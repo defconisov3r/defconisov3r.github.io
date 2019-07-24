@@ -38,7 +38,6 @@
   <body>
     <div class="container-lg px-3 my-5 markdown-body">
       <h1>
-        <a href="./">recipes</a>
         <form id="search_form" autocomplete="off">
           <input id="search_input">
         </form>
@@ -99,7 +98,7 @@
       }
       (async () => {
         // Get GitHub repository file info
-        const response = await fetch('https://api.github.com/repos/e55db081d05f58a/recipes/contents/');
+        const response = await fetch('https://api.github.com/repos/e55db081d05f58a/e55db081d05f58a.github.io/contents/');
         const data = await response.json();
         // Initialize search fields and results
         const search_form = document.getElementById('search_form');
