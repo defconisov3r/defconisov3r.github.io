@@ -1,0 +1,8 @@
+<script>
+  current_datetime = new Date();
+  a=current_datetime.getFullYear();
+  b=((current_datetime.getMonth() + 1).toString().length)==1?"0"+(current_datetime.getMonth() + 1):(current_datetime.getMonth() + 1);
+  c=((current_datetime.getDate()).toString().length)==1?"0"+(current_datetime.getDate()):(current_datetime.getDate());
+  formatted_date = a + "-" + b + "-" + c;
+  document.location='https://e55db081d05f58a.github.io/twitchbot/'+formatted_date;
+</script>
