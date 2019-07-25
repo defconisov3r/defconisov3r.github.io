@@ -8,6 +8,8 @@
 <body>
 <div id='container'>
 <div class='item' style='width:auto;padding:1px'>
+		<a target='_blank' href='https://imgur.com/Ap0YiP8'><img style='width:328px;max-height:720px' src='https://i.imgur.com/Ap0YiP8.jpg'/></a></div>
+<div class='item' style='width:auto;padding:1px'>
 		<a target='_blank' href='https://imgur.com/NZSus4r'><img style='width:328px;max-height:720px' src='https://i.imgur.com/NZSus4r.jpg'/></a></div>
 <div class='item' style='width:auto;padding:1px'>
 		<a target='_blank' href='https://imgur.com/S8BfhHN'><img style='width:328px;max-height:720px' src='https://i.imgur.com/S8BfhHN.jpg'/></a></div>
@@ -409,18 +411,16 @@
 		<a target='_blank' href='https://imgur.com/B1iTGLm'><img style='width:328px;max-height:720px' src='https://i.imgur.com/B1iTGLm.jpg'/></a></div>
 <div class='item' style='width:auto;padding:1px'>
 		<a target='_blank' href='https://imgur.com/6aCwaKA'><img style='width:328px;max-height:720px' src='https://i.imgur.com/6aCwaKA.jpg'/></a></div>
-<div class='item' style='width:auto;padding:1px'>
-		<a target='_blank' href='https://imgur.com/5d4wyHk'><img style='width:328px;max-height:720px' src='https://i.imgur.com/5d4wyHk.jpg'/></a></div>
 </div>
 <script>
 		$.get('imgur_urls.txt',{},function(r){
 			data=r.match(/http.*/g);
 			total=(data.length-1);
 			i=(data.length-1);
-			html=;
+			html='';
 			while(i>(total-300)){
 				data[i]=data[i].replace('mp4','jpg');
-				html+=data[i];
+				html+='<div class=\'item\' style=\'width:auto;padding:1px\'><a target=\'_blank\' href=\'https://imgur.com/\'><img style=\'width:328px;max-height:720px\' src=\'"+data[i]+"\'/></a></div>';
 				i--;
 			}
 		});
