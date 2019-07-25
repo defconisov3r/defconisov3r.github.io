@@ -16,14 +16,14 @@
 			html='';
 			while(i>(total-201)){
 				data[i]=data[i].replace('mp4','jpg');
-				html+='<div class=\'item\' style=\'width:auto;padding:1px\'><a target=\'_blank\' href=\'https://imgur.com/\'><img style=\'width:328px;max-height:720px\' src=\'"+data[i]+"\'/></a></div>';
+				html+='<div class=\'item\' style=\'width:auto;padding:1px\'><a target=\'_blank\' href=\'https://imgur.com/\'><img style=\'width:328px;max-height:720px\' src=\''+data[i]+'\'/></a></div>';
 				i--;
 			}
-			$('#container').html(html);
-			$('#container').imagesLoaded( function() {
-				$('#container').masonry({
-				  itemSelector: '.item',
-				});
+		});
+		$('#container').html(html);
+		$('#container').imagesLoaded( function() {
+			$('#container').masonry({
+			  itemSelector: '.item',
 			});
 		});
 </script>
