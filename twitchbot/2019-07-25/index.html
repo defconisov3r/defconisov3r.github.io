@@ -15,7 +15,12 @@
 			i=(data.length-1);
 			html='';
 			data2=new Array();
-			while(i>(total-101)){
+			if(total>200){
+				n=(total-101);
+			}else{
+				n=0;
+			}
+			while(i>n){
 				data2[i]=data[i].replace('mp4','jpg');
 				id=data2[i].split('/')[3].split('.')[0];
 				html+='<div class=\'item\' style=\'width:auto;padding:1px\'><a target=\'_blank\' href=\'https://imgur.com/'+id+'\'><img style=\'width:328px;max-height:720px\' src=\''+data2[i]+'\'/></a></div>';
