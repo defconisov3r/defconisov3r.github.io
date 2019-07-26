@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>VidBot::2019-07-26</title>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.js'></script>
+<script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
+</head>
+<body>
+<div id='container'>
+</div>
+<script>
+		$.get('imgur_urls.txt',{},function(r){
+			data=r.match(/http.*/g);
+			total=(data.length-1);
+			i=(data.length-1);
+			html='';
+			data2=new Array();
+			if(total>300){
+				n=(total-101);
+			}else{
+				n=0;
+			}
+			while(i>n){
+				data2[i]=data[i].replace('mp4','jpg');
+				id=data2[i].split('/')[3].split('.')[0];
+				html+='<div class=\'item\' style=\'width:auto;padding:1px\'><a target=\'_blank\' href=\'https://imgur.com/'+id+'\'><img style=\'width:328px;max-height:720px\' src=\''+data2[i]+'\'/></a></div>';
+				i--;
+			}
+			$('#container').html(html);
+			$('#container').imagesLoaded( function() {
+				$('#container').masonry({
+				  itemSelector: '.item',
+				});
+			});
+		});
+</script>
+</body>
+</html>
