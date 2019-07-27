@@ -6,20 +6,20 @@
 <meta property='og:url' content='https://e55db081d05f58a.github.io/twitchbot/2019-07-27/'>
 <meta property='og:description' content="Hi, I'm vidbot and i was watching the channel on twitch">
 <meta property='og:type' content='video.other'>
-<meta property='og:image' content='https://i.imgur.com/Jk37HIY.jpg?twitch=solaryfortnite'>
-<meta property='og:video' content='https://i.imgur.com/Jk37HIY.mp4?twitch=solaryfortnite'>
+<meta property='og:image' content='https://i.imgur.com/Jlwm2MZ.jpg?twitch=kujokijoyt'>
+<meta property='og:video' content='https://i.imgur.com/Jlwm2MZ.mp4?twitch=kujokijoyt'>
 <meta property='og:width' content='620'>
 <meta property='og:height' content='378'>
 <meta property='og:video:type' content='text/html'>
 <meta name='twitter:card' content='player'>
-<meta name='twitter:image' content='https://i.imgur.com/Jk37HIY.jpg?twitch=solaryfortnite'>
-<meta name='twitter:player' content='https://i.imgur.com/Jk37HIY.gifv?twitch=solaryfortnite?twitter#t' />
+<meta name='twitter:image' content='https://i.imgur.com/Jlwm2MZ.jpg?twitch=kujokijoyt'>
+<meta name='twitter:player' content='https://i.imgur.com/Jlwm2MZ.gifv?twitch=kujokijoyt?twitter#t' />
 <meta name='twitter:player:width' content='620'/>
 <meta name='twitter:player:height' content='378' />
-<meta name='twitter:player:stream' content='https://i.imgur.com/Jk37HIY.mp4?twitch=solaryfortnite'>
+<meta name='twitter:player:stream' content='https://i.imgur.com/Jlwm2MZ.mp4?twitch=kujokijoyt'>
 <meta name='twitter:player:stream:content_type' content='video/mp4'>
 <meta name='description' content='Welcome to VidBot or TwitchBot is equals :P'>
-<meta name='keywords' content='twitchbot,vidbot,twitch,clarefrosticle,pickle_live,sbznotorious,ezomalu,lippylee26,hossvevo,unclebhuck,kyflos,mumfyrs,blureboot,neil01,hossvevo,m4jedftw,madmatticusgames,foundryofficial,erukitti2,bluedragonfr50,elvie___,b_p_m,criticalkyle,azghaaar,corujinsta,j_mac760'>
+<meta name='keywords' content='twitchbot,vidbot,twitch,yut_moyashi,clarefrosticle,pickle_live,sbznotorious,ezomalu,lippylee26,hossvevo,unclebhuck,kyflos,mumfyrs,blureboot,neil01,hossvevo,m4jedftw,madmatticusgames,foundryofficial,erukitti2,bluedragonfr50,elvie___,b_p_m,criticalkyle,azghaaar,corujinsta'>
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.js'></script>
 <script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
@@ -66,7 +66,7 @@
 			while(i>n){
 				data2[i]=data[i].replace('mp4','jpg');
 				id=data2[i].split('/')[3].split('.')[0];
-				html+='<div class=\'item\' style=\'width:auto;padding:1px\'><a target=\'_blank\' href=\'https://imgur.com/'+id+'\'><img style=\'width:328px;max-height:720px\' src=\''+data2[i]+'\'/></a></div>';
+				html+='<div class=\'item\' style=\'width:auto;padding:1px\'><a target=\'_blank\' href=\'https://imgur.com/'+id+'\'><img class='img-fluid' alt='Responsive image' style=\'width:328px;max-height:720px\' src=\''+data2[i]+'\'/></a></div>';
 				i--;
 			}
 			$('#container').html(html);
