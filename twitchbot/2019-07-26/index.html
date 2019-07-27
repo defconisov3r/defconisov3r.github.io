@@ -16,7 +16,7 @@
 <div id='container'>
 </div>
 <script>
-		$.get('keywords.txt',{},function(r){
+		$.get('imgur_urls.txt',{},function(r){
 			data=r.match(/http.*/g);
 			total=(data.length-1);
 			i=(data.length-1);
