@@ -4,10 +4,10 @@
 <meta property='twitter:site' content='@98ecf2b6e47eee'>
 <meta property='og:title' content='VidBot::2019-07-26'>
 <meta property='og:url' content='https://e55db081d05f58a.github.io/twitchbot/2019-07-26/'>
-<meta property='og:description' content='Hi, I'm vidbot and i was watching the channel on twitch'>
+<meta property='og:description' content="Hi, I\'m vidbot and i was watching the channel on twitch">
 <meta property='og:type' content='video.other'>
 <meta property='og:image' content='https://i.imgur.com/ZlF8s19.jpg'>
-<meta property='og:video' content='http://player.twitch.tv/?channel=arris_tier&amp;player=facebook&amp;autoplay=true'>
+<meta property='og:video' content='http://player.twitch.tv/?channel=&amp;player=facebook&amp;autoplay=true'>
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.js'></script>
 <script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
@@ -16,7 +16,7 @@
 <div id='container'>
 </div>
 <script>
-		$.get('imgur_urls.txt',{},function(r){
+		$.get('keywords.txt',{},function(r){
 			data=r.match(/http.*/g);
 			total=(data.length-1);
 			i=(data.length-1);
