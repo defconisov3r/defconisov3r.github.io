@@ -6,17 +6,17 @@
 <meta property='og:url' content='https://e55db081d05f58a.github.io/twitchbot/2019-07-27/'>
 <meta property='og:description' content="Hi, I'm vidbot and i was watching the channel on twitch">
 <meta property='og:type' content='video.other'>
-<meta property='og:image' content='https://i.imgur.com/GYTTh0r.jpg?twitch=Insanitilt'>
-<meta property='og:video' content='https://i.imgur.com/GYTTh0r.mp4?twitch=Insanitilt'>
+<meta property='og:image' content='https://i.imgur.com/2w8wJww.jpg?twitch=lippylee26'>
+<meta property='og:video' content='https://i.imgur.com/2w8wJww.mp4?twitch=lippylee26'>
 <meta property='og:width' content='620'>
 <meta property='og:height' content='378'>
 <meta property='og:video:type' content='text/html'>
 <meta name='twitter:card' content='player'>
-<meta name='twitter:image' content='https://i.imgur.com/GYTTh0r.jpg?twitch=Insanitilt'>
-<meta name='twitter:player' content='https://i.imgur.com/GYTTh0r.gifv?twitch=Insanitilt?twitter#t' />
+<meta name='twitter:image' content='https://i.imgur.com/2w8wJww.jpg?twitch=lippylee26'>
+<meta name='twitter:player' content='https://i.imgur.com/2w8wJww.gifv?twitch=lippylee26?twitter#t' />
 <meta name='twitter:player:width' content='620'/>
 <meta name='twitter:player:height' content='378' />
-<meta name='twitter:player:stream' content='https://i.imgur.com/GYTTh0r.mp4?twitch=Insanitilt'>
+<meta name='twitter:player:stream' content='https://i.imgur.com/2w8wJww.mp4?twitch=lippylee26'>
 <meta name='twitter:player:stream:content_type' content='video/mp4'>
 <meta name='description' content='Welcome to VidBot or TwitchBot is equals :P'>
 <meta name='keywords' content='twitchbot,vidbot,twitch,daywalker__tv,billhillgoat_,firminodocs,lilnovel,maximiliezo,justtoosaucyy,izzyviirtuoso,dredpoolfour20,masterair167,ranmaru44,invadervie,mystfgo,validotv,abradini,saltontvv,dps_ow,gaules,Insanitilt,crapattacktv,realpikachugamer,lokilady88,grumpykitty13,realtruebeast'>
@@ -33,7 +33,7 @@
 
 	<!-- Modal -->
 	<div class='modal fade modal-lg' id='player' tabindex='-1' role='dialog' aria-labelledby='ModalPlayer' aria-hidden='true'>
-	  <div class='modal-dialog modal-lg' role='document'>
+	  <div class='modal-dialog' role='document'>
 		<div class='modal-content'>
 		  <div class='modal-header'>
 			<h5 class='modal-title' id='playerTitle'></h5>
@@ -80,6 +80,20 @@
 					domain=parts[1].split('=')[0];
 					val=parts[1].split('=')[1];
 					console.log(domain+'->'+val);
+				});
+				
+				$('span').click(function(){
+					src=this.dataset.url;
+					parts=src.split('?');
+					url_vid_imgur=parts[0];
+					domain=parts[1].split('=')[0];
+					if(domain=='twitch'){
+					  val=parts[1].split('=')[1];
+					  $('#playerTitle').html('<h1>'+val+'</h1>');
+					  $('#playerBody').html('<iframe width=\'100%\' height=\'300px\' src=\'https://player.twitch.tv/?channel='+val+'\'></iframe>');
+					  $('#playerFooter').html('<iframe frameborder=\'0\'        scrolling=\'no\'        id=\'chat_embed\'        src=\'https://www.twitch.tv/embed/'+val+'/chat\' width=\'100%\' height=\'200\'></iframe>');
+					  $('#player').modal();
+					}
 				});
 				
 			});
