@@ -1,0 +1,10 @@
+<div id='container'></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    let url='https://feeds.feedburner.com/TheHackersNews';
+    $.get(url,function(r){
+      $("#container").html(r);
+    });
+  });
+</script>
