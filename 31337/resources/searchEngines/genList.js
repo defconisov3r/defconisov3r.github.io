@@ -115,9 +115,9 @@ urls=[
 ];
 tot=urls.length;
 i=0;
-html="<ul class='list-group bg-dark text-danger'>";
+html="<ul class='list-group'>";
 while(i<tot){
-  html+="<li class='list-group-item'><a href='"+urls[i]+"'>"+urls[i]+"</a></li>";
+  html+="<li class='list-group-item bg-dark text-danger'><a target='_blank' href='"+urls[i]+"'>"+urls[i]+"</a></li>";
   i++;
 }
 html+="</ul>";
