@@ -20,50 +20,48 @@
 						repositorios, y cuentas que sigue un usuario especifico de github</p>
 						<img style='margin:0 auto' src="https://lh3.googleusercontent.com/-1gWMHvtJStV6xN5vBdNgMlFY_z6uCir4rRo9ERjyurw7MUwXUzH0OZqBbSKgS60DY86rIo=s712" alt="searching...">
 						<pre><code>
-						
-							#! /bin/bash
-							if(( $# == 3 ));then
-								user=$1;
-								tab=$2;
-								page=$3;
+#! /bin/bash
+if(( $# == 3 ));then
+	user=$1;
+	tab=$2;
+	page=$3;
 
-								if [[ "$page" =~ "^[0-9]+$" ]];then
-									page=1;
-								fi
+	if [[ "$page" =~ "^[0-9]+$" ]];then
+		page=1;
+	fi
 
-								uri="https://api.github.com/users/$user/$tab";
-								file="$user"_"$tab"".txt";
-								if [[ $tab == "followers" || $tab == "following" || $tab == "repos" ]];then
-									data=`proxychains -q curl -s $uri`;
-									while [[ `echo $data` != "[ ]" && `echo $data` != ""  && `echo $data` != " " ]];do
-										checkLimit=`echo "$data"|grep -Eio "limit exceeded"|wc -l`;
-										while(($checkLimit>0));do
-											echo "LIMITE ALCANZADO, ESPERANDO EL CAMBIO...";
-											sleep 20;
-											data1=`proxychains -q curl -s $uri`;
-											checkLimit=`echo "$data1"|grep -Eio "limit exceeded"|wc -l`;
-										done
-										echo -e "\nWorking page $page\n";
-										data=`proxychains -q curl -s "$uri?page=$page"`;
-										if [[ $tab == "followers" || $tab == "following" ]];then
-											echo "$data"|grep -Eio "login.*"|cut -d ":" -f2|grep -Eio "[a-z0-9_\-]*";
-											echo "$data"|grep -Eio "login.*"|cut -d ":" -f2|grep -Eio "[a-z0-9_\-]*" >> $file;
-											echo -e "\nSave in file: $file";
-										else
-											echo "$data"|grep -Eio "\"name.*"|sed s/'\"name\":'//g|sed s/'[,\"]'//g;
-											echo "$data"|grep -Eio "\"name.*"|sed s/'\"name\":'//g|sed s/'[,\"]'//g >> $file;
-											echo -e "\nSave in file: $file";
-										fi
-										page=$((page+1));
-									done
-								else
-									echo -e "Use:\n $0 <user> <followers|following|repos> <page(0|1|2|3)>";
-								fi
-							else
-								echo -e "Use:\n $0 <user> <followers|following|repos> <page(0|1|2|3)>";
-							fi
-						
-						
+	uri="https://api.github.com/users/$user/$tab";
+	file="$user"_"$tab"".txt";
+	if [[ $tab == "followers" || $tab == "following" || $tab == "repos" ]];then
+		data=`proxychains -q curl -s $uri`;
+		while [[ `echo $data` != "[ ]" && `echo $data` != ""  && `echo $data` != " " ]];do
+			checkLimit=`echo "$data"|grep -Eio "limit exceeded"|wc -l`;
+			while(($checkLimit>0));do
+				echo "LIMITE ALCANZADO, ESPERANDO EL CAMBIO...";
+				sleep 20;
+				data1=`proxychains -q curl -s $uri`;
+				checkLimit=`echo "$data1"|grep -Eio "limit exceeded"|wc -l`;
+			done
+			echo -e "\nWorking page $page\n";
+			data=`proxychains -q curl -s "$uri?page=$page"`;
+			if [[ $tab == "followers" || $tab == "following" ]];then
+				echo "$data"|grep -Eio "login.*"|cut -d ":" -f2|grep -Eio "[a-z0-9_\-]*";
+				echo "$data"|grep -Eio "login.*"|cut -d ":" -f2|grep -Eio "[a-z0-9_\-]*" >> $file;
+				echo -e "\nSave in file: $file";
+			else
+				echo "$data"|grep -Eio "\"name.*"|sed s/'\"name\":'//g|sed s/'[,\"]'//g;
+				echo "$data"|grep -Eio "\"name.*"|sed s/'\"name\":'//g|sed s/'[,\"]'//g >> $file;
+				echo -e "\nSave in file: $file";
+			fi
+			page=$((page+1));
+		done
+	else
+		echo -e "Use:\n $0 <user> <followers|following|repos> <page(0|1|2|3)>";
+	fi
+else
+	echo -e "Use:\n $0 <user> <followers|following|repos> <page(0|1|2|3)>";
+fi
+
 						</code></pre>
 						
 						
