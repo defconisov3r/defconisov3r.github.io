@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<title>
+			Search engines and resources for hackers by @defconisov3r
+		</title>
+		<meta charset='utf-8'/>	
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="card" style="width:100%;">
+			<div class="card-body">
+				<h5 class="card-title">GetGithub</h5>
+					<img style='width:300px;margin:0 auto' src="https://ton.twitter.com/i/ton/data/dm/1237457498120105993/1237457481221255169/0WZcxl1c.png:small" alt="searching...">
+					<div class="card-text" id='list'>
+						<p>Pequeño trozo de codigo que nos permite obtener una lista de los seguidores, 
+						repositorios, y cuentas que sigue un usuario especifico de github</p>
+						<samp>
+						
+							#! /bin/bash
+							if(( $# == 3 ));then
+								user=$1;
+								tab=$2;
+								page=$3;
+
+								if [[ "$page" =~ "^[0-9]+$" ]];then
+									page=1;
+								fi
+
+								uri="https://api.github.com/users/$user/$tab";
+								file="$user"_"$tab"".txt";
+								if [[ $tab == "followers" || $tab == "following" || $tab == "repos" ]];then
+									data=`proxychains -q curl -s $uri`;
+									while [[ `echo $data` != "[ ]" && `echo $data` != ""  && `echo $data` != " " ]];do
+										checkLimit=`echo "$data"|grep -Eio "limit exceeded"|wc -l`;
+										while(($checkLimit>0));do
+											echo "LIMITE ALCANZADO, ESPERANDO EL CAMBIO...";
+											sleep 20;
+											data1=`proxychains -q curl -s $uri`;
+											checkLimit=`echo "$data1"|grep -Eio "limit exceeded"|wc -l`;
+										done
+										echo -e "\nWorking page $page\n";
+										data=`proxychains -q curl -s "$uri?page=$page"`;
+										if [[ $tab == "followers" || $tab == "following" ]];then
+											echo "$data"|grep -Eio "login.*"|cut -d ":" -f2|grep -Eio "[a-z0-9_\-]*";
+											echo "$data"|grep -Eio "login.*"|cut -d ":" -f2|grep -Eio "[a-z0-9_\-]*" >> $file;
+											echo -e "\nSave in file: $file";
+										else
+											echo "$data"|grep -Eio "\"name.*"|sed s/'\"name\":'//g|sed s/'[,\"]'//g;
+											echo "$data"|grep -Eio "\"name.*"|sed s/'\"name\":'//g|sed s/'[,\"]'//g >> $file;
+											echo -e "\nSave in file: $file";
+										fi
+										page=$((page+1));
+									done
+								else
+									echo -e "Use:\n $0 <user> <followers|following|repos> <page(0|1|2|3)>";
+								fi
+							else
+								echo -e "Use:\n $0 <user> <followers|following|repos> <page(0|1|2|3)>";
+							fi
+						
+						
+						</samp>
+						
+						
+						
+					</div>
+			</div>
+		</div>
+	</body>
+</html>
