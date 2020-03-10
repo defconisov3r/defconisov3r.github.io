@@ -115,7 +115,7 @@ urls=[
 ];
 tot=urls.length;
 i=0;
-html="<ul class='list-group'>";
+html="<ul class='list-group bg-dark text-danger'>";
 while(i<tot){
   html+="<li class='list-group-item'>"+urls[i]+"</li>";
   i++;
