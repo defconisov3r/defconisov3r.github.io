@@ -121,3 +121,4 @@ while(i<tot){
   i++;
 }
 html+="</ul>";
+$("#list").html(html);
