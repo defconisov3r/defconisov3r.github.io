@@ -117,7 +117,7 @@ tot=urls.length;
 i=0;
 html="<ul class='list-group'>";
 while(i<tot){
-  html+="<li style='background-color:#000' class='list-group-item text-danger'><b><a style='color:#FF0000' target='_blank' href='"+urls[i]+"'>"+urls[i]+"</a></b></li>";
+  html+="<li style='background-color:#000' class='list-group-item text-danger'><b><img src='https://www.google.com/s2/favicons?domain="+urls[i]+"'><a style='color:#FF0000' target='_blank' href='"+urls[i]+"'>"+urls[i]+"</a></b></li>";
   i++;
 }
 html+="</ul>";
