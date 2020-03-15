@@ -15,7 +15,7 @@
   </body>
   <script>
 	$.get("https://defconisov3r.github.io/31337/coronavirus/covid19/hosts_results.txt",function(r){
-		$("#container").html(r);
+		$("#container").html("<pre><code>"+r+"</code></pre>");
 	});
   </script>
   </html>
