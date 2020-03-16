@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>VidBot::2020-03-16</title>
+<meta property='twitter:site' content='@98ecf2b6e47eee'>
+<meta property='og:title' content='VidBot::2020-03-16'>
+<meta property='og:url' content='https://e55db081d05f58a.github.io/twitchbot/2020-03-16/'>
+<meta property='og:description' content="Hi, I'm vidbot and i was watching the channel on twitch">
+<meta property='og:type' content='video.other'>
+<meta property='og:image' content=''>
+<meta property='og:video' content=''>
+<meta property='og:width' content='620'>
+<meta property='og:height' content='378'>
+<meta property='og:video:type' content='text/html'>
+<meta name='twitter:card' content='player'>
+<meta name='twitter:image' content=''>
+<meta name='twitter:player' content='?twitter#t' />
+<meta name='twitter:player:width' content='620'/>
+<meta name='twitter:player:height' content='378' />
+<meta name='twitter:player:stream' content=''>
+<meta name='twitter:player:stream:content_type' content='video/mp4'>
+<meta name='description' content='Welcome to VidBot or TwitchBot is equals :P'>
+<meta name='keywords' content='twitchbot,vidbot,twitch'>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src='https://e55db081d05f58a.github.io/static/js/masonry.pkgd.min.js'></script>
+<script src='https://e55db081d05f58a.github.io/static/js/imagesloaded.pkgd.min.js'></script>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
+<script type='text/javascript'>if(top.location!=this.location) top.location=this.location;</script>
+<link rel='stylesheet' type='text/css' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'/>
+</head>
+<body>
+<div id='container'>
+</div>
+
+	<!-- Modal -->
+	<div class='modal fade' id='player' tabindex='-1' role='dialog' aria-labelledby='ModalPlayer' aria-hidden='true'>
+	  <div class='modal-dialog modal-xl' role='document'>
+		<div class='modal-content'>
+		  <div class='modal-header'>
+			<h5 class='modal-title' id='playerTitle'></h5>
+			<button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+			  <span aria-hidden='true'>&times;</span>
+			</button>
+		  </div>
+		  <div class='modal-body' id='playerBody'>
+			...
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+<script>
+		$.get('imgur_urls.txt',{},function(r){
+			data_=r.match(/http.*/g);
+			total=(data_.length-1);
+			i=(data_.length-1);
+			html='';
+			data2=new Array();
+			if(total>350){
+				n=(total-202);
+			}else{
+				n=0;
+			}
+			while(i>n){
+				data2[i]=data_[i].replace('mp4','jpg');
+				id=data2[i].split('/')[3].split('.')[0];
+				html+='<div class=\'item\' style=\'width:auto;padding:0px\'><a target=\'_blank\' href=\'https://imgur.com/'+id+'\'><img class=\'img-fluid\' alt=\'Responsive image\' style=\'width:328px;max-height:720px\' src=\''+data2[i]+'\'/></a> <span data-url=\''+data2[i]+'\' class=\'btn btn-lg\' style=\'font-size:15px;padding:3px;cursor:pointer;position:absolute;width:100%;background:#000;color:#15FF00;top:0px;left:0px;font-weight:bold\'>VISUALIZAR STREAM</span> </div>';
+				i--;
+			}
+			$('#container').html(html);
+			$('#container').imagesLoaded( function() {
+				$('#container').masonry({
+				  itemSelector: '.item',
+				});
+				
+				$('img').mousemove(function(){
+					parts=this.src.split('?');
+					domain=parts[1].split('=')[0];
+					val=parts[1].split('=')[1];
+					console.log(domain+'->'+val);
+				});
+				
+				$('span').click(function(){
+					src=this.dataset.url;
+					parts=src.split('?');
+					url_vid_imgur=parts[0];
+					domain=parts[1].split('=')[0];
+					if(domain=='twitch'){
+					  val=parts[1].split('=')[1];
+					  $('#playerTitle').html('<h3 style=\'text-align:center\'>'+val+'</h3>');
+					  $('#playerBody').html('<div class=\'media\'><iframe width=\'500px\' height=\'420px\' src=\'https://player.twitch.tv/?channel='+val+'\'></iframe><div class=\'media-body\'><iframe frameborder=\'0\'        scrolling=\'no\'        id=\'chat_embed\'        src=\'https://www.twitch.tv/embed/'+val+'/chat\' width=\'100%\' height=\'430px\'></iframe></div></div>');
+					  //$('#playerFooter').html('<iframe frameborder=\'0\'        scrolling=\'no\'        id=\'chat_embed\'        src=\'https://www.twitch.tv/embed/'+val+'/chat\' width=\'100%\' height=\'430\'></iframe>');
+					  $('#player').modal();
+					}
+				});
+				setInterval(function(){
+					setTimeout(function(){
+						if($('#player').css('display')=='none'){
+							$('#playerBody').html('');
+						}
+					},100);
+				},1500);
+
+			});
+		});
+</script>
+</body>
+</html>
