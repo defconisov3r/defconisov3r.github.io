@@ -20,42 +20,6 @@
 		</nav>		
 		
 		<div class="accordion" id="accordionCov">
-	
-		  <div class="card">
-			<div class="card-header" id="map">
-			  <h2 class="mb-0">
-				<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseMap" aria-expanded="false" aria-controls="collapseMap">
-					<h3>Coronavirus COVID-19 Global Cases by Johns Hopkins CSSE</h3>
-				</button>
-			  </h2>
-			</div>
-
-			<div id="collapseMap" class="collapse" data-parent="#accordionCov">
-			  <div class="card-body">
-				   <div class="embed-responsive embed-responsive-16by9">
-					  <iframe class="embed-responsive-item" src="map.html" allowfullscreen></iframe>
-					</div>
-			  </div>
-			</div>
-		  </div>
-		  
-		  <div class="card">
-			<div class="card-header" id="gen">
-			  <h2 class="mb-0">
-				<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseGen" aria-expanded="false" aria-controls="collapseGen">
-					<h3>Genomic epidemiology of novel coronavirus (HCoV-19)</h3>
-				</button>
-			  </h2>
-			</div>
-			<div id="collapseGen" class="collapse" data-parent="#accordionCov">
-			  <div class="card-body">
-					<div class="embed-responsive embed-responsive-16by9">
-					  <iframe class="embed-responsive-item" src="genomic.html" allowfullscreen></iframe>
-					</div>
-			  </div>
-			</div>
-		  </div>
-			
 		  <div class="card">
 			<div class="card-header" id="linksAndResources">
 			  <h2 class="mb-0">
@@ -64,14 +28,24 @@
 				</button>
 			  </h2>
 			</div>
-			<div id="collapseResources" class="collapse" data-parent="#accordionCov">
+			<div id="collapseResources" class="collapse show" data-parent="#accordionCov">
 			  <div class="card-body">
 				<ul class="list-group">
 					<li class="list-group-item">
 					  	<a target='_blank' href='https://github.com/midas-network/COVID-19/wiki/Documents'>
 							All documents relevant to COVID-19
 						</a>
-					</li>							
+					</li>
+					<li class="list-group-item">
+					  	<a target='_blank' href='https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6'>
+							Coronavirus COVID-19 Global Cases by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University (JHU)
+						</a>
+					</li>
+					<li class="list-group-item">
+					  	<a target='_blank' href='https://nextstrain.org/ncov'>
+							Genomic epidemiology of novel coronavirus (HCoV-19)	
+						</a>
+					</li>										
 				  	<li class="list-group-item">
 					  	<a target='_blank' href='https://tomeraltman.net/2020/03/03/technical-problems-COVID-primers.html'>
 							Technical Problems with Existing CDC COVID-19 Primers, and an Improved Set of Primers
