@@ -1,0 +1,168 @@
+<!doctype html><html lang="en" style="background-repeat:repeat-y;background-image:url(&quot;./images/mob.png&quot;)"><head><title>Corona Virus FAX</title><meta name="description" content="ServisBOT Web Messenger"/><meta name="author" content="ServisBot"/><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="height=device-heightwidth=device-width,initial-scale=1"/><meta property="og:locale" content="en_US"/><meta property="og:type" content="website"/><meta property="og:title" content="ServisBOT | Customer Service AI, Messaging &amp; Automation | Transform CSX"/><meta property="og:description" content="Let customers connect via SMS, in-app + other messaging apps, optimize accuracy in handling requests with Customer Service AI, lower costs with bot automation.Take a Test Drive Today!"/><meta property="og:url" content="https://servisbot.com/"/><meta property="og:site_name" content="ServisBOT"/><meta property="og:image" content="./images/mob.png"/><meta property="og:image:secure_url" content="./images/mob.png"/><meta property="og:image:width" content="1400"/><meta property="og:image:height" content="522"/><link rel="stylesheet" href="//lightning.production.helium.servismatrixcdn.com/lightning/latest/demo/assets/demo.css"/><link href="/static/css/2.7c70028a.chunk.css" rel="stylesheet"><link href="/static/css/main.9a67bb35.chunk.css" rel="stylesheet"></head><body><script src="//lightning.production.helium.servismatrixcdn.com/lightning/latest/servisbot-utils.js"></script><script src="//lightning.production.helium.servismatrixcdn.com/lightning/latest/bundle-messenger.js"></script><script src="https://unpkg.com/react-trigger-change/dist/react-trigger-change.js"></script><script>var recognizing = false;
+
+      if (!('webkitSpeechRecognition' in window)) {
+        console.log("webkitSpeechRecognition:  Speech API NOT supported here…")
+        //Speech API not supported here…
+      } else { //Let’s do some cool stuff :)
+          console.log("webkitSpeechRecognition:  OK")
+          var recognition = new webkitSpeechRecognition(); //That is the object that will manage our whole recognition process.
+          recognition.continuous = false;   //Suitable for dictation.
+          recognition.interimResults = true;  //If we want to start receiving results even if they are not final.
+          //Define some more additional parameters for the recognition:
+          recognition.lang = "en-US";
+          recognition.maxAlternatives = 1; //Since from our experience, the highest result is really the best...
+      }
+
+      recognition.onstart = function() {
+          recognizing = true;
+          //Listening (capturing voice from audio input) started.
+          //This is a good place to give the user visual feedback about that (i.e. flash a red light, etc.)
+          console.log("recognition.onstart")
+      };
+
+      recognition.onend = function() {
+          recognizing = false;
+          //Again – give the user feedback that you are not listening anymore. If you wish to achieve continuous recognition – you can write a script to start the recognizer again here.
+          console.log("recognition.onend")
+      };
+
+      recognition.onerror = function (event) {
+          recognizing = false;
+      };
+
+      recognition.onresult = function(event) { //the event holds the results
+      //Yay – we have results! Let’s check if they are defined and if final or not:
+          if (typeof(event.results) === 'undefined') { //Something is wrong…
+              recognition.stop();
+              return;
+          }
+          // for (var i = event.resultIndex; i < event.results.length; ++i) {
+          //     if (event.results[i].isFinal) { //Final results
+          //         inject(event.results[i][0].transcript);
+          //         setTextBoxValue("");
+          //         console.log("final results: " + event.results[i][0].transcript);   //Of course – here is the place to do useful things with the results.
+          //     } else {   //i.e. interim...
+          //         //setTextBoxValue(event.results[i][0].transcript);
+          //         //console.log("interim results: " + event.results[i][0].transcript);  //You can use these results to give the user near real time experience.
+          //
+          //         setTextBoxValue(event.results[i][0].transcript);
+          //         console.log("interim results: " + event.results[i][0].transcript);  //You can use these results to give the user near real time experience.
+          //     }
+          // } //end for loop
+          if (event.results[0].isFinal) { //Final results
+              inject(event.results[0][0].transcript);
+              setTextBoxValue("");
+              highlightTalkButton(false);
+              console.log("final results: " + event.results[0][0].transcript);   //Of course – here is the place to do useful things with the results.
+          } else {   //i.e. interim...
+              setTextBoxValue(event.results[0][0].transcript);
+              console.log("interim results: " + event.results[0][0].transcript);  //You can use these results to give the user near real time experience.
+          }
+      };
+
+    function startButton(event) {
+      console.log("startButton(", event);
+      var textarea = document.getElementById('voice-input-text'); //event.srcElement;
+      highlightTalkButton(true);
+      setTextBoxValue("");
+      if (!recognizing){
+        recognition.start();
+      }
+      //start_img.src = 'https://speechlogger.appspot.com/images/micslash2.png'; //We change the image to a slashed until the user approves the browser to listen and recognition actually starts. Then – we’ll change the image to ‘mic on’.
+    }
+
+    function muteButton(event) {
+      console.log("muteButton(", event);
+      let audioCtx = this.sumerian.AudioContext.getContext();
+      let sum = this.sumerian;
+      console.log(this.sumerian);
+      var btn = this.document.getElementById("mute-button");
+      
+      if(audioCtx.state === 'running') {
+          audioCtx.suspend().then(function() {
+            btn.textContent = 'UNMUTE';
+          });
+          //sum.HostSystem.start();
+      } else if(audioCtx.state === 'suspended') {
+          audioCtx.resume().then(function() {
+            btn.textContent = 'MUTE';
+        });  
+        //sum.HostSystem.stop();
+      }
+      // AudioContext
+    }
+
+
+    function nluButton(event) {
+      console.log("nluButton(", event);
+      var btn = this.document.getElementById("nlu-button");
+      //console.log("nlu type:", btn.textContent);
+      var sb = this.window.app.servisBotController;
+      //var n = this.window.app.servisBotController.sbconfigList;
+      if(btn.textContent === 'RASA') {
+            btn.textContent = 'LEX';
+            sb.connect(1);
+            //window.app.servisBotController.init(chatConfig);
+      } else if(btn.textContent === 'LEX') {
+            btn.textContent = 'RASA';
+            sb.connect(0);
+      }
+    }
+
+    function setTextBoxValue(txtVal) {
+      var textarea = document.getElementById('voice-input-text');
+      textarea.value = txtVal;
+      //console.log(textarea);
+    }
+
+    function inject(value) {
+      // if (servisBot) {}
+      var p = document.querySelector('iframe#servisbot-messenger-iframe');
+      if (p.contentDocument) {
+        var q = p.contentDocument.body.querySelector('.sb-textarea__wrap textarea');
+        q.value = value;
+        console.log(q);
+        reactTriggerChange(q);
+        setTimeout(function () {
+          document.querySelector('iframe#servisbot-messenger-iframe').contentDocument.body.querySelector(
+            '.sb-textarea__submit').click();
+        }, 300);
+      }
+      //}
+    };
+
+    // function injectPhoto(value) {
+    //   var q = document.querySelector('iframe#servisbot-messenger-iframe').contentDocument.body.querySelector('.sb-textarea__wrap textarea');
+    //   q.value = value;
+    //   reactTriggerChange(q);
+    //   setTimeout(function () {
+    //     document.querySelector('iframe#servisbot-messenger-iframe').contentDocument.body.querySelector('.sb-textarea__submit').click();
+    //   }, 300);
+    // };
+    // var scrollToTop = function scrollTop(){
+    //   $('html, body').animate({
+    //     scrollTop: $("#top").offset().top
+    //   }, 500);
+    // };
+
+    // var clickFn = function click(obj) {
+    //   inject($(obj).text());
+    // };
+    // var clickPhotoFn = function click(obj) {
+    //   $('html, body').animate({
+    //     scrollTop: $("#after-photos").offset().top
+    //   }, 500);
+    //   injectPhoto(obj.value);
+    //
+    // };
+
+    function highlightTalkButton(bHighlight) {
+      var button = document.getElementById('voice-input-button');
+      if (bHighlight) {
+        button.style.background = "red";
+        button.style.color = "grey";
+      } else {
+        button.style.background = "white";
+        button.style.color = "black";
+      }
+    }</script><div id="voice-input"><textarea id="voice-input-text" placeholder="Spacebar to talk..." style="height:24px;width:100%"></textarea> <button id="voice-input-button" onclick="startButton(event)">TALK</button> <button id="mute-button" onclick="muteButton(event)">UNMUTE</button> <button id="nlu-button" onclick="nluButton(event)">RASA</button></div><div id="host-notifications" style="display:flex;flex:1;flex-direction:column;padding-top:60px"></div><div id="root"><div id="servisbot-app"><div style="border-radius:5px;overflow:hidden"><iframe id="servisbot-messenger-iframe" data-sb-test-messenger-frame="true" style="height:70vh;max-height:600px;width:350px;border:none;right:15px;bottom:90px;position:fixed;overflow:hidden;z-index:2147483647;transition:all .3s ease 0s;box-shadow:rgba(0,0,0,.25) 0 0 20px 1px;opacity:1;border-radius:5px"></iframe><iframe id="servisbot-messenger-iframe-roundel" data-sb-test-roundel-frame="true" style="height:82px;width:73px;border:none;right:0;bottom:0;position:fixed"></iframe></div></div><textarea style="min-height:0!important;max-height:none!important;height:0!important;visibility:hidden!important;overflow:hidden!important;position:absolute!important;z-index:-1000!important;top:0!important;right:0!important;letter-spacing:.2px;line-height:23.2px;font-family:Roboto,sans-serif;font-weight:400;font-size:16px;font-style:normal;tab-size:8;text-rendering:auto;text-transform:none;text-indent:0;padding:0 5px;border-width:0;box-sizing:content-box;width:234px"> </textarea><div id="host-notifications" style="background:#fff;display:flex;flex:1;flex-direction:column"></div></div><script>!function(i){function e(e){for(var r,t,n=e[0],o=e[1],u=e[2],l=0,f=[];l<n.length;l++)t=n[l],Object.prototype.hasOwnProperty.call(p,t)&&p[t]&&f.push(p[t][0]),p[t]=0;for(r in o)Object.prototype.hasOwnProperty.call(o,r)&&(i[r]=o[r]);for(s&&s(e);f.length;)f.shift()();return c.push.apply(c,u||[]),a()}function a(){for(var e,r=0;r<c.length;r++){for(var t=c[r],n=!0,o=1;o<t.length;o++){var u=t[o];0!==p[u]&&(n=!1)}n&&(c.splice(r--,1),e=l(l.s=t[0]))}return e}var t={},p={1:0},c=[];function l(e){if(t[e])return t[e].exports;var r=t[e]={i:e,l:!1,exports:{}};return i[e].call(r.exports,r,r.exports,l),r.l=!0,r.exports}l.m=i,l.c=t,l.d=function(e,r,t){l.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},l.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},l.t=function(r,e){if(1&e&&(r=l(r)),8&e)return r;if(4&e&&"object"==typeof r&&r&&r.__esModule)return r;var t=Object.create(null);if(l.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:r}),2&e&&"string"!=typeof r)for(var n in r)l.d(t,n,function(e){return r[e]}.bind(null,n));return t},l.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return l.d(r,"a",r),r},l.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},l.p="/";var r=window.webpackJsonp=window.webpackJsonp||[],n=r.push.bind(r);r.push=e,r=r.slice();for(var o=0;o<r.length;o++)e(r[o]);var s=n;a()}([])</script><script src="/static/js/2.b0af8610.chunk.js"></script><script src="/static/js/main.f4516552.chunk.js"></script></body></html>
