@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Covid19 Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='./map/mapbox-gl.css' />
+  <link rel="stylesheet" type="text/css" media="screen" href="./map/map.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./style/style.min.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./style/app.css" />
+  <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+</head>
+
+<body class="dark">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKDZZMM"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- System bar -->
+  <header class="sysbar">
+    <div class="items-container">
+      <div class="item">
+        <span class="product">Corona Virus Disease 19</span>
+        <span class="acronym">COVID19</span>
+      </div>
+    </div>
+    <div class="items-container">
+      <span class="color-gray hide-when-large">Last updated &nbsp;&nbsp;</span>
+      <span class="color-text" id="date"></span>
+    </div>
+    <div class="items-container">
+      <div style="margin-right: 50px;">
+        <label class="switch" id="switchTheme">
+          <input type="checkbox">
+          <i class="ball"></i>
+          <span data-enabled="Light" data-disabled="Dark"></span>
+        </label>
+      </div>
+      <span class="color-gray">
+        <a href="https://juangreco.com" target="_blank">About</a>
+      </span>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Application -->
+    <div class="app" id="app">
+
+      <!-- Application: Bar -->
+      <nav class="appbar" style="display: none;">
+        <div class="actions-left">
+          <div class="title">
+            <span>Dashboard</span>
+          </div>
+        </div>
+        <div class="actions-right">
+          <div class="item">
+            <span class="color-gray">Last updated &nbsp;&nbsp;</span>
+            <span class="color-text" id="date"></span>
+          </div>
+        </div>
+      </nav>
+
+      <div class="appbody">
+
+        <!-- Application: Content -->
+        <div class="appcontent">
+
+          <div class="row" style="overflow: hidden; height: 100%;">
+
+            <!-- Tile table -->
+            <div class="tile" id="t2">
+              <div class="header">
+                <div class="left">
+                  <div class="title">World statistics</div>
+                </div>
+                <div class="right">
+                  <div class="action" id="tuck">
+                    <i class="icon icon-resize-down"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="content">
+                <div class="row">
+                  <div class="column sm-12 kpi-container">
+                    <div class="covidkpi" id="confirmed"></div>
+                    <div class="covidkpi" id="deaths"></div>
+                    <div class="covidkpi" id="recovered"></div>
+                  </div>
+                </div>
+
+                <div class="hide-when-large" id="evolution"></div>
+                <br>
+
+                <div class="hide-when-large">
+                  <table class="table dashed compact sortable" style="margin: 0;">
+                    <thead>
+                      <tr id="fixed-thead">
+                        <th class="">Country</th>
+                        <th class="asc">Confirmed</th>
+                        <th class="">Deaths</th>
+                        <th class="">Recovered</th>
+                      </tr>
+                    </thead>
+                    <tbody style="visibility: hidden;">
+                      <tr>
+                        <td>China</td>
+                        <td>6</td>
+                        <td>0</td>
+                        <td>0</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <div class="table-container">
+                    <table class="table dashed compact sortable" style="margin-top: -34px;">
+                      <thead style="visibility: visible;">
+                        <tr id="data-thead">
+                          <th class="asc">Country</th>
+                          <th class="is-sortable">Confirmed</th>
+                          <th class="is-sortable">Deaths</th>
+                          <th class="is-sortable">Recovered</th>
+                        </tr>
+                      </thead>
+                      <tbody id="user-tbody">
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+            <!-- Tile map -->
+            <div class="tile sm-12 xl-12" id="t6" style="height: 100%;">
+              <div class="content no-margins">
+                <div class="map" id='map'></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+  </main>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HFY1WMW5P6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HFY1WMW5P6');
+  </script>
+  <script src="https://covid19js.com/dist/covid19.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="./index.js" charset="utf-8"></script>
+</body>
+
+</html>

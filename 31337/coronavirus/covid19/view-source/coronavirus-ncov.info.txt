@@ -1,0 +1,3365 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Карта коронавируса онлайн: статистика распространения в реальном времени</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v13.2 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Карта коронавируса обновляется в режиме онлайн, чтобы у вас была объективная статистика распространения вируса в реальном времени"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="https://coronavirus-ncov.info/" />
+<meta property="og:locale" content="ru_RU" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Карта коронавируса онлайн: статистика распространения в реальном времени" />
+<meta property="og:description" content="Карта коронавируса обновляется в режиме онлайн, чтобы у вас была объективная статистика распространения вируса в реальном времени" />
+<meta property="og:url" content="https://coronavirus-ncov.info/" />
+<meta property="og:site_name" content="Коронавирус" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Карта коронавируса обновляется в режиме онлайн, чтобы у вас была объективная статистика распространения вируса в реальном времени" />
+<meta name="twitter:title" content="Карта коронавируса онлайн: статистика распространения в реальном времени" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://coronavirus-ncov.info/#website","url":"https://coronavirus-ncov.info/","name":"\u041a\u043e\u0440\u043e\u043d\u0430\u0432\u0438\u0440\u0443\u0441","inLanguage":"ru-RU","description":"SARS-CoV-2, \u0440\u0430\u043d\u0435\u0435 2019-nCoV","potentialAction":{"@type":"SearchAction","target":"https://coronavirus-ncov.info/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://coronavirus-ncov.info/#webpage","url":"https://coronavirus-ncov.info/","name":"\u041a\u0430\u0440\u0442\u0430 \u043a\u043e\u0440\u043e\u043d\u0430\u0432\u0438\u0440\u0443\u0441\u0430 \u043e\u043d\u043b\u0430\u0439\u043d: \u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430 \u0440\u0430\u0441\u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0435\u043d\u0438\u044f \u0432 \u0440\u0435\u0430\u043b\u044c\u043d\u043e\u043c \u0432\u0440\u0435\u043c\u0435\u043d\u0438","isPartOf":{"@id":"https://coronavirus-ncov.info/#website"},"inLanguage":"ru-RU","datePublished":"2020-03-05T22:15:34+00:00","dateModified":"2020-03-12T10:15:41+00:00","description":"\u041a\u0430\u0440\u0442\u0430 \u043a\u043e\u0440\u043e\u043d\u0430\u0432\u0438\u0440\u0443\u0441\u0430 \u043e\u0431\u043d\u043e\u0432\u043b\u044f\u0435\u0442\u0441\u044f \u0432 \u0440\u0435\u0436\u0438\u043c\u0435 \u043e\u043d\u043b\u0430\u0439\u043d, \u0447\u0442\u043e\u0431\u044b \u0443 \u0432\u0430\u0441 \u0431\u044b\u043b\u0430 \u043e\u0431\u044a\u0435\u043a\u0442\u0438\u0432\u043d\u0430\u044f \u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430 \u0440\u0430\u0441\u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0435\u043d\u0438\u044f \u0432\u0438\u0440\u0443\u0441\u0430 \u0432 \u0440\u0435\u0430\u043b\u044c\u043d\u043e\u043c \u0432\u0440\u0435\u043c\u0435\u043d\u0438"}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/coronavirus-ncov.info\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://coronavirus-ncov.info/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2'  media='all' />
+<link rel='stylesheet' id='google-fonts-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A400%2C400i%2C700&#038;subset=cyrillic&#038;ver=5.3.2'  media='all' />
+<link rel='stylesheet' id='root-style-css'  href='https://coronavirus-ncov.info/wp-content/themes/root/css/style.min.css?ver=2.4.1'  media='all' />
+<script  src='https://coronavirus-ncov.info/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script  src='https://coronavirus-ncov.info/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://coronavirus-ncov.info/wp-json/' />
+<link rel="alternate" type="application/json+oembed" href="https://coronavirus-ncov.info/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcoronavirus-ncov.info%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://coronavirus-ncov.info/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcoronavirus-ncov.info%2F&#038;format=xml" />
+<style>@media (max-width: 991px) { .mob-search {display: block; margin-bottom: 25px;} }.scrolltop { background-color: #cccccc;}.scrolltop:after { color: #ffffff;}.scrolltop { width: 50px;}.scrolltop { height: 50px;}.scrolltop:after { content: "\f102"; }body { font-family: "Roboto" ,"Helvetica Neue", Helvetica, Arial, sans-serif; }.site-title, .site-title a { font-family: "Roboto" ,"Helvetica Neue", Helvetica, Arial, sans-serif; }.site-description { font-family: "Roboto" ,"Helvetica Neue", Helvetica, Arial, sans-serif; }.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6, .entry-image__title h1, .entry-title, .entry-title a { font-family: "Roboto" ,"Helvetica Neue", Helvetica, Arial, sans-serif; }.main-navigation ul li a, .main-navigation ul li .removed-link, .footer-navigation ul li a, .footer-navigation ul li .removed-link{ font-family: "Roboto" ,"Helvetica Neue", Helvetica, Arial, sans-serif; }@media (min-width: 576px) { body { font-size: 16px;} }@media (min-width: 576px) { .site-title, .site-title a { font-size: 28px;} }@media (min-width: 576px) { .site-description { font-size: 16px;} }@media (min-width: 576px) { .main-navigation ul li a, .main-navigation ul li .removed-link, .footer-navigation ul li a, .footer-navigation ul li .removed-link { font-size: 16px;} }@media (min-width: 576px) { body { line-height: 1.5;} }@media (min-width: 576px) { .site-title, .site-title a { line-height: 1.1;} }@media (min-width: 576px) { .main-navigation ul li a, .main-navigation ul li .removed-link, .footer-navigation ul li a, .footer-navigation ul li .removed-link { line-height: 1.5;} }.mob-hamburger span, .card-slider__category span, .card-slider-container .swiper-pagination-bullet-active, .page-separator, .pagination .current, .pagination a.page-numbers:hover, .entry-content ul > li:before, .entry-content ul:not([class])>li:before, .taxonomy-description ul:not([class])>li:before, .btn, .comment-respond .form-submit input, .contact-form .contact_submit, .page-links__item { background-color: #5a80b1;}.spoiler-box, .entry-content ol li:before, .entry-content ol:not([class]) li:before, .taxonomy-description ol:not([class]) li:before, .mob-hamburger, .inp:focus, .search-form__text:focus, .entry-content blockquote { border-color: #5a80b1;}.entry-content blockquote:before, .spoiler-box__title:after, .sidebar-navigation .menu-item-has-children:after, .star-rating--score-5:not(.hover) .star-rating-item:nth-child(1), .star-rating--score-5:not(.hover) .star-rating-item:nth-child(2), .star-rating--score-5:not(.hover) .star-rating-item:nth-child(3), .star-rating--score-5:not(.hover) .star-rating-item:nth-child(4), .star-rating--score-5:not(.hover) .star-rating-item:nth-child(5), .star-rating-item.hover { color: #5a80b1;}body { color: #333333;}a, .spanlink, .comment-reply-link, .pseudo-link, .root-pseudo-link { color: #428bca;}a:hover, a:focus, a:active, .spanlink:hover, .comment-reply-link:hover, .pseudo-link:hover { color: #e66212;}.site-header { background-color: #ffffff;}.site-title, .site-title a { color: #5a80b1;}.site-description, .site-description a { color: #666666;}.main-navigation, .footer-navigation, .main-navigation ul li .sub-menu, .footer-navigation ul li .sub-menu { background-color: #5a80b1;}.main-navigation ul li a, .main-navigation ul li .removed-link, .footer-navigation ul li a, .footer-navigation ul li .removed-link { color: #ffffff;}.site-footer { background-color: #ffffff;}body { background-image: url(https://coronavirus-ncov.info/wp-content/themes/root/images/backgrounds/honey.png) }@media (min-width: 768px) {.site-header { background-repeat: repeat; }}@media (min-width: 768px) {.site-header { background-position: center center; }}</style><link rel="icon" href="https://coronavirus-ncov.info/wp-content/uploads/2020/03/cropped-coronavirus-mi-min-scaled-1-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="https://coronavirus-ncov.info/wp-content/uploads/2020/03/cropped-coronavirus-mi-min-scaled-1-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://coronavirus-ncov.info/wp-content/uploads/2020/03/cropped-coronavirus-mi-min-scaled-1-180x180.jpg" />
+<meta name="msapplication-TileImage" content="https://coronavirus-ncov.info/wp-content/uploads/2020/03/cropped-coronavirus-mi-min-scaled-1-270x270.jpg" />
+    </head>
+
+<body class="home page-template-default page page-id-2 ">
+
+
+
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#main">Перейти к контенту</a>
+
+    
+    
+<header id="masthead" class="site-header container" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="site-header-inner ">
+        <div class="site-branding">
+            
+                            <div class="site-branding-container">
+
+                    <div class="site-title">Коронавирус</div>
+                                            <p class="site-description">SARS-CoV-2, ранее 2019-nCoV</p>
+                    
+                </div>
+                    </div><!-- .site-branding -->
+
+        
+        
+                    <div class="top-menu">
+                <div class="menu-%d0%b3%d0%bb%d0%b0%d0%b2%d0%bd%d0%be%d0%b5-container"><ul id="top_menu" class="menu"><li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48"><a href="https://coronavirus-ncov.info/title-coronavirus">Название вируса</a></li>
+<li id="menu-item-51" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51"><a href="https://coronavirus-ncov.info/origin">Происхождение вируса</a></li>
+</ul></div>            </div>
+        
+        
+        <div class="mob-hamburger"><span></span></div>
+
+                    <div class="mob-search">
+<form role="search" method="get" id="searchform_7089" action="https://coronavirus-ncov.info/" class="search-form">
+    <label class="screen-reader-text" for="s_7089">Поиск: </label>
+    <input type="text" value="" name="s" id="s_7089" class="search-form__text">
+    <button type="submit" id="searchsubmit_7089" class="search-form__submit"></button>
+</form></div>
+            </div><!--.site-header-inner-->
+</header><!-- #masthead -->
+    
+    
+    
+    <nav id="site-navigation" class="main-navigation container">
+        <div class="main-navigation-inner ">
+            <div class="menu-%d0%bf%d0%be%d0%b4-%d1%88%d0%b0%d0%bf%d0%ba%d0%be%d0%b9-container"><ul id="header_menu" class="menu"><li id="menu-item-85" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-has-children menu-item-85"><span class="removed-link">Карта заражения</span>
+<ul class="sub-menu">
+	<li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-87"><a href="https://coronavirus-ncov.info/statistic-world">Статистика в мире</a>
+	<ul class="sub-menu">
+		<li id="menu-item-148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a href="https://coronavirus-ncov.info/statistic-iran">Иран</a></li>
+		<li id="menu-item-151" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"><a href="https://coronavirus-ncov.info/statistic-south-korea">Южная Корея</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"><a href="https://coronavirus-ncov.info/symptoms">Симптомы</a></li>
+<li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="https://coronavirus-ncov.info/incubation-period">Инкубационный период</a></li>
+<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="https://coronavirus-ncov.info/vaccine">Вакцина</a></li>
+<li id="menu-item-59" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59"><a href="https://coronavirus-ncov.info/faq">База знаний</a></li>
+<li id="menu-item-67" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-67"><a href="https://coronavirus-ncov.info/russian-federation">Россия</a>
+<ul class="sub-menu">
+	<li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="https://coronavirus-ncov.info/statistics-rf">Статистика в РФ</a></li>
+</ul>
+</li>
+<li id="menu-item-146" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146"><a href="https://coronavirus-ncov.info/statistic-china">Китай</a></li>
+<li id="menu-item-147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a href="https://coronavirus-ncov.info/statistic-italy">Италия</a></li>
+</ul></div>        </div><!--.main-navigation-inner-->
+    </nav><!-- #site-navigation -->
+
+    
+
+    
+    
+	<div id="content" class="site-content container">
+
+        
+
+<div itemscope itemtype="http://schema.org/Article">
+
+    
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
+
+            
+            
+<article id="post-2" class="post-2 page type-page status-publish ">
+
+    
+                    <header class="entry-header">
+                                <h1 class="entry-title" itemprop="headline">Карта коронавируса онлайн: статистика распространения в реальном времени</h1>                            </header><!-- .entry-header -->
+        
+        
+        
+    
+    <div class="entry-content" itemprop="articleBody">
+        <p><iframe src="https://www.google.com/maps/d/embed?mid=1a04iBi41DznkMaQRnICO40ktROfnMfMx" width="640" height="480"></iframe><br />
+За распространением коронавирусной инфекции без преувеличения следит весь мир. Нужно знать заболевание и иметь представление о его масштабе. Поскольку простой способ убедить себя, что нужно придерживаться мер предосторожности, это понять серьезность коронавируса. Для следящих за новостями об эпидемии коронавируса карта онлайн работает и обновляется 24/7.</p>
+<div class="table-of-contents open"><!--noindex--><div class="table-of-contents__header"><span class="table-of-contents__hide js-table-of-contents-hide">Содержание</span></div><ol class="table-of-contents__list js-table-of-contents-list">
+<li class="level-1"><a href="#statistika-rasprostraneniya-v-realnom-vremeni">Статистика распространения в реальном времени</a></li><li class="level-1"><a href="#kak-rabotaet-onlayn-karta-koronavirusa">Как работает онлайн-карта коронавируса</a></li><li class="level-1"><a href="#pochemu-vazhno-znat-statistiku-koronavirusa">Почему важно знать статистику коронавируса</a></li></ol><!--/noindex--></div><h2 id="statistika-rasprostraneniya-v-realnom-vremeni">Статистика распространения в реальном времени</h2>
+<table class="table table-bordered table-responsive-sm">
+<thead>
+<tr>
+<th scope="col">
+<p class="stat_countries_count">Стран: 123</p>
+</th>
+<th scope="col" class="text-center">
+<p>Заражено</p>
+</th>
+<th scope="col" class="text-center">
+<p>Болеют</p>
+</th>
+<th scope="col" class="text-center">
+<p>Смерти</p>
+</th>
+<th scope="col" class="text-center">
+<p>Выздоровевшие</p>
+</th>
+<th scope="col" class="text-center">
+<p>% Смертности</p>
+</th>
+<th scope="col" class="text-center">
+<p>% Выздоровления</p>
+</th>
+</tr>
+</thead>
+<tbody class="country_data_rows">
+<tr>
+<th scope="row" class="text-left">
+<p>Total 🌐  </p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Total 🌐  &quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Total 🌐  &quot;, false, &quot;modalBody2&quot;, true);">126513</a></p>
+</td>
+<td>
+<p class="text-center">53592</p>
+</td>
+<td>
+<p class="text-center">4634</p>
+</td>
+<td>
+<p class="text-center">68287</p>
+</td>
+<td>
+<p class="text-center">3.66%</p>
+</td>
+<td>
+<p class="text-center">53.98%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Total (Outside China) 🌎  </p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Total (Outside China) 🌎  &quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Total (Outside China) 🌎  &quot;, false, &quot;modalBody2&quot;, true);">45717</a></p>
+</td>
+<td>
+<p class="text-center">38767</p>
+</td>
+<td>
+<p class="text-center">1465</p>
+</td>
+<td>
+<p class="text-center">5485</p>
+</td>
+<td>
+<p class="text-center">3.2%</p>
+</td>
+<td>
+<p class="text-center">12%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>China 🇨🇳</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;China 🇨🇳&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;China 🇨🇳&quot;, false, &quot;modalBody2&quot;, true);">80796</a></p>
+</td>
+<td>
+<p class="text-center">14825</p>
+</td>
+<td>
+<p class="text-center">3169</p>
+</td>
+<td>
+<p class="text-center">62802</p>
+</td>
+<td>
+<p class="text-center">3.92%</p>
+</td>
+<td>
+<p class="text-center">77.73%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Italy 🇮🇹</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Italy 🇮🇹&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Italy 🇮🇹&quot;, false, &quot;modalBody2&quot;, true);">12462</a></p>
+</td>
+<td>
+<p class="text-center">10590</p>
+</td>
+<td>
+<p class="text-center">827</p>
+</td>
+<td>
+<p class="text-center">1045</p>
+</td>
+<td>
+<p class="text-center">6.64%</p>
+</td>
+<td>
+<p class="text-center">8.39%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Iran 🇮🇷</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Iran 🇮🇷&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Iran 🇮🇷&quot;, false, &quot;modalBody2&quot;, true);">9000</a></p>
+</td>
+<td>
+<p class="text-center">5687</p>
+</td>
+<td>
+<p class="text-center">354</p>
+</td>
+<td>
+<p class="text-center">2959</p>
+</td>
+<td>
+<p class="text-center">3.93%</p>
+</td>
+<td>
+<p class="text-center">32.88%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>South Korea 🇰🇷</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;South Korea 🇰🇷&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;South Korea 🇰🇷&quot;, false, &quot;modalBody2&quot;, true);">7869</a></p>
+</td>
+<td>
+<p class="text-center">7470</p>
+</td>
+<td>
+<p class="text-center">66</p>
+</td>
+<td>
+<p class="text-center">333</p>
+</td>
+<td>
+<p class="text-center">0.84%</p>
+</td>
+<td>
+<p class="text-center">4.23%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>France 🇫🇷</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;France 🇫🇷&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;France 🇫🇷&quot;, false, &quot;modalBody2&quot;, true);">2281</a></p>
+</td>
+<td>
+<p class="text-center">2221</p>
+</td>
+<td>
+<p class="text-center">48</p>
+</td>
+<td>
+<p class="text-center">12</p>
+</td>
+<td>
+<p class="text-center">2.1%</p>
+</td>
+<td>
+<p class="text-center">0.53%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Spain 🇪🇸</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Spain 🇪🇸&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Spain 🇪🇸&quot;, false, &quot;modalBody2&quot;, true);">2277</a></p>
+</td>
+<td>
+<p class="text-center">2039</p>
+</td>
+<td>
+<p class="text-center">55</p>
+</td>
+<td>
+<p class="text-center">183</p>
+</td>
+<td>
+<p class="text-center">2.42%</p>
+</td>
+<td>
+<p class="text-center">8.04%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Germany 🇩🇪</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Germany 🇩🇪&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Germany 🇩🇪&quot;, false, &quot;modalBody2&quot;, true);">2027</a></p>
+</td>
+<td>
+<p class="text-center">1999</p>
+</td>
+<td>
+<p class="text-center">3</p>
+</td>
+<td>
+<p class="text-center">25</p>
+</td>
+<td>
+<p class="text-center">0.15%</p>
+</td>
+<td>
+<p class="text-center">1.23%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>United States 🇺🇸</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;United States 🇺🇸&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;United States 🇺🇸&quot;, false, &quot;modalBody2&quot;, true);">1336</a></p>
+</td>
+<td>
+<p class="text-center">1283</p>
+</td>
+<td>
+<p class="text-center">38</p>
+</td>
+<td>
+<p class="text-center">15</p>
+</td>
+<td>
+<p class="text-center">2.84%</p>
+</td>
+<td>
+<p class="text-center">1.12%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Diamond Princess 🛳  </p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Diamond Princess 🛳  &quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Diamond Princess 🛳  &quot;, false, &quot;modalBody2&quot;, true);">696</a></p>
+</td>
+<td>
+<p class="text-center">364</p>
+</td>
+<td>
+<p class="text-center">7</p>
+</td>
+<td>
+<p class="text-center">325</p>
+</td>
+<td>
+<p class="text-center">1.01%</p>
+</td>
+<td>
+<p class="text-center">46.7%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Switzerland 🇨🇭</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Switzerland 🇨🇭&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Switzerland 🇨🇭&quot;, false, &quot;modalBody2&quot;, true);">652</a></p>
+</td>
+<td>
+<p class="text-center">644</p>
+</td>
+<td>
+<p class="text-center">4</p>
+</td>
+<td>
+<p class="text-center">4</p>
+</td>
+<td>
+<p class="text-center">0.61%</p>
+</td>
+<td>
+<p class="text-center">0.61%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Japan 🇯🇵</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Japan 🇯🇵&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Japan 🇯🇵&quot;, false, &quot;modalBody2&quot;, true);">639</a></p>
+</td>
+<td>
+<p class="text-center">506</p>
+</td>
+<td>
+<p class="text-center">15</p>
+</td>
+<td>
+<p class="text-center">118</p>
+</td>
+<td>
+<p class="text-center">2.35%</p>
+</td>
+<td>
+<p class="text-center">18.47%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Norway 🇳🇴</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Norway 🇳🇴&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Norway 🇳🇴&quot;, false, &quot;modalBody2&quot;, true);">630</a></p>
+</td>
+<td>
+<p class="text-center">629</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0.16%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Denmark 🇩🇰</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Denmark 🇩🇰&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Denmark 🇩🇰&quot;, false, &quot;modalBody2&quot;, true);">514</a></p>
+</td>
+<td>
+<p class="text-center">513</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0.19%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Netherlands 🇳🇱</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Netherlands 🇳🇱&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Netherlands 🇳🇱&quot;, false, &quot;modalBody2&quot;, true);">503</a></p>
+</td>
+<td>
+<p class="text-center">498</p>
+</td>
+<td>
+<p class="text-center">5</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0.99%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Sweden 🇸🇪</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Sweden 🇸🇪&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Sweden 🇸🇪&quot;, false, &quot;modalBody2&quot;, true);">500</a></p>
+</td>
+<td>
+<p class="text-center">498</p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">0.2%</p>
+</td>
+<td>
+<p class="text-center">0.2%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>United Kingdom 🇬🇧</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;United Kingdom 🇬🇧&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;United Kingdom 🇬🇧&quot;, false, &quot;modalBody2&quot;, true);">456</a></p>
+</td>
+<td>
+<p class="text-center">430</p>
+</td>
+<td>
+<p class="text-center">8</p>
+</td>
+<td>
+<p class="text-center">18</p>
+</td>
+<td>
+<p class="text-center">1.75%</p>
+</td>
+<td>
+<p class="text-center">3.95%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Belgium 🇧🇪</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Belgium 🇧🇪&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Belgium 🇧🇪&quot;, false, &quot;modalBody2&quot;, true);">314</a></p>
+</td>
+<td>
+<p class="text-center">310</p>
+</td>
+<td>
+<p class="text-center">3</p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">0.96%</p>
+</td>
+<td>
+<p class="text-center">0.32%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Austria 🇦🇹</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Austria 🇦🇹&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Austria 🇦🇹&quot;, false, &quot;modalBody2&quot;, true);">302</a></p>
+</td>
+<td>
+<p class="text-center">298</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">4</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">1.32%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Qatar 🇶🇦</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Qatar 🇶🇦&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Qatar 🇶🇦&quot;, false, &quot;modalBody2&quot;, true);">262</a></p>
+</td>
+<td>
+<p class="text-center">262</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Bahrain 🇧🇭</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Bahrain 🇧🇭&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Bahrain 🇧🇭&quot;, false, &quot;modalBody2&quot;, true);">195</a></p>
+</td>
+<td>
+<p class="text-center">160</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">35</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">17.95%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Singapore 🇸🇬</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Singapore 🇸🇬&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Singapore 🇸🇬&quot;, false, &quot;modalBody2&quot;, true);">178</a></p>
+</td>
+<td>
+<p class="text-center">82</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">96</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">53.93%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Australia 🇦🇺</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Australia 🇦🇺&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Australia 🇦🇺&quot;, false, &quot;modalBody2&quot;, true);">156</a></p>
+</td>
+<td>
+<p class="text-center">129</p>
+</td>
+<td>
+<p class="text-center">3</p>
+</td>
+<td>
+<p class="text-center">24</p>
+</td>
+<td>
+<p class="text-center">1.92%</p>
+</td>
+<td>
+<p class="text-center">15.38%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Malaysia 🇲🇾</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Malaysia 🇲🇾&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Malaysia 🇲🇾&quot;, false, &quot;modalBody2&quot;, true);">149</a></p>
+</td>
+<td>
+<p class="text-center">123</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">26</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">17.45%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Hong Kong 🇭🇰</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Hong Kong 🇭🇰&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Hong Kong 🇭🇰&quot;, false, &quot;modalBody2&quot;, true);">129</a></p>
+</td>
+<td>
+<p class="text-center">66</p>
+</td>
+<td>
+<p class="text-center">3</p>
+</td>
+<td>
+<p class="text-center">60</p>
+</td>
+<td>
+<p class="text-center">2.33%</p>
+</td>
+<td>
+<p class="text-center">46.51%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Canada 🇨🇦</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Canada 🇨🇦&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Canada 🇨🇦&quot;, false, &quot;modalBody2&quot;, true);">118</a></p>
+</td>
+<td>
+<p class="text-center">108</p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">9</p>
+</td>
+<td>
+<p class="text-center">0.85%</p>
+</td>
+<td>
+<p class="text-center">7.63%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Israel 🇮🇱</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Israel 🇮🇱&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Israel 🇮🇱&quot;, false, &quot;modalBody2&quot;, true);">100</a></p>
+</td>
+<td>
+<p class="text-center">96</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">4</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">4%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Greece 🇬🇷</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Greece 🇬🇷&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Greece 🇬🇷&quot;, false, &quot;modalBody2&quot;, true);">99</a></p>
+</td>
+<td>
+<p class="text-center">98</p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">1.01%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Czech Republic 🇨🇿</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Czech Republic 🇨🇿&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Czech Republic 🇨🇿&quot;, false, &quot;modalBody2&quot;, true);">94</a></p>
+</td>
+<td>
+<p class="text-center">94</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Iceland 🇮🇸</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Iceland 🇮🇸&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Iceland 🇮🇸&quot;, false, &quot;modalBody2&quot;, true);">85</a></p>
+</td>
+<td>
+<p class="text-center">84</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">1.18%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Kuwait 🇰🇼</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Kuwait 🇰🇼&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Kuwait 🇰🇼&quot;, false, &quot;modalBody2&quot;, true);">80</a></p>
+</td>
+<td>
+<p class="text-center">78</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">2</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">2.5%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>United Arab Emirates 🇦🇪</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;United Arab Emirates 🇦🇪&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;United Arab Emirates 🇦🇪&quot;, false, &quot;modalBody2&quot;, true);">74</a></p>
+</td>
+<td>
+<p class="text-center">57</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">17</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">22.97%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>India 🇮🇳</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;India 🇮🇳&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;India 🇮🇳&quot;, false, &quot;modalBody2&quot;, true);">73</a></p>
+</td>
+<td>
+<p class="text-center">69</p>
+</td>
+<td>
+<p class="text-center">0</p>
+</td>
+<td>
+<p class="text-center">4</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">5.48%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Iraq 🇮🇶</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Iraq 🇮🇶&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Iraq 🇮🇶&quot;, false, &quot;modalBody2&quot;, true);">71</a></p>
+</td>
+<td>
+<p class="text-center">49</p>
+</td>
+<td>
+<p class="text-center">7</p>
+</td>
+<td>
+<p class="text-center">15</p>
+</td>
+<td>
+<p class="text-center">9.86%</p>
+</td>
+<td>
+<p class="text-center">21.13%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Thailand 🇹🇭</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Thailand 🇹🇭&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Thailand 🇹🇭&quot;, false, &quot;modalBody2&quot;, true);">70</a></p>
+</td>
+<td>
+<p class="text-center">35</p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">34</p>
+</td>
+<td>
+<p class="text-center">1.43%</p>
+</td>
+<td>
+<p class="text-center">48.57%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>San Marino 🇸🇲</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;San Marino 🇸🇲&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;San Marino 🇸🇲&quot;, false, &quot;modalBody2&quot;, true);">62</a></p>
+</td>
+<td>
+<p class="text-center">60</p>
+</td>
+<td>
+<p class="text-center">2</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">3.23%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Lebanon 🇱🇧</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Lebanon 🇱🇧&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Lebanon 🇱🇧&quot;, false, &quot;modalBody2&quot;, true);">61</a></p>
+</td>
+<td>
+<p class="text-center">58</p>
+</td>
+<td>
+<p class="text-center">2</p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">3.28%</p>
+</td>
+<td>
+<p class="text-center">1.64%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Egypt 🇪🇬</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Egypt 🇪🇬&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Egypt 🇪🇬&quot;, false, &quot;modalBody2&quot;, true);">60</a></p>
+</td>
+<td>
+<p class="text-center">32</p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">27</p>
+</td>
+<td>
+<p class="text-center">1.67%</p>
+</td>
+<td>
+<p class="text-center">45%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Finland 🇫🇮</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Finland 🇫🇮&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Finland 🇫🇮&quot;, false, &quot;modalBody2&quot;, true);">59</a></p>
+</td>
+<td>
+<p class="text-center">58</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">1.69%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Portugal 🇵🇹</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Portugal 🇵🇹&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Portugal 🇵🇹&quot;, false, &quot;modalBody2&quot;, true);">59</a></p>
+</td>
+<td>
+<p class="text-center">59</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Slovenia 🇸🇮</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Slovenia 🇸🇮&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Slovenia 🇸🇮&quot;, false, &quot;modalBody2&quot;, true);">57</a></p>
+</td>
+<td>
+<p class="text-center">57</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Brazil 🇧🇷</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Brazil 🇧🇷&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Brazil 🇧🇷&quot;, false, &quot;modalBody2&quot;, true);">52</a></p>
+</td>
+<td>
+<p class="text-center">52</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Philippines 🇵🇭</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Philippines 🇵🇭&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Philippines 🇵🇭&quot;, false, &quot;modalBody2&quot;, true);">49</a></p>
+</td>
+<td>
+<p class="text-center">45</p>
+</td>
+<td>
+<p class="text-center">2</p>
+</td>
+<td>
+<p class="text-center">2</p>
+</td>
+<td>
+<p class="text-center">4.08%</p>
+</td>
+<td>
+<p class="text-center">4.08%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Taiwan 🇹🇼</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Taiwan 🇹🇼&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Taiwan 🇹🇼&quot;, false, &quot;modalBody2&quot;, true);">49</a></p>
+</td>
+<td>
+<p class="text-center">31</p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">17</p>
+</td>
+<td>
+<p class="text-center">2.04%</p>
+</td>
+<td>
+<p class="text-center">34.69%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Romania 🇷🇴</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Romania 🇷🇴&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Romania 🇷🇴&quot;, false, &quot;modalBody2&quot;, true);">49</a></p>
+</td>
+<td>
+<p class="text-center">43</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">6</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">12.24%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Poland 🇵🇱</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Poland 🇵🇱&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Poland 🇵🇱&quot;, false, &quot;modalBody2&quot;, true);">47</a></p>
+</td>
+<td>
+<p class="text-center">47</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Saudi Arabia 🇸🇦</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Saudi Arabia 🇸🇦&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Saudi Arabia 🇸🇦&quot;, false, &quot;modalBody2&quot;, true);">45</a></p>
+</td>
+<td>
+<p class="text-center">44</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">2.22%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Ireland 🇮🇪</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Ireland 🇮🇪&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Ireland 🇮🇪&quot;, false, &quot;modalBody2&quot;, true);">43</a></p>
+</td>
+<td>
+<p class="text-center">42</p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">2.33%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Vietnam 🇻🇳</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Vietnam 🇻🇳&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Vietnam 🇻🇳&quot;, false, &quot;modalBody2&quot;, true);">38</a></p>
+</td>
+<td>
+<p class="text-center">22</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">16</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">42.11%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Indonesia 🇮🇩</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Indonesia 🇮🇩&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Indonesia 🇮🇩&quot;, false, &quot;modalBody2&quot;, true);">34</a></p>
+</td>
+<td>
+<p class="text-center">31</p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">2</p>
+</td>
+<td>
+<p class="text-center">2.94%</p>
+</td>
+<td>
+<p class="text-center">5.88%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Palestine 🇵🇸</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Palestine 🇵🇸&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Palestine 🇵🇸&quot;, false, &quot;modalBody2&quot;, true);">30</a></p>
+</td>
+<td>
+<p class="text-center">30</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Georgia 🇬🇪</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Georgia 🇬🇪&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Georgia 🇬🇪&quot;, false, &quot;modalBody2&quot;, true);">24</a></p>
+</td>
+<td>
+<p class="text-center">24</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Algeria 🇩🇿</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Algeria 🇩🇿&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Algeria 🇩🇿&quot;, false, &quot;modalBody2&quot;, true);">24</a></p>
+</td>
+<td>
+<p class="text-center">24</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Chile 🇨🇱</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Chile 🇨🇱&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Chile 🇨🇱&quot;, false, &quot;modalBody2&quot;, true);">23</a></p>
+</td>
+<td>
+<p class="text-center">23</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Costa Rica 🇨🇷</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Costa Rica 🇨🇷&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Costa Rica 🇨🇷&quot;, false, &quot;modalBody2&quot;, true);">22</a></p>
+</td>
+<td>
+<p class="text-center">22</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Russia 🇷🇺</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Russia 🇷🇺&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Russia 🇷🇺&quot;, false, &quot;modalBody2&quot;, true);">20</a></p>
+</td>
+<td>
+<p class="text-center">17</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">3</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">15%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Argentina 🇦🇷</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Argentina 🇦🇷&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Argentina 🇦🇷&quot;, false, &quot;modalBody2&quot;, true);">19</a></p>
+</td>
+<td>
+<p class="text-center">18</p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">5.26%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Croatia 🇭🇷</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Croatia 🇭🇷&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Croatia 🇭🇷&quot;, false, &quot;modalBody2&quot;, true);">19</a></p>
+</td>
+<td>
+<p class="text-center">19</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Pakistan 🇵🇰</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Pakistan 🇵🇰&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Pakistan 🇵🇰&quot;, false, &quot;modalBody2&quot;, true);">19</a></p>
+</td>
+<td>
+<p class="text-center">17</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">2</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">10.53%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Oman 🇴🇲</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Oman 🇴🇲&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Oman 🇴🇲&quot;, false, &quot;modalBody2&quot;, true);">18</a></p>
+</td>
+<td>
+<p class="text-center">9</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">9</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">50%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Ecuador 🇪🇨</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Ecuador 🇪🇨&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Ecuador 🇪🇨&quot;, false, &quot;modalBody2&quot;, true);">17</a></p>
+</td>
+<td>
+<p class="text-center">17</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>South Africa 🇿🇦</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;South Africa 🇿🇦&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;South Africa 🇿🇦&quot;, false, &quot;modalBody2&quot;, true);">17</a></p>
+</td>
+<td>
+<p class="text-center">17</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Estonia 🇪🇪</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Estonia 🇪🇪&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Estonia 🇪🇪&quot;, false, &quot;modalBody2&quot;, true);">16</a></p>
+</td>
+<td>
+<p class="text-center">16</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Albania 🇦🇱</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Albania 🇦🇱&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Albania 🇦🇱&quot;, false, &quot;modalBody2&quot;, true);">15</a></p>
+</td>
+<td>
+<p class="text-center">14</p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">6.67%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Hungary 🇭🇺</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Hungary 🇭🇺&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Hungary 🇭🇺&quot;, false, &quot;modalBody2&quot;, true);">13</a></p>
+</td>
+<td>
+<p class="text-center">13</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Peru 🇵🇪</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Peru 🇵🇪&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Peru 🇵🇪&quot;, false, &quot;modalBody2&quot;, true);">13</a></p>
+</td>
+<td>
+<p class="text-center">13</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Serbia 🇷🇸</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Serbia 🇷🇸&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Serbia 🇷🇸&quot;, false, &quot;modalBody2&quot;, true);">12</a></p>
+</td>
+<td>
+<p class="text-center">12</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Belarus 🇧🇾</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Belarus 🇧🇾&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Belarus 🇧🇾&quot;, false, &quot;modalBody2&quot;, true);">12</a></p>
+</td>
+<td>
+<p class="text-center">9</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">3</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">25%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Mexico 🇲🇽</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Mexico 🇲🇽&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Mexico 🇲🇽&quot;, false, &quot;modalBody2&quot;, true);">12</a></p>
+</td>
+<td>
+<p class="text-center">8</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">4</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">33.33%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Azerbaijan 🇦🇿</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Azerbaijan 🇦🇿&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Azerbaijan 🇦🇿&quot;, false, &quot;modalBody2&quot;, true);">11</a></p>
+</td>
+<td>
+<p class="text-center">8</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">3</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">27.27%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Brunei 🇧🇳</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Brunei 🇧🇳&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Brunei 🇧🇳&quot;, false, &quot;modalBody2&quot;, true);">11</a></p>
+</td>
+<td>
+<p class="text-center">11</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Latvia 🇱🇻</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Latvia 🇱🇻&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Latvia 🇱🇻&quot;, false, &quot;modalBody2&quot;, true);">10</a></p>
+</td>
+<td>
+<p class="text-center">9</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">10%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Macau 🇲🇴</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Macau 🇲🇴&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Macau 🇲🇴&quot;, false, &quot;modalBody2&quot;, true);">10</a></p>
+</td>
+<td>
+<p class="text-center">0</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">10</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">100%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Slovakia 🇸🇰</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Slovakia 🇸🇰&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Slovakia 🇸🇰&quot;, false, &quot;modalBody2&quot;, true);">10</a></p>
+</td>
+<td>
+<p class="text-center">10</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Colombia 🇨🇴</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Colombia 🇨🇴&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Colombia 🇨🇴&quot;, false, &quot;modalBody2&quot;, true);">9</a></p>
+</td>
+<td>
+<p class="text-center">9</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Maldives 🇲🇻</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Maldives 🇲🇻&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Maldives 🇲🇻&quot;, false, &quot;modalBody2&quot;, true);">8</a></p>
+</td>
+<td>
+<p class="text-center">8</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Panama 🇵🇦</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Panama 🇵🇦&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Panama 🇵🇦&quot;, false, &quot;modalBody2&quot;, true);">8</a></p>
+</td>
+<td>
+<p class="text-center">7</p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">12.5%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Afghanistan 🇦🇫</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Afghanistan 🇦🇫&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Afghanistan 🇦🇫&quot;, false, &quot;modalBody2&quot;, true);">7</a></p>
+</td>
+<td>
+<p class="text-center">7</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Bosnia and Herzegovina 🇧🇦</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Bosnia and Herzegovina 🇧🇦&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Bosnia and Herzegovina 🇧🇦&quot;, false, &quot;modalBody2&quot;, true);">7</a></p>
+</td>
+<td>
+<p class="text-center">7</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Bulgaria 🇧🇬</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Bulgaria 🇧🇬&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Bulgaria 🇧🇬&quot;, false, &quot;modalBody2&quot;, true);">7</a></p>
+</td>
+<td>
+<p class="text-center">6</p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">14.29%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Luxembourg 🇱🇺</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Luxembourg 🇱🇺&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Luxembourg 🇱🇺&quot;, false, &quot;modalBody2&quot;, true);">7</a></p>
+</td>
+<td>
+<p class="text-center">7</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>North Macedonia 🇲🇰</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;North Macedonia 🇲🇰&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;North Macedonia 🇲🇰&quot;, false, &quot;modalBody2&quot;, true);">7</a></p>
+</td>
+<td>
+<p class="text-center">7</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Tunisia 🇹🇳</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Tunisia 🇹🇳&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Tunisia 🇹🇳&quot;, false, &quot;modalBody2&quot;, true);">7</a></p>
+</td>
+<td>
+<p class="text-center">7</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Cyprus 🇨🇾</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Cyprus 🇨🇾&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Cyprus 🇨🇾&quot;, false, &quot;modalBody2&quot;, true);">6</a></p>
+</td>
+<td>
+<p class="text-center">6</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Malta 🇲🇹</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Malta 🇲🇹&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Malta 🇲🇹&quot;, false, &quot;modalBody2&quot;, true);">6</a></p>
+</td>
+<td>
+<p class="text-center">6</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Morocco 🇲🇦</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Morocco 🇲🇦&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Morocco 🇲🇦&quot;, false, &quot;modalBody2&quot;, true);">6</a></p>
+</td>
+<td>
+<p class="text-center">5</p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">16.67%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Dominican Republic 🇩🇴</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Dominican Republic 🇩🇴&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Dominican Republic 🇩🇴&quot;, false, &quot;modalBody2&quot;, true);">5</a></p>
+</td>
+<td>
+<p class="text-center">5</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>French Guiana 🇬🇫</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;French Guiana 🇬🇫&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;French Guiana 🇬🇫&quot;, false, &quot;modalBody2&quot;, true);">5</a></p>
+</td>
+<td>
+<p class="text-center">5</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>New Zealand 🇳🇿</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;New Zealand 🇳🇿&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;New Zealand 🇳🇿&quot;, false, &quot;modalBody2&quot;, true);">5</a></p>
+</td>
+<td>
+<p class="text-center">5</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Paraguay 🇵🇾</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Paraguay 🇵🇾&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Paraguay 🇵🇾&quot;, false, &quot;modalBody2&quot;, true);">5</a></p>
+</td>
+<td>
+<p class="text-center">5</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Senegal 🇸🇳</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Senegal 🇸🇳&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Senegal 🇸🇳&quot;, false, &quot;modalBody2&quot;, true);">4</a></p>
+</td>
+<td>
+<p class="text-center">3</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">25%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Bangladesh 🇧🇩</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Bangladesh 🇧🇩&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Bangladesh 🇧🇩&quot;, false, &quot;modalBody2&quot;, true);">3</a></p>
+</td>
+<td>
+<p class="text-center">3</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Cambodia 🇰🇭</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Cambodia 🇰🇭&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Cambodia 🇰🇭&quot;, false, &quot;modalBody2&quot;, true);">3</a></p>
+</td>
+<td>
+<p class="text-center">2</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">33.33%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Cuba 🇨🇺</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Cuba 🇨🇺&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Cuba 🇨🇺&quot;, false, &quot;modalBody2&quot;, true);">3</a></p>
+</td>
+<td>
+<p class="text-center">3</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Lithuania 🇱🇹</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Lithuania 🇱🇹&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Lithuania 🇱🇹&quot;, false, &quot;modalBody2&quot;, true);">3</a></p>
+</td>
+<td>
+<p class="text-center">3</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Martinique 🇲🇶</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Martinique 🇲🇶&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Martinique 🇲🇶&quot;, false, &quot;modalBody2&quot;, true);">3</a></p>
+</td>
+<td>
+<p class="text-center">3</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Moldova 🇲🇩</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Moldova 🇲🇩&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Moldova 🇲🇩&quot;, false, &quot;modalBody2&quot;, true);">3</a></p>
+</td>
+<td>
+<p class="text-center">3</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Bolivia 🇧🇴</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Bolivia 🇧🇴&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Bolivia 🇧🇴&quot;, false, &quot;modalBody2&quot;, true);">2</a></p>
+</td>
+<td>
+<p class="text-center">2</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Burkina Faso 🇧🇫</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Burkina Faso 🇧🇫&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Burkina Faso 🇧🇫&quot;, false, &quot;modalBody2&quot;, true);">2</a></p>
+</td>
+<td>
+<p class="text-center">2</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Cameroon 🇨🇲</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Cameroon 🇨🇲&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Cameroon 🇨🇲&quot;, false, &quot;modalBody2&quot;, true);">2</a></p>
+</td>
+<td>
+<p class="text-center">2</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Channel Islands</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Channel Islands&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Channel Islands&quot;, false, &quot;modalBody2&quot;, true);">2</a></p>
+</td>
+<td>
+<p class="text-center">2</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Faroe Islands 🇫🇴</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Faroe Islands 🇫🇴&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Faroe Islands 🇫🇴&quot;, false, &quot;modalBody2&quot;, true);">2</a></p>
+</td>
+<td>
+<p class="text-center">2</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Honduras 🇭🇳</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Honduras 🇭🇳&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Honduras 🇭🇳&quot;, false, &quot;modalBody2&quot;, true);">2</a></p>
+</td>
+<td>
+<p class="text-center">2</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Jamaica 🇯🇲</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Jamaica 🇯🇲&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Jamaica 🇯🇲&quot;, false, &quot;modalBody2&quot;, true);">2</a></p>
+</td>
+<td>
+<p class="text-center">2</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Nigeria 🇳🇬</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Nigeria 🇳🇬&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Nigeria 🇳🇬&quot;, false, &quot;modalBody2&quot;, true);">2</a></p>
+</td>
+<td>
+<p class="text-center">2</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Saint Martin 🇸🇽</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Saint Martin 🇸🇽&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Saint Martin 🇸🇽&quot;, false, &quot;modalBody2&quot;, true);">2</a></p>
+</td>
+<td>
+<p class="text-center">2</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Sri Lanka 🇱🇰</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Sri Lanka 🇱🇰&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Sri Lanka 🇱🇰&quot;, false, &quot;modalBody2&quot;, true);">2</a></p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">50%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Andorra 🇦🇩</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Andorra 🇦🇩&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Andorra 🇦🇩&quot;, false, &quot;modalBody2&quot;, true);">1</a></p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Armenia 🇦🇲</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Armenia 🇦🇲&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Armenia 🇦🇲&quot;, false, &quot;modalBody2&quot;, true);">1</a></p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Bhutan 🇧🇹</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Bhutan 🇧🇹&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Bhutan 🇧🇹&quot;, false, &quot;modalBody2&quot;, true);">1</a></p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Congo(Democratic Republic of the) 🇨🇩</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Congo(Democratic Republic of the) 🇨🇩&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Congo(Democratic Republic of the) 🇨🇩&quot;, false, &quot;modalBody2&quot;, true);">1</a></p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>French Polynesia 🇵🇫</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;French Polynesia 🇵🇫&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;French Polynesia 🇵🇫&quot;, false, &quot;modalBody2&quot;, true);">1</a></p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Gibraltar 🇬🇮</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Gibraltar 🇬🇮&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Gibraltar 🇬🇮&quot;, false, &quot;modalBody2&quot;, true);">1</a></p>
+</td>
+<td>
+<p class="text-center">0</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">100%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Ivory Coast 🇨🇮</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Ivory Coast 🇨🇮&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Ivory Coast 🇨🇮&quot;, false, &quot;modalBody2&quot;, true);">1</a></p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Jordan 🇯🇴</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Jordan 🇯🇴&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Jordan 🇯🇴&quot;, false, &quot;modalBody2&quot;, true);">1</a></p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Liechtenstein 🇱🇮</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Liechtenstein 🇱🇮&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Liechtenstein 🇱🇮&quot;, false, &quot;modalBody2&quot;, true);">1</a></p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Monaco 🇲🇨</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Monaco 🇲🇨&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Monaco 🇲🇨&quot;, false, &quot;modalBody2&quot;, true);">1</a></p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Mongolia 🇲🇳</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Mongolia 🇲🇳&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Mongolia 🇲🇳&quot;, false, &quot;modalBody2&quot;, true);">1</a></p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Nepal 🇳🇵</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Nepal 🇳🇵&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Nepal 🇳🇵&quot;, false, &quot;modalBody2&quot;, true);">1</a></p>
+</td>
+<td>
+<p class="text-center">0</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">100%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Réunion 🇷🇪</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Réunion 🇷🇪&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Réunion 🇷🇪&quot;, false, &quot;modalBody2&quot;, true);">1</a></p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Saint Barthélemy 🇧🇱</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Saint Barthélemy 🇧🇱&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Saint Barthélemy 🇧🇱&quot;, false, &quot;modalBody2&quot;, true);">1</a></p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Togo 🇹🇬</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Togo 🇹🇬&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Togo 🇹🇬&quot;, false, &quot;modalBody2&quot;, true);">1</a></p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Turkey 🇹🇷</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Turkey 🇹🇷&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Turkey 🇹🇷&quot;, false, &quot;modalBody2&quot;, true);">1</a></p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Ukraine 🇺🇦</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Ukraine 🇺🇦&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Ukraine 🇺🇦&quot;, false, &quot;modalBody2&quot;, true);">1</a></p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+<tr>
+<th scope="row" class="text-left">
+<p>Vatican City🇻🇦</p>
+</th>
+<td>
+<p class="text-center"><a href="javascript:void(0);" onclick="drawChart3(&quot;Vatican City🇻🇦&quot;, false, &quot;modalBody&quot;, false);$(&quot;#exampleModal&quot;).modal();drawChart3(&quot;Vatican City🇻🇦&quot;, false, &quot;modalBody2&quot;, true);">1</a></p>
+</td>
+<td>
+<p class="text-center">1</p>
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+<td>
+<p class="text-center">0%</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h2 id="kak-rabotaet-onlayn-karta-koronavirusa">Как работает онлайн-карта коронавируса</h2>
+<p>Карта включает в себя статистические данные, получаемые в автоматическом режиме от официальных источников. Вся информация соответствует данным Всемирной Организации Здравоохранения. На карте распространения коронавируса вы можете узнать, в каких странах/городах какое количество зараженных. Также доступны статистики выздоровевших, умерших из-за инфекции. Карта работает в реальном времени. Поэтому вы оперативно получаете честные и свежие данные, связанные с коронавирусом.</p>
+<blockquote><p>Обновление информации на карте происходит каждые 15 минут. Тщательно следящим за распространением коронавируса рекомендуем добавить наш сайт в раздел закладок в браузере.</p></blockquote>
+<h2 id="pochemu-vazhno-znat-statistiku-koronavirusa">Почему важно знать статистику коронавируса</h2>
+<p>К сожалению, даже сейчас граждане нескольких стран убеждены, что коронавирус гарантированно обойдет их стороной. Из-за этого они не прилагают ни малейших усилий, чтобы обезопасить себя от инфекции. Знакомство со статистикой наглядным образом даст понять такой категории граждан, что коронавирусная инфекция способна распространяться с колоссальной скоростью и ударять по тем странам, которые находятся за десятки тысяч километров от Китая. И это понимание — отличная мотивация начать тщательно следить за своим здоровьем.</p>
+<p>Также статистика коронавируса в реальном времени полезна для путешественников. Власти абсолютно всех стран предупреждают своих граждан, что в текущих обстоятельствах стоит отказаться от путешествий и деловых поездок в другие государства. Однако, некоторые граждане все же решаются на путешествие. Таким людям посоветовать можно лишь одно — посещение стран, где случаи заболевания коронавирусом единичные.</p>
+<p>Стоит привести в качестве примера Италию, которую можно смело назвать туристической страной. Несмотря на предупреждение властей о том, что коронавирус оперативно распространяется по всем уголкам планеты, многие граждане продолжили путешествовать. Некоторые решили посетить Италию. Когда произошла вспышка эпидемии в данной стране (сейчас Италия больше всего охвачена коронавирусом в Европе), путешественники попали на карантин.</p>
+<blockquote><p>Автоматически обновляющаяся карта коронавируса в реальном времени — это ваша возможность узнавать, как развивается эпидемия во всем мире, без чтения многочисленных статей в СМИ.</p></blockquote>    </div><!-- .entry-content -->
+</article><!-- #post-## -->
+
+
+
+
+
+
+
+        <div class="b-related">
+                        <div class="b-related__header"><span>Вам также может быть интересно</span></div>
+                        <div class="b-related__items">
+
+                
+                    
+<div id="post-1" class="post-card post-1 post type-post status-publish format-standard has-post-thumbnail  category-faq tag-coronavirus tag-4 tag-7 tag-6">
+
+    <div class="post-card__image">
+        <a href="https://coronavirus-ncov.info/faq/vegetables-fruits.html">
+                            <img width="330" height="140" src="https://coronavirus-ncov.info/wp-content/uploads/2020/03/fruits-coronavirus-330x140.jpg" class="attachment-thumb-wide size-thumb-wide wp-post-image" alt="Можно ли заразиться коронавирусом через овощи и фрукты" srcset="https://coronavirus-ncov.info/wp-content/uploads/2020/03/fruits-coronavirus-330x140.jpg 330w, https://coronavirus-ncov.info/wp-content/uploads/2020/03/fruits-coronavirus-300x128.jpg 300w, https://coronavirus-ncov.info/wp-content/uploads/2020/03/fruits-coronavirus-1024x438.jpg 1024w, https://coronavirus-ncov.info/wp-content/uploads/2020/03/fruits-coronavirus-768x328.jpg 768w, https://coronavirus-ncov.info/wp-content/uploads/2020/03/fruits-coronavirus-770x330.jpg 770w, https://coronavirus-ncov.info/wp-content/uploads/2020/03/fruits-coronavirus.jpg 1170w" sizes="(max-width: 330px) 100vw, 330px" />            
+
+            
+                
+                <div class="entry-meta">
+                    <span class="entry-category"><span>База знаний</span></span>                    <span class="entry-meta__info">
+                                                <span class="entry-meta__comments" title="Комментарии"><span class="fa fa-comment-o"></span> 0</span>
+                        
+                                                                                            </span>
+                </div><!-- .entry-meta -->
+                    </a>
+    </div>
+
+	<header class="entry-header">
+		<div class="entry-title"><a href="https://coronavirus-ncov.info/faq/vegetables-fruits.html" rel="bookmark" >Можно ли заразиться коронавирусом через овощи и фрукты</a></div>	</header><!-- .entry-header -->
+
+    	<div class="post-card__content">
+		Количество мифов вокруг коронавируса растет вместе с числом заразившихся. Под воздействием недостоверных источников многие	</div><!-- .entry-content -->
+    
+</div><!-- #post-## -->
+                
+                    
+<div id="post-68" class="post-card post-68 post type-post status-publish format-standard has-post-thumbnail  category-faq tag-coronavirus tag-4 tag-10">
+
+    <div class="post-card__image">
+        <a href="https://coronavirus-ncov.info/faq/cases-coronavirus-russia.html">
+                            <img width="330" height="140" src="https://coronavirus-ncov.info/wp-content/uploads/2020/03/coronavirus-micro-330x140.jpg" class="attachment-thumb-wide size-thumb-wide wp-post-image" alt="Когда и где выявлены случаи заболевания коронавирусом в России" srcset="https://coronavirus-ncov.info/wp-content/uploads/2020/03/coronavirus-micro-330x140.jpg 330w, https://coronavirus-ncov.info/wp-content/uploads/2020/03/coronavirus-micro-300x128.jpg 300w, https://coronavirus-ncov.info/wp-content/uploads/2020/03/coronavirus-micro-1024x438.jpg 1024w, https://coronavirus-ncov.info/wp-content/uploads/2020/03/coronavirus-micro-768x328.jpg 768w, https://coronavirus-ncov.info/wp-content/uploads/2020/03/coronavirus-micro-770x330.jpg 770w, https://coronavirus-ncov.info/wp-content/uploads/2020/03/coronavirus-micro.jpg 1170w" sizes="(max-width: 330px) 100vw, 330px" />            
+
+            
+                
+                <div class="entry-meta">
+                    <span class="entry-category"><span>База знаний</span></span>                    <span class="entry-meta__info">
+                                                <span class="entry-meta__comments" title="Комментарии"><span class="fa fa-comment-o"></span> 0</span>
+                        
+                                                                                            </span>
+                </div><!-- .entry-meta -->
+                    </a>
+    </div>
+
+	<header class="entry-header">
+		<div class="entry-title"><a href="https://coronavirus-ncov.info/faq/cases-coronavirus-russia.html" rel="bookmark" >Когда и где выявлены случаи заболевания коронавирусом в России</a></div>	</header><!-- .entry-header -->
+
+    	<div class="post-card__content">
+		Коронавирусная инфекция добралась до территории Российской Федерации, что было подтверждено властями. Однако, ситуация в	</div><!-- .entry-content -->
+    
+</div><!-- #post-## -->
+                
+                    
+<div id="post-89" class="post-card post-89 post type-post status-publish format-standard has-post-thumbnail  category-faq tag-coronavirus tag-4 tag-10">
+
+    <div class="post-card__image">
+        <a href="https://coronavirus-ncov.info/faq/coronavirus-in-russia.html">
+                            <img width="330" height="140" src="https://coronavirus-ncov.info/wp-content/uploads/2020/03/coronavirus-thermometer-330x140.jpg" class="attachment-thumb-wide size-thumb-wide wp-post-image" alt="Есть ли заболевшие коронавирусом в России 2020" srcset="https://coronavirus-ncov.info/wp-content/uploads/2020/03/coronavirus-thermometer-330x140.jpg 330w, https://coronavirus-ncov.info/wp-content/uploads/2020/03/coronavirus-thermometer-300x128.jpg 300w, https://coronavirus-ncov.info/wp-content/uploads/2020/03/coronavirus-thermometer-1024x438.jpg 1024w, https://coronavirus-ncov.info/wp-content/uploads/2020/03/coronavirus-thermometer-768x328.jpg 768w, https://coronavirus-ncov.info/wp-content/uploads/2020/03/coronavirus-thermometer-770x330.jpg 770w, https://coronavirus-ncov.info/wp-content/uploads/2020/03/coronavirus-thermometer.jpg 1170w" sizes="(max-width: 330px) 100vw, 330px" />            
+
+            
+                
+                <div class="entry-meta">
+                    <span class="entry-category"><span>База знаний</span></span>                    <span class="entry-meta__info">
+                                                <span class="entry-meta__comments" title="Комментарии"><span class="fa fa-comment-o"></span> 0</span>
+                        
+                                                                                            </span>
+                </div><!-- .entry-meta -->
+                    </a>
+    </div>
+
+	<header class="entry-header">
+		<div class="entry-title"><a href="https://coronavirus-ncov.info/faq/coronavirus-in-russia.html" rel="bookmark" >Есть ли заболевшие коронавирусом в России в 2020 году</a></div>	</header><!-- .entry-header -->
+
+    	<div class="post-card__content">
+		Еще вначале февраля власти России начали готовиться к тому, что коронавирусная инфекция может попасть	</div><!-- .entry-content -->
+    
+</div><!-- #post-## -->
+                
+                    
+<div id="post-52" class="post-card post-52 post type-post status-publish format-standard has-post-thumbnail  category-faq tag-coronavirus tag-4">
+
+    <div class="post-card__image">
+        <a href="https://coronavirus-ncov.info/faq/bananas-coronavirus.html">
+                            <img width="330" height="140" src="https://coronavirus-ncov.info/wp-content/uploads/2020/03/bananas-coronavirus-330x140.jpg" class="attachment-thumb-wide size-thumb-wide wp-post-image" alt="Можно ли заразиться коронавирусом через бананы" srcset="https://coronavirus-ncov.info/wp-content/uploads/2020/03/bananas-coronavirus-330x140.jpg 330w, https://coronavirus-ncov.info/wp-content/uploads/2020/03/bananas-coronavirus-300x128.jpg 300w, https://coronavirus-ncov.info/wp-content/uploads/2020/03/bananas-coronavirus-1024x438.jpg 1024w, https://coronavirus-ncov.info/wp-content/uploads/2020/03/bananas-coronavirus-768x328.jpg 768w, https://coronavirus-ncov.info/wp-content/uploads/2020/03/bananas-coronavirus-770x330.jpg 770w, https://coronavirus-ncov.info/wp-content/uploads/2020/03/bananas-coronavirus.jpg 1170w" sizes="(max-width: 330px) 100vw, 330px" />            
+
+            
+                
+                <div class="entry-meta">
+                    <span class="entry-category"><span>База знаний</span></span>                    <span class="entry-meta__info">
+                                                <span class="entry-meta__comments" title="Комментарии"><span class="fa fa-comment-o"></span> 0</span>
+                        
+                                                                                            </span>
+                </div><!-- .entry-meta -->
+                    </a>
+    </div>
+
+	<header class="entry-header">
+		<div class="entry-title"><a href="https://coronavirus-ncov.info/faq/bananas-coronavirus.html" rel="bookmark" >Можно ли заразиться коронавирусом через бананы</a></div>	</header><!-- .entry-header -->
+
+    	<div class="post-card__content">
+		В последнее время все чаще в социальных сетях и мессенджерах можно наткнуться на информацию,	</div><!-- .entry-content -->
+    
+</div><!-- #post-## -->
+                
+                    
+<div id="post-60" class="post-card post-60 post type-post status-publish format-standard has-post-thumbnail  category-faq tag-coronavirus tag-9 tag-4 tag-8">
+
+    <div class="post-card__image">
+        <a href="https://coronavirus-ncov.info/faq/things-clothes.html">
+                            <img width="330" height="140" src="https://coronavirus-ncov.info/wp-content/uploads/2020/03/clothes-coronavirus-330x140.jpg" class="attachment-thumb-wide size-thumb-wide wp-post-image" alt="Можно ли заразиться коронавирусом через вещи и одежду" srcset="https://coronavirus-ncov.info/wp-content/uploads/2020/03/clothes-coronavirus-330x140.jpg 330w, https://coronavirus-ncov.info/wp-content/uploads/2020/03/clothes-coronavirus-300x128.jpg 300w, https://coronavirus-ncov.info/wp-content/uploads/2020/03/clothes-coronavirus-1024x438.jpg 1024w, https://coronavirus-ncov.info/wp-content/uploads/2020/03/clothes-coronavirus-768x328.jpg 768w, https://coronavirus-ncov.info/wp-content/uploads/2020/03/clothes-coronavirus-770x330.jpg 770w, https://coronavirus-ncov.info/wp-content/uploads/2020/03/clothes-coronavirus.jpg 1170w" sizes="(max-width: 330px) 100vw, 330px" />            
+
+            
+                
+                <div class="entry-meta">
+                    <span class="entry-category"><span>База знаний</span></span>                    <span class="entry-meta__info">
+                                                <span class="entry-meta__comments" title="Комментарии"><span class="fa fa-comment-o"></span> 0</span>
+                        
+                                                                                            </span>
+                </div><!-- .entry-meta -->
+                    </a>
+    </div>
+
+	<header class="entry-header">
+		<div class="entry-title"><a href="https://coronavirus-ncov.info/faq/things-clothes.html" rel="bookmark" >Можно ли заразиться коронавирусом через вещи и одежду</a></div>	</header><!-- .entry-header -->
+
+    	<div class="post-card__content">
+		Способы распространения коронавируса сегодня активно обсуждает мировая общественность. В действительности делать какие-то окончательные выводы	</div><!-- .entry-content -->
+    
+</div><!-- #post-## -->
+                
+            </div>
+                    </div>
+
+        
+
+<meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="https://coronavirus-ncov.info/" content="Карта коронавируса онлайн: статистика распространения в реальном времени">
+<meta itemprop="dateModified" content="2020-03-12">
+<meta itemprop="datePublished" content="2020-03-06T01:15:34+03:00">
+<meta itemprop="author" content="Эксперт по коронавирусу">
+<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="Коронавирус"><meta itemprop="telephone" content="Коронавирус"><meta itemprop="address" content="https://coronavirus-ncov.info"></div>
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+</div><!-- micro -->
+
+
+
+<aside id="secondary" class="widget-area" itemscope itemtype="http://schema.org/WPSideBar">
+
+    
+	<div id="custom_html-2" class="widget_text widget widget_custom_html"><div class="widget-header">Статистика</div><div class="textwidget custom-html-widget"><div class="row">
+            <div class="col-3 text-center">
+                <h3 class="infected_numbers">169864</h3>
+                <p>Заражены</p>
+            </div>
+            <div class="col-3 text-center">
+                <h3 class="deaths_numbers">6515</h3>
+                <p>Смерти</p>
+            </div>
+            <div class="col-3 text-center">
+                <h3 class="recovered_numbers">77753</h3>
+                <p>Выздоровевшие</p>
+            </div>
+            <div class="col-3 text-center">
+                <h3 class="affected_countries_numbers">158</h3>
+                <p>Затронутые страны</p>
+            </div>
+        </div></div></div><div id="search-2" class="widget widget_search">
+<form role="search" method="get" id="searchform_3962" action="https://coronavirus-ncov.info/" class="search-form">
+    <label class="screen-reader-text" for="s_3962">Поиск: </label>
+    <input type="text" value="" name="s" id="s_3962" class="search-form__text">
+    <button type="submit" id="searchsubmit_3962" class="search-form__submit"></button>
+</form></div>		<div id="recent-posts-2" class="widget widget_recent_entries">		<div class="widget-header">Последние записи</div>		<ul>
+											<li>
+					<a href="https://coronavirus-ncov.info/faq/coronavirus-in-russia.html">Есть ли заболевшие коронавирусом в России в 2020 году</a>
+									</li>
+											<li>
+					<a href="https://coronavirus-ncov.info/faq/cases-coronavirus-russia.html">Когда и где выявлены случаи заболевания коронавирусом в России</a>
+									</li>
+											<li>
+					<a href="https://coronavirus-ncov.info/faq/things-clothes.html">Можно ли заразиться коронавирусом через вещи и одежду</a>
+									</li>
+											<li>
+					<a href="https://coronavirus-ncov.info/faq/bananas-coronavirus.html">Можно ли заразиться коронавирусом через бананы</a>
+									</li>
+											<li>
+					<a href="https://coronavirus-ncov.info/faq/vegetables-fruits.html">Можно ли заразиться коронавирусом через овощи и фрукты</a>
+									</li>
+					</ul>
+		</div><div id="recent-comments-2" class="widget widget_recent_comments"><div class="widget-header">Свежие комментарии</div><ul id="recentcomments"></ul></div>
+    
+</aside><!-- #secondary -->
+
+
+	</div><!-- #content -->
+
+    
+    
+    
+
+
+    <footer class="site-footer container" itemscope itemtype="http://schema.org/WPFooter">
+        <div class="site-footer-inner ">
+
+            <div class="footer-info">
+                © 2020 Коронавирус | Размещенная на страницах ресурса coronavirus-ncov.info информация, предоставляется только в ознакомительных целях. Копирование материалов, опубликованных на страницах сайта, разрешено только при условии размещения активной гиперссылки на первоисточник. 18+
+                
+                            </div><!-- .site-info -->
+
+            
+            <div class="footer-counters"><!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(60773533, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/60773533" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<script type="text/javascript">
+document.write('<a href="//www.liveinternet.ru/click" '+
+'target="_blank"><img src="//counter.yadro.ru/hit?t26.1;r'+
+escape(document.referrer)+((typeof(screen)=='undefined')?'':
+';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+
+';h'+escape(document.title.substring(0,150))+';'+Math.random()+
+'" alt="" title="LiveInternet: показано число посетителей за'+
+' сегодня" '+
+'border="0" width="0" height="0"><\/a>')
+</script></div>
+        </div><!-- .site-footer-inner -->
+    </footer><!-- .site-footer -->
+
+
+            <button type="button" class="scrolltop js-scrolltop"></button>
+    
+
+</div><!-- #page -->
+
+
+<script  src='https://coronavirus-ncov.info/wp-content/themes/root/js/lightbox.js?ver=2.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var settings_array = {"rating_text_average":"\u0441\u0440\u0435\u0434\u043d\u0435\u0435","rating_text_from":"\u0438\u0437","lightbox_enabled":""};
+var wps_ajax = {"url":"https:\/\/coronavirus-ncov.info\/wp-admin\/admin-ajax.php","nonce":"423c12656b"};
+/* ]]> */
+</script>
+<script  src='https://coronavirus-ncov.info/wp-content/themes/root/js/scripts.min.js?ver=2.4.1'></script>
+<script  src='https://coronavirus-ncov.info/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+<script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+<script src="https://yastatic.net/share2/share.js"></script>
+<div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,twitter,tumblr,telegram"></div>
+
+</body>
+</html>

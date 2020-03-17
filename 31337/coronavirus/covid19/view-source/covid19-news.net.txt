@@ -1,0 +1,1889 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+
+    <title>covid19-news.net</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="covid19-news.net &raquo; Feed" href="http://covid19-news.net/feed/" />
+<link rel="alternate" type="application/rss+xml" title="covid19-news.net &raquo; Comments Feed" href="http://covid19-news.net/comments/feed/" />
+<!-- This site uses the Google Analytics by ExactMetrics plugin v6.0.2 - Using Analytics tracking - https://www.exactmetrics.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var em_version         = '6.0.2';
+	var em_track_user      = true;
+	var em_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-153233154-3';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+
+	if ( 'undefined' === typeof gaOptout ) {
+		function gaOptout() {
+			__gaTrackerOptout();
+		}
+	}
+	
+	if ( em_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-153233154-3', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + em_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by ExactMetrics -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/covid19-news.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='http://covid19-news.net/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='bbp-default-css'  href='http://covid19-news.net/wp-content/plugins/bbpress/templates/default/css/bbpress.min.css?ver=2.6.4' type='text/css' media='all' />
+<link rel='stylesheet' id='hardnews-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Oswald:300,400,700' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='http://covid19-news.net/wp-content/themes/covernews/assets/bootstrap/css/bootstrap.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='covernews-style-css'  href='http://covid19-news.net/wp-content/themes/covernews/style.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='hardnews-css'  href='http://covid19-news.net/wp-content/themes/hardnews/style.css?ver=1.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-v5-css'  href='http://covid19-news.net/wp-content/themes/covernews/assets/font-awesome-v5/css/fontawesome-all.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-css'  href='http://covid19-news.net/wp-content/themes/covernews/assets/slick/css/slick.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='covernews-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Source%20Sans%20Pro:400,400i,700,700i|Lato:400,300,400italic,900,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='wppb_stylesheet-css'  href='http://covid19-news.net/wp-content/plugins/profile-builder/assets/css/style-front-end.css?ver=3.1.3' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var exactmetrics_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"http:\/\/covid19-news.net","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://covid19-news.net/wp-content/plugins/google-analytics-dashboard-for-wp/assets/js/frontend.min.js?ver=6.0.2'></script>
+<script type='text/javascript' src='http://covid19-news.net/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://covid19-news.net/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='http://covid19-news.net/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://covid19-news.net/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://covid19-news.net/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.3.2" />
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>        <style type="text/css">
+                        .site-title a,
+            .site-header .site-branding .site-title a:visited,
+            .site-header .site-branding .site-title a:hover,
+            .site-description {
+                color: #000000;
+            }
+
+            .site-branding .site-title {
+                font-size: 24px;
+            }
+
+            @media only screen and (max-width: 640px) {
+                .header-layout-3 .site-header .site-branding .site-title,
+                .site-branding .site-title {
+                    font-size: 60px;
+
+                }
+              }   
+
+           @media only screen and (max-width: 375px) {
+               .header-layout-3 .site-header .site-branding .site-title,
+               .site-branding .site-title {
+                        font-size: 50px;
+
+                    }
+                }
+                
+            
+
+        </style>
+        <link rel="icon" href="http://covid19-news.net/wp-content/uploads/2020/03/cropped-logo-1-32x32.png" sizes="32x32" />
+<link rel="icon" href="http://covid19-news.net/wp-content/uploads/2020/03/cropped-logo-1-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="http://covid19-news.net/wp-content/uploads/2020/03/cropped-logo-1-180x180.png" />
+<meta name="msapplication-TileImage" content="http://covid19-news.net/wp-content/uploads/2020/03/cropped-logo-1-270x270.png" />
+</head>
+
+<body class="home blog hfeed default-content-layout align-content-left">
+
+    <div id="af-preloader">
+        <div id="loader-wrapper">
+            <div id="loader"></div>
+        </div>
+    </div>
+
+<div id="page" class="site">
+    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+<div class="header-layout-3">
+<header id="masthead" class="site-header">
+        <div class="masthead-banner " data-background="">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="site-branding">
+                                                    <h1 class="site-title font-family-1">
+                                <a href="http://covid19-news.net/"
+                                   rel="home">covid19-news.net</a>
+                            </h1>
+                        
+                                            </div>
+                </div>
+                <div class="col-md-12">
+                                    </div>
+            </div>
+        </div>
+    </div>
+    <nav id="site-navigation" class="main-navigation">
+        <div class="container">
+            <div class="row">
+                <div class="kol-12">
+                    <div class="navigation-container">
+
+
+
+                        <span class="toggle-menu" aria-controls="primary-menu" aria-expanded="false">
+                                <span class="screen-reader-text">Primary Menu</span>
+                                 <i class="ham"></i>
+                        </span>
+                        <span class="af-mobile-site-title-wrap">
+                                                        <p class="site-title font-family-1">
+                                <a href="http://covid19-news.net/"
+                                   rel="home">covid19-news.net</a>
+                            </p>
+                        </span>
+                        <div class="menu main-menu"><ul id="primary-menu" class="menu"><li id="menu-item-149" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-149"><a href="http://covid19-news.net" aria-current="page">Startseite</a></li>
+<li id="menu-item-168" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-168"><a href="http://covid19-news.net/category/coronavirus-covid-19-news/">Coronavirus News</a></li>
+<li id="menu-item-1617" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1617"><a href="#">Coronavirus/ Covid-19 Maps</a>
+<ul class="sub-menu">
+	<li id="menu-item-1645" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1645"><a href="http://covid19-news.net/coronavirus-covid-19-map-monitor-by-who/">Coronavirus/ Covid-19 Map &#038; Monitor by WHO</a></li>
+	<li id="menu-item-164" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-164"><a href="http://covid19-news.net/coronavirus-covid-19-karte/">Coronavirus COVID-19 by JHU</a></li>
+	<li id="menu-item-163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163"><a href="http://covid19-news.net/coronavirus-covid-19-map-mobile-version/">Coronavirus/Covid-19-Map Mobile by JHU</a></li>
+	<li id="menu-item-1620" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1620"><a href="http://covid19-news.net/rki-map/">Coronavirus/ Covid-19 Monitor by RKI</a></li>
+</ul>
+</li>
+<li id="menu-item-1654" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1654"><a href="http://covid19-news.net/forums/">Forums</a></li>
+<li id="menu-item-1663" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1663"><a href="http://covid19-news.net/register/">Register</a></li>
+<li id="menu-item-1662" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1662"><a href="http://covid19-news.net/log-in/">Log In</a></li>
+</ul></div>
+                        <div class="cart-search">
+
+                            <div class="af-search-wrap">
+                                <div class="search-overlay">
+                                    <a href="#" title="Search" class="search-icon">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+                                    <div class="af-search-form">
+                                        <form role="search" method="get" class="search-form" action="http://covid19-news.net/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form>                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+</div>
+
+
+
+        <section class="af-blocks">
+            
+                <div class="container af-main-banner default-section-slider">
+                    <div class="row">
+                                    <div class="banner-exclusive-posts-wrapper clearfix">
+
+                
+                <div class="exclusive-posts">
+                    <div class="exclusive-now primary-color">
+                        <div class="alert-spinner">
+                            <div class="double-bounce1"></div>
+                            <div class="double-bounce2"></div>
+                        </div>
+                        <strong>Flash Story</strong>
+                    </div>
+                    <div class="exclusive-slides" dir="ltr">
+                                                <div class='marquee flash-slide-left' data-speed='80000' data-gap='0' data-duplicated='true' data-direction='left'>
+                                                            <a href="http://covid19-news.net/corona-gefahr-in-deutschland-robert-koch-institut-setzt-risiko-auf-hoch/">
+                                                                            <img src="http://covid19-news.net/wp-content/uploads/2020/03/131056577-150x150.jpg" alt="Corona-Gefahr in Deutschland: Robert-Koch-Institut setzt Risiko auf &#8220;hoch&#8221;">
+                                                                        Corona-Gefahr in Deutschland: Robert-Koch-Institut setzt Risiko auf &#8220;hoch&#8221;                                </a>
+                                                            <a href="http://covid19-news.net/aufstand-in-brasilien-coronavirus-treibt-haftlinge-in-die-flucht/">
+                                                                            <img src="http://covid19-news.net/wp-content/uploads/2020/03/imago63634384h-150x150.jpg" alt="Aufstand in Brasilien: Coronavirus treibt Häftlinge in die Flucht">
+                                                                        Aufstand in Brasilien: Coronavirus treibt Häftlinge in die Flucht                                </a>
+                                                            <a href="http://covid19-news.net/south-east-asian-countries-impose-coronavirus-restrictions/">
+                                                                        South-east Asian countries impose coronavirus restrictions                                </a>
+                                                            <a href="http://covid19-news.net/athletensprecher-hartung-im-interview-was-eine-olympia-verschiebung-fur-die-sportler-bedeuten-wurde-der-spiegel/">
+                                                                        Athletensprecher Hartung im Interview: Was eine Olympia-Verschiebung für die Sportler bedeuten würde &#8211; DER SPIEGEL                                </a>
+                                                            <a href="http://covid19-news.net/corona-impstoff-deutsche-biotechunternehmen-im-fokus/">
+                                                                            <img src="http://covid19-news.net/wp-content/uploads/2020/03/52778471_1-150x143.jpg" alt="Corona-Impstoff: Deutsche Biotechunternehmen im Fokus">
+                                                                        Corona-Impstoff: Deutsche Biotechunternehmen im Fokus                                </a>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Excluive line END -->
+                                    <div class="for-main-row">
+                            <div class="main-story-wrapper col-sm-6">
+                                                                    <h4 class="header-after1">
+                                    <span class="header-after ">
+                                        Main Story                                    </span>
+                                    </h4>
+                                                                <div class="main-slider-wrapper">
+                                <div class="main-slider full-slider-mode">
+                                                                                <figure class="slick-item">
+                                                <div class="data-bg data-bg-hover data-bg-hover data-bg-slide"
+                                                     data-background="http://covid19-news.net/wp-content/uploads/2020/03/131056577.jpg">
+                                                    <a class="aft-slide-items" href="http://covid19-news.net/corona-gefahr-in-deutschland-robert-koch-institut-setzt-risiko-auf-hoch/"></a>
+                                                                                                        <figcaption class="slider-figcaption slider-figcaption-1">
+                                                        <div class="figure-categories figure-categories-bg">
+                                                            <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-news/" alt="View all posts in Coronavirus (COVID-19)"> 
+                                 Coronavirus (COVID-19)
+                             </a>
+                        </li></ul>                                                        </div>
+                                                        <div class="title-heading">
+                                                            <h3 class="article-title slide-title">
+                                                                <a href="http://covid19-news.net/corona-gefahr-in-deutschland-robert-koch-institut-setzt-risiko-auf-hoch/">Corona-Gefahr in Deutschland: Robert-Koch-Institut setzt Risiko auf &#8220;hoch&#8221;</a>
+                                                            </h3>
+                                                        </div>
+                                                        <div class="grid-item-metadata grid-item-metadata-1">
+                                                            
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    12 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                                                                </div>
+                                                    </figcaption>
+                                                </div>
+                                            </figure>
+                                                                                    <figure class="slick-item">
+                                                <div class="data-bg data-bg-hover data-bg-hover data-bg-slide"
+                                                     data-background="http://covid19-news.net/wp-content/uploads/2020/03/imago63634384h.jpg">
+                                                    <a class="aft-slide-items" href="http://covid19-news.net/aufstand-in-brasilien-coronavirus-treibt-haftlinge-in-die-flucht/"></a>
+                                                                                                        <figcaption class="slider-figcaption slider-figcaption-1">
+                                                        <div class="figure-categories figure-categories-bg">
+                                                            <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-news/" alt="View all posts in Coronavirus (COVID-19)"> 
+                                 Coronavirus (COVID-19)
+                             </a>
+                        </li></ul>                                                        </div>
+                                                        <div class="title-heading">
+                                                            <h3 class="article-title slide-title">
+                                                                <a href="http://covid19-news.net/aufstand-in-brasilien-coronavirus-treibt-haftlinge-in-die-flucht/">Aufstand in Brasilien: Coronavirus treibt Häftlinge in die Flucht</a>
+                                                            </h3>
+                                                        </div>
+                                                        <div class="grid-item-metadata grid-item-metadata-1">
+                                                            
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    12 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                                                                </div>
+                                                    </figcaption>
+                                                </div>
+                                            </figure>
+                                                                                    <figure class="slick-item">
+                                                <div class="data-bg data-bg-hover data-bg-hover data-bg-slide"
+                                                     data-background="">
+                                                    <a class="aft-slide-items" href="http://covid19-news.net/south-east-asian-countries-impose-coronavirus-restrictions/"></a>
+                                                                                                        <figcaption class="slider-figcaption slider-figcaption-1">
+                                                        <div class="figure-categories figure-categories-bg">
+                                                            <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-english-news/" alt="View all posts in Coronavirus (COVID-19) - English News"> 
+                                 Coronavirus (COVID-19) - English News
+                             </a>
+                        </li></ul>                                                        </div>
+                                                        <div class="title-heading">
+                                                            <h3 class="article-title slide-title">
+                                                                <a href="http://covid19-news.net/south-east-asian-countries-impose-coronavirus-restrictions/">South-east Asian countries impose coronavirus restrictions</a>
+                                                            </h3>
+                                                        </div>
+                                                        <div class="grid-item-metadata grid-item-metadata-1">
+                                                            
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    22 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                                                                </div>
+                                                    </figcaption>
+                                                </div>
+                                            </figure>
+                                                                                    <figure class="slick-item">
+                                                <div class="data-bg data-bg-hover data-bg-hover data-bg-slide"
+                                                     data-background="">
+                                                    <a class="aft-slide-items" href="http://covid19-news.net/athletensprecher-hartung-im-interview-was-eine-olympia-verschiebung-fur-die-sportler-bedeuten-wurde-der-spiegel/"></a>
+                                                                                                        <figcaption class="slider-figcaption slider-figcaption-1">
+                                                        <div class="figure-categories figure-categories-bg">
+                                                            <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-news/" alt="View all posts in Coronavirus (COVID-19)"> 
+                                 Coronavirus (COVID-19)
+                             </a>
+                        </li></ul>                                                        </div>
+                                                        <div class="title-heading">
+                                                            <h3 class="article-title slide-title">
+                                                                <a href="http://covid19-news.net/athletensprecher-hartung-im-interview-was-eine-olympia-verschiebung-fur-die-sportler-bedeuten-wurde-der-spiegel/">Athletensprecher Hartung im Interview: Was eine Olympia-Verschiebung für die Sportler bedeuten würde &#8211; DER SPIEGEL</a>
+                                                            </h3>
+                                                        </div>
+                                                        <div class="grid-item-metadata grid-item-metadata-1">
+                                                            
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    37 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                                                                </div>
+                                                    </figcaption>
+                                                </div>
+                                            </figure>
+                                                                                    <figure class="slick-item">
+                                                <div class="data-bg data-bg-hover data-bg-hover data-bg-slide"
+                                                     data-background="http://covid19-news.net/wp-content/uploads/2020/03/52778471_1.jpg">
+                                                    <a class="aft-slide-items" href="http://covid19-news.net/corona-impstoff-deutsche-biotechunternehmen-im-fokus/"></a>
+                                                                                                        <figcaption class="slider-figcaption slider-figcaption-1">
+                                                        <div class="figure-categories figure-categories-bg">
+                                                            <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-news/" alt="View all posts in Coronavirus (COVID-19)"> 
+                                 Coronavirus (COVID-19)
+                             </a>
+                        </li></ul>                                                        </div>
+                                                        <div class="title-heading">
+                                                            <h3 class="article-title slide-title">
+                                                                <a href="http://covid19-news.net/corona-impstoff-deutsche-biotechunternehmen-im-fokus/">Corona-Impstoff: Deutsche Biotechunternehmen im Fokus</a>
+                                                            </h3>
+                                                        </div>
+                                                        <div class="grid-item-metadata grid-item-metadata-1">
+                                                            
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    41 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                                                                </div>
+                                                    </figcaption>
+                                                </div>
+                                            </figure>
+                                                                        </div>
+                                <div class="af-main-navcontrols "></div>
+                            </div>
+                            </div>
+                            
+                            <div class="af-main-banner-editors-picks categorized-story col-sm-3">
+                                                                    <h4 class="header-after1">
+                                        <span class="header-after ">
+                                            
+                                            Editor&#8217;s Picks                                        </span>
+                                    </h4>
+                                                                <div class="featured-posts-grid i-row row">
+
+                                                                                <div class="even-grid">
+                                            <div class="spotlight-post" data-mh="banner-height">
+                                                <figure class="featured-article">
+                                                    <div class="featured-article-wrapper">
+                                                        <div class="data-bg data-bg-hover data-bg-hover data-bg-featured"
+                                                             data-background="http://covid19-news.net/wp-content/uploads/2020/03/131056577.jpg">
+                                                            <a href="http://covid19-news.net/corona-gefahr-in-deutschland-robert-koch-institut-setzt-risiko-auf-hoch/"></a>
+                                                        </div>
+                                                    </div>
+                                                                                                    </figure>
+
+                                                <figcaption class="cate-fig">
+                                                    <div class="figure-categories figure-categories-bg">
+
+                                                        <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-news/" alt="View all posts in Coronavirus (COVID-19)"> 
+                                 Coronavirus (COVID-19)
+                             </a>
+                        </li></ul>                                                    </div>
+                                                    <div class="title-heading">
+                                                        <h3 class="article-title article-title-2">
+                                                            <a href="http://covid19-news.net/corona-gefahr-in-deutschland-robert-koch-institut-setzt-risiko-auf-hoch/">
+                                                                Corona-Gefahr in Deutschland: Robert-Koch-Institut setzt Risiko auf &#8220;hoch&#8221;                                                            </a>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="grid-item-metadata">
+                                                        
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    12 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                                                            </div>
+                                                </figcaption>
+                                            </div>
+                                            </div>
+                                                                                    <div class="even-grid">
+                                            <div class="spotlight-post" data-mh="banner-height">
+                                                <figure class="featured-article">
+                                                    <div class="featured-article-wrapper">
+                                                        <div class="data-bg data-bg-hover data-bg-hover data-bg-featured"
+                                                             data-background="http://covid19-news.net/wp-content/uploads/2020/03/imago63634384h.jpg">
+                                                            <a href="http://covid19-news.net/aufstand-in-brasilien-coronavirus-treibt-haftlinge-in-die-flucht/"></a>
+                                                        </div>
+                                                    </div>
+                                                                                                    </figure>
+
+                                                <figcaption class="cate-fig">
+                                                    <div class="figure-categories figure-categories-bg">
+
+                                                        <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-news/" alt="View all posts in Coronavirus (COVID-19)"> 
+                                 Coronavirus (COVID-19)
+                             </a>
+                        </li></ul>                                                    </div>
+                                                    <div class="title-heading">
+                                                        <h3 class="article-title article-title-2">
+                                                            <a href="http://covid19-news.net/aufstand-in-brasilien-coronavirus-treibt-haftlinge-in-die-flucht/">
+                                                                Aufstand in Brasilien: Coronavirus treibt Häftlinge in die Flucht                                                            </a>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="grid-item-metadata">
+                                                        
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    12 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                                                            </div>
+                                                </figcaption>
+                                            </div>
+                                            </div>
+                                        
+                                </div>
+                            </div>
+                                                        <div class="trending-story col-sm-3">
+                                                                    <h4 class="header-after1">
+                                    <span class="header-after ">
+                                         Trending Story                                    </span>
+                                    </h4>
+                                                                            <div class="banner-trending-posts-wrapper clearfix">
+
+                                <div class="trending-posts-carousel">
+                                                <div class="slick-item">
+                                <!-- <span style="margin: 0 0 10px 0; display: block;"> -->
+                                <figure class="carousel-image">
+                                    <div class="no-gutter-col">
+                                        <figure class="featured-article">
+                                            <div class="featured-article-wrapper">
+                                                <div class="data-bg data-bg-hover data-bg-hover data-bg-featured" data-background="http://covid19-news.net/wp-content/uploads/2020/03/131056577-150x150.jpg">
+                                                    <a href="http://covid19-news.net/corona-gefahr-in-deutschland-robert-koch-institut-setzt-risiko-auf-hoch/"></a>
+                                                </div>
+                                            </div>
+                                            <span class="trending-no">
+                                                1                                            </span>
+                                                                                    </figure>
+
+                                        <figcaption>
+                                            <div class="figure-categories figure-categories-bg">
+                                                <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-news/" alt="View all posts in Coronavirus (COVID-19)"> 
+                                 Coronavirus (COVID-19)
+                             </a>
+                        </li></ul>                                            </div>
+                                            <div class="title-heading">
+                                                <h3 class="article-title">
+                                                    <a href="http://covid19-news.net/corona-gefahr-in-deutschland-robert-koch-institut-setzt-risiko-auf-hoch/">
+                                                        Corona-Gefahr in Deutschland: Robert-Koch-Institut setzt Risiko auf &#8220;hoch&#8221;                                                    </a>
+                                                </h3>
+                                            </div>
+                                        </figcaption>
+                                    </div>
+                                    </figcaption>
+                                </figure>
+                                <!-- </span> -->
+                            </div>
+                                                    <div class="slick-item">
+                                <!-- <span style="margin: 0 0 10px 0; display: block;"> -->
+                                <figure class="carousel-image">
+                                    <div class="no-gutter-col">
+                                        <figure class="featured-article">
+                                            <div class="featured-article-wrapper">
+                                                <div class="data-bg data-bg-hover data-bg-hover data-bg-featured" data-background="http://covid19-news.net/wp-content/uploads/2020/03/imago63634384h-150x150.jpg">
+                                                    <a href="http://covid19-news.net/aufstand-in-brasilien-coronavirus-treibt-haftlinge-in-die-flucht/"></a>
+                                                </div>
+                                            </div>
+                                            <span class="trending-no">
+                                                2                                            </span>
+                                                                                    </figure>
+
+                                        <figcaption>
+                                            <div class="figure-categories figure-categories-bg">
+                                                <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-news/" alt="View all posts in Coronavirus (COVID-19)"> 
+                                 Coronavirus (COVID-19)
+                             </a>
+                        </li></ul>                                            </div>
+                                            <div class="title-heading">
+                                                <h3 class="article-title">
+                                                    <a href="http://covid19-news.net/aufstand-in-brasilien-coronavirus-treibt-haftlinge-in-die-flucht/">
+                                                        Aufstand in Brasilien: Coronavirus treibt Häftlinge in die Flucht                                                    </a>
+                                                </h3>
+                                            </div>
+                                        </figcaption>
+                                    </div>
+                                    </figcaption>
+                                </figure>
+                                <!-- </span> -->
+                            </div>
+                                                    <div class="slick-item">
+                                <!-- <span style="margin: 0 0 10px 0; display: block;"> -->
+                                <figure class="carousel-image">
+                                    <div class="no-gutter-col">
+                                        <figure class="featured-article">
+                                            <div class="featured-article-wrapper">
+                                                <div class="data-bg data-bg-hover data-bg-hover data-bg-featured" data-background="">
+                                                    <a href="http://covid19-news.net/south-east-asian-countries-impose-coronavirus-restrictions/"></a>
+                                                </div>
+                                            </div>
+                                            <span class="trending-no">
+                                                3                                            </span>
+                                                                                    </figure>
+
+                                        <figcaption>
+                                            <div class="figure-categories figure-categories-bg">
+                                                <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-english-news/" alt="View all posts in Coronavirus (COVID-19) - English News"> 
+                                 Coronavirus (COVID-19) - English News
+                             </a>
+                        </li></ul>                                            </div>
+                                            <div class="title-heading">
+                                                <h3 class="article-title">
+                                                    <a href="http://covid19-news.net/south-east-asian-countries-impose-coronavirus-restrictions/">
+                                                        South-east Asian countries impose coronavirus restrictions                                                    </a>
+                                                </h3>
+                                            </div>
+                                        </figcaption>
+                                    </div>
+                                    </figcaption>
+                                </figure>
+                                <!-- </span> -->
+                            </div>
+                                                    <div class="slick-item">
+                                <!-- <span style="margin: 0 0 10px 0; display: block;"> -->
+                                <figure class="carousel-image">
+                                    <div class="no-gutter-col">
+                                        <figure class="featured-article">
+                                            <div class="featured-article-wrapper">
+                                                <div class="data-bg data-bg-hover data-bg-hover data-bg-featured" data-background="">
+                                                    <a href="http://covid19-news.net/athletensprecher-hartung-im-interview-was-eine-olympia-verschiebung-fur-die-sportler-bedeuten-wurde-der-spiegel/"></a>
+                                                </div>
+                                            </div>
+                                            <span class="trending-no">
+                                                4                                            </span>
+                                                                                    </figure>
+
+                                        <figcaption>
+                                            <div class="figure-categories figure-categories-bg">
+                                                <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-news/" alt="View all posts in Coronavirus (COVID-19)"> 
+                                 Coronavirus (COVID-19)
+                             </a>
+                        </li></ul>                                            </div>
+                                            <div class="title-heading">
+                                                <h3 class="article-title">
+                                                    <a href="http://covid19-news.net/athletensprecher-hartung-im-interview-was-eine-olympia-verschiebung-fur-die-sportler-bedeuten-wurde-der-spiegel/">
+                                                        Athletensprecher Hartung im Interview: Was eine Olympia-Verschiebung für die Sportler bedeuten würde &#8211; DER SPIEGEL                                                    </a>
+                                                </h3>
+                                            </div>
+                                        </figcaption>
+                                    </div>
+                                    </figcaption>
+                                </figure>
+                                <!-- </span> -->
+                            </div>
+                                                    <div class="slick-item">
+                                <!-- <span style="margin: 0 0 10px 0; display: block;"> -->
+                                <figure class="carousel-image">
+                                    <div class="no-gutter-col">
+                                        <figure class="featured-article">
+                                            <div class="featured-article-wrapper">
+                                                <div class="data-bg data-bg-hover data-bg-hover data-bg-featured" data-background="http://covid19-news.net/wp-content/uploads/2020/03/52778471_1-150x143.jpg">
+                                                    <a href="http://covid19-news.net/corona-impstoff-deutsche-biotechunternehmen-im-fokus/"></a>
+                                                </div>
+                                            </div>
+                                            <span class="trending-no">
+                                                5                                            </span>
+                                                                                    </figure>
+
+                                        <figcaption>
+                                            <div class="figure-categories figure-categories-bg">
+                                                <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-news/" alt="View all posts in Coronavirus (COVID-19)"> 
+                                 Coronavirus (COVID-19)
+                             </a>
+                        </li></ul>                                            </div>
+                                            <div class="title-heading">
+                                                <h3 class="article-title">
+                                                    <a href="http://covid19-news.net/corona-impstoff-deutsche-biotechunternehmen-im-fokus/">
+                                                        Corona-Impstoff: Deutsche Biotechunternehmen im Fokus                                                    </a>
+                                                </h3>
+                                            </div>
+                                        </figcaption>
+                                    </div>
+                                    </figcaption>
+                                </figure>
+                                <!-- </span> -->
+                            </div>
+                                        </div>
+                <div class="af-trending-navcontrols "></div>
+
+            </div>
+            <!-- Trending line END -->
+                                        </div>
+                        </div>
+                    </div>
+                </div>
+
+            
+
+
+            <div class="container container-full-width">
+                <div class="row">
+                    
+                        <div class="af-main-banner-featured-posts grid-layout">
+
+                            
+                                <h4 class="header-after1 ">
+                                <span class="header-after ">
+                                    Featured Story                                </span>
+
+                                </h4>
+                            
+                                        <div class="featured-posts-grid">
+                <div class="row">
+                                                <div class="col-sm-15">
+                                <div class="spotlight-post" data-mh="banner-height">
+                                    <figure class="featured-article">
+                                        <div class="featured-article-wrapper">
+                                            <div class="data-bg data-bg-hover data-bg-hover data-bg-featured"
+                                                 data-background="http://covid19-news.net/wp-content/uploads/2020/03/131056577.jpg">
+                                                <a href="http://covid19-news.net/corona-gefahr-in-deutschland-robert-koch-institut-setzt-risiko-auf-hoch/"></a>
+                                            </div>
+                                                                                        <div class="figure-categories figure-categories-bg">
+
+                                                <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-news/" alt="View all posts in Coronavirus (COVID-19)"> 
+                                 Coronavirus (COVID-19)
+                             </a>
+                        </li></ul>                                            </div>
+                                        </div>
+                                    </figure>
+
+                                    <figcaption>
+
+                                        <div class="title-heading">
+                                            <h3 class="article-title article-title-1">
+                                                <a href="http://covid19-news.net/corona-gefahr-in-deutschland-robert-koch-institut-setzt-risiko-auf-hoch/">
+                                                    Corona-Gefahr in Deutschland: Robert-Koch-Institut setzt Risiko auf &#8220;hoch&#8221;                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="grid-item-metadata">
+                                            
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    12 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                                                </div>
+                                    </figcaption>
+                                </div>
+                            </div>
+
+                                                    <div class="col-sm-15">
+                                <div class="spotlight-post" data-mh="banner-height">
+                                    <figure class="featured-article">
+                                        <div class="featured-article-wrapper">
+                                            <div class="data-bg data-bg-hover data-bg-hover data-bg-featured"
+                                                 data-background="http://covid19-news.net/wp-content/uploads/2020/03/imago63634384h.jpg">
+                                                <a href="http://covid19-news.net/aufstand-in-brasilien-coronavirus-treibt-haftlinge-in-die-flucht/"></a>
+                                            </div>
+                                                                                        <div class="figure-categories figure-categories-bg">
+
+                                                <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-news/" alt="View all posts in Coronavirus (COVID-19)"> 
+                                 Coronavirus (COVID-19)
+                             </a>
+                        </li></ul>                                            </div>
+                                        </div>
+                                    </figure>
+
+                                    <figcaption>
+
+                                        <div class="title-heading">
+                                            <h3 class="article-title article-title-1">
+                                                <a href="http://covid19-news.net/aufstand-in-brasilien-coronavirus-treibt-haftlinge-in-die-flucht/">
+                                                    Aufstand in Brasilien: Coronavirus treibt Häftlinge in die Flucht                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="grid-item-metadata">
+                                            
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    12 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                                                </div>
+                                    </figcaption>
+                                </div>
+                            </div>
+
+                                                    <div class="col-sm-15">
+                                <div class="spotlight-post" data-mh="banner-height">
+                                    <figure class="featured-article">
+                                        <div class="featured-article-wrapper">
+                                            <div class="data-bg data-bg-hover data-bg-hover data-bg-featured"
+                                                 data-background="">
+                                                <a href="http://covid19-news.net/south-east-asian-countries-impose-coronavirus-restrictions/"></a>
+                                            </div>
+                                                                                        <div class="figure-categories figure-categories-bg">
+
+                                                <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-english-news/" alt="View all posts in Coronavirus (COVID-19) - English News"> 
+                                 Coronavirus (COVID-19) - English News
+                             </a>
+                        </li></ul>                                            </div>
+                                        </div>
+                                    </figure>
+
+                                    <figcaption>
+
+                                        <div class="title-heading">
+                                            <h3 class="article-title article-title-1">
+                                                <a href="http://covid19-news.net/south-east-asian-countries-impose-coronavirus-restrictions/">
+                                                    South-east Asian countries impose coronavirus restrictions                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="grid-item-metadata">
+                                            
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    22 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                                                </div>
+                                    </figcaption>
+                                </div>
+                            </div>
+
+                                                    <div class="col-sm-15">
+                                <div class="spotlight-post" data-mh="banner-height">
+                                    <figure class="featured-article">
+                                        <div class="featured-article-wrapper">
+                                            <div class="data-bg data-bg-hover data-bg-hover data-bg-featured"
+                                                 data-background="">
+                                                <a href="http://covid19-news.net/athletensprecher-hartung-im-interview-was-eine-olympia-verschiebung-fur-die-sportler-bedeuten-wurde-der-spiegel/"></a>
+                                            </div>
+                                                                                        <div class="figure-categories figure-categories-bg">
+
+                                                <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-news/" alt="View all posts in Coronavirus (COVID-19)"> 
+                                 Coronavirus (COVID-19)
+                             </a>
+                        </li></ul>                                            </div>
+                                        </div>
+                                    </figure>
+
+                                    <figcaption>
+
+                                        <div class="title-heading">
+                                            <h3 class="article-title article-title-1">
+                                                <a href="http://covid19-news.net/athletensprecher-hartung-im-interview-was-eine-olympia-verschiebung-fur-die-sportler-bedeuten-wurde-der-spiegel/">
+                                                    Athletensprecher Hartung im Interview: Was eine Olympia-Verschiebung für die Sportler bedeuten würde &#8211; DER SPIEGEL                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="grid-item-metadata">
+                                            
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    37 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                                                </div>
+                                    </figcaption>
+                                </div>
+                            </div>
+
+                                                    <div class="col-sm-15">
+                                <div class="spotlight-post" data-mh="banner-height">
+                                    <figure class="featured-article">
+                                        <div class="featured-article-wrapper">
+                                            <div class="data-bg data-bg-hover data-bg-hover data-bg-featured"
+                                                 data-background="http://covid19-news.net/wp-content/uploads/2020/03/52778471_1.jpg">
+                                                <a href="http://covid19-news.net/corona-impstoff-deutsche-biotechunternehmen-im-fokus/"></a>
+                                            </div>
+                                                                                        <div class="figure-categories figure-categories-bg">
+
+                                                <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-news/" alt="View all posts in Coronavirus (COVID-19)"> 
+                                 Coronavirus (COVID-19)
+                             </a>
+                        </li></ul>                                            </div>
+                                        </div>
+                                    </figure>
+
+                                    <figcaption>
+
+                                        <div class="title-heading">
+                                            <h3 class="article-title article-title-1">
+                                                <a href="http://covid19-news.net/corona-impstoff-deutsche-biotechunternehmen-im-fokus/">
+                                                    Corona-Impstoff: Deutsche Biotechunternehmen im Fokus                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="grid-item-metadata">
+                                            
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    41 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                                                </div>
+                                    </figcaption>
+                                </div>
+                            </div>
+
+                                        </div>
+            </div>
+            <!-- Trending line END -->
+                                    </div>
+                                    </div>
+            </div>
+        </section>
+
+        <!-- end slider-section -->
+        
+    <div id="content" class="container">
+<section class="section-block-upper row">
+
+                <div id="primary" class="content-area">
+                    <main id="main" class="site-main">
+                    <div class="row">
+
+                        
+
+        <article id="post-4369" class="col-lg-4 col-sm-4 col-md-4 latest-posts-grid post-4369 post type-post status-publish format-standard has-post-thumbnail hentry category-coronavirus-covid-19-news"                 data-mh="archive-layout-grid">
+            
+<div class="align-items-center">
+        <div class="spotlight-post">
+            <figure class="categorised-article inside-img">
+                <div class="categorised-article-wrapper">
+                    <div class="data-bg-hover data-bg data-bg-categorised"
+                         data-background="http://covid19-news.net/wp-content/uploads/2020/03/131056577.jpg">
+                        <a href="http://covid19-news.net/corona-gefahr-in-deutschland-robert-koch-institut-setzt-risiko-auf-hoch/"></a>
+                    </div>
+                                        <div class="figure-categories figure-categories-bg">
+                        <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-news/" alt="View all posts in Coronavirus (COVID-19)"> 
+                                 Coronavirus (COVID-19)
+                             </a>
+                        </li></ul>                    </div>
+                </div>
+
+            </figure>
+            <figcaption>
+
+                <h3 class="article-title article-title-1">
+                    <a href="http://covid19-news.net/corona-gefahr-in-deutschland-robert-koch-institut-setzt-risiko-auf-hoch/">
+                        Corona-Gefahr in Deutschland: Robert-Koch-Institut setzt Risiko auf &#8220;hoch&#8221;                    </a>
+                </h3>
+                <div class="grid-item-metadata">
+                    
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    12 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                        </div>
+                                    <div class="full-item-discription">
+                        <div class="post-description">
+                            <p>Die restliche Welt hat China bei der Zahl der Coronavirus-Fälle abgelöst. Deshalb steht ab sofort &#8220;Europa im Fokus der Pandemie&#8221;, teilt das Robert-Koch-Insitut auf einer Pressekonferenz mit. Die Gefährdungslage für die deutsche Bevölkerung verschlimmert sich.</p>
+
+                        </div>
+                    </div>
+                            </figcaption>
+    </div>
+    </div>
+
+
+
+
+
+
+
+        </article>
+    
+
+        <article id="post-4367" class="col-lg-4 col-sm-4 col-md-4 latest-posts-grid post-4367 post type-post status-publish format-standard has-post-thumbnail hentry category-coronavirus-covid-19-news"                 data-mh="archive-layout-grid">
+            
+<div class="align-items-center">
+        <div class="spotlight-post">
+            <figure class="categorised-article inside-img">
+                <div class="categorised-article-wrapper">
+                    <div class="data-bg-hover data-bg data-bg-categorised"
+                         data-background="http://covid19-news.net/wp-content/uploads/2020/03/imago63634384h.jpg">
+                        <a href="http://covid19-news.net/aufstand-in-brasilien-coronavirus-treibt-haftlinge-in-die-flucht/"></a>
+                    </div>
+                                        <div class="figure-categories figure-categories-bg">
+                        <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-news/" alt="View all posts in Coronavirus (COVID-19)"> 
+                                 Coronavirus (COVID-19)
+                             </a>
+                        </li></ul>                    </div>
+                </div>
+
+            </figure>
+            <figcaption>
+
+                <h3 class="article-title article-title-1">
+                    <a href="http://covid19-news.net/aufstand-in-brasilien-coronavirus-treibt-haftlinge-in-die-flucht/">
+                        Aufstand in Brasilien: Coronavirus treibt Häftlinge in die Flucht                    </a>
+                </h3>
+                <div class="grid-item-metadata">
+                    
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    12 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                        </div>
+                                    <div class="full-item-discription">
+                        <div class="post-description">
+                            <p>In einer offenbar konzertierten Aktion begehren Hunderte brasilianische Gefängnis-Insassen auf. Der Staat hat ihnen zuvor einen geplanten Freigang verwehrt. Die Behörden fürchten eine Einschleppung und massive Ausbreitung des Coronavirus.</p>
+
+                        </div>
+                    </div>
+                            </figcaption>
+    </div>
+    </div>
+
+
+
+
+
+
+
+        </article>
+    
+
+        <article id="post-4353" class="col-lg-4 col-sm-4 col-md-4 latest-posts-grid post-4353 post type-post status-publish format-standard hentry category-coronavirus-covid-19-english-news"                 data-mh="archive-layout-grid">
+            
+<div class="align-items-center">
+        <div class="spotlight-post">
+            <figure class="categorised-article inside-img">
+                <div class="categorised-article-wrapper">
+                    <div class="data-bg-hover data-bg data-bg-categorised"
+                         data-background="">
+                        <a href="http://covid19-news.net/south-east-asian-countries-impose-coronavirus-restrictions/"></a>
+                    </div>
+                                        <div class="figure-categories figure-categories-bg">
+                        <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-english-news/" alt="View all posts in Coronavirus (COVID-19) - English News"> 
+                                 Coronavirus (COVID-19) - English News
+                             </a>
+                        </li></ul>                    </div>
+                </div>
+
+            </figure>
+            <figcaption>
+
+                <h3 class="article-title article-title-1">
+                    <a href="http://covid19-news.net/south-east-asian-countries-impose-coronavirus-restrictions/">
+                        South-east Asian countries impose coronavirus restrictions                    </a>
+                </h3>
+                <div class="grid-item-metadata">
+                    
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    22 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                        </div>
+                                    <div class="full-item-discription">
+                        <div class="post-description">
+                            <p>Increase of positive cases in region casts doubts on theory warmer weather may stop pandemic<br />
+Coronavirus – latest updatesSee all our coronavirus coverageCountries across south-east Asia are imposing sweeping restrictions on millions of people after recording a wave of coronavirus cases.<br />
+A rise in patient numbers across the region – where nations had initially recorded relatively few cases – follows a ramping up of testing efforts. The increases have cast doubts on suggestions that warmer weather may stop the virus.<br />
+ Continue reading&#8230;</p>
+
+                        </div>
+                    </div>
+                            </figcaption>
+    </div>
+    </div>
+
+
+
+
+
+
+
+        </article>
+    
+
+        <article id="post-4360" class="col-lg-4 col-sm-4 col-md-4 latest-posts-grid post-4360 post type-post status-publish format-standard hentry category-coronavirus-covid-19-news"                 data-mh="archive-layout-grid">
+            
+<div class="align-items-center">
+        <div class="spotlight-post">
+            <figure class="categorised-article inside-img">
+                <div class="categorised-article-wrapper">
+                    <div class="data-bg-hover data-bg data-bg-categorised"
+                         data-background="">
+                        <a href="http://covid19-news.net/athletensprecher-hartung-im-interview-was-eine-olympia-verschiebung-fur-die-sportler-bedeuten-wurde-der-spiegel/"></a>
+                    </div>
+                                        <div class="figure-categories figure-categories-bg">
+                        <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-news/" alt="View all posts in Coronavirus (COVID-19)"> 
+                                 Coronavirus (COVID-19)
+                             </a>
+                        </li></ul>                    </div>
+                </div>
+
+            </figure>
+            <figcaption>
+
+                <h3 class="article-title article-title-1">
+                    <a href="http://covid19-news.net/athletensprecher-hartung-im-interview-was-eine-olympia-verschiebung-fur-die-sportler-bedeuten-wurde-der-spiegel/">
+                        Athletensprecher Hartung im Interview: Was eine Olympia-Verschiebung für die Sportler bedeuten würde &#8211; DER SPIEGEL                    </a>
+                </h3>
+                <div class="grid-item-metadata">
+                    
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    37 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                        </div>
+                                    <div class="full-item-discription">
+                        <div class="post-description">
+                            <p>Athletensprecher Hartung im Interview: Was eine Olympia-Verschiebung für die Sportler bedeuten würde DER SPIEGELAthletensprecher Hartung wünscht sich offenere Kommunikation mit IOC LeichtathletikCorona-Krise: In Japan wachsen die Zweifel an Olympia sportschau.deOlympische Spiele: Mit aller Macht DER SPIEGELFlash-News des Tages Leichtathletik&#8221;Mehr zum Thema&#8221; ansehen in Google News</p>
+
+                        </div>
+                    </div>
+                            </figcaption>
+    </div>
+    </div>
+
+
+
+
+
+
+
+        </article>
+    
+
+        <article id="post-4361" class="col-lg-4 col-sm-4 col-md-4 latest-posts-grid post-4361 post type-post status-publish format-standard has-post-thumbnail hentry category-coronavirus-covid-19-news"                 data-mh="archive-layout-grid">
+            
+<div class="align-items-center">
+        <div class="spotlight-post">
+            <figure class="categorised-article inside-img">
+                <div class="categorised-article-wrapper">
+                    <div class="data-bg-hover data-bg data-bg-categorised"
+                         data-background="http://covid19-news.net/wp-content/uploads/2020/03/52778471_1.jpg">
+                        <a href="http://covid19-news.net/corona-impstoff-deutsche-biotechunternehmen-im-fokus/"></a>
+                    </div>
+                                        <div class="figure-categories figure-categories-bg">
+                        <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-news/" alt="View all posts in Coronavirus (COVID-19)"> 
+                                 Coronavirus (COVID-19)
+                             </a>
+                        </li></ul>                    </div>
+                </div>
+
+            </figure>
+            <figcaption>
+
+                <h3 class="article-title article-title-1">
+                    <a href="http://covid19-news.net/corona-impstoff-deutsche-biotechunternehmen-im-fokus/">
+                        Corona-Impstoff: Deutsche Biotechunternehmen im Fokus                    </a>
+                </h3>
+                <div class="grid-item-metadata">
+                    
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    41 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                        </div>
+                                    <div class="full-item-discription">
+                        <div class="post-description">
+                            <p>Der Wettlauf um einen Impfstoff gegen das Coronavirus ist im vollen Gang. Auch deutsche Biotech-Unternehmen vermelden erste Teilerfolge. Generell ist aber das Überleben in dieser Branche schwierig.</p>
+
+                        </div>
+                    </div>
+                            </figcaption>
+    </div>
+    </div>
+
+
+
+
+
+
+
+        </article>
+    
+
+        <article id="post-4351" class="col-lg-4 col-sm-4 col-md-4 latest-posts-grid post-4351 post type-post status-publish format-standard hentry category-coronavirus-covid-19-english-news"                 data-mh="archive-layout-grid">
+            
+<div class="align-items-center">
+        <div class="spotlight-post">
+            <figure class="categorised-article inside-img">
+                <div class="categorised-article-wrapper">
+                    <div class="data-bg-hover data-bg data-bg-categorised"
+                         data-background="">
+                        <a href="http://covid19-news.net/markets-slide-again-as-economic-costs-of-covid-19-crisis-mount-business-live/"></a>
+                    </div>
+                                        <div class="figure-categories figure-categories-bg">
+                        <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-english-news/" alt="View all posts in Coronavirus (COVID-19) - English News"> 
+                                 Coronavirus (COVID-19) - English News
+                             </a>
+                        </li></ul>                    </div>
+                </div>
+
+            </figure>
+            <figcaption>
+
+                <h3 class="article-title article-title-1">
+                    <a href="http://covid19-news.net/markets-slide-again-as-economic-costs-of-covid-19-crisis-mount-business-live/">
+                        Markets slide again as economic costs of Covid-19 crisis mount &#8211; business live                    </a>
+                </h3>
+                <div class="grid-item-metadata">
+                    
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    42 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                        </div>
+                                    <div class="full-item-discription">
+                        <div class="post-description">
+                            <p>Rolling coverage of the latest economic and financial news, as the coronavirus pandemic grips markets again<br />
+Investors hope for government actionFrance to mobilise €45bnUS airlines seek bailout<br />
+Wall Street to rebound after worst day since 1987Coronavirus – latest updatesSee all our coronavirus coverage 8.57am GMT<br />
+The EU-wide Stoxx 600 has erased its gains, and now down 0.7%. France’s pledge of billions of euros to fight the economic cost of Covid-19 isn’t helping much.<br />
+ 8.53am GMT<br />
+Oh dear. The early bounce in Europe’s stock markets appears to be fizzling out.<br />
+The FTSE 100 is now negative for the day, down 64 points or 1.25% at 5085. It’s being dragged down by the travel sector again &#8212; with holiday firm TUI down another 14% and cruise operator Carnival losing 8%.<br />
+While some investors may begin to ask whether we are close to the bottom, others will see further downside potential and I sit in this camp. We’re only just at the start of the crisis in the UK and judging by what’s going on ..</p>
+
+                        </div>
+                    </div>
+                            </figcaption>
+    </div>
+    </div>
+
+
+
+
+
+
+
+        </article>
+    
+
+        <article id="post-4302" class="col-lg-4 col-sm-4 col-md-4 latest-posts-grid post-4302 post type-post status-publish format-standard has-post-thumbnail hentry category-coronavirus-covid-19-news"                 data-mh="archive-layout-grid">
+            
+<div class="align-items-center">
+        <div class="spotlight-post">
+            <figure class="categorised-article inside-img">
+                <div class="categorised-article-wrapper">
+                    <div class="data-bg-hover data-bg data-bg-categorised"
+                         data-background="http://covid19-news.net/wp-content/uploads/2020/03/1w120c0.bild_-43.jpg">
+                        <a href="http://covid19-news.net/grenzen-dicht-wegen-corona-sorge-um-ernte-weil-spargelstecher-fehlen/"></a>
+                    </div>
+                                        <div class="figure-categories figure-categories-bg">
+                        <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-news/" alt="View all posts in Coronavirus (COVID-19)"> 
+                                 Coronavirus (COVID-19)
+                             </a>
+                        </li></ul>                    </div>
+                </div>
+
+            </figure>
+            <figcaption>
+
+                <h3 class="article-title article-title-1">
+                    <a href="http://covid19-news.net/grenzen-dicht-wegen-corona-sorge-um-ernte-weil-spargelstecher-fehlen/">
+                        Grenzen dicht wegen Corona &#8211; Sorge um Ernte, weil Spargelstecher fehlen                    </a>
+                </h3>
+                <div class="grid-item-metadata">
+                    
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    45 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                        </div>
+                                    <div class="full-item-discription">
+                        <div class="post-description">
+                            <p>Diese Woche soll das große Stechen des Edelgemüses beginnen – doch Bauern aufgrund der Corona-Krise fehlt es an saisonalen Erntehelfern.<br />
+Foto: picture alliance/dpa</p>
+
+                        </div>
+                    </div>
+                            </figcaption>
+    </div>
+    </div>
+
+
+
+
+
+
+
+        </article>
+    
+
+        <article id="post-4352" class="col-lg-4 col-sm-4 col-md-4 latest-posts-grid post-4352 post type-post status-publish format-standard hentry category-coronavirus-covid-19-english-news"                 data-mh="archive-layout-grid">
+            
+<div class="align-items-center">
+        <div class="spotlight-post">
+            <figure class="categorised-article inside-img">
+                <div class="categorised-article-wrapper">
+                    <div class="data-bg-hover data-bg data-bg-categorised"
+                         data-background="">
+                        <a href="http://covid19-news.net/euro-2020-what-will-uefas-video-conference-realistically-decide/"></a>
+                    </div>
+                                        <div class="figure-categories figure-categories-bg">
+                        <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-english-news/" alt="View all posts in Coronavirus (COVID-19) - English News"> 
+                                 Coronavirus (COVID-19) - English News
+                             </a>
+                        </li></ul>                    </div>
+                </div>
+
+            </figure>
+            <figcaption>
+
+                <h3 class="article-title article-title-1">
+                    <a href="http://covid19-news.net/euro-2020-what-will-uefas-video-conference-realistically-decide/">
+                        Euro 2020: what will Uefa&#8217;s video conference realistically decide?                    </a>
+                </h3>
+                <div class="grid-item-metadata">
+                    
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    49 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                        </div>
+                                    <div class="full-item-discription">
+                        <div class="post-description">
+                            <p>Restarting leagues across Europe is still an unknown but a definitive decision to cancel Euro 2020 is expected<br />
+Uefa called the video conference last Thursday forTuesday to discuss football’s response to the coronavirus crisis, with all 55 of Europe’s football associations, the European Club Association, European Leagues and the international players’ union Fifpro. There is expected to be more than one meeting, probably with the FAs holding theirs separately. There was some criticism when the video-conferences were announced that no supporters organisations are included, although the postponement of matches clearly affects fans in huge numbers. Ronan Evain, executive director of Football Supporters Europe, a collective of European fans’ groups that works with Uefa on many issues, said, though, that dialogue has continued with senior management at Uefa, including over the coronavirus response. Evain said he had told Uefa that the clear consensus from supporters is to recognise the urgenc..</p>
+
+                        </div>
+                    </div>
+                            </figcaption>
+    </div>
+    </div>
+
+
+
+
+
+
+
+        </article>
+    
+
+        <article id="post-4355" class="col-lg-4 col-sm-4 col-md-4 latest-posts-grid post-4355 post type-post status-publish format-standard hentry category-coronavirus-covid-19-news"                 data-mh="archive-layout-grid">
+            
+<div class="align-items-center">
+        <div class="spotlight-post">
+            <figure class="categorised-article inside-img">
+                <div class="categorised-article-wrapper">
+                    <div class="data-bg-hover data-bg data-bg-categorised"
+                         data-background="">
+                        <a href="http://covid19-news.net/heiko-maas-regierung-startet-ruckholaktion-fur-im-ausland-festsitzende-deutsche-zeit-online/"></a>
+                    </div>
+                                        <div class="figure-categories figure-categories-bg">
+                        <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-news/" alt="View all posts in Coronavirus (COVID-19)"> 
+                                 Coronavirus (COVID-19)
+                             </a>
+                        </li></ul>                    </div>
+                </div>
+
+            </figure>
+            <figcaption>
+
+                <h3 class="article-title article-title-1">
+                    <a href="http://covid19-news.net/heiko-maas-regierung-startet-ruckholaktion-fur-im-ausland-festsitzende-deutsche-zeit-online/">
+                        Heiko Maas: Regierung startet Rückholaktion für im Ausland festsitzende Deutsche &#8211; ZEIT ONLINE                    </a>
+                </h3>
+                <div class="grid-item-metadata">
+                    
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    50 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                        </div>
+                                    <div class="full-item-discription">
+                        <div class="post-description">
+                            <p>Heiko Maas: Regierung startet Rückholaktion für im Ausland festsitzende Deutsche ZEIT ONLINECoronakrise: Auswärtiges Amt will festsitzende Deutsche aus dem Ausland zurückholen DER SPIEGELCoronavirus im Liveblog: Volkswagen will Produktion wegen Coronavirus aussetzen STERN.deGestrandete Urlauber: Maas startet Deutschen-Rückholung aus dem Ausland ZEIT ONLINECORONA IM URLAUB: Coronavirus-Krise &#8211; Heiko Maas zu Rückholung gestrandeter Urlauber WELT Nachrichtensender&#8221;Mehr zum Thema&#8221; ansehen in Google News</p>
+
+                        </div>
+                    </div>
+                            </figcaption>
+    </div>
+    </div>
+
+
+
+
+
+
+
+        </article>
+    
+
+        <article id="post-4363" class="col-lg-4 col-sm-4 col-md-4 latest-posts-grid post-4363 post type-post status-publish format-standard has-post-thumbnail hentry category-coronavirus-covid-19-news"                 data-mh="archive-layout-grid">
+            
+<div class="align-items-center">
+        <div class="spotlight-post">
+            <figure class="categorised-article inside-img">
+                <div class="categorised-article-wrapper">
+                    <div class="data-bg-hover data-bg data-bg-categorised"
+                         data-background="http://covid19-news.net/wp-content/uploads/2020/03/17-maas-kuendigt-luftbruecke-fuer-gestrandete-touristen-an-9497afe2d7ff2da2.jpg">
+                        <a href="http://covid19-news.net/maas-luftbrucke-fur-im-ausland-gestrandete-deutsche-touristen-geplant/"></a>
+                    </div>
+                                        <div class="figure-categories figure-categories-bg">
+                        <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-news/" alt="View all posts in Coronavirus (COVID-19)"> 
+                                 Coronavirus (COVID-19)
+                             </a>
+                        </li></ul>                    </div>
+                </div>
+
+            </figure>
+            <figcaption>
+
+                <h3 class="article-title article-title-1">
+                    <a href="http://covid19-news.net/maas-luftbrucke-fur-im-ausland-gestrandete-deutsche-touristen-geplant/">
+                        Maas: &#8220;Luftbrücke&#8221; für im Ausland gestrandete deutsche Touristen geplant                    </a>
+                </h3>
+                <div class="grid-item-metadata">
+                    
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    54 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                        </div>
+                                    <div class="full-item-discription">
+                        <div class="post-description">
+                            <p>Die Bundesregierung will tausende wegen der Coronapandemie im Ausland gestrandete deutsche Touristen mit einer &#8220;Luftbrücke&#8221; zurückholen.<br />
+Die Bundesregierung will tausende wegen der Coronapandemie im Ausland gestrandete deutsche Touristen mit einer &#8220;Luftbrücke&#8221; zurückholen. In den kommenden Tagen sollen zunächst Pauschalreisende aus besonders betroffenen Gebieten nach Hause geholt werden, wie Außenminister Heiko Maas (SPD) am Dienstag in Berlin sagte. Dazu zählten &#8220;im wesentlichen zunächst&#8221; Marokko, Ägypten, die Dominikanische Republik, die Philippinen und die Malediven.<br />
+Das Auswärtige Amt vereinbarte nach Angaben von Maas am Montag mit kommerziellen Fluganbietern, ein &#8220;einmaliges Programm&#8221; zur Rückholung deutscher Touristen aufzulegen. Dafür stelle die Bundesregierung bis zu 50 Millionen Euro zur Verfügung. Alle Reisenden, die von der &#8220;Luftbrücke&#8221; profitieren möchten, sollen sich auf der Website des Auswärtigen Amtes informieren und ihre Reiseveranstalter kontaktieren.<br />
+Weitere Einzelh..</p>
+
+                        </div>
+                    </div>
+                            </figcaption>
+    </div>
+    </div>
+
+
+
+
+
+
+
+        </article>
+                                <div class="col col-ten">
+                                <div class="covernews-pagination">
+                                    
+	<nav class="navigation pagination" role="navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Posts navigation</h2>
+		<div class="nav-links"><span aria-current="page" class="page-numbers current">1</span>
+<a class="page-numbers" href="http://covid19-news.net/page/2/">2</a>
+<a class="page-numbers" href="http://covid19-news.net/page/3/">3</a>
+<a class="page-numbers" href="http://covid19-news.net/page/4/">4</a>
+<span class="page-numbers dots">&hellip;</span>
+<a class="page-numbers" href="http://covid19-news.net/page/289/">289</a>
+<a class="next page-numbers" href="http://covid19-news.net/page/2/">Next</a></div>
+	</nav>                                </div>
+                            </div>
+                        
+                        </div>
+                    </main><!-- #main -->
+                </div><!-- #primary -->
+
+                <aside id="secondary" class="widget-area aft-sticky-sidebar">
+	<div id="search-2" class="widget covernews-widget widget_search"><form role="search" method="get" class="search-form" action="http://covid19-news.net/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form></div><div id="categories-2" class="widget covernews-widget widget_categories"><h2 class="widget-title widget-title-1"><span>Categories</span></h2>		<ul>
+				<li class="cat-item cat-item-3"><a href="http://covid19-news.net/category/coronavirus-covid-19-news/" title="SARS-CoV-2 (Sars-CoV-2; vormals 2019-nCoV, 2019-novel Corona virus, „neuartiges Coronavirus 2019“ sowie Wuhan-Coronavirus[4]) ist die Bezeichnung eines im Januar 2020 in der chinesischen Stadt Wuhan, Provinz Hubei, neu identifizierten Coronavirus. Das Virus verursacht die Erkrankung namens COVID-19 (oder Covid-19, für Corona virus disease 2019)[5] und ist Auslöser der Coronavirus-Epidemie 2019/2020, die von der WHO zunächst als „gesundheitliche Notlage von internationaler Tragweite“ und am 11. März 2020 als Pandemie eingestuft wurde. In der Öffentlichkeit wird das Virus meist (nach der Virus-Familie) als Coronavirus, nur Corona, oder gelegentlich (nach der Krankheit) als Covid-19-Virus bezeichnet.[6] ">Coronavirus (COVID-19)</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://covid19-news.net/category/coronavirus-covid-19-english-news/" title="Coronavirus (COVID-19) - English News">Coronavirus (COVID-19) &#8211; English News</a>
+</li>
+		</ul>
+			</div>		<div id="recent-posts-2" class="widget covernews-widget widget_recent_entries">		<h2 class="widget-title widget-title-1"><span>Recent Posts</span></h2>		<ul>
+											<li>
+					<a href="http://covid19-news.net/corona-gefahr-in-deutschland-robert-koch-institut-setzt-risiko-auf-hoch/">Corona-Gefahr in Deutschland: Robert-Koch-Institut setzt Risiko auf &#8220;hoch&#8221;</a>
+									</li>
+											<li>
+					<a href="http://covid19-news.net/aufstand-in-brasilien-coronavirus-treibt-haftlinge-in-die-flucht/">Aufstand in Brasilien: Coronavirus treibt Häftlinge in die Flucht</a>
+									</li>
+											<li>
+					<a href="http://covid19-news.net/south-east-asian-countries-impose-coronavirus-restrictions/">South-east Asian countries impose coronavirus restrictions</a>
+									</li>
+											<li>
+					<a href="http://covid19-news.net/athletensprecher-hartung-im-interview-was-eine-olympia-verschiebung-fur-die-sportler-bedeuten-wurde-der-spiegel/">Athletensprecher Hartung im Interview: Was eine Olympia-Verschiebung für die Sportler bedeuten würde &#8211; DER SPIEGEL</a>
+									</li>
+											<li>
+					<a href="http://covid19-news.net/corona-impstoff-deutsche-biotechunternehmen-im-fokus/">Corona-Impstoff: Deutsche Biotechunternehmen im Fokus</a>
+									</li>
+					</ul>
+		</div><div id="recent-comments-2" class="widget covernews-widget widget_recent_comments"><h2 class="widget-title widget-title-1"><span>Recent Comments</span></h2><ul id="recentcomments"></ul></div></aside><!-- #secondary -->
+
+    </section>
+
+
+</div>
+
+<div class="af-main-banner-latest-posts grid-layout">
+    <div class="container">
+        <div class="row">
+
+    <div class="widget-title-section">
+                    <h4 class="widget-title header-after1">
+                        <span class="header-after">                            
+                            You may have missed                            </span>
+            </h4>
+        
+    </div>
+    <div class="row">
+                <div class="col-sm-15 latest-posts-grid" data-mh="latest-posts-grid">
+                <div class="spotlight-post">
+                    <figure class="categorised-article inside-img">
+                        <div class="categorised-article-wrapper">
+                            <div class="data-bg data-bg-hover data-bg-categorised"
+                                 data-background="http://covid19-news.net/wp-content/uploads/2020/03/131056577.jpg">
+                                <a href="http://covid19-news.net/corona-gefahr-in-deutschland-robert-koch-institut-setzt-risiko-auf-hoch/"></a>
+                            </div>
+                        </div>
+                                                <div class="figure-categories figure-categories-bg">
+                            
+                            <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-news/" alt="View all posts in Coronavirus (COVID-19)"> 
+                                 Coronavirus (COVID-19)
+                             </a>
+                        </li></ul>                        </div>
+                    </figure>
+
+                    <figcaption>
+                        
+                        <h3 class="article-title article-title-1">
+                            <a href="http://covid19-news.net/corona-gefahr-in-deutschland-robert-koch-institut-setzt-risiko-auf-hoch/">
+                                Corona-Gefahr in Deutschland: Robert-Koch-Institut setzt Risiko auf &#8220;hoch&#8221;                            </a>
+                        </h3>
+                        <div class="grid-item-metadata">
+                            
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    12 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                                </div>
+                    </figcaption>
+                </div>
+            </div>
+                    <div class="col-sm-15 latest-posts-grid" data-mh="latest-posts-grid">
+                <div class="spotlight-post">
+                    <figure class="categorised-article inside-img">
+                        <div class="categorised-article-wrapper">
+                            <div class="data-bg data-bg-hover data-bg-categorised"
+                                 data-background="http://covid19-news.net/wp-content/uploads/2020/03/imago63634384h.jpg">
+                                <a href="http://covid19-news.net/aufstand-in-brasilien-coronavirus-treibt-haftlinge-in-die-flucht/"></a>
+                            </div>
+                        </div>
+                                                <div class="figure-categories figure-categories-bg">
+                            
+                            <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-news/" alt="View all posts in Coronavirus (COVID-19)"> 
+                                 Coronavirus (COVID-19)
+                             </a>
+                        </li></ul>                        </div>
+                    </figure>
+
+                    <figcaption>
+                        
+                        <h3 class="article-title article-title-1">
+                            <a href="http://covid19-news.net/aufstand-in-brasilien-coronavirus-treibt-haftlinge-in-die-flucht/">
+                                Aufstand in Brasilien: Coronavirus treibt Häftlinge in die Flucht                            </a>
+                        </h3>
+                        <div class="grid-item-metadata">
+                            
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    12 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                                </div>
+                    </figcaption>
+                </div>
+            </div>
+                    <div class="col-sm-15 latest-posts-grid" data-mh="latest-posts-grid">
+                <div class="spotlight-post">
+                    <figure class="categorised-article inside-img">
+                        <div class="categorised-article-wrapper">
+                            <div class="data-bg data-bg-hover data-bg-categorised"
+                                 data-background="">
+                                <a href="http://covid19-news.net/south-east-asian-countries-impose-coronavirus-restrictions/"></a>
+                            </div>
+                        </div>
+                                                <div class="figure-categories figure-categories-bg">
+                            
+                            <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-english-news/" alt="View all posts in Coronavirus (COVID-19) - English News"> 
+                                 Coronavirus (COVID-19) - English News
+                             </a>
+                        </li></ul>                        </div>
+                    </figure>
+
+                    <figcaption>
+                        
+                        <h3 class="article-title article-title-1">
+                            <a href="http://covid19-news.net/south-east-asian-countries-impose-coronavirus-restrictions/">
+                                South-east Asian countries impose coronavirus restrictions                            </a>
+                        </h3>
+                        <div class="grid-item-metadata">
+                            
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    22 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                                </div>
+                    </figcaption>
+                </div>
+            </div>
+                    <div class="col-sm-15 latest-posts-grid" data-mh="latest-posts-grid">
+                <div class="spotlight-post">
+                    <figure class="categorised-article inside-img">
+                        <div class="categorised-article-wrapper">
+                            <div class="data-bg data-bg-hover data-bg-categorised"
+                                 data-background="">
+                                <a href="http://covid19-news.net/athletensprecher-hartung-im-interview-was-eine-olympia-verschiebung-fur-die-sportler-bedeuten-wurde-der-spiegel/"></a>
+                            </div>
+                        </div>
+                                                <div class="figure-categories figure-categories-bg">
+                            
+                            <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-news/" alt="View all posts in Coronavirus (COVID-19)"> 
+                                 Coronavirus (COVID-19)
+                             </a>
+                        </li></ul>                        </div>
+                    </figure>
+
+                    <figcaption>
+                        
+                        <h3 class="article-title article-title-1">
+                            <a href="http://covid19-news.net/athletensprecher-hartung-im-interview-was-eine-olympia-verschiebung-fur-die-sportler-bedeuten-wurde-der-spiegel/">
+                                Athletensprecher Hartung im Interview: Was eine Olympia-Verschiebung für die Sportler bedeuten würde &#8211; DER SPIEGEL                            </a>
+                        </h3>
+                        <div class="grid-item-metadata">
+                            
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    37 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                                </div>
+                    </figcaption>
+                </div>
+            </div>
+                    <div class="col-sm-15 latest-posts-grid" data-mh="latest-posts-grid">
+                <div class="spotlight-post">
+                    <figure class="categorised-article inside-img">
+                        <div class="categorised-article-wrapper">
+                            <div class="data-bg data-bg-hover data-bg-categorised"
+                                 data-background="http://covid19-news.net/wp-content/uploads/2020/03/52778471_1.jpg">
+                                <a href="http://covid19-news.net/corona-impstoff-deutsche-biotechunternehmen-im-fokus/"></a>
+                            </div>
+                        </div>
+                                                <div class="figure-categories figure-categories-bg">
+                            
+                            <ul class="cat-links"><li class="meta-category">
+                             <a class="covernews-categories category-color-1" href="http://covid19-news.net/category/coronavirus-covid-19-news/" alt="View all posts in Coronavirus (COVID-19)"> 
+                                 Coronavirus (COVID-19)
+                             </a>
+                        </li></ul>                        </div>
+                    </figure>
+
+                    <figcaption>
+                        
+                        <h3 class="article-title article-title-1">
+                            <a href="http://covid19-news.net/corona-impstoff-deutsche-biotechunternehmen-im-fokus/">
+                                Corona-Impstoff: Deutsche Biotechunternehmen im Fokus                            </a>
+                        </h3>
+                        <div class="grid-item-metadata">
+                            
+        <span class="author-links">
+                            <span class="item-metadata posts-date">
+                <i class="far fa-clock"></i>
+                    41 mins ago            </span>
+                        
+                <span class="item-metadata posts-author">
+            <a href="http://covid19-news.net/author/covid19-news/">
+                covid19-news covid19-news            </a>
+        </span>
+                    </span>
+                                </div>
+                    </figcaption>
+                </div>
+            </div>
+                </div>
+    </div>
+    </div>
+</div>
+
+<footer class="site-footer">
+        
+                <div class="site-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                                                                Copyright © covid19-news.net                                                                                    <span class="sep"> | </span>
+                        <a href="https://afthemes.com/products/covernews/">CoverNews</a> by AF themes.                                    </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+<a id="scroll-up" class="secondary-color">
+    <i class="fa fa-angle-up"></i>
+</a>
+<script type='text/javascript' src='http://covid19-news.net/wp-content/themes/covernews/js/navigation.js?ver=20151215'></script>
+<script type='text/javascript' src='http://covid19-news.net/wp-content/themes/covernews/js/skip-link-focus-fix.js?ver=20151215'></script>
+<script type='text/javascript' src='http://covid19-news.net/wp-content/themes/covernews/assets/slick/js/slick.min.js?ver=5.3.2'></script>
+<script type='text/javascript' src='http://covid19-news.net/wp-content/themes/covernews/assets/bootstrap/js/bootstrap.min.js?ver=5.3.2'></script>
+<script type='text/javascript' src='http://covid19-news.net/wp-content/themes/covernews/assets/jquery-match-height/jquery.matchHeight.min.js?ver=5.3.2'></script>
+<script type='text/javascript' src='http://covid19-news.net/wp-content/themes/covernews/assets/marquee/jquery.marquee.js?ver=5.3.2'></script>
+<script type='text/javascript' src='http://covid19-news.net/wp-content/themes/covernews/assets/theiaStickySidebar/theia-sticky-sidebar.min.js?ver=5.3.2'></script>
+<script type='text/javascript' src='http://covid19-news.net/wp-content/themes/covernews/assets/script.js?ver=5.3.2'></script>
+<script type='text/javascript' src='http://covid19-news.net/wp-content/themes/covernews/assets/fixed-header-script.js?ver=5.3.2'></script>
+<script type='text/javascript' src='http://covid19-news.net/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+
+</body>
+</html>

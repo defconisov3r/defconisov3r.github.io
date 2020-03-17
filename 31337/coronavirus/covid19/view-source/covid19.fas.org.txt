@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+        <title>FAS COVID-19 Ask a Scientist</title>
+          
+
+      <meta name="description" content="Do you have COVID-19 questions? Our scientists have answers.">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <link rel="shortcut icon" href="https://files.helpdocs.io/lxn46yd1as/favico.png?t=1583897807511">
+
+        <meta property="og:title" content="FAS COVID-19 Ask a Scientist">
+        <meta property="twitter:title" content="FAS COVID-19 Ask a Scientist">
+        <meta property="og:description" content="FAS COVID-19 Ask a Scientist">
+        <meta property="twitter:description" content="FAS COVID-19 Ask a Scientist">
+        <meta property="og:image" content="https://files.helpdocs.io/lxn46yd1as/logo.png?t=1583959486999">
+        <meta property="twitter:image:src" content="https://files.helpdocs.io/lxn46yd1as/logo.png?t=1583959486999">
+        <meta property="og:site_name" content="Do you have COVID-19 questions? Our scientists have answers.">
+        <meta property="og:type" content="website">
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:site" content="https://covid19.fas.org">
+        <meta property="og:url" content="https://covid19.fas.org/l/en">
+    
+
+      <script type="application/ld+json">{"@context":"http://schema.org","@type":"WebSite","name":"Do you have COVID-19 questions? Our scientists have answers.","potentialAction":{"@type":"SearchAction","query-input":"required name=search_term_string","target":"https://covid19.fas.org/search/{search_term_string}"},"url":"https://covid19.fas.org"}</script>
+
+      <link rel="canonical" href="https://covid19.fas.org/l/en">
+
+    <link rel="stylesheet" href="https://cdn.helpdocs.io/css/bootstrap.min.css?v=1583928946">
+    <link rel="stylesheet" href="https://cdn.helpdocs.io/css/font-awesome.min.css?v=1583928946">
+    <link rel="stylesheet" href="https://cdn.helpdocs.io/css/tether.min.css?v=1583928946">
+    <link rel="stylesheet" href="https://cdn.helpdocs.io/css/glyphicons.css?v=1583928946">
+    <link rel="stylesheet" href="https://cdn.helpdocs.io/css/highlightjs-github-gist.min.css?v=1583928946">
+
+      <link rel="stylesheet" href="https://cdn.helpdocs.io/css/v3/curve.min.css?v=1583928946">
+
+      <style>
+        .card-title {
+  color: #60693f;
+}
+.small-capital-text a {
+  color: #60693f;
+}
+.bg-faded {
+  height: 170px;
+  background-color: #C1D37F;
+}
+.navbar-brand > span {
+  color: #898a85;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(137, 138, 133,.7);
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #898a85;
+}
+.btn.btn-primary.btn-contact, .btn.btn-primary.btn-contact:hover {
+  color: #60693f;
+}
+#lang-dropdown {
+  color: #60693f;
+}
+svg.lang-dropdown-icon {
+  stroke: #60693f;
+}
+#instant-search input:focus {
+  caret-color: #60693f;
+}
+.search-article-title {
+  color: #60693f;
+}
+.category-icon {
+  color: #60693f;
+}
+#article ol > li:before {
+  color: rgba(57, 63, 37,.5);
+  border-color: rgba(96, 105, 63,.15);
+  background-color: rgba(96, 105, 63,.15);
+}
+#article ul > li::before {
+  color: #60693f;
+}
+#contact-modal .btn-primary {
+  background-color: #60693f;
+}
+#article a, #article * > a, #article * > * > a {
+  color: #60693f;
+}
+p#breadcrumbs a {
+  color: #60693f;
+}
+      </style>
+
+        <style>
+          .author-text {
+    display: none;
+}
+.fa {
+ padding-left:4px; 
+  padding-right:4px; 
+}
+#social{
+  display:flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+ul#social{
+  margin-left: 8rem;
+   margin-right: 8rem;
+}
+ul#social > li::before{
+  list-style-type: none;
+  content: "";
+}
+  #social img{
+    height:2rem;
+ max-height:2rem; 
+ max-width:2rem;
+}
+#fas-link, #cino-link, #gl-link, #about-us-link, #info-collect-link{
+  color:#54A6BA;
+}
+.full-article-title{
+  margin-bottom:1rem;
+}
+#article a, #article * > a, #article * > * > a{
+  color: #54A6BA;
+}
+#hide-this{
+  display:block;
+}
+.navbar-brand img{
+ padding-bottom: 10px;
+}
+.navbar-light .navbar-brand, .navbar-light .navbar-brand:hover {
+  color: #60693f;
+  font-weight: 600;
+}
+#hits:lang(en)::before {
+  content: "Didn't find the answer? Click 'ask a scientist your question' on the top of this page";
+  color: #8A975E;
+   height: 50px;
+    display: block;
+}
+#hits:lang(es)::before {
+  content: "No encuentra la respuesta? Click en  ‘Haga su pregunta a un científico’ en la parte superior de esta página";
+  color: #8A975E;
+   height: 50px;
+    display: block;
+}
+#hits{
+  text-align:center;
+}
+
+.navbar-brand span{
+  display:none;
+}
+.navbar-brand>img {
+display: block;
+  height:50px;
+}
+.row{
+ align-content:left;
+}
+
+#home .card-block{
+  height: 14rem;
+}
+#articles .card-block{
+  height: 12rem;
+}
+#home{
+  text-align:left;
+}
+.navbar-light .navbar-nav .nav-link {
+  color:#657247;
+}
+#info-collect-link{
+  float: right;
+  position: relative;
+  left: -40%; /* or right 50% */
+  text-align: left;
+  bottom:30px;
+}
+#created-text{
+  text-align:center;
+  padding-bottom: 20px;
+   font-weight: 600;
+  color: #888888;
+}
+ .bg-faded{
+    display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+    
+  }
+.nav-items{
+   display: flex;
+   flex-direction: column;
+}
+@media (max-width: 800px){
+    .spacer{
+    display:none;
+  }
+  #social img{
+    height:2rem;
+ max-height:2rem; 
+ max-width:2rem;
+}
+  .navbar-brand>img {
+
+    width:100px;
+}
+  .bg-faded{
+    height: 380px;
+    flex-direction: column;
+  }
+  #lang-dropdown{
+    width: 30%;
+    margin-bottom:10px;
+  }
+    .nav, .navbar-brand{
+    display: flex;
+    
+    flex-direction:column;
+  }
+  .nav-items{
+    padding-top:0px;
+    float:left;
+  
+   
+  }
+  .navbar-nav .nav-item+.nav-item {
+    margin-left: 0rem;
+}
+
+
+}
+@media (max-width: 580px){
+  .navbar-brand>img {
+
+    width:100px;
+}
+  #social img{
+    height:2rem;
+ max-height:2rem; 
+ max-width:2rem;
+}
+  .bg-faded{
+    height: 380px;
+    flex-direction: column;
+  }
+  #lang-dropdown{
+    margin-bottom:10px;
+  }
+  #info-collect-link{
+   left: -25%; 
+  }
+    .nav, .navbar-brand{
+    display: flex;
+    
+    flex-direction:column;
+  }
+  .nav-items{
+    padding-top:0px;
+    float:left;
+  
+   
+  }
+  .navbar-nav .nav-item+.nav-item {
+    margin-left: 0rem;
+}
+  #lang-dropdown{
+    width: 30%;
+  }
+  ul#social{
+  margin-left: 0rem;
+   margin-right: 0rem;
+}
+
+}
+  
+@media (max-width: 400px){
+    .navbar-brand>img {
+
+    width:100px;
+}
+  #social img{
+    height:2rem;
+ max-height:2rem; 
+ max-width:2rem;
+}
+    #info-collect-link{
+   left: -25%; 
+  }
+  .spacer{
+    display:none;
+  }
+  .bg-faded{
+    height: 400px;
+    padding: 30px 15px;
+     flex-direction: column;
+  }
+  .nav, .navbar-brand{
+    display: flex;
+    
+    flex-direction:column;
+  }
+  .nav-items{
+    padding-top:0px;
+    float:left;
+
+    
+  }
+ul#social{
+  margin-left: 0rem;
+   margin-right: 0rem;
+}
+  .navbar-nav .nav-item+.nav-item {
+    margin-left: 0rem;
+}
+  .col-xs-12, .col-md-6, .offset-md-3, .col-lg-6, .offset-lg-3{
+    padding-left: 10px;
+    padding-right:10px;
+  }
+    #lang-dropdown{
+    width: 30%;
+  }
+}
+        </style>
+    
+
+    
+
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.find"></script>
+    <script src="https://cdn.helpdocs.io/js/jquery.min.js?v=1583928946"></script>
+
+        <script type="text/javascript">
+      window.hdlh = {
+        widget_key: "8bi8g1ygumkphadqnumx",
+        primary_color: '#C1D37F',
+        logo: 'https://newjersey.github.io/cv/img/fas_logo.png', // an absolute URL to an image to use as the logo, or pass false to disable the logo completely. Ideally an SVG, but a 180px square PNG/JPG will work great.
+        brand: '',
+        color_mode: 'dark',
+        disable_authorship: true,
+        launcher_button_image: 'https://newjersey.github.io/cv/img/question_12.svg',
+        i18n: { // change the value of the strings we use inside Lighthouse, for internationalization
+    contact_button: 'Ask a scientist your question',
+     contact_name_placeholder: 'Name (Optional)',
+    contact_email_placeholder: 'Email (Required)',
+    search_placeholder: 'Ask your questions here...',
+    contact_message_placeholder: 'Type your question or message for us here...',
+        }
+      };
+      (function(h,d){var s=d.createElement("script");s.type='text/javascript';s.async=true;s.src=h+"?t="+new Date().getTime();d.head.appendChild(s);})("https://lighthouse.helpdocs.io/load",document);
+    </script>
+
+
+
+<script>
+
+
+function ready_alert() {
+var links = document.getElementsByClassName('nav-link');
+links[1].removeAttribute("target");
+links[2].removeAttribute("target");
+document.getElementById("email").required = true;
+var para = document.createElement("p");
+para.id = "created-text";
+ 
+
+var node = document.createTextNode("Made possible through the collaboration of the "); 
+var node_6_link = document.createElement('a');  
+var node_6 = document.createTextNode("Federation of American Scientists, ");
+if (document.documentElement.lang === "es") {
+  var node_6 = document.createTextNode("la Federación Americana de Científicos, ");
+}
+node_6_link.appendChild(node_6);  
+node_6_link.id = "fas-link";  
+node_6_link.href = "https://fas.org"; 
+var node_2_link = document.createElement('a');  
+var node_2 = document.createTextNode("the New Jersey Office of Innovation, ");
+if (document.documentElement.lang === "es") {
+  var node_2 = document.createTextNode("La Oficina de Innovación de New Jersey, ");
+}
+node_2_link.appendChild(node_2);  
+node_2_link.id = "cino-link";  
+node_2_link.href = "https://innovation.nj.gov";  
+var node_4_link = document.createElement('a');
+var node_4 = document.createTextNode("The Governance Lab ");
+if (document.documentElement.lang === "es") {
+  var node_4 = document.createTextNode("el Governance Lab ");
+}
+node_4_link.appendChild(node_4);  
+node_4_link.id = "gl-link";  
+node_4_link.href = "http://thegovlab.org";   
+var node_5 = document.createTextNode("at New York University, ");
+var node_3 = document.createTextNode("and ");
+var node_7_link = document.createElement('a');
+var node_7 = document.createTextNode("many volunteers.");
+if (document.documentElement.lang === "es") {
+  var node_7 = document.createTextNode("and muchos voluntarios.");
+}
+node_7_link.appendChild(node_7);  
+node_7_link.id = "about-us-link";  
+node_7_link.href = "https://covid19.fas.org/l/en/article/jgibm2l09k-about-this-site";
+if (document.documentElement.lang === "es") {
+    var node = document.createTextNode("Hecho posible mediante la colaboración de ");
+}
+para.appendChild(node);
+para.appendChild(node_6_link);
+para.appendChild(node_2_link);
+para.appendChild(node_4_link);
+para.appendChild(node_5);  
+para.appendChild(node_3);
+para.appendChild(node_7_link);
+var element = document.getElementById("content");
+element.appendChild(para);
+    
+var a = document.createElement('a');  
+var link = document.createTextNode("Information Collection Statement"); 
+a.appendChild(link);  
+a.id = "info-collect-link";  
+a.href = "https://fascv.helpdocs.io/article/y008cvl5sh-info-collection";  
+var element_2 = document.getElementById("content");
+element_2.appendChild(a);
+var img = document.createElement("img");
+img.src = "https://files.helpdocs.io/lxn46yd1as/logo.png?t=1583959486999";
+var src = document.getElementsByClassName("navbar-brand");
+src.class = "img-responsive logo";
+var brand_name = document.createElement("p");
+brand_name.id = "brand_name";
+var brand_name_en = document.createTextNode("Do you have COVID-19 questions? Our scientists have answers.");
+if (document.documentElement.lang === "es") {
+  var brand_name_en = document.createTextNode("Tiene preguntas sobre el COVID-19? Nuestros científicos tienen respuestas.");
+}
+src[0].appendChild(img);
+src[0].appendChild(brand_name_en); 
+var cmt_ie = document.createComment("[if lt IE 9]>" + "<script src=" + '"' + "https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" + '"' +" type=" + '"' + "text/javascript" + '"' + "><" + "/script><![endif]");
+var cmt_final = document.getElementsByTagName('head')[0];                                     cmt_final.appendChild(cmt_ie);
+var new_list = document.createElement('ul');
+new_list.id = "social";
+var li_fb = document.createElement('li');
+var li_tw = document.createElement('li');
+var li_lkd = document.createElement('li');
+ 
+var fb = document.createElement('a');
+fb.id = "facebook";
+fb.setAttribute('window.open','href');
+fb.setAttribute('target', '_blank');
+fb.href = "https://www.facebook.com/sharer.php?u="+window.location.href;
+var fb_icon = document.createElement("img");
+fb_icon.src = "https://newjersey.github.io/covid19-ask-a-scientist/img/fb.svg";
+fb.appendChild(fb_icon);
+var tw = document.createElement('a');
+tw.id = "twitter";
+tw.setAttribute('window.open','href');
+tw.setAttribute('target', '_blank');
+tw.href = "https://twitter.com/intent/tweet?url="+window.location.href+"&text=Check%20this%20out:";
+tw.setAttribute('target', '_blank');
+var tw_icon = document.createElement("img");
+tw_icon.src = "https://newjersey.github.io/covid19-ask-a-scientist/img/twitter.svg";
+tw.appendChild(tw_icon);
+var lkd = document.createElement('a');
+lkd.id = "linkedin";
+lkd.setAttribute('window.open','href');
+lkd.setAttribute('target', '_blank');
+lkd.href = "https://www.linkedin.com/shareArticle?mini=true&url="+window.location.href;
+lkd.setAttribute('target', '_blank');
+var lkd_icon = document.createElement("img");
+lkd_icon.src = "https://newjersey.github.io/covid19-ask-a-scientist/img/linkedin.svg";
+lkd.appendChild(lkd_icon);
+li_fb.appendChild(fb);
+li_tw.appendChild(tw);
+li_lkd.appendChild(lkd);
+new_list.appendChild(li_fb);
+new_list.appendChild(li_tw);
+new_list.appendChild(li_lkd);
+var social = document.getElementsByClassName('full-article-card')[0];
+var ref_node = document.getElementById('feedback');   
+social.insertBefore(new_list, ref_node);
+  
+  
+
+  }
+
+  document.addEventListener('readystatechange', function() {
+    if (document.readyState === "complete") {
+      ready_alert();
+    }
+  });
+
+  window.addEventListener('languagechange', function() {
+    if (document.readyState === "complete") {
+      ready_alert();
+    }
+  });
+
+
+</script>
+    
+
+
+        <!-- Google Analytics -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-160324591-1', 'auto');
+          ga('send', 'pageview');
+        </script>
+    
+
+    
+
+    
+
+    <meta property="hd-render" content="hbs">
+
+  </head>
+
+  <body
+    data-article-id="undefined"
+    data-category-id="undefined"
+    data-search-term="undefined"
+    data-original-search-term="undefined"
+    data-search-result-count="undefined"
+    data-language-code="en"
+    data-default-language-code="en"
+    data-account-id="lxn46yd1as"
+    data-home-path="/l/en"
+    data-search-placeholder="Ask your questions here..."
+    data-see-more-results-string="See more results"
+    data-no-articles-found-string="Didn&apos;t find your answer? Click ask a scientist."
+  >
+
+    <div id="main" data-hd-template="curvev3">
+      <div id="header">
+        <div class="container-fluid">
+          <nav class="navbar navbar-light bg-faded">
+            <a class="navbar-brand" href="/l/en">
+              <span>
+                  <img class="img-responsive logo" src="https://files.helpdocs.io/lxn46yd1as/logo.png?t=1583959486999">
+                
+                  Do you have COVID-19 questions? Our scientists have answers.
+              </span>
+            </a>
+            <div class="spacer"></div>
+            <div class="nav-items">
+              <ul class="nav navbar-nav">
+                    <li class="nav-item custom-link">
+                      <a class="nav-link" href="https://fascv.helpdocs.io/article/4x9rpflx27-report" target="_blank">
+                        Report a Correction
+                      </a>
+                    </li>
+                    <li class="nav-item custom-link">
+                      <a class="nav-link" href="https://covid19.fas.org/l/en/article/jgibm2l09k-about-this-site" target="_blank">
+                        About Us
+                      </a>
+                    </li>
+                
+                          
+                  <li class="nav-item language-picker">
+                    <div class="dropdown show">
+                      <a id="lang-dropdown" class="dropdown-toggle nav-link" style="text-transform:uppercase;" href data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg class="lang-dropdown-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                          <defs>
+                            <style>.a,.b{fill:none;stroke-width:2px;}.b{stroke-linecap:square;fill-rule:evenodd;}</style>
+                          </defs>
+                          <circle class="a" cx="10" cy="10" r="10" transform="translate(1 1)"/>
+                          <path class="b" d="M0,0A36.356,36.356,0,0,0,9.108,1.174,36.356,36.356,0,0,0,18.215,0" transform="translate(8.857 2.118) rotate(90)"/>
+                          <path class="b" d="M1,11H19.667" transform="translate(0.667 -2.667)"/>
+                          <path class="b" d="M1,19H19.667" transform="translate(0.667 -5.333)"/>
+                          <path class="b" d="M0,1.174A35.525,35.525,0,0,1,9,0a35.525,35.525,0,0,1,9,1.174" transform="translate(14.841 2.333) rotate(90)"/>
+                        </svg>
+                        en
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="lang-dropdown">
+      
+      
+                              <a class="dropdown-item" href="/l/en" style="color: #444 !important">
+                                English
+                              </a>
+                          
+      
+      
+                              <a class="dropdown-item" href="/l/es" style="color: #444 !important">
+                                Español
+                              </a>
+                          
+                      </div>
+                    </div>
+                  </li>
+                <li class="nav-item">
+                  
+                  
+                  
+                  
+                  
+                        <a
+                          id="contact-modal-trigger"
+                          class="btn btn-primary btn-contact nav-link"
+                          href="#"
+                          data-toggle="modal"
+                          data-target="#contact-modal"
+                          data-popup-trigger="contact-modal"
+                        >Ask a scientist your question</a>
+                    
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div id="search-container" class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12 col-md-6 offset-md-3">
+              <div id="instant-search">
+                <form action="/search" method="GET">
+                  <input id="hd-query" name="query" placeholder="Ask your questions here...">
+                </form>
+              </div>
+      		    <span class="fa fa-search"></span>
+            </div>
+          </div>
+        </div>
+        <div id="searchresults" class="container-fluid">
+          <div id="articles" class="row">
+            <div class="col-xs-12 col-md-6 offset-md-3 col-lg-6 offset-lg-3">
+              <div id="hits"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div id="content">
+          <div id="home">
+                <div class="row" id="top-articles-container">
+                  <div class="col-xs-12 col-sm-10 col-md-10">
+              			<h4 class="top-articles-label large-heading-text">
+              				Top Articles
+              			</h4>
+            			</div>
+            					<div class="col-xs-12 col-sm-6 col-md-4">
+            						<a class="card-link" href="/l/en/article/o6la7seox4-how-can-i-prevent-myself-from-getting-the-virus">
+            							<div id="top-article" class="card hvr-card">
+              							<div class="card-block">
+               	 							<h3 class="card-title">
+            				            How can I prevent myself from getting the virus?
+              								</h3>
+              								<p class="card-description">To ensure the lowest chance of obtaining the virus, it is recommended to do the following: avoid touching your nose, eyes, and mouth; keep your distance from people, especially those who look sick; w…</p>
+            			        	</div>
+            							</div>
+            						</a>
+            					</div>
+            			  					<div class="col-xs-12 col-sm-6 col-md-4">
+            						<a class="card-link" href="/l/en/article/duduwq9y1s-if-i-get-infected-when-do-symptoms-appear">
+            							<div id="top-article" class="card hvr-card">
+              							<div class="card-block">
+               	 							<h3 class="card-title">
+            				            If I get infected, when do symptoms appear?
+              								</h3>
+              								<p class="card-description">Symptoms can appear between 2-14 days after exposure, though some people may not have any symptoms while still being contagious. It’s also important to consider whether you’ve been in contact with an…</p>
+            			        	</div>
+            							</div>
+            						</a>
+            					</div>
+            			  					<div class="col-xs-12 col-sm-6 col-md-4">
+            						<a class="card-link" href="/l/en/article/3q8r3oki32-what-would-lead-you-to-believe-that-someone-is-infected-with-covid-19">
+            							<div id="top-article" class="card hvr-card">
+              							<div class="card-block">
+               	 							<h3 class="card-title">
+            				            What would lead you to believe that someone is infected with COVID-19?
+              								</h3>
+              								<p class="card-description">Identifying people who may be infected with COVID-19 virus relies on recognizing the symptoms that are caused by infection (fever, cough, shortness of breath), ruling out other causes for those sympt…</p>
+            			        	</div>
+            							</div>
+            						</a>
+            					</div>
+            			
+                </div>
+            
+            <div id="categories" class="row flex-row">
+            	<div class="col-xs-12 col-sm-10 col-md-10">
+            		<h4 class="all-categories-label large-heading-text">
+            			All Categories
+            		</h4>
+              </div>
+                  <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a class="card-link" href="/l/en/category/vi8cn7y1jx-about-widget">
+                      <div id="category" class="card hvr-card">
+                        <div class="card-block">
+                            <i class="fa fa-3x category-icon fa-info-circle"></i>
+                          <h3 class="card-title">Welcome to the COVID-19 Ask a Scientist Site</h3>
+                          <p class="card-description">Search for instant answers or click the button above to send your question to be answered by a scientist.</p>
+                            <p class="author-text small-capital-text">
+                                    <img class="img-fluid author-image" src="https://www.gravatar.com/avatar/eac766161ff342cf889d5a9ffd287d41?d=mm&amp;s=150">
+                                
+                              <span>
+                                3
+                                  articles
+                                by
+                                1
+                                  author
+                              </span>
+                            </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                      <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a class="card-link" href="/l/en/category/ei9p8rw206-about">
+                      <div id="category" class="card hvr-card">
+                        <div class="card-block">
+                            <i class="fa fa-3x category-icon fa-book"></i>
+                          <h3 class="card-title">About Novel Coronavirus 2019</h3>
+                          <p class="card-description">General information about the Novel Coronavirus 2019 (COVID-19)</p>
+                            <p class="author-text small-capital-text">
+                                    <img class="img-fluid author-image" src="https://www.gravatar.com/avatar/98c54b6892b16d01464322d63e662178?d=mm&amp;s=150">
+                                
+                                    <img class="img-fluid author-image" src="https://www.gravatar.com/avatar/eac766161ff342cf889d5a9ffd287d41?d=mm&amp;s=150">
+                                
+                                    <img class="img-fluid author-image" src="https://www.gravatar.com/avatar/f3632e81a2eb9e0f2e1ef5ff179782db?d=mm&amp;s=150">
+                                
+                              <span>
+                                30
+                                  articles
+                                by
+                                3
+                                  authors
+                              </span>
+                            </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                      <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a class="card-link" href="/l/en/category/9yf620nuua-current-cases">
+                      <div id="category" class="card hvr-card">
+                        <div class="card-block">
+                            <i class="fa fa-3x category-icon fa-bar-chart"></i>
+                          <h3 class="card-title">The Latest Data</h3>
+                          <p class="card-description">Find the latest information about current cases around the world</p>
+                            <p class="author-text small-capital-text">
+                                    <img class="img-fluid author-image" src="https://www.gravatar.com/avatar/eac766161ff342cf889d5a9ffd287d41?d=mm&amp;s=150">
+                                
+                                    <img class="img-fluid author-image" src="https://www.gravatar.com/avatar/f3632e81a2eb9e0f2e1ef5ff179782db?d=mm&amp;s=150">
+                                
+                                    <img class="img-fluid author-image" src="https://www.gravatar.com/avatar/98c54b6892b16d01464322d63e662178?d=mm&amp;s=150">
+                                
+                              <span>
+                                8
+                                  articles
+                                by
+                                3
+                                  authors
+                              </span>
+                            </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                      <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a class="card-link" href="/l/en/category/y6pja7oj6u-symptoms-tests-treatment">
+                      <div id="category" class="card hvr-card">
+                        <div class="card-block">
+                            <i class="fa fa-3x category-icon fa-home"></i>
+                          <h3 class="card-title">Symptoms, Tests, and Treatment</h3>
+                          <p class="card-description">Guidance if you believe you or someone you know may have the coronavirus</p>
+                            <p class="author-text small-capital-text">
+                                    <img class="img-fluid author-image" src="https://www.gravatar.com/avatar/f3632e81a2eb9e0f2e1ef5ff179782db?d=mm&amp;s=150">
+                                
+                                    <img class="img-fluid author-image" src="https://www.gravatar.com/avatar/eac766161ff342cf889d5a9ffd287d41?d=mm&amp;s=150">
+                                
+                                    <img class="img-fluid author-image" src="https://www.gravatar.com/avatar/98c54b6892b16d01464322d63e662178?d=mm&amp;s=150">
+                                
+                              <span>
+                                16
+                                  articles
+                                by
+                                3
+                                  authors
+                              </span>
+                            </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                      <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a class="card-link" href="/l/en/category/e1tmopj0pz-prepare">
+                      <div id="category" class="card hvr-card">
+                        <div class="card-block">
+                            <i class="fa fa-3x category-icon fa-hand-paper-o"></i>
+                          <h3 class="card-title">How to minimize your risk</h3>
+                          <p class="card-description">Guidance for how to minimize the spread of COVID-19</p>
+                            <p class="author-text small-capital-text">
+                                    <img class="img-fluid author-image" src="https://www.gravatar.com/avatar/be52d2276605b8927e2a8dc5383c0030?d=mm&amp;s=150">
+                                
+                                    <img class="img-fluid author-image" src="https://www.gravatar.com/avatar/f3632e81a2eb9e0f2e1ef5ff179782db?d=mm&amp;s=150">
+                                
+                                    <img class="img-fluid author-image" src="https://www.gravatar.com/avatar/98c54b6892b16d01464322d63e662178?d=mm&amp;s=150">
+                                
+                                    <img class="img-fluid author-image" src="https://www.gravatar.com/avatar/eac766161ff342cf889d5a9ffd287d41?d=mm&amp;s=150">
+                                
+                              <span>
+                                18
+                                  articles
+                                by
+                                4
+                                  authors
+                              </span>
+                            </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                      <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a class="card-link" href="/l/en/category/4bt7xdbxo1-maternity-children">
+                      <div id="category" class="card hvr-card">
+                        <div class="card-block">
+                            <i class="fa fa-3x category-icon fa-child"></i>
+                          <h3 class="card-title">Information regarding pregnancy and children</h3>
+                          <p class="card-description">Find answers to questions regarding the potential impact of COVID19 on pregnancy and children.</p>
+                            <p class="author-text small-capital-text">
+                                    <img class="img-fluid author-image" src="https://www.gravatar.com/avatar/be52d2276605b8927e2a8dc5383c0030?d=mm&amp;s=150">
+                                
+                              <span>
+                                4
+                                  articles
+                                by
+                                1
+                                  author
+                              </span>
+                            </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                      <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a class="card-link" href="/l/en/category/rw71rb2kx1-healthcare-workers">
+                      <div id="category" class="card hvr-card">
+                        <div class="card-block">
+                            <i class="fa fa-3x category-icon fa-medkit"></i>
+                          <h3 class="card-title">Information for Healthcare Workers</h3>
+                          <p class="card-description">Advice for healthcare workers who may come into contact with COVID-19</p>
+                            <p class="author-text small-capital-text">
+                                    <img class="img-fluid author-image" src="https://www.gravatar.com/avatar/f3632e81a2eb9e0f2e1ef5ff179782db?d=mm&amp;s=150">
+                                
+                                    <img class="img-fluid author-image" src="https://www.gravatar.com/avatar/98c54b6892b16d01464322d63e662178?d=mm&amp;s=150">
+                                
+                                    <img class="img-fluid author-image" src="https://www.gravatar.com/avatar/eac766161ff342cf889d5a9ffd287d41?d=mm&amp;s=150">
+                                
+                              <span>
+                                4
+                                  articles
+                                by
+                                3
+                                  authors
+                              </span>
+                            </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                      <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a class="card-link" href="/l/en/category/35k8c3g7vv-business">
+                      <div id="category" class="card hvr-card">
+                        <div class="card-block">
+                            <i class="fa fa-3x category-icon fa-building"></i>
+                          <h3 class="card-title">Information for Businesses</h3>
+                          <p class="card-description">Guidance for employers on how to respond to the coronavirus outbreak</p>
+                            <p class="author-text small-capital-text">
+                                    <img class="img-fluid author-image" src="https://www.gravatar.com/avatar/f3632e81a2eb9e0f2e1ef5ff179782db?d=mm&amp;s=150">
+                                
+                              <span>
+                                1
+                                  article
+                                by
+                                1
+                                  author
+                              </span>
+                            </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                      <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a class="card-link" href="/l/en/category/d2b54ln4xi-travel">
+                      <div id="category" class="card hvr-card">
+                        <div class="card-block">
+                            <i class="fa fa-3x category-icon fa-plane"></i>
+                          <h3 class="card-title">Travel Information</h3>
+                          <p class="card-description">Guidance that you should review before and after traveling</p>
+                            <p class="author-text small-capital-text">
+                                    <img class="img-fluid author-image" src="https://www.gravatar.com/avatar/f3632e81a2eb9e0f2e1ef5ff179782db?d=mm&amp;s=150">
+                                
+                              <span>
+                                10
+                                  articles
+                                by
+                                1
+                                  author
+                              </span>
+                            </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                      <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a class="card-link" href="/l/en/category/wzd18y3dk0-additional">
+                      <div id="category" class="card hvr-card">
+                        <div class="card-block">
+                            <i class="fa fa-3x category-icon fa-bookmark"></i>
+                          <h3 class="card-title">Additional Information</h3>
+                          <p class="card-description">Answers to additional COVID19 questions</p>
+                            <p class="author-text small-capital-text">
+                                    <img class="img-fluid author-image" src="https://www.gravatar.com/avatar/f3632e81a2eb9e0f2e1ef5ff179782db?d=mm&amp;s=150">
+                                
+                                    <img class="img-fluid author-image" src="https://www.gravatar.com/avatar/be52d2276605b8927e2a8dc5383c0030?d=mm&amp;s=150">
+                                
+                              <span>
+                                6
+                                  articles
+                                by
+                                2
+                                  authors
+                              </span>
+                            </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+              
+            </div>
+          </div>
+          
+
+
+
+
+
+  <div  style="position: relative !important; bottom: 0 !important; text-align: center !important; margin: 2em !important; padding: initial !important; padding-bottom: 2em !important; display: block !important;">
+
+
+          <a
+            href="https://www.helpdocs.io?ref=hd"
+            target="_blank"
+            title="Powered by HelpDocs"
+            style="display: initial !important; position: initial !important; margin: 0 !important; padding: 0 !important; color: #ccc !important; text-decoration: none !important;"
+          >
+            <img
+              src="https://cdn.helpdocs.io/img/logo_grey.png?v=1583928946"
+              alt="Powered by HelpDocs"
+              style="height: 2em !important; width: 2em !important; display: initial !important; position: initial !important; margin: 0 !important; padding: 0 !important;"
+            />
+          </a>
+      
+                
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+      <div id="contact-modal" class="modal fade">
+        <div class="modal-dialog" role='document'>
+          <div class="modal-content">
+            <div class="modal-header">
+              <button class="close" type='button' data-dismiss='modal' aria-label='Close'>
+                <span aria-hidden='true'>×</span>
+              </button>
+              <h4 class="modal-title">Ask a scientist your question</h4>
+            </div>
+            <div class="modal-body">
+              <form
+                id="contact-form"
+                action="/contact"
+                method="POST"
+                data-article-id=""
+                data-category-id=""
+                data-search-term=""
+              >
+                <fieldset class="form-group">
+                  <input id="name" class="form-control" type="text" placeholder="Name (optional)">
+                </fieldset>
+                <fieldset class="form-group">
+                  <input id="email" class="form-control" type="email" placeholder="Email (required)">
+                </fieldset>
+                <fieldset class="form-group">
+                  <textarea id="question" class="form-control" type="text" placeholder="Ask your questions here..." rows="5"></textarea>
+                </fieldset>
+                <input id="noop" type="text" name="noop" style="display: none !important">
+              </form>
+              <button id="contact-form-submit" class="btn btn-primary btn-block" type='button'>Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="https://cdn.helpdocs.io/js/tether.min.js?v=1583928946"></script>
+    <script src="https://cdn.helpdocs.io/js/bootstrap.min.js?v=1583928946"></script>
+    <script src="https://cdn.helpdocs.io/js/js.cookie.min.js?v=1583928946"></script>
+
+    <script src="https://cdn.helpdocs.io/js/highlight.min.js?v=1583928946"></script>
+
+
+                                                            
+                
+
+    <script src="https://cdn.helpdocs.io/js/libs/hdanalytics.js?v=1583928946" type="text/javascript"></script>
+
+    <script>
+      window.hd_util_params = {
+        disable_legacy_search_timers: true,
+        enable_pre_languages: 'pre',
+        search_article_template: `
+	       <div class="row search-article-row">
+          <div class="col-xs">
+            <div id="search-article" class="search-article">
+              <a class="search-article-link" data-article-id="\{\{article_id\}\}" href="\{\{relative_url\}\}">
+                <h3 class="search-article-title">\{\{title\}\}</h3>
+                <p class="search-article-description">\{\{description\}\}</p>
+		           </a>
+              <hr>
+            </div>
+          </div>
+        </div>
+        `
+      };
+    </script>
+
+    <script src="https://cdn.helpdocs.io/js/libs/hdthemeutils.js?v=1583928946" type="text/javascript"></script>
+    <script src="https://cdn.helpdocs.io/js/libs/instantsearch.js?v=1583928946" type="text/javascript"></script>
+
+    
+
+    <!-- Resize videos -->
+    <script>
+      (function() {
+        $(function () {
+          var $allVideos = $("iframe[src*='//www.youtube.com'],iframe[src*='//player.vimeo.com'],.hd--embed iframe,.hd--embed span[id^='vidyard_span_']"),
+              $fluidEl = $("#article .card-block"),
+              isBackup = false;
+          if (!$fluidEl || !$fluidEl.width()) {
+            isBackup = true;
+            $fluidEl = $('#article #body');
+          };
+          $allVideos.each(function() {
+            $(this)
+                .data('aspectRatio', (this.height / this.width) || 0.5625)
+                .removeAttr('height')
+                .removeAttr('width');
+            });
+            $(window).resize(function() {
+              var newWidth = $fluidEl.width() - (isBackup ? 200 : 0);
+              if (!newWidth) return;
+              $allVideos.each(function() {
+                var $el = $(this);
+                $el
+                  .width(newWidth)
+                  .height(newWidth * $el.data('aspectRatio'));
+              });
+          }).resize();
+        });
+      })();
+    </script>
+  </body>
+</html>
