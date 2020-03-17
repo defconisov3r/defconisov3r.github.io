@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://covid19.mx/xmlrpc.php">
+<title>COVID19 &#8211; Todo sobre el coronavirus y el covid19 en México.</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="COVID19 &raquo; Feed" href="https://covid19.mx/feed/" />
+<link rel="alternate" type="application/rss+xml" title="COVID19 &raquo; Comments Feed" href="https://covid19.mx/comments/feed/" />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.10.4 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.10.4';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-160594724-1';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-160594724-1', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/covid19.mx\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='scrawl-style-css'  href='https://covid19.mx/wp-content/themes/scrawl/style.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='scrawl-fonts-css'  href='https://fonts.googleapis.com/css?family=Lora:400,700|Merriweather:400italic,400,700,700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='https://covid19.mx/wp-content/themes/scrawl/fonts/genericons.css?ver=3.3' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://covid19.mx/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css' media='all' />
+<script type='text/javascript' src='https://covid19.mx/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://covid19.mx/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/covid19.mx","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://covid19.mx/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js?ver=7.10.4'></script>
+<link rel='https://api.w.org/' href='https://covid19.mx/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://covid19.mx/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://covid19.mx/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.3.2" />
+</head>
+
+<body class="home blog">
+	<button class="menu-toggle x">
+		<span class="lines"></span>
+		<span class="screen-reader-text">Primary Menu</span>
+	</button>
+	<div class="slide-menu">
+		
+		<h1 class="site-title"><a href="https://covid19.mx/" rel="home">COVID19</a></h1>
+		<h2 class="site-description">Todo sobre el coronavirus y el covid19 en México.</h2>
+
+		
+		
+			<div id="secondary" class="widget-area" role="complementary">
+		<aside id="search-2" class="widget widget_search"><h1 class="widget-title">Buscar</h1><form role="search" method="get" class="search-form" action="https://covid19.mx/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form></aside>	</div><!-- #secondary -->
+	</div><!-- .slide-menu -->
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<header id="masthead" class="site-header" role="banner">
+
+		<div class="site-branding">
+						<h1 class="site-title"><a href="https://covid19.mx/" rel="home">COVID19</a></h1>
+		</div>
+
+	</header><!-- #masthead -->
+
+	
+	
+	<div id="content" class="site-content">
+
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+						
+				
+<article id="post-1" class="post-1 post type-post status-publish format-standard hentry category-uncategorized">
+	<header class="entry-header">
+					<h1 class="entry-title"><a href="https://covid19.mx/covid19-o-coronavirus/" rel="bookmark">&#8220;Todo sobre el Coronavirus ó COVID19 en México&#8221;</a></h1>			</header><!-- .entry-header -->
+			<div class="entry-content">
+			
+<p>El coronavirus o COVID19 es un virus que data de los años 60, es decir, ya es bien conocido, y que en los humanos <strong>puede causar desde resfriado hasta un Síndrome Respiratorio Agudo Severo (SARS)</strong>. Sin embargo, este 2020 ha surgido una forma del virus que está resultando ser mortal en algunas personas. El coronavirus o COVID19 puede derivar a problemas más graves como<strong> bronquitis, neumonía</strong> e incluso la <strong>muerte</strong>. </p>
+
+
+
+<p>Desde el pasado 20 de enero, se reportó el primer caso del nuevo coronavirus o COVID19. Una mujer originaria de Wuhan, una ciudad de China, estaba infectada. Al poco tiempo, la mujer fue sometida a pruebas que corroboraron la enfermedad. El nuevo virus es llamado COVID19.</p>
+
+
+
+<p>Hasta el momento, el virus ha llegado a casi todos los países incluido México.</p>
+
+
+
+<p>Con la posible llegada de esta infección a más países, es importante que estés atento y <strong>aquí te compartimos todo lo que debes saber del Coronavirus ó COVID19</strong> <strong>de Wuhan</strong>.</p>
+
+
+
+<h2><strong>¿Quién tiene más riesgo de contraer coronavirus o COVID19?</strong></h2>
+
+
+
+<p>Como es común, a la hora de considerar la población en riesgo, están<strong>&nbsp;los niños pequeños y los adultos mayores</strong>, ya que ellos están más expuestos al agresivo virus. Sin embargo, los adultos no deben descartar que pueden ser la víctima. Recuerda que nadie está exento.</p>
+
+
+
+<h2><strong>¿El coronavirus o COVID19 en México?</strong></h2>
+
+
+
+<p>El pasado 20 de enero, se dio a conocer un posible caso del nuevo coronavirus o COVID19 en México. El presidente de la República, Andrés Manuel López Obrador, comentó en su informe matutino que en Tamaulipas se detectó un hombre con síntomas relacionados con la infección, luego de haber viajado en diciembre del año pasado a la ciudad de Wuhan.</p>
+
+
+
+<p>El infectado en cuestión es un&nbsp;hombre&nbsp;de 57 años de origen asiático investigador del Instituto Politécnico Nacional (IPN) que después de haber acudido al ISSTE por presentar la sintomatología relacionada, se decidió mantenerlo en vigilancia. 24 horas después del comunicado, la secretaría de Salud del estado de Tamaulipas descartó la posible enfermedad.</p>
+
+
+
+<p>Sin embargo, a la par de esta negativa, en el estado de Jalisco se han detectado tres posibles casos, (un hombre, una mujer y un menor) que están en observación para poder determinar si se trata de los primeros casos oficiales.</p>
+
+
+
+<p>Por lo anterior, es importante que no te confíes y acudas a tu médico en el momento que sientas los primeros&nbsp;síntomas.</p>
+					</div><!-- .entry-content -->
+				<div class="entry-meta clear">
+			<span class="posted-on">Posted on <a href="https://covid19.mx/covid19-o-coronavirus/" rel="bookmark"><time class="entry-date published" datetime="2020-03-14T01:36:09-06:00">14/03/2020</time><time class="updated" datetime="2020-03-14T12:22:05-06:00">14/03/2020</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="https://covid19.mx/author/covid19_2ksqn0/">covid19_2ksqn0</a></span></span>			<span class="secondary-entry-meta">
+																	<span class="comments-link"><a href="https://covid19.mx/covid19-o-coronavirus/#respond">0</a></span>							</span>
+		</div><!-- .entry-meta -->
+	</article><!-- #post-## -->
+
+			
+			
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+			<a href="http://wordpress.org/">Proudly powered by WordPress</a>
+			<span class="sep"> ~ </span>
+			Theme: Scrawl by <a href="http://wordpress.com/themes/scrawl/" rel="designer">WordPress.com</a>.		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript' src='https://covid19.mx/wp-content/themes/scrawl/js/scrawl.js?ver=20150309'></script>
+<script type='text/javascript' src='https://covid19.mx/wp-content/themes/scrawl/js/skip-link-focus-fix.js?ver=20130115'></script>
+<script type='text/javascript' src='https://covid19.mx/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+
+</body>
+</html>

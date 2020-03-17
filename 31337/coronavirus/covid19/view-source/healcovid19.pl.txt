@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Domena healcovid19.pl jest utrzymywana na serwerach nazwa.pl</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//newkf.nazwa.pl/templates/blackdown-template-03.2020/css/style.css" type="text/css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script type="text/javascript">
+        var Links = {
+      url: 'https://www.nazwa.pl/kampania,redirect,11625.html?utm_source=blackdown&utm_medium=blackdown&utm_campaign=blog?redirectId=hosting-nazwa-pl-najszybszy-w-polsce',
+      redirect: function() {
+           try {
+                parent.location.href = Links.url;
+          }
+          catch(e) {}
+          return false;
+      },
+       refresh: function() {
+           window.setTimeout('Links.redirect()', 8000);
+      },
+       load: function() {
+           var obj = this;
+          window.onload = function() {
+              obj.refresh();
+          }
+      }
+    };
+     Links.load();
+
+     window.onclick = function(e){
+       var className = e.target.className.toString();
+       if(!className.includes('policy-accept') && !className.includes('policy-box')){
+         var redirectUrl = 'https://www.nazwa.pl/kampania,redirect,11625.html?utm_source=blackdown&utm_medium=blackdown&utm_campaign=blog?redirectId=hosting-nazwa-pl-najszybszy-w-polsce';
+         if(redirectUrl){
+            window.location.href=redirectUrl;
+         }
+       }
+     };
+        function policyButtonClicked() {
+        var data = new Date();
+        data.setTime(data.getTime()+(100*365*24*60*60*1000));
+        document.cookie="polityka=true; expires="+data.toGMTString()+"; path=/";
+        var policy_box = document.getElementById('policy-box');
+        policy_box.style.display = 'none';
+    }
+
+  </script>
+    </head>
+  <body>
+  <div class="blackDown">
+      <div class="blackDown__circle">
+          <div class="blackDown__logo">
+              <a href="https://nazwa.pl" class="blackDown__logo-wrapper">
+                  <img src="//newkf.nazwa.pl/templates/blackdown-template-03.2020/images/logo.png" alt="" class="blackDown__logo-img">
+              </a>
+          </div>
+          <h1 class="blackDown__primaryHeading">
+              Najszybszy <strong>hosting</strong>
+              <p>w polsce</p>
+          </h1>
+          <h2 class="blackDown__secondaryHeading">
+              Domena <strong id="domainName">healcovid19.pl</strong>
+              <p>utrzymywana jest na serwerach nazwa.pl</p>
+          </h2>
+      </div>
+      <img src="//newkf.nazwa.pl/templates/blackdown-template-03.2020/images/cien.png" alt="" class="blackDown__shadow">
+  </div>
+
+
+    <div class="policy-box" id="policy-box" style="bottom: 0; position: fixed; width: 100%; z-index: 1000;">
+        <div style="margin: 0 auto;">
+            <div class="policy-box-inner" style="display: inline-block"> Na naszych stronach internetowych stosujemy pliki cookies. Korzystając z naszych serwisów internetowych bez zmiany ustawień przeglądarki wyrażasz zgodę na stosowanie plików cookies zgodnie z <a href="https://nazwa.pl/pomoc/konfiguracja/polityka-prywatnosci/" style="text-decoration: underline; opacity: 0.9;">Polityką Prywatności</a>.
+            </div>
+            <a href="javascript:void(0)" class="policy-accept orange small" style="width: 163px;"  onclick="policyButtonClicked()">Akceptuję, nie pokazuj więcej</a>
+        </div>
+    </div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11186383-2");
+pageTracker._setDomainName("none");
+pageTracker._setAllowLinker(true);
+pageTracker._setAllowHash(false);
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+  </body>
+</html>

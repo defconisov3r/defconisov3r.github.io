@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>COVID-19 Alerts</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+
+    <!-- Styles -->
+    <style>
+        html, body {
+            background-color: #fff;
+            color: #636b6f;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 200;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .full-height {
+            height: 100vh;
+        }
+
+        .flex-center {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .position-ref {
+            position: relative;
+        }
+
+        .top-right {
+            position: absolute;
+            right: 10px;
+            top: 18px;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .title {
+            font-size: 70px;
+            line-height: 88px;
+        }
+
+        .links > a {
+            color: #636b6f;
+            padding: 0 25px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        @media  only screen and (max-width: 800px) {
+            .links > a {
+                display: block;
+                margin-bottom: 16px;
+            }
+        }
+
+        .m-b-md {
+            margin-bottom: 30px;
+        }
+
+        .page {
+            max-width: 800px;
+            padding: 37px 15px;
+        }
+    </style>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160652386-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {dataLayer.push(arguments);}
+
+  gtag("js", new Date());
+  gtag("config", "UA-160652386-1");
+</script>
+    <!-- Start of Async Drift Code -->
+<script>
+    "use strict";
+    !function() {
+        var t = window.driftt = window.drift = window.driftt || [];
+        if (!t.init) {
+            if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+            t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+                t.factory = function(e) {
+                    return function() {
+                        var n = Array.prototype.slice.call(arguments);
+                        return n.unshift(e), t.push(n), t;
+                    };
+                }, t.methods.forEach(function(e) {
+                t[e] = t.factory(e);
+            }), t.load = function(t) {
+                var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                var i = document.getElementsByTagName("script")[0];
+                i.parentNode.insertBefore(o, i);
+            };
+        }
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('7isex6mnbg48');
+</script>
+<!-- End of Async Drift Code -->
+</head>
+<body>
+<div class="flex-center position-ref full-height">
+    <div class="content">
+        <div class="title m-b-md">
+            COVID-19 Alerts
+        </div>
+
+        <div class="links">
+            <a href="https://covid19alerts.info/news">News</a>
+<a href="https://covid19alerts.info/faq">FAQ</a>
+<a href="https://covid19alerts.info/page/roadmap">Roadmap</a>
+    <a href="https://covid19alerts.info/register">Register</a>
+    <a href="https://covid19alerts.info/login">Login</a>
+        </div>
+
+                    <div class="page">
+                <div><strong>Why?</strong><br>We felt that in such a decisive time, having access to truthful information it's vital to make the most strategic decisions in our lives. Nowadays, the majority of the news networks are biased and highly politicized as well as social media have become a toxic environment. <br><br><strong>What?</strong><br>In response to this situation, we decided to create this service that provides near-real-time SMS updates based on truthful &amp; official sources.</div><div><br></div>
+            </div>
+            </div>
+</div>
+</body>
+</html>

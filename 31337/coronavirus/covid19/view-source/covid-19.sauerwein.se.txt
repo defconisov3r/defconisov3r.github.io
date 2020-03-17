@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Asauerwein Covid-19 Chart</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="jquery.csv.min.js"></script>
+<script src="chartjs-plugin-colorschemes.min.js"></script>
+</head>
+
+<body>
+	<h1> Covid-19 Confirmed Cases</h1>
+	<p> Switch to Growth Rate <a href="index_growth.html"> Growth </a></p>
+	<p> Data based on <a href="https://github.com/CSSEGISandData/COVID-19">Data Repository by Johns Hopkins CSSE</a></p>
+	<button id="logarithmic">Log Scale</button>
+	<button id="linear">Linear Scale</button>
+	<button id="showall"> Show All </button>
+	<div style="height:100vh; width:100%; max-height:800px">
+		<canvas id="myChart"></canvas>
+	</div>
+</body>
+
+</html>
+<script>
+var myLineChart;
+var data = {};
+
+$(document).ready(function() {
+    $.ajax({
+        type: "GET",
+        url: "time_series_19-covid-Confirmed.csv",
+        dataType: "text",
+        success: function(csv) {generateChart(csv);}
+     });
+});
+
+function generateChart(csv) {
+	var ctx = document.getElementById('myChart');
+	var csv_objects = $.csv.toObjects(csv);
+	data["datasets"] = [];
+
+	$.each(csv_objects, function( key, value){
+		var existing_index = findDataSet(data["datasets"], value["Country/Region"]);
+		if (existing_index){
+			$.each(value, function( index ){
+				if(index.includes("/20")){
+					var value_index = findValue(data["datasets"][existing_index]["data"], index)
+					data["datasets"][existing_index]["data"][value_index]["y"] += parseInt(value[index]);
+				}
+			})
+		}
+		else{
+			var new_dataset = {};
+			new_dataset["label"] = value["Country/Region"];
+			new_dataset["hidden"] = !value["Country/Region"].includes("Austria");
+			new_dataset["data"] = [];
+			$.each(value, function( index ){
+				if(index.includes("/20")){
+					new_dataset["data"].push({"x": index, "y": parseInt(value[index])});
+				}
+			})
+
+			data["datasets"].push(new_dataset);
+		}
+
+		
+	})
+	data["datasets"] = sortByKey(data["datasets"], "label");
+
+	myLineChart = new Chart(ctx, {
+    type: 'line',
+    data: data,
+    options: {
+    	maintainAspectRatio: false,
+    	responsive: true,
+    	legend: {
+    		position: 'top',
+    	},
+        scales: {
+        	xAxes: [{
+        		type: 'time',
+        		offset: true,
+        	}],
+            yAxes: [{
+            	type: 'logarithmic',
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        },
+        plugins: {
+        	colorschemes: {
+        		scheme: "tableau.Tableau20"
+        	}
+        }
+    }
+	});
+
+//  Show All Data as table
+//	$( "#table").html(csvToTable(csv_objects))	
+}
+
+function findDataSet(datasets, country){
+	var existing_index;
+	$.each(datasets, function( index ){
+		if (datasets[index]["label"] == country){
+			existing_index = index;
+		}
+	})
+	return existing_index;
+}
+
+function findValue(data, value){
+	var value_index;
+	$.each(data, function( index ){
+		if (data[index]["x"] == value){
+			value_index = index;
+			
+		}
+	})
+	return value_index;
+}
+
+var csvToTable = function (csv) {
+    var html = '<table>';
+
+    jQuery.each(csv[0], function( key ){
+    	key;
+    	html += "<th>" + key + "</th>";
+    })
+    jQuery.each(csv, function( key, row ){
+    	html += "<tr>"
+    	jQuery.each(row, function(key, value){
+    		html += "<td>" + value + "</td>";
+    	})
+    	html += "</tr>";
+    })
+    html += '</table>';
+ 
+    return html;
+};
+
+function sortByKey(array, key) {
+    return array.sort(function(a, b) {
+        var x = a[key]; var y = b[key];
+        return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+    });
+}
+
+
+$( "#logarithmic").click(function(){
+	myLineChart.options.scales.yAxes[0].type = 'logarithmic';
+    myLineChart.update();
+})
+$( "#linear").click(function(){
+	myLineChart.options.scales.yAxes[0].type = 'linear';
+    myLineChart.update();
+})
+$("#showall").click(function() {
+	myLineChart.data.datasets.forEach(function(ds) {
+    ds.hidden = false;
+  });
+  myLineChart.update();
+});
+
+</script>

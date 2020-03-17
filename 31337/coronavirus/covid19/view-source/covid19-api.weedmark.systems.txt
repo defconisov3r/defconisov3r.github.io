@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en-CA" data-ng-app="COVID19-api">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <title></title>
+    <meta name="description" content="COVID19-api by Weedmark Systems">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="canonical" href="https://covid19.weedmark.systems/" />
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-OUFW7hFO0/r5aEGTQOz9F/aXQOt+TwqI1Z4fbVvww04=" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="ContentPane" class="container">
+    <div class="col-12">
+<h1>REST API for COVID-19 Stats</h1>
+<p>Data sourced from <a href="https://github.com/CSSEGISandData/COVID-19"></a> which is re-pulled in hourly.</p>
+
+<h2>Endpoint:</h2>
+<pre>GET https://covid19-api.weedmark.systems/api/v1/stats</pre>
+Accepts: <em>country</em> as filter parameter, otherwise returns all stats. Country name must match exactly with what is in the data (URL encoded spaces and punctuation)<br />
+For example:
+<pre>GET https://covid19-api.weedmark.systems/api/v1/stats?country=Canada</pre>
+<h4>Returns</h4>
+<pre>
+{
+  "error": false,
+  "statusCode": 200,
+  "message": "OK",
+  "data": {
+    "lastChecked": "2020-03-11T14:25:22.787Z",
+    "covid19Stats": [
+      {
+        "province": "Ontario",
+        "country": "Canada",
+        "lastUpdate": "2020-03-10T17:13:32",
+        "confirmed": 36,
+        "deaths": 0,
+        "recovered": 4
+      },
+      {
+        "province": "British Columbia",
+        "country": "Canada",
+        "lastUpdate": "2020-03-09T22:43:25",
+        "confirmed": 32,
+        "deaths": 1,
+        "recovered": 4
+      },
+      {
+        "province": "Alberta",
+        "country": "Canada",
+        "lastUpdate": "2020-03-09T17:53:24",
+        "confirmed": 7,
+        "deaths": 0,
+        "recovered": 0
+      },
+      {
+        "province": "Quebec",
+        "country": "Canada",
+        "lastUpdate": "2020-03-10T00:53:03",
+        "confirmed": 4,
+        "deaths": 0,
+        "recovered": 0
+      }
+    ]
+  }
+}
+</pre>
+
+<h4>Terms of Use</h4>
+<p>The data this API serves including all data, mapping, and analysis, copyright 2020 Johns Hopkins University, all rights reserved, is provided to the public strictly for educational and academic research purposes. The Website relies upon publicly available data from multiple sources, that do not always agree. Weedmark Systems (the author of this API) and The Johns Hopkins University (the author of the data provided by this API) hereby disclaims any and all representations and warranties with respect to this website, including accuracy, fitness for use, and merchantability. Reliance on this website or API for medical guidance or use of this website or API in commerce is strictly prohibited.</p>
+</div>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-6347925-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-6347925-16');
+</script>
+</body>
+</html>
