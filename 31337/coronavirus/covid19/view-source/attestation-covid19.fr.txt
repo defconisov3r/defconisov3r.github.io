@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>COVID-19 | Téléchargez votre attestation de déplacement</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<style>
+	
+	#main {
+		
+		width: 90%;
+		font-family: 'Roboto', sans-serif;
+		font-size: 18px;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		text-align: center;
+		overflow-x: hidden;
+		margin: 0 auto;
+		
+	}
+	
+	#header h1 {
+		
+		text-align: center;
+		color: #000;	
+		font-size: 3em;
+		
+	}
+	
+	#header {
+		border-radius: 10px;
+		vertical-align: middle;
+	}
+	
+	#logo {
+		width: 330px;
+		border-radius: 10px;
+		margin: 30px auto;
+	}
+	
+	.telechargement {
+		display: flex;
+		border-radius: 30px;
+		height: 380px;
+		width:300px;
+		margin: 50px auto;
+		border: 1px solid #f3f3f3;
+		background-color: #4EC3EA;
+		color: #fff;
+		padding: 20px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		
+	}
+	
+	.telechargement .lien a {
+		
+		color:#fff;
+		text-decoration: none;
+		font-weight: bold;
+		
+	}
+	
+	.icone {
+		margin: 0 0 20px 0;
+	}
+	
+	.bloc-telechargement{
+		margin: 50px auto;
+		display: flex;
+		flex-direction: row;
+		width: 70%;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	
+	.questions {
+		text-align: left;
+		vertical-align: middle;
+		align-items: center;
+		display: flex;
+		height: 100%;
+	}
+	
+	.questions p {
+		text-align: center;
+	}
+	
+		
+	.questions img {
+		text-align: center;
+	}
+	
+	.liste {
+		margin: 5% auto;
+	}
+
+	
+	h2 {
+		text-align:left;
+	} 
+	
+	li {
+		text-align: left;
+		line-height: 1.3em;
+		font-size: 18px;
+	}
+	
+	.twitter {
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	
+</style>
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160841326-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-160841326-1');
+</script>
+
+</head>
+
+<body>
+	
+<div id="main">
+	
+		<div id="logo"><img src="republique-française logo.PNG" width="300" alt="Logo République française"/></div>
+	
+  		<div id="header">
+			<h1 class="title">Attestation sur l'honneur COVID-19</h1>
+			<p>Téléchargez dès <strong>mardi 17 mars 2020 12h00</strong> votre attestation sur l'honneur pour les déplacements autorisés dans le cadre des mesures mises en place pour lutter contre le coronavirus COVID-19 sur le territoire français.</p>
+		</div>
+	
+		<div class="bloc-telechargement">
+			<div class="telechargement">
+				<div class="icone"><a href="#"><img src="form.png" width="75%" alt="Formulaire"/></a></div>
+				<div class="lien"><a href="#">Télécharger le formulaire</a></div>
+			</div>
+			<div class="questions">
+				<div class="liste">
+					<h2>Quels sont les motifs valables & autorisés ?</h2>
+					<ul>
+						<li>Déplacement vers le lieu de travail si le télétravail n'est pas possible.</li>
+						<li>Assistance & besoin impérieux d'assistance à un proche.</li>
+					  <li>Déplacement de première nécessité (alimentation et médicaments). </li>
+					  <li>Déplacement lié à la garde d'enfant.</li>
+					  <li>Rendez-vous chez un professionnel de santé.</li>
+						<li>Exercice physique individuel (footing, marche à pied...)</li>
+                    </ul>
+				  <p>Pour toute question, contactez ce numéro : </p>
+		      <p><img src="https://www.service-public.fr/webapp/images/actu/small/I3713.jpg" alt=""/></p> </div>
+			</div>
+		</div>
+		<h1>Suivez-toute l'actualité officielle liée au COVID-19</h1>
+		<div class="twitter"><a class="twitter-timeline" href="https://twitter.com/Elysee?ref_src=twsrc%5Etfw">Tweets by Elysee</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+		
+	</div>
+	
+</body>
+</html>

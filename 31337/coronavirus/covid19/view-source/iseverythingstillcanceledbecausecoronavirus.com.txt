@@ -1,0 +1,55 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Is Everything Still Canceled Because Coronavirus?</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="stylesheet" href="https://unpkg.com/koality-flexbox-grid@0.0.14/dist/css/flexbox-grid.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/massive-typo@0.0.3/dist/css/typography.min.css"> 
+  <style>
+    .text-center {
+      text-align: center;
+    }
+    .info {
+      margin-top: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="inner-row body-container">
+    <h1 class="text-center">Yes</h1>
+    <div class="info">
+      <p>Some Actual Useful Information:</p>
+      <ul>
+        <li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public">WHO: Coronavirus disease (COVID-19) advice for the public</a></li>
+        <li>
+          <a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html">CDC: Coronavirus</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Fathom - simple website analytics - https://github.com/usefathom/fathom -->
+  <script>
+  (function(f, a, t, h, o, m){
+    a[h]=a[h]||function(){
+      (a[h].q=a[h].q||[]).push(arguments)
+    };
+    o=f.createElement('script'),
+    m=f.getElementsByTagName('script')[0];
+    o.async=1; o.src=t; o.id='fathom-script';
+    m.parentNode.insertBefore(o,m)
+  })(document, window, '//analytics.joshfabean.com/tracker.js', 'fathom');
+  fathom('set', 'siteId', 'IJGGB');
+  fathom('trackPageview');
+  </script>
+  <!-- / Fathom -->
+</body>
+
+</html>

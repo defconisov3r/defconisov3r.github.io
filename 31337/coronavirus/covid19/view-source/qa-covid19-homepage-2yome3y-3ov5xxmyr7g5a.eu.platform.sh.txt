@@ -1,0 +1,946 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<!--[if IE 7]><html class="oldie ie7" xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"><![endif]-->
+<!--[if IE 8]><html class="oldie ie8" xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"><![endif]-->
+<!--[if IE 9]><html class="ie9" xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"><![endif]-->
+<!--[if !IE]><!--><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"><!--<![endif]-->
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/" />
+<link rel="shortlink" href="https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/" />
+  <title>My World of Work |</title>
+  <style>
+@import url("https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/modules/system/system.base.css?q7caf3");
+@import url("https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/modules/system/system.menus.css?q7caf3");
+@import url("https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/modules/system/system.messages.css?q7caf3");
+@import url("https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/modules/system/system.theme.css?q7caf3");
+</style>
+<style>
+@import url("https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/modules/contrib/colorbox_node/colorbox_node.css?q7caf3");
+@import url("https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/modules/contrib/date/date_api/date.css?q7caf3");
+@import url("https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/modules/contrib/date/date_popup/themes/datepicker.1.7.css?q7caf3");
+@import url("https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/modules/field/theme/field.css?q7caf3");
+@import url("https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/modules/contrib/logintoboggan/logintoboggan.css?q7caf3");
+@import url("https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/modules/node/node.css?q7caf3");
+@import url("https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/modules/contrib/office_hours/office_hours.css?q7caf3");
+@import url("https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/modules/search/search.css?q7caf3");
+@import url("https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/modules/user/user.css?q7caf3");
+@import url("https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/modules/contrib/_views/views/css/views.css?q7caf3");
+@import url("https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/modules/contrib/media/modules/media_wysiwyg/css/media_wysiwyg.base.css?q7caf3");
+</style>
+<style>
+@import url("https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/modules/contrib/ctools/css/ctools.css?q7caf3");
+</style>
+<style>
+@import url("https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/themes/contrib/mothership/mothership/css/normalize.css?q7caf3");
+@import url("https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/themes/contrib/mothership/mothership/css/mothership-default.css?q7caf3");
+@import url("https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/themes/contrib/mothership/mothership/css/mothership-layout.css?q7caf3");
+@import url("https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/themes/contrib/mothership/mothership/css/mothership.css?q7caf3");
+@import url("https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/themes/custom/sds_mywow_semantic/fomantic/build/mywow/prototypes/dist/semantic.min.css?q7caf3");
+@import url("https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/themes/custom/sds_mywow_semantic/css/style.css?q7caf3");
+@import url("https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/themes/custom/sds_mywow_semantic/css/print.css?q7caf3");
+@import url("https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/themes/custom/sds_mywow_semantic/css/icons.css?q7caf3");
+</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="/profiles/sds_mywow/themes/custom/sds_mywow_semantic/images/120.png" rel="apple-touch-icon" />
+  <link href="/profiles/sds_mywow/themes/custom/sds_mywow_semantic/images/152.png" rel="apple-touch-icon" sizes="152x152" />
+  <link href="/profiles/sds_mywow/themes/custom/sds_mywow_semantic/images/167.png" rel="apple-touch-icon" sizes="167x167" />
+  <link href="/profiles/sds_mywow/themes/custom/sds_mywow_semantic/images/180.png" rel="apple-touch-icon" sizes="180x180" />
+  <link href="/profiles/sds_mywow/themes/custom/sds_mywow_semantic/images/192.png" rel="icon" sizes="192x192" />
+  <link href="/profiles/sds_mywow/themes/custom/sds_mywow_semantic/images/128.png" rel="icon" sizes="128x128" />
+  <link rel="stylesheet" href="https://use.typekit.net/nkn2nky.css">
+</head>
+<body class="front no-sidebars node-type-homepage-with-featured-content homepage-0 pushable" >
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+  
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5949LK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>  
+  <header role="banner">
+	<div class="ui padded grid absolute-menu">
+		<div class="computer only row padding--none">
+
+			<!-- Used for announcement at top of homepage only.		 -->
+			<div class="ui fluid announcement huge menu margin--none">
+				<div class="ui container padding--standard--vert">
+					<p><strong>Coronavirus (COVID-19) update:</strong> Get the latest information on the response to the outbreak on the <a class="annoucement link" href="https://www.skillsdevelopmentscotland.co.uk/coronavirus-covid-19/">Skills Development Scotland website</a>.</p>
+				</div>
+			</div>
+		
+			<div class="ui fluid attached gradient main-menu inverted menu borderless padding--thin--vert">
+				<div class="ui container" id="main-menu">
+						<a href="/">
+							<svg role="img" class="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="wow-logo" x="0px" y="0px" viewBox="0 134.2 841.9 326.5" enable-background="new 0 134.2 841.9 326.5" xml:space="preserve" aria-labelledby="title desc" aria-describedby="desc">
+                                <title>My World of Work</title>
+                                <desc id="desc">My World of Work logo accompanied by a wheel of icons representing various job industries</desc>
+                                    <g>
+                                        <path d="M295.5,222.7c-1.6-2.3-1.1-5.6,1.2-7.2c2.3-1.6,5.6-1.1,7.2,1.2s1.1,5.6-1.2,7.2    C300.4,225.6,297.2,225,295.5,222.7 M254.9,258.9l-5.8-8.3c22,6.1,37.7,5,46.9-3.3c6.4-5.6,8.1-13.4,8.3-19.5    c0.3-0.2,0.6-0.3,0.9-0.5c4.2-3,5.3-8.7,2.3-12.9c-0.6-0.9-1.6-1.7-2.5-2.3l2.8-1.9c3.6-2.5,4.4-7.3,2-10.7l-2.3-3.4    c-2.5-3.6-7.3-4.4-10.7-2l-22.4,15.4c-3.1,2.2-4.2,6.4-2.6,9.8l-3.1,2.2c-0.9,0.6-1.1,1.9-0.5,2.6l1.6,2.2    c0.6,0.9,1.9,1.1,2.6,0.5l3.1-2.2c2.6,2.6,6.9,3.3,10,1.1l5.4-3.7c0.3,1.1,0.8,2.2,1.4,3.1c1.2,1.9,3.1,3.1,5.1,3.6    c-0.3,4.5-1.7,9.8-5.9,13.7c-7.2,6.4-21,7-40.2,1.7l5.4-4.4l2.2,3.3c0.6,0.9,1.9,1.1,2.6,0.5l3-2c0.9-0.6,1.1-1.9,0.5-2.6    l-10.4-15.1c-0.6-0.9-1.9-1.1-2.6-0.5l-3,2c-0.9,0.6-1.1,1.9-0.5,2.6l2.2,3.3l-10.7,6.2l-7.8-11.2c-0.6-0.9-1.9-1.1-2.6-0.5    l-6.4,4.4c-0.9,0.6-1.1,1.9-0.5,2.6l22.6,32.9c0.6,0.9,1.9,1.1,2.6,0.5l6.4-4.4C255.2,261,255.4,259.7,254.9,258.9"/>
+                                        <path d="M86.9,381.6l-36-17.9l5.3-6.2l18.4,3.6l0.6-0.8c1.4-1.6,3.7-1.7,5.3-0.3c0.8,0.6,1.2,1.6,1.2,2.5l18.4,3.6    l9.7-11.2c3.7-4.4,9.7-5.6,13.1-2.6c3.4,3,3.1,9-0.6,13.4l-9.7,11.2l6.2,17.8c0.9,0,1.9,0.2,2.6,0.9c1.6,1.4,1.7,3.7,0.3,5.3    l-0.6,0.8l6.2,17.6l-5.3,6.2l-22.9-33L82.5,412c-0.2,0.3-0.5,0.5-0.6,0.8l4.2,20.9l-5.4,6.2l-11.8-24l-25.4-8.3l5.4-6.2l20.6,0.9    c0.3-0.3,0.5-0.8,0.8-1.1L86.9,381.6z"/>
+                                        <g>
+                                            <path d="M156.8,423.4l3.1-5l5.3-9.5l0.2-17.6h-3.7c-1.1,0-2-0.9-2-2v-0.5c0-1.1,0.9-2,2-2l19.3,0.2     c1.1,0,2,0.9,2,2v0.5c0,1.1-0.9,2-2,2h-3.7L177,409l5.1,9.7l3,5L156.8,423.4z M179.8,408.3l0.2-14.2h0.9c2.6,0,4.8-2.2,4.8-4.8     v-0.5c0-2.6-2.2-4.8-4.8-4.8l-19.3-0.2c-2.6,0-4.8,2.2-4.8,4.8v0.5c0,2.6,2.2,4.8,4.8,4.8h0.9l-0.2,14.2l-22.7,35.5l-1.1,1.7     c-2,3.7-2.2,7.5-0.5,10.4c1.7,3,5.1,4.7,9.3,4.7l46.4,0.3c4.2,0,7.6-1.6,9.5-4.5c1.7-3,1.7-6.7-0.3-10.4L179.8,408.3z"/>
+                                            <path d="M176.9,370.7c0,3-2.3,5.3-5.3,5.3s-5.3-2.3-5.3-5.3c0-3,2.3-5.3,5.3-5.3S176.9,367.8,176.9,370.7"/>
+                                            <path d="M166.9,357.4c0,2.2-1.7,4-4,4c-2.2,0-4-1.7-4-4c0-2.2,1.7-4,4-4C165.2,353.5,166.9,355.2,166.9,357.4"/>
+                                            <path d="M173.8,396c0,1.2-0.9,2.2-2.2,2.2s-2.2-0.9-2.2-2.2c0-1.2,0.9-2.2,2.2-2.2S173.8,394.7,173.8,396"/>
+                                        </g>
+                                        <path d="M514.4,219.7h-19.6V170c-0.5,3.3-3.1,9.3-4.5,12.3l-17,37.4h-9.8l-17-35.5c-1.9-3.9-3.7-9-4.7-14.3v49.8    h-19.5v-85.5h21.3l21.6,44.4c1.6,3.4,3.6,8.4,3.6,10.1h0.2c0.3-2.2,1.6-6.4,3.3-10l20.1-44.5h22V219.7z"/>
+                                        <path d="M592.6,215c0,10.9-1.9,18.2-6.4,23.4c-5.1,5.9-13.2,8.7-24.8,8.7c-10.7,0-20.1-2.5-28.3-6.7l1.6-16    c6.5,3.9,14.8,6.9,22.3,6.9c9.5,0,12.8-4.2,12.8-13.1v-4.8c-3.9,3.7-10.4,6.5-16.8,6.5c-8.7,0-16-3-19.8-9.2c-2-3.4-3-7.3-3-14.3    v-43.3h22.7v39.7c0,2.6,0.2,5,1.2,6.7c1.1,1.9,3.6,3.4,6.7,3.4c3.6,0,5.9-1.6,7.3-3.7c1.6-2.2,1.7-5.3,1.7-8.3v-37.8h22.7V215z"/>
+                                        <path d="M495.1,259.3l-26.6,85.5h-21l-10.6-34.9l-11.5,34.9h-20.6l-28.5-85.5h23.8l14.9,47    c0.8,2.3,2.2,8.1,2.2,11.1h0.3c0.2-3.1,1.2-8.7,1.9-10.7l8.7-25.8l-6.4-21.5h22.1l13.4,46.9c0.6,2.5,1.6,7.9,1.6,11.2h0.3    c0.2-3.4,1.1-8.7,1.7-11.5l11.7-46.6H495.1z"/>
+                                        <path d="M525.2,292c-8.4,0-10.7,6.7-10.7,18.8c0,12.1,2.3,18.8,10.7,18.8s10.7-6.7,10.7-18.8    C535.9,298.7,533.6,292,525.2,292 M525.2,344.7c-21.6,0-33.6-13.5-33.6-33.9c0-20.4,12-34.1,33.6-34.1c21.6,0,33.6,13.7,33.6,34.1    S546.7,344.7,525.2,344.7"/>
+                                        <path d="M613.5,295.8c-1.9-0.3-4-0.5-5.9-0.5c-7.6,0-10.7,3.7-10.7,12.5v36.9h-22.7v-49.7h-7.9v-15.9h21.3l4,9.3    c3.1-6.4,9.7-10.6,17.1-10.6c1.9,0,3.1,0,4.7,0.5v17.4H613.5z"/>
+                                        <path d="M658.5,341.2c-3.4,2.3-9,4-14.6,4c-7,0-11.4-1.9-13.9-5.8c-1.6-2.5-2.3-5.6-2.3-10.9v-61h-7.9v-15.9h30.7    v75c0,2.5,1.1,3.6,3.1,3.6c1.9,0,4.5-0.9,5.6-1.7L658.5,341.2z"/>
+                                        <path d="M709.7,291c-0.8-0.2-2-0.3-3.6-0.3c-10.1,0-15.7,9.3-15.7,22.6c0,8.7,2.6,15.6,10.7,15.6    c3.1,0,5.6-1.4,6.9-3.1c1.4-1.7,1.7-4.7,1.7-7.2V291z M740.2,340.7c-3.9,2.5-9.3,4.4-14.8,4.4c-5.6,0-11.2-2.5-13.4-7.6    c-3.6,4.5-10.6,7.8-18.4,7.8c-15.9,0-26.3-10.9-26.3-30.5c0-24.3,16.7-37.4,36.9-37.4c1.9,0,3.6,0.2,5.4,0.3v-10.1h-7.9v-16h30.7    v75c0,2.5,1.1,3.6,3.1,3.6c1.9,0,4.5-0.9,5.6-1.7L740.2,340.7z"/>
+                                        <path d="M580.6,374.5L555.9,460h-13.5l-14.9-51.7L511.6,460h-12.9l-25.5-85.5H487l17.6,59.9    c0.9,3.3,1.6,6.4,1.6,8.7h0.2c0.2-2.5,0.6-5.9,1.6-8.4l14-45.6l-4.4-14.8h13.2l17.1,59.6c0.9,3.1,1.6,6.5,1.6,9.2h0.2    c0.2-2.5,0.8-6.4,1.6-9.2l16.2-59.6h13.2V374.5z"/>
+                                        <path d="M611.8,401.6c-10.9,0-16.5,7.8-16.5,24.6s5.6,24.4,16.5,24.4c10.9,0,16.5-7.6,16.5-24.4    S622.7,401.6,611.8,401.6 M611.8,460c-18.8,0-29.9-12-29.9-33.9c0-22,10.9-34.1,29.9-34.1c18.8,0,29.9,12.1,29.9,34.1    S630.6,460,611.8,460"/>
+                                        <path d="M691,404.8c-0.9-0.3-3.4-0.5-4.7-0.5c-4.5,0-8.3,1.6-10.7,4.7c-2.6,3.4-3.6,7.8-3.6,14.6V460h-13.2v-55.7    h-7.6v-9.7h16.2l2.5,9c3.4-6.7,10.1-10.3,17.6-10.3c1.6,0,2.8,0.2,3.6,0.5V404.8z"/>
+                                        <path d="M762,457.8c-1.6,1.2-5,2.3-8.1,2.3c-5.9,0-9.8-2.5-13.2-8.3l-13.7-24h-8.3v31.5h-13.2v-82.7h-7.6V367h21    v51.1h8.7l15.6-24.1h13.5L738,422.4l13.9,24c1.9,3.4,3.4,4.5,5.6,4.5c1.7,0,3.6-0.5,4.7-1.4L762,457.8z"/>
+                                        <path d="M784.7,290.6c-9.2,0-14,6.7-14,22.7c0,15.9,4.8,22.7,14,22.7s14-6.7,14-22.7S793.9,290.6,784.7,290.6     M784.7,343.2c-16.2,0-24.1-11.4-24.1-29.9c0-18.7,7.8-29.9,24.1-29.9c16.2,0,24.1,11.4,24.1,29.9    C808.7,331.8,800.9,343.2,784.7,343.2"/>
+                                        <path d="M841.9,289.3c-1.9-0.6-3.9-1.1-6.4-1.1c-2.3,0-3.9,0.8-4.8,2c-0.8,1.2-1.1,2.8-1.1,5.6v4.7h10.6v6.4h-10.6    v36.3H821v-36.3h-6.7v-6.4h6.5v-5c0-4.4,0.8-7.8,3-10.1c2.2-2.3,5.3-3.6,10.1-3.6c2.3,0,5.6,0.5,7.8,1.2v6.2H841.9z"/>
+                                        <g>
+                                            <path d="M331.8,291.3l-20.7-2.5l0.2-5.3c0-3-2.2-5.6-5.1-5.9l-20.7-2.5c-3-0.3-5.8,1.6-6.4,4.5l-1.2,5.1     l-20.9-2.5c-2.2-0.3-4,1.2-4.4,3.4l-5.3,42.8c-0.3,2.2,1.2,4,3.4,4.4l74.9,9.2c2.2,0.3,4-1.2,4.4-3.4l5.3-42.8     C335.5,293.7,334,291.6,331.8,291.3z M312.7,314.8c-1.4,11.8-12.1,20.1-24,18.7s-20.1-12.1-18.7-24c1.4-11.8,12.1-20.1,24-18.7     C305.6,292.3,314.1,303,312.7,314.8z M330.6,300.5l-17.6-2.2l0.6-5.1l17.6,2.2L330.6,300.5z"/>
+                                            <circle cx="291.3" cy="312.2" r="12.9"/>
+                                        </g>
+                                        <path d="M215.5,382.1l11.7-20.7c1.2-2,3.9-2.8,5.9-1.6c2,1.2,2.8,3.7,1.6,5.9L223,386.5c-1.2,2-3.7,2.8-5.9,1.6    C215,386.9,214.2,384.3,215.5,382.1"/>
+                                        <path d="M222.5,393.6l19.2-33.8c1.2-2,3.7-2.8,5.9-1.6c2,1.2,2.8,3.7,1.6,5.9L230,398c-1.2,2-3.7,2.8-5.9,1.6    C222.2,398.3,221.4,395.8,222.5,393.6"/>
+                                        <path d="M231.4,402.4l19.2-33.8c1.2-2,3.7-2.8,5.9-1.6c2,1.2,2.8,3.7,1.6,5.9l-19.2,33.8c-1.2,2-3.9,2.8-5.9,1.6    C230.9,407,230.1,404.4,231.4,402.4"/>
+                                        <path d="M243.2,405.3l15.4-27.2c1.2-2,3.7-2.8,5.9-1.6c2,1.2,2.8,3.7,1.6,5.9l-15.4,27.2c-1.2,2-3.9,2.8-5.9,1.6    C242.7,410.1,242.1,407.5,243.2,405.3"/>
+                                        <path d="M280.4,430.1h-0.3c-0.6-0.2-0.9-0.6-0.8-1.2c0-0.2,0.2-0.3,0.3-0.5l7.9-7.9c0.5-0.5,1.1-0.5,1.4,0    c0.2,0.2,0.3,0.3,0.3,0.5v0.3c0.2,0.9-0.2,2-0.8,2.8l-5.3,5.4C282.4,429.9,281.5,430.2,280.4,430.1"/>
+                                        <path d="M282,404.4l5.9,5.9c1.1,1.1,1.7,2.5,1.7,3.9c0,1.4-0.6,2.8-1.6,3.9l-10.4,10.6c-1.1,1.1-2.5,1.7-3.9,1.7    c-1.4,0-3-0.6-3.9-1.6l-5.9-5.9c-1.1-1.1-2.5-1.6-3.9-1.6c-1.4,0-2.8-0.6-3.9-1.6l-0.3-0.3c-1.1-1.1-1.1-2.8,0-3.9l1.1-1.1l-3-3    l3.7-7l4.5,4.4l6.1-6.2l-6.2-6.1l3.7-7l7.8,7.6l1.1-1.1c1.1-1.1,2.8-1.1,3.9,0l0.3,0.3c1.1,1.1,1.7,2.5,1.7,3.9    C280.3,402,280.9,403.4,282,404.4"/>
+                                        <path d="M212.7,417.3c-0.5,0-0.8-0.2-1.1-0.5c-0.6-0.6-0.6-1.6,0-2.2l5.6-5.8c0.6-0.6,1.6-0.6,2.2,0    c0.6,0.6,0.6,1.6,0,2.2l-5.6,5.8C213.5,417.1,213.2,417.3,212.7,417.3"/>
+                                        <path d="M266.9,362.3c-0.5,0-0.8-0.2-1.1-0.5c-0.6-0.6-0.6-1.6,0-2.2l5.6-5.8c0.6-0.6,1.6-0.6,2.2,0s0.6,1.6,0,2.2    l-5.6,5.8C267.7,362.2,267.2,362.3,266.9,362.3"/>
+                                        <path d="M242.9,429.6c-0.8,0-1.6-0.6-1.6-1.6v-7.9c0-0.9,0.6-1.6,1.6-1.6l0,0c0.8,0,1.6,0.6,1.6,1.6v7.9    C244.5,428.8,243.8,429.6,242.9,429.6L242.9,429.6z"/>
+                                        <path d="M242.3,352.5c-0.8,0-1.6-0.6-1.6-1.6V343c0-0.9,0.6-1.6,1.6-1.6l0,0c0.8,0,1.6,0.6,1.6,1.6v7.9    C243.8,351.7,243.2,352.5,242.3,352.5L242.3,352.5z"/>
+                                        <path d="M277.2,386.8c-0.8,0-1.6-0.6-1.6-1.6s0.6-1.6,1.6-1.6h7.9c0.8,0,1.6,0.6,1.6,1.6s-0.6,1.6-1.6,1.6H277.2    L277.2,386.8z"/>
+                                        <path d="M200.1,387.4c-0.8,0-1.6-0.6-1.6-1.6s0.6-1.6,1.6-1.6h7.9l0,0c0.8,0,1.6,0.6,1.6,1.6s-0.6,1.6-1.6,1.6    H200.1L200.1,387.4z"/>
+                                        <path d="M218,362.8c-0.5,0-0.8-0.2-1.1-0.5l-5.8-5.6c-0.6-0.6-0.6-1.6,0-2.2s1.6-0.6,2.2,0l5.8,5.6    c0.6,0.6,0.6,1.6,0,2.2C218.8,362.6,218.3,362.8,218,362.8"/>
+                                        <g>
+                                            <path d="M217.4,312.5L217.4,312.5V261c0-3-2.3-5.3-5.3-5.3h-83c-3,0-5.3,2.3-5.3,5.3v51.5l0,0v7.6     c0,1.6,0.6,3,1.7,3.9c1.1,1.1,2.5,1.7,4,1.7h28l-0.5,7c-0.2,2.8-2.5,4.8-5.1,4.8H151c-0.6,0-1.1,0.5-1.1,1.1     c0,0.6,0.5,1.1,1.1,1.1h19.8h2.2h17.4c0.6,0,1.1-0.5,1.1-1.1c0-0.6-0.5-1.1-1.1-1.1h-1.1c-2.8,0-5-2.2-5.1-4.8l-0.5-7h28     c2,0,3.7-0.9,4.7-2.5c0.6-0.9,1.1-1.9,1.1-3.1v-7.6H217.4z M214.1,320.1c0,1.4-1.1,2.5-2.5,2.5h-82.1c-1.4,0-2.5-1.1-2.5-2.5v-5     h87V320.1z M129.9,263.2c0-0.8,0.6-1.2,1.2-1.2h78.3c0.8,0,1.2,0.6,1.2,1.2v43.3c0,0.8-0.6,1.2-1.2,1.2h-78.3     c-0.8,0-1.2-0.6-1.2-1.2L129.9,263.2L129.9,263.2z"/>
+                                            <circle cx="170.7" cy="318.9" r="2.5"/>
+                                        </g>
+                                        <path d="M173.3,174.9c0-22.3,18.1-40.2,40.2-40.2c22.3,0,40.2,18.1,40.2,40.2c0,22.3-18.1,40.2-40.2,40.2    S173.3,197,173.3,174.9 M196.7,185.9c-1.4,0.2-2.2,1.1-2.3,2.2c-0.3,1.4,0.6,2.6,2.3,3l25.4,4.5c1.7,0.3,3.4-0.8,3.7-2.5    s-0.8-3.4-2.6-3.7l-16-2.8l1.7-10l11.7,2c1.6,0.3,3.3-0.8,3.6-2.5c0.3-1.6-0.9-3.3-2.5-3.6l-11.7-2l0.9-5.1c0.5-2.5,1.4-4.2,3-5.3    c1.2-0.8,2.6-1.2,4.5-0.9c2.6,0.5,4.2,1.9,5.6,4c0.3,0.6,1.1,1.4,2.3,1.6c2,0.3,3.7-0.9,4.2-2.8c0.2-1.1-0.2-2-0.6-2.8    c-2-3.1-5.1-5.8-10.4-6.7c-4.2-0.8-7.6,0-10.4,1.9c-2.8,1.9-4.7,5.3-5.4,9.5l-0.9,5.3l-1.9-0.3c-1.7-0.3-3.3,0.9-3.6,2.5    c-0.3,1.7,0.8,3.3,2.5,3.6l1.9,0.3l-1.9,10.3L196.7,185.9"/>
+                                        <path d="M18.5,305.7c-0.2,2.6-0.6,5.9-0.8,7.3c-0.2,0.8-0.3,2.6-0.5,3.7c-0.2,1.6-0.2,1.6-0.3,1.9    c-0.2,0.3-0.3,0.6-4.5,3.7c0,0-5.1,3.9-7.8,6.5c-0.5,0.5-0.5,0.9-0.5,1.1c0.5,1.9,5.9,4.4,14.8,6.7c0.8,0.2,1.7,0.5,2.6,0.8    c5.1,1.4,12.1,3.4,17.9,3.4c2,0,3.7-0.3,5.1-0.8c11.2-3.9,18.5-7.8,19-8.1s1.2-0.5,5.6-1.2c12-2.2,22.6-6.4,23-9l-3-2l-0.2-0.6    c0-0.2-0.3-1.4-0.3-4v-0.6c-0.2-5.9-0.5-12.8-4.4-21.6c-0.9-2-4.2-8.9-11.2-13.9l-0.3-0.3c-0.3-0.2-0.8-0.6-1.2-1.1    c-2.6-1.7-5.1-3.1-7.8-3.9h-0.2c-0.3-0.2-0.6-0.2-0.9-0.3c-2.5-0.8-5-1.1-7.5-1.1c0,0-4.8,0.2-10.3,1.6c-0.2,0-5.1,1.1-8.9,3.3    c-6.2,3.6-10.4,8.3-13.7,15.1c-0.8,1.7-2.3,5.3-3.4,10.3C18.7,304.7,18.5,305.5,18.5,305.7 M39.5,345.2c-6.2,0-13.5-2-19-3.6    c-0.9-0.3-1.9-0.5-2.6-0.8c-14.3-3.7-17-6.9-17.8-9.7c-0.5-1.9,0-3.7,1.4-5.1c3-3,8.1-6.9,8.3-7c1.4-1.1,2.5-2,3.3-2.5    c0-0.2,0-0.2,0-0.3c0.2-1.2,0.3-3.1,0.5-4c0.2-1.4,0.6-4.5,0.8-7c0-0.2,0-0.3,0.6-3.4c1.1-5.6,2.8-9.5,3.7-11.4    c3.7-7.6,8.4-12.8,15.4-16.8c4.4-2.5,9.8-3.7,10.1-3.7c5.8-1.6,10.9-1.7,11.1-1.7l0,0c3,0,5.8,0.5,8.6,1.2    c0.5,0.2,0.8,0.3,1.2,0.3h0.2c3,0.9,5.8,2.5,8.7,4.4l0.6,0.3l0.2,0.3c0,0,0.3,0.3,0.5,0.5l0.5,0.3c7.8,5.4,11.5,13.2,12.6,15.6    c4.2,9.7,4.4,16.8,4.7,23.2v0.8c0,1.1,0,1.7,0.2,2.3l1.7,1.2c0.9,0.8,1.6,1.9,1.6,3.1c0,7.8-20.2,12-26.5,13.2    c-2.2,0.5-3.9,0.8-4.4,0.9c-1.2,0.6-8.6,4.5-19.6,8.4C44.1,344.9,41.9,345.2,39.5,345.2"/>
+                                        <path d="M25.2,322.2c0.3-6.5,0.8-27.2,10.6-38.8c0.2-0.3-0.2-0.6-0.3-0.5c-5,4-14.6,16.2-16.8,37.7    c0,0.6,0.3,1.1,0.8,1.4l3.9,1.2C24.1,323.7,25.2,323.1,25.2,322.2"/>
+                                        <path d="M135.3,190.4l-2-6.2c16.7-12.9,11.8-20.4,10.4-24.6c-1.4-4.2-3.1-9.8-3.1-9.8l-8.3,9.8    c-4.5,5.3-5.8,10-5.6,14.2c-2.3-3.4-5.9-6.5-12.8-8.1l-12.5-3c0,0,1.9,5.6,3.1,9.8c1.4,4.2,1.9,13.1,22.9,13.7l2,6.2    c0,0-14.8-2.5-19.3-5.4c0,0,1.7,5.3,2.8,8.9c1.1,3.4,5.6,15.9,22.7,15.4l5.1,15.1l1.7-0.6l1.6-0.5l1.7-0.6l-4.8-15.3    c14.2-9.8,10.4-22.4,9.3-25.8c-0.9-3.6-2.6-8.9-2.6-8.9C145.9,179.5,135.3,190.4,135.3,190.4"/>
+                                        <path d="M112.7,154.5c0.6,1.9,1.6,3.6,2.6,5c1.4,2,3.1,3.7,5,4.8c0.9,0.6,1.9,1.1,3,1.2c0.3,0,0.8,0,1.1,0    c0.5-0.2,0.8-0.5,0.9-0.9c0.8-0.9,1.2-2.2,1.7-3.6c0.6-1.7,0.8-3.7,0.8-5.8c0-2.5-0.6-5-1.6-7.3c-0.6-1.7-1.4-3.3-2.5-4.7    c-1.4-2-3.1-3.7-5-4.8c-1.1-0.5-2-0.9-3-1.1c-0.5-0.2-0.9,0-1.4,0.3c-0.5,0.3-0.8,0.8-1.1,1.2c-0.8,1.1-1.2,2.5-1.6,3.9    c-0.3,1.4-0.5,3-0.5,4.7c0,1.4,0.2,2.8,0.5,4.2c0.2,0.8,0.5,1.7,0.6,2.5l0,0C112.6,154.3,112.6,154.5,112.7,154.5"/>
+                                        <path d="M50.3,213c3.6-5.3,10.9-6.7,16.2-3.1c2.5,1.7,4.2,4.4,4.8,7.5c0.6,3.1,0,6.2-1.7,8.7l-0.2,0.2    c-3.9,5.4-10.9,6.7-16.2,3C48,225.6,46.7,218.3,50.3,213 M47.3,246.6c0.8-0.9,1.7-1.9,2.6-2.8c0.5-0.6,1.1-1.1,1.6-1.7    c0.6-0.8,1.4-0.9,2.3-0.6s1.7,0.5,2.8,0.6c0.9,0.2,1.4,0.6,1.7,1.6c0.6,2,1.2,3.9,1.9,5.8c0.2,0.5,0.3,0.5,0.3,0.6    c0,0,0.2,0,0.5,0c2.6-0.5,5.4-0.9,9-1.6c0.2,0,0.2,0,0.2,0s0-0.2,0-0.5v-1.4c0-1.6-0.2-3.3-0.3-4.8c0-0.8,0.2-1.9,1.2-2.5    c0.5-0.2,0.8-0.5,1.2-0.8c0.3-0.2,0.6-0.5,0.9-0.6c0.5-0.3,1.2-0.3,1.9-0.2c2,0.9,4,1.9,6.1,3c0.5,0.2,0.6,0.2,0.8,0.2l5.3-7.8    c0-0.2-0.2-0.3-0.5-0.6l-0.8-0.6c-1.4-1.2-2.6-2.5-4-3.7c-0.5-0.3-0.9-0.9-0.6-2c0.2-0.5,0.2-0.9,0.3-1.6c0.2-0.5,0.2-0.9,0.3-1.4    c0-0.2,0.2-0.5,0.3-0.6c0.2-0.2,0.5-0.6,0.9-0.8c1.4-0.5,3-0.9,4.4-1.4l1.7-0.6c0.5-0.2,0.6-0.3,0.6-0.3s0-0.2,0-0.5    c-0.2-3-0.8-5.9-1.7-9.2c0-0.2,0-0.2,0-0.2s-0.2,0-0.5,0l-2.2-0.3c-1.4,0.2-2.6,0.2-4,0.3c-0.9,0-1.6-0.3-2-1.1    c-0.3-0.5-0.5-0.8-0.8-1.2c-0.3-0.5-0.6-0.9-0.8-1.4c-0.3-0.5-0.5-1.2-0.2-1.9c0.9-2,1.9-4,2.8-5.9c0.3-0.5,0.2-0.6,0.2-0.6    s0-0.2-0.5-0.5c-2.3-1.6-4.5-3.1-6.9-4.7c-0.5-0.3-0.6-0.3-0.6-0.3s-0.2,0-0.5,0.5c-1.4,1.6-2.8,3.1-4.2,4.7    c-0.6,0.8-1.4,0.9-2.3,0.6c-1.1-0.3-2.2-0.5-3-0.6s-1.4-0.6-1.7-1.4c-0.6-2-1.2-3.9-1.9-5.9c-0.3-0.8-0.3-0.8-0.8-0.6    c-3.3,0.5-6.4,1.1-9.2,1.7c0,0-0.2,0.2-0.2,0.5v1.4c0.2,1.7,0.2,3.3,0.3,5c0,0.9-0.3,1.7-1.1,2.2c-0.8,0.5-1.4,0.9-2,1.2    c-0.8,0.6-1.7,0.6-2.5,0.3c-1.7-0.8-3.4-1.6-5-2.5l-1.1-0.5c-0.2-0.2-0.3,0-0.3,0s0,0-0.2,0.2l-2.6,3.7l-2.5,3.7    c-0.2,0.2-0.2,0.2-0.2,0.2s0,0.2,0.2,0.3c1.1,1.1,2.2,2.2,3.3,3.1l0.8,0.8c0.2,0.2,0.3,0.2,0.3,0.3c0.3,0.2,0.5,0.5,0.8,0.6    c0.5,0.5,0.6,1.1,0.5,1.7c-0.2,1.2-0.5,2.3-0.6,3.3c-0.2,0.6-0.8,1.2-1.4,1.4c-1.4,0.5-3,0.9-4.4,1.4l-1.6,0.5    c-0.3,0.5-0.3,0.5-0.3,0.5s0,0.2,0,0.5c0.2,3,0.8,5.9,1.7,9.2v0.2c0,0,0.2,0,0.5,0h0.3c2-0.2,4-0.3,6.1-0.3c1.1,0,1.9,0.3,2.3,1.2    c0.3,0.6,0.8,1.4,1.2,2c0.3,0.3,0.8,1.2,0.3,2.3c-0.5,0.8-0.8,1.6-1.1,2.3c-0.5,1.1-1.1,2.2-1.6,3.3c-0.5,0.8-0.5,0.9-0.5,1.2    l7.6,5.1C46.7,247.3,47,247.1,47.3,246.6"/>
+                                        <path d="M97.2,233.3c1.7-2.3,5-3,7.3-1.4c1.1,0.8,1.9,2,2.2,3.4c0.3,1.4,0,2.8-0.8,3.9v0.2c-1.7,2.5-4.8,3-7.3,1.2    C96.1,239,95.4,235.7,97.2,233.3 M95.8,248.5c0.3-0.5,0.8-0.9,1.2-1.2c0.3-0.3,0.5-0.5,0.8-0.8s0.6-0.5,1.1-0.3    c0.5,0.2,0.8,0.2,1.2,0.3c0.5,0,0.6,0.3,0.8,0.6c0.3,0.9,0.6,1.7,0.9,2.6c0,0.2,0.2,0.3,0.2,0.3s0,0,0.2,0c1.2-0.2,2.5-0.5,4-0.8    h0.2v-0.2v-0.6c0-0.8,0-1.4-0.2-2.2c0-0.3,0.2-0.8,0.6-1.1c0.2-0.2,0.3-0.2,0.6-0.3c0.2-0.2,0.3-0.2,0.5-0.3    c0.3-0.2,0.6-0.2,0.8,0c0.9,0.5,1.9,0.9,2.6,1.2c0.2,0.2,0.3,0.2,0.3,0.2l2.3-3.6c0,0,0-0.2-0.2-0.3l-0.3-0.5    c-0.6-0.6-1.2-1.1-1.9-1.7c-0.2-0.2-0.5-0.5-0.3-0.9c0-0.2,0.2-0.5,0.2-0.6s0.2-0.5,0.2-0.6s0-0.2,0.2-0.3c0-0.2,0.2-0.3,0.5-0.3    c0.6-0.2,1.2-0.5,2-0.6l0.8-0.3c0.2,0,0.3-0.2,0.3-0.2s0,0,0-0.3c0-1.2-0.3-2.6-0.8-4.2c0,0,0,0,0-0.2c0,0,0,0-0.2,0h-1.1    c-0.6,0-1.2,0-1.9,0.2c-0.3,0-0.6-0.2-0.9-0.5c-0.2-0.2-0.3-0.3-0.3-0.6c-0.2-0.2-0.3-0.5-0.3-0.6c-0.2-0.2-0.2-0.6,0-0.8    c0.5-0.9,0.8-1.9,1.2-2.6c0.2-0.2,0.2-0.3,0.2-0.3s0,0-0.2-0.2c-1.1-0.8-2-1.4-3.1-2.2c-0.6,0-0.6,0-0.6,0s0,0-0.2,0.2    c-0.6,0.6-1.2,1.4-1.9,2c-0.3,0.3-0.6,0.5-1.1,0.3s-0.9-0.2-1.4-0.3c-0.3,0-0.6-0.3-0.8-0.6c-0.3-0.9-0.6-1.7-0.9-2.6    c-0.2-0.3-0.2-0.3-0.3-0.3c-1.4,0.3-3,0.5-4.2,0.8c0,0,0,0,0,0.2v0.6c0,0.8,0,1.6,0.2,2.2c0,0.5-0.2,0.8-0.5,0.9    c-0.3,0.2-0.6,0.5-0.9,0.6c-0.3,0.3-0.8,0.3-1.1,0.2c-0.8-0.3-1.6-0.8-2.3-1.1l-0.5-0.3h-0.2c0,0,0,0,0,0.2l-1.1,1.7l-1.1,1.7v0.2    c0,0,0,0,0.2,0.2c0.5,0.5,0.9,0.9,1.6,1.4l0.3,0.3l0.2,0.2c0.2,0.2,0.2,0.2,0.3,0.3c0.2,0.2,0.3,0.5,0.2,0.8    c-0.2,0.6-0.2,1.1-0.3,1.4c0,0.3-0.3,0.6-0.6,0.6c-0.6,0.2-1.4,0.5-2,0.6l-0.6,0.2c-0.2,0-0.3,0.2-0.3,0.2s0,0,0,0.3    c0.2,1.4,0.3,2.6,0.8,4.2l0,0c0,0,0,0,0.2,0h0.2c0.9,0,1.9-0.2,2.6-0.2c0.5,0,0.8,0.2,1.1,0.6c0.2,0.3,0.3,0.6,0.6,0.9    c0.2,0.2,0.3,0.5,0.2,1.1c-0.2,0.3-0.3,0.8-0.5,1.1c-0.3,0.5-0.5,0.9-0.8,1.6c-0.2,0.3-0.2,0.3-0.2,0.5l3.4,2.3    C95.6,248.8,95.6,248.8,95.8,248.5"/>
+                                </g>
+                            </svg>
+						</a>
+
+						<nav class="main-nav" aria-label="Main navigation">
+							<ul class="ui inverted transparent header menu">
+								<li class="ui simple full dropdown item">
+									<div class="browse padding--none">
+										My career options
+										<i aria-hidden="true" class="angle down icon"></i>
+									</div>
+                                    <ul class="menu">
+                                        <li class="megamenu item">
+                                            <div class="ui container megamenu">
+                                                <div class="ui centered grid">
+                                                    <div class="stretched row">
+                                                        <div class="five wide column">
+                                                            <div class="ui megamenu vertical segment">
+																<h1 class="ui medium header">My career options</h1>
+																<p>Learn more about yourself, explore your options and find the career that's right for you.</p>
+																<a class="ui blue link link--first" href="/my-career-options" id="megamenu--mco--go-to-section">Go to section <span
+																		class="sr-only">career options</span></a>
+															</div>
+														</div>
+
+														<div class="eleven wide column">
+                                                            <div class="ui two column thin flex-col grid">
+                                                                <div class="row">
+                                                                    <div class="column margin--thin--vert">
+																		<a href="/tools/about-me/start"
+																		   class="ui secondary megamenu tiny segment text-decoration--none" id="megamenu--mco--about-me-tool">
+																		   <h2 class="ui tiny header margin--thin--bottom">About Me tool</h2>
+																			<p>Find careers that match your personality.</p>
+																		</a>
+																	</div>
+																	<div class="column margin--thin--vert">
+																		<a href="/choosing-my-subjects-0"
+																		   class="ui secondary megamenu tiny segment text-decoration--none" id="megamenu--mco--subject-choices-tool">
+																			<h2 class="ui tiny header margin--thin--bottom">Subject Choices tool</h2>
+																			<p>Find out where your subjects can take you.</p>
+																		</a>
+																	</div>
+																	<div class="column margin--thin--vert">
+																		<a href="/tools/strengths/start"
+																		   class="ui secondary megamenu tiny segment text-decoration--none" id="megamenu--mco--strengths-tool">
+																           <h2 class="ui tiny header margin--thin--bottom">Strengths tool</h2>
+																		   <p>Discover jobs that suit your strengths.</p>
+																		</a>
+																	</div>
+																	<div class="column margin--thin--vert">
+																		<a href="/my-career-options/job-categories"
+																		   class="ui secondary megamenu tiny segment text-decoration--none" id="megamenu--mco--explore-careers">
+																		   <h2 class="ui tiny header margin--thin--bottom">Explore careers</h2>
+																           <p>Discover over 600 job profiles.</p>
+															            </a>
+																	</div>
+																	<div class="column margin--thin--vert">
+																		<a href="/tools/skills/start"
+																 		   class="ui secondary megamenu tiny segment text-decoration--none" id="megamenu--mco--skills-explorer-tool">
+																           <h2 class="ui tiny header margin--thin--bottom">Skills Explorer tool</h2>
+																           <p>Learn which jobs match your skills.</p>
+															            </a>
+														            </div>
+																	<div class="column margin--thin--vert">
+																		<a href="/changes-my-career-0"
+																		   class="ui secondary megamenu tiny segment text-decoration--none" id="megamenu--mco--changing-career">
+																        	<h2 class="ui tiny header margin--thin--bottom">Changing career</h2>
+																			<p>Plan your next move with our advice.</p>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+
+								<li class="ui simple full dropdown item">
+									<div class="browse padding--none">
+										Learn and train
+										<i aria-hidden="true" class="angle down icon"></i>
+									</div>
+                                    <ul class="menu">
+                                        <li class="megamenu item">
+                                            <div class="ui container megamenu">
+                                                <div class="ui centered grid">
+                                                    <div class="stretched row">
+                                                        <div class="five wide column">
+                                                            <div class="ui megamenu vertical segment">
+																<h1 class="ui medium header">Learn and train</h1>
+																<p>
+																  College, university, training or volunteering – find
+																  out about your options and what funding is available.
+																</p>
+																<a class="ui blue link" href="/learn-and-train" id="megamenu--lt--go-to-section">
+																	Go to section
+																	<span class="sr-only">learn and train</span>
+																</a>
+															</div>
+														</div>
+
+                                                        <div class="eleven wide column">
+                                                            <div class="ui two column thin flex-col grid">
+                                                                <div class="row">
+																	<div class="column margin--thin--vert">
+																		<a href="/learn-and-train"
+																	   	   class="ui secondary megamenu tiny segment text-decoration--none" id="megamenu--lt--course-search">
+																	   	   <h2 class="ui tiny header margin--thin--bottom">
+																			  Course search
+																			</h2>
+																	   		<p>
+																	   			Find further and higher education courses and
+																				training.
+																			</p>
+																		</a>
+																	</div>
+																	<div class="column margin--thin--vert">
+																		<a href="/learn-and-train/funding"
+																		   class="ui secondary megamenu tiny segment text-decoration--none" id="megamenu--lt--funding">
+																		   <h2 class="ui tiny header margin--thin--bottom">Funding</h2>
+																		   <p>Advice on funding and grants to support learning.</p>
+																		</a>
+																	</div>
+																	<div class="column margin--thin--vert">
+																		<a href="/learn-and-train#/volunteering"
+																		   class="ui secondary megamenu tiny segment text-decoration--none" id="megamenu--lt--volunteering-search">
+																			<h2 class="ui tiny header margin--thin--bottom">
+																				Volunteering search
+																			</h2>
+																			<p>Discover opportunities to build your skills.</p>
+																		</a>
+																	</div>
+																	<div class="column margin--thin--vert">
+																		<a href="/learn-and-train/sds-individual-training-accounts-ita"
+																		   class="ui secondary megamenu tiny segment text-decoration--none" id="megamenu--lt--ita">
+																			<h2 class="ui tiny header margin--thin--bottom">
+																				Individual Training Accounts
+																			</h2>
+																			<p>Get up to £200 to support training costs.</p>
+																		</a>
+																	</div>
+																	<div class="column margin--thin--vert">
+																		<a href="/learn-and-train/learning-options"
+																		   class="ui secondary megamenu tiny segment text-decoration--none" id="megamenu--lt--learning-options">
+																			<h2 class="ui tiny header margin--thin--bottom">
+																				Learning options
+																			</h2>
+																			<p>Explore different ways to learn.</p>
+																		</a>
+																	</div>
+
+																	<div class="column margin--thin--vert">
+																		<a href="/learn-and-train/applying-courses"
+																		   class="ui secondary megamenu tiny segment text-decoration--none" id="megamenu--lt--applying-for-courses">
+																			<h2 class="ui tiny header margin--thin--bottom">
+																				Applying for courses
+																			</h2>
+																			<p>Advice on how to apply for university and college.</p>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+
+								<li class="ui simple full dropdown item">
+									<div class="browse padding--none">
+										Getting a job
+										<i aria-hidden="true" class="angle down icon"></i>
+									</div>
+                                    <ul class="menu menu-last">
+                                        <li class="megamenu item">
+                                            <div class="ui container megamenu">
+                                                <div class="ui centered grid">
+                                                    <div class="stretched row">
+                                                        <div class="five wide column">
+                                                            <div class="ui megamenu vertical segment">
+																<h1 class="ui medium header">Getting a job</h1>
+																<p>
+																	Apply for jobs with our advice and sell yourself to
+																	potential employers – from
+																	creating the perfect CV to giving a great interview.
+																</p>
+																<a class="ui blue link" href="/getting-a-job" id="megamenu--gaj--go-to-section">
+																	Go to section
+																	<span class="sr-only">getting a job</span>
+																</a>
+															</div>
+														</div>
+
+
+                                                        <div class="eleven wide column">
+                                                            <div class="ui two column thin flex-col grid">
+                                                                <div class="row">
+																	<div class="column margin--thin--vert">
+																		<a href="/cvs-and-applications-0"
+																	   	   class="ui secondary megamenu tiny segment text-decoration--none" id="megamenu--gaj--cvs-and-applications">
+																		   <h2 class="ui tiny header margin--thin--bottom">
+																			CVs and applications
+																			</h2>
+																			<p>
+																				Increase your chances of getting hired with the
+																				perfect CV.
+																			</p>
+																		</a>
+																	</div>
+																	<div class="column margin--thin--vert">
+																		<a href="/getting-a-job"
+																	       class="ui secondary megamenu tiny segment text-decoration--none" id="megamenu--gaj--find-a-job">
+																			<h2 class="ui tiny header margin--thin--bottom">Find a job</h2>
+																			<p>Search for job vacancies and Modern Apprenticeships.</p>
+																		</a>
+																	</div>
+																	<div class="column margin--thin--vert">
+																		<a href="/interviews-0"
+																		   class="ui secondary megamenu tiny segment text-decoration--none" id="megamenu--gaj--interviews">
+																           <h2 class="ui tiny header margin--thin--bottom">
+																		   		Interviews
+																		   </h2>
+																           <p>
+																				Nail your interviews with our advice and support.
+																		   </p>
+															           	</a>
+																	</div>
+																	<div class="column margin--thin--vert">
+																		<a href="/apprenticeships-0"
+																		   class="ui secondary megamenu tiny segment text-decoration--none" id="megamenu--gaj--apprenticeships">
+																			<h2 class="ui tiny header margin--thin--bottom">
+																				Apprenticeships
+																			</h2>
+																			<p>
+																				Foundation, Modern or Graduate. Discover the different types
+																				of apprenticeship in Scotland.
+																			</p>
+																		</a>
+																	</div>
+																	<div class="column margin--thin--vert">
+																		<a href="/work-experience-0"
+																		   class="ui secondary megamenu tiny segment text-decoration--none" id="megamenu--gaj--work-experience">
+																           <h2 class="ui tiny header margin--thin--bottom">
+																		   		Work experience
+																		   </h2>
+																		   <p>How to make the most of a work placement.</p>
+																		</a>
+																	</div>
+																	<div class="column margin--thin--vert">
+																		<a href="/getting-job/how-search-jobs"
+																		   class="ui secondary megamenu tiny segment text-decoration--none last" id="megamenu--gaj--how-to-search-for-jobs">
+																		   <h2 class="ui tiny header margin--thin--bottom">
+																		   		How to search for jobs
+																		   </h2>
+																			<p>
+																				Know where to look with our advice on networking and
+																				job hunting.
+																			</p>
+																		</a>
+																	</div>
+																</div>
+															</div>														</div>
+														</div>
+													</div>
+												</div>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+
+						<div class="right menu">
+							<div class="ui full dropdown item padding--none--right dropdown--user-menu">
+								<div class="item">
+									<button class="unset-styles browse padding--none" data-variation="basic" id="search">
+										<i aria-hidden="true" class="large white search icon"></i>
+										<span class="sr-only">Search toggle</span>
+									</button>
+								</div>
+
+                            	<div class="search-dropdown menu" id="search-dropdown">
+                                	<div class="ui container padding--wide--vert">
+                                    	<div class="ui site-search form padding--narrow--bottom">
+                                        	<div class="fifteen wide field">
+                                            	<div class="ui fluid site search">
+													
+        <form class="site-search" id="site-search" action="/" method="post" accept-charset="UTF-8">
+  <h2 class="element-invisible">Search form</h2>
+<div class="ui left icon input">
+  <i aria-hidden="true" class="search icon"></i>
+   <label class="sr-only" for="search-input">Search My World of Work <span class="form-required" title="This field is required.">*</span></label> <input title="Enter the terms you wish to search for." placeholder="Search My World of Work" type="search" id="search-input" name="search_block_form" value="" maxlength="128" required />
+<div class="form-actions form-wrapper" id="edit-actions"><input aria-label="Search" title="Search" type="submit" id="edit-submit" name="op" value="" class="form-submit" /></div><input type="hidden" name="form_id" value="search_block_form" />
+  <button class="ui white borderless icon button" type="submit" form="site-search">
+	  <i aria-hidden="true"  class="arrow right icon"></i>
+	  <span class="sr-only">Submit search</span>
+	</button>
+</div></form>												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+              												  		<div class="fitted item">
+								  		<a class="ui primary button" href="/account/login?destination=account" id="header--button--sign-in">
+									  		Sign in
+								  		</a>
+							  		</div>
+              					              												  		<div class="item padding--none--right">
+								  		<a class="ui secondary white-border button" href="/account/register#/" id="header--button--register">
+									  		Register
+								  		</a>
+                			  		</div>
+              					            												</div>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- MOBILE/TABLET MENU -->
+	<div class="ui padded grid">
+		<div class="tablet only mobile only row padding--none">
+		<div class="ui fluid announcement menu margin--none">
+				<div class="ui container padding--narrow--top">
+				<p><strong>Coronavirus (COVID-19) update:</strong> Get the latest information on the response to the outbreak on the <a class="annoucement link" href="https://www.skillsdevelopmentscotland.co.uk/coronavirus-covid-19/">Skills Development Scotland website</a>.</p>
+			</div>
+			</div>
+				<div class="ui attached borderless mobile menu padding--narrow--left" id="mobile-menu">
+					<div class="ui small image padding--thin--vert">
+						<a class="block-link" href="/"><img src="/profiles/sds_mywow/themes/custom/sds_mywow_semantic/images/logos/mywow-logo--navy.png"
+								alt="My World of Work logo"></a>
+					</div>
+
+					<div class="right menu">
+
+						<button class="unset-styles right floated browse item" id="mobile-search-popup">
+							<i aria-hidden="true" class="search icon"></i>
+							<span class="sr-only">Search toggle</span>
+						</button>
+						<div class="ui mobile basic popup bottom left transition hidden margin--none"
+							id="mobile-search-popup-menu">
+							<div class="ui container">
+								<div class="ui basic segment">
+								<div class="ui search">
+									<div class="ui site-search form">
+										<div class="field">
+											<div class="ui fluid site search">
+												
+        <form class="site-search" id="site-search--mobile" action="/" method="post" accept-charset="UTF-8">
+  <h2 class="element-invisible">Search form</h2>
+<div class="ui left icon input">
+  <i aria-hidden="true" class="search icon"></i>
+   <label class="sr-only" for="search-input">Search My World of Work <span class="form-required" title="This field is required.">*</span></label> <input title="Enter the terms you wish to search for." placeholder="Search My World of Work" type="search" id="search-input" name="search_block_form" value="" maxlength="128" required />
+<div class="form-actions form-wrapper" id="edit-actions"><input aria-label="Search" title="Search" type="submit" id="edit-submit" name="op" value="" class="form-submit" /></div><input type="hidden" name="form_id" value="search_block_form" />
+  <button class="ui white borderless icon button" type="submit" form="site-search--mobile">
+	  <i aria-hidden="true"  class="arrow right icon"></i>
+	  <span class="sr-only">Submit search</span>
+	</button>
+</div></form>											</div>
+										</div>
+									</div>
+									<div class="results"></div>
+								</div>
+							</div>
+							</div>
+						</div>
+
+						<button class="unset-styles right floated browse item" id="mobile-user-popup">
+							<i aria-hidden="true" class="user icon"></i>
+							<span class="sr-only">User Account Menu</span>
+						</button>
+
+						<div class="ui mobile basic popup bottom left transition hidden margin--none" id="mobile-user-menu">
+							<div class="ui basic segment">
+                								  <div class="item">
+									  <a href="/account/login?destination=account" class="ui mobile navy button margin--standard--right" id="header-mobile--button--sign-in">
+										  Sign in
+									  </a>
+									  <a href="/account/register#/" class="ui mobile white button" id="header-mobile--button--register">
+										  Register
+									  </a>
+                  		</div>
+                                							</div>
+						</div>
+
+						<button class="unset-styles right floated browse item" id="mobile-menu-popup">
+							<i aria-hidden="true" class="sidebar icon"></i>
+							<span class="sr-only">Open the menu</span>
+						</button>
+
+						<nav aria-label="Main navigation"
+							class="ui mobile basic popup bottom left transition hidden margin--none" id="mobile-mega-menu">
+							<div class="ui fluid megamenu accordion padding--narrow">
+								<div class="title" tabindex="0">
+									<i aria-hidden="true" class="dropdown icon"></i>
+									My career options
+								</div>
+								<div class="content">
+									<ul class="ui mobile list padding--narrow--left">
+										<li class="item"><a href="/tools/about-me/start" id="megamenu-mobile--mco--about-me-tool">About Me tool</a></li>
+										<li class="item"><a href="/tools/strengths/start" id="megamenu-mobile--mco--strengths-tool">Strengths tool</a></li>
+										<li class="item"><a href="/tools/skills/start" id="megamenu-mobile--mco--skills-explorer-tool">Skills Explorer tool</a></li>
+										<li class="item"><a href="/choosing-my-subjects-0" id="megamenu-mobile--mco--subject-choices-tool">Subject Choices tool</a></li>
+										<li class="item"><a href="/my-career-options/job-categories" id="megamenu-mobile--mco--explore-careers">Explore careers</a></li>
+										<li class="item"><a href="/changes-my-career-0" id="megamenu-mobile--mco--changing-career">Changing career</a></li>
+										<li class="item"><a href="/my-career-options" id="megamenu-mobile--mco--go-to-section">Go to section...</a></li>
+									</ul>
+								</div>
+								<div class="title" tabindex="0">
+									<i aria-hidden="true" class="dropdown icon"></i>
+									Learn and train
+								</div>
+								<div class="content">
+									<ul class="ui mobile list padding--narrow--left">
+										<li class="item"><a href="/learn-and-train" id="megamenu-mobile--lt--course-search">Course search</a></li>
+										<li class="item"><a href="/learn-and-train#/volunteering" id="megamenu-mobile--lt--volunteering-search">Volunteering search</a></li>
+										<li class="item"><a href="/learn-and-train/learning-options" id="megamenu-mobile--lt--learning-options">Learning
+												options</a></li>
+										<li class="item"><a href="/learn-and-train/funding" id="megamenu-mobile--lt--funding">Funding</a></li>
+										<li class="item"><a
+												href="/learn-and-train/sds-individual-training-accounts-ita" id="megamenu-mobile--lt--ita">Individual
+												Training Accounts</a></li>
+										<li class="item"><a href="/learn-and-train/applying-courses" id="megamenu-mobile--lt--applying-for-courses">Applying for
+												courses</a></li>
+										<li class="item"><a href="/learn-and-train" id="megamenu-mobile--lt--go-to-section">Go to section...</a></li>
+									</ul>
+								</div>
+								<div class="title" tabindex="0">
+									<i aria-hidden="true" class="dropdown icon"></i>
+									Getting a job
+								</div>
+								<div class="content">
+									<ul class="ui mobile list padding--narrow--left">
+										<li class="item"><a href="/cvs-and-applications-0" id="megamenu-mobile--gaj--cvs-and-applications">CVs and applications</a></li>
+										<li class="item"><a href="/interviews-0" id="megamenu-mobile--gaj--interviews">Interviews</a></li>
+										<li class="item"><a href="/work-experience-0" id="megamenu-mobile--gaj--work-experience">Work experience</a></li>
+										<li class="item"><a href="/getting-a-job" id="megamenu-mobile--gaj--find-a-job">Find a job</a></li>
+										<li class="item"><a href="/apprenticeships-0" id="megamenu-mobile--gaj--apprenticeships">Apprenticeships</a></li>
+										<li class="item"><a href="/getting-job/how-search-jobs" id="megamenu-mobile--gaj--how-to-search-for-jobs">How to search for
+												jobs</a>
+										</li>
+										<li class="item"><a href="/getting-a-job"  id="megamenu-mobile--gaj--go-to-section">Go to section...</a></li>
+									</ul>
+								</div>
+							</div>
+						</nav>
+					</div>
+				</div>
+		</div>
+	</div>
+</header>
+
+<!-- HERO -->
+
+<!-- padding--wide--top only required when annoucement banner is in place. -->
+<div class="ui padded grid padding--wide--top">
+		<div class="computer only sixteen wide column padding--none">
+			<div class="ui navy inverted segment margin--none">
+				<div class="ui container">
+					<div class="ui two column grid hero-block">
+						<div class="left column padding--huge--top padding--none--right">
+							<h1 class="ui inverted header padding--standard--top">From accountant to zoologist. We've got you covered.</h1>
+							<h2>Expert career information and advice for everyone in Scotland.</h2>
+							<div class="button cluster padding--standard--bottom">
+								<h6 class="ui inverted header padding--wide--top margin--narrow--bottom">Popular
+										links
+									</h6>
+								<a class="ui white group button" href="/getting-job/building-cv" id="homepage--popular-links--how-write-cv">How to write a
+										CV</a>
+								<a class="ui white group button" href="/learn-and-train/funding" id="homepage--popular-links--funding">Funding</a>
+								<a class="ui white group button" href="/choosing-my-subjects-0" id="homepage--popular-links--subject-choices">Subject choices</a>
+								<a class="ui white group button" href="/apprenticeships-0" id="homepage--popular-links--apprenticeships">Apprenticeships</a>
+								<a class="ui white group button" href="/centres" id="homepage--popular-links--find-career-centres">Find a careers centre</a>
+								<a class="ui white group button" href="/career-changes" id="homepage--popular-links--career-changes">Career changes</a>
+							</div>
+						</div>
+
+						<div class="hero-image">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="tablet only mobile only sixteen wide column padding--none">
+			<div class="ui navy mobile-slash segment margin--none">
+				<div class="ui container margin--wide--bottom">
+						<h1 class="ui mobile inverted header">From accountant to zoologist. We've got you covered.</h1>
+						<p class="ui mobile inverted header margin--standard--bottom">
+							Expert career information and advice for everyone in Scotland.
+						</p>
+						<div class="button cluster margin--narrow--bottom">
+							<h6 class="ui inverted header padding--standard--top margin--narrow--bottom">Popular links</h6>
+							<a class="ui white group button" href="/getting-job/building-cv" id="homepage--popular-links-mobile--how-write-cv">How to write a CV</a>
+							<a class="ui white group button" href="/learn-and-train/funding" id="homepage--popular-links-mobile--funding">Funding</a>
+							<a class="ui white group button" href="/choosing-my-subjects-0" id="homepage--popular-links-mobile--subject-choices">Subject choices</a>
+							<a class="ui white group button" href="/apprenticeships-0" id="homepage--popular-links-mobile--apprenticeships">Apprenticeships</a>
+							<a class="ui white group button" href="/centres" id="homepage--popular-links-mobile--find-career-centres">Find a careers centre</a>
+							<a class="ui white group button" href="/career-changes" id="homepage--popular-links-mobile--career-changes">Career changes</a>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- HERO END -->
+
+
+  <!-- MAIN CONTENT -->
+  <div id="main-content">
+  			<div class="ui basic padded segment">
+			<div class="ui container">
+				<h2 class="ui header">New to My World of Work?</h2>
+				<p>Tell us more about who you are and why you're here.</p>
+
+
+				<div class="ui two column doubling grid padding--standard--top">
+					<div class="column">
+						<h4 class="ui header">To plan my own career</h4>
+							<a class="ui right labeled icon fluid blue border button" href="/primary-school-pupils" id="homepage--roles--primary-school-pupil">
+								<i class="angle right icon"></i>
+								Primary school pupil
+							</a>
+							<a class="ui right labeled icon fluid blue border button" href="/secondary-school-pupils" id="homepage--roles--secondary-school-pupil">
+								<i class="angle right icon"></i>
+								Secondary school pupil
+							</a>
+							<a class="ui right labeled icon fluid blue border button"
+								href="/college-and-university-students" id="homepage--roles--college-university-student">
+								<i class="angle right icon"></i>
+								College/University student
+							</a>
+							<a class="ui right labeled icon fluid blue border button" href="/looking-work" id="homepage--roles--employed">
+								<i class="angle right icon"></i>
+								Employed
+							</a>
+						<a class="ui right labeled icon fluid blue border button" href="/looking-work" id="homepage--roles--unemployed">
+							<i class="angle right icon"></i>
+							Unemployed
+						</a>
+					</div>
+					<div class="column">
+						<h4 class="ui header">To support someone else with their career</h4>
+						<a class="ui right labeled icon fluid teal border button" href="/parents" id="homepage--roles--parents">
+							<i class="angle right icon"></i>
+							Parent
+						</a>
+						<a class="ui right labeled icon fluid teal border button" href="/primary-teachers" id="homepage--roles--primary-teachers">
+							<i class="angle right icon"></i>
+							Primary teacher
+						</a>
+						<a class="ui right labeled icon fluid teal border button" href="/secondary-teachers" id="homepage--roles--secondary-teachers">
+							<i class="angle right icon"></i>
+							Secondary teacher
+						</a>
+						<a class="ui right labeled icon fluid teal border button" href="/college-university-staff" id="homepage--roles--college-university-staff">
+							<i class="angle right icon"></i>
+							College/University staff
+						</a>
+						<a class="ui right labeled icon fluid teal border button"
+							href="/support-employability-partners" id="homepage--roles--sds-partner">
+							<i class="angle right icon"></i>
+							SDS partner
+						</a>
+					</div>
+				</div>
+			</div>
+	 	</div>
+  	  </div>
+
+
+
+
+    
+<div >
+  
+      
+  
+  <div id="featured-content-application" data-nid="34731592">
+
+      <link href="/profiles/sds_mywow/modules/custom/sds_mywow_featured_content/apps/featured-content/dist/styles.ac89bfdd6de82636b768.bundle.css" rel="stylesheet" />
+  
+  <app-root>
+    <div class="inner bg-base--alt align--center padding--wide-vert"></div>
+  </app-root>
+
+      <script type="text/javascript" src="/profiles/sds_mywow/modules/custom/sds_mywow_featured_content/apps/featured-content/dist/inline.318b50c57b4eba3d437b.bundle.js"></script>
+      <script type="text/javascript" src="/profiles/sds_mywow/modules/custom/sds_mywow_featured_content/apps/featured-content/dist/polyfills.0dad3df6b25d033ec95f.bundle.js"></script>
+      <script type="text/javascript" src="/profiles/sds_mywow/modules/custom/sds_mywow_featured_content/apps/featured-content/dist/main.4ff375a7bc7c786e7e90.bundle.js"></script>
+  
+</div>
+
+  </div>
+  
+
+
+<footer role="contentinfo">
+	<div class="ui grid margin--none">
+
+
+
+
+		<div class="computer only row padding--none">
+			<div class="sixteen wide column padding--none">
+				<div class="ui inverted basic very padded navy vertical segment">
+					<div class="ui four column inverted stackable grid container">
+						<div class="column">
+							<div class="ui small image">
+								<a href="https://www.skillsdevelopmentscotland.co.uk/" class="block-link"><img src="/profiles/sds_mywow/themes/custom/sds_mywow_semantic/images/logos/sds-logo--white.png"
+											alt="Skills Development Scotland logo"></a>
+							</div>
+							<address class="margin--standard--top">Monteith House, 11 George Square, Glasgow, G2 1DY
+							</address>
+						</div>
+						<div class="column">
+							<h4 class="ui inverted header margin--narrow--bottom">
+								Help
+							</h4>
+							<ul class="ui main-footer list margin--none">
+								<li class="item"><a href="/about-us">About us</a></li>
+								<li class="item"><a href="/contact-us">Contact us</a></li>
+								<li class="item"><a href="/parents/topics">Help for parents and carers</a></li>
+								<li class="item"><a href="/partners">Support for partners</a></li>
+								<li class="item"><a href="/british-sign-language">BSL and subtitled video</a></li>
+							</ul>
+						</div>
+						<div class="column">
+							<h4 class="ui inverted header margin--narrow--bottom">
+								Our policies
+							</h4>
+							<ul class="ui main-footer list margin--none">
+								<li class="item"><a href="/accessibility">Accessibility</a></li>
+								<li class="item"><a href="/cookies">Cookies</a></li>
+								<li class="item"><a href="/privacy">Privacy</a></li>
+								<li class="item"><a href="/terms-and-conditions">Terms and conditions</a></li>
+							</ul>
+						</div>
+						<div class="column">
+							<h4 class="ui inverted header margin--narrow--bottom">
+								Follow us
+							</h4>
+							<p>For all the latest My World of Work updates follow us:</p>
+
+							<div class="ui horizontal list padding--thin--top">
+								<div class="item">
+									<a class=social-link aria-label="facebook" href="https://www.facebook.com/myworldofwork">
+										<i aria-hidden="true" class="large facebook f icon"></i>
+									</a>
+								</div>
+								<div class="item">
+									<a class=social-link aria-label="YouTube" href="https://www.youtube.com/user/myworldofwork">
+										<i aria-hidden="true" class="large youtube icon"></i>
+									</a>
+								</div>
+								<div class="item">
+									<a class=social-link aria-label="twitter" href="https://twitter.com/mywowscotland">
+											<i aria-hidden="true" class="large twitter icon"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="ui divider margin--wide--vert"></div>
+					<div class="ui container">
+						&copy; The Skills Development Scotland Co. Ltd. Reg No SCO202659
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- MOBILE FOOTER START -->
+		<div class="tablet only mobile only navy row padding--standard margin--standard--top">
+			<div class="ui inverted fluid accordion" id='mobile-footer-menu'>
+				<div class="column">
+					<div class="ui small image">
+						<a href="https://www.skillsdevelopmentscotland.co.uk/" class="block-link"><img src="/profiles/sds_mywow/themes/custom/sds_mywow_semantic/images/logos/sds-logo--white.png" alt="Skills Development Scotland logo"></a>
+					</div>
+					<address class="padding--narrow--vert">Monteith House, 11 George Square, Glasgow, G2 1DY
+					</address>
+				</div>
+				<div class="ui inverted divider margin--none"></div>
+				<div class="title padding--narrow--vert" tabindex="0">
+					<i aria-hidden="true" class="dropdown icon float-right"></i>
+					<h5 class="ui inverted header margin--none">Help</h5>
+				</div>
+
+				<div class="inverted content padding--thin--right">
+					<ul class="ui mobile-footer list margin--none">
+						<li class="item padding--narrow--bottom"><a href="/about-us">About us</a></li>
+						<li class="item padding--narrow--bottom"><a href="/contact-us">Contact us</a></li>
+						<li class="item padding--narrow--bottom"><a href="/parents/topics">Help for parents and
+								carers</a></li>
+						<li class="item padding--narrow--bottom"><a href="/partners">Support for partners</a></li>
+						<li class="item padding--narrow--bottom"><a href="/british-sign-language">BSL and subtitled
+								video</a></li>
+					</ul>
+				</div>
+				<div class="ui inverted divider margin--none"></div>
+				<div class="title padding--narrow--vert" tabindex="0">
+					<i aria-hidden="true" class="dropdown icon"></i>
+					<h5 class="ui inverted header margin--none">Our policies</h5>
+				</div>
+				<div class="inverted content padding--thin--right">
+					<ul class="ui mobile-footer list margin--none">
+						<li class="item padding--narrow--bottom"><a href="/accessibility">Accessibility</a></li>
+						<li class="item padding--narrow--bottom"><a href="/cookies">Cookies</a></li>
+						<li class="item padding--narrow--bottom"><a href="/privacy">Privacy</a></li>
+						<li class="item padding--narrow--bottom"><a href="/terms-and-conditions">Terms and
+								conditions</a></li>
+					</ul>
+				</div>
+				<div class="ui inverted divider margin--none"></div>
+			</div>
+
+
+			<div class="ui container margin--none padding--narrow--vert">
+				<div class="ui two column grid">
+					<div class="column">
+						<h5 class="ui inverted header margin--none">Follow us</h5>
+					</div>
+
+					<div class="right aligned column">
+						<a class=social-link aria-label="facebook" href="https://www.facebook.com/myworldofwork">
+							<i aria-hidden="true" class="large facebook f icon"></i>
+						</a>
+						<a class=social-link aria-label="YouTube" href="https://www.youtube.com/user/myworldofwork">
+							<i aria-hidden="true" class="large youtube icon"></i>
+						</a>
+						<a class=social-link aria-label="twitter" href="https://twitter.com/mywowscotland">
+							<i aria-hidden="true" class="large twitter icon"></i>
+						</a>
+					</div>
+
+				</div>
+			</div>
+			<div class="ui container margin--none">
+			<div class="ui inverted divider margin--none"></div>
+
+					<div class="content font-color--white padding--narrow--top">&copy; The Skills Development Scotland Co. Ltd.
+						Registration
+						Number
+						SCO202659
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+    
+<div >
+  
+      
+  
+  
+  </div>
+  
+  <div class="ui dimmer" id="dimmer"></div>
+  
+      
+<script src="https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/modules/custom/sds_mywow_zendesk/assets/js/index.js?q7caf3"></script>
+  <script src="https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/sites/default/files/google_tag/google_tag.script.js?q7caf3"></script>
+<script src="https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/modules/contrib/jquery_update/replace/jquery/1.10/jquery.min.js?v=1.10.2"></script>
+<script src="https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/misc/jquery-extend-3.4.0.js?v=1.10.2"></script>
+<script src="https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/misc/jquery.once.js?v=1.2"></script>
+<script src="https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/misc/drupal.js?q7caf3"></script>
+<script src="https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/modules/contrib/jquery_update/replace/ui/external/jquery.cookie.js?v=67fb34f6a866c40d0570"></script>
+<script src="https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/modules/features/sds/sds_mywow_ambition/js/remove_unflag_text.js?q7caf3"></script>
+<script src="https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/modules/contrib/authcache/authcache.js?q7caf3"></script>
+<script src="https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/modules/contrib/iframe/iframe.js?q7caf3"></script>
+<script src="https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/libraries/sorttable/sorttable.js?q7caf3"></script>
+<script src="https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/modules/custom/sds_mywow_bookmarking/assets/js/bookmarking.js?q7caf3"></script>
+<script src="https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/themes/contrib/mothership/mothership/js/contextual.js?q7caf3"></script>
+<script src="https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/themes/custom/sds_mywow_semantic/fomantic/build/mywow/prototypes/dist/semantic.min.js?q7caf3"></script>
+<script src="https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/themes/custom/sds_mywow_semantic/js/lib/jquery.matchHeight-min.js?q7caf3"></script>
+<script src="https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/themes/custom/sds_mywow_semantic/js/app/match-height.js?q7caf3"></script>
+<script src="https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/themes/custom/sds_mywow_semantic/fomantic/build/mywow/prototypes/js/app/semantic-element-initialisation.js?q7caf3"></script>
+<script src="https://www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh/profiles/sds_mywow/themes/custom/sds_mywow_semantic/js/app/cookie-acceptance-message.js?q7caf3"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"sds_mywow_semantic","theme_token":"BjOvH3v8p93wWQDcXCiEtag8ThrewWOHDxsVCwyx-rI","js":{"profiles\/sds_mywow\/modules\/custom\/sds_mywow_zendesk\/assets\/js\/index.js":1,"public:\/\/google_tag\/google_tag.script.js":1,"profiles\/sds_mywow\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"profiles\/sds_mywow\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"profiles\/sds_mywow\/modules\/features\/sds\/sds_mywow_ambition\/js\/remove_unflag_text.js":1,"profiles\/sds_mywow\/modules\/contrib\/authcache\/authcache.js":1,"profiles\/sds_mywow\/modules\/contrib\/iframe\/iframe.js":1,"profiles\/sds_mywow\/libraries\/sorttable\/sorttable.js":1,"profiles\/sds_mywow\/modules\/custom\/sds_mywow_bookmarking\/assets\/js\/bookmarking.js":1,"profiles\/sds_mywow\/themes\/contrib\/mothership\/mothership\/js\/contextual.js":1,"profiles\/sds_mywow\/themes\/custom\/sds_mywow_semantic\/fomantic\/build\/mywow\/prototypes\/dist\/semantic.min.js":1,"profiles\/sds_mywow\/themes\/custom\/sds_mywow_semantic\/js\/lib\/jquery.matchHeight-min.js":1,"profiles\/sds_mywow\/themes\/custom\/sds_mywow_semantic\/js\/app\/match-height.js":1,"profiles\/sds_mywow\/themes\/custom\/sds_mywow_semantic\/fomantic\/build\/mywow\/prototypes\/js\/app\/semantic-element-initialisation.js":1,"profiles\/sds_mywow\/themes\/custom\/sds_mywow_semantic\/js\/app\/cookie-acceptance-message.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"profiles\/sds_mywow\/modules\/contrib\/colorbox_node\/colorbox_node.css":1,"profiles\/sds_mywow\/modules\/contrib\/date\/date_api\/date.css":1,"profiles\/sds_mywow\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"profiles\/sds_mywow\/modules\/contrib\/logintoboggan\/logintoboggan.css":1,"modules\/node\/node.css":1,"profiles\/sds_mywow\/modules\/contrib\/office_hours\/office_hours.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"profiles\/sds_mywow\/modules\/contrib\/_views\/views\/css\/views.css":1,"profiles\/sds_mywow\/modules\/contrib\/media\/modules\/media_wysiwyg\/css\/media_wysiwyg.base.css":1,"profiles\/sds_mywow\/modules\/contrib\/ctools\/css\/ctools.css":1,"profiles\/sds_mywow\/themes\/contrib\/mothership\/mothership\/css\/normalize.css":1,"profiles\/sds_mywow\/themes\/contrib\/mothership\/mothership\/css\/mothership-default.css":1,"profiles\/sds_mywow\/themes\/contrib\/mothership\/mothership\/css\/mothership-layout.css":1,"profiles\/sds_mywow\/themes\/contrib\/mothership\/mothership\/css\/mothership.css":1,"profiles\/sds_mywow\/themes\/custom\/sds_mywow_semantic\/fomantic\/build\/mywow\/prototypes\/dist\/semantic.min.css":1,"profiles\/sds_mywow\/themes\/custom\/sds_mywow_semantic\/css\/style.css":1,"profiles\/sds_mywow\/themes\/custom\/sds_mywow_semantic\/css\/print.css":1,"profiles\/sds_mywow\/themes\/custom\/sds_mywow_semantic\/css\/icons.css":1}},"authcache":{"q":"node\/34731592","cp":{"path":"\/","domain":".www---qa-covid19-homepage-2yome3y-3ov5xxmyr7g5a.eu.platform.sh","secure":true},"cl":1},"sds_mywow_bookmarking":{"uuid":"e6a83656-33a9-4529-97bd-354ea18f3be9","url":"homepage-0","title":"Homepage","type":"entity","site_id":"MyWoW","created":1584455569,"entity_id":"34731592","entity_type":"homepage_with_featured_content"},"urlIsAjaxTrusted":{"\/":true}});</script>
+</body>
+</html>

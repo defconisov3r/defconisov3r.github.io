@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Covid-19 (Coronavirus)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="9xnkVQpX3u5CESDH2PB3e5oB6+Mfomla0TVz33EUwTRD71BoVd4E3qJEzakgbxumBZSpecvPJHN1lnrPTdMfhg==" />
+    
+
+    <link rel="stylesheet" media="all" href="/assets/application-535bb852379556a350167416d2483e1a99f6ab5ffa91d27ccd905bc872511a6a.css" data-turbolinks-track="reload" />
+    <script src="/packs/js/application-4932a0fe0f29d35baee3.js" data-turbolinks-track="reload"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+  </head>
+
+  <body>
+    <section class="section" data-controller="dashboard">
+  <div class="container">
+    <h1 data-target="dashboard.output" class="title has-text-centered">COVID-19</h1>
+    <h2 class="subtitle has-text-centered">
+      Mini Tracker
+    </h2>
+  </div>
+
+  <div id="geo" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["GeoChart"]("geo", [["Virgin Islands",1],["Vermont",12],["Nevada",45],["New York",967],["West Virginia",0],["South Carolina",33],["Hawaii",7],["New Mexico",17],["Arkansas",22],["Missouri",6],["South Dakota",10],["District of Columbia",22],["Ohio",50],["Minnesota",54],["Washington",904],["Kentucky",21],["Arizona",18],["Maryland",41],["Puerto Rico",5],["Wyoming",3],["New Hampshire",17],["North Dakota",1],["Nebraska",18],["Tennessee",52],["Oregon",39],["Idaho",5],["Alabama",29],["North Carolina",38],["Colorado",160],["Mississippi",13],["Florida",155],["Delaware",8],["Louisiana",136],["Grand Princess",20],["Guam",3],["New Jersey",178],["Connecticut",30],["Iowa",23],["Indiana",25],["Massachusetts",197],["Rhode Island",21],["Michigan",53],["Pennsylvania",77],["Montana",7],["Wisconsin",47],["Diamond Princess",47],["Illinois",105],["Virginia",49],["Georgia",121],["Utah",39],["Maine",17],["California",557],["Kansas",11],["Texas",85],["Alaska",1],["Oklahoma",10]], {"library":{"region":"US","resolution":"provinces"}});
+</script>
+
+
+    <div>
+      <h1 class="title is-size-2 has-text-centered">Virginia</h1>
+
+      <nav class="level">
+        <div class="level-item has-text-centered">
+          <div>
+            <p class="heading">Virginia</p>
+            <p class="title">49</p>
+          </div>
+        </div>
+      </nav>
+
+      <div class="columns">
+        <div class="column is-6">
+          <h1 class="title is-size-4 has-text-centered">Confirmed</h1>
+          <div id="chart-1" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["BarChart"]("chart-1", [["2020-03-10",7],["2020-03-11",9],["2020-03-12",17],["2020-03-13",30],["2020-03-14",41],["2020-03-15",45],["2020-03-16",49]], {});
+</script>
+
+        </div>
+        <div class="column is-6">
+          <h1 class="title is-size-4 has-text-centered">Change per Day</h1>
+          <div id="chart-2" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["BarChart"]("chart-2", [["2020-03-10",null],["2020-03-11",2],["2020-03-12",8],["2020-03-13",13],["2020-03-14",11],["2020-03-15",4],["2020-03-16",4]], {});
+</script>
+
+        </div>
+      </div>
+    </div>
+
+  <div>
+    <nav class="level">
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">United States</p>
+          <p class="title">4,632</p>
+        </div>
+      </div>
+    </nav>
+
+    <div class="columns">
+      <div class="column is-6">
+        <h1 class="title is-size-4 has-text-centered">Confirmed</h1>
+        <div id="chart-3" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["BarChart"]("chart-3", [["2020-03-03",122],["2020-03-04",153],["2020-03-05",221],["2020-03-06",278],["2020-03-07",417],["2020-03-08",537],["2020-03-09",605],["2020-03-10",959],["2020-03-11",1281],["2020-03-12",1663],["2020-03-13",2179],["2020-03-14",2726],["2020-03-15",3499],["2020-03-16",4632]], {});
+</script>
+
+      </div>
+      <div class="column is-6">
+        <h1 class="title is-size-4 has-text-centered">Change per Day</h1>
+        <div id="chart-4" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["BarChart"]("chart-4", [["2020-03-03",null],["2020-03-04",31],["2020-03-05",68],["2020-03-06",57],["2020-03-07",139],["2020-03-08",120],["2020-03-09",68],["2020-03-10",354],["2020-03-11",322],["2020-03-12",382],["2020-03-13",516],["2020-03-14",547],["2020-03-15",773],["2020-03-16",1133]], {});
+</script>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  </body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Coronavirus Map | COVID-19 Tracker</title>
+		<meta name="description" content="Coronavirus map COVID-19 tracker. Take part in the World's largest COVID-19 self isolation database. The data you share may help combat Coronavirus.">
+		<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="leaflet-v1.6.0/leaflet.css">
+		<link rel="stylesheet" href="css/cluster.css">
+		<link rel='stylesheet' href='bootstrap-4.4.1-dist/css/bootstrap.css'>
+		<link rel="stylesheet" href="css/index-style.css"> 
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/images/favicon/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+		
+		<meta name="twitter:title" 				content="Coronavirus Map | COVID-19 Tracker">
+		<meta name="twitter:description" 		content="Take part in the World's largest COVID-19 self isolation database. The data you share may help combat Coronavirus.">
+		<meta name="twitter:image" 				content="https://www.covid19maptrack.com/images/heart_twitter_update_poster_2.png">
+		<meta name="twitter:card" 				content="summary_large_image">
+		<meta property="og:url"                	content="https://www.covid19maptrack.com" />
+		<meta property="og:type"               	content="article" />
+		<meta property="og:title"              	content="Coronavirus Map | COVID-19 Tracker" />
+		<meta property="og:description"        	content="Take part in the World's largest COVID-19 self isolation database. The data you share may help combat Coronavirus." />
+		<meta property="og:image"              	content="https://www.covid19maptrack.com/images/heart_twitter_update_poster_2.png" />
+		<meta name="google-site-verification" content="lbrO3a4FF5flhW5X7_bwwp8-yHB0GRuxwjpK4a6g5_E" />
+		<script>
+		  (function () {
+			var s = document.createElement('script');
+			s.type = 'text/javascript';
+			s.async = true;
+			s.src = 'https://app.termly.io/embed.min.js';
+			s.id = '8ce70eed-f551-4a8d-bd38-03ed7353c5bc';
+			s.setAttribute("data-name", "termly-embed-banner");
+			var x = document.getElementsByTagName('script')[0];
+			x.parentNode.insertBefore(s, x);
+		  })();
+		</script>
+		
+	</head>
+	<body class="eupopup eupopup-top">
+		
+	<header class="header">
+		<a href="/" class="logo"><img src="/images/heart.png"> COVID-19 Map Track</a>	
+		<input class="menu-btn" type="checkbox" id="menu-btn" />
+		<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+		<ul class="menu">
+			<li><a href="/">Home</a></li>
+			<li><a href="/#about">About</a></li>
+			<li><a href="/add.html" class="addlink">Add</a></li>
+		</ul>
+	</header>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h1>Are you self isolating due to Corona Virus?</h1>
+					<p>We need your help... add your <img src="images/heart.png" class="pheart"> to our map. </p>
+					<p>We are mapping who is self isolating after contracting Corona Virus (COVID-19). </p>
+					<p>This data will help scientists understand how the virus spreads, identify virus hotspots and assist them to combat COVID-19 from cases that may go unnoticed by health organisations.</b></p>
+					<div class="text-left">
+						<p><a href="add.html" class="btn btn-lg btn-success">Add</a> </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<main id="mapcontainer">
+			<div id="map" style></div>
+		</main>
+		<div id="key">
+				<h4>Map Key</h4>
+			<table class="table">
+				<tbody>
+					<tr>
+						<td>Self isolation maker<br><small>Data collected on this website</small></td></td>
+						<td><img src="images/heart.png" class="Our Data">						
+					</tr>
+					<tr>
+						<td>Country/Region data maker<br>
+						<small>Data collected by jhu.edu. Read <a href="#credits">credits</a></small></td>
+						<td><img src="images/triangle.png" alt="Country/Region Data"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					
+					<a name="about"></a>
+					<h1>Coronavirus (COVID-19) Map Track</h1>
+					
+					<p>We track who is self isolating after contracting Coronavirus to indentify virus trends which health professionals may be able use to comabat the COVID-19 virus. </p>
+					<p>The cases we track may otherwise go un-noticed by governments and health officials if the person that is infected with Coronavirus does not contact their local health organisation. If these cases are not recorded health officials will not truly understand the extend of the virus spread during or after the pandemic.</p>
+					
+					<p><a href="add.html" class="btn btn-lg btn-success">Add</a> </p>
+					<br>
+					<br>
+			
+					<hr>
+			
+					<h2>About</h2>
+					<p>Covid19MapTrack.com was created by Ben Llewellyn founder of Slib Design Limited. Ben is a web developer living in London, United Kingdom. Covid19maptrack.com is a pilot scheme with the aim to help health professionals better understand how the virus spreads, identify current virus hotspots and measure the true impact of the virus on the population.</p>
+
+					<h3>Aim</h3>
+					<p>The aim of Covid19MapTrack is to track Coronavirus cases from those that self isolate and don’t require medical assistance from their state. These cases may go undetected by health organisations and governments. </p>
+					
+					<h3>Purpose</h3>
+					<p>Here are some examples of how tracking the Coronavirus on Covid19MapTrack.com may help health organisations and governments:</p>
+					<ul>
+						<li>Data provided might help scientists understand how the disease spreads locally</li>
+						<li>Data provided might help scientists visualise current virus hotspots they are unaware of</li>
+						<li>Data provided might offer new insights to scientists from a pool of people who may not contact their local health organisation and may otherwise go unnoticed</li>
+					</ul>
+
+					<h3>Data is collected voluntarily</h3>
+					<p>We collect data from individuals that volunteer it on <a href="add.html">the add page</a>. We collect and share the following with scientists, governments and heealth organisations:</p>
+					<ul>
+						<li>Longitude &amp; latitude – Location of the case</li>
+						<li>Number of people infected with Coronavirus at this location</li>
+						<li>Date of Coronavirus infection</li>
+						<li>Whether or not health authorities have been notified</li>
+						<li>Whether or not the visitor has completed the form before</li>
+						<li>Other comments</li>
+						<li>Time</li>
+						<li>Date</li>
+					</ul>
+					<h3>Data publicly available on our website</h3>
+					<p>We share the following data publicly on our map:</p>
+					<ul>
+					<li>Location plotted by longitude &amp; latitude<br>
+					We plot a heart case marker pin on our map. The public map on our website omits the last few digits from the longitude and latitude. This is to ensure someone doesn’t identify their exact location on a public website. </li>
+					<li>Other comments<br>
+					User comments are published on their map pin.</li>
+					</ul>
+					<h3>How data is processed and shared</h3>
+					<p>Data is collected voluntarily from those individuals who choose to share their data. The data under “Data collected” will be shared with health organisations, scientists and other third parties with the view that it may help scientists and medical professionals find a cure and/or reduce the spread of the pandemic.</p>
+					<h3>Your right not to not participate</h3>
+					<p>You have the right not to submit your data, You have the right not to participate.</p>
+					<p>If you chose to participate voluntarily and you have submitted your data in error, contact <a href="mailto:remove@covid19maptrack.com">remove@covid19maptrack.com</a> and we will remove your data. </p>
+					<h3>Credits</h3>
+					<a name="credits"></a>
+					<ul>
+					<li>(Triangle map marker data) Country data from <a href="https://github.com/CSSEGISandData/COVID-19" target="_blank">GitHub</a> provided by <a href="https://systems.jhu.edu/" target="_blank">Provided by Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE)</a> which is used on <a href="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6" target="_blank">their map</a>. This data was not collected by convid19maptrack.com. It is only displayed on the website map.</li>
+					<li>Leaflet cluster based on <a href="http://asmaloney.com/2015/06/code/clustering-markers-on-leaflet-maps">Andy Maloney's version</a></li>
+					<li>Icons made by Flat Icons from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></li>
+					</ul>
+					<h3>Contact information</h3>
+					<p>Contact Ben on <a href="mailto:help@covid19maptrack.com">help@covid19maptrack.com</a> for more information. <a href="https://twitter.com/covid19maptrack" target="_blank">Follow us on Twitter</a>. 
+					<h3>Scientists and health officials can access our data</h3>	
+					If you are health official or scientist you can request us to share out data. If you request access to our data you must confirm in writing: 1) you are a recognised practisioner in your area of expertise and 2) you are working to combat COVID-19 within an organisation. Please send data requests to <a href="mailto:help@covid19maptrack.com">help@covid19maptrack.com</a>.</p>
+					<h3>Project Launch Date</h3>
+					<p>16 March 2020 at 12:30 GMT from United Kingdom</p>
+					<br><br>
+					<h3>Update Information</h3>
+					<p>Heart marker icons update automatically. Reload your browser to see new updates</p>
+					<p>Triangle marker icons update when we manually get the latest .csv file from GitHub. There is usually a daily update. Last update 17/03/2020 GMT</p>
+					
+					
+				</div>
+			</div>
+		</div>
+		
+		<script src="leaflet-v1.6.0/leaflet.js"></script>
+		<script src="js/leaflet-components/markercluster.js"></script>
+		<script src="js/jQuery-v2.2.4.js"></script>
+		<script src="js/index-dual-script.js"></script>		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160652992-1"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-160652992-1');
+		</script>		
+	</body>
+</html>
