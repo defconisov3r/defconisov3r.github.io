@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+
+<!-- template name: html.form.login.template.html -->
+
+
+<!-- Configurable default behavior for the Remember Username checkbox -->
+            <!-- set the checkbox to unchecked -->
+            
+
+
+
+
+
+
+
+
+
+<html lang="en" dir="ltr">
+<head>
+    <title>Sign On</title>
+    <base href="https://federate.xh1.lilly.com/"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+</head>
+<body onload="setFocus()">
+    
+<div class="ping-container ping-signin">
+
+    <div class="ping-header">
+		<div class="has-logo">
+			<span class ="company-logo"><img class="" src="assets/images/LillyLogo.png" alt="lilly logo" /></span>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-lg-12">
+				<div style="margin-bottom:5px;border-bottom:2px solid #0c3e52;height:10px;"></div>
+			</div>
+		</div>		
+		<div class="row">
+			<div class="col-xs-12"id="loginHeader">
+				<div class="text-center" >
+				<strong>Please provide the following</strong>	
+				</div>
+			</div>
+		</div>
+    </div>
+    <!-- .ping-header -->
+    
+    <div class="ping-body-container">
+        <div class="section-title">            
+        </div>
+        <div>
+            <form method="POST" action="/idp/6azYK/resumeSAML20/idp/SSO.ping" autocomplete="off">
+                <div class="ping-messages">
+
+                                        					
+                    <div class="ping-error" id="Err_Empty_Fields"style="display:none;">Please provide username and password.</div>                    
+
+                                        
+                </div>
+
+                <div class="ping-input-label">
+                    Username
+                </div>
+                <div class="ping-input-container">
+                                            <input id="username" type="text" size="36" name="pf.username" value="" autocorrect="off" autocapitalize="off" onKeyPress="return postOnReturn(event)"  /><!---->
+                                    </div>
+
+                <div class="ping-input-label">
+                    Password
+                </div>
+                <div class="ping-input-container">
+                    <input id="password" type="password" size="36" name="pf.pass" onKeyPress="return postOnReturn(event)"  />
+                </div>
+
+                
+                <div class="ping-buttons">
+                    <input type="hidden" name="pf.ok" value=""/>
+                    <input type="hidden" name="pf.cancel" value=""/>
+
+
+                    <a onclick="postOk();" class="ping-button normal allow" title="Sign On">
+                        Sign On
+                    </a>
+
+                </div><!-- .ping-buttons -->
+
+                
+
+                <input type="hidden" name="pf.adapterId" value="formProdVds"/>
+            </form>	
+			<div class="row">
+				<div class="col-xs-12">
+					<div style="margin-bottom:15px;border-bottom:2px solid #0c3e52;height:20px;"></div>
+				</div>
+				<div class="col-xs-12">
+					<div class="text-left" style="text-align:left;">
+						<div class="disclaimerTitle" style="margin-bottom:10px;">
+							<strong>***ATTENTION*** System for Authorized Use Only</strong>
+						</div>
+						
+						<div class="disclaimerText" style="margin-bottom:5px;">
+							<small>Authorized Access and Use -  You must be a user authorized by Eli Lilly and Company to use these resources. You must use all company resources in accordance with company policies.</small>
+						</div>
+						
+						<div class="disclaimerText"style="margin-bottom:5px;">
+							<small>Expectations of privacy - All information sent or received through or contained in company resources including any computers, computer databases, networks, systems or any communication systems and resources is the property of the company and not your private information.</small>
+						</div>
+						
+						<div class="disclaimerText" style="margin-bottom:5px;">
+							<small>You should also be aware that in certain circumstances the company is creating automatic copies of electronic information that you create, send, or receive and keeping those for company purposes including litigation purposes as well as for back-up documentation.  For more information about Lilly's privacy practice, please refer to your local Workforce Privacy Notice.  By using company electronic resources you are consenting to the company monitoring and use as stated in this notice and or Lilly policies. By clicking the "Sign On" button, you are acknowledging that consent.</small>
+						</div>
+					</div>
+				</div>
+			</div>			
+        </div><!-- .ping-body -->
+    </div><!-- .ping-body-container -->
+    
+    <div class="ping-footer-container">
+        <div class="ping-footer">            
+
+        </div> <!-- .ping-footer -->
+    </div> <!-- .ping-footer-container -->
+    
+</div><!-- .ping-container -->
+
+<script type="text/javascript">
+
+    function postOk() {
+		var error_div = document.getElementById('Err_Empty_Fields');		
+		
+		if(document.forms[0].password.value!="" && document.forms[0].username.value!=""){
+			error_div.style.display = 'none';
+			document.forms[0]['pf.ok'].value = 'clicked';
+			document.forms[0].submit();			
+		}
+		else{			
+			error_div.style.display = 'block';
+			document.forms[0].username.focus();
+			return false;
+		}
+    }
+    function postCancel() {
+        document.forms[0]['pf.cancel'].value = 'clicked';
+        document.forms[0].submit();
+    }
+    function postOnReturn(e) {
+        var keycode;
+        if (window.event) keycode = window.event.keyCode;
+        else if (e) keycode = e.which;
+        else return true;
+
+        if (keycode == 13) {
+            document.forms[0].submit();
+            return false;
+        } else {
+            return true;
+        }
+    }
+    function setFocus() {
+        var platform = navigator.platform;
+        if(platform != null && platform.indexOf("iPhone") == -1) {
+                            document.getElementById('username').focus();
+                    }
+    }
+    function setMobile(mobile) {
+        var className = ' mobile',
+            hasClass = (bodyTag.className.indexOf(className) !== -1);
+
+        if(mobile && !hasClass) {
+            bodyTag.className += className;
+
+        } else if (!mobile && hasClass) {
+            bodyTag.className = bodyTag.className.replace(className, '');
+        }
+
+        
+        <!-- Check if this is the PingOne Mobile App -->
+            }
+    function getScreenWidth() {
+        return (window.outerHeight) ? window.outerWidth : document.body.clientWidth;
+    }
+
+    var bodyTag = document.getElementsByTagName('body')[0],
+        width = getScreenWidth(),
+        remember = false && false;
+
+    
+    if(/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        setMobile(true);
+    } else {
+        setMobile((width <= 480));
+        window.onresize = function() {
+            width = getScreenWidth();
+            setMobile((width <= 480));
+        }
+    }
+</script>
+
+</body>
+</html>

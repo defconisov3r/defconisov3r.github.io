@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160827478-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-160827478-1');
+</script>
+	<title>Coronavirus Live Stats</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="Coronavirus live tracker. See data, maps, social media trends, and learn about prevention measures." />
+	<meta name="keywords" content="coronavirus, covid-19, tracker, dashboard, preperation, prevention, trends, statistics, data" />
+
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://ncov19.wiki/">
+	<meta property="og:title" content="Coronavirus Live Stats">
+	<meta property="og:description" content="coronavirus live tracker. See data, maps, social media trends, and learn about prevention measures.">
+	<meta property="og:image" content="https://ncov19.wiki/images/android-chrome-512x512.png">
+
+	<meta name="twitter:title" content="Coronavirus Live Tracker">
+	<meta name="twitter:description" content="Coronavirus Live Stats. See data, maps, social media trends, and learn about prevention measures.">
+	<meta name="twitter:image" content="https://ncov19.wiki/images/android-chrome-512x512.png">
+	<meta name="twitter:creator" content="@yassin.ahjij">
+	<meta name="twitter:card" content="summary_large_image"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+	<link rel="manifest" href="/images/site.webmanifest">
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/footable.bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-select.min.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/footable.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-select.min.js"></script>
+	<style>
+		.divCStats{display: none;margin-top: 12px;}
+		.divCCStats{display: none;margin-top: 12px;}
+	</style>
+</head>
+<body>
+	<div id="Menu" class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+		<h5 class="my-0 mr-md-auto" style="font-size: 30px;">Coronavirus Live Stats</h5>
+		<nav class="my-2 my-md-0 mr-md-3">
+			<a class="p-2 text-dark active" href="/">Home</a>
+			<a class="p-2 text-dark" href="realtime">Real-time Stats</a>
+			<a class="p-2 text-dark" href="map">Map</a>
+			<a class="p-2 text-dark" href="wiki">Wiki</a>
+			<a class="p-2 text-dark" href="about">About</a>
+		</nav>
+		<a title="Support me on ko-fi.com" style="background-color:#e02828;color: white;" href="https://ko-fi.com/yassinel" target="_blank" class="btn"><img src="https://ko-fi.com/img/cup-border.png" style="width: 25px;margin-right: 5px;">Buy Me a Coffee</a>
+	</div>
+
+
+	<div class="content">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="card gradient-1">
+					<div class="card-body">
+						<h3 class="card-title text-white">Confirmed</h3>
+						<div class="d-inline-block">
+							<h2 class="card_value">184,078<span class="card_value_new"> (+1,638)</span></h2>
+						</div>
+						<span class="card_icon"><i class="fa fa-Confirmed"></i></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="card gradient-2">
+					<div class="card-body">
+						<h3 class="card-title text-white">Deaths</h3>
+						<div class="d-inline-block">
+							<h2 class="card_value">7,184 <span class="card_value_new"> (+35)</span></h2>
+						</div>
+						<span class="card_icon"><i class="fa fa-Deaths"></i></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="card gradient-3">
+					<div class="card-body">
+						<h3 class="card-title text-white">Recovered</h3>
+						<div class="d-inline-block">
+							<h2 class="card_value">80,093</h2>
+						</div>
+						<span class="card_icon"><i class="fa fa-Recovered"></i></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="card gradient-4">
+					<div class="card-body">
+						<h3 class="card-title text-white">Serious</h3>
+						<div class="d-inline-block">
+							<h2 class="card_value">6,563</h2>
+						</div>
+						<span class="card_icon"><i class="fa fa-Serious"></i></span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6">
+				<div class="panel panel-default" style="background-color: inherit;">
+					<div class="panel-heading">Global Stats</div>
+					<div class="panel-body">
+						<p style="margin-bottom: 0;font-weight: bold;">Recovered:</p>
+						<div class="progress" style="float: left;width: 45%;margin-right: 10%;margin-bottom: 0;"><div class="progress-bar" style="width: 43.51%;">43.51%</div></div>
+						<div class="input-group" style="margin-top: -14px;">
+							<input type="text" class="form-control" placeholder="Search" id="txt_Filter_G" onkeyup="Table_Filter('GStats', 'txt_Filter_G')">
+							<div class="input-group-btn" onclick="Table_Filter('GStats', 'txt_Filter_G')"><button type="button" class="btn btn-primary search_btn"><span class="fooicon fooicon-search"></span></button></div>
+						</div>
+					</div>
+					<div class="table_scroll"><table class="table GStats" data-sorting="true" data-filtering="true"></table></div>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="panel panel-default" style="background-color: inherit;">
+					<div class="panel-heading">United States Stats</div>
+					<div class="panel-body">
+						<p style="margin-bottom: 0;font-weight: bold;">Recovered:</p>
+						<div class="progress" style="float: left;width: 45%;margin-right: 10%;margin-bottom: 0;"><div class="progress-bar" style="width: 10%;">10%</div></div>
+						<div class="input-group" style="margin-top: -14px;">
+							<input type="text" class="form-control" placeholder="Search" id="txt_Filter_USA" onkeyup="Table_Filter('USAStats', 'txt_Filter_USA')">
+							<div class="input-group-btn" onclick="Table_Filter('USAStats', 'txt_Filter_USA')"><button type="button" class="btn btn-primary search_btn"><span class="fooicon fooicon-search"></span></button></div>
+						</div>
+					</div>
+					<div class="table_scroll"><table class="table USAStats" data-sorting="true" data-filtering="true"></table></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6">
+				<div class="panel panel-default" style="background-color: inherit;">
+					<div class="panel-heading">Stats By Continent</div>
+					<div class="panel-body">
+						<select id="Continent" class="selectpicker form-control" data-live-search="true" data-size="5">
+							<option data-hidden="true">Select Continent</option>
+							<option value="Asia">Asia</option>
+							<option value="Europe">Europe</option>
+							<option value="Africa">Africa</option>
+							<option value="North America">North America</option>
+							<option value="South America">South America</option>
+							<option value="Oceania/Australia">Oceania/Australia</option>
+						</select>
+						<div class="divCStats">
+							<p style="margin-bottom: 0;font-weight: bold;">Recovered:</p>
+							<div class="progress" style="float: left;width: 45%;margin-right: 10%;margin-bottom: 0;"><div class="progress-bar" style="width: 100%;">100%</div></div>
+							<div class="input-group" style="margin-top: -14px;">
+								<input type="text" class="form-control" placeholder="Search" id="txt_Filter_C" onkeyup="Table_Filter('CStats', 'txt_Filter_C')">
+								<div class="input-group-btn" onclick="Table_Filter('CStats', 'txt_Filter_C')"><button type="button" class="btn btn-primary search_btn"><span class="fooicon fooicon-search"></span></button></div>
+							</div>
+						</div>
+					</div>
+					<div class="table_scroll divCStats"><table class="table CStats" data-sorting="true" data-filtering="true"></table></div>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="panel panel-default" style="background-color: inherit;">
+					<div class="panel-heading">Stats By Country</div>
+					<div class="panel-body">
+						<select id="Country" class="selectpicker form-control" data-live-search="true" data-size="8">
+							<option data-hidden="true">Select Country</option>
+							<option value="CN">China</option>
+							<option value="IT">Italy</option>
+							<option value="IR">Iran</option>
+							<option value="ES">Spain</option>
+							<option value="KR">South Korea</option>
+							<option value="DE">Germany</option>
+							<option value="FR">France</option>
+							<option value="US">United States</option>
+							<option value="CH">Switzerland</option>
+							<option value="GB">United Kingdom</option>
+							<option value="NL">Netherlands</option>
+							<option value="NO">Norway</option>
+							<option value="BE">Belgium</option>
+							<option value="AT">Austria</option>
+							<option value="SE">Sweden</option>
+							<option value="DK">Denmark</option>
+							<option value="00">Unknown</option>
+							<option value="JP">Japan</option>
+							<option value="MY">Malaysia</option>
+							<option value="AU">Australia</option>
+							<option value="CA">Canada</option>
+							<option value="QA">Qatar</option>
+							<option value="CZ">Czech Republic</option>
+							<option value="GR">Greece</option>
+							<option value="PT">Portugal</option>
+							<option value="IL">Palestine (Israel)</option>
+							<option value="FI">Finland</option>
+							<option value="SI">Slovenia</option>
+							<option value="SG">Singapore</option>
+							<option value="BR">Brazil</option>
+							<option value="BH">Bahrain</option>
+							<option value="EE">Estonia</option>
+							<option value="IE">Ireland</option>
+							<option value="PL">Poland</option>
+							<option value="IS">Iceland</option>
+							<option value="PK">Pakistan</option>
+							<option value="PH">Philippines</option>
+							<option value="RO">Romania</option>
+							<option value="TH">Thailand</option>
+							<option value="ID">Indonesia</option>
+							<option value="EG">Egypt</option>
+							<option value="HK">Hong Kong</option>
+							<option value="CL">Chile</option>
+							<option value="SA">Saudi Arabia</option>
+							<option value="IQ">Iraq</option>
+							<option value="KW">Kuwait</option>
+							<option value="IN">India</option>
+							<option value="LB">Lebanon</option>
+							<option value="SM">San Marino</option>
+							<option value="AE">United Arab Emirates</option>
+							<option value="LU">Luxembourg</option>
+							<option value="RU">Russian Federation</option>
+							<option value="PE">Peru</option>
+							<option value="MX">Mexico</option>
+							<option value="SK">Slovakia</option>
+							<option value="PA">Panama</option>
+							<option value="BG">Bulgaria</option>
+							<option value="RS">Serbia</option>
+							<option value="HR">Croatia</option>
+							<option value="AR">Argentina</option>
+							<option value="AM">Armenia</option>
+							<option value="ZA">South Africa</option>
+							<option value="VN">Viet Nam</option>
+							<option value="DZ">Algeria</option>
+							<option value="EC">Ecuador</option>
+							<option value="CO">Colombia</option>
+							<option value="BN">Brunei Darussalam</option>
+							<option value="AL">Albania</option>
+							<option value="HU">Hungary</option>
+							<option value="LV">Latvia</option>
+							<option value="TR">Turkey</option>
+							<option value="CY">Cyprus</option>
+							<option value="CR">Costa Rica</option>
+							<option value="PS">Palestine</option>
+							<option value="MA">Morocco</option>
+							<option value="BY">Belarus</option>
+							<option value="GE">Georgia</option>
+							<option value="JO">Jordan</option>
+							<option value="VE">Venezuela</option>
+							<option value="MT">Malta</option>
+							<option value="MD">Moldova</option>
+							<option value="LK">Sri Lanka</option>
+							<option value="UY">Uruguay</option>
+							<option value="AZ">Azerbaijan</option>
+							<option value="SN">Senegal</option>
+							<option value="KZ">Kazakhstan</option>
+							<option value="BA">Bosnia and Herzegovina</option>
+							<option value="OM">Oman</option>
+							<option value="MK">North Macedonia</option>
+							<option value="TN">Tunisia</option>
+							<option value="KH">Cambodia</option>
+							<option value="AF">Afghanistan</option>
+							<option value="DO">Dominican Republic</option>
+							<option value="LT">Lithuania</option>
+							<option value="BF">Burkina Faso</option>
+							<option value="AD">Andorra</option>
+							<option value="MV">Maldives</option>
+							<option value="NZ">New Zealand</option>
+							<option value="JM">Jamaica</option>
+							<option value="BO">Bolivia</option>
+							<option value="BD">Bangladesh</option>
+							<option value="UZ">Uzbekistan</option>
+							<option value="MC">Monaco</option>
+							<option value="PY">Paraguay</option>
+							<option value="GT">Guatemala</option>
+							<option value="HN">Honduras</option>
+							<option value="UA">Ukraine</option>
+							<option value="GY">Guyana</option>
+							<option value="LI">Liechtenstein</option>
+							<option value="GH">Ghana</option>
+							<option value="TT">Trinidad and Tobago</option>
+							<option value="CM">Cameroon</option>
+							<option value="ET">Ethiopia</option>
+							<option value="CU">Cuba</option>
+							<option value="SC">Seychelles</option>
+							<option value="MN">Mongolia</option>
+							<option value="CI">Ivory Coast</option>
+							<option value="KE">Kenya</option>
+							<option value="CD">Democratic Congo</option>
+							<option value="NG">Nigeria</option>
+							<option value="NA">Namibia</option>
+							<option value="LC">Saint Lucia</option>
+							<option value="CG">Congo</option>
+							<option value="MR">Mauritania</option>
+							<option value="BT">Bhutan</option>
+							<option value="VA">Holy See (Vatican City State)</option>
+							<option value="VC">St Vincent & Grenadines</option>
+							<option value="GQ">Equatorial Guinea</option>
+							<option value="TG">Togo</option>
+							<option value="AG">Antigua and Barbuda</option>
+							<option value="SR">Suriname</option>
+							<option value="BS">Bahamas</option>
+							<option value="GA">Gabon</option>
+							<option value="GN">Guinea</option>
+							<option value="NP">Nepal</option>
+							<option value="SD">Sudan</option>
+							<option value="CF">Central African Republic</option>
+						</select>
+						<div class="divCCStats">
+							<p style="margin-bottom: 0;font-weight: bold;">Recovered:</p>
+							<div class="progress" style="float: left;width: 45%;margin-right: 10%;margin-bottom: 0;"><div class="progress-bar" style="width: 100%;">100%</div></div>
+							<div class="input-group" style="margin-top: -14px;">
+								<input type="text" class="form-control" placeholder="Search" id="txt_Filter_CC" onkeyup="Table_Filter('CCStats', 'txt_Filter_CC')">
+								<div class="input-group-btn" onclick="Table_Filter('CCStats', 'txt_Filter_CC')"><button type="button" class="btn btn-primary search_btn"><span class="fooicon fooicon-search"></span></button></div>
+							</div>
+						</div>
+					</div>
+					<div class="table_scroll divCCStats"><table class="table CCStats" data-sorting="true" data-filtering="true"></table></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<a href="https://paypal.me/YassinelDev?locale.x=en_US" class="footer-a">Support me on PayPal.</a>
+	</footer>
+<script>
+	function RoundUp(num, places){
+		return (+(Math.round(num + "e+" + places)  + "e-" + places)).toFixed(places);
+	}
+
+	function Table_Filter(Table, txt_Filter){
+		var value = $('#' + txt_Filter).val();
+		var filtering = FooTable.get('.' + Table).use(FooTable.Filtering);
+		if(value == "") filtering.removeFilter('FValue');
+		else filtering.addFilter('FValue', value);
+		filtering.filter();
+	}
+
+	$('.GStats').footable({"columns": $.get('content/columns.json'), "rows": $.get('content/rows.php?Target=GStats&Token=1')});
+	$('.USAStats').footable({"columns": $.get('content/columns.json'), "rows": $.get('content/rows.php?Target=CCStats&Option=US&Token=1')});
+	var ft_CStats = FooTable.init('.CStats', {"columns": $.get('content/columns.json')});
+	var ft_CCStats = FooTable.init('.CCStats', {"columns": $.get('content/columns.json')});
+
+	$("#Continent").change(function(){
+		$.get('content/rows.php?Target=CStats&Option='+$(this).val()+'&Token=1').then(function(rows){
+			ft_CStats.rows.load(rows);
+			$(".divCStats").show();
+			if(rows.length){
+				var rec_percent = RoundUp((rows[0]['Recovered']/rows[0]['Confirmed']) * 100, 2) + "%";
+				$(".divCStats .progress-bar").html(rec_percent).width(rec_percent);
+			}
+		});
+	});
+
+	$("#Country").change(function(){
+		$.get('content/rows.php?Target=CCStats&Option='+$(this).val()+'&Token=1').then(function(rows){
+			ft_CCStats.rows.load(rows);
+			$(".divCCStats").show();
+			if(rows.length){
+				var rec_percent = RoundUp((rows[0]['Recovered']/rows[0]['Confirmed']) * 100, 2) + "%";
+				$(".divCCStats .progress-bar").html(rec_percent).width(rec_percent);
+			}
+		});
+	});
+</script>
+</body>
+</html>

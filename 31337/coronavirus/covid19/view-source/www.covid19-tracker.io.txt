@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Coronavirus &#8211; Soyez alerté quand de nouveaux cas sont présents dans votre région</title>
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">//<![CDATA[
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+//]]>
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/covid19-tracker.io\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://covid19-tracker.io/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wpforms-full-css'  href='https://covid19-tracker.io/wp-content/plugins/wpforms-lite/assets/css/wpforms-full.css?ver=1.5.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='sage/main.css-css'  href='https://covid19-tracker.io/wp-content/themes/corona/dist/styles/main_0439ddc9.css' type='text/css' media='all' />
+<script type='text/javascript' src='https://covid19-tracker.io/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://covid19-tracker.io/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://covid19-tracker.io/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js?ver=1.11.3'></script>
+<link rel='https://api.w.org/' href='https://covid19-tracker.io/index.php?rest_route=/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://covid19-tracker.io/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://covid19-tracker.io/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.3.2" />
+<link rel="canonical" href="https://covid19-tracker.io/" />
+<link rel='shortlink' href='https://covid19-tracker.io/' />
+<link rel="alternate" type="application/json+oembed" href="https://covid19-tracker.io/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=https%3A%2F%2Fcovid19-tracker.io%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://covid19-tracker.io/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=https%3A%2F%2Fcovid19-tracker.io%2F&#038;format=xml" />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">//<![CDATA[
+	var dataLayer_content = {"pagePostType":"frontpage","pagePostType2":"single-page","pagePostAuthor":"coronavirus-root"};
+	dataLayer.push( dataLayer_content );//]]>
+</script>
+<script data-cfasync="false">//<![CDATA[
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K8PHLD8');//]]>
+</script>
+<!-- End Google Tag Manager -->
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style></head>
+  <body class="home page-template page-template-template-home template-home page page-id-17 app-data index-data singular-data page-data page-17-data page-ceci-est-un-test-data template-home-data front-page-data">
+        <header class="banner">
+  <div class="cover bg-left bg-center-l" >
+    <nav class="dt w-100 mw8 center">
+      <div class="dtc w2 v-mid pa3 center">
+        <i> Coronavirus Tracker </i>
+      </div>
+    </nav>
+  </div>
+</header>
+    <div class="wrap container" role="document">
+      <div class="content">
+        <main class="main">
+               <div class="wp-block-group pv5-ns pv2 black flex mw8 justify-center items-center center"><div class="wp-block-group__inner-container">
+<div class="wp-block-group relative z-1 center"><div class="wp-block-group__inner-container">
+<div class="wp-block-columns flex flex-columns-ns flex-nowrap-ns flex-wrap-reverse justify-center items-center">
+<div class="wp-block-column mh4">
+<h1 class="fw2 violet">Soyez au courant de l&#8217;évolution du nombre de cas.</h1>
+
+
+<div class="wpforms-container wpforms-container-full" id="wpforms-149"><form id="wpforms-form-149" class="wpforms-validate wpforms-form wpforms-ajax-form" data-formid="149" method="post" enctype="multipart/form-data" action="/"><noscript class="wpforms-error-noscript">Please enable JavaScript in your browser to complete this form.</noscript><div class="wpforms-field-container"><div id="wpforms-149-field_1-container" class="wpforms-field wpforms-field-email" data-field-id="1"><label class="wpforms-field-label" for="wpforms-149-field_1">Email <span class="wpforms-required-label">*</span></label><input type="email" id="wpforms-149-field_1" class="wpforms-field-large wpforms-field-required" name="wpforms[fields][1]" required></div><div id="wpforms-149-field_3-container" class="wpforms-field wpforms-field-select" data-field-id="3"><label class="wpforms-field-label" for="wpforms-149-field_3">Région <span class="wpforms-required-label">*</span></label><select id="wpforms-149-field_3" class="wpforms-field-large wpforms-field-required" name="wpforms[fields][3]" required="required"><option value="Guadeloupe" >Guadeloupe</option><option value="Martinique" >Martinique</option><option value="Guyane" >Guyane</option><option value="La Réunion" >La Réunion</option><option value="Mayotte" >Mayotte</option><option value="Ile-de-France" >Ile-de-France</option><option value="Centre-Val de Loire" >Centre-Val de Loire</option><option value="Bourgogne-Franche-Comté" >Bourgogne-Franche-Comté</option><option value="Normandie" >Normandie</option><option value="Hauts-de-France" >Hauts-de-France</option><option value="Grand Est" >Grand Est</option><option value="Pays de la Loire" >Pays de la Loire</option><option value="Bretagne" >Bretagne</option><option value="Nouvelle-Aquitaine" >Nouvelle-Aquitaine</option><option value="Occitanie" >Occitanie</option><option value="Auvergne-Rhône-Alpes" >Auvergne-Rhône-Alpes</option><option value="Provence-Alpes-Côte d’Azur" >Provence-Alpes-Côte d’Azur</option><option value="Corse" >Corse</option></select></div></div><div class="wpforms-field wpforms-field-hp"><label for="wpforms-149-field-hp" class="wpforms-field-label">Message</label><input type="text" name="wpforms[hp]" id="wpforms-149-field-hp" class="wpforms-field-medium"></div><div class="wpforms-submit-container" ><input type="hidden" name="wpforms[id]" value="149"><input type="hidden" name="wpforms[author]" value="1"><input type="hidden" name="wpforms[post_id]" value="17"><button type="submit" name="wpforms[submit]" class="wpforms-submit " id="wpforms-submit-149" value="wpforms-submit" aria-live="assertive" data-alt-text="Sending..." data-submit-text="Suivre l&#039;évolution">Suivre l&#039;évolution</button><img src="https://covid19-tracker.io/wp-content/plugins/wpforms-lite/assets/images/submit-spin.svg" class="wpforms-submit-spinner" style="display: none;" width="26" height="26" alt=""></div></form></div>  <!-- .wpforms-container --><div></div>
+
+
+
+<p class="f6 fw2 black-50 mt0 lh-copy tl">Votre email sera utilisé seulement et uniquement pour vous alerter. </p>
+</div>
+
+
+
+<div class="wp-block-column"><div class="cardWrapper center">
+  <div class="headerWrapper">
+    <div class="iconWrapper" id="menuIcon"><i class="fa fa-equals"></i></div>
+    <div class="titleWrapper">Notifications</div>
+    <div class="iconWrapper" id="searchIcon"><i class="fa fa-search"></i></div>
+  </div>
+  <div class="bodyWrapper">
+    <div class="line"></div>
+    <div class="newsWrapper one">
+      <div class="circle"></div>
+      <div class="textWrapper">
+        <div class="time">9:24 </div>
+        <div class="description">
+          <b>1 209 cas</b> dans la région Ile-de-France
+        </div>
+      </div>
+    </div>
+
+    <div class="newsWrapper two">
+      <div class="circle"></div>
+      <div class="textWrapper">
+        <div class="time">8:19 AM</div>
+        <div class="description">
+          <b>523 cas</b> dans la région Auvergne-Rhône-Alpes
+        </div>
+      </div>
+    </div>
+
+    <div class="newsWrapper three">
+      <div class="circle"></div>
+      <div class="textWrapper">
+        <div class="time">9:24</div>
+        <div class="description">
+          <b>330 cas</b> dans la région Provence-Alpes-Côte d’Azur
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+</div></div>
+</div></div>
+
+
+
+<div class="wp-block-group bg-home-grey"><div class="wp-block-group__inner-container">
+<div class="wp-block-group center pt5 pb4 mw8 ph2"><div class="wp-block-group__inner-container">
+<p class="tc violet"><strong>Propagation du virus</strong></p>
+
+
+
+<h2 class="tc bleu">Comment le virus se propage-t-il ? </h2>
+
+
+
+<div class="wp-block-columns pv0-ns items-center justify-center flex-auto">
+<div class="wp-block-column">
+<article class=" shadow-light mw6 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+  <div class="tc">
+    <img src="/wp-content/uploads/2020/03/éternuer.png" class="h3 dib" title="Photo of a kitty staring at you">
+    <h3 class="f4"> Toux ou des éternuements de la personne infectée.</h3>
+  </div>
+</article>
+
+
+
+<p></p>
+</div>
+
+
+
+<div class="wp-block-column">
+<article class=" shadow-light mw6 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+  <div class="tc">
+    <img src="/wp-content/uploads/2020/03/contact.png" class="h3 dib" title="Photo of a kitty staring at you">
+    <h3 class="f4">Des contacts étroits avec des personne porteuses du virus.
+</h3>
+</div>
+</article>
+</div>
+
+
+
+<div class="wp-block-column">
+<article class=" shadow-light mw6 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+  <div class="tc">
+    <img src="/wp-content/uploads/2020/03/objet-contaminé.png" class="h3 dib" title="Photo of a kitty staring at you">
+    <h3 class="f4">
+Toucher des objets qui ont été en contact avec une personne infectée.
+</h3>
+    </div>
+</article>
+</div>
+</div>
+</div></div>
+</div></div>
+
+
+
+<div class="wp-block-group bg-blue pt5 pb4"><div class="wp-block-group__inner-container">
+<div class="wp-block-group mw8 center"><div class="wp-block-group__inner-container">
+<p class="white tc"><strong>Se protéger</strong></p>
+
+
+
+<h2 class="white tc pb4">Comment se protéger ? </h2>
+
+
+
+<div class="wp-block-columns br2">
+<div class="wp-block-column bg-red-gradient pa4 white br2">
+<h3 class="tc f2">Les symptômes</h3>
+
+
+
+<div class="wp-block-columns">
+<div class="wp-block-column" style="flex-basis:30%">
+<figure class="wp-block-image size-large"><img src="http://localhost:8080/wp-content/uploads/2020/03/Fichier-18.png" alt="" class="wp-image-118" srcset="https://covid19-tracker.io/wp-content/uploads/2020/03/Fichier-18.png 522w, https://covid19-tracker.io/wp-content/uploads/2020/03/Fichier-18-300x263.png 300w" sizes="(max-width: 522px) 100vw, 522px" /></figure>
+
+
+
+<p></p>
+</div>
+
+
+
+<div class="wp-block-column" style="flex-basis:70%">
+<h4 class="b mt0 mb1">La toux</h4>
+
+
+
+<p class="fw3">La toux est plutôt sèche que grasse.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns">
+<div class="wp-block-column" style="flex-basis:30%">
+<figure class="wp-block-image size-large"><img src="http://localhost:8080/wp-content/uploads/2020/03/Fichier-16.png" alt="" class="wp-image-116" srcset="https://covid19-tracker.io/wp-content/uploads/2020/03/Fichier-16.png 522w, https://covid19-tracker.io/wp-content/uploads/2020/03/Fichier-16-300x256.png 300w" sizes="(max-width: 522px) 100vw, 522px" /></figure>
+
+
+
+<p></p>
+</div>
+
+
+
+<div class="wp-block-column" style="flex-basis:70%">
+<h4 class="mt0 b mb1">La fièvre</h4>
+
+
+
+<p class="fw2">Surveiller la température deux fois par jour.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns">
+<div class="wp-block-column" style="flex-basis:30%">
+<figure class="wp-block-image size-full"><img src="http://localhost:8080/wp-content/uploads/2020/03/Fichier-19.png" alt="" class="wp-image-119" srcset="https://covid19-tracker.io/wp-content/uploads/2020/03/Fichier-19.png 521w, https://covid19-tracker.io/wp-content/uploads/2020/03/Fichier-19-300x236.png 300w" sizes="(max-width: 521px) 100vw, 521px" /></figure>
+
+
+
+<p></p>
+</div>
+
+
+
+<div class="wp-block-column" style="flex-basis:70%">
+<h4 class="b mt0 mb1">Difficulté respiratoire</h4>
+
+
+
+<p class="fw2">Une gène prononcé lorsque vous respirez.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns">
+<div class="wp-block-column ma0" style="flex-basis:30%">
+<figure class="wp-block-image size-full"><img src="http://localhost:8080/wp-content/uploads/2020/03/Fichier-17.png" alt="" class="wp-image-117" srcset="https://covid19-tracker.io/wp-content/uploads/2020/03/Fichier-17.png 521w, https://covid19-tracker.io/wp-content/uploads/2020/03/Fichier-17-300x240.png 300w" sizes="(max-width: 521px) 100vw, 521px" /></figure>
+
+
+
+<p></p>
+</div>
+
+
+
+<div class="wp-block-column" style="flex-basis:70%">
+<h4 class="b mt0 mb1">Écoulement nasal</h4>
+
+
+
+<p class="fw2">Accompagné d&#8217;une obstruction des voix nasales.</p>
+</div>
+</div>
+
+
+
+<p></p>
+</div>
+
+
+
+<div class="wp-block-column bg-blue-gradient pa4 white br2">
+<h3 class="tc f2">Les bons gestes</h3>
+
+
+
+<div class="wp-block-columns">
+<div class="wp-block-column" style="flex-basis:30%">
+<figure class="wp-block-image size-large"><img src="http://localhost:8080/wp-content/uploads/2020/03/Fichier-20.png" alt="" class="wp-image-128" srcset="https://covid19-tracker.io/wp-content/uploads/2020/03/Fichier-20.png 521w, https://covid19-tracker.io/wp-content/uploads/2020/03/Fichier-20-300x264.png 300w" sizes="(max-width: 521px) 100vw, 521px" /></figure>
+
+
+
+<p></p>
+</div>
+
+
+
+<div class="wp-block-column" style="flex-basis:70%">
+<h4 class="b mt0 mb1">La masque</h4>
+
+
+
+<p class="fw2">Si vous êtes malade, portez un masque en présence d&#8217;autre personnes.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns">
+<div class="wp-block-column" style="flex-basis:30%">
+<figure class="wp-block-image size-large"><img src="http://localhost:8080/wp-content/uploads/2020/03/Fichier-25.png" alt="" class="wp-image-130" srcset="https://covid19-tracker.io/wp-content/uploads/2020/03/Fichier-25.png 521w, https://covid19-tracker.io/wp-content/uploads/2020/03/Fichier-25-300x264.png 300w" sizes="(max-width: 521px) 100vw, 521px" /></figure>
+
+
+
+<p></p>
+</div>
+
+
+
+<div class="wp-block-column" style="flex-basis:70%">
+<h4 class="b mt0 mb1">Se laver les mains.</h4>
+
+
+
+<p class="fw2">Lavez vous les mains très régulièrement.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns">
+<div class="wp-block-column" style="flex-basis:30%">
+<figure class="wp-block-image size-large"><img src="http://covid19-tracker.io/wp-content/uploads/2020/03/Fichier-27.png" alt="" class="wp-image-204" srcset="https://covid19-tracker.io/wp-content/uploads/2020/03/Fichier-27.png 464w, https://covid19-tracker.io/wp-content/uploads/2020/03/Fichier-27-300x283.png 300w" sizes="(max-width: 464px) 100vw, 464px" /></figure>
+
+
+
+<p></p>
+</div>
+
+
+
+<div class="wp-block-column" style="flex-basis:70%">
+<h4 class="b mt0 mb1">Eviter les contacts</h4>
+
+
+
+<p class="fw2">Saluer sans se serrer la main, éviter les embrassade.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns">
+<div class="wp-block-column" style="flex-basis:30%">
+<figure class="wp-block-image size-large"><img src="http://covid19-tracker.io/wp-content/uploads/2020/03/Fichier-28.png" alt="" class="wp-image-172" srcset="https://covid19-tracker.io/wp-content/uploads/2020/03/Fichier-28.png 464w, https://covid19-tracker.io/wp-content/uploads/2020/03/Fichier-28-300x283.png 300w" sizes="(max-width: 464px) 100vw, 464px" /></figure>
+
+
+
+<p></p>
+</div>
+
+
+
+<div class="wp-block-column" style="flex-basis:70%">
+<h4 class="b mt0 mb1">Tousser ou éternuer</h4>
+
+
+
+<p class="fw2">Tousser ou éternuer dans sa manche ou dans un mouchoir.</p>
+</div>
+</div>
+
+
+
+<p></p>
+</div>
+</div>
+</div></div>
+</div></div>
+
+
+
+<div class="wp-block-group pt4 pb3"><div class="wp-block-group__inner-container">
+<p class="tc center violet"><strong>En ce moment</strong></p>
+
+
+
+<h2 class="tc center">La carte des régions</h2>
+
+
+
+<div id="map" class="center"></div>
+</div></div>
+
+          </main>
+              </div>
+    </div>
+        <footer class="content-info">
+  <div class="container">
+
+  </div>
+</footer>
+    <script src="https://kit.fontawesome.com/03ddad67c6.js" crossorigin="anonymous"></script>
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8PHLD8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><script type='text/javascript' src='https://covid19-tracker.io/wp-content/themes/corona/dist/scripts/main_0439ddc9.js'></script>
+<script type='text/javascript' src='https://covid19-tracker.io/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+<script type='text/javascript' src='https://covid19-tracker.io/wp-content/plugins/wpforms-lite/assets/js/jquery.validate.min.js?ver=1.19.0'></script>
+<script type='text/javascript' src='https://covid19-tracker.io/wp-content/plugins/wpforms-lite/assets/js/mailcheck.min.js?ver=1.1.2'></script>
+<script type='text/javascript' src='https://covid19-tracker.io/wp-content/plugins/wpforms-lite/assets/js/wpforms.js?ver=1.5.9.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpforms_settings = {"val_required":"This field is required.","val_url":"Please enter a valid URL.","val_email":"Please enter a valid email address.","val_email_suggestion":"Did you mean {suggestion}?","val_email_suggestion_title":"Click to accept this suggestion.","val_number":"Please enter a valid number.","val_confirm":"Field values do not match.","val_fileextension":"File type is not allowed.","val_filesize":"File exceeds max size allowed. File was not uploaded.","val_time12h":"Please enter time in 12-hour AM\/PM format (eg 8:45 AM).","val_time24h":"Please enter time in 24-hour format (eg 22:45).","val_requiredpayment":"Payment is required.","val_creditcard":"Please enter a valid credit card number.","val_post_max_size":"The total size of the selected files {totalSize} Mb exceeds the allowed limit {maxSize} Mb.","val_checklimit":"You have exceeded the number of allowed selections: {#}.","val_limit_characters":"{count} of {limit} max characters.","val_limit_words":"{count} of {limit} max words.","val_recaptcha_fail_msg":"Google reCAPTCHA verification failed, please try again later.","post_max_size":"8388608","uuid_cookie":"","locale":"en","wpforms_plugin_url":"https:\/\/covid19-tracker.io\/wp-content\/plugins\/wpforms-lite\/","gdpr":"1","ajaxurl":"https:\/\/covid19-tracker.io\/wp-admin\/admin-ajax.php","mailcheck_enabled":"1","mailcheck_domains":[],"mailcheck_toplevel_domains":["dev"]}
+/* ]]> */
+</script>
+  </body>
+</html>

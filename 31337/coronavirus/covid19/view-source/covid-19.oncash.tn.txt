@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>JQuery Activ'Map Plugin Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- Google Maps API V3 -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
+    <!--
+    As per Google recent announcement, usage of the Google Maps APIs now requires a key.
+    If you are using the Google Maps API on localhost or your domain was not active prior to June 22nd, 2016, it will require a key going forward.
+    Add your own Google Maps API key.
+    Here is the link to get your key: https://console.developers.google.com/flows/enableapi?apiid=maps_backend&keyType=CLIENT_SIDE&reusekey=true
+    
+    Replace the script above with: <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=YOUR_OWN_API_KEY"></script>
+    -->
+    
+    <!-- Activ'Map plugin -->
+    <link rel="stylesheet" href="jquery-activmap/css/skin-classic/activmap-classic.css">
+    <script src="jquery-activmap/js/jquery-activmap.min.js"></script>
+    <script src="jquery-activmap/js/markercluster.min.js"></script>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,300,700">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script>
+        $(function(){
+            // Activ'Map plugin init
+            // All options here: http://activmap.pandao.eu/doc/#options
+            $('#activmap-wrapper').activmap({
+                places: [
+                    {title: 'Crowne Plaza', address: '19 New Bridge Street London EC4V 6DB, United Kingdom', url: 'https://activmap.pandao.eu/', tags: ['tourism_01'], lat: 51.512279, lng: -0.104649, img: 'images/thumb.png', icon: 'images/icons/marker-hotel.png'},
+                    {title: 'The Cavendish London', address: '81 Jermyn Street London SW1Y 6JF, United Kingdom', phone: '+44 20 7930 2111', url: 'https://activmap.pandao.eu/', tags: ['tourism_01'], lat: 51.507632, lng: -0.137779, img: 'images/thumb.png', icon: 'images/icons/marker-hotel.png'},
+                    {title: 'Hilton London Tower Bridge', address: '5 More London Place, Tooley Street London SE1 2BY, United Kingdom', phone: '+44 20 3002 4300', url: 'https://activmap.pandao.eu/', tags: ['tourism_01'], lat: 51.504580, lng: -0.082737, img: 'images/thumb.png', icon: 'images/icons/marker-hotel.png'},
+                    {title: 'Hertz Rent-A-Car', address: '35 Edgware Road London W2 2JE, United Kingdom', phone: '+44 870 844 8844', url: 'https://activmap.pandao.eu/', tags: ['shops_04'], lat: 51.514633, lng: -0.162566, img: 'images/thumb.png', icon: 'images/icons/marker-car.png'},
+                    {title: 'Radiant Hair and Beauty Salon', address: '178 Jamaica Road London, UK SE16 4RT, United Kingdom', phone: '+44 20 7231 8833', url: 'https://activmap.pandao.eu/', tags: ['shops_01'], lat: 51.498222, lng: -0.062331, img: 'images/thumb.png', icon: 'images/icons/marker-eye.png'},
+                    {title: 'Harrods', address: '87-135 Brompton Road London SW1X 7XL, United Kingdom', phone: '+44 20 7730 1234', url: 'https://activmap.pandao.eu/', tags: ['shops_01','shops_02'], lat: 51.499418, lng: -0.163239, img: 'images/thumb.png', icon: 'images/icons/marker-diam.png'},
+                    {title: 'House of Fraser', address: '318 Oxford Street London W1C 1HF, United Kingdom', phone: '+44 344 800 3752', url: 'https://activmap.pandao.eu/', tags: ['shops_02'], lat: 51.514886, lng: -0.146204, img: 'images/thumb.png', icon: 'images/icons/marker-diam.png'},
+                    {title: 'Holland & Barrett', address: '94A Brompton Road Knightsbridge, London SW3 1ER, United Kingdom', phone: '+44 20 7581 3324', url: 'https://activmap.pandao.eu/', tags: ['shops_03'], lat: 51.499875, lng: -0.164063, img: 'images/thumb.png', icon: 'images/icons/marker-food.png'},
+                    {title: 'Whole Foods Market', address: '20 Glasshouse Street London W1B 5AR, United Kingdom', phone: '+44 20 7406 3100', url: 'https://activmap.pandao.eu/', tags: ['shops_03'], lat: 51.510434, lng: -0.136833, img: 'images/thumb.png', icon: 'images/icons/marker-food.png'},
+                    {title: 'Greensmiths', address: '27 Lower Marsh London SE1 7RG, United Kingdom', phone: '+44 20 7921 2970', url: 'https://activmap.pandao.eu/', tags: ['shops_03'], lat: 51.500827, lng: -0.112327, img: 'images/thumb.png', icon: 'images/icons/marker-food.png'},
+                    {title: 'Emirates Stadium', address: 'Hornsey Road London N7 7AJ, United Kingdom', phone: '+44 20 7619 5003', url: 'https://activmap.pandao.eu/', tags: ['services_06'], lat: 51.554888, lng: -0.108419, img: 'images/thumb.png', icon: 'images/icons/marker-ball.png'},
+                    {title: 'Wembley Stadium', address: 'Wembley London HA9 0WS, United Kingdom', phone: '+44 844 980 8001', url: 'https://activmap.pandao.eu/', tags: ['services_06'], lat: 51.555973, lng: -0.279502, img: 'images/thumb.png', icon: 'images/icons/marker-ball.png'},
+                    {title: 'Saint Mary\'s Hospital', address: 'Praed Street Paddington London W2 1NY, United Kingdom', phone: '+44 20 3312 6666', url: 'https://activmap.pandao.eu/', tags: ['services_02'], lat: 51.517158, lng: -0.173877, img: 'images/thumb.png', icon: 'images/icons/marker-health.png'},
+                    {title: 'The Wellington Hospital', address: 'Wellington Place London NW8 9LE, United Kingdom', phone: '+44 20 7586 5959', url: 'https://activmap.pandao.eu/', tags: ['services_02'], lat: 51.531531, lng: -0.171516, img: 'images/thumb.png', icon: 'images/icons/marker-health.png'},
+                    {title: 'Westminster School', address: 'Little Smith Street London SW1P 3PF, United Kingdom', phone: '+44 20 7963 1000', url: 'https://activmap.pandao.eu/', tags: ['services_05'], lat: 51.4981706, lng: -0.1279789, img: 'images/thumb.png', icon: 'images/icons/marker-grad.png'},
+                    {title: 'The City Of London School', address: '107 Queen Victoria Street London EC4V 3AL, United Kingdom', phone: '+44 20 7489 0291', url: 'https://activmap.pandao.eu/', tags: ['services_05'], lat: 51.511740, lng: -0.098659, img: 'images/thumb.png', icon: 'images/icons/marker-grad.png'},
+                    {title: 'London Fire & Emergency Planning Authority', address: '169 Union Street London SE1 0LL, United Kingdom', phone: '+44 20 8555 1200', url: 'https://activmap.pandao.eu/', tags: ['services_04'], lat: 51.503546, lng: -0.098593, img: 'images/thumb.png', icon: 'images/icons/marker-ext.png'},
+                    {title: 'Southwark Fire Station', address: '126 Shaftsbury Avenue London W1D 5ET, United Kingdom', phone: '+44 20 8555 1200', url: 'https://activmap.pandao.eu/', tags: ['services_04'], lat: 51.502047, lng: -0.09798, img: 'images/thumb.png', icon: 'images/icons/marker-ext.png'},
+                    {title: 'Soho Fire Station', address: '126 Shaftsbury Avenue London W1D 5ET, United Kingdom', phone: '+44 20 8555 1200', url: 'https://activmap.pandao.eu/', tags: ['services_04'], lat: 51.512469, lng: -0.130089, img: 'images/thumb.png', icon: 'images/icons/marker-ext.png'},
+                    {title: 'Scotland Yard', address: '8-10 Broadway London SW1H 0BG, United Kingdom', phone: '+44 20 7230 1212', url: 'https://activmap.pandao.eu/', tags: ['services_04'], lat: 51.498511, lng: -0.133091, img: 'images/thumb.png', icon: 'images/icons/marker-star.png'},
+                    {title: 'Big Ben', address: 'London SW1A 0AA, United Kingdom', phone: '', url: 'https://activmap.pandao.eu/', tags: ['tourism_02'], lat: 51.500729, lng: -0.124625, img: 'images/thumb.png', icon: 'images/icons/marker-museum.png'},
+                    {title: 'Saint Paul\'s Cathedral', address: 'St. Paul\'s Churchyard London EC4M 8AD, United Kingdom', phone: '+44 20 7246 8350', url: 'https://activmap.pandao.eu/', tags: ['services_03','tourism_02','tourism_02_01'], lat: 51.513845, lng: -0.098351, img: 'images/thumb.png', icon: 'images/icons/marker-museum.png'},
+                    {title: 'Westminster Abbey', address: '20 Deans Yd, London SW1P 3PA, United Kingdom', phone: '+44 20 7222 5152', url: 'https://activmap.pandao.eu/', tags: ['services_03','tourism_02','tourism_02_01'], lat: 51.499292, lng: -0.12731, img: 'images/thumb.png', icon: 'images/icons/marker-museum.png'},
+                    {title: 'Tower Bridge', address: 'Tower Bridge Road London SE1 2UP, United Kingdom', phone: '+44 20 7403 3761', url: 'https://activmap.pandao.eu/', tags: ['tourism_02','tourism_02_02'], lat: 51.505456, lng: -0.075356, img: 'images/thumb.png', icon: 'images/icons/marker-museum.png'},
+                    {title: 'Palace of Westminster', address: 'Westminster London SW1A 0AA, United Kingdom', phone: '+44 20 7219 3000', url: 'https://activmap.pandao.eu/', tags: ['tourism_02','tourism_03','tourism_02_03'], lat: 51.499479, lng: -0.124809, img: 'images/thumb.png', icon: 'images/icons/marker-museum.png'},
+                    {title: 'National Gallery', address: 'Trafalgar Square London WC2N 5DN, United Kingdom', phone: '+44 20 7747 2885', url: 'https://activmap.pandao.eu/', tags: ['services_01','tourism_03'], lat: 51.508916, lng: -0.128294, img: 'images/thumb.png', icon: 'images/icons/marker-museum.png'},
+                    {title: 'The British Museum', address: 'Great Russell Street London WC1B 3DG, United Kingdom', phone: '+44 20 7323 8299', url: 'https://activmap.pandao.eu/', tags: ['services_01','tourism_03'], lat: 51.519400, lng: -0.126984, img: 'images/thumb.png', icon: 'images/icons/marker-museum.png'}
+                ],
+                icon: 'jquery-activmap/img/marker.png',
+                lat: 51.5286416,       //latitude of the center
+                lng: -0.1015987,       //longitude of the center
+                posPanel: 'left',
+                showPanel: true,
+                radius: 0,
+                cluster: true,
+                country: 'uk',
+                mapType: 'roadmap',
+                request: 'large',
+                locationTypes: ['geocode','establishment']
+            }); 
+        });
+    </script>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>Activ'Map jQuery plugin</h1>
+                <p class="lead">Responsive and Powerful Nearby places plugin.<br>Custom Places, Filters, Geolocation, Radius.</p>
+                <p><a class="btn btn-success"href="https://codecanyon.net/item/activmap-16-stores-locator-responsive-gmaps/10036421?ref=pandao" target="_blank">BUY ON CODECANYON</a></p>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 col-lg-2">
+            <div class="form-group">
+                <div class="input-group">
+                    <!-- Optional: possibility for the user to change the center location -->
+                    <input id="activmap-location" type="text" class="form-control" name="location" value="" placeholder="Location...">
+                    <span class="input-group-btn">
+                        <!-- Optional: possibility for the user to reset all the map (location, radius, filters) -->
+                        <a id="activmap-reset" class="btn btn-danger" href="#"><i class="fa fa-ban"></i> Reset</a>
+                    </span>
+                </div>
+                
+                <!-- Optional: possibility for the user to change the radius -->
+                <p>
+                    Radius:<br>
+                    <small>
+                        <input type="radio" name="activmap_radius" value="0"> None
+                        <input type="radio" name="activmap_radius" value="3"> 3km
+                        <input type="radio" name="activmap_radius" value="20"> 20km
+                        <input type="radio" name="activmap_radius" value="50"> 50km
+                        <input type="radio" name="activmap_radius" value="100"> 100km
+                    </small>
+                </p>
+            </div>
+            
+            <!-- Optional: possibility for the user to be geolocated -->
+            <a id="activmap-geolocate" class="btn btn-default" href="#"><i class="fa fa-crosshairs"></i> Geolocate</a>
+            
+            <!-- Optional: possibility for the user to target the results on the map -->
+            <a id="activmap-target" class="btn btn-default" href="#"><i class="fa fa-bullseye"></i> Target results</a>
+
+            <!-- Activ'Map categories and tags -->
+            <div class="panel-group" id="activmap-accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse-tourism">
+                                <i class="fa fa-suitcase"></i> Tourism
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse-tourism" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <!-- Add checked="checked" to show the markers of this filter on page loading -->
+                            <input type="checkbox" name="marker_type[]" value="tourism_01" checked="checked"> Hotels<br>
+                            <input type="checkbox" name="marker_type[]" value="tourism_02"> Monuments
+                            <select name="marker_type[]">
+                                <option value="">- Monument type -</option>
+                                <option value="tourism_02_01" selected="selected">Places of worship</option>
+                                <option value="tourism_02_02">Bridge</option>
+                                <option value="tourism_02_03">Institution</option>
+                            </select><br>
+                            <input type="checkbox" name="marker_type[]" value="tourism_03" checked="checked"> Museums
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <!-- Replace class "collapse" with "collapsed" to close this panel on page loading --> 
+                            <a class="collapse" data-toggle="collapse" href="#collapse-services">
+                                <i class="fa fa-bank"></i> Services
+                            </a>
+                        </h4>
+                    </div>
+                    <!-- Remove "in" from this class to close the panel on page loading --> 
+                    <div id="collapse-services" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <input type="checkbox" name="marker_type[]" value="services_01"> Culture<br>
+                            <input type="checkbox" name="marker_type[]" value="services_02"> Health<br>
+                            <input type="checkbox" name="marker_type[]" value="services_03"> Places of worship<br>
+                            <input type="checkbox" name="marker_type[]" value="services_04"> Safety<br>
+                            <input type="checkbox" name="marker_type[]" value="services_05"> Schools<br>
+                            <input type="checkbox" name="marker_type[]" value="services_06"> Sports
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <!-- Replace class "collapse" with "collapsed" to close this panel on page loading --> 
+                            <a class="collapse" data-toggle="collapse" href="#collapse-shops">
+                                <i class="fa fa-shopping-cart"></i> Shops
+                            </a>
+                        </h4>
+                    </div>
+                    <!-- Remove "in" from the class to close this panel on page loading --> 
+                    <div id="collapse-shops" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <input type="checkbox" name="marker_type[]" value="shops_01"> Beauty<br>
+                            <input type="checkbox" name="marker_type[]" value="shops_02"> Clothes &amp; Jewels<br>
+                            <input type="checkbox" name="marker_type[]" value="shops_03"> Food<br>
+                            <input type="checkbox" name="marker_type[]" value="shops_04"> Services
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 col-lg-10">
+            <div id="activmap-wrapper">
+                <!-- Places panel (auto removable) -->
+                <div id="activmap-places" class="hidden-xs">
+                    <div id="activmap-results-num"></div>
+                </div>
+                <div id="activmap-container">
+                    <!-- Map container REQUIRED -->
+                    <div id="activmap-canvas"></div>
+                </div>
+            </div>  
+        </div>  
+    </div>         
+</div>
+</body>
+</html>

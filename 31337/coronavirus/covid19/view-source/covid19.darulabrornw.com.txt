@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Corona Monitor</title>
+	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+	<title>Meta Tags — Preview, Edit and Generate</title>
+	<meta name="title" content="Corona Monitor - Covid-19 Monitoring">
+	<meta name="description" content="ebsite informasi perkembangan virus covid-19 dalam bentuk grafik">
+	<meta name="author" content="Ricky Anwar">
+	<link rel="stylesheet" href="./assets/css/flag-icon.min.css">
+	<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/css/atlantis.min.css">
+</head>
+
+<body oncontextmenu="return false;">
+	<div class="wrapper overlay-sidebar is-show">
+		<div class="main-panel">
+			<div class="content">
+				<div class="mx-auto d-flex justify-content-center">
+					<img src="./assets/memanjang.png"  width="240px" height="90px" alt="">
+				</div>
+				<div class="page-inner">
+					<!-- Card -->
+
+					<div class="row">
+						<div class="col-md-4">
+							<div class="card">
+								<div class="card-header">
+									<div class="card-title"><span class="flag-icon flag-icon-id mr-3 "></span>INDONESIA
+										<span class="badge badge-warning" id="idnConfirmed"> </span><span
+											class="badge badge-success" id="idnRecovered"> </span><span
+											class="badge badge-danger" id="idnDeats"></span>
+									</div>
+								</div>
+								<div class="card-body">
+									<div class="chart-container">
+										<canvas id="chartINDO" style="width: 50%; height: 50%"></canvas>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-8">
+							<div class="card">
+								<div class="card-header">
+									<div class="card-title">GLOBAL <span class="badge badge-warning" id="glConfirmed">
+										</span><span class="badge badge-success" id="glRecovered">
+										</span><span class="badge badge-danger" id="glDeats"></span>
+									</div>
+									<div class="card-body">
+										<div class="row">
+											<div class="col-md-3">
+												<div class="chart-container">
+													<canvas id="chartGLOBAL" style="width: 50%; height: 50%"></canvas>
+												</div>
+											</div>
+											<div class="col-md-9">
+												<div class="chart-container">
+
+													<canvas id="dailyReport" style="width: 50%; height: 50%"></canvas>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row" id="allCountries">
+						</div>
+					</div>
+				</div>
+				<footer class="footer">
+					<div class="container-fluid">
+
+						<div class="copyright ml-auto">
+							2020, made with <i class="fa fa-heart heart text-danger"></i> by <a
+								href="https://www.linkedin.com/in/rickyanwarr/">Ricky Anwar</a>
+						</div>
+					</div>
+				</footer>
+			</div>
+
+
+		</div>
+		<!--   Core JS Files   -->
+		<script>
+			var dateDaily = ` 2020-03-16`
+			console.log(`${dateDaily}`)
+		</script>
+		<script src="./assets/js/jquery-3.4.1.min.js"></script>
+		<script src="JS.php"></script>
+		
+</body>
+
+</html>
