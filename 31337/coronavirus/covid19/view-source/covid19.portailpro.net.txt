@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Génération d'attestation de déplacement dérogatoire</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="icon" href="./favicon.png" type="image/png">
+    </head>
+    <body>
+        <h1>ATTESTATION DE DÉPLACEMENT DÉROGATOIRE</h1>
+        <p class="explain">En application de l’article 1 er du décret du 16 mars 2020 portant réglementation des
+        déplacements dans le cadre de la lutte contre la propagation du virus Covid-19 :</p>
+        <div id="form">
+            <div>Je soussigné(e)</div>
+            <div class="identity">
+                <div>
+                    <label for="name">Mme / M.</label>
+                    <input type="text" id="name" name="name" required autofocus />
+                </div>
+                <div>
+                    <label for="birthdate">Né(e) le :</label>
+                    <input type="date" id="birthdate" name="birthdate" required />
+                </div>
+                <div>
+                    <label for="address">Demeurant :</label>
+                    <textarea id="address" name="address" required></textarea>
+                </div>
+            </div>
+            <div>
+            certifie que mon déplacement est lié au motif suivant (cocher la case) autorisé par l’article 1 er du décret du 16 mars 2020 portant réglementation des déplacements dans le cadre de la lutte contre la propagation du virus Covid-19 :
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="work">
+                    <span>déplacements entre le domicile et le lieu d’exercice de l’activité professionnelle, lorsqu’ils sont indispensables à l’exercice d’activités ne pouvant être organisées sous forme de télétravail (sur justificatif permanent) ou déplacements professionnels ne pouvant être différés ;</span>
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="shopping">
+                    <span>déplacements pour effectuer des achats de première nécessité dans des établissements autorisés (liste sur gouvernement.fr) ;</span>
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="health">
+                    <span>déplacements pour motif de santé ;</span>
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="family">
+                    <span>déplacements pour motif familial impérieux, pour l’assistance aux personnes vulnérables ou la garde d’enfants ;</span>
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="sport">
+                    <span>déplacements brefs, à proximité du domicile, liés à l’activité physique individuelle des personnes, à l’exclusion de toute pratique sportive collective, et aux besoins des animaux de compagnie.</span>
+                </label>
+            </div>
+        </div>
+        <div class="sign">
+            <p>Fait à <input type="text" id="city" name="city" required />, le <input type="date" name="today" id="today" required /></p>
+            <div id="signature">
+                <canvas></canvas>
+            </div>
+        </div>
+        <div class="generate">
+            <button id="generate">Générer mon attestation</button>
+            <label>
+                <input type="checkbox" checked id="keep-data">
+                Conserver mes informations pour la prochaine génération (données conservées uniquement sur votre terminal)
+            </label>
+        </div>
+
+        <footer>Générateur d'attestation réalisé par l'équipe de <a href="https://www.portailpro.net">Portailpro</a> confinée chez eux :)</footer>
+
+        <div class="hidden" id="error">
+        Veuillez vérifier que vous avez bien complété tous les champs, sélectionné au moins un motif et signé avant de générer votre attestation.
+        </div>
+
+        <script src="./jspdf.min.js"></script>
+        <script src="./attestation.js"></script>
+        <script src="./signature_pad.min.js"></script>
+        <script>
+        let datas = window.localStorage.getItem('covid-19');
+        if (datas) {
+            datas = JSON.parse(datas);
+            ['name', 'birthdate', 'address', 'city'].forEach(input => {
+                if (datas[input]) {
+                    document.getElementById(input).value = datas[input];
+                }
+            });
+        }
+
+        document.getElementById('today').value = (new Date()).toISOString().split('T')[0];
+
+        document.getElementById('generate').addEventListener('click', (event) => {
+            event.preventDefault();
+
+            let isValid = true;
+            // Tous les champs sont remplis et valide
+            ['name', 'birthdate', 'address', 'city', 'today'].forEach(input => {
+                if (false === document.getElementById(input).checkValidity()) {
+                    isValid = false;
+                }
+            });
+
+            // Au moins une checkbox est coché
+            let hasChecked = false;
+            document.querySelectorAll('.checkbox input[type="checkbox"]').forEach(input => {
+                if (input.checked) {
+                    hasChecked = true;
+                }
+            });
+
+            // La signature n'est pas vide
+            if (signaturePad.isEmpty()) {
+                console.log('signature vide');
+                document.getElementById('error').classList.remove('hidden');
+                return;
+            }
+
+            if (document.getElementById('keep-data').checked) {
+                let datas = {};
+                ['name', 'birthdate', 'address', 'city'].forEach(input => {
+                    datas[input] = document.getElementById(input).value;
+                });
+                window.localStorage.setItem('covid-19', JSON.stringify(datas));
+            }
+
+            if (isValid && hasChecked) {
+                document.getElementById('error').classList.add('hidden');
+                attestation();
+            } else {
+                document.getElementById('error').classList.remove('hidden');
+            }
+        }, true);
+
+        const canvas = document.querySelector("canvas");
+
+        const signaturePad = new SignaturePad(canvas);
+
+        function resizeCanvas() {
+            // When zoomed out to less than 100%, for some very strange reason,
+            // some browsers report devicePixelRatio as less than 1
+            // and only part of the canvas is cleared then.
+            const ratio =  Math.max(window.devicePixelRatio || 1, 1);
+
+            // This part causes the canvas to be cleared
+            canvas.width = canvas.offsetWidth * ratio;
+            canvas.height = canvas.offsetHeight * ratio;
+            canvas.getContext("2d").scale(ratio, ratio);
+
+            // This library does not listen for canvas changes, so after the canvas is automatically
+            // cleared by the browser, SignaturePad#isEmpty might still return false, even though the
+            // canvas looks empty, because the internal data of this library wasn't cleared. To make sure
+            // that the state of this library is consistent with visual state of the canvas, you
+            // have to clear it manually.
+            signaturePad.clear();
+        }
+
+        // On mobile devices it might make more sense to listen to orientation change,
+        // rather than window resize events.
+        //window.onresize = resizeCanvas;
+        resizeCanvas();
+        </script>
+    </body>
+</html>

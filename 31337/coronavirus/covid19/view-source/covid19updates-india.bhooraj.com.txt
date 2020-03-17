@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      COVID-19 Updates from India &middot; With State-wise / UT data
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="public/css/poole.css">
+  <link rel="stylesheet" href="public/css/syntax.css">
+  <link rel="stylesheet" href="public/css/hyde.css">
+  <link rel="stylesheet" href="public/css/forms.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="public/bhooraj-logo.png">
+                                 <link rel="shortcut icon" href="public/bhooraj-logo.png">
+
+  <!--JQuery-->
+  <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+      
+    <!-- Include the standard DataTables bits -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script> 
+    <!-- First, this walks through the tables that occur between ...-begin
+         and ...-end and add the "datatable" class to them.
+         Then it invokes DataTable's standard initializer
+         Credit here: http://www.beardedhacker.com/blog/2015/08/28/add-class-attribute-to-markdown-table/
+      -->
+    <script>
+      $(document).ready(function(){
+          $('div.datatable-begin').nextUntil('div.datatable-end', 'table').addClass('display');
+          $("table").attr("id","displayT");
+          $('#displayT').DataTable( {
+              paging: false,
+              stateSave: true,
+              searching: true
+          });
+       });
+    </script>
+    
+
+    <script type="text/javascript">
+      window.onload = function calC(argument) {
+        var x = document.getElementsByTagName("table")[0].rows, totalCases = 0, totalRecovered = 0, totalDeaths = 0 ;
+        var y = x.length;
+        for(i = 1; i < y; i++)
+          {
+            totalCases += parseInt(x[i].cells[1].innerHTML);
+            totalRecovered += parseInt(x[i].cells[2].innerHTML);
+            totalDeaths += parseInt(x[i].cells[3].innerHTML);
+          }
+        document.getElementById("totalcases").innerHTML = "Total Cases &colon;" + totalCases;
+        document.getElementById("totalrecovered").innerHTML = "Total Recovered / Discharged &colon;" + totalRecovered;
+        document.getElementById("totaldeaths").innerHTML = "Total Deaths &colon;" + totalDeaths;
+      }
+    </script>
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="">
+          COVID-19 Updates from India
+        </a>
+      </h1>
+      <p class="lead">Updates on Coronovirus (COVID-19) cases in India</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="">Home</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about/">About</a>
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+       
+    </nav>
+    
+      <span class="sidebar-nav-item">Last updated &colon; 18.03.2020 at 5:50 PM IST</span>
+    
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2020/03/16/home/">
+        COVID-19 Updates from India
+      </a>
+    </h1>
+    
+    <span class="post-date">18.03.2020 at 5:50 PM IST</span>
+    
+    <p>COVID-19 is the infectious disease caused by the most recently discovered coronavirus (2019-nCoV). This new virus and disease were unknown before the outbreak began in Wuhan, China, in December 2019.</p>
+
+<h2 id="covid-19-cases-in-india">COVID-19 Cases in India</h2>
+<p id="totalcases" style="font-size: 1.2rem; font-weight: bold;"></p>
+<p id="totalrecovered" style="font-size: 1.2rem; font-weight: bold;"></p>
+<p id="totaldeaths" style="font-size: 1.2rem; font-weight: bold;"></p>
+
+<h2 id="state-wise-covid-19-cases-in-india">State-wise COVID-19 cases in India</h2>
+
+<div class="datatable-begin"></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>State / Union Territory</th>
+      <th>Total Cases</th>
+      <th>Total Recovered / Discharged</th>
+      <th>Total Deaths</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Maharashtra</td>
+      <td>39</td>
+      <td>00</td>
+      <td>01</td>
+    </tr>
+    <tr>
+      <td>Kerala</td>
+      <td>26</td>
+      <td>03</td>
+      <td>00</td>
+    </tr>
+    <tr>
+      <td>Delhi</td>
+      <td>08</td>
+      <td>02</td>
+      <td>01</td>
+    </tr>
+    <tr>
+      <td>Uttar Pradesh</td>
+      <td>15</td>
+      <td>05</td>
+      <td>00</td>
+    </tr>
+    <tr>
+      <td>Andhra Pradesh</td>
+      <td>01</td>
+      <td>00</td>
+      <td>00</td>
+    </tr>
+    <tr>
+      <td>Haryana</td>
+      <td>15</td>
+      <td>00</td>
+      <td>00</td>
+    </tr>
+    <tr>
+      <td>Karnataka</td>
+      <td>11</td>
+      <td>00</td>
+      <td>01</td>
+    </tr>
+    <tr>
+      <td>Odisha</td>
+      <td>01</td>
+      <td>00</td>
+      <td>00</td>
+    </tr>
+    <tr>
+      <td>Punjab</td>
+      <td>01</td>
+      <td>00</td>
+      <td>00</td>
+    </tr>
+    <tr>
+      <td>Rajasthan</td>
+      <td>04</td>
+      <td>03</td>
+      <td>00</td>
+    </tr>
+    <tr>
+      <td>Tamil Nadu</td>
+      <td>01</td>
+      <td>00</td>
+      <td>00</td>
+    </tr>
+    <tr>
+      <td>Telangana</td>
+      <td>05</td>
+      <td>00</td>
+      <td>00</td>
+    </tr>
+    <tr>
+      <td>Union Territory of J&amp;K</td>
+      <td>03</td>
+      <td>00</td>
+      <td>00</td>
+    </tr>
+    <tr>
+      <td>Union Territory of Ladakh</td>
+      <td>06</td>
+      <td>00</td>
+      <td>00</td>
+    </tr>
+    <tr>
+      <td>Uttarakhand</td>
+      <td>01</td>
+      <td>00</td>
+      <td>00</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="datatable-end"></div>
+
+<p><em>Data shown in the table is collected through Newspaper articles, Govt. sites and Press releases.</em></p>
+
+<p><strong>Data is updated twice daily (Morning: 9-10 AM, Night: 9-10 PM).</strong></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2020/03/16/Latest-updates/">
+        Latest Updates
+      </a>
+    </h1>
+    
+    <h3 id="17th-march-2020">17<sup>th</sup> March, 2020</h3>
+<ul>
+  <li>
+    <p>Exams cancelled in Uttar Pradesh. Schools and Colleges closed till April 2, 2020. [<a href="https://www.livemint.com/news/india/coronavirus-update-up-cancels-exams-extends-closure-of-schools-colleges-till-april-2-11584436122730.html">Source</a>]</p>
+  </li>
+  <li>
+    <p>West Bengal reports first positive case of coronavirus.[<a href="http://timesofindia.indiatimes.com/articleshow/74679605.cms?utm_source=contentofinterest&amp;utm_medium=text&amp;utm_campaign=cppst">Source</a>]</p>
+  </li>
+</ul>
+
+  </div>
+  
+</div>
+
+<div class="pagination">
+  
+    <a class="pagination-item older" href="page2">Older</a>
+  
+  
+    <span class="pagination-item newer">Newer</span>
+  
+</div>
+    </div>
+    
+    	
+  </body>
+</html>

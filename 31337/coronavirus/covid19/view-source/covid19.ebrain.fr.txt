@@ -1,0 +1,245 @@
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no,maximum-scale=1">
+    <meta name="description" content="Attestation déplacement COVID19 By Ebrain.fr">
+    <meta name="author" content="EBRAIN">
+    <title>Attestation de déplacement COVID-19</title>
+
+    <!-- Favicons-->
+    <!-- <link rel="shortcut icon" type="img/png" href="/static/commerciaux/img/fav_logo.png"> -->
+
+    <!-- apple -->
+  	<meta name="apple-mobile-web-app-capable" content="yes">
+  	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+  	<meta name="apple-mobile-web-app-title" content="Attestation de déplacement COVID19 By Ebrain.fr">
+  	<!-- <link rel="apple-touch-icon" href="/static/commerciaux/img/fav_logo_apple.jpg"> -->
+
+    <!-- GOOGLE WEB FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="/static/vitrine/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/static/vitrine/css/menu.css" rel="stylesheet">
+    <link href="/static/vitrine/css/style.css" rel="stylesheet">
+	<link href="/static/vitrine/css/vendors.css" rel="stylesheet">
+
+	 
+
+	<link href="/static/vitrine/css/custom_pc.css" media="screen and (min-width:991px)" rel="stylesheet">
+	<link href="/static/vitrine/css/custom_tel.css" media="screen and (max-width:992px)" rel="stylesheet">
+
+
+
+    <!-- Custom script -->
+	<script src="/static/vitrine/js/custom.js"></script>
+	
+
+
+</head>
+
+<body>
+	<style type="text/css">
+		
+		.CSSTEL
+		{
+			display: none;
+		}
+		.input-format-simple
+		{
+		    border: none;
+		    border-style: none;
+		    border: 1px solid #d2d8dd;
+		    height: 48px;
+		    width: 100%;
+		    padding-left: 15px;
+		    background-color: white;
+		    overflow-y: scroll;
+		}
+		#mw_25
+		{
+			max-width: 25%;
+		}
+		@media (max-width:991px)
+		{
+			.CSSPC
+			{
+				display: none;
+			}
+			.CSSTEL
+			{
+				display: block;
+			}
+			#mw_25
+			{
+				max-width: 100%;
+			}
+		}
+		.submit:before {
+			display: none;
+		}
+	</style>
+
+	<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div><!-- /Preload -->
+	
+	<div id="loader_form">
+		<div data-loader="circle-side-2"></div>
+	</div><!-- /loader_form -->
+	
+	<!-- /menu -->
+	<div class="container-fluid full-height">
+		<div class="row row-height">
+			<div class="col-lg-6 content-left" id="mw_25">
+				<div class="content-left-wrapper" style="background: linear-gradient(to bottom,  #ff9999, #800000);">
+					<!-- <a href="" id="logo"><img src="/static/commerciaux/img/logo.png" alt="" width="100" ></a> -->
+					
+					<div>
+						<figure><img src="/static/vitrine/img/logo.png" alt="" class="img-fluid"></figure>
+						<h2>Attestation de déplacement <b>COVID-19</b> <br></h2>
+					</div>
+					<div class="copy">© 2020 Attestation de déplacement COVID-19 <br> by <a href="https://www.ebrain.fr">Ebrain.fr</a></div>
+				</div>
+				<!-- /content-left-wrapper -->
+			</div>
+			<!-- /content-left -->
+			<div class="col-lg-6 content-right"  style="max-width: 75%; flex: 0 0 75%; " id="start">
+				<div id="wizard_container">
+					<div id="top-wizard">
+							<div id="progressbar"></div>
+						</div>
+						<!-- /top-wizard -->
+						
+<form  method='POST'  action='' enctype="multipart/form-data"> <input type='hidden' name='csrfmiddlewaretoken' value='heGvcQO2giaLl3jBEQDFy8Gkm3XbCfhEVpYQfDsTaUT7NMI7ieOKqHi5VKxOJMtn' /> 
+	<input id="website" name="website" type="text" value="">
+	<!-- Leave for security protection, read docs for details -->
+	<div id="middle-wizard">
+		<!-- /step-->
+		<div class="step">
+			<h3 class="main_question" style="margin-bottom: 50px; text-align: center;"><strong>1/3 Votre attestation</strong></h3>
+			<div class="container_first" >
+				<h3 class="main_question">Selectionnez-votre sexe</h3>
+				<div class="form-group sexe_field" >
+					<label class="container_radio version_2" style=" margin-right: 30px;">Femme
+					<input type="radio" name="sexe" value="femme" >
+					<span class="checkmark"></span>
+					</label>
+					<label class="container_radio version_2">Homme
+					<input type="radio" name="sexe" value="homme" checked>
+					<span class="checkmark"></span>
+					</label>
+				</div>
+				<h3 class="main_question">Nom complet</h3>
+				<div class="form-group">
+					<input type="text" autocomplete="off" value="Blabla" name="nom_dossier" class="form-control required">
+				</div>
+				<h3 class="main_question">Adresse</h3>
+				<div class="form-group">
+					<input type="text" autocomplete="off"  value="20 lala de lala" name="adresse_dossier" class="form-control required">
+				</div>
+				<h3 class="main_question">Code Postal</h3>
+				<div class="form-group">
+					<input type="text" autocomplete="off" value="00000" name="code_postal_dossier" class="form-control required">
+				</div>
+				<h3 class="main_question">Ville</h3>
+				<div class="form-group">
+					<input type="text" autocomplete="off" value="Ville" name="ville_dossier" class="form-control required">
+				</div>
+			</div>
+		</div>
+		<!-- /step-->
+		<div class="step">
+			<h3 class="main_question" style="margin-bottom: 50px; text-align: center;"><strong>2/3 Votre attestation</strong></h3>
+			<div class="first_step container_second" >
+				<h3 class="main_question">Motif de votre dérogation</h3>
+				<div class="form-group" style="display:flex; justify-content: center;flex-direction: column;text-align: justify;" >
+					<label class="container_radio version_2 choice_field" style=" margin-right: 30px;">Déplacements entre le domicile et le lieu d'exercice de l'activité professionnelle, lorsqu'ils sont indispensables à l'exercice d'activités ne pouvant être organisées sous forme de télétravail (sur justificatif permanent) ou déplacements professionnels ne pouvant être différés
+					<input type="radio" name="option_choice" checked value="option_one" onchange="getVals(this, 'option_choice');">
+					<span class="checkmark"></span>
+					</label>
+					<label class="container_radio version_2 choice_field">Déplacements pour effectuer des achats de première nécessité dans des établissements autorisés (liste sur gouvernement.fr)
+					<input type="radio" name="option_choice" value="air_air" onchange="getVals(this, 'option_choice');">
+					<span class="checkmark"></span>
+					</label>
+					<label class="container_radio version_2 choice_field">Déplacements pour motif de santé
+					<input type="radio" name="option_choice" value="air_air" onchange="getVals(this, 'option_choice');">
+					<span class="checkmark"></span>
+					</label>
+					<label class="container_radio version_2 choice_field">Déplacements pour motif familial impérieux, pour l'assistance aux personnes vulnérables ou la garde d'enfants
+					<input type="radio" name="option_choice" value="air_air" onchange="getVals(this, 'option_choice');">
+					<span class="checkmark"></span>
+					</label>
+					<label class="container_radio version_2 choice_field">Déplacements brefs, à proximité du domicile, liés à l'activité physique individuelle des personnes, à l'exclusion de toute pratique sportive collective, et aux besoins des animaux de compagnie
+					<input type="radio" name="option_choice" value="air_air" onchange="getVals(this, 'option_choice');">
+					<span class="checkmark"></span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<!-- /step-->
+		<div class="submit step">
+			<h3 class="main_question" style="margin-bottom: 50px; text-align: center;"><strong>1/3 Votre attestation</strong></h3>
+			<div style="display:flex; align-items: center;flex-direction: column;">
+				<h3 class="main_question" ><strong>Signature</strong></h3>
+			    
+			    <div class="form-group" style="display: flex; justify-content: row; margin-top: 50px; ">
+					<label class="container_radio version_2" style="margin-right: 20px; width: 100px ">Fait à</label>
+					<input type="text" autocomplete="off" name="ville_signature" style="max-width: 200px" class="form-control required">
+					<label class="container_radio version_2" style="margin-right: 20px; ">Le </label>
+					<input type="date" autocomplete="off" name="date_signature" value="" style="max-width: 150px" class="form-control required">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="bottom-wizard">
+		<button type="button" name="backward" class="backward">Précédent</button>
+		<button type="button" name="forward" class="forward">Suivant</button>
+		<button type="submit" name="submit" value="submit" class="submit">Signer</button>
+		
+	</div>
+	<!-- /bottom-wizard -->
+</form>
+
+
+
+						</div>
+					<!-- /Wizard container -->
+			</div>
+			<!-- /content-right-->
+		</div>
+		<!-- /row-->
+	</div>
+	<!-- /container-fluid -->
+
+	<div class="cd-overlay-nav">
+		<span></span>
+	</div>
+	<!-- /cd-overlay-nav -->
+
+	<div class="cd-overlay-content">
+		<span></span>
+	</div>
+	<!-- /cd-overlay-content -->
+	
+	<!-- COMMON SCRIPTS -->
+	<script src="/static/vitrine/js/jquery-3.2.1.min.js"></script>
+    <script src="/static/vitrine/js/common_scripts.min.js"></script>
+	<script src="/static/vitrine/js/velocity.min.js"></script>
+	<script src="/static/vitrine/js/functions.js"></script>
+
+	<!-- Wizard script -->
+	<script src="/static/vitrine/js/survey_func.js"></script>
+
+	<script type="text/javascript" src="/static/vitrine/js/django-jsignature.js"></script>
+	<script type="text/javascript" src="/static/vitrine/js/jsignature.min.js"></script>
+
+</body>
+</html>

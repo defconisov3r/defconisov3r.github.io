@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+<title>Covid-19 Diario de la crisis </title>
+
+<!-- Async WordPress.com Remote Login -->
+<script id="wpcom_remote_login_js">
+var wpcom_remote_login_extra_auth = '';
+function wpcom_remote_login_remove_dom_node_id( element_id ) {
+	var dom_node = document.getElementById( element_id );
+	if ( dom_node ) { dom_node.remove(); }
+}
+function wpcom_remote_login_remove_dom_node_classes( class_name ) {
+	var dom_nodes = document.querySelectorAll( '.' + class_name );
+	for ( var i = 0; i < dom_nodes.length; i++ ) {
+		dom_nodes[i].remove();
+	}
+}
+function wpcom_remote_login_final_cleanup() {
+	wpcom_remote_login_remove_dom_node_classes( "wpcom_remote_login_msg" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_validate" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_js" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_iframe" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_styles" );
+}
+
+// Watch for messages back from the remote login
+window.addEventListener( "message", function( e ) {
+	if ( e.origin === "https://r-login.wordpress.com" ) {
+		var data = {};
+		try {
+			data = JSON.parse( e.data );
+		} catch( e ) {
+			wpcom_remote_login_final_cleanup();
+			return;
+		}
+
+		if ( data.msg === 'LOGIN' ) {
+			// Clean up the login check iframe
+			wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+
+			var id_regex = new RegExp( /^[0-9]+$/ );
+			var token_regex = new RegExp( /^.*|.*|.*$/ );
+			if (
+				token_regex.test( data.token )
+				&& id_regex.test( data.wpcomid )
+			) {
+				// We have everything we need to ask for a login
+				var script = document.createElement( "script" );
+				script.setAttribute( "id", "wpcom_remote_login_validate" );
+				script.src = '/remote-login.php?wpcom_remote_login=validate'
+					+ '&wpcomid=' + data.wpcomid
+					+ '&token=' + encodeURIComponent( data.token )
+					+ '&host=' + window.location.protocol
+						+ '//' + window.location.hostname;
+				document.body.appendChild( script );
+			}
+
+			return;
+		}
+
+		// Safari ITP, not logged in, so redirect
+		if ( data.msg === 'LOGIN-REDIRECT' ) {
+			window.location = 'https://wordpress.com/log-in?redirect_to=' + window.location.href;
+			return;
+		}
+
+		// Safari ITP, storage access failed, remove the request
+		if ( data.msg === 'LOGIN-REMOVE' ) {
+			var css_zap = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } @media screen and ( max-width: 782px ) { html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } }';
+			var style_zap = document.createElement( 'style' );
+			style_zap.type = 'text/css';
+			style_zap.appendChild( document.createTextNode( css_zap ) );
+			document.body.appendChild( style_zap );
+
+			var e = document.getElementById( 'wpcom_request_access_iframe' );
+			e.parentNode.removeChild( e );
+
+			document.cookie = 'wordpress_com_login_access=denied; path=/; max-age=31536000';
+
+			return;
+		}
+
+		// Safari ITP
+		if ( data.msg === 'REQUEST_ACCESS' ) {
+			console.log( 'request access: safari' );
+
+			// Check ITP iframe enable/disable knob
+			if ( wpcom_remote_login_extra_auth !== 'safari_itp_iframe' ) {
+				return;
+			}
+
+			// If we are in a "private window" there is no ITP.
+			var private_window = false;
+			try {
+				var opendb = window.openDatabase( null, null, null, null );
+			} catch( e ) {
+				private_window = true;
+			}
+
+			if ( private_window ) {
+				console.log( 'private window' );
+				return;
+			}
+
+			var iframe = document.createElement( 'iframe' );
+			iframe.id = 'wpcom_request_access_iframe';
+			iframe.setAttribute( 'scrolling', 'no' );
+			iframe.setAttribute( 'sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-top-navigation-by-user-activation' );
+			iframe.src = 'https://r-login.wordpress.com/remote-login.php?wpcom_remote_login=request_access&origin=' + encodeURIComponent( data.origin ) + '&wpcomid=' + encodeURIComponent( data.wpcomid );
+
+			var css = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 46px !important; } * html body { margin-top: 46px !important; } @media screen and ( max-width: 660px ) { html { margin-top: 71px !important; } * html body { margin-top: 71px !important; } #wpcom_request_access_iframe { display: block; height: 71px !important; } } #wpcom_request_access_iframe { border: 0px; height: 46px; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 99999; background: #23282d; } ';
+
+			var style = document.createElement( 'style' );
+			style.type = 'text/css';
+			style.id = 'wpcom_request_access_styles';
+			style.appendChild( document.createTextNode( css ) );
+			document.body.appendChild( style );
+
+			document.body.appendChild( iframe );
+		}
+
+		if ( data.msg === 'DONE' ) {
+			wpcom_remote_login_final_cleanup();
+		}
+	}
+}, false );
+
+// Inject the remote login iframe after the page has had a chance to load
+// more critical resources
+window.addEventListener( "DOMContentLoaded", function( e ) {
+	var iframe = document.createElement( "iframe" );
+	iframe.style.display = "none";
+	iframe.setAttribute( "scrolling", "no" );
+	iframe.setAttribute( "id", "wpcom_remote_login_key" );
+	iframe.src = "https://r-login.wordpress.com/remote-login.php"
+		+ "?wpcom_remote_login=key"
+		+ "&origin=aHR0cHM6Ly9jb3ZpZDE5ZW5hbGVtYW5pYS5mYW1pbHkuYmxvZw%3D%3D"
+		+ "&wpcomid=174348676"
+		+ "&time=1584486383";
+	document.body.appendChild( iframe );
+}, false );
+</script>
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//covid19enalemaniafamily.wordpress.com' />
+<link rel="alternate" type="application/rss+xml" title="Covid-19 Diario de la crisis  &raquo; Feed" href="https://covid19enalemania.family.blog/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Covid-19 Diario de la crisis  &raquo; Comments Feed" href="https://covid19enalemania.family.blog/comments/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s0.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1582709031h&ver=5.4-RC1-47425"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='all-css-0-1' href='https://s0.wp.com/_static/??-eJyllNtuwjAMQH9oaShrxXiY9i1pa4IhN+VC1b+f28BWqGBovFRx7ONLbJf3jrXWRDCR68ScShJN4L1rrWZBo4LhRiraEN74DGuUlT+gFv4IEY1kjfCcTK9vFvCFk4nEBrwkjQe+Kd6LFW8Sqm703x6ZwsYLP/AQBwVPuJmowA8QnRhxMdgUmfTY/deFF2MV4Q98l5RiASMw6HAqO2t4XW2rdV1vOZzInrhkYmd7k8O87PWSZUQNCg287DC31YYYzhl2GCI/IfR3nbb2/GRlsV4VJZvmJnNZUeSkpr6+kFrOSpHfeWq3t4sAs/keh4zutRNxtNAUSYACTWaPsLwITeM8hMDoqzFpFvcELvdixkkw4JEUd44LNrvkLjUcTQcO6ENDQzLVtwfP1nf6+wQ4LuW5Hf+g0bQ5dO7uw9fCTkIMHBJp7RGBtrDnEbRTIsK9Rbp6NssoUdo7a64EtlMClz+TGephnF86yqneX3GEvvRnWX9U5arcVPXhGwC+3p8=?cssminify=yes' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify {
+	text-align:justify;
+}
+</style>
+<link rel='stylesheet' id='print-css-1-1' href='https://s0.wp.com/wp-content/mu-plugins/global-print/global-print.css?m=1465851035h&cssminify=yes' type='text/css' media='print' />
+<link rel='stylesheet' id='all-css-2-1' href='https://s0.wp.com/_static/??-eJxlzEEOAiEMheELiRUD0VkYzwKITLWUiS2ZeHvHZIwm7t7iez/Mk0mNNbNC7WaiXpAFQlJsHMPju7ZJZAM//GOvncgIajb5gopc1gp4N7i99wMUajEsRp+UBUSDYoJIge9/UR1zXczo1tMbnOvJ+qOzO3tw/vYCJE4/7g==?cssminify=yes' type='text/css' media='all' />
+<style id='jetpack-global-styles-frontend-style-inline-css'>
+:root { --font-headings: unset; --font-base: unset; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+</style>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJx9zUsKgDAMBNALWYtIixvxLH6itJhUmxTx9lbQnQgDs5gHo49NORrXNAFrn7MniOdTpedC/wGFbom9QImOXjwGEiC57RZYEJj7BT5WDINbQSWGmAFJvplDdh22lTFNbaw1tb8AOGU7DA=='></script>
+<link rel='stylesheet' id='all-css-0-2' href='https://s0.wp.com/wp-content/mu-plugins/highlander-comments/style.css?m=1530132353h&cssminify=yes' type='text/css' media='all' />
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s0.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563h&#038;ver=20110606' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://covid19enalemaniafamily.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s0.wp.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress.com" />
+<link rel='shortlink' href='https://wp.me/bNy3q' />
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Covid-19 Diario de la crisis " />
+<meta property="og:url" content="https://covid19enalemania.family.blog/" />
+<meta property="og:site_name" content="Covid-19 Diario de la crisis " />
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="shortcut icon" type="image/x-icon" href="https://s0.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="icon" type="image/x-icon" href="https://s0.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="apple-touch-icon" href="https://s0.wp.com/i/webclip.png" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://covid19enalemania.family.blog/osd.xml" title="Covid-19 Diario de la crisis " />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<meta name="application-name" content="Covid-19 Diario de la crisis " /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-task" content="name=Subscribe;action-uri=https://covid19enalemania.family.blog/feed/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico" /></head>
+
+<body class="home blog wp-embed-responsive customizer-styles-applied admin-bar highlander-enabled highlander-light">
+
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<div id="hero-header" class="site-hero-section">
+		<header id="masthead" class="site-header" role="banner">
+			<div class="inner">
+				<div class="site-branding">
+					
+											<a class="site-logo-link" href="https://covid19enalemania.family.blog/">
+							<img alt="" class="site-logo-image no-grav" width="80" height="80" src="https://secure.gravatar.com/avatar/aaaafdafb88a0f9774b4a1a724bb3c4e?s=160&#038;d=identicon&#038;r=g" />
+						</a><!-- .site-logo-link -->
+													<h1 class="site-title"><a href="https://covid19enalemania.family.blog/" rel="home">Covid-19 Diario de la crisis </a></h1>
+										</div><!-- .site-branding -->
+
+				
+									<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" id="primary-menu-button">
+						Menu					</button><!-- .menu-toggle -->
+				
+			</div><!-- .inner -->
+		</header><!-- #masthead -->
+	</div>
+
+				<nav id="site-navigation" class="main-navigation" role="navigation">
+			<div class="menu-primary-container"><ul id="primary-menu" class="menu"><li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-6"><a href="/" aria-current="page">Home</a></li>
+<li id="menu-item-7" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7"><a href="https://covid19enalemania.family.blog/contact/">Contact</a></li>
+</ul></div>		</nav><!-- .main-navigation -->
+	
+	
+	
+	<div id="content-wrapper" class="content-wrapper">
+		<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+			
+						
+				
+<article id="post-11" class="post-11 post type-post status-publish format-standard hentry category-uncategorized">
+			<header class="entry-header">
+			<h1 class="entry-title"><a href="https://covid19enalemania.family.blog/2020/03/17/el-inicio/" rel="bookmark">El inicio</a></h1>		</header><!-- .entry-header -->	
+	<div class="entry-content">
+		
+<p>Ayer fue el último día de &#8216;normalidad&#8217; en Alemania, aunque no en esta casa, pues aunque afortunadamente no nos hemos contagiado, ya hemos vivido experiencias diferentes gracias a él.</p>
+
+
+
+<p>El viernes la nena comenzó a tener fiebre y tos muy seca. Precisamente ese día nos enteramos que el papá de un amiguito de su mismo grupo en la guardería había sido el primer positivo del virus en el pueblo. Después de una noche con fiebre, a la mañana siguiente decidimos llamar a la línea de atención alemana para la pandemia, donde nos recomendaron llamar al hospital pediátrico más cercano. Llamamos y nos indicaron pasar por consulta para hacer el test.</p>
+
+
+
+<p>Debo decir que no sentí mucha coordinación entre las partes, pero igualmente todo muy controlado al llegar. Nos aislaron preventivamente y el doctor en traje de astronauta le hizo la prueba a la nena y dijo que nos llamaría el domingo.</p>
+
+
+
+<p>Noche larga con poco descanso y el domingo esperamos todo el día por la llamada que llegó finalmente a la 5pm: negativo! Descansamos todos, acá y en Colombia donde se le rezó por lo menos a 3 vírgenes para que no hubiese llegado el virus a la casa.</p>
+
+
+
+<p>El lunes se hizo efectiva la medida decretada el viernes, en donde se indicaba que los estudiantes de colegios y universidades, así como niños de guardería, asistirían a los centros por última vez antes de permanecer cerrados por 5 semanas.</p>
+
+
+
+<p>El nene recibió tareas para casa para las próximas 3 semanas (las últimas 2 eran oficialmente vacaciones) y se acabó la normalidad. Ya no más encuentros con amigos ni colegio en un buen rato.</p>
+
+
+
+<p>Adicional a la situación de colegios y guarderías, en la empresa donde trabajamos se confirmó un caso de virus y estamos todos trabajando obligatoriamente desde casa. 4 personas en casa con trabajo, estudio y comida por hacer, durante 5 semanas! Comenzamos así el diario de una cuarentena.</p>
+
+
+
+<p></p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		
+				<div class="entry-meta">
+			<span class="byline">
+				<a href="https://covid19enalemania.family.blog/author/katherinevivas/" title="Posts by katherinevivas" rel="author">katherinevivas</a>			</span>
+							<span class="cat-links">
+					<a href="https://covid19enalemania.family.blog/category/uncategorized/" rel="category tag">Uncategorized</a>				</span><!-- .cat-links -->
+			
+			<span class="comments-link"><a href="https://covid19enalemania.family.blog/2020/03/17/el-inicio/#respond">Leave a comment</a></span><!-- .comments-link -->
+			<span class="published-on">
+									<a href="https://covid19enalemania.family.blog/2020/03/17/el-inicio/" rel="bookmark"><time class="entry-date published" datetime="2020-03-17T21:08:24+00:00">March 17, 2020</time><time class="updated" datetime="2020-03-17T21:08:27+00:00">March 17, 2020</time></a>
+							</span>
+
+			<span class="word-count">1 Minute</span>		</div><!-- .entry-meta -->
+		</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-3" class="post-3 post type-post status-publish format-standard hentry category-uncategorized">
+			<header class="entry-header">
+			<h1 class="entry-title"><a href="https://covid19enalemania.family.blog/2020/03/17/the-journey-begins/" rel="bookmark">El diario de una&nbsp;cuarentena</a></h1>		</header><!-- .entry-header -->	
+	<div class="entry-content">
+		<p>Quiero poder contarme a mi misma, en unos años, como fue esta experiencia al vivir una cuarentena por un virus en 2020.</p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		
+				<div class="entry-meta">
+			<span class="byline">
+				<a href="https://covid19enalemania.family.blog/author/katherinevivas/" title="Posts by katherinevivas" rel="author">katherinevivas</a>			</span>
+							<span class="cat-links">
+					<a href="https://covid19enalemania.family.blog/category/uncategorized/" rel="category tag">Uncategorized</a>				</span><!-- .cat-links -->
+			
+			<span class="comments-link"><a href="https://covid19enalemania.family.blog/2020/03/17/the-journey-begins/#respond">Leave a comment</a></span><!-- .comments-link -->
+			<span class="published-on">
+									<a href="https://covid19enalemania.family.blog/2020/03/17/the-journey-begins/" rel="bookmark"><time class="entry-date published" datetime="2020-03-17T20:46:05+00:00">March 17, 2020</time><time class="updated" datetime="2020-03-17T21:11:23+00:00">March 17, 2020</time></a>
+							</span>
+
+			<span class="word-count">1 Minute</span>		</div><!-- .entry-meta -->
+		</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+			
+			
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+		</div><!-- #content -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+						<div class="site-info">
+				<a href="https://wordpress.com/?ref=footer_segment_blog" rel="nofollow">Blog at WordPress.com.</a>
+				
+							</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+	</div><!-- #content-wrapper -->
+</div><!-- #page -->
+
+<!--  -->
+<div id="wpadminbar" class="marketing-bar"><div class="marketing-bar-text">Create your website at WordPress.com</div><a class="marketing-bar-button" href="https://wordpress.com/?ref=marketing_bar">Get started</a></div><script src='//0.gravatar.com/js/gprofiles.js?ver=202012y'></script>
+<script>
+var WPGroHo = {"my_hash":""};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781h'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	</div>
+<script>
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"https:\/\/covid19enalemaniafamily.wordpress.com\/public.api\/connect\/?action=request&domain=covid19enalemania.family.blog","logoutURL":"https:\/\/covid19enalemaniafamily.wordpress.com\/wp-login.php?action=logout&_wpnonce=54a74b4aa8","homeURL":"https:\/\/covid19enalemania.family.blog\/","postID":"11","gravDefault":"identicon","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"0","userIsLoggedIn":"","isJetpack":"","text_direction":"ltr"};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??/wp-content/js/jquery/jquery.autoresize.js,/wp-content/mu-plugins/highlander-comments/script.js?m=1573483029j'></script>
+<div class="widget widget_eu_cookie_law_widget"><div
+	class="hide-on-button ads-active"
+	data-hide-timeout="30"
+	data-consent-expiration="180"
+	id="eu-cookie-law"
+>
+	<form method="post">
+		<input type="submit" value="Close and accept" class="accept" />
+
+		Privacy &amp; Cookies: This site uses cookies. By continuing to use this website, you agree to their use. <br />
+To find out more, including how to control cookies, see here:
+		<a href="https://automattic.com/cookies" >
+			Cookie Policy		</a>
+ </form>
+</div>
+</div><link rel='stylesheet' id='all-css-0-3' href='https://s0.wp.com/wp-content/plugins/gutenberg-blocks/jetpack-layout-grid/blocks/front.css?m=1583834955h&cssminify=yes' type='text/css' media='all' />
+<script>
+var actionbardata = {"siteID":"174348676","siteName":"Covid-19 Diario de la crisis ","siteURL":"https:\/\/covid19enalemania.family.blog","icon":"<img alt='' src='https:\/\/s0.wp.com\/i\/logo\/wpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/independent-publisher-2","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Fcovid19enalemania.family.blog%2F2020%2F03%2F17%2Fel-inicio%2F&signup_flow=account&domain=covid19enalemania.family.blog","themeURL":"https:\/\/wordpress.com\/theme\/independent-publisher-2\/","xhrURL":"https:\/\/covid19enalemania.family.blog\/wp-admin\/admin-ajax.php","nonce":"8821da7da8","isSingular":"","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"f6fd83ba5c\" \/>","referer":"https:\/\/covid19enalemania.family.blog\/","canFollow":"1","feedID":"104343516","statusMessage":"","customizeLink":"https:\/\/covid19enalemaniafamily.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Fcovid19enalemaniafamily.wordpress.com%2F","i18n":{"view":"View site","follow":"Follow","following":"Following","edit":"Edit","login":"Log in","signup":"Sign up","customize":"Customize","report":"Report this content","themeInfo":"Get theme: Independent Publisher 2","shortlink":"Copy shortlink","copied":"Copied","followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/read\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar","editSubs":"Manage subscriptions","viewReader":"View site in Reader","viewReadPost":"View post in Reader","subscribe":"Sign me up","enterEmail":"Enter your email address","followers":"","alreadyUser":"Already have a WordPress.com account? <a href=\"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Fcovid19enalemania.family.blog%2F2020%2F03%2F17%2Fel-inicio%2F&signup_flow=account&domain=covid19enalemania.family.blog\">Log in now.<\/a>","stats":"Stats"}};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJydUtFuwyAM/KF5rFWirQ/TvoWCk7ohgLBJur+f07V9iLRKywsyPt8Z+zBzBpeiYBRzZuNxIof58nrmF6MQRReqR75ixGImjD6VBcopfHcUwutI8V5+V8qh9hTZdDUEYBIE9CQUe/hFTNscmn3bHswxJE0mFgYN3XDrQjhv10R9pCivRvFpjjfh68lrcN1FTjjquLkeDUWPWcdd6vUeiE9YYL+sItqJeiuUNvL/gLaJ8UAZAsUBuuQqQ0eXDULqtGFXKAvM2aVxLTFWuDswk+9RdJVV0TQQQrCzERxzsIKr/BMd6/XrwNEWM1oWLBpBmrAUWn7cI/dPBSlWfX5GcotxC+kRafXX+LlrP5rd2+69ac8/CCMmEg=='></script>
+<script type='text/javascript'>
+( 'fetch' in window ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?m=1573572739h&#038;ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?m=1540208548h&#038;ver=3.26.0-0"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?m=1550600082h&#038;ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?m=1540208548h&#038;ver=2.0.2"></scr' + 'ipt>' );
+</script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="//stats.wp.com/w.js?61" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'174348676','blog_tz':'0','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'174348676','v':'wpcom','tz':'0','user_id':'0','subd':'covid19enalemaniafamily'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1mJVY3bm9aR3VCbS9mWm1pRyZuJS1LX1t5QmRXZzE3RC9rQWZHK1FjbDltdWdaMVFFZTcxUGVHLWR0WTJoS05QSm18aVRSN010PUsydXZBQ35kQmdGSnBHXTU2VVNfUmZbTHYuQ05LVlhxJXM4ZHh1akktXWc9ZnNNanlLSS4udVpdUUEveXEzLHk4VD1kTklVP0o9OEhqaWhrL05YVGFscjU3LnZ3P20sN25OPWFTV1AmUkprP1JYMVBRVGtUQUhbY2hVeHo0QW9SbitLfmpobUptNnkyTXxOX0xQTXYtUkMxMUZ3TVFLNG9+W0xBTlpWNVk2OWdqQm82Qlt8MnZJWllXNHBSWC5xSw=='}]);
+_stq.push([ 'clickTrackerInit', '174348676', '0' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+</body>
+</html>

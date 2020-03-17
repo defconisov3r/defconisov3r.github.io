@@ -142,7 +142,7 @@
                     
 
 <div style="max-width:400px;" class="covid-case-container">
-	<b style="font-size:23px;">Kondisi 17 March 2020</b>
+	<b style="font-size:23px;">Kondisi 18 March 2020</b>
 <br>	&nbsp;
 		
 	
@@ -150,17 +150,17 @@
 		<tbody><tr>
 			<td class="description">Jumlah orang yang diperiksa</td>
 			<td class="dot">:</td>
-			<td class="case">1230</td>
+			<td class="case">1255</td>
 		</tr>
 		<tr>
 			<td class="description">Positif COVID-19</td>
 			<td class="dot">:</td>
-			<td class="case">134</td>
+			<td class="case">172</td>
 		</tr>
 		<tr>
 			<td class="description">Sembuh (Positif COVID-19)</td>
 			<td class="dot">:</td>
-			<td class="case">8</td>
+			<td class="case">9</td>
 		</tr>
 		<tr>
 			<td class="description">Meninggal (Positif COVID-19)</td>
@@ -206,7 +206,7 @@
                     <p>Peningkatan Kasus Per Hari<br>
 					</p>
 					<h3><b>
-					25.8%					</b></h3>
+					25.6%					</b></h3>
 
                 </div>
                 <div class="icon">
@@ -220,7 +220,7 @@
 					 <p>Potensi Terjangkit COVID-19<br>
 					</p>
 					<h3><b>
-					10.9%					</b></h3>
+					13.7%					</b></h3>
 
                 </div>
                 <div class="icon">
@@ -240,7 +240,7 @@
 					 <p>Peluang Pasien Sembuh<br>
 					</p>
 					<h3><b>
-					6.0%					</b></h3>
+					5.2%					</b></h3>
 
                 </div>
                 <div class="icon">
@@ -254,7 +254,7 @@
 					 <p>Peluang Pasien Meninggal<br>
 					</p>
 					<h3><b>
-					3.7%					</b></h3>
+					2.9%					</b></h3>
 
                 </div>
                 <div class="icon">
@@ -404,7 +404,7 @@
                 </div><!-- /.box-header -->
                 <div class="box-body">
                     
-                <iframe style="width:100%; height:480px;"  src="https://www.youtube.com/embed/1HerfeGXnks" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe style="width:100%; height:480px;"  src="https://www.youtube.com/embed/LMxpgVwyWNY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     
                     
             </div>
@@ -506,7 +506,7 @@ $(function () {
 		},
 		series: [{
 			type: 'line',
-			name: 'Total Kasus (134)',
+			name: 'Total Kasus (172)',
 			data: [
 					['02 March 2020',2],
 ['03 March 2020',2],
@@ -523,7 +523,8 @@ $(function () {
 ['14 March 2020',96],
 ['15 March 2020',117],
 ['16 March 2020',134],
-['17 March 2020',134],
+['17 March 2020',172],
+['18 March 2020',172],
 			]
 		},
 		{
@@ -546,12 +547,13 @@ $(function () {
 ['15 March 2020',5],
 ['16 March 2020',5],
 ['17 March 2020',5],
+['18 March 2020',5],
 					
 			]
 		},
 		{
 			type: 'line',
-			name: 'Kasus Sembuh (8)',
+			name: 'Kasus Sembuh (9)',
 			data: [
 					['02 March 2020',0],
 ['03 March 2020',0],
@@ -568,7 +570,8 @@ $(function () {
 ['14 March 2020',8],
 ['15 March 2020',8],
 ['16 March 2020',8],
-['17 March 2020',8],
+['17 March 2020',9],
+['18 March 2020',9],
 					
 			]
 		}]
@@ -614,9 +617,9 @@ $(function () {
 			type: 'pie',
 			name: 'Total Kasus',
 			data: [
-				['Masih Dirawat',121],
+				['Masih Dirawat',158],
                     ['Meninggal',5],
-                    ['Sudah Sembuh',8]
+                    ['Sudah Sembuh',9]
 			]
 		}]
 	});
