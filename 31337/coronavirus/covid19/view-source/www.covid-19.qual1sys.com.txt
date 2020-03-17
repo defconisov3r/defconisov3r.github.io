@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Quali1Sys.com - ... and be in control</title>
+  <meta name="keywords" content="Self-Assessment, Audits, Monitor Suppliers, Tool, Cloud Solution, ISMS, QMS, Solution, Management Systems, Compliance, ISO 27001, ISO 9001">
+  <meta name="description" content="Qual1Sys : Solution for Management Systems and Compliance">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <meta property="og:title" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:site_name" content="">
+	<meta property="og:description" content="">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/animate.css">
+<link rel="icon" type="/image/png" sizes="32x32" href="/fav32.png">
+<link rel="icon" type="/image/png" sizes="16x16" href="/fav16.png">
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+
+  <script src="/js/modernizr-2.7.1.js"></script>
+  
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//stats.pr1sec.com/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151399506-1"></script>
+<script data-ad-client="ca-pub-5780450982921144" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-151399506-1');
+</script>
+
+</head>
+<body>
+<span class="top-link hide wow fadeInUp" id="js-top" data-wow-delay="0.4s" >
+  <img height=20 src="/img/up.png">
+</span>
+
+<script>
+// Set a variable for our button element.
+const scrollToTopButton = document.getElementById('js-top');
+
+// Let's set up a function that shows our scroll-to-top button if we scroll beyond the height of the initial window.
+const scrollFunc = () => {
+  // Get the current scroll value
+  let y = window.scrollY;
+  
+  // If the scroll value is greater than the window height, let's add a class to the scroll-to-top button to show it!
+  if (y > 0) {
+    scrollToTopButton.className = "top-link show";
+  } else {
+    scrollToTopButton.className = "top-link hide";
+  }
+};
+
+window.addEventListener("scroll", scrollFunc);
+
+const scrollToTop = () => {
+  // Let's set a variable for the number of pixels we are from the top of the document.
+  const c = document.documentElement.scrollTop || document.body.scrollTop;
+  
+  // If that number is greater than 0, we'll scroll back to 0, or the top of the document.
+  // We'll also animate that scroll with requestAnimationFrame:
+  // https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
+  if (c > 0) {
+    window.requestAnimationFrame(scrollToTop);
+    // ScrollTo takes an x and a y coordinate.
+    // Increase the '10' value to get a smoother/slower scroll!
+    window.scrollTo(0, c - c / 10);
+  }
+};
+
+// When the button is clicked, run our ScrolltoTop function above!
+scrollToTopButton.onclick = function(e) {
+  e.preventDefault();
+  scrollToTop();
+}
+</script>
+ <style>
+.top-link {
+  transition: all 1s ease-in-out;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: inline-flex;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+	margin: 30px;
+	border-radius: 50%;
+	padding: 15px;
+	width: 50px;
+	height: 50px;
+    background-color: #079FE2;
+  	font-size: 0.5em;
+  &.show {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  &.hide {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+
+	&:hover {
+		background-color: #E8E8E8;
+	}
+}
+
+
+sup {
+    vertical-align: super;
+    font-size: 30%;
+}
+</style>
+	<a id="backToTop"></a>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="logo" href="/"><img height='35' src='/img/logo.png'></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right black">
+		      <li><a href="#backToTop" class="scroll" >home&nbsp; &nbsp;|</a></li>
+            <li><a href="/configurator.php">configurator&nbsp; &nbsp;|</a></li>
+		   <li><a href="#press" class="scroll">about us&nbsp; &nbsp;|</a></li>
+            <li><a href="https://app.qual1sys.com" >login &nbsp; &nbsp; </a> </li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+	
+	
+
+
+    <header>
+		<div style=' z-index: 2; position; absolute; text-align:right;margin-right:2%;' class="white"> <a href="/index.php?lang=DE"> <img  style=' border: 0px;'  height='12' src="/img/de.png">  </a></div>
+	      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-6">
+            <a href="index.html"></a>
+          </div>
+          <div class="col-xs-6 signin text-right navbar-nav">
+            <a href="#backToTop" class="scroll" >home&nbsp; &nbsp;|</a>&nbsp;&nbsp;<a href="/configurator.php">&nbsp;&nbsp;configurator&nbsp; &nbsp;|</a>&nbsp;&nbsp;<a  href="#press" class="scroll">&nbsp;&nbsp;about us&nbsp; &nbsp;|</a>&nbsp;&nbsp;<a href="https://app.qual1sys.com">&nbsp;&nbsp;login &nbsp;&nbsp;</a>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1 text-center  text-center ">
+		<div style='padding-top:5%;padding-bottom:5%;'><img class='logoSiez' src='/img/logo.png'><span class="wow fadeIn black" data-wow-delay="0.5s"> </div>
+		<div><p> <h5> Qual<span style='font-weight:600;'>1</span>Sys<sup>&reg;</sup></h5></span></p>
+
+            <h1 class="wow fadeIn" data-wow-delay="0.8s">... and be in control</h1>
+            <br />
+       </div>
+              
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                <div class="row">
+                  <div class="col-xs-6 text-right wow fadeInUp" data-wow-delay="1s">
+                    <a href="#overview" class="btn btn-secondary btn-lg scroll">learn more</a>
+                  </div>
+                  <div class="col-xs-6 text-left wow fadeInUp" data-wow-delay="1.4s">
+                    <a  href="/configurator.php?step=1"  class="btn btn-primary btn-lg">buy now</a>
+                  </div>
+                </div><!--End Button Row-->  
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <div class="mouse-icon hidden-xs">
+	<div class="scroll"></div>
+			</div>
+	
+	<section id="overview" class='pad-xl'>
+
+      <div class="container-fluid">
+		 <div class="col-sm-12  text-center" style='margin-bottom:6%'> 
+		 <p><h2><span style='color:#000000'> Solution for Management Systems and Compliance<h2></p>
+		
+		 </div>
+		 <div class="col-sm-7 text-left wow fadeIn" data-wow-delay="0.3s">
+		  
+		  <div class="col-sm-12" style='margin-bottom:6%'> 
+		    <div class='appLookOver' style='margin-bottom:10px;background-image: url("https://app.qual1sys.com/_img/assessmentC.png")'></div>
+		    <div> <p class='black'><h3S><b>Self-Assessment</b></h3S></p></div>
+			<div> <p class='black'>To check your implementation status of requirements</p></div>
+		  </div>
+		  
+		  <div class="col-sm-12" style='margin-bottom:6%'> 
+		    <div class='appLookOver' style='margin-bottom:10px;background-image: url("https://app.qual1sys.com/_img/auditC.png")'></div>
+		    <div> <p class='black'><h3S><b>Audits</b></h3S></p></div>
+			<div>  <p class='black'>For audits to document and structure programs</p></div>
+		  </div>
+		  
+		  		  <div class="col-sm-12" style='margin-bottom:6%'> 
+		    <div class='appLookOver' style='margin-bottom:10px;background-image: url("https://app.qual1sys.com/_img/supplierC.png")'></div>
+		    <div> <p class='black'><h3S><b>Monitor Suppliers</b></h3S></p></div>
+			<div>  <p class='black'>Whenever you want to be on top of your suppliers</p></div>
+		  </div>
+		  
+		  		  <div class="col-sm-12"> 
+		    <div class='appLookOver' style='margin-bottom:10px;background-image: url("https://app.qual1sys.com/_img/coronaC.png")'></div>
+		    <div> <p class='black'><h3S><b>Policy-Portal [Optional]</b></h3S></p></div>
+			<div><p class='black'> To publish policies in a central online portal. </p></div>
+		  </div>
+
+		  
+		</div>
+		<div class="col-sm-5  text-left wow fadeIn" data-wow-delay="0.6s">
+		
+		<div class='overviewFrame'>
+		
+			<div class='overviewTop'>
+
+				<div style='display:inline;padding-right:1%'><img height='40' src='/img/logo.png'></div> 	<div style='display:inline;'><text class='black'>Qual1Sys Solution</text></div>
+			</div>
+
+			<div class='overviewText'><p class='black'>
+				<table margin=1>
+		   
+		  <tr> <td width='30px' height='30px'><text class='blue'>&#10003; </text></td><td ><pS class='black'> 3 modules (Self-Assessment, Audits, Monitor Suppliers)</pS></td></tr>
+		 <tr> <td width='30px' height='30px'><text class='blue'>&#10003; </text></td><td><pS class='black'> Integrated dashboards and automated notification </pS></td></tr>
+		 	<tr> <td width='30px' height='30px'><text class='blue'>&#10003; </text></td><td><pS class='black'> Enhancement options,  e.g. pre-defined checklists </pS></td></tr>
+			</table>			</p></div>
+			<div class='overiewButton'>
+			
+				 <pS class='white'><a  href="/configurator.php?step=2"  class="btn btn-primary btn-lg "> Select pre-defined checklists</a></pS>
+	
+			</div>
+		
+		</div>
+		
+		<div class='overviewBottom'>
+		<text class='black'>The solution is hosted GDPR conformed hosted in the EU.</text>
+		</div>
+		
+        </div>
+ </div>
+    </section>
+	
+
+
+	
+	
+
+
+<section id="Overview2" class='pad-xl'>
+
+      <div class="container-fluid">
+	 		
+
+		   <div class="col-sm-12  text-center" style='margin-bottom:4%'>  <p><h2><span style='color:#000000'> The steps to be in control<h2></p>	 </div> 
+	
+
+
+		<div class="col-sm-12">
+		  <div class="chp horizontal-progress passive">
+			<div class="horizontal-progress__step first">
+			  <div class="horizontal-progress__step__line"><span class="horizontal-progress__step__number">1</span>
+			  </div>
+			</div>
+			<div class="horizontal-progress__step">
+			  <div class="horizontal-progress__step__line"><span class="horizontal-progress__step__number">2</span>
+			  </div>
+			</div>
+			<div class="horizontal-progress__step last">
+			  <div class="horizontal-progress__step__line"><span class="horizontal-progress__step__number">3</span>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+  
+		 <div class="col-sm-4  text-center" id='step'> 
+			<div><img height=120 src='/img/checklistBlue.png' ></div>
+		    <div id='stepItem'><pS class='black'><b >Select checklist(s)</b></Ps></div>
+			<div><p class='black'>Select from a range of pre-defined checklists or simply upload your own.</Ps></div>
+		</div>
+	
+		 <div class="col-sm-4  text-center" id='step'> 
+			<div><img height=120 src='/img/adjustBlue.png' ></div>
+		    <div id='stepItem'><pS class='black'><b >Tailor to your needs</b></Ps></div>
+			<div><p class='black'>Orchestrate the requirements for your organization. Drive clear accountability with this step. </Ps></div><br>
+			 <a  href="/configurator.php?step=1"  class="btn btn-primary btn-lg">buy now</a>
+		</div>
+		
+		 <div class="col-sm-4  text-center" id='step'> 
+			<div><img height=120 src='/img/logo.png' ></div>
+		    <div id='stepItem'><pS class='black'><b >Start to be in control</b></Ps></div>
+			<div><p class='black'>Share dashboards, send automated reminders and analyse the data.</Ps></div>
+		</div>
+
+	
+	</div>
+    </section>
+			<section id="screenshotSec" class='pad-xl'>
+      <div class="container-fluid">
+	 		 <div class="col-sm-12  text-center" style='margin-bottom:4%'> 
+ 		  	 <p><h2><span style='color:#000000'> provides you overview<h2></p>
+
+		 </div>
+		 	 		
+
+					  <div class="col-sm-12  text-center"  style='border-bottom: 1px solid #E5E5E5;'>
+			<div>
+			<img id='backgroundImageScnreenshot'  src='/img/usesShort.png'>
+		</div> 
+					 </div> 
+					 </div>
+	<div class="text-center" style='padding-top:2%' ><pS class='black'>Available on the web as cloud solution</pS><br><br><br><a  href="/configurator.php?step=1"  class="btn btn-primary btn-lg">buy now</a></div>
+	 
+					</div>
+	  </div>
+	  </section>
+	  
+    <section id="Overview2" class="pad-xl">
+	    <div class="container-fluid text-center">
+		    <div class="row">
+				   <p><h2><span style='color:#000000'> 	Solution concept</span></h2></p>			<div style='text-align:left;'>
+				   <br><p><h3 class='black'>Our solution is designed for organizations and professionals understanding the status of quality, information security, cyber security, privacy or any other compliance issues in an efficient and effective way. Our unique approach covers:</h3></p><br/><br/><br/>
+					   
+				   <p class='black'><text class='blue'>&#10003; </text>We work with recognized industry experts (e.g. CEOs, CIOs, CISOs, Quality Managers, Consultants, and Auditors) to develop the solution.</p>
+				   <p class='black'><text class='blue'>&#10003; </text>We provide great user experience and invested a lot in usability.</p>
+				   <p class='black'><text class='blue'>&#10003; </text>We design it with a modern concept to including an App-Store to install new features by a click.  </p>
+				   <p class='black'><text class='blue'>&#10003; </text>We provide data-driven analytics for fact-based analysis.   </p>
+				   <p class='black'><text class='blue'>&#10003; </text>We develop them based on the LRxt platform from Lloyds Research so that they are 100% compatible with the Pr1Sec ® premium solutions (https://www.pr1sec.com/).   </p>
+				   <p class='black'><text class='blue'>&#10003; </text>We leverage cloud that no local installation is necessary.</p>
+			       <p class='black'><text class='blue'>&#10003; </text>We host your data GDPR conformed in the EU.</p>
+				   <br><br>
+                   </p><div>				   		                   <br><p><a href='/configurator.php?step=2'  class="btn btn-primary btn-lg" >buy now</a></p></div>
+                    
+				   
+		    </div>
+	    </div>
+    </section>
+	  	    <section id="Overview" class="pad-xl">
+      <div class="container-fluid ">
+     
+           <span class="row ">
+			
+			 <div class="col-sm-12 col-sm-offset-0  text-center" >
+			   <p><h2 class="black"> Philosophy</h2></p>
+<p><h3 class='black'>We help our customer to be in control. </h3></p><br/></div>
+					
+			  
+<div class='col-sm-4 wow fadeIn black' data-wow-delay='0.4s'>
+<hr  class='line bluehr'>
+<h3 class='black'>Problems</h3>
+				
+<p class='black'> &#10060;  A lot of administration effort using e.g. Excel. </p>
+<p class='black'>&#10060;  No clear accountability and a lot of discussions. </p>
+<p class='black'>&#10060;  Not much automatization by manual reminding.</p>
+<p class='black'>&#10060;  Selected suppliers are challenged to manage due to over promising.  </p>
+</div>
+					
+<div class='col-sm-4 wow fadeIn' data-wow-delay='0.8s'>
+<hr  class='line bluehr'>
+ <h3 class='black'>Design</h3>
+ <p class='black'>We eliminated the use of excel and manual remaindering.</p>
+<p class='black'>We created products, which are easy to use even the overall problem is complex.</p>
+<p class='black'>We want to make life easier for security professionals and organizations. </p>
+<p class='black'>We want our customers to be in control.</p>
+</div>
+				
+<div class='col-sm-4 wow fadeIn' data-wow-delay='1.2s'>
+<hr class='line bluehr'>
+<h3 class='black'> Arguments </h3>
+				 
+<p class='black'><b><text class='grey'>&#9989; </text></b> It is an add-on to your existing infrastructure. </p>
+<p class='black'><b><text class='grey'>&#9989; </text></b>It enhances your systems and processes.</p>
+<p class='black'><b><text class='grey'>&#9989; </text></b>It increases your productivity and reduces your time expenditure.</p>
+<p class='black'><b><text class='grey'>&#9989; </text></b>It allows to have your risks under control.</p>
+<p class='black'><b><text class='grey'>&#9989; </text></b>It improves your supplier's compliance.</p>
+<p class='black'><b><text class='grey'>&#9989; </text></b>It works without any local installation.</p> 
+
+				
+			    </div>
+
+		    </div>
+	    </div>
+    </section>
+	
+        
+      
+    <section id="press" class="pad-sm">
+      <div class="container-fluid">
+        
+  
+
+
+          	 		
+					
+					<div class="col-sm-12  text-center" style='margin-bottom:4%'> 
+ 		  	 <p><h2><span style='color:#000000'> about us<h2></p>
+
+		 </div>
+         
+          
+		
+				     <p class='black'> 
+<br>Qual1Sys International LLC is incorporated in the State of Delaware, USA and provides its products and services worldwide.<br>
+<br><br>
+Qual1Sys International is a company specialized for compliance solutions and focused on helping customers around the world have a better digital experience with greater protection for their works. In order to do this, Qual1Sys develops and distributes a variety of software solutions in the online space, utilizing its proprietary digital distribution technology to optimize its customer reach and create a superb user experience. The Company offers solutions, which provide information security, privacy and optimal productivity experience.
+<br><br>
+All our solutions are developed on the widely recognized LRxt platform from Lloyds Research. So, our solutions are scalable and fully compatible to solutions from other providers.
+<br><br>
+By listening to all the suggestions and comments we get from our customers, we make our solutions a little better every day. We hope you will take some time to give our solutions a try, and to let us know what you think. Whether you're happy or not, We'd love to hear from you, and We guarantee that We'll take a personal interest in your comment or suggestion. 
+  <br>  <br> <br><p class="black">contact@qual1sys.com<br><br /> 
+            </p>
+            </a>
+
+
+         <a href="#backToTop" class="btn btn-primary btn-lg scroll">back to home</a>
+      </div>
+    </section>
+    
+    
+    <footer>
+      <div class="container">
+        
+        <div class="row">
+          <div class="col-sm-8 margin-20">
+            <ul class="list-inline social">
+    
+            </ul>
+          </div>
+          <div class="col-sm-4 text-right">
+          
+            <p><small>Copyright &copy; 2020. All rights reserved. <br>
+	            Created by Qual1Sys International LLC</small></p>
+          </div>
+        </div>
+       
+      </div>
+    </footer>
+    
+    
+    <!-- Javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+   
+    </body>
+</html>
+

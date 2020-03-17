@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Covid19 Resources</title>
+        
+        <meta name="author" content="Brian Whicheloe">
+    </head>
+    <body>
+        <div id="app"></div>        
+
+        <style>
+            /* To update these or get more versions use https://google-webfonts-helper.herokuapp.com/fonts */
+            /* baloo-tammudu-regular - latin */
+            @font-face {
+            font-family: 'Baloo Tammudu';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Baloo Tammudu Regular'), local('BalooTammudu-Regular'),
+                url('/fonts/baloo-tammudu-v3-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+                url('/fonts/baloo-tammudu-v3-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+            }
+
+        </style>
+
+        <script src="/dist/vendor-bundle.js"></script>
+        <script src="/dist/app-bundle.js"></script>
+    </body>
+</html>

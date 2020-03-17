@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Coronavirus (COVID-19) live data of total confirmed cases, total cured and total death In India. Total confirmed cases on map of Inda. All coronavirus report as per states of India. Helpline numbers for all states of India.">
+    <title>Coronavirus Live Data Update - India and Its States</title>
+    <link rel="icon" href="favicon.png" type="image/png"> 
+    <script src="//www.amcharts.com/lib/4/core.js"></script>
+    <script src="//www.amcharts.com/lib/4/maps.js"></script>
+    <script src="//www.amcharts.com/lib/4/geodata/india2019Low.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            background-color: #222325;
+            font-size: 16px;
+            font-weight: 300;
+            color:#e9e9e9;
+            margin: 0 auto;
+            max-width: 1600px;
+            padding: 10px 40px;
+        }
+        .title, h2 {
+            border: 1px solid #555;
+            padding: 6px 12px;
+            text-align: center;
+            font-size: 1.8em;
+            font-weight: bold;
+            background: #000000;
+            margin: 0 0 10px 0;
+        }
+        .data {
+            display: flex;
+        }
+        .meta {
+            width: 230px;
+        }
+        .meta h2, .states h2 {
+            border-width: 0 0 1px 0;
+            font-size: 1.5em;
+            margin-bottom: 0;
+            padding: 10px 0;
+        }
+        .tcase, .trecovered, .tdeath {
+            border: 1px solid #555;
+            margin-bottom: 20px;
+            text-align: center;      
+        }
+        .tcase h2{
+            color: #ff5d5d;
+        }
+        .trecovered h2{
+            color: #8de486;
+        }
+        .tdeath h2{
+            color: #ffffff;
+        }
+        .tcase div, .trecovered div, .tdeath div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .tcasediv {
+            flex-direction: column;
+            
+        }
+        .tcasediv div {
+            font-size: 2em;
+        }
+        .trecovered div, .tdeath div {
+            font-size: 4em;
+        }
+        #chartdiv {
+            width: calc(100% - 240px - 240px);
+            height: 90vh;
+        }
+        .states {
+            width: 240px;
+            border: 1px solid #555;
+            overflow-y: auto;
+            max-height: 90vh;
+            height: auto;
+        }
+        .states .st {
+            padding: 0 10px;
+        }
+        .states .st .stname {
+            font-weight: bold;
+            font-size: 1.2em;
+            background: #000000;
+        }
+        .states .st table {
+           margin-bottom: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            border: 1px solid #555;
+            display: table;
+            width: 100%;
+            margin: 10px 0;
+        }
+        table th, table td {
+            text-align: center;
+            vertical-align: middle;
+            font-size: .8em;
+            font-weight: 300;
+            border: 1px solid #555;
+            padding: 4px;
+        }
+        .footer {
+            background: #000;
+            border: 1px solid #555;
+            padding: 10px 20px;
+            font-size: .9em;
+            text-align: center;
+            margin-top: 20px;          
+        }
+        .footer h3 {
+            margin: 5px 0 10px;
+        }
+        .footer a {
+            display: inline-block;
+            margin-right: 20px;
+            text-decoration: underline;
+            color: inherit;
+            margin-bottom: 10px;
+        }
+        .footer a:last-of-type {
+            margin-right: 0;
+        }
+
+        .states::-webkit-scrollbar-track {    
+            background-color: #fff;
+        }
+        .states::-webkit-scrollbar {
+            width: 10px;
+            background-color: #fff;
+        }
+        .states::-webkit-scrollbar-thumb {
+            border-radius: 8px;
+            background-color: #555;
+        }
+        .iminfo {
+            margin-top: 30px;
+        }
+        .iminfo h2 {
+            border: 0;
+            background-color: transparent;
+        }
+        .iminfo h2 span {
+            color: #f83e3e;
+        }
+        .iminfo h3 {
+            text-align: center;
+
+        }
+        .iminfo table {
+            max-width: 750px;
+            width: 100%;
+            margin: 20px auto;
+        }
+        .iminfo table th {
+            font-weight: bold;
+            background: #000;
+        }
+        .iminfo table td {
+            font-weight: normal;
+            
+        }
+        .iminfo table th, .iminfo table td {
+            padding: 4px 10px;
+            text-align: left;
+            font-size: .9em;
+        }
+        @media (max-width: 800px) {
+            body {
+                padding: 10px;
+            }
+            .data {
+                display: block;
+            }
+
+            .meta {
+                max-width: 300px;
+                margin: 0 auto;
+                width: auto;
+                height: 100vh;
+            }
+    
+            #chartdiv {
+                width: 100%;
+                height: 100vh;
+                margin: -110px auto 20px auto;
+            }
+            .states {
+                max-width: 300px;
+                width: auto;
+                margin: 0 auto;;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Coronavirus COVID-19 India - Live Data and Report</h1>
+    <div class="data">
+        <div class="meta">
+            <div class="tcase">
+                <h2>Total Confirmed</h2>
+                <div class="tcasediv">
+                    <div>132</div>
+                    <table>
+                        <tr>
+                            <td>109<br/>Indian</td>
+                            <td>23<br/>Foreigner</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="trecovered">
+                <h2>Total Cured</h2>
+                <div>13</div>
+            </div>
+            <div class="tdeath">
+                <h2>Total Death</h2>
+                <div>3</div>
+            </div>
+        </div>
+        <div id="chartdiv"></div>
+        
+        <div class="states" id="style-2">
+            <h2>States Data</h2>
+            <div class="st">
+                
+                                        <table>
+                        <tr><th colspan="4" class="stname">Andhra Pradesh</th></tr>
+                        <tr>
+                            <th>Confirmed</th>
+                            <td>1<br>Total</td>
+                            <td>1<br>Indian</td>
+                            <td>0<br>Foreigner</td>
+                        </tr>
+                        <tr>
+                            <th>Cured</th>
+                            <td colspan="3">0</td>
+                        </tr>
+                        <tr>
+                            <th>Death</th>
+                            <td colspan="3">0</td>
+                        </tr>
+                        </table>
+                                           <table>
+                        <tr><th colspan="4" class="stname">Delhi</th></tr>
+                        <tr>
+                            <th>Confirmed</th>
+                            <td>7<br>Total</td>
+                            <td>7<br>Indian</td>
+                            <td>0<br>Foreigner</td>
+                        </tr>
+                        <tr>
+                            <th>Cured</th>
+                            <td colspan="3">2</td>
+                        </tr>
+                        <tr>
+                            <th>Death</th>
+                            <td colspan="3">1</td>
+                        </tr>
+                        </table>
+                                           <table>
+                        <tr><th colspan="4" class="stname">Haryana</th></tr>
+                        <tr>
+                            <th>Confirmed</th>
+                            <td>15<br>Total</td>
+                            <td>1<br>Indian</td>
+                            <td>14<br>Foreigner</td>
+                        </tr>
+                        <tr>
+                            <th>Cured</th>
+                            <td colspan="3">0</td>
+                        </tr>
+                        <tr>
+                            <th>Death</th>
+                            <td colspan="3">0</td>
+                        </tr>
+                        </table>
+                                           <table>
+                        <tr><th colspan="4" class="stname">Karnataka</th></tr>
+                        <tr>
+                            <th>Confirmed</th>
+                            <td>10<br>Total</td>
+                            <td>9<br>Indian</td>
+                            <td>1<br>Foreigner</td>
+                        </tr>
+                        <tr>
+                            <th>Cured</th>
+                            <td colspan="3">0</td>
+                        </tr>
+                        <tr>
+                            <th>Death</th>
+                            <td colspan="3">1</td>
+                        </tr>
+                        </table>
+                                           <table>
+                        <tr><th colspan="4" class="stname">Kerala</th></tr>
+                        <tr>
+                            <th>Confirmed</th>
+                            <td>24<br>Total</td>
+                            <td>22<br>Indian</td>
+                            <td>2<br>Foreigner</td>
+                        </tr>
+                        <tr>
+                            <th>Cured</th>
+                            <td colspan="3">3</td>
+                        </tr>
+                        <tr>
+                            <th>Death</th>
+                            <td colspan="3">0</td>
+                        </tr>
+                        </table>
+                                           <table>
+                        <tr><th colspan="4" class="stname">Maharashtra</th></tr>
+                        <tr>
+                            <th>Confirmed</th>
+                            <td>39<br>Total</td>
+                            <td>36<br>Indian</td>
+                            <td>3<br>Foreigner</td>
+                        </tr>
+                        <tr>
+                            <th>Cured</th>
+                            <td colspan="3">0</td>
+                        </tr>
+                        <tr>
+                            <th>Death</th>
+                            <td colspan="3">1</td>
+                        </tr>
+                        </table>
+                                           <table>
+                        <tr><th colspan="4" class="stname">Odisha</th></tr>
+                        <tr>
+                            <th>Confirmed</th>
+                            <td>1<br>Total</td>
+                            <td>1<br>Indian</td>
+                            <td>0<br>Foreigner</td>
+                        </tr>
+                        <tr>
+                            <th>Cured</th>
+                            <td colspan="3">0</td>
+                        </tr>
+                        <tr>
+                            <th>Death</th>
+                            <td colspan="3">0</td>
+                        </tr>
+                        </table>
+                                           <table>
+                        <tr><th colspan="4" class="stname">Punjab</th></tr>
+                        <tr>
+                            <th>Confirmed</th>
+                            <td>1<br>Total</td>
+                            <td>1<br>Indian</td>
+                            <td>0<br>Foreigner</td>
+                        </tr>
+                        <tr>
+                            <th>Cured</th>
+                            <td colspan="3">0</td>
+                        </tr>
+                        <tr>
+                            <th>Death</th>
+                            <td colspan="3">0</td>
+                        </tr>
+                        </table>
+                                           <table>
+                        <tr><th colspan="4" class="stname">Rajasthan</th></tr>
+                        <tr>
+                            <th>Confirmed</th>
+                            <td>4<br>Total</td>
+                            <td>2<br>Indian</td>
+                            <td>2<br>Foreigner</td>
+                        </tr>
+                        <tr>
+                            <th>Cured</th>
+                            <td colspan="3">3</td>
+                        </tr>
+                        <tr>
+                            <th>Death</th>
+                            <td colspan="3">0</td>
+                        </tr>
+                        </table>
+                                           <table>
+                        <tr><th colspan="4" class="stname">Tamil Nadu</th></tr>
+                        <tr>
+                            <th>Confirmed</th>
+                            <td>1<br>Total</td>
+                            <td>1<br>Indian</td>
+                            <td>0<br>Foreigner</td>
+                        </tr>
+                        <tr>
+                            <th>Cured</th>
+                            <td colspan="3">0</td>
+                        </tr>
+                        <tr>
+                            <th>Death</th>
+                            <td colspan="3">0</td>
+                        </tr>
+                        </table>
+                                           <table>
+                        <tr><th colspan="4" class="stname">Telangana</th></tr>
+                        <tr>
+                            <th>Confirmed</th>
+                            <td>4<br>Total</td>
+                            <td>4<br>Indian</td>
+                            <td>0<br>Foreigner</td>
+                        </tr>
+                        <tr>
+                            <th>Cured</th>
+                            <td colspan="3">1</td>
+                        </tr>
+                        <tr>
+                            <th>Death</th>
+                            <td colspan="3">0</td>
+                        </tr>
+                        </table>
+                                           <table>
+                        <tr><th colspan="4" class="stname">Jammu & Kashmir</th></tr>
+                        <tr>
+                            <th>Confirmed</th>
+                            <td>3<br>Total</td>
+                            <td>3<br>Indian</td>
+                            <td>0<br>Foreigner</td>
+                        </tr>
+                        <tr>
+                            <th>Cured</th>
+                            <td colspan="3">0</td>
+                        </tr>
+                        <tr>
+                            <th>Death</th>
+                            <td colspan="3">0</td>
+                        </tr>
+                        </table>
+                                           <table>
+                        <tr><th colspan="4" class="stname">Ladakh</th></tr>
+                        <tr>
+                            <th>Confirmed</th>
+                            <td>6<br>Total</td>
+                            <td>6<br>Indian</td>
+                            <td>0<br>Foreigner</td>
+                        </tr>
+                        <tr>
+                            <th>Cured</th>
+                            <td colspan="3">0</td>
+                        </tr>
+                        <tr>
+                            <th>Death</th>
+                            <td colspan="3">0</td>
+                        </tr>
+                        </table>
+                                           <table>
+                        <tr><th colspan="4" class="stname">Uttar Pradesh</th></tr>
+                        <tr>
+                            <th>Confirmed</th>
+                            <td>15<br>Total</td>
+                            <td>14<br>Indian</td>
+                            <td>1<br>Foreigner</td>
+                        </tr>
+                        <tr>
+                            <th>Cured</th>
+                            <td colspan="3">4</td>
+                        </tr>
+                        <tr>
+                            <th>Death</th>
+                            <td colspan="3">0</td>
+                        </tr>
+                        </table>
+                                           <table>
+                        <tr><th colspan="4" class="stname">Uttarakhand</th></tr>
+                        <tr>
+                            <th>Confirmed</th>
+                            <td>1<br>Total</td>
+                            <td>1<br>Indian</td>
+                            <td>0<br>Foreigner</td>
+                        </tr>
+                        <tr>
+                            <th>Cured</th>
+                            <td colspan="3">0</td>
+                        </tr>
+                        <tr>
+                            <th>Death</th>
+                            <td colspan="3">0</td>
+                        </tr>
+                        </table>
+                                   
+                
+            </div>
+        </div>
+        
+    </div>
+    <div class="iminfo">
+        <h2>Central Helpline Number for corona-virus: <span>+91-11-23978046 | 1800112545</span></h2>
+        <h3>Helpline Numbers of States & Union Territories (UTs)</h3>
+        <table>
+            <tr>
+                <th>Name of the State or UT</th>
+                <th>Helpline Number</th>
+            </tr>
+                        <tr>
+                <td>Jammu & Kashmir</td>
+                <td>01912520982, 0194-2440283</td>
+            </tr>
+                        <tr>
+                <td>Ladakh</td>
+                <td>01982256462</td>
+            </tr>
+                        <tr>
+                <td>Delhi</td>
+                <td>011-22307145</td>
+            </tr>
+                        <tr>
+                <td>Haryana</td>
+                <td>+91-8558893911</td>
+            </tr>
+                        <tr>
+                <td>Kerala</td>
+                <td>0471-2552056</td>
+            </tr>
+                        <tr>
+                <td>Rajasthan</td>
+                <td>0141-2225624</td>
+            </tr>
+                        <tr>
+                <td>Telangana</td>
+                <td>104</td>
+            </tr>
+                        <tr>
+                <td>Uttar Pradesh</td>
+                <td>18001805145</td>
+            </tr>
+                        <tr>
+                <td>Tamil Nadu</td>
+                <td>044-29510500</td>
+            </tr>
+                        <tr>
+                <td>Punjab</td>
+                <td>104</td>
+            </tr>
+                        <tr>
+                <td>Karnataka</td>
+                <td>104</td>
+            </tr>
+                        <tr>
+                <td>Maharashtra</td>
+                <td>020-26127394</td>
+            </tr>
+                        <tr>
+                <td>Andhra Pradesh</td>
+                <td>0866-2410978</td>
+            </tr>
+                        <tr>
+                <td>West Bengal</td>
+                <td>1800313444222, 03323412600</td>
+            </tr>
+                        <tr>
+                <td>Uttarakhand</td>
+                <td>18001805145</td>
+            </tr>
+                        <tr>
+                <td>Tripura</td>
+                <td>0381-2315879</td>
+            </tr>
+                        <tr>
+                <td>Sikkim</td>
+                <td>104</td>
+            </tr>
+                        <tr>
+                <td>Puducherry</td>
+                <td>104</td>
+            </tr>
+                        <tr>
+                <td>Odisha</td>
+                <td>+91-9439994859</td>
+            </tr>
+                        <tr>
+                <td>Nagaland</td>
+                <td>+91-7005539653</td>
+            </tr>
+                        <tr>
+                <td>Mizoram</td>
+                <td>102</td>
+            </tr>
+                        <tr>
+                <td>Madhya Pradesh</td>
+                <td>0755-2527177</td>
+            </tr>
+                        <tr>
+                <td>Manipur</td>
+                <td>0385-2411668</td>
+            </tr>
+                        <tr>
+                <td>Meghalaya</td>
+                <td>108</td>
+            </tr>
+                        <tr>
+                <td>Lakshadweep</td>
+                <td>104</td>
+            </tr>
+                        <tr>
+                <td>Jharkhand</td>
+                <td>104</td>
+            </tr>
+                        <tr>
+                <td>Himachal Pradesh</td>
+                <td>104</td>
+            </tr>
+                        <tr>
+                <td>Gujarat</td>
+                <td>104</td>
+            </tr>
+                        <tr>
+                <td>Goa</td>
+                <td>104</td>
+            </tr>
+                        <tr>
+                <td>Dadra and Nagar Haveli</td>
+                <td>104</td>
+            </tr>
+                        <tr>
+                <td>Daman and Diu</td>
+                <td>104</td>
+            </tr>
+                        <tr>
+                <td>Chhattisgarh</td>
+                <td>104</td>
+            </tr>
+                        <tr>
+                <td>Chandigarh</td>
+                <td>+91-9779558282</td>
+            </tr>
+                        <tr>
+                <td>Bihar</td>
+                <td>104</td>
+            </tr>
+                        <tr>
+                <td>Assam</td>
+                <td>+91-6913347770</td>
+            </tr>
+                        <tr>
+                <td>Arunachal Pradesh</td>
+                <td>+91-9436055743</td>
+            </tr>
+                        <tr>
+                <td>Andaman & Nicobar Islands</td>
+                <td>03192-232102</td>
+            </tr>
+                    </table>
+    </div>
+    <div class="footer">
+        <h3>Important Links</h3>
+        <a href="https://coronavirus.jhu.edu/map.html" target="_blank">World MAP of Coronavirus</a>
+        <a href="https://www.mohfw.gov.in/" target="_blank">Ministry of Health and Family Welfare India</a>
+        <a href="mailto:sanjay@dezmi.com">Contact US</a>
+        <br/>
+        &copy; 2020 coronavirus-india-map.com
+
+    </div>
+    
+
+    <script>
+        // Create map instance
+        var chart = am4core.create("chartdiv", am4maps.MapChart);
+
+        // Set map definition
+        chart.geodata = am4geodata_india2019Low;
+
+        // Set projection
+        chart.projection = new am4maps.projections.Miller();
+
+        chart.seriesContainer.draggable = false;
+        chart.seriesContainer.resizable = false;
+        chart.maxZoomLevel = 1;
+        // Create map polygon series
+        var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
+
+        // Make map load polygon (like country names) data from GeoJSON
+        polygonSeries.useGeodata = true;
+        
+        // Configure series
+        var polygonTemplate = polygonSeries.mapPolygons.template;
+        polygonTemplate.tooltipText = "{NAME}";
+        polygonTemplate.fill = am4core.color("#363636");
+        polygonTemplate.propertyFields.fill = "fill";
+
+        // Create hover state and set alternative fill color
+        //var hs = polygonTemplate.states.create("hover");
+        //hs.properties.fill = am4core.color("#367B25");
+
+        // Place series
+        var placeSeries = chart.series.push(new am4maps.MapImageSeries());
+        var place = placeSeries.mapImages.template;
+        place.nonScaling = false;
+        place.propertyFields.latitude = "lat";
+        place.propertyFields.longitude = "long";
+        placeSeries.data = [{"indian":1,"for":0,"cured":0,"death":0,"id":"IN-AP","lat":15.091218,"long":79.250976,"name":"Andhra Pradesh","phone":"0866-2410978","radius":8,"ttrs":1},{"indian":7,"for":0,"cured":2,"death":1,"id":"IN-DL","lat":28.577286,"long":77.205322,"name":"Delhi","phone":"011-22307145","radius":12,"ttrs":7},{"indian":1,"for":14,"cured":0,"death":0,"id":"IN-HR","lat":29.054249,"long":76.21875,"name":"Haryana","phone":"+91-8558893911","radius":19,"ttrs":15},{"indian":9,"for":1,"cured":0,"death":1,"id":"IN-KA","lat":14.411273,"long":75.603515,"name":"Karnataka","phone":104,"radius":14,"ttrs":10},{"indian":22,"for":2,"cured":3,"death":0,"id":"IN-KL","lat":9.763198,"long":76.482422,"name":"Kerala","phone":"0471-2552056","radius":27,"ttrs":24},{"indian":36,"for":3,"cured":0,"death":1,"id":"IN-MH","lat":19.412721,"long":75.471679,"name":"Maharashtra","phone":"020-26127394","radius":41,"ttrs":39},{"indian":1,"for":0,"cured":0,"death":0,"id":"IN-OR","lat":20.560796,"long":84.788086,"name":"Odisha","phone":"+91-9439994859","radius":8,"ttrs":1},{"indian":1,"for":0,"cured":0,"death":0,"id":"IN-PB","lat":30.654926,"long":75.427734,"name":"Punjab","phone":104,"radius":8,"ttrs":1},{"indian":2,"for":2,"cured":3,"death":0,"id":"IN-RJ","lat":26.545292,"long":73.951171,"name":"Rajasthan","phone":"0141-2225624","radius":11,"ttrs":4},{"indian":1,"for":0,"cured":0,"death":0,"id":"IN-TN","lat":10.939035,"long":78.416015,"name":"Tamil Nadu","phone":"044-29510500","radius":8,"ttrs":1},{"indian":4,"for":0,"cured":1,"death":0,"id":"IN-TG","lat":17.788444,"long":79.03125,"name":"Telangana","phone":104,"radius":11,"ttrs":4},{"indian":3,"for":0,"cured":0,"death":0,"id":"IN-JK","lat":33.594489,"long":74.944336,"name":"Jammu & Kashmir","phone":"01912520982, 0194-2440283","radius":10,"ttrs":3},{"indian":6,"for":0,"cured":0,"death":0,"id":"IN-LK","lat":34.590695,"long":77.277806,"name":"Ladakh","phone":1982256462,"radius":11,"ttrs":6},{"indian":14,"for":1,"cured":4,"death":0,"id":"IN-UP","lat":26.645495,"long":81.008789,"name":"Uttar Pradesh","phone":18001805145,"radius":19,"ttrs":15},{"indian":1,"for":0,"cured":0,"death":0,"id":"IN-UT","lat":30.177424,"long":79.426758,"name":"Uttarakhand","phone":18001805145,"radius":8,"ttrs":1}];
+        
+        var circle = place.createChild(am4core.Circle);
+        var maxRadius = 20;
+        
+        circle.fill = am4core.color("#ff0000");
+        circle.stroke = am4core.color("#8c8c8c");
+        circle.fillOpacity = 0.6;
+        circle.strokeWidth = 1;
+        circle.nonScaling = false;
+        circle.tooltipText = "[bold]{name} - {ttrs}[/]\nIndian: {indian}\nForeigner: {for}\nCured: {cured}\nDeath: {death}";
+        circle.propertyFields.radius = "radius";
+        
+
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160729872-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-160729872-1');
+    </script>
+
+</body>
+</html>

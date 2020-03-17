@@ -1,0 +1,373 @@
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head itemscope itemtype="http://schema.org/WebSite">
+	    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <title>Coronavírus Brasil &ndash; Informações sobre o Coronavírus</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v13.2 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Informações sobre o Coronavírus"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="https://coronavirus.bio.br/" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Coronavírus Brasil &ndash; Informações sobre o Coronavírus" />
+<meta property="og:description" content="Informações sobre o Coronavírus" />
+<meta property="og:url" content="https://coronavirus.bio.br/" />
+<meta property="og:site_name" content="Coronavírus Brasil" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Informações sobre o Coronavírus" />
+<meta name="twitter:title" content="Coronavírus Brasil &ndash; Informações sobre o Coronavírus" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":["Person","Organization"],"@id":"https://coronavirus.bio.br/#/schema/person/663360673f09b4262cdcad98bfcadcd1","name":"Administrador","image":{"@type":"ImageObject","@id":"https://coronavirus.bio.br/#personlogo","inLanguage":"pt-BR","url":"http://0.gravatar.com/avatar/fafe155f482ec97b73458452ca721af6?s=96&d=mm&r=g","caption":"Administrador"},"logo":{"@id":"https://coronavirus.bio.br/#personlogo"},"sameAs":[]},{"@type":"WebSite","@id":"https://coronavirus.bio.br/#website","url":"https://coronavirus.bio.br/","name":"Coronav\u00edrus Brasil","inLanguage":"pt-BR","description":"Informa\u00e7\u00f5es sobre o Coronav\u00edrus","publisher":{"@id":"https://coronavirus.bio.br/#/schema/person/663360673f09b4262cdcad98bfcadcd1"},"potentialAction":{"@type":"SearchAction","target":"https://coronavirus.bio.br/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"CollectionPage","@id":"https://coronavirus.bio.br/#webpage","url":"https://coronavirus.bio.br/","name":"Coronav\u00edrus Brasil &ndash; Informa\u00e7\u00f5es sobre o Coronav\u00edrus","isPartOf":{"@id":"https://coronavirus.bio.br/#website"},"inLanguage":"pt-BR","about":{"@id":"https://coronavirus.bio.br/#/schema/person/663360673f09b4262cdcad98bfcadcd1"},"description":"Informa\u00e7\u00f5es sobre o Coronav\u00edrus"}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Feed para Coronavírus Brasil &raquo;" href="https://coronavirus.bio.br/feed" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Coronavírus Brasil &raquo;" href="https://coronavirus.bio.br/comments/feed" />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.10.4 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.10.4';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-82646916-4';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-82646916-4', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/coronavirus.bio.br\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='http://coronavirus.bio.br/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='blossomthemes-email-newsletter-css'  href='http://coronavirus.bio.br/wp-content/plugins/blossomthemes-email-newsletter/public/css/blossomthemes-email-newsletter-public.min.css?ver=2.0.9' type='text/css' media='all' />
+<link rel='stylesheet' id='blossomthemes-toolkit-css'  href='http://coronavirus.bio.br/wp-content/plugins/blossomthemes-toolkit/public/css/blossomthemes-toolkit-public.min.css?ver=2.1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='owl-carousel-css'  href='http://coronavirus.bio.br/wp-content/themes/blossom-coach/css/owl.carousel.min.css?ver=2.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css'  href='http://coronavirus.bio.br/wp-content/themes/blossom-coach/css/animate.min.css?ver=3.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='blossom-coach-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans%3A300%2C300italic%2Cregular%2Citalic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%7CMontserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMontserrat%3A700' type='text/css' media='all' />
+<link rel='stylesheet' id='blossom-health-coach-parent-style-css'  href='http://coronavirus.bio.br/wp-content/themes/blossom-coach/style.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='blossom-coach-css'  href='http://coronavirus.bio.br/wp-content/themes/blossom-health-coach/style.css?ver=1.0.6' type='text/css' media='all' />
+<style id='blossom-coach-inline-css' type='text/css'>
+
+    
+    /*Typography*/
+    body,
+    button,
+    input,
+    select,
+    optgroup,
+    textarea, section[class*="-section"] .widget_blossom_client_logo_widget .widget-title, .widget.widget_blossomthemes_stat_counter_widget .widget-title, .single .entry-meta, 
+    .portfolio-text-holder .portfolio-img-title, 
+    .widget_blossomtheme_featured_page_widget .featured_page_content h1, .widget_blossomtheme_featured_page_widget .featured_page_content h3, .widget_blossomtheme_featured_page_widget .featured_page_content h4, .widget_blossomtheme_featured_page_widget .featured_page_content h5, .widget_blossomtheme_featured_page_widget .featured_page_content h6 {
+        font-family : Open Sans;
+    }
+    
+    .site-title, 
+    .site-title-wrap .site-title{
+        font-size   : 40px;
+        font-family : Montserrat;
+        font-weight : 700;
+        font-style  : normal;
+    }
+    
+    /*Typography*/
+    h1, h2, h3, h4, h5, h6, 
+    section[class*="-section"] .widget .widget-title,
+    section[class*="-section"] .widget_blossomtheme_featured_page_widget .section-subtitle,
+    .section-title, .comment-body b.fn, .comment-body .reply .comment-reply-link, .single .navigation .nav-links, 
+    .site-header .header-search label.screen-reader-text, .btn-readmore, .btn-readmore:visited, .bttk-testimonial-holder .name, 
+    .pricing-block .price, .entry-meta, #primary .widget_blossomtheme_featured_page_widget .section-subtitle, 
+    .widget_blossomthemes_stat_counter_widget .hs-counter, .widget_bttk_description_widget .bttk-team-holder .name, 
+    .bttk-team-inner-holder-modal .name, .page-header .subtitle, .dropcap, .error-404 .error-num, .error-404 a.bttn, 
+    .related-portfolio-title,
+    .woocommerce div.product form.cart .single_add_to_cart_button, .woocommerce div.product .cart .single_add_to_cart_button.alt,
+    .button-wrap a,
+    .banner-caption .blossomthemes-email-newsletter-wrapper form input[type="submit"], 
+    .main-navigation ul li, .blog-section article .entry-meta, .btn-link, 
+    button, input[type="button"], input[type="reset"], input[type="submit"] {
+		font-family: Montserrat;
+	}
+</style>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"https:\/\/coronavirus.bio.br","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://coronavirus.bio.br/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js?ver=7.10.4'></script>
+<script type='text/javascript' src='http://coronavirus.bio.br/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://coronavirus.bio.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://coronavirus.bio.br/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://coronavirus.bio.br/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://coronavirus.bio.br/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.3.2" />
+<style>[class$="woocommerce-product-gallery__trigger"] {visibility:hidden;}</style></head>
+
+<body class="home blog hfeed no-post grid-view rightsidebar" itemscope itemtype="http://schema.org/WebPage">
+
+    <div id="page" class="site"><a aria-label="skip to content" class="skip-link" href="#content">Pular para o conteúdo</a>
+        <div class="sticky-t-bar">
+		<div class="sticky-bar-content">
+			<div class="wrapper">
+				                <div class="blossomthemes-email-newsletter-wrapper" id="boxes-50" style="background: #b9dbb8; color:  ">
+                    <div class="text-holder" >
+                                                <span>Se inscreva para manter-se informado</span>                    </div>
+                    <form id="blossomthemes-email-newsletter-50" class="blossomthemes-email-newsletter-window-50">
+                                                    <input type="text" name="subscribe-fname" required="required" class="subscribe-fname-50" value="" placeholder="Seu nome">
+
+                            <input type="text" name="subscribe-email" required="required" class="subscribe-email-50" value="" placeholder="Seu email">
+                                                <div id="loader-50" style="display: none">
+                            <div class="table">
+                                <div class="table-row">
+                                    <div class="table-cell">
+                                        <img src="http://coronavirus.bio.br/wp-content/plugins/blossomthemes-email-newsletter/public/css/loader.gif">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="submit" name="subscribe-submit" class="subscribe-submit-50" value="Me inscrever">
+                    </form>
+                    <div class="bten-response" id="bten-response-50"><span></span></div>
+                    <div id="mask-50"></div>
+                </div>
+                <style>#mask-50{position:fixed;width:100%;height:100%;left:0;top:0;z-index:9000;background-color:#000;display:none}#boxes-50 #dialog{width:750px;height:300px;padding:10px;background-color:#fff;font-family:"Segoe UI Light",sans-serif;font-size:15pt}#loader-50{position:absolute;top:27%;left:0;width:100%;height:80%;text-align:center;font-size:50px}#loader-50 .table{display:table;width:100%;height:100%}#loader-50 .table-row{display:table-row}#loader-50 .table-cell{display:table-cell;vertical-align:middle}</style><script>jQuery(document).ready(function(){jQuery(document).on("submit","form#blossomthemes-email-newsletter-50",function(e){e.preventDefault();jQuery(".subscribe-submit-50").attr("disabled","disabled");var email=jQuery(".subscribe-email-50").val();var fname=jQuery(".subscribe-fname-50").val();var confirmation=jQuery(".subscribe-confirmation-50").val();var sid=50;jQuery.ajax({type:"post",dataType:"json",url:bten_ajax_data.ajaxurl,data:{action:"subscription_response",email:email,fname:fname,sid:sid,confirmation:confirmation},beforeSend:function(){jQuery("#loader-50").fadeIn(500)},success:function(response){jQuery(".subscribe-submit-50").attr("disabled","disabled");if(response.type==="success"){jQuery("#bten-response-50 span").html(response.message);jQuery("#bten-response-50").fadeIn("slow").delay("3000").fadeOut("3000",function(){jQuery(".subscribe-submit-50").removeAttr("disabled","disabled");jQuery("form#blossomthemes-email-newsletter-50").find("input[type=text]").val("");jQuery("form#blossomthemes-email-newsletter-50").find("input[type=checkbox]").prop("checked",!1)})}else{jQuery("#bten-response-50 span").html(response.message);jQuery("#bten-response-50").fadeIn("slow").delay("3000").fadeOut("3000",function(){jQuery(".subscribe-submit-50").removeAttr("disabled","disabled");jQuery("form#blossomthemes-email-newsletter-50").find("input[type=text]").val("");jQuery("form#blossomthemes-email-newsletter-50").find("input[type=checkbox]").prop("checked",!1)})}},complete:function(){jQuery("#loader-50").fadeOut(500)}})})});</script>			</div>
+		</div>
+        <button aria-label="sticky bar close" class="close"></button>
+	</div>
+        <header id="masthead" class="site-header" itemscope itemtype="http://schema.org/WPHeader"> 
+        <div class="header-t">
+			<div class="wrapper">
+				<div class="header-social">
+									</div>
+					<div class="site-branding" itemscope itemtype="http://schema.org/Organization">
+                        <div class="site-title-wrap">                    <h1 class="site-title" itemprop="name"><a href="https://coronavirus.bio.br/" rel="home" itemprop="url">Coronavírus Brasil</a></h1>
+                                    <p class="site-description">Informações sobre o Coronavírus</p>
+                </div>        </div><!-- .site-branding -->
+    <div class="top-right"></div>			</div><!-- .wrapper -->            				 
+		</div><!-- .header-t -->
+
+		<div class="main-header">
+			<div class="wrapper">
+				<div class="menu-wrap">
+					<nav id="site-navigation" class="main-navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        <button type="button" class="toggle-button">
+                            <span class="toggle-bar"></span>
+                            <span class="toggle-bar"></span>
+                            <span class="toggle-bar"></span>
+                        </button>
+                        <div class="menu-principal-container"><ul id="primary-menu" class="menu"><li id="menu-item-37" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-37"><a href="https://coronavirus.bio.br/" aria-current="page">Início</a></li>
+<li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38"><a href="https://coronavirus.bio.br/numero-de-infectados-e-de-mortos-por-coronavirus-no-brasil">Casos</a></li>
+<li id="menu-item-64" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-64"><a href="https://coronavirus.bio.br/como-prevenir-o-contagio-do-coronavirus">Prevenção</a></li>
+<li id="menu-item-65" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-65"><a href="https://coronavirus.bio.br/quais-sao-os-sintomas-do-coronavirus">Sintomas</a></li>
+</ul></div>                    </nav><!-- #site-navigation -->	
+				</div>
+			</div>
+		</div>  
+	</header><!-- .site-header -->
+        <div id="banner_section" class="site-banner">
+		<div id="banner-slider" class="owl-carousel">
+			            <div class="item">
+				<img width="1200" height="700" src="https://coronavirus.bio.br/wp-content/uploads/2020/03/medico-coronavirus-1200x700.jpg" class="attachment-blossom-coach-slider size-blossom-coach-slider wp-post-image" alt="Como prevenir o contágio do coronavírus" itemprop="image" />                        
+				<div class="banner-text">
+					<div class="container">
+						<div class="text-holder">
+							<div class="category" itemprop="about"><a href="https://coronavirus.bio.br/category/destaques" rel="category tag">Destaques</a></div><h2 class="title"><a href="https://coronavirus.bio.br/como-prevenir-o-contagio-do-coronavirus" rel="bookmark">Como prevenir o contágio do coronavírus</a></h2>						</div>
+					</div>
+				</div>
+			</div>
+			            <div class="item">
+				<img width="768" height="512" src="http://coronavirus.bio.br/wp-content/uploads/2020/03/coronavirus.jpg" class="attachment-blossom-coach-slider size-blossom-coach-slider wp-post-image" alt="Imagem microscópica do coronavírus" itemprop="image" srcset="https://coronavirus.bio.br/wp-content/uploads/2020/03/coronavirus.jpg 768w, https://coronavirus.bio.br/wp-content/uploads/2020/03/coronavirus-300x200.jpg 300w, https://coronavirus.bio.br/wp-content/uploads/2020/03/coronavirus-90x60.jpg 90w" sizes="(max-width: 768px) 100vw, 768px" />                        
+				<div class="banner-text">
+					<div class="container">
+						<div class="text-holder">
+							<div class="category" itemprop="about"><a href="https://coronavirus.bio.br/category/destaques" rel="category tag">Destaques</a></div><h2 class="title"><a href="https://coronavirus.bio.br/quais-sao-os-sintomas-do-coronavirus" rel="bookmark">Quais são os sintomas do coronavírus?</a></h2>						</div>
+					</div>
+				</div>
+			</div>
+			            
+		</div>
+	</div>
+            <div id="content" class="site-content">        
+                        <div class="wrapper">
+            
+	<div id="primary" class="content-area">
+		
+                
+        <main id="main" class="site-main">
+
+		
+<section class="no-results not-found">
+	<header class="page-header">
+		<h1 class="page-title">Nada encontrado</h1>        
+	</header><!-- .page-header -->
+
+	<div class="page-content">
+		
+			<p>Parece que não podemos&rsquo;t encontrar o que você&rsquo;re está procurando. Possivelmente uma pesquisa possa lhe ajudar.</p>
+			<form role="search" method="get" class="search-form" action="https://coronavirus.bio.br/">
+                <label class="screen-reader-text">Procurando algo?</label>
+                <input type="search" class="search-field" placeholder="Digite as palavras-chaves&hellip;" value="" name="s" />
+                <label for="submit-field">
+                    <span><i class="fa fa-search"></i></span>
+                    <input type="submit" id="submit-field" class="search-submit" value="Pesquisa" />
+                </label>
+            </form>	</div><!-- .page-content -->
+</section><!-- .no-results -->
+
+		</main><!-- #main -->
+        
+                
+	</div><!-- #primary -->
+
+
+<aside id="secondary" class="widget-area" itemscope itemtype="http://schema.org/WPSideBar">
+	<section id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://coronavirus.bio.br/">
+                <label class="screen-reader-text">Procurando algo?</label>
+                <input type="search" class="search-field" placeholder="Digite as palavras-chaves&hellip;" value="" name="s" />
+                <label for="submit-field">
+                    <span><i class="fa fa-search"></i></span>
+                    <input type="submit" id="submit-field" class="search-submit" value="Pesquisa" />
+                </label>
+            </form></section>		<section id="recent-posts-2" class="widget widget_recent_entries">		<h2 class="widget-title" itemprop="name"><span>Posts recentes</span></h2>		<ul>
+											<li>
+					<a href="https://coronavirus.bio.br/como-prevenir-o-contagio-do-coronavirus">Como prevenir o contágio do coronavírus</a>
+									</li>
+											<li>
+					<a href="https://coronavirus.bio.br/quais-sao-os-sintomas-do-coronavirus">Quais são os sintomas do coronavírus?</a>
+									</li>
+					</ul>
+		</section></aside><!-- #secondary -->
+            
+        </div><!-- .wrapper -->        
+    </div><!-- .site-content -->
+        <footer id="colophon" class="site-footer" itemscope itemtype="http://schema.org/WPFooter">
+        <div class="bottom-footer">
+		<div class="wrapper">
+			<div class="copyright">            
+            <span>Direitos autorias: Coronavírus Brasil.</span> Blossom Health Coach | Desenvolvido por <a href="https://blossomthemes.com/" rel="nofollow" target="_blank">Blossom Themes</a>. Desenvolvido por <a href="https://wordpress.org/" target="_blank">WordPress</a>.               
+            </div>
+		</div><!-- .wrapper -->
+	</div><!-- .bottom-footer -->
+        <button aria-label="go to top" class="back-to-top">
+		<span>&#10140;</span>
+	</button>
+        </footer><!-- #colophon -->
+        </div><!-- #page -->
+    <link rel='stylesheet' id='fifu-woo-css-css'  href='http://coronavirus.bio.br/wp-content/plugins/featured-image-from-url/includes/html/css/woo.css?ver=5.3.2' type='text/css' media='all' />
+<style id='fifu-woo-css-inline-css' type='text/css'>
+img.zoomImg {display:inline !important}
+</style>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var bten_ajax_data = {"ajaxurl":"https:\/\/coronavirus.bio.br\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://coronavirus.bio.br/wp-content/plugins/blossomthemes-email-newsletter/public/js/blossomthemes-email-newsletter-public.min.js?ver=2.0.9'></script>
+<script type='text/javascript' src='http://coronavirus.bio.br/wp-content/plugins/blossomthemes-email-newsletter/public/js/all.min.js?ver=5.6.3'></script>
+<script type='text/javascript' src='http://coronavirus.bio.br/wp-content/plugins/blossomthemes-toolkit/public/js/isotope.pkgd.min.js?ver=3.0.5'></script>
+<script type='text/javascript' src='http://coronavirus.bio.br/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='http://coronavirus.bio.br/wp-includes/js/masonry.min.js?ver=3.3.2'></script>
+<script type='text/javascript' src='http://coronavirus.bio.br/wp-content/plugins/blossomthemes-toolkit/public/js/blossomthemes-toolkit-public.min.js?ver=2.1.6'></script>
+<script type='text/javascript' src='http://coronavirus.bio.br/wp-content/plugins/blossomthemes-toolkit/public/js/fontawesome/v4-shims.min.js?ver=5.6.3'></script>
+<script type='text/javascript' src='http://coronavirus.bio.br/wp-content/themes/blossom-coach/js/owl.carousel.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://coronavirus.bio.br/wp-content/themes/blossom-coach/js/owl.carousel.aria.min.js?ver=2.0.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var blossom_coach_data = {"rtl":"","animation":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://coronavirus.bio.br/wp-content/themes/blossom-coach/js/custom.min.js?ver=1.0.6'></script>
+<script type='text/javascript' src='http://coronavirus.bio.br/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var fifuImageVars = {"fifu_lazy":"off","fifu_woo_lbox":"on","fifu_woo_zoom":"inline"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://coronavirus.bio.br/wp-content/plugins/featured-image-from-url/includes/html/js/image.js?ver=5.3.2'></script>
+
+</body>
+</html>

@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+      <title>COVID-19</title>
+      <meta name="description" content="Use these questions to help assess your level of risk and get guidance around COVID-19">
+      <meta name="keywords" content="healthcare, health, care, doctor, quick, easy, now, on demand, canadian, ontario, toronto, prescriptions, telecare, telehealth">
+      <meta name="author" content="Akira">
+
+      <meta property="og:title" content="COVID-19 self-screening tool" />
+      <meta property="og:url" content="https://akirahealth.ca/covid19_assessment_toronto.html" />
+      <meta property="og:type" content="website" />
+      <meta property="og:description" content="Use these questions to help assess your level of risk and get guidance around COVID-19" />
+      <meta property="og:image" content="https://akirahealth.ca/assets/images/global/toronto_covid_ogimage.png" />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="COVID-19 self-screening tool" />
+      <meta name="twitter:description" content="Use these questions to help assess your level of risk and get guidance around COVID-19" />
+      <meta name="twitter:url" content="https://akirahealth.ca/covid19_assessment_toronto.html" />
+      <meta name="twitter:image" content="https://akirahealth.ca/assets/images/global/toronto_covid_ogimage.png" />
+    
+
+    <link rel="canonical" href="https://akirahealth.ca/covid19_assessment_toronto.html">
+
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <script src="/assets/js/covid19.js"></script>
+    <link rel="stylesheet" href="/assets/css/covid19.css"></link>
+  </head>
+
+  <body class="covid19-assessment">
+    <div>
+
+      <main role="main" aria-label="Content">
+        
+          <div id="toronto-logos">
+  <img src="/assets/images/covid19/toronto/humber-river-logo.png" >
+  <img src="/assets/images/covid19/toronto/north-york-general-logo.png" >
+  <img src="/assets/images/covid19/toronto/sunnybrook-logo.png" >
+</div>
+
+        
+
+        <div class="container">
+          <div id="covid19-assessment"
+  class="whitelabel-toronto"
+>
+
+  <h1>
+    
+      Toronto COVID-19 Self-Assessment Tool
+      <script>
+        window.location.replace("https://covid19.akirahealth.ca")
+      </script>
+    
+  </h1>
+
+  <input type="hidden" id="assessment-id" name="assessment_version" value="toronto_en" />
+
+  <p class="last-updated"><em>Last Updated: <strong>March 16, 2020 at 11:32 PM</strong></em></p>
+
+  <p>
+    The following questionnaire is designed to help assess your risk factors for COVID-19 infection and to provide
+    guidance on how to keep yourself, your family, and your community healthy. The questions are based on the best
+    available guidance from Canadian public health agencies and other stakeholders at this time, and will be updated
+    regularly.
+  </p>
+
+  <p>
+    
+      Your answers are anonymous but may be aggregated to help healthcare providers gauge
+      the spread of COVID-19.
+    
+  </p>
+
+  <h2 class="stripe-after stripe--yellow">Questions</h2>
+
+  <div id="questions">
+    <div class="question" id="q-province">
+      
+        <select name="province" style="display: none">
+          <option value="ON" selected>Ontario</option>
+        </select>
+      
+    </div>
+
+
+    <div class="question" id="q-new-onset-fever">
+      <p>
+        Do you have a fever, chills or shakes?
+      </p>
+      <label class="radio-label" for="new-onset-fever-yes">
+        <input type="radio" id="new-onset-fever-yes" class="" name="new-onset-fever" value="Y">
+        <span>Yes</span>
+      </label>
+      <label class="radio-label" for="new-onset-fever-no">
+        <input type="radio" id="new-onset-fever-no" class="" name="new-onset-fever" value="N">
+        <span>No</span>
+      </label>
+    </div>
+
+
+    <div class="question" id="q-new-onset-cough">
+      <p>
+        Do you have a new or worsening cough?
+      </p>
+      <label class="radio-label" for="new-onset-cough-yes">
+        <input type="radio" id="new-onset-cough-yes" class="" name="new-onset-cough" value="Y">
+        <span>Yes</span>
+      </label>
+      <label class="radio-label" for="new-onset-cough-no">
+        <input type="radio" id="new-onset-cough-no" class="" name="new-onset-cough" value="N">
+        <span>No</span>
+      </label>
+    </div>
+
+    <div class="question" id="q-shortness-of-breath">
+      <p>
+        Are you experiencing shortness of breath (difficulty breathing, breathlessness)?
+      </p>
+      <label class="radio-label" for="shortness-of-breath-yes">
+        <input type="radio" id="shortness-of-breath-yes" class="" name="shortness-of-breath" value="Y">
+        <span>Yes</span>
+      </label>
+      <label class="radio-label" for="shortness-of-breath-no">
+        <input type="radio" id="shortness-of-breath-no" class="" name="shortness-of-breath" value="N">
+        <span>No</span>
+      </label>
+    </div>
+
+    <div class="question" id="q-age-60-or-older">
+      <p>
+        Are you 60 years of age or older?
+      </p>
+      <label class="radio-label" for="age-60-or-older-yes">
+        <input type="radio" id="age-60-or-older-yes" class="" name="age-60-or-older" value="Y">
+        <span>Yes</span>
+      </label>
+      <label class="radio-label" for="age-60-or-older-no">
+        <input type="radio" id="age-60-or-older-no" class="" name="age-60-or-older" value="N">
+        <span>No</span>
+      </label>
+    </div>
+
+    <div class="question" id="q-has-comorbidities">
+      <!-- TODO: turen this into a list of checkboxes -->
+      <p>
+        Do you have any of the following medical conditions:
+        <em>diabetes,
+        heart disease,
+        active cancer,
+        history of stroke,
+        asthma,
+        COPD,
+        dialysis</em>
+      </p>
+      <label class="radio-label" for="has-comorbidities-yes">
+        <input type="radio" id="has-comorbidities-yes" class="" name="has-comorbidities" value="Y">
+        <span>Yes</span>
+      </label>
+      <label class="radio-label" for="has-comorbidities-no">
+        <input type="radio" id="has-comorbidities-no" class="" name="has-comorbidities" value="N">
+        <span>No</span>
+      </label>
+    </div>
+
+    <div class="question" id="q-travel">
+      <p>
+        Have you traveled outside of Canada within the last 14 days?
+      </p>
+      <label class="radio-label" for="travel-yes">
+        <input type="radio" id="travel-yes" class="" name="travel" value="Y">
+        <span>Yes</span>
+      </label>
+      <label class="radio-label" for="travel-no">
+        <input type="radio" id="travel-no" class="" name="travel" value="N">
+        <span>No</span>
+      </label>
+    </div>
+
+    <div class="question" id="q-contact">
+      <p>
+        Have you had close contact with someone who is coughing, has a fever, or is otherwise sick and has been outside of Canada in the last 14 days?
+      </p>
+      <label class="radio-label" for="contact-yes">
+        <input type="radio" id="contact-yes" class="" name="contact" value="Y">
+        <span>Yes</span>
+      </label>
+      <label class="radio-label" for="contact-no">
+        <input type="radio" id="contact-no" class="" name="contact" value="N">
+        <span>No</span>
+      </label>
+    </div>
+  </div>
+
+  <button id="submit" class="btn btn--wide btn--block btn-inline-block--sm btn--color-purple" style="max-width: 400px;">
+    Submit
+  </button>
+
+  <div id="results" style="display: none">
+    <h2 class="stripe-after stripe--yellow">Your Guidance</h2>
+
+    <div id="result-go-to-er" class="result" style="display: none">
+      <div id="instructions-other-go-to-er" class="instructions instructions-other">
+  <div class="riskbox risk-high">
+    <p>
+      <img src="/assets/images/icons/icon-warn.png" alt="Warning" class="risk-icon" />
+      You are encouraged to <b>proceed to your nearest ER</b> or call 911. Please put on a mask if
+      you have one; if you call 911, inform the operator of a possibility for COVID-19.
+    </p>
+  </div>
+</div>
+
+
+<h6>
+  What is a coronavirus (COVID-19)?
+</h6>
+<p>
+  Coronaviruses are a large family of viruses. Some coronaviruses cause respiratory illness
+  in people, ranging from mild common colds to severe pneumonias, while others cause illness
+  in animals only. Novel coronaviruses are new strains of the virus that have not been previously
+  identified in humans.
+</p>
+
+<h6>
+  How does COVID-19 spread?
+</h6>
+<p>
+  COVID-19 is believed to be spread most commonly from an infected person through:
+  <ul>
+    <li>Respiratory droplets generated when they cough or sneeze.</li>
+    <li>Close, prolonged personal contact such as touching or shaking hands.</li>
+    <li>Touching something with the virus on it, then touching your mouth, nose or eyes before washing your hands</li>
+  </ul>
+</p>
+
+<h6>
+  What are the symptoms of COVID-19?
+</h6>
+<p>
+  Symptoms for COVID-19 are similar to those for influenza or other respiratory illnesses.
+  The most common symptoms include: fever, cough, and shortness of breath. Less common symptoms
+  can include extreme tiredness, sore throat, and runny nose.
+</p>
+<p>
+  Most people (about 80%) recover from this disease without needing special treatment, but
+  it can also cause serious illness. Those who are older and those with other medical problems
+  are more likely to develop serious illness, which can include difficulty breathing and pneumonia;
+  there is also a risk of death in severe cases.
+</p>
+<p>
+  While we are still learning about how COVID-19 affects people, older persons and persons
+  with pre-existing medical conditions (such as high blood pressure, heart disease, lung disease,
+  active cancer, dialysis, or diabetes) appear to develop serious illness more often than others.
+</p>
+
+<h6>
+  How do I prevent myself and my loved ones from getting COVID-19?
+</h6>
+<p>
+  At this time, there is no vaccine, medication, or natural health products that have evidence
+  of protecting against COVID-19. We would encourage you to practice “social distancing”: Stay
+  home as much as possible, refrain from attending large gatherings of people, wash your hands
+  often with soap and water for at least 20 seconds (or use hand sanitizer made up of at least
+  60% alcohol), avoid touching your eyes nose or mouth with unwashed hands, avoid close contact
+  with people who are sick, and avoid all non-essential travel.
+</p>
+<p>
+  As well, clean the following high-touch surfaces frequently with regular household cleaners
+  or diluted bleach (1 part bleach to 9 parts water): toys, toilets, phones, electronics, door
+  handles, bedside tables, television remotes.
+</p>
+
+<h6>
+  When should I see my family doctor or go to the hospital?
+</h6>
+<p>
+  If you are seeking help for mild or moderate COVID-19 symptoms, know that there are no treatments
+  at this time and you will be instructed to stay home and use treatment (described below) to help
+  with your symptoms.
+</p>
+<p>
+  If you are seriously ill or experiencing severe symptoms (severe shortness of breath, chest
+  pain, serious weakness or lethargy that impairs ability to carry out your regular activities)
+  call 911 and inform them that you may have COVID-19.
+</p>
+
+<h6>
+  What is social distancing and how do I do it?
+</h6>
+<p>
+  Social distancing is used to minimize COVID-19 transmission in the community. This means
+  minimizing close contact with others during the peak of an outbreak. Where possible, we
+  would encourage you to: avoid public transit, stay 6 feet away from others, reduce your
+  exposure in the community by avoiding areas such as shopping malls, recreation centers,
+  movie theaters, and avoid social gatherings. Overall, try to limit your exposure outside
+  the home.
+</p>
+
+<h6>
+  Contacts
+</h6>
+
+  <p>
+    Public Health Contact: <a href="tel:4163387600">416-338-7600</a><br />
+    Telehealth Ontario: <a href="tel:18667970000">1-866-797-0000</a><br />
+    <a href="https://www.toronto.ca/home/covid-19/">Toronto Public Health</a>
+  </p>
+
+
+
+    </div>
+
+    <div id="result-get-assessed" class="result" style="display: none">
+      <div id="instructions-ON-get-assessed" class="instructions instructions-ON" style="display: none">
+  <div class="riskbox risk-medium">
+    <p>
+      Based on your health history, clinical symptoms, and/or age, you are encouraged to
+      make your way to an assessment center. Please put on a mask if you have one. Location
+      options can be found below. Please check individual testing websites for information
+      on hours of operation, pre-test requirements.
+    </p>
+
+    <p>
+      Here are your location options:
+    </p>
+
+    <p>
+      <ul>
+        <li><a href="https://www.hrh.ca/covid-19/">Humber River Hospital</a></li>
+        <li><a href="https://www.mackenziehealth.ca/Modules/News/index.aspx?feedId=14b664f2-e8ac-4b9d-8244-04d1b47d3f95,0dd022c2-8647-4d23-b3d5-842f55903b86&newsId=03ca2a19-a322-464d-a613-2d033f7689ef">Mackenzie Health in Richmond Hill</a></li>
+        <li><a href="https://www.tehn.ca/about-us/newsroom/michael-garron-hospital-opens-covid-19-assessment-centre-expand-screening-and">Michael Garron Hospital in Toronto</a></li>
+        <li><a href="https://www.nygh.on.ca/">North York General Hospital</a></li>
+        <li><a href="https://www.shn.ca/covid-19-assessment-centres/">Scarborough Health Network — Birchmount Hospital</a></li>
+        <li><a href="https://southlake.ca/news/coronavirus-2019-ncov/">South Lake Regional Health Centre</a></li>
+        <li><a href="https://twitter.com/THP_hospital/status/1238532994161414149">Trillium Health Partners in Mississauga</a></li>
+        <li><a href="https://unityhealth.to/patients-and-families/coronavirus-information-for-patients-and-families/">Unity Health – St. Josephs Health Centre</a></li>
+        <li><a href="https://unityhealth.to/patients-and-families/coronavirus-information-for-patients-and-families/">Unity Health – St. Michael’s Hospital</a></li>
+        <li><a href="https://twitter.com/OslerHealth/status/1237834877761970179">William Osler Health System</a> — Peel Memorial in Brampton</li>
+        <li><a href="https://www.womenscollegehospital.ca/patients-and-caregivers/wch-covid-19-assessment-centre">Women's College Hospital</a></li>
+      </ul>
+    </p>
+
+    <p>
+      If you are unable to go to an assessment center:
+    </p>
+    <ul>
+      <li>Contact your primary care provider (for example, family doctor). Let them know that you have
+        used this self-assessment tool.</li>
+      
+      <li>Or contact Telehealth Ontario at <a href="tel:+18667970000">1-866-797-0000</a> and speak with a
+      registered nurse. Let them know that you have used this self-assessment tool.</li>
+    </ul>
+
+    <p>The majority of COVID-19 illnesses are mild. A clinician can help guide whether you will
+      require further care.</p>
+
+    <p>
+      <strong>If you start to experience worsening symptoms, please visit your local emergency
+      department. Call before you go and let them know you have used this self-assessment
+      tool.</strong>
+    </p>
+  </div>
+</div>
+
+<div id="instructions-other-get-assessed" class="instructions instructions-other">
+  <div class="riskbox risk-medium">
+    <p>
+      <b>Your responses indicate an increased risk of COVID-19 infection</b>. Please note that this is not
+      a diagnosis.
+    </p>
+    <p>
+      <b>Further assessment is recommended</b>; please reach out to your local public health
+      authority for instructions and next steps. In the meantime, <b>we recommend self-isolation.</b>
+    </p>
+  </div>
+</div>
+
+
+<h6>
+  What is a coronavirus (COVID-19)?
+</h6>
+<p>
+  Coronaviruses are a large family of viruses. Some coronaviruses cause respiratory illness
+  in people, ranging from mild common colds to severe pneumonias, while others cause illness
+  in animals only. Novel coronaviruses are new strains of the virus that have not been previously
+  identified in humans.
+</p>
+
+<h6>
+  How does COVID-19 spread?
+</h6>
+<p>
+  COVID-19 is believed to be spread most commonly from an infected person through:
+  <ul>
+    <li>Respiratory droplets generated when they cough or sneeze.</li>
+    <li>Close, prolonged personal contact such as touching or shaking hands.</li>
+    <li>Touching something with the virus on it, then touching your mouth, nose or eyes before washing your hands</li>
+  </ul>
+</p>
+
+<h6>
+  What are the symptoms of COVID-19?
+</h6>
+<p>
+  Symptoms for COVID-19 are similar to those for influenza or other respiratory illnesses.
+  The most common symptoms include: fever, cough, and shortness of breath. Less common symptoms
+  can include extreme tiredness, sore throat, and runny nose.
+</p>
+<p>
+  Most people (about 80%) recover from this disease without needing special treatment, but
+  it can also cause serious illness. Those who are older and those with other medical problems
+  are more likely to develop serious illness, which can include difficulty breathing and pneumonia;
+  there is also a risk of death in severe cases.
+</p>
+<p>
+  While we are still learning about how COVID-19 affects people, older persons and persons
+  with pre-existing medical conditions (such as high blood pressure, heart disease, lung disease,
+  active cancer, dialysis, or diabetes) appear to develop serious illness more often than others.
+</p>
+
+<h6>
+  How do I prevent myself and my loved ones from getting COVID-19?
+</h6>
+<p>
+  At this time, there is no vaccine, medication, or natural health products that have evidence
+  of protecting against COVID-19. We would encourage you to practice “social distancing”: Stay
+  home as much as possible, refrain from attending large gatherings of people, wash your hands
+  often with soap and water for at least 20 seconds (or use hand sanitizer made up of at least
+  60% alcohol), avoid touching your eyes nose or mouth with unwashed hands, avoid close contact
+  with people who are sick, and avoid all non-essential travel.
+</p>
+<p>
+  As well, clean the following high-touch surfaces frequently with regular household cleaners
+  or diluted bleach (1 part bleach to 9 parts water): toys, toilets, phones, electronics, door
+  handles, bedside tables, television remotes.
+</p>
+
+<h6>
+  When should I see my family doctor or go to the hospital?
+</h6>
+<p>
+  If you are seeking help for mild or moderate COVID-19 symptoms, know that there are no treatments
+  at this time and you will be instructed to stay home and use treatment (described below) to help
+  with your symptoms.
+</p>
+<p>
+  If you are seriously ill or experiencing severe symptoms (severe shortness of breath, chest
+  pain, serious weakness or lethargy that impairs ability to carry out your regular activities)
+  call 911 and inform them that you may have COVID-19.
+</p>
+
+<h6>
+  What is social distancing and how do I do it?
+</h6>
+<p>
+  Social distancing is used to minimize COVID-19 transmission in the community. This means
+  minimizing close contact with others during the peak of an outbreak. Where possible, we
+  would encourage you to: avoid public transit, stay 6 feet away from others, reduce your
+  exposure in the community by avoiding areas such as shopping malls, recreation centers,
+  movie theaters, and avoid social gatherings. Overall, try to limit your exposure outside
+  the home.
+</p>
+
+<h6>
+  Contacts
+</h6>
+
+  <p>
+    Public Health Contact: <a href="tel:4163387600">416-338-7600</a><br />
+    Telehealth Ontario: <a href="tel:18667970000">1-866-797-0000</a><br />
+    <a href="https://www.toronto.ca/home/covid-19/">Toronto Public Health</a>
+  </p>
+
+
+
+    </div>
+
+    <div id="result-remain-vigilant" class="result" style="display: none">
+      <div id="instructions-other-stay-vigilant" class="instructions instructions-other">
+  <div class="riskbox risk-low">
+    <p>
+      <img src="/assets/images/icons/icon-info.png" alt="Info" class="risk-icon" />
+      Based on your health history, clinical symptoms, and travel record, you <b>do not need
+      further COVID-19 testing</b> at this time. If your symptoms worsen, please use the self-assessment
+      tool again.
+    </p>
+  </div>
+</div>
+
+
+<h6>
+  What is a coronavirus (COVID-19)?
+</h6>
+<p>
+  Coronaviruses are a large family of viruses. Some coronaviruses cause respiratory illness
+  in people, ranging from mild common colds to severe pneumonias, while others cause illness
+  in animals only. Novel coronaviruses are new strains of the virus that have not been previously
+  identified in humans.
+</p>
+
+<h6>
+  How does COVID-19 spread?
+</h6>
+<p>
+  COVID-19 is believed to be spread most commonly from an infected person through:
+  <ul>
+    <li>Respiratory droplets generated when they cough or sneeze.</li>
+    <li>Close, prolonged personal contact such as touching or shaking hands.</li>
+    <li>Touching something with the virus on it, then touching your mouth, nose or eyes before washing your hands</li>
+  </ul>
+</p>
+
+<h6>
+  What are the symptoms of COVID-19?
+</h6>
+<p>
+  Symptoms for COVID-19 are similar to those for influenza or other respiratory illnesses.
+  The most common symptoms include: fever, cough, and shortness of breath. Less common symptoms
+  can include extreme tiredness, sore throat, and runny nose.
+</p>
+<p>
+  Most people (about 80%) recover from this disease without needing special treatment, but
+  it can also cause serious illness. Those who are older and those with other medical problems
+  are more likely to develop serious illness, which can include difficulty breathing and pneumonia;
+  there is also a risk of death in severe cases.
+</p>
+<p>
+  While we are still learning about how COVID-19 affects people, older persons and persons
+  with pre-existing medical conditions (such as high blood pressure, heart disease, lung disease,
+  active cancer, dialysis, or diabetes) appear to develop serious illness more often than others.
+</p>
+
+<h6>
+  How do I prevent myself and my loved ones from getting COVID-19?
+</h6>
+<p>
+  At this time, there is no vaccine, medication, or natural health products that have evidence
+  of protecting against COVID-19. We would encourage you to practice “social distancing”: Stay
+  home as much as possible, refrain from attending large gatherings of people, wash your hands
+  often with soap and water for at least 20 seconds (or use hand sanitizer made up of at least
+  60% alcohol), avoid touching your eyes nose or mouth with unwashed hands, avoid close contact
+  with people who are sick, and avoid all non-essential travel.
+</p>
+<p>
+  As well, clean the following high-touch surfaces frequently with regular household cleaners
+  or diluted bleach (1 part bleach to 9 parts water): toys, toilets, phones, electronics, door
+  handles, bedside tables, television remotes.
+</p>
+
+<h6>
+  When should I see my family doctor or go to the hospital?
+</h6>
+<p>
+  If you are seeking help for mild or moderate COVID-19 symptoms, know that there are no treatments
+  at this time and you will be instructed to stay home and use treatment (described below) to help
+  with your symptoms.
+</p>
+<p>
+  If you are seriously ill or experiencing severe symptoms (severe shortness of breath, chest
+  pain, serious weakness or lethargy that impairs ability to carry out your regular activities)
+  call 911 and inform them that you may have COVID-19.
+</p>
+
+<h6>
+  What is social distancing and how do I do it?
+</h6>
+<p>
+  Social distancing is used to minimize COVID-19 transmission in the community. This means
+  minimizing close contact with others during the peak of an outbreak. Where possible, we
+  would encourage you to: avoid public transit, stay 6 feet away from others, reduce your
+  exposure in the community by avoiding areas such as shopping malls, recreation centers,
+  movie theaters, and avoid social gatherings. Overall, try to limit your exposure outside
+  the home.
+</p>
+
+<h6>
+  Contacts
+</h6>
+
+  <p>
+    Public Health Contact: <a href="tel:4163387600">416-338-7600</a><br />
+    Telehealth Ontario: <a href="tel:18667970000">1-866-797-0000</a><br />
+    <a href="https://www.toronto.ca/home/covid-19/">Toronto Public Health</a>
+  </p>
+
+
+
+    </div>
+
+    <div id="result-stay-home" class="result" style="display: none">
+      <div id="instructions-other-stay-home" class="instructions instructions-other">
+  <div class="riskbox risk-low">
+    <p>
+      <img src="/assets/images/icons/icon-info.png" alt="Info" class="risk-icon" />
+      Based on your answers, <b>you need to self-isolate for 14 days</b>. But you
+      <b>do not require COVID-19 testing.</b>. If your symptoms change or worsen, please use
+      this self-assessment tool again.
+    </p>
+
+    <p>We would also encourage you to:</p>
+
+    <ul>
+      <li>
+        Wash your hands often with soap and water for at least 20 seconds, or use hand sanitizer
+        if soap and water are not available (hand sanitizer must be at least 60% alcohol);
+      </li>
+      <li>
+        Avoid touching your eyes, nose, or mouth with unwashed hands;
+      </li>
+      <li>
+        Avoid close contact with people who are sick, and
+      </li>
+      <li>
+        Avoid all non-essential travel.
+      </li>
+    </ul>
+  </div>
+</div>
+
+<p>
+  You should also clean the following high-touch surfaces frequently with regular household
+  cleaners or diluted bleach (1 part bleach to 9 parts water): toys, toilets, phones, electronics,
+  door handles, bedside tables, television remotes.
+</p>
+
+<p>
+  The following links may be helpful
+</p>
+<ul>
+  <li>
+    <a href="https://www.publichealthontario.ca/-/media/documents/ncov/factsheet-covid-19-how-to-self-isolate.pdf?la=en">How to self-isolate</a>
+  </li>
+  <li>
+    <a href="https://www.publichealthontario.ca/-/media/documents/ncov/factsheet-covid-19-self-monitor.pdf?la=en">How to self-monitor</a>
+  </li>
+</ul>
+
+
+<h6>
+  What is a coronavirus (COVID-19)?
+</h6>
+<p>
+  Coronaviruses are a large family of viruses. Some coronaviruses cause respiratory illness
+  in people, ranging from mild common colds to severe pneumonias, while others cause illness
+  in animals only. Novel coronaviruses are new strains of the virus that have not been previously
+  identified in humans.
+</p>
+
+<h6>
+  How does COVID-19 spread?
+</h6>
+<p>
+  COVID-19 is believed to be spread most commonly from an infected person through:
+  <ul>
+    <li>Respiratory droplets generated when they cough or sneeze.</li>
+    <li>Close, prolonged personal contact such as touching or shaking hands.</li>
+    <li>Touching something with the virus on it, then touching your mouth, nose or eyes before washing your hands</li>
+  </ul>
+</p>
+
+<h6>
+  What are the symptoms of COVID-19?
+</h6>
+<p>
+  Symptoms for COVID-19 are similar to those for influenza or other respiratory illnesses.
+  The most common symptoms include: fever, cough, and shortness of breath. Less common symptoms
+  can include extreme tiredness, sore throat, and runny nose.
+</p>
+<p>
+  Most people (about 80%) recover from this disease without needing special treatment, but
+  it can also cause serious illness. Those who are older and those with other medical problems
+  are more likely to develop serious illness, which can include difficulty breathing and pneumonia;
+  there is also a risk of death in severe cases.
+</p>
+<p>
+  While we are still learning about how COVID-19 affects people, older persons and persons
+  with pre-existing medical conditions (such as high blood pressure, heart disease, lung disease,
+  active cancer, dialysis, or diabetes) appear to develop serious illness more often than others.
+</p>
+
+<h6>
+  How do I prevent myself and my loved ones from getting COVID-19?
+</h6>
+<p>
+  At this time, there is no vaccine, medication, or natural health products that have evidence
+  of protecting against COVID-19. We would encourage you to practice “social distancing”: Stay
+  home as much as possible, refrain from attending large gatherings of people, wash your hands
+  often with soap and water for at least 20 seconds (or use hand sanitizer made up of at least
+  60% alcohol), avoid touching your eyes nose or mouth with unwashed hands, avoid close contact
+  with people who are sick, and avoid all non-essential travel.
+</p>
+<p>
+  As well, clean the following high-touch surfaces frequently with regular household cleaners
+  or diluted bleach (1 part bleach to 9 parts water): toys, toilets, phones, electronics, door
+  handles, bedside tables, television remotes.
+</p>
+
+<h6>
+  When should I see my family doctor or go to the hospital?
+</h6>
+<p>
+  If you are seeking help for mild or moderate COVID-19 symptoms, know that there are no treatments
+  at this time and you will be instructed to stay home and use treatment (described below) to help
+  with your symptoms.
+</p>
+<p>
+  If you are seriously ill or experiencing severe symptoms (severe shortness of breath, chest
+  pain, serious weakness or lethargy that impairs ability to carry out your regular activities)
+  call 911 and inform them that you may have COVID-19.
+</p>
+
+<h6>
+  What is social distancing and how do I do it?
+</h6>
+<p>
+  Social distancing is used to minimize COVID-19 transmission in the community. This means
+  minimizing close contact with others during the peak of an outbreak. Where possible, we
+  would encourage you to: avoid public transit, stay 6 feet away from others, reduce your
+  exposure in the community by avoiding areas such as shopping malls, recreation centers,
+  movie theaters, and avoid social gatherings. Overall, try to limit your exposure outside
+  the home.
+</p>
+
+<h6>
+  Contacts
+</h6>
+
+  <p>
+    Public Health Contact: <a href="tel:4163387600">416-338-7600</a><br />
+    Telehealth Ontario: <a href="tel:18667970000">1-866-797-0000</a><br />
+    <a href="https://www.toronto.ca/home/covid-19/">Toronto Public Health</a>
+  </p>
+
+
+
+    </div>
+  </div>
+
+  
+    <!-- nada for now -->
+  
+
+</div>
+
+        </div>
+
+        
+          <div style="height: 10em;">&nbsp;</div>
+          <div id="toronto-logos">
+  <img src="/assets/images/covid19/toronto/humber-river-logo.png" >
+  <img src="/assets/images/covid19/toronto/north-york-general-logo.png" >
+  <img src="/assets/images/covid19/toronto/sunnybrook-logo.png" >
+</div>
+
+        
+      </main>
+
+      <div style="margin-top: 3em; margin-bottom: 3em;">&nbsp;</div>
+
+      
+    </div>
+
+  </body>
+</html>

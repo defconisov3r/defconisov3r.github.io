@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<title>Covid-19 Shops </title>
+<meta charset="utf-8" />
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"f662eb9288","applicationID":"15456546","transactionName":"J1xdF0MKDg0ERh9FFRZWVkxZCg8ETl1eUgAc","queueTime":2,"applicationTime":67,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"f662eb9288",applicationID:"15456546"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
+
+
+<meta content="Collaborative online shop. 
+We are a one stop solution for Covid-19 preventive products.
+We make easy for everybody get fast access for the products or suppliers." name="description">
+
+
+
+<meta content="authenticity_token" name="csrf-param">
+
+
+<meta content="rQ0njlWoPk+RbgGa7k5ry/gb0l+KawG/nwD+OttgbCsgSpeYM+nm2lN1Vy6yZs7c/o0CNGrMABmsDxrwS7gOUw==" name="csrf-token">
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="//onlinestore.wsimg.com/assets/themes/__master/assets/stylesheets/master_styles-3fdcd7180dca9938c1c0047e3f6c3d0a227a11a781d9930b1d5653809281e3f1.css">
+
+  
+<link rel="stylesheet" type="text/css" href="//onlinestore.wsimg.com/assets/themes/006/V1/assets/stylesheets/style-e9ac1cda03657f730f82fd39c93a39c4eebffed4c826c63fab93a3ca4d754783.css">
+
+
+
+
+  
+  
+  
+  
+
+
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+
+<script type="text/javascript">
+  var DeferredLoader = (function () {
+
+    function downloadJS(script) {
+      var element = document.createElement("script");
+      element.src = script;
+      document.body.appendChild(element);
+    }
+
+    return {
+      addScript: function (script) {
+        var add = function () {
+          downloadJS(script);
+        };
+
+        if (window.addEventListener) {
+          window.addEventListener("load", add, false);
+        } else if (window.attachEvent) {
+          window.attachEvent("onload", add);
+        } else {
+          window.onload = add;
+        }
+      }
+    };
+  })();
+</script>
+
+<script type="text/javascript">
+  window.currency = {"symbol":"$","format":"%u%n","with_currency":false,"currency":"USD","decimal_mark":".","thousands_separator":",","precision":2} || {};
+</script>
+</head>
+<body class="page-home">
+<div id="main-wrapper">
+  <div class="wrapper">
+    <div class="header">
+      <div class="container">
+        <nav class="navbar navbar-default" role="navigation">
+           <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                <span class="sr-only">Toggle navigation</span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+              </button>
+              
+  <div class="name"><a href="/"><span ><h1>Covid-19 Shops</h1></span></a></div>
+
+
+
+	<div class="tagline">Proudly serving solutions to prevent&nbsp;COVID-19</div>
+
+           </div>
+           <div class="collapse navbar-collapse" id="main-nav">
+              <div class="navbar-els">
+  <form class="search-form" role="search" method="GET" action="/products">
+    <div class="search-wrap collapse" id="search-wrap">
+      <label class="sr-only" for="search">Search</label>
+      <input type="text" class="form-control" id="search" placeholder="Start your search here" name="keywords">
+    </div>
+    <button type="button" class="btn btn-default" id="search-button">
+      <span class="glyphicon glyphicon-search"></span>
+    </button>
+</form>
+  
+  <ul id="cart-info" class="nav navbar-nav navbar-right" >
+  <li>
+    <a href="/cart">
+      <span id='cart-count'>Cart&nbsp;(0)</span>
+    </a>
+  </li>
+  <li id="checkout-link" style="display:none">
+    <a href="/checkout">
+      Checkout
+    </a>
+  </li>
+</ul>
+
+  
+
+  <ul class="nav navbar-nav navbar-right">
+    
+
+    
+    <li class="active"><a  href="/">Home</a></li>
+    
+
+    
+
+    
+    <li class=""><a  href="/p/news">News</a></li>
+    
+
+    
+
+    
+    <li class=""><a  href="/about">BE PART OF IT</a></li>
+    
+
+    
+
+    
+    <li class="dropdown ">
+        <a href="/products" class="dropdown-toggle" data-toggle="dropdown">Shop <span class="caret"></span></a>
+        <ul class="dropdown-menu" id="nav-cat-list">
+          <li class="view-all "><a href="/products">View All</a></li>
+          <li role="presentation" class="divider"></li>
+          
+
+    
+      
+  <li >
+    <a href="/t/mask">Mask</a>
+    
+  </li>
+
+    
+      
+  <li >
+    <a href="/t/disposable-clothing-medical-suite-corona-covid19-covid-19">Disposable clothing medical suite corona covid19 covid-19</a>
+    
+  </li>
+
+    
+      
+  <li >
+    <a href="/t/protective-clothes">Protective clothes</a>
+    
+  </li>
+
+    
+      
+  <li >
+    <a href="/t/thermomiter">Thermomiter</a>
+    
+  </li>
+
+    
+      
+  <li >
+    <a href="/t/thermometer">Thermometer</a>
+    
+  </li>
+
+    
+      
+  <li >
+    <a href="/t/medical-goggles">Medical Goggles</a>
+    
+  </li>
+
+    
+      
+  <li >
+    <a href="/t/disposable-medical-latex">disposable medical latex</a>
+    
+  </li>
+
+    
+      
+  <li >
+    <a href="/t/medical-cap">Medical Cap</a>
+    
+  </li>
+
+    
+      
+  <li >
+    <a href="/t/temperature-gate">temperature gate</a>
+    
+  </li>
+
+    
+      
+  <li >
+    <a href="/t/medical-ventilator">Medical ventilator</a>
+    
+  </li>
+
+    
+      
+  <li >
+    <a href="/t/protective-face-screen">protective face screen</a>
+    
+  </li>
+
+    
+      
+  <li >
+    <a href="/t/ambulance">ambulance</a>
+    
+  </li>
+
+    
+
+
+
+        </ul>
+      </li>
+    
+
+    
+
+    
+    <li class=""><a  href="/contact">Contact Us</a></li>
+    
+
+    
+  </ul>
+</div>
+
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="content">
+    	
+<div class="hero">
+  <div id="slider-ph"></div>
+  <ul class="bxslider slider" style="display:none;">
+    
+      
+        
+
+<li>
+  <a href="">
+    <div class="image-wrapper">
+      <img src="https://isteam.wsimg.com/ip/56eaa282-db90-46df-bb88-fda6dbcdbca1/ols/24_original/:/cr=t:7.44485294117647,l:285.3860294117647,w:1588.2352941176468,h:794.1176470588234/rs=w:1200,h:1200" data-hook="image" class="hero-img">
+    </div>
+
+    <div class="hero-text-position">
+      <div class="hero-text-table">
+        <div class="hero-text-cell">
+          <div class="hero-overlay">
+          
+            <div class="hero-text" id="hero-text" data-empty-hide="overlay_text" data-hook="overlay_text" style="display:none"></div>
+
+            <div class="hero-button" data-empty-hide="button_text" style="display:none">
+              <button id="hero-button" class="btn btn-primary" data-hook="button_text"></button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</li>
+      
+        
+
+<li>
+  <a href="https://covid19shops.com/products">
+    <div class="image-wrapper">
+      <img src="https://isteam.wsimg.com/ip/56eaa282-db90-46df-bb88-fda6dbcdbca1/ols/10_original/:/cr=t:136.17021276595744,l:0,w:960,h:480/rs=w:1200,h:1200" data-hook="image" class="hero-img">
+    </div>
+
+    <div class="hero-text-position">
+      <div class="hero-text-table">
+        <div class="hero-text-cell">
+          <div class="hero-overlay">
+          
+            <div class="hero-text" id="hero-text" data-empty-hide="overlay_text" data-hook="overlay_text" >COVID-19 PREVENTION</div>
+
+            <div class="hero-button" data-empty-hide="button_text" >
+              <button id="hero-button" class="btn btn-primary" data-hook="button_text">SHOP NOW</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</li>
+      
+        
+
+<li>
+  <a href="https://youtu.be/9Ay4u7OYOhA">
+    <div class="image-wrapper">
+      <img src="https://isteam.wsimg.com/ip/56eaa282-db90-46df-bb88-fda6dbcdbca1/ols/11_original/:/cr=t:153.19148936170214,l:0,w:1080,h:540/rs=w:1200,h:1200" data-hook="image" class="hero-img">
+    </div>
+
+    <div class="hero-text-position">
+      <div class="hero-text-table">
+        <div class="hero-text-cell">
+          <div class="hero-overlay">
+          
+            <div class="hero-text" id="hero-text" data-empty-hide="overlay_text" data-hook="overlay_text" >learn how to prevent</div>
+
+            <div class="hero-button" data-empty-hide="button_text" >
+              <button id="hero-button" class="btn btn-primary" data-hook="button_text">watch now</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</li>
+      
+    
+  </ul>
+  <div class="control-wrapper prev-wrapper"></div>
+  <div class="control-wrapper next-wrapper"></div>
+</div>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      
+
+
+
+<div class="products featured-products">
+  <div class="products-title">
+      <h2>
+        <span>
+          Featured Products</span>
+        <small>
+          <a href="/products" id="featured-all">View All Products</a></small>
+      </h2>
+  </div>
+  <div class="row ">
+
+
+
+
+<div class="col-sm-3 col-xs-6">
+  <div class="product">
+    <a class="product-link" href="/products/disposable-medical-mask" >
+      <div class="product-thumb">
+        <div class="product-thumb-inner" style="background-image:url(https://isteam.wsimg.com/ip/56eaa282-db90-46df-bb88-fda6dbcdbca1/ols/12_original/:/rs=w:240,h:240);">
+        </div>
+      </div>
+      <span class="product-title" href="/products/disposable-medical-mask">Disposable medical mask</span>
+    </a>
+    
+    <div class="product-price" data-on-sale="true"><span>$2.22</span><span>$0.74</span></div>
+    
+    
+      <div class="free-shipping">
+  <div class="ship-table">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="6.943 12.685 20 14" enable-background="new 6.943 12.685 20 14" xml:space="preserve">
+    <path display="none" d="M39.451,34.034c0,2.032-1.578,3.61-3.611,3.61s-3.611-1.578-3.611-3.61
+      s1.578-3.611,3.611-3.611S39.451,32.002,39.451,34.034z M35.612,32.002c-1.13,0-1.806,0.902-1.806,1.805s0.902,1.806,1.806,1.806
+      c1.13,0,1.806-0.903,1.806-1.806S36.742,32.002,35.612,32.002z"/>
+    <rect x="6.938" y="13.03" display="none" width="20.322" height="15.581"/>
+    <path display="none" d="M17.999,33.58c0,2.032-1.578,3.61-3.611,3.61s-3.611-1.578-3.611-3.61
+      c0-2.033,1.579-3.611,3.611-3.611S17.999,31.547,17.999,33.58z M14.388,31.773c-1.13,0-1.806,0.903-1.806,1.807
+      c0,0.902,0.903,1.805,1.806,1.805s1.806-0.902,1.806-1.805C16.193,32.677,15.291,31.773,14.388,31.773z"/>
+    <path display="none" d="M28.384,34.255V19.356V17.55h8.358c0,0,6.32,0.455,6.32,6.32v8.579l-1.357,1.578h-0.903
+      c0,0,0.454-5.644-5.417-5.644c0,0-5.195-0.228-5.195,5.644h-1.806V34.255z M37.19,19.804c-2.708,0-4.065,0-4.065,0v3.384h5.645
+      h1.805C40.581,23.194,39.678,19.804,37.19,19.804z"/>
+    <path display="none" d="M6.938,29.969h3.611c0,0-1.806,1.805-1.578,4.293H6.938V29.969z"/>
+    <path display="none" d="M27.26,29.969h-9.034c0,0,1.806,1.805,1.578,4.293h7.45v-4.293H27.26z"/>
+    <path d="M10.976,22.635c1.119,0,2.025,0.907,2.025,2.026c0,1.119-0.906,2.025-2.025,2.025c-1.118,0-2.029-0.902-2.029-2.025
+      C8.946,23.542,9.857,22.635,10.976,22.635z M9.927,24.661c0,0.578,0.468,1.048,1.049,1.048c0.582,0,1.049-0.466,1.049-1.048
+      c0-0.578-0.468-1.05-1.049-1.05C10.395,23.611,9.927,24.083,9.927,24.661z"/>
+    <rect x="15.703" y="12.685" width="11.24" height="8.974"/>
+    <path d="M22.857,22.635c1.119,0,2.026,0.907,2.026,2.026c0,1.119-0.907,2.025-2.026,2.025c-1.118,0-2.026-0.906-2.026-2.025
+      C20.832,23.542,21.739,22.635,22.857,22.635z M21.808,24.661c0,0.577,0.467,1.048,1.049,1.048c0.577,0,1.05-0.468,1.05-1.048
+      c0-0.581-0.469-1.05-1.05-1.05C22.279,23.611,21.808,24.08,21.808,24.661z"/>
+    <path d="M13.956,24.813c0-3.235-2.863-3.155-2.863-3.155c-3.294,0-2.979,3.155-2.979,3.155H7.682l-0.738-0.936v-4.77
+      c0-3.254,3.469-3.565,3.469-3.565h4.6v0.995v8.28h-1.057V24.813z M8.318,18.658h0.955h3.155v-1.89c0,0-0.684,0-2.219,0
+      C8.727,16.771,8.318,18.658,8.318,18.658z"/>
+    <path d="M26.943,22.416h-1.959c0,0,1.032,1.005,0.853,2.409h1.106V22.416z"/>
+    <path d="M15.703,22.416h5.009c0,0-1.032,1.005-0.852,2.409h-4.157V22.416z"/>
+    </svg>
+    <span>Free Shipping!</span>
+  </div>
+</div>
+
+    
+    
+ </div>
+</div>
+
+
+
+
+
+<div class="col-sm-3 col-xs-6">
+  <div class="product">
+    <a class="product-link" href="/products/disposable-kn95-mask" >
+      <div class="product-thumb">
+        <div class="product-thumb-inner" style="background-image:url(https://isteam.wsimg.com/ip/56eaa282-db90-46df-bb88-fda6dbcdbca1/ols/17_original/:/rs=w:240,h:240);">
+        </div>
+      </div>
+      <span class="product-title" href="/products/disposable-kn95-mask">Disposable KN95 mask</span>
+    </a>
+    
+    <div class="product-price" data-on-sale="true"><span>$5.37</span><span>$3.58</span></div>
+    
+    
+      <div class="free-shipping">
+  <div class="ship-table">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="6.943 12.685 20 14" enable-background="new 6.943 12.685 20 14" xml:space="preserve">
+    <path display="none" d="M39.451,34.034c0,2.032-1.578,3.61-3.611,3.61s-3.611-1.578-3.611-3.61
+      s1.578-3.611,3.611-3.611S39.451,32.002,39.451,34.034z M35.612,32.002c-1.13,0-1.806,0.902-1.806,1.805s0.902,1.806,1.806,1.806
+      c1.13,0,1.806-0.903,1.806-1.806S36.742,32.002,35.612,32.002z"/>
+    <rect x="6.938" y="13.03" display="none" width="20.322" height="15.581"/>
+    <path display="none" d="M17.999,33.58c0,2.032-1.578,3.61-3.611,3.61s-3.611-1.578-3.611-3.61
+      c0-2.033,1.579-3.611,3.611-3.611S17.999,31.547,17.999,33.58z M14.388,31.773c-1.13,0-1.806,0.903-1.806,1.807
+      c0,0.902,0.903,1.805,1.806,1.805s1.806-0.902,1.806-1.805C16.193,32.677,15.291,31.773,14.388,31.773z"/>
+    <path display="none" d="M28.384,34.255V19.356V17.55h8.358c0,0,6.32,0.455,6.32,6.32v8.579l-1.357,1.578h-0.903
+      c0,0,0.454-5.644-5.417-5.644c0,0-5.195-0.228-5.195,5.644h-1.806V34.255z M37.19,19.804c-2.708,0-4.065,0-4.065,0v3.384h5.645
+      h1.805C40.581,23.194,39.678,19.804,37.19,19.804z"/>
+    <path display="none" d="M6.938,29.969h3.611c0,0-1.806,1.805-1.578,4.293H6.938V29.969z"/>
+    <path display="none" d="M27.26,29.969h-9.034c0,0,1.806,1.805,1.578,4.293h7.45v-4.293H27.26z"/>
+    <path d="M10.976,22.635c1.119,0,2.025,0.907,2.025,2.026c0,1.119-0.906,2.025-2.025,2.025c-1.118,0-2.029-0.902-2.029-2.025
+      C8.946,23.542,9.857,22.635,10.976,22.635z M9.927,24.661c0,0.578,0.468,1.048,1.049,1.048c0.582,0,1.049-0.466,1.049-1.048
+      c0-0.578-0.468-1.05-1.049-1.05C10.395,23.611,9.927,24.083,9.927,24.661z"/>
+    <rect x="15.703" y="12.685" width="11.24" height="8.974"/>
+    <path d="M22.857,22.635c1.119,0,2.026,0.907,2.026,2.026c0,1.119-0.907,2.025-2.026,2.025c-1.118,0-2.026-0.906-2.026-2.025
+      C20.832,23.542,21.739,22.635,22.857,22.635z M21.808,24.661c0,0.577,0.467,1.048,1.049,1.048c0.577,0,1.05-0.468,1.05-1.048
+      c0-0.581-0.469-1.05-1.05-1.05C22.279,23.611,21.808,24.08,21.808,24.661z"/>
+    <path d="M13.956,24.813c0-3.235-2.863-3.155-2.863-3.155c-3.294,0-2.979,3.155-2.979,3.155H7.682l-0.738-0.936v-4.77
+      c0-3.254,3.469-3.565,3.469-3.565h4.6v0.995v8.28h-1.057V24.813z M8.318,18.658h0.955h3.155v-1.89c0,0-0.684,0-2.219,0
+      C8.727,16.771,8.318,18.658,8.318,18.658z"/>
+    <path d="M26.943,22.416h-1.959c0,0,1.032,1.005,0.853,2.409h1.106V22.416z"/>
+    <path d="M15.703,22.416h5.009c0,0-1.032,1.005-0.852,2.409h-4.157V22.416z"/>
+    </svg>
+    <span>Free Shipping!</span>
+  </div>
+</div>
+
+    
+    
+ </div>
+</div>
+
+
+
+
+
+<div class="col-sm-3 col-xs-6">
+  <div class="product">
+    <a class="product-link" href="/products/disposable-n95-mask" >
+      <div class="product-thumb">
+        <div class="product-thumb-inner" style="background-image:url(https://isteam.wsimg.com/ip/56eaa282-db90-46df-bb88-fda6dbcdbca1/ols/19_original/:/rs=w:240,h:240);">
+        </div>
+      </div>
+      <span class="product-title" href="/products/disposable-n95-mask">Disposable N95 mask</span>
+    </a>
+    
+    <div class="product-price" data-on-sale="true"><span>$5.94</span><span>$3.96</span></div>
+    
+    
+      <div class="free-shipping">
+  <div class="ship-table">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="6.943 12.685 20 14" enable-background="new 6.943 12.685 20 14" xml:space="preserve">
+    <path display="none" d="M39.451,34.034c0,2.032-1.578,3.61-3.611,3.61s-3.611-1.578-3.611-3.61
+      s1.578-3.611,3.611-3.611S39.451,32.002,39.451,34.034z M35.612,32.002c-1.13,0-1.806,0.902-1.806,1.805s0.902,1.806,1.806,1.806
+      c1.13,0,1.806-0.903,1.806-1.806S36.742,32.002,35.612,32.002z"/>
+    <rect x="6.938" y="13.03" display="none" width="20.322" height="15.581"/>
+    <path display="none" d="M17.999,33.58c0,2.032-1.578,3.61-3.611,3.61s-3.611-1.578-3.611-3.61
+      c0-2.033,1.579-3.611,3.611-3.611S17.999,31.547,17.999,33.58z M14.388,31.773c-1.13,0-1.806,0.903-1.806,1.807
+      c0,0.902,0.903,1.805,1.806,1.805s1.806-0.902,1.806-1.805C16.193,32.677,15.291,31.773,14.388,31.773z"/>
+    <path display="none" d="M28.384,34.255V19.356V17.55h8.358c0,0,6.32,0.455,6.32,6.32v8.579l-1.357,1.578h-0.903
+      c0,0,0.454-5.644-5.417-5.644c0,0-5.195-0.228-5.195,5.644h-1.806V34.255z M37.19,19.804c-2.708,0-4.065,0-4.065,0v3.384h5.645
+      h1.805C40.581,23.194,39.678,19.804,37.19,19.804z"/>
+    <path display="none" d="M6.938,29.969h3.611c0,0-1.806,1.805-1.578,4.293H6.938V29.969z"/>
+    <path display="none" d="M27.26,29.969h-9.034c0,0,1.806,1.805,1.578,4.293h7.45v-4.293H27.26z"/>
+    <path d="M10.976,22.635c1.119,0,2.025,0.907,2.025,2.026c0,1.119-0.906,2.025-2.025,2.025c-1.118,0-2.029-0.902-2.029-2.025
+      C8.946,23.542,9.857,22.635,10.976,22.635z M9.927,24.661c0,0.578,0.468,1.048,1.049,1.048c0.582,0,1.049-0.466,1.049-1.048
+      c0-0.578-0.468-1.05-1.049-1.05C10.395,23.611,9.927,24.083,9.927,24.661z"/>
+    <rect x="15.703" y="12.685" width="11.24" height="8.974"/>
+    <path d="M22.857,22.635c1.119,0,2.026,0.907,2.026,2.026c0,1.119-0.907,2.025-2.026,2.025c-1.118,0-2.026-0.906-2.026-2.025
+      C20.832,23.542,21.739,22.635,22.857,22.635z M21.808,24.661c0,0.577,0.467,1.048,1.049,1.048c0.577,0,1.05-0.468,1.05-1.048
+      c0-0.581-0.469-1.05-1.05-1.05C22.279,23.611,21.808,24.08,21.808,24.661z"/>
+    <path d="M13.956,24.813c0-3.235-2.863-3.155-2.863-3.155c-3.294,0-2.979,3.155-2.979,3.155H7.682l-0.738-0.936v-4.77
+      c0-3.254,3.469-3.565,3.469-3.565h4.6v0.995v8.28h-1.057V24.813z M8.318,18.658h0.955h3.155v-1.89c0,0-0.684,0-2.219,0
+      C8.727,16.771,8.318,18.658,8.318,18.658z"/>
+    <path d="M26.943,22.416h-1.959c0,0,1.032,1.005,0.853,2.409h1.106V22.416z"/>
+    <path d="M15.703,22.416h5.009c0,0-1.032,1.005-0.852,2.409h-4.157V22.416z"/>
+    </svg>
+    <span>Free Shipping!</span>
+  </div>
+</div>
+
+    
+    
+ </div>
+</div>
+
+
+
+
+
+<div class="col-sm-3 col-xs-6">
+  <div class="product">
+    <a class="product-link" href="/products/disposable-surgical-mask" >
+      <div class="product-thumb">
+        <div class="product-thumb-inner" style="background-image:url(https://isteam.wsimg.com/ip/56eaa282-db90-46df-bb88-fda6dbcdbca1/ols/20_original/:/rs=w:240,h:240);">
+        </div>
+      </div>
+      <span class="product-title" href="/products/disposable-surgical-mask">Disposable surgical mask</span>
+    </a>
+    
+    <div class="product-price" data-on-sale="true"><span>$1.80</span><span>$1.20</span></div>
+    
+    
+      <div class="free-shipping">
+  <div class="ship-table">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="6.943 12.685 20 14" enable-background="new 6.943 12.685 20 14" xml:space="preserve">
+    <path display="none" d="M39.451,34.034c0,2.032-1.578,3.61-3.611,3.61s-3.611-1.578-3.611-3.61
+      s1.578-3.611,3.611-3.611S39.451,32.002,39.451,34.034z M35.612,32.002c-1.13,0-1.806,0.902-1.806,1.805s0.902,1.806,1.806,1.806
+      c1.13,0,1.806-0.903,1.806-1.806S36.742,32.002,35.612,32.002z"/>
+    <rect x="6.938" y="13.03" display="none" width="20.322" height="15.581"/>
+    <path display="none" d="M17.999,33.58c0,2.032-1.578,3.61-3.611,3.61s-3.611-1.578-3.611-3.61
+      c0-2.033,1.579-3.611,3.611-3.611S17.999,31.547,17.999,33.58z M14.388,31.773c-1.13,0-1.806,0.903-1.806,1.807
+      c0,0.902,0.903,1.805,1.806,1.805s1.806-0.902,1.806-1.805C16.193,32.677,15.291,31.773,14.388,31.773z"/>
+    <path display="none" d="M28.384,34.255V19.356V17.55h8.358c0,0,6.32,0.455,6.32,6.32v8.579l-1.357,1.578h-0.903
+      c0,0,0.454-5.644-5.417-5.644c0,0-5.195-0.228-5.195,5.644h-1.806V34.255z M37.19,19.804c-2.708,0-4.065,0-4.065,0v3.384h5.645
+      h1.805C40.581,23.194,39.678,19.804,37.19,19.804z"/>
+    <path display="none" d="M6.938,29.969h3.611c0,0-1.806,1.805-1.578,4.293H6.938V29.969z"/>
+    <path display="none" d="M27.26,29.969h-9.034c0,0,1.806,1.805,1.578,4.293h7.45v-4.293H27.26z"/>
+    <path d="M10.976,22.635c1.119,0,2.025,0.907,2.025,2.026c0,1.119-0.906,2.025-2.025,2.025c-1.118,0-2.029-0.902-2.029-2.025
+      C8.946,23.542,9.857,22.635,10.976,22.635z M9.927,24.661c0,0.578,0.468,1.048,1.049,1.048c0.582,0,1.049-0.466,1.049-1.048
+      c0-0.578-0.468-1.05-1.049-1.05C10.395,23.611,9.927,24.083,9.927,24.661z"/>
+    <rect x="15.703" y="12.685" width="11.24" height="8.974"/>
+    <path d="M22.857,22.635c1.119,0,2.026,0.907,2.026,2.026c0,1.119-0.907,2.025-2.026,2.025c-1.118,0-2.026-0.906-2.026-2.025
+      C20.832,23.542,21.739,22.635,22.857,22.635z M21.808,24.661c0,0.577,0.467,1.048,1.049,1.048c0.577,0,1.05-0.468,1.05-1.048
+      c0-0.581-0.469-1.05-1.05-1.05C22.279,23.611,21.808,24.08,21.808,24.661z"/>
+    <path d="M13.956,24.813c0-3.235-2.863-3.155-2.863-3.155c-3.294,0-2.979,3.155-2.979,3.155H7.682l-0.738-0.936v-4.77
+      c0-3.254,3.469-3.565,3.469-3.565h4.6v0.995v8.28h-1.057V24.813z M8.318,18.658h0.955h3.155v-1.89c0,0-0.684,0-2.219,0
+      C8.727,16.771,8.318,18.658,8.318,18.658z"/>
+    <path d="M26.943,22.416h-1.959c0,0,1.032,1.005,0.853,2.409h1.106V22.416z"/>
+    <path d="M15.703,22.416h5.009c0,0-1.032,1.005-0.852,2.409h-4.157V22.416z"/>
+    </svg>
+    <span>Free Shipping!</span>
+  </div>
+</div>
+
+    
+    
+ </div>
+</div>
+
+
+
+
+
+<div class="col-sm-3 col-xs-6">
+  <div class="product">
+    <a class="product-link" href="/products/disposable-protective-clothing-for-medical-use" >
+      <div class="product-thumb">
+        <div class="product-thumb-inner" style="background-image:url(//onlinestore.wsimg.com/assets/noimage/product-5fec99477aebb10bac85d82665ec1497de4536cda3279e59089555c45cf589fa.png);">
+        </div>
+      </div>
+      <span class="product-title" href="/products/disposable-protective-clothing-for-medical-use">Disposable protective clothing for medical use</span>
+    </a>
+    
+    <div class="product-price" data-on-sale="true"><span>$48.00</span><span>$32.00</span></div>
+    
+    
+      <div class="free-shipping">
+  <div class="ship-table">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="6.943 12.685 20 14" enable-background="new 6.943 12.685 20 14" xml:space="preserve">
+    <path display="none" d="M39.451,34.034c0,2.032-1.578,3.61-3.611,3.61s-3.611-1.578-3.611-3.61
+      s1.578-3.611,3.611-3.611S39.451,32.002,39.451,34.034z M35.612,32.002c-1.13,0-1.806,0.902-1.806,1.805s0.902,1.806,1.806,1.806
+      c1.13,0,1.806-0.903,1.806-1.806S36.742,32.002,35.612,32.002z"/>
+    <rect x="6.938" y="13.03" display="none" width="20.322" height="15.581"/>
+    <path display="none" d="M17.999,33.58c0,2.032-1.578,3.61-3.611,3.61s-3.611-1.578-3.611-3.61
+      c0-2.033,1.579-3.611,3.611-3.611S17.999,31.547,17.999,33.58z M14.388,31.773c-1.13,0-1.806,0.903-1.806,1.807
+      c0,0.902,0.903,1.805,1.806,1.805s1.806-0.902,1.806-1.805C16.193,32.677,15.291,31.773,14.388,31.773z"/>
+    <path display="none" d="M28.384,34.255V19.356V17.55h8.358c0,0,6.32,0.455,6.32,6.32v8.579l-1.357,1.578h-0.903
+      c0,0,0.454-5.644-5.417-5.644c0,0-5.195-0.228-5.195,5.644h-1.806V34.255z M37.19,19.804c-2.708,0-4.065,0-4.065,0v3.384h5.645
+      h1.805C40.581,23.194,39.678,19.804,37.19,19.804z"/>
+    <path display="none" d="M6.938,29.969h3.611c0,0-1.806,1.805-1.578,4.293H6.938V29.969z"/>
+    <path display="none" d="M27.26,29.969h-9.034c0,0,1.806,1.805,1.578,4.293h7.45v-4.293H27.26z"/>
+    <path d="M10.976,22.635c1.119,0,2.025,0.907,2.025,2.026c0,1.119-0.906,2.025-2.025,2.025c-1.118,0-2.029-0.902-2.029-2.025
+      C8.946,23.542,9.857,22.635,10.976,22.635z M9.927,24.661c0,0.578,0.468,1.048,1.049,1.048c0.582,0,1.049-0.466,1.049-1.048
+      c0-0.578-0.468-1.05-1.049-1.05C10.395,23.611,9.927,24.083,9.927,24.661z"/>
+    <rect x="15.703" y="12.685" width="11.24" height="8.974"/>
+    <path d="M22.857,22.635c1.119,0,2.026,0.907,2.026,2.026c0,1.119-0.907,2.025-2.026,2.025c-1.118,0-2.026-0.906-2.026-2.025
+      C20.832,23.542,21.739,22.635,22.857,22.635z M21.808,24.661c0,0.577,0.467,1.048,1.049,1.048c0.577,0,1.05-0.468,1.05-1.048
+      c0-0.581-0.469-1.05-1.05-1.05C22.279,23.611,21.808,24.08,21.808,24.661z"/>
+    <path d="M13.956,24.813c0-3.235-2.863-3.155-2.863-3.155c-3.294,0-2.979,3.155-2.979,3.155H7.682l-0.738-0.936v-4.77
+      c0-3.254,3.469-3.565,3.469-3.565h4.6v0.995v8.28h-1.057V24.813z M8.318,18.658h0.955h3.155v-1.89c0,0-0.684,0-2.219,0
+      C8.727,16.771,8.318,18.658,8.318,18.658z"/>
+    <path d="M26.943,22.416h-1.959c0,0,1.032,1.005,0.853,2.409h1.106V22.416z"/>
+    <path d="M15.703,22.416h5.009c0,0-1.032,1.005-0.852,2.409h-4.157V22.416z"/>
+    </svg>
+    <span>Free Shipping!</span>
+  </div>
+</div>
+
+    
+    
+ </div>
+</div>
+
+
+
+
+
+<div class="col-sm-3 col-xs-6">
+  <div class="product">
+    <a class="product-link" href="/products/infraredthermometer" >
+      <div class="product-thumb">
+        <div class="product-thumb-inner" style="background-image:url(//onlinestore.wsimg.com/assets/noimage/product-5fec99477aebb10bac85d82665ec1497de4536cda3279e59089555c45cf589fa.png);">
+        </div>
+      </div>
+      <span class="product-title" href="/products/infraredthermometer">InfraredThermometer</span>
+    </a>
+    
+    <div class="product-price" data-on-sale="true"><span>$126.00</span><span>$84.00</span></div>
+    
+    
+      <div class="free-shipping">
+  <div class="ship-table">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="6.943 12.685 20 14" enable-background="new 6.943 12.685 20 14" xml:space="preserve">
+    <path display="none" d="M39.451,34.034c0,2.032-1.578,3.61-3.611,3.61s-3.611-1.578-3.611-3.61
+      s1.578-3.611,3.611-3.611S39.451,32.002,39.451,34.034z M35.612,32.002c-1.13,0-1.806,0.902-1.806,1.805s0.902,1.806,1.806,1.806
+      c1.13,0,1.806-0.903,1.806-1.806S36.742,32.002,35.612,32.002z"/>
+    <rect x="6.938" y="13.03" display="none" width="20.322" height="15.581"/>
+    <path display="none" d="M17.999,33.58c0,2.032-1.578,3.61-3.611,3.61s-3.611-1.578-3.611-3.61
+      c0-2.033,1.579-3.611,3.611-3.611S17.999,31.547,17.999,33.58z M14.388,31.773c-1.13,0-1.806,0.903-1.806,1.807
+      c0,0.902,0.903,1.805,1.806,1.805s1.806-0.902,1.806-1.805C16.193,32.677,15.291,31.773,14.388,31.773z"/>
+    <path display="none" d="M28.384,34.255V19.356V17.55h8.358c0,0,6.32,0.455,6.32,6.32v8.579l-1.357,1.578h-0.903
+      c0,0,0.454-5.644-5.417-5.644c0,0-5.195-0.228-5.195,5.644h-1.806V34.255z M37.19,19.804c-2.708,0-4.065,0-4.065,0v3.384h5.645
+      h1.805C40.581,23.194,39.678,19.804,37.19,19.804z"/>
+    <path display="none" d="M6.938,29.969h3.611c0,0-1.806,1.805-1.578,4.293H6.938V29.969z"/>
+    <path display="none" d="M27.26,29.969h-9.034c0,0,1.806,1.805,1.578,4.293h7.45v-4.293H27.26z"/>
+    <path d="M10.976,22.635c1.119,0,2.025,0.907,2.025,2.026c0,1.119-0.906,2.025-2.025,2.025c-1.118,0-2.029-0.902-2.029-2.025
+      C8.946,23.542,9.857,22.635,10.976,22.635z M9.927,24.661c0,0.578,0.468,1.048,1.049,1.048c0.582,0,1.049-0.466,1.049-1.048
+      c0-0.578-0.468-1.05-1.049-1.05C10.395,23.611,9.927,24.083,9.927,24.661z"/>
+    <rect x="15.703" y="12.685" width="11.24" height="8.974"/>
+    <path d="M22.857,22.635c1.119,0,2.026,0.907,2.026,2.026c0,1.119-0.907,2.025-2.026,2.025c-1.118,0-2.026-0.906-2.026-2.025
+      C20.832,23.542,21.739,22.635,22.857,22.635z M21.808,24.661c0,0.577,0.467,1.048,1.049,1.048c0.577,0,1.05-0.468,1.05-1.048
+      c0-0.581-0.469-1.05-1.05-1.05C22.279,23.611,21.808,24.08,21.808,24.661z"/>
+    <path d="M13.956,24.813c0-3.235-2.863-3.155-2.863-3.155c-3.294,0-2.979,3.155-2.979,3.155H7.682l-0.738-0.936v-4.77
+      c0-3.254,3.469-3.565,3.469-3.565h4.6v0.995v8.28h-1.057V24.813z M8.318,18.658h0.955h3.155v-1.89c0,0-0.684,0-2.219,0
+      C8.727,16.771,8.318,18.658,8.318,18.658z"/>
+    <path d="M26.943,22.416h-1.959c0,0,1.032,1.005,0.853,2.409h1.106V22.416z"/>
+    <path d="M15.703,22.416h5.009c0,0-1.032,1.005-0.852,2.409h-4.157V22.416z"/>
+    </svg>
+    <span>Free Shipping!</span>
+  </div>
+</div>
+
+    
+    
+ </div>
+</div>
+
+
+
+
+
+<div class="col-sm-3 col-xs-6">
+  <div class="product">
+    <a class="product-link" href="/products/medical-goggles" >
+      <div class="product-thumb">
+        <div class="product-thumb-inner" style="background-image:url(//onlinestore.wsimg.com/assets/noimage/product-5fec99477aebb10bac85d82665ec1497de4536cda3279e59089555c45cf589fa.png);">
+        </div>
+      </div>
+      <span class="product-title" href="/products/medical-goggles">Medical Goggles</span>
+    </a>
+    
+    <div class="product-price" data-on-sale="true"><span>$20.64</span><span>$13.76</span></div>
+    
+    
+      <div class="free-shipping">
+  <div class="ship-table">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="6.943 12.685 20 14" enable-background="new 6.943 12.685 20 14" xml:space="preserve">
+    <path display="none" d="M39.451,34.034c0,2.032-1.578,3.61-3.611,3.61s-3.611-1.578-3.611-3.61
+      s1.578-3.611,3.611-3.611S39.451,32.002,39.451,34.034z M35.612,32.002c-1.13,0-1.806,0.902-1.806,1.805s0.902,1.806,1.806,1.806
+      c1.13,0,1.806-0.903,1.806-1.806S36.742,32.002,35.612,32.002z"/>
+    <rect x="6.938" y="13.03" display="none" width="20.322" height="15.581"/>
+    <path display="none" d="M17.999,33.58c0,2.032-1.578,3.61-3.611,3.61s-3.611-1.578-3.611-3.61
+      c0-2.033,1.579-3.611,3.611-3.611S17.999,31.547,17.999,33.58z M14.388,31.773c-1.13,0-1.806,0.903-1.806,1.807
+      c0,0.902,0.903,1.805,1.806,1.805s1.806-0.902,1.806-1.805C16.193,32.677,15.291,31.773,14.388,31.773z"/>
+    <path display="none" d="M28.384,34.255V19.356V17.55h8.358c0,0,6.32,0.455,6.32,6.32v8.579l-1.357,1.578h-0.903
+      c0,0,0.454-5.644-5.417-5.644c0,0-5.195-0.228-5.195,5.644h-1.806V34.255z M37.19,19.804c-2.708,0-4.065,0-4.065,0v3.384h5.645
+      h1.805C40.581,23.194,39.678,19.804,37.19,19.804z"/>
+    <path display="none" d="M6.938,29.969h3.611c0,0-1.806,1.805-1.578,4.293H6.938V29.969z"/>
+    <path display="none" d="M27.26,29.969h-9.034c0,0,1.806,1.805,1.578,4.293h7.45v-4.293H27.26z"/>
+    <path d="M10.976,22.635c1.119,0,2.025,0.907,2.025,2.026c0,1.119-0.906,2.025-2.025,2.025c-1.118,0-2.029-0.902-2.029-2.025
+      C8.946,23.542,9.857,22.635,10.976,22.635z M9.927,24.661c0,0.578,0.468,1.048,1.049,1.048c0.582,0,1.049-0.466,1.049-1.048
+      c0-0.578-0.468-1.05-1.049-1.05C10.395,23.611,9.927,24.083,9.927,24.661z"/>
+    <rect x="15.703" y="12.685" width="11.24" height="8.974"/>
+    <path d="M22.857,22.635c1.119,0,2.026,0.907,2.026,2.026c0,1.119-0.907,2.025-2.026,2.025c-1.118,0-2.026-0.906-2.026-2.025
+      C20.832,23.542,21.739,22.635,22.857,22.635z M21.808,24.661c0,0.577,0.467,1.048,1.049,1.048c0.577,0,1.05-0.468,1.05-1.048
+      c0-0.581-0.469-1.05-1.05-1.05C22.279,23.611,21.808,24.08,21.808,24.661z"/>
+    <path d="M13.956,24.813c0-3.235-2.863-3.155-2.863-3.155c-3.294,0-2.979,3.155-2.979,3.155H7.682l-0.738-0.936v-4.77
+      c0-3.254,3.469-3.565,3.469-3.565h4.6v0.995v8.28h-1.057V24.813z M8.318,18.658h0.955h3.155v-1.89c0,0-0.684,0-2.219,0
+      C8.727,16.771,8.318,18.658,8.318,18.658z"/>
+    <path d="M26.943,22.416h-1.959c0,0,1.032,1.005,0.853,2.409h1.106V22.416z"/>
+    <path d="M15.703,22.416h5.009c0,0-1.032,1.005-0.852,2.409h-4.157V22.416z"/>
+    </svg>
+    <span>Free Shipping!</span>
+  </div>
+</div>
+
+    
+    
+ </div>
+</div>
+
+
+
+
+
+<div class="col-sm-3 col-xs-6">
+  <div class="product">
+    <a class="product-link" href="/products/disposable-medical-latex" >
+      <div class="product-thumb">
+        <div class="product-thumb-inner" style="background-image:url(//onlinestore.wsimg.com/assets/noimage/product-5fec99477aebb10bac85d82665ec1497de4536cda3279e59089555c45cf589fa.png);">
+        </div>
+      </div>
+      <span class="product-title" href="/products/disposable-medical-latex">disposable medical latex</span>
+    </a>
+    
+    <div class="product-price" data-on-sale="true"><span>$38.40</span><span>$25.60</span></div>
+    
+    
+      <div class="free-shipping">
+  <div class="ship-table">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="6.943 12.685 20 14" enable-background="new 6.943 12.685 20 14" xml:space="preserve">
+    <path display="none" d="M39.451,34.034c0,2.032-1.578,3.61-3.611,3.61s-3.611-1.578-3.611-3.61
+      s1.578-3.611,3.611-3.611S39.451,32.002,39.451,34.034z M35.612,32.002c-1.13,0-1.806,0.902-1.806,1.805s0.902,1.806,1.806,1.806
+      c1.13,0,1.806-0.903,1.806-1.806S36.742,32.002,35.612,32.002z"/>
+    <rect x="6.938" y="13.03" display="none" width="20.322" height="15.581"/>
+    <path display="none" d="M17.999,33.58c0,2.032-1.578,3.61-3.611,3.61s-3.611-1.578-3.611-3.61
+      c0-2.033,1.579-3.611,3.611-3.611S17.999,31.547,17.999,33.58z M14.388,31.773c-1.13,0-1.806,0.903-1.806,1.807
+      c0,0.902,0.903,1.805,1.806,1.805s1.806-0.902,1.806-1.805C16.193,32.677,15.291,31.773,14.388,31.773z"/>
+    <path display="none" d="M28.384,34.255V19.356V17.55h8.358c0,0,6.32,0.455,6.32,6.32v8.579l-1.357,1.578h-0.903
+      c0,0,0.454-5.644-5.417-5.644c0,0-5.195-0.228-5.195,5.644h-1.806V34.255z M37.19,19.804c-2.708,0-4.065,0-4.065,0v3.384h5.645
+      h1.805C40.581,23.194,39.678,19.804,37.19,19.804z"/>
+    <path display="none" d="M6.938,29.969h3.611c0,0-1.806,1.805-1.578,4.293H6.938V29.969z"/>
+    <path display="none" d="M27.26,29.969h-9.034c0,0,1.806,1.805,1.578,4.293h7.45v-4.293H27.26z"/>
+    <path d="M10.976,22.635c1.119,0,2.025,0.907,2.025,2.026c0,1.119-0.906,2.025-2.025,2.025c-1.118,0-2.029-0.902-2.029-2.025
+      C8.946,23.542,9.857,22.635,10.976,22.635z M9.927,24.661c0,0.578,0.468,1.048,1.049,1.048c0.582,0,1.049-0.466,1.049-1.048
+      c0-0.578-0.468-1.05-1.049-1.05C10.395,23.611,9.927,24.083,9.927,24.661z"/>
+    <rect x="15.703" y="12.685" width="11.24" height="8.974"/>
+    <path d="M22.857,22.635c1.119,0,2.026,0.907,2.026,2.026c0,1.119-0.907,2.025-2.026,2.025c-1.118,0-2.026-0.906-2.026-2.025
+      C20.832,23.542,21.739,22.635,22.857,22.635z M21.808,24.661c0,0.577,0.467,1.048,1.049,1.048c0.577,0,1.05-0.468,1.05-1.048
+      c0-0.581-0.469-1.05-1.05-1.05C22.279,23.611,21.808,24.08,21.808,24.661z"/>
+    <path d="M13.956,24.813c0-3.235-2.863-3.155-2.863-3.155c-3.294,0-2.979,3.155-2.979,3.155H7.682l-0.738-0.936v-4.77
+      c0-3.254,3.469-3.565,3.469-3.565h4.6v0.995v8.28h-1.057V24.813z M8.318,18.658h0.955h3.155v-1.89c0,0-0.684,0-2.219,0
+      C8.727,16.771,8.318,18.658,8.318,18.658z"/>
+    <path d="M26.943,22.416h-1.959c0,0,1.032,1.005,0.853,2.409h1.106V22.416z"/>
+    <path d="M15.703,22.416h5.009c0,0-1.032,1.005-0.852,2.409h-4.157V22.416z"/>
+    </svg>
+    <span>Free Shipping!</span>
+  </div>
+</div>
+
+    
+    
+ </div>
+</div>
+
+
+
+
+
+<div class="col-sm-3 col-xs-6">
+  <div class="product">
+    <a class="product-link" href="/products/disposable-medical-cap" >
+      <div class="product-thumb">
+        <div class="product-thumb-inner" style="background-image:url(//onlinestore.wsimg.com/assets/noimage/product-5fec99477aebb10bac85d82665ec1497de4536cda3279e59089555c45cf589fa.png);">
+        </div>
+      </div>
+      <span class="product-title" href="/products/disposable-medical-cap">Disposable Medical Cap</span>
+    </a>
+    
+    <div class="product-price" data-on-sale="true"><span>$0.84</span><span>$0.56</span></div>
+    
+    
+      <div class="free-shipping">
+  <div class="ship-table">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="6.943 12.685 20 14" enable-background="new 6.943 12.685 20 14" xml:space="preserve">
+    <path display="none" d="M39.451,34.034c0,2.032-1.578,3.61-3.611,3.61s-3.611-1.578-3.611-3.61
+      s1.578-3.611,3.611-3.611S39.451,32.002,39.451,34.034z M35.612,32.002c-1.13,0-1.806,0.902-1.806,1.805s0.902,1.806,1.806,1.806
+      c1.13,0,1.806-0.903,1.806-1.806S36.742,32.002,35.612,32.002z"/>
+    <rect x="6.938" y="13.03" display="none" width="20.322" height="15.581"/>
+    <path display="none" d="M17.999,33.58c0,2.032-1.578,3.61-3.611,3.61s-3.611-1.578-3.611-3.61
+      c0-2.033,1.579-3.611,3.611-3.611S17.999,31.547,17.999,33.58z M14.388,31.773c-1.13,0-1.806,0.903-1.806,1.807
+      c0,0.902,0.903,1.805,1.806,1.805s1.806-0.902,1.806-1.805C16.193,32.677,15.291,31.773,14.388,31.773z"/>
+    <path display="none" d="M28.384,34.255V19.356V17.55h8.358c0,0,6.32,0.455,6.32,6.32v8.579l-1.357,1.578h-0.903
+      c0,0,0.454-5.644-5.417-5.644c0,0-5.195-0.228-5.195,5.644h-1.806V34.255z M37.19,19.804c-2.708,0-4.065,0-4.065,0v3.384h5.645
+      h1.805C40.581,23.194,39.678,19.804,37.19,19.804z"/>
+    <path display="none" d="M6.938,29.969h3.611c0,0-1.806,1.805-1.578,4.293H6.938V29.969z"/>
+    <path display="none" d="M27.26,29.969h-9.034c0,0,1.806,1.805,1.578,4.293h7.45v-4.293H27.26z"/>
+    <path d="M10.976,22.635c1.119,0,2.025,0.907,2.025,2.026c0,1.119-0.906,2.025-2.025,2.025c-1.118,0-2.029-0.902-2.029-2.025
+      C8.946,23.542,9.857,22.635,10.976,22.635z M9.927,24.661c0,0.578,0.468,1.048,1.049,1.048c0.582,0,1.049-0.466,1.049-1.048
+      c0-0.578-0.468-1.05-1.049-1.05C10.395,23.611,9.927,24.083,9.927,24.661z"/>
+    <rect x="15.703" y="12.685" width="11.24" height="8.974"/>
+    <path d="M22.857,22.635c1.119,0,2.026,0.907,2.026,2.026c0,1.119-0.907,2.025-2.026,2.025c-1.118,0-2.026-0.906-2.026-2.025
+      C20.832,23.542,21.739,22.635,22.857,22.635z M21.808,24.661c0,0.577,0.467,1.048,1.049,1.048c0.577,0,1.05-0.468,1.05-1.048
+      c0-0.581-0.469-1.05-1.05-1.05C22.279,23.611,21.808,24.08,21.808,24.661z"/>
+    <path d="M13.956,24.813c0-3.235-2.863-3.155-2.863-3.155c-3.294,0-2.979,3.155-2.979,3.155H7.682l-0.738-0.936v-4.77
+      c0-3.254,3.469-3.565,3.469-3.565h4.6v0.995v8.28h-1.057V24.813z M8.318,18.658h0.955h3.155v-1.89c0,0-0.684,0-2.219,0
+      C8.727,16.771,8.318,18.658,8.318,18.658z"/>
+    <path d="M26.943,22.416h-1.959c0,0,1.032,1.005,0.853,2.409h1.106V22.416z"/>
+    <path d="M15.703,22.416h5.009c0,0-1.032,1.005-0.852,2.409h-4.157V22.416z"/>
+    </svg>
+    <span>Free Shipping!</span>
+  </div>
+</div>
+
+    
+    
+ </div>
+</div>
+
+
+
+
+
+<div class="col-sm-3 col-xs-6">
+  <div class="product">
+    <a class="product-link" href="/products/medical-alcohol-75" >
+      <div class="product-thumb">
+        <div class="product-thumb-inner" style="background-image:url(//onlinestore.wsimg.com/assets/noimage/product-5fec99477aebb10bac85d82665ec1497de4536cda3279e59089555c45cf589fa.png);">
+        </div>
+      </div>
+      <span class="product-title" href="/products/medical-alcohol-75">Medical alcohol 75%</span>
+    </a>
+    
+    <div class="product-price" data-on-sale="true"><span>$7.95</span><span>$5.30</span></div>
+    
+    
+      <div class="free-shipping">
+  <div class="ship-table">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="6.943 12.685 20 14" enable-background="new 6.943 12.685 20 14" xml:space="preserve">
+    <path display="none" d="M39.451,34.034c0,2.032-1.578,3.61-3.611,3.61s-3.611-1.578-3.611-3.61
+      s1.578-3.611,3.611-3.611S39.451,32.002,39.451,34.034z M35.612,32.002c-1.13,0-1.806,0.902-1.806,1.805s0.902,1.806,1.806,1.806
+      c1.13,0,1.806-0.903,1.806-1.806S36.742,32.002,35.612,32.002z"/>
+    <rect x="6.938" y="13.03" display="none" width="20.322" height="15.581"/>
+    <path display="none" d="M17.999,33.58c0,2.032-1.578,3.61-3.611,3.61s-3.611-1.578-3.611-3.61
+      c0-2.033,1.579-3.611,3.611-3.611S17.999,31.547,17.999,33.58z M14.388,31.773c-1.13,0-1.806,0.903-1.806,1.807
+      c0,0.902,0.903,1.805,1.806,1.805s1.806-0.902,1.806-1.805C16.193,32.677,15.291,31.773,14.388,31.773z"/>
+    <path display="none" d="M28.384,34.255V19.356V17.55h8.358c0,0,6.32,0.455,6.32,6.32v8.579l-1.357,1.578h-0.903
+      c0,0,0.454-5.644-5.417-5.644c0,0-5.195-0.228-5.195,5.644h-1.806V34.255z M37.19,19.804c-2.708,0-4.065,0-4.065,0v3.384h5.645
+      h1.805C40.581,23.194,39.678,19.804,37.19,19.804z"/>
+    <path display="none" d="M6.938,29.969h3.611c0,0-1.806,1.805-1.578,4.293H6.938V29.969z"/>
+    <path display="none" d="M27.26,29.969h-9.034c0,0,1.806,1.805,1.578,4.293h7.45v-4.293H27.26z"/>
+    <path d="M10.976,22.635c1.119,0,2.025,0.907,2.025,2.026c0,1.119-0.906,2.025-2.025,2.025c-1.118,0-2.029-0.902-2.029-2.025
+      C8.946,23.542,9.857,22.635,10.976,22.635z M9.927,24.661c0,0.578,0.468,1.048,1.049,1.048c0.582,0,1.049-0.466,1.049-1.048
+      c0-0.578-0.468-1.05-1.049-1.05C10.395,23.611,9.927,24.083,9.927,24.661z"/>
+    <rect x="15.703" y="12.685" width="11.24" height="8.974"/>
+    <path d="M22.857,22.635c1.119,0,2.026,0.907,2.026,2.026c0,1.119-0.907,2.025-2.026,2.025c-1.118,0-2.026-0.906-2.026-2.025
+      C20.832,23.542,21.739,22.635,22.857,22.635z M21.808,24.661c0,0.577,0.467,1.048,1.049,1.048c0.577,0,1.05-0.468,1.05-1.048
+      c0-0.581-0.469-1.05-1.05-1.05C22.279,23.611,21.808,24.08,21.808,24.661z"/>
+    <path d="M13.956,24.813c0-3.235-2.863-3.155-2.863-3.155c-3.294,0-2.979,3.155-2.979,3.155H7.682l-0.738-0.936v-4.77
+      c0-3.254,3.469-3.565,3.469-3.565h4.6v0.995v8.28h-1.057V24.813z M8.318,18.658h0.955h3.155v-1.89c0,0-0.684,0-2.219,0
+      C8.727,16.771,8.318,18.658,8.318,18.658z"/>
+    <path d="M26.943,22.416h-1.959c0,0,1.032,1.005,0.853,2.409h1.106V22.416z"/>
+    <path d="M15.703,22.416h5.009c0,0-1.032,1.005-0.852,2.409h-4.157V22.416z"/>
+    </svg>
+    <span>Free Shipping!</span>
+  </div>
+</div>
+
+    
+    
+ </div>
+</div>
+
+
+
+
+
+<div class="col-sm-3 col-xs-6">
+  <div class="product">
+    <a class="product-link" href="/products/infrared-temperature-gate" >
+      <div class="product-thumb">
+        <div class="product-thumb-inner" style="background-image:url(//onlinestore.wsimg.com/assets/noimage/product-5fec99477aebb10bac85d82665ec1497de4536cda3279e59089555c45cf589fa.png);">
+        </div>
+      </div>
+      <span class="product-title" href="/products/infrared-temperature-gate">Infrared temperature gate</span>
+    </a>
+    
+    <div class="product-price" data-on-sale="true"><span>$5,910.00</span><span>$3,940.00</span></div>
+    
+    
+      <div class="free-shipping">
+  <div class="ship-table">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="6.943 12.685 20 14" enable-background="new 6.943 12.685 20 14" xml:space="preserve">
+    <path display="none" d="M39.451,34.034c0,2.032-1.578,3.61-3.611,3.61s-3.611-1.578-3.611-3.61
+      s1.578-3.611,3.611-3.611S39.451,32.002,39.451,34.034z M35.612,32.002c-1.13,0-1.806,0.902-1.806,1.805s0.902,1.806,1.806,1.806
+      c1.13,0,1.806-0.903,1.806-1.806S36.742,32.002,35.612,32.002z"/>
+    <rect x="6.938" y="13.03" display="none" width="20.322" height="15.581"/>
+    <path display="none" d="M17.999,33.58c0,2.032-1.578,3.61-3.611,3.61s-3.611-1.578-3.611-3.61
+      c0-2.033,1.579-3.611,3.611-3.611S17.999,31.547,17.999,33.58z M14.388,31.773c-1.13,0-1.806,0.903-1.806,1.807
+      c0,0.902,0.903,1.805,1.806,1.805s1.806-0.902,1.806-1.805C16.193,32.677,15.291,31.773,14.388,31.773z"/>
+    <path display="none" d="M28.384,34.255V19.356V17.55h8.358c0,0,6.32,0.455,6.32,6.32v8.579l-1.357,1.578h-0.903
+      c0,0,0.454-5.644-5.417-5.644c0,0-5.195-0.228-5.195,5.644h-1.806V34.255z M37.19,19.804c-2.708,0-4.065,0-4.065,0v3.384h5.645
+      h1.805C40.581,23.194,39.678,19.804,37.19,19.804z"/>
+    <path display="none" d="M6.938,29.969h3.611c0,0-1.806,1.805-1.578,4.293H6.938V29.969z"/>
+    <path display="none" d="M27.26,29.969h-9.034c0,0,1.806,1.805,1.578,4.293h7.45v-4.293H27.26z"/>
+    <path d="M10.976,22.635c1.119,0,2.025,0.907,2.025,2.026c0,1.119-0.906,2.025-2.025,2.025c-1.118,0-2.029-0.902-2.029-2.025
+      C8.946,23.542,9.857,22.635,10.976,22.635z M9.927,24.661c0,0.578,0.468,1.048,1.049,1.048c0.582,0,1.049-0.466,1.049-1.048
+      c0-0.578-0.468-1.05-1.049-1.05C10.395,23.611,9.927,24.083,9.927,24.661z"/>
+    <rect x="15.703" y="12.685" width="11.24" height="8.974"/>
+    <path d="M22.857,22.635c1.119,0,2.026,0.907,2.026,2.026c0,1.119-0.907,2.025-2.026,2.025c-1.118,0-2.026-0.906-2.026-2.025
+      C20.832,23.542,21.739,22.635,22.857,22.635z M21.808,24.661c0,0.577,0.467,1.048,1.049,1.048c0.577,0,1.05-0.468,1.05-1.048
+      c0-0.581-0.469-1.05-1.05-1.05C22.279,23.611,21.808,24.08,21.808,24.661z"/>
+    <path d="M13.956,24.813c0-3.235-2.863-3.155-2.863-3.155c-3.294,0-2.979,3.155-2.979,3.155H7.682l-0.738-0.936v-4.77
+      c0-3.254,3.469-3.565,3.469-3.565h4.6v0.995v8.28h-1.057V24.813z M8.318,18.658h0.955h3.155v-1.89c0,0-0.684,0-2.219,0
+      C8.727,16.771,8.318,18.658,8.318,18.658z"/>
+    <path d="M26.943,22.416h-1.959c0,0,1.032,1.005,0.853,2.409h1.106V22.416z"/>
+    <path d="M15.703,22.416h5.009c0,0-1.032,1.005-0.852,2.409h-4.157V22.416z"/>
+    </svg>
+    <span>Free Shipping!</span>
+  </div>
+</div>
+
+    
+    
+ </div>
+</div>
+
+
+
+
+
+<div class="col-sm-3 col-xs-6">
+  <div class="product">
+    <a class="product-link" href="/products/medical-ventilator" >
+      <div class="product-thumb">
+        <div class="product-thumb-inner" style="background-image:url(//onlinestore.wsimg.com/assets/noimage/product-5fec99477aebb10bac85d82665ec1497de4536cda3279e59089555c45cf589fa.png);">
+        </div>
+      </div>
+      <span class="product-title" href="/products/medical-ventilator">Medical ventilator</span>
+    </a>
+    
+    <div class="product-price" data-on-sale="true"><span>$8,100.00</span><span>$5,400.00</span></div>
+    
+    
+      <div class="free-shipping">
+  <div class="ship-table">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="6.943 12.685 20 14" enable-background="new 6.943 12.685 20 14" xml:space="preserve">
+    <path display="none" d="M39.451,34.034c0,2.032-1.578,3.61-3.611,3.61s-3.611-1.578-3.611-3.61
+      s1.578-3.611,3.611-3.611S39.451,32.002,39.451,34.034z M35.612,32.002c-1.13,0-1.806,0.902-1.806,1.805s0.902,1.806,1.806,1.806
+      c1.13,0,1.806-0.903,1.806-1.806S36.742,32.002,35.612,32.002z"/>
+    <rect x="6.938" y="13.03" display="none" width="20.322" height="15.581"/>
+    <path display="none" d="M17.999,33.58c0,2.032-1.578,3.61-3.611,3.61s-3.611-1.578-3.611-3.61
+      c0-2.033,1.579-3.611,3.611-3.611S17.999,31.547,17.999,33.58z M14.388,31.773c-1.13,0-1.806,0.903-1.806,1.807
+      c0,0.902,0.903,1.805,1.806,1.805s1.806-0.902,1.806-1.805C16.193,32.677,15.291,31.773,14.388,31.773z"/>
+    <path display="none" d="M28.384,34.255V19.356V17.55h8.358c0,0,6.32,0.455,6.32,6.32v8.579l-1.357,1.578h-0.903
+      c0,0,0.454-5.644-5.417-5.644c0,0-5.195-0.228-5.195,5.644h-1.806V34.255z M37.19,19.804c-2.708,0-4.065,0-4.065,0v3.384h5.645
+      h1.805C40.581,23.194,39.678,19.804,37.19,19.804z"/>
+    <path display="none" d="M6.938,29.969h3.611c0,0-1.806,1.805-1.578,4.293H6.938V29.969z"/>
+    <path display="none" d="M27.26,29.969h-9.034c0,0,1.806,1.805,1.578,4.293h7.45v-4.293H27.26z"/>
+    <path d="M10.976,22.635c1.119,0,2.025,0.907,2.025,2.026c0,1.119-0.906,2.025-2.025,2.025c-1.118,0-2.029-0.902-2.029-2.025
+      C8.946,23.542,9.857,22.635,10.976,22.635z M9.927,24.661c0,0.578,0.468,1.048,1.049,1.048c0.582,0,1.049-0.466,1.049-1.048
+      c0-0.578-0.468-1.05-1.049-1.05C10.395,23.611,9.927,24.083,9.927,24.661z"/>
+    <rect x="15.703" y="12.685" width="11.24" height="8.974"/>
+    <path d="M22.857,22.635c1.119,0,2.026,0.907,2.026,2.026c0,1.119-0.907,2.025-2.026,2.025c-1.118,0-2.026-0.906-2.026-2.025
+      C20.832,23.542,21.739,22.635,22.857,22.635z M21.808,24.661c0,0.577,0.467,1.048,1.049,1.048c0.577,0,1.05-0.468,1.05-1.048
+      c0-0.581-0.469-1.05-1.05-1.05C22.279,23.611,21.808,24.08,21.808,24.661z"/>
+    <path d="M13.956,24.813c0-3.235-2.863-3.155-2.863-3.155c-3.294,0-2.979,3.155-2.979,3.155H7.682l-0.738-0.936v-4.77
+      c0-3.254,3.469-3.565,3.469-3.565h4.6v0.995v8.28h-1.057V24.813z M8.318,18.658h0.955h3.155v-1.89c0,0-0.684,0-2.219,0
+      C8.727,16.771,8.318,18.658,8.318,18.658z"/>
+    <path d="M26.943,22.416h-1.959c0,0,1.032,1.005,0.853,2.409h1.106V22.416z"/>
+    <path d="M15.703,22.416h5.009c0,0-1.032,1.005-0.852,2.409h-4.157V22.416z"/>
+    </svg>
+    <span>Free Shipping!</span>
+  </div>
+</div>
+
+    
+    
+ </div>
+</div>
+
+
+
+
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+        <ul class="nav" id="footer-nav">
+	
+	<li class="active"><a  href="/">Home</a></li>
+	
+	<li class=""><a  href="/products">Shop</a></li>
+	
+	<li class=""><a  href="/about">Our Story</a></li>
+	
+	<li class=""><a  href="/terms">Terms</a></li>
+	
+	<li class=""><a  href="/contact">Contact Us</a></li>
+	
+</ul>
+
+        </div>
+
+        <div class="col-sm-6 payment-logos" id="payment-logos">
+  
+    
+    <img class="payment-logo paypal_express " src="//onlinestore.wsimg.com/assets/themes/__master/assets/images/paypal-fa7e005dd4c24ec8b1187849b1aa37824d8e5a744ce73c72145c3471e549acfa.png" alt="PayPal" />
+    
+  
+</div>
+
+
+      </div>
+      <div class="row footer-extra">
+        <div class="col-sm-12">
+        <div class="connect">
+          
+          
+        </div>
+
+          <div id="copyright">Copyright &copy; 2020 Covid-19 Shops
+   - <a href='https://www.godaddy.com/ecommerce/online-store.aspx' class='powered-by-link' target='_blank'>Powered by GoDaddy Online Store</a>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="//onlinestore.wsimg.com/assets/themes/006/V1/assets/javascripts/jquery.min-ecbbc9517c3b45f88b889d98c6ad167995ed49522b7f2cf323e1b32700f236f0.js"></script>
+<script type="text/javascript" src="//onlinestore.wsimg.com/assets/themes/006/V1/assets/javascripts/bootstrap.min-a2f520692df7d377f513dfb135239e9be3dbb5b6613c4c603beb5665fe44a4e7.js"></script>
+<script type="text/javascript" src="//onlinestore.wsimg.com/assets/themes/__master/assets/javascripts/lib/jquery.bxslider.min-ff876bc21a7ce03a7320d5cc39e259a5723e82c7731e6349787b0c5dcec956b2.js"></script>
+<script type="text/javascript" src="//onlinestore.wsimg.com/assets/themes/006/V1/assets/javascripts/theme-a913afa1e070f1bcc8bd10b8238b43f2daf4c9170075b2f791c5ed790f073331.js"></script>
+<script type="text/javascript" src="//onlinestore.wsimg.com/assets/themes/__master/assets/javascripts/nemo-894c9cd4454700922d8f386355d6f97889b4bdbb9fce7c16cc2c91b37910f716.js"></script>
+<script type="text/javascript" src="//onlinestore.wsimg.com/assets/themes/__master/assets/javascripts/lib/email_widget-3fea23d6f7b44abec2f7caee63265280899b05245f4f19a46ab170b4637ad3fa.js"></script>
+
+
+
+
+
+
+<script>
+jQuery(function($) {
+  $(window).load( function() {
+    $('#slider-ph').hide();
+    $('.bxslider').show().bxSlider({
+      auto: true,
+      speed: 800,
+      pause: 3000,
+      mode: 'fade',
+      controls: true,
+      nextText: '',
+      prevText: '',
+      useCSS: true
+      
+      
+    });
+    
+    $('.bx-prev').detach().prependTo('.prev-wrapper');
+    $('.bx-next').detach().prependTo('.next-wrapper');
+    
+  });
+});
+</script>
+
+
+<script>
+window.CART_COUNT_ONE = window.CART_COUNT_ONE || "Cart&nbsp;(1)";
+window.CART_COUNT_OTHER = window.CART_COUNT_OTHER || "Cart&nbsp;(%count%)";
+
+jQuery(function($) {
+  $(window).load( function() {
+    $.get(Nemo.getURL('cart_count'), function (data) {
+      var quantity = data.total_quantity || 0
+      if ($("#cart-count").length) {
+        var countString = window.CART_COUNT_OTHER.replace('%count%', quantity);
+        if (quantity === 1 && window.CART_COUNT_ONE) {
+          countString = window.CART_COUNT_ONE;
+        }
+        $("#cart-count").html(countString);
+      }
+      if (quantity > 0) {
+        if ($("#checkout-link")) {
+          $("#checkout-link").show();
+        }
+        if ($("#cart-display")) {
+          $("#cart-display").show();
+        }
+      }
+    });
+  });
+});
+</script>
+
+<script type="text/javascript">
+  window.sfEventMap = {
+    // START checkout events
+
+    // Any page
+    'checkout_click_cart': ['nemo-storefront-checkout', 'click-cart'],
+    'checkout_click_checkout': ['nemo-storefront-checkout', 'click-checkout'],
+
+    // Any checkout page
+    'checkout_click_edit_cart': ['nemo-storefront-checkout', 'click-edit-cart'],
+    'checkout_click_progress_address': ['nemo-storefront-checkout', 'click-progress-address'],
+    'checkout_click_progress_payment': ['nemo-storefront-checkout', 'click-progress-payment'],
+    'checkout_receive_error': ['nemo-storefront-checkout', 'receive-error'],
+
+    // Cart page
+    'checkout_cart_click_checkout': ['nemo-storefront-checkout-cart', 'click-checkout'],
+    'checkout_cart_click_update': ['nemo-storefront-checkout-cart', 'click-update'],
+    'checkout_cart_click_keep_shopping': ['nemo-storefront-checkout-cart', 'click-keep-shopping'],
+
+    // Address page
+    'checkout_address_click_shipping_checkbox': ['nemo-storefront-checkout-address', 'click-shipping-address-is-same-as-billing-checkbox'],
+    'checkout_address_click_continue': ['nemo-storefront-checkout-address', 'click-continue'],
+    'checkout_address_click_return_to_store': ['nemo-storefront-checkout-address', 'click-return-to-store'],
+    'checkout_address_click_paypal_redirect_button': ['nemo-storefront-checkout-address', 'click-paypal-redirect-button'],
+
+    // Payment page
+    'checkout_payment_click_edit_shipping_address': ['nemo-storefront-checkout-payment', 'click-edit-shipping-address'],
+    'checkout_payment_click_edit_billing_address': ['nemo-storefront-checkout-payment', 'click-edit-billing-address'],
+    'checkout_payment_click_payment_method_radio_option': ['nemo-storefront-checkout-payment', 'click-payment-method-radio-option'],
+    'checkout_payment_click_place_order': ['nemo-storefront-checkout-payment', 'click-place-order'],
+    'checkout_payment_click_check_out_with_paypal_button': ['nemo-storefront-checkout-payment', 'click-check-out-with-paypal-button'],
+    'checkout_payment_click_check_out_with_mercado_pago_button': ['nemo-storefront-checkout-payment', 'click-check-out-with-mercado-pago-button'],
+    'checkout_payment_click_finalize_paypal_redirect_button': ['nemo-storefront-checkout-payment', 'click-finalize-paypal-redirect-button'],
+    'checkout_payment_click_apply_coupon': ['nemo-storefront-checkout-payment', 'click-apply-coupon'],
+    'checkout_payment_receive_stripe_error': ['nemo-storefront-checkout-payment', 'receive-stripe-error'],
+
+    // Confirm page
+    'checkout_confirm_click_return_to_store': ['nemo-storefront-checkout-confirm', 'click-return-to-store'],
+    'checkout_confirm_click_contact_us': ['nemo-storefront-checkout-confirm', 'click-contact-us']
+
+    // END checkout events
+  };
+
+  // Make the object immutable
+  Object.freeze(window.sfEventMap);
+</script>
+
+
+<script type="text/javascript">
+  window.VISIBILITY_ANIMATION_SPEED = 300;
+  // Add GA to global cart icon and checkout link with JS since both are in unique files for every theme (i.e. due to laziness).
+  // However, theme 010 has a different header structure, so the data-ga label for the checkout link was added onto the element in the liquid file.
+  var $cartIcon = $('a#cart-info[href="/cart"]');
+  var $cartIconWrapper;
+
+  if ($cartIcon && $cartIcon.length) {
+    $cartIcon.attr('data-ga', 'checkout_click_cart');
+  } else {
+    $cartIconWrapper = $('#cart-info');
+    $cartIconWrapper.find('a[href="/cart"]').attr('data-ga', 'checkout_click_cart');
+    $cartIconWrapper.find('a[href="/checkout"]').attr('data-ga', 'checkout_click_checkout');
+  }
+
+  // START Google Analytics
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  // Create GA tracker for Nemo Product Manager to track the storefront
+  ga('create', 'UA-85190973-1', 'auto', 'nemoPmTracker');
+
+  
+
+  window.trackEvent = function (eventKey, label) {
+    if (typeof window.sfEventMap !== 'undefined') {
+      var eventValue = window.sfEventMap[eventKey];
+
+      if (!eventValue) {
+        return;
+      }
+
+      ga('nemoPmTracker.send', {
+        hitType: 'event',
+        eventCategory: eventValue[0],
+        eventAction: eventValue[1],
+        eventLabel: label
+      });
+    }
+  };
+
+  window.trackPageview = function (pagePath) {
+    if (!pagePath) {
+      return;
+    }
+
+    ga('nemoPmTracker.send', {
+      hitType: 'pageview',
+      page: pagePath
+    });
+  };
+  // END Google Analytics
+
+    if ($) {
+      // Listener for GA
+      $(document).ready(function () {
+        $(document).on('click', '[data-ga], [data-ga][data-ga-label]', function () {
+          var key = $(this).attr('data-ga');
+          var label = $(this).attr('data-ga-label');
+          window.trackEvent(key, label);
+        });
+      });
+
+      // GA: Track pageview for checkout pages and order confirmation page
+      
+
+      // GA: Track error event in checkout
+      
+
+      $.ajaxSetup({
+          headers: {
+              'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+          }
+      });
+
+
+      
+
+      // Cart remove logic
+      $(document).on('click', '.cart-remove', function () {
+          var $form = $(this).closest('form'),
+              $quantity = $(this).closest('tr').find('.cart-quantity');
+
+          $('.cart-remove').addClass('cart-remove-disable')
+          $form.find('button').attr('disabled', 'disabled');
+          $quantity.val(0);
+          $form.submit();
+      });
+
+      // Attach a submit handler to the contact form
+      $(document).on('submit', '#contact-form', function (event) {
+          //Stop normal form submision
+          event.preventDefault();
+          var formData =  $('#contact-form').serialize();
+
+          Nemo.submitFormData({
+              data: formData,
+              method: "POST",
+              always: function (res) {
+                  if (res) {
+                      $('#contact-form-box').replaceWith(res);
+                  }
+              }
+          });
+
+          return false;
+      });
+    }
+</script>
+
+
+
+<script type="text/javascript" src="//onlinestore.wsimg.com/assets/themes/__master/assets/javascripts/lib/jquery.cookie-e9703d26744209e6a8c89c89a2b129f1c860fd708a1d958f6a6056c79b82ccb3.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <script>
+              "undefined"==typeof _trfd&&(window._trfd=[]),
+              _trfd.push({"tccl.baseHost":"secureserver.net"});
+              _trfd.push({"ap":"OLS"});
+              
+            </script>
+            <script src="//img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js">
+            </script>
+
+
+</body>
+</html>

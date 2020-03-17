@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- favicon -->
+    <link rel='icon' type='image/png' href='favicon.png'>
+
+    <title>Coronavirus Switzerland</title>
+    <meta name="description" content="Prediction for the Coronavirus outbreak in Switzerland.">
+    <meta property="og:site_name" content="Coronavirus Switzerland" />
+    <meta property="og:title" content="Coronavirus Switzerland" />
+    <meta property="og:description" content="Prediction for the Coronavirus outbreak in Switzerland." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://coronavirus.ddns.info/" />
+    <meta property="og:image" itemprop="image" content="https://coronavirus.ddns.info/favicon.png" />
+    <meta property="og:image:secure_url" itemprop="image" content="https://coronavirus.ddns.info/favicon.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="256" />
+    <meta property="og:image:height" content="256" />
+
+    <style>
+      body {
+        margin-top: 20px;
+        margin-bottom: 50px;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      img {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <h1>Coronavirus Epidemic Switzerland</h1>
+        <p>The following graph shows the predicted development of the COVID-19 (Coronavirus) outbreak in Switzerland based on the confirmed number of infections so far (source: <a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6" target="_blank">Johns Hopkins University</a>).</p>
+        
+        <p>The predictions are made by a logistic model, which usually predicts the infection rate of epidemics quite well (check out this <a href="https://youtu.be/Kas0tIxDvrg" target="_blank">video</a> for an explanation). The source code for the model was taken from <a href="https://towardsdatascience.com/covid-19-infection-in-italy-mathematical-models-and-predictions-7784b4d7dd8d" target="_blank">Gianluca Malato</a> and adapted for Switzerland by <a href="https://chris.works" target="_blank">me</a>.</p>
+        
+        <p>The graph updates automatically as soon as new data becomes available.</p>
+
+        <img width="100%" src="plot.png">
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

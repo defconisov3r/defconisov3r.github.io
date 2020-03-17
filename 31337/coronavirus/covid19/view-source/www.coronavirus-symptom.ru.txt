@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Тест на COVID19</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="modal" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body lead">
+                    <pre>Modal body text goes here.</pre>
+                </div>
+                <br>
+                <div>
+                    <p class="small text-center">Тест не гарантирует правильность результата</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-target="#collapseThree" data-toggle="collapse in" onclick="topFunction()">Посмотреть таблицу симптомов</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand col" href="#">Пройди тест на COVID19 (Коронавирус)</a>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="py-5 text-center">
+            <h1>Проверь если у тебя есть симптомы коронавируса, простуды или гриппа</h1>
+
+            <p class="lead">Отметь все свои симптомы снизу.</p>
+
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                            aria-expanded="false" aria-controls="collapseThree">
+                            Посмотреть таблицу симптомов
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
+                    <div class="card-body">
+                        <h2>Таблица симптомов Коронавируса по частоте ощущений</h2>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Ощущение / Симптом</th>
+                                    <th scope="col">Коронавирус</th>
+                                    <th scope="col">Простуда</th>
+                                    <th scope="col">Грип</th>
+                                    <th scope="col">Аллергия</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Температура</th>
+                                    <td>Часто</td>
+                                    <td>Редко</td>
+                                    <td>Часто</td>
+                                    <td>Иногда</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Сухой кашель</th>
+                                    <td>Частый и сильный</td>
+                                    <td>Умеренный</td>
+                                    <td>Частый</td>
+                                    <td>Иногда</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Затрудненное дыхание</th>
+                                    <td>Часто</td>
+                                    <td>Нет</td>
+                                    <td>Нет</td>
+                                    <td>Иногда</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Головная боль</th>
+                                    <td>Иногда</td>
+                                    <td>Редко</td>
+                                    <td>Часто</td>
+                                    <td>Иногда</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Болит тело</th>
+                                    <td>Иногда</td>
+                                    <td>Часто</td>
+                                    <td>Часто</td>
+                                    <td>Нет</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Болит горло</th>
+                                    <td>Иногда</td>
+                                    <td>Часто</td>
+                                    <td>Часто</td>
+                                    <td>Нет</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Усталость</th>
+                                    <td>Иногда</td>
+                                    <td>Иногда</td>
+                                    <td>Часто</td>
+                                    <td>Иногда</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Диарея</th>
+                                    <td>Редко</td>
+                                    <td>Нет</td>
+                                    <td>Иногда (у детей)</td>
+                                    <td>Нет</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Заложеность носа</th>
+                                    <td>Редко</td>
+                                    <td>Часто</td>
+                                    <td>Иногда</td>
+                                    <td>Часто</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Чиханье</th>
+                                    <td>Нет</td>
+                                    <td>Часто</td>
+                                    <td>Нет</td>
+                                    <td>Часто</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="control-label col" for="temperature">Температура</label>
+            <div class="col">
+                <select class="form-control" id="temperature">
+                    <option selected="selected" value="0">Нет</option>
+                    <option value="1">Да, слабая</option>
+                    <option value="2">Да, сильная</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col" for="fatigue">Усталость</label>
+            <div class="col">
+                <select class="form-control" id="fatigue">
+                    <option selected="selected" value="0">Нет</option>
+                    <option value="1">Да, легкая</option>
+                    <option value="2">Да, сильная</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col" for="cough">Сухой кашель</label>
+            <div class="col">
+                <select class="form-control" id="cough">
+                    <option selected="selected" value="0">Нет</option>
+                    <option value="1">Да, слабый</option>
+                    <option value="2">Да, сильный</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col" for="sneezing">Чиханье</label>
+            <div class="col">
+                <select class="form-control" id="sneezing">
+                    <option selected="selected" value="0">Нет</option>
+                    <option value="1">Да, слабое</option>
+                    <option value="2">Да, сильное</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col" for="nose">Заложеность носа</label>
+            <div class="col">
+                <select class="form-control" id="nose">
+                    <option selected="selected" value="0">Нет</option>
+                    <option value="1">Да, слабая</option>
+                    <option value="2">Да, сильная</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col" for="headaches">Головная боль</label>
+            <div class="col">
+                <select class="form-control" id="headaches">
+                    <option selected="selected" value="0">Нет</option>
+                    <option value="1">Да, слабая</option>
+                    <option value="2">Да, сильная</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col" for="throat">Боль в горле</label>
+            <div class="col">
+                <select class="form-control" id="throat">
+                    <option selected="selected" value="0">Нет</option>
+                    <option value="1">Да, слабая</option>
+                    <option value="2">Да, сильная</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col" for="body">Болит тело</label>
+            <div class="col">
+                <select class="form-control" id="body">
+                    <option selected="selected" value="0">Нет</option>
+                    <option value="1">Да, слегка</option>
+                    <option value="2">Да, сильно</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col" for="diarrhea">Диарея</label>
+            <div class="col">
+                <select class="form-control" id="diarrhea">
+                    <option selected="selected" value="0">Нет</option>
+                    <option value="1">Да, слабая</option>
+                    <option value="2">Да, сильная</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col" for="breath">Затруднено дыхание</label>
+            <div class="col">
+                <select class="form-control" id="breath">
+                    <option selected="selected" value="0">Нет</option>
+                    <option value="1">Да</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-offset-1 col my-4 text-center">
+            <button class="btn btn-primary" id="checkBtn">Получить результат</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/check-symptoms.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9084683476457614",
+    enable_page_level_ads: true
+  });
+</script>
+<script data-ad-client="ca-pub-9084683476457614" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</body>
+
+</html>

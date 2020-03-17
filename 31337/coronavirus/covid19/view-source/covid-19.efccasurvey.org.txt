@@ -1,0 +1,954 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="it" dir="ltr" class="it dir-ltr  no-js " >
+
+        
+
+
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="LimeSurvey http://www.limesurvey.org" />
+
+        
+
+    <link rel="stylesheet" type="text/css" href="/tmp/assets/2a0d3a01/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/tmp/assets/dc562969/survey.css" />
+<link rel="stylesheet" type="text/css" href="/tmp/assets/8bdccd83/build/embeddables.min.css" />
+<link rel="stylesheet" type="text/css" href="/tmp/assets/7ad7307f/spectrum.css" />
+<link rel="stylesheet" type="text/css" href="/tmp/assets/7ad7307f/template-core.css" />
+<link rel="stylesheet" type="text/css" href="/tmp/assets/7ad7307f/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" />
+<link rel="stylesheet" type="text/css" href="/tmp/assets/a2c661f2/noto.css" />
+<link rel="stylesheet" type="text/css" href="/tmp/assets/9d97831c/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/tmp/assets/9d97831c/yiistrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/tmp/assets/2d3b32bb/css/ajaxify.css" />
+<link rel="stylesheet" type="text/css" href="/tmp/assets/2d3b32bb/./css/noTablesOnMobile.css" />
+<link rel="stylesheet" type="text/css" href="/tmp/assets/2d3b32bb/./css/survey-list.css" />
+<link rel="stylesheet" type="text/css" href="/tmp/assets/15b4e698/css/animate.css" />
+<link rel="stylesheet" type="text/css" href="/tmp/assets/15b4e698/css/variations/sea_green.css" />
+<link rel="stylesheet" type="text/css" href="/tmp/assets/15b4e698/css/theme.css" />
+<link rel="stylesheet" type="text/css" href="/tmp/assets/15f3e6e5/css/custom.css" />
+<script type='text/javascript'>window.debugState = {frontend : (0 === 1), backend : (0 === 1)};</script><script type="text/javascript" src="/tmp/assets/71230f73/jquery-3.4.1.min.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/tmp/assets/71230f73/jquery-migrate-3.1.0.min.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/tmp/assets/e348b9eb/moment-with-locales.min.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/tmp/assets/f7972b6e/em_javascript.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/tmp/assets/dc562969/survey.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/tmp/assets/7ad7307f/spectrum.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/tmp/assets/7ad7307f/template-core.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/tmp/assets/880c4b42/build/lslog.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/tmp/assets/284c1c7c/pjax.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/tmp/assets/9d97831c/bootstrap.min.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/tmp/assets/9d97831c/plugins/bootstrapconfirm/bootstrapconfirm.min.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/tmp/assets/2d3b32bb/scripts/theme.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/tmp/assets/2d3b32bb/scripts/ajaxify.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/tmp/assets/2d3b32bb/scripts/custom.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/tmp/assets/f8150469/nojs.js" class="headScriptTag"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+LSvar= LSvar || {};
+/*]]>*/
+</script>
+<title>
+        Covid-19
+    </title>
+
+    <link rel="shortcut icon" href="/tmp/assets/2590787/efcca_icon.ico" />
+    <script type="text/javascript">
+        if(window.basicThemeScripts === undefined){ 
+            window.basicThemeScripts = new ThemeScripts(); 
+        } 
+    </script>
+        
+        
+    
+
+<style>
+    
+            body .top-container {
+            margin-top: 70px;
+        }
+    
+    body {
+         padding-bottom: 10px;
+         padding-top: 60px;/* now is redefine in JS to fit any title length */
+         background-color:#ffffff ;
+         color: #444444;
+    }
+
+    .navbar-default .navbar-nav > li > a:hover {
+        color: #444444;
+    }
+
+
+    .question-container {
+      background-color: #ffffff;
+
+              border:  1px solid #e6e6e6;
+      
+              box-shadow: 0 1px 2px rgba(0,0,0,.2);
+          }
+
+        .checkbox-item input[type="checkbox"]:checked + label::after, .checkbox-item input[type="radio"]:checked + label::after {
+        content: "\";
+    }
+
+    
+                            
+        .checkbox-item input[type="checkbox"]:checked + label::after{
+            animation-name: ;
+            animation-duration: 500ms;
+            animation-fill-mode: both;
+            animation-iteration-count: 1;
+            display: inline-block;
+            -webkit-transform: none;
+            -ms-transform: none;
+            -o-transform: none;
+            transform: none;
+        }
+        .checkbox-item input[type="checkbox"] + label::after{
+            display: none;
+            -webkit-transform: none;
+            -ms-transform: none;
+            -o-transform: none;
+            transform: none;
+        }
+    
+    
+                            
+        .radio-item input[type="radio"]:checked + label::after{
+            animation-name: ;
+            animation-duration: 500ms;
+            animation-fill-mode: both;
+            animation-iteration-count: 1;
+            display: inline-block;
+            -webkit-transform: none;
+            -ms-transform: none;
+            -o-transform: none;
+            transform: none;
+        }
+        .radio-item input[type="radio"] + label::after{
+            display:none;
+            -webkit-transform: none;
+            -ms-transform: none;
+            -o-transform: none;
+            transform: none;
+        }
+    
+    
+    
+    
+    
+    
+    
+    
+</style>
+
+
+
+
+
+    
+</head>
+
+
+    <body class=" covid_19 fruity vanilla font- lang-it  brand-logo"  >
+
+                <div id="beginScripts">
+            <script type="text/javascript" src="/tmp/assets/e5685eca/decimal.js"></script>
+<script type="text/javascript" src="/tmp/assets/d879cc71/decimalcustom.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+var LEMmode='group';
+var LEMgseq='';
+ExprMgr_process_relevance_and_tailoring = function(evt_type,sgqa,type){
+if (typeof LEM_initialized == 'undefined') {
+LEM_initialized=true;
+LEMsetTabIndexes();
+}
+if (evt_type == 'onchange' && (typeof last_sgqa !== 'undefined' && sgqa==last_sgqa) && (typeof last_evt_type !== 'undefined' && last_evt_type == 'TAB' && type != 'checkbox')) {
+  last_evt_type='onchange';
+  last_sgqa=sgqa;
+  return;
+}
+if (evt_type == 'updated'  && (typeof last_sgqa !== 'undefined' && sgqa==last_sgqa)) {
+  last_evt_type='updated';
+  last_sgqa=sgqa;
+  return;
+}
+last_evt_type = evt_type;
+last_sgqa=sgqa;
+
+}
+
+/*]]>*/
+</script>
+
+        </div>
+
+                <article>
+
+            <div id="dynamicReloadContainer">
+                                                                
+<!-- Bootstrap Navigation Bar -->
+<div class=" navbar navbar-default navbar-fixed-top" >
+    <div class=" navbar-header   "  >
+        <button type="button" class=" navbar-toggle collapsed "  data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"   >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+                            <div class=" navbar-brand  logo-container hidden-xs"    >
+                <img class="logo img-responsive" src="/tmp/assets/729da1b2/new_efcca_logo.png" />
+            </div>
+            </div>
+    <div id="navbar" class=" collapse navbar-collapse "  >
+        <ul class=" nav navbar-nav  navbar-action-link  navbar-right" >
+            
+
+            
+
+
+  
+            
+
+
+            
+
+        
+    <!-- Language Changer, top menu version -->
+    <li class=" ls-no-js-hidden form-change-lang  dropdown"   >
+        <a class="  dropdown-toggle animate"  data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"  >
+
+                        Lingua: Italiano - Italiano
+            <span class="  caret"   ></span>
+        </a>
+
+        <ul class=" language_change_container  dropdown-menu" id="langs-container"  style="overflow: scroll"  >
+                                        <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='he' class="ls-language-link  animate"  >
+                         עברית - Ebraico
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='be' class="ls-language-link  animate"  >
+                        Беларускі - Bielorusso
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='ky' class="ls-language-link  animate"  >
+                        Кыргызча - Kirghiso
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='mk' class="ls-language-link  animate"  >
+                        Македонски - Macedone
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='mn' class="ls-language-link  animate"  >
+                        Монгол - Mongolo
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='ru' class="ls-language-link  animate"  >
+                        Русский - Russo
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='sr' class="ls-language-link  animate"  >
+                        Српски - Serbo (Cirillico)
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='hy' class="ls-language-link  animate"  >
+                        հայերեն - Armeno
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='ur' class="ls-language-link  animate"  >
+                        اردو - Urdu
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='prs' class="ls-language-link  animate"  >
+                        دری - Dari
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='ar' class="ls-language-link  animate"  >
+                        عَرَبيْ - Arabo
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='fa' class="ls-language-link  animate"  >
+                        فارسی - Persiano
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='ps' class="ls-language-link  animate"  >
+                        پښتو - Pashto
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='ckb' class="ls-language-link  animate"  >
+                        کوردیی ناوەندی - Curdo (Sorani)
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='mr' class="ls-language-link  animate"  >
+                        मराठी - Marathi
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='hi' class="ls-language-link  animate"  >
+                        हिन्दी - Hindi
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='is' class="ls-language-link  animate"  >
+                        íslenska - Islandese
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='bn' class="ls-language-link  animate"  >
+                        বাংলা - Bengali
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='pa' class="ls-language-link  animate"  >
+                        ਪੰਜਾਬੀ - Punjabi
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='gu' class="ls-language-link  animate"  >
+                        ગુજરાતી - Gujarati
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='ta' class="ls-language-link  animate"  >
+                        தமிழ் - Tamil
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='zh-Hans' class="ls-language-link  animate"  >
+                        简体中文 - Cinese (semplificato)
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='zh-Hant-HK' class="ls-language-link  animate"  >
+                        繁體中文語系 - Cinese (Tradizionale - Hong Kong)
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='zh-Hant-TW' class="ls-language-link  animate"  >
+                        繁體中文（台灣） - Cinese (Tradizionale - Taiwan)
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='si' class="ls-language-link  animate"  >
+                        සිංහල - Sinhala
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='th' class="ls-language-link  animate"  >
+                        ภาษาไทย - Tailandese
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='mya' class="ls-language-link  animate"  >
+                        မြန်မာဘာသာ - Myanmar (Birmano)
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='ka' class="ls-language-link  animate"  >
+                        ქართული ენა - Georgiano
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='am' class="ls-language-link  animate"  >
+                        አማርኛ - Amarico
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='ko' class="ls-language-link  animate"  >
+                        한국어 - Coreano
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='el' class="ls-language-link  animate"  >
+                        Ελληνικά - Greco
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='cs' class="ls-language-link  animate"  >
+                        Česky - Ceco
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='cs-informal' class="ls-language-link  animate"  >
+                        Česky neformální - Czech (informale)
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='bg' class="ls-language-link  animate"  >
+                        Български - Bulgaro
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='tg' class="ls-language-link  animate"  >
+                        Тоҷикӣ - Tajik
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='uk' class="ls-language-link  animate"  >
+                        Українська - Ucraino
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='ja' class="ls-language-link  animate"  >
+                        日本語 - Giapponese
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='so' class="ls-language-link  animate"  >
+                        Af-Soomaali - Somalo
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='af' class="ls-language-link  animate"  >
+                        Afrikaans - Afrikaans
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='id' class="ls-language-link  animate"  >
+                        Bahasa Indonesia - Indonesiano
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='ms' class="ls-language-link  animate"  >
+                        Bahasa Melayu - Malese
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='bs' class="ls-language-link  animate"  >
+                        Bosanski - Bosniaco
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='ca' class="ls-language-link  animate"  >
+                        Català - Catalano
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='ca-valencia' class="ls-language-link  animate"  >
+                        Català (Valencià) - Catalano (Valencia)
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='cnr' class="ls-language-link  animate"  >
+                        Crnogorski - Montenegrino
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='cy' class="ls-language-link  animate"  >
+                        Cymraeg - Gallese
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='da' class="ls-language-link  animate"  >
+                        Dansk - Danese
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='de' class="ls-language-link  animate"  >
+                        Deutsch - Tedesco
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='de-informal' class="ls-language-link  animate"  >
+                        Deutsch (Du) - Tedesco (informale)
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='et' class="ls-language-link  animate"  >
+                        Eesti - Estone
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='en' class="ls-language-link  animate"  >
+                        English - Inglese
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='es' class="ls-language-link  animate"  >
+                        Español - Spagnolo
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='es-CL' class="ls-language-link  animate"  >
+                        Español chileno - Spagnolo (Cileno)
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='es-CO' class="ls-language-link  animate"  >
+                        Español colombiano - Spagnolo (Colombia)
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='es-MX' class="ls-language-link  animate"  >
+                        Español mexicano - Spagnolo (Messicano)
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='es-AR' class="ls-language-link  animate"  >
+                        Español rioplatense - Spagnolo (Argentina)
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='es-AR-informal' class="ls-language-link  animate"  >
+                        Español rioplatense informal - Spagnolo (Argentina) (Informale)
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='eu' class="ls-language-link  animate"  >
+                        Euskara - Basco
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='fr' class="ls-language-link  animate"  >
+                        Français - Francese
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='ful' class="ls-language-link  animate"  >
+                        Fulfulde - Fula
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='ie' class="ls-language-link  animate"  >
+                        Gaeilge - Irish
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='gl' class="ls-language-link  animate"  >
+                        Galego - Galiziano
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='hr' class="ls-language-link  animate"  >
+                        Hrvatski - Croato
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='run' class="ls-language-link  animate"  >
+                        Ikirundi - Kirundi
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='it' class="ls-language-link  animate"  >
+                        Italiano - Italiano
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='it-informal' class="ls-language-link  animate"  >
+                        Italiano (informale) - Italiano (informale)
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='rw' class="ls-language-link  animate"  >
+                        Kinyarwanda - Kinyarwanda
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='swh' class="ls-language-link  animate"  >
+                        Kiswahili - Swahili
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='kmr' class="ls-language-link  animate"  >
+                        Kurmancî - Curdo (Kurmanji)
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='lb' class="ls-language-link  animate"  >
+                        Lëtzebuergesch - Lussemburghese
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='lv' class="ls-language-link  animate"  >
+                        Latviešu - Lettone
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='oc' class="ls-language-link  animate"  >
+                        Lenga d&#039;òc - Occitano
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='lt' class="ls-language-link  animate"  >
+                        Lietuvių - Lituano
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='hu' class="ls-language-link  animate"  >
+                        Magyar - Ungherese
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='ml' class="ls-language-link  animate"  >
+                        Malayāḷaṁ - Malayalam
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='mt' class="ls-language-link  animate"  >
+                        Malti - Maltese
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='nl' class="ls-language-link  animate"  >
+                        Nederlands - Olandese
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='nl-informal' class="ls-language-link  animate"  >
+                        Nederlands (informeel) - Dutch (informale)
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='nb' class="ls-language-link  animate"  >
+                        Norsk Bokmål - Norvegese (Bokmal)
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='nn' class="ls-language-link  animate"  >
+                        Norsk Nynorsk - Norvegese (Nynorsk)
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='pap-CW' class="ls-language-link  animate"  >
+                        Papiamentu - Papiamento (Curaçao &amp;amp; Bonaire)
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='pl' class="ls-language-link  animate"  >
+                        Polski - Polacco
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='pl-informal' class="ls-language-link  animate"  >
+                        Polski (nieformalny) - Polacco (Informale)
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='pt' class="ls-language-link  animate"  >
+                        Português - Portoghese
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='pt-BR' class="ls-language-link  animate"  >
+                        Português do Brasil - Portoghese (Brasiliano)
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='ro' class="ls-language-link  animate"  >
+                        Româna - Rumeno
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='sq' class="ls-language-link  animate"  >
+                        Shqipe - Albanese
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='sk' class="ls-language-link  animate"  >
+                        Slovenčina - Slovacco
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='sl' class="ls-language-link  animate"  >
+                        Slovenščina - Sloveno
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='sr-Latn' class="ls-language-link  animate"  >
+                        Srpski - Serbo (Latino)
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='fi' class="ls-language-link  animate"  >
+                        Suomi - Finlandese
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='sv' class="ls-language-link  animate"  >
+                        Svenska - Svedese
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='tr' class="ls-language-link  animate"  >
+                        Türkçe - Turco
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='tl' class="ls-language-link  animate"  >
+                        Tagalog - Tagalog
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='vi' class="ls-language-link  animate"  >
+                        Tiếng Việt - Vietnamita
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='fil' class="ls-language-link  animate"  >
+                        Wikang Filipino - Filippino
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='zu' class="ls-language-link  animate"  >
+                        isiZulu - Zulu
+                    </a>
+                </li>
+                            <li class="index-item "  >
+                    <a href='#' data-limesurvey-lang='ug' class="ls-language-link  animate"  >
+                        ئۇيغۇرچە - Uyghur
+                    </a>
+                </li>
+                    </ul>
+    </li>
+
+
+
+
+
+        </ul>
+    </div>
+</div>
+
+                
+
+                                                    <div class="container-fluid">
+                    
+                
+                    <div class="   row" id="surveys-list-container" >
+
+                                                
+
+<!-- No JavaScript alert -->
+<div class=' ls-js-hidden warningjs  alert alert-danger '    data-type='checkjavascript'>
+    Attenzione: Javascript è disabilitato nel browser che si sta usando. Potrebbe non essere possibile rispondere a tutte le domande dell&#039;indagine. Verificare le impostazioni del  browser.
+</div>
+
+
+                        <div id="surveys-list-jumbotron" >
+                            <!--<img class="img-responsive center-block" src="/tmp/assets/739e50a6/survey_list_header.png" />-->
+                            <img class="img-responsive center-block" src="/tmp/assets/f5f50f33/new_efcca_logox500.png" alt="efcca" />
+                            Covid-19
+                            <div class="ls-js-hidden">
+                                    <form method="get">
+    
+
+        
+            <!-- Language Changer -->
+    <div class="   form-change-lang form-inline"  >
+        <label class=" "  for="lang">
+            <span class="control-label" >Lingua:</span>
+            <select class="form-control" name="lang" id="lang">
+<option value="he"> עברית - Ebraico</option>
+<option value="be">Беларускі - Bielorusso</option>
+<option value="ky">Кыргызча - Kirghiso</option>
+<option value="mk">Македонски - Macedone</option>
+<option value="mn">Монгол - Mongolo</option>
+<option value="ru">Русский - Russo</option>
+<option value="sr">Српски - Serbo (Cirillico)</option>
+<option value="hy">հայերեն - Armeno</option>
+<option value="ur">اردو - Urdu</option>
+<option value="prs">دری - Dari</option>
+<option value="ar">عَرَبيْ - Arabo</option>
+<option value="fa">فارسی - Persiano</option>
+<option value="ps">پښتو - Pashto</option>
+<option value="ckb">کوردیی ناوەندی - Curdo (Sorani)</option>
+<option value="mr">मराठी - Marathi</option>
+<option value="hi">हिन्दी - Hindi</option>
+<option value="is">íslenska - Islandese</option>
+<option value="bn">বাংলা - Bengali</option>
+<option value="pa">ਪੰਜਾਬੀ - Punjabi</option>
+<option value="gu">ગુજરાતી - Gujarati</option>
+<option value="ta">தமிழ் - Tamil</option>
+<option value="zh-Hans">简体中文 - Cinese (semplificato)</option>
+<option value="zh-Hant-HK">繁體中文語系 - Cinese (Tradizionale - Hong Kong)</option>
+<option value="zh-Hant-TW">繁體中文（台灣） - Cinese (Tradizionale - Taiwan)</option>
+<option value="si">සිංහල - Sinhala</option>
+<option value="th">ภาษาไทย - Tailandese</option>
+<option value="mya">မြန်မာဘာသာ - Myanmar (Birmano)</option>
+<option value="ka">ქართული ენა - Georgiano</option>
+<option value="am">አማርኛ - Amarico</option>
+<option value="ko">한국어 - Coreano</option>
+<option value="el">Ελληνικά - Greco</option>
+<option value="cs">Česky - Ceco</option>
+<option value="cs-informal">Česky neformální - Czech (informale)</option>
+<option value="bg">Български - Bulgaro</option>
+<option value="tg">Тоҷикӣ - Tajik</option>
+<option value="uk">Українська - Ucraino</option>
+<option value="ja">日本語 - Giapponese</option>
+<option value="so">Af-Soomaali - Somalo</option>
+<option value="af">Afrikaans - Afrikaans</option>
+<option value="id">Bahasa Indonesia - Indonesiano</option>
+<option value="ms">Bahasa Melayu - Malese</option>
+<option value="bs">Bosanski - Bosniaco</option>
+<option value="ca">Català - Catalano</option>
+<option value="ca-valencia">Català (Valencià) - Catalano (Valencia)</option>
+<option value="cnr">Crnogorski - Montenegrino</option>
+<option value="cy">Cymraeg - Gallese</option>
+<option value="da">Dansk - Danese</option>
+<option value="de">Deutsch - Tedesco</option>
+<option value="de-informal">Deutsch (Du) - Tedesco (informale)</option>
+<option value="et">Eesti - Estone</option>
+<option value="en">English - Inglese</option>
+<option value="es">Español - Spagnolo</option>
+<option value="es-CL">Español chileno - Spagnolo (Cileno)</option>
+<option value="es-CO">Español colombiano - Spagnolo (Colombia)</option>
+<option value="es-MX">Español mexicano - Spagnolo (Messicano)</option>
+<option value="es-AR">Español rioplatense - Spagnolo (Argentina)</option>
+<option value="es-AR-informal">Español rioplatense informal - Spagnolo (Argentina) (Informale)</option>
+<option value="eu">Euskara - Basco</option>
+<option value="fr">Français - Francese</option>
+<option value="ful">Fulfulde - Fula</option>
+<option value="ie">Gaeilge - Irish</option>
+<option value="gl">Galego - Galiziano</option>
+<option value="hr">Hrvatski - Croato</option>
+<option value="run">Ikirundi - Kirundi</option>
+<option value="it" selected="selected">Italiano - Italiano</option>
+<option value="it-informal">Italiano (informale) - Italiano (informale)</option>
+<option value="rw">Kinyarwanda - Kinyarwanda</option>
+<option value="swh">Kiswahili - Swahili</option>
+<option value="kmr">Kurmancî - Curdo (Kurmanji)</option>
+<option value="lb">Lëtzebuergesch - Lussemburghese</option>
+<option value="lv">Latviešu - Lettone</option>
+<option value="oc">Lenga d&#039;òc - Occitano</option>
+<option value="lt">Lietuvių - Lituano</option>
+<option value="hu">Magyar - Ungherese</option>
+<option value="ml">Malayāḷaṁ - Malayalam</option>
+<option value="mt">Malti - Maltese</option>
+<option value="nl">Nederlands - Olandese</option>
+<option value="nl-informal">Nederlands (informeel) - Dutch (informale)</option>
+<option value="nb">Norsk Bokmål - Norvegese (Bokmal)</option>
+<option value="nn">Norsk Nynorsk - Norvegese (Nynorsk)</option>
+<option value="pap-CW">Papiamentu - Papiamento (Curaçao &amp;amp; Bonaire)</option>
+<option value="pl">Polski - Polacco</option>
+<option value="pl-informal">Polski (nieformalny) - Polacco (Informale)</option>
+<option value="pt">Português - Portoghese</option>
+<option value="pt-BR">Português do Brasil - Portoghese (Brasiliano)</option>
+<option value="ro">Româna - Rumeno</option>
+<option value="sq">Shqipe - Albanese</option>
+<option value="sk">Slovenčina - Slovacco</option>
+<option value="sl">Slovenščina - Sloveno</option>
+<option value="sr-Latn">Srpski - Serbo (Latino)</option>
+<option value="fi">Suomi - Finlandese</option>
+<option value="sv">Svenska - Svedese</option>
+<option value="tr">Türkçe - Turco</option>
+<option value="tl">Tagalog - Tagalog</option>
+<option value="vi">Tiếng Việt - Vietnamita</option>
+<option value="fil">Wikang Filipino - Filippino</option>
+<option value="zu">isiZulu - Zulu</option>
+<option value="ug">ئۇيغۇرچە - Uyghur</option>
+</select>
+        </label>
+        <!-- for no js functionality (need form) -->
+                <button type="submit" value="changelang" name="move" class="btn btn-info ls-language-changer-item ">Cambiare lingua</button>
+    </div>
+
+        
+
+
+</form>
+
+                            </div>
+                        </div>
+
+                        <div class="  survey-list-heading  col-xs-12" >
+                            <div class='   h3' >
+                                Le seguenti indagini sono disponibili:
+                            </div>
+                        </div>
+
+                        <div class="  survey-list  col-xs-12" >
+                            <div class=' surveys-list-container ' >
+                                <ul class=' surveys-list  list-unstyled ' >
+
+                                                                </ul>
+                            </div>
+                        </div>
+
+                        <div class=" survey-contact  col-xs-12 " >
+                            Per favore contattare &#039;Administrator&#039;  (&#039;info@officinedigitali.org&#039;) per ulteriore assistenza.
+                        </div>
+
+                    </div>
+
+                    <div id="surveyListFooter" class=" footer " >
+                        <div class="   container" >
+                            <div  class="row">
+                                <div class="col-xs-6 col-sm-12 text-center">
+                                    <a  href="http://www.limesurvey.org"  target="_blank"  class="center-block text-center">
+                                        <img class="img-responsive center-block " src="/tmp/assets/739e50a6/poweredby.png" alt="LimeSurvey Survey Software" />
+                                    </a>
+                                </div>
+                                <div class="col-sm-12 hidden-xs text-center">
+                                    <a >
+                                        The Online Survey Tool
+                                    </a>
+                                    - Free & Open Source
+                                </div>
+                                <div class="col-xs-6 visible-xs text-center">
+                                    <a >
+                                        Online Surveytool
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                        
+
+                        </div>
+        </article>
+                    
+                <div id="bottomScripts">
+            <script type="text/javascript" src="/tmp/assets/8bdccd83/build/embeddables.min.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+activateLanguageChanger(); 
+ if(window.basicThemeScripts === undefined){ window.basicThemeScripts = new ThemeScripts(); } basicThemeScripts.initGlobal(); 
+
+            try{ 
+                triggerEmClassChange(); 
+            } catch(e) {
+                console.ls.warn('triggerEmClassChange could not be run. Is survey.js correctly loaded?');
+            }
+
+triggerEmRelevance();
+jQuery(document).off('pjax:scriptcomplete.mainBottom').on('ready pjax:scriptcomplete.mainBottom', function() {
+activateActionLink();
+activateConfirmButton();
+basicThemeScripts.initTopMenuLanguageChanger('.ls-language-link ', 'form#limesurvey'); 
+updateMandatoryErrorClass();
+});
+/*]]>*/
+</script>
+
+        </div>
+                <script>
+            window.basicThemeScripts.init();
+        </script>
+            </body>
+</html>
