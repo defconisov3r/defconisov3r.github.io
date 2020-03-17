@@ -1,0 +1,53 @@
+﻿﻿<html>
+ <head>
+ <title> Карта коронавируса </title>
+ <style>
+ body {
+ font: 14pt Arial, Helvetica, sans-serif; /* Шрифт теста */
+ background: #ffffff; /* Цвет фона */ 
+ }
+ h2 {
+ font-size: 18px; /* Размер шрифта в заголовке */
+ color: #080808; /* Цвет заголовка */
+ margin-top: 1; /* Отступ сверху */
+ }
+ .container {
+ width: 1000px; /* Ширина слоя */
+ margin: 0 auto; /* Выравнивнить весь блок по центру */
+ background: #f0f0f0; /* Цвет фона левой колонки */
+ text-align: center;
+ }
+ .header {
+ font-size: 30px; /* Размер текста в шапке */
+ text-align: center; /* Выравнивание текст шапки по центру */
+ padding: 5px; /* Отступы внутри блока шапки */
+ background: #8fa09b; /* Цвет фона шапки */
+ color: #fff; /* Цвет текста */
+ }
+ .sidebar {
+ margin-top: 10px;
+ width: 110px; /* Ширина блока */
+ padding: 0 10px; /* Отступы внутри левого блока */
+ float: right; /* Обтекание блока по левому краю */
+ }
+ .content {
+ margin-right: 130px; /* Отступ справа */
+ padding: 10px; /* Отступы внутри правого блока */
+ background: #fff; /* Цвет фона правого блока */
+ }
+ .footer {
+ background: #8fa09b; /* Цвет фона нижнего блока-подвала */
+ color: #fff; /* Цвет текста подвала */
+ padding: 5px; /* Отступы внутри блока */
+ clear: right; /* Отменяем действие float */
+ }
+ </style>
+ </head>
+ <body>
+ <div class="content">
+ <iframe src="https://coronavirus-monitor.ru/map" frameBorder="0" height="800" width="1800" style="max-width: 100%;"></iframe>
+ <h2> </h2>
+</div>
+</div>
+</body>
+</html>

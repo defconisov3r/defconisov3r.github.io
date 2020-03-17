@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="robots" content="noindex,nofollow" />
+	<title>WordPress &rsaquo; Instalación del archivo de configuración.</title>
+	<link rel='stylesheet' id='dashicons-css'  href='http://covid19mundial.com/wp-includes/css/dashicons.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='buttons-css'  href='http://covid19mundial.com/wp-includes/css/buttons.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='forms-css'  href='http://covid19mundial.com/wp-admin/css/forms.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='l10n-css'  href='http://covid19mundial.com/wp-admin/css/l10n.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='install-css'  href='http://covid19mundial.com/wp-admin/css/install.min.css?ver=5.3.2' type='text/css' media='all' />
+</head>
+<body class="wp-core-ui">
+<p id="logo"><a href="https://es.wordpress.org/">WordPress</a></p>
+	<h1 class="screen-reader-text">Antes de empezar</h1>
+<p>Bienvenido a WordPress. Antes de empezar necesitamos alguna información de la base de datos. Necesitarás saber lo siguiente antes de continuar.</p>
+<ol>
+	<li>Nombre de la base de datos</li>
+	<li>Usuario de la base de datos</li>
+	<li>Contraseña de la base de datos</li>
+	<li>Servidor de la base de datos</li>
+	<li>Prefijo de la tabla (si quieres ejecutar más de un WordPress en una sola base de datos)</li>
+</ol>
+<p>
+		Vamos a usar esta información para crear un archivo <code>wp-config.php</code>.	<strong>
+		Si por alguna razón no funciona la creación automática de este archivo, no te preocupes. Todo lo que hace es rellenar la información de la base de datos en un archivo de configuración. También puedes, simplemente, abrir el archivo <code>wp-config-sample.php</code> en un editor de texto, rellenarlo con tu información y guardarlo como <code>wp-config.php</code>.	</strong>
+		¿Necesitas más ayuda? <a href="https://wordpress.org/support/article/editing-wp-config-php/">La tenemos</a>.</p>
+<p>Es muy probable que estos elementos te los haya facilitado tu proveedor de alojamiento. Si no tienes esta información, tendrás que ponerte en contacto con ellos para poder continuar. Si ya estás listo&hellip;</p>
+
+<p class="step"><a href="setup-config.php?step=1&amp;language=es_ES" class="button button-large">¡Vamos a ello!</a></p>
+		<script type='text/javascript' src='http://covid19mundial.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://covid19mundial.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://covid19mundial.com/wp-admin/js/language-chooser.min.js?ver=5.3.2'></script>
+</body>
+</html>

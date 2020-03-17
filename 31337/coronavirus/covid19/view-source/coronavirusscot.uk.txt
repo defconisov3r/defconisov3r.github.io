@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map - CoronaScot</title>
+    <meta name="description" content="A map displaying coronavirus cases in Scotland's NHS boards." />
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160624427-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-160624427-1');
+    </script>
+
+    <link rel="stylesheet" href="/lib/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="/lib/Leaflet.EasyButton/easy-button.css" />
+    <link rel="stylesheet" href="/lib/leaflet-sidebar/src/L.Control.Sidebar.css" />
+    <link rel="stylesheet" href="/lib/leaflet-locatecontrol/L.Control.Locate.css" />
+    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/lib/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+
+    <meta property="og:url" content="https://coronavirusscot.uk/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="CoronaScot" />
+    <meta property="og:description" content="A map displaying coronavirus cases in Scotland's NHS boards." />
+    <meta property="og:image" content="https://coronavirusscot.uk/coronavirus.jpg" />
+
+</head>
+<body>
+    <div id="map"></div>
+
+<div id="sidebar">
+    <div class="container px-0">
+        <div class="sidebar-header font-weight-bold">
+            Coronavirus in Scotland
+        </div>
+        <div class="text-secondary mb-2">A map displaying coronavirus cases in Scotland's NHS boards.</div>
+        <p>The following map extracts Coronavirus (COVID-19) case data from the <a href="https://www.gov.scot/coronavirus-covid-19/">Scottish government website</a> and displays it by NHS board region.</p>
+        <p>Clicking on each region will display a popup with the count of current cases. Regions are colour coded on a range from light yellow (low cases) through to dark red (high cases). Regions with no cases are blank.</p>
+        <p>The map will update automatically when the Scottish Governement website updates their testing figures on their website (usually 2pm each day).</p>
+
+        <details id="advice">
+            <summary class="sidebar-header">Advice</summary>
+            <div>Below are some useful links with advice regarding Coronavirus in Scotland: </div>
+            <ul>
+                <li><a href="https://www.gov.scot/coronavirus-covid-19/">Scottish government Coronavirus advice</a></li>
+                <li><a href="https://www.nhsinform.scot/illnesses-and-conditions/infections-and-poisoning/coronavirus-covid-19">NHS inform public health advice</a></li>
+                <li><a href="https://www.fitfortravel.nhs.uk/advice/disease-prevention-advice/coronavirus-disease-covid-19">Travel advice</a></li>
+                <li><a href="https://staythefuckhome.com/">Self-Quarantine advice</a></li>
+            </ul>
+        </details>
+
+
+        <details id="sources">
+            <summary class="sidebar-header">Sources</summary>
+            <ul>
+                <li><a href="https://www.openstreetmap.org/">OpenStreetMap</a></li>
+                <li><a href="https://www.gov.scot/coronavirus-covid-19/">Scottish government Coronavirus information</a></li>
+                <li><a href="https://spatialdata.gov.scot/geonetwork/srv/eng/catalog.search#/metadata/f12c3826-4b4b-40e6-bf4f-77b9ed01dc14">SpatialData.gov.scot NHS Health Boards</a></li>
+            </ul>
+        </details>
+
+        <details id="disclaimer">
+            <summary class="sidebar-header">Disclaimer</summary>
+            <p class="text-justify">
+                This website is not medical advice and should not be considered as such.
+                The information provided is compiled from a variety of sources listed above.
+                The operators of this website do not endorse or guarantee accuracy the information provided by the third parties mentioned in the sections above.
+                This website is not associated with the Scottish Government or the NHS.
+            </p>
+        </details>
+
+
+        <div class="sidebar-header">
+            About
+        </div>
+        <p>This site was created by Jack Gilmore</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="http://linkedin.com/in/gilmorejc" class="text-decoration-none" target="_blank"><i class="fab fa-2x fa-linkedin"></i>&nbsp; LinkedIn</a></li>
+            <li class="list-inline-item"><a href="http://twitter.com/yesimjack" class="text-decoration-none" target="_blank"><i class="fab fa-2x fa-twitter-square"></i>&nbsp; Twitter</a></li>
+            <li class="list-inline-item"><a href="mailto:jg@gilmore.scot" class="text-decoration-none" target="_blank"><i class="fas fa-2x fa-envelope-square"></i>&nbsp; Email</a></li>
+            <li class="list-inline-item"><a href="/privacy" class="text-decoration-none"><i class="fas fa-2x fa-lock"></i>&nbsp; Privacy</a></li>
+        </ul>
+        <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/jackg"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:15px;font-size:28px !important;font-family: 'Cookie', sans-serif !important;">Buy me a coffee</span></a>
+
+    </div>
+</div>
+
+
+
+
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.js?v=dLGP40S79Xnx6GqUthRF6NWvjvhQ1nOvdVSwaNcgG18"></script>
+
+    
+    <script src="/lib/leaflet/leaflet.js"></script>
+    <script src="/lib/leaflet-sidebar/src/L.Control.Sidebar.js"></script>
+    <script src="/lib/Leaflet.EasyButton/easy-button.js"></script>
+    <script src="/lib/leaflet-locatecontrol/L.Control.Locate.min.js"></script>
+    <script src="/lib/d3/d3.js"></script>
+    <script>
+        let DEFAULT_OPACITY = 0.6;
+        let HOVER_OPACITY = 0.2;
+
+        var date = new Date();
+        var currentYear = date.getFullYear();
+
+        var zoom = L.Browser.mobile ? 6 : 7;
+
+        var map = L.map('map').setView([57.2, -4.2], zoom);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap</a> Contributors | NHS data: Copyright Scottish Government, contains Ordnance Survey data &copy; Crown copyright and database right ' + currentYear,
+            maxZoom: 18,
+            minZoom: zoom
+        }).addTo(map);
+
+        var button = L.easyButton('fa-info-circle', function (btn, map) {
+            openSidebar();
+        }).addTo(map);
+
+
+        var sidebar = L.control.sidebar('sidebar', {
+            position: 'left',
+            closeButton: true
+        });
+
+        sidebar.on('hidden', function () {
+            closeSidebar();
+        });
+
+
+        map.addControl(sidebar);
+
+        if (!L.Browser.mobile) {
+            openSidebar();
+        }
+
+
+        L.control.locate({ circleStyle: { interactive: false }, locateOptions: { maxZoom: 16 }, flyTo: true }).addTo(map);
+
+
+        var colours = new Array();
+        var features = new Array();
+
+        $.ajax({
+            type: "GET",
+            url: '/api/regioncases',
+            dataType: 'json',
+            success: function (response) {
+                var geojson = L.geoJSON(response, {
+                    style: polystyle,
+                    onEachFeature: function (feature, layer) {
+                        layer.on('mouseover', function () {
+                            this.setStyle({
+                                fillOpacity: HOVER_OPACITY
+                            });
+                        });
+                        layer.on('mouseout', function () {
+                            this.setStyle({
+                                fillOpacity: this.feature.properties.count == 0 ? 0 : DEFAULT_OPACITY
+                            });
+                        });
+
+                        layer.bindPopup(function (layer) { return "<div class=\"popup-title\">" + layer.feature.properties.HBName + "</div><div class=\"text-center popup-count\">" + layer.feature.properties.count + "<small> cases</small></div>"; });
+                        colours.push(layer.feature.properties.count);
+                        features.push(layer);
+                    }
+                })
+
+                colours = colours.sort((a, b) => a - b);
+
+                var low = colours[0];
+                var mid = colours[Math.floor((colours.length - 1) / 2)];
+                var high = colours[colours.length - 1];
+
+                var colorScale = d3.scaleThreshold()
+                    .domain([low, mid, high])
+                    .range(["#", "#fdcc8a", "#fc8d59", "#e34a33", "#b30000"]);
+
+                for (var i = 0; i < features.length; i++) {
+                    if (features[i].feature.properties.count > 0) {
+                        var fill = colorScale(features[i].feature.properties.count)
+                        features[i].setStyle({ fillColor: fill })
+                    }
+                }
+
+                geojson.addTo(map);
+
+
+            }
+        });
+
+        function polystyle(feature) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: '#005eb8',  //Outline color
+                fillOpacity: feature.properties.count == 0 ? 0 : DEFAULT_OPACITY,
+            };
+        }
+
+        function openSidebar() {
+            sidebar.show();
+            button.disable();
+            $(".easy-button-container").addClass("d-none");
+            $("#advice").attr("open", "");
+            $("#sources").attr("open", "");
+            $("#disclaimer").attr("open", "")
+        }
+
+        function closeSidebar() {
+            button.enable();
+            $(".easy-button-container").removeClass("d-none");
+        }
+
+    </script>
+
+
+</body>
+</html>

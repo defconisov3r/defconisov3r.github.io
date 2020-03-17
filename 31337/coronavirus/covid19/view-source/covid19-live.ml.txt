@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+    <title>LIVE UPDATE CORONA</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta http-equiv="refresh" content="60">
+    </head>
+<body>
+    <center><h1>PANTAU CORONA BERSAMA SAMA</h1></center>
+</div>
+<center><table cellspacing='5'>
+<thead>
+        <tr>
+            <th><img src='/img/negara.png' height='25' width='25'/><br>Negara</th>
+            <th><img src='/img/kasus.png' height='25' width='25'/><br>Total Kasus</th>
+            <th><img src='/img/aktif.png' height='25' width='25'/><br>Dalam Penanganan</th>
+        </tr>
+</thead>
+<tbody>
+    <tr>
+        <th>
+        <form>
+            <select name='negara' onchange='this.form.submit()'>
+            <option value='' disabled selected>Pilih Negara</option>
+            <option value='Indonesia'>Indonesia</option>
+            <option value='USA'>Amerika</option>
+            <option value='China'>China</option>
+            <option value='Italy'>Italy</option>
+            <option value='S. Korea'>S. Korea</option>
+            <option value='Germany'>Germany</option>
+            <option value='France'>France</option>
+            <option value='Switzerland'>Switzerland</option>
+            <option value='UK'>UK</option>
+            <option value='Netherlands'>Netherlands</option>
+            <option value='Sweden'>Sweden</option>
+            <option value='Belgium'>Belgium</option>
+            <option value='Denmark'>Denmark</option>
+            <option value='Japan'>Japan</option>
+            <option value='Austria'>Austria</option>
+            <option value='Diamond Princess'>Diamond Princess</option>
+            <option value='Malaysia'>Malaysia</option>
+            <option value='Qatar'>Qatar</option>
+            <option value='Australia'>Australia</option>
+            <option value='Canada'>Canada</option>
+            <option value='Portugal'>Portugal</option>
+            <option value='Finland'>Finland</option>
+            <option value='Czechia'>Czechia</option>
+            <option value='Greece'>Greece</option>
+            <option value='Bahrain'>Bahrain</option>
+            <option value='Singapore'>Singapore</option>
+            <option value='Israel'>Israel</option>
+            <option value='Slovenia'>Slovenia</option>
+            <option value='Iceland'>Iceland</option>
+            <option value='Hong Kong'>Hong Kong</option>
+            <option value='Philippines'>Philippines</option>
+            <option value='Estonia'>Estonia</option>
+            <option value='Romania'>Romania</option>
+            <option value='Ireland'>Ireland</option>
+            <option value='Brazil'>Brazil</option>
+            <option value='Thailand'>Thailand</option>
+            <option value='Kuwait'>Kuwait</option>
+            <option value='Poland'>Poland</option>
+            <option value='Iraq'>Iraq</option>
+            <option value='Egypt'>Egypt</option>
+            <option value='India'>India</option>
+            <option value='Saudi Arabia'>Saudi Arabia</option>
+            <option value='San Marino'>San Marino</option>
+            <option value='Lebanon'>Lebanon</option>
+            <option value='UAE'>UAE</option>
+            <option value='Chile'>Chile</option>
+            <option value='Luxembourg'>Luxembourg</option>
+            <option value='Taiwan'>Taiwan</option>
+            <option value='Russia'>Russia</option>
+        </select>
+        </form>
+        </th><th></th><th>0</th></tr>
+    <tr>
+        <th rowspan='2'> DATA NEGARA :<br><br>Indonesia</th>
+        <th><img src='/img/sembuh.png' height='25' width='25'/><br>Sembuh</th>
+        <th><img src='/img/mati.png' height='30' width='30'/><br>Meninggal</th>
+    </tr>
+    <tr><th></th><th></th></tr>
+        <tr>
+        <th colspan='3'>PETA PANTAUAN JAWA BARAT<br><iframe frameborder='0' height='800px' width='800px' title='Data Visualization' allowtransparency='true' allowfullscreen='true' data-v-0b11a7ef='' class='tableauViz' src='https://public.tableau.com/views/PetaSebaranODPPDP-BlueVersion/DashboardMapAllCases?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fpublic.tableau.com%2F&amp;:embed_code_version=3&amp;:tabs=no&amp;:toolbar=yes&amp;:animate_transition=yes&amp;:display_static_image=no&amp;:display_spinner=no&amp;:display_overlay=yes&amp;:display_count=yes&amp;publish=yes&amp;:loadOrderID=0'></iframe></th>
+    </tr>
+    <tr>
+            <th colspan='3'><br>Terakhir Cek : 17 Maret 2020 (16:53:45 WIB)</tbody>
+            </tr>
+    </table></center>
+</body>
+
+</html>

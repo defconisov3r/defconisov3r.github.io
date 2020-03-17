@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+   <meta http-equiv="Pragma" content="no-cache">
+   <meta http-equiv="Expires" content="0">
+   <title>CAPTCHA</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://www.freehosting.com/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+   <link href="https://www.freehosting.com/css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+   <link href="https://www.freehosting.com/css/theme.css" rel="stylesheet" type="text/css" media="all" />
+   <link href="https://www.freehosting.com/css/custom.css" rel="stylesheet" type="text/css" media="all" />
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   <script src="https://www.freehosting.com/js/smooth-scroll.min.js"></script>
+   <script src="https://www.freehosting.com/js/scripts.js"></script>
+</head>
+<body data-smooth-scroll-offset="77">
+   <div class="main-container">
+      <section class="height-100 bg--dark text-center">
+         <div class="container pos-vertical-center">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1 class="h1--large">Are you a robot?</h1>
+                  <p class="lead">
+                     We have detected an unusual activity originating from your IP address. Please complete verification to continue.
+                  </p>
+                  <div style="text-align: center; width: 304px; margin: 0 auto;">
+                     <form>
+                     <div class="g-recaptcha" data-sitekey="6LcqXLIUAAAAALBshED-nhlPGQBO8ECXN56f8mvJ"></div>
+                     </form>
+                  </div>
+                  <br/>
+                  <a class="btn btn--primary" id="submit"><span class="btn__text">Continue</span></a>
+                  <script>
+                  $('#submit').on('click',function() {
+                     event.preventDefault();
+                     var data = $('form').serialize();
+                     $.ajax({
+                        url: '/freehost/check_recaptcha.php',
+                        data: data,
+                        method: 'POST',
+                        success: function() {
+                           location.reload();
+                        },
+                        error: function() {
+                           location.reload();
+                        }
+                     });
+                  });
+                  </script>
+               </div>
+            </div>
+         </section>
+      </div>
+   </body>
+</html>

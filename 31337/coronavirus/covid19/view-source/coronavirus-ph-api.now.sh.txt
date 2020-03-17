@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>coronavirus-ph-api | Documentation</title>
+  <link rel="stylesheet" href="https://unpkg.com/docute@4/dist/docute.css">
+</head>
+<body>
+  <div id="docute"></div>
+  <script src="https://unpkg.com/docute@4/dist/docute.js"></script>
+  <script>
+    new Docute({
+      target: '#docute',
+      layout: 'narrow',
+      theme: 'light',
+      darkThemeToggler: true,
+      detectSystemDarkTheme: true,
+      title: 'Documentation',
+      highlight: ['http', 'json'],
+      sidebar: [
+      {
+        title: 'Github',
+        link: 'https://github.com/sorxrob/coronavirus-ph-api'
+      },
+      {
+        title: 'the2019ncov.com',
+        link: 'https://the2019ncov.com'
+      },
+      
+      {
+        title: 'Developer',
+        link: 'https://robsoriano.com'
+      }
+      ]
+    })
+  </script>
+</body>
+</html>

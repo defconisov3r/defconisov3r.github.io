@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Norsk system for egen COVID-19 risikovurdering </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+    <div class="padder">
+	<h1>Norsk system for egen COVID-19 risikovurdering </h1>
+
+		<p>
+
+		</p>
+
+		<table>
+
+			<tr>
+				<td><label for="sex">Kjønn</label></td>
+				<td><select name="sex" id="sex">
+					<option value="f">Kvinne</option>
+					<option value="m">Mann</option>
+					<option value="a">Annet</option>
+				</select></td>
+			</tr>
+
+			<tr>
+				<td><label for="age">Alder</label></td>
+				<td><input name="age" type="text" id="age" style="width:2rem" maxlength="2"/></td>
+			</tr>
+
+			<tr>
+				<td><label for="pc">Postnummer</label></td>
+				<td><input name="pc" type="text" id="pc" style="width:4rem" maxlength="4"/></td>
+			</tr>
+
+			<tr>
+				<td>Er det mistanke om smitte?</td>
+				<td>
+					<label class="radio-label" for="cs-y">Ja <input type="radio" name="cs" id="cs-y" value="y"/></label>
+					<label class="radio-label" for="cs-n"><input type="radio" name="cs" id="cs-n" value="n"/>
+						Nei</label></td>
+			</tr>
+
+			<tr>
+				<td>Vært i område med mye smitte?</td>
+				<td>
+					<label class="radio-label" for="ca-y">Ja <input type="radio" name="ca" id="ca-y" value="y"/></label>
+					<label class="radio-label" for="ca-n"><input type="radio" name="ca" id="ca-n" value="n"/>
+						Nei</label></td>
+			</tr>
+
+			<tr>
+				<td>Er du testet for Korona?</td>
+				<td>
+					<label class="radio-label" for="ct-y">Ja <input type="radio" name="ct" id="ct-y" value="y"/></label>
+					<label class="radio-label" for="ct-n"><input type="radio" name="ct" id="ct-n" value="n"/>
+						Nei</label></td>
+			</tr>
+
+			<tr>
+				<td>Har du noen av de følgende symptomene?<br/><a href="https://nhi.no/" target="_blank">Les mer om symptomer hos NHI</a></td>
+				<td>
+					<label class="radio-label" for="s_1">Tørrhoste <input type="checkbox" name="s_1"
+																		  id="s_1"></label><br/>
+					<label class="radio-label" for="s_2">Slitenhet eller utmattelse <input type="checkbox" name="s_2"
+																						   id="s_2"></label><br/>
+					<label class="radio-label" for="s_3">Feber <input type="checkbox" name="s_3" id="s_3"></label><br/>
+					<label class="radio-label" for="s_4">Tung pust <input type="checkbox" name="s_4"
+																		  id="s_4"></label><br/>
+					<label class="radio-label" for="s_5">Muskelsmerter <input type="checkbox" name="s_5"
+																			  id="s_5"></label><br/>
+					<label class="radio-label" for="s_6">Diaré <input type="checkbox" name="s_6" id="s_6"></label><br/>
+					<label class="radio-label" for="s_6">Vondt i hals <input type="checkbox" name="s_7" id="s_7"></label><br/>
+					<label class="radio-label" for="s_6">Hodepine<input type="checkbox" name="s_8" id="s_8"></label><br/>
+				</td>
+			</tr>
+            <tr>
+                <td>
+                    Estimat for risiko:
+                </td>
+                <td>
+                    <div id="risk"></div>
+                </td>
+
+            </tr>
+
+		</table>
+
+	</div>
+    <script>
+
+        var nodes = document.querySelectorAll("input");
+        for( let i=0;i<nodes.length;i++){
+            nodes[i].addEventListener("blur", recalculate );
+        }
+
+        function recalculate(event){
+
+            var factor = 0
+
+            repaintRiskLabel();
+        }
+
+        function $(selector){
+            var nodes = document.querySelectorAll(selector);
+            if( nodes.length === 0){
+                return undefined;
+            }
+            return nodes;
+        }
+
+
+        function repaintRiskLabel(){
+            let pc = $("#pc")[0].value;
+
+            try {
+                pc = parseInt(pc,10);
+            }
+            catch( w ){
+
+            }
+        }
+
+    </script>
+</div>
+
+  </body>
+</html>

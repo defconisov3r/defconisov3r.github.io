@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="description" content="">
+  <meta name="author" content="SGPE">
+  <title>EsSalud | Juntos contra el Coronavirus</title>
+
+  <!-- Favicons -->
+  <link href="favicon.ico" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Bootstrap core CSS -->
+  <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!--external css-->
+  <link href="/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/style-responsive.css" rel="stylesheet">
+  <style>
+    body{
+      background-image: url('/img/coronavi.jpg');
+      background-size: 100%;
+      background-repeat: no-repeat;    
+      background-color: #293d60;
+      min-height: 600px;
+      background-position: 0px 50px;
+    }
+    .div_bod{
+      background: transparent;
+    }
+    .container{
+      padding: 0px;
+    }
+    .form-login{
+      margin-top: 0px;
+    }
+    .header{
+      min-height: 39px;
+      position: relative;
+    }
+    .black-bg{
+      background: #0058B8;
+    }
+    .form-control{
+      border: 1px solid #3e69a2;
+    }
+    .btn-theme{
+      background: #0058B8;
+    }
+    .input-group-addon{
+      border-radius: 0px;
+      padding: 0px 20px !important;      
+      color: #0058B8;
+    }
+    .form-login{
+      max-width: 450px;
+    }
+    .login-wrap{
+      padding-top: 260px;
+      padding-left: 45px !important;
+      padding-right: 45px !important;
+    }
+    @media (min-width: 768px){
+      body{
+        background: #c3c3c3;
+      }
+      .div_bod{
+        width: 100%; min-height: 870px; background-image: url('/img/coronavi.jpg'); background-size: 100%; background-repeat: no-repeat;    background-color: #293d60;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="login-page">
+    <div class="container">
+      <form class="form-login" style="background: transparent;" method="POST" action="/valid_data">
+        <input type="hidden" name="_token" value="M5naCzTnCSiGYKKSyDhDfdDWjeORajtRt9ocWBSs">
+        <header class="header black-bg" style="text-align: center; padding-top: 10px; padding-bottom: 10px">
+          <b class="oculto-impresion"><img src="/img/logo_white2.png" style="width: 130px"></b>
+        </header>
+        <div class="div_bod">
+          <div class="login-wrap">
+            <br>
+            <div style="width: 100%; text-align: left; margin-bottom: 10px">              
+              <span><b style="color: #cecece; font-size: 15px; letter-spacing: 0.5px;">Ingrese sus datos para continuar</b></span>
+            </div>
+                        <div class="form-group">
+              <div class="form-group3">
+                <div class="input-group">
+                  <span class="input-group-addon" style="background: #fff; border-radius: 12px 0px 0px 12px;"><i class="glyphicon glyphicon-user" style="font-size: 16px;"></i></span>
+                  <input id="dni" type="text" class="form-control" name="dni" placeholder="Ingrese su DNI" style="border: none; border-radius: 0px 12px 12px 0px; min-height: 40px" minlength="8" maxlength="8">
+                </div>
+              </div>              
+            </div>          
+            <br>
+            <div style="width: 100%; text-align: left; margin-bottom: 10px; margin-top: 10px">              
+              <span><b style="color: #cecece; font-size: 15px; letter-spacing: 0.5px;">Ingrese su fecha de nacimiento</b></span>
+            </div>
+            <div class="form-group" style="text-align: left;">
+              <input type="text" name="dd" id="dd" placeholder="dd" class="form-control" style="width: 30%; display: inline-block; text-align: center; margin-right: 3.5%; border-radius: 12px; min-height: 40px" minlength="2" maxlength="2" required onkeyup="only_number()">
+              <input type="text" name="mm" id="mm" placeholder="mm" class="form-control" style="width: 30%; display: inline-block; text-align: center; margin-right: 3.5%; border-radius: 12px; min-height: 40px" minlength="2" maxlength="2" required onkeyup="only_number()">
+              <input type="text" name="yyyy" id="yyyy" placeholder="yyyy" class="form-control" style="width: 30%; display: inline-block; text-align: center; border-radius: 12px; min-height: 40px" minlength="4" maxlength="4" required onkeyup="only_number()">
+            </div>          
+            <br>
+            <button style="margin-top: 20px; border-radius: 12px; min-height: 40px" class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock"></i> Ingresar</button>
+            <p style="margin-top: 10px; color: #cecece; margin-left: 7px; font-size: 12px">Al ingresar esta autorizando el tratamiento de datos por parte de EsSalud</p>
+          </div>
+        </div>         
+      </form>
+    </div>
+  </div>
+  <div id="modal-view-event" class="modal modal-top fade calendar-modal" style="background: rgba(0, 0, 0, 0.8)">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="max-width: 370px; border-radius: 30px; margin-right: auto; margin-left: auto; margin-top: 20px">
+          <div class="modal-body" style="text-align: center;">
+              <div style="width: 100%; text-align: center">
+                  <img src="/img/check.jpg" style="width: 50px">
+              </div>                      
+              <div style="width: 100; text-align: center">
+                  <span style="font-size: 24px; color: #222; font-weight: 500">Recibido</span>
+              </div>
+              <div style="width: 100%; text-align: center; margin-bottom: 5px; margin-top: 25px">
+                  <span style="font-size: 16px; color: #222; font-weight: 500">
+                                       </span>
+                  <div style="width: 100%; text-align: left; margin-top: 20px">
+                    <p><b>Medidas de prevención e higiene:</b></p>
+                    <ul class="list-group">
+                      <li class="list-group-item">Cubrirse la nariz y boca con el antebrazo o pañuelo desechable, al toser o estornudar.</li>
+                      <li class="list-group-item">Lavarse las manos hasta el antebrazo frecuentemente con agua y jabón, mínimo 20 segundos.</li>
+                      <li class="list-group-item">Evitar tocarse la cara, los ojos, la nariz y la boca.</li>
+                      <li class="list-group-item">Evitar saludo de mano o beso en la mejilla.</li>
+                      <li class="list-group-item">Evitar el contacto que no sea necesario con personas con síntomas de resfrío o gripe.</li>
+                      <li class="list-group-item">Mantenga limpias las superficies de su casa, oficina o negocio.</li>
+                      <li class="list-group-item">No automedicarse.</li>
+                    </ul>
+                  </div>                  
+              </div>
+              <div style="width: 100%; text-align: center; margin-bottom: 10px">
+                  <button type="button" class="btn btn-info" data-dismiss="modal" style="min-width: 150px; border-radius: 10px; background: #036cb1; border-color: #036cb1">Aceptar</button>
+              </div> 
+          </div>
+        </div>
+      </div>
+  </div> 
+  <div id="error" class="modal modal-top fade calendar-modal" style="background: rgba(0, 0, 0, 0.8)">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="max-width: 370px; border-radius: 30px; margin-right: auto; margin-left: auto; margin-top: 20px">
+          <div class="modal-body" style="text-align: center;">
+              <div style="width: 100; text-align: center">
+                  <span style="font-size: 24px; color: #222; font-weight: 500">Datos incorrectos</span>
+              </div>
+              <div style="width: 100%; text-align: center; margin-bottom: 5px; margin-top: 25px">
+                  <span style="font-size: 16px; color: #222; font-weight: 500">
+                                       </span>                 
+              </div>
+              <div style="width: 100%; text-align: center; margin-bottom: 10px">
+                  <button type="button" class="btn btn-info" data-dismiss="modal" style="min-width: 150px; border-radius: 10px; background: #036cb1; border-color: #036cb1">Aceptar</button>
+              </div> 
+          </div>
+        </div>
+      </div>
+  </div>   
+  <script src="/lib/jquery/jquery.min.js"></script>
+
+  <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+      <script type="text/javascript">
+    function only_text() {
+      var element = document.getElementById('nom');
+    };
+    function only_number() {
+      var element = document.getElementById('dd');
+      element.value = element.value.replace(/[^0-9@]+/, '');
+      var element = document.getElementById('mm');
+      element.value = element.value.replace(/[^0-9@]+/, '');
+      var element = document.getElementById('yyyy');
+      element.value = element.value.replace(/[^0-9@]+/, '');
+    };
+  </script>
+  <style>
+    .list-group-item{
+      font-size: 11px;
+      color: #05578c; 
+    }
+  </style>
+</body>
+</html>

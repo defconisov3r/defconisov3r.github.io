@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/profiles/contrib/contenta_jsonapi/modules/contenta_enhancements/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="canonical" href="https://engine.covid19caribtracker.com/welcome" />
+<link rel="shortlink" href="https://engine.covid19caribtracker.com/node/6" />
+<link rel="revision" href="https://engine.covid19caribtracker.com/welcome" />
+
+    <title>API Engine | COVID-19 Caribbean Tracker</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EDi8ZFoNtw5WtfHsDvRkrJYA1knfEmKTnKJEjHcCAsM.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_zb5Anlq2ItYhokaa9j0PUNHcfnJRQZAZE48aL_QJ6zw.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="/core/assets/vendor/modernizr/modernizr.min.js?v=3.3.1"></script>
+
+  </head>
+  <body class="toolbar-tray-open toolbar-horizontal toolbar-fixed toolbar-loading material_admin path-frontpage page-node-type-page">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    <div id="toolbar-administration" role="group" aria-label="Site administration toolbar" class="toolbar">
+  <nav id="toolbar-bar" role="navigation" aria-label="Toolbar items" class="toolbar-bar clearfix">
+    <h2 class="visually-hidden">Toolbar items</h2>
+                <div class="toolbar-tab">
+        <a href="/" title="Welcome to Contenta CMS" class="toolbar-icon toolbar-icon-menu toolbar-icon-contenta trigger toolbar-item" id="toolbar-item-contenta" data-toolbar-tray="toolbar-item-contenta-tray" role="button" aria-pressed="false">Contenta CMS</a>
+        <div id="toolbar-item-contenta-tray" data-toolbar-tray="toolbar-item-contenta-tray" class="toolbar-tray"><nav class="toolbar-lining clearfix" role="navigation" aria-label="Contenta CMS"><h3 class="toolbar-tray-name visually-hidden">Contenta CMS</h3><ul class="toolbar-menu"><li class="menu-item"><a href="/" title="Welcome to Contenta." id="toolbar-link-front" class="toolbar-icon toolbar-icon-homepage is-active" data-drupal-link-system-path="&lt;front&gt;">Home</a></li><li class="menu-item"><a href="/help/tutorials" title="List of external documentation sources." id="toolbar-link-view-tutorials-page_1" class="toolbar-icon toolbar-icon-views-view:views-tutorials-page-1" data-drupal-link-system-path="help/tutorials">Tutorials</a></li></ul></nav></div>      </div>
+                <div class="toolbar-tab">
+        <a href="/admin/api" class="toolbar-icon toolbar-icon-system-modules-list toolbar-item" data-drupal-link-system-path="admin/api">API</a>
+        <div><nav class="toolbar-lining clearfix" role="navigation"></nav></div>      </div>
+                <div id="admin-toolbar-search-tab" class="toolbar-tab">
+        <a href="/admin" class="toolbar-icon trigger toolbar-item" id="toolbar-item-administration-search" data-toolbar-tray="toolbar-item-administration-search-tray" role="button" aria-pressed="false">Search</a>
+        <div id="toolbar-item-administration-search-tray" data-toolbar-tray="toolbar-item-administration-search-tray" class="toolbar-tray"><nav class="toolbar-lining clearfix" role="navigation"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item- form-item- form-has-label input-field"><label>Search</label><input id="admin-toolbar-search-input" type="text" size="60" maxlength="128" class="form-text" /></div></nav></div>      </div>
+                <div class="login-tab toolbar-tab">
+        <a href="/user/login" class="toolbar-item" data-drupal-link-system-path="user/login">Log in</a>
+        <div><nav class="toolbar-lining clearfix" role="navigation"></nav></div>      </div>
+                <div class="toolbar-tab">
+        
+        <div><nav class="toolbar-lining clearfix" role="navigation" aria-label="Environment switcher"><h3 class="toolbar-tray-name visually-hidden">Environment switcher</h3></nav></div>      </div>
+      </nav>
+  
+</div>
+
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+ 
+<div class="layout-container">
+  <div id="messageContainer" class="modal bottom-sheet">
+  <div class="modal-content">
+    <h4 class="notification-title">Message Notifications</h4>
+    <div class="allmessages">  <div class="region region-status">
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a data-href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+     </div>
+</div>
+  <header class="header-wrapper z-depth-2" role="banner">
+    <div class="row material-container">
+      <div class="s12 col">
+      <div class="right" id="notification-wrapper">
+  <a class="modal-trigger message-trigger waves-light waves-effect" href="#messageContainer"><i class="material-icons">notifications</i><span class="badge messages--status">0</span><span class="badge messages--warning">0</span><span class="badge messages--error">0</span></a>
+</div>
+        <div class="region region-header">
+    <div id="block-material-admin-page-title" class="block block-core block-page-title-block">
+  
+    
+      
+  <h1 class="page-title"><span property="schema:name" class="field field--name-title field--type-string field--label-hidden">API Engine</span>
+</h1>
+
+
+  </div>
+
+  </div>
+ 
+              </div>
+          </div>
+  </header>
+  <section class="breadcrumb-section-wrapper-empty">
+    <div class="row material-container">
+      <div class="s12 col">
+        
+    </div>
+    </div>
+  </section>
+  <section class="highlighted-wrapper">
+       <div class="row highlighted-container material-container">
+    <div class="s12 col">
+		<div class="region region-highlighted"></div>	</div>
+</div>
+
+  </section>
+  <main role="main-wrapper">
+    <div class="row material-container">
+      <div class="s12 col">
+      <a id="main-content" tabindex="-1"></a>      <div class="layout-content">
+          <div class="region region-content">
+    <div id="block-material-admin-content" class="block block-system block-system-main-block">
+  
+    
+      
+<article role="article" about="/welcome" typeof="schema:WebPage" class="node node--type-page node--view-mode-full">
+
+  
+      <span property="schema:name" content="API Engine" class="rdf-meta hidden"></span>
+
+
+  
+  <div class="node__content">
+    
+            <div property="schema:text" class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="card horizontal">
+<div class="card-stacked">
+<div class="card-content"><img class="right" src="/profiles/contrib/contenta_jsonapi/modules/contenta_enhancements/logo.svg" style="padding: 1.5rem;" /> <span class="card-title">OK! I just installed Contenta CMS, now what?</span>
+<p>First of all, congratulations! We know that trying new software can be both fun and also a little bit intimidating. In any case we are glad to see that you are giving this a shot.</p>
+
+<p> </p>
+
+<ul>
+	<li>You can explore the capabilities of decoupled Drupal from the backend perspective.</li>
+	<li>You can revert the site to a clean state and remove all the demo content and configuration.</li>
+</ul>
+</div>
+
+<div class="card-action right right-align"><span class="left">From here there are two different paths you can follow next:</span> <a href="#reverting-to-a-clean-state">Revert</a> <a href="#exploring-contenta-cms">Explore</a></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-stacked">
+<div class="card-content"><span class="card-title" id="exploring-contenta-cms">Explore</span>
+
+<p>To get started with your content we recommend you starting with this steps. You will need to <a href="/user/login" title="Use your credentials to access the administration pages.">log in</a> first.</p>
+
+<div class="section">
+<h5>Discover Structure</h5>
+
+<p>Go to the content types configuration page and explore the different content types and their fields to understand what you are going to be exposing.</p>
+</div>
+
+<div class="divider"> </div>
+
+<div class="section">
+<h5>Discover Content</h5>
+
+<p>Head over to the content list page to see the demo content that you can interact with.</p>
+</div>
+
+<div class="divider"> </div>
+
+<div class="section">
+<h5>Discover Your API</h5>
+
+<p>One of the first things that you may want to do is to understand what your API looks like. Check the autogenerated API documentation to explore how to interact with your API.</p>
+</div>
+</div>
+
+<div class="card-action"><a href="/user/login">Log in</a> <a href="/admin/structure/types">Discover Structure</a> <a href="/admin/content">Discover Content</a> <a href="/admin/config/services/openapi/redoc/jsonapi">Discover API</a></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-stacked">
+<div class="card-content"><span class="card-title" id="exploring-contenta-cms">Start Working</span>
+
+<div class="section">
+<h5>Make a Request</h5>
+
+<p>Once you understand the schema of your API, it’s time for you to <a href="https://www.youtube.com/watch?v=8NHK8kMC9xg&amp;index=2&amp;list=PLZOQ_ZMpYrZsyO-3IstImK1okrpfAjuMZ">make your first request</a>.</p>
+</div>
+
+<div class="divider"> </div>
+
+<div class="section">
+<h5>Create Content with the API</h5>
+
+<p>The section video about creating content using the API will give you information about how you can use the API to write content to Contenta, instead of just reading from it.</p>
+
+<p>It is possible that you will need to make authenticated requests. That’s fine too, we have you covered. Contenta comes with OAuth support out of the box.</p>
+</div>
+
+<div class="divider"> </div>
+
+<div class="section">
+<h5>Optimize</h5>
+
+<p>Finally, if you are a perfectionist you will probably want to learn how to aggregate your requests for performance reasons. JSON API makes it really easy to have very few requests, however some times you just want One Request to Rule Them All.</p>
+</div>
+</div>
+
+<div class="card-action"><a href="/admin/config/people/simple_oauth">Administer OAuth2</a> <a href="https://www.youtube.com/watch?v=vEfH2TZAxDg&amp;list=PLZOQ_ZMpYrZsyO-3IstImK1okrpfAjuMZ&amp;index=14">Create Content via API</a> <a href="https://www.youtube.com/watch?v=BEKKFExaBMM&amp;index=3&amp;list=PLZOQ_ZMpYrZtqy5-o7KoDhM3n6M0duBjX">Authenticated</a> <a href="https://cgit.drupalcode.org/subrequests/tree/SPECIFICATION.md?h=8.x-1.x">Subrequests Spec</a></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-stacked">
+<div class="card-content"><span class="card-title" id="reverting-to-a-clean-state">Revert to a Clean State</span>
+
+<p>You have already explored what contenta can offer out of the box, now you are ready to start building your project.</p>
+
+<p>In order to revert Contenta to a clean slate you will need to uninstall the <em>Recipes Magazin</em> and the <em>Recipes Magazin Contenta</em> modules. By uninstalling those modules you will:</p>
+
+<ul>
+	<li>Remove the demo content types: Recipe, Page and Article.</li>
+	<li>Remove the customizations to clean the API of Drupalisms.</li>
+	<li>Remove all the content for the demo content types. Even if you created the content after installing, if you remove the content types the content will be deleted.</li>
+</ul>
+
+<p>Once those two modules are gone, you will have a clean Contenta CMS installation. Even this page and all the help content will be gone.</p>
+
+<p>If you ever regret this decision, it’s OK! By re-enabling those two modules you will get everything back.</p>
+</div>
+
+<div class="card-action"><a href="/admin/contenta/revert">Revert</a></div>
+</div>
+</div>
+</div>
+      
+  </div>
+
+</article>
+
+  </div>
+
+  </div>
+
+      </div>      </div>
+    </div>
+  </main>
+  </div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/6","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"admin_toolbar\/search,classy\/base,classy\/messages,classy\/node,contenta_enhancements\/contenta_enhancements,contenta_enhancements\/custom,contenta_enhancements\/fix-2886816,contenta_enhancements\/fix-2887220,core\/html5shiv,core\/normalize,material_admin\/global-styling,system\/base,toolbar\/toolbar","theme":"material_admin","theme_token":null},"ajaxTrustedUrl":[],"material_admin":{"material_admin_message_length":88,"material_admin_jqueryui_dialog_background":true,"material_admin_jqueryui_dialog_close":true,"material_admin_datepicker_select_years":20},"toolbar":{"breakpoints":{"toolbar.narrow":"only screen and (min-width: 16.5em)","toolbar.standard":"only screen and (min-width: 38.125em)","toolbar.wide":"only screen and (min-width: 61em)"}},"user":{"uid":0,"permissionsHash":"169b60987dbdb1bebc0803ea5a2a90621aef6afc2a44e28f89e77184d49370be"}}</script>
+<script src="/sites/default/files/js/js_xeg15HJvX-Jo5HLK_mlytePR1Fkn7rIsBFdlhQkjeAk.js"></script>
+
+  </body>
+</html>

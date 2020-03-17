@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Коронавирус. Онлайн карта распространения коронавируса. Коронавирус в России и мире.</title>
+  <meta name="description" content="Карта распространения коронавируса. Статистика по коронавирусу в России и мире. Новости про коронавирус. Covid-19">
+  <meta name="keywords" content="коронавирус,онлайн карта распространения коронавируса, симптомы коронавируса, коронавирус онлайн, новости про коронавирус, статистика, covid-19, коронавирус в России">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="canonical">
+  <meta name="og:title" content="Коронавирус. Онлайн карта распространения коронавируса. Коронавирус в России и мире.">
+  <meta name="og:description" content="Карта распространения коронавируса. Статистика по коронавирусу в России и мире. Новости про коронавирус. Covid-19">
+  <meta name="og:image" content="https://coronavirusmonitor.info/coronavirus.png">
+  <meta name="og:url" content="https://coronavirusmonitor.info">
+  <meta name="twitter:title" content="Коронавирус. Онлайн карта распространения коронавируса. Коронавирус в России и мире.">
+  <meta name="twitter:description" content="Карта распространения коронавируса. Статистика по коронавирусу в России и мире. Новости про коронавирус. Covid-19">
+  <meta name="twitter:image" content="https://coronavirusmonitor.info/coronavirus.png">
+  <meta name="twitter:url" content="https://coronavirusmonitor.info">
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+
+    .site-header {
+      background: #fff;
+      color: #999999;
+    }
+    #chartdiv {
+      background: #f1f1f1;
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+    }
+
+    .navbar-brand {
+      cursor: default;
+    }
+
+    .navbar-brand small {
+      display: block;
+      font-size: 12px;
+    }
+    h1,h2,h3,h4,h5,h6 {
+      color: #ff6600;
+    }
+    .nav-link {
+      color: #ff6600;
+    }
+    .b-totals {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    .b-totals .total {
+      margin-bottom: 10px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      background: hsla(220,27%,70%,.75);
+      border: 1px solid #fff;
+      padding: 5px;
+      max-width: 180px;
+    }
+    .b-totals .total .description {
+      font-size: 15px;
+      color: #fff;
+    }
+    .b-totals .total .amount {
+      font-size: 22px;
+      color: #fff;
+    }
+    #map {
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-light bg-light navbar-expand-sm flex-nowrap align-items-start site-header sticky-top py-1">
+    <div class="container">
+      <a class="py-2 navbar-brand" href="#">
+        <img src="coronavirus.png" width="50" height="50" class="d-inline-block align-top" alt="">
+        <div class="d-inline-block">
+          Коронавирус мониторинг
+          <small>Актуальные цифры и новости</small>
+        </div>
+      </a>
+      <a class="py-2 d-none d-md-inline-block nav-link" href="#simptomy">Симптомы</a>
+      <a class="py-2 d-none d-md-inline-block nav-link" href="#profilaktika">Профилактика</a>
+      <a class="py-2 d-none d-md-inline-block nav-link" href="#news">Новости</a>
+    </div>
+  </nav>
+  <div class="w-100" id="map">
+    <div id="chartdiv"></div>
+    <div class="b-totals js-totals">
+      <div class="total">
+        <div class="description">
+          Актуально на
+        </div>
+        <div class="amount small">
+          <script>
+          var today = new Date();
+          var dd = String(today.getDate()).padStart(2, '0');
+          var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+          var yyyy = today.getFullYear();
+
+          today = dd + '/' + mm + '/' + yyyy;
+          document.write(today);
+          </script>
+        </div>
+      </div>
+      <div class="total">
+        <div class="description">
+          Зараженных
+        </div>
+        <div class="amount">
+          181351
+        </div>
+      </div>
+      <div class="total">
+        <div class="description">
+          Погибших
+        </div>
+        <div class="amount">
+          7099
+        </div>
+      </div>
+      <div class="total">
+        <div class="description">
+          Выздоровевших
+        </div>
+        <div class="amount">
+          77940
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="w-100" id="simptomy">
+    <div class="container">
+      <div class="my-3 py-5">
+        <h2 class="display-5">Симптомы коронавируса</h2>
+        <p class="lead">Инкубационный период коронавируса Covid-19 может продолжаться более двух недель. Более продолжительные сроки инкубационного периода могут быть характерны при передаче вируса от животных.</p>
+        <p class="lead">Симптомы коронавируса Covid-19 схожи с симптомами пневмонии или тяжёлого острого респираторного синдрома:</p>
+        <ul>
+          <li>Потеря сознания (в результате прогрессирующего разрушения лёгочных тканей),</li>
+          <li>Сухой, непродуктивный кашель,</li>
+          <li>Лихорадка и повышение температуры (38 °С или выше, озноб),</li>
+          <li>Затруднения при дыхании,</li>
+          <li>Боли в области груди,</li>
+          <li>Головная боль,</li>
+          <li>Боль в мышцах,</li>
+          <li>Общее недомогание.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-100 bg-light" id="profilaktika">
+    <div class="container">
+      <div class="my-3 py-5">
+        <h2 class="display-5">Меры профилактики коронавируса</h2>
+        <ul>
+          <li>Часто мойте руки с мылом - не менее 20 секунд</li>
+          <li>Не касайтесь грязными руками глаз, рта и слизистых</li>
+          <li>Избегайте тесного контакта с зараженными людьми</li>
+          <li>Почаще делайте влажную уборку с использованием дезинфицирующих средств</li>
+          <li>Уточняйте эпидемиологическую обстановку при планировании путешествия</li>
+          <li>Используйте маски для защиты органов дыхания</li>
+          <li>При первых признаках заболевания обратитесь за медицинской помощью в лечебные организации</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="container py-5">
+    <div class="row">
+      <div class="col-6 col-md">
+        <img src="coronavirus.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <small class="d-inline-block mb-3 text-muted">Коронавирус COVID-2019 мониторинг</small>
+      </div>
+      <div class="col-6 col-md">
+        <div class=" float-md-right addthis_sharing_toolbox"></div>
+      </div>
+    </div>
+
+  </footer>
+
+
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ec02a2d5e7f1f90"></script>
+
+  <script src="https://www.amcharts.com/lib/4/core.js"></script>
+  <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://www.amcharts.com/lib/4/maps.js"></script>
+  <script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/spiritedaway.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+  <script src="https://www.amcharts.com/lib/4/geodata/lang/RU.js"></script>
+  <script>
+    // Themes begin
+    am4core.useTheme(am4themes_spiritedaway);
+    am4core.useTheme(am4themes_animated);
+    // Themes end
+
+    // Create map instance
+    var chart = am4core.create("chartdiv", am4maps.MapChart);
+
+    chart.homeZoomLevel = 3;
+    chart.homeGeoPoint = {
+      latitude: 50.4547,
+      longitude: 30.5238
+    };
+
+    // Set map definition
+    chart.geodata = am4geodata_worldLow;
+    chart.geodataNames = am4geodata_lang_RU;
+
+    // Set projection
+    chart.projection = new am4maps.projections.Miller();
+
+    // Zoom control
+    var zoomControl = new am4maps.ZoomControl();
+    chart.zoomControl = zoomControl;
+    zoomControl.slider.height = 100;
+
+    // Create map polygon series
+    var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
+
+    // Exclude Antartica
+    polygonSeries.exclude = ["AQ"];
+
+    // Make map load polygon (like country names) data from GeoJSON
+    polygonSeries.useGeodata = true;
+
+    // Configure series
+    var polygonTemplate = polygonSeries.mapPolygons.template;
+    polygonTemplate.tooltipText = "[bold]{name}[/]";
+    polygonTemplate.fill = chart.colors.getIndex(0);
+    // polygonTemplate.polygon.fillOpacity = 0.6;
+    // polygonTemplate.fill = am4core.color("#FAFAFA");
+    // polygonTemplate.stroke = am4core.color("#D1D1D1");
+    // Create hover state and set alternative fill color
+    var hs = polygonTemplate.states.create("hover");
+    hs.properties.fill = chart.colors.getIndex(0).brighten(0.5);
+
+    // Add image series
+    var imageSeries = chart.series.push(new am4maps.MapImageSeries());
+    imageSeries.mapImages.template.propertyFields.longitude = "longitude";
+    imageSeries.mapImages.template.propertyFields.latitude = "latitude";
+    imageSeries.mapImages.template.tooltipText = "[bold]{ru}[/]\nЗаражений: {confirmed}\nСмертей: {deaths}\nВыздоровлений: {cured}";
+    // imageSeries.mapImages.template.propertyFields.url = "url";
+
+    var circle = imageSeries.mapImages.template.createChild(am4core.Circle);
+    circle.radius = 1;
+    circle.stroke = am4core.color("#CC0000");
+    circle.fill = am4core.color("#f1f1f1");
+
+    var circle2 = imageSeries.mapImages.template.createChild(am4core.Circle);
+    circle2.radius = 1;
+    circle2.stroke = am4core.color("#CC0000");
+    circle2.fill = am4core.color("#f1f1f1");
+    circle2.events.on("inited", function(event){
+      animateBullet(event.target);
+    })
+
+    function animateBullet(circle) {
+        var animation = circle.animate([{ property: "scale", from: 1, to: 2 }, { property: "opacity", from: 1, to: 0 }], 1000, am4core.ease.circleOut);
+        animation.events.on("animationended", function(event){
+          animateBullet(event.target.object);
+        })
+    }
+
+    imageSeries.data = [{"latitude":32.278826,"longitude":102.110178,"confirmed":80866,"deaths":3213,"cured":67870,"en":"China","ru":"\u041a\u0438\u0442\u0430\u0439","ch":"China","isCountry":true},{"latitude":44.954457,"longitude":10.349284,"confirmed":24747,"deaths":1809,"cured":2335,"en":"Italy","ru":"\u0418\u0442\u0430\u043b\u0438\u044f","ch":"\u610f\u5927\u5229","isCountry":true},{"latitude":33.733982,"longitude":54.221233,"confirmed":13983,"deaths":724,"cured":4790,"en":"Iran","ru":"\u0418\u0440\u0430\u043d","ch":"\u4f0a\u6717","isCountry":true},{"latitude":35.966941,"longitude":127.571227,"confirmed":8236,"deaths":75,"cured":1137,"en":"South Korea","ru":"\u042e\u0436\u043d\u0430\u044f \u041a\u043e\u0440\u0435\u044f","ch":"\u97e9\u56fd","isCountry":true},{"latitude":39.159964,"longitude":-3.512808,"confirmed":7884,"deaths":292,"cured":517,"en":"Spain","ru":"\u0418\u0441\u043f\u0430\u043d\u0438\u044f","ch":"\u897f\u73ed\u7259","isCountry":true},{"latitude":51.228764,"longitude":10.551692,"confirmed":5813,"deaths":13,"cured":46,"en":"Germany","ru":"\u0413\u0435\u0440\u043c\u0430\u043d\u0438\u044f","ch":"\u5fb7\u56fd","isCountry":true},{"latitude":46.790878,"longitude":1.943379,"confirmed":5423,"deaths":127,"cured":12,"en":"France","ru":"\u0424\u0440\u0430\u043d\u0446\u0438\u044f","ch":"\u6cd5\u56fd","isCountry":true},{"latitude":36.952915,"longitude":-99.115868,"confirmed":3791,"deaths":65,"cured":9,"en":"United States","ru":"\u0421\u0428\u0410","ch":"\u7f8e\u56fd","isCountry":true},{"latitude":46.812875,"longitude":8.443732,"confirmed":2200,"deaths":14,"cured":4,"en":"Switzerland","ru":"\u0428\u0432\u0435\u0439\u0446\u0430\u0440\u0438\u044f","ch":"\u745e\u58eb","isCountry":true},{"latitude":52.515717,"longitude":-1.276317,"confirmed":1372,"deaths":35,"cured":18,"en":"United Kingdom","ru":"\u0412\u0435\u043b\u0438\u043a\u043e\u0431\u0440\u0438\u0442\u0430\u043d\u0438\u044f","ch":"\u82f1\u570b","isCountry":true},{"latitude":64.570968,"longitude":11.966377,"confirmed":1256,"deaths":3,"cured":0,"en":"Norway","ru":"\u041d\u043e\u0440\u0432\u0435\u0433\u0438\u044f","ch":"\u632a\u5a01","isCountry":true},{"latitude":36.72451,"longitude":139.268181,"confirmed":1151,"deaths":24,"cured":59,"en":"Japan","ru":"\u042f\u043f\u043e\u043d\u0438\u044f","ch":"\u65e5\u672c","isCountry":true},{"latitude":52.848781,"longitude":5.838421,"confirmed":1135,"deaths":20,"cured":2,"en":"Netherlands","ru":"\u041d\u0438\u0434\u0435\u0440\u043b\u0430\u043d\u0434\u044b","ch":"\u8377\u862d","isCountry":true},{"latitude":62.113107,"longitude":15.088463,"confirmed":1032,"deaths":3,"cured":0,"en":"Sweden","ru":"\u0428\u0432\u0435\u0446\u0438\u044f","ch":"\u745e\u5178","isCountry":true},{"latitude":50.510867,"longitude":4.863748,"confirmed":886,"deaths":4,"cured":1,"en":"Belgium","ru":"\u0411\u0435\u043b\u044c\u0433\u0438\u044f","ch":"\u6bd4\u5229\u6642","isCountry":true},{"latitude":56.142676,"longitude":9.466572,"confirmed":875,"deaths":1,"cured":0,"en":"Denmark","ru":"\u0414\u0430\u043d\u0438\u044f","ch":"\u4e39\u9ea5","isCountry":true},{"latitude":47.69646,"longitude":14.754613,"confirmed":860,"deaths":1,"cured":6,"en":"Austria","ru":"\u0410\u0432\u0441\u0442\u0440\u0438\u044f","ch":"\u5967\u5730\u5229","isCountry":true},{"latitude":3.74927,"longitude":102.157932,"confirmed":428,"deaths":0,"cured":42,"en":"Malaysia","ru":"\u041c\u0430\u043b\u0430\u0439\u0437\u0438\u044f","ch":"\u9a6c\u6765\u897f\u4e9a","isCountry":true},{"latitude":25.35913,"longitude":51.246866,"confirmed":401,"deaths":0,"cured":4,"en":"Qatar","ru":"\u041a\u0430\u0442\u0430\u0440","ch":"\u5361\u5854\u723e","isCountry":true},{"latitude":-25.694768,"longitude":133.795384,"confirmed":353,"deaths":5,"cured":27,"en":"Australia","ru":"\u0410\u0432\u0441\u0442\u0440\u0430\u043b\u0438\u044f","ch":"\u6fb3\u5927\u5229\u4e9a","isCountry":true},{"latitude":54.164145,"longitude":-105.983704,"confirmed":336,"deaths":1,"cured":11,"en":"Canada","ru":"\u041a\u0430\u043d\u0430\u0434\u0430","ch":"\u52a0\u62ff\u5927","isCountry":true},{"latitude":39.267067,"longitude":22.302411,"confirmed":331,"deaths":4,"cured":10,"en":"Greece","ru":"\u0413\u0440\u0435\u0446\u0438\u044f","ch":"\u5e0c\u81d8","isCountry":true},{"latitude":49.574818,"longitude":15.267847,"confirmed":298,"deaths":0,"cured":0,"en":"Czech Republic","ru":"\u0427\u0435\u0445\u0438\u044f","ch":"\u6377\u514b\u5171\u548c\u570b","isCountry":true},{"latitude":30.982826,"longitude":34.84609,"confirmed":250,"deaths":0,"cured":4,"en":"Israel","ru":"\u0418\u0437\u0440\u0430\u0438\u043b\u044c","ch":"\u4ee5\u8272\u5217","isCountry":true},{"latitude":39.489874,"longitude":-8.448817,"confirmed":245,"deaths":0,"cured":2,"en":"Portugal","ru":"\u041f\u043e\u0440\u0442\u0443\u0433\u0430\u043b\u0438\u044f","ch":"Portugal","isCountry":true},{"latitude":62.723206,"longitude":25.933922,"confirmed":241,"deaths":0,"cured":1,"en":"Finland","ru":"\u0424\u0438\u043d\u043b\u044f\u043d\u0434\u0438\u044f","ch":"\u82ac\u862d","isCountry":true},{"latitude":1.32395,"longitude":103.791806,"confirmed":226,"deaths":0,"cured":105,"en":"Singapore","ru":"\u0421\u0438\u043d\u0433\u0430\u043f\u0443\u0440","ch":"\u65b0\u52a0\u5761","isCountry":true},{"latitude":26.028616,"longitude":50.587907,"confirmed":221,"deaths":1,"cured":77,"en":"Bahrain","ru":"\u0411\u0430\u0445\u0440\u0435\u0439\u043d","ch":"\u5df4\u6797","isCountry":true},{"latitude":45.826614,"longitude":14.599043,"confirmed":219,"deaths":1,"cured":0,"en":"Slovenia","ru":"\u0421\u043b\u043e\u0432\u0435\u043d\u0438\u044f","ch":"Slovenia","isCountry":true},{"latitude":-8.626851,"longitude":-53.373061,"confirmed":218,"deaths":0,"cured":1,"en":"Brazil","ru":"\u0411\u0440\u0430\u0437\u0438\u043b\u0438\u044f","ch":"\u5df4\u897f","isCountry":true},{"latitude":64.881884,"longitude":-18.783719,"confirmed":180,"deaths":0,"cured":0,"en":"Iceland","ru":"\u0418\u0441\u043b\u0430\u043d\u0434\u0438\u044f","ch":"\u51b0\u5cf6","isCountry":true},{"latitude":58.856069,"longitude":24.800104,"confirmed":171,"deaths":0,"cured":1,"en":"Estonia","ru":"\u042d\u0441\u0442\u043e\u043d\u0438\u044f","ch":"\u611b\u6c99\u5c3c\u4e9e","isCountry":true},{"latitude":53.383188,"longitude":-8.163323,"confirmed":170,"deaths":2,"cured":0,"en":"Ireland","ru":"\u0418\u0440\u043b\u0430\u043d\u0434\u0438\u044f","ch":"Ireland","isCountry":true},{"latitude":22.326371,"longitude":114.179358,"confirmed":149,"deaths":4,"cured":84,"en":"Hong Kong","ru":"\u0413\u043e\u043d\u043a\u043e\u043d\u0433","ch":"\u9999\u6e2f","isCountry":true},{"latitude":11.379411,"longitude":122.976578,"confirmed":140,"deaths":12,"cured":2,"en":"Philippines","ru":"\u0424\u0438\u043b\u0438\u043f\u043f\u0438\u043d\u044b","ch":"\u83f2\u5f8b\u8cd3\u4eba","isCountry":true},{"latitude":46.192021,"longitude":24.744553,"confirmed":139,"deaths":0,"cured":9,"en":"Romania","ru":"\u0420\u0443\u043c\u044b\u043d\u0438\u044f","ch":"\u7f85\u99ac\u5c3c\u4e9e","isCountry":true},{"latitude":22.792252,"longitude":81.385128,"confirmed":130,"deaths":2,"cured":13,"en":"India","ru":"\u0418\u043d\u0434\u0438\u044f","ch":"\u5370\u5ea6\u7684","isCountry":true},{"latitude":26.112189,"longitude":29.90523,"confirmed":126,"deaths":2,"cured":27,"en":"Egypt","ru":"\u0415\u0433\u0438\u043f\u0435\u0442","ch":"\u57c3\u53ca","isCountry":true},{"latitude":51.211428,"longitude":19.758436,"confirmed":125,"deaths":3,"cured":0,"en":"Poland","ru":"\u041f\u043e\u043b\u044c\u0448\u0430","ch":"Poland","isCountry":true},{"latitude":35.109933,"longitude":43.380112,"confirmed":124,"deaths":10,"cured":26,"en":"Iraq","ru":"\u0418\u0440\u0430\u043a","ch":"\u4f0a\u62c9\u514b","isCountry":true},{"latitude":22.848295,"longitude":45.725533,"confirmed":118,"deaths":0,"cured":2,"en":"Saudi Arabia","ru":"\u0421\u0430\u0443\u0434\u043e\u0432\u0441\u043a\u0430\u044f \u0410\u0440\u0430\u0432\u0438\u044f","ch":"Saudi Arabia","isCountry":true},{"latitude":-1.35516,"longitude":102.456703,"confirmed":117,"deaths":5,"cured":8,"en":"Indonesia","ru":"\u0418\u043d\u0434\u043e\u043d\u0435\u0437\u0438\u044f","ch":"Indonesia","isCountry":true},{"latitude":16.378309,"longitude":101.307704,"confirmed":114,"deaths":1,"cured":35,"en":"Thailand","ru":"\u0422\u0430\u0438\u043b\u0430\u043d\u0434","ch":"\u6cf0\u56fd","isCountry":true},{"latitude":29.312949,"longitude":47.752159,"confirmed":112,"deaths":0,"cured":9,"en":"Kuwait","ru":"\u041a\u0443\u0432\u0435\u0439\u0442","ch":"\u79d1\u5a01\u7279","isCountry":true},{"latitude":44.808137,"longitude":10.913884,"confirmed":109,"deaths":7,"cured":4,"en":"San Marino","ru":"\u0421\u0430\u043d-\u041c\u0430\u0440\u0438\u043d\u043e","ch":"\u8056\u99ac\u529b\u8afe","isCountry":true},{"latitude":34.058188,"longitude":35.99411,"confirmed":99,"deaths":3,"cured":0,"en":"Lebanon","ru":"\u041b\u0438\u0432\u0430\u043d","ch":"\u9ece\u5df4\u5ae9","isCountry":true},{"latitude":29.801824,"longitude":69.28032,"confirmed":94,"deaths":0,"cured":3,"en":"Pakistan","ru":"\u041f\u0430\u043a\u0438\u0441\u0442\u0430\u043d","ch":"\u5df4\u57fa\u65af\u5766","isCountry":true},{"latitude":23.602744,"longitude":54.057083,"confirmed":85,"deaths":0,"cured":20,"en":"UAE","ru":"\u041e\u0410\u042d","ch":"\u963f\u8054\u914b","isCountry":true},{"latitude":49.815317,"longitude":6.086365,"confirmed":77,"deaths":1,"cured":0,"en":"Luxembourg","ru":"\u041b\u044e\u043a\u0441\u0435\u043c\u0431\u0443\u0440\u0433","ch":"Luxembourg","isCountry":true},{"latitude":-35.978566,"longitude":-71.618671,"confirmed":75,"deaths":0,"cured":0,"en":"Chile","ru":"\u0427\u0438\u043b\u0438","ch":"Chile","isCountry":true},{"latitude":-9.233838,"longitude":-75.946458,"confirmed":71,"deaths":0,"cured":0,"en":"Peru","ru":"\u041f\u0435\u0440\u0443","ch":"Peru","isCountry":true},{"latitude":61.698653,"longitude":99.505405,"confirmed":69,"deaths":0,"cured":4,"en":"Russia","ru":"\u0420\u043e\u0441\u0441\u0438\u044f","ch":"\u4fc4\u7f85\u65af","isCountry":true},{"latitude":-32.068609,"longitude":23.441304,"confirmed":61,"deaths":0,"cured":0,"en":"South Africa","ru":"\u042e\u0410\u0420","ch":"South Africa","isCountry":true},{"latitude":48.1482,"longitude":17.1067,"confirmed":61,"deaths":0,"cured":0,"en":"Slovakia","ru":"\u0421\u043b\u043e\u0432\u0430\u043a\u0438\u044f","ch":"Slovakia","isCountry":true},{"latitude":23.882593,"longitude":120.954775,"confirmed":59,"deaths":1,"cured":20,"en":"Taiwan","ru":"\u0422\u0430\u0439\u0432\u0430\u043d\u044c","ch":"\u53f0\u6e7e","isCountry":true},{"latitude":16.831339,"longitude":106.891991,"confirmed":57,"deaths":0,"cured":16,"en":"Vietnam","ru":"\u0412\u044c\u0435\u0442\u043d\u0430\u043c","ch":"\u8d8a\u5357","isCountry":true},{"latitude":-37.837617,"longitude":-64.788609,"confirmed":56,"deaths":2,"cured":0,"en":"Argentina","ru":"\u0410\u0440\u0433\u0435\u043d\u0442\u0438\u043d\u0430","ch":"Argentina","isCountry":true},{"latitude":44.804,"longitude":20.4651,"confirmed":55,"deaths":0,"cured":0,"en":"Serbia","ru":"\u0421\u0435\u0440\u0431\u0438\u044f","ch":"Serbia","isCountry":true},{"latitude":8.389249,"longitude":-81.34217,"confirmed":55,"deaths":1,"cured":0,"en":"Panama","ru":"\u041f\u0430\u043d\u0430\u043c\u0430","ch":"Panama","isCountry":true},{"latitude":23.530671,"longitude":-102.277714,"confirmed":53,"deaths":1,"cured":4,"en":"Mexico","ru":"\u041c\u0435\u043a\u0441\u0438\u043a\u0430","ch":"\u58a8\u897f\u54e5","isCountry":true},{"latitude":42.725351,"longitude":25.286389,"confirmed":51,"deaths":2,"cured":0,"en":"Bulgaria","ru":"\u0411\u043e\u043b\u0433\u0430\u0440\u0438\u044f","ch":"Bulgaria","isCountry":true},{"latitude":45.439828,"longitude":16.106443,"confirmed":49,"deaths":0,"cured":1,"en":"Croatia","ru":"\u0425\u043e\u0440\u0432\u0430\u0442\u0438\u044f","ch":"\u514b\u7f85\u5730\u4e9e","isCountry":true},{"latitude":36.7722,"longitude":3.059815,"confirmed":49,"deaths":4,"cured":10,"en":"Algeria","ru":"\u0410\u043b\u0436\u0438\u0440","ch":"\u963f\u723e\u53ca\u5229\u4e9e","isCountry":true},{"latitude":2.028975,"longitude":-73.174661,"confirmed":45,"deaths":0,"cured":0,"en":"Colombia","ru":"\u041a\u043e\u043b\u0443\u043c\u0431\u0438\u044f","ch":"Colombia","isCountry":true},{"latitude":40.510963,"longitude":20.100981,"confirmed":42,"deaths":1,"cured":0,"en":"Albania","ru":"\u0410\u043b\u0431\u0430\u043d\u0438\u044f","ch":"Albania","isCountry":true},{"latitude":-1.782989,"longitude":-78.383991,"confirmed":37,"deaths":2,"cured":0,"en":"Ecuador","ru":"\u042d\u043a\u0432\u0430\u0434\u043e\u0440","ch":"\u5384\u74dc\u591a\u723e","isCountry":true},{"latitude":41.574686,"longitude":44.067009,"confirmed":33,"deaths":0,"cured":1,"en":"Georgia","ru":"\u0413\u0440\u0443\u0437\u0438\u044f","ch":"\u4f50\u6cbb\u4e9e\u5dde","isCountry":true},{"latitude":35.128223,"longitude":33.149774,"confirmed":33,"deaths":0,"cured":0,"en":"Cyprus","ru":"\u041a\u0438\u043f\u0440","ch":"Cyprus","isCountry":true},{"latitude":47.497912,"longitude":19.040235,"confirmed":32,"deaths":1,"cured":0,"en":"Hungary","ru":"\u0412\u0435\u043d\u0433\u0440\u0438\u044f","ch":"Hungary","isCountry":true},{"latitude":40.636692,"longitude":44.587906,"confirmed":30,"deaths":0,"cured":1,"en":"Armenia","ru":"\u0410\u0440\u043c\u0435\u043d\u0438\u044f","ch":"\u4e9e\u7f8e\u5c3c\u4e9e","isCountry":true},{"latitude":56.896888,"longitude":25.8441,"confirmed":30,"deaths":0,"cured":0,"en":"Latvia","ru":"\u041b\u0430\u0442\u0432\u0438\u044f","ch":"Latvia","isCountry":true},{"latitude":32.785618,"longitude":-4.001123,"confirmed":28,"deaths":1,"cured":0,"en":"Morocco","ru":"\u041c\u0430\u0440\u043e\u043a\u043a\u043e","ch":"Morocco","isCountry":true},{"latitude":52.858248,"longitude":27.701393,"confirmed":27,"deaths":0,"cured":3,"en":"Belarus","ru":"\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u044c","ch":"\u767d\u4fc4\u7f85\u65af","isCountry":true},{"latitude":14.335609,"longitude":-14.593177,"confirmed":26,"deaths":0,"cured":0,"en":"Senegal","ru":"\u0421\u0435\u043d\u0435\u0433\u0430\u043b","ch":"Senegal","isCountry":true},{"latitude":40.359953,"longitude":47.651476,"confirmed":25,"deaths":1,"cured":3,"en":"Azerbaijan","ru":"\u0410\u0437\u0435\u0440\u0431\u0430\u0439\u0434\u0436\u0430\u043d","ch":"\u963f\u585e\u62dc\u7586","isCountry":true},{"latitude":47.459198,"longitude":28.324851,"confirmed":23,"deaths":0,"cured":0,"en":"Moldova","ru":"\u041c\u043e\u043b\u0434\u043e\u0432\u0430","ch":"Moldova","isCountry":true},{"latitude":20.114063,"longitude":56.30792,"confirmed":22,"deaths":0,"cured":9,"en":"Oman","ru":"\u041e\u043c\u0430\u043d","ch":"\u963f\u66fc","isCountry":true},{"latitude":33.356617,"longitude":65.797642,"confirmed":21,"deaths":0,"cured":0,"en":"Afghanistan","ru":"\u0410\u0444\u0433\u0430\u043d\u0438\u0441\u0442\u0430\u043d","ch":"\u963f\u5bcc\u6c57","isCountry":true},{"latitude":35.903046,"longitude":14.413972,"confirmed":21,"deaths":0,"cured":2,"en":"Malta","ru":"\u041c\u0430\u043b\u044c\u0442\u0430","ch":"Malta","isCountry":true},{"latitude":36.795113,"longitude":10.180562,"confirmed":20,"deaths":0,"cured":0,"en":"Tunisia","ru":"\u0422\u0443\u043d\u0438\u0441","ch":"Tunisia","isCountry":true},{"latitude":41.605594,"longitude":21.750414,"confirmed":19,"deaths":0,"cured":0,"en":"North Macedonia","ru":"\u0421\u0435\u0432\u0435\u0440\u043d\u0430\u044f \u041c\u0430\u043a\u0435\u0434\u043e\u043d\u0438\u044f","ch":"\u5317\u99ac\u5176\u9813","isCountry":true},{"latitude":7.745521,"longitude":80.606846,"confirmed":18,"deaths":0,"cured":1,"en":"Sri Lanka","ru":"\u0428\u0440\u0438-\u041b\u0430\u043d\u043a\u0430","ch":"\u65af\u91cc\u5170\u5361","isCountry":true},{"latitude":39.056249,"longitude":35.302075,"confirmed":18,"deaths":0,"cured":0,"en":"Turkey","ru":"\u0422\u0443\u0440\u0446\u0438\u044f","ch":"Turkey","isCountry":true},{"latitude":30.61741,"longitude":37.103368,"confirmed":15,"deaths":0,"cured":1,"en":"Jordan","ru":"\u0418\u043e\u0440\u0434\u0430\u043d\u0438\u044f","ch":"Jordan","isCountry":true},{"latitude":55.508473,"longitude":23.600189,"confirmed":14,"deaths":0,"cured":1,"en":"Lithuania","ru":"\u041b\u0438\u0442\u0432\u0430","ch":"\u7acb\u9676\u5b9b","isCountry":true},{"latitude":4.214899,"longitude":73.541641,"confirmed":13,"deaths":0,"cured":0,"en":"Maldives","ru":"\u041c\u0430\u043b\u044c\u0434\u0438\u0432\u044b","ch":"Maldives","isCountry":true},{"latitude":12.564393,"longitude":104.825812,"confirmed":12,"deaths":0,"cured":1,"en":"Cambodia","ru":"\u041a\u0430\u043c\u0431\u043e\u0434\u0436\u0430","ch":"\u67ec\u57d4\u5be8","isCountry":true},{"latitude":22.200297,"longitude":113.54539,"confirmed":11,"deaths":0,"cured":10,"en":"Macau","ru":"\u041c\u0430\u043a\u0430\u043e","ch":"\u6fb3\u95e8","isCountry":true},{"latitude":18.754804,"longitude":-69.981707,"confirmed":11,"deaths":0,"cured":0,"en":"Dominican Republic","ru":"\u0414\u043e\u043c\u0438\u043d\u0438\u043a\u0430\u043d\u0441\u043a\u0430\u044f \u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430","ch":"\u591a\u660e\u5c3c\u52a0\u5171\u548c\u570b","isCountry":true},{"latitude":-44.069577,"longitude":170.455747,"confirmed":10,"deaths":0,"cured":0,"en":"New Zealand","ru":"\u041d\u043e\u0432\u0430\u044f \u0417\u0435\u043b\u0430\u043d\u0434\u0438\u044f","ch":"\u65b0\u897f\u862d","isCountry":true},{"latitude":-15.68846,"longitude":-64.967554,"confirmed":10,"deaths":0,"cured":0,"en":"Bolivia","ru":"\u0411\u043e\u043b\u0438\u0432\u0438\u044f","ch":"Bolivia","isCountry":true},{"latitude":48.136207,"longitude":67.15355,"confirmed":9,"deaths":0,"cured":0,"en":"Kazakhstan","ru":"\u041a\u0430\u0437\u0430\u0445\u0441\u0442\u0430\u043d","ch":"Kazakhstan","isCountry":true},{"latitude":-22.952575,"longitude":-58.491177,"confirmed":8,"deaths":0,"cured":0,"en":"Paraguay","ru":"\u041f\u0430\u0440\u0430\u0433\u0432\u0430\u0439","ch":"Paraguay","isCountry":true},{"latitude":41.765066,"longitude":63.150118,"confirmed":6,"deaths":0,"cured":0,"en":"Uzbekistan","ru":"\u0423\u0437\u0431\u0435\u043a\u0438\u0441\u0442\u0430\u043d","ch":"Uzbekistan","isCountry":true},{"latitude":9.530947,"longitude":-83.851138,"confirmed":5,"deaths":0,"cured":0,"en":"Costa rica","ru":"\u041a\u043e\u0441\u0442\u0430 \u0420\u0438\u043a\u0430","ch":"Costa rica","isCountry":true},{"latitude":47.158135,"longitude":9.549792,"confirmed":4,"deaths":0,"cured":0,"en":"Liechtenstein","ru":"\u041b\u0438\u0445\u0442\u0435\u043d\u0448\u0442\u0435\u0439\u043d","ch":"Liechtenstein","isCountry":true},{"latitude":-32.627735,"longitude":-55.695215,"confirmed":4,"deaths":0,"cured":0,"en":"Uruguay","ru":"\u0423\u0440\u0443\u0433\u0432\u0430\u0439","ch":"Uruguay","isCountry":true},{"latitude":6.843968,"longitude":40.165302,"confirmed":4,"deaths":0,"cured":0,"en":"Ethiopia","ru":"\u042d\u0444\u0438\u043e\u043f\u0438\u044f","ch":"Ethiopia","isCountry":true},{"latitude":50.4547,"longitude":30.5238,"confirmed":3,"deaths":1,"cured":0,"en":"Ukraine","ru":"\u0423\u043a\u0440\u0430\u0438\u043d\u0430","ch":"Ukraine","isCountry":true},{"latitude":21.491983,"longitude":-78.478808,"confirmed":3,"deaths":0,"cured":0,"en":"Cuba","ru":"\u041a\u0443\u0431\u0430","ch":"Cuba","isCountry":true},{"latitude":10.445435,"longitude":8.353578,"confirmed":2,"deaths":0,"cured":0,"en":"Nigeria","ru":"\u041d\u0438\u0433\u0435\u0440\u0438\u044f","ch":"\u5948\u53ca\u5229\u4e9e","isCountry":true},{"latitude":43.737335,"longitude":7.427657,"confirmed":2,"deaths":0,"cured":0,"en":"Monaco","ru":"\u041c\u043e\u043d\u0430\u043a\u043e","ch":"\u6469\u7d0d\u54e5","isCountry":true},{"latitude":3.86667,"longitude":11.5167,"confirmed":2,"deaths":0,"cured":0,"en":"Cameroon","ru":"\u041a\u0430\u043c\u0435\u0440\u0443\u043d","ch":"Cameroon","isCountry":true},{"latitude":28.244893,"longitude":83.908244,"confirmed":1,"deaths":0,"cured":1,"en":"Nepal","ru":"\u041d\u0435\u043f\u0430\u043b","ch":"\u5c3c\u6cca\u5c14","isCountry":true},{"latitude":42.528762,"longitude":1.544599,"confirmed":1,"deaths":0,"cured":0,"en":"Andorra","ru":"\u0410\u043d\u0434\u043e\u0440\u0440\u0430","ch":"Andorra","isCountry":true},{"latitude":36.14474,"longitude":-5.35257,"confirmed":1,"deaths":0,"cured":0,"en":"Gibraltar","ru":"\u0413\u0438\u0431\u0440\u0430\u043b\u0442\u0430\u0440","ch":"Gibraltar","isCountry":true},{"latitude":27.4661,"longitude":89.6419,"confirmed":1,"deaths":0,"cured":0,"en":"Bhutan","ru":"\u0411\u0443\u0442\u0430\u043d","ch":"Bhutan","isCountry":true},{"latitude":41.9027,"longitude":12.4541,"confirmed":1,"deaths":0,"cured":0,"en":"Vatican City","ru":"\u0412\u0430\u0442\u0438\u043a\u0430\u043d","ch":"Vatican City","isCountry":true},{"latitude":45.516505,"longitude":103.83532,"confirmed":1,"deaths":0,"cured":0,"en":"Mongolia","ru":"\u041c\u043e\u043d\u0433\u043e\u043b\u0438\u044f","ch":"Mongolia","isCountry":true},{"latitude":55.755814,"longitude":37.617635,"confirmed":34,"deaths":0,"cured":1,"en":"Moscow","ru":"\u041c\u043e\u0441\u043a\u0432\u0430","ch":"Moscow","isCountry":false},{"latitude":55.815792,"longitude":37.380031,"confirmed":8,"deaths":0,"cured":0,"en":"Moscow oblast","ru":"\u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c","ch":"Moscow oblast","isCountry":false},{"latitude":59.939095,"longitude":30.315868,"confirmed":6,"deaths":0,"cured":0,"en":"Saint Petersburg","ru":"\u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433","ch":"Saint Petersburg","isCountry":false},{"latitude":52.60311,"longitude":39.57076,"confirmed":3,"deaths":0,"cured":0,"en":"Lipetsk","ru":"\u041b\u0438\u043f\u0435\u0446\u043a","ch":"Lipetsk","isCountry":false},{"latitude":54.710454,"longitude":20.512733,"confirmed":3,"deaths":0,"cured":0,"en":"Kaliningrad","ru":"\u041a\u0430\u043b\u0438\u043d\u0438\u043d\u0433\u0440\u0430\u0434","ch":"Kaliningrad","isCountry":false},{"latitude":55.796289,"longitude":49.108795,"confirmed":3,"deaths":0,"cured":3,"en":"\u041a\u0430\u0437\u0430\u043d\u044c","ru":"\u041a\u0430\u0437\u0430\u043d\u044c","ch":"\u58a8\u897f\u54e5","isCountry":false},{"latitude":57.541821,"longitude":68.096045,"confirmed":2,"deaths":0,"cured":1,"en":"Tyumen region","ru":"\u0422\u044e\u043c\u0435\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c","ch":null,"isCountry":false},{"latitude":59.337013,"longitude":29.608975,"confirmed":2,"deaths":0,"cured":0,"en":"Leningrad region","ru":"\u041b\u0435\u043d\u0438\u043d\u0433\u0440\u0430\u0434\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c","ch":"Leningrad region","isCountry":false},{"latitude":55.354727,"longitude":86.088374,"confirmed":2,"deaths":0,"cured":0,"en":"Kemerovo","ru":"\u041a\u0435\u043c\u0435\u0440\u043e\u0432\u043e","ch":"Kemerovo","isCountry":false},{"latitude":56.326797,"longitude":44.006516,"confirmed":1,"deaths":0,"cured":0,"en":"Nizhny Novgorod","ru":"\u041d\u0438\u0436\u043d\u0438\u0439 \u041d\u043e\u0432\u0433\u043e\u0440\u043e\u0434","ch":"Nizhny Novgorod","isCountry":false},{"latitude":50.59566,"longitude":36.587223,"confirmed":1,"deaths":0,"cured":0,"en":"Belgorod","ru":"\u0411\u0435\u043b\u0433\u043e\u0440\u043e\u0434","ch":"Belgorod","isCountry":false},{"latitude":52.847258,"longitude":116.200424,"confirmed":1,"deaths":0,"cured":1,"en":"Transbaikal territory","ru":"\u0417\u0430\u0431\u0430\u0439\u043a\u0430\u043b\u044c\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439","ch":"Transbaikal territory","isCountry":false},{"latitude":45.544904,"longitude":39.610422,"confirmed":1,"deaths":0,"cured":0,"en":"Krasnodar region","ru":"\u041a\u0440\u0430\u0441\u043d\u043e\u0434\u0430\u0440\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439","ch":"Krasnodar region","isCountry":false},{"latitude":59.117698,"longitude":56.225679,"confirmed":1,"deaths":0,"cured":0,"en":"Perm region","ru":"\u041f\u0435\u0440\u043c\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439","ch":"Perm region","isCountry":false},{"latitude":65.982613,"longitude":174.432311,"confirmed":1,"deaths":0,"cured":0,"en":"Chukotka Autonomous Okrug","ru":"\u0427\u0443\u043a\u043e\u0442\u0441\u043a\u0438\u0439 \u0430\u0432\u0442\u043e\u043d\u043e\u043c\u043d\u044b\u0439 \u043e\u043a\u0440\u0443\u0433","ch":"Chukotka Autonomous Okrug","isCountry":false}];
+  </script>
+
+
+  <script>
+    $('.nav-link, .navbar-brand').click(function() {
+      var sectionTo = $(this).attr('href');
+      $('html, body').animate({
+        scrollTop: $(sectionTo).offset().top - 75
+      }, 1500);
+    });
+
+
+  </script>
+</body>
+</html>

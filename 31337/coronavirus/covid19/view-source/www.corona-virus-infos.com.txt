@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="fr-FR">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<title>Vivre au temps du coronavirus &#8211; informations sur les précautions à prendre contre le coronavirus en France</title>
+
+<!-- Async WordPress.com Remote Login -->
+<script id="wpcom_remote_login_js">
+var wpcom_remote_login_extra_auth = '';
+function wpcom_remote_login_remove_dom_node_id( element_id ) {
+	var dom_node = document.getElementById( element_id );
+	if ( dom_node ) { dom_node.remove(); }
+}
+function wpcom_remote_login_remove_dom_node_classes( class_name ) {
+	var dom_nodes = document.querySelectorAll( '.' + class_name );
+	for ( var i = 0; i < dom_nodes.length; i++ ) {
+		dom_nodes[i].remove();
+	}
+}
+function wpcom_remote_login_final_cleanup() {
+	wpcom_remote_login_remove_dom_node_classes( "wpcom_remote_login_msg" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_validate" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_js" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_iframe" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_styles" );
+}
+
+// Watch for messages back from the remote login
+window.addEventListener( "message", function( e ) {
+	if ( e.origin === "https://r-login.wordpress.com" ) {
+		var data = {};
+		try {
+			data = JSON.parse( e.data );
+		} catch( e ) {
+			wpcom_remote_login_final_cleanup();
+			return;
+		}
+
+		if ( data.msg === 'LOGIN' ) {
+			// Clean up the login check iframe
+			wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+
+			var id_regex = new RegExp( /^[0-9]+$/ );
+			var token_regex = new RegExp( /^.*|.*|.*$/ );
+			if (
+				token_regex.test( data.token )
+				&& id_regex.test( data.wpcomid )
+			) {
+				// We have everything we need to ask for a login
+				var script = document.createElement( "script" );
+				script.setAttribute( "id", "wpcom_remote_login_validate" );
+				script.src = '/remote-login.php?wpcom_remote_login=validate'
+					+ '&wpcomid=' + data.wpcomid
+					+ '&token=' + encodeURIComponent( data.token )
+					+ '&host=' + window.location.protocol
+						+ '//' + window.location.hostname;
+				document.body.appendChild( script );
+			}
+
+			return;
+		}
+
+		// Safari ITP, not logged in, so redirect
+		if ( data.msg === 'LOGIN-REDIRECT' ) {
+			window.location = 'https://wordpress.com/log-in?redirect_to=' + window.location.href;
+			return;
+		}
+
+		// Safari ITP, storage access failed, remove the request
+		if ( data.msg === 'LOGIN-REMOVE' ) {
+			var css_zap = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } @media screen and ( max-width: 782px ) { html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } }';
+			var style_zap = document.createElement( 'style' );
+			style_zap.type = 'text/css';
+			style_zap.appendChild( document.createTextNode( css_zap ) );
+			document.body.appendChild( style_zap );
+
+			var e = document.getElementById( 'wpcom_request_access_iframe' );
+			e.parentNode.removeChild( e );
+
+			document.cookie = 'wordpress_com_login_access=denied; path=/; max-age=31536000';
+
+			return;
+		}
+
+		// Safari ITP
+		if ( data.msg === 'REQUEST_ACCESS' ) {
+			console.log( 'request access: safari' );
+
+			// Check ITP iframe enable/disable knob
+			if ( wpcom_remote_login_extra_auth !== 'safari_itp_iframe' ) {
+				return;
+			}
+
+			// If we are in a "private window" there is no ITP.
+			var private_window = false;
+			try {
+				var opendb = window.openDatabase( null, null, null, null );
+			} catch( e ) {
+				private_window = true;
+			}
+
+			if ( private_window ) {
+				console.log( 'private window' );
+				return;
+			}
+
+			var iframe = document.createElement( 'iframe' );
+			iframe.id = 'wpcom_request_access_iframe';
+			iframe.setAttribute( 'scrolling', 'no' );
+			iframe.setAttribute( 'sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-top-navigation-by-user-activation' );
+			iframe.src = 'https://r-login.wordpress.com/remote-login.php?wpcom_remote_login=request_access&origin=' + encodeURIComponent( data.origin ) + '&wpcomid=' + encodeURIComponent( data.wpcomid );
+
+			var css = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 46px !important; } * html body { margin-top: 46px !important; } @media screen and ( max-width: 660px ) { html { margin-top: 71px !important; } * html body { margin-top: 71px !important; } #wpcom_request_access_iframe { display: block; height: 71px !important; } } #wpcom_request_access_iframe { border: 0px; height: 46px; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 99999; background: #23282d; } ';
+
+			var style = document.createElement( 'style' );
+			style.type = 'text/css';
+			style.id = 'wpcom_request_access_styles';
+			style.appendChild( document.createTextNode( css ) );
+			document.body.appendChild( style );
+
+			document.body.appendChild( iframe );
+		}
+
+		if ( data.msg === 'DONE' ) {
+			wpcom_remote_login_final_cleanup();
+		}
+	}
+}, false );
+
+// Inject the remote login iframe after the page has had a chance to load
+// more critical resources
+window.addEventListener( "DOMContentLoaded", function( e ) {
+	var iframe = document.createElement( "iframe" );
+	iframe.style.display = "none";
+	iframe.setAttribute( "scrolling", "no" );
+	iframe.setAttribute( "id", "wpcom_remote_login_key" );
+	iframe.src = "https://r-login.wordpress.com/remote-login.php"
+		+ "?wpcom_remote_login=key"
+		+ "&origin=aHR0cHM6Ly9jb3JvbmEtdmlydXMtaW5mb3MuY29t"
+		+ "&wpcomid=174237733"
+		+ "&time=1584439011";
+	document.body.appendChild( iframe );
+}, false );
+</script>
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//coronavirusinfos.wordpress.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Vivre au temps du coronavirus &raquo; Flux" href="https://corona-virus-infos.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Vivre au temps du coronavirus &raquo; Flux des commentaires" href="https://corona-virus-infos.com/comments/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s0.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1582709031h&ver=5.4-RC1-47425"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='all-css-0-1' href='https://s0.wp.com/_static/??-eJylk+tugzAMhV9oSaAFdf0x7VkCeMxdboqdIt5+4VIJMW2rxJ9IsfMdHyUnagii9Y7BsbJJBJN6dKSG0HoryKKBcbeTLdGL2mAPpk9520DscyeCusizLFST0HSqMb79EgabqOOoiEcDx2X4E+wzMjNF6gYc9ITr0ScWfcTuaSc7iagZXU//4B/JGEHIIKDDCVhvV9XVtTrV9VXBPZ/PXHLc+cEtYw6rPlwyWjDo4LBgtpWLnphWhx0SqzvC8Kto69crK+WpkKWYE7RwS0MupuZ3PWBtcWWy7tbavvpjwCbpU8hy3QbN0wmbJ2kwOVmO/8KWL9E0IQKRyKvFZMUcyfmHvNu3sn6tyqK8VPXtGzxxQQI=?cssminify=yes' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify {
+	text-align:justify;
+}
+</style>
+<link rel='stylesheet' id='print-css-1-1' href='https://s0.wp.com/wp-content/themes/pub/varia/print.css?m=1571655471h&cssminify=yes' type='text/css' media='print' />
+<link rel='stylesheet' id='all-css-2-1' href='https://s0.wp.com/_static/??-eJx9i9EKwjAMAH/IGqaTPonf0pXYRdKktOmGf+/EF0Xx7Q7uYC0uqhiKgc2YsUHpE8y4YIVmd8Z9bG0Hv7MlVApAEl+pW0vU/DXk7gr3RNIgoTrWGIxUPsRdOVD9t1acWNOGCbbqTZ/TJZ+Hk/fD4TiO/vYAjSBOww==?cssminify=yes' type='text/css' media='all' />
+<link crossorigin="anonymous" rel='stylesheet' id='hever-fonts-css'  href='https://fonts.googleapis.com/css?family=PT%2BSans%3A400%2C400i%2C700%2C700i&#038;subset=latin%2Clatin-ext' media='all' />
+<link rel='stylesheet' id='all-css-4-1' href='https://s0.wp.com/_static/??-eJxlzk0OwiAQBeALiSMGol0YzwI4AspP0xlqvL1tgtGku1l8772B1yhcLYyFgQNmJBibhYAzTkD8Trh3RDv4Y7mJMTUfC4FxHGuxZvpdG/6195aSoMgo8BY5Ft9bQKtBHbUewKdqzWLWVVrGDUcHNpny3JT2V4PqoRVc80Xqs5IHeVL68QGFsE6j?cssminify=yes' type='text/css' media='all' />
+<style id='jetpack-global-styles-frontend-style-inline-css'>
+:root { --font-headings: unset; --font-base: unset; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+</style>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJx9zUsKgDAMBNALWYtIixvxLH6itJhUmxTx9lbQnQgDs5gHo49NORrXNAFrn7MniOdTpedC/wGFbom9QImOXjwGEiC57RZYEJj7BT5WDINbQSWGmAFJvplDdh22lTFNbaw1tb8AOGU7DA=='></script>
+<link rel='stylesheet' id='all-css-0-2' href='https://s0.wp.com/wp-content/mu-plugins/highlander-comments/style.css?m=1530132353h&cssminify=yes' type='text/css' media='all' />
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s0.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563h&#038;ver=20110606' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://coronavirusinfos.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s0.wp.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress.com" />
+<link rel='shortlink' href='https://wp.me/bN5c1' />
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Vivre au temps du coronavirus" />
+<meta property="og:description" content="informations sur les précautions à prendre contre le coronavirus en France" />
+<meta property="og:url" content="https://corona-virus-infos.com/" />
+<meta property="og:site_name" content="Vivre au temps du coronavirus" />
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg" />
+<meta property="og:locale" content="fr_FR" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="shortcut icon" type="image/x-icon" href="https://s0.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="icon" type="image/x-icon" href="https://s0.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="apple-touch-icon" href="https://s0.wp.com/i/webclip.png" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://corona-virus-infos.com/osd.xml" title="Vivre au temps du coronavirus" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<meta name="application-name" content="Vivre au temps du coronavirus" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="informations sur les précautions à prendre contre le coronavirus en France" /><meta name="msapplication-task" content="name=Souscrire;action-uri=https://corona-virus-infos.com/feed/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Inscrivez-vous pour créer un blog gratuitement;action-uri=http://wordpress.com/signup/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Assistance WordPress.com;action-uri=http://support.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Forums WordPress.com;action-uri=http://forums.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="description" content="informations sur les précautions à prendre contre le coronavirus en France" />
+</head>
+
+<body class="home blog wp-embed-responsive customizer-styles-applied hfeed image-filters-enabled hide-homepage-title highlander-enabled highlander-light">
+
+	
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Accéder au contenu</a>
+
+	
+		<header id="masthead" class="site-header responsive-max-width">
+
+			
+
+			<h1 class="site-title"><a href="https://corona-virus-infos.com/" rel="home">Vivre au temps du coronavirus</a></h1>
+	
+		<p class="site-description">
+			informations sur les précautions à prendre contre le coronavirus en France		</p>
+
+							<nav id="site-navigation" class="main-navigation" aria-label="Navigation principale">
+					<input type="checkbox" role="button" aria-haspopup="true" id="toggle" class="hide-visually">
+					<label for="toggle" id="toggle-menu" class="button">
+						Menu						<span class="dropdown-icon open">+</span>
+						<span class="dropdown-icon close">&times;</span>
+						<span class="hide-visually expanded-text">expanded</span>
+						<span class="hide-visually collapsed-text">collapsed</span>
+					</label>
+					<div class="menu-primary-container"><ul id="menu-primary" class="main-menu" aria-label="submenu"><li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="https://corona-virus-infos.com/blog/">Informations et conseils</a></li>
+<li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="https://corona-virus-infos.com/blog-2/">Blog</a></li>
+<li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a href="https://corona-virus-infos.com/about/">À propos</a></li>
+<li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="https://corona-virus-infos.com/contact/">Contact</a></li>
+</ul></div>				</nav><!-- #site-navigation -->
+			
+			
+		</header><!-- #masthead -->
+
+	
+	<div id="content" class="site-content">
+
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main">
+
+		
+<article id="post-75" class="post-75 post type-post status-publish format-standard hentry category-non-classe tag-lavage-des-mains tag-masques tag-tests-coronavirus entry">
+	<header class="entry-header responsive-max-width">
+		<h2 class="entry-title"><a href="https://corona-virus-infos.com/2020/03/15/questions-pratiques-frequentes/" rel="bookmark">Questions pratiques fréquentes</a></h2>	</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<p><strong>Pourquoi ne pas tester tout le monde&nbsp;?</strong></p>
+
+
+
+<p>Nous ne disposons pas (pas encore) d’un test simple et rapide pour tester le COVID 19. Les tests actuels mobilisent du personnel, sont longs, et coûteux. En outre, une politique de tests systématiques comporte deux risques</p>
+
+
+
+<p>Le premier est de faire venir dans les centres de tests une grande quantité de personnes, ce qui est contradictoire avec la distanciation sociale</p>
+
+
+
+<p>Le second est de rassurer de façon inappropriée les sujets testés négatifs. Un sujet négatif au moment du test peut être contaminé une heure après, mais rassuré par la négativité du test il pourrait être tenté de relâcher l’application des consignes de distanciation sociale et, par là-même infecter un grand nombre de sujets.</p>
+
+
+
+<p><strong>Faut-il se faire tester&nbsp;?</strong></p>
+
+
+
+<p>Bien qu’il soit tentant de se faire tester, cela n’est ni possible ni souhaitable. Ce n’est pas possible parce que le test est long et disponible dans peu de centres. Surcharger ces centres en testant des sujets asymptomatiques ou même en testant les sujets atteints de formes mineures de l’infection gênera la réalisation des tests chez les sujets graves qui en ont besoin. En outre, dans les formes mineures, la positivité ou négativité du test ne changera rien au traitement&nbsp;: rentrer chez soi, s’isoler, et si nécessaire faire baisser la fièvre avec du paracétamol (500 mg à 1 g par prise, sans dépasser 3 g/jour)</p>
+
+
+
+<p><strong>Combien de temps faut-il rester isolé&nbsp;?</strong></p>
+
+
+
+<p>On ne sait pas encore. L’exemple chinois indique qu’une durée de confinement de quelques semaines a un effet mesurable de ralentissement de la propagation de l’épidémie</p>
+
+
+
+<p><strong>Peut-on aller faire ses courses&nbsp;?</strong></p>
+
+
+
+<p>Oui, on peut effectuer des courses alimentaires de base, à la condition de minimiser la durée et le déplacement,&nbsp;et surtout de maintenir les distances de base d’un mètre minimum.</p>
+
+
+
+<p><strong>Faut il porter un masque et quel type de masque&nbsp;?</strong></p>
+
+
+
+<p>A l’heure actuelle, le port de masque est réservé aux malades, et aux personnels de santé. Les bien-portants n’ont pas besoin de porter un masque, et le stock de masques disponibles doit être géré avec parcimonie. Si vous disposez de masques chirurgicaux simples (ou de masques «&nbsp;artisanaux&nbsp;», voir plus bas), ils sont efficaces, surtout s’ils sont combinés au port de lunettes, contre le risque de contamination par autrui. Il n’est pas nécessaire, si on n’effectue pas de gestes médicaux, de s’équiper d’un masque FFP2 spécial. Ceux-ci sont réservés aux personnels soignants, en particulier en réanimation.</p>
+
+
+
+<p><strong>On ne trouve plus de masques chirurgicaux en vente libre. Un masque «&nbsp;artisanal&nbsp;» est-il efficace&nbsp;?</strong></p>
+
+
+
+<p>Oui, cela a été testé<a href="https://coronavirusinfos.wordpress.com/wp-admin/post.php?post=63&amp;action=edit&amp;post_type=page&amp;block-editor=1&amp;frame-nonce=3a325656c9&amp;origin=https%3A%2F%2Fwordpress.com&amp;environment-id=production&amp;support_user&amp;_support_token#_ftn1">[1]</a>, même des masques artisanaux en tissu ont une efficacité certaine contre le risque de contamination, en l’absence de masques chirurgicaux à usage unique, car ils protègent contre le risque de projection de gouttelettes contaminantes.</p>
+
+
+
+<p><strong>Je ne trouve pas de solutés hydro-alcooliques, que faire&nbsp;?</strong></p>
+
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le lavage des mains à l’eau et au savon pendant vingt secondes est très efficace et constitue une alternative aux solutés hydro-alcooliques. Ne pas oubliez d’utiliser des serviettes en papier à usage unique néanmoins (par exemple une feuille de sopalin), pour éviter de se contaminer avec une serviette partagée.</p>
+
+
+
+<p><strong>Faut-il prendre les transports en commun&nbsp;?</strong></p>
+
+
+
+<p>Il est surement souhaitable de limiter les transports en commun s’ils impliquent d’être proches d’autres voyageurs, à une distance de moins d’un mètre.</p>
+
+
+
+<p><strong>Y a-t-il un risque à se promener dans la rue ou dans un jardin ?</strong></p>
+
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le virus ne circule pas dans l’air, et donc la promenade n’est pas en soi un risque. Par contre, la proximité sociale l’est. Il faut donc résister à la tentation de la conversation ou du regroupement, et, pour les enfants à la tentation du jeu collectif…</p>
+
+
+
+<p><strong>Si j’ai de la fièvre, quel traitement prendre&nbsp;?</strong></p>
+
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Exclusivement du paracétamol (500 mg à 1 g par prise, sans dépasser 3 grammes par jour en tout). Ne pas prendre de corticoïdes ou d’anti-inflammatoires non stéroidiens (pas d’ibuprofène, aspirine ou médicaments similaires)</p>
+
+
+
+<hr class="wp-block-separator" />
+
+
+
+<p><a href="https://coronavirusinfos.wordpress.com/wp-admin/post.php?post=63&amp;action=edit&amp;post_type=page&amp;block-editor=1&amp;frame-nonce=3a325656c9&amp;origin=https%3A%2F%2Fwordpress.com&amp;environment-id=production&amp;support_user&amp;_support_token#_ftnref1">[1]</a> van der Sande M, Teunis P, Sabel R. Professional and home-made face masks reduce exposure to respiratory infections among the general population. PLoS One. 2008 Jul 9;3(7):e2618. doi: 10.1371/journal.pone.0002618. PMID: 18612429; PMCID: PMC2440799.Ouvrir le panneau de publication</p>
+
+
+
+<ul><li>Document</li></ul>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer responsive-max-width">
+		<span class="byline"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Publié par</span><span class="author vcard"><a class="url fn n" href="https://corona-virus-infos.com/author/hospimedicfr/">hospimedic</a></span></span><span class="posted-on"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><path id="a" d="M0 0h24v24H0V0z"></path></defs><clipPath id="b"><use xlink:href="#a" overflow="visible"></use></clipPath><path clip-path="url(#b)" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"></path></svg><a href="https://corona-virus-infos.com/2020/03/15/questions-pratiques-frequentes/" rel="bookmark"><time class="entry-date published" datetime="2020-03-15T22:26:08+01:00">15 mars 2020</time><time class="updated" datetime="2020-03-15T23:21:58+01:00">15 mars 2020</time></a></span><span class="cat-links"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Publié dans</span><a href="https://corona-virus-infos.com/category/non-classe/" rel="category tag">Non classé</a></span><span class="tags-links"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Étiquettes&nbsp;:</span><a href="https://corona-virus-infos.com/tag/lavage-des-mains/" rel="tag">lavage des mains</a>, <a href="https://corona-virus-infos.com/tag/masques/" rel="tag">masques</a>, <a href="https://corona-virus-infos.com/tag/tests-coronavirus/" rel="tag">tests coronavirus</a></span><span class="comments-link"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><a href="https://corona-virus-infos.com/2020/03/15/questions-pratiques-frequentes/#respond">Laisser un commentaire<span class="screen-reader-text"> sur Questions pratiques fréquentes</span></a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-${ID} -->
+
+<article id="post-10" class="post-10 post type-post status-publish format-standard hentry category-non-classe tag-epidemie tag-conseils tag-coronavirus tag-france tag-information tag-sante tag-zerotohero entry">
+	<header class="entry-header responsive-max-width">
+		<h2 class="entry-title"><a href="https://corona-virus-infos.com/2020/03/15/example-post-3/" rel="bookmark">Comment se protéger de l’infection à coronavirus&nbsp;?</a></h2>	</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<p></p>
+
+
+
+<ol type="1"><li><strong>Les gestes barrières&nbsp;:</strong></li></ol>
+
+
+
+<p>Les agences gouvernementales diffusent depuis maintenant plusieurs semaines les conseils de base<a href="#_ftn1">[1]</a>, que tous devraient connaître&nbsp;:</p>
+
+
+
+<ul><li>Lavez vous les mains fréquemment, et en particulier dès que vous arrivez quelque part ou avant de manipuler de la nourriture</li><li>Eternuez ou toussez dans votre coude ou dans un mouchoir</li><li>Utiliser un mouchoir à usage unique et le jeter</li><li>Se saluer sans se serrer la main ni s’embrasser</li></ul>
+
+
+
+<p>A ces conseils généraux, on peut rajouter quelques conseils pratiques simples</p>
+
+
+
+<ul><li>Ne pas porter les mains au visage&nbsp;: l’infection se transmet par contact avec les muqueuses (la bouche, le nez, les yeux) ou au travers de plaies cutanées. Il est souvent très difficile d’éviter de porter consciemment ou inconsciemment les mains au visage, et en particulier à la bouche, au nez ou aux yeux. Une méthode simple pour minimiser ce risque est de porter des gants.</li><li>Minimiser les contacts avec les objets touchés par de nombreuses personnes&nbsp;: poignées de porte, boutons d’ascenseur, touches de digicode, et si on doit les toucher, le faire avec des gants ou se laver les mains dès que possible</li><li>Si on porte des gants, se laver les mains après les avoir enlevés</li></ul>
+
+
+
+<ul><li><strong>La distanciation sociale&nbsp;:</strong></li></ul>
+
+
+
+<p>En maintenant une distance entre personnes d’environ 1 m ou plus, la probabilité de contamination par une personne infectée, qu’elle soit ou non porteuse de symptômes, diminue considérablement. Donc si vous allez faire les courses ou prenez les transports en commun, isolez-vous au maximum, éviter toute proximité rapprochée. Cela peut conduire à préférer les escaliers aux ascenseurs et à éviter certains transports en commun aux heures de pointe.</p>
+
+
+
+<ul><li><strong>L’isolement&nbsp;: dans la mesure du possible, restez chez vous</strong></li></ul>
+
+
+
+<p>En restant chez soi et en minimisant les contacts sociaux, on diminue drastiquement la possibilité de contamination&nbsp;: le virus n’est pas dans l’air, il est transmis par de grosses gouttelettes, à l’occasion de toux ou d’éternuements d’une personne infectée, ou à partir de surfaces contaminées (le virus peut survivre plusieurs jours sur une surface inerte). Il faut donc minimiser les déplacements et surtout les contacts sociaux, c’est-à-dire le nombre de personnes que l’on va croiser, à fortiori si on est dans un espace fermé. L’idéal est de rester confiné chez soi, pendant une durée que l’on peut estimer à «&nbsp;quelques&nbsp;» semaines, sans que l’on sache encore si ce sera 3, 6 ou 9 semaines. Cela dépendra de la discipline collective&nbsp;: plus la population suivra les consignes et limitera la diffusion du virus, plus vite le confinement sera levé. Le virus ne circule pas seul et n’est pas dans l’air, ce sont les personnes infectées qui circulent et le disséminent.</p>
+
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cela veut dire&nbsp;: restez chez vous. Ne rendez pas visite à vos amis et votre famille si cela n’est pas indispensable. Ne recevez pas chez vous des amis ou de la famille, même s’ils sont parfaitement bien portants. Ne vous rendez pas à des regroupements de personne&nbsp;: spectacles, manifestations, voire marchés.</p>
+
+
+
+<p>Les mesures de distanciation sociale et d’isolement sont parfaitement logiques&nbsp;: le graphique ci-dessous représente en abscisse le nombre de personnes présentes en un endroit donnée, en ordonnée le taux d’infections actives circulantes. Chaque ligne diagonale représente le pourcentage de risque d’être contaminé&nbsp;: on observe que,&nbsp;; pour un taux donné d’infection (en ordonnée) dans le pays, le risque &nbsp;&nbsp;de contamination diminue de façon spectaculaire avec la diminution du nombre de personnes présentes</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large is-resized"><img data-attachment-id="59" data-permalink="https://corona-virus-infos.com/event-risk-assessment-1/" data-orig-file="https://coronavirusinfos.files.wordpress.com/2020/03/event-risk-assessment-1.jpg" data-orig-size="350,265" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="event-risk-assessment-1" data-image-description="" data-medium-file="https://coronavirusinfos.files.wordpress.com/2020/03/event-risk-assessment-1.jpg?w=300" data-large-file="https://coronavirusinfos.files.wordpress.com/2020/03/event-risk-assessment-1.jpg?w=350" src="https://coronavirusinfos.files.wordpress.com/2020/03/event-risk-assessment-1.jpg?w=350" alt="" class="wp-image-59" width="426" height="323" srcset="https://coronavirusinfos.files.wordpress.com/2020/03/event-risk-assessment-1.jpg 350w, https://coronavirusinfos.files.wordpress.com/2020/03/event-risk-assessment-1.jpg?w=150 150w, https://coronavirusinfos.files.wordpress.com/2020/03/event-risk-assessment-1.jpg?w=300 300w" sizes="(max-width: 426px) 100vw, 426px" /></figure></div>
+
+
+
+<p>Les mesures de distanciation sociale et d’isolement sont efficaces&nbsp;: le graphique ci-dessous représente la croissance du nombre de décès en Italie (courbe bleue), dans la région de Wuhan (Hubei) en Chine (courbe rouge), ou en France (courbe verte). On observe que dans les 3 cas, la croissance du nombre de cas est exponentielle (et donc représentée par une droite en coordonnées semi-logarithmiques), et surtout que dans les jours qui suivent l’instauration du confinement en Chine, puis en Italie, les courbes de décès s’infléchissent nettement.</p>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="57" data-permalink="https://corona-virus-infos.com/effectslockdown/" data-orig-file="https://coronavirusinfos.files.wordpress.com/2020/03/effectslockdown.jpg" data-orig-size="453,272" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="effectslockdown" data-image-description="" data-medium-file="https://coronavirusinfos.files.wordpress.com/2020/03/effectslockdown.jpg?w=300" data-large-file="https://coronavirusinfos.files.wordpress.com/2020/03/effectslockdown.jpg?w=453" src="https://coronavirusinfos.files.wordpress.com/2020/03/effectslockdown.jpg?w=453" alt="" class="wp-image-57" srcset="https://coronavirusinfos.files.wordpress.com/2020/03/effectslockdown.jpg 453w, https://coronavirusinfos.files.wordpress.com/2020/03/effectslockdown.jpg?w=150 150w, https://coronavirusinfos.files.wordpress.com/2020/03/effectslockdown.jpg?w=300 300w" sizes="(max-width: 453px) 100vw, 453px" /></figure>
+
+
+
+<p>Si les mesures de distanciation sociale mises en application à partir de samedi 14 Mars 2020 s’avèrent insuffisantes, il est possible que l’on s’oriente vers des mesures plus directives de confinement. En attendant, et quelle que soit la décision des autorités, un «&nbsp;auto-confinement&nbsp;» est certainement conseillé&nbsp;: moins on a de contacts, moins on risque d’être contaminé. Si on a aucun contact, on évite la contamination.</p>
+
+
+
+<p><strong>Quelles mesures pratiques prendre pour se préparer à l’isolement&nbsp;?</strong></p>
+
+
+
+<ul><li>Installer à l’entrée de chez soi un distributeur de solutés hydro alcoolique et du sopalin. A défaut le lavage des mains avec du savon est parfaitement efficace à condition de durer 20 secondes (un bon moyen de compter 20 secondes est de siffloter ou chanter intérieurement 2 fois la chanson «&nbsp;joyeux anniversaire&nbsp;»)</li><li>Il ne sert à rien de stocker des quantités phénoménales de nourriture et de boissons&nbsp;: l’eau du robinet est potable et va le rester, et la quantité de nourriture nécessaire pour ne pas mourir de faim pendant quelques semaines est en fait relativement limitée. Pensez à avoir une réserve suffisante de légumes et de fruits en conserve ou surgelés.</li><li>Il est important d’avoir une réserve de sopalin car cela fait fonction de serviettes à usage unique et, chaque fois que vous allez vous laver les mains, vous utiliserez une ou plusieurs feuilles.15/03/2020 21:12</li><li>Pensez à vos parents ou voisins isolés ou âgés&nbsp;: prenez de leur nouvelles, et aidez les à s’approvisionner. Si vous devez leur rendre visite et vous occuper d’eux (on pense aux personnes dépendantes et en perte d’autonomie), redoublez de précautions (lavage des mains, port du masque autant que possible si des masques sont disponibles, limitation des contacts corporels au strict minimum)</li></ul>
+
+
+
+<p>Protégez-vous, réduisez vos sorties et vos contacts au maximum, maintenez les distances sociales… A demain pour de nouvelles informations.</p>
+
+
+
+<p><em>15/03/2020 21:25:59</em></p>
+
+
+
+<hr class="wp-block-separator" />
+
+
+
+<p><a href="#_ftnref1">[1]</a> <a href="https://solidarites-sante.gouv.fr/IMG/pdf/affiche_gestes_barrieres_fr.pdf">https://solidarites-sante.gouv.fr/IMG/pdf/affiche_gestes_barrieres_fr.pdf</a></p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer responsive-max-width">
+		<span class="byline"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Publié par</span><span class="author vcard"><a class="url fn n" href="https://corona-virus-infos.com/author/hospimedicfr/">hospimedic</a></span></span><span class="posted-on"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><path id="a" d="M0 0h24v24H0V0z"></path></defs><clipPath id="b"><use xlink:href="#a" overflow="visible"></use></clipPath><path clip-path="url(#b)" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"></path></svg><a href="https://corona-virus-infos.com/2020/03/15/example-post-3/" rel="bookmark"><time class="entry-date published" datetime="2020-03-15T16:19:18+01:00">15 mars 2020</time><time class="updated" datetime="2020-03-15T23:09:07+01:00">15 mars 2020</time></a></span><span class="cat-links"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Publié dans</span><a href="https://corona-virus-infos.com/category/non-classe/" rel="category tag">Non classé</a></span><span class="tags-links"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Étiquettes&nbsp;:</span><a href="https://corona-virus-infos.com/tag/epidemie/" rel="tag">épidémie</a>, <a href="https://corona-virus-infos.com/tag/conseils/" rel="tag">Conseils</a>, <a href="https://corona-virus-infos.com/tag/coronavirus/" rel="tag">coronavirus</a>, <a href="https://corona-virus-infos.com/tag/france/" rel="tag">France</a>, <a href="https://corona-virus-infos.com/tag/information/" rel="tag">Information</a>, <a href="https://corona-virus-infos.com/tag/sante/" rel="tag">Santé</a>, <a href="https://corona-virus-infos.com/tag/zerotohero/" rel="tag">zerotohero</a></span><span class="comments-link"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><a href="https://corona-virus-infos.com/2020/03/15/example-post-3/#respond">Laisser un commentaire<span class="screen-reader-text"> sur Comment se protéger de l’infection à coronavirus&nbsp;?</span></a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-${ID} -->
+
+		</main><!-- .site-main -->
+	</section><!-- .content-area -->
+
+
+	</div><!-- #content -->
+
+		<footer id="colophon" class="site-footer responsive-max-width">
+	
+		<div class="site-info">
+										<a class="site-name" href="https://corona-virus-infos.com/" rel="home">Vivre au temps du coronavirus</a><span class="comma">,</span>
+						<a href="https://wordpress.com/?ref=footer_blog" rel="nofollow">Propulsé par WordPress.com.</a>					</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+
+</div><!-- #page -->
+
+<!--  -->
+<script src='//0.gravatar.com/js/gprofiles.js?ver=202012y'></script>
+<script>
+var WPGroHo = {"my_hash":""};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781h'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	</div>
+<script>
+var HighlanderComments = {"loggingInText":"Connexion\u2026","submittingText":"Publication d'un Commentaire\u2026","postCommentText":"Laisser un commentaire","connectingToText":"Connexion \u00e0 %s","commentingAsText":"%1$s: Vous commentez \u00e0 l'aide de votre compte %2$s.","logoutText":"Se d\u00e9connecter","loginText":"Se connecter","connectURL":"https:\/\/coronavirusinfos.wordpress.com\/public.api\/connect\/?action=request&domain=corona-virus-infos.com","logoutURL":"https:\/\/coronavirusinfos.wordpress.com\/wp-login.php?action=logout&_wpnonce=515059920c","homeURL":"https:\/\/corona-virus-infos.com\/","postID":"75","gravDefault":"identicon","enterACommentError":"Entrez un commentaire","enterEmailError":"Veuillez entrer votre adresse mail","invalidEmailError":"Adresse email invalide","enterAuthorError":"Veuillez entrer votre nom","gravatarFromEmail":"L\u2019image s\u2019affiche lorsque vous postez un commentaire. Cliquez pour personnaliser.","logInToExternalAccount":"Connectez-vous pour utiliser les informations li\u00e9es \u00e0 un de ces comptes:","change":"Changer","changeAccount":"Changer de compte","comment_registration":"0","userIsLoggedIn":"","isJetpack":"","text_direction":"ltr"};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??/wp-content/js/jquery/jquery.autoresize.js,/wp-content/mu-plugins/highlander-comments/script.js?m=1573483029j'></script>
+
+	<div id="carousel-reblog-box">
+		<form action="#" name="carousel-reblog">
+			<textarea id="carousel-reblog-content" name="carousel-reblog-content" placeholder="Ajoutez votre grain de sel personnel... (facultatif)"></textarea>
+			<label for="carousel-reblog-to-blog-id" id="carousel-reblog-lblogid">Publier sur</label>
+			<select name="carousel-reblog-to-blog-id" id="carousel-reblog-to-blog-id">
+						</select>
+
+			<div class="submit">
+				<span class="canceltext"><a href="#" class="cancel">Annuler</a></span>
+				<input type="submit" name="carousel-reblog-submit" class="button" id="carousel-reblog-submit" value="Reblog Article" />
+				<input type="hidden" id="carousel-reblog-blog-id" value="174237733" />
+				<input type="hidden" id="carousel-reblog-blog-url" value="https://corona-virus-infos.com" />
+				<input type="hidden" id="carousel-reblog-blog-title" value="Vivre au temps du coronavirus" />
+				<input type="hidden" id="carousel-reblog-post-url" value="" />
+				<input type="hidden" id="carousel-reblog-post-title" value="" />
+			</div>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="96863b4754" /><input type="hidden" name="_wp_http_referer" value="/" />		</form>
+
+		<div class="arrow"></div>
+	</div>
+<link rel='stylesheet' id='all-css-0-3' href='https://s0.wp.com/_static/??/wp-content/plugins/gutenberg-blocks/jetpack-layout-grid/blocks/front.css,/wp-content/mu-plugins/carousel/jetpack-carousel.css?m=1583834955j&cssminify=yes' type='text/css' media='all' />
+<script>
+var actionbardata = {"siteID":"174237733","siteName":"Vivre au temps du coronavirus","siteURL":"https:\/\/corona-virus-infos.com","icon":"<img alt='' src='https:\/\/s0.wp.com\/i\/logo\/wpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/hever","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Fcorona-virus-infos.com%2F2020%2F03%2F15%2Fquestions-pratiques-frequentes%2F&signup_flow=account&domain=corona-virus-infos.com","themeURL":"https:\/\/wordpress.com\/theme\/hever\/","xhrURL":"https:\/\/corona-virus-infos.com\/wp-admin\/admin-ajax.php","nonce":"7bdc50a742","isSingular":"","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"0dff2938e5\" \/>","referer":"https:\/\/corona-virus-infos.com\/","canFollow":"1","feedID":"104284591","statusMessage":"","customizeLink":"https:\/\/coronavirusinfos.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Fcoronavirusinfos.wordpress.com%2F","i18n":{"view":"Afficher le site","follow":"Suivre","following":"Abonn\u00e9","edit":"Modifier","login":"Connexion","signup":"S'inscrire","customize":"Personnaliser","report":"Signaler ce contenu","themeInfo":"Obtenir le th\u00e8me: Hever","shortlink":"Copier shortlink","copied":"Copi\u00e9","followedText":"Les nouveaux articles de ce site appara\u00eetront d\u00e9sormais dans votre <a href=\"https:\/\/wordpress.com\/\">Lecteur<\/a>","foldBar":"R\u00e9duire cette barre","unfoldBar":"\u00c9tendre cette barre","editSubs":"G\u00e9rer les abonnements","viewReader":"Voir le site dans le Lecteur","viewReadPost":"Voir l'article dans le Lecteur","subscribe":"M\u2019inscrire","enterEmail":"Entrez votre adresse e-mail","followers":"","alreadyUser":"Vous disposez d\u00e9j\u00e0 d\u02bcun compte WordPress ? <a href=\"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Fcorona-virus-infos.com%2F2020%2F03%2F15%2Fquestions-pratiques-frequentes%2F&signup_flow=account&domain=corona-virus-infos.com\">Connectez-vous maintenant.<\/a>","stats":"Statistiques"}};
+</script>
+<script>
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"fr","ajaxurl":"https:\/\/corona-virus-infos.com\/wp-admin\/admin-ajax.php","nonce":"189abf9350","display_exif":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Commentaire","post_comment":"Laisser un commentaire","write_comment":"\u00c9crire un commentaire...","loading_comments":"Chargement des commentaires\u2026","download_original":"Afficher dans sa taille r\u00e9elle <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>.","no_comment_text":"Veuillez ajouter du contenu \u00e0 votre commentaire.","no_comment_email":"Merci de renseigner une adresse e-mail.","no_comment_author":"Merci de renseigner votre nom.","comment_post_error":"Une erreur s'est produite \u00e0 la publication de votre commentaire. Veuillez nous en excuser, et r\u00e9essayer dans quelques instants.","comment_approved":"Votre commentaire a \u00e9t\u00e9 approuv\u00e9.","comment_unapproved":"Votre commentaire est en attente de validation.","camera":"Appareil photo","aperture":"Ouverture","shutter_speed":"Vitesse d'obturation","focal_length":"Focale","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/coronavirusinfos.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fcorona-virus-infos.com%2F2020%2F03%2F15%2Fexample-post-3%2F","blog_id":"174237733","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">E-mail (requis)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Nom (requis)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Site web<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Reblog","reblogged":"Reblogu\u00e9","reblog_add_thoughts":"Ajoutez votre grain de sel personnel... (facultatif)","reblogging":"Reblogging...","post_reblog":"Relais d'article","stats_query_args":"blog=174237733&v=wpcom&tz=1&user_id=0&subd=coronavirusinfos","is_public":"1","reblog_enabled":""};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJydUdFuwyAM/KERlilo68O0b6HgVmbEMGyS9e9HuqSrqmrS9gLWne/OGD1n5RIJkOjA2sOEDvJnF/hBNwrJxeqBzxyy6AnIp7JQOcXTAWPsRqStfXPKsR6RWB9qjIpRQIFHQTqqb0abYTc8GbPT+5gamFhYtdK9rykI8/89oQ0pTVdJfJppNT6ffEvepoxVbUHWt5epvS16tCxQWqXSBKXgspAL9kcHKbaN8ZvICSZaRJfq3m9w/ln7NR4+KpTTenXXXXeynC2pMkQdQHKbS21A07yNr715GfrH/nkw4QtOCcx3'></script>
+<script type='text/javascript'>
+( 'fetch' in window ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?m=1573572739h&#038;ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?m=1540208548h&#038;ver=3.26.0-0"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?m=1550600082h&#038;ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?m=1540208548h&#038;ver=2.0.2"></scr' + 'ipt>' );
+</script>
+	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="//stats.wp.com/w.js?61" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'174237733','blog_tz':'1','user_lang':'fr','blog_lang':'fr','user_id':'0'}]);
+_stq.push(['view', {'blog':'174237733','v':'wpcom','tz':'1','user_id':'0','subd':'coronavirusinfos'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1mJVY3bm9aR3VCbS9mWm1pRyZuJS1LX1t5NE84SWQsc2J8a3kvOS9ufHlFc2gmTk9WWlF2Lit2cCVUNnFGN2FKMVkuU2cxa3g1SThLSFg/RDFXcU42RG0udEFiRzhkOCU0PWE0dk1PVmJDU2QmY1pLfENzYmk2a2NYbUdhWFZbQWg5W2F0ZzN+OEhxJnRDV0U4dThYd2JudVZ6NEhZb2l0LjdaLn5NRGosOV1TWzM/Mi5ESyxPOExKPXJCeC5hSVhldlctb1glejNFZk0/c2RXdW9SQzIxb3BfalotLml6dnVfU21CZSxycHpKYUkycWswbFRWUFpt'}]);
+_stq.push([ 'clickTrackerInit', '174237733', '0' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+</body>
+</html>
