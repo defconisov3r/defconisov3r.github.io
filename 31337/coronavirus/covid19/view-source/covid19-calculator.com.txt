@@ -1,0 +1,459 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160862355-1"></script>
+            <script type="text/javascript" src="/assets/js/a22231caac98ea17be9a1153755e6fd1-gtag.min.js"></script>
+            <script data-ad-client="ca-pub-3033716134009667" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        
+
+
+    <!--<script type="text/javascript" src="/assets/js/97fedf9d52273bcd2d574916bb9e45ce-facebookshare.min.js"></script>-->
+
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
+
+    <title>COVID-19 Calculator</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The COVID19-Calculator helps to determine the time it will take to handle all critical cases within ICU beds">
+    <meta name="author" content="Huehn Solutions GmbH">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+    <meta property="og:url"           content="https://covid19-calculator.com/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Corona Virus Pandemic. How long will it take? How long does it have to take? How many ICU beds do we need?" />
+    <meta property="og:description"   content="As the Corona Virus (SARS-CoV-2) is spreading with an increasing momentum, governments have started to started to counter this pandemic. The idea is to slow it down such that the health care systems remain operative. The number of intensive care unit ICU beds is a limiting factor, as this is a key element in COVID-19 treatment.  &lt;br&gt;&lt;br&gt;This calculator helps to understand the outreach of this pandemic. It answers the question until it will last under the assumption that all critical patients who require an ICU bed will get it. It is a simple rule of three calculation which you could also make on a napkin without the ambition of being a fully fledged scientific approach." />
+    <!--<meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />-->
+
+
+    <link href="/assets/lib/bootstrap/css/7cc40c199d128af6b01e74a28c5900b0-bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/lib/mdb/css/7ebac82a331fdabf7abf833929c34b99-mdb.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/lib/mdb/css/3323b514e51661c6469b49938f0ac0bd-style.min.css" rel="stylesheet" type="text/css">
+
+    <link href="/assets/scss/4342ce5635b0992a4018d93e0a6499e2-toast.css" rel="stylesheet" type="text/css">
+    <link href="/assets/lib/jquery-ui/0b5729a931d113be34b6fac13bcf5b29-jquery-ui.min.css" rel="stylesheet" type="text/css">
+
+    <link href="/assets/css/1aadd3ecc0ce6c2aafb6a2c6cd314fa2-fieldConstructors.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/fontawesome/css/467b042bd4f377223f70e636d1b09e56-all.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/lib/DataTables/498ea5439791248619e54f22ec57bb74-datatables.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/6c98ecaec33081adc80f96c20bdbf971-main.css" rel="stylesheet">
+    <link href="/assets/css/adedf70954fdced2f3d1d3c4b583516a-general.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/8211f3c2a38d1ebbd29498abd632632f-mdmain.css" rel="stylesheet" type="text/css">
+
+    <link href="/assets/css/bece665f802a7473ec68a6075ade197a-index.css" rel="stylesheet" type="text/css">
+
+    </head>
+
+    <body>
+
+        <span class="d-none" id="csrf_token" data-value="943e4f49dfb8b1f5c341f4e7333138a77af0d9ef-1584461205511-38e7c85e339aca44643c169c"> </span>
+        <span class="d-none" id="currentLanguage" data-value="en"> </span>
+
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark scrolling-navbar top-nav-collapse">
+            <div class="container">
+
+                <a class="navbar-brand" href="/">
+                        <!--<img src="/assets/img/cvcalc_Logo_White.svg" class="d-inline" style="height: 1.5rem" alt="">-->
+                    <strong>COVID-19 Calculator</strong>
+                </a>
+
+                    <!-- Collapse -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                    <!-- Links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                        <!-- Left -->
+                    <ul class="navbar-nav mr-auto">
+
+                   </ul>
+
+                        <!-- Right -->
+                    <ul class="navbar-nav nav-flex-icons">
+                        <li class="nav-item">
+                            <a class="nav-link d-block" href="/imprint"> Imprint </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://www.linkedin.com/showcase/covid19-calculator" class="nav-link" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a href="#" class="d-flex align-items-center dropdown-toggle nav-link border border-light rounded py-1 my-2 mx-1 text-white" data-toggle="dropdown">
+                                    <i class="fa fa-language"></i>
+                                    <span id="navbarLanguage"></span>
+                                    <span class="caret"> </span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="/language/EN">English</a></li>
+                                    <li><a href="/language/DE">Deutsch </a> </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </nav>
+            <!-- Navbar -->
+
+
+
+
+        
+
+
+    <!-- Full Page Intro -->
+    <div class="view full-page-intro" style="background-image: url('/assets/img/b5bb9eb29c700762ce8aa3b7235e44bf-clouds_and_palms.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;">
+
+            <!-- Mask & flexbox options-->
+        <div class="mask rgba-black-strong overflow-auto">
+
+                <!-- Content -->
+            <div id="introStart" class="container" style="margin-top: 100px;
+                display: none">
+
+                    <!--Grid row-->
+                <div class="row wow fadeIn">
+
+                    <div class="col-12 my-4 white-text text-center text-md-left">
+                        <h1 class="lead font-weight-bold">
+                                <!--<img src="/assets/img/cvcalc_Logo_White.svg" class="d-inline" style="height: 6rem" alt="">-->
+                            Corona Virus Pandemic. How long will it take? How long does it have to take? How many ICU beds do we need?
+                        </h1>
+                    </div>
+
+                        <!--Grid column-->
+                    <div class="col-lg-4 mb-4 white-text text-center text-md-left">
+                        <hr class="hr-light mt-0">
+
+                        <p>
+                            <strong class="lead"></strong>
+                        </p>
+
+                        <p class="mb-4">
+                            <strong>As the Corona Virus (SARS-CoV-2) is spreading with an increasing momentum, governments have started to started to counter this pandemic. The idea is to slow it down such that the health care systems remain operative. The number of intensive care unit ICU beds is a limiting factor, as this is a key element in COVID-19 treatment.  <br><br>This calculator helps to understand the outreach of this pandemic. It answers the question until it will last under the assumption that all critical patients who require an ICU bed will get it. It is a simple rule of three calculation which you could also make on a napkin without the ambition of being a fully fledged scientific approach.</strong>
+                        </p>
+                        
+                        
+                        
+                    </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                    <div class="col-lg-8 mb-4">
+
+                        <div class="card">
+                            <div class="card-header pb-1">
+                                <div class="">
+                                    <div class="form-row my-0">
+                                        <div class="d-flex col-7 col-md-8 col-lg-9 align-items-center lead">
+                                        Please provide the following numbers or choose a preset
+                                        </div>
+                                        <div class="d-flex col-5 col-md-4 col-lg-3 align-items-center lead">
+                                            <div class="form-group mt-2 mb-0 w-100">
+                                                <select class="custom-select form-control" id="country" required>
+                                                    <option value=""></option>
+                                                    
+
+    <option  value="DE">Germany</option>
+
+
+                                                </select>
+                                                <label class="form-control-placeholder no-user-select" for="country">Country Preset</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                                <!--Card content-->
+                            <div class="card-body">
+                                    <!-- Heading -->
+                                <div class="">
+                                    <form class="calculator">
+                                    
+                                        <div class="form-row my-1">
+                                            
+<div class="form-group col-md-4 mt-4 mb-2 control-highlight">
+    <input class="form-control empty" type="number" id="population" name="population"
+         autocomplete=""
+        
+        
+        min="0.0"
+        >
+    <label class="form-control-placeholder no-user-select" for="population">Population (in Millions)</label>
+</div>
+
+
+                                            
+<div class="form-group col-md-4 mt-4 mb-2 control-highlight">
+    <input class="form-control empty" type="number" id="infectionRate" name="infectionRate"
+         autocomplete=""
+        
+        
+        min="0.0"
+        max="100.0">
+    <label class="form-control-placeholder no-user-select" for="infectionRate">Infection Rate (in %)</label>
+</div>
+
+
+                                            
+<div class="form-group col-md-4 mt-4 mb-2 control-highlight">
+    <input class="form-control empty" type="number" id="infected" name="infected"
+         autocomplete=""
+        
+        readonly tabindex=-1 disabled
+        min="0.0"
+        >
+    <label class="form-control-placeholder no-user-select" for="infected">Infected (in Millions)</label>
+</div>
+
+
+                                        </div>
+
+                                        <div class="form-row my-1">
+                                            
+<div class="form-group col-md-4 offset-md-4 mt-4 mb-2 control-highlight">
+    <input class="form-control empty" type="number" id="criticalShare" name="criticalShare"
+         autocomplete=""
+        
+        
+        min="0.0"
+        max="100.0">
+    <label class="form-control-placeholder no-user-select" for="criticalShare">Share of critical cases (in %)</label>
+</div>
+
+
+                                            
+<div class="form-group col-md-4 mt-4 mb-2 control-highlight">
+    <input class="form-control empty" type="number" id="critical" name="critical"
+         autocomplete=""
+        
+        readonly tabindex=-1 disabled
+        min="0.0"
+        >
+    <label class="form-control-placeholder no-user-select" for="critical">Critical cases (in Millions)</label>
+</div>
+
+
+                                        </div>
+
+                                        <div class="form-row my-1">
+                                            
+<div class="form-group col-md-4 mt-4 mb-2 control-highlight">
+    <input class="form-control empty" type="number" id="icuBeds" name="icuBeds"
+         autocomplete=""
+        
+        
+        min="1.0"
+        >
+    <label class="form-control-placeholder no-user-select" for="icuBeds">No. of intensive care unit (ICU) beds</label>
+</div>
+
+
+                                            
+<div class="form-group col-md-4 mt-4 mb-2 control-highlight">
+    <input class="form-control empty" type="number" id="icuBedsForCovid19Share" name="icuBedsForCovid19Share"
+         autocomplete=""
+        
+        
+        min="0.0"
+        max="100.0">
+    <label class="form-control-placeholder no-user-select" for="icuBedsForCovid19Share">Vacant ICU beds (in %)</label>
+</div>
+
+
+                                            
+<div class="form-group col-md-4 mt-4 mb-2 control-highlight">
+    <input class="form-control empty" type="number" id="icuBedsForCovid19" name="icuBedsForCovid19"
+         autocomplete=""
+        
+        readonly tabindex=-1 disabled
+        
+        >
+    <label class="form-control-placeholder no-user-select" for="icuBedsForCovid19">Vacant ICU beds</label>
+</div>
+
+
+                                        </div>
+
+                                        <div class="form-row my-1">
+                                            
+<div class="form-group col-md-4 mt-4 mb-2 control-highlight">
+    <input class="form-control empty" type="number" id="icuDuration" name="icuDuration"
+         autocomplete=""
+        
+        
+        min="0.0"
+        max="31.0">
+    <label class="form-control-placeholder no-user-select" for="icuDuration">Duration of ICU stay (in days)</label>
+</div>
+
+
+                                            
+<div class="form-group col-md-4 offset-md-4 mt-4 mb-2 control-highlight">
+    <input class="form-control empty" type="number" id="icuAnnualCapacityPerBed" name="icuAnnualCapacityPerBed"
+         autocomplete=""
+        
+        readonly tabindex=-1 disabled
+        min="0.0"
+        max="365.0">
+    <label class="form-control-placeholder no-user-select" for="icuAnnualCapacityPerBed">Annual capacity (in no. patients)</label>
+</div>
+
+
+                                        </div>
+
+                                        <div class="form-row my-1">
+                                        
+<div class="form-group col-12 mt-4 mb-2 ">
+    <input class="form-control empty"
+    type="text"
+    id="timeframe"
+    name="timeframe"
+    value=""
+    autocomplete=""
+        
+        readonly tabindex=-1 disabled
+    >
+    <label class="form-control-placeholder no-user-select" for="timeframe">Time to treat all ICU cases</label>
+</div>
+
+
+                                        </div>
+                                        
+                                    
+                                    </form>
+
+                                    <div id="sourceDiv" class="small">
+                                        <div class="">
+                                            <a class="text-dark" data-toggle="collapse" href="#source" role="button" aria-expanded="false" aria-controls="source">
+                                            Source (click to expand)
+                                            </a>
+                                        </div>
+                                        <div class="collapse" id="source">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-between">
+
+
+                                <div>
+                                    <button id="btn-copy-url-to-clipboard" class="btn btn-primary btn-sm p-1">
+                                    Copy URL with these settings to clipboard
+                                    </button>
+                                </div>
+                              <!--
+                                <div id="fb-share-button" class="fb-share-button"
+                                data-href="https://covid19-calculator.com/"
+                                data-layout="button">
+                                </div>
+                          -->
+                              <div class="fb-share-button" data-href="http://covid19-calculator.com" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcovid19-calculator.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Copy URL with these settings to clipboard</a></div>
+                            </div>
+
+                        </div>
+                    </div>
+                        <!--Grid column-->
+
+                </div>
+                    <!--Grid row-->
+
+            </div>
+                <!-- Content -->
+
+        </div>
+            <!-- Mask & flexbox options-->
+
+    </div>
+        <!-- Full Page Intro -->
+        
+
+
+        <!-- /container -->
+
+
+        
+<script type="text/javascript" src="/assets/js/helper/06177d3d683bb40e66a06364f7fe738c-toaster.min.js"  defer="defer"></script>
+
+<div aria-live="polite" aria-atomic="true" style="position: fixed; top:80px; right:0px; z-index:1080">
+        <!-- Position it -->
+    <div id="toaster">
+    </div>
+</div>
+
+
+
+<div id="toast-template" class="d-none" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+        <i class="fa rounded mr-2 toast-icon"></i>
+        <strong class="mr-auto toast-title">Bootstrap</strong>
+        <small class="text-muted toast-date"></small>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="toast-body">
+    </div>
+    <div style="width:200px"></div>
+</div>
+        
+
+
+<script type="text/javascript" src="/assets/js/2fa0342521740f690aca9c5f55f1a51d-cookieNotification.min.js" defer="defer"></script>
+
+<div id="cookieNotificationArea" style="display: none">
+    <div class="nav navbar d-flex fixed-bottom" style="background: rgba(0,0,0,.33)!important">
+        <span class="text-light">
+            By using this website you consent to Cookies set.
+        </span>
+
+        <a class="btn btn-sm btn-success" id="btnAcceptCookies">
+            Accept and hide this message
+        </a>
+    </div>
+</div>
+
+
+        <script type="text/javascript" src="/assets/lib/jquery/a09e13ee94d51c524b7e2a728c7d4039-jquery.min.js"></script>
+        <script type="text/javascript" src="/assets/lib/jquery-ui/c15b1008dec3c8967ea657a7bb4baaec-jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/assets/lib/jquery-ui-touch-punch/700b877cd3ade98ce6cd4be349d81a5c-jquery.ui.touch-punch.min.js"></script>
+        <script type="text/javascript" src="/assets/lib/popper.js/umd/7e58cd01528ac4394af369c152c17bc2-popper.min.js"></script>
+        <script type="text/javascript" src="/assets/lib/bootstrap/js/61f338f870fcd0ff46362ef109d28533-bootstrap.min.js"></script>
+        <script type="text/javascript" src="/assets/lib/DataTables/6b0736dfbdcd604f2a5e31926a8c41cb-datatables.min.js"></script>
+        <script type="text/javascript" src="/assets/lib/DataTables-PageResize/3faae8a8563b24231ab21cd32bedbe9a-dataTables.pageResize.min.js"></script>
+        <script type="text/javascript" src="/assets/lib/bootbox/dist/c03bd83e89ad00fa10479162362a6d4e-bootbox.min.js"></script>
+        <script type="text/javascript" src="/assets/js/helper/4d794e6f870b7b7a6926d5a4cbd8f58c-fieldConstructors.min.js"></script>
+
+        <script type="text/javascript" src="/assets/lib/js-cookie/8ff1c89f24a8ca6f91f77389a0b70449-js.cookie.js"></script>
+        <script type="text/javascript" src="/assets/lib/parseuri/754b1549e7543eba44648b7ae619934c-parseuri.js"></script>
+
+            <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="/assets/lib/mdb/js/c9def5456a192e3a43cfaa30e620550d-mdb.min.js"></script>
+        <script type="text/javascript" src="/assets/js/e221b9d20c7b702d035febc75c8d149b-index.min.js"></script>
+        
+        
+        
+        <script type="text/javascript" src="/assets/js/4b5adaf59d259429e50389f74f76990c-main.min.js"></script>
+        <script type="text/javascript" src="/assets/javascript/routes.js" defer="defer"></script>
+        <script type="text/javascript" src="/assets/javascript/jsmessages" defer="defer"></script>
+    </body>
+</html>

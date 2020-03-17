@@ -1,0 +1,117 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="robots" content="noindex, nofollow">
+<title>Webmail - Login</title>
+<link href="in.base.css?1" rel="stylesheet" type="text/css">
+<link href="in.css.php" rel="stylesheet" type="text/css">
+<link rel="icon" href="favicon.ico" type="image/ico">
+<link rel="shortcut icon" href="favicon.ico" type="image/ico">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function chklform() {
+  frm = document.login;
+  if (frm.domain.value.length == 0) {
+    alert("Please fill in the Domain name.");
+    frm.domain.focus();
+    return false;
+  }
+}
+//-->
+</script>
+<style type="text/css">
+.ssl {
+	display: inline;
+}
+.ssl input {
+	width: 13px;
+	height: 13px;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	vertical-align: bottom;
+	position: relative;
+	top: 1px;
+	*overflow: hidden;
+}
+</style>
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="logo-box">
+	<img src="img//logoh.jpg" alt="Webmail" title="Webmail" width="400" height="72">
+	</td>
+</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td class="loginbody" align="center" valign="middle"><form action="https://mbox.s807.sureserver.com/" method="post" name="login" class="form" style="padding-top:7px;" id="login"><table border="0" cellspacing="0" cellpadding="0">
+<tr><td colspan="3" class="logodivider"></td></tr>
+<tr>
+  <td height="26" nowrap class="ntahoma">E-mail Username:&nbsp;&nbsp;</td>
+  <td><input name="username" type="text" class="infield" id="username" size="18" maxlength="67" autocapitalize="off"></td>
+  <td class="ntahoma" nowrap><strong>@covid-19war.com</strong><input type="hidden" name="domain" value="covid-19war.com"></td>
+</tr>
+<tr><td colspan="3" class="logodivider"></td></tr>
+<tr>
+  <td height="26" nowrap class="ntahoma">Password:&nbsp;&nbsp;</td>
+  <td><input name="password" type="password" class="infield" id="password" size="18" maxlength="67"></td>
+  <td align="right" valign="middle"><input type="submit" class="inbutn" title="Login" value="Login"></td>
+</tr>
+<tr><td colspan="3" class="logodivider"></td></tr>
+</table></form></td></tr>
+<tr>
+	<td style="height:28px;background-color:#fafafa">
+		<table style="width:480px;margin: 0 auto" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td class="talit" style="height:16px;text-align:center;line-height:16px;">
+					<a id="toggle-forgotten-pass-info" href="#"><img style="vertical-align:middle;margin-bottom:2px;" src="img//f.gif" width="20" height="14" border="0">Forgot your password?</a>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<tr id="forgotten-pass-info" style="display:none">
+	<td style="background-color:#fafafa">
+		<table style="width:480px;margin: 0 auto" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td class="talit" style="text-align:center;padding-bottom:8px;">
+					In case you have forgotten or misplaced your password, please contact the owner of
+		this domain to reset it. If you are the owner of the domain, you can reset the
+		password from the Mail Manager section of your Control Panel.				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td style="height:1px;background-color:#eee"></td>
+</tr>
+</table>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+document.login.username.focus();
+// check for cookies enabled
+document.cookie = "iscookieenabled=yes";
+cookieOk = (document.cookie.indexOf("iscookieenabled=yes") > -1);
+if (!cookieOk) { document.write("<div class='ntahoma' align='center'><font class='errorc'>Attention: Your browser has cookies disabled/blocked (perhaps by a firewall),<br>and you will not be able to login!</font></div>"); }
+// and delete the test cookie
+var now = new Date();
+document.cookie = "iscookieenabled=;expires=" + now.toGMTString();
+// and detect window width
+document.cookie = "winwid=" + document.body.clientWidth + "; path=/; domain=s807.sureserver.com";
+// and timezone
+document.cookie = 'tz=' + (now.getTimezoneOffset()/60)*(-1) + "; path=/; domain=s807.sureserver.com";
+//-->
+</script>
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script>
+	$(function () {
+		$('#toggle-forgotten-pass-info').click(function (e) {
+			e.preventDefault();
+
+			$('#forgotten-pass-info').toggle();
+		});
+	});
+</script>
+</body>
+</html>
