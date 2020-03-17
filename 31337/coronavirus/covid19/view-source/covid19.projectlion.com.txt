@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COVID 19 Aggregator</title>
+  <meta name="description" content="COVID 19 Aggregator"/>
+  <meta name="keywords" content="COVID 19"/>
+
+  <link rel="shortcut icon" type="image/x-icon" href="shared/static/img/favicon.ico?a=3"/>
+
+      <link rel="stylesheet" href="/mb/_vendor/bootstrap/css/bootstrap.css?v=3.0.335" type="text/css" />
+<link rel="stylesheet" href="/mb/_vendor/css/icons/font-awesome/css/fontawesome-all.css?v=3.0.335" type="text/css" />
+<link rel="stylesheet" href="/mb/_vendor/css/icons/simple-line-icons/css/simple-line-icons.css?v=3.0.335" type="text/css" />
+<link rel="stylesheet" href="/mb/_vendor/css/icons/weather-icons/css/weather-icons.min.css?v=3.0.335" type="text/css" />
+<link rel="stylesheet" href="/mb/_vendor/css/icons/linea-icons/linea.css?v=3.0.335" type="text/css" />
+<link rel="stylesheet" href="/mb/_vendor/css/icons/themify-icons/themify-icons.css?v=3.0.335" type="text/css" />
+<link rel="stylesheet" href="/mb/_vendor/css/icons/flag-icon-css/flag-icon.min.css?v=3.0.335" type="text/css" />
+<link rel="stylesheet" href="/mb/_vendor/css/icons/material-design-iconic-font/css/materialdesignicons.min.css?v=3.0.335" type="text/css" />
+<link rel="stylesheet" href="/mb/_vendor/css/spinners.css?v=3.0.335" type="text/css" />
+<link rel="stylesheet" href="/mb/_vendor/css/animate.css?v=3.0.335" type="text/css" />
+<link rel="stylesheet" href="/mb/_vendor/datatables.net-bs4/css/dataTables.bootstrap4.css?v=3.0.335" type="text/css" />
+<link rel="stylesheet" href="/mb/_vendor/datatables.net-bs4/css/responsive.dataTables.min.css?v=3.0.335" type="text/css" />
+<link rel="stylesheet" href="/mb/_vendor/css/style.css?v=3.0.335" type="text/css" />
+<link rel="stylesheet" href="/mb/_vendor/css/colors/green.css?v=3.0.335" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.8.1/css/perfect-scrollbar.css" type="text/css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.1.2/flatpickr.css" type="text/css" />
+<link rel="stylesheet" href="https://www.trillo.io/css/3.0/trillo.css?v=3.0.335" type="text/css" />
+<link rel="stylesheet" href="https://www.trillo.io/css/3.0/trillo-theme.css?v=3.0.335" type="text/css" />
+<link rel="stylesheet" href="https://www.trillo.io/css/role.css?v=3.0.335" type="text/css" />
+<link rel="stylesheet" href="https://www.trillo.io/css/3.0/trillo-bootstrap4.css?v=3.0.335" type="text/css" />
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i&display=swap" />
+<link rel="stylesheet" href="/$org_name$/_vendor/css/steps.css?v=3.0.335" type="text/css" />
+<link rel="stylesheet" href="/mb/shared/static/css/jquery-form-validator.css?v=3.0.335" type="text/css" />
+<link rel="stylesheet" href="/mb/shared/static/css/templates.css?v=3.0.335" type="text/css" />
+<link rel="stylesheet" href="/mb/covid19/static/css/covid19.css?v=3.0.335" type="text/css" />
+
+
+</head>
+<body class="user-trillo-role-none">
+
+<div class="trillo-application js-application" nm="covid19">
+ 
+</div>
+<div class="trillo-dialog js-modal-dialog-container trillo-display-none" nm="trillo-dialog-container">
+</div>
+
+<div class="trillo-dialog js-modal-dialog-container trillo-display-none case-dialog js-readonly" nm="case-dialog-container">
+</div>
+
+
+<div class="trillo-dialog  js-dialog-container trillo-display-none rounded" nm="trillo-non-modal-dialog-container">
+</div>
+
+<div class="trillo-dialog  js-modal-dialog-container trillo-display-none rounded" nm="trillo-dialog3-container">
+</div>
+
+<div class="trillo-dialog2  js-modal-dialog-container trillo-display-none" nm="trillo-dialog2-container">
+</div>
+
+<div class="trillo-dialog2  js-dialog-container trillo-display-none" nm="trillo-non-modal-dialog2-container">
+</div>
+
+<div class="trillo-scroll-dialog js-dialog-container" nm="trillo-scroll-dialog-container">
+</div>
+
+<div class="trillo-pagination js-pagination"></div>
+
+<div class="trillo-global-progress-indicator js-global-progress-bar" style="display: none">
+  <div>
+    <span class="js-title"></span> <span class="js-message"></span> %
+  </div>
+  <div class="progress">
+    <div nm="progressGraph"
+      class="progress-bar progress-bar-striped active js-progress-bar">
+    </div>
+  </div>
+</div>
+
+<div style="visibility: hidden" class="trillo-busy-indicator progress js-busy-indicator">
+  <div class="progress-bar progress-bar-striped active js-progress-bar">
+  </div>
+</div>
+
+<div id="menu-popover-target" class="trillo-popover-dropdown-menu"  h-offset="10px" alignment="b-c">
+  <i class="js-popover-anchor trillo-arrow-up"></i>
+</div>
+
+<div class="trillo-popover-container" alignment="none" id="popover-container">
+  <!--
+    <i class="js-popover-anchor trillo-arrow-up"></i>
+  -->
+  <i class="trillo-popover-close js-popover-close fa fa-angle-double-left"></i>
+</div>
+
+<div class="trillo-toolbar-popup-container" alignment="b-c" h-offset="10" id="toolbar-container">
+  <i class="js-popover-anchor trillo-arrow-up"></i>
+</div>
+
+<div class="trilo-page-load-indicator fa fa-spinner fa-spin fa-3x fa-fw trillo-hidden js-page-load-indicator"></div>
+
+<div class="trillo-disabled-overlay">
+  <img src="/$org_name$/shared/static/img/busy.gif" class="trillo-disabled-spinner"/>
+</div>
+<div class="trillo-alert-c">
+	<div style="display:none" class="trillo-alert alert alert-danger js-alert">
+	  <button type="button" nm="close" class="close">&#215;</button>
+	  <h4 class="js-title">
+	    Error!
+	  </h4>
+	  <span class="js-message">Error message.</span>
+	</div>
+</div>
+
+<div class="js-modal modal fade trillo-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" nm="modalTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p nm="modalMessage">
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" nm="modalYes" display="none" class="btn btn-primary">Yes</button>
+        <button type="button" nm="modalNo" display="none" class="btn btn-danger">No</button>
+        <button type="button"class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" nm="modalOK" class="btn btn-primary">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+	
+</body>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.3/moment.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-tokeninput/1.7.0/jquery.tokeninput.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.8/jquery.autocomplete.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/3.0.8/autosize.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/purl/2.3.1/purl.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-debug/0.4/ba-debug.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.8.1/js/perfect-scrollbar.jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/string-mask/0.3.0/string-mask.min.js# Not available on CDN, served by Trillo server." charset="utf-8"></script>
+<script type="text/javascript" src="https://www.trillo.io/lib/js/jquery.history-master/jquery.history.min.js?v=3.0.335" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.1.2/flatpickr.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://www.trillo.io/dist/js/trillo-core.min.js?v=3.0.335" charset="utf-8"></script>
+<script type="text/javascript" src="https://www.trillo.io/dist/js/trillo-view.min.js?v=3.0.335" charset="utf-8"></script>
+<script type="text/javascript" src="https://www.trillo.io/dist/js/trillo-common.min.js?v=3.0.335" charset="utf-8"></script>
+<script type="text/javascript" src="/mb/_vendor/js/sidebarmenu.js?v=3.0.335" charset="utf-8"></script>
+
+
+
+<script type="text/javascript" src="/mb/shared/static/js/shared_ns.js?v=3.0.335" charset="utf-8"></script>
+<script type="text/javascript" src="/mb/shared/static/js/sharedC.js?v=3.0.335" charset="utf-8"></script>
+<script type="text/javascript" src="/mb/shared/static/js/appC.js?v=3.0.335" charset="utf-8"></script>
+<script type="text/javascript" src="/mb/covid19/static/js/covid19_ns.js?v=3.0.335" charset="utf-8"></script>
+<script type="text/javascript" src="/mb/covid19/static/js/CaseC.js?v=3.0.335" charset="utf-8"></script>
+<script type="text/javascript" src="/mb/covid19/static/js/CaseListC.js?v=3.0.335" charset="utf-8"></script>
+
+
+<script type="text/javascript">
+  Trillo.appContext = {
+  "frameWorkBuster" : "3.0.335",
+  "authChoice" : "1",
+  "buildTimestamp" : "3.0.335",
+  "displayName" : "COVID-19",
+  "type" : "default",
+  "logoStamp" : "/mb/shared/static/img/logo-stamp.png",
+  "pageName" : "covid19",
+  "cacheBuster" : "3.0.335",
+  "placeHolderName" : "covid19",
+  "webSocketEndPoint" : "/websocket/",
+  "orgName" : "mb",
+  "dtServerInst" : "false",
+  "appName" : "covid19",
+  "userFullName" : "guest",
+  "pagePath" : "mb/covid19",
+  "webSocketDestination" : "/user/queue/notification",
+  "useRtUser" : "false",
+  "dtServerEnv" : "",
+  "homeUrl" : "/mb/covid19",
+  "csrfToken" : "48sb7HiwNpiGOUlGlpFwSEnSJcwdq8zD",
+  "basePath" : "covid19",
+  "loggedIn" : "false",
+  "pageUrl" : "mb/covid19",
+  "page" : {
+    "appTemplate" : "webapp",
+    "blank" : false,
+    "defaultPage" : true,
+    "description" : "COVID 19 Aggregator",
+    "displayName" : "COVID-19",
+    "htmlHeadTitle" : "COVID 19 Aggregator",
+    "keywords" : "COVID 19",
+    "linkedApp" : "shared",
+    "name" : "covid19",
+    "requiredRoles" : "none",
+    "trilloVersion" : "2.0",
+    "useTestData" : true,
+    "usingEnumsCatalog" : true,
+    "usingStringFiles" : true,
+    "usingViewSpecs" : true
+  },
+  "isTrilloServer" : true,
+  "user" : {
+    "createdAt" : 1584439453928,
+    "deleted" : false,
+    "deletedAt" : 0,
+    "emailVerified" : false,
+    "firstName" : "guest",
+    "fullName" : "guest",
+    "orgId" : 0,
+    "role" : "none",
+    "uid" : "User.null",
+    "updatedAt" : 1584439453928,
+    "userId" : "guest"
+  }
+};
+</script>
+
+</html>

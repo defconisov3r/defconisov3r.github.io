@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>    Dashboard
+ &mdash; SportQ</title>
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- CSS Libraries -->
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="https://covid19.sportq.id/assets/css/style.css">
+    <link rel="stylesheet" href="https://covid19.sportq.id/assets/css/components.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119519336-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-119519336-5');
+    </script>
+</head>
+
+<body>
+<div id="app">
+    <div class="main-wrapper">
+        <div class="navbar-bg"></div>
+        <nav class="navbar navbar-expand-lg main-navbar">
+            <form class="form-inline mr-auto" action="https://covid19.sportq.id/users">
+  <ul class="navbar-nav mr-3">
+    <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+  </ul>
+</form>
+        </nav>
+        <div class="main-sidebar">
+            <aside id="sidebar-wrapper">
+  <div class="sidebar-brand">
+      <a href="https://covid19.sportq.id">
+          <img src="https://partner.sportq.id/assets/img/logo.png" width="100" class="img-fluid">
+      </a>
+  </div>
+  <div class="sidebar-brand sidebar-brand-sm">
+    <a href="index.html">St</a>
+  </div>
+  <ul class="sidebar-menu">
+      <li class="menu-header">Dashboard</li>
+      <li class=" active"><a class="nav-link" href="https://covid19.sportq.id"><i class="fa fa-columns"></i> <span>Dashboard</span></a></li>
+    </ul>
+</aside>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+                <section class="section">
+        <div class="section-header">
+            <h1>Dashboard</h1>
+        </div>
+            <dashboard-component></dashboard-component>
+        <div class="section-body">
+            <dataworld-component></dataworld-component>
+        </div>
+    </section>
+        </div>
+        <footer class="main-footer">
+            <div class="footer-left">
+  Copyright &copy; 2020 <div class="bullet"></div> <b> SportQ</b>
+</div>
+        </footer>
+    </div>
+</div>
+
+<script src="https://covid19.sportq.id/dynamic.js"></script>
+<script src="https://covid19.sportq.id/js/app.js?5e70a2246b861"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://covid19.sportq.id/assets/js/stisla.js"></script>
+<script src="https://covid19.sportq.id/assets/js/scripts.js"></script>
+</body>
+</html>

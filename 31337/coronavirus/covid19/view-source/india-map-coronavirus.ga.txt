@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>CoronaVirus India - Live Interactive Map</title>
+    <meta name="description" content="Live updated map of novel corona virus, covid-19, city wise spread in india."/>
+    <!-- Google Analytics -->
+    <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-160825964-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #wrapper { height: 100%; }
+      #over_map {
+        position: absolute;
+        top: 0.6em;
+        right: 0.6em;
+        z-index: 99;
+      }
+      #info_box {
+        background-color: rgba(255,255,255,1);
+        padding: 10px;
+        font-size: smaller;
+        color: rgba(0, 0, 0, 0.87);
+        border-radius: 10px;
+      }
+      #info {
+        font-size: small;
+        margin-top: 10px;
+      }
+      #share {
+        position: absolute;
+        right: 0.6em;
+        bottom: 7em;
+        display: none;
+      }
+      #over_map #last_updated {
+        color: rgba(0, 0, 0, 0.57);
+        font-size: smaller;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="map"></div>
+      <div id="over_map">
+          <div id="info_box">
+            <b>CoronaVirus Map - India</b>
+            <div id="info">
+              <span id="confirmed"></span> confirmed cases</br>
+              <span id="recovered"></span> recovered</br>
+              <span id="death"></span> reported deaths</br>
+              8 cases reported today
+              <div id="last_updated">
+                --------------------------------------------<br/>
+                last updated: 12:50pm 17 March
+              </div>
+            </div>
+          </div>
+      </div>
+      <img id="share" src="./share.png" />
+    </div>
+
+    <script>
+      var share = document.getElementById('share')
+      let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+      if (navigator.share && isMobile) {
+        share.style.display = "block"
+      };
+      share.addEventListener("click", async () => {
+        try {
+          await navigator.share({ title: "Example Page", url: "" });
+          console.log("Data was shared successfully");
+        } catch (err) {
+          console.error("Share failed:", err.message);
+        }
+      });
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 6,
+          center: {lat: 23.024, lng: 77.887},
+          streetViewControl: false,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          mapTypeControl: false
+        });
+
+        // Create an array of alphabetical characters used to label the markers.
+        var labels = '111111111111111111';
+        var confirmed = 0;
+        var death = 0;
+        var recovered = 0;
+        // Add some markers to the map.
+        // Note: The code uses the JavaScript Array.prototype.map() method to
+        // create an array of markers based on a given "locations" array.
+        // The map() method here has nothing to do with the Google Maps API.
+        var markers = [];
+        locations.forEach(function(location, i) {
+          count = location[4];
+          if(location[0] === "in") {
+            confirmed += location[4];
+            recovered += location[5];
+            death += location[6];
+          }
+          while(count > 0) {
+            count--;
+            var mark = new google.maps.Marker({
+              position: {lat: location[2], lng: location[3]},
+              label: labels[(i+count) % labels.length],
+              title: location[1]
+            });
+            markers.push(mark);
+          }
+        });
+
+        // set confirmed cases count
+        document.getElementById("confirmed").textContent= confirmed;
+        document.getElementById("death").textContent= death;
+        document.getElementById("recovered").textContent= recovered;
+        // Add a marker clusterer to manage the markers.
+        var markerCluster = new MarkerClusterer(map, markers,
+            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+      }
+      var locations = [
+        // ["pk", "islamabad", 29.6210, 68.2341, 94, 0, 0],
+        // ["np", "kathmandu", 27.7172, 85.3240, 1, 0, 0],
+        // ["bh", "thimphu", 27.4998, 90.5083, 1, 0, 0],
+        // ["bl", "dhaka", 23.8103, 90.4125, 5, 0, 0],
+        // ["sl", "colombo", 6.9271, 79.8612, 18, 0, 0],
+
+        ["in", "kargil", 34.5539, 76.1349, 1, 0, 0],
+        ["in", "leh", 34.1526, 77.5771, 5, 0, 0],
+        ["in", "jammu", 32.7266, 74.8570, 3, 0, 0],
+        ["in", "hoshiarpur", 31.5143, 75.9115, 1, 0, 0],
+
+        ["in", "delhi", 28.6139, 77.2090, 7, 2, 1],
+
+        // uttrakhand
+        ["in", "dehradun", 30.3165, 78.0322, 1, 0, 0],
+
+        // haryana
+        ["in", "Gurgaon", 28.4595, 77.0266, 15, 0, 0],
+
+        // Uttar Pradesh
+        ["in", "lucknow", 26.8467, 80.9462, 2, 0, 0],
+        ["in", "agra", 27.1767, 78.0081, 8, 4, 0],
+        ["in", "noida", 28.5355, 77.3910, 4, 0, 0],
+        ["in", "ghaziabad", 28.6692, 77.4538, 1, 0, 0],
+
+        // rajasthan
+        ["in", "jaipur", 26.9124, 75.7873, 4, 3, 0],
+
+        // Maharashtra
+        ["in", "pune", 18.5204, 73.8567, 7, 0, 0],
+        ["in", "mumbai", 19.0760, 72.8777, 6, 0, 1],
+        ["in", "navi mumbai", 19.0330, 73.0297, 3, 0, 0],
+        ["in", "nagpur", 21.1458, 79.0882, 4, 0, 0],
+        ["in", "thane", 19.2183, 72.9781, 1, 0, 0],
+        ["in", "ahmednagar", 19.0948, 74.7480, 1, 0, 0],
+        ["in", "yavatmal", 20.3899, 78.1307, 3, 0, 0],
+        ["in", "pimpri-chinchwad", 18.6298, 73.7997, 9, 0, 0],
+        ["in", "Kalyan", 19.2403, 73.1305, 3, 0, 0],
+        ["in", "Aurangabad", 19.8762, 75.3433, 1, 0, 0],
+        ["in", "raigad", 18.5158, 73.1822, 1, 0, 0],
+
+        // Odisha
+        ["in", "Bhubaneswar", 20.2961, 85.8245, 1, 0, 0],
+
+        // Andhra Pradesh / Telangana
+        ["in", "hyderabad", 17.3850, 78.4867, 4, 1, 0],
+        ["in", "nellore", 14.4426, 79.9865, 1, 0, 0],
+
+	      // karnataka
+        ["in", "bangalore", 12.9716, 77.5946, 7, 0, 1],
+        ["in", "kalaburagi", 17.3297, 76.8343, 3, 0, 0],
+
+	      // kerela
+	      ["in", "kochi", 9.9312, 76.2673, 10, 3, 0],
+        ["in", "pathanamthitta", 9.2648, 76.7870, 5, 0, 0],
+        ["in", "kasaragod", 12.4996, 74.9869, 2, 0, 0],
+        ["in", "Thrissur", 10.5276, 76.2144, 1, 0, 0],
+        ["in", "Ernakulam", 9.9816, 76.2999, 1, 0, 0],
+        ["in", "Kannur", 11.8745, 75.3704, 1, 0, 0],
+        ["in", "trivandrum", 8.5241, 76.9366, 1, 0, 0],
+        ["in", "Varkala", 8.7379, 76.7163, 1, 0, 0],
+        ["in", "Malappuram", 11.0510, 76.0711, 2, 0, 0],
+
+        // tamilnadu
+        ["in", "chennai", 13.0827, 80.2707, 1, 0, 0]
+      ]
+    </script>
+    <!-- Replace following script src -->
+    <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js">
+    </script>
+    <!-- production  -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKUweQ7xFa4aT9YghZLJmIePQ1cXzkS30&callback=initMap">
+    </script>
+    <!-- development -->
+    <!-- <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-7So1kMNMMKQhTZV6GiqOyhmaFSXx4c0&callback=initMap">
+    </script> -->
+  </body>
+</html>

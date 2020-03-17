@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="IMMO SQUARE">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+  <title>CoronaVirus Statistics | Monitoring</title>
+<meta name="description" content="Find all latest statistics about the CoronaVirus country by country">
+<link rel="canonical" href="https://coronavirus.immosquare.com/">
+<meta property="og:site_name" content="coronavirus.immosquare.com">
+<meta property="og:title" content="CoronaVirus Statistics | Monitoring">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://coronavirus.immosquare.com/">
+<meta property="og:image" content="https://coronavirus.immosquare.com/coronavirus_immosquare_v2.jpg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1002">
+<meta property="og:description" content="Find all latest statistics about the CoronaVirus country by country ">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CoronaVirus Statistics | Monitoring">
+<meta name="twitter:url" content="https://coronavirus.immosquare.com/">
+<meta name="twitter:image:src" content="https://coronavirus.immosquare.com/coronavirus_immosquare_v2.jpg">
+<meta name="twitter:image:width" content="1920">
+<meta name="twitter:image:height" content="1002">
+<meta name="twitter:description" content="Find all latest statistics about the CoronaVirus country by country ">
+
+  <link rel="stylesheet" media="all" href="/assets/application-a32fdb10802acf702061c2104daf95b7e5887fa009e89c41daf130416435a132.css" data-turbolinks-track="reload" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77028005-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-77028005-2');
+  </script>
+
+
+
+  <script src="https://kit.fontawesome.com/836e274140.js"></script>
+
+  <script src="https://js.pusher.com/4.3/pusher.min.js"></script>
+  <script src="/assets/application-c39d2c5af68f0747cf3e5cf0113f8251b50d58cd0051486f8e0215adc07e58cf.js" data-turbolinks-track="reload"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+
+
+  
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="dflZTvy8WaTZ5cV28utH13C9sYHeKZ8r1jTobCQp2ucLqtLCUH34YpyV12ip1jAYBrjMTw2qVmZSERQIcXN2RQ==" />
+
+
+</head>
+
+<body class='pages coronavirus '>
+  <div id="flashMessageContainer">
+</div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/en">
+  <img style="height:20px;" src="/assets/logo_immosquare-34d0b4eca3800db49ab20313144d4a0a4341f8ef681d287ab5d46f72ff416683.png" />
+</a>  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class='nav-item'><a class="nav-link" href="/en/users/sign_in">SignIn</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <div class="container pt-3">
+    
+
+
+
+
+
+
+<div class="alert alert-info">
+  The information on this page is generally updated around 4 am (US eastern time).
+  The graphs generated here are based on data from <a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/">World Health Organization</a>.<br>
+  If you have any suggestion, you can email me at <a href="mailto:jules@immosquare.com">jules@immosquare.com</a>.
+</div>
+
+
+<div class="h2">Countries where contamination is greater than 50 <small>(56 countries)</small></div>
+<div class="row">
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Argentina
+      <small><a class="italic color-dark-grey" href="/en/Argentina">See details</a></small>
+      </div>
+    <div id="chart-1" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-1", [{"name":"total_cases","data":[["2020-03-04",1],["2020-03-05",1],["2020-03-06",1],["2020-03-07",2],["2020-03-08",9],["2020-03-09",12],["2020-03-10",12],["2020-03-11",17],["2020-03-12",19],["2020-03-13",31],["2020-03-14",34],["2020-03-15",45],["2020-03-16",56]]},{"name":"total_deaths","data":[["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",1],["2020-03-09",1],["2020-03-10",1],["2020-03-11",1],["2020-03-12",1],["2020-03-13",1],["2020-03-14",2],["2020-03-15",2],["2020-03-16",2]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Australia
+      <small><a class="italic color-dark-grey" href="/en/Australia">See details</a></small>
+      </div>
+    <div id="chart-2" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-2", [{"name":"total_cases","data":[["2020-01-25",3],["2020-01-26",4],["2020-01-27",4],["2020-01-28",5],["2020-01-29",7],["2020-01-30",7],["2020-01-31",9],["2020-02-01",12],["2020-02-02",12],["2020-02-03",12],["2020-02-04",12],["2020-02-05",13],["2020-02-06",14],["2020-02-07",15],["2020-02-08",15],["2020-02-09",15],["2020-02-10",15],["2020-02-11",15],["2020-02-12",15],["2020-02-13",15],["2020-02-14",15],["2020-02-15",15],["2020-02-16",15],["2020-02-17",15],["2020-02-18",15],["2020-02-19",15],["2020-02-20",15],["2020-02-21",17],["2020-02-22",21],["2020-02-23",22],["2020-02-24",22],["2020-02-25",22],["2020-02-26",23],["2020-02-27",23],["2020-02-28",23],["2020-02-29",24],["2020-03-01",25],["2020-03-02",27],["2020-03-03",33],["2020-03-04",43],["2020-03-05",57],["2020-03-06",57],["2020-03-07",62],["2020-03-08",74],["2020-03-09",77],["2020-03-10",92],["2020-03-11",112],["2020-03-12",122],["2020-03-13",140],["2020-03-14",197],["2020-03-15",249],["2020-03-16",298]]},{"name":"total_deaths","data":[["2020-01-25",null],["2020-01-26",null],["2020-01-27",null],["2020-01-28",null],["2020-01-29",null],["2020-01-30",null],["2020-01-31",null],["2020-02-01",null],["2020-02-02",null],["2020-02-03",null],["2020-02-04",null],["2020-02-05",null],["2020-02-06",null],["2020-02-07",null],["2020-02-08",null],["2020-02-09",null],["2020-02-10",null],["2020-02-11",null],["2020-02-12",null],["2020-02-13",null],["2020-02-14",null],["2020-02-15",null],["2020-02-16",null],["2020-02-17",null],["2020-02-18",null],["2020-02-19",null],["2020-02-20",null],["2020-02-21",null],["2020-02-22",null],["2020-02-23",null],["2020-02-24",null],["2020-02-25",null],["2020-02-26",null],["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",1],["2020-03-03",1],["2020-03-04",1],["2020-03-05",1],["2020-03-06",2],["2020-03-07",2],["2020-03-08",3],["2020-03-09",3],["2020-03-10",3],["2020-03-11",3],["2020-03-12",3],["2020-03-13",3],["2020-03-14",3],["2020-03-15",3],["2020-03-16",5]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Austria
+      <small><a class="italic color-dark-grey" href="/en/Austria">See details</a></small>
+      </div>
+    <div id="chart-3" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-3", [{"name":"total_cases","data":[["2020-02-26",2],["2020-02-27",2],["2020-02-28",4],["2020-02-29",5],["2020-03-01",10],["2020-03-02",10],["2020-03-03",18],["2020-03-04",24],["2020-03-05",37],["2020-03-06",47],["2020-03-07",66],["2020-03-08",104],["2020-03-09",112],["2020-03-10",131],["2020-03-11",182],["2020-03-12",302],["2020-03-13",361],["2020-03-14",504],["2020-03-15",800],["2020-03-16",959]]},{"name":"total_deaths","data":[["2020-02-26",null],["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",1],["2020-03-14",1],["2020-03-15",1],["2020-03-16",1]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Bahrain
+      <small><a class="italic color-dark-grey" href="/en/Bahrain">See details</a></small>
+      </div>
+    <div id="chart-4" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-4", [{"name":"total_cases","data":[["2020-02-25",8],["2020-02-26",26],["2020-02-27",33],["2020-02-28",33],["2020-02-29",38],["2020-03-01",40],["2020-03-02",47],["2020-03-03",49],["2020-03-04",49],["2020-03-05",49],["2020-03-06",49],["2020-03-07",49],["2020-03-08",56],["2020-03-09",79],["2020-03-10",109],["2020-03-11",110],["2020-03-12",189],["2020-03-13",195],["2020-03-14",210],["2020-03-15",211],["2020-03-16",221]]},{"name":"total_deaths","data":[["2020-02-25",null],["2020-02-26",null],["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",1]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Belgium
+      <small><a class="italic color-dark-grey" href="/en/Belgium">See details</a></small>
+      </div>
+    <div id="chart-5" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-5", [{"name":"total_cases","data":[["2020-02-05",1],["2020-02-06",1],["2020-02-07",1],["2020-02-08",1],["2020-02-09",1],["2020-02-10",1],["2020-02-11",1],["2020-02-12",1],["2020-02-13",1],["2020-02-14",1],["2020-02-15",1],["2020-02-16",1],["2020-02-17",1],["2020-02-18",1],["2020-02-19",1],["2020-02-20",1],["2020-02-21",1],["2020-02-22",1],["2020-02-23",1],["2020-02-24",1],["2020-02-25",1],["2020-02-26",1],["2020-02-27",1],["2020-02-28",1],["2020-02-29",1],["2020-03-01",1],["2020-03-02",1],["2020-03-03",8],["2020-03-04",8],["2020-03-05",23],["2020-03-06",50],["2020-03-07",109],["2020-03-08",169],["2020-03-09",200],["2020-03-10",239],["2020-03-11",267],["2020-03-12",314],["2020-03-13",314],["2020-03-14",599],["2020-03-15",689],["2020-03-16",1085]]},{"name":"total_deaths","data":[["2020-02-05",null],["2020-02-06",null],["2020-02-07",null],["2020-02-08",null],["2020-02-09",null],["2020-02-10",null],["2020-02-11",null],["2020-02-12",null],["2020-02-13",null],["2020-02-14",null],["2020-02-15",null],["2020-02-16",null],["2020-02-17",null],["2020-02-18",null],["2020-02-19",null],["2020-02-20",null],["2020-02-21",null],["2020-02-22",null],["2020-02-23",null],["2020-02-24",null],["2020-02-25",null],["2020-02-26",null],["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",5]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Brazil
+      <small><a class="italic color-dark-grey" href="/en/Brazil">See details</a></small>
+      </div>
+    <div id="chart-6" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-6", [{"name":"total_cases","data":[["2020-02-27",1],["2020-02-28",1],["2020-02-29",1],["2020-03-01",2],["2020-03-02",2],["2020-03-03",2],["2020-03-04",2],["2020-03-05",3],["2020-03-06",7],["2020-03-07",13],["2020-03-08",19],["2020-03-09",25],["2020-03-10",25],["2020-03-11",34],["2020-03-12",52],["2020-03-13",77],["2020-03-14",98],["2020-03-15",121],["2020-03-16",200]]},{"name":"total_deaths","data":[["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",null]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Bulgaria
+      <small><a class="italic color-dark-grey" href="/en/Bulgaria">See details</a></small>
+      </div>
+    <div id="chart-7" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-7", [{"name":"total_cases","data":[["2020-03-08",2],["2020-03-09",4],["2020-03-10",4],["2020-03-11",6],["2020-03-12",7],["2020-03-13",7],["2020-03-14",7],["2020-03-15",43],["2020-03-16",51]]},{"name":"total_deaths","data":[["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",1],["2020-03-13",1],["2020-03-14",1],["2020-03-15",2],["2020-03-16",2]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Canada
+      <small><a class="italic color-dark-grey" href="/en/Canada">See details</a></small>
+      </div>
+    <div id="chart-8" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-8", [{"name":"total_cases","data":[["2020-01-27",1],["2020-01-28",2],["2020-01-29",3],["2020-01-30",3],["2020-01-31",3],["2020-02-01",4],["2020-02-02",4],["2020-02-03",4],["2020-02-04",4],["2020-02-05",5],["2020-02-06",5],["2020-02-07",7],["2020-02-08",7],["2020-02-09",7],["2020-02-10",7],["2020-02-11",7],["2020-02-12",7],["2020-02-13",7],["2020-02-14",7],["2020-02-15",7],["2020-02-16",7],["2020-02-17",7],["2020-02-18",8],["2020-02-19",8],["2020-02-20",8],["2020-02-21",8],["2020-02-22",8],["2020-02-23",9],["2020-02-24",9],["2020-02-25",10],["2020-02-26",10],["2020-02-27",11],["2020-02-28",11],["2020-02-29",14],["2020-03-01",19],["2020-03-02",19],["2020-03-03",27],["2020-03-04",30],["2020-03-05",30],["2020-03-06",45],["2020-03-07",51],["2020-03-08",57],["2020-03-09",62],["2020-03-10",77],["2020-03-11",93],["2020-03-12",93],["2020-03-13",138],["2020-03-14",176],["2020-03-15",244],["2020-03-16",304]]},{"name":"total_deaths","data":[["2020-01-27",null],["2020-01-28",null],["2020-01-29",null],["2020-01-30",null],["2020-01-31",null],["2020-02-01",null],["2020-02-02",null],["2020-02-03",null],["2020-02-04",null],["2020-02-05",null],["2020-02-06",null],["2020-02-07",null],["2020-02-08",null],["2020-02-09",null],["2020-02-10",null],["2020-02-11",null],["2020-02-12",null],["2020-02-13",null],["2020-02-14",null],["2020-02-15",null],["2020-02-16",null],["2020-02-17",null],["2020-02-18",null],["2020-02-19",null],["2020-02-20",null],["2020-02-21",null],["2020-02-22",null],["2020-02-23",null],["2020-02-24",null],["2020-02-25",null],["2020-02-26",null],["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",1],["2020-03-12",1],["2020-03-13",1],["2020-03-14",1],["2020-03-15",1],["2020-03-16",1]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Chile
+      <small><a class="italic color-dark-grey" href="/en/Chile">See details</a></small>
+      </div>
+    <div id="chart-9" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-9", [{"name":"total_cases","data":[["2020-03-04",1],["2020-03-05",1],["2020-03-06",1],["2020-03-07",5],["2020-03-08",5],["2020-03-09",10],["2020-03-10",13],["2020-03-11",17],["2020-03-12",23],["2020-03-13",33],["2020-03-14",43],["2020-03-15",61],["2020-03-16",75]]},{"name":"total_deaths","data":[["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",null]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      China
+      <small><a class="italic color-dark-grey" href="/en/China">See details</a></small>
+      </div>
+    <div id="chart-10" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-10", [{"name":"total_cases","data":[["2020-01-21",278],["2020-01-22",310],["2020-01-23",574],["2020-01-24",835],["2020-01-25",1297],["2020-01-26",1985],["2020-01-27",2761],["2020-01-28",4537],["2020-01-29",5997],["2020-01-30",7736],["2020-01-31",9720],["2020-02-01",11821],["2020-02-02",14411],["2020-02-03",17238],["2020-02-04",20471],["2020-02-05",24363],["2020-02-06",28060],["2020-02-07",31211],["2020-02-08",34598],["2020-02-09",37251],["2020-02-10",40235],["2020-02-11",42708],["2020-02-12",44730],["2020-02-13",46550],["2020-02-14",48548],["2020-02-15",50054],["2020-02-16",51174],["2020-02-17",70635],["2020-02-18",72528],["2020-02-19",74280],["2020-02-20",74675],["2020-02-21",75569],["2020-02-22",76392],["2020-02-23",77042],["2020-02-24",77262],["2020-02-25",77780],["2020-02-26",78191],["2020-02-27",78630],["2020-02-28",78961],["2020-02-29",79394],["2020-03-01",79968],["2020-03-02",80174],["2020-03-03",80304],["2020-03-04",80422],["2020-03-05",80565],["2020-03-06",80711],["2020-03-07",80813],["2020-03-08",80859],["2020-03-09",80904],["2020-03-10",80924],["2020-03-11",80955],["2020-03-12",80981],["2020-03-13",80991],["2020-03-14",81021],["2020-03-15",81048],["2020-03-16",81077]]},{"name":"total_deaths","data":[["2020-01-21",6],["2020-01-22",6],["2020-01-23",17],["2020-01-24",25],["2020-01-25",41],["2020-01-26",56],["2020-01-27",80],["2020-01-28",106],["2020-01-29",132],["2020-01-30",170],["2020-01-31",213],["2020-02-01",259],["2020-02-02",304],["2020-02-03",361],["2020-02-04",425],["2020-02-05",491],["2020-02-06",564],["2020-02-07",637],["2020-02-08",723],["2020-02-09",812],["2020-02-10",909],["2020-02-11",1017],["2020-02-12",1114],["2020-02-13",1368],["2020-02-14",1381],["2020-02-15",1524],["2020-02-16",1666],["2020-02-17",1772],["2020-02-18",1870],["2020-02-19",2006],["2020-02-20",2121],["2020-02-21",2239],["2020-02-22",2348],["2020-02-23",2445],["2020-02-24",2595],["2020-02-25",2666],["2020-02-26",2718],["2020-02-27",2747],["2020-02-28",2791],["2020-02-29",2838],["2020-03-01",2873],["2020-03-02",2915],["2020-03-03",2946],["2020-03-04",2984],["2020-03-05",3015],["2020-03-06",3045],["2020-03-07",3073],["2020-03-08",3100],["2020-03-09",3123],["2020-03-10",3140],["2020-03-11",3162],["2020-03-12",3173],["2020-03-13",3180],["2020-03-14",3194],["2020-03-15",3204],["2020-03-16",3218]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Czech Republic
+      <small><a class="italic color-dark-grey" href="/en/Czech%20Republic">See details</a></small>
+      </div>
+    <div id="chart-11" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-11", [{"name":"total_cases","data":[["2020-03-02",3],["2020-03-03",3],["2020-03-04",5],["2020-03-05",5],["2020-03-06",12],["2020-03-07",12],["2020-03-08",26],["2020-03-09",32],["2020-03-10",38],["2020-03-11",61],["2020-03-12",94],["2020-03-13",116],["2020-03-14",150],["2020-03-15",214],["2020-03-16",298]]},{"name":"total_deaths","data":[["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",null]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Denmark
+      <small><a class="italic color-dark-grey" href="/en/Denmark">See details</a></small>
+      </div>
+    <div id="chart-12" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-12", [{"name":"total_cases","data":[["2020-02-27",1],["2020-02-28",1],["2020-02-29",2],["2020-03-01",3],["2020-03-02",4],["2020-03-03",5],["2020-03-04",8],["2020-03-05",10],["2020-03-06",18],["2020-03-07",23],["2020-03-08",31],["2020-03-09",36],["2020-03-10",90],["2020-03-11",262],["2020-03-12",615],["2020-03-13",674],["2020-03-14",801],["2020-03-15",827],["2020-03-16",898]]},{"name":"total_deaths","data":[["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",1]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Egypt
+      <small><a class="italic color-dark-grey" href="/en/Egypt">See details</a></small>
+      </div>
+    <div id="chart-13" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-13", [{"name":"total_cases","data":[["2020-02-15",1],["2020-02-16",1],["2020-02-17",1],["2020-02-18",1],["2020-02-19",1],["2020-02-20",1],["2020-02-21",1],["2020-02-22",1],["2020-02-23",1],["2020-02-24",1],["2020-02-25",1],["2020-02-26",1],["2020-02-27",1],["2020-02-28",1],["2020-02-29",1],["2020-03-01",1],["2020-03-02",2],["2020-03-03",2],["2020-03-04",2],["2020-03-05",2],["2020-03-06",3],["2020-03-07",3],["2020-03-08",48],["2020-03-09",55],["2020-03-10",59],["2020-03-11",59],["2020-03-12",67],["2020-03-13",67],["2020-03-14",93],["2020-03-15",93],["2020-03-16",126]]},{"name":"total_deaths","data":[["2020-02-15",null],["2020-02-16",null],["2020-02-17",null],["2020-02-18",null],["2020-02-19",null],["2020-02-20",null],["2020-02-21",null],["2020-02-22",null],["2020-02-23",null],["2020-02-24",null],["2020-02-25",null],["2020-02-26",null],["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",1],["2020-03-10",1],["2020-03-11",1],["2020-03-12",1],["2020-03-13",1],["2020-03-14",2],["2020-03-15",2],["2020-03-16",2]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Estonia
+      <small><a class="italic color-dark-grey" href="/en/Estonia">See details</a></small>
+      </div>
+    <div id="chart-14" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-14", [{"name":"total_cases","data":[["2020-02-27",1],["2020-02-28",1],["2020-02-29",1],["2020-03-01",1],["2020-03-02",1],["2020-03-03",1],["2020-03-04",2],["2020-03-05",2],["2020-03-06",3],["2020-03-07",10],["2020-03-08",10],["2020-03-09",10],["2020-03-10",10],["2020-03-11",13],["2020-03-12",13],["2020-03-13",13],["2020-03-14",79],["2020-03-15",79],["2020-03-16",205]]},{"name":"total_deaths","data":[["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",null]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Finland
+      <small><a class="italic color-dark-grey" href="/en/Finland">See details</a></small>
+      </div>
+    <div id="chart-15" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-15", [{"name":"total_cases","data":[["2020-01-30",1],["2020-01-31",1],["2020-02-01",1],["2020-02-02",1],["2020-02-03",1],["2020-02-04",1],["2020-02-05",1],["2020-02-06",1],["2020-02-07",1],["2020-02-08",1],["2020-02-09",1],["2020-02-10",1],["2020-02-11",1],["2020-02-12",1],["2020-02-13",1],["2020-02-14",1],["2020-02-15",1],["2020-02-16",1],["2020-02-17",1],["2020-02-18",1],["2020-02-19",1],["2020-02-20",1],["2020-02-21",1],["2020-02-22",1],["2020-02-23",1],["2020-02-24",1],["2020-02-25",1],["2020-02-26",1],["2020-02-27",2],["2020-02-28",2],["2020-02-29",2],["2020-03-01",2],["2020-03-02",6],["2020-03-03",7],["2020-03-04",7],["2020-03-05",7],["2020-03-06",12],["2020-03-07",19],["2020-03-08",19],["2020-03-09",30],["2020-03-10",40],["2020-03-11",40],["2020-03-12",40],["2020-03-13",109],["2020-03-14",109],["2020-03-15",210],["2020-03-16",267]]},{"name":"total_deaths","data":[["2020-01-30",null],["2020-01-31",null],["2020-02-01",null],["2020-02-02",null],["2020-02-03",null],["2020-02-04",null],["2020-02-05",null],["2020-02-06",null],["2020-02-07",null],["2020-02-08",null],["2020-02-09",null],["2020-02-10",null],["2020-02-11",null],["2020-02-12",null],["2020-02-13",null],["2020-02-14",null],["2020-02-15",null],["2020-02-16",null],["2020-02-17",null],["2020-02-18",null],["2020-02-19",null],["2020-02-20",null],["2020-02-21",null],["2020-02-22",null],["2020-02-23",null],["2020-02-24",null],["2020-02-25",null],["2020-02-26",null],["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",null]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      France
+      <small><a class="italic color-dark-grey" href="/en/France">See details</a></small>
+      </div>
+    <div id="chart-16" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-16", [{"name":"total_cases","data":[["2020-01-25",3],["2020-01-26",3],["2020-01-27",3],["2020-01-28",3],["2020-01-29",4],["2020-01-30",5],["2020-01-31",6],["2020-02-01",6],["2020-02-02",6],["2020-02-03",6],["2020-02-04",6],["2020-02-05",6],["2020-02-06",6],["2020-02-07",6],["2020-02-08",6],["2020-02-09",11],["2020-02-10",11],["2020-02-11",11],["2020-02-12",11],["2020-02-13",11],["2020-02-14",11],["2020-02-15",11],["2020-02-16",12],["2020-02-17",12],["2020-02-18",12],["2020-02-19",12],["2020-02-20",12],["2020-02-21",12],["2020-02-22",12],["2020-02-23",12],["2020-02-24",12],["2020-02-25",12],["2020-02-26",12],["2020-02-27",18],["2020-02-28",38],["2020-02-29",57],["2020-03-01",100],["2020-03-02",100],["2020-03-03",191],["2020-03-04",212],["2020-03-05",282],["2020-03-06",420],["2020-03-07",613],["2020-03-08",706],["2020-03-09",1116],["2020-03-10",1402],["2020-03-11",1774],["2020-03-12",2269],["2020-03-13",2860],["2020-03-14",3640],["2020-03-15",4469],["2020-03-16",5380]]},{"name":"total_deaths","data":[["2020-01-25",null],["2020-01-26",null],["2020-01-27",null],["2020-01-28",null],["2020-01-29",null],["2020-01-30",null],["2020-01-31",null],["2020-02-01",null],["2020-02-02",null],["2020-02-03",null],["2020-02-04",null],["2020-02-05",null],["2020-02-06",null],["2020-02-07",null],["2020-02-08",null],["2020-02-09",null],["2020-02-10",null],["2020-02-11",null],["2020-02-12",null],["2020-02-13",null],["2020-02-14",null],["2020-02-15",null],["2020-02-16",1],["2020-02-17",1],["2020-02-18",1],["2020-02-19",1],["2020-02-20",1],["2020-02-21",1],["2020-02-22",1],["2020-02-23",1],["2020-02-24",1],["2020-02-25",1],["2020-02-26",1],["2020-02-27",2],["2020-02-28",2],["2020-02-29",2],["2020-03-01",2],["2020-03-02",2],["2020-03-03",3],["2020-03-04",4],["2020-03-05",4],["2020-03-06",6],["2020-03-07",9],["2020-03-08",10],["2020-03-09",19],["2020-03-10",30],["2020-03-11",33],["2020-03-12",48],["2020-03-13",61],["2020-03-14",79],["2020-03-15",91],["2020-03-16",127]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Germany
+      <small><a class="italic color-dark-grey" href="/en/Germany">See details</a></small>
+      </div>
+    <div id="chart-17" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-17", [{"name":"total_cases","data":[["2020-01-28",1],["2020-01-29",4],["2020-01-30",4],["2020-01-31",5],["2020-02-01",7],["2020-02-02",8],["2020-02-03",10],["2020-02-04",12],["2020-02-05",12],["2020-02-06",12],["2020-02-07",13],["2020-02-08",14],["2020-02-09",14],["2020-02-10",14],["2020-02-11",14],["2020-02-12",16],["2020-02-13",16],["2020-02-14",16],["2020-02-15",16],["2020-02-16",16],["2020-02-17",16],["2020-02-18",16],["2020-02-19",16],["2020-02-20",16],["2020-02-21",16],["2020-02-22",16],["2020-02-23",16],["2020-02-24",16],["2020-02-25",16],["2020-02-26",18],["2020-02-27",21],["2020-02-28",26],["2020-02-29",57],["2020-03-01",57],["2020-03-02",129],["2020-03-03",157],["2020-03-04",196],["2020-03-05",262],["2020-03-06",534],["2020-03-07",639],["2020-03-08",795],["2020-03-09",1112],["2020-03-10",1139],["2020-03-11",1296],["2020-03-12",1567],["2020-03-13",2369],["2020-03-14",3062],["2020-03-15",3795],["2020-03-16",4838]]},{"name":"total_deaths","data":[["2020-01-28",null],["2020-01-29",null],["2020-01-30",null],["2020-01-31",null],["2020-02-01",null],["2020-02-02",null],["2020-02-03",null],["2020-02-04",null],["2020-02-05",null],["2020-02-06",null],["2020-02-07",null],["2020-02-08",null],["2020-02-09",null],["2020-02-10",null],["2020-02-11",null],["2020-02-12",null],["2020-02-13",null],["2020-02-14",null],["2020-02-15",null],["2020-02-16",null],["2020-02-17",null],["2020-02-18",null],["2020-02-19",null],["2020-02-20",null],["2020-02-21",null],["2020-02-22",null],["2020-02-23",null],["2020-02-24",null],["2020-02-25",null],["2020-02-26",null],["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",2],["2020-03-11",2],["2020-03-12",3],["2020-03-13",6],["2020-03-14",6],["2020-03-15",8],["2020-03-16",12]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Greece
+      <small><a class="italic color-dark-grey" href="/en/Greece">See details</a></small>
+      </div>
+    <div id="chart-18" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-18", [{"name":"total_cases","data":[["2020-02-27",1],["2020-02-28",3],["2020-02-29",3],["2020-03-01",3],["2020-03-02",7],["2020-03-03",7],["2020-03-04",7],["2020-03-05",9],["2020-03-06",32],["2020-03-07",32],["2020-03-08",66],["2020-03-09",73],["2020-03-10",73],["2020-03-11",89],["2020-03-12",98],["2020-03-13",98],["2020-03-14",98],["2020-03-15",228],["2020-03-16",331]]},{"name":"total_deaths","data":[["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",1],["2020-03-13",1],["2020-03-14",1],["2020-03-15",2],["2020-03-16",4]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Iceland
+      <small><a class="italic color-dark-grey" href="/en/Iceland">See details</a></small>
+      </div>
+    <div id="chart-19" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-19", [{"name":"total_cases","data":[["2020-03-02",2],["2020-03-03",9],["2020-03-04",16],["2020-03-05",26],["2020-03-06",26],["2020-03-07",45],["2020-03-08",45],["2020-03-09",55],["2020-03-10",55],["2020-03-11",61],["2020-03-12",61],["2020-03-13",61],["2020-03-14",61],["2020-03-15",138],["2020-03-16",138]]},{"name":"total_deaths","data":[["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",null]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      India
+      <small><a class="italic color-dark-grey" href="/en/India">See details</a></small>
+      </div>
+    <div id="chart-20" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-20", [{"name":"total_cases","data":[["2020-01-30",1],["2020-01-31",1],["2020-02-01",1],["2020-02-02",2],["2020-02-03",3],["2020-02-04",3],["2020-02-05",3],["2020-02-06",3],["2020-02-07",3],["2020-02-08",3],["2020-02-09",3],["2020-02-10",3],["2020-02-11",3],["2020-02-12",3],["2020-02-13",3],["2020-02-14",3],["2020-02-15",3],["2020-02-16",3],["2020-02-17",3],["2020-02-18",3],["2020-02-19",3],["2020-02-20",3],["2020-02-21",3],["2020-02-22",3],["2020-02-23",3],["2020-02-24",3],["2020-02-25",3],["2020-02-26",3],["2020-02-27",3],["2020-02-28",3],["2020-02-29",3],["2020-03-01",3],["2020-03-02",3],["2020-03-03",5],["2020-03-04",6],["2020-03-05",29],["2020-03-06",30],["2020-03-07",31],["2020-03-08",34],["2020-03-09",43],["2020-03-10",44],["2020-03-11",60],["2020-03-12",73],["2020-03-13",74],["2020-03-14",82],["2020-03-15",107],["2020-03-16",114]]},{"name":"total_deaths","data":[["2020-01-30",null],["2020-01-31",null],["2020-02-01",null],["2020-02-02",null],["2020-02-03",null],["2020-02-04",null],["2020-02-05",null],["2020-02-06",null],["2020-02-07",null],["2020-02-08",null],["2020-02-09",null],["2020-02-10",null],["2020-02-11",null],["2020-02-12",null],["2020-02-13",null],["2020-02-14",null],["2020-02-15",null],["2020-02-16",null],["2020-02-17",null],["2020-02-18",null],["2020-02-19",null],["2020-02-20",null],["2020-02-21",null],["2020-02-22",null],["2020-02-23",null],["2020-02-24",null],["2020-02-25",null],["2020-02-26",null],["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",1],["2020-03-14",2],["2020-03-15",2],["2020-03-16",2]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Indonesia
+      <small><a class="italic color-dark-grey" href="/en/Indonesia">See details</a></small>
+      </div>
+    <div id="chart-21" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-21", [{"name":"total_cases","data":[["2020-03-02",2],["2020-03-03",2],["2020-03-04",2],["2020-03-05",2],["2020-03-06",2],["2020-03-07",2],["2020-03-08",6],["2020-03-09",6],["2020-03-10",19],["2020-03-11",27],["2020-03-12",34],["2020-03-13",34],["2020-03-14",69],["2020-03-15",117],["2020-03-16",117]]},{"name":"total_deaths","data":[["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",1],["2020-03-12",1],["2020-03-13",1],["2020-03-14",3],["2020-03-15",4],["2020-03-16",4]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Iran
+      <small><a class="italic color-dark-grey" href="/en/Iran">See details</a></small>
+      </div>
+    <div id="chart-22" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-22", [{"name":"total_cases","data":[["2020-02-20",2],["2020-02-21",5],["2020-02-22",18],["2020-02-23",28],["2020-02-24",43],["2020-02-25",61],["2020-02-26",95],["2020-02-27",141],["2020-02-28",245],["2020-02-29",388],["2020-03-01",593],["2020-03-02",978],["2020-03-03",1501],["2020-03-04",2336],["2020-03-05",2922],["2020-03-06",3513],["2020-03-07",4747],["2020-03-08",5823],["2020-03-09",6566],["2020-03-10",7161],["2020-03-11",8042],["2020-03-12",9000],["2020-03-13",10075],["2020-03-14",11364],["2020-03-15",12729],["2020-03-16",14991]]},{"name":"total_deaths","data":[["2020-02-20",2],["2020-02-21",2],["2020-02-22",4],["2020-02-23",5],["2020-02-24",8],["2020-02-25",12],["2020-02-26",15],["2020-02-27",22],["2020-02-28",26],["2020-02-29",34],["2020-03-01",43],["2020-03-02",54],["2020-03-03",66],["2020-03-04",77],["2020-03-05",92],["2020-03-06",107],["2020-03-07",124],["2020-03-08",145],["2020-03-09",194],["2020-03-10",237],["2020-03-11",291],["2020-03-12",354],["2020-03-13",429],["2020-03-14",514],["2020-03-15",608],["2020-03-16",853]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Iraq
+      <small><a class="italic color-dark-grey" href="/en/Iraq">See details</a></small>
+      </div>
+    <div id="chart-23" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-23", [{"name":"total_cases","data":[["2020-02-25",1],["2020-02-26",5],["2020-02-27",6],["2020-02-28",7],["2020-02-29",8],["2020-03-01",13],["2020-03-02",19],["2020-03-03",26],["2020-03-04",31],["2020-03-05",36],["2020-03-06",36],["2020-03-07",44],["2020-03-08",54],["2020-03-09",60],["2020-03-10",61],["2020-03-11",61],["2020-03-12",70],["2020-03-13",70],["2020-03-14",93],["2020-03-15",93],["2020-03-16",124]]},{"name":"total_deaths","data":[["2020-02-25",null],["2020-02-26",null],["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",2],["2020-03-06",2],["2020-03-07",4],["2020-03-08",4],["2020-03-09",6],["2020-03-10",6],["2020-03-11",6],["2020-03-12",7],["2020-03-13",7],["2020-03-14",9],["2020-03-15",9],["2020-03-16",9]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Ireland
+      <small><a class="italic color-dark-grey" href="/en/Ireland">See details</a></small>
+      </div>
+    <div id="chart-24" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-24", [{"name":"total_cases","data":[["2020-03-01",1],["2020-03-02",1],["2020-03-03",1],["2020-03-04",2],["2020-03-05",2],["2020-03-06",14],["2020-03-07",18],["2020-03-08",19],["2020-03-09",21],["2020-03-10",24],["2020-03-11",34],["2020-03-12",43],["2020-03-13",70],["2020-03-14",90],["2020-03-15",129],["2020-03-16",169]]},{"name":"total_deaths","data":[["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",1],["2020-03-13",1],["2020-03-14",1],["2020-03-15",2],["2020-03-16",2]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Israel
+      <small><a class="italic color-dark-grey" href="/en/Israel">See details</a></small>
+      </div>
+    <div id="chart-25" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-25", [{"name":"total_cases","data":[["2020-02-22",1],["2020-02-23",1],["2020-02-24",1],["2020-02-25",2],["2020-02-26",2],["2020-02-27",2],["2020-02-28",3],["2020-02-29",5],["2020-03-01",7],["2020-03-02",7],["2020-03-03",10],["2020-03-04",12],["2020-03-05",15],["2020-03-06",15],["2020-03-07",19],["2020-03-08",25],["2020-03-09",39],["2020-03-10",39],["2020-03-11",75],["2020-03-12",75],["2020-03-13",75],["2020-03-14",100],["2020-03-15",178],["2020-03-16",200]]},{"name":"total_deaths","data":[["2020-02-22",null],["2020-02-23",null],["2020-02-24",null],["2020-02-25",null],["2020-02-26",null],["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",null]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Italy
+      <small><a class="italic color-dark-grey" href="/en/Italy">See details</a></small>
+      </div>
+    <div id="chart-26" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-26", [{"name":"total_cases","data":[["2020-01-31",2],["2020-02-01",2],["2020-02-02",2],["2020-02-03",2],["2020-02-04",2],["2020-02-05",2],["2020-02-06",2],["2020-02-07",3],["2020-02-08",3],["2020-02-09",3],["2020-02-10",3],["2020-02-11",3],["2020-02-12",3],["2020-02-13",3],["2020-02-14",3],["2020-02-15",3],["2020-02-16",3],["2020-02-17",3],["2020-02-18",3],["2020-02-19",3],["2020-02-20",3],["2020-02-21",3],["2020-02-22",9],["2020-02-23",76],["2020-02-24",124],["2020-02-25",229],["2020-02-26",322],["2020-02-27",400],["2020-02-28",650],["2020-02-29",888],["2020-03-01",1128],["2020-03-02",1689],["2020-03-03",2036],["2020-03-04",2502],["2020-03-05",3089],["2020-03-06",3858],["2020-03-07",4636],["2020-03-08",5883],["2020-03-09",7375],["2020-03-10",9172],["2020-03-11",10149],["2020-03-12",12462],["2020-03-13",15113],["2020-03-14",17660],["2020-03-15",21157],["2020-03-16",24747]]},{"name":"total_deaths","data":[["2020-01-31",null],["2020-02-01",null],["2020-02-02",null],["2020-02-03",null],["2020-02-04",null],["2020-02-05",null],["2020-02-06",null],["2020-02-07",null],["2020-02-08",null],["2020-02-09",null],["2020-02-10",null],["2020-02-11",null],["2020-02-12",null],["2020-02-13",null],["2020-02-14",null],["2020-02-15",null],["2020-02-16",null],["2020-02-17",null],["2020-02-18",null],["2020-02-19",null],["2020-02-20",null],["2020-02-21",null],["2020-02-22",null],["2020-02-23",2],["2020-02-24",2],["2020-02-25",6],["2020-02-26",11],["2020-02-27",12],["2020-02-28",17],["2020-02-29",21],["2020-03-01",29],["2020-03-02",35],["2020-03-03",52],["2020-03-04",80],["2020-03-05",107],["2020-03-06",148],["2020-03-07",197],["2020-03-08",234],["2020-03-09",366],["2020-03-10",463],["2020-03-11",631],["2020-03-12",827],["2020-03-13",1016],["2020-03-14",1268],["2020-03-15",1441],["2020-03-16",1809]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Japan
+      <small><a class="italic color-dark-grey" href="/en/Japan">See details</a></small>
+      </div>
+    <div id="chart-27" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-27", [{"name":"total_cases","data":[["2020-01-21",1],["2020-01-22",1],["2020-01-23",1],["2020-01-24",1],["2020-01-25",3],["2020-01-26",3],["2020-01-27",4],["2020-01-28",6],["2020-01-29",7],["2020-01-30",11],["2020-01-31",14],["2020-02-01",17],["2020-02-02",20],["2020-02-03",20],["2020-02-04",20],["2020-02-05",23],["2020-02-06",25],["2020-02-07",25],["2020-02-08",25],["2020-02-09",26],["2020-02-10",26],["2020-02-11",26],["2020-02-12",28],["2020-02-13",29],["2020-02-14",33],["2020-02-15",41],["2020-02-16",53],["2020-02-17",59],["2020-02-18",65],["2020-02-19",73],["2020-02-20",85],["2020-02-21",93],["2020-02-22",105],["2020-02-23",132],["2020-02-24",144],["2020-02-25",157],["2020-02-26",164],["2020-02-27",186],["2020-02-28",210],["2020-02-29",230],["2020-03-01",239],["2020-03-02",254],["2020-03-03",268],["2020-03-04",284],["2020-03-05",317],["2020-03-06",349],["2020-03-07",408],["2020-03-08",455],["2020-03-09",488],["2020-03-10",514],["2020-03-11",568],["2020-03-12",620],["2020-03-13",675],["2020-03-14",716],["2020-03-15",780],["2020-03-16",814]]},{"name":"total_deaths","data":[["2020-01-21",null],["2020-01-22",null],["2020-01-23",null],["2020-01-24",null],["2020-01-25",null],["2020-01-26",null],["2020-01-27",null],["2020-01-28",null],["2020-01-29",null],["2020-01-30",null],["2020-01-31",null],["2020-02-01",null],["2020-02-02",null],["2020-02-03",null],["2020-02-04",null],["2020-02-05",null],["2020-02-06",null],["2020-02-07",null],["2020-02-08",null],["2020-02-09",null],["2020-02-10",null],["2020-02-11",null],["2020-02-12",null],["2020-02-13",null],["2020-02-14",1],["2020-02-15",1],["2020-02-16",1],["2020-02-17",1],["2020-02-18",1],["2020-02-19",1],["2020-02-20",1],["2020-02-21",1],["2020-02-22",1],["2020-02-23",1],["2020-02-24",1],["2020-02-25",1],["2020-02-26",1],["2020-02-27",3],["2020-02-28",4],["2020-02-29",5],["2020-03-01",5],["2020-03-02",6],["2020-03-03",6],["2020-03-04",6],["2020-03-05",6],["2020-03-06",6],["2020-03-07",6],["2020-03-08",6],["2020-03-09",7],["2020-03-10",9],["2020-03-11",12],["2020-03-12",15],["2020-03-13",19],["2020-03-14",21],["2020-03-15",22],["2020-03-16",24]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Kuwait
+      <small><a class="italic color-dark-grey" href="/en/Kuwait">See details</a></small>
+      </div>
+    <div id="chart-28" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-28", [{"name":"total_cases","data":[["2020-02-24",3],["2020-02-25",8],["2020-02-26",12],["2020-02-27",43],["2020-02-28",43],["2020-02-29",45],["2020-03-01",45],["2020-03-02",56],["2020-03-03",56],["2020-03-04",56],["2020-03-05",58],["2020-03-06",58],["2020-03-07",58],["2020-03-08",62],["2020-03-09",64],["2020-03-10",65],["2020-03-11",69],["2020-03-12",80],["2020-03-13",80],["2020-03-14",100],["2020-03-15",112],["2020-03-16",112]]},{"name":"total_deaths","data":[["2020-02-24",null],["2020-02-25",null],["2020-02-26",null],["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",null]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Lebanon
+      <small><a class="italic color-dark-grey" href="/en/Lebanon">See details</a></small>
+      </div>
+    <div id="chart-29" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-29", [{"name":"total_cases","data":[["2020-02-22",1],["2020-02-23",1],["2020-02-24",1],["2020-02-25",1],["2020-02-26",1],["2020-02-27",2],["2020-02-28",2],["2020-02-29",2],["2020-03-01",2],["2020-03-02",10],["2020-03-03",13],["2020-03-04",13],["2020-03-05",13],["2020-03-06",16],["2020-03-07",22],["2020-03-08",28],["2020-03-09",32],["2020-03-10",41],["2020-03-11",41],["2020-03-12",66],["2020-03-13",66],["2020-03-14",77],["2020-03-15",93],["2020-03-16",99]]},{"name":"total_deaths","data":[["2020-02-22",null],["2020-02-23",null],["2020-02-24",null],["2020-02-25",null],["2020-02-26",null],["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",1],["2020-03-12",3],["2020-03-13",3],["2020-03-14",4],["2020-03-15",4],["2020-03-16",null]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Malaysia
+      <small><a class="italic color-dark-grey" href="/en/Malaysia">See details</a></small>
+      </div>
+    <div id="chart-30" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-30", [{"name":"total_cases","data":[["2020-01-26",3],["2020-01-27",4],["2020-01-28",4],["2020-01-29",4],["2020-01-30",7],["2020-01-31",8],["2020-02-01",8],["2020-02-02",8],["2020-02-03",8],["2020-02-04",10],["2020-02-05",10],["2020-02-06",12],["2020-02-07",14],["2020-02-08",15],["2020-02-09",17],["2020-02-10",18],["2020-02-11",18],["2020-02-12",18],["2020-02-13",18],["2020-02-14",19],["2020-02-15",21],["2020-02-16",22],["2020-02-17",22],["2020-02-18",22],["2020-02-19",22],["2020-02-20",22],["2020-02-21",22],["2020-02-22",22],["2020-02-23",22],["2020-02-24",22],["2020-02-25",22],["2020-02-26",22],["2020-02-27",22],["2020-02-28",24],["2020-02-29",24],["2020-03-01",24],["2020-03-02",24],["2020-03-03",29],["2020-03-04",50],["2020-03-05",50],["2020-03-06",55],["2020-03-07",83],["2020-03-08",93],["2020-03-09",93],["2020-03-10",117],["2020-03-11",129],["2020-03-12",129],["2020-03-13",129],["2020-03-14",197],["2020-03-15",238],["2020-03-16",553]]},{"name":"total_deaths","data":[["2020-01-26",null],["2020-01-27",null],["2020-01-28",null],["2020-01-29",null],["2020-01-30",null],["2020-01-31",null],["2020-02-01",null],["2020-02-02",null],["2020-02-03",null],["2020-02-04",null],["2020-02-05",null],["2020-02-06",null],["2020-02-07",null],["2020-02-08",null],["2020-02-09",null],["2020-02-10",null],["2020-02-11",null],["2020-02-12",null],["2020-02-13",null],["2020-02-14",null],["2020-02-15",null],["2020-02-16",null],["2020-02-17",null],["2020-02-18",null],["2020-02-19",null],["2020-02-20",null],["2020-02-21",null],["2020-02-22",null],["2020-02-23",null],["2020-02-24",null],["2020-02-25",null],["2020-02-26",null],["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",null]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Mexico
+      <small><a class="italic color-dark-grey" href="/en/Mexico">See details</a></small>
+      </div>
+    <div id="chart-31" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-31", [{"name":"total_cases","data":[["2020-02-29",2],["2020-03-01",2],["2020-03-02",5],["2020-03-03",5],["2020-03-04",5],["2020-03-05",5],["2020-03-06",5],["2020-03-07",5],["2020-03-08",7],["2020-03-09",7],["2020-03-10",7],["2020-03-11",7],["2020-03-12",11],["2020-03-13",12],["2020-03-14",26],["2020-03-15",41],["2020-03-16",53]]},{"name":"total_deaths","data":[["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",null]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Netherlands
+      <small><a class="italic color-dark-grey" href="/en/Netherlands">See details</a></small>
+      </div>
+    <div id="chart-32" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-32", [{"name":"total_cases","data":[["2020-02-28",1],["2020-02-29",2],["2020-03-01",7],["2020-03-02",13],["2020-03-03",18],["2020-03-04",28],["2020-03-05",38],["2020-03-06",82],["2020-03-07",128],["2020-03-08",188],["2020-03-09",265],["2020-03-10",321],["2020-03-11",382],["2020-03-12",503],["2020-03-13",614],["2020-03-14",804],["2020-03-15",959],["2020-03-16",1135]]},{"name":"total_deaths","data":[["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",1],["2020-03-08",1],["2020-03-09",3],["2020-03-10",3],["2020-03-11",4],["2020-03-12",5],["2020-03-13",5],["2020-03-14",10],["2020-03-15",12],["2020-03-16",20]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Norway
+      <small><a class="italic color-dark-grey" href="/en/Norway">See details</a></small>
+      </div>
+    <div id="chart-33" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-33", [{"name":"total_cases","data":[["2020-02-27",1],["2020-02-28",4],["2020-02-29",6],["2020-03-01",15],["2020-03-02",19],["2020-03-03",25],["2020-03-04",32],["2020-03-05",56],["2020-03-06",86],["2020-03-07",113],["2020-03-08",147],["2020-03-09",169],["2020-03-10",192],["2020-03-11",277],["2020-03-12",489],["2020-03-13",489],["2020-03-14",750],["2020-03-15",907],["2020-03-16",1077]]},{"name":"total_deaths","data":[["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",1],["2020-03-14",1],["2020-03-15",1],["2020-03-16",1]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Pakistan
+      <small><a class="italic color-dark-grey" href="/en/Pakistan">See details</a></small>
+      </div>
+    <div id="chart-34" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-34", [{"name":"total_cases","data":[["2020-02-27",2],["2020-02-28",2],["2020-02-29",2],["2020-03-01",4],["2020-03-02",4],["2020-03-03",5],["2020-03-04",5],["2020-03-05",5],["2020-03-06",5],["2020-03-07",5],["2020-03-08",5],["2020-03-09",6],["2020-03-10",16],["2020-03-11",16],["2020-03-12",19],["2020-03-13",20],["2020-03-14",21],["2020-03-15",28],["2020-03-16",52]]},{"name":"total_deaths","data":[["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",null]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Peru
+      <small><a class="italic color-dark-grey" href="/en/Peru">See details</a></small>
+      </div>
+    <div id="chart-35" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-35", [{"name":"total_cases","data":[["2020-03-07",1],["2020-03-08",6],["2020-03-09",6],["2020-03-10",9],["2020-03-11",11],["2020-03-12",17],["2020-03-13",22],["2020-03-14",28],["2020-03-15",43],["2020-03-16",71]]},{"name":"total_deaths","data":[["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",null]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Philippines
+      <small><a class="italic color-dark-grey" href="/en/Philippines">See details</a></small>
+      </div>
+    <div id="chart-36" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-36", [{"name":"total_cases","data":[["2020-01-30",1],["2020-01-31",1],["2020-02-01",1],["2020-02-02",2],["2020-02-03",2],["2020-02-04",2],["2020-02-05",3],["2020-02-06",3],["2020-02-07",3],["2020-02-08",3],["2020-02-09",3],["2020-02-10",3],["2020-02-11",3],["2020-02-12",3],["2020-02-13",3],["2020-02-14",3],["2020-02-15",3],["2020-02-16",3],["2020-02-17",3],["2020-02-18",3],["2020-02-19",3],["2020-02-20",3],["2020-02-21",3],["2020-02-22",3],["2020-02-23",3],["2020-02-24",3],["2020-02-25",3],["2020-02-26",3],["2020-02-27",3],["2020-02-28",3],["2020-02-29",3],["2020-03-01",3],["2020-03-02",3],["2020-03-03",3],["2020-03-04",3],["2020-03-05",3],["2020-03-06",5],["2020-03-07",5],["2020-03-08",6],["2020-03-09",10],["2020-03-10",33],["2020-03-11",49],["2020-03-12",52],["2020-03-13",52],["2020-03-14",64],["2020-03-15",111],["2020-03-16",140]]},{"name":"total_deaths","data":[["2020-01-30",null],["2020-01-31",null],["2020-02-01",null],["2020-02-02",1],["2020-02-03",1],["2020-02-04",1],["2020-02-05",1],["2020-02-06",1],["2020-02-07",1],["2020-02-08",1],["2020-02-09",1],["2020-02-10",1],["2020-02-11",1],["2020-02-12",1],["2020-02-13",1],["2020-02-14",1],["2020-02-15",1],["2020-02-16",1],["2020-02-17",1],["2020-02-18",1],["2020-02-19",1],["2020-02-20",1],["2020-02-21",1],["2020-02-22",1],["2020-02-23",1],["2020-02-24",1],["2020-02-25",1],["2020-02-26",1],["2020-02-27",1],["2020-02-28",1],["2020-02-29",1],["2020-03-01",1],["2020-03-02",1],["2020-03-03",1],["2020-03-04",1],["2020-03-05",1],["2020-03-06",1],["2020-03-07",1],["2020-03-08",1],["2020-03-09",1],["2020-03-10",1],["2020-03-11",1],["2020-03-12",2],["2020-03-13",2],["2020-03-14",2],["2020-03-15",6],["2020-03-16",12]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Poland
+      <small><a class="italic color-dark-grey" href="/en/Poland">See details</a></small>
+      </div>
+    <div id="chart-37" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-37", [{"name":"total_cases","data":[["2020-03-04",1],["2020-03-05",1],["2020-03-06",1],["2020-03-07",5],["2020-03-08",6],["2020-03-09",11],["2020-03-10",16],["2020-03-11",22],["2020-03-12",44],["2020-03-13",49],["2020-03-14",64],["2020-03-15",111],["2020-03-16",150]]},{"name":"total_deaths","data":[["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",1],["2020-03-14",1],["2020-03-15",3],["2020-03-16",3]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Portugal
+      <small><a class="italic color-dark-grey" href="/en/Portugal">See details</a></small>
+      </div>
+    <div id="chart-38" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-38", [{"name":"total_cases","data":[["2020-03-03",2],["2020-03-04",2],["2020-03-05",7],["2020-03-06",9],["2020-03-07",13],["2020-03-08",21],["2020-03-09",30],["2020-03-10",30],["2020-03-11",41],["2020-03-12",41],["2020-03-13",41],["2020-03-14",112],["2020-03-15",112],["2020-03-16",245]]},{"name":"total_deaths","data":[["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",null]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Qatar
+      <small><a class="italic color-dark-grey" href="/en/Qatar">See details</a></small>
+      </div>
+    <div id="chart-39" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-39", [{"name":"total_cases","data":[["2020-03-01",1],["2020-03-02",3],["2020-03-03",7],["2020-03-04",8],["2020-03-05",8],["2020-03-06",8],["2020-03-07",11],["2020-03-08",12],["2020-03-09",15],["2020-03-10",18],["2020-03-11",24],["2020-03-12",262],["2020-03-13",262],["2020-03-14",262],["2020-03-15",337],["2020-03-16",401]]},{"name":"total_deaths","data":[["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",null]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Romania
+      <small><a class="italic color-dark-grey" href="/en/Romania">See details</a></small>
+      </div>
+    <div id="chart-40" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-40", [{"name":"total_cases","data":[["2020-02-27",1],["2020-02-28",1],["2020-02-29",3],["2020-03-01",3],["2020-03-02",3],["2020-03-03",3],["2020-03-04",4],["2020-03-05",4],["2020-03-06",6],["2020-03-07",7],["2020-03-08",13],["2020-03-09",15],["2020-03-10",15],["2020-03-11",25],["2020-03-12",48],["2020-03-13",48],["2020-03-14",64],["2020-03-15",123],["2020-03-16",158]]},{"name":"total_deaths","data":[["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",null]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Russia
+      <small><a class="italic color-dark-grey" href="/en/Russia">See details</a></small>
+      </div>
+    <div id="chart-41" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-41", [{"name":"total_cases","data":[["2020-02-01",2],["2020-02-02",2],["2020-02-03",2],["2020-02-04",2],["2020-02-05",2],["2020-02-06",2],["2020-02-07",2],["2020-02-08",2],["2020-02-09",2],["2020-02-10",2],["2020-02-11",2],["2020-02-12",2],["2020-02-13",2],["2020-02-14",2],["2020-02-15",2],["2020-02-16",2],["2020-02-17",2],["2020-02-18",2],["2020-02-19",2],["2020-02-20",2],["2020-02-21",2],["2020-02-22",2],["2020-02-23",2],["2020-02-24",2],["2020-02-25",2],["2020-02-26",2],["2020-02-27",2],["2020-02-28",2],["2020-02-29",2],["2020-03-01",2],["2020-03-02",2],["2020-03-03",3],["2020-03-04",3],["2020-03-05",3],["2020-03-06",4],["2020-03-07",7],["2020-03-08",7],["2020-03-09",7],["2020-03-10",7],["2020-03-11",7],["2020-03-12",20],["2020-03-13",34],["2020-03-14",34],["2020-03-15",34],["2020-03-16",63]]},{"name":"total_deaths","data":[["2020-02-01",null],["2020-02-02",null],["2020-02-03",null],["2020-02-04",null],["2020-02-05",null],["2020-02-06",null],["2020-02-07",null],["2020-02-08",null],["2020-02-09",null],["2020-02-10",null],["2020-02-11",null],["2020-02-12",null],["2020-02-13",null],["2020-02-14",null],["2020-02-15",null],["2020-02-16",null],["2020-02-17",null],["2020-02-18",null],["2020-02-19",null],["2020-02-20",null],["2020-02-21",null],["2020-02-22",null],["2020-02-23",null],["2020-02-24",null],["2020-02-25",null],["2020-02-26",null],["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",null]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      San Marino
+      <small><a class="italic color-dark-grey" href="/en/San%20Marino">See details</a></small>
+      </div>
+    <div id="chart-42" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-42", [{"name":"total_cases","data":[["2020-02-29",1],["2020-03-01",1],["2020-03-02",1],["2020-03-03",8],["2020-03-04",8],["2020-03-05",16],["2020-03-06",21],["2020-03-07",24],["2020-03-08",27],["2020-03-09",37],["2020-03-10",49],["2020-03-11",63],["2020-03-12",63],["2020-03-13",63],["2020-03-14",66],["2020-03-15",92],["2020-03-16",92]]},{"name":"total_deaths","data":[["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",1],["2020-03-09",1],["2020-03-10",2],["2020-03-11",2],["2020-03-12",2],["2020-03-13",2],["2020-03-14",2],["2020-03-15",5],["2020-03-16",5]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Saudi Arabia
+      <small><a class="italic color-dark-grey" href="/en/Saudi%20Arabia">See details</a></small>
+      </div>
+    <div id="chart-43" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-43", [{"name":"total_cases","data":[["2020-03-03",1],["2020-03-04",1],["2020-03-05",2],["2020-03-06",8],["2020-03-07",8],["2020-03-08",11],["2020-03-09",15],["2020-03-10",15],["2020-03-11",20],["2020-03-12",21],["2020-03-13",21],["2020-03-14",62],["2020-03-15",103],["2020-03-16",103]]},{"name":"total_deaths","data":[["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",null]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Singapore
+      <small><a class="italic color-dark-grey" href="/en/Singapore">See details</a></small>
+      </div>
+    <div id="chart-44" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-44", [{"name":"total_cases","data":[["2020-01-24",1],["2020-01-25",3],["2020-01-26",4],["2020-01-27",4],["2020-01-28",7],["2020-01-29",7],["2020-01-30",10],["2020-01-31",13],["2020-02-01",16],["2020-02-02",18],["2020-02-03",18],["2020-02-04",18],["2020-02-05",24],["2020-02-06",28],["2020-02-07",30],["2020-02-08",33],["2020-02-09",40],["2020-02-10",43],["2020-02-11",45],["2020-02-12",47],["2020-02-13",50],["2020-02-14",58],["2020-02-15",67],["2020-02-16",72],["2020-02-17",75],["2020-02-18",77],["2020-02-19",81],["2020-02-20",84],["2020-02-21",85],["2020-02-22",86],["2020-02-23",89],["2020-02-24",89],["2020-02-25",90],["2020-02-26",91],["2020-02-27",93],["2020-02-28",96],["2020-02-29",98],["2020-03-01",102],["2020-03-02",106],["2020-03-03",108],["2020-03-04",110],["2020-03-05",110],["2020-03-06",117],["2020-03-07",130],["2020-03-08",138],["2020-03-09",150],["2020-03-10",160],["2020-03-11",166],["2020-03-12",178],["2020-03-13",187],["2020-03-14",200],["2020-03-15",212],["2020-03-16",243]]},{"name":"total_deaths","data":[["2020-01-24",null],["2020-01-25",null],["2020-01-26",null],["2020-01-27",null],["2020-01-28",null],["2020-01-29",null],["2020-01-30",null],["2020-01-31",null],["2020-02-01",null],["2020-02-02",null],["2020-02-03",null],["2020-02-04",null],["2020-02-05",null],["2020-02-06",null],["2020-02-07",null],["2020-02-08",null],["2020-02-09",null],["2020-02-10",null],["2020-02-11",null],["2020-02-12",null],["2020-02-13",null],["2020-02-14",null],["2020-02-15",null],["2020-02-16",null],["2020-02-17",null],["2020-02-18",null],["2020-02-19",null],["2020-02-20",null],["2020-02-21",null],["2020-02-22",null],["2020-02-23",null],["2020-02-24",null],["2020-02-25",null],["2020-02-26",null],["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",null]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Slovakia
+      <small><a class="italic color-dark-grey" href="/en/Slovakia">See details</a></small>
+      </div>
+    <div id="chart-45" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-45", [{"name":"total_cases","data":[["2020-03-07",1],["2020-03-08",3],["2020-03-09",5],["2020-03-10",7],["2020-03-11",7],["2020-03-12",10],["2020-03-13",21],["2020-03-14",30],["2020-03-15",44],["2020-03-16",61]]},{"name":"total_deaths","data":[["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",null]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Slovenia
+      <small><a class="italic color-dark-grey" href="/en/Slovenia">See details</a></small>
+      </div>
+    <div id="chart-46" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-46", [{"name":"total_cases","data":[["2020-03-05",1],["2020-03-06",6],["2020-03-07",9],["2020-03-08",12],["2020-03-09",16],["2020-03-10",23],["2020-03-11",31],["2020-03-12",57],["2020-03-13",57],["2020-03-14",141],["2020-03-15",141],["2020-03-16",219]]},{"name":"total_deaths","data":[["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",null]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      South Africa
+      <small><a class="italic color-dark-grey" href="/en/South%20Africa">See details</a></small>
+      </div>
+    <div id="chart-47" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-47", [{"name":"total_cases","data":[["2020-03-06",1],["2020-03-07",1],["2020-03-08",2],["2020-03-09",3],["2020-03-10",7],["2020-03-11",7],["2020-03-12",13],["2020-03-13",17],["2020-03-14",17],["2020-03-15",38],["2020-03-16",51]]},{"name":"total_deaths","data":[["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",null]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      South Korea
+      <small><a class="italic color-dark-grey" href="/en/South%20Korea">See details</a></small>
+      </div>
+    <div id="chart-48" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-48", [{"name":"total_cases","data":[["2020-01-21",1],["2020-01-22",1],["2020-01-23",1],["2020-01-24",2],["2020-01-25",2],["2020-01-26",2],["2020-01-27",4],["2020-01-28",4],["2020-01-29",4],["2020-01-30",4],["2020-01-31",11],["2020-02-01",12],["2020-02-02",15],["2020-02-03",15],["2020-02-04",16],["2020-02-05",18],["2020-02-06",23],["2020-02-07",24],["2020-02-08",24],["2020-02-09",27],["2020-02-10",27],["2020-02-11",28],["2020-02-12",28],["2020-02-13",28],["2020-02-14",28],["2020-02-15",28],["2020-02-16",29],["2020-02-17",30],["2020-02-18",31],["2020-02-19",51],["2020-02-20",104],["2020-02-21",204],["2020-02-22",346],["2020-02-23",602],["2020-02-24",763],["2020-02-25",977],["2020-02-26",1261],["2020-02-27",1766],["2020-02-28",2337],["2020-02-29",3150],["2020-03-01",3736],["2020-03-02",4212],["2020-03-03",4812],["2020-03-04",5328],["2020-03-05",5766],["2020-03-06",6284],["2020-03-07",6767],["2020-03-08",7134],["2020-03-09",7382],["2020-03-10",7513],["2020-03-11",7755],["2020-03-12",7869],["2020-03-13",7979],["2020-03-14",8086],["2020-03-15",8162],["2020-03-16",8236]]},{"name":"total_deaths","data":[["2020-01-21",null],["2020-01-22",null],["2020-01-23",null],["2020-01-24",null],["2020-01-25",null],["2020-01-26",null],["2020-01-27",null],["2020-01-28",null],["2020-01-29",null],["2020-01-30",null],["2020-01-31",null],["2020-02-01",null],["2020-02-02",null],["2020-02-03",null],["2020-02-04",null],["2020-02-05",null],["2020-02-06",null],["2020-02-07",null],["2020-02-08",null],["2020-02-09",null],["2020-02-10",null],["2020-02-11",null],["2020-02-12",null],["2020-02-13",null],["2020-02-14",null],["2020-02-15",null],["2020-02-16",null],["2020-02-17",null],["2020-02-18",null],["2020-02-19",null],["2020-02-20",1],["2020-02-21",1],["2020-02-22",2],["2020-02-23",5],["2020-02-24",7],["2020-02-25",10],["2020-02-26",12],["2020-02-27",13],["2020-02-28",13],["2020-02-29",17],["2020-03-01",18],["2020-03-02",22],["2020-03-03",28],["2020-03-04",32],["2020-03-05",35],["2020-03-06",42],["2020-03-07",44],["2020-03-08",50],["2020-03-09",51],["2020-03-10",54],["2020-03-11",60],["2020-03-12",66],["2020-03-13",66],["2020-03-14",72],["2020-03-15",75],["2020-03-16",75]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Spain
+      <small><a class="italic color-dark-grey" href="/en/Spain">See details</a></small>
+      </div>
+    <div id="chart-49" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-49", [{"name":"total_cases","data":[["2020-02-01",1],["2020-02-02",1],["2020-02-03",1],["2020-02-04",1],["2020-02-05",1],["2020-02-06",1],["2020-02-07",1],["2020-02-08",1],["2020-02-09",1],["2020-02-10",2],["2020-02-11",2],["2020-02-12",2],["2020-02-13",2],["2020-02-14",2],["2020-02-15",2],["2020-02-16",2],["2020-02-17",2],["2020-02-18",2],["2020-02-19",2],["2020-02-20",2],["2020-02-21",2],["2020-02-22",2],["2020-02-23",2],["2020-02-24",2],["2020-02-25",2],["2020-02-26",2],["2020-02-27",12],["2020-02-28",25],["2020-02-29",32],["2020-03-01",45],["2020-03-02",45],["2020-03-03",114],["2020-03-04",151],["2020-03-05",198],["2020-03-06",257],["2020-03-07",374],["2020-03-08",430],["2020-03-09",589],["2020-03-10",1024],["2020-03-11",1639],["2020-03-12",2140],["2020-03-13",2965],["2020-03-14",4231],["2020-03-15",5753],["2020-03-16",7753]]},{"name":"total_deaths","data":[["2020-02-01",null],["2020-02-02",null],["2020-02-03",null],["2020-02-04",null],["2020-02-05",null],["2020-02-06",null],["2020-02-07",null],["2020-02-08",null],["2020-02-09",null],["2020-02-10",null],["2020-02-11",null],["2020-02-12",null],["2020-02-13",null],["2020-02-14",null],["2020-02-15",null],["2020-02-16",null],["2020-02-17",null],["2020-02-18",null],["2020-02-19",null],["2020-02-20",null],["2020-02-21",null],["2020-02-22",null],["2020-02-23",null],["2020-02-24",null],["2020-02-25",null],["2020-02-26",null],["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",1],["2020-03-06",3],["2020-03-07",5],["2020-03-08",5],["2020-03-09",10],["2020-03-10",28],["2020-03-11",36],["2020-03-12",48],["2020-03-13",84],["2020-03-14",120],["2020-03-15",136],["2020-03-16",288]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Sweden
+      <small><a class="italic color-dark-grey" href="/en/Sweden">See details</a></small>
+      </div>
+    <div id="chart-50" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-50", [{"name":"total_cases","data":[["2020-02-01",1],["2020-02-02",1],["2020-02-03",1],["2020-02-04",1],["2020-02-05",1],["2020-02-06",1],["2020-02-07",1],["2020-02-08",1],["2020-02-09",1],["2020-02-10",1],["2020-02-11",1],["2020-02-12",1],["2020-02-13",1],["2020-02-14",1],["2020-02-15",1],["2020-02-16",1],["2020-02-17",1],["2020-02-18",1],["2020-02-19",1],["2020-02-20",1],["2020-02-21",1],["2020-02-22",1],["2020-02-23",1],["2020-02-24",1],["2020-02-25",1],["2020-02-26",1],["2020-02-27",2],["2020-02-28",7],["2020-02-29",12],["2020-03-01",13],["2020-03-02",14],["2020-03-03",15],["2020-03-04",24],["2020-03-05",35],["2020-03-06",61],["2020-03-07",137],["2020-03-08",161],["2020-03-09",203],["2020-03-10",248],["2020-03-11",326],["2020-03-12",461],["2020-03-13",620],["2020-03-14",775],["2020-03-15",924],["2020-03-16",992]]},{"name":"total_deaths","data":[["2020-02-01",null],["2020-02-02",null],["2020-02-03",null],["2020-02-04",null],["2020-02-05",null],["2020-02-06",null],["2020-02-07",null],["2020-02-08",null],["2020-02-09",null],["2020-02-10",null],["2020-02-11",null],["2020-02-12",null],["2020-02-13",null],["2020-02-14",null],["2020-02-15",null],["2020-02-16",null],["2020-02-17",null],["2020-02-18",null],["2020-02-19",null],["2020-02-20",null],["2020-02-21",null],["2020-02-22",null],["2020-02-23",null],["2020-02-24",null],["2020-02-25",null],["2020-02-26",null],["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",3]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Switzerland
+      <small><a class="italic color-dark-grey" href="/en/Switzerland">See details</a></small>
+      </div>
+    <div id="chart-51" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-51", [{"name":"total_cases","data":[["2020-02-26",1],["2020-02-27",1],["2020-02-28",6],["2020-02-29",10],["2020-03-01",18],["2020-03-02",24],["2020-03-03",30],["2020-03-04",37],["2020-03-05",56],["2020-03-06",86],["2020-03-07",209],["2020-03-08",264],["2020-03-09",332],["2020-03-10",332],["2020-03-11",491],["2020-03-12",645],["2020-03-13",858],["2020-03-14",1125],["2020-03-15",1359],["2020-03-16",2200]]},{"name":"total_deaths","data":[["2020-02-26",null],["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",1],["2020-03-07",1],["2020-03-08",2],["2020-03-09",2],["2020-03-10",2],["2020-03-11",3],["2020-03-12",4],["2020-03-13",6],["2020-03-14",6],["2020-03-15",11],["2020-03-16",13]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Thailand
+      <small><a class="italic color-dark-grey" href="/en/Thailand">See details</a></small>
+      </div>
+    <div id="chart-52" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-52", [{"name":"total_cases","data":[["2020-01-21",2],["2020-01-22",2],["2020-01-23",4],["2020-01-24",4],["2020-01-25",4],["2020-01-26",5],["2020-01-27",5],["2020-01-28",14],["2020-01-29",14],["2020-01-30",14],["2020-01-31",14],["2020-02-01",19],["2020-02-02",19],["2020-02-03",19],["2020-02-04",19],["2020-02-05",25],["2020-02-06",25],["2020-02-07",25],["2020-02-08",32],["2020-02-09",32],["2020-02-10",32],["2020-02-11",33],["2020-02-12",33],["2020-02-13",33],["2020-02-14",33],["2020-02-15",34],["2020-02-16",34],["2020-02-17",35],["2020-02-18",35],["2020-02-19",35],["2020-02-20",35],["2020-02-21",35],["2020-02-22",35],["2020-02-23",35],["2020-02-24",35],["2020-02-25",37],["2020-02-26",40],["2020-02-27",40],["2020-02-28",40],["2020-02-29",42],["2020-03-01",42],["2020-03-02",42],["2020-03-03",43],["2020-03-04",43],["2020-03-05",47],["2020-03-06",47],["2020-03-07",48],["2020-03-08",50],["2020-03-09",50],["2020-03-10",53],["2020-03-11",59],["2020-03-12",70],["2020-03-13",75],["2020-03-14",75],["2020-03-15",75],["2020-03-16",114]]},{"name":"total_deaths","data":[["2020-01-21",null],["2020-01-22",null],["2020-01-23",null],["2020-01-24",null],["2020-01-25",null],["2020-01-26",null],["2020-01-27",null],["2020-01-28",null],["2020-01-29",null],["2020-01-30",null],["2020-01-31",null],["2020-02-01",null],["2020-02-02",null],["2020-02-03",null],["2020-02-04",null],["2020-02-05",null],["2020-02-06",null],["2020-02-07",null],["2020-02-08",null],["2020-02-09",null],["2020-02-10",null],["2020-02-11",null],["2020-02-12",null],["2020-02-13",null],["2020-02-14",null],["2020-02-15",null],["2020-02-16",null],["2020-02-17",null],["2020-02-18",null],["2020-02-19",null],["2020-02-20",null],["2020-02-21",null],["2020-02-22",null],["2020-02-23",null],["2020-02-24",null],["2020-02-25",null],["2020-02-26",null],["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",1],["2020-03-03",1],["2020-03-04",1],["2020-03-05",1],["2020-03-06",1],["2020-03-07",1],["2020-03-08",1],["2020-03-09",1],["2020-03-10",1],["2020-03-11",1],["2020-03-12",1],["2020-03-13",1],["2020-03-14",1],["2020-03-15",1],["2020-03-16",1]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      United Arab Emirates
+      <small><a class="italic color-dark-grey" href="/en/United%20Arab%20Emirates">See details</a></small>
+      </div>
+    <div id="chart-53" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-53", [{"name":"total_cases","data":[["2020-01-29",4],["2020-01-30",4],["2020-01-31",4],["2020-02-01",4],["2020-02-02",5],["2020-02-03",5],["2020-02-04",5],["2020-02-05",5],["2020-02-06",5],["2020-02-07",5],["2020-02-08",7],["2020-02-09",7],["2020-02-10",7],["2020-02-11",8],["2020-02-12",8],["2020-02-13",8],["2020-02-14",8],["2020-02-15",8],["2020-02-16",8],["2020-02-17",9],["2020-02-18",9],["2020-02-19",9],["2020-02-20",9],["2020-02-21",9],["2020-02-22",11],["2020-02-23",13],["2020-02-24",13],["2020-02-25",13],["2020-02-26",13],["2020-02-27",13],["2020-02-28",19],["2020-02-29",19],["2020-03-01",19],["2020-03-02",21],["2020-03-03",21],["2020-03-04",27],["2020-03-05",27],["2020-03-06",27],["2020-03-07",45],["2020-03-08",45],["2020-03-09",45],["2020-03-10",59],["2020-03-11",74],["2020-03-12",74],["2020-03-13",85],["2020-03-14",85],["2020-03-15",85],["2020-03-16",98]]},{"name":"total_deaths","data":[["2020-01-29",null],["2020-01-30",null],["2020-01-31",null],["2020-02-01",null],["2020-02-02",null],["2020-02-03",null],["2020-02-04",null],["2020-02-05",null],["2020-02-06",null],["2020-02-07",null],["2020-02-08",null],["2020-02-09",null],["2020-02-10",null],["2020-02-11",null],["2020-02-12",null],["2020-02-13",null],["2020-02-14",null],["2020-02-15",null],["2020-02-16",null],["2020-02-17",null],["2020-02-18",null],["2020-02-19",null],["2020-02-20",null],["2020-02-21",null],["2020-02-22",null],["2020-02-23",null],["2020-02-24",null],["2020-02-25",null],["2020-02-26",null],["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",null]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      United Kingdom
+      <small><a class="italic color-dark-grey" href="/en/United%20Kingdom">See details</a></small>
+      </div>
+    <div id="chart-54" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-54", [{"name":"total_cases","data":[["2020-02-01",2],["2020-02-02",2],["2020-02-03",2],["2020-02-04",2],["2020-02-05",2],["2020-02-06",2],["2020-02-07",3],["2020-02-08",3],["2020-02-09",3],["2020-02-10",4],["2020-02-11",8],["2020-02-12",8],["2020-02-13",9],["2020-02-14",9],["2020-02-15",9],["2020-02-16",9],["2020-02-17",9],["2020-02-18",9],["2020-02-19",9],["2020-02-20",9],["2020-02-21",9],["2020-02-22",9],["2020-02-23",9],["2020-02-24",9],["2020-02-25",13],["2020-02-26",13],["2020-02-27",13],["2020-02-28",16],["2020-02-29",20],["2020-03-01",23],["2020-03-02",36],["2020-03-03",39],["2020-03-04",51],["2020-03-05",89],["2020-03-06",118],["2020-03-07",167],["2020-03-08",210],["2020-03-09",277],["2020-03-10",323],["2020-03-11",373],["2020-03-12",460],["2020-03-13",594],["2020-03-14",802],["2020-03-15",1144],["2020-03-16",1395]]},{"name":"total_deaths","data":[["2020-02-01",null],["2020-02-02",null],["2020-02-03",null],["2020-02-04",null],["2020-02-05",null],["2020-02-06",null],["2020-02-07",null],["2020-02-08",null],["2020-02-09",null],["2020-02-10",null],["2020-02-11",null],["2020-02-12",null],["2020-02-13",null],["2020-02-14",null],["2020-02-15",null],["2020-02-16",null],["2020-02-17",null],["2020-02-18",null],["2020-02-19",null],["2020-02-20",null],["2020-02-21",null],["2020-02-22",null],["2020-02-23",null],["2020-02-24",null],["2020-02-25",null],["2020-02-26",null],["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",1],["2020-03-08",2],["2020-03-09",2],["2020-03-10",3],["2020-03-11",6],["2020-03-12",6],["2020-03-13",8],["2020-03-14",10],["2020-03-15",21],["2020-03-16",35]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      United States
+      <small><a class="italic color-dark-grey" href="/en/United%20States">See details</a></small>
+      </div>
+    <div id="chart-55" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-55", [{"name":"total_cases","data":[["2020-01-23",1],["2020-01-24",1],["2020-01-25",2],["2020-01-26",2],["2020-01-27",5],["2020-01-28",5],["2020-01-29",5],["2020-01-30",5],["2020-01-31",6],["2020-02-01",7],["2020-02-02",8],["2020-02-03",11],["2020-02-04",11],["2020-02-05",11],["2020-02-06",12],["2020-02-07",12],["2020-02-08",12],["2020-02-09",12],["2020-02-10",12],["2020-02-11",13],["2020-02-12",13],["2020-02-13",14],["2020-02-14",15],["2020-02-15",15],["2020-02-16",15],["2020-02-17",15],["2020-02-18",15],["2020-02-19",15],["2020-02-20",15],["2020-02-21",15],["2020-02-22",35],["2020-02-23",35],["2020-02-24",35],["2020-02-25",53],["2020-02-26",53],["2020-02-27",59],["2020-02-28",59],["2020-02-29",62],["2020-03-01",62],["2020-03-02",62],["2020-03-03",64],["2020-03-04",108],["2020-03-05",129],["2020-03-06",148],["2020-03-07",213],["2020-03-08",213],["2020-03-09",213],["2020-03-10",472],["2020-03-11",696],["2020-03-12",987],["2020-03-13",1264],["2020-03-14",1678],["2020-03-15",1678],["2020-03-16",1678]]},{"name":"total_deaths","data":[["2020-01-23",null],["2020-01-24",null],["2020-01-25",null],["2020-01-26",null],["2020-01-27",null],["2020-01-28",null],["2020-01-29",null],["2020-01-30",null],["2020-01-31",null],["2020-02-01",null],["2020-02-02",null],["2020-02-03",null],["2020-02-04",null],["2020-02-05",null],["2020-02-06",null],["2020-02-07",null],["2020-02-08",null],["2020-02-09",null],["2020-02-10",null],["2020-02-11",null],["2020-02-12",null],["2020-02-13",null],["2020-02-14",null],["2020-02-15",null],["2020-02-16",null],["2020-02-17",null],["2020-02-18",null],["2020-02-19",null],["2020-02-20",null],["2020-02-21",null],["2020-02-22",null],["2020-02-23",null],["2020-02-24",null],["2020-02-25",null],["2020-02-26",null],["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",2],["2020-03-04",6],["2020-03-05",9],["2020-03-06",10],["2020-03-07",11],["2020-03-08",11],["2020-03-09",11],["2020-03-10",19],["2020-03-11",25],["2020-03-12",29],["2020-03-13",36],["2020-03-14",41],["2020-03-15",41],["2020-03-16",41]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      Vietnam
+      <small><a class="italic color-dark-grey" href="/en/Vietnam">See details</a></small>
+      </div>
+    <div id="chart-56" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-56", [{"name":"total_cases","data":[["2020-01-24",2],["2020-01-25",2],["2020-01-26",2],["2020-01-27",2],["2020-01-28",2],["2020-01-29",2],["2020-01-30",2],["2020-01-31",5],["2020-02-01",6],["2020-02-02",7],["2020-02-03",8],["2020-02-04",9],["2020-02-05",10],["2020-02-06",10],["2020-02-07",12],["2020-02-08",13],["2020-02-09",14],["2020-02-10",14],["2020-02-11",15],["2020-02-12",15],["2020-02-13",16],["2020-02-14",16],["2020-02-15",16],["2020-02-16",16],["2020-02-17",16],["2020-02-18",16],["2020-02-19",16],["2020-02-20",16],["2020-02-21",16],["2020-02-22",16],["2020-02-23",16],["2020-02-24",16],["2020-02-25",16],["2020-02-26",16],["2020-02-27",16],["2020-02-28",16],["2020-02-29",16],["2020-03-01",16],["2020-03-02",16],["2020-03-03",16],["2020-03-04",16],["2020-03-05",16],["2020-03-06",16],["2020-03-07",17],["2020-03-08",21],["2020-03-09",30],["2020-03-10",31],["2020-03-11",35],["2020-03-12",39],["2020-03-13",39],["2020-03-14",48],["2020-03-15",53],["2020-03-16",57]]},{"name":"total_deaths","data":[["2020-01-24",null],["2020-01-25",null],["2020-01-26",null],["2020-01-27",null],["2020-01-28",null],["2020-01-29",null],["2020-01-30",null],["2020-01-31",null],["2020-02-01",null],["2020-02-02",null],["2020-02-03",null],["2020-02-04",null],["2020-02-05",null],["2020-02-06",null],["2020-02-07",null],["2020-02-08",null],["2020-02-09",null],["2020-02-10",null],["2020-02-11",null],["2020-02-12",null],["2020-02-13",null],["2020-02-14",null],["2020-02-15",null],["2020-02-16",null],["2020-02-17",null],["2020-02-18",null],["2020-02-19",null],["2020-02-20",null],["2020-02-21",null],["2020-02-22",null],["2020-02-23",null],["2020-02-24",null],["2020-02-25",null],["2020-02-26",null],["2020-02-27",null],["2020-02-28",null],["2020-02-29",null],["2020-03-01",null],["2020-03-02",null],["2020-03-03",null],["2020-03-04",null],["2020-03-05",null],["2020-03-06",null],["2020-03-07",null],["2020-03-08",null],["2020-03-09",null],["2020-03-10",null],["2020-03-11",null],["2020-03-12",null],["2020-03-13",null],["2020-03-14",null],["2020-03-15",null],["2020-03-16",null]]}], {});
+</script>
+
+  </div>
+  <div class="col-sm-6 mb-3">
+    <div class="h4 text-primary">
+      World
+      <small><a class="italic color-dark-grey" href="/en/World">See details</a></small>
+      </div>
+    <div id="chart-57" style="height: 300px; width: 100%; text-align: center; color: #999; line-height: 300px; font-size: 14px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;">Loading...</div><script type="text/javascript">
+  new Chartkick["AreaChart"]("chart-57", [{"name":"total_cases","data":[["2020-01-21",282],["2020-01-22",314],["2020-01-23",581],["2020-01-24",846],["2020-01-25",1320],["2020-01-26",2014],["2020-01-27",2798],["2020-01-28",4593],["2020-01-29",6065],["2020-01-30",7818],["2020-01-31",9826],["2020-02-01",11953],["2020-02-02",14557],["2020-02-03",17391],["2020-02-04",20630],["2020-02-05",24544],["2020-02-06",28276],["2020-02-07",31481],["2020-02-08",34886],["2020-02-09",37558],["2020-02-10",40554],["2020-02-11",43103],["2020-02-12",45171],["2020-02-13",46997],["2020-02-14",49053],["2020-02-15",50580],["2020-02-16",51857],["2020-02-17",71429],["2020-02-18",73332],["2020-02-19",75204],["2020-02-20",75748],["2020-02-21",76769],["2020-02-22",77794],["2020-02-23",78811],["2020-02-24",79331],["2020-02-25",80239],["2020-02-26",81109],["2020-02-27",82294],["2020-02-28",83652],["2020-02-29",85403],["2020-03-01",87137],["2020-03-02",88948],["2020-03-03",90869],["2020-03-04",93090],["2020-03-05",95324],["2020-03-06",98192],["2020-03-07",101927],["2020-03-08",105592],["2020-03-09",109577],["2020-03-10",113702],["2020-03-11",118319],["2020-03-12",125260],["2020-03-13",132758],["2020-03-14",142539],["2020-03-15",153523],["2020-03-16",167502]]},{"name":"total_deaths","data":[["2020-01-21",6],["2020-01-22",6],["2020-01-23",17],["2020-01-24",25],["2020-01-25",41],["2020-01-26",56],["2020-01-27",80],["2020-01-28",106],["2020-01-29",132],["2020-01-30",170],["2020-01-31",213],["2020-02-01",259],["2020-02-02",305],["2020-02-03",362],["2020-02-04",426],["2020-02-05",492],["2020-02-06",565],["2020-02-07",638],["2020-02-08",724],["2020-02-09",813],["2020-02-10",910],["2020-02-11",1018],["2020-02-12",1115],["2020-02-13",1369],["2020-02-14",1383],["2020-02-15",1526],["2020-02-16",1669],["2020-02-17",1775],["2020-02-18",1873],["2020-02-19",2009],["2020-02-20",2129],["2020-02-21",2247],["2020-02-22",2359],["2020-02-23",2463],["2020-02-24",2618],["2020-02-25",2700],["2020-02-26",2762],["2020-02-27",2804],["2020-02-28",2858],["2020-02-29",2924],["2020-03-01",2977],["2020-03-02",3043],["2020-03-03",3112],["2020-03-04",3198],["2020-03-05",3280],["2020-03-06",3380],["2020-03-07",3486],["2020-03-08",3584],["2020-03-09",3809],["2020-03-10",4012],["2020-03-11",4292],["2020-03-12",4613],["2020-03-13",4956],["2020-03-14",5393],["2020-03-15",5736],["2020-03-16",6603]]}], {});
+</script>
+
+  </div>
+</div>
+
+<div class="h3">All Countries</div>
+<ul style="columns: 3;">
+  <li><a href="/en/Afghanistan">Afghanistan</a></li>
+  <li><a href="/en/Albania">Albania</a></li>
+  <li><a href="/en/Algeria">Algeria</a></li>
+  <li><a href="/en/Andorra">Andorra</a></li>
+  <li><a href="/en/Antigua%20and%20Barbuda">Antigua and Barbuda</a></li>
+  <li><a href="/en/Argentina">Argentina</a></li>
+  <li><a href="/en/Armenia">Armenia</a></li>
+  <li><a href="/en/Australia">Australia</a></li>
+  <li><a href="/en/Austria">Austria</a></li>
+  <li><a href="/en/Azerbaijan">Azerbaijan</a></li>
+  <li><a href="/en/Bahrain">Bahrain</a></li>
+  <li><a href="/en/Bangladesh">Bangladesh</a></li>
+  <li><a href="/en/Belarus">Belarus</a></li>
+  <li><a href="/en/Belgium">Belgium</a></li>
+  <li><a href="/en/Bhutan">Bhutan</a></li>
+  <li><a href="/en/Bolivia">Bolivia</a></li>
+  <li><a href="/en/Bosnia%20and%20Herzegovina">Bosnia and Herzegovina</a></li>
+  <li><a href="/en/Brazil">Brazil</a></li>
+  <li><a href="/en/Brunei">Brunei</a></li>
+  <li><a href="/en/Bulgaria">Bulgaria</a></li>
+  <li><a href="/en/Burkina%20Faso">Burkina Faso</a></li>
+  <li><a href="/en/Cambodia">Cambodia</a></li>
+  <li><a href="/en/Cameroon">Cameroon</a></li>
+  <li><a href="/en/Canada">Canada</a></li>
+  <li><a href="/en/Cayman%20Islands">Cayman Islands</a></li>
+  <li><a href="/en/Central%20African%20Republic">Central African Republic</a></li>
+  <li><a href="/en/Chile">Chile</a></li>
+  <li><a href="/en/China">China</a></li>
+  <li><a href="/en/Colombia">Colombia</a></li>
+  <li><a href="/en/Congo">Congo</a></li>
+  <li><a href="/en/Costa%20Rica">Costa Rica</a></li>
+  <li><a href="/en/Cote%20d&#39;Ivoire">Cote d&#39;Ivoire</a></li>
+  <li><a href="/en/Croatia">Croatia</a></li>
+  <li><a href="/en/Cuba">Cuba</a></li>
+  <li><a href="/en/Curacao">Curacao</a></li>
+  <li><a href="/en/Cyprus">Cyprus</a></li>
+  <li><a href="/en/Czech%20Republic">Czech Republic</a></li>
+  <li><a href="/en/Democratic%20Republic%20of%20Congo">Democratic Republic of Congo</a></li>
+  <li><a href="/en/Denmark">Denmark</a></li>
+  <li><a href="/en/Dominican%20Republic">Dominican Republic</a></li>
+  <li><a href="/en/Ecuador">Ecuador</a></li>
+  <li><a href="/en/Egypt">Egypt</a></li>
+  <li><a href="/en/Equatorial%20Guinea">Equatorial Guinea</a></li>
+  <li><a href="/en/Estonia">Estonia</a></li>
+  <li><a href="/en/Ethiopia">Ethiopia</a></li>
+  <li><a href="/en/Faeroe%20Islands">Faeroe Islands</a></li>
+  <li><a href="/en/Finland">Finland</a></li>
+  <li><a href="/en/France">France</a></li>
+  <li><a href="/en/French%20Guiana">French Guiana</a></li>
+  <li><a href="/en/French%20Polynesia">French Polynesia</a></li>
+  <li><a href="/en/Gabon">Gabon</a></li>
+  <li><a href="/en/Georgia">Georgia</a></li>
+  <li><a href="/en/Germany">Germany</a></li>
+  <li><a href="/en/Ghana">Ghana</a></li>
+  <li><a href="/en/Gibraltar">Gibraltar</a></li>
+  <li><a href="/en/Greece">Greece</a></li>
+  <li><a href="/en/Guadeloupe">Guadeloupe</a></li>
+  <li><a href="/en/Guatemala">Guatemala</a></li>
+  <li><a href="/en/Guernsey">Guernsey</a></li>
+  <li><a href="/en/Guinea">Guinea</a></li>
+  <li><a href="/en/Guyana">Guyana</a></li>
+  <li><a href="/en/Honduras">Honduras</a></li>
+  <li><a href="/en/Hungary">Hungary</a></li>
+  <li><a href="/en/Iceland">Iceland</a></li>
+  <li><a href="/en/India">India</a></li>
+  <li><a href="/en/Indonesia">Indonesia</a></li>
+  <li><a href="/en/International">International</a></li>
+  <li><a href="/en/Iran">Iran</a></li>
+  <li><a href="/en/Iraq">Iraq</a></li>
+  <li><a href="/en/Ireland">Ireland</a></li>
+  <li><a href="/en/Israel">Israel</a></li>
+  <li><a href="/en/Italy">Italy</a></li>
+  <li><a href="/en/Jamaica">Jamaica</a></li>
+  <li><a href="/en/Japan">Japan</a></li>
+  <li><a href="/en/Jersey">Jersey</a></li>
+  <li><a href="/en/Jordan">Jordan</a></li>
+  <li><a href="/en/Kazakhstan">Kazakhstan</a></li>
+  <li><a href="/en/Kenya">Kenya</a></li>
+  <li><a href="/en/Kuwait">Kuwait</a></li>
+  <li><a href="/en/Latvia">Latvia</a></li>
+  <li><a href="/en/Lebanon">Lebanon</a></li>
+  <li><a href="/en/Liechtenstein">Liechtenstein</a></li>
+  <li><a href="/en/Lithuania">Lithuania</a></li>
+  <li><a href="/en/Luxembourg">Luxembourg</a></li>
+  <li><a href="/en/Macedonia">Macedonia</a></li>
+  <li><a href="/en/Malaysia">Malaysia</a></li>
+  <li><a href="/en/Maldives">Maldives</a></li>
+  <li><a href="/en/Malta">Malta</a></li>
+  <li><a href="/en/Martinique">Martinique</a></li>
+  <li><a href="/en/Mauritania">Mauritania</a></li>
+  <li><a href="/en/Mayotte">Mayotte</a></li>
+  <li><a href="/en/Mexico">Mexico</a></li>
+  <li><a href="/en/Moldova">Moldova</a></li>
+  <li><a href="/en/Monaco">Monaco</a></li>
+  <li><a href="/en/Mongolia">Mongolia</a></li>
+  <li><a href="/en/Morocco">Morocco</a></li>
+  <li><a href="/en/Namibia">Namibia</a></li>
+  <li><a href="/en/Nepal">Nepal</a></li>
+  <li><a href="/en/Netherlands">Netherlands</a></li>
+  <li><a href="/en/New%20Zealand">New Zealand</a></li>
+  <li><a href="/en/Nigeria">Nigeria</a></li>
+  <li><a href="/en/Norway">Norway</a></li>
+  <li><a href="/en/Oman">Oman</a></li>
+  <li><a href="/en/Pakistan">Pakistan</a></li>
+  <li><a href="/en/Palestine">Palestine</a></li>
+  <li><a href="/en/Panama">Panama</a></li>
+  <li><a href="/en/Paraguay">Paraguay</a></li>
+  <li><a href="/en/Peru">Peru</a></li>
+  <li><a href="/en/Philippines">Philippines</a></li>
+  <li><a href="/en/Poland">Poland</a></li>
+  <li><a href="/en/Portugal">Portugal</a></li>
+  <li><a href="/en/Puerto%20Rico">Puerto Rico</a></li>
+  <li><a href="/en/Qatar">Qatar</a></li>
+  <li><a href="/en/Reunion">Reunion</a></li>
+  <li><a href="/en/Romania">Romania</a></li>
+  <li><a href="/en/Russia">Russia</a></li>
+  <li><a href="/en/Rwanda">Rwanda</a></li>
+  <li><a href="/en/Saint%20Barthlemy">Saint Barthlemy</a></li>
+  <li><a href="/en/Saint%20Lucia">Saint Lucia</a></li>
+  <li><a href="/en/Saint%20Martin%20(French%20part)">Saint Martin (French part)</a></li>
+  <li><a href="/en/Saint%20Vincent%20and%20the%20Grenadines">Saint Vincent and the Grenadines</a></li>
+  <li><a href="/en/San%20Marino">San Marino</a></li>
+  <li><a href="/en/Saudi%20Arabia">Saudi Arabia</a></li>
+  <li><a href="/en/Senegal">Senegal</a></li>
+  <li><a href="/en/Serbia">Serbia</a></li>
+  <li><a href="/en/Seychelles">Seychelles</a></li>
+  <li><a href="/en/Singapore">Singapore</a></li>
+  <li><a href="/en/Slovakia">Slovakia</a></li>
+  <li><a href="/en/Slovenia">Slovenia</a></li>
+  <li><a href="/en/South%20Africa">South Africa</a></li>
+  <li><a href="/en/South%20Korea">South Korea</a></li>
+  <li><a href="/en/Spain">Spain</a></li>
+  <li><a href="/en/Sri%20Lanka">Sri Lanka</a></li>
+  <li><a href="/en/Sudan">Sudan</a></li>
+  <li><a href="/en/Suriname">Suriname</a></li>
+  <li><a href="/en/Swaziland">Swaziland</a></li>
+  <li><a href="/en/Sweden">Sweden</a></li>
+  <li><a href="/en/Switzerland">Switzerland</a></li>
+  <li><a href="/en/Thailand">Thailand</a></li>
+  <li><a href="/en/Togo">Togo</a></li>
+  <li><a href="/en/Trinidad%20and%20Tobago">Trinidad and Tobago</a></li>
+  <li><a href="/en/Tunisia">Tunisia</a></li>
+  <li><a href="/en/Turkey">Turkey</a></li>
+  <li><a href="/en/Ukraine">Ukraine</a></li>
+  <li><a href="/en/United%20Arab%20Emirates">United Arab Emirates</a></li>
+  <li><a href="/en/United%20Kingdom">United Kingdom</a></li>
+  <li><a href="/en/United%20States">United States</a></li>
+  <li><a href="/en/Uruguay">Uruguay</a></li>
+  <li><a href="/en/Uzbekistan">Uzbekistan</a></li>
+  <li><a href="/en/Vatican">Vatican</a></li>
+  <li><a href="/en/Venezuela">Venezuela</a></li>
+  <li><a href="/en/Vietnam">Vietnam</a></li>
+  <li><a href="/en/World">World</a></li>
+</ul>
+
+  </div>
+  <footer class="py-2">
+  <div class="center fs10">© 2013-2020
+    <a target="_blank" class="color-red bold" href="https://immosquare.com">IMMOSQUARE</a>  - All Rights Reserved
+  </div>
+</footer>
+
+</body>
+</html>

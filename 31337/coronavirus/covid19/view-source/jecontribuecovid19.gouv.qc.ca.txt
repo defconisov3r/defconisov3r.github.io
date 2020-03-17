@@ -1,0 +1,296 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><title>
+	JeContribueCovid19 - Inscription
+</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="Scripts/jquery-3.0.0.min.js"></script> 
+    <link rel="stylesheet" href="Content/bootstrap.min.css" />
+    <script src="Scripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="Content/bootstrap-theme.min.css" /><link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet" /><link href="Content/styles.min.css" rel="stylesheet" /></head>
+
+
+<body>
+    <div class="contenu-fluide piv--blanc">
+        <div class="contenu-fixe">
+             <div class="ligne">
+                <div class="d-flex align-items-center">
+                        <a tabindex="1" class="visuallyHidden" href="#contenu">Passer au contenu</a>
+                </div>
+            </div>
+            <div class="ligne" id="entetePiv">
+                <div class="d-flex align-items-center zone1">
+                    <!--<a tabindex="5" href="/"><img id="pivImage" alt="Logo du gouvernement du Qu�bec." src="img/QUEBEC_blanc.svg" width="256" height="72"></a>-->
+                    <a tabindex="5" target="_blank" href="http://www.quebec.ca"><img width="256" height="72" id="pivImage" alt="Logo du gouvernement du Québec." src="Images/QUEBEC_couleur.svg" /></a>
+                </div>
+               
+                
+            </div>
+            <div class="row" id="entetePiv--titreMobile">
+
+            </div>
+            
+        </div>
+    </div>
+    <img src="Images/entete.png" alt="COVID-19, Je contribue" style="width: 100%" />
+    <div class="container" style="margin-left: auto; margin-right:auto">
+
+        <div style="font: 600 18px Open Sans; padding-top: 30px">Vous souhaitez contribuer?</div>
+        <div style="font: 600 18px Open Sans; padding-bottom: 30px">Merci de nous fournir les informations suivantes.</div>
+
+        <form method="post" action="./Inscription.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="form1" class="form-vertical">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="bPt1J8+7FBa9ScwjZXjyuDETrgH+H+vGPvs/Mvy7NPSAST91++4IbPDvayYQIpRiPSagEqcYtUeGZxUlaiwl3dTytQKVQgzgtfyB15x6UT6ntuqhi1QputtVXkuYYLaCOsH+S86CQXuLpopOrfcWjRs/f1+p/sUqPmWBnp/TkxMHWmUjOjrGW54KLIascCcHaLGTW/X6OVu9IqdMSG7yYa4LNYWMFJN3S2APGxa1/7QtM4lWqDOLoZsu7dK2loOFpocgMyQc54JpXlzgG8uFcDOCuY6rKPsMgkUe/lfyoh5EW7N3FnfmUgd+Ep03fy/FD8GeUv+oYSOVkdigKTIv1vN3XT7d9aXhLt0FfeGWZncMD9PVnrsrZRleXPQU7IV/+5mO9MTnET16MUdKG+UTH0IKZsdWOb01Oamy81TAtXSkvI7fuTXVE3vaPRHETKKAMMa7XzR0TsWlqK2EzKWVp6CT9tuKcIUqf65q3qKqSArFv9Ted54YaPc+hBrxV9QtEfEPfLRPBfcODNwvpemdsASVyJroA7osLJ9OogNwCoK1e8k477mx54vEWq6M5nF2Pm5ItqT7uMcCqZbEmcXv7zG0LtTujn4w0g6Hx9ggAk92wlnTImgCik0ImpW6Wq4EZ8BFGzjh9zsgEb1CF0p6pdmmx+RVaqpa+6tCI0XVfMOmBN74NGlRM5jowOZkTruTSFhel9gUa0kb+tiZPZqY9IrM+vbKUg+H3KevSmmnh7n4bGcyf3VbHjt1X3i8HTxozLUlQznR51sFzhEcxhy9+FNFSBJeE0NNugRsXN2x0VzwpiqVnulA6L/uQFHUNdzv0b/EbeQu9S+2lCcLVzDw1gmJKkfzMKoBy35L3nTXOcAdKywpFZ9fY6Rllb/VB5BKy7+Sd/gkqzYkiJhFKzsWbLJgBKA0ktqCkKEd6YK3UA/Pw/dJoGPXvQY4X6ghsRRxd7aNMiM92B/rfgVY3SKZMPdbcW1Wbm15qQkVpHedjQh2wc7sAM/NVDVEIqstlIkVD2x4QaMLFhZqujbhaWB8cFOkMPSwKR50KruBReoY7QZytTPvBvMUpNkQ8JCo8+xo1jTfwN65k/1Rqyd3lW1gN4ytMOR6Kxo4KaOHZDNWz8scwJ/VN54Qto3PfCDjvdC+HFrus3sX5n+kxFcGU3LTggZ5Ov5zYUdVCHfYT9JPixdzuR4jHR/xuwThZF0CYYhBQSDfePYETxTAENraUEwNQvOP6jbf+DJERYRAzTX2Ry2J9CT1XF51fvR4NSplYozQss1qGe2s0WV3fviGQqMWVxMsfYaFtyc6OXB+bI985YAMdluJDoF1sOxEMix0kfpncXVbWu0DudLG1Rz1fFOXSlJjKTTRC8A90E7pjsY7ACbQAw7dsjSeHvSSdCByBYhX4tnm3Mih+FAdhPyZGRaDQZ19XJXW5V4K7Mux0ST6dM2eW9+nK7UgEScTHGWsdtRgzkX2AeSRA4RdNim1t5zSCdeigzfck3h2qyRNE7Jd9Dg=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZCq_C9ED3t5ootX9eK5TMknWzQeSXJSHptAZqfE3uqdPv7zB-pZcJQEBBYl5rxp_1g2&amp;t=636765251060000000" type="text/javascript"></script>
+
+
+<script src="/WebResource.axd?d=x2nkrMJGXkMELz33nwnakDCX_76ROYbxthWwpeE1r7wCZdFEuTMgMAdgW7bU6k7lKtG8OQxPcNYUZqhg9bK4TKLuqsS7q-oywE0otUmL4J81&amp;t=636765251060000000" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F3A9D9D8" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="JIhtS9U2dMR3Gp+A0UqyF7hPPNwilKcyyp3BtLgAA4T7tqgz/jHUD5Rs5xJ/Vu19d8LwR8C2zL24w/qJgeIoZEhL32/53BD+agl3Cpu/cKN50amqhFbCfKg3ojjgS5B5/0u7cYLcN1Por1BXuLDm/QJMhBGRVRvGZqfl3rK4v+kP7QkLWKUIsssjoipG3kW9O0ZM2R968t30bgP4nw/ISghk9OvT/2R6HpwsaPgnCy3s+8MNtuHskFwW3Kz/2V4B9Mxnq1kHIe23cP+NgUesWBg41+10aaFZH00HFuFk3wjv18uQpxS70aXc8ROYgRKtK1skGkBhnn02iiWNFsB89BZxJqeFw7mw/wIKxvXBRGTLu6zA5bwbzYSuZqHjhZMX2h9K3UToNpwkgQnw7kytS8Byc29iMm7hnl4X2KjkQgBP/oHDDVEkddQYJzLodJq02h3lojcSRYkuzhWLbw5iuzaWVQi/XhqQXxQdDS/mDiYWIoXVfT+sylf7S+6PELjBHvdZwuOt/FZhOWiz27xZp5xzqLgP3J8WuK95Dx6snmaBBWb8xylY+6wGNH4TIvdPJEmmqJNyrZdCeaJsbJMdq5qfo+kOMXEl+QXlGhK68RSZP8yInLb6EDqhnqpOO46gnAmKVcnCB8hZGIzfl451FHAxHV2P9arCvxj33DVgam6l95tINglPS6pzAgXuQNobX11+pACPsTFSW9/w/BzOZzKTfVFPvGAGiy5A7aFLJ1w1P8FyGEBbB96CPh8b/zoCx9bzMOSRw/U6BPYI7VpcYnYK6UJXrReD5o1DjMrxsXJQTToH3bUvXwBlZjCnZiUjxaQUBqP9B1835ScS62P0dUldU/rYzC7DLcXPS0RHfeUoym5+N1J5JXgtmKA7T7bN19iCkWxdLeCWTT5SMg+1W/OLhW71lzSH8FEhT3e6OTTPiD/5t3P+DTyWEEbU1S6qfseAvYvkOg62LnTdzq2hzu9Uo1y7x2Vr1Z7TPt+RD+HmcgR0UMBBBby20/BaZOJzcDs4TcufVW1evvBAo7+gfXMx7bm6MS925vWKa+ekGz/QT1tb6SbP9vOfyShTLm9MrTe5k5tIv1hBpNl9ZqTaxwmMdcRdGbS/XDFfbs40Mobx9vhRvZaIcZ1sZgTiuOOz" />
+</div>
+
+            <div class="container">
+                <div class="row" style="font: 600 20px Open Sans">Vos coordonnées</div>
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <label for="txtPrenom" class="col control-label">Prénom *</label>
+                        <input name="txtPrenom" type="text" maxlength="255" id="txtPrenom" class="col" />
+                        <span id="rqPrenom" style="color:Red;visibility:hidden;">Veuillez saisir votre prénom</span>
+                    </div>
+
+                    <div class="form-group col-sm-6">
+                        <label for="txtNom" class="col control-label">Nom *</label>
+                        <input name="txtNom" type="text" maxlength="255" id="txtNom" class="col" />
+                        <span id="rqNom" style="color:Red;visibility:hidden;">Veuillez saisir votre nom</span>
+                    </div>
+<div class="w-100"></div>
+                    <div class="form-group col-sm-6">
+                        <label for="txtTelephone" class="col control-label">Numéro de téléphone 1 *</label>
+                        <input name="txtTelephone" type="text" id="txtTelephone" class="col" />
+                        <span id="rqTel" style="color:Red;visibility:hidden;">Veuillez saisir un numéro de téléphone</span>
+                    </div>
+
+                    <div class="form-group col-sm-6">
+                        <label for="txtTelephone2" class="col control-label">Numéro de téléphone 2</label>
+                        <input name="txtTelephone2" type="text" id="txtTelephone2" class="col" />
+                    </div>
+<div class="w-100"></div>
+                    <div class="form-group col-sm-6">
+                        <label for="txtCourriel" class="col control-label">Adresse courriel 1</label>
+                        <input name="txtCourriel" type="text" id="txtCourriel" class="col" />
+                    </div>
+
+                    <div class="form-group col-sm-6">
+                        <label for="txtCourriel2" class="col control-label">Adresse courriel 2</label>
+                        <input name="txtCourriel2" type="text" id="txtCourriel2" class="col" />
+                    </div>
+                </div>
+                <div class="row" style="font: 600 20px Open Sans">Votre champ d'expertise</div>
+
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <label for="ddlEmploi" class="col control-label">À quel titre d’emploi souhaiteriez-vous contribuer? *</label>
+                        <select name="ddlEmploi" id="ddlEmploi" class="col">
+	<option value="">Veuillez choisir une option</option>
+	<option value="1">Infirmi&#232;re</option>
+	<option value="2">Pr&#233;pos&#233; aux b&#233;n&#233;ficiaires</option>
+	<option value="3">Technologue en laboratoire</option>
+	<option value="4">Technologue en imagerie</option>
+	<option value="6">Pharmacien</option>
+	<option value="9">Agent de bureau  et administration</option>
+	<option value="10">Autre emploi</option>
+
+</select>
+                        <span id="rqEmploi" style="color:Red;visibility:hidden;">Veuillez choisir un titre d'emploi</span>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="txtAutreEmploi" class="col control-label">Autre (si votre titre d'emploi n'est pas inscrit)</label>
+                        <input name="txtAutreEmploi" type="text" id="txtAutreEmploi" class="col" />
+                    </div>
+<div class="w-100"></div>
+                    <div class="form-group col-sm-6">
+                        <label for="txtNoPratique" class="col control-label">Quel est votre numéro de pratique (si pertinent)?</label>
+                        <input name="txtNoPratique" type="text" id="txtNoPratique" class="col" />
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="rdioOrdre" class="col control-label">Si un permis d’exercice d’un ordre professionnel est requis, est-il valide actuellement?</label>
+                        <table id="rdioOrdre" class="col">
+	<tr>
+		<td><input id="rdioOrdre_0" type="radio" name="rdioOrdre" value="OuiOrdre" /><label for="rdioOrdre_0">Oui</label></td><td><input id="rdioOrdre_1" type="radio" name="rdioOrdre" value="NonOrdre" /><label for="rdioOrdre_1">Non</label></td>
+	</tr>
+</table>
+                    </div>
+<div class="w-100"></div>
+                    <div class="form-group col-sm-6">
+                        <label for="ddlSecteur" class="col control-label">Quel est votre secteur de préférence? *</label>
+                        <select name="ddlSecteur" id="ddlSecteur" class="col">
+	<option value="">Veuillez choisir une option</option>
+	<option value="1">Info-Sante 811</option>
+	<option value="2">Urgence</option>
+	<option value="3">Laboratoire</option>
+	<option value="4">Imagerie m&#233;dicale</option>
+	<option value="5">H&#244;pitaux</option>
+	<option value="6">CHSLD</option>
+	<option value="7">CLSC</option>
+	<option value="8">Autre secteur</option>
+
+</select>
+                        <span id="RequiredFieldValidator1" style="color:Red;visibility:hidden;">Veuillez choisir un secteur</span>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="txtAutreSecteur" class="col control-label">Autre (si votre secteur n'est pas inscrit)</label>
+                        <input name="txtAutreSecteur" type="text" id="txtAutreSecteur" class="col" />
+                    </div>
+<div class="w-100"></div>
+                    <div class="form-group col-sm-6">
+                        <label for="ddlRegion" class="col control-label">Dans quelle région êtes-vous disponible pour travailler? *</label>
+                        <select name="ddlRegion" id="ddlRegion" class="col">
+	<option value="">Veuillez choisir une option</option>
+	<option value="1">01 - Bas-Saint-Laurent</option>
+	<option value="2">02 - Saguenay - Lac-Saint-Jean</option>
+	<option value="3">03 - Capitale-Nationale</option>
+	<option value="4">04 - Mauricie et Centre-du-Qu&#233;bec</option>
+	<option value="5">05 - Estrie</option>
+	<option value="6">06 - Montr&#233;al</option>
+	<option value="7">07 - Outaouais</option>
+	<option value="8">08 - Abitibi-T&#233;miscamingue</option>
+	<option value="9">09 - C&#244;te-Nord</option>
+	<option value="10">10 - Nord-du-Qu&#233;bec</option>
+	<option value="11">11 - Gasp&#233;sie - &#206;les-de-la-Madeleine</option>
+	<option value="12">12 - Chaudi&#232;re-Appalaches</option>
+	<option value="13">13 - Laval</option>
+	<option value="14">14 - Lanaudi&#232;re</option>
+	<option value="15">15 - Laurentides</option>
+	<option value="16">16 - Mont&#233;r&#233;gie</option>
+	<option value="17">17 - Nunavik</option>
+	<option value="18">18 - Terres-Cries-de-la-Baie-James</option>
+
+</select>
+                        <span id="rqRegion" style="color:Red;visibility:hidden;">Veuillez choisir une région</span>
+                    </div>
+<div class="w-100"></div>
+                    <div class="row" style="padding:30px">
+                        <input type="submit" name="btnSoumettre" value="Soumettre" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;btnSoumettre&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnSoumettre" class="btn-primary" />
+                    </div>
+                </div>
+            </div>
+
+        
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("rqPrenom"), document.getElementById("rqNom"), document.getElementById("rqTel"), document.getElementById("rqEmploi"), document.getElementById("RequiredFieldValidator1"), document.getElementById("rqRegion"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var rqPrenom = document.all ? document.all["rqPrenom"] : document.getElementById("rqPrenom");
+rqPrenom.controltovalidate = "txtPrenom";
+rqPrenom.errormessage = "Veuillez saisir votre prénom";
+rqPrenom.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+rqPrenom.initialvalue = "";
+var rqNom = document.all ? document.all["rqNom"] : document.getElementById("rqNom");
+rqNom.controltovalidate = "txtNom";
+rqNom.errormessage = "Veuillez saisir votre nom";
+rqNom.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+rqNom.initialvalue = "";
+var rqTel = document.all ? document.all["rqTel"] : document.getElementById("rqTel");
+rqTel.controltovalidate = "txtTelephone";
+rqTel.errormessage = "Veuillez saisir un numéro de téléphone";
+rqTel.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+rqTel.initialvalue = "";
+var rqEmploi = document.all ? document.all["rqEmploi"] : document.getElementById("rqEmploi");
+rqEmploi.controltovalidate = "ddlEmploi";
+rqEmploi.errormessage = "Veuillez choisir un titre d\'emploi";
+rqEmploi.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+rqEmploi.initialvalue = "";
+var RequiredFieldValidator1 = document.all ? document.all["RequiredFieldValidator1"] : document.getElementById("RequiredFieldValidator1");
+RequiredFieldValidator1.controltovalidate = "ddlSecteur";
+RequiredFieldValidator1.errormessage = "Veuillez choisir un secteur";
+RequiredFieldValidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator1.initialvalue = "";
+var rqRegion = document.all ? document.all["rqRegion"] : document.getElementById("rqRegion");
+rqRegion.controltovalidate = "ddlRegion";
+rqRegion.errormessage = "Veuillez choisir une région";
+rqRegion.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+rqRegion.initialvalue = "";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+</form>
+
+    </div>
+
+    <footer id="piv_piedPage" role="contentinfo">
+        <div class="pivFooter">
+        <div class="contenu contenu-fixe">
+
+            <div id="logo">
+                <a href="http://www.msss.gouv.qc.ca" target="_blank">
+                    <!--Changer la source de l'image pour votre signature gouvernementale-->
+                    <!--Modifiez le ALT en conséquence.-->
+                    <img height="50" alt="Logo du gouvernement du Québec." src="./Images/MSSS_couleur.svg" />
+                </a>
+            </div>
+            <div id="credits">
+                <small><a href="http://www.droitauteur.gouv.qc.ca/copyright.php" target="_blank">© Gouvernement du Québec, 2020</a></small>
+            </div>
+        </div>
+        </div>
+        
+    </footer>
+</body>
+</html>

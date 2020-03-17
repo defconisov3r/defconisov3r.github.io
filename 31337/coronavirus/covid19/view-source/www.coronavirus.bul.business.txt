@@ -1,0 +1,304 @@
+
+<!--   https://www.coronavirus.bul.business/   -->
+
+ <!DOCTYPE html>
+ 
+ <html lang="bg" dir="ltr" prefix="og: http://ogp.me/ns#">
+
+  <head> 
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138584466-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+ 
+      gtag('config', 'UA-138584466-5');
+    </script>
+  
+    <!-- Titele of page -->   
+	<title>Coronavirus COVID-19 Cases Real Time Data Worldwide</title>
+	
+    <!-- Favicon of page --> 
+	<link rel="icon" href="/images/favicon.png" type="image/png">
+	
+	<!-- Meta Tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">   
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="description" content="Coronavirus COVID-19 Cases Real Time Data Worldwide" />
+    <meta name="keywords" content="Coronavirus COVID-19 Cases Real Time Data Worldwide, Total Coronavirus Cases Worldwide, Total Deaths, Total Recovered" />
+
+	
+    <!-- Meta Tags robots  -->
+	<meta name="robots" content="index, follow" />
+	
+	<!-- Meta Tags Facebook  -->	
+	<meta property="og:title" content="Coronavirus COVID-19 Cases Real Time Data Worldwide" />
+	<meta property="og:description" content="Coronavirus COVID-19 Cases Real Time Data Worldwide" />    
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.coronavirus.bul.business/" />
+    <meta property="og:image" content="http://www.coronavirus.bul.business//images/Advertising-Facebook-picture-1.png" />	
+	<meta property="og:image:secure_url" content="https://www.coronavirus.bul.business//images/Advertising-Facebook-picture-1.png" /> 
+	<meta property="og:image:type" content="image/png" /> 	
+	
+	
+	<link href="https://www.coronavirus.bul.business" rel="canonical">
+    <link rel="alternate" href="https://www.coronavirus.bul.business" hreflang="x-default" />
+    <link rel="alternate" href="https://www.coronavirus.bul.business" hreflang="en" />
+	
+    <link rel="alternate" href="https://www.coronavirus.bul.business/lang/bg" hreflang="bg" />
+    <link rel="alternate" href="https://www.coronavirus.bul.business/lang/ru" hreflang="ru" />
+    <link rel="alternate" href="https://www.coronavirus.bul.business/lang/de" hreflang="de" />
+    <link rel="alternate" href="https://www.coronavirus.bul.business/lang/it" hreflang="it" />
+    <link rel="alternate" href="https://www.coronavirus.bul.business/lang/fr" hreflang="fr" />
+    <link rel="alternate" href="https://www.coronavirus.bul.business/lang/es" hreflang="es" />
+	<link rel="alternate" href="https://www.coronavirus.bul.business/lang/gr" hreflang="el" />
+    <link rel="alternate" href="https://www.coronavirus.bul.business/lang/tr" hreflang="tr" />
+    <link rel="alternate" href="https://www.coronavirus.bul.business/lang/mk" hreflang="mk" />
+    <link rel="alternate" href="https://www.coronavirus.bul.business/lang/ro" hreflang="ro" />
+    <link rel="alternate" href="https://www.coronavirus.bul.business/lang/rs" hreflang="sr" />
+
+	
+    <!-- External CSS links --> 
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	
+	
+	<!-- Internal CSS links -->
+    <link rel="stylesheet" type="text/css" href="/css/preloader1.css">		
+	
+	<!-- Internal javascripts -->  
+	<script>   
+	
+	    function InitPage()
+		{
+	       document.getElementById("preloader").style.display = 'none';   
+	    }	
+		
+		function RefreshPage()
+		{
+			//location.reload();	
+            window.location.href = window.location.href;			
+		}
+		
+		
+    </script>		
+  
+    <!-- Internal styles --> 
+    <style>  
+	
+	  .topRefresh 
+	  { 
+	     margin-top: 1vh; 
+	     cursor: pointer; 
+	     display: inline-block;
+		 color: white; 
+		 background-color: gray;
+		 
+	  }	  
+	  .topRefresh:hover 
+	  { 
+	     color: gray; 
+		 background-color: white;
+	  }
+  
+  
+  
+    /*   Landscape style   */
+	  
+    @media only screen and (orientation: landscape) 
+    {
+  
+        .h1-1
+        {
+	       color: black;
+	       font-size: 6vh;
+	       display: block;
+        }
+  
+        .totalCases
+        {
+	       display: block;
+	       width: 100%;
+	       background-color: white;
+	       color: blue;
+	       font-size: 14vh;
+
+	       margin-left: auto;
+	       margin-right: auto;
+	   
+	       border-bottom: 1vh solid black;
+        }
+		
+		.topTime
+		{
+			font-size: 3vh;		
+            color: white;
+            margin-top: 1vh;			
+		}
+		
+		.topMenu
+		{
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 15vh;
+            background-color: gray;			
+            text-align: center;			
+		}
+		
+		.marginTopMenu
+		{
+			margin-top: 20vh;			
+		}
+    }
+	
+    /*   Portrait style   */
+	  
+    @media only screen and (orientation: portrait) 
+    {
+  
+        .h1-1
+        {
+	       color: black;
+	       font-size: 4vh;
+	       display: block;
+        }
+  
+        .totalCases
+        {
+	       display: block;
+	       width: 100%;
+	       background-color: white;
+	       color: blue;
+	       font-size: 10vh;
+
+	       margin-left: auto;
+	       margin-right: auto;
+	   
+	       border-bottom: 1vh solid black;
+        }
+		
+		.topTime
+		{
+			font-size: 3vh;		
+            color: white;	
+            margin-top: 2vh;			
+		}		
+		
+		.topMenu
+		{
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 20vh;
+            background-color: gray;			
+            text-align: center;			
+		}		
+		
+		.marginTopMenu
+		{
+			margin-top: 25vh;			
+		}
+    }	
+   
+   </style> 
+  
+  
+  </head>
+
+
+  <body style='width: 100%;
+               background-color: White; 
+			   margin: 0px; 
+			   padding: 0px; 
+			   text-align: center;'
+		onload='InitPage()'>
+		
+		
+    	
+			   
+    <!-- Preloader type 1  -->
+    <div id='preloader'>
+     <div class='container'>
+      <div class='loader'>
+        <div class='loader--dot' style='background-color: blue'></div>
+        <div class='loader--dot' style='background-color: blue'></div>
+        <div class='loader--dot' style='background-color: blue'></div>
+        <div class='loader--dot' style='background-color: blue'></div>    
+        <div class='loader--dot' style='background-color: blue'></div>
+        <div class='loader--dot' style='background-color: blue'></div>  		
+      </div>
+     </div>
+	</div> 			  
+
+
+  <div class='topMenu' >
+  
+        <div class='topRefresh'		  	
+             onclick='RefreshPage()'	 
+		     >
+
+	        <i class="material-icons" style='display: block; font-size: 6vh; '>refresh</i>
+		  
+	     <!--   <span style='display: block; font-size: 2vh;'>refresh</span>	-->	  
+		    <span style='display: block; font-size: 2vh;'>refresh</span>
+			
+	    </div>
+		
+	    <div class='topTime' >
+            
+			   Last update <span style='color: yellow; font-weight: bold;'> 10:05am </span> London GMT time        </div> 
+  
+    </div>	
+
+			   
+  <div class='marginTopMenu' 
+       style='width: fit-content;
+              display: block;
+			  margin-left: auto;
+			  margin-right: auto;'>	
+			  
+   <h1 class='h1-1' style='color: black;'>Coronavirus COVID-19 Spread</h1>
+   
+   <p class='h1-1' style='color: black'>Data in real time</p>
+   
+ 
+ 
+ 
+
+  <h1 class='h1-1' style='color: blue'>Total Coronavirus Cases Worldwide</h1><div class='totalCases' style='color: blue'>  183,846   </div><h1 class='h1-1' style='color: red'>Total Deaths Worldwide</h1><div  class='totalCases' style='color: red'>  7,180  </div><h1 class='h1-1' style='color: green'>Total Recovered Worldwide</h1><div class='totalCases' style='color: green'>  79,911  </div> 
+
+  </div>
+  
+  <div style='width: 100%;
+              height: 50vh;'>
+			  
+      <p class='h1-1' style='color: black; margin-top: 20vh;'>More information on each country will be available soon.</p>
+	  
+  </div>
+  
+
+
+
+  </body>
+  </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
