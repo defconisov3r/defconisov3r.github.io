@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<title>Memes Coronavirus</title>
+<link rel="stylesheet" href="style.css">
+<script>
+                function funcionRefresh() 
+                  {
+                      location.reload();
+                  }
+            </script>
+</head>
+
+<body>
+<div id="boton"><button class="button" onclick="funcionRefresh()">Dame más</button></div>
+<br><br>
+<div id="main">
+<img src="imagenes/coronavirus25.jpg">
+</div>
+
+</body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-3097577-37"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-3097577-37');
+</script>
+
+</html>
