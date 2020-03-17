@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="pingback" href="https://map.covid19nc.org/xmlrpc.php">
+
+	<title>Covid-19 Resource Map  &#8211; NC</title>
+<link rel='dns-prefetch' href='//maps.googleapis.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Covid-19 Resource Map  &raquo; Feed" href="https://map.covid19nc.org/index.php/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Covid-19 Resource Map  &raquo; Comments Feed" href="https://map.covid19nc.org/index.php/comments/feed/" />
+<link rel='preload' as='style' onload="this.onload=null;this.rel='stylesheet'" id='wp-block-library-css'  href='https://map.covid19nc.org/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='preload' as='style' onload="this.onload=null;this.rel='stylesheet'" id='wc-block-style-css'  href='https://map.covid19nc.org/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/style.css?ver=2.5.14' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='https://map.covid19nc.org/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.7' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-layout-css'  href='https://map.covid19nc.org/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=4.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-smallscreen-css'  href='https://map.covid19nc.org/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=4.0.0' type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css'  href='https://map.covid19nc.org/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=4.0.0' type='text/css' media='all' />
+<style id='woocommerce-inline-inline-css' type='text/css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='elementor-icons-css'  href='https://map.covid19nc.org/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.6.2' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-animations-css'  href='https://map.covid19nc.org/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=2.9.6' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css'  href='https://map.covid19nc.org/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=2.9.6' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-5-all-css'  href='https://map.covid19nc.org/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=2.9.6' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-4-shim-css'  href='https://map.covid19nc.org/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=2.9.6' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-global-css'  href='https://map.covid19nc.org/wp-content/uploads/elementor/css/global.css?ver=1584390518' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-27-css'  href='https://map.covid19nc.org/wp-content/uploads/elementor/css/post-27.css?ver=1584401606' type='text/css' media='all' />
+<link rel='stylesheet' id='mylisting-maps-css'  href='https://map.covid19nc.org/wp-content/themes/my-listing/assets/dist/maps/google-maps/google-maps.css?ver=2.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='mylisting-icons-css'  href='https://map.covid19nc.org/wp-content/themes/my-listing/assets/dist/icons.css?ver=2.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='mylisting-material-icons-css'  href='https://fonts.googleapis.com/icon?family=Material+Icons&#038;ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='select2-css'  href='https://map.covid19nc.org/wp-content/plugins/woocommerce/assets/css/select2.css?ver=4.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='mylisting-vendor-css'  href='https://map.covid19nc.org/wp-content/themes/my-listing/assets/dist/vendor.css?ver=2.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='mylisting-frontend-css'  href='https://map.covid19nc.org/wp-content/themes/my-listing/assets/dist/frontend.css?ver=2.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-styles-default-css'  href='https://map.covid19nc.org/wp-content/themes/my-listing/style.css?ver=5.3.2' type='text/css' media='all' />
+<style id='theme-styles-default-inline-css' type='text/css'>
+.case27-primary-text {  font-weight: 600 !important; }  .featured-section .fc-description h1, .featured-section .fc-description h2, .featured-section .fc-description h3, .featured-section .fc-description h4, .featured-section .fc-description h5, .featured-section .fc-description h6 {  font-weight: 600 !important; }  .case27-secondary-text {  font-weight: 400 !important; }  .title-style-1 h5 {  font-weight: 400 !important; }  .case27-body-text {  font-weight: 400 !important; }  p { font-weight: 400 !important; } .case27-accent-text {  font-weight: 500 !important; } 
+</style>
+<link rel='stylesheet' id='mylisting-default-fonts-css'  href='https://map.covid19nc.org/wp-content/themes/my-listing/assets/dist/default-fonts.css?ver=2.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='mylisting-dynamic-styles-css'  href='https://map.covid19nc.org/wp-content/uploads/mylisting-dynamic-styles.css?ver=1584391080' type='text/css' media='all' />
+<link rel='stylesheet' id='google-fonts-1-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.3.2' type='text/css' media='all' />
+<script type='text/javascript' src='https://map.covid19nc.org/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://map.covid19nc.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://map.covid19nc.org/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=2.9.6'></script>
+<link rel='https://api.w.org/' href='https://map.covid19nc.org/index.php/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://map.covid19nc.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://map.covid19nc.org/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.3.2" />
+<meta name="generator" content="WooCommerce 4.0.0" />
+<link rel="canonical" href="https://map.covid19nc.org/" />
+<link rel='shortlink' href='https://map.covid19nc.org/' />
+<link rel="alternate" type="application/json+oembed" href="https://map.covid19nc.org/index.php/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmap.covid19nc.org%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://map.covid19nc.org/index.php/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmap.covid19nc.org%2F&#038;format=xml" />
+<script type="text/javascript">var MyListing = {"Helpers":{},"Handlers":{},"MapConfig":{"ClusterSize":35,"AccessToken":"AIzaSyBYe5IoQ4e9CL9X4zghncUIoLomj9Lljy4","Language":"default","TypeRestrictions":"geocode","CountryRestrictions":["US"],"CustomSkins":{}}};</script><script type="text/javascript">var CASE27 = {"ajax_url":"https:\/\/map.covid19nc.org\/wp-admin\/admin-ajax.php","mylisting_ajax_url":"\/?mylisting-ajax=1","env":"production","ajax_nonce":"976c98baf2","l10n":{"selectOption":"Select an option","errorLoading":"The results could not be loaded.","loadingMore":"Loading more results\u2026","noResults":"No results found","searching":"Searching\u2026","datepicker":{"format":"DD MMMM, YY","timeFormat":"h:mm A","dateTimeFormat":"DD MMMM, YY, h:mm A","timePicker24Hour":false,"firstDay":1,"applyLabel":"Apply","cancelLabel":"Cancel","customRangeLabel":"Custom Range","daysOfWeek":["Su","Mo","Tu","We","Th","Fr","Sa"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"]},"irreversible_action":"This is an irreversible action. Proceed anyway?","delete_listing_confirm":"Are you sure you want to delete this listing?","copied_to_clipboard":"Copied!","nearby_listings_location_required":"Enter a location to find nearby listings.","nearby_listings_retrieving_location":"Retrieving location...","nearby_listings_searching":"Searching for nearby listings...","geolocation_failed":"You must enable location to use this feature.","something_went_wrong":"Something went wrong.","all_in_category":"All in \"%s\"","invalid_file_type":"Invalid file type. Accepted types:","file_limit_exceeded":"You have exceeded the file upload limit (%d)."},"woocommerce":[],"js_field_html_img":"<div class=\"uploaded-file uploaded-image review-gallery-image job-manager-uploaded-file\">\t<span class=\"uploaded-file-preview\">\t\t\t\t\t<span class=\"job-manager-uploaded-file-preview\">\t\t\t\t<img src=\"\">\t\t\t<\/span>\t\t\t\t<a class=\"remove-uploaded-file review-gallery-image-remove job-manager-remove-uploaded-file\"><i class=\"mi delete\"><\/i><\/a>\t<\/span>\t<input type=\"hidden\" class=\"input-text\" name=\"\" value=\"\"><\/div>","js_field_html":"<div class=\"uploaded-file  review-gallery-image job-manager-uploaded-file\">\t<span class=\"uploaded-file-preview\">\t\t\t\t\t<span class=\"job-manager-uploaded-file-name\">\t\t\t\t<i class=\"mi insert_drive_file uploaded-file-icon\"><\/i>\t\t\t\t<code><\/code>\t\t\t<\/span>\t\t\t\t<a class=\"remove-uploaded-file review-gallery-image-remove job-manager-remove-uploaded-file\"><i class=\"mi delete\"><\/i><\/a>\t<\/span>\t<input type=\"hidden\" class=\"input-text\" name=\"\" value=\"\"><\/div>"};</script>	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style type="text/css" id="mylisting-element-queries">.featured-search[max-width~="1000px"] .form-group, .featured-search .filter-count-3 .form-group { width: calc(33.3% - 12px); margin-right: 18px; } .featured-search[max-width~="1000px"] .form-group:nth-child(3n), .featured-search .filter-count-3 .form-group:nth-child(3n) { margin-right: 0; } .featured-search[max-width~="750px"] .form-group, .featured-search .filter-count-2 .form-group { width: calc(50% - 5px); margin-right: 10px !important; } .featured-search[max-width~="750px"] .form-group:nth-child(2n), .featured-search .filter-count-2 .form-group:nth-child(2n) { margin-right: 0 !important; } .featured-search[max-width~="550px"] .form-group, .featured-search .filter-count-1 .form-group { width: 100%; margin-right: 0 !important; } </style><style type="text/css" id="mylisting-typography"></style></head>
+<body class="home page-template-default page page-id-27 theme-my-listing woocommerce-no-js my-listing elementor-default elementor-kit-3271 elementor-page elementor-page-27">
+
+<div id="c27-site-wrapper"><div class="loader-bg main-loader site-logo-loader" style="background-color: #202125;">
+	<img src="">
+</div>
+
+<header class="c27-main-header header header-style-default header-dark-skin header-scroll-dark-skin hide-until-load header-scroll-hide header-fixed header-menu-right">
+	<div class="header-skin"></div>
+	<div class="header-container">
+		<div class="header-top container-fluid">
+			<div class="mobile-menu">
+				<a href="#main-menu">
+					<div class="mobile-menu-lines"><i class="mi menu"></i></div>
+				</a>
+			</div>
+
+			<div class="logo">
+									<a href="https://map.covid19nc.org/" class="header-logo-text">
+						Covid-19 Resource Map 					</a>
+							</div>
+
+			<div class="header-right">
+									<div class="user-area signin-area">
+						<i class="mi person user-area-icon"></i>
+						<a href="#" data-toggle="modal" data-target="#sign-in-modal">Sign in</a>
+											</div>
+					<div class="mob-sign-in">
+						<a href="#" data-toggle="modal" data-target="#sign-in-modal"><i class="mi person"></i></a>
+					</div>
+
+											
+<a class="view-cart-contents" href="#" type="button" id="user-cart-menu" data-toggle="modal" data-target="#wc-cart-modal" title="View your shopping cart">
+	<span class="mi shopping_basket"></span>
+	<i class="header-cart-counter counter-hidden" data-count="0">
+		<span>0</span>
+	</i>
+</a>									
+				<div class="header-button">
+	<a href="https://map.covid19nc.org/index.php/add-listing/" class="buttons button-1">
+		<i class="icon-location-pin-check-2"></i> Add a listing	</a>
+</div>
+									<div class="search-trigger" data-toggle="modal" data-target="#quicksearch-mobile-modal">
+						<a href="#"><i class="mi search"></i></a>
+					</div>
+							</div>
+		</div>
+		<div class="container-fluid header-bottom">
+
+			<div class="header-bottom-wrapper row">
+									<div class="quick-search-instance text-left" id="c27-header-search-form" data-focus="default">
+	<form action="https://map.covid19nc.org/index.php/explore/" method="GET">
+		<div class="dark-forms header-search  search-shortcode-light">
+			<i class="mi search"></i>
+			<input type="search" placeholder="What are you looking for?" name="search_keywords" autocomplete="off">
+			<div class="instant-results">
+				<ul class="instant-results-list ajax-results"></ul>
+				<button type="submit" class="buttons full-width button-5 search view-all-results all-results">
+					<i class="mi search"></i>View all results				</button>
+				<button type="submit" class="buttons full-width button-5 search view-all-results no-results">
+					<i class="mi search"></i>No results				</button>
+				<div class="loader-bg">
+					
+<div class="paper-spinner center-vh" style="width: 24px; height: 24px;">
+	<div class="spinner-container active">
+		<div class="spinner-layer layer-1" style="border-color: #777;">
+			<div class="circle-clipper left">
+				<div class="circle" style="border-width: 2.5px;"></div>
+			</div><div class="gap-patch">
+				<div class="circle" style="border-width: 2.5px;"></div>
+			</div><div class="circle-clipper right">
+				<div class="circle" style="border-width: 2.5px;"></div>
+			</div>
+		</div>
+	</div>
+</div>				</div>
+
+									<ul class="instant-results-list default-results">
+        				<li class="ir-cat">Featured</li>
+
+						
+					</ul>
+							</div>
+		</div>
+	</form>
+</div>
+									
+				<div class="i-nav">
+					<div class="mobile-nav-head">
+						<div class="mnh-close-icon">
+							<a href="#close-main-menu">
+								<i class="mi menu"></i>
+							</a>
+						</div>
+
+											</div>
+
+					
+					<ul id="menu-main-menu" class="main-menu main-nav"><li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-27 current_page_item menu-item-63"><a href="https://map.covid19nc.org/" aria-current="page"><i class="icon-places-home-3"></i> Home</a></li>
+<li id="menu-item-64" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-64"><a href="https://map.covid19nc.org/index.php/explore/"><i class="fa fa-compass"></i> Explore</a>
+<div class="submenu-toggle"><i class="material-icons">arrow_drop_down</i></div><ul class="sub-menu i-dropdown">
+	<li id="menu-item-2775" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2775"><a href="https://map.covid19nc.org/index.php/explore/">Explore</a></li>
+	<li id="menu-item-3412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3412"><a href="https://map.covid19nc.org/index.php/explore-2-columns/">Explore (2 columns)</a></li>
+	<li id="menu-item-2763" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2763"><a href="https://map.covid19nc.org/index.php/explore-alternate/">Explore (3 columns)</a></li>
+	<li id="menu-item-3416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3416"><a href="https://map.covid19nc.org/index.php/explore-alternate-2/">Explore Alternate</a></li>
+	<li id="menu-item-3139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3139"><a href="https://map.covid19nc.org/index.php/explore-no-map/">Explore No map</a></li>
+</ul>
+</li>
+<li id="menu-item-3438" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3438"><a href="https://map.covid19nc.org/index.php/explore/"><i class="icon-location-pin-check-2"></i> Listings</a>
+<div class="submenu-toggle"><i class="material-icons">arrow_drop_down</i></div><ul class="sub-menu i-dropdown">
+	<li id="menu-item-3443" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3443"><a href="https://map.covid19nc.org/listing/liman-restaurant/#profile">Place</a></li>
+	<li id="menu-item-3442" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3442"><a href="https://map.covid19nc.org/listing/london-grammar-live/">Event</a></li>
+	<li id="menu-item-3441" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3441"><a href="https://map.covid19nc.org/listing/experienced-project-manager/">Jobs</a></li>
+	<li id="menu-item-3439" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3439"><a href="https://map.covid19nc.org/listing/charming-1-bedroom-flat-for-rent-in-whitechapel/#profile">Real Estate</a></li>
+	<li id="menu-item-3440" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3440"><a href="https://map.covid19nc.org/listing/bmw-316-d-facelift/">Cars</a></li>
+	<li id="menu-item-3444" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3444"><a href="https://docs.mylistingtheme.com/category/listing-types/">Create your own!</a></li>
+</ul>
+</li>
+<li id="menu-item-3445" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3445"><a href="#"><i class="icon-box-2"></i> More</a>
+<div class="submenu-toggle"><i class="material-icons">arrow_drop_down</i></div><ul class="sub-menu i-dropdown">
+	<li id="menu-item-3452" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3452"><a href="https://map.covid19nc.org/index.php/all-elementor-widgets/">All elementor widgets</a></li>
+	<li id="menu-item-3446" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3446"><a href="https://map.covid19nc.org/index.php/add-listing/">Add a Listing</a></li>
+	<li id="menu-item-3458" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3458"><a href="https://map.covid19nc.org/index.php/my-account/">Dashboard</a></li>
+	<li id="menu-item-3141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3141"><a href="https://map.covid19nc.org/index.php/shop/">Shop</a></li>
+	<li id="menu-item-3140" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3140"><a href="https://map.covid19nc.org/index.php/blog/">Blog</a></li>
+	<li id="menu-item-3453" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3453"><a href="https://map.covid19nc.org/files/landing/">More demos</a></li>
+</ul>
+</li>
+</ul>
+					<div class="mobile-nav-button">
+						<div class="header-button">
+	<a href="https://map.covid19nc.org/index.php/add-listing/" class="buttons button-1">
+		<i class="icon-location-pin-check-2"></i> Add a listing	</a>
+</div>					</div>
+
+				</div>
+				<div class="i-nav-overlay"></div>
+			</div>
+		</div>
+	</div>
+</header>
+
+
+
+		<div data-elementor-type="wp-post" data-elementor-id="27" class="elementor elementor-27" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-2woam06 elementor-section-use-parallax-yes elementor-section-height-min-height elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-id="2woam06" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-9b1306f elementor-column elementor-col-100 elementor-top-column" data-id="9b1306f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-cc73ae3 elementor-widget elementor-widget-heading" data-id="cc73ae3" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Covid-19 Resources </h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-1ad38d2 elementor-widget elementor-widget-shortcode" data-id="1ad38d2" data-element_type="widget" data-widget_type="shortcode.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-shortcode"><div class="text-center transparent">
+	<div class="featured-search wide">
+		<div class="fs-tabs">
+			<ul class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="active">
+						<a href="#sform-kV0ZY-place" role="tab" class="tab-switch">
+							<i class="fa fa-first-aid"></i>Aid Locations						</a>
+					</li>
+							</ul>
+			<div class="tab-content add-box-shadow">
+				
+					<div role="tabpanel" class="tab-pane fade in active filter-count-4" id="sform-kV0ZY-place">
+						<form method="GET" action="https://map.covid19nc.org/index.php/explore/">
+
+							
+<div class="form-group location-wrapper explore-filter location-filter md-group ">
+    <input
+    	type="text"
+		class="form-location-autocomplete"
+		id="filter_UKQ9UBo"
+		name="search_location"
+		placeholder=""
+		v-model="types[&quot;place&quot;].filters.search_location"
+		@autocomplete:change="$event.detail.place.debounce === false ? _geocodeLocation( $event ) : geocodeLocation( $event );"
+	>
+    <i class="material-icons geocode-location" @click="getUserLocation">my_location</i>
+    <label for="filter_UKQ9UBo">Where to look?</label>
+    <div class="md-border-line"></div>
+</div>
+    <div class="cts-term-hierarchy form-group md-group">
+        <input
+            type="text"
+            class="term-hierarchy-input"
+            data-selected="[]"
+            name="category"
+            data-mylisting-ajax-params="{&quot;taxonomy&quot;:&quot;job_listing_category&quot;,&quot;listing-type-id&quot;:3484,&quot;orderby&quot;:&quot;count&quot;,&quot;order&quot;:&quot;DESC&quot;,&quot;hide_empty&quot;:&quot;yes&quot;,&quot;term-value&quot;:&quot;slug&quot;,&quot;parent&quot;:0}"
+            data-template="alternate"
+            data-placeholder=" "            @termhierarchy:change="types[&quot;place&quot;].filters[&quot;job_category&quot;] = $event.detail.value; getListings( 'termhierarchy-change' );"        >
+        <label>All categories</label>
+    </div>
+
+
+<div class="form-group explore-filter wp-search-filter md-group ">
+    <input
+    	type="text"
+    	v-model="types[&quot;place&quot;].filters.search_keywords"
+    	id="filter_IUjHIb5"
+    	name="search_keywords"
+    	placeholder=""
+    	@keyup="getListings( 'wp-search-filter' )"
+    >
+    <label for="filter_IUjHIb5">
+    	What are you looking for?    </label>
+    <div class="md-border-line"></div>
+</div>
+							<div class="form-group">
+								<input type="hidden" name="tab" value="search-form">
+								<input type="hidden" name="type" value="place">
+								<button type="submit" class="buttons button-2 search"><i class="material-icons">search</i>Search</button>
+							</div>
+						</form>
+					</div>
+
+							</div>
+		</div>
+	</div>
+</div></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-84ec6bc elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="84ec6bc" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-0e35f04 elementor-column elementor-col-100 elementor-top-column" data-id="0e35f04" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1d60012 elementor-widget elementor-widget-case27-map-widget" data-id="1d60012" data-element_type="widget" data-widget_type="case27-map-widget.default">
+				<div class="elementor-widget-container">
+			
+	<section class="contact-map" id="section__5e70aad7a4180">
+		<div class="c27-map map" data-options="{&quot;items_type&quot;:&quot;listings&quot;,&quot;zoom&quot;:20,&quot;skin&quot;:&quot;skin3&quot;,&quot;marker_type&quot;:&quot;basic&quot;,&quot;locations&quot;:[{&quot;marker_lat&quot;:2,&quot;marker_lng&quot;:2,&quot;_id&quot;:&quot;30b1d41&quot;,&quot;marker_image&quot;:{&quot;url&quot;:&quot;&quot;,&quot;id&quot;:&quot;&quot;}}],&quot;listings_query&quot;:{&quot;lat&quot;:35.75959999999999894271240918897092342376708984375,&quot;lng&quot;:79.0193000000000012050804798491299152374267578125,&quot;radius&quot;:21,&quot;listing_type&quot;:&quot;place&quot;,&quot;count&quot;:&quot;20&quot;},&quot;cluster_markers&quot;:true,&quot;draggable&quot;:true,&quot;_section_id&quot;:&quot;section__5e70aad7a4180&quot;}"></div>
+		<div class="c27-map-listings hide"></div>
+	</section>
+
+
+
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+		
+</div>
+<footer class="footer footer-mini">
+	<div class="container">
+		
+		<div class="row">
+			<div class="col-md-12">
+				<div class="footer-bottom">
+					<div class="row">
+													<div class="col-md-12 col-sm-12 col-xs-12 social-links">
+								<ul id="menu-footer-social-links" class="main-menu social-nav"><li id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18"><a href="https://www.facebook.com/wearecase27/"><i class="fa fa-facebook-f"></i></a></li>
+<li id="menu-item-3646" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3646"><a href="https://www.youtube.com/channel/UCva2ULajnzEhorlabr_yDpA"><i class="fa fa-youtube-play"></i></a></li>
+<li id="menu-item-20" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="https://twitter.com/collective27?lang=en"><i class="fa fa-twitter"></i></a></li>
+</ul>							</div>
+												<div class="col-md-12 col-sm-12 col-xs-12 copyright">
+							<p>© Made by 27collective</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+        <style type="text/css">
+            .c27-main-header .logo img { height: 38px; }.c27-main-header:not(.header-scroll) .header-skin { background: rgba(25,28,31,0) !important; }.c27-main-header:not(.header-scroll) .header-skin { border-bottom: 1px solid rgba(255,255,255,0) !important; } .c27-main-header.header-scroll .header-skin{ background: #202125 !important; }.c27-main-header.header-scroll .header-skin { border-bottom: 1px solid #202125 !important; }         </style>
+        
+	<!-- Modal - SIGN IN-->
+	<div id="sign-in-modal" class="modal modal-27 " role="dialog">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				
+<div class="sign-in-box element">
+	<div class="title-style-1">
+		<i class="material-icons user-area-icon">person</i>
+		<h5>Sign in</h5>
+	</div>
+	<form class="sign-in-form woocomerce-form woocommerce-form-login login" method="POST" action="https://map.covid19nc.org/index.php/my-account/">
+
+		
+		<div class="form-group">
+			<input type="text" name="username" id="username" value="" placeholder="Username">
+		</div>
+
+		<div class="form-group">
+			<input type="password" name="password" id="password" placeholder="Password">
+		</div>
+
+		
+		<input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="83d6eb4b04" /><input type="hidden" name="_wp_http_referer" value="/" />
+		<div class="form-group">
+			<button type="submit" class="buttons button-2 full-width" name="login" value="Login">
+				Sign in			</button>
+		</div>
+
+		<div class="form-info">
+			<div class="md-checkbox">
+				<input type="checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever">
+				<label for="rememberme" class="">Remember me</label>
+			</div>
+			
+		</div>
+
+		
+		
+				<div class="forgot-password">
+		<a href="https://map.covid19nc.org/index.php/my-account/lost-password/"><i class="material-icons">lock</i>Forgot password?</a>
+		</div>
+	</form>
+
+	
+<div class="paper-spinner center-vh" style="width: 24px; height: 24px;">
+	<div class="spinner-container active">
+		<div class="spinner-layer layer-1" style="border-color: #777;">
+			<div class="circle-clipper left">
+				<div class="circle" style="border-width: 2.5px;"></div>
+			</div><div class="gap-patch">
+				<div class="circle" style="border-width: 2.5px;"></div>
+			</div><div class="circle-clipper right">
+				<div class="circle" style="border-width: 2.5px;"></div>
+			</div>
+		</div>
+	</div>
+</div></div>			</div>
+		</div>
+	</div>
+
+<!-- Quick view modal -->
+<div id="quick-view" class="modal modal-27 quick-view-modal c27-quick-view-modal" role="dialog">
+	<div class="container">
+		<div class="modal-dialog">
+			<div class="modal-content"></div>
+		</div>
+	</div>
+	<div class="loader-bg">
+		
+<div class="paper-spinner center-vh" style="width: 28px; height: 28px;">
+	<div class="spinner-container active">
+		<div class="spinner-layer layer-1" style="border-color: #ddd;">
+			<div class="circle-clipper left">
+				<div class="circle" style="border-width: 3px;"></div>
+			</div><div class="gap-patch">
+				<div class="circle" style="border-width: 3px;"></div>
+			</div><div class="circle-clipper right">
+				<div class="circle" style="border-width: 3px;"></div>
+			</div>
+		</div>
+	</div>
+</div>	</div>
+</div>
+<!-- Modal - WC Cart Contents-->
+<div id="wc-cart-modal" class="modal modal-27" role="dialog">
+    <div class="modal-dialog modal-md">
+	    <div class="modal-content">
+	        <div class="sign-in-box">
+				<div class="widget woocommerce widget_shopping_cart"><h2 class="widgettitle">Cart</h2><div class="widget_shopping_cart_content"></div></div>			</div>
+		</div>
+	</div>
+</div><!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+<!-- Background of PhotoSwipe.
+It's a separate element as animating opacity is faster than rgba(). -->
+<div class="pswp__bg"></div>
+<!-- Slides wrapper with overflow:hidden. -->
+<div class="pswp__scroll-wrap">
+    <!-- Container that holds slides.
+        PhotoSwipe keeps only 3 of them in the DOM to save memory.
+        Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div><script id="mylisting-dialog-template" type="text/template">
+	<div class="mylisting-dialog-wrapper">
+		<div class="mylisting-dialog">
+			<div class="mylisting-dialog--message"></div><!--
+			 --><div class="mylisting-dialog--actions">
+				<div class="mylisting-dialog--dismiss mylisting-dialog--action">Dismiss</div>
+				<div class="mylisting-dialog--loading mylisting-dialog--action hide">
+					
+<div class="paper-spinner " style="width: 24px; height: 24px;">
+	<div class="spinner-container active">
+		<div class="spinner-layer layer-1" style="border-color: #777;">
+			<div class="circle-clipper left">
+				<div class="circle" style="border-width: 2.5px;"></div>
+			</div><div class="gap-patch">
+				<div class="circle" style="border-width: 2.5px;"></div>
+			</div><div class="circle-clipper right">
+				<div class="circle" style="border-width: 2.5px;"></div>
+			</div>
+		</div>
+	</div>
+</div>				</div>
+			</div>
+		</div>
+	</div>
+</script>        <a href="#" class="back-to-top">
+            <i class="mi keyboard_arrow_up"></i>
+        </a>
+    					    <div id="quicksearch-mobile-modal" class="modal modal-27">
+					    	<div class="modal-dialog modal-md">
+					    		<div class="modal-content">
+					    			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					    				<span aria-hidden="true">&times;</span>
+					    			</button>
+									<div class="quick-search-instance text-left" id="quicksearch-mobile" data-focus="always">
+	<form action="https://map.covid19nc.org/index.php/explore/" method="GET">
+		<div class="dark-forms header-search  search-shortcode-light">
+			<i class="mi search"></i>
+			<input type="search" placeholder="What are you looking for?" name="search_keywords" autocomplete="off">
+			<div class="instant-results">
+				<ul class="instant-results-list ajax-results"></ul>
+				<button type="submit" class="buttons full-width button-5 search view-all-results all-results">
+					<i class="mi search"></i>View all results				</button>
+				<button type="submit" class="buttons full-width button-5 search view-all-results no-results">
+					<i class="mi search"></i>No results				</button>
+				<div class="loader-bg">
+					
+<div class="paper-spinner center-vh" style="width: 24px; height: 24px;">
+	<div class="spinner-container active">
+		<div class="spinner-layer layer-1" style="border-color: #777;">
+			<div class="circle-clipper left">
+				<div class="circle" style="border-width: 2.5px;"></div>
+			</div><div class="gap-patch">
+				<div class="circle" style="border-width: 2.5px;"></div>
+			</div><div class="circle-clipper right">
+				<div class="circle" style="border-width: 2.5px;"></div>
+			</div>
+		</div>
+	</div>
+</div>				</div>
+
+									<ul class="instant-results-list default-results">
+        				<li class="ir-cat">Featured</li>
+
+						
+					</ul>
+							</div>
+		</div>
+	</form>
+</div>								</div>
+							</div>
+						</div>
+					<script id="case27-basic-marker-template" type="text/template">
+	<a href="#" class="marker-icon">
+		<div class="marker-img" style="background-image: url({{marker-bg}});"></div>
+	</a>
+</script>
+<script id="case27-traditional-marker-template" type="text/template">
+	<div class="cts-marker-pin">
+		<img src="https://map.covid19nc.org/wp-content/themes/my-listing/assets/images/pin.png">
+	</div>
+</script>
+<script id="case27-user-location-marker-template" type="text/template">
+	<div class="cts-geoloc-marker"></div>
+</script>
+<script id="case27-marker-template" type="text/template">
+	<a href="#" class="marker-icon {{listing-id}}">
+		{{icon}}
+		<div class="marker-img" style="background-image: url({{marker-bg}});"></div>
+	</a>
+</script>	<script type="text/javascript">
+		var c = document.body.className;
+		c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+		document.body.className = c;
+	</script>
+	<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/map.covid19nc.org\/index.php\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://map.covid19nc.org/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.7'></script>
+<script type='text/javascript' src='https://map.covid19nc.org/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/map.covid19nc.org\/index.php\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://map.covid19nc.org/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=4.0.0'></script>
+<script type='text/javascript' src='https://map.covid19nc.org/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://map.covid19nc.org/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=4.0.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_2b4201420403a4591e9c258dfec402ba","fragment_name":"wc_fragments_2b4201420403a4591e9c258dfec402ba","request_timeout":"5000"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://map.covid19nc.org/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=4.0.0'></script>
+<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBYe5IoQ4e9CL9X4zghncUIoLomj9Lljy4&#038;libraries=places&#038;v=3'></script>
+<script type='text/javascript' src='https://map.covid19nc.org/wp-content/themes/my-listing/assets/dist/maps/google-maps/google-maps.js?ver=2.3.4'></script>
+<script type='text/javascript' src='https://map.covid19nc.org/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://map.covid19nc.org/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://map.covid19nc.org/wp-includes/js/jquery/ui/mouse.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://map.covid19nc.org/wp-includes/js/jquery/ui/sortable.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://map.covid19nc.org/wp-includes/js/dist/vendor/moment.min.js?ver=2.22.2'></script>
+<script type='text/javascript'>
+moment.locale( 'en_US', {"months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"week":{"dow":1},"longDateFormat":{"LT":"g:i a","LTS":null,"L":null,"LL":"F j, Y","LLL":"F j, Y g:i a","LLLL":null}} );
+</script>
+<script type='text/javascript' src='https://map.covid19nc.org/wp-content/themes/my-listing/assets/vendor/select2/select2.js?ver=4.0.5'></script>
+<script type='text/javascript' src='https://map.covid19nc.org/wp-content/themes/my-listing/assets/dist/vendor.js?ver=2.3.4'></script>
+<script type='text/javascript' src='https://map.covid19nc.org/wp-content/themes/my-listing/assets/dist/frontend.js?ver=2.3.4'></script>
+<script type='text/javascript' src='https://map.covid19nc.org/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+<script type='text/javascript' src='https://map.covid19nc.org/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=2.9.6'></script>
+<script type='text/javascript' src='https://map.covid19nc.org/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://map.covid19nc.org/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.7.6'></script>
+<script type='text/javascript' src='https://map.covid19nc.org/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2'></script>
+<script type='text/javascript' src='https://map.covid19nc.org/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6'></script>
+<script type='text/javascript' src='https://map.covid19nc.org/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=2.9.6'></script>
+<script type='text/javascript'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","downloadImage":"Download image"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.9.6","urls":{"assets":"https:\/\/map.covid19nc.org\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes","elementor_lightbox_enable_counter":"yes","elementor_lightbox_enable_fullscreen":"yes","elementor_lightbox_enable_zoom":"yes","elementor_lightbox_enable_share":"yes","elementor_lightbox_title_src":"title","elementor_lightbox_description_src":"description"},"editorPreferences":[]},"post":{"id":27,"title":"Covid-19 Resource Map  \u2013 NC","excerpt":"","featuredImage":false}};
+</script>
+<script type='text/javascript' src='https://map.covid19nc.org/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=2.9.6'></script>
+</body>
+</html>

@@ -1,0 +1,370 @@
+<html>
+<head>
+  <title>COVID-19 Assessment Tool</title><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/> 
+  <!-- For div animation -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css" rel="stylesheet prefetch"/> 
+  <link href="style.css" rel="stylesheet"/>
+</head>
+
+
+<body>
+  <div class="header-wrap">
+    <div class="header section-row">
+      <a class="section-icon" href="https://www.albertahealthservices.ca/"> 
+        <img src="https://myhealth.albertahealthservices.ca/Journey/COVID-19/SiteAssets/img/ahs.png" alt=""/></a> 
+      <a class="section-icon" href="https://www.albertahealthservices.ca/"> 
+        <img src="https://myhealth.albertahealthservices.ca/Journey/COVID-19/SiteAssets/img/vision.png" alt=""/></a>
+    </div>
+  </div>
+
+<!-- -----------------------------------------------------------  QUESTION PAGES ----------------------------------------------------------- -->
+
+<div class="page-wrapper">
+<div id="q1" class="container-fluid questions">
+<div class="body-copy">
+  <h1 class="questions">Are you experiencing any of the following:</h1>
+  <ul>
+    <li>severe difficulty breathing (e.g., struggling for each breath, speaking in single words)</li>
+    <li>severe chest pain</li>
+    <li>having a very hard time waking up</li>
+    <li>feeling confused</li>
+    <li>lost consciousness</li>
+  </ul>    
+</div>
+<button type="button" class="btn btn-lg btn-block btn-primary answers" id="emergencyCheckYes">Yes</button>
+<button type="button" class="btn btn-lg btn-block btn-secondary answers" id="emergencyCheckNo">No</button>     
+</div>
+
+<div id="q2" class="container-fluid questions">
+<div class="body-copy">
+  <h1 class="questions">Are you experiencing any of the following:</h1>
+  <ul>
+    <li>short of breath at rest</li>
+    <li>inability to lie down because of difficulty breathing</li>
+    <li>chronic health conditions that you are having difficulty managing because of your current respiratory illness</li>
+  </ul>    
+</div>
+<button type="button" class="btn btn-lg btn-block btn-primary answers" id="emergencyCheckTwoYes">Yes</button>
+<button type="button" class="btn btn-lg btn-block btn-secondary answers" id="emergencyCheckTwoNo">No</button>
+<div class="quiz-nav">
+  <a id="backBtn">Return to previous question</a>
+</div>  
+</div>
+
+<div id="q3" class="container-fluid questions">
+<div class="body-copy">
+  <h1 class="questions"><p>The rest of this assessment will determine if you need to speak with Health Link (811).</p>
+<p>Do you have any of the following:</p></h1>
+  <ul>
+    <li>fever</li>
+    <li>cough</li>
+    <li>shortness of breath</li>
+    <li>sore throat</li>
+  </ul>   
+</div>
+<button type="button" class="btn btn-lg btn-block btn-primary answers" id="testingRequiredYes">Yes</button>
+<button type="button" class="btn btn-lg btn-block btn-secondary answers" id="testingRequiredNo">No</button>
+<div class="quiz-nav">
+  <a id="backBtn">Return to previous question</a>
+</div>
+</div>
+
+<div id="q4" class="container-fluid questions">
+<div class="body-copy">
+  <h1>Were you exposed to someone who has been confirmed as having COVID-19 within 14 days of your symptoms starting?</h1>
+</div>
+<button type="button" class="btn btn-lg btn-block btn-primary answers" id="exposedYes">Yes</button>
+<button type="button" class="btn btn-lg btn-block btn-secondary answers" id="exposedNo">No</button>
+<div class="quiz-nav">
+  <a id="backBtn">Return to previous question</a>
+</div>
+</div>
+
+<div id="q5" class="container-fluid questions">
+<div class="body-copy">
+  <h1>Did you travel outside Canada within 14 days of your symptoms starting?</h1>
+</div>
+<button type="button" class="btn btn-lg btn-block btn-primary answers" id="travelWithinCanadaYes">Yes</button>
+<button type="button" class="btn btn-lg btn-block btn-secondary answers" id="travelWithinCanadaNo">No</button>
+<div class="quiz-nav">
+  <a id="backBtn">Return to previous question</a>
+</div>
+</div>
+
+<div id="q6" class="container-fluid questions">
+<div class="body-copy">
+  <h1>Have you been in close contact with someone with respiratory illness in the past 14 days?</h1>
+  <p>A close contact is defined as a person who: </p>
+  <ul>
+    <li>provided care for the individual, including healthcare workers, family members or other caregivers, or who had other similar close physical contact without consistent and appropriate use of personal protective equipment <b>OR</b></li>
+    <li>who lived with or otherwise had close prolonged contact (within 2 meters) with the person while they were infectious <b>OR</b></li>
+    <li>had direct contact with infectious bodily fluids of the person (e.g. was coughed or sneezed on) while not wearing recommended personal protective equipment</li>
+  </ul>    
+</div>
+<button type="button" class="btn btn-lg btn-block btn-primary answers" id="travelOutsideCanadaYes">Yes</button>
+<button type="button" class="btn btn-lg btn-block btn-secondary answers" id="travelOutsideCanadaNo">No</button>
+<div class="quiz-nav">
+  <a id="backBtn">Return to previous question</a>
+</div>
+</div>
+
+<div id="q7" class="container-fluid questions">
+<div class="body-copy">
+  <h1>Had that person travelled outside of Canada within the past 28 days?</h1>      
+</div>
+<button type="button" class="btn btn-lg btn-block btn-primary answers" id="contactedPersonTravelledYes">Yes</button>
+<button type="button" class="btn btn-lg btn-block btn-secondary answers" id="contactedPersonTravelledNo">No</button>
+<div class="quiz-nav">
+  <a id="backBtn">Return to previous question</a>
+</div>
+</div>
+
+<div id="q8" class="container-fluid questions">
+<div class="body-copy">
+  <h1>In the past 14 days have you had close contact with someone who is confirmed as having COVID-19?</h1>
+  <p>A close contact is defined as a person who: </p>
+  <ul>
+    <li>provided care for the individual, including healthcare workers, family members or other caregivers, or who had other similar close physical contact without consistent and appropriate use of personal protective equipment <b>OR</b></li>
+    <li>who lived with or otherwise had close prolonged contact (within 2 meters) with the person while they were infectious <b>OR</b></li>
+    <li>had direct contact with infectious bodily fluids of the person (e.g. was coughed or sneezed on) while not wearing recommended personal protective equipment</li>
+  </ul>    
+</div>
+<button type="button" class="btn btn-lg btn-block btn-primary answers" id="travelCloseContactConfirmedYes">Yes</button>
+<button type="button" class="btn btn-lg btn-block btn-secondary answers" id="travelCloseContactConfirmedNo">No</button>
+<div class="quiz-nav">
+  <a id="backBtn">Return to previous question</a>
+</div>
+</div>
+
+
+<div id="q9" class="container-fluid questions">
+<div class="body-copy">
+  <h1>In the past 14 days have you returned from travel to any other locations outside of Canada?</h1> 
+  <p>Travel includes passing through an airport.</p>
+</div>
+<button type="button" class="btn btn-lg btn-block btn-primary answers" id="generalReturnTravelYes">Yes</button>
+<button type="button" class="btn btn-lg btn-block btn-secondary answers" id="generalReturnTravelNo">No</button>
+<div class="quiz-nav">
+  <a id="backBtn">Return to previous question</a>
+</div>
+</div>
+
+
+
+<!-- -----------------------------------------------------------  RESULT SECTIONS ----------------------------------------------------------- -->
+
+<div id="emergencyInfo" class="recs">
+<div class="container-fluid">
+  <div class="body-copy">
+    <h1>Please call 911 or go directly to your nearest emergency department.</h1>
+  </div>
+  <div class="quiz-nav">
+    <a id="backBtn">Return to previous question</a>
+  </div>    
+</div>
+</div>  
+
+<div id="callNurse" class="recs">
+<div class="container-fluid">
+  <div class="body-copy">
+    <h1>Please call 811 to speak with a nurse.</h1>
+  <p>Because you may need to speak with a nurse about your symptoms, please call 811. We are experiencing heavy call volumes and will get to your call as quickly as we can.</p>
+  </div>
+  <div class="quiz-nav">
+    <a id="backBtn">Return to previous question</a>
+  </div>    
+</div>
+</div>  
+
+<div id="nResult15" class="recs">
+<div class="container-fluid">
+  <div class="body-copy">
+    <h1>You don't need to be tested for COVID-19.</h1>
+    <p>There are many common viruses other than COVID-19 that can cause your symptoms. Based on your responses you do not need to be tested for COVID-19 at this time.</p>
+      <p>If your symptoms worsen, or if you are concerned, go to <a href="https://myhealth.alberta.ca" target="_blank">MyHealth.Alberta.ca</a> for care advice or call 811. We are experiencing heavy call volumes and will get to your call as quickly as we can.</p>
+  <div class="callout">
+      <b>Important recommendations:</b>
+      <ul>
+      <li>Travellers returning to Canada after March 12 are STRONGLY REQUESTED to <a href="https://open.alberta.ca/dataset/44e7c639-7bb6-4bb4-9138-1abf5c56a7b8/resource/91cd86ac-7eaf-4376-9f9a-0b600a9af2fa/download/health-self-isolation-information-sheet.pdf" target="_blank">self-isolate</a> for 14 days upon arriving back in Canada.</li>
+      <li>Travellers returning from Italy, Iran or the Hubei province of China MUST self-isolate regardless of their date of travel.</li>
+      <li>AHS strongly urges anyone who has symptoms, including a cough, runny nose, fever or sore throat, to self-isolate for 14 days.</li>
+      <li>To protect yourself while out in public, wash your hands frequently, and maintain a distance of about 2 metres from others.</li>
+      </ul>
+  </div>
+  </div>
+  <div class="quiz-nav">
+    <a id="backBtn">Return to previous question</a>
+    <a id="resetBtn">Start over</a>
+  </div>    
+</div>
+</div>  
+
+<div id="nResult15a" class="recs">
+<div class="container-fluid">
+  <div class="body-copy">
+    <h1>You don't need to be tested for COVID-19.</h1>
+    <p>There are many common viruses other than COVID-19 that can cause your symptoms. Based on your responses you do not need to be tested for COVID-19 at this time.</p>
+    <p>If your symptoms worsen, or if you are concerned, go to <a href="https://myhealth.alberta.ca" target="_blank">MyHealth.Alberta.ca</a> for care advice or call 811. We are experiencing heavy call volumes and will get to your call as quickly as we can.</p>
+  <div class="callout">
+  <b>Important recommendations:</b>
+  <ul>
+  <li>Travellers returning to Canada after March 12 are STRONGLY REQUESTED to <a href="https://open.alberta.ca/dataset/44e7c639-7bb6-4bb4-9138-1abf5c56a7b8/resource/91cd86ac-7eaf-4376-9f9a-0b600a9af2fa/download/health-self-isolation-information-sheet.pdf" target="_blank">self-isolate</a> for 14 days upon arriving back in Canada.</li>
+  <li>Travellers returning from Italy, Iran or the Hubei province of China MUST self-isolate regardless of their date of travel.</li>
+  <li>AHS strongly urges anyone who has symptoms, including a cough, runny nose, fever or sore throat, to self-isolate for 14 days.</li>
+  <li>To protect yourself while out in public, wash your hands frequently, and maintain a distance of about 2 metres from others.</li>
+  </ul>
+  </div>
+  </div>
+  <div class="quiz-nav">
+    <a id="backBtn">Return to previous question</a>
+    <a id="resetBtn">Start over</a>
+  </div>    
+</div>
+</div>  
+
+<div id="nResult16a" class="recs">
+<div class="container-fluid">
+  <div class="body-copy">
+    <h1>Since you don’t have any COVID-19 symptoms, you don’t need to be tested for COVID-19.</h1>
+    <p>However, there’s a chance you could get sick since it’s less than 14 days since your exposure. You should <a href="https://open.alberta.ca/dataset/44e7c639-7bb6-4bb4-9138-1abf5c56a7b8/resource/91cd86ac-7eaf-4376-9f9a-0b600a9af2fa/download/health-self-isolation-information-sheet.pdf" target="_blank">self-isolate</a> until 14 days after the exposure. Self-isolation means don’t go to any public places, stay at home, and don’t have any visitors. Don’t share personal items like dishes, utensils and towels. Wash your hands often. If you have questions, visit <a href="https://www.albertahealthservices.ca/topics/Page16997.aspx" target="_blank">AHS.ca</a>.</p>
+    <p>If you get any <a href="https://www.albertahealthservices.ca/topics/Page16997.aspx#sign" target="_blank">COVID-19 symptoms</a>, take this self-assessment again. If you need information, go to <a href="https://www.albertahealthservices.ca/topics/Page16997.aspx" target="_blank">AHS.ca</a>.</p>
+   <p>If you are experiencing other symptoms and want assessment, go to <a href="https://myhealth.alberta.ca" target="_blank">MyHealth.Alberta.ca</a> for care advice or call 811. We are experiencing heavy call volumes and will get to your call as quickly as we can.</p>
+ <div class="callout">
+<b>Important recommendations:</b>
+<ul>
+<li>Travellers returning to Canada after March 12 are STRONGLY REQUESTED to <a href="https://open.alberta.ca/dataset/44e7c639-7bb6-4bb4-9138-1abf5c56a7b8/resource/91cd86ac-7eaf-4376-9f9a-0b600a9af2fa/download/health-self-isolation-information-sheet.pdf" target="_blank">self-isolate</a> for 14 days upon arriving back in Canada.</li>
+<li>Travellers returning from Italy, Iran or the Hubei province of China MUST self-isolate regardless of their date of travel.</li>
+<li>AHS strongly urges anyone who has symptoms, including a cough, runny nose, fever or sore throat, to self-isolate for 14 days.</li>
+</ul>
+</div>
+  </div>
+  <div class="quiz-nav">
+    <a id="backBtn">Return to previous question</a>
+    <a id="resetBtn">Start over</a>
+  </div>    
+</div>
+</div>  
+
+
+<div id="nResult16" class="recs">
+<div class="container-fluid">
+  <div class="body-copy">
+    <h1>Since you don’t have any COVID-19 symptoms, you don’t need to be tested for COVID-19.</h1>
+    <p>However, there’s a chance you could get sick since it’s less than 14 days since your exposure. You should <a href="https://open.alberta.ca/dataset/44e7c639-7bb6-4bb4-9138-1abf5c56a7b8/resource/91cd86ac-7eaf-4376-9f9a-0b600a9af2fa/download/health-self-isolation-information-sheet.pdf" target="_blank">self-isolate</a> until 14 days after the exposure. Self-isolation means don’t go to any public places, stay at home, and don’t have any visitors. Don’t share personal items like dishes, utensils, and towels and wash your hands often. If you have any questions, go to <a href="https://www.albertahealthservices.ca/topics/Page16997.aspx" target="_blank"></a>AHS.ca</a>.</p>
+    <p>If you get any <a href="https://www.albertahealthservices.ca/topics/Page16997.aspx#sign" target="_blank">COVID-19 symptoms</a>, take this self-assessment again. If you need information, visit <a href="https://www.albertahealthservices.ca/topics/Page16997.aspx" target="_blank">AHS.ca</a>.</p>
+    <p>If you are experiencing other symptoms and want assessment, go to <a href="https://myhealth.alberta.ca" target="_blank">MyHealth.Alberta.ca</a> for care advice or call 811. We are experiencing heavy call volumes and will get to your call as quickly as we can.</p>
+  <div class="callout">
+<b>Important recommendations:</b>
+<ul>
+<li>Travellers returning to Canada after March 12 are STRONGLY REQUESTED to <a href="https://open.alberta.ca/dataset/44e7c639-7bb6-4bb4-9138-1abf5c56a7b8/resource/91cd86ac-7eaf-4376-9f9a-0b600a9af2fa/download/health-self-isolation-information-sheet.pdf" target="_blank">self-isolate</a> for 14 days upon arriving back in Canada.</li>
+<li>Travellers returning from Italy, Iran or the Hubei province of China MUST self-isolate regardless of their date of travel.</li>
+<li>AHS strongly urges anyone who has symptoms, including a cough, runny nose, fever or sore throat, to self-isolate for 14 days.</li>
+</ul>
+</div>
+  </div>
+  <div class="quiz-nav">
+    <a id="backBtn">Return to previous question</a>
+    <a id="resetBtn">Start over</a>
+  </div>    
+</div>
+</div>  
+
+<div id="nResult17" class="recs">
+<div class="container-fluid">
+  <div class="body-copy">
+    <h1>Since you don’t have any COVID-19 symptoms, you don’t need to be tested for COVID-19.</h1>
+    <p>However, there’s a chance you could get sick since it’s less than 14 days since your exposure. You should <a href="https://open.alberta.ca/dataset/44e7c639-7bb6-4bb4-9138-1abf5c56a7b8/resource/91cd86ac-7eaf-4376-9f9a-0b600a9af2fa/download/health-self-isolation-information-sheet.pdf" target="_blank">self-isolate</a> until 14 days after your return to Canada. Self-isolation means don’t go to any public places, stay at home, and don’t have any visitors. Don’t share personal items like dishes, utensils, and towels and wash your hands often. If you have any questions, go to <a href="https://www.albertahealthservices.ca/topics/Page16997.aspx" target="_blank">AHS.ca</a>.</p>
+  <p>If you get any <a href="https://www.albertahealthservices.ca/topics/Page16997.aspx#sign" target="_blank">COVID-19 symptoms</a>, take this self-assessment again. If you need more information, visit <a href="https://www.albertahealthservices.ca/topics/Page16997.aspx" target="_blank">AHS.ca</a>.</p>
+    <p>If you are experiencing other symptoms and want assessment, go to <a href="https://myhealth.alberta.ca" target="_blank">MyHealth.Alberta.ca</a> for care advice or call 811. We are experiencing heavy call volumes and will get to your call as quickly as we can.</p></p>
+  <div class="callout">
+<b>Important recommendations:</b>
+<ul>
+<li>Travellers returning to Canada after March 12 are STRONGLY REQUESTED to <a href="https://open.alberta.ca/dataset/44e7c639-7bb6-4bb4-9138-1abf5c56a7b8/resource/91cd86ac-7eaf-4376-9f9a-0b600a9af2fa/download/health-self-isolation-information-sheet.pdf" target="_blank">self-isolate</a> for 14 days upon arriving back in Canada.</li>
+<li>Travellers returning from Italy, Iran or the Hubei province of China MUST self-isolate regardless of their date of travel.</li>
+<li>AHS strongly urges anyone who has symptoms, including a cough, runny nose, fever or sore throat, to self-isolate for 14 days.</li>
+</ul>
+</div>
+  </div>
+  <div class="quiz-nav">
+    <a id="backBtn">Return to previous question</a>
+    <a id="resetBtn">Start over</a>
+  </div>    
+</div>
+</div>  
+
+<div id="nResult18" class="recs">
+<div class="container-fluid">
+  <div class="body-copy">
+    <h1>Since you don’t have any COVID-19 symptoms, you don’t need to be tested for COVID-19.</h1>
+            <p>If you get any <a href="https://www.albertahealthservices.ca/topics/Page16997.aspx#sign" target="_blank">COVID-19 symptoms</a>, take this self-assessment again. If you need more information, visit <a href="https://www.albertahealthservices.ca/topics/Page16997.aspx" target="_blank">AHS.ca</a>.</p>
+    <p>If you are experiencing other symptoms and want assessment, go to <a href="https://myhealth.alberta.ca" target="_blank">MyHealth.Alberta.ca</a> for care advice or call 811. We are experiencing heavy call volumes and will get to your call as quickly as we can.</p></p>
+  <div class="callout">
+<b>Important recommendations:</b>
+<ul>
+<li>Travellers returning to Canada after March 12 are STRONGLY REQUESTED to <a href="https://open.alberta.ca/dataset/44e7c639-7bb6-4bb4-9138-1abf5c56a7b8/resource/91cd86ac-7eaf-4376-9f9a-0b600a9af2fa/download/health-self-isolation-information-sheet.pdf" target="_blank">self-isolate</a> for 14 days upon arriving back in Canada.</li>
+<li>Travellers returning from Italy, Iran or the Hubei province of China MUST self-isolate regardless of their date of travel.</li>
+<li>AHS strongly urges anyone who has symptoms, including a cough, runny nose, fever or sore throat, to self-isolate for 14 days.</li>
+<li>To protect yourself while out in public, wash your hands frequently, and maintain a distance of about 2 metres from others.</li>
+</ul>
+</div>
+  </div>
+  <div class="quiz-nav">
+    <a id="backBtn">Return to previous question</a>
+    <a id="resetBtn">Start over</a>
+  </div>    
+</div>
+</div>  
+
+<div id="nResult18a" class="recs">
+<div class="container-fluid">
+  <div class="body-copy">
+    <h1> Since you don’t have any COVID-19 symptoms, you don’t need to be tested for COVID-19.</h1>
+    <p>If you get any <a href="https://www.albertahealthservices.ca/topics/Page16997.aspx#sign" target="_blank">COVID-19 symptoms</a>, take this self-assessment again. If you need more information, visit <a href="https://www.albertahealthservices.ca/topics/Page16997.aspx" target="_blank">AHS.ca</a>.</p>
+    <p>If you are experiencing other symptoms and want assessment, go to <a href="https://myhealth.alberta.ca" target="_blank">MyHealth.Alberta.ca</a> for care advice or call 811. We are experiencing heavy call volumes and will get to your call as quickly as we can.</p>
+  <div class="callout">
+<b>Important recommendations:</b>
+<ul>
+<li>Travellers returning to Canada after March 12 are STRONGLY REQUESTED to <a href="https://open.alberta.ca/dataset/44e7c639-7bb6-4bb4-9138-1abf5c56a7b8/resource/91cd86ac-7eaf-4376-9f9a-0b600a9af2fa/download/health-self-isolation-information-sheet.pdf" target="_blank">self-isolate</a> for 14 days upon arriving back in Canada.</li>
+<li>Travellers returning from Italy, Iran or the Hubei province of China MUST self-isolate regardless of their date of travel.</li>
+<li>AHS strongly urges anyone who has symptoms, including a cough, runny nose, fever or sore throat, to self-isolate for 14 days.</li>
+<li>To protect yourself while out in public, wash your hands frequently, and maintain a distance of about 2 metres from others.</li>
+</ul>
+</div>
+  </div>
+  <div class="quiz-nav">
+    <a id="backBtn">Return to previous question</a>
+    <a id="resetBtn">Start over</a>
+  </div>    
+</div>
+</div>  
+
+<div id="contactForm" class="recs">
+<div class="container-fluid">
+  <div class="body-copy">
+    <h1>Please call 811 to speak with a nurse.</h1>
+    <p>Based on the responses you've just provided, please call 811 to have your symptoms assessed.  811 is currently experiencing heavy call volumes and we'll get to your call as quickly as we can.</p>
+<p><b>Please do not go to an emergency department, family doctor or walk-in clinic unless your symptoms worsen.</b></p>
+<p>Because you have (or had) symptoms, you should <a href="https://open.alberta.ca/dataset/44e7c639-7bb6-4bb4-9138-1abf5c56a7b8/resource/91cd86ac-7eaf-4376-9f9a-0b600a9af2fa/download/health-self-isolation-information-sheet.pdf" target="_blank">self-isolate</a> until your test results are available. That means don't go to any public places, stay at home, and don’t have any visitors. Don’t share personal items like dishes, utensils, and towels and wash your hands often. If you have any questions, visit <a href="https://www.albertahealthservices.ca/topics/Page16997.aspx" target="_blank">AHS.ca</a></p>
+<p>If you have had a swab test, you will receive a phone call from Alberta Health Services with your results and to provide further instruction on self-isolation. This could take up to 4 days after the swab was taken.</p>
+  </div> 
+  <div class="quiz-nav">
+      <a id="backBtn">Return to previous question</a>
+      <a id="resetBtn">Start over</a>
+  </div>     
+</div>
+</div> 
+
+</div><!-- page-wrapper end-->
+
+<div class="footer-wrap">
+  <div class="footer section-row">
+    <p>© Alberta Health Services 2020 <a href="https://www.albertahealthservices.ca/about/Page635.aspx">Terms of Use</a><a href="https://www.albertahealthservices.ca/about/Page121.aspx">Privacy Statement</a></p>
+  </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="assessment.js"></script>
+</body>
+</html>

