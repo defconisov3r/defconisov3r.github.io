@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+            <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+            <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+            <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+            <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+            <head><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<link rel="shortcut icon" href="/themes/Mirage2/images/favicon.ico">
+<link rel="apple-touch-icon" href="/themes/Mirage2/images/apple-touch-icon.png">
+<meta name="Generator" content="DSpace 6.0">
+<link href="/themes/Mirage2/styles/main.css" rel="stylesheet">
+<link type="application/rss+xml" rel="alternate" href="/feed/rss_1.0/site">
+<link type="application/rss+xml" rel="alternate" href="/feed/rss_2.0/site">
+<link type="application/atom+xml" rel="alternate" href="/feed/atom_1.0/site">
+<link type="application/opensearchdescription+xml" rel="search" href="http://covid19.eihealth.online:80/open-search/description.xml" title="DSpace">
+<script>
+                //Clear default text of empty text areas on focus
+                function tFocus(element)
+                {
+                if (element.value == ' '){element.value='';}
+                }
+                //Clear default text of empty text areas on submit
+                function tSubmit(form)
+                {
+                var defaultedElements = document.getElementsByTagName("textarea");
+                for (var i=0; i != defaultedElements.length; i++){
+                if (defaultedElements[i].value == ' '){
+                defaultedElements[i].value='';}}
+                }
+                //Disable pressing 'enter' key to submit a form (otherwise pressing 'enter' causes a submission to start over)
+                function disableEnterKey(e)
+                {
+                var key;
+
+                if(window.event)
+                key = window.event.keyCode;     //Internet Explorer
+                else
+                key = e.which;     //Firefox and Netscape
+
+                if(key == 13)  //if "Enter" pressed, then disable!
+                return false;
+                else
+                return true;
+                }
+            </script><!--[if lt IE 9]>
+                <script src="/themes/Mirage2/vendor/html5shiv/dist/html5shiv.js"> </script>
+                <script src="/themes/Mirage2/vendor/respond/dest/respond.min.js"> </script>
+                <![endif]--><script src="/themes/Mirage2/vendor/modernizr/modernizr.js"> </script>
+<title>COVID-19</title>
+</head><body>
+<header>
+<div role="navigation" class="navbar navbar-default navbar-static-top">
+<div class="container">
+<div class="navbar-header">
+<button data-toggle="offcanvas" class="navbar-toggle" type="button"><span class="sr-only">Cambiar navegaci&oacute;n</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/"><img src="/themes/Mirage2//images/logo2.png"></a>
+<div class="navbar-header pull-right visible-xs hidden-sm hidden-md hidden-lg">
+<ul class="nav nav-pills pull-left ">
+<li class="dropdown" id="ds-language-selection-xs">
+<button data-toggle="dropdown" class="dropdown-toggle navbar-toggle navbar-link" role="button" href="#" id="language-dropdown-toggle-xs"><b aria-hidden="true" class="visible-xs glyphicon glyphicon-globe"></b></button>
+<ul data-no-collapse="true" aria-labelledby="language-dropdown-toggle-xs" role="menu" class="dropdown-menu pull-right">
+<li role="presentation">
+<a href="http://covid19.eihealth.online:80/?locale-attribute=en">English</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="http://covid19.eihealth.online:80/?locale-attribute=es">espa&ntilde;ol</a>
+</li>
+<li role="presentation">
+<a href="http://covid19.eihealth.online:80/?locale-attribute=pt_BR">portugu&ecirc;s (Brasil)</a>
+</li>
+</ul>
+</li>
+<li>
+<form method="get" action="/login" style="display: inline">
+<button class="navbar-toggle navbar-link"><b aria-hidden="true" class="visible-xs glyphicon glyphicon-user"></b></button>
+</form>
+</li>
+</ul>
+</div>
+</div>
+<div class="navbar-header pull-right hidden-xs">
+<ul class="nav navbar-nav pull-left">
+<li class="dropdown" id="ds-language-selection">
+<a data-toggle="dropdown" class="dropdown-toggle" role="button" href="#" id="language-dropdown-toggle"><span class="hidden-xs">espa&ntilde;ol&nbsp;<b class="caret"></b></span></a>
+<ul data-no-collapse="true" aria-labelledby="language-dropdown-toggle" role="menu" class="dropdown-menu pull-right">
+<li role="presentation">
+<a href="http://covid19.eihealth.online:80/?locale-attribute=en">English</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="http://covid19.eihealth.online:80/?locale-attribute=es">espa&ntilde;ol</a>
+</li>
+<li role="presentation">
+<a href="http://covid19.eihealth.online:80/?locale-attribute=pt_BR">portugu&ecirc;s (Brasil)</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="nav navbar-nav pull-left">
+<li>
+<a href="/login"><span class="hidden-xs">Login</span></a>
+</li>
+</ul>
+<button type="button" class="navbar-toggle visible-sm" data-toggle="offcanvas"><span class="sr-only">Cambiar navegaci&oacute;n</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+</div>
+</div>
+</div>
+</header>
+<div class="trail-wrapper hidden-print">
+<div class="container">
+<div class="row">
+<div class="col-xs-12">
+<ul class="breadcrumb">
+<li>
+<i aria-hidden="true" class="glyphicon glyphicon-home"></i>&nbsp;
+            COVID-19</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden" id="no-js-warning-wrapper">
+<div id="no-js-warning">
+<div class="notice failure">JavaScript is disabled for your browser. Some features of this site may not work without it.</div>
+</div>
+</div>
+<div class="container" id="main-container">
+<div class="row row-offcanvas row-offcanvas-right">
+<div class="horizontal-slider clearfix">
+<div class="col-xs-12 col-sm-12 col-md-9 main-content">
+<div>
+<h2 class="ds-div-head page-header first-page-header">Orientaciones t&eacute;cnicas e investigaci&oacute;n en curso sobre COVID-19 en las Am&eacute;ricas</h2>
+<div id="file_news_div_news" class="ds-static-div primary">
+<p class="ds-paragraph">En este sitio web puede encontrar las orientaciones t&eacute;cnicas, publicaciones cient&iacute;ficas y los protocolos de investigaci&oacute;n en curso de la regi&oacute;n de las Am&eacute;ricas sobre la pandemia causada por el nuevo coronavirus (COVID-19).<br>
+<br>Para buscar por categor&iacute;as, escriba la misma en la caja de texto que que dice b&uacute;squedas (parte superior derecha)<br>
+<br>Categor&iacute;as:<br>
+1. Virus: historia natural, transmisi&oacute;n y diagn&oacute;stico.<br>
+
+2. Investigaci&oacute;n animal y ambiental sobre el origen del virus y medidas de manejo humano-animal<br>
+
+3. Epidemiolog&iacute;a y estudios epidemiol&oacute;gicos<br>
+
+4. Caracterizaci&oacute;n cl&iacute;nica y manejo<br>
+
+5. Prevenci&oacute;n y control de infecciones, incluida la protecci&oacute;n de los trabajadores de la salud.<br>
+
+6. I + D terap&eacute;uticos<br>
+
+7. Vacunas candidatas I + D<br>
+
+8. Consideraciones &eacute;ticas para la investigaci&oacute;n<br>
+
+9. Ciencias sociales en la respuesta<br>
+
+10. Sistemas y servicios de salud<br>
+
+11. Intervenciones de salud p&uacute;blica<br>
+
+12. Tr&aacute;fico internacional y puntos de entrada<br>
+
+13. Servicios m&eacute;dicos de emergencia, transporte m&eacute;dico y 911<br>
+
+14. Disponibilidad de operaci&oacute;n, surge capacity<br>
+
+15. Servicios de Emergencia M&eacute;dica Prehospitalar&iacute;a<br>
+
+</p>
+</div>
+
+<h2 class="ds-div-head page-header">Comunidades</h2>
+<div id="aspect_artifactbrowser_CommunityBrowser_div_comunity-browser" class="ds-static-div primary">
+<p class="ds-paragraph">Elija una comunidad para listar sus colecciones</p>
+<div id="aspect_artifactbrowser_CommunityBrowser_referenceSet_community-browser" class="ds-static-div community-browser-wrapper">
+<div class="ds-static-div row community-browser-row">
+<div class="ds-static-div col-xs-10 col-sm-12 col-sm-offset-0 list-mode">
+<a href="/handle/123456789/37" name="community-browser-link">Recursos em Portugu&ecirc;s</a>
+</div>
+</div>
+<div class="ds-static-div row community-browser-row odd-community-browser-row">
+<div class="ds-static-div col-xs-10 col-sm-12 col-sm-offset-0 list-mode">
+<a href="/handle/123456789/1" name="community-browser-link">Recursos en Espa&ntilde;ol</a>
+</div>
+</div>
+<div class="ds-static-div row community-browser-row">
+<div class="ds-static-div col-xs-10 col-sm-12 col-sm-offset-0 list-mode">
+<a href="/handle/123456789/19" name="community-browser-link">Resources in English</a>
+</div>
+</div>
+<div class="ds-static-div row community-browser-row odd-community-browser-row">
+<div class="ds-static-div col-xs-10 col-sm-12 col-sm-offset-0 list-mode">
+<a href="/handle/123456789/356" name="community-browser-link">Ressources en Fran&ccedil;ais</a>
+</div>
+</div>
+</div>
+</div>
+<div id="aspect_discovery_SiteRecentSubmissions_div_site-home" class="ds-static-div primary repository">
+<h2 class="ds-div-head page-header">A&ntilde;adido Recientemente</h2>
+<div id="aspect_discovery_SiteRecentSubmissions_div_site-recent-submission" class="ds-static-div secondary recent-submission">
+<ul class="ds-artifact-list list-unstyled">
+<!-- External Metadata URL: cocoon://metadata/handle/123456789/394/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL-->
+<li class="ds-artifact-item odd">
+<div class="item-wrapper row">
+<div class="col-sm-3 hidden-xs">
+<div class="thumbnail artifact-preview">
+<a href="/handle/123456789/394" class="image-link"><img alt="Thumbnail" class="img-thumbnail" data-src="holder.js/100%x80/text:No Thumbnail"></a>
+</div>
+</div>
+<div class="col-sm-9">
+<div class="artifact-description">
+<h4 class="artifact-title">
+<a href="/handle/123456789/394">Handbook for the management of public health events in air transport: updated with information on Ebola virus disease and Middle East respiratory syndrome coronavirus</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft_id=http%3A%2F%2Fcovid19.eihealth.online%2Fhandle%2F123456789%2F394&amp;rft_id=http%3A%2F%2Firis.paho%2Corg&amp;rfr_id=info%3Asid%2Fdspace.org%3Arepository&amp;">
+                    ﻿ 
+                </span>
+</h4>
+<div class="artifact-info">
+<span class="author h4"><small><span>World Health Organization</span></small></span> 
+</div>
+<div class="artifact-abstract">A wide variety of health events ranging in severity may occur related to air transport, requiring different responses or, perhaps, no response at all. The target audience for this guidance document includes the national ...</div>
+</div>
+</div>
+</div>
+</li>
+<!-- External Metadata URL: cocoon://metadata/handle/123456789/393/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL-->
+<li class="ds-artifact-item even">
+<div class="item-wrapper row">
+<div class="col-sm-3 hidden-xs">
+<div class="thumbnail artifact-preview">
+<a href="/handle/123456789/393" class="image-link"><img alt="Thumbnail" class="img-thumbnail" data-src="holder.js/100%x80/text:No Thumbnail"></a>
+</div>
+</div>
+<div class="col-sm-9">
+<div class="artifact-description">
+<h4 class="artifact-title">
+<a href="/handle/123456789/393">La gesti&oacute;n de los viajeros enfermos en los puntos de entrada &ndash;aeropuertos, puertos y pasos fronterizos terrestres internacionales&ndash; en el contexto del brote de COVID-19, Directrices provisionales, 16 de febrero de 2020</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft_id=http%3A%2F%2Fcovid19.eihealth.online%2Fhandle%2F123456789%2F393&amp;rfr_id=info%3Asid%2Fdspace.org%3Arepository&amp;">
+                    ﻿ 
+                </span>
+</h4>
+<div class="artifact-info">
+<span class="author h4"><small><span>Organizaci&oacute;n Mundial de la Salud</span></small></span> 
+</div>
+<div class="artifact-abstract">En virtud del Reglamento Sanitario Internacional (RSI), las autoridades de salud p&uacute;blica de los puertos, aeropuertos y pasos fronterizos terrestres internacionales deben establecer planes y medidas de contingencia eficaces ...</div>
+</div>
+</div>
+</div>
+</li>
+<!-- External Metadata URL: cocoon://metadata/handle/123456789/392/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL-->
+<li class="ds-artifact-item odd">
+<div class="item-wrapper row">
+<div class="col-sm-3 hidden-xs">
+<div class="thumbnail artifact-preview">
+<a href="/handle/123456789/392" class="image-link"><img alt="Thumbnail" class="img-thumbnail" data-src="holder.js/100%x80/text:No Thumbnail"></a>
+</div>
+</div>
+<div class="col-sm-9">
+<div class="artifact-description">
+<h4 class="artifact-title">
+<a href="/handle/123456789/392">Management of ill travellers at Points of Entry &ndash; international airports, seaports and ground crossings &ndash; in the context of COVID -19 outbreak, Interim guidance, 16 February 2020</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft_id=https%3A%2F%2Fwww.who.int%2Fpublications-detail%2Fmanagement-of-ill-travellers-at-points-of-entry-international-airports-seaports-and-ground-crossings-in-the-context-of-covid--19-outbreak&amp;rft_id=http%3A%2F%2Fcovid19.eihealth.online%2Fhandle%2F123456789%2F392&amp;rfr_id=info%3Asid%2Fdspace.org%3Arepository&amp;">
+                    ﻿ 
+                </span>
+</h4>
+<div class="artifact-info">
+<span class="author h4"><small><span>World Health Organization</span></small></span> 
+</div>
+<div class="artifact-abstract">This document aims to provide advice on the detection and management of ill travellers suspected of COVID-19 infection, at international airports, ports and ground crossings. It includes the following measures; 1)Detection ...</div>
+</div>
+</div>
+</div>
+</li>
+<!-- External Metadata URL: cocoon://metadata/handle/123456789/391/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL-->
+<li class="ds-artifact-item even">
+<div class="item-wrapper row">
+<div class="col-sm-3 hidden-xs">
+<div class="thumbnail artifact-preview">
+<a href="/handle/123456789/391" class="image-link"><img alt="Thumbnail" class="img-thumbnail" data-src="holder.js/100%x80/text:No Thumbnail"></a>
+</div>
+</div>
+<div class="col-sm-9">
+<div class="artifact-description">
+<h4 class="artifact-title">
+<a href="/handle/123456789/391">Considerations for quarantine of individuals in the context of containment for coronavirus disease (COVID-19), Interim guidance, 29 February 2020</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft_id=https%3A%2F%2Fwww.who.int%2Fpublications-detail%2Fconsiderations-for-quarantine-of-individuals-in-the-context-of-containment-for-coronavirus-disease-%28covid-19%29&amp;rft_id=http%3A%2F%2Fcovid19.eihealth.online%2Fhandle%2F123456789%2F391&amp;rfr_id=info%3Asid%2Fdspace.org%3Arepository&amp;">
+                    ﻿ 
+                </span>
+</h4>
+<div class="artifact-info">
+<span class="author h4"><small><span>World Health Organization</span></small></span> 
+</div>
+<div class="artifact-abstract">The purpose of this document is to offer guidance to Member States on quarantine measures for individuals in the context of COVID-19. It is intended for those responsible for establishing local or national policy for ...</div>
+</div>
+</div>
+</div>
+</li>
+<!-- External Metadata URL: cocoon://metadata/handle/123456789/390/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL-->
+<li class="ds-artifact-item odd">
+<div class="item-wrapper row">
+<div class="col-sm-3 hidden-xs">
+<div class="thumbnail artifact-preview">
+<a href="/handle/123456789/390" class="image-link"><img alt="Thumbnail" class="img-thumbnail" data-src="holder.js/100%x80/text:No Thumbnail"></a>
+</div>
+</div>
+<div class="col-sm-9">
+<div class="artifact-description">
+<h4 class="artifact-title">
+<a href="/handle/123456789/390">Global surveillance for COVID-19 disease caused by human infection with the 2019 novel coronavirus, Interim guidance, 27 February 2020</a><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft_id=https%3A%2F%2Fapps.who.int%2Firis%2Frest%2Fbitstreams%2F1270873%2Fretrieve&amp;rft_id=http%3A%2F%2Fcovid19.eihealth.online%2Fhandle%2F123456789%2F390&amp;rfr_id=info%3Asid%2Fdspace.org%3Arepository&amp;">
+                    ﻿ 
+                </span>
+</h4>
+<div class="artifact-info">
+<span class="author h4"><small><span>World Health Organization</span></small></span> 
+</div>
+<div class="artifact-abstract">Background: This document summarizes WHO&rsquo;s revised guidance for global surveillance of COVID-19 disease caused by infection with the 2019 novel coronavirus. WHO will continue to update this guidance as new information about ...</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<p id="aspect_discovery_SiteRecentSubmissions_p_recent-submission-view-more" class="ds-paragraph recentSubmissionViewMore">
+<a href="/recent-submissions">M&aacute;s</a>
+</p>
+</div>
+</div>
+</div>
+<div class="visible-xs visible-sm">
+<footer>
+<div class="row">
+<hr>
+<div class="col-xs-7 col-sm-8">
+<div> | <a href="/feedback">Sugerencias</a>
+<br>
+<a target="_parent" href="http://covid19.eihealth.online/disclaimer.html">Disclaimer</a>
+</div>
+<div class="hidden-print">
+<img alt="eihealth" src="/themes/Mirage2//images/PAHO_logos_bottom_spanish.png"></div>
+</div>
+<div class="col-xs-5 col-sm-4 hidden-print">
+<div class="pull-right"></div>
+</div>
+</div>
+<a class="hidden" href="/htmlmap">&nbsp;</a>
+<p>&nbsp;</p>
+</footer>
+</div>
+</div>
+<div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
+<div class="word-break hidden-print" id="ds-options">
+<div class="ds-option-set" id="ds-search-option">
+<form method="post" class="" id="ds-search-form" action="/discover">
+<fieldset>
+<div class="input-group">
+<input placeholder="B&uacute;squedas" type="text" class="ds-text-field form-control" name="query"><span class="input-group-btn"><button title="Ir" class="ds-button-field btn btn-primary"><span aria-hidden="true" class="glyphicon glyphicon-search"></span></button></span>
+</div>
+</fieldset>
+</form>
+</div>
+<h2 class="ds-option-set-head  h6">Lista</h2>
+<div id="aspect_viewArtifacts_Navigation_list_browse" class="list-group">
+<a class="list-group-item active"><span class="h5 list-group-item-heading  h5">Todo</span></a><a href="/community-list" class="list-group-item ds-option">Comunidades &amp; Colecciones</a><a href="/browse?type=dateissued" class="list-group-item ds-option">Por fecha de publicaci&oacute;n</a><a href="/browse?type=author" class="list-group-item ds-option">Autores</a><a href="/browse?type=title" class="list-group-item ds-option">T&iacute;tulos</a><a href="/browse?type=subject" class="list-group-item ds-option">Materias</a>
+</div>
+<h2 class="ds-option-set-head  h6">Mi cuenta</h2>
+<div id="aspect_viewArtifacts_Navigation_list_account" class="list-group">
+<a href="/login" class="list-group-item ds-option">Acceder</a>
+</div>
+<div id="aspect_viewArtifacts_Navigation_list_context" class="list-group"></div>
+<div id="aspect_viewArtifacts_Navigation_list_administrative" class="list-group"></div>
+<h2 class="ds-option-set-head  h6">Descubre</h2>
+<div id="aspect_discovery_Navigation_list_discovery" class="list-group">
+<a class="list-group-item active"><span class="h5 list-group-item-heading  h5">Autor</span></a><a href="/discover?filtertype=author&amp;filter_relational_operator=equals&amp;filter=World+Health+Organization" class="list-group-item ds-option">World Health Organization (7)</a><a href="/discover?filtertype=author&amp;filter_relational_operator=equals&amp;filter=Australian+and+New+Zealand+Intensive+Care+Society" class="list-group-item ds-option">Australian and New Zealand Intensive Care Society (1)</a><a href="/discover?filtertype=author&amp;filter_relational_operator=equals&amp;filter=Cergas+%28Centre+for+Research+on+Health+and+Social+Care+Management%29%2C+SDA+Bocconi+School+of+Management%2C+Milan%2C+Italy" class="list-group-item ds-option">Cergas (Centre for Research on Health and Social Care Management), SDA Bocconi School of Management, Milan, Italy (1)</a><a href="/discover?filtertype=author&amp;filter_relational_operator=equals&amp;filter=Chee+Fu%2C+Yung" class="list-group-item ds-option">Chee Fu, Yung (1)</a><a href="/discover?filtertype=author&amp;filter_relational_operator=equals&amp;filter=Cochrane+Work+Review+Group%2C+University+of+Eastern+Finland%2C+Kuopio%2C+Finland" class="list-group-item ds-option">Cochrane Work Review Group, University of Eastern Finland, Kuopio, Finland (1)</a><a href="/discover?filtertype=author&amp;filter_relational_operator=equals&amp;filter=Johns+Hopkins+Center+for+Health+Security" class="list-group-item ds-option">Johns Hopkins Center for Health Security (1)</a><a href="/discover?filtertype=author&amp;filter_relational_operator=equals&amp;filter=Low%2C+Mabel+Sheau+Fong" class="list-group-item ds-option">Low, Mabel Sheau Fong (1)</a><a href="/discover?filtertype=author&amp;filter_relational_operator=equals&amp;filter=Offeddu%2C+Vittoria" class="list-group-item ds-option">Offeddu, Vittoria (1)</a><a href="/discover?filtertype=author&amp;filter_relational_operator=equals&amp;filter=Organizaci%C3%B3n+Mundial+de+la+Salud" class="list-group-item ds-option">Organizaci&oacute;n Mundial de la Salud (1)</a><a href="/discover?filtertype=author&amp;filter_relational_operator=equals&amp;filter=Tam%2C+Clarence+C" class="list-group-item ds-option">Tam, Clarence C (1)</a>
+</div>
+<div>
+<h2 class="ds-option-set-head h6">RSS Feeds</h2>
+<div class="ds-option-set list-group" id="ds-feed-option">
+<a class="list-group-item" href="/feed/rss_1.0/site"><img alt="feed" class="btn-xs" src="/static/icons/feed.png">RSS 1.0</a><a class="list-group-item" href="/feed/rss_2.0/site"><img alt="feed" class="btn-xs" src="/static/icons/feed.png">RSS 2.0</a><a class="list-group-item" href="/feed/atom_1.0/site"><img alt="feed" class="btn-xs" src="/static/icons/feed.png">Atom</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden-xs hidden-sm">
+<footer>
+<div class="row">
+<hr>
+<div class="col-xs-7 col-sm-8">
+<div> | <a href="/feedback">Sugerencias</a>
+<br>
+<a target="_parent" href="http://covid19.eihealth.online/disclaimer.html">Disclaimer</a>
+</div>
+<div class="hidden-print">
+<img alt="eihealth" src="/themes/Mirage2//images/PAHO_logos_bottom_spanish.png"></div>
+</div>
+<div class="col-xs-5 col-sm-4 hidden-print">
+<div class="pull-right"></div>
+</div>
+</div>
+<a class="hidden" href="/htmlmap">&nbsp;</a>
+<p>&nbsp;</p>
+</footer>
+</div>
+</div>
+<script type="text/javascript">
+                         if(typeof window.publication === 'undefined'){
+                            window.publication={};
+                          };
+                        window.publication.contextPath= '';window.publication.themePath= '/themes/Mirage2/';</script><script>if(!window.DSpace){window.DSpace={};}window.DSpace.context_path='';window.DSpace.theme_path='/themes/Mirage2/';</script><script src="/themes/Mirage2/scripts/theme.js"> </script>
+</body></html>

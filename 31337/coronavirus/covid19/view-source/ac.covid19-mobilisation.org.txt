@@ -1,0 +1,715 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+	<link rel="shortcut icon" href="https://d3rxaij56vjege.cloudfront.net/media/favicon.ico" />
+<title>Email Marketing</title>
+<script type="text/javascript" src="https://d3rxaij56vjege.cloudfront.net/prototype/1.7/prototype.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/admin/js/jq/csrf-protection.js?v=913-new-social-iconse3e2e9903cc5054c"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script type="text/javascript" src="../ac_global/js/ac.js.php?inc=ajax,dom,b64,str,array,utf,editor,ui,loader&v=913-new-social-iconse3e2e9903cc5054c"></script>
+<script type="text/javascript">
+var _locale_ckeditor = 'en';
+var _locale_tinymce = 'en';
+var _locale_aviary = 'en';
+
+// define messages
+var jsNothingSelected                = 'You did not select any items. Please first check the box(es) next to the item(s) you wish to perform this operation on.';
+var jsNothingFound                   = 'There are no items to choose from.';
+var jsNothingSelectedButContinue     = 'You did not select any items, so this action will be performed on all items!' + '\n\n' +
+	'If you wish to select specific items first, then please cancel this action, then check the box(es) next to the item(s) you wish to perform this operation on.' + '\n\n' +
+	'Are you sure you wish to continue?'
+;
+
+var str_template_loading = 'Loading';
+
+
+// global strings (used everywhere)
+
+var replaceAlert1                    = 'Please type in the phrase to replace.';
+var replaceAlert2                    = 'You did not provide a phrase to replace. Type it in now.';
+var replaceAlert3                    = 'You did not provide within which areas should this text be replaced.\n\nWould you like to replace text \'%s\' with text \'%s\' EVERYWHERE?';
+
+var versionsNotFound                 = 'No versions found.';
+
+var jsAllItemsWillBeDeleted          = 'All items will be deleted.';
+var jsAllItemsWillBeClosed           = 'All items will be closed.';
+
+var jsTitleAdd                       = '"&raquo; Add"';
+var jsTitleEdit                      = '"&raquo; Edit"';
+var jsTitleDelete                    = '"&raquo; Delete"';
+var jsTitleVersion                   = 'Past Versions';
+
+var jsEdit                           = 'Edit';
+var jsDelete                         = 'Delete';
+var jsRemove                         = 'Remove';
+var jsAdd                            = 'Add';
+var jsUpdate                         = 'Update';
+var jsSave                           = 'Save';
+var jsImport                         = 'Import';
+var jsNext                           = 'Next';
+var jsOK                             = 'OK';
+var jsCancel                         = 'Cancel';
+var jsBack                           = 'Back';
+var jsContent                        = 'Content';
+var jsSetAsDefault                   = 'Set as Default';
+var jsHtmlEditor                     = 'HTML Editor';
+var jsTextEditor                     = 'Text Editor';
+var jsNotAvailable                   = 'N/A';
+var jsNone                           = 'None';
+var jsDefault                        = 'Default';
+var jsSubmit                         = 'Submit';
+var jsReset                          = 'Reset';
+var jsBranding                       = 'Branding';
+var jsPrint                          = 'Print';
+var jsForward                        = 'Forward';
+var jsOptions                        = 'Options';
+var jsUnknown                        = 'Unknown';
+var jsCheck                          = 'Check';
+var jsSend                           = 'Send';
+
+var jsOrderNotSaved                  = 'You have not saved your order changes.';
+
+var jsSearching                      = 'Searching...';
+var jsSorting                        = 'Sorting...';
+var jsFiltering                      = 'Filtering...';
+var jsSaving                         = 'Saving...';
+var jsDeleting                       = 'Deleting...';
+var jsRemoving                       = 'Removing...';
+var jsReplacing                      = 'Replacing...';
+var jsWorking                        = 'Working...';
+var jsReverting                      = 'Reverting...';
+var jsConnecting                     = 'Connecting...';
+var jsImporting                      = 'Importing...';
+var jsChecking                       = 'Checking...';
+var jsInstalling                     = 'Installing...';
+var jsUpdating                       = 'Updating...';
+var jsResetting                      = 'Resetting...';
+var jsSending                        = 'Sending...';
+var jsStarting                       = 'Starting...';
+var jsResuming                       = 'Resuming...';
+var jsPausing                        = 'Pausing...';
+var jsStopping                       = 'Stopping...';
+var jsRestarting                     = 'Restarting...';
+var jsEnabling                       = 'Enabling...';
+var jsDisabling                      = 'Disabling...';
+var jsFetching                       = 'Fetching...';
+var jsCounting                       = 'Counting...';
+var jsAdding                         = 'Adding...';
+var jsApproving                      = 'Approving...';
+var jsActivating                     = 'Activating...';
+var jsDeactivating                   = 'Deactivating...';
+var jsCopying                        = 'Copying...';
+
+var jsWait4AWhile                    = 'Please wait, this can take a while.';
+
+var jsFilteringOn                    = 'on';
+var jsFilteringBetween               = 'between';
+var jsFilteringAnd                   = 'and';
+
+var jsOptionEdit                     = 'Edit';
+var jsOptionDelete                   = 'Delete';
+var jsOptionView                     = 'View';
+var jsOptionReply                    = 'Reply';
+var jsOptionPublic                   = 'Public';
+var jsOptionRestore                  = 'Restore';
+var jsOptionPreview                  = 'Preview';
+var jsOptionDownload                 = 'Download';
+var jsOptionTest                     = 'Test';
+var jsOptionRun                      = 'Run';
+var jsOptionResume                   = 'Resume';
+var jsOptionContinue                 = 'Continue';
+var jsOptionRestart                  = 'Restart';
+var jsOptionPause                    = 'Pause';
+var jsOptionStop                     = 'Stop';
+var jsOptionReport                   = 'Report';
+var jsOptionReports                  = 'Reports';
+var jsOptionLog                      = 'Log';
+var jsOptionExport                   = 'Export';
+var jsOptionHTML                     = 'HTML';
+var jsOptionXML                      = 'XML';
+var jsOptionEnable                   = 'Enable';
+var jsOptionDisable                  = 'Disable';
+var jsOptionApprove                  = 'Approve';
+var jsOptionBlock                    = 'Block';
+
+var jsCreated                        = 'Created: ';
+var jsModified                       = 'Modified: ';
+
+var messageLP                        = 'This will cancel all the changes you might have made.';
+
+
+var jsYes                            = 'Yes';
+var jsNo                             = 'No';
+
+var jsAnd                            = 'and';
+var jsOr                             = 'or';
+
+var jsNoGroup                        = 'No Group';
+
+var decimalDelim										 = '.';
+var commaDelim										   = ',';
+
+
+// define strings
+var jsAreYouSure                     = 'Are You Sure?';
+var jsAPIfailed                      = 'Server call failed for unknown reason. Please try your action again.';
+var jsLoading                        = 'Loading...';
+var jsResult                         = 'Changes Saved.';
+var jsError                          = 'Error Occurred!';
+
+// Users
+var jsUserDeleteMessage              = 'This operation will delete %s; are you sure you want to do this?';
+var jsUserDeleteDeals              	 = 'When this user is deleted, their Deals will be reassigned to:';
+var jsUserDeleteDealsMulti           = 'When these users are deleted, their Deals will be reassigned to:';
+var jsUserDeleteGlobal               = 'This operation will permanently delete this user.  If they are used in any other product that shares your authentication table, they will be deleted there as well.  Are you sure you want to do this?';
+var jsUserImport                     = 'Import';
+var jsUserDelete                     = 'Delete';
+var jsUserFormPasswordBlank          = 'Password field cannot be left blank.';
+var jsUserFormPasswordMismatch       = 'The two passwords do not match; you should re-type them and try again.';
+var jsUserFormValidationFail         = 'To add or change a user, you must ensure that they have at least a username, password and group.';
+var jsUserFormValidationUserBadchars = 'A username can only have lower-case letters and/or numbers, and may not have any spaces in it.';
+var jsUserFormMissingGroups          = 'You need to select at least one group for this user to belong to.';
+
+
+// AC_GLOBAL CONTEXTS
+
+var syncEnterTitle                   = 'Please type in the sync name.';
+var syncMissingTitle                 = 'You did not provide a sync name. Type it in now.';
+var syncEnterUser                    = 'Please type in the database username.';
+var syncMissingUser                  = 'You did not provide a database username. Type it in now.';
+var syncEnterHost                    = 'Please type in the database host name.';
+var syncMissingHost                  = 'You did not provide a database host name. Type it in now.';
+var syncHostNoLocalhost              = 'Host cannot be localhost';
+var syncNothingChanged               = 'You did not change anything. Do you wish to save this sync anyway?';
+var syncMissingRelid                 = 'You did not select a sync destination. Please select it first.';
+var syncMissingTable                 = 'Please select a table you wish to sync with first.';
+var syncMissingQuery                 = 'You did not enter a proper (SELECT) database query. Please write down the query or select a table to sync.';
+var syncDuplicateMapping             = 'You cannot sync the same field twice. Please select different destinations for every mapped field.';
+var syncMissingMapping               = 'You did not map a required field %s. Please select a field in external database for it.';
+var syncCustomQuery                  = 'Custom Query';
+var syncShowTables                   = 'Show Tables';
+var syncHideTables                   = 'Hide Tables';
+var syncShowSynced                   = 'Show Synced';
+var syncHideSynced                   = 'Hide Synced';
+var syncShowFailed                   = 'Show Failed';
+var syncHideFailed                   = 'Hide Failed';
+var syncTitleRun                     = 'Initiating Synchronization';
+var syncTitleTest                    = 'Testing Synchronization';
+var syncStartRun                     = 'Start Sync';
+var syncStartTest                    = 'Start Test';
+
+
+var importMissingRelid               = 'You did not select an import destination. Please select it first.';
+var importMissingText                = 'You did not enter any data into a text box. Please add data first.';
+var importMissingFile                = 'You did not upload a file to import. Please do that first.';
+var importMissingMapping             = 'You did not map a required field %s. Please select a column for it.';
+var importDuplicateMapping           = 'You cannot map the same field twice. Please select different destinations for every mapped field.';
+var importSuccessfulMapping          = 'Mapping successful.';
+
+
+var installerFoundTables             = 'Installer has found a version of %s already installed.';
+var installerFoundTablesOptions      = '\n\nYour options are:\n1) Please enter a different database information and click NEXT.\n2) Move/Backup your previous database data and click NEXT\n3) Install can remove your old installation for you.\n\n\nDo you want installer to remove found installation?';
+var installerRemoveTablesConfirm     = 'THIS WILL REMOVE TABLES FROM THE DATABASE!\n\nAre you sure you wish to continue?';
+var installerAuthTableMissing        = 'Table `acp_globalauth` was not found on this connection. Please choose another.';
+
+
+
+var strPersCustomFields              = 'Custom Fields';
+var strPersGlobalFields              = 'Global Custom Fields';
+var strPersSystemTags                = 'System Personalization Tags';
+
+var syncConfDeleteSingle = 'Are you sure you want to delete this sync job?';
+var syncConfDeleteMulti = 'Are you sure you want to delete the following sync jobs?';
+
+
+var editorConfirmSwitch = 'Do you wish to convert existing text to other format?';
+var editorPersonalizeTitle = 'Insert Personalization';
+var editorActiveRSSTitle = 'Insert RSS Feed';
+var editorTemplateTitle = 'Insert Template';
+var editorConditionalTitle = 'Insert Conditional Content';
+var editorConditionalText = 'Insert Content Here';
+var editorConditionalElseText = 'Insert Alternative Content Here';
+
+
+var jsErrorMailerBarMessage = 'Unexpected Error Occurred.';
+
+var jsAPIErrorAuthMessage = 'You are not authorized to access this file';
+
+var timeago_suffixAgo = 'ago';
+var timeago_suffixFromNow = 'from now';
+var timeago_seconds = 'less than a minute';
+var timeago_minute = 'a minute';
+var timeago_minutes = '%d minutes';
+var timeago_hour = 'an hour';
+var timeago_hours = '%d hours';
+var timeago_day = 'a day';
+var timeago_days = '%d days';
+var timeago_month = 'a month';
+var timeago_months = '%d months';
+var timeago_year = 'a year';
+var timeago_years = '%d years';
+
+var clipboard_assist_ctrl_copy = 'Press Ctrl+C to copy';
+var clipboard_assist_cmd_copy = 'Press ⌘+C to copy';
+
+var campaign_status_strings = [
+	'Draft',
+	'Scheduled',
+	'Sending',
+	'Paused',
+	'Stopped',
+	'Completed',
+	'Disabled',
+	'Pending Approval'
+];
+
+var campaign_statuses_strings = [
+	'Drafts',
+	'Scheduled',
+	'Sending',
+	'Paused',
+	'Stopped',
+	'Completed',
+	'Disabled',
+	'Pending Approval'
+];
+
+var series_status_strings = [
+	'Draft',
+	'Active',
+	'Inactive'
+];
+
+var series_statuses_strings = [
+	'Drafts',
+	'Active',
+	'Inactive'
+];
+
+
+var campaign_error_strings = {
+
+	block_error: 'This campaign uses a block you no longer have access to'
+
+};
+
+var campaign_split_offsets = {
+
+	hour: 'hour(s)',
+	day: 'days(s)',
+	week: 'week(s)',
+	month: 'months(s)'
+
+};
+
+var campaign_split_types = {
+
+	click: 'CLICK',
+	read: 'READ'
+
+};
+
+var campaign_type_strings = {
+
+	single: 'One-Time Campaign',
+	recurring: 'Recurring Campaign',
+	responder: 'AutoResponder',
+	reminder: 'Contact Date Based Campaign',
+	split: 'Split Test',
+	activerss: 'RSS Campaign',
+	text: 'Text-Only Campaign',
+	series: 'Email Sent in Automation'
+
+};
+
+var campaign_type_strings_short = {
+
+	single: 'One-Time',
+	recurring: 'Recurring',
+	responder: 'AutoResponder',
+	reminder: 'Contact Date Based',
+	split: 'Split Test',
+	activerss: 'RSS',
+	text: 'Text-Only',
+	series: 'Automation Email'
+
+};
+
+var campaign_types_strings = {
+
+	single: 'One-Time Campaigns',
+	recurring: 'Recurring Campaigns',
+	responder: 'AutoResponders',
+	reminder: 'Contact Date Based Campaigns',
+	split: 'Split Tests',
+	activerss: 'RSS Campaigns',
+	text: 'Text-Only Campaigns',
+	series: 'Emails Sent in Automation'
+
+};
+
+var series_types_strings = {
+
+	draft: 'Drafts',
+	active: 'Active',
+	inactive: 'Inactive'
+
+}
+
+
+var jsOptionResendUse = 'Resend Options';
+
+var jsAddAndSend                            = 'Add & Send Campaign';
+var jsUpdateAndSend                         = 'Update & Send Campaign';
+
+
+var strEmailNotEmail = 'Email Address is not valid.';
+var strURLNotURL = 'Click the Insert button in the top left and select RSS Feed to continue.';
+var strMissingURL = 'Please enter a URL to an RSS Feed.';
+
+// add admin side strings here
+var strListNameEmpty = 'List Name can not be empty.';
+var strListNotEmail = 'List Email Address has to contain an email address.';
+var strListAnalyticsUAEmpty = 'Please enter Google Analytics UA Number in the following format:\n\nUA-xxxxxxx-y';
+
+var strListTwitterUserEmpty = 'Please enter your Twitter Username to use Twitter notifications.';
+var strListTwitterPassEmpty = 'Please enter your Twitter Password to use Twitter notifications.';
+
+var strHeaderTitleEmpty = 'Please name this Email Header.';
+var strHeaderNameEmpty = 'Email Header Name can not be left blank.';
+var strHeaderNameInvalid = 'You can not use a restricted Email Header Name.';
+var strHeaderValueEmpty = 'Email Header Value can not be left blank.';
+//var strListEmpty = '';
+//var strListEmpty = '';
+
+var strSubscriberNotEmail = 'Contact Email Address is not valid.';
+
+
+var strSubscriberRuleLong = 'Automatically %s list \'%s\' when contact %s list \'%s\'';
+var strSubscriberRuleSourceSub = 'subscribes to';
+var strSubscriberRuleSourceUnsub = 'unsubscribes from';
+var strSubscriberRuleTargetSub = 'subscribe to';
+var strSubscriberRuleTargetUnsub = 'unsubscribe from';
+var strSubscriberRuleSub = 'subscribe';
+var strSubscriberRuleUnsub = 'unsubscribe';
+var strSubscriberRuleWrong = 'You cannot select the same list as both source and destination';
+
+
+var strMessageEmailNotEmail = 'From Email Address is not valid.';
+var strMessageSubjectEmpty = 'Email Subject can not be left empty.';
+var strMessageTextConfirmMissing = 'Text version does not contain an unsubscription link.';
+var strMessageHTMLConfirmMissing = 'HTML version does not contain an unsubscription link.';
+
+var strMessageReadsTimes = 'Read/Opened';
+var strMessageReadsTitle = 'Read(s)';
+var strMessageClicksTimes = 'Link(s)';
+var strMessageClicksTitle = 'Click(s)';
+var strMessageForwardsDate = 'Date';
+var strMessageForwardsTo = 'Forward(s)';
+
+
+var strMailingFullStats = 'Full report for this mailing';
+var strResponderFullStats = 'Full report for this auto-responder';
+
+
+
+var strTrackUpdateSubscriberName = 'Update Contact Link';
+var strTrackWebCopyName = 'Web Copy Link';
+var strTrackForward2FriendName = 'Forward to a Friend Link';
+
+
+
+var strPersGlobalTemplates         = 'System Templates';
+var strPersListTemplates           = 'List-Related Templates';
+var strPersMessageTags             = 'Message Option and Link Tags';
+var strPersSocialTags              = 'Social Media Tags';
+var strPersOtherTags               = 'Other Tags';
+var strPersSubscriberTags          = 'Contact Personalization Tags';
+var strPersSenderTags              = 'Sender Personalization Tags';
+
+var strOK = 'OK';
+var strCancel = 'Cancel';
+var strClose = 'Close';
+var strClear = 'Clear';
+var strPersListFields = 'List-Related Fields';
+var strPersConfirmLink = 'Confirmation Link';
+var strPersUnsubLink = 'Unsubscribe Link';
+var strPersUnsubLink_DESC = 'Unsubscribes the contact from the list used to send the email.';
+var strPersUnsubLinkAll = 'Unsubscribe Link (All Lists)';
+var strPersUnsubLinkAll_DESC = 'Unsubscribe from all lists. Even lists not included in the email sent.';
+var strPersUpdateLink = 'Update Subscription Account Link';
+var strPersUpdateLink_DESC = 'Allow contacts to update their subscription details.';
+var strPersWCopyLink = 'Web Version Link';
+var strPersWCopyLink_DESC = 'Allow contacts to view the email in their browser.';
+var strPersFriendLink = 'Send to Friend Link';
+var strPersFriendLink_DESC = 'Your contacts can forward the email to multiple people.';
+var strPersSocialLink = 'Social Submit Links';
+var strPersSocialFacebookLikeLink = 'Facebook Like Button';
+var strPersEmailLink = 'Email Address';//"
+var strPersEmailLinkDesc = 'The contact\'s email address.';//"
+var strPersFNameLink = 'First Name';//"
+var strPersLNameLink = 'Last Name';//"
+var strPersNameLink = 'Full Name';//"
+var strPersPhoneLink = 'Phone Number';//"
+var strPersOrgLink = 'Organization';//"
+var strPersListnameLink = 'Contact\'s List';//"
+var strPersListnameLink_DESC = 'Show the name of the list that this email was sent to.';//"
+
+var strPersIPLink = 'Contact\'s IP Address';//"
+var strPersIPLink_DESC = 'The IP Address of the contact when they subscribed to this list.';
+var strPersSDateLink = 'Date Subscribed';
+var strPersSDateLink_DESC = 'The date that this contact subscribed.';
+
+var strPersGeoCountryLink = 'GEO - Country';
+var strPersGeoCountryLink_DESC = 'Country where the contact is coming from.';
+var strPersGeoStateLink = 'GEO - State/Region';
+var strPersGeoStateLink_DESC = 'State or region where the contact is coming from.';
+var strPersGeoCityLink = 'GEO - City';
+var strPersGeoCityLink_DESC = 'City where the contact is coming from.';
+var strPersGeoZipLink = 'GEO - ZIP/Postal Code';
+var strPersGeoZipLink_DESC = 'ZIP or Postal Code where the contact is coming from.';
+var strPersGeoAreaLink = 'GEO - Area Code';
+var strPersGeoAreaLink_DESC = 'Area Code where the contact is coming from.';
+
+var strPersSDateTimeLink = 'Date and Time Subscribed';
+var strPersSDateTimeLink_DESC = 'The date and time the contact subscribed.';
+var strPersSTimeLink = 'Time Subscribed';
+var strPersSTimeLink_DESC = 'The time of the day the contact subscribed.';
+var strPersTodayLink = 'Today\'s Date';//"
+var strPersTodayRangeLink = 'Today\'s Date +/- X day(s)';//"
+var strPersSenderInfoLink = 'List Sender Info (multiple lines)';//"
+var strPersSenderInfoSingleLink = 'List Sender Info (single line)';//"
+var strPersSIDLink = 'Contact ID';
+var strPersSIDLink_DESC = 'Display the ID # of the contact.';
+var strPersMissing = 'Please select a Personalization Tag';
+var strEvent = 'Event - ';
+
+var strConfirmLinkText = 'Click here to confirm your subscription';
+var strUnsubscribeText = 'Click here to unsubscribe';
+var strUnsubscribeAllText = 'Click here to unsubscribe from all lists';
+var strSubscriberUpdateText = 'Click here to update your info';
+var strWebCopyText = 'Click here to see a web copy of this email';
+var strForward2FriendText = 'Click here to forward this email to a friend';
+var strSurveyText = 'Take our survey';
+var strSurveyText2 = 'SurveyMonkey survey';
+var strEnterText = 'Enter the text for this link:';
+var strEnterRange = 'Enter the date range compared to sending date.' +
+	'\n\n' + 'Sample values: -10, -1, +3, 6 (plus is assumed)...';
+var strEnterRangeInvalid = 'Invalid range.' +
+	'\n\n' + 'Sample values: -10, -1, +3, 6 (plus is assumed)...';
+
+var strPersPersonalize = 'Insert Personalization Tag';
+
+var strDefaultTO = 'Recipient';
+
+
+var strFormUpgrade = 'Upgrade to a paid plan to remove this!';
+var strFormNameMissing = 'You must enter a name for this form';
+var strFormListMissing = 'You must select a valid list to continue';
+
+var strEmail = 'Email';
+var currentlyTZ = 'Currently %s';
+var subscribedToListsSG = 'Subscribed to %s list.';
+var subscribedToListsPL = 'Subscribed to %s lists.';
+
+var strDefaultOptInText  = 'Thank you for subscribing. Click here to confirm your subscription:';
+var strDefaultOptOutText = 'Please click this link to confirm your unsubscription:';
+
+var strImportTypeXML  = 'XML (Includes Dependent Files)';
+var strImportTypeHTML = 'HTML Only';
+
+var strRssNew = 'Emails will only be sent if new RSS items are found';
+
+var strSurveyChoose = 'Choose...';
+
+var strSideMenuFolderEmptyAlert = 'Please enter a name for the folder first.';
+
+
+var personalization_social_networks = {
+
+	facebook: 'Share on Facebook Link',
+	twitter: 'Share on Twitter Link',
+	digg: 'Share on Digg Link',
+	reddit: 'Share on Reddit Link',
+	delicious: 'Share on del.icio.us Link',
+	greader: 'Share on GoogleReader Link',
+	stumbleupon: 'Share on StumbleUpon Link'
+
+};
+
+
+var strServiceFacebook = 'Facebook';
+var strServiceTwitter = 'Twitter';
+var strServiceLinkedIn = 'LinkedIn';
+var strServiceMySpace = 'MySpace';
+var strServiceFlickr = 'Flickr';
+var strServiceGitHub = 'GitHub';
+var strServicePicasa = 'Picasa';
+var strServiceQuora = 'Quora';
+var strServiceTumblr = 'Tumblr';
+var strServiceVimeo = 'Vimeo';
+var strServiceYelp = 'Yelp';
+var strServiceAmazon = 'Amazon';
+var strServiceEtsy = 'Etsy';
+var strServiceFoursquare = 'Foursquare';
+var strServiceGoogle = 'Google';
+var strServiceYouTube = 'YouTube';
+var strServicevCard = 'vCard';
+
+var strStreamSubscribe = '%s subscribed to list';
+var strStreamTwitter = '@%s tweeted';
+var strStreamFacebook = '%s shared on Facebook';
+var strStreamUnsubscribe = '%s unsubscribed from list';
+var strStreamOpen = '%s opened campaign';
+var strStreamClick = '%s clicked campaign';
+var strStreamForward = '%s forwarded campaign';
+var strStreamUpdate = '%s updated contact details';
+
+var strSubscribers = 'Contacts';
+var strCampaigns = 'Campaigns';
+var strSeries = 'Automations';
+var strCampaignReports = 'Campaign Reports';
+var strList = 'List';
+var jsInsert = 'Insert';
+var jsCopy = 'Copy';
+var jsDuplicate = 'Duplicate';
+var strShare = 'Share';
+
+var strHere_is_your_shared_template = 'Here is your shared template';
+var strYour_shared_template = 'Your shared template';
+var strImport_a_template = 'Import a template';
+var strEnter_your_template_url = 'Enter your template URL';
+var strError = 'Error';
+
+var strLoading = 'Loading...';
+
+var campaign_str_choosefield = 'Please choose a field first.';
+var campaign_str_typename = 'Please type a valid Default From Name first.';
+var campaign_str_typeemail = 'Please type a valid Default From Email first.';
+var campaign_str_displayvalue = 'Will use %s or \"%s\"';
+
+
+var $J = jQuery.noConflict();
+var $I = function(x) {
+return $J("#" + x).get(0);
+};
+
+</script>
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500|Poppins:700" rel="stylesheet">
+<script type="text/javascript" src="jsc/ac.js?v=913-new-social-iconse3e2e9903cc5054c"></script>
+<script language="JavaScript" type="text/javascript" src="js/functions.js?v=913-new-social-iconse3e2e9903cc5054c"></script>
+<link href="css/camp-colors.css?v=913-new-social-iconse3e2e9903cc5054c" rel="stylesheet" type="text/css">
+<link href="css/skin.css?v=913-new-social-iconse3e2e9903cc5054c" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/style.css?v=913-new-social-iconse3e2e9903cc5054c">
+<link rel="stylesheet" href="css/animations.css?v=913-new-social-iconse3e2e9903cc5054c">
+<link href="css/header.css?v=913-new-social-iconse3e2e9903cc5054c" rel="stylesheet" type="text/css">
+<link href="css/footer.css?v=913-new-social-iconse3e2e9903cc5054c" rel="stylesheet" type="text/css">
+<link href="css/skin2.css?v=913-new-social-iconse3e2e9903cc5054c" rel="stylesheet" type="text/css">
+<link href="css/content.css?v=913-new-social-iconse3e2e9903cc5054c" rel="stylesheet" type="text/css">
+<link href="../ac_global/fontello/css/ac-icons.css?v=913-new-social-iconse3e2e9903cc5054c" rel="stylesheet" type="text/css">
+<link href="css/style.css?v=913-new-social-iconse3e2e9903cc5054c" rel="stylesheet" type="text/css" />
+<link href="css/default.css?v=913-new-social-iconse3e2e9903cc5054c" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="mainjs.php?v=0?v=913-new-social-iconse3e2e9903cc5054c"></script>
+<script src="https://unpkg.com/css-vars-ponyfill@2/dist/css-vars-ponyfill.min.js"></script>
+<script type="text/javascript">cssVars();</script>
+<script>
+<!--
+
+var datetimeformat = "%m/%d/%Y %H:%M";
+var dateformat = "%m/%d/%Y";
+var timeformat = "%H:%M";
+
+var ac_action = null;
+var plink = "https://ac.covid19-mobilisation.org";
+var ac_branded = 1;
+
+var currentuser_name = "";
+var currentuser_email = "";
+var chat_tags = { 0 : "\'chat_reseller_owned\'", 1 : "\'acv_0\'", 2 : "\'tier_trial\'" };
+var is_trial = true;
+
+var apipath = "https://ac.covid19-mobilisation.org/admin/api.php";
+
+-->
+</script>
+<style>
+	
+</style>
+
+
+</head>
+
+<body id="" bgcolor="" style="direction: ltr" class="login">
+<div class="ac_flex-row max-height no-wrap" align="center">
+		<div class="ac_flex-col ac_flex12 first login-pane">
+			<div id="ac_loading_bar" style="display:none;"><span id="ac_loading_text">Loading...</span></div>
+		<div id="ac_result_bar" style="display:none;"><span id="ac_result_text">Changes Saved.</span></div>
+		<div id="ac_error_bar" style="display:none;"><span id="ac_error_text">Error Occurred!</span></div>
+
+					<div class="ac_login_box_container" id="login_container">
+				<div class="ac_login_box_border">
+					<div class="ac_login_box">
+																					<a href="http://www.activecampaign.com/" target="_blank" class="text-center">
+														<img src="
+																											https://d226aj4ao1t61q.cloudfront.net/ybbsswx8e_ac_logo-white-trans.png
+																	" width="80%" border="0" alt="email marketing" class="ac_login-logo"
+							/>
+															</a>
+																			
+
+<script>
+
+function fade_login(){
+	$J('#login_container').fadeTo(1000, 0.55);
+	$J('#login_container').fadeTo(5000, 0.25);
+	$J('#login_container').fadeTo(1000, 1.00);
+}
+function lookup_link_fix(e) {
+	var url = $J(this).attr('href');
+	var usr = $J('#user').val();
+	if ( ac_str_email(usr) ) {
+		$J(this).attr('href', url + '&email=' + usr);
+	}
+}
+$J(document).ready(function(){
+	$J("a.forgotpass").click(lookup_link_fix);
+	// if there is a hash, append it to links
+	if ( window.location.hash ) {
+		$J("form[name=log_user]").attr('action', $J("form[name=log_user]").attr('action') + window.location.hash);
+	}
+});
+
+</script>
+<form action="login.php" method="post" name="log_user" id="log_user" style="margin:0px;" onsubmit="fade_login();">
+	<div class="input_wrap">
+		<input class="ac_input" name="user" type="text" id="user" value="" tabindex="1" placeholder="Email Address" autofocus="true" />
+	</div>
+	<div class="input_wrap">
+		<input class="ac_input" name="pass" type="password" id="pass" tabindex="2" autocomplete="off" placeholder="Password" />
+		<a href="index.php?action=account_lookup" class="forgotpass">Forgot?</a>
+	</div>
+	<input name="idt" type="hidden" id="idt" value="" />
+	<div class="ac_login-lower cf">
+		<div class="remember">
+			<input name="rmu" type="checkbox" id="rmu" value="1" tabindex="3"  /><label for="rmu" class="checkbox">Remember me</label>
+		</div>
+		<input type="submit" class="ac_button button_large alt1 fright nomargin" value="Login" tabindex="4"  />
+
+	</div>
+</form>					</div>
+				</div>
+				<!-- <div class="ac_copyright_text" style="margin-top:30px;">
+				</div> -->
+			</div><!--//ac_login_box_container -->
+	</div><!-- //left pane -->
+	</div>
+
+
+</body>
+</html>

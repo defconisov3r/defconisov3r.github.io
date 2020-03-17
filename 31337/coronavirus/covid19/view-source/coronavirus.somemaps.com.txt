@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Coronavirus Map: Tracking the cases by countries.</title> 
+		<meta name="description" content="World map showing countries with COVID-19 cases - confirmed,recovered,deaths." />
+		<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta http-equiv="x-ua-compatible" content="IE=edge" />
+		<style>
+			@-ms-viewport { width:device-width; }
+			@media only screen and (min-device-width:800px) { html {  } }
+			html { height:100%; }
+			body { height:100%; margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#FFFFFF; background-color:#000000; }
+			a:link { display:inline-block;padding:2px;margin:2px;color:#ffff99;background-color:#555500; font-size:15px;font-weight: bold;text-decoration: none; }
+			a:visited { display:inline-block;padding:2px;margin:2px;color:#ffff99; background-color:#555500;font-size:15px;font-weight: bold;text-decoration: none; }
+			a:hover { display:inline-block;padding:2px;margin:2px;color:#ffff99;background-color:#555500; font-size:15px;font-weight: bold;text-decoration: underline; }
+			a:active { display:inline-block;padding:2px;margin:2px;color:#ffff99;background-color:#555500; font-size:15px;font-weight: bold;text-decoration: underline; }
+			@media (max-width: 991px){
+			a.mpad:link {
+			padding: 10px;margin:20px;background-color:#555500; display:inline-block;
+			}}
+		</style>
+	</head>
+	<body><center>
+		<div style="margin:10px;display:inline-block;position:relative;background-color:#222222">
+			<a href="https://experience.arcgis.com/experience/685d0ace521648f8a5beeeee1b9125cd" target="_blank" title="Novel Coronavirus (COVID-19) Situation Summar"><img src="images/novel-coronavirus-covid-19-situation.jpg"></a>
+		</div>
+		
+		<div style="margin:10px;display:inline-block;position:relative;background-color:#222222">
+			<a href="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6" target="_blank" title="Coronavirus COVID-19 Global Cases by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University (JHU)"><img src="images/global-cases-johns-hopkins-university.jpg"></a>
+		</div>
+		
+		<div style="margin:10px;display:inline-block;position:relative;background-color:#222222">
+			<a href="http://nssac.bii.virginia.edu/covid-19/dashboard/" target="_blank" title="Coronavirus COVID-19 chronology map - live "><img src="images/nssac-bii-virginia-edu.jpg"></a>
+		</div>
+		
+		<div style="margin:10px;display:inline-block;position:relative;background-color:#222222">
+			<a href="https://storymaps.arcgis.com/stories/4fdc0d03d3a34aa485de1fb0d2650ee0" target="_blank" title="Coronavirus disease (COVID-19) outbreak - live online map"><img src="images/mapping-the-novel-coronavirus-outbreak.jpg"></a>
+		</div>
+		
+		<div style="margin:10px;display:inline-block;position:relative;background-color:#222222">
+			<a href="https://www.healthmap.org/covid-19/" target="_blank" title="healthmap Novel Coronavirus (COVID-19) - confirmed cases"><img src="images/healthmap.jpg"></a>
+		</div>
+		
+		<div style="margin:10px;display:inline-block;position:relative;background-color:#222222">
+			<a href="https://hgis.uw.edu/virus/" target="_blank" title="Coronavirus (COVID-19) world spread trend - live map"><img src="images/hgis-uw-edu.jpg"></a>
+		</div>
+		
+		<div style="margin:10px;display:inline-block;position:relative;background-color:#222222">
+			<a href="https://www.kff.org/global-health-policy/fact-sheet/coronavirus-tracker/" target="_blank" title="Live coronavirus (COVID-19) tracker"><img src="images/kff-org.jpg"></a>
+		</div><br><br>
+		
+		<h2>Virus spreading simulations under different behavior scenarios:</h2>
+		
+		<div style="padding:5px;margin:15px;display:inline-block;position:relative;background-color:#222222">
+			<video width="720" height="405" controls >
+				<source src="../videos/01.mp4" type="video/mp4">
+				<source src="" type="video/ogg">
+				<source src="" type="video/webm">
+				Your browser does not support the video tag or the file format of this video. <a href="http://www.webestools.com/">http://www.webestools.com/</a>
+			</video><br>
+			No movement restrictions
+		</div>
+		<div style="padding:5px;margin:15px;display:inline-block;position:relative;background-color:#222222">
+			<video width="720" height="405" controls >
+				<source src="../videos/02.mp4" type="video/mp4">
+				<source src="" type="video/ogg">
+				<source src="" type="video/webm">
+				Your browser does not support the video tag or the file format of this video. <a href="http://www.webestools.com/">http://www.webestools.com/</a>
+			</video><br>
+			Mandatory quarantine like in China, which actually has gaps
+		</div>
+		<div style="padding:5px;margin:15px;display:inline-block;position:relative;background-color:#222222">
+			<video width="720" height="405" controls >
+				<source src="../videos/03.mp4" type="video/mp4">
+				<source src="" type="video/ogg">
+				<source src="" type="video/webm">
+				Your browser does not support the video tag or the file format of this video. <a href="http://www.webestools.com/">http://www.webestools.com/</a>
+			</video><br>
+			Voluntary self-isolation, every fourth is in motion
+		</div>
+		<div style="padding:5px;margin:15px;display:inline-block;position:relative;background-color:#222222">
+			<video width="720" height="405" controls >
+				<source src="../videos/04.mp4" type="video/mp4">
+				<source src="" type="video/ogg">
+				<source src="" type="video/webm">
+				Your browser does not support the video tag or the file format of this video. <a href="http://www.webestools.com/">http://www.webestools.com/</a>
+			</video><br>
+			Voluntary self-isolation, every eighth is in motion
+		</div><br>
+		source: <a href="https://www.washingtonpost.com/graphics/2020/world/corona-simulator/" target="_blank">https://www.washingtonpost.com/graphics/2020/world/corona-simulator/</a>
+	</center>
+	<br><br><br><br><br><br>
+<center><a href="../de/">Deutsch</a> <a href="../bg/">Български</a> <a href="../rs/">Srpski</a> <a href="../">English</a></center>	<!-- Default Statcounter code for Сomemaps.com Coronavirus
+	http://coronavirus.somemaps.com -->
+	<script type="text/javascript">
+		var sc_project=12218944; 
+		var sc_invisible=1; 
+		var sc_security="3a8bf8ca"; 
+	</script>
+	<script type="text/javascript"
+	src="https://www.statcounter.com/counter/counter.js"
+	async></script>
+	<noscript><div class="statcounter"><a title="Web Analytics
+		Made Easy - StatCounter" href="https://statcounter.com/"
+		target="_blank"><img class="statcounter"
+			src="https://c.statcounter.com/12218944/0/3a8bf8ca/1/"
+			alt="Web Analytics Made Easy -
+		StatCounter"></a></div></noscript>
+		<!-- End of Statcounter Code -->
+	</body>
+</html>
+
+
+

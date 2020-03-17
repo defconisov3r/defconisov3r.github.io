@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html lang="es" dir="ltr" class="es dir-ltr  no-js " >
+            
+
+
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="LimeSurvey http://www.limesurvey.org" />
+
+        
+
+    <link rel="stylesheet" type="text/css" href="/encuestas3/tmp/assets/1ae51f1f/noto.css" />
+<link rel="stylesheet" type="text/css" href="/encuestas3/tmp/assets/f055d4d1/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/encuestas3/tmp/assets/75377be8/survey.css" />
+<link rel="stylesheet" type="text/css" href="/encuestas3/tmp/assets/ca42f3e4/template-core.css" />
+<link rel="stylesheet" type="text/css" href="/encuestas3/tmp/assets/ca42f3e4/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" />
+<link rel="stylesheet" type="text/css" href="/encuestas3/tmp/assets/d204fa2a/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/encuestas3/tmp/assets/d204fa2a/yiistrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/encuestas3/tmp/assets/e3b562dd/css/ajaxify.css" />
+<link rel="stylesheet" type="text/css" href="/encuestas3/tmp/assets/e3b562dd/css/theme.css" />
+<link rel="stylesheet" type="text/css" href="/encuestas3/tmp/assets/e3b562dd/css/custom.css" />
+<link rel="stylesheet" type="text/css" href="/encuestas3/tmp/assets/8378fa20/lime-progress.css" />
+<script type='text/javascript'>window.debugState = {frontend : (0 === 1), backend : (0 === 1)};</script><script type="text/javascript" src="/encuestas3/tmp/assets/f32dc7e5/jquery-3.1.1.min.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/encuestas3/tmp/assets/f32dc7e5/jquery-migrate-3.0.0.min.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/encuestas3/tmp/assets/c83256ef/build/lslog.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/encuestas3/tmp/assets/c13faf4e/pjax.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/encuestas3/tmp/assets/791994e9/moment-with-locales.min.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/encuestas3/tmp/assets/75377be8/survey.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/encuestas3/tmp/assets/ca42f3e4/template-core.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/encuestas3/tmp/assets/d204fa2a/bootstrap.min.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/encuestas3/tmp/assets/d204fa2a/plugins/bootstrapconfirm/bootstrapconfirm.min.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/encuestas3/tmp/assets/e3b562dd/scripts/theme.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/encuestas3/tmp/assets/e3b562dd/scripts/ajaxify.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/encuestas3/tmp/assets/e3b562dd/scripts/custom.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/encuestas3/tmp/assets/cb5e0749/survey_runtime.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/encuestas3/tmp/assets/cb5e0749/nojs.js" class="headScriptTag"></script>
+<script type="text/javascript" src="/encuestas3/tmp/assets/b98326ff/em_javascript.js" class="headScriptTag"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+LSvar={"bFixNumAuto":1,"bNumRealValue":0,"sLEMradix":".","lang":{"confirm":{"confirm_cancel":"Cancelar","confirm_ok":"OK"}},"showpopup":1,"startPopups":{},"debugMode":0};
+LSvar= LSvar || {};
+/*]]>*/
+</script>
+<title>
+        Estado de Alarma
+    </title>
+
+    <link rel="shortcut icon" href="/encuestas3/tmp/assets/ecfc48d5/favicon.ico" />
+    <script type="text/javascript">
+        if(window.basicThemeScripts === undefined){ 
+            window.basicThemeScripts = new ThemeScripts(); 
+        } 
+    </script>
+                <script type="text/javascript">
+            var ajaxHandler = new AjaxSubmitObject();
+            $(document).on('ready', function () {
+                ajaxHandler.bindActions();
+            });
+        </script>
+            
+        
+    <style>
+        body .top-container {
+            margin-top: 70px;
+        }
+    </style>
+
+
+    
+</head>
+
+        <body style="padding-top: 90px;" class=" vanilla font-noto lang-es  brand-logo"  >
+                                            <script>
+    $.ajaxSetup({
+        beforeSend:function(){
+            // show gif here, eg:
+            $("#ajax-loading").show();
+        },
+        complete:function(){
+            // hide gif here, eg:
+            $("#ajax-loading").hide();
+        }
+    });
+</script>
+<div id="ajax-loading" hidden></div>
+                        
+        
+                            <div id="beginScripts" class="script-container">
+                <script type="text/javascript" src="/encuestas3/tmp/assets/50d88a94/decimal.js"></script>
+<script type="text/javascript" src="/encuestas3/tmp/assets/40a3560a/decimalcustom.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+setJsVar();
+var LEMmode='group';
+var LEMgseq='';
+ExprMgr_process_relevance_and_tailoring = function(evt_type,sgqa,type){
+if (typeof LEM_initialized == 'undefined') {
+LEM_initialized=true;
+LEMsetTabIndexes();
+}
+if (evt_type == 'onchange' && (typeof last_sgqa !== 'undefined' && sgqa==last_sgqa) && (typeof last_evt_type !== 'undefined' && last_evt_type == 'TAB' && type != 'checkbox')) {
+  last_evt_type='onchange';
+  last_sgqa=sgqa;
+  return;
+}
+last_evt_type = evt_type;
+last_sgqa=sgqa;
+
+}
+
+/*]]>*/
+</script>
+
+            </div>
+               
+
+                <article>
+
+            <div id="dynamicReloadContainer">
+            
+                                                    
+<!-- Bootstrap Navigation Bar -->
+<div class=" navbar navbar-default navbar-fixed-top" >
+    <div class=" navbar-header   "  >
+        <button type="button" class=" navbar-toggle collapsed "  data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"   >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+                            <div class=" navbar-brand  logo-container hidden-xs"    >
+                <img class="logo img-responsive" src="/encuestas3/tmp/assets/ecfc48d5/logo.png" alt="Estado de Alarma" />
+            </div>
+            </div>
+    <div id="navbar" class=" collapse navbar-collapse "  >
+        <ul class=" nav navbar-nav  navbar-action-link  navbar-right" >
+            
+
+            
+
+            
+
+
+            
+
+
+
+
+        </ul>
+    </div>
+</div>
+
+                
+                                                    
+    <!-- Top container -->
+    <div class=" top-container  space-col"    >
+        <div class="  container-fluid"  >
+                            
+                                <div class=" progress "  >
+                    <div class=" progress-bar "   role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: 0%;">
+                        0%
+                    </div>
+                </div>
+                    </div> <!-- must hide it without javascript -->
+    </div>
+
+                
+                <!-- Outer Frame Container -->
+                                                                            <!-- outer frame container -->
+<div class=" outerframe    container  " id="outerframeContainer"  >
+        
+<!-- Main Row -->
+<div id="main-row"  >
+    <!-- Main Col -->
+    <div class="  col-centered  space-col" id="main-col" >
+
+                                
+
+
+
+                        
+
+                                        
+<!-- Main Row -->
+<div id="main-row" >
+
+    <!-- Main Col -->
+    <div class="  col-centered " id="main-col" >
+
+        <div class='captcha-page' >
+                                <div class="   h3" >
+            Antes de empezar demuestre que es usted un humano, por favor.
+    </div>
+<div class="   well container-fluid" >
+
+            
+    
+    
+    <div class="form-captcha  "  >
+                
+                <!-- Start of the main Form-->
+        <form id="form-captcha" name="limesurvey" class="ls-form form form-horizontal" action="/encuestas3/index.php/735242" method="post">
+<input type="hidden" value="UE5XWjJvS25IVF9wYzdGbV9FWERvSVY3UXprdThYS2JEJiPUPtyCNMEIbw5b8ctYQNLBnVlNaJqbHw7nSIDLtw==" name="YII_CSRF_TOKEN" />
+
+        
+            <div class=' captcha-item   form-group '  >
+
+                <!-- Doesn't seems aria capable -->
+                <label class='   control-label col-sm-4'  for="loadsecurity"  >
+                    Por favor resuelva la siguiente ecuación:
+                    <small class="   text-danger asterisk fa fa-asterisk pull-left small"   aria-hidden="true"  ></small>
+                    <span  class="   sr-only text-danger asterisk" >
+                        ( Obligatoria )
+                    <span>
+                </label>
+                <div class="col-sm-2">
+                    <div class=' '  >
+                                                <img id="yw0" src="/encuestas3/index.php/survey/captcha?v=5e70a4d65368b" alt="" />
+                        <a href="#" class="btn btn-sm btn-default" id="reloadCaptcha" title="Recargar captcha" data-toggle="captcha"><i class="fa fa-refresh"></i></a>
+                    </div>
+                </div>
+                <div class='   col-sm-6'  >
+                    <input class='form-control   '  type="text" size="15" maxlength="15" id="loadsecurity" name="loadsecurity" value="" alt="" required  >
+                </div>
+            </div>
+
+            <div class=' load-survey-row load-survey-submit  form-group ' >
+                <div class=' load-survey-input input-cell  col-sm-7 col-md-offset-3 '  >
+                    <button class='   btn btn-default'  type="submit" id="default" name="continue"  value="continue" >
+                        Continuar
+                    </button>
+                </div>
+            </div>
+                </form>
+    </div>
+</div>
+        </div>
+
+        <form method="get">
+    
+
+</form>
+
+
+    </div> <!-- main col -->
+</div> <!-- main row -->
+
+            
+
+    </div> <!-- main col -->
+</div> <!-- main row -->
+</div>
+                
+                                
+
+
+
+<!-- Bootstrap Modal Alert -->
+<div id="bootstrap-alert-box-modal" class=" modal fade " >
+    <div class=" modal-dialog " >
+        <div class=" modal-content "  >
+            <div class=" modal-header "  style="min-height:40px;"  >
+                <button   type="button" data-dismiss="modal" aria-hidden="true"  class=" close "  >&times;</button>
+                <div class=" modal-title h4 " >&nbsp;</div>
+            </div>
+            <div class=" modal-body " >
+                <p></p>
+            </div>
+            <div class=" modal-footer " >
+                <a  href="#" data-dismiss="modal"   class=" btn btn-default ">Cerrar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                                
+
+                        </div>
+
+        </article>
+                    
+                            <div id="bottomScripts" class="script-container">
+                <script type="text/javascript">
+/*<![CDATA[*/
+
+                if(window.basicThemeScripts === undefined){ 
+                    window.basicThemeScripts = new ThemeScripts(); 
+                } 
+                basicThemeScripts.initGlobal(); 
+                
+
+            try{ 
+                triggerEmClassChange(); 
+            } catch(e) {
+                console.ls.warn('triggerEmClassChange could not be run. Is survey.js correctly loaded?');
+            }
+
+triggerEmRelevance();
+jQuery(document).off('pjax:scriptcomplete.mainBottom').on('ready pjax:scriptcomplete.mainBottom', function() {
+activateActionLink();
+activateConfirmButton();
+basicThemeScripts.initTopMenuLanguageChanger('.ls-language-link ', 'form#limesurvey'); 
+updateMandatoryErrorClass();
+});
+/*]]>*/
+</script>
+
+            </div>
+           
+
+                    <script>
+                window.basicThemeScripts.init();
+            </script>
+                
+    </body>
+</html>
