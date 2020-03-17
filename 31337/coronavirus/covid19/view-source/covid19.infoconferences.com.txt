@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>World Congress on Cancer Science and Therapy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0 user-scalable=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+
+
+ <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://www.covid19.infoconferences.com/dists/css/docs.theme.min.css">
+<link rel="stylesheet" href="https://www.covid19.infoconferences.com/dists/css/owl.carousel.min.css">
+<link rel="stylesheet" href="https://www.covid19.infoconferences.com/dists/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://www.covid19.infoconferences.com/dists/css/style.css">
+<script src="https://www.covid19.infoconferences.com/dists/js/jquery.min.js"></script>
+<script src="https://www.covid19.infoconferences.com/dists/js/owl.carousel.js"></script>
+<script src="https://www.innovationinfo.org/dists/js/animate.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://www.innovationinfo.org/dists/css/animate.css" rel="stylesheet">
+ 
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
+  <script type="text/javascript">
+ 
+    $(document).ready( function() {
+    $('#rotate').delay(500).fadeIn();
+   });
+  </script>
+
+  <script>
+// Set the date we're counting down to
+var countDownDate = new Date("September 23, 2020").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+
+  <script type="text/javascript">
+
+jQuery(document).ready(function () {
+    jQuery('#rotate').rotaterators({fadeSpeed: 1200, pauseSpeed:100, pauseSpeed:100});
+});
+
+
+   (function ($) {
+        $.fn.extend({
+            rotaterators: function (optionsq) {
+
+              var options = $.extend(optionsq);
+
+
+
+                return this.each(function () {
+                    var o = options;
+
+
+                    var obj = $(this);
+
+                    var items = $(obj.children(), obj);
+                    
+
+                    items.each(function () {
+                        $(this).hide();
+                    })
+
+                    if (!o.child) {
+                      
+                        var next = $(obj).children(':first');
+                        
+                    } else {
+                        var next = o.child;
+                        
+                    }
+                    $(next).fadeIn(1200, function () {
+                        $(next).delay(100).fadeOut(2500, function () {
+                            var next = $(this).next();
+                            if (next.length == 0) {
+                                next = $(obj).children(':first');
+                            }
+                            $(obj).rotaterators({child: next, fadeSpeed: 2500, pauseSpeed: 500});
+                        })
+                    });
+                });
+            }
+        });
+    })(jQuery);
+ </script>
+ 
+ <style>
+ 	.marq { 
+		padding-top:30px; 
+		padding-bottom:30px; 
+	} 
+	.geek1 { 
+		font-size:15px; 
+		font-weight:bold; 
+		color:#b83130; 
+		text-align:center; 
+	} 
+	.geek2 { 
+		text-align:center; 
+	}
+      .geek1
+      {
+        display:inline;
+        margin-right:10px;
+      }
+ </style>
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<div class="container-fluid" style="background: #f1f2f3;display: flex;
+    align-items: center;overflow: hidden;height: 57px;">
+    
+     <div class="col-md-2 hdrtop">
+         <p style="float:right;font-weight:700;margin:0px">latest News: </p>
+         </div>
+
+  <div class="col-md-8 hdrtop">
+   
+<marquee class="marq" direction = "left" loop="" onmouseover="stop();" onmouseout="start();"> 
+		<div class="geek1">Canada among top world performers in testing for COVID-19, despite shortcomings</div>
+      <div class="geek1">COVID-19: developers of medicines or vaccines to benefit from free scientific advice </div> 
+	
+	</marquee> 
+  </div>
+<div class="col-md-2" >
+  <p id="demo" style="float: right;margin:0px"></p>
+
+</div>
+
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-top" style="margin-top:56px;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="https://www.covid19.infoconferences.com/">
+<img src="https://www.grapheneconferences.org/images/Innovationinfo-conferences-Logo.png" style="height:70px;width: 160px">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+        
+                
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://www.covid19.infoconferences.com/">Home</a></li>
+        <li ><a href="https://www.covid19.infoconferences.com/abstract">Abstract</a></li>
+        <li ><a href="https://www.covid19.infoconferences.com/brochure-download">Brochure</a></li>
+        <li ><a href="https://www.covid19.infoconferences.com/registration">Registration</a></li>
+        <li ><a href="https://www.covid19.infoconferences.com/executive-committee">Executive Committee</a></li>
+        <li class="dropdown" style="display:none">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Guideleines
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Merchandise</a></li>
+            <li><a href="#">Extras</a></li>
+            <li><a href="#">Media</a></li> 
+          </ul>
+        </li>
+        <li ><a href="https://www.covid19.infoconferences.com/scientific-program">Program</a></li>
+        <!--<li ><a href="https://www.covid19.infoconferences.com/venue">Venue</a></li>-->
+        <li ><a href="https://www.covid19.infoconferences.com/faq">Faq</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav><style>
+    .txtwtclr
+    {
+        color:white;
+    }
+    
+    h2.txtwtclr
+    {
+        margin:10px;
+    }
+    
+    .indven1 {
+    position: relative;
+    background-size: cover;
+    background-position: 50%;
+    width: 100%;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+    padding: 155px;
+    text-align: center;
+}
+
+.indven1 {
+
+}
+
+.indven1:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.indven1 h2 {
+    color: #ffffff;
+    z-index: 1;
+    position: relative;
+    font-size: 35px;
+    margin: 0px;
+}
+
+.bs li
+{
+    display:inline;
+    margin-right:10px;
+}
+
+.btnbnr
+{
+    background-color:#b83130;
+    font-size:20px;
+}
+</style>
+
+  <section id="demos" class="demos" style="margin-top:89px;"> 
+
+          <div class="fadeOut owl-carousel owl-theme">
+              
+              
+                <div class="item">
+              <div style="position: relative;">
+              <img src="https://www.covid19.infoconferences.com/bannerimages/Corona-Virus.jpg">
+
+<div class="caption" style="text-align: center;color:white;padding:70px">
+    
+    <h2 class="txtwtclr animated fadeInDown">World Video Conference On Covid-19</h2>
+    <h2 class="txtwtclr animated fadeInDown">(coronavirus)</h2>
+    <h3 class="txtwtclr animated fadeInDown">April 20, 2020</h3>
+    
+    <ul class="bs">
+        <li><a href="" class="btn btnbnr" style="position:relative">Book Slot</a></li>
+        <li><a href="" class="btn btnbnr" style="position:relative">Abstract</a></li>
+    </ul>
+
+
+</div>
+</div>
+</div>
+             <div class="item">
+              <div style="position: relative;">
+              <img src="https://www.covid19.infoconferences.com/bannerimages/Corona-Virus---02.jpg">
+
+<div class="caption" style="text-align: center;color:white;padding:70px">
+    
+    <h2 class="txtwtclr animated fadeInDown">World Video Conference On Covid-19</h2>
+    <h2 class="txtwtclr animated fadeInDown">(coronavirus)</h2>
+    <h3 class="txtwtclr animated fadeInDown">April 20, 2020</h3>
+    
+    <ul class="bs">
+        <li><a href="" class="btn btnbnr" style="position:relative">Book Slot</a></li>
+        <li><a href="" class="btn btnbnr" style="position:relative">Abstract</a></li>
+    </ul>
+
+
+</div>
+</div>
+</div>
+               
+              
+              
+
+
+
+
+
+           
+          </div>
+          
+          <link rel="stylesheet" href="https://www.covid19.infoconferences.com/dists/css/animate.css">
+          <script>
+            jQuery(document).ready(function($) {
+              $('.fadeOut').owlCarousel({
+                autoplayHoverPause:false,
+                items: 1,
+                animateOut: 'fadeOut',
+                loop: true,
+                margin: 10,
+                autoplay:true,
+                nav:true,
+                dots: false,
+                autoplayTimeout:5000
+    
+              });
+
+
+    $('.fadeOut').on('changed.owl.carousel', function(event){
+        var item=event.item.index-2;
+        $('h2').removeClass('animated fadeInDown');
+        $('.owl-item').not('.cloned').eq(item).find('h2').addClass('animated fadeInDown');
+        $('h3').removeClass('animated fadeInDown');
+        $('.owl-item').not('.cloned').eq(item).find('h3').addClass('animated fadeInDown');
+    });
+            });
+          </script>
+     
+    </section>
+
+<link href="https://fonts.googleapis.com/css?family=Cookie&display=swap" rel="stylesheet">
+<!-- Container (The Band Section) -->
+<div id="band" class="container text-center animated fadeInUp" style="margin-top:10px;padding:50px 0px 50px 0px">
+    
+    <div class="col-md-6">
+        
+        <div class="indven1" style="background-image:url(https://images.theconversation.com/files/309691/original/file-20200113-103974-l2362i.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop)">
+
+<!--<i class="fa fa-youtube-play" aria-hidden="true"></i>-->
+<img src="https://www.covid19.infoconferences.com/images/youtube.png" style="position:relative"> 
+</div>
+        
+        
+    </div>
+    
+    <div class="col-md-6">
+          <h3 style="font-family: 'Cookie', cursive;font-size: 40px;margin: 0px 0px 10px 0px;">About Conference</h3>
+  
+  <p><p>Innovation Info Conferences takes the honor to invite the &ldquo;International Conference on Cancer Summit 2020 &rdquo; scheduled during at September 23-24, 2020 | Rome, Italy. We invite oncologists from all over the world to join us. The principal objective of this session series is to provide an international forum for cutting edge research in cancer science and therapy. Treating cancer is one of the most complex aspects of medical care. It involves a team that encompasses many types of doctors working together.&nbsp;The principal objective of this session series is to provide an international forum for cutting edge research in cancer science and therapy. Treating cancer is one of the most complex aspects of medical care. It involves a team that encompasses many types of doctors working together</p>
+ </p>
+        
+    </div>
+
+  
+</div>
+
+<div class="container-fluid" style="margin-bottom: 50px;background-color: #f5f5f5 !important;">
+  
+
+  <div class="row container">
+    <div class="col-md-6" data-aos="fade-down">
+      <h3 style="font-family: 'Cookie', cursive;font-size: 40px;margin: 0px 0px 10px 0px;text-align: center;">Abstract</h3>
+      <p>Cancer Summit 2020 is based on the theme “I AM AND I WILL”. This conference is going to cover the most recent techniques, innovative methods and new research systems, developments, and the newest updates in cancer summit the goal are to offer to every cancer patient a 
+      therapeutic regimen that is tailored to his individual disease and situation in an optimal way.</p>
+
+      <a href="https://www.covid19.infoconferences.com/abstract" class="btn btn1" style="position:relative">Submit</a>
+    </div>
+    <div class="col-md-6" data-aos="fade-up">
+      <h3 style="font-family: 'Cookie', cursive;font-size: 40px;margin: 0px 0px 10px 0px;text-align: center;">Register</h3>
+      <p>Cancer Summit 2020, the importance of cancer registries lies in the fact that they collect accurate and complete cancer data that can be used for cancer control and epidemiological research, public health program planning, and patient care improvement. Ultimately, 
+      all of these activities reduce the burden of cancer.</p>
+
+      <a href="https://www.covid19.infoconferences.com/registration" class="btn btn1" style="position:relative">Register</a>
+    </div>
+  </div>
+
+<p></p>
+
+</div>
+
+<div class="container-fluid" style="margin-bottom: 50px;background-color: #f5f5f5 !important;display: none">
+
+<div class="row">
+  <div class="col-md-3">
+    <div class="hex">
+<div class="hexagon">
+  <div class="icon">
+<i class="fa fa-calendar" aria-hidden="true"></i>
+  </div>
+</div>
+</div>
+</div>
+
+  <div class="col-md-3">
+<div class="hexagon">
+    <div class="icon">
+<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+  </div>
+  
+</div>
+</div>
+
+  <div class="col-md-3">
+<div class="hexagon">
+  <div class="icon">
+<i class="fa fa-calendar" aria-hidden="true"></i>
+  </div>
+</div>
+</div>
+
+  <div class="col-md-3">
+<div class="hexagon">
+    <div class="icon">
+<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+  </div>
+  
+</div>
+</div>
+</div>
+</div>
+
+<div class="container-fluid" style="margin-bottom: 50px;">
+<section>
+<h3 style="font-family: 'Cookie', cursive;font-size: 40px;margin: 0px 0px 10px 0px;text-align: center;">Scientific Sessions</h3>
+
+  <!-- widget area for above single content -->
+  <div class="wp-block-cover-image has-background-dim" style="background-image:url(https://www.redbus.co.nz/assets/uploads/conference-events/_hi/conference-header.jpg)">
+    <div class="row">
+        
+        
+    <div class="col-md-12" data-aos="fade-up">
+  
+
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Cancer Genetics & Genomics</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Cancer Immunotherapy & Vaccines</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Cancer Metabolism</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Cell Signaling & Regulation</p>
+        </div>
+        
+            </div><div class="col-md-12" data-aos="fade-up" style="margin-top:20px;">       <div class="col-md-3 parallaximgcnt">
+          <p>Cell-Based Therapy</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Computational Oncology</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Metastasis & Drug Resistance</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Molecular Pathology & Diagnostics</p>
+        </div>
+        
+            </div><div class="col-md-12" data-aos="fade-up" style="margin-top:20px;">       <div class="col-md-3 parallaximgcnt">
+          <p>Neuroscience & Neuro-Oncology</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Solid Tumor Oncogenesis</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Stem Cells</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Targeted Therapy</p>
+        </div>
+        
+            </div><div class="col-md-12" data-aos="fade-up" style="margin-top:20px;">       <div class="col-md-3 parallaximgcnt">
+          <p>Tumor Microenvironment</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Hematologic Malignancies</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Advances in Alternative Lung Cancer Treatment</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Anti-Cancer Drugs</p>
+        </div>
+        
+            </div><div class="col-md-12" data-aos="fade-up" style="margin-top:20px;">       <div class="col-md-3 parallaximgcnt">
+          <p>Bone Cancer Stages</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Bone Marrow Cancer Survival</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Brain Tumor Treatment</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Cancer Science</p>
+        </div>
+        
+            </div><div class="col-md-12" data-aos="fade-up" style="margin-top:20px;">       <div class="col-md-3 parallaximgcnt">
+          <p>Cancer Therapies</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Esophageal Cancer</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Kidney Cancer Prognosis</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Lung Tumor</p>
+        </div>
+        
+            </div><div class="col-md-12" data-aos="fade-up" style="margin-top:20px;">       <div class="col-md-3 parallaximgcnt">
+          <p>Lungs Cancer Cure</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Lymph Node Cancer</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Oseophagus Cancer</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Ovarian Cancer and Prognosis</p>
+        </div>
+        
+            </div><div class="col-md-12" data-aos="fade-up" style="margin-top:20px;">       <div class="col-md-3 parallaximgcnt">
+          <p>Pancreatic Cancer</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Sarcoma Cancer</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Breast Cancer</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Cancer Diagnosis</p>
+        </div>
+        
+            </div><div class="col-md-12" data-aos="fade-up" style="margin-top:20px;">       <div class="col-md-3 parallaximgcnt">
+          <p>Cancer Surgery</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Carcinogenesis & Mutagenesis</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Cervical Cancer</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Chemotherapy</p>
+        </div>
+        
+            </div><div class="col-md-12" data-aos="fade-up" style="margin-top:20px;">       <div class="col-md-3 parallaximgcnt">
+          <p>Colorectal Cancer</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Gastrointestinal Cancer</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Integrative Oncology</p>
+        </div>
+        
+                   <div class="col-md-3 parallaximgcnt">
+          <p>Leukemia</p>
+        </div>
+        
+            </div><div class="col-md-12" data-aos="fade-up" style="margin-top:20px;"> 
+   </div>     
+
+
+
+
+    </div>
+  </div>
+
+
+
+</section>
+</div>
+
+
+<div id="band" class="container text-center" style="margin-top:10px;padding: 0px">
+  <h3 style="font-family: 'Cookie', cursive;font-size: 40px;margin: 0px 0px 10px 0px;">Conference Schedule</h3>
+
+    <ul class="nav nav-tabs cs">
+    <li class="active"><a data-toggle="tab" href="#home">Day 1 <br>Wednesday - September 23, 2020</a></li>
+    <li><a data-toggle="tab" href="#menu1">Day 2 <br>Thursday - September 24, 2020</a></li>
+
+  </ul>
+
+  <div class="tab-content" style="margin-top: 25px">
+    <div id="home" class="tab-pane fade in active">
+    
+    <div class="row">
+        <div class="conschcon">
+          <div class="col-md-12">
+          <div class="col-md-2">
+          <p>08:00 - 09:00</p>
+          </div>
+          <div class="col-md-8">
+          <p>Registration at Desk</p>
+          </div>
+        </div>
+        </div>
+
+        <div class="conschcon">
+          <div class="col-md-12">
+          <div class="col-md-2">
+          <p>09:00 - 09:30</p>
+          </div>
+          <div class="col-md-8">
+          <p>Opening Ceremony</p>
+          </div>
+        </div>
+        </div>
+
+        <div class="conschcon">
+          <div class="col-md-12">
+          <div class="col-md-2">
+          <p>10:00-11:00</p>
+          </div>
+          <div class="col-md-8">
+          <p>Keynote Forum</p>
+          </div>
+        </div>
+        </div>
+
+        <div class="conschcon">
+          <div class="col-md-12">
+          <div class="col-md-2">
+          <p>11:00 - 11:15</p>
+          </div>
+          <div class="col-md-8">
+          <p>Refreshments & Networking</p>
+          </div>
+        </div>
+        </div>
+
+        <div class="conschcon">
+          <div class="col-md-12">
+          <div class="col-md-2">
+          <p>11:15 - 12:15</p>
+          </div>
+          <div class="col-md-8">
+          <p>Keynote Forum</p>
+          </div>
+        </div>
+        </div>
+
+        <div class="conschcon">
+          <div class="col-md-12">
+          <div class="col-md-2">
+          <p>12:15 - 13:00</p>
+          </div>
+          <div class="col-md-8">
+          <p>Session 1 (Oral Presentation)</p>
+          </div>
+        </div>
+        </div>
+
+        <div class="conschcon">
+          <div class="col-md-12">
+          <div class="col-md-2">
+          <p>13:00 - 14:00</p>
+          </div>
+          <div class="col-md-8">
+          <p>Lunch Break</p>
+          </div>
+        </div>
+        </div>
+
+        <div class="conschcon">
+          <div class="col-md-12">
+          <div class="col-md-2">
+          <p>14:00 - 15:30</p>
+          </div>
+          <div class="col-md-8">
+          <p>Session 2 (Oral Presentation)</p>
+          </div>
+        </div>
+        </div>
+
+        <div class="conschcon">
+          <div class="col-md-12">
+          <div class="col-md-2">
+          <p>15:30 - 15:45</p>
+          </div>
+          <div class="col-md-8">
+          <p>Refreshments & Networking</p>
+          </div>
+        </div>
+        </div>
+
+        <div class="conschcon">
+          <div class="col-md-12">
+          <div class="col-md-2">
+          <p>15:45 - 17:00</p>
+          </div>
+          <div class="col-md-8">
+          <p>Session 3 (Oral Presentation)</p>
+          </div>
+        </div>
+        </div>
+
+
+    </div>
+    
+
+
+    </div>
+    <div id="menu1" class="tab-pane fade">
+
+
+    <div class="row">
+        <div class="conschcon">
+          <div class="col-md-12">
+          <div class="col-md-2">
+          <p>08:00 - 09:00</p>
+          </div>
+          <div class="col-md-8">
+          <p>Registration at Desk</p>
+          </div>
+        </div>
+        </div>
+
+        <div class="conschcon">
+          <div class="col-md-12">
+          <div class="col-md-2">
+          <p>09:00 - 09:30</p>
+          </div>
+          <div class="col-md-8">
+          <p>Opening Ceremony</p>
+          </div>
+        </div>
+        </div>
+
+        <div class="conschcon">
+          <div class="col-md-12">
+          <div class="col-md-2">
+          <p>10:00-11:00</p>
+          </div>
+          <div class="col-md-8">
+          <p>Keynote Forum</p>
+          </div>
+        </div>
+        </div>
+
+        <div class="conschcon">
+          <div class="col-md-12">
+          <div class="col-md-2">
+          <p>11:00 - 11:15</p>
+          </div>
+          <div class="col-md-8">
+          <p>Refreshments & Networking</p>
+          </div>
+        </div>
+        </div>
+
+        <div class="conschcon">
+          <div class="col-md-12">
+          <div class="col-md-2">
+          <p>11:15 - 12:15</p>
+          </div>
+          <div class="col-md-8">
+          <p>Keynote Forum</p>
+          </div>
+        </div>
+        </div>
+
+        <div class="conschcon">
+          <div class="col-md-12">
+          <div class="col-md-2">
+          <p>12:15 - 13:00</p>
+          </div>
+          <div class="col-md-8">
+          <p>Session 1 (Oral Presentation)</p>
+          </div>
+        </div>
+        </div>
+
+        <div class="conschcon">
+          <div class="col-md-12">
+          <div class="col-md-2">
+          <p>13:00 - 14:00</p>
+          </div>
+          <div class="col-md-8">
+          <p>Lunch Break</p>
+          </div>
+        </div>
+        </div>
+
+        <div class="conschcon">
+          <div class="col-md-12">
+          <div class="col-md-2">
+          <p>14:00 - 15:30</p>
+          </div>
+          <div class="col-md-8">
+          <p>Session 2 (Oral Presentation)</p>
+          </div>
+        </div>
+        </div>
+
+        <div class="conschcon">
+          <div class="col-md-12">
+          <div class="col-md-2">
+          <p>15:30 - 15:45</p>
+          </div>
+          <div class="col-md-8">
+          <p>Refreshments & Networking</p>
+          </div>
+        </div>
+        </div>
+
+        <div class="conschcon">
+          <div class="col-md-12">
+          <div class="col-md-2">
+          <p>15:45 - 17:00</p>
+          </div>
+          <div class="col-md-8">
+          <p>Session 3 (Oral Presentation)</p>
+          </div>
+        </div>
+        </div>
+
+
+    </div>
+
+
+    </div>
+
+  </div>
+  
+</div>
+
+
+<div class="container-fluid" style="margin-top: 50px;">
+
+    <div class="indven" style="background-image:url(https://www.covid19.infoconferences.com/images/bg-image1.jpg)">
+<p>ROME, Caput Mundi during the Roman Empire, capital of Italy since 1870, home of the Catholic Church and the Italian government, 
+is placed on the banks of the Tiber, there where the river, running weakly among the seven hills, creates vast meanders which originate little plains.</p>
+<h3>September 23-24, 2020 | Rome, Italy</p>
+
+
+<a href="https://www.covid19.infoconferences.com/venue" class="btn btn1" style="position:relative">More Details</a>
+
+
+
+    </div>
+</div>
+
+
+<div class="container-fluid" style="margin-top: 50px;">
+<div class="row">
+  <div class="col-md-12 container text-center">
+
+    <h3 style="font-family: 'Cookie', cursive;font-size: 40px;margin: 0px 0px 10px 0px;">Registration</h3>
+  </div>
+
+
+
+<div class="col-md-3 wow fadeInLeft animated" data-wow-delay="0.1s" data-wow-offset="10" style="visibility: visible;-webkit-animation-delay: 0.1s; -moz-animation-delay: 0.1s; animation-delay: 0.1s;">
+<div class="rt1">
+  <div class="rt2">
+    <div class="rt2rotate">
+    <h2>Academic</h2>
+  </div>
+  <p>$ 599</p>
+</div>
+
+<div class="tr3">
+  <ul>                            
+   <li>Conference material <span><i class="fa fa-check"></i></span></li>
+   <li>Access to exhibits, poster sessions <span><i class="fa fa-check"></i></span></li>
+   <li>Free access to conference app <span><i class="fa fa-check"></i></span></li>
+   <li>Lunch, tea/coffee breaks <span><i class="fa fa-check"></i></span></li>
+   <li>WiFi in meeting rooms <span><i class="fa fa-check"></i></span></li>
+   <li>Free shuttle service <span><i class="fa fa-check"></i></span></li>
+</ul>
+</div>
+
+<div class="trbutton">
+  <a href="https://www.covid19.infoconferences.com/registration" class="btn btn-buynow">Register</a>
+  </div>
+
+</div>
+</div>
+
+
+<div class="col-md-3 wow fadeInLeft animated" data-wow-delay="0.1s" data-wow-offset="10" style="visibility: visible;-webkit-animation-delay: 0.1s; -moz-animation-delay: 0.1s; animation-delay: 0.1s;">
+<div class="rt1">
+  <div class="rt2">
+    <div class="rt2rotate">
+    <h2>Industry</h2>
+  </div>
+  <p>$ 699</p>
+</div>
+
+<div class="tr3">
+  <ul>                            
+   <li>Conference material <span><i class="fa fa-check"></i></span></li>
+   <li>Access to exhibits, poster sessions <span><i class="fa fa-check"></i></span></li>
+   <li>Free access to conference app <span><i class="fa fa-check"></i></span></li>
+   <li>Lunch, tea/coffee breaks <span><i class="fa fa-check"></i></span></li>
+   <li>WiFi in meeting rooms <span><i class="fa fa-check"></i></span></li>
+   <li>Free shuttle service <span><i class="fa fa-check"></i></span></li>
+</ul>
+</div>
+
+<div class="trbutton">
+  <a href="https://www.covid19.infoconferences.com/registration" class="btn btn-buynow">Register</a>
+  </div>
+
+</div>
+</div>
+
+
+<div class="col-md-3 wow fadeInLeft animated" data-wow-delay="0.1s" data-wow-offset="10" style="visibility: visible;-webkit-animation-delay: 0.1s; -moz-animation-delay: 0.1s; animation-delay: 0.1s;">
+<div class="rt1">
+  <div class="rt2">
+    <div class="rt2rotate">
+    <h2>Delegate</h2>
+  </div>
+  <p>$ 449</p>
+</div>
+
+<div class="tr3">
+  <ul>                            
+   <li>Conference material <span><i class="fa fa-check"></i></span></li>
+   <li>Access to exhibits, poster sessions <span><i class="fa fa-check"></i></span></li>
+   <li>Free access to conference app <span><i class="fa fa-check"></i></span></li>
+   <li>Lunch, tea/coffee breaks <span><i class="fa fa-check"></i></span></li>
+   <li>WiFi in meeting rooms <span><i class="fa fa-check"></i></span></li>
+   <li>Free shuttle service <span><i class="fa fa-check"></i></span></li>
+</ul>
+</div>
+
+<div class="trbutton">
+  <a href="https://www.covid19.infoconferences.com/registration" class="btn btn-buynow">Register</a>
+  </div>
+
+</div>
+</div>
+
+
+<div class="col-md-3 wow fadeInLeft animated" data-wow-delay="0.1s" data-wow-offset="10" style="visibility: visible;-webkit-animation-delay: 0.1s; -moz-animation-delay: 0.1s; animation-delay: 0.1s;">
+<div class="rt1">
+  <div class="rt2">
+    <div class="rt2rotate">
+    <h2>Student</h2>
+  </div>
+  <p>$ 349</p>
+</div>
+
+<div class="tr3">
+  <ul>                            
+   <li>Conference material <span><i class="fa fa-check"></i></span></li>
+   <li>Access to exhibits, poster sessions <span><i class="fa fa-check"></i></span></li>
+   <li>Free access to conference app <span><i class="fa fa-check"></i></span></li>
+   <li>Lunch, tea/coffee breaks <span><i class="fa fa-check"></i></span></li>
+   <li>WiFi in meeting rooms <span><i class="fa fa-check"></i></span></li>
+   <li>Free shuttle service <span><i class="fa fa-check"></i></span></li>
+</ul>
+</div>
+
+
+<div class="trbutton">
+  <a href="https://www.covid19.infoconferences.com/registration" class="btn btn-buynow">Register</a>
+</div>
+
+</div>
+</div>
+
+  
+</div>
+</div>  
+
+
+
+<style>
+.ftrcnt h2
+{
+    color:#f15638;
+    font-size:18px;
+    margin:0px 0px 10px 0px;
+}
+
+.ftrcnt p
+{
+    color:#ffffff;
+    font-size:14px;
+    margin:0px 0px 10px 0px;
+}
+
+.ftrcnt li
+{
+    list-style:none;
+    border-bottom:1px solid #ffffff;
+}
+.footericons
+{
+    margin-right:15px;
+}
+
+.footericons .fa
+{
+    font-size:25px;
+     margin-right:15px;
+}
+    
+</style>
+<!-- Footer -->
+<footer class="text-center" style="margin-top: 25px">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p style="color:#ffffff;">Innovationinfo</a></p>
+  
+  <div class="row ftrcnt">
+      
+      <div class="col-md-6">
+          <h2>About US</h2>
+          
+          <p>Innovation Info Conferences (IIC) is a world class specialist in organizing academic, scientific, and business conferences, meetings, symposiums and exhibitions in different verticals and horizontals like medical, pharma, engineering, science and technology and business to promote scientific research. Innovation Info aims to schedule its conferences in regions like Europe, Asia, Middle East and North America with the generous support and cooperation from our 300+ editorial board members.</p>
+      
+      
+      
+      </div>
+      
+      <div class="col-md-3">
+
+          <h2>Contact Us</h2>
+          
+          <p>Email: cancer@infoconferences.com</p>
+          <p>Call us: +44 20 3807 2025</p>
+          
+      </div>
+      
+      <div class="col-md-3">
+          <h2>Follow US</h2>
+          
+          <div class="footericons">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+          </div>
+      </div>
+      
+  </div>
+  
+</footer>
+
+<div class="Whatsapp">
+    <a target="_blank" href="https://api.whatsapp.com/send?phone=+447553200098&amp;text=hi"><i class="fa fa-whatsapp" aria-hidden="true"></i> +44 7553 200098</a>
+</div>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+
+<script type="text/javascript">
+ $(window).on("scroll load", function() {   
+        
+  var scroll = $(window).scrollTop();
+
+    if (scroll >= 150) {
+        $(".navbar-fixed-top").addClass("fixheader");
+
+
+    } else {
+        $(".navbar-fixed-top").removeClass("fixheader");
+  
+
+         
+        
+    }
+});
+</script>
+
+
+</body>
+<script>
+$(function() {
+  AOS.init(
+      {
+          duration: 1200,
+      });
+});
+</script>
+</html>

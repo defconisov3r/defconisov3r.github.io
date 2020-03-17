@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Operations Dashboard for ArcGIS</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="icon" href="assets/images/favicon.ico?" type="image/x-icon">
+
+
+  <link href="https://js.arcgis.com/3.31/dijit/themes/claro/claro.css" rel="stylesheet" type="text/css">
+  <link href="https://js.arcgis.com/3.31/esri/css/esri.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="assets/vendor-36211ead39d5c1e27a4b693f05e3f1af.css">
+  <link rel="stylesheet" href="assets/app-light-a4ce40813167ba31a775b2184a79f86e.css">
+
+
+</head>
+
+<body class="claro">
+  <script>
+    window.dojoConfig = {
+      async: true
+    };
+
+    var cookieName = 'esri_auth';
+
+    var browserCulture = navigator.languages ? navigator.languages[0] : navigator.language || navigator.userLanguage;
+    var culture = browserCulture && browserCulture.toLowerCase() || 'en';
+    var _rtl = false;
+
+    var cookie = JSON.parse(decodeURIComponent(document.cookie.replace(new RegExp('(?:(?:^|.*;\\s*)' + cookieName + '\\s*\\=\\s*([^;]*).*$)|^.*$'), '$1')) || null);
+    if (cookie && cookie.culture) {
+      culture = cookie.culture.toLowerCase();
+    }
+
+    var queryParams = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for (var i = 0; i < queryParams.length; i++) {
+      var queryParam = queryParams[i].split('=');
+      if (queryParam[0] === 'locale' && queryParam[1]) {
+        culture = queryParam[1].toLowerCase();
+      }
+      if (queryParam[0] === '_rtl' && queryParam[1] === 'true') {
+        _rtl = true;
+      }
+    }
+
+    var isRTL = culture.toLowerCase() === 'ar' || culture.toLowerCase() === 'he' || _rtl;
+
+    window.dojoConfig.locale = culture;
+    window.dojoConfig.isRTL = isRTL;
+
+    var dirNode = document.querySelector('html');
+    dirNode.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
+    dirNode.className += ' ' + culture;
+    dirNode.className += culture.indexOf('-') !== -1 ? ' ' + culture.split('-')[0] : '';
+
+    window.CKEDITOR_BASEPATH = window.location.pathname.replace('index.html', '') + 'assets/ckeditor/';
+  </script>
+  <script src="https://js.arcgis.com/3.31/init.js" data-amd="true"></script>
+  <script>
+    require([
+      'esri/request', 'esri/moment', 'dojo/_base/config', 'dojo/Deferred', 'esri/dijit/ColorPicker', 'dojo/promise/all', 'esri/tasks/query', 'dojo/_base/Color', 'dojo/io-query', 'esri/IdentityManager', 'dojo/i18n!dojo/cldr/nls/gregorian', 'esri/dijit/ColorPicker/HexPalette', 'dijit/form/DateTextBox', 'dijit/form/TimeTextBox', 'dojo/number', 'dojox/color', 'esri/dijit/Legend', 'dojo/dom-geometry', 'dojox/gfx', 'esri/symbols/jsonUtils', 'esri/dijit/Scalebar', 'dojo/on', 'esri/dijit/BasemapGallery', 'esri/geometry/Extent', 'esri/arcgis/utils', 'esri/dijit/LayerList', 'esri/dijit/Search', 'esri/tasks/locator', 'esri/symbols/SimpleMarkerSymbol', 'esri/Color', 'esri/toolbars/draw', 'esri/graphic', 'esri/symbols/PictureMarkerSymbol', 'esri/symbols/SimpleLineSymbol', 'esri/symbols/SimpleFillSymbol', 'esri/geometry/ScreenPoint', 'dojo/date/locale', 'esri/geometry/Point', 'esri/SpatialReference', 'esri/dijit/PopupTemplate', 'esri/plugins/FeatureLayerStatistics', 'esri/tasks/QueryTask', 'esri/geometry/geometryEngineAsync', 'esri/geometry/jsonUtils', 'esri/layers/FeatureLayer', 'dojo/_base/lang', 'esri/geometry/geometryEngine', 'esri/layers/GridLayout', 'esri/renderers/jsonUtils', 'dojo/_base/fx', 'dojo/fx/easing', 'esri/renderers/UniqueValueRenderer', 'esri/renderers/SimpleRenderer', 'esri/layers/GraphicsLayer', 'esri/config', 'esri/geometry/scaleUtils', 'esri/tasks/StatisticDefinition', 'esri/arcgis/OAuthInfo', 'esri/arcgis/Portal', 'esri/tasks/GeometryService', 'dojo/_base/Deferred', 'dojo/json', 'dojo/cookie', 'esri/styles/colors', 'esri/lang', 'esri/geometry/webMercatorUtils'
+    ], function(mod0, mod1, mod2, mod3, mod4, mod5, mod6, mod7, mod8, mod9, mod10, mod11, mod12, mod13, mod14, mod15, mod16, mod17, mod18, mod19, mod20, mod21, mod22, mod23, mod24, mod25, mod26, mod27, mod28, mod29, mod30, mod31, mod32, mod33, mod34, mod35, mod36, mod37, mod38, mod39, mod40, mod41, mod42, mod43, mod44, mod45, mod46, mod47, mod48, mod49, mod50, mod51, mod52, mod53, mod54, mod55, mod56, mod57, mod58, mod59, mod60, mod61, mod62, mod63, mod64, mod65) {
+      var adoptables = [{
+        name: 'esri/request',
+        obj: mod0
+      }, {
+        name: 'esri/moment',
+        obj: mod1
+      }, {
+        name: 'dojo/_base/config',
+        obj: mod2
+      }, {
+        name: 'dojo/Deferred',
+        obj: mod3
+      }, {
+        name: 'esri/dijit/ColorPicker',
+        obj: mod4
+      }, {
+        name: 'dojo/promise/all',
+        obj: mod5
+      }, {
+        name: 'esri/tasks/query',
+        obj: mod6
+      }, {
+        name: 'dojo/_base/Color',
+        obj: mod7
+      }, {
+        name: 'dojo/io-query',
+        obj: mod8
+      }, {
+        name: 'esri/IdentityManager',
+        obj: mod9
+      }, {
+        name: 'dojo/i18n!dojo/cldr/nls/gregorian',
+        obj: mod10
+      }, {
+        name: 'esri/dijit/ColorPicker/HexPalette',
+        obj: mod11
+      }, {
+        name: 'dijit/form/DateTextBox',
+        obj: mod12
+      }, {
+        name: 'dijit/form/TimeTextBox',
+        obj: mod13
+      }, {
+        name: 'dojo/number',
+        obj: mod14
+      }, {
+        name: 'dojox/color',
+        obj: mod15
+      }, {
+        name: 'esri/dijit/Legend',
+        obj: mod16
+      }, {
+        name: 'dojo/dom-geometry',
+        obj: mod17
+      }, {
+        name: 'dojox/gfx',
+        obj: mod18
+      }, {
+        name: 'esri/symbols/jsonUtils',
+        obj: mod19
+      }, {
+        name: 'esri/dijit/Scalebar',
+        obj: mod20
+      }, {
+        name: 'dojo/on',
+        obj: mod21
+      }, {
+        name: 'esri/dijit/BasemapGallery',
+        obj: mod22
+      }, {
+        name: 'esri/geometry/Extent',
+        obj: mod23
+      }, {
+        name: 'esri/arcgis/utils',
+        obj: mod24
+      }, {
+        name: 'esri/dijit/LayerList',
+        obj: mod25
+      }, {
+        name: 'esri/dijit/Search',
+        obj: mod26
+      }, {
+        name: 'esri/tasks/locator',
+        obj: mod27
+      }, {
+        name: 'esri/symbols/SimpleMarkerSymbol',
+        obj: mod28
+      }, {
+        name: 'esri/Color',
+        obj: mod29
+      }, {
+        name: 'esri/toolbars/draw',
+        obj: mod30
+      }, {
+        name: 'esri/graphic',
+        obj: mod31
+      }, {
+        name: 'esri/symbols/PictureMarkerSymbol',
+        obj: mod32
+      }, {
+        name: 'esri/symbols/SimpleLineSymbol',
+        obj: mod33
+      }, {
+        name: 'esri/symbols/SimpleFillSymbol',
+        obj: mod34
+      }, {
+        name: 'esri/geometry/ScreenPoint',
+        obj: mod35
+      }, {
+        name: 'dojo/date/locale',
+        obj: mod36
+      }, {
+        name: 'esri/geometry/Point',
+        obj: mod37
+      }, {
+        name: 'esri/SpatialReference',
+        obj: mod38
+      }, {
+        name: 'esri/dijit/PopupTemplate',
+        obj: mod39
+      }, {
+        name: 'esri/plugins/FeatureLayerStatistics',
+        obj: mod40
+      }, {
+        name: 'esri/tasks/QueryTask',
+        obj: mod41
+      }, {
+        name: 'esri/geometry/geometryEngineAsync',
+        obj: mod42
+      }, {
+        name: 'esri/geometry/jsonUtils',
+        obj: mod43
+      }, {
+        name: 'esri/layers/FeatureLayer',
+        obj: mod44
+      }, {
+        name: 'dojo/_base/lang',
+        obj: mod45
+      }, {
+        name: 'esri/geometry/geometryEngine',
+        obj: mod46
+      }, {
+        name: 'esri/layers/GridLayout',
+        obj: mod47
+      }, {
+        name: 'esri/renderers/jsonUtils',
+        obj: mod48
+      }, {
+        name: 'dojo/_base/fx',
+        obj: mod49
+      }, {
+        name: 'dojo/fx/easing',
+        obj: mod50
+      }, {
+        name: 'esri/renderers/UniqueValueRenderer',
+        obj: mod51
+      }, {
+        name: 'esri/renderers/SimpleRenderer',
+        obj: mod52
+      }, {
+        name: 'esri/layers/GraphicsLayer',
+        obj: mod53
+      }, {
+        name: 'esri/config',
+        obj: mod54
+      }, {
+        name: 'esri/geometry/scaleUtils',
+        obj: mod55
+      }, {
+        name: 'esri/tasks/StatisticDefinition',
+        obj: mod56
+      }, {
+        name: 'esri/arcgis/OAuthInfo',
+        obj: mod57
+      }, {
+        name: 'esri/arcgis/Portal',
+        obj: mod58
+      }, {
+        name: 'esri/tasks/GeometryService',
+        obj: mod59
+      }, {
+        name: 'dojo/_base/Deferred',
+        obj: mod60
+      }, {
+        name: 'dojo/json',
+        obj: mod61
+      }, {
+        name: 'dojo/cookie',
+        obj: mod62
+      }, {
+        name: 'esri/styles/colors',
+        obj: mod63
+      }, {
+        name: 'esri/lang',
+        obj: mod64
+      }, {
+        name: 'esri/geometry/webMercatorUtils',
+        obj: mod65
+      }];
+      var isVendor = new RegExp('vendor(.*js)');
+
+      function recursiveRequire(i, scripts) {
+        if (i >= scripts.length) {
+          return;
+        }
+        require([scripts[i]], function() {
+          if (isVendor.test(scripts[i])) {
+            adoptables.forEach(function(adoptable) {
+              enifed(adoptable.name, [], function() {
+                return adoptable.obj;
+              });
+            });
+          }
+          recursiveRequire(++i, scripts);
+        });
+      }
+      recursiveRequire(0, ["assets/vendor-b294ef434e8ecd8fc0671169898118d0.js", "assets/nickel-3a9fdff2fead41c28df9eeaf949f145b.js", "assets/moment-timezone-with-data.min-f71eb5eba513b3ab182b567941a82ef5.js"]);
+    });
+  </script>
+
+  <div id="initialLoadingContainer" class="full-height flex-vertical flex-justify-center flex-align-items-center">
+    <div class="loader is-active">
+      <div class="loader-bars"></div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

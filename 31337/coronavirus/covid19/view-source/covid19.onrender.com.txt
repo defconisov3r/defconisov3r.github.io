@@ -1,0 +1,45 @@
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <title>Deep COVID19 - Detecting COVID-19 from X-Ray/CT Scans</title>
+  <link rel='stylesheet' href='../static/style.css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src='../static/client.js'></script>
+</head>
+<body>
+<div>
+  <div class='center'>
+    <h1 class='title'>Deep COVID19</h1>
+    <h2>Detecting COVID-19 from X-Ray/CT Scans using Deep Learning</h2>
+    <p>
+      Read full details <a href="https://ashleyrudland.com/2020/03/16/detecting-covid19-with-ai.html" target="_blank">here</a>.
+    </p>
+    <p>To try it out, tap Select Image below.</p>
+    <div class='content'>
+      <div class='no-display'>
+        <input id='file-input'
+               class='no-display'
+               type='file'
+               name='file'
+               accept='image/*'
+               onchange='showPicked(this)'>
+      </div>
+      <button id="choose-file-button" class='choose-file-button' type='button' onclick='showPicker()'>Select Image</button>
+      <div class='upload-label'>
+        <label id='upload-label'>No file chosen</label>
+      </div>
+      <div>
+        <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
+      </div>
+      <!--<div class='analyze'>
+        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analyze</button>
+      </div>-->
+      <div class='result-label'>
+        <label id='result-label'></label>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

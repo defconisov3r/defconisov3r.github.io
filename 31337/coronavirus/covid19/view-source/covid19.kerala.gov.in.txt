@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+    <title>Login</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="https://covid19.kerala.gov.in/css/font-face.css" rel="stylesheet" media="all">
+    <link href="https://covid19.kerala.gov.in/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="https://covid19.kerala.gov.in/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="https://covid19.kerala.gov.in/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="https://covid19.kerala.gov.in/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="https://covid19.kerala.gov.in/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="https://covid19.kerala.gov.in/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="https://covid19.kerala.gov.in/vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="https://covid19.kerala.gov.in/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="https://covid19.kerala.gov.in/vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="https://covid19.kerala.gov.in/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="https://covid19.kerala.gov.in/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+<script src="https://covid19.kerala.gov.in/js/sweet/sweetalert2.all.js"></script>  
+<link rel="stylesheet" href="https://covid19.kerala.gov.in/js/sweet/sweetalert2.css">  
+    <!-- Main CSS-->
+    <link href="https://covid19.kerala.gov.in/css/theme.css" rel="stylesheet" media="all">
+<!--	<link href="https://covid19.kerala.gov.in/css/bootstrapValidator.min.css" rel="stylesheet" media="all">	 
+	  <script src="https://covid19.kerala.gov.in/js/vendor/jquery.validate.js"></script>-->
+</head>
+
+<body class="animsition">
+<div class="modal fade" id="introModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-success">
+                <h5 class="modal-title text-white" id="exampleModalLongTitle"><b><i class="fa fa-handshake-o"></i> Welcome to God's own Country Kerala.</b></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+			<p align="justify">WHO has declared COVID19 as pandemic. The pandemic can be controlled effectively with the wholehearted cooperation by people and facilitation by Administration. 
+			It can be contained and controlled by taking voluntary actions by all of us as suggested by the health department.
+			We all should ensure 100% compliance to all health advisories of the Department of Health Govt of Kerala.
+			We earnestly request you to register and fill the correct information to protect yourself, your family and community as a whole.<br>Together we will win the fight against COVID19</p>
+			<b><img src="https://covid19.kerala.gov.in/img/khealth.png"></b>
+                                    
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="page-wrapper">
+        <div class="page-content--bge5">
+            <div class="container">
+                <div class="login-wrap">
+				<!--  box-shadow: rgb(136, 136, 136) 10px 10px 5px; background-position: right center;-->
+                    <div class="login-content" style="border-radius: 20px; border: none; ">
+                        <div class="login-logo">
+                            <a href="#"><img width="50px" src="https://covid19.kerala.gov.in/img/corona.png" alt="">
+                            </a><h4><img src="https://covid19.kerala.gov.in/img/khealth.png"><br>Covid-19</h4>
+                        </div>
+						
+                        <div class="login-form">
+                            <form action="https://covid19.kerala.gov.in/index.php/Register/SaveRegistration" method="post" id="loginfrm" name="loginfrm">
+                                <div class="form-group">
+                                    <label><i class="fa fa-mobile-phone"></i> Mobile </label>
+                                    <input class="au-input au-input--full" type="text" name="mob_no" placeholder="Your Mobile No" id="mob_no" onKeyPress="return event.charCode >=48 &amp;&amp; event.charCode <=57" maxlength="10">
+                                </div>
+								<div class="form-group">
+                                    <label><i class="fa fa-envelope"></i> Email </label>
+                                    <input class="au-input au-input--full" type="email" name="email_id" placeholder="Your Email ID" id="email_id" onBlur="return ValidateEmail(this.value);">
+                                </div>
+								<div class="form-group">
+                                    <label><i class="fa fa-book"></i> Passport No </label><input class="au-input au-input--full" type="text" name="pass_no" placeholder="Your Passport No" id="pass_no" onKeyPress="return (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode==32) || (47<event.keyCode && event.keyCode<58 && event.shiftKey==false)">
+                                </div>
+                          
+                                <div class="error" id="errorMsg" align="center" style="color:#FF0000">
+                                  <div class="error" id="errorMsg" align="center" style="color:#FF0000">
+                                    
+                                </div>
+                                </div>
+                                <button class="au-btn au-btn--block au-btn--blue m-b-10" type="submit" id="btnsub"><i class="fa fa-location-arrow"></i> Register </button>							<input type="hidden" id="lat" name="lat">
+								<input type="hidden" id="lon" name="lon">
+								<input type="hidden" id="c19_token" name="c19_token" value="a8a62b2934fca4f63a835be5ce5a27bb">
+                            </form>
+                            <!--<div class="register-link">
+                                <p>Powered By <a href="#">eHealth</a> &copy; 2020
+                                </p>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="https://covid19.kerala.gov.in/vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="https://covid19.kerala.gov.in/vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="https://covid19.kerala.gov.in/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="https://covid19.kerala.gov.in/vendor/slick/slick.min.js">
+    </script>
+    <script src="https://covid19.kerala.gov.in/vendor/wow/wow.min.js"></script>
+    <script src="https://covid19.kerala.gov.in/vendor/animsition/animsition.min.js"></script>
+    <script src="https://covid19.kerala.gov.in/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="https://covid19.kerala.gov.in/vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="https://covid19.kerala.gov.in/vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="https://covid19.kerala.gov.in/vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="https://covid19.kerala.gov.in/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="https://covid19.kerala.gov.in/vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="https://covid19.kerala.gov.in/vendor/select2/select2.min.js">
+    </script>
+    <script>
+	function ValidateEmail(mail) 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+  {
+    return (true)
+  }
+    swal("Invalid Email","Please enter a valid email","warning");
+    return (false)
+}
+
+var x = document.getElementById("demo");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+
+ $('#lat').val(position.coords.latitude);
+ $('#lon').val(position.coords.longitude);
+/*document.getElementById("lat").value=position.coords.latitude;
+document.getElementById("lon").value=position.coords.longitude;
+
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+  */
+}
+getLocation();
+</script>
+    <!-- Main JS-->
+    <script src="https://covid19.kerala.gov.in/js/main.js"></script>
+<script>
+$(function(){
+
+		$("#introModel").modal("toggle");
+		$("#btnsub").click( function (event){
+		var mobilenum = $("#mob_no").val();
+		var emailid = $("#email_id").val();
+		var pass_no = $("#pass_no").val();
+		var err_cd = 0;
+		event.preventDefault();
+		if(emailid!=''){
+		if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailid))
+  		{
+    		err_cd = 0;
+  		}else{
+			err_cd = 1;
+			swal("Invalid Email","Please enter a valid Email","warning");
+			$("#email_id").val('');
+    		return (false)
+		}
+		}
+		if(mobilenum!='' && mobilenum.length < 10){
+			err_cd = 1;
+			swal("Invalid Mobile","Please enter a valid Mobile","warning");
+			$("#mob_no").val('');
+    		return (false)
+		}
+		if((mobilenum!='' && emailid!='' && err_cd == 0) || (mobilenum!='' && pass_no!='') || (emailid!='' && pass_no!='' && err_cd == 0)){
+				swal({ 
+							type: '', // Title 
+							allowOutsideClick: false,
+							showSpinner: true,
+							closeOnEsc: false,
+							html: "Please wait .....<i class='fa fa-spin fa-1x fa-fw'><i class='fa fa-cog'></i></i> ",
+							showConfirmButton: false
+							});
+		$("#loginfrm").submit();
+		}else{
+		swal("Atleast two required","Please enter atleast two information!! ","warning");
+    return (false)
+		
+		}
+		});
+		});
+</script>
+</body>
+
+</html>
+<!-- end document-->

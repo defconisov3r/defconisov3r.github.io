@@ -1,0 +1,399 @@
+   <!DOCTYPE html>
+ <html lang="ru-RU">
+
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+       <title>Coronovirus - Ещё один сайт на WordPress</title>
+<link href="https://fonts.googleapis.com/css?family=Rosario%3A300%2C400%2C700%2C900%7CMerriweather%3A%2C400%2C700%2C900%7CPoppins%3A%2C400%2C700%2C900" rel="stylesheet">
+<!-- This site is optimized with the Yoast SEO plugin v13.2 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Ещё один сайт на WordPress"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="https://coronavirus-monitorr.ru/" />
+<meta property="og:locale" content="ru_RU" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Coronovirus - Ещё один сайт на WordPress" />
+<meta property="og:description" content="Ещё один сайт на WordPress" />
+<meta property="og:url" content="https://coronavirus-monitorr.ru/" />
+<meta property="og:site_name" content="Coronovirus" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Ещё один сайт на WordPress" />
+<meta name="twitter:title" content="Coronovirus - Ещё один сайт на WordPress" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://coronavirus-monitorr.ru/#website","url":"https://coronavirus-monitorr.ru/","name":"Coronovirus","inLanguage":"ru-RU","description":"\u0415\u0449\u0451 \u043e\u0434\u0438\u043d \u0441\u0430\u0439\u0442 \u043d\u0430 WordPress","potentialAction":{"@type":"SearchAction","target":"https://coronavirus-monitorr.ru/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"CollectionPage","@id":"https://coronavirus-monitorr.ru/#webpage","url":"https://coronavirus-monitorr.ru/","name":"Coronovirus - \u0415\u0449\u0451 \u043e\u0434\u0438\u043d \u0441\u0430\u0439\u0442 \u043d\u0430 WordPress","isPartOf":{"@id":"https://coronavirus-monitorr.ru/#website"},"inLanguage":"ru-RU","description":"\u0415\u0449\u0451 \u043e\u0434\u0438\u043d \u0441\u0430\u0439\u0442 \u043d\u0430 WordPress"}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Coronovirus &raquo; Лента" href="https://coronavirus-monitorr.ru/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Coronovirus &raquo; Лента комментариев" href="https://coronavirus-monitorr.ru/comments/feed/" />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='https://coronavirus-monitorr.ru/wp-includes/css/dist/block-library/theme.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css'  href='https://coronavirus-monitorr.ru/wp-content/plugins/revslider/public/assets/css/rs6.css' type='text/css' media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+#rs-demo-id {}
+</style>
+<link rel='stylesheet' id='asRange-css'  href='https://coronavirus-monitorr.ru/wp-content/plugins/metform/public/assets/css/asRange.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='select2-css'  href='https://coronavirus-monitorr.ru/wp-content/plugins/metform/public/assets/css/select2.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='flatpickr-css'  href='https://coronavirus-monitorr.ru/wp-content/plugins/elementor/assets/lib/flatpickr/flatpickr.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='metform-ui-css'  href='https://coronavirus-monitorr.ru/wp-content/plugins/metform/public/assets/css/metform-ui.css' type='text/css' media='all' />
+<link rel='stylesheet' id='metform-style-css'  href='https://coronavirus-monitorr.ru/wp-content/plugins/metform/public/assets/css/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='elementskit-framework-css-frontend-css'  href='https://coronavirus-monitorr.ru/wp-content/plugins/elementskit-lite/libs/framework/assets/css/frontend-style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='elementskit-parallax-style-css'  href='https://coronavirus-monitorr.ru/wp-content/plugins/blo-essential/modules/parallax/assets/css/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='blo-fonts-css'  href='https://fonts.googleapis.com/css?family=Rubik%3A300%2C400%2C500%2C700%2C900%26display%3Dswap%7CMerriweather%3A300%2C300i%2C400%2C700%2C900%26display%3Dswap%7CPoppins%3A100%2C200%2C300%2C400%2C500%2C700%2C800' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='https://coronavirus-monitorr.ru/wp-content/themes/blo/assets/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://coronavirus-monitorr.ru/wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='owl-carousel-css'  href='https://coronavirus-monitorr.ru/wp-content/themes/blo/assets/css/owl.carousel.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='OverlayScrollbars-css'  href='https://coronavirus-monitorr.ru/wp-content/themes/blo/assets/css/OverlayScrollbars.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='owl-theme-default-css'  href='https://coronavirus-monitorr.ru/wp-content/themes/blo/assets/css/owl.theme.default.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='blo-wocommerce-custom-css'  href='https://coronavirus-monitorr.ru/wp-content/themes/blo/assets/css/woocommerce.css' type='text/css' media='all' />
+<link rel='stylesheet' id='blo-blog-css'  href='https://coronavirus-monitorr.ru/wp-content/themes/blo/assets/css/blog.css' type='text/css' media='all' />
+<link rel='stylesheet' id='blo-gutenberg-custom-css'  href='https://coronavirus-monitorr.ru/wp-content/themes/blo/assets/css/gutenberg-custom.css' type='text/css' media='all' />
+<link rel='stylesheet' id='blo-master-css'  href='https://coronavirus-monitorr.ru/wp-content/themes/blo/assets/css/master.css' type='text/css' media='all' />
+<style id='blo-master-inline-css' type='text/css'>
+
+        body{ font-family:"Rosario";font-size:15px;font-weight:300; }
+
+        h1,h2{
+            font-family:"Merriweather";font-weight:700;
+        }
+        h3{ 
+            font-family:"Poppins";font-weight:700; 
+        }
+
+        h4{ 
+            font-family:"Poppins";font-weight:700;
+        }
+
+        a, .post-meta span i, .entry-header .entry-title a:hover{
+            color: #f3525a;
+            transition: all ease 500ms;
+        }
+        .sidebar ul li a:hover, a:hover,
+        .post-navigation span:hover, .post-navigation h3:hover,
+        .post .entry-header .entry-title a:hover{
+          color: #000;
+        }
+        .header ul.navbar-nav > li > a:hover,
+         .header ul.navbar-nav > li > a.active,
+         .header ul.navbar-nav > li > a:focus{
+            color: #f3525a !important;
+        }
+
+         .entry-header .entry-title a,
+         h1,h2,h3,h4,h5,h6,
+         .post .entry-header .entry-title a{
+            color: #172541;
+            
+        }
+        
+        ul.navbar-nav li .dropdown-menu li a:hover,
+        .xs-service .xs-service-box .xs-service-box-info .xs-title a:hover,
+        .recent-folio-menu ul li.active,
+        .xs-footer .footer-left-widget ul li span,
+        .xs-footer .footer-widget ul li a:hover,
+        .copyright span a,
+        .xs-latest-news .single-latest-news .single-news-content .ts-post-title a:hover,
+        .xs-top-bar .top-bar .header-nav-right-info li i.fa,
+        .xs-nav-classic .header-nav-right-info li i,
+        .sidebar .widget .media-body .entry-title a:hover,
+        .header ul.navbar-nav li .dropdown-menu li a:hover,
+        .header ul.navbar-nav li .dropdown-menu li a.active,
+        .btn:hover,
+        .readmore-btn-area a,
+        .post .entry-header .entry-title a:hover,
+         .wp-block-quote:before
+        .woocommerce ul.products li.product .price,.woocommerce ul.products li.product .woocommerce-loop-product__title:hover{
+           color: #f3525a;
+        }
+        
+        .wp-block-quote:before{
+          color: #f3525a !important;
+        }
+              
+        .btn-primary,
+        .recent-folio-menu ul li.active,
+        .copyright .footer-social ul li a:hover,
+        .testimonial-footer:after,
+        .btn-border-dark:hover, 
+        .ts-working-box:hover .working-icon-wrapper,
+        .header ul.navbar-nav > li:hover > a:before, .header ul.navbar-nav > li.active > a:before,
+        .blog-post-comment .comment-respond .comment-form .form-control:focus,
+        .qutoe-form-inner.ts-qoute-form .form-control:focus{
+           border-color: #f3525a;
+        }
+        .recent-folio-menu ul li.active:after,
+        .ts-latest-news .single-latest-news{
+           border-bottom-color: #f3525a;
+        }
+        .nav-classic .main-logo a:after{
+           border-top-color: #f3525a;
+        }
+        .post .post-footer .readmore,
+        .sidebar .widget.widget_search .input-group-btn,
+        .sidebar .widget .widget-title:before,
+        .blog-post-comment .comment-respond .comment-form .btn.btn-primary,
+        .BackTo{
+          background: #f3525a;
+          border-color: #f3525a;
+        }
+        .btn-primary:hover, 
+        .post .post-footer .readmore:hover,
+        .sidebar .widget.widget_search .input-group-btn:hover,
+        .blog-post-comment .comment-respond .comment-form .btn.btn-primary:hover,
+        .BackTo:hover{
+         background: #000;
+         border-color: #000;
+        }
+        blockquote.wp-block-quote, .wp-block-quote, .wp-block-quote:not(.is-large):not(.is-style-large), .wp-block-pullquote blockquote,
+         blockquote.wp-block-pullquote, .wp-block-quote.is-large, .wp-block-quote.is-style-large{
+            border-left-color: #f3525a;
+        }
+ 
+         .single-intro-text .count-number, .sticky.post .meta-featured-post,
+        .sidebar .widget .widget-title:before, .pagination li.active a, .pagination li:hover a,
+        .pagination li.active a:hover, .pagination li:hover a:hover,
+        .sidebar .widget.widget_search .input-group-btn, .tag-lists a:hover, .tagcloud a:hover,
+        .BackTo, .ticket-btn.btn:hover,
+        .navbar-container .navbar-light .navbar-nav > li > a:before,
+        .nav-button,
+        .btn-primary,
+        .single-recent-work .link-more,
+        .ts-team-slider .owl-nav .owl-prev:hover i, .ts-team-slider .owl-nav .owl-next:hover i,
+              .ts-footer-info-box,
+        .working-process-number,
+        .copyright .footer-social ul li a:hover,
+        .btn-border-dark:hover,
+        .nav-classic .main-logo a:before,
+        .btn,
+        .main-logo,
+        .hero-area.owl-carousel.owl-theme .owl-nav [class*=owl-]:hover,
+        .post .post-footer .readmore,
+        .post .post-media .video-link-btn a,
+        .woocommerce-message .button.wc-forward:, .woocommerce nav.woocommerce-pagination ul li a:focus, .woocommerce nav.woocommerce-pagination ul li a:hover, .woocommerce nav.woocommerce-pagination ul li span.current, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce ul.products li.product span.onsale, .woocommerce span.onsale{
+            background: #f3525a;
+        }
+        .owl-carousel.owl-loaded .owl-nav .owl-next.disabled, 
+        .owl-carousel.owl-loaded .owl-nav .owl-prev.disabled,
+        .xs-about-image-wrapper.owl-carousel.owl-theme .owl-nav [class*=owl-]:hover{
+            background: #f3525a !important;
+
+        }
+
+        .banner-bg::after{
+            background: rgba(0, 0, 0, 0.4);
+        }
+        .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover {
+    background-color: #000;
+}
+        .ts-footer{
+            padding-top:100px;
+            padding-bottom:100px;
+         }
+      body{
+         background-color: #fff;
+         
+      }
+     
+      .xs-footer{
+          background-color: #142355;
+          background-repeat:no-repeat;
+          background-size: cover;
+          background:#f2f2f2
+          
+      }
+
+      .xs-footer-classic .widget-title,
+      .footer-widget .widget-title,
+      .xs-footer-classic h3,
+      .xs-footer-classic h4,
+      .xs-footer-classic .contact h3{
+          color: #142355;
+      }
+      .xs-footer-classic .widget-title,
+      .footer-widget .widget-title,
+      .xs-footer-classic h3,
+      .xs-footer-classic h4,
+      .xs-footer-classic .contact h3{
+          color: #142355;
+      }
+      .xs-footer-classic p,
+      .xs-footer-classic .list-arrow li a,
+      .xs-footer-classic .menu li a,
+      .xs-footer-classic .service-time li,
+      .xs-footer-classic .list-arrow li::before, 
+      .xs-footer-classic .menu li::before{
+        color: #666666;
+      }
+      
+      .xs-footer a{
+        color: #666666;
+      }
+     
+      .copy-right {
+         background: #142355;
+      }
+      .copy-right .copyright-text{
+         color: #a5a5a5;
+      }
+      
+</style>
+<link rel='stylesheet' id='elementskit-vendors-css'  href='https://coronavirus-monitorr.ru/wp-content/plugins/elementskit-lite/widgets/init/assets/css/vendors.css' type='text/css' media='all' />
+<link rel='stylesheet' id='elementskit-style-css'  href='https://coronavirus-monitorr.ru/wp-content/plugins/elementskit-lite/widgets/init/assets/css/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='elementskit-responsive-css'  href='https://coronavirus-monitorr.ru/wp-content/plugins/elementskit-lite/widgets/init/assets/css/responsive.css' type='text/css' media='all' />
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-content/plugins/revslider/public/assets/js/revolution.tools.min.js'></script>
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-content/plugins/revslider/public/assets/js/rs6.min.js'></script>
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-content/plugins/blo-essential/modules/parallax/assets/js/jarallax.js'></script>
+<style>.pseudo-clearfy-link { color: #008acf; cursor: pointer;}.pseudo-clearfy-link:hover { text-decoration: none;}</style>
+			<script type="text/javascript">
+				var elementskit_section_parallax_data = {};
+				var elementskit_module_parallax_url = "https://coronavirus-monitorr.ru/wp-content/plugins/blo-essential/modules/parallax/"
+			</script>
+		<meta name="generator" content="Powered by Slider Revolution 6.1.5 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<script type="text/javascript">function setREVStartSize(t){try{var h,e=document.getElementById(t.c).parentNode.offsetWidth;if(e=0===e||isNaN(e)?window.innerWidth:e,t.tabw=void 0===t.tabw?0:parseInt(t.tabw),t.thumbw=void 0===t.thumbw?0:parseInt(t.thumbw),t.tabh=void 0===t.tabh?0:parseInt(t.tabh),t.thumbh=void 0===t.thumbh?0:parseInt(t.thumbh),t.tabhide=void 0===t.tabhide?0:parseInt(t.tabhide),t.thumbhide=void 0===t.thumbhide?0:parseInt(t.thumbhide),t.mh=void 0===t.mh||""==t.mh||"auto"===t.mh?0:parseInt(t.mh,0),"fullscreen"===t.layout||"fullscreen"===t.l)h=Math.max(t.mh,window.innerHeight);else{for(var i in t.gw=Array.isArray(t.gw)?t.gw:[t.gw],t.rl)void 0!==t.gw[i]&&0!==t.gw[i]||(t.gw[i]=t.gw[i-1]);for(var i in t.gh=void 0===t.el||""===t.el||Array.isArray(t.el)&&0==t.el.length?t.gh:t.el,t.gh=Array.isArray(t.gh)?t.gh:[t.gh],t.rl)void 0!==t.gh[i]&&0!==t.gh[i]||(t.gh[i]=t.gh[i-1]);var r,a=new Array(t.rl.length),n=0;for(var i in t.tabw=t.tabhide>=e?0:t.tabw,t.thumbw=t.thumbhide>=e?0:t.thumbw,t.tabh=t.tabhide>=e?0:t.tabh,t.thumbh=t.thumbhide>=e?0:t.thumbh,t.rl)a[i]=t.rl[i]<window.innerWidth?0:t.rl[i];for(var i in r=a[0],a)r>a[i]&&0<a[i]&&(r=a[i],n=i);var d=e>t.gw[n]+t.tabw+t.thumbw?1:(e-(t.tabw+t.thumbw))/t.gw[n];h=t.gh[n]*d+(t.tabh+t.thumbh)}void 0===window.rs_init_css&&(window.rs_init_css=document.head.appendChild(document.createElement("style"))),document.getElementById(t.c).height=h,window.rs_init_css.innerHTML+="#"+t.c+"_wrapper { height: "+h+"px }"}catch(t){console.log("Failure at Presize of Slider:"+t)}};</script>
+   </head>
+
+<body data-rsssl=1 class="home blog sidebar-active elementor-default" >
+
+ <header id="header" class="header header-standard    pt-3 pb-3">
+      <div class="header-wrapper">
+            <div class="container">
+               <nav class="navbar navbar-expand-lg navbar-light">
+                        <!-- logo-->
+                     <a class="logo" href="https://coronavirus-monitorr.ru/">
+                        <img  class="img-fluid" src="https://coronavirus-monitorr.ru/wp-content/themes/blo/assets/images/logo/logo-common.png" alt="Coronovirus">
+                     </a>
+                     <button class="navbar-toggler" type="button" data-toggle="collapse"
+                           data-target="#primary-nav" aria-controls="primary-nav" aria-expanded="false"
+                           aria-label="Toggle navigation">
+                           <span class="navbar-toggler-icon"><i class="icon icon-menu"></i></span>
+                     </button>
+                     
+                       
+
+	
+                                                  <div class="nav-search-area">
+                                                               <!--Search End-->
+                              <div class="search-block" style="display: none;">
+                                    
+        <form  method="get" action="https://coronavirus-monitorr.ru/" class="blo-serach xs-search-group">
+            <div class="input-group">
+                <input type="search" class="form-control" name="s" placeholder="Search" value="">
+                <button class="input-group-btn search-button"><i class="fa fa-search"></i></button>
+            </div>
+        </form>                                    <span class="search-close">&#9932;</span>
+                              </div>
+                           </div>
+                           
+                                          <!-- Site search end-->
+                                                                                              
+                            
+               </nav>
+            </div><!-- container end-->
+   </div><!-- header wrapper end-->
+</header>
+
+
+
+    <section class="xs-breadcrumb breadcrumb-height">
+        <div class="breadcrumb-bg banner-bg" style="background-image:url(https://coronavirus-monitorr.ru/wp-content/themes/blo/assets/images/banner/bredcumbs-1.png);"></div>
+        <div class="container">
+            <div class="row breadcrumb-height align-items-center">
+                <div class="col-12 d-block d-md-flex justify-content-between">
+                    <h3>
+                        Coronovirus                    </h3>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+  
+     <section id="main-content" class="blog main-container" role="main">
+	<div class="container">
+		<div class="row">
+      			<div class="col-lg-12">
+								
+											<article class="post-1 post type-post status-publish format-standard hentry category-bez-rubriki">
+   <div class="post-media post-image">
+   
+<div class="post-body clearfix">
+      <div class="entry-header">
+        	<div class="post-meta">
+		<span class="post-meta-date">
+					<i class="fa fa-clock"></i>
+						16.02.2020</span><span class="meta-categories post-cat">
+					<i class="fa fa-folder"></i>
+						<a href="https://coronavirus-monitorr.ru/category/bez-rubriki/" rel="category tag">Без рубрики</a> 
+					</span>	</div>
+        <h2 class="entry-title">
+          <a href="https://coronavirus-monitorr.ru/2020/02/16/privet-mir/">Привет, мир!</a>
+        </h2>
+   
+      </div>
+        
+      <div class="post-content">
+         <div class="entry-content">
+            <p>
+                Добро пожаловать в WordPress. Это ваша первая запись. Отредактируйте или удалите ее, затем начинайте создавать!            </p>
+         </div>
+        <div class="post-footer readmore-btn-area"><a class="readmore" href="https://coronavirus-monitorr.ru/2020/02/16/privet-mir/">Continue <i class="icon icon-arrow-right"></i></a></div>      </div>
+  
+</div>
+<!-- post-body end-->       
+</article>					
+												</div><!-- .col-md-8 -->
+
+         		</div><!-- .row -->
+	</div><!-- .container -->
+</section><!-- #main-content -->
+
+   <script type="text/javascript">var pseudo_links = document.querySelectorAll(".pseudo-clearfy-link");for (var i=0;i<pseudo_links.length;i++ ) { pseudo_links[i].addEventListener("click", function(e){   window.open( e.target.getAttribute("data-uri") ); }); }</script><script type='text/javascript'>
+/* <![CDATA[ */
+var ekit_site_url = {"siteurl":"https:\/\/coronavirus-monitorr.ru"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-content/plugins/elementskit-lite/widgets/mail-chimp/assets/js/mail-chimp.js'></script>
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-content/plugins/metform/public/assets/js/jquery.validate.min.js'></script>
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-content/plugins/metform/public/assets/js/jquery-asRange.min.js'></script>
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-content/plugins/metform/public/assets/js/select2.min.js'></script>
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-content/plugins/elementor/assets/lib/flatpickr/flatpickr.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mf_submission = {"default_required_message":"This field is required."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-content/plugins/metform/public/assets/js/submission.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var rest_api = {"end_point":"https:\/\/coronavirus-monitorr.ru\/wp-json\/metform\/v1\/forms\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-content/plugins/metform/public/assets/js/count-views.js'></script>
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-content/plugins/elementskit-lite/libs/framework/assets/js/frontend-script.js'></script>
+<script type='text/javascript'>
+        //console.log(window.elementskit);
+
+		var elementskit = {
+            resturl: 'https://coronavirus-monitorr.ru/wp-json/elementskit/v1/',
+        }
+
+        //console.log(window.elementskit);
+		
+</script>
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-content/plugins/elementskit-lite/widgets/init/assets/js/nav-menu.js'></script>
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-content/plugins/elementskit-lite/widgets/init/assets/js/ui-slim.min.js'></script>
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-content/plugins/blo-essential/modules/parallax/assets/js/TweenMax.min.js'></script>
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-content/plugins/blo-essential/modules/parallax/assets/js/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-content/plugins/elementskit-lite/widgets/init/assets/js/tilt.jquery.min.js'></script>
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-content/plugins/blo-essential/modules/parallax/assets/js/anime.js'></script>
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-content/plugins/blo-essential/modules/parallax/assets/js/magician.js'></script>
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-content/plugins/blo-essential/modules/elements/chart/assets/js/chart.js'></script>
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-content/themes/blo/assets/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-content/themes/blo/assets/js/Popper.js'></script>
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-content/themes/blo/assets/js/owl.carousel.min.js'></script>
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-content/themes/blo/assets/js/jquery.overlayScrollbars.min.js'></script>
+<script type='text/javascript' src='https://coronavirus-monitorr.ru/wp-content/themes/blo/assets/js/script.js'></script>
+
+   </body>
+</html>

@@ -1,0 +1,460 @@
+<html lang="en" class="hydrated"><head>
+    <meta charset="utf-8"><style data-styles="">ion-icon{visibility:hidden}.hydrated{visibility:inherit}</style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Опрос на симптомы коронавируса в России | coronavirusin.ru</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+    <meta name="description" content="CoronaVirus Test, симптомы корона вируса в россии, тест,коронавирус в россии">
+    <meta name="keywords" content="bootstrap, mobile template, cordova, phonegap, mobile, html, responsive">
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js" data-stencil-namespace="ionicons"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<body>
+
+    <div class="appHeader bg-primary text-light">
+        <div class="left">
+            <a href="#" class="headerButton" data-toggle="modal" data-target="#sidebarPanel">
+                <ion-icon name="menu-outline" role="img" class="md hydrated" aria-label="menu outline"></ion-icon>
+            </a>
+        </div>
+        <div class="pageTitle">
+            coronavirusin.ru
+        </div>
+        <div class="right">
+            <a href="#" class="headerButton">
+                <img src="https://s3.amazonaws.com/estatemag/uploads/2019/08/14031719/un-logo-white.png" alt="image" class="imaged w32">
+            </a>
+        </div>
+    </div>
+
+
+<div id="appCapsule">
+
+<style>
+    .tab {
+        display: none;
+    }
+    input.invalid {
+        background-color: #ffdddd;
+    }
+</style>
+
+
+<form action="result.php"  id="regForm" method="post">    
+    <div class="section wallet-card-section pt-1">
+    <input type="text" name="region" style="display:none" value="Люксембург">
+    <input type="text" name="city" style="display:none" value="">
+    <input type="text" name="lat" style="display:none" value="49.75">
+    <input type="text" name="lon" style="display:none" value="6.17">
+    
+
+    <div class="tab">
+        <div class="wallet-card">
+            <div class="balance">
+                <div style="text-align: center;margin: auto;">  
+                    <h1 class="total">Введите ваше имя</h1>
+                    <input type="text" name="name" class="form-control">
+                </div>
+                
+                    </div>
+                    <div class="wallet-footer">
+                        <div class="row" style="margin: auto;">
+                    <div class="col-6">
+                        <a class="btn btn-lg btn-primary btn-block" onclick="nextPrev(1)">Начать</a>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>
+
+
+    <div class="tab">
+        <div class="wallet-card">
+            <div class="balance">
+                <div style="text-align: center;margin: auto;">  
+                    <h1 class="total">Ваш возраст старше 45 лет?</h1>
+                    Вопрос 1/10
+                    </div>
+                    </div>
+                <div class="wallet-footer">
+                    <div class="row">
+                        <div class="col-6">
+                            <label><input name="q1" type="radio" value="0" onclick="nextPrev(1)" style="display:none;"><a class="btn btn-lg btn-secondary btn-block">Нет</a></label>
+                        </div>
+                        <div class="col-6">
+                            <label><input name="q1" type="radio" value="60" onclick="nextPrev(1)" style="display:none;"><a class="btn btn-lg btn-primary btn-block">Да</a></label>
+                        </div>
+                </div>
+            </div>
+         </div>
+    </div>
+
+    <div class="tab">
+        <div class="wallet-card">
+            <div class="balance">
+                <div style="text-align: center;margin: auto;">  
+                    <h1 class="total">Были ли за границей в последние 10 дней?</h1>
+                    Вопрос 2/10
+                    </div>
+                    </div>
+                <div class="wallet-footer">
+                    <div class="row">
+                        <div class="col-6">
+                            <label><input name="q2" type="radio" value="0" onclick="nextPrev(1)" style="display:none;"><a class="btn btn-lg btn-secondary btn-block">Нет</a></label>
+                        </div>
+                        <div class="col-6">
+                            <label><input name="q2" type="radio" value="100" onclick="nextPrev(1)" style="display:none;"><a class="btn btn-lg btn-primary btn-block">Да</a></label>
+                        </div>
+                </div>
+            </div>
+         </div>
+    </div>
+        
+    <div class="tab">
+        <div class="wallet-card">
+            <div class="balance">
+                <div style="text-align: center;margin: auto;">  
+                    <h1 class="total">Повышалась ли у вас температура?</h1>
+                    Больше 38 градусов за последние 7 дней.
+                    </div>
+                    </div>
+                <div class="wallet-footer">
+                    <div class="row">
+                        <div class="col-6">
+                            <label><input name="q3" type="radio" value="0" onclick="nextPrev(1)" style="display:none;"><a class="btn btn-lg btn-secondary btn-block">Нет</a></label>
+                        </div>
+                        <div class="col-6">
+                            <label><input name="q3" type="radio" value="60" onclick="nextPrev(1)" style="display:none;"><a class="btn btn-lg btn-primary btn-block">Да</a></label>
+                        </div>
+                </div>
+            </div>
+         </div>
+    </div>    
+
+    <div class="tab">
+        <div class="wallet-card">
+            <div class="balance">
+                <div style="text-align: center;margin: auto;">  
+                    <h1 class="total">Есть ли у вас сухой кашель, чихание с небольшим количество мокроты?</h1>
+                    Вопрос 4/10
+                    
+                    </div>
+                    </div>
+                <div class="wallet-footer">
+                    <div class="row">
+                        <div class="col-6">
+                            <label><input name="q4" type="radio" value="0" onclick="nextPrev(1)" style="display:none;"><a class="btn btn-lg btn-secondary btn-block">Нет</a></label>
+                        </div>
+                        <div class="col-6">
+                            <label><input name="q4" type="radio" value="60" onclick="nextPrev(1)" style="display:none;"><a class="btn btn-lg btn-primary btn-block">Да</a></label>
+                        </div>
+                </div>
+            </div>
+         </div>
+    </div>
+
+    <div class="tab">
+        <div class="wallet-card">
+            <div class="balance">
+                <div style="text-align: center;margin: auto;">  
+                    <h1 class="total">Есть ли у вас заложенность носа в отсутствие повышении температуры?</h1>
+                    Вопрос 5/10
+                    
+                    </div>
+                    </div>
+                <div class="wallet-footer">
+                    <div class="row">
+                        <div class="col-6">
+                            <label><input name="q5" type="radio" value="0" onclick="nextPrev(1)" style="display:none;"><a class="btn btn-lg btn-secondary btn-block">Нет</a></label>
+                        </div>
+                        <div class="col-6">
+                            <label><input name="q5" type="radio" value="60" onclick="nextPrev(1)" style="display:none;"><a class="btn btn-lg btn-primary btn-block">Да</a></label>
+                        </div>
+                </div>
+            </div>
+         </div>
+    </div>
+
+    <div class="tab">
+        <div class="wallet-card">
+            <div class="balance">
+                <div style="text-align: center;margin: auto;">  
+                    <h1 class="total">Замечали ли вы боль в мышцах или в груди?</h1>
+                    Вопрос 6/10
+                    </div>
+                    </div>
+                <div class="wallet-footer">
+                    <div class="row">
+                        <div class="col-6">
+                            <label><input name="q6" type="radio" value="0" onclick="nextPrev(1)" style="display:none;"><a class="btn btn-lg btn-secondary btn-block">Нет</a></label>
+                        </div>
+                        <div class="col-6">
+                            <label><input name="q6" type="radio" value="60" onclick="nextPrev(1)" style="display:none;"><a class="btn btn-lg btn-primary btn-block">Да</a></label>
+                        </div>
+                </div>
+            </div>
+         </div>
+    </div>
+
+    <div class="tab">
+        <div class="wallet-card">
+            <div class="balance">
+                <div style="text-align: center;margin: auto;">  
+                    <h1 class="total">Замечали ли вы за собой частую утомляемость, усталость?</h1>  
+                    Вопрос 7/10                    
+                    </div>
+                    </div>
+                <div class="wallet-footer">
+                    <div class="row">
+                        <div class="col-6">
+                            <label><input name="q7" type="radio" value="0" onclick="nextPrev(1)" style="display:none;"><a class="btn btn-lg btn-secondary btn-block">Нет</a></label>
+                        </div>
+                        <div class="col-6">
+                            <label><input name="q7" type="radio" value="60" onclick="nextPrev(1)" style="display:none;"><a class="btn btn-lg btn-primary btn-block">Да</a></label>
+                        </div>
+                </div>
+            </div>
+         </div>
+    </div>
+
+    <div class="tab">
+        <div class="wallet-card">
+            <div class="balance">
+                <div style="text-align: center;margin: auto;">  
+                    <h1 class="total">Бывало ли у вас затрудненое дыхание, одышка?</h1>   
+                    Вопрос 8/10                   
+                    </div>
+                    </div>
+                <div class="wallet-footer">
+                    <div class="row">
+                        <div class="col-6">
+                            <label><input name="q8" type="radio" value="0" onclick="nextPrev(1)" style="display:none;"><a class="btn btn-lg btn-secondary btn-block">Нет</a></label>
+                        </div>
+                        <div class="col-6">
+                            <label><input name="q8" type="radio" value="60" onclick="nextPrev(1)" style="display:none;"><a class="btn btn-lg btn-primary btn-block">Да</a></label>
+                        </div>
+                </div>
+            </div>
+         </div>
+    </div>
+
+    <div class="tab">
+        <div class="wallet-card">
+            <div class="balance">
+                <div style="text-align: center;margin: auto;">  
+                    <h1 class="total">Часто ли вы испытываете головную боль?</h1> 
+                    Вопрос 9/10                    
+                    </div>
+                    </div>
+                <div class="wallet-footer">
+                    <div class="row">
+                        <div class="col-6">
+                            <label><input name="q9" type="radio" value="0" onclick="nextPrev(1)" style="display:none;"><a class="btn btn-lg btn-secondary btn-block">Не болит</a></label>
+                        </div>
+                        <div class="col-6">
+                            <label><input name="q9" type="radio" value="20" onclick="nextPrev(1)" style="display:none;"><a class="btn btn-lg btn-primary btn-block">1-2 раза в неделю</a></label>
+                        </div>
+                        <div class="col-6">
+                            <label><input name="q9" type="radio" value="40" onclick="nextPrev(1)" style="display:none;"><a class="btn btn-lg btn-primary btn-block">2-3 раза в неделю</a></label>
+                        </div>
+                        <div class="col-6">
+                            <label><input name="q9" type="radio" value="70" onclick="nextPrev(1)" style="display:none;"><a class="btn btn-lg btn-primary btn-block">Каждый день</a></label>
+                        </div>
+                </div>
+            </div>
+         </div>
+    </div>
+
+    <div class="tab">
+        <div class="wallet-card">
+            <div class="balance">
+                <div style="text-align: center;margin: auto;">  
+                    <h1 class="total">Была ли у вас тошнота, рвота или кровохарканье?</h1> 
+                    Данные симптомы в дебюте инфекции могут наблюдаться в отсутствии повышения температуры тела.                    
+                    </div>
+                    </div>
+                <div class="wallet-footer">
+                    <div class="row">
+                    <div class="col-6">
+                            <label><input name="q10" type="radio" value="0" onclick="nextPrev(1)" style="display:none;"><a class="btn btn-lg btn-secondary btn-block">Нет</a></label>
+                        </div>
+                        <div class="col-6">
+                            <label><input name="q10" type="radio" value="100" onclick="nextPrev(1)" style="display:none;"><a class="btn btn-lg btn-primary btn-block">Да</a></label>
+                        </div>
+                </div>
+            </div>
+         </div>
+    </div>
+
+    <div class="tab">
+        <div class="wallet-card">
+            <div class="balance">
+                <div style="text-align: center;margin: auto;">  
+                    <h1 class="total">Вы прошли тест!</h1>
+                    
+                    </div>
+                    </div>
+                <div class="wallet-footer">
+                    <div class="row">
+                        <div class="col-6" style="margin:auto;">
+                        <input type="submit" value="Узнать результаты" class="btn btn-lg btn-primary btn-block" style="width:200px;"></div>
+                        
+                       
+                </div>
+            </div>
+         </div>
+    </div>
+ </div>
+
+ <div id="navBar" style="text-align:center;margin-top:100px;display:none;">
+<span class="step"></span>
+<span class="step"></span>
+<span class="step"></span>
+<span class="step"></span>
+<span class="step"></span>
+<span class="step"></span>
+<span class="step"></span>
+<span class="step"></span>
+<span class="step"></span>
+<span class="step"></span>
+<span class="step"></span>
+</div>
+
+</form>
+
+
+<script>
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+function showTab(n) {
+// This function will display the specified tab of the form ...
+var x = document.getElementsByClassName("tab");
+x[n].style.display = "block";
+}
+
+function nextPrev(n) {
+// This function will figure out which tab to display
+var x = document.getElementsByClassName("tab");
+// Exit the function if any field in the current tab is invalid:
+if (n == 1 && !validateForm()) return false;
+// Hide the current tab:
+x[currentTab].style.display = "none";
+// Increase or decrease the current tab by 1:
+currentTab = currentTab + n;
+// if you have reached the end of the form... :
+if (currentTab >= x.length) {
+//...the form gets submitted:
+document.getElementById("regForm").submit();
+return false;
+}
+// Otherwise, display the correct tab:
+showTab(currentTab);
+}
+
+function validateForm() {
+// This function deals with validation of the form fields
+var x, y, i, valid = true;
+x = document.getElementsByClassName("tab");
+y = x[currentTab].getElementsByTagName("input");
+// A loop that checks every input field in the current tab:
+for (i = 0; i < y.length; i++) {
+// If a field is empty...
+if (y[i].value == "") {
+  // add an "invalid" class to the field:
+  y[i].className += " invalid";
+  // and set the current valid status to false:
+  valid = false;
+}
+}
+// If the valid status is true, mark the step as finished and valid:
+if (valid) {
+document.getElementsByClassName("step")[currentTab].className += " finish";
+}
+return valid; // return the valid status
+}
+
+</script>
+    
+    <div class="section mt-3 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Важно</h2><p>Для корректного определения результатов, все симптомы, которые будут указаны в тесте, должны были проявлятся в течение последних 7 дней. </p>
+               <p> *тест не гарантирует 100% точности диагноза. При обнаружение симптомов, рекомендуется обратиться к врачу.</p> </div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="row mt-2">
+            <div class="col-6">
+                <div class="stat-box">
+                    <div class="title">Зараженных</div>
+                    <div class="value text-danger">181 334</div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="stat-box">
+                    <div class="title">Выздоровевших</div>
+                    <div class="value text-success">77 940</div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-6">
+                <div class="stat-box">
+                    <div class="title">Погибших</div>
+                    <div class="value">7 098</div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="stat-box">
+                    <div class="title">Актуально на</div>
+                    <div class="value" style="color: #8996a7;">16.03.2020</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+
+    <div class="appFooter">
+            <div class="footer-title">
+                Copyright © Coronavirusin.ru 2020. 
+            </div>
+            All Rights Reserved.
+        </div>
+    
+    <div class="appBottomMenu">
+        <a href="/" class="item active">
+            <div class="col">
+                <ion-icon name="pie-chart-outline" role="img" class="md hydrated" aria-label="pie chart outline"></ion-icon>
+                <strong>Опрос</strong>
+            </div>
+        </a>
+        <a href="news.php" class="item">
+            <div class="col">
+                <ion-icon name="document-text-outline" role="img" class="md hydrated" aria-label="document text outline"></ion-icon>
+                <strong>Новости</strong>
+            </div>
+        </a>
+        <a href="map.php" class="item">
+            <div class="col">
+                <ion-icon name="apps-outline" role="img" class="md hydrated" aria-label="apps outline"></ion-icon>
+                <strong>Карта</strong>
+            </div>
+        </a>
+        <a href="#" class="item">
+            <div class="col">
+                <ion-icon name="card-outline" role="img" class="md hydrated" aria-label="card outline"></ion-icon>
+                <strong>Статистика</strong>
+            </div>
+        </a>
+        <a href="javascript:;" class="item" data-toggle="modal" data-target="#sidebarPanel">
+            <div class="col">
+                <ion-icon name="menu-outline" role="img" class="md hydrated" aria-label="menu outline"></ion-icon>
+                <strong>Меню</strong>
+            </div>
+        </a>
+    </div>
+
+
+</body></html>
