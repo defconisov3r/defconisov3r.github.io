@@ -1,0 +1,50 @@
+<html>
+<head>
+<script language="javascript">
+lang = navigator.language || navigator.userLanguage;
+switch (lang) {
+    case "cz":
+        url='__ovh/cz/welcome.html';
+        break;
+    case "de":
+        url='__ovh/de/welcome.html';
+        break;
+    case "en":
+        url='__ovh/en/welcome.html';
+        break;
+    case "es":
+        url='__ovh/es/welcome.html';
+        break;
+    case "fi":
+        url='__ovh/fi/welcome.html';
+        break;
+    case "fr":
+        url='__ovh/fr/welcome.html';
+        break;
+    case "ie":
+        url='__ovh/ie/welcome.html';
+        break;
+    case "it":
+        url='__ovh/it/welcome.html';
+        break;
+    case "lt":
+        url='__ovh/lt/welcome.html';
+        break;
+    case "nl":
+        url='__ovh/nl/welcome.html';
+        break;
+    case "pl":
+        url='__ovh/pl/welcome.html';
+        break;
+    case "pt":
+        url='__ovh/pt/welcome.html';
+        break;
+    default:
+        url='__ovh/en/welcome.html';
+        break;
+}
+location.replace(url);
+</script>
+<meta http-equiv="refresh" content="0;url= __ovh/en/welcome.html" />
+</head>
+</html>

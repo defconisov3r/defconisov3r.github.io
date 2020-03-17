@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kominfo Kota Bogor, Kantor Kominfo, profil kominfo kota bogor, Kantor Komunikasi dan Informatika Kota Bogor, Kominfo Bogor, Website resmi Kantor Kominfo">
+    <meta name="author" content="Imam Teguh">
+
+    <title> Pusat Informasi & Koordinasi COVID-19</title>
+
+    <link rel="shortcut icon" href="http://covid19.kotabogor.go.id/asset/images/admweb/logokotabogor.png"/>
+
+    <link href="http://covid19.kotabogor.go.id/asset/css/metro-bootstrap.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://covid19.kotabogor.go.id/asset/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="http://covid19.kotabogor.go.id/asset/css/style.css" rel="stylesheet">
+    
+    <link href="http://covid19.kotabogor.go.id/asset/css/nivo-slider.css" rel="stylesheet">
+    <link href="http://covid19.kotabogor.go.id/asset/css/default/default.css" rel="stylesheet">
+    <link href="http://covid19.kotabogor.go.id/asset/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <script src="http://covid19.kotabogor.go.id/asset/js/jquery-1.10.2.js"></script>
+    <script src="http://covid19.kotabogor.go.id/asset/js/bootstrap.js"></script>
+    <script src="http://covid19.kotabogor.go.id/asset/js/jquery/jquery.min.js"></script>
+    <script src="http://covid19.kotabogor.go.id/asset/js/jquery/jquery.widget.min.js"></script>
+    <script src="http://covid19.kotabogor.go.id/asset/js/metro.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="http://covid19.kotabogor.go.id/asset/js/fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
+    <script src="http://covid19.kotabogor.go.id/asset/js/inewsticker.js"></script>
+
+    <script type="text/javascript" src="http://covid19.kotabogor.go.id/asset/js/fancybox/jquery.fancybox.js?v=2.1.5"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            (function ($, F) {
+    F.transitions.resizeIn = function() {
+        var previous = F.previous,
+            current  = F.current,
+            startPos = previous.wrap.stop(true).position(),
+            endPos   = $.extend({opacity : 1}, current.pos);
+
+        startPos.width  = previous.wrap.width();
+        startPos.height = previous.wrap.height();
+
+        previous.wrap.stop(true).trigger('onReset').remove();
+
+        delete endPos.position;
+
+        current.inner.hide();
+
+        current.wrap.css(startPos).animate(endPos, {
+            duration : current.nextSpeed,
+            easing   : current.nextEasing,
+            step     : F.transitions.step,
+            complete : function() {
+                F._afterZoomIn();
+
+                current.inner.fadeIn("fast");
+            }
+        });
+    };
+
+}(jQuery, jQuery.fancybox));
+            
+            $(".fancybox")
+    .attr('rel', 'gallery')
+    .fancybox({
+        nextMethod : 'resizeIn',
+        nextSpeed  : 250,
+        
+        prevMethod : false,
+        
+        helpers : {
+            title : {
+                type : 'inside'
+            }
+        }
+    });
+        });
+    </script>
+    
+    
+</head>
+<body>
+   
+        </div>
+    </div>
+
+<!-- End Header -->
+    <div class="section top bluedark">
+        <div class="container">
+    	<div class="row">
+	<div class="col-md-8 col-sm-8 col-xs-12">
+		<img class="img-responsive" src="http://covid19.kotabogor.go.id/asset/images/panitiaseleksi-edits.PNG">
+	</div>
+	<div class="col-md-4 col-sm-4 col-xs-12">
+		<div class="time">
+            <span>
+                <script type="text/javascript">
+                    <!--
+                    var currentTime = new Date()
+                    var hours = currentTime.getHours()
+                    var minutes = currentTime.getMinutes()
+                    if (minutes < 10){
+                    minutes = "0" + minutes
+                    }
+                    document.write(hours + ":" + minutes + " - ")
+                    //-->
+                </script>
+                <script type="text/javascript"><!--
+                    function makeArray() {
+                    for (i = 0; i<makeArray.arguments.length; i++)
+                    this[i + 1] = makeArray.arguments[i];
+                    }
+                    
+                    var months = new makeArray('Januari','Februari','Maret','April','Mei',
+                    'Juni','Juli','Agustus','September','Oktober','November','Desember');
+                    var date = new Date();
+                    var day = date.getDate();
+                    var month = date.getMonth() + 1;
+                    var yy = date.getYear();
+                    var year = (yy < 1000) ? yy + 1900 : yy;
+                    
+                    document.write(day + " " + months[month] + " " + year );
+                    //-->
+                </script>
+            </span>
+            <div>
+                <font color="white">22 Rajab 1441 H</font>            </div>
+        </div>
+        
+        <br><br>
+	</div>
+</div><!-- div row -->        </div>
+    </div>
+<!-- End Header -->
+
+<!-- Menu -->
+    <div class="container" style="margin-top:10px;">
+        	
+<div class="row">
+<div class="col-md-12">
+<div class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav"><li><a href="http://covid19.kotabogor.go.id/"><span class="glyphicon glyphicon-home"></span></a>
+                    </li><li><a href="http://covid19.kotabogor.go.id/index.php/docs/kategori/FAQ">Dokumen</a></li></ul>        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div>
+</div>
+</div>    </div>
+<!-- End Menu -->
+
+    <div class="container" style="margin-top:8px;">
+    	<div class="row header-slide">
+    		<div class="col-md-12">
+            <div class="panel widget">
+<img src="http://covid19.kotabogor.go.id/asset/images/web/banner/a.jpg">
+</div>
+		    </div>
+    	</div><!-- div row -->
+    	<div class="row">
+
+
+<!-- Content -->
+            <div class="col-md-9">
+                 <div class="panel widget">
+ <div class="panel-heading head bluedark">
+        <strong>Peta Sebaran Kasus COVID-19 di Kota Bogor</strong>
+        <div class="icon-right">
+            <i class="fa fa-arrow-circle-right"></i>
+        </div>
+    </div>
+<img src="http://covid19.kotabogor.go.id/asset/images/web/banner/jabar.png">
+</div>
+
+<div class="panel widget">
+    <div class="panel-heading head bluedark">
+        <strong>Daftar Rumah Sakit Rujukan Pasien Dalam Pengawasan di Kota Bogor</strong>
+        <div class="icon-right">
+            <i class="fa fa-arrow-circle-right"></i>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div class="col-md-6 col-sm-6 col-xs-6"><div class="thumbnail">
+        <h5> Rumah Sakit Umum Daerah Kota Bogor </h5>
+        <p> Jl. DR. Sumeru No.120, Menteng, Kec. Bogor Bar., Kota Bogor, Jawa Barat 16112 </p>
+            </div></div>
+            <div class="col-md-6 col-sm-6 col-xs-6"><div class="thumbnail">
+            <h5> Rumah Sakit Siloam Bogor </h5>
+            <p> Jl. Raya Pajajaran No.27, RT.03/RW.08, Babakan, Kecamatan Bogor Tengah, Kota Bogor, Jawa Barat 14140 </p>
+            </div></div>
+            <div class="col-md-6 col-sm-6 col-xs-6"><div class="thumbnail">
+            <h5> Rumah Sakit Bogor Senior Hospital </h5>
+            <p> Jl. Raya Tajur No.168, RT.03/RW.04, Muarasari, Kec. Bogor Sel., Kota Bogor, Jawa Barat 16137 </p>
+            </div></div>
+           
+    </div>
+</div>
+
+<div class="panel-heading head bluedark">
+        <strong>Rilis Berita</strong>
+        <div class="icon-right">
+            <i class="fa fa-arrow-circle-right"></i>
+        </div>
+    </div>
+<div class="tab-content">
+        <div class="tab-pane fade in active" id="berita">
+            <ul class="nav">
+                            <li style="padding:5px 0px;">
+                                            <div class="thumb" style="width:auto; margin-right:10px;"><img src="http://covid19.kotabogor.go.id/asset/images/web/konten/thumbnail/21-rumah-sakit-ikuti-instruksi-bima-arya-soal-kesiapsiagaan-hadapi-virus-corona.jpeg" alt="21 Rumah Sakit Ikuti Instruksi Bima Arya Soal Kesiapsiagaan Hadapi Virus Corona" class="img-responsive img-thumbnail"></div>
+                                        <div class="listpost">
+                        <div style="color:#999; font-style: italic;"><span class="glyphicon glyphicon-calendar"></span> 2020-03-03 11:35:02</div>
+                        <a href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/45"><strong>21 Rumah Sakit Ikuti Instruksi Bima Arya Soal Kesiapsiagaan Hadapi Virus Corona</strong></a><br>
+                        <p align="justify">Wali Kota Bogor Bima Arya memantau sejumlah rumah sakit di Kota Bogor terkait peningkatkan kewaspadaan dan kesiapsiagaan dalam mengantisipasi penyebaran infeksi Virus Corona Covid-19.
+
+Rumah sakit yang dipantau Bima Arya dan jajaran Dinas Kesehatan...</p>
+                    </div>
+                    <div class="clear"></div>
+                    <p class="readmore"><a class="btn btn-primary btn-sm" href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/45">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+                    </p>
+                </li>
+                            <li style="padding:5px 0px;">
+                                            <div class="thumb" style="width:auto; margin-right:10px;"><img src="http://covid19.kotabogor.go.id/asset/images/web/konten/thumbnail/antipasi-penularan-virus-corona,-berikut-instruksi-bima-arya-untuk-warga-hingga-rumah-sakit.jpeg" alt="Antipasi penularan Virus Corona, Berikut Instruksi Bima Arya untuk Warga hingga Rumah Sakit" class="img-responsive img-thumbnail"></div>
+                                        <div class="listpost">
+                        <div style="color:#999; font-style: italic;"><span class="glyphicon glyphicon-calendar"></span> 2020-03-02 11:37:31</div>
+                        <a href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/46"><strong>Antipasi penularan Virus Corona, Berikut Instruksi Bima Arya untuk Warga hingga Rumah Sakit</strong></a><br>
+                        <p align="justify">Wali Kota Bogor Bima Arya mengeluarkan instruksi tentang peningkatkan kewaspadaan dan kesiapsiagaan Kota Bogor dalam mengantisipasi penularan infeksi Virus Corona Covid-19, Senin (2/3/2020).
+
+Ada delapan poin instruksi yang disampaikan Bima Arya. P...</p>
+                    </div>
+                    <div class="clear"></div>
+                    <p class="readmore"><a class="btn btn-primary btn-sm" href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/46">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+                    </p>
+                </li>
+                            <li style="padding:5px 0px;">
+                                            <div class="thumb" style="width:auto; margin-right:10px;"><img src="http://covid19.kotabogor.go.id/asset/images/web/konten/thumbnail/covid-19-jadi-bencana-nasional-dedie-rachim-minta-warga-patuhi-imbauan-pemerintah.jpeg" alt="Covid-19 Jadi Bencana Nasional Dedie Rachim Minta Warga Patuhi Imbauan Pemerintah" class="img-responsive img-thumbnail"></div>
+                                        <div class="listpost">
+                        <div style="color:#999; font-style: italic;"><span class="glyphicon glyphicon-calendar"></span> 2020-03-15 11:38:39</div>
+                        <a href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/47"><strong>Covid-19 Jadi Bencana Nasional Dedie Rachim Minta Warga Patuhi Imbauan Pemerintah</strong></a><br>
+                        <p align="justify">Pemerintah Kota Bogor bersama Polresta Bogor Kota dan Kodim 0606/Kota Bogor melakukan aksi bersih-bersih fasilitas publik di Kota Bogor secara serentak, Minggu (15/3/2020). Aksi tersebut secara simbolis dilangsungkan di Stasiun Bogor. Sementara di wi...</p>
+                    </div>
+                    <div class="clear"></div>
+                    <p class="readmore"><a class="btn btn-primary btn-sm" href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/47">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+                    </p>
+                </li>
+                            <li style="padding:5px 0px;">
+                                            <div class="thumb" style="width:auto; margin-right:10px;"><img src="http://covid19.kotabogor.go.id/asset/images/web/konten/thumbnail/arahan-walikota-bogor-untuk-antisipasi-penyebaran-virus-corona.jpg" alt="Arahan Walikota Bogor untuk antisipasi penyebaran Virus Corona" class="img-responsive img-thumbnail"></div>
+                                        <div class="listpost">
+                        <div style="color:#999; font-style: italic;"><span class="glyphicon glyphicon-calendar"></span> 2020-03-17 12:01:42</div>
+                        <a href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/48"><strong>Arahan Walikota Bogor untuk antisipasi penyebaran Virus Corona</strong></a><br>
+                        <p align="justify">Untuk disampaikan kepada media dan masyarakat umum.
+
+Arahan Walikota Bogor untuk antisipasi penyebaran Virus Corona :
+
+1. Kesiagaan ASN Kota Bogor.
+Jajaran Pemkot harus ada di garda terdepan dalam pelayanan dan antisipasi virus Corona. Karena it...</p>
+                    </div>
+                    <div class="clear"></div>
+                    <p class="readmore"><a class="btn btn-primary btn-sm" href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/48">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+                    </p>
+                </li>
+                            <li style="padding:5px 0px;">
+                                            <div class="thumb" style="width:auto; margin-right:10px;"><img src="http://covid19.kotabogor.go.id/asset/images/web/konten/thumbnail/bima-arya-berkantor-di-rumah-hingga-bakal-ikuti-tes-rekomendasi-gubernur-jabar.jpeg" alt="Bima Arya Berkantor di Rumah hingga Bakal Ikuti Tes Rekomendasi Gubernur Jabar" class="img-responsive img-thumbnail"></div>
+                                        <div class="listpost">
+                        <div style="color:#999; font-style: italic;"><span class="glyphicon glyphicon-calendar"></span> 2020-03-17 12:09:52</div>
+                        <a href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/49"><strong>Bima Arya Berkantor di Rumah hingga Bakal Ikuti Tes Rekomendasi Gubernur Jabar</strong></a><br>
+                        <p align="justify">Nomor : 002/Jubir/Siaga-Corona/Pemkot-Bogor/2020
+
+Keterangan Pers Jubir Pemkot Bogor Untuk Siaga Corona
+Kota Bogor, 16 Maret 2020
+
+Wali Kota Bogor Bima Arya kembali ke tanah air pasca kunjungan kerjanya ke Turki dan Azerbaijan dalam seminggu ter...</p>
+                    </div>
+                    <div class="clear"></div>
+                    <p class="readmore"><a class="btn btn-primary btn-sm" href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/49">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+                    </p>
+                </li>
+                            <li style="padding:5px 0px;">
+                                            <div class="thumb" style="width:auto; margin-right:10px;"><img src="http://covid19.kotabogor.go.id/asset/images/web/konten/thumbnail/cfd-ditiadakan,-tempat-umum-diimbau-menyediakan-alat-deteksi-suhu-tubuh-dan-hand-sanitizer.jpeg" alt="CFD Ditiadakan, Tempat Umum Diimbau Menyediakan Alat Deteksi Suhu Tubuh dan Hand Sanitizer" class="img-responsive img-thumbnail"></div>
+                                        <div class="listpost">
+                        <div style="color:#999; font-style: italic;"><span class="glyphicon glyphicon-calendar"></span> 2020-03-17 12:15:03</div>
+                        <a href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/50"><strong>CFD Ditiadakan, Tempat Umum Diimbau Menyediakan Alat Deteksi Suhu Tubuh dan Hand Sanitizer</strong></a><br>
+                        <p align="justify">Wali Kota Bogor Bima Arya kembali memberikan arahan seputar antisipasi penyebaran Novel Coronavirus (Covid-19). Arahan itu diberikan kepada jajaran Pemkot Bogor, PT KAI, sekolah hingga warga.
+
+Ada delapan poin yang disampaikan Bima Arya mulai dari ...</p>
+                    </div>
+                    <div class="clear"></div>
+                    <p class="readmore"><a class="btn btn-primary btn-sm" href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/50">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+                    </p>
+                </li>
+                            <li style="padding:5px 0px;">
+                                            <div class="thumb" style="width:auto; margin-right:10px;"><img src="http://covid19.kotabogor.go.id/asset/images/web/konten/thumbnail/covid-19-jadi-bencana-nasional,-dedie-rachim-minta-warga-patuhi-imbauan-pemerintah.jpeg" alt="Covid-19 Jadi Bencana Nasional, Dedie Rachim Minta Warga Patuhi Imbauan Pemerintah" class="img-responsive img-thumbnail"></div>
+                                        <div class="listpost">
+                        <div style="color:#999; font-style: italic;"><span class="glyphicon glyphicon-calendar"></span> 2020-03-17 12:16:44</div>
+                        <a href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/51"><strong>Covid-19 Jadi Bencana Nasional, Dedie Rachim Minta Warga Patuhi Imbauan Pemerintah</strong></a><br>
+                        <p align="justify">Pemerintah Kota Bogor bersama Polresta Bogor Kota dan Kodim 0606/Kota Bogor melakukan aksi bersih-bersih fasilitas publik di Kota Bogor secara serentak, Minggu (15/3/2020). Aksi tersebut secara simbolis dilangsungkan di Stasiun Bogor. Sementara di wi...</p>
+                    </div>
+                    <div class="clear"></div>
+                    <p class="readmore"><a class="btn btn-primary btn-sm" href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/51">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+                    </p>
+                </li>
+                            <li style="padding:5px 0px;">
+                                            <div class="thumb" style="width:auto; margin-right:10px;"><img src="http://covid19.kotabogor.go.id/asset/images/web/konten/thumbnail/hari-terakhir-masa-inkubasi,-dinkes-kota-bogor-pantau-3-warga-berstatus-odp.jpeg" alt="Hari Terakhir Masa Inkubasi, Dinkes Kota Bogor Pantau 3 Warga Berstatus ODP" class="img-responsive img-thumbnail"></div>
+                                        <div class="listpost">
+                        <div style="color:#999; font-style: italic;"><span class="glyphicon glyphicon-calendar"></span> 2020-03-17 12:23:03</div>
+                        <a href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/52"><strong>Hari Terakhir Masa Inkubasi, Dinkes Kota Bogor Pantau 3 Warga Berstatus ODP</strong></a><br>
+                        <p align="justify">BOGOR - Plt. Kepala Dinas kesehatan Kota Bogor Sri Nowo Retno yang ditunjuk Wali Kota Bogor Bima Arya sebagai Juru Bicara Pemkot untuk Penanganan Covid-19 menyampaikan perkembangan terbaru antisipasi virus Corona di kota hujan sepanjang Jumat (13/3/2...</p>
+                    </div>
+                    <div class="clear"></div>
+                    <p class="readmore"><a class="btn btn-primary btn-sm" href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/52">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+                    </p>
+                </li>
+                            <li style="padding:5px 0px;">
+                                            <div class="thumb" style="width:auto; margin-right:10px;"><img src="http://covid19.kotabogor.go.id/asset/images/web/konten/thumbnail/jabar-resmikan-pikobar,-sekda-jelaskan-kesiapsiagaan-kota-bogor-hadapi-covid-19.jpeg" alt="Jabar Resmikan Pikobar, Sekda Jelaskan Kesiapsiagaan Kota Bogor Hadapi Covid-19" class="img-responsive img-thumbnail"></div>
+                                        <div class="listpost">
+                        <div style="color:#999; font-style: italic;"><span class="glyphicon glyphicon-calendar"></span> 2020-03-17 12:24:49</div>
+                        <a href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/53"><strong>Jabar Resmikan Pikobar, Sekda Jelaskan Kesiapsiagaan Kota Bogor Hadapi Covid-19</strong></a><br>
+                        <p align="justify">Sekretaris Daerah Kota Bogor Ade Sarip Hidayat mengikuti jalannya peresmian command center penanganan Covid-19 bernama Pusat Informasi Korona Jawa Barat (Pikobar) melalui video conference dengan Gubernur Jawa Barat Ridwan Kamil, di Paseban Sri Bima, ...</p>
+                    </div>
+                    <div class="clear"></div>
+                    <p class="readmore"><a class="btn btn-primary btn-sm" href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/53">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+                    </p>
+                </li>
+                            <li style="padding:5px 0px;">
+                                            <div class="thumb" style="width:auto; margin-right:10px;"><img src="http://covid19.kotabogor.go.id/asset/images/web/konten/thumbnail/jajaran-pemkot-bogor-tinjau-titik-keramaian-terkait-penanganan-covid-19,-ini-hasilnya.jpeg" alt="Jajaran Pemkot Bogor Tinjau Titik Keramaian Terkait Penanganan Covid-19, Ini Hasilnya" class="img-responsive img-thumbnail"></div>
+                                        <div class="listpost">
+                        <div style="color:#999; font-style: italic;"><span class="glyphicon glyphicon-calendar"></span> 2020-03-17 12:26:25</div>
+                        <a href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/54"><strong>Jajaran Pemkot Bogor Tinjau Titik Keramaian Terkait Penanganan Covid-19, Ini Hasilnya</strong></a><br>
+                        <p align="justify">Jajaran Dinas Kesehatan Kota Bogor, Dinas Perindustrian dan Perdagangan Kota Bogor, beserta Camat hingga Lurah melakukan pemantauan di sejumlah titik keramaian terkait penanganan serta pencegahan Covid-19 di Kota Bogor, Jumat (13/3/2020).
+
+Sejumlah...</p>
+                    </div>
+                    <div class="clear"></div>
+                    <p class="readmore"><a class="btn btn-primary btn-sm" href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/54">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+                    </p>
+                </li>
+                            <li style="padding:5px 0px;">
+                                            <div class="thumb" style="width:auto; margin-right:10px;"><img src="http://covid19.kotabogor.go.id/asset/images/web/konten/thumbnail/kenali-gejala-dbd,-ini-penjelasan-dinkes-kota-bogor.jpg" alt="Kenali Gejala DBD, Ini Penjelasan Dinkes Kota Bogor" class="img-responsive img-thumbnail"></div>
+                                        <div class="listpost">
+                        <div style="color:#999; font-style: italic;"><span class="glyphicon glyphicon-calendar"></span> 2020-03-17 12:27:03</div>
+                        <a href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/55"><strong>Kenali Gejala DBD, Ini Penjelasan Dinkes Kota Bogor</strong></a><br>
+                        <p align="justify">Sekretaris Daerah (Sekda) Kota Bogor Ade Sarip Hidayat menjelaskan mengenai perkembangan kasus Demam Berdarah Dengue (DBD) di Kota Bogor. Ia menyebut Pemkot Bogor bersama unsur Forkopimda serta stakeholder terus melakukan pemantauan, pengawasan dan e...</p>
+                    </div>
+                    <div class="clear"></div>
+                    <p class="readmore"><a class="btn btn-primary btn-sm" href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/55">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+                    </p>
+                </li>
+                            <li style="padding:5px 0px;">
+                                            <div class="thumb" style="width:auto; margin-right:10px;"><img src="http://covid19.kotabogor.go.id/asset/images/web/konten/thumbnail/kota-bogor-ekspor-7-ton-maggot-ke-inggris.jpeg" alt="Kota Bogor Ekspor 7 Ton Maggot ke Inggris" class="img-responsive img-thumbnail"></div>
+                                        <div class="listpost">
+                        <div style="color:#999; font-style: italic;"><span class="glyphicon glyphicon-calendar"></span> 2020-03-17 12:29:25</div>
+                        <a href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/56"><strong>Kota Bogor Ekspor 7 Ton Maggot ke Inggris</strong></a><br>
+                        <p align="justify">Ditengah mewabahnya virus Corona (Covid 19) di sejumlah negara hingga daerah yang mengakibatkan lesunya perekonomian dunia, hal tersebut lantas tak menyurutkan Kota Bogor dalam kegiatan perniagaan.
+
+Hal Itu dibuktikan saat Menteri Pertanian (Mentan...</p>
+                    </div>
+                    <div class="clear"></div>
+                    <p class="readmore"><a class="btn btn-primary btn-sm" href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/56">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+                    </p>
+                </li>
+                            <li style="padding:5px 0px;">
+                                            <div class="thumb" style="width:auto; margin-right:10px;"><img src="http://covid19.kotabogor.go.id/asset/images/web/konten/thumbnail/ngobrol-di-balaikota,-bima-arya-pastikan-mahasiswa-wuhan-asal-bogor-sehat.jpg" alt="Ngobrol di Balaikota, Bima Arya Pastikan Mahasiswa Wuhan asal Bogor Sehat" class="img-responsive img-thumbnail"></div>
+                                        <div class="listpost">
+                        <div style="color:#999; font-style: italic;"><span class="glyphicon glyphicon-calendar"></span> 2020-03-17 12:30:38</div>
+                        <a href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/57"><strong>Ngobrol di Balaikota, Bima Arya Pastikan Mahasiswa Wuhan asal Bogor Sehat</strong></a><br>
+                        <p align="justify">Wali Kota Bogor Bima Arya menerima dengan hangat mahasiswa asal Kota Bogor yang berkuliah di Central China Normal University, Wuhan, Tiongkok, Almer Belmiro Putrawan (18) di Balaikota Bogor, Senin (17/2/2020). Diterimanya Almer di kantor wali kota te...</p>
+                    </div>
+                    <div class="clear"></div>
+                    <p class="readmore"><a class="btn btn-primary btn-sm" href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/57">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+                    </p>
+                </li>
+                            <li style="padding:5px 0px;">
+                                            <div class="thumb" style="width:auto; margin-right:10px;"><img src="http://covid19.kotabogor.go.id/asset/images/web/konten/thumbnail/pastikan-dalam-keadaan-sehat,-pemantauan-wali-kota-bogor-sepulang-dari-luar-negeri-sesuai-pedoman-ke.jpeg" alt="Pastikan dalam Keadaan Sehat, Pemantauan Wali Kota Bogor Sepulang dari Luar Negeri Sesuai Pedoman Ke" class="img-responsive img-thumbnail"></div>
+                                        <div class="listpost">
+                        <div style="color:#999; font-style: italic;"><span class="glyphicon glyphicon-calendar"></span> 2020-03-17 12:31:18</div>
+                        <a href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/58"><strong>Pastikan dalam Keadaan Sehat, Pemantauan Wali Kota Bogor Sepulang dari Luar Negeri Sesuai Pedoman Ke</strong></a><br>
+                        <p align="justify">Wali Kota Bogor Bima Arya memastikan kondisi dirinya selama bertugas di Azerbaijan dalam keadaan sehat. &ldquo;Alhamdulillah saya baik-baik saja. Saya sedang berada di Kota Baku, Azerbaijan didampingi Pak Dubes, dan juga Kadis Perizinan serta bagian ...</p>
+                    </div>
+                    <div class="clear"></div>
+                    <p class="readmore"><a class="btn btn-primary btn-sm" href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/58">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+                    </p>
+                </li>
+                            <li style="padding:5px 0px;">
+                                            <div class="thumb" style="width:auto; margin-right:10px;"><img src="http://covid19.kotabogor.go.id/asset/images/web/konten/thumbnail/pemerintah-jamin-ketersediaan-pasokan-bahan-pokok-dan-industri-terkait-kondisi-masuknya-virus-corona.jpg" alt="Pemerintah Jamin Ketersediaan Pasokan Bahan Pokok dan Industri Terkait Kondisi Masuknya Virus Corona" class="img-responsive img-thumbnail"></div>
+                                        <div class="listpost">
+                        <div style="color:#999; font-style: italic;"><span class="glyphicon glyphicon-calendar"></span> 2020-03-17 12:31:49</div>
+                        <a href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/59"><strong>Pemerintah Jamin Ketersediaan Pasokan Bahan Pokok dan Industri Terkait Kondisi Masuknya Virus Corona</strong></a><br>
+                        <p align="justify">Jakarta, 3 Maret 2020 - Pemerintah Indonesia mengumumkan bahwa ada dua Warga Negara Indonesia (WNI) yang berdomisili di Depok yang positif terjangkit virus Covid-19 atau popular dengan sebutan virus Corona, hari Senin (2/3). Kondisi tersebut menimbul...</p>
+                    </div>
+                    <div class="clear"></div>
+                    <p class="readmore"><a class="btn btn-primary btn-sm" href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/59">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+                    </p>
+                </li>
+                            <li style="padding:5px 0px;">
+                                            <div class="thumb" style="width:auto; margin-right:10px;"><img src="http://covid19.kotabogor.go.id/asset/images/web/konten/thumbnail/pemerintah-terbitkan-protokol-kesehatan-penanganan-covid-19.jpg" alt="Pemerintah Terbitkan Protokol Kesehatan Penanganan COVID-19" class="img-responsive img-thumbnail"></div>
+                                        <div class="listpost">
+                        <div style="color:#999; font-style: italic;"><span class="glyphicon glyphicon-calendar"></span> 2020-03-17 12:32:39</div>
+                        <a href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/60"><strong>Pemerintah Terbitkan Protokol Kesehatan Penanganan COVID-19</strong></a><br>
+                        <p align="justify">Pemerintah sudah menyusun sebuah protokol utama dalam penanganan kasus penyebaran wabah virus corona (COVID-19). Kantor Staf Kepresidenan (KSP) bersama dengan berbagai kementerian, terutama Kementerian Kesehatan, menyusun pedoman utama tersebut sehin...</p>
+                    </div>
+                    <div class="clear"></div>
+                    <p class="readmore"><a class="btn btn-primary btn-sm" href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/60">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+                    </p>
+                </li>
+                            <li style="padding:5px 0px;">
+                                            <div class="thumb" style="width:auto; margin-right:10px;"><img src="http://covid19.kotabogor.go.id/asset/images/web/konten/thumbnail/siaga-corona,-bima-arya--ini-situasi-yang-sangat-serius.jpeg" alt="Siaga Corona, Bima Arya: Ini Situasi yang Sangat Serius" class="img-responsive img-thumbnail"></div>
+                                        <div class="listpost">
+                        <div style="color:#999; font-style: italic;"><span class="glyphicon glyphicon-calendar"></span> 2020-03-17 12:33:07</div>
+                        <a href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/61"><strong>Siaga Corona, Bima Arya: Ini Situasi yang Sangat Serius</strong></a><br>
+                        <p align="justify">Nomor : 003/Jubir/Siaga-Corona/Pemkot-Bogor/2020
+
+Keterangan Pers Jubir Pemkot Bogor Untuk Siaga Corona
+Kota Bogor, 16 Maret 2020
+
+Pelaksana Tugas (Plt) Kepala Dinas Kesehatan Kota Bogor Sri Nowo Retno menyampaikan update terbaru terkait kondisi...</p>
+                    </div>
+                    <div class="clear"></div>
+                    <p class="readmore"><a class="btn btn-primary btn-sm" href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/61">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+                    </p>
+                </li>
+                            <li style="padding:5px 0px;">
+                                            <div class="thumb" style="width:auto; margin-right:10px;"><img src="http://covid19.kotabogor.go.id/asset/images/web/konten/thumbnail/wali-kota-bogor-keluarkan-surat-edaran-pencegahan-covid-19,-ini-isinya.jpeg" alt="Wali Kota Bogor Keluarkan Surat Edaran Pencegahan Covid-19, Ini Isinya" class="img-responsive img-thumbnail"></div>
+                                        <div class="listpost">
+                        <div style="color:#999; font-style: italic;"><span class="glyphicon glyphicon-calendar"></span> 2020-03-17 12:34:03</div>
+                        <a href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/62"><strong>Wali Kota Bogor Keluarkan Surat Edaran Pencegahan Covid-19, Ini Isinya</strong></a><br>
+                        <p align="justify">Wali Kota Bogor Bima Arya mengeluarkan Surat Edaran Nomor 443.1/1057-Umum tentang Pencegahan Penyebaran Corona Virus Disease (Covid-19) di Kota Bogor. Dalam surat yang ditandatangani oleh Wakil Wali Kota Bogor Dedie A Rachim itu, terdapat tujuh poin ...</p>
+                    </div>
+                    <div class="clear"></div>
+                    <p class="readmore"><a class="btn btn-primary btn-sm" href="http://covid19.kotabogor.go.id/index.php/post/dc2f4ef676263fe/62">Selengkapnya <i class="fa fa-arrow-circle-right"></i></a>
+                    </p>
+                </li>
+                        </ul>
+        </div>
+</div>
+<div class="panel widget">
+    <div class="panel-heading head orange"><strong>Infografis</strong>
+        <div class="icon-right">
+            <i class="fa fa-arrow-circle-right"></i>
+        </div>
+    </div>
+    <div class="panel-body">
+    <div class="metro">
+        <div class="tile double live" data-role="live-tile" style="width:100%; height:800px;" data-effect="slideDown">
+                  <div class="tile-content image-container">
+                <a href="#"><img src="http://covid19.kotabogor.go.id/asset/images/web/iklan/6.jpeg" alt="corona"></a>
+            </div>
+                 <div class="tile-content image-container">
+                <a href="#"><img src="http://covid19.kotabogor.go.id/asset/images/web/iklan/5.jpeg" alt="corona"></a>
+            </div>
+                 <div class="tile-content image-container">
+                <a href="#"><img src="http://covid19.kotabogor.go.id/asset/images/web/iklan/4.jpeg" alt="corona"></a>
+            </div>
+                 <div class="tile-content image-container">
+                <a href="#"><img src="http://covid19.kotabogor.go.id/asset/images/web/iklan/3.jpeg" alt="corona"></a>
+            </div>
+                 <div class="tile-content image-container">
+                <a href="#"><img src="http://covid19.kotabogor.go.id/asset/images/web/iklan/2.jpeg" alt="corona"></a>
+            </div>
+                 <div class="tile-content image-container">
+                <a href="#"><img src="http://covid19.kotabogor.go.id/asset/images/web/iklan/1.jpeg" alt="corona"></a>
+            </div>
+                 <div class="tile-content image-container">
+                <a href="#"><img src="http://covid19.kotabogor.go.id/asset/images/web/iklan/11.jpeg" alt="corona"></a>
+            </div>
+             </div>
+    </div>
+    </div>
+</div>
+ 
+
+ 
+
+
+<!-- -->
+
+<!-- -->
+<div class="panel widget">
+    <div class="panel-body">
+        
+  <!--      <script type="text/javascript" src="https://widget.kominfo.go.id/gpr-widget-kominfo.min.js"></script>-->
+		<!--<div id="gpr-kominfo-widget-container"></div>-->
+       
+    </div>
+</div>            </div>
+<!-- end content -->
+
+
+            
+            
+            <div class="col-md-25 col-sm-8 col-xs-8">
+                <div class="kolom--ilang">
+                    <!-- Widget Right -->
+                    <div class="panel widget">
+    <div class="panel-heading head orange"><strong>Kalendar</strong>
+        <div class="icon-right">
+            <i class="fa fa-arrow-circle-right"></i>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div class="metro">
+        <div id="kalender" class="calendar small" style="width:100%"></div>
+        </div>
+        <script type="text/javascript">
+        $(function() {
+            $("#kalender").calendar({
+                click:false,
+                getDates:false,
+                weekStart:0
+            });
+        });
+        </script>
+    </div>
+</div>
+
+
+<div class="panel widget">
+    <div class="panel-heading head lightBlue">
+        <strong>Dokumen</strong>
+        <div class="icon-right">
+        <i class="fa fa-arrow-circle-right"></i>
+        </div>
+    </div>
+    <div class="panel-body">
+        <ul class="nav">
+                    <li>
+               
+                <div class="listpost">
+                    <a href="http://covid19.kotabogor.go.id/index.php/docs/view/5">
+                                            Surat Edaran Tent Penutupan Sementara Fasilitas Um...
+                                        </a>
+                    
+                </div>
+                <div class="clear"></div>
+            </li>
+                    <li>
+               
+                <div class="listpost">
+                    <a href="http://covid19.kotabogor.go.id/index.php/docs/view/4">
+                                            Surat Edaran ttg Peningkatan Kewaspadaan thd Risik...
+                                        </a>
+                    
+                </div>
+                <div class="clear"></div>
+            </li>
+                    <li>
+               
+                <div class="listpost">
+                    <a href="http://covid19.kotabogor.go.id/index.php/docs/view/3">
+                                            Surat Edaran Walikota Bogor tentang COVID-19                                        </a>
+                    
+                </div>
+                <div class="clear"></div>
+            </li>
+                </ul>
+    </div>
+</div>
+
+
+
+<div class="panel widget">
+    <div class="panel-heading head lightOlive">
+        <strong>Berita Kota</strong>
+        <div class="icon-right">
+        <i class="fa fa-arrow-circle-right"></i>
+        </div>
+    </div>
+    <div class="panel-body">
+       <div class="panel-body" style="padding:0 15px; font-size: 12px; ">
+                            <a href='http://kotabogor.go.id/index.php/show_post/detail/14033' target='_blank' style='color:#e68a00; font-family:Andale mono'><b>Mahasiswi Positif Covid-19, Warga Jakarta yang Kost di Sempur<br/></b></a><br>------------------------<br><a href='http://kotabogor.go.id/index.php/show_post/detail/14032' target='_blank' style='color:#e68a00; font-family:Andale mono'><b>Siaga Corona, Bima Arya: Ini Situasi yang Sangat Serius<br/></b></a><br>------------------------<br><a href='http://kotabogor.go.id/index.php/show_post/detail/14031' target='_blank' style='color:#e68a00; font-family:Andale mono'><b>Bima Arya Berkantor di Rumah hingga Bakal Ikuti Tes Rekomendasi Gubernur Jabar<br/></b></a><br>------------------------<br><a href='http://kotabogor.go.id/index.php/show_post/detail/14030' target='_blank' style='color:#e68a00; font-family:Andale mono'><b>Lolos Seleksi Ketat, 50 PKWT Satpol PP Ikuti Diklat<br/></b></a><br>------------------------<br><a href='http://kotabogor.go.id/index.php/show_post/detail/14029' target='_blank' style='color:#e68a00; font-family:Andale mono'><b>Jajaran Pemkot Bogor Tinjau Titik Keramaian Terkait Penanganan Covid-19, Ini Hasilnya<br/></b></a><br>------------------------<br>  
+                    </div>
+    </div>
+</div>
+                    <!-- end widget -->
+                </div>
+            </div><!-- end widget -->
+
+    	</div><!-- end row -->
+    </div><!-- div container -->
+
+    <div class="section bgfoot">
+
+        <div class="container">
+
+            
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.section -->
+
+   
+    <div class="section copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-sm-10 col-xs-12">
+                    Copyright &copy; 2020 Dinas Komunikasi Dan Informatika Kota Bogor. All Right Reserved.
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-12">
+                    <a target="_blank" href="https://www.facebook.com/kominfokotabogor"><img src="http://covid19.kotabogor.go.id/asset/images/fb.png" width="30" target="_blank"></a>
+                    <a target="_blank" href="https://www.twitter.com/kominfobogor"><img src="http://covid19.kotabogor.go.id/asset/images/twitter.png" width="30" ="_blank"></a>
+                    <a target="_blank" href="https://www.youtube.com/channel/UCTApY_obTMA_KfPBQiJ9TPQ"><img src="http://covid19.kotabogor.go.id/asset/images/youtube.png" width="30"></a>&nbsp;
+                    <a target="_blank" href="http://covid19.kotabogor.go.id/index.php/feed"><img src="http://covid19.kotabogor.go.id/asset/images/rss_logo.png" target="_blank" width="25"></a>
+               </div>
+            </div>
+        </div>
+    </div>
+  
+    
+
+
+
+<script type="text/javascript">
+    $(function() {
+        $('#myCarousel').carousel({
+            interval:10000
+        });
+    });
+</script>
+
+    
+
+</body>
+</html>

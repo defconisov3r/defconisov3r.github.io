@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>COVID-19 Tracker</title>
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="COVID-19 Tracker">
+		<meta property="og:url" content="https://covid19.majed.xyz">
+		<meta property="og:image" content="covidog.jpg">
+		<meta property="og:description" content="Track confirmed cases of COVID-19 around the globe powered by Bing">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Coronavirus Map">
+		<meta name="twitter:image" content="covidog.jpg">
+        <style type="text/css">
+            body, html
+            {
+                margin: 0; padding: 0; height: 100%; overflow: hidden;
+            }
+
+            #content
+            {
+                position:absolute; left: 0; right: 0; bottom: 0; top: 0px; 
+            }
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <iframe width="100%" height="100%" frameborder="0" src="https://bing.com/covid?fbclid=IwAR3iFPpoBg9y8sPk-ATEymARmV1274vJ8Fga8rkEkIAUK3YBUTxOfJSddMA" />
+        </div>
+    </body>
+</html>
