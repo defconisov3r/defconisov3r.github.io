@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="google-site-verification" content="5i_qisSyIe4CzPYguTsltBz1RuGee_nSumzI-44C9wI" />
+    <meta name="description" content="Tableau des morts du SRAS-COV-2 (Coronavirus)">
+    <meta name="keywords" content="Coronavirus, virus, Corona, Covid-19, SRAS-COV-2, SARS-COV-2">
+    <title>Tableau mortalité - Coronavirus (SRAS-COV-2/Covid-19)</title>
+
+    <!-- Page css -->
+    
+<link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"/>
+<link href="/static/css/responsive/responsive.bootstrap4.min.css"
+      rel="stylesheet"/>
+
+    <!-- Font Awesome Icons -->
+    <!--    <link rel="stylesheet" href="/static/adminlte/plugins/fontawesome-free/css/all.min.css">-->
+    <!-- Theme style -->
+    <!--    <link rel="stylesheet" href="/static/adminlte/dist/css/adminlte.min.css">-->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <!--  kassandra css-->
+    <link rel="stylesheet" href="/static/css/corona.css?v=2">
+    <!-- Page css -->
+    
+<!--<link href="/static/css/dashboard.css?v=1"-->
+<!--      rel="stylesheet"/>-->
+
+
+    <link rel="icon" href="/static/img/favicon/favicon.ico" type="image/x-icon"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/static/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/static/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/static/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/static/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/static/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/static/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+</head>
+<body class="container">
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      Situation globale:
+<ul>
+    <li>Contaminés: 183325
+</li>
+    <li>Morts: 7177
+</li>
+    <li>Mortalité: 3.91%
+    <li>Dernière mise à jour: il y a 14 minutes (17-03-2020 10:15:38)</li>
+</ul>
+    </div>
+    <div class="col-sm">
+      Dernières nouvelles:
+        <ul>
+    
+        <li>
+            <a href="https://www.pscp.tv/w/1gqGvEBLpbpKB?t=7s" target="_blank">Adresse aux Français. - </a>
+        </li>
+        
+</ul>
+    </div>
+  </div>
+</div>
+
+    
+    
+<table id="death_rate_table" class="table table-striped table-bordered" style="width:100%;">
+    <thead align="left">
+    <tr role="row">
+        <th class="all" >Pays</th>
+        <th class="all" >Morts</th>
+        <th class="all" >Contaminés</th>
+        <th class="all" >Mortalité</th>
+        <th>Nouveaux cas (aujourd'hui)</th>
+        <th>Nouveaux morts (aujourd'hui)</th>
+        <th>Cas testés</th>
+        <th>Cas critiques</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Chine </td>
+        <td>3226</td>
+        <td>80881</td>
+        <td>3.99%</td>
+        <td>21</td>
+        <td>13</td>
+        <td></td>
+        <td>3226</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Italie </td>
+        <td>2158</td>
+        <td>27980</td>
+        <td>7.71%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1851</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Iran </td>
+        <td>853</td>
+        <td>14991</td>
+        <td>5.69%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Espagne </td>
+        <td>342</td>
+        <td>9942</td>
+        <td>3.44%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>272</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >France </td>
+        <td>148</td>
+        <td>6633</td>
+        <td>2.23%</td>
+        <td></td>
+        <td></td>
+        <td>11895</td>
+        <td>400</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Etats-Unis </td>
+        <td>93</td>
+        <td>4743</td>
+        <td>1.96%</td>
+        <td>80</td>
+        <td>7</td>
+        <td></td>
+        <td>12</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Corée du Sud </td>
+        <td>81</td>
+        <td>8320</td>
+        <td>0.97%</td>
+        <td>84</td>
+        <td>6</td>
+        <td>210144</td>
+        <td>59</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Royaume-Uni </td>
+        <td>55</td>
+        <td>1543</td>
+        <td>3.56%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>20</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Japon </td>
+        <td>28</td>
+        <td>839</td>
+        <td>3.34%</td>
+        <td>6</td>
+        <td></td>
+        <td></td>
+        <td>41</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Pays-Bas </td>
+        <td>24</td>
+        <td>1413</td>
+        <td>1.70%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>45</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Suisse </td>
+        <td>21</td>
+        <td>2354</td>
+        <td>0.89%</td>
+        <td>1</td>
+        <td>2</td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Allemagne </td>
+        <td>17</td>
+        <td>7272</td>
+        <td>0.23%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>2</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Philippines </td>
+        <td>12</td>
+        <td>187</td>
+        <td>6.42%</td>
+        <td>45</td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Belgique </td>
+        <td>10</td>
+        <td>1058</td>
+        <td>0.95%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>33</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Iraq </td>
+        <td>10</td>
+        <td>133</td>
+        <td>7.52%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Diamond Princess </td>
+        <td>7</td>
+        <td>696</td>
+        <td>1.01%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>15</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Saint-Marin </td>
+        <td>7</td>
+        <td>109</td>
+        <td>6.42%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>11</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Suède </td>
+        <td>7</td>
+        <td>1121</td>
+        <td>0.62%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>2</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Australie </td>
+        <td>5</td>
+        <td>452</td>
+        <td>1.11%</td>
+        <td>51</td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Indonésie </td>
+        <td>5</td>
+        <td>172</td>
+        <td>2.91%</td>
+        <td>38</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Pologne </td>
+        <td>5</td>
+        <td>205</td>
+        <td>2.44%</td>
+        <td>28</td>
+        <td>1</td>
+        <td></td>
+        <td>3</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Algérie </td>
+        <td>4</td>
+        <td>60</td>
+        <td>6.67%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Canada </td>
+        <td>4</td>
+        <td>441</td>
+        <td>0.91%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+    </tr>
+    
+    <tr role="row" class="text-danger">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Danemark </td>
+        <td>4</td>
+        <td>960</td>
+        <td>0.42%</td>
+        <td>46</td>
+        <td></td>
+        <td></td>
+        <td>10</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Egypte </td>
+        <td>4</td>
+        <td>166</td>
+        <td>2.41%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Grèce </td>
+        <td>4</td>
+        <td>352</td>
+        <td>1.14%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>5</td>
+    </tr>
+    
+    <tr role="row" class="text-danger">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Hong Kong </td>
+        <td>4</td>
+        <td>162</td>
+        <td>2.47%</td>
+        <td>7</td>
+        <td></td>
+        <td></td>
+        <td>4</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Autriche </td>
+        <td>3</td>
+        <td>1132</td>
+        <td>0.27%</td>
+        <td>114</td>
+        <td></td>
+        <td></td>
+        <td>12</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Inde </td>
+        <td>3</td>
+        <td>126</td>
+        <td>2.38%</td>
+        <td></td>
+        <td>1</td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Liban </td>
+        <td>3</td>
+        <td>120</td>
+        <td>2.50%</td>
+        <td>11</td>
+        <td></td>
+        <td></td>
+        <td>3</td>
+    </tr>
+    
+    <tr role="row" class="text-danger">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Norvège </td>
+        <td>3</td>
+        <td>1356</td>
+        <td>0.22%</td>
+        <td>8</td>
+        <td></td>
+        <td></td>
+        <td>27</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Argentine </td>
+        <td>2</td>
+        <td>65</td>
+        <td>3.08%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Bulgarie </td>
+        <td>2</td>
+        <td>67</td>
+        <td>2.99%</td>
+        <td>5</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Equateur </td>
+        <td>2</td>
+        <td>58</td>
+        <td>3.45%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>2</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Irlande </td>
+        <td>2</td>
+        <td>223</td>
+        <td>0.90%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>6</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Albanie </td>
+        <td>1</td>
+        <td>51</td>
+        <td>1.96%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>2</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Azerbaïdjan </td>
+        <td>1</td>
+        <td>28</td>
+        <td>3.57%</td>
+        <td>3</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Bahrain </td>
+        <td>1</td>
+        <td>228</td>
+        <td>0.44%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Guatemala </td>
+        <td>1</td>
+        <td>8</td>
+        <td>12.50%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Guyana </td>
+        <td>1</td>
+        <td>7</td>
+        <td>14.29%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Hongrie </td>
+        <td>1</td>
+        <td>50</td>
+        <td>2.00%</td>
+        <td>11</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Luxembourg </td>
+        <td>1</td>
+        <td>94</td>
+        <td>1.06%</td>
+        <td>13</td>
+        <td></td>
+        <td></td>
+        <td>10</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Maroc </td>
+        <td>1</td>
+        <td>37</td>
+        <td>2.70%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Martinique </td>
+        <td>1</td>
+        <td>15</td>
+        <td>6.67%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Pakistan </td>
+        <td>1</td>
+        <td>194</td>
+        <td>0.52%</td>
+        <td>10</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Panama </td>
+        <td>1</td>
+        <td>69</td>
+        <td>1.45%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Portugal </td>
+        <td>1</td>
+        <td>331</td>
+        <td>0.30%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>18</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >République dominicaine </td>
+        <td>1</td>
+        <td>21</td>
+        <td>4.76%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Slovénie </td>
+        <td>1</td>
+        <td>253</td>
+        <td>0.40%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>3</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Soudan </td>
+        <td>1</td>
+        <td>1</td>
+        <td>100.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="text-danger">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Taïwan </td>
+        <td>1</td>
+        <td>77</td>
+        <td>1.30%</td>
+        <td>10</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Thaîlande </td>
+        <td>1</td>
+        <td>177</td>
+        <td>0.56%</td>
+        <td>30</td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Ukraine </td>
+        <td>1</td>
+        <td>7</td>
+        <td>14.29%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Îles Caïmans </td>
+        <td>1</td>
+        <td>1</td>
+        <td>100.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Afghanistan </td>
+        <td>0</td>
+        <td>22</td>
+        <td>0.00%</td>
+        <td>1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Afrique du Sud </td>
+        <td>0</td>
+        <td>64</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Andorre </td>
+        <td>0</td>
+        <td>14</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Antigua-et-Barbuda </td>
+        <td>0</td>
+        <td>1</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Arabie Saoudite </td>
+        <td>0</td>
+        <td>133</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Arménie </td>
+        <td>0</td>
+        <td>52</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>2</td>
+    </tr>
+    
+    <tr role="row" class="text-danger">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Aruba </td>
+        <td>0</td>
+        <td>3</td>
+        <td>0.00%</td>
+        <td>1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Bahamas </td>
+        <td>0</td>
+        <td>1</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Bangladesh </td>
+        <td>0</td>
+        <td>10</td>
+        <td>0.00%</td>
+        <td>2</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Bhoutan </td>
+        <td>0</td>
+        <td>1</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Biélorussie </td>
+        <td>0</td>
+        <td>36</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Bolivie </td>
+        <td>0</td>
+        <td>11</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Bosnie-Herzégovine </td>
+        <td>0</td>
+        <td>25</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Brunei </td>
+        <td>0</td>
+        <td>54</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Brésil </td>
+        <td>0</td>
+        <td>234</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>2</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Burkina Faso </td>
+        <td>0</td>
+        <td>15</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Bénin </td>
+        <td>0</td>
+        <td>1</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Cambodia </td>
+        <td>0</td>
+        <td>24</td>
+        <td>0.00%</td>
+        <td>12</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Cameroun </td>
+        <td>0</td>
+        <td>5</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Channel Islands de Californie </td>
+        <td>0</td>
+        <td>6</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Chilie </td>
+        <td>0</td>
+        <td>156</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Chypre </td>
+        <td>0</td>
+        <td>46</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Colombie </td>
+        <td>0</td>
+        <td>57</td>
+        <td>0.00%</td>
+        <td>3</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Costa Rica </td>
+        <td>0</td>
+        <td>41</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>3</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Croatie </td>
+        <td>0</td>
+        <td>65</td>
+        <td>0.00%</td>
+        <td>8</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Cuba </td>
+        <td>0</td>
+        <td>4</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Curaçao </td>
+        <td>0</td>
+        <td>2</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Côte d&#39;Ivoire </td>
+        <td>0</td>
+        <td>4</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Estonie </td>
+        <td>0</td>
+        <td>225</td>
+        <td>0.00%</td>
+        <td>20</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Eswatini </td>
+        <td>0</td>
+        <td>1</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Ethiopie </td>
+        <td>0</td>
+        <td>5</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Finlande </td>
+        <td>0</td>
+        <td>278</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Gabon </td>
+        <td>0</td>
+        <td>1</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Georgie </td>
+        <td>0</td>
+        <td>34</td>
+        <td>0.00%</td>
+        <td>1</td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Ghana </td>
+        <td>0</td>
+        <td>6</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Gibraltar </td>
+        <td>0</td>
+        <td>3</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Groenland </td>
+        <td>0</td>
+        <td>1</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Guadeloupe </td>
+        <td>0</td>
+        <td>6</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Guam </td>
+        <td>0</td>
+        <td>5</td>
+        <td>0.00%</td>
+        <td>2</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Guinée </td>
+        <td>0</td>
+        <td>1</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Guinée équatoriale </td>
+        <td>0</td>
+        <td>1</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Guyane </td>
+        <td>0</td>
+        <td>11</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Honduras </td>
+        <td>0</td>
+        <td>8</td>
+        <td>0.00%</td>
+        <td>2</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Islande </td>
+        <td>0</td>
+        <td>199</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Israël </td>
+        <td>0</td>
+        <td>304</td>
+        <td>0.00%</td>
+        <td>6</td>
+        <td></td>
+        <td></td>
+        <td>4</td>
+    </tr>
+    
+    <tr role="row" class="">
+        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
+        <td >Jamaïque </td>
+        <td>0</td>
+        <td>12</td>
+        <td>0.00%</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    </tbody>
+</table>
+    
+
+
+<!-- REQUIRED SCRIPTS -->
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<!--<script src="/static/adminlte/plugins/jquery/jquery.min.js"></script>-->
+<!-- Bootstrap 4 -->
+<!--<script src="/static/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>-->
+<!-- AdminLTE App -->
+<!--<script src="/static/adminlte/dist/js/adminlte.min.js"></script>-->
+
+<!-- Page scripts -->
+
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+
+<script src="/static/js/responsive/dataTables.responsive.min.js"></script>
+<script src="/static/js/responsive/responsive.bootstrap4.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    $('#death_rate_table').DataTable(
+    {
+        responsive: true,
+        "paging":   false,
+        "ordering": true,
+        "order": [[ 1, "desc" ]],
+        "info":     false,
+        //"searching":false,
+        language:{
+        "search": ""
+        }
+    });
+} );
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<title>RememberingCOVID19</title>
+
+<!-- Async WordPress.com Remote Login -->
+<script id="wpcom_remote_login_js">
+var wpcom_remote_login_extra_auth = '';
+function wpcom_remote_login_remove_dom_node_id( element_id ) {
+	var dom_node = document.getElementById( element_id );
+	if ( dom_node ) { dom_node.remove(); }
+}
+function wpcom_remote_login_remove_dom_node_classes( class_name ) {
+	var dom_nodes = document.querySelectorAll( '.' + class_name );
+	for ( var i = 0; i < dom_nodes.length; i++ ) {
+		dom_nodes[i].remove();
+	}
+}
+function wpcom_remote_login_final_cleanup() {
+	wpcom_remote_login_remove_dom_node_classes( "wpcom_remote_login_msg" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_validate" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_js" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_iframe" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_styles" );
+}
+
+// Watch for messages back from the remote login
+window.addEventListener( "message", function( e ) {
+	if ( e.origin === "https://r-login.wordpress.com" ) {
+		var data = {};
+		try {
+			data = JSON.parse( e.data );
+		} catch( e ) {
+			wpcom_remote_login_final_cleanup();
+			return;
+		}
+
+		if ( data.msg === 'LOGIN' ) {
+			// Clean up the login check iframe
+			wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+
+			var id_regex = new RegExp( /^[0-9]+$/ );
+			var token_regex = new RegExp( /^.*|.*|.*$/ );
+			if (
+				token_regex.test( data.token )
+				&& id_regex.test( data.wpcomid )
+			) {
+				// We have everything we need to ask for a login
+				var script = document.createElement( "script" );
+				script.setAttribute( "id", "wpcom_remote_login_validate" );
+				script.src = '/remote-login.php?wpcom_remote_login=validate'
+					+ '&wpcomid=' + data.wpcomid
+					+ '&token=' + encodeURIComponent( data.token )
+					+ '&host=' + window.location.protocol
+						+ '//' + window.location.hostname;
+				document.body.appendChild( script );
+			}
+
+			return;
+		}
+
+		// Safari ITP, not logged in, so redirect
+		if ( data.msg === 'LOGIN-REDIRECT' ) {
+			window.location = 'https://wordpress.com/log-in?redirect_to=' + window.location.href;
+			return;
+		}
+
+		// Safari ITP, storage access failed, remove the request
+		if ( data.msg === 'LOGIN-REMOVE' ) {
+			var css_zap = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } @media screen and ( max-width: 782px ) { html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } }';
+			var style_zap = document.createElement( 'style' );
+			style_zap.type = 'text/css';
+			style_zap.appendChild( document.createTextNode( css_zap ) );
+			document.body.appendChild( style_zap );
+
+			var e = document.getElementById( 'wpcom_request_access_iframe' );
+			e.parentNode.removeChild( e );
+
+			document.cookie = 'wordpress_com_login_access=denied; path=/; max-age=31536000';
+
+			return;
+		}
+
+		// Safari ITP
+		if ( data.msg === 'REQUEST_ACCESS' ) {
+			console.log( 'request access: safari' );
+
+			// Check ITP iframe enable/disable knob
+			if ( wpcom_remote_login_extra_auth !== 'safari_itp_iframe' ) {
+				return;
+			}
+
+			// If we are in a "private window" there is no ITP.
+			var private_window = false;
+			try {
+				var opendb = window.openDatabase( null, null, null, null );
+			} catch( e ) {
+				private_window = true;
+			}
+
+			if ( private_window ) {
+				console.log( 'private window' );
+				return;
+			}
+
+			var iframe = document.createElement( 'iframe' );
+			iframe.id = 'wpcom_request_access_iframe';
+			iframe.setAttribute( 'scrolling', 'no' );
+			iframe.setAttribute( 'sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-top-navigation-by-user-activation' );
+			iframe.src = 'https://r-login.wordpress.com/remote-login.php?wpcom_remote_login=request_access&origin=' + encodeURIComponent( data.origin ) + '&wpcomid=' + encodeURIComponent( data.wpcomid );
+
+			var css = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 46px !important; } * html body { margin-top: 46px !important; } @media screen and ( max-width: 660px ) { html { margin-top: 71px !important; } * html body { margin-top: 71px !important; } #wpcom_request_access_iframe { display: block; height: 71px !important; } } #wpcom_request_access_iframe { border: 0px; height: 46px; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 99999; background: #23282d; } ';
+
+			var style = document.createElement( 'style' );
+			style.type = 'text/css';
+			style.id = 'wpcom_request_access_styles';
+			style.appendChild( document.createTextNode( css ) );
+			document.body.appendChild( style );
+
+			document.body.appendChild( iframe );
+		}
+
+		if ( data.msg === 'DONE' ) {
+			wpcom_remote_login_final_cleanup();
+		}
+	}
+}, false );
+
+// Inject the remote login iframe after the page has had a chance to load
+// more critical resources
+window.addEventListener( "DOMContentLoaded", function( e ) {
+	var iframe = document.createElement( "iframe" );
+	iframe.style.display = "none";
+	iframe.setAttribute( "scrolling", "no" );
+	iframe.setAttribute( "id", "wpcom_remote_login_key" );
+	iframe.src = "https://r-login.wordpress.com/remote-login.php"
+		+ "?wpcom_remote_login=key"
+		+ "&origin=aHR0cHM6Ly9yZW1lbWJlcmluZ2NvdmlkMTkuY29t"
+		+ "&wpcomid=173978175"
+		+ "&time=1584437204";
+	document.body.appendChild( iframe );
+}, false );
+</script>
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//rememberingcovid19.wordpress.com' />
+<link rel='dns-prefetch' href='//wordpress.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="RememberingCOVID19 &raquo; Feed" href="https://rememberingcovid19.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="RememberingCOVID19 &raquo; Comments Feed" href="https://rememberingcovid19.com/comments/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s0.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1582709031h&ver=5.4-RC1-47425"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='all-css-0-1' href='https://s0.wp.com/_static/??-eJylk9tugzAMhl9oIaUFdb2Y9iwcPOY2BxQ7Rbz9DKFTR7WtEjdRbOf7/Stx9NCrxjsGx9pG1ZvYoSM99I23iiwaGFdR1hC96DvsxnRRwhpCJ5UA+pgdsp2uI5pW18Y3F2WwDlUYNfFoYLsMf4J9RmamSJ+B+2rCq9FHVl3A9mknK4lQMbqO/sE/ojGKkEFBixOw3K4ui1OxL8uThqucFy46bv3gUpvNqjeXjBYMOtgsKLYk6Ylpcdgisb4iDL+KNn65sjzb77JczROUuFTIkqn5XTdYS66M6N5bW2cfGtxN+jRkkrd9xdMJK50qMDJZjv/C0peo6z4AkZLVYrRqHsnHH/KjnZ2kxdwFJKJVJqGonWcUmr43U+HdvuXla5Hv8mNRnr8ActRg3A==?cssminify=yes' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify {
+	text-align:justify;
+}
+</style>
+<link rel='stylesheet' id='print-css-1-1' href='https://s0.wp.com/wp-content/themes/pub/varia/print.css?m=1571655471h&cssminify=yes' type='text/css' media='print' />
+<link rel='stylesheet' id='all-css-2-1' href='https://s0.wp.com/_static/??-eJx9i9EKwjAMAH/IGqaTPonf0pXYRdKktOmGf+/EF0Xx7Q7uYC0uqhiKgc2YsUHpE8y4YIVmd8Z9bG0Hv7MlVApAEl+pW0vU/DXk7gr3RNIgoTrWGIxUPsRdOVD9t1acWNOGCbbqTZ/TJZ+Hk/fD4TiO/vYAjSBOww==?cssminify=yes' type='text/css' media='all' />
+<link crossorigin="anonymous" rel='stylesheet' id='hever-fonts-css'  href='https://fonts.googleapis.com/css?family=PT%2BSans%3A400%2C400i%2C700%2C700i&#038;subset=latin%2Clatin-ext' media='all' />
+<link rel='stylesheet' id='all-css-4-1' href='https://s0.wp.com/_static/??-eJx9kNsKwjAMhl/IGictugvxWdratdGuHUuq+PZ2sKEy2FUS+P4DgdcgbE7sEgMH1zuCoRgI7ulGIH5Ht7dEO/jB+iKGWDwmAm0ZczJ6/G4rfGG7EqMgZCfcDRmTn11AyVYelWrBx2x0ZaZUquGa0YKJOj22OgyZWHRRY+0b9FiNl7mlomyxZsXs8/+xEs1fCXLuNwHX/tKos2wOzUmq+wfwindB?cssminify=yes' type='text/css' media='all' />
+<style id='jetpack-global-styles-frontend-style-inline-css'>
+@import url('https://fonts.googleapis.com/css?family=Space Mono:regular,bold,italic,bolditalic|Space Mono:regular,bold,italic,bolditalic|');:root { --font-headings: Space Mono; --font-base: Space Mono; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+</style>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJx9zUsKgDAMBNALWYtIixvxLH6itJhUmxTx9lbQnQgDs5gHo49NORrXNAFrn7MniOdTpedC/wGFbom9QImOXjwGEiC57RZYEJj7BT5WDINbQSWGmAFJvplDdh22lTFNbaw1tb8AOGU7DA=='></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://rememberingcovid19.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s0.wp.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress.com" />
+<link rel="canonical" href="https://rememberingcovid19.com/" />
+<link rel='shortlink' href='https://wp.me/PbLZFB-5' />
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Frememberingcovid19.com%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Frememberingcovid19.com%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="RememberingCOVID19" />
+<meta property="og:url" content="https://rememberingcovid19.com/" />
+<meta property="og:site_name" content="RememberingCOVID19" />
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+<meta name="twitter:text:title" content="RememberingCOVID19" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Visit the post for more." />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="shortcut icon" type="image/x-icon" href="https://s0.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="icon" type="image/x-icon" href="https://s0.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="apple-touch-icon" href="https://s0.wp.com/i/webclip.png" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://rememberingcovid19.com/osd.xml" title="RememberingCOVID19" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<meta name="application-name" content="RememberingCOVID19" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-task" content="name=Subscribe;action-uri=https://rememberingcovid19.com/feed/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="description" content="This is a site of public grieving. We are preparing for losses to come due to the outbreak of COVID 19 across the world.&nbsp; On March 9th, 2020, Italy became the first nation to implement countrywide travel restrictions. Perhaps you are seeing the effects of fear in your surroundings; the paranoia, the mental preparation, the&hellip;" />
+</head>
+
+<body class="home page-template-default page page-id-5 wp-embed-responsive customizer-styles-applied singular image-filters-enabled hide-homepage-title highlander-enabled highlander-light">
+
+	
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	
+		<header id="masthead" class="site-header responsive-max-width">
+
+			
+
+			<p class="site-title"><a href="https://rememberingcovid19.com/" rel="home">RememberingCOVID19</a></p>
+	
+
+							<nav id="site-navigation" class="main-navigation" aria-label="Main Navigation">
+					<input type="checkbox" role="button" aria-haspopup="true" id="toggle" class="hide-visually">
+					<label for="toggle" id="toggle-menu" class="button">
+						Menu						<span class="dropdown-icon open">+</span>
+						<span class="dropdown-icon close">&times;</span>
+						<span class="hide-visually expanded-text">expanded</span>
+						<span class="hide-visually collapsed-text">collapsed</span>
+					</label>
+					<div class="menu-primary-container"><ul id="menu-primary" class="main-menu" aria-label="submenu"><li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item menu-item-19"><a href="https://rememberingcovid19.com/" aria-current="page">RememberingCOVID19</a></li>
+<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="https://rememberingcovid19.com/blog-2/">Blog</a></li>
+</ul></div>				</nav><!-- #site-navigation -->
+			
+			
+		</header><!-- #masthead -->
+
+	
+	<div id="content" class="site-content">
+
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main">
+
+			
+<article id="post-5" class="post-5 page type-page status-publish hentry entry">
+
+	<header class="entry-header responsive-max-width">
+		
+<h1 class="entry-title">RememberingCOVID19</h1>
+	</header>
+
+	<div class="entry-content">
+		
+<p>This is a site of public grieving. We are preparing for losses to come due to the outbreak of COVID 19 across the world.&nbsp;</p>
+
+
+
+<p>On March 9th, 2020, Italy became the first nation to implement countrywide travel restrictions. Perhaps you are seeing the effects of fear in your surroundings; the paranoia, the mental preparation, the constant news alerts. As you shut yourself in at home, wary of any outsiders, you still have no idea how extreme things can be for you, your family and friends. </p>
+
+
+
+<p>All you know is that already, your life has changed. </p>
+
+
+
+<p>We invite you to post about events in your life that have been cancelled or postponed due to the outbreak. This could be your wedding, a long-awaited concert, a loved one&#8217;s funeral, or any large celebration. </p>
+
+
+
+<p>As you stroll all the cancelled events on this site, you might be reminded of how social gatherings hold us together. Together we mourn the loss of public life.</p>
+
+
+<div id='contact-form-5'>
+<form action='https://rememberingcovid19.com/#contact-form-5' method='post' class='contact-form commentsblock'>
+
+
+<div class='grunion-field-wrap grunion-field-name-wrap'  >
+<label
+				for='g5-name'
+				class='grunion-field-label name'
+				>Name</label>
+<input
+					type='text'
+					name='g5-name'
+					id='g5-name'
+					value=''
+					class='name' 
+					
+				/>
+	</div>
+
+
+
+<div class='grunion-field-wrap grunion-field-email-wrap'  >
+<label
+				for='g5-email'
+				class='grunion-field-label email'
+				>Email</label>
+<input
+					type='email'
+					name='g5-email'
+					id='g5-email'
+					value=''
+					class='email' 
+					
+				/>
+	</div>
+
+
+
+<div class='grunion-field-wrap grunion-field-textarea-wrap'  >
+<label
+				for='contact-form-comment-g5-message'
+				class='grunion-field-label textarea'
+				>Message</label>
+<textarea
+		                name='g5-message'
+		                id='contact-form-comment-g5-message'
+		                rows='20' class='textarea'  ></textarea>
+	</div>
+
+
+
+<p></p>
+
+	<p class='contact-submit'>
+		<button type='submit' class='pushbutton-wide'>Submit</button>		<input type='hidden' name='is_block' value='1' />
+		<input type='hidden' name='contact-form-id' value='5' />
+		<input type='hidden' name='action' value='grunion-contact-form' />
+		<input type='hidden' name='contact-form-hash' value='5229074d1f6e71619e168615ee0b949bfcc83db7' />
+	</p>
+</form>
+</div>
+
+
+<div class="wp-block-group alignfull has-background-background-color has-background"><div class="wp-block-group__inner-container">
+<div class="wp-block-jetpack-layout-grid alignfull column1-desktop-grid__span-12 column1-desktop-grid__row-1 column1-tablet-grid__span-8 column1-tablet-grid__row-1 column1-mobile-grid__span-4 column1-mobile-grid__row-1">
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-none">
+<h4>Latest from the Blog</h4>
+
+
+				<div
+			class="wp-block-newspack-blocks-homepage-articles  wpnbha is-grid columns-3 show-image image-aligntop ts-3 is-3 "
+			style=""
+			>
+			<div data-posts>
+									<article data-post-id="56"
+						>
+		
+		<div class="entry-wrapper">
+			<h2 class="entry-title"><a href="https://rememberingcovid19.com/2020/03/13/a-dream-job-delayed/" rel="bookmark">A dream job&nbsp;delayed</a></h2>						<p>A friend who has been doing working holiday in Korea is fired because her company stopped their operation, she&#8217;s trying to find a new job so that she could stay in Korea to pursue her dream. &#8211; Maggie Chan</p>
+				<div class="entry-meta">
+					<time class="entry-date published updated" datetime="2020-03-13T14:30:04+00:00">March 13, 2020</time>				</div><!-- .entry-meta -->
+					</div><!-- .entry-wrapper -->
+	</article>
+
+			<article data-post-id="51"
+						>
+		
+		<div class="entry-wrapper">
+			<h2 class="entry-title"><a href="https://rememberingcovid19.com/2020/03/10/p-is-for-popadum/" rel="bookmark">P is for&nbsp;#Popadum</a></h2>						<p>A Gallery show featuring South Asian Art that was to open March 14, 2020 at The Galallery, 180 Capp Street, San Francisco was canceled.P is for #Popadum. South Asian art showcased in San Francisco, bringing beauty, questions, playfulness, subversion and challenges to our world.Popadum! brings together creative works that challenge the status quo by manipulating<a class="more-link" href="https://rememberingcovid19.com/2020/03/10/p-is-for-popadum/">Continue reading <span class="screen-reader-text">&#8220;P is for&nbsp;#Popadum&#8221;</span></a></p>
+				<div class="entry-meta">
+					<time class="entry-date published updated" datetime="2020-03-10T17:25:26+00:00">March 10, 2020</time>				</div><!-- .entry-meta -->
+					</div><!-- .entry-wrapper -->
+	</article>
+
+			<article data-post-id="9"
+						>
+		
+		<div class="entry-wrapper">
+			<h2 class="entry-title"><a href="https://rememberingcovid19.com/2020/03/09/example-post-3/" rel="bookmark">Chinese New Year, Iowa City,&nbsp;2020</a></h2>						<p>The Iowa City Chinese Association and the University of Iowa&#8217;s Chinese Association of Scholars of and Students had planned Chinese New Years celebrations for February of 2020. However they were cancelled due to fears of intra-community contagion and paranoia about Chinese international students. &#8211; Shirley Wang, Iowa City, IA. March 9, 2020</p>
+				<div class="entry-meta">
+					<time class="entry-date published" datetime="2020-03-09T21:45:30+00:00">March 9, 2020</time><time class="updated" datetime="2020-03-09T22:17:41+00:00">March 9, 2020</time>				</div><!-- .entry-meta -->
+					</div><!-- .entry-wrapper -->
+	</article>
+
+					</div>
+			
+		</div>
+				</div>
+</div>
+</div></div>
+
+
+
+<p></p>
+
+
+
+<div class="wp-block-group alignfull has-foreground-dark-background-color has-background"><div class="wp-block-group__inner-container"></div></div>
+	</div><!-- .entry-content -->
+
+	</article><!-- #post-5 -->
+
+		</main><!-- #main -->
+	</section><!-- #primary -->
+
+
+	</div><!-- #content -->
+
+		<footer id="colophon" class="site-footer responsive-max-width">
+	
+		<div class="site-info">
+										<a class="site-name" href="https://rememberingcovid19.com/" rel="home">RememberingCOVID19</a><span class="comma">,</span>
+						<a href="https://wordpress.com/?ref=footer_custom_powered" rel="nofollow">Powered by WordPress.com</a>.					</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+
+</div><!-- #page -->
+
+<!--  -->
+<script src='//0.gravatar.com/js/gprofiles.js?ver=202012y'></script>
+<script>
+var WPGroHo = {"my_hash":""};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781h'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-76393cbd4fd04c5988bf1322246920ca">
+	</div>
+	</div>
+<link rel='stylesheet' id='all-css-0-2' href='https://s0.wp.com/_static/??/wp-content/plugins/gutenberg-blocks/jetpack-layout-grid/blocks/front.css,/wp-content/mu-plugins/grunion-contact-form/css/grunion.css?m=1583834955j&cssminify=yes' type='text/css' media='all' />
+<script>
+var comment_like_text = {"loading":"Loading..."};
+</script>
+<script>
+var actionbardata = {"siteID":"173978175","siteName":"RememberingCOVID19","siteURL":"https:\/\/rememberingcovid19.com","icon":"<img alt='' src='https:\/\/s0.wp.com\/i\/logo\/wpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/hever","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Frememberingcovid19.com%2F&signup_flow=account&domain=rememberingcovid19.com","themeURL":"https:\/\/wordpress.com\/theme\/hever\/","xhrURL":"https:\/\/rememberingcovid19.com\/wp-admin\/admin-ajax.php","nonce":"7bdc50a742","isSingular":"1","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"5172af2305\" \/>","referer":"https:\/\/rememberingcovid19.com\/","canFollow":"1","feedID":"104121498","statusMessage":"","customizeLink":"https:\/\/rememberingcovid19.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Frememberingcovid19.wordpress.com%2F","postID":"5","shortlink":"https:\/\/wp.me\/PbLZFB-5","canEditPost":"","editLink":"https:\/\/wordpress.com\/page\/rememberingcovid19.com\/5","statsLink":"https:\/\/wordpress.com\/stats\/post\/5\/rememberingcovid19.com","i18n":{"view":"View site","follow":"Follow","following":"Following","edit":"Edit","login":"Log in","signup":"Sign up","customize":"Customize","report":"Report this content","themeInfo":"Get theme: Hever","shortlink":"Copy shortlink","copied":"Copied","followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/read\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar","editSubs":"Manage subscriptions","viewReader":"View site in Reader","viewReadPost":"View post in Reader","subscribe":"Sign me up","enterEmail":"Enter your email address","followers":"","alreadyUser":"Already have a WordPress.com account? <a href=\"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Frememberingcovid19.com%2F&signup_flow=account&domain=rememberingcovid19.com\">Log in now.<\/a>","stats":"Stats"}};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJydUNFuwyAM/KFRlilo68O0b0nArZwag7BJtr8faZtK60Ol7gWd7nzH2XbJxidWYLWT2AAzesjfu0lebJOQPdUActZQ1M7AIZVVyol+Dki0i8jb+JaUqR6RxR4qkRFUMBBQkY/moljX7/s35/Z2pNTIJCqmQX+6/oKw3GfGarZYn2JslCE8XaoRjlYWzPCM6Q/x/w1gXkN8qqwhLXxd4/zKvfig3hDaHc04FBsHUSgNmTRDKbie/8Y9maBlaDUembxi4tV0Q236K3527qPvXrv33k2/SwDK5A=='></script>
+<script type='text/javascript'>
+( 'fetch' in window ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?m=1573572739h&#038;ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?m=1540208548h&#038;ver=3.26.0-0"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?m=1550600082h&#038;ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?m=1540208548h&#038;ver=2.0.2"></scr' + 'ipt>' );
+</script>
+	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="//stats.wp.com/w.js?61" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'173978175','blog_tz':'0','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'173978175','v':'wpcom','tz':'0','user_id':'0','post':'5','subd':'rememberingcovid19'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1mJVY3bm9aR3VCbS9mWm1pRyZuJS1LX1t5NE84SWQsc2J8a3kvOS9ufHlFc2gmTk9WWlF2Lit2cCVUNnFGN2FKMVkuU2cxa3g1SThLSFg/RDFXcU42RG0udEFiRzhkOEhKOWU4N0RwOVh6VGxkLm18a2ZBfFNrPXBVK041P3ZBZjZNLEZ1YTgleG1fJT8xSEYlRkFDNEsuZW1HW2o1LTdQajk3YThzWjU9bURtMzJfcmVCeX51az1FWzhELEhQP0lwU09pdmJreTR1eEQxUVJFSGlLJls/dnRHWXYrYy9OTVVsflZWdFt3SjFhY19rfkl5VlVqNnda'}]);
+_stq.push([ 'clickTrackerInit', '173978175', '5' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+</body>
+</html>

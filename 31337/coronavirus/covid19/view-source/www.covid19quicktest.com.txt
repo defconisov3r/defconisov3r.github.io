@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html ng-app="main_app">
+<head>
+
+  <title>SHOPLINE ｜ Your One-Stop e-Commerce Solution</title>
+<meta name="description" content="Create your online shop with SHOPLINE, no coding required, launch an online shop in minutes.">
+<link rel="alternate" href="https://shopline.tw/" hreflang="zh-tw">
+<link rel="alternate" href="https://shopline.hk/" hreflang="zh-hk">
+<link rel="alternate" href="https://shopline.hk/en/" hreflang="en-hk">
+<link rel="alternate" href="https://shopline.ph/" hreflang="en-ph">
+<link rel="alternate" href="https://shoplineapp.com/" hreflang="en">
+<meta property="og:title" content="SHOPLINE | Your One-Stop e-Commerce Solution">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="shopline">
+<meta property="og:url" content="https://shoplineapp.com/">
+<meta property="og:image" content="https://dt9jl8a7gc9zr.cloudfront.net/assets/og-tag-banners/meta-OG-image-homepage-hken-44fed5c25bf9be745f61d431c0b4bd80d6007e94cebb3a1adad76bf5a7a2dbc4.jpg">
+<meta property="og:description" content="Create your online shop with SHOPLINE, no coding required, launch an online shop in minutes.">
+
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="content-language" content="en">
+  <link rel="stylesheet" media="all" href="https://dt9jl8a7gc9zr.cloudfront.net/assets/application-f55f9f0a65230953bf5d660e24a216f8a7e8735eef03f2749f7cd6359f460b55.css" />
+
+  <!-- <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon"> -->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://s3-ap-southeast-1.amazonaws.com/static.shoplineapp.com/web/v7/apple-touch-icons/180px.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="https://s3-ap-southeast-1.amazonaws.com/static.shoplineapp.com/web/v7/apple-touch-icons/167px.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://s3-ap-southeast-1.amazonaws.com/static.shoplineapp.com/web/v7/apple-touch-icons/152px.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://s3-ap-southeast-1.amazonaws.com/static.shoplineapp.com/web/v7/apple-touch-icons/120px.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://s3-ap-southeast-1.amazonaws.com/static.shoplineapp.com/web/v7/apple-touch-icons/76px.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://s3-ap-southeast-1.amazonaws.com/static.shoplineapp.com/web/v7/apple-touch-icons/60px.png">
+
+    <!-- tracking code -->
+    <!-- start GTM -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NQC4NP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NQC4NP');</script>
+<!-- end GTM -->
+
+
+<!-- start intercom -->
+<script>
+  window.intercomSettings = {
+    app_id: "ryx6jq53"
+  };
+</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/ryx6jq53';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+<!-- end intercom -->
+
+
+<!-- start Hotjar -->
+<!-- Hotjar Tracking Code for All domains (.hk/.tw/.ph/.app/admin) -->
+<script>
+(function(h,o,t,j,a,r){
+    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+    h._hjSettings={hjid:74247,hjsv:5};
+    a=o.getElementsByTagName('head')[0];
+    r=o.createElement('script');r.async=1;
+    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+    a.appendChild(r);
+})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<!-- end Hotjar -->
+
+    <!-- Bing verify code -->
+    <meta name="msvalidate.01" content="99F24CF93C5B10882538B3BB5804246A" />
+  <script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@id": "https://shoplineapp.com/",
+        "name": "shopline.en"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+
+<body data-spy="scroll" data-target="#scrollspy" data-offset="500" class="home-index index app-home home-index-en" ng-controller="MainController">
+  <div class="responsive-state hide">
+    <div class="visible-xs-block">XS</div>
+    <div class="visible-sm-block">SM</div>
+    <div class="visible-md-block">MD</div>
+    <div class="visible-lg-block">LG</div>
+    <div class="visible-xl-block">XL</div>
+  </div>
+  <div class="view app viewing-index">
+    <!-- header -->
+    <div class="app__drawer">
+  <div class="drawer--wrapper">
+    <nav>
+      <ul class="nav nav-list nav--drawer">
+        <li class="nav-item"><a class="nav-link" href="/features/overview">Features</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about/pricing">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="/showcase">Showcase</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://shoplineapp.com/blog/" target="_blank">Academy</a></li>
+        <li class="nav-item"><a class="more btn--collapse collapsed" data-toggle="collapse" href="#more"><span>Resources<i class="fa fa-caret-down"></i></span></a>
+          <div class="collapse" id="more">
+            <div class="collapse--wrapper">
+              <ul class="nav nav-list nav--drawer">
+                <li class="nav-item"><a class="nav-link" href="/online-store-setup">Shop Setup</a></li>
+                <li class="nav-item"><a class="nav-link" href="/templates">Themes</a></li>
+                <li class="nav-item"><a class="nav-link" href="/faq/overview">FAQ Support</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="collapse--line"></div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="/">Back to Home</a></li>
+      </ul>
+      <div class="row--button"><a class="button--drawer" href="http://admin.shoplineapp.com/users/sign_in?locale=en&amp;"><span>Log in</span></a><a class="button--drawer is-invert" href="http://admin.shoplineapp.com/users/sign_up?locale=en&amp;ref=shoplineapp.com&amp;"><span>Get Started</span></a></div>
+      <div class="row--ui">
+        <div class="lang--switch">
+          <div class="btn-group dropdown">
+  <button class="dropdown-toggle btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+    <img src="https://dt9jl8a7gc9zr.cloudfront.net/assets/sprite/flag--world-8d9e528e42edd981ab808d25ecfecf124c944a6361be0c7628d4d70166788bce.png" /><span>Others (ENG)</span>
+  </button>
+
+  <div class="dropdown-menu">
+    <a href="http://shopline.tw/" class="dropdown-item">台灣 (中文)</a>
+    <a href="http://shopline.hk/" class="dropdown-item">香港 (中文)</a>
+    <a href="http://shopline.hk/en/" class="dropdown-item">Hong Kong (ENG)</a>
+    <a href="http://shopline.ph/" class="dropdown-item">Philippines (ENG)</a>
+    <a href="http://shoplineapp.com/" class="dropdown-item">Others (ENG)</a>
+  </div>
+</div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+<div class="app__header">
+  <header>
+    <div class="header--left"><a class="logo" href="/"></a></div>
+    <div class="header--middle">
+      <nav>
+        <ul class="nav nav-list nav--privmacy">
+          <li class="nav-item"><a class="nav-link" href="/features/overview">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about/pricing">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="/showcase">Showcase</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://shoplineapp.com/blog/" target="_blank">Academy</a></li>
+          <li class="nav-item"><a class="nav-link" href="#more">Resources<i class="fa fa-caret-down"></i></a>
+            <div class="subMenu">
+              <div class="subMenu--container">
+                <nav>
+                  <ul class="nav nav-list nav--secordary">
+                    <li class="nav-item"><a class="nav-link" href="/online-store-setup">Shop Setup</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/templates">Themes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/faq/overview">FAQ Support</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header--right button-group"><a class="button--small is-invert" href="http://admin.shoplineapp.com/users/sign_in?locale=en&amp;">Log in</a><a class="button--small" href="http://admin.shoplineapp.com/users/sign_up?locale=en&amp;ref=shoplineapp.com&amp;">Get Started</a></div>
+    <div class="menu">
+      <div class="btn-toggle-menu">
+        <div class="hamburger hamburger--boring" js-toggle="drawer"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div>
+      </div>
+    </div>
+  </header>
+</div>
+
+
+    <div class="app__content viewport">
+      <div class="header--push"></div>
+       <div id="wrap">
+  <div class="hide fixed" id="scrollspy">
+    <ul class="nav nav--scrollspy">
+      <li class="nav-item"><a class="nav-link" href="#cover">cover</a></li>
+      <li class="nav-item"><a class="nav-link" href="#feature">feature</a></li>
+      <li class="nav-item"><a class="nav-link" href="#featureSP">featureSP</a></li>
+      <li class="nav-item"><a class="nav-link" href="#spec">spec</a></li>
+      <li class="nav-item"><a class="nav-link" href="#plan">plan</a></li>
+      <li class="nav-item"><a class="nav-link" href="#casestudy">casestudy</a></li>
+      <li class="nav-item"><a class="nav-link" href="#newarrival">newarrival</a></li>
+    </ul>
+  </div>
+  <div class="scrollSpyOffset" id="cover"></div>
+  <section class="section--cover">
+    <div class="hint--scrollDown">
+      <div class="mouseScroll"></div>
+      <p>Scroll</p>
+    </div>
+    <div class="cover__bg">
+      <div class="l-1">
+        <div class="left--1--screen__shadow"></div>
+      </div>
+      <div class="l-2">
+        <div class="left--2--screen"></div>
+      </div>
+      <div class="l-3">
+        <div class="left--3--mobile__shadow" js-velocity=".06"></div>
+      </div>
+      <div class="l-4">
+        <div class="left--4--mobile" js-velocity=".08"></div>
+      </div>
+      <div class="l-5">
+        <div class="left--5--icon__shadow" js-velocity=".10"></div>
+      </div>
+      <div class="r-1">
+        <div class="right--1--screen__shadow"></div>
+      </div>
+      <div class="r-2">
+        <div class="right--2--screen"></div>
+      </div>
+      <div class="r-3">
+        <div class="right--3--cart__shadow" js-velocity=".05"></div>
+      </div>
+      <div class="r-4">
+        <div class="right--4--cart" js-velocity=".05"></div>
+      </div>
+      <div class="r-5">
+        <div class="right--5--photo__shadow" js-velocity=".06"></div>
+      </div>
+      <div class="r-6">
+        <div class="right--6--photo" js-velocity=".06"></div>
+      </div>
+      <div class="r-7">
+        <div class="right--7--ring__shadow" js-velocity=".06"></div>
+      </div>
+      <div class="r-8">
+        <div class="right--8--ring" js-velocity=".06"></div>
+      </div>
+      <div class="r-9">
+        <div class="right--9--shop__shadow" js-velocity=".10"></div>
+      </div>
+      <div class="r-10">
+        <div class="right--10--shop" js-velocity=".25"></div>
+      </div>
+      <div class="r-11">
+        <div class="right--11--mobile__shadow" js-velocity=".10"></div>
+      </div>
+      <div class="r-12">
+        <div class="right--12--mobile" js-velocity=".23"></div>
+      </div>
+      <div class="cover--ui">
+        <div class="cover__ui" js-velocity=".04"></div>
+      </div>
+      <div class="l-6">
+        <div class="left--6--icon" js-velocity=".20"></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="cover__caption">
+        <h1>A Global Smart <br class="v-xs v-sm" />Commerce Enabler<br class="v-md v-lg v-xl"/><span class="v-md v-lg v-xl">Providing a True Omni-Channel Platform and <br class="v-md" />Cross-Border Services for Brands</span></h1>
+        <p>SHOPLINE provides a complete solution and <br class="v-xs v-sm"/>customized services to promote,<br class="v-md v-lg v-xl" />also support <br class="v-xs v-sm"/>entrepreneurs, SMEs, and enterprises <br class="v-xs v-sm"/>go online and go global.</p>
+        <div class="ui--email">
+          <form class="wrapper" onSubmit="return freeTrialsubmit()">
+            <input class="input-email" type="email" placeholder="Enter EMAIL (Changeable anytime)" required>
+            <button class="button--basic" type="submit" value="submit">Start trial</button>
+          </form>
+        </div>
+        <h2>Try SHOPLINE free for 30 days.</h2>
+      </div>
+    </div>
+  </section>
+  <div class="scrollSpyOffset" id="feature"></div>
+  <section class="section--feature">
+    <div class="container--feature">
+      <div class="row--feature">
+        <div class="col">
+          <div class="card--feature">
+            <div class="pic">
+              <div class="ico--powerful"></div>
+            </div>
+            <article class="caption">
+              <h2>Powerful and practical<br>e-commerce features</h2>
+              <p class="sm">SHOPLINE offers a wide selection of shop designs, multiple payment gateways, shipping carriers, and diverse marketing channels. SHOPLINE lets you quickly build a full-featured online store. Start selling right away!</p>
+              <div class="row--button"><a class="button--xl is-orange" href="/features/overview"><span>Check Out These Features</span></a></div>
+            </article>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card--feature is-highlight">
+            <div class="pic">
+              <div class="ico--easy"></div>
+            </div>
+            <article class="caption">
+              <h2>Intuitive and simple ways to build your store</h2>
+              <p class="sm">SHOPLINE’s dashboard will guide you through the setup process so you can single-handedly establish your professional online store. There’s no need to hire a web designer. Save time and costs and start selling online instantly!</p>
+              <div class="row--button"><a class="button--xl" href="http://admin.shoplineapp.com/users/sign_up?locale=en&amp;ref=shoplineapp.com&amp;"><span>Start 30 Days Free Trial</span></a></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section--feature">
+    <div class="container--feature">
+      <div class="scrollSpyOffset" id="featureSP"></div>
+      <div class="row--featureSP">
+        <div class="col--caption">
+          <div class="card--featureSP">
+            <article class="caption">
+              <h2>Perfectly Designed Merchant Dashboard</h2>
+              <p>SHOPLINE’s online store platform is designed to boost your sales, and to handle everything from product listings, payments, shipping to marketing promotion settings. Our smart responsive web design (RWD) adjusts perfectly to any browsing device and makes it easy for you to own a store that reflects your vision and brand values.</p>
+              <div class="row--button"><a class="button--xl is-orange" href="/online-store-setup"><span>See More Online Store Tips</span></a></div>
+            </article>
+          </div>
+        </div>
+        <div class="col--pic">
+          <div class="img--dashboard">
+            <div class="imac"></div>
+            <div class="chart--3__shadow"></div>
+            <div class="chart--3"></div>
+            <div class="chart--2__shadow"></div>
+            <div class="chart--2"></div>
+            <div class="chart--1__shadow"></div>
+            <div class="chart--1"></div>
+            <div class="imac__ui"></div>
+          </div>
+        </div>
+      </div>
+      <div class="scrollSpyOffset" id="spec"></div>
+      <div class="row--spec">
+        <div class="col">
+          <div class="card--spec">
+            <div class="pic">
+              <div class="thumb--spec">
+                <div class="ico--free"></div>
+              </div>
+            </div>
+            <div class="caption">
+              <h3>Zero commission. No transaction fees</h3>
+              <p>SHOPLINE does not charge commission fees like other e-commerce platforms. We think in your shoes to help you save costs and maximize your profits.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card--spec">
+            <div class="pic">
+              <div class="thumb--spec">
+                <div class="ico--www"></div>
+              </div>
+            </div>
+            <div class="caption">
+              <h3>Custom store domain. Unlimited bandwidth</h3>
+              <p>SHOPLINE can help you move your existing domain to your store. You may also choose to apply for your custom domain and get insights to your store performance. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card--spec">
+            <div class="pic">
+              <div class="thumb--spec">
+                <div class="ico--card"></div>
+              </div>
+            </div>
+            <div class="caption">
+              <h3>Multiple payment and shipping options</h3>
+              <p>Choose from a variety of payment and shipping options including domestic and foreign credit cards, ATM transfer, cash-on-delivery and many more.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card--spec">
+            <div class="pic">
+              <div class="thumb--spec">
+                <div class="ico--order"></div>
+              </div>
+            </div>
+            <div class="caption">
+              <h3>Complete order and inventory management system</h3>
+              <p>Check out real-time status of every order and view reports and important metrics of your sales. Track your store performance anytime, anywhere. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card--spec">
+            <div class="pic">
+              <div class="thumb--spec">
+                <div class="ico--rwd"></div>
+              </div>
+            </div>
+            <div class="caption">
+              <h3>Multi-language and mobile optimization</h3>
+              <p>Multi-language switch and responsive store designs that help you present the most professional and seamless experience to your customers.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card--spec">
+            <div class="pic">
+              <div class="thumb--spec">
+                <div class="ico--support"></div>
+              </div>
+            </div>
+            <div class="caption">
+              <h3>Professional service team<br><br></h3>
+              <p>Through our fast and transparent communication channels, SHOPLINE’s strong service team will help you solve any problem you may have with operating your store.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="scrollSpyOffset" id="plan"></div>
+  <div class="hr--wave"></div>
+  <section class="section--plan">
+    <div class="container">
+      <div class="plan--caption">
+        <h2>SHOPLINE has just the <br class="v-375">right solution<br>tailored for the scope of your business</h2>
+        <div class="v-lg v-xl v-md">
+          <div class="switch"><span>Monthly Plans</span>
+            <label js-toggle-plan>
+              <input id="switchYearMonth" type="checkbox" checked>
+              <div class="ui--switch">
+                <div class="wrapper"></div>
+                <div class="button"></div>
+              </div>
+            </label><span>Annual Plans
+                <div class="tip">Save 10%</div></span>
+          </div>
+        </div>
+      </div>
+      <div class="row row--planInfo">
+        <div class="col-sm">
+          <ul class="nav nav--planInfo">
+            <li class="nav-item"><a class="nav-link slidePlan-1" href="#">Basic</a></li>
+            <li class="nav-item"><a class="nav-link slidePlan-2 active" href="#">Advanced</a></li>
+            <li class="nav-item"><a class="nav-link slidePlan-3 mobile--default" href="#">Premium</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-container" id="planSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="card--plan is-year">
+            <div class="card__hedaer">
+              <h2>Basic</h2>
+              <div class="v-year">
+                <p>US$ <span class="price">310</span>/ year</p>
+                <p class="xs">( Approx. $26 / month )</p>
+              </div>
+              <div class="v-month">
+                <p>US$ <span class="price">29</span>/ month</p>
+                <p class="xs">( Save 10% for Annual Payment )</p>
+              </div>
+            </div>
+            <div class="card__body">
+              <h3>The easiest way to quickly start your online store.</h3>
+              <ul>
+                <li>Discounts and Free Delivery Promotions</li>
+                <li>Basic Ads Tracking Tools</li>
+                <li>Sales Analytics Reports</li>
+              </ul>
+              <div class="row--button"><a class="button--xl is-gray" href="http://admin.shoplineapp.com/users/sign_up?locale=en&amp;ref=shoplineapp.com&amp;"><span>30-day Free Trial</span></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card--plan is-year">
+            <div class="card__hedaer">
+              <h2>Advanced</h2>
+              <div class="v-year">
+                <p>US$ <span class="price">910</span>/ year</p>
+                <p class="xs">( Approx. $76 / month )</p>
+              </div>
+              <div class="v-month">
+                <p>US$ <span class="price">85</span>/ month</p>
+                <p class="xs">( Save 10% for Annual Payment )</p>
+              </div>
+            </div>
+            <div class="card__body">
+              <h3>Features and integrations to boost your sales</h3>
+              <ul>
+                <li>Multiple Admin Accounts</li>
+                <li>Retargeting Tag</li>
+                <li>CSS Editor</li>
+              </ul>
+              <div class="row--button"><a class="button--xl is-gray" href="http://admin.shoplineapp.com/users/sign_up?locale=en&amp;ref=shoplineapp.com&amp;"><span>30-day Free Trial</span></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card--plan is-year is-highlight">
+            <div class="card__hedaer">
+              <h2>Premium</h2>
+              <div class="v-year">
+                <p>US$ <span class="price">1,780</span>/ year</p>
+                <p class="xs">( Approx. $148 / month )</p>
+              </div>
+              <div class="v-month">
+                <p>~ US$ <span class="price">148</span>/ month</p>
+                <p class="xs">( Only Available for Annual Payment )</p>
+              </div>
+            </div>
+            <div class="card__body">
+              <h3>The most full featured plan for a growing business. </h3>
+              <ul>
+                <li>Membership Discounts & Store Credits</li>
+                <li>Order Status Update via Facebook Msg</li>
+                <li>Express Checkout Page</li>
+              </ul>
+              <div class="row--button"><a class="button--xl" href="http://admin.shoplineapp.com/users/sign_up?locale=en&amp;ref=shoplineapp.com&amp;"><span>30-day Free Trial</span></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination hide-in-desktop"></div>
+    </div>
+  </section>
+  <div class="hr--wave is-reverse"></div>
+  <div class="scrollSpyOffset" id="casestudy"></div>
+  <section class="section--casestudy">
+    <div class="container">
+      <div class="casestudy__caption">
+        <h4>Popular store merchants all recommend using SHOPLINE!</h4>
+      </div>
+    </div>
+    <div class="swiper-container" id="caseSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="card--case">
+            <div class="card__pic"><img src="https://dt9jl8a7gc9zr.cloudfront.net/assets/content/casestudy/durex-banner__hkzh-555256821d0a07b50d24cd742d2b2df7af0b85b22b4155cbeca8d3144ac9b39f.jpg" /></div>
+            <div class="card__caption">
+              <div class="row">
+                <div class="thumb--shop"><img src="https://dt9jl8a7gc9zr.cloudfront.net/assets/content/casestudy/durex-logo__hkzh-487b1f5ff6e869799283aedf2858fc4feb4bfcfc857b5257ebcf8666d99df9e2.jpg" /></div><a class="url" href="https://www.durex-shopline.com" target="_blank">durex-shopline.com</a>
+              </div>
+              <article>
+                <p>We especially like SHOPLINE’s “end-to-end” customer management system. We can see a lot more customer data and trends compared to our offline store. Now, we know about the lifetime value of customers, their spending, and demographics.。</p>
+                <p class="user">Sales Director, Ashish</p>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card--case">
+            <div class="card__pic"><img src="https://dt9jl8a7gc9zr.cloudfront.net/assets/content/casestudy/fumble-banner__hkzh-97a2c3eb1b4d23e86bf23949fb9724042e6355d181abb6df9ce94f9320a6e2f9.jpg" /></div>
+            <div class="card__caption">
+              <div class="row">
+                <div class="thumb--shop"><img src="https://dt9jl8a7gc9zr.cloudfront.net/assets/content/casestudy/fumble-logo__hkzh-aaa79f793ec25bdf36aff6936a3087eb1ea51733c67c6a02341949657921b2e8.jpg" /></div><a class="url" href="https://www.fumble.com.hk" target="_blank">fumble.com.hk</a>
+              </div>
+              <article>
+                <p>The best thing I like about SHOPLINE is their customer support, which is very supportive and speedy. You usually do not expect anyone from other platforms to teach you or help you find bugs, but SHOPLINE has full exceptional support here.</p>
+                <p class="user">Founder, Carlsen</p>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card--case">
+            <div class="card__pic"><img src="https://dt9jl8a7gc9zr.cloudfront.net/assets/content/casestudy/hiwalk-banner__hkzh-6f0fd4dd401873b6b0e81c3f6179f347c4f4f800f192b56f9102e632453ace0e.jpg" /></div>
+            <div class="card__caption">
+              <div class="row">
+                <div class="thumb--shop"><img src="https://dt9jl8a7gc9zr.cloudfront.net/assets/content/casestudy/hiwalk-logo__hkzh-b594e770b6031f7e4afafe4ad405f65764c11d0af54cc539924207cad56fe398.jpg" /></div><a class="url" href="https://hk.hiwalk.co/" target="_blank">hiwalk.co</a>
+              </div>
+              <article>
+                <p>Our handmade eggrolls are in a really competitive industry. We were able to highlight our product’s unique selling points via Google Shopping Ads.</p>
+                <p class="user">Founder, Zech</p>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card--case">
+            <div class="card__pic"><img src="https://dt9jl8a7gc9zr.cloudfront.net/assets/content/casestudy/lemon-king-banner__hkzh-dcf14bb21674acfe36694b9e04550965fddb32f93fb7d4a940eb5b993c953fd8.jpg" /></div>
+            <div class="card__caption">
+              <div class="row">
+                <div class="thumb--shop"><img src="https://dt9jl8a7gc9zr.cloudfront.net/assets/content/casestudy/lemonking-logo__hkzh-63db15e19571ffa63c16e05dc7df46808dcdc81ac2a1f01c6355cc3297ca7369.jpg" /></div><a class="url" href="https://www.lemonking.com.hk" target="_blank">

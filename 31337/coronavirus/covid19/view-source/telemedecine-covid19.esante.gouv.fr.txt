@@ -1,0 +1,865 @@
+
+<!DOCTYPE html>
+  <html lang="fr">
+    <head>
+      <meta charset="utf-8">
+      <title>ANS Téléconsultation</title>
+        <!-- CSS -->
+        
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<!-- Fontawesome CSS -->
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css' />
+
+        <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/static/img/favicon16_ans.png">
+        
+    </head>
+    <body>
+    
+      <!-- Navigation Bar -->
+      
+<nav class="navbar navbar-expand-lg navbar-dark mb-3" style="background-color: #0168B3;">
+    <a class="navbar-brand" href="/">
+        <img src="/static/img/mss_logo.png" class="d-inline-block align-right" 
+        height="50"
+        alt="Logo Ministère des Solidarités et de la Santé">
+    </a>
+    <a class="navbar-brand" href="/">
+        <img src="/static/img/ans_logo_2020.png" class="d-inline-block align-right" 
+        alt="Logo ANS">
+    </a>
+</nav>
+
+      <!-- Content -->
+      
+<div class='container'>
+
+    <div class="mb-4 mt-4">
+        <h3>
+            Formulaire d’auto déclaration des fonctionnalités proposées par la solution logicielle de téléconsultation et de télésoin dans le cadre de consultation ou de suivi à distance en lien avec l’épidémie de Covid-19
+        </h3>
+    </div>
+
+    <!--Error messages about the form-->
+    
+
+    <div class="mb-4 mt-4">
+        <h4 class="text-muted">
+            Contexte et objet du document :
+        </h4>
+    </div>
+
+    <div class="row justify-content-center mt-4 mb-4">
+        <div class="col text-justify">
+            La <strong>téléconsultation</strong> est un des cinq actes de télémédecine qui comme défini par le décret no 2010-1229 du 19 octobre 2010 relatif à la télémédecine, permet un acte médical de consultation, réalisé à distance, au moyen d’un dispositif utilisant les technologies de l’information et de la communication.
+        </div>
+    </div>
+    <div class="row justify-content-center mt-4 mb-4">
+        <div class="col text-justify">
+            L’arrêté du 1er août 2018 portant approbation de l’avenant no 6 à la convention nationale organisant les rapports entre les médecins libéraux et l’assurance maladie signée le 25 août 2016, fait entrer la téléconsultation dans le droit commun au remboursement par l’assurance maladie, et le subordonne à l’existence d’une vidéotransmission.
+        </div>
+    </div>
+    <div class="row justify-content-center mt-4 mb-4">
+        <div class="col text-justify">
+            La loi n° 2019-774 du 24 juillet 2019 relative à l'organisation et à la transformation du système de santé introduit par ailleurs la notion de <strong>télésoin</strong> (télésuivi infirmier).
+        </div>
+    </div>
+    <div class="row justify-content-center mt-4 mb-4">
+        <div class="col text-justify">
+            Compte tenu de ces éléments et du caractère personnel des données échangées, un certain nombre d’obligations doivent être respectées par les solutions logicielles proposant d’effectuer des téléconsultations ou du télésuivi infirmier, notamment :
+            <br>
+            -	Respect du RGPD
+            <br>
+            -	Hébergement des documents sur un serveur certifié HDS
+            <br>
+            -	Respect de la PGSSI-S pour les échanges de documents
+        </div>
+    </div>
+    <div class="row justify-content-center mt-4 mb-4">
+        <div class="col text-justify">
+            <strong>
+                La téléconsultation et le télésuivi infirmier apparaissent comme des enjeux importants dans la gestion de l’épidémie de Covid-19.
+            </strong>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-4 mb-4">
+        <div class="col text-justify">
+            Compte tenu de la nécessité de répondre à la crise Covid-19, ces obligations ne doivent cependant pas empêcher la prise en charge des patients. Leurs non-respects ne sauraient être reproché aux professionnels de santé qui ne pourraient y souscrire.
+        </div>
+    </div>
+    <div class="row justify-content-center mt-4 mb-4">
+        <div class="col text-justify">
+            De par l’urgence à apporter au plus vite de la lisibilité aux professionnels de santé sur les fonctionnalités différenciantes leur permettant de choisir de manière éclairée un logiciel de téléconsultation,
+            <strong>
+                le présent document a pour objectif de permettre aux éditeurs de solutions logicielles d’auto-déclarer les fonctionnalités de leur solution logicielle de téléconsultation/télésuivi infirmier et/ou de partage sécurisé de documents.
+            </strong>
+        </div>
+    </div>
+
+    <!--Error messages about the form-->
+    
+
+
+    <form method="post">
+        <input type="hidden" name="csrfmiddlewaretoken" value="EWUoNTVDnZqhZPeb8xRh3vfniGWy5vKYsXgHxAOgxnunSDEY1LKINhSGEIJ2RXxC">
+
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <div class="form-group">
+    <sup><small><i class="fas fa-asterisk text-danger"></i></small></sup>
+    <label for="id_first_name">Prénom :</label>
+    <input type="text" name="first_name" maxlength="30" 
+        class="form-control" id="id_first_name"
+        >
+</div>
+
+<div class="form-group">
+    <sup><small><i class="fas fa-asterisk text-danger"></i></small></sup>
+    <label for="id_last_name">Nom :</label>
+    <input type="text" name="last_name" maxlength="150" 
+        class="form-control" id="id_last_name"
+        >
+</div>
+
+<div class="form-group">
+    <sup><small><i class="fas fa-asterisk text-danger"></i></small></sup>
+    <label for="id_email">Adresse électronique :</label>
+    <input type="email" name="email" maxlength="254" 
+        class="form-control" id="id_email"
+        >
+</div>
+
+<div class="form-group">
+    <sup><small><i class="fas fa-asterisk text-danger"></i></small></sup>
+    <label for="id_company_name">Nom de la société/organisme ( Si le logiciel est porté par un GRADeS/ARS/URPS.. ou autre institution, alors renseigner : le nom de l’institution suivi du nom de l’ industriel fournissant le logiciel ) :</label>
+    <input type="text" name="company_name" maxlength="150" 
+        class="form-control" id="id_company_name"
+        >
+</div>
+
+<div class="form-group">
+    <sup><small><i class="fas fa-asterisk text-danger"></i></small></sup>
+    <label for="id_solution_name">Nom de la solution :</label>
+    <input type="text" name="solution_name" maxlength="150" 
+        class="form-control" id="id_solution_name"
+        >
+</div>
+
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <div class="form-group">
+                    <label for="id_adresse_internet">
+                        Je sollicite que la mention de cette solution de téléconsultation à la liste mise à disposition du public soit assortie de l’adresse internet et/ou de l’adresse email et/ou du numéro de téléphone suivants : 
+                    </label>
+                    <input type="text" name="adresse_internet" maxlength="1000" 
+                        class="form-control" id="id_adresse_internet"
+                        >
+                </div>
+            </div>      
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <div class="text-justify mb-4 mt-4">
+                    Je soussigné(e) représentant la société/organisme nommée ci-dessus, 
+                    sollicite le référencement de ma solution de téléconsultation/télésuivi infirmier nommée ci-dessus, pour la prise en charge des patients présentant les symptômes de l'infection ou reconnus atteints du Covid-19 jusqu’au 30 avril 2020 sur la liste tenue par le Ministère des solidarités et de la santé, publiée sur son site internet et relayée par d’autres sites publics. La licéité du traitement repose sur le respect d’une ou plusieurs obligations légales. Les données personnelles collectées seront conservées pendant la durée de mise en œuvre du dispositif exceptionnel lié à la crise du COVID 19.
+                </div>
+                <div class="text-justify mb-4 mt-4">
+                    Je suis informé(e) que je peux à tout moment demander à ne plus figurer sur cette liste,
+                    ou exercer mon droit d'accès et de rectification à mes données personnelles en faisant la demande à l'adresse suivante dpo.asipsante@sante.gouv.fr. 
+                    Dans le cas où j'estimerais que mes droits n'ont pas été respectés, 
+                    j'ai la possibilité de faire une réclamation auprès de la CNIL.
+                </div>
+                <div class="text-justify mb-4 mt-4">
+                    Je déclare que la solution de téléconsultation/télésuivi infirmier et/ou de partage sécurisé de documents, objet de la présente déclaration dispose des fonctionnalités suivantes :
+                    
+                </div>
+
+                <div class="mb-4 mt-4">
+                    <h4>
+                        1. Fonctionnalités
+                    </h4>
+                </div>                
+                <div class="form-group">
+    <h5>
+        1-1 Type de patientèle du professionnel  de santé
+    </h5>
+    <p class="text-justify">
+        Quel est le type de patient susceptible d’utiliser votre logiciel de téléconsultation/télésuivi infirmier ( Patient à son domicile, patient en  établissements de santé, en EHPAD, en  établissements pénitentiaires,  autre…) ?
+    </p>
+    
+    <div class="mt-2">
+        <em>
+            Réponses du déclarant :
+        </em>
+        <textarea name="q1_cible" maxlength="1000" rows="2" class="form-control" id="id_q1_cible"
+        ></textarea>
+    </div>
+</div>
+
+<div class="form-group">
+    <h5>
+        1-2 Territoire
+    </h5>
+    <p class="text-justify">
+    Le logiciel est disponible sur le territoire suivant (indiquer les <strong><u>régions</u></strong>) :
+    </p>
+    
+    <div class="mt-2">
+        <em>
+            Réponses du déclarant :
+        </em>
+        <textarea name="q1b_terrain" maxlength="1000" rows="2" class="form-control" id="id_q1b_terrain"
+        ></textarea>
+    </div>
+</div>
+
+<div class="form-group">
+    <h5>
+        1-3 Vidéotransmission
+    </h5>
+    <p class="text-justify">
+    Le logiciel intègre une solution de vidéotransmission dédiée aux échanges interpersonnels entre le professionnel de santé et son patient. 
+    </p>
+
+    <em>
+        Je déclare que le logiciel est conforme à l’exigence ci-dessus :
+    </em>
+
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q2_video_choice" id="id_q2_video_choice_1" class="form-check-input"
+        value="Oui"
+        >
+        <label class="form-check-label" for="id_q2_video_choice_1">Oui</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q2_video_choice" id="id_q2_video_choice_2" class="form-check-input"
+        value="Non"
+        >
+        <label class="form-check-label" for="id_q2_video_choice_2">Non</label>
+    </div>                    
+
+    <br>
+    <div class="mt-2">
+        <em>
+            <b>Si besoin</b>, justifications du déclarant :
+        </em>
+        <textarea name="q2_video" maxlength="1000" rows="2" class="form-control" id="id_q2_video"
+        ></textarea>
+    </div>
+</div>  
+
+<div class="form-group">
+    <h5>
+        1-4 Partage de documents du professionnel de santé vers le patient
+    </h5>
+    <p class="text-justify">
+    Le logiciel permet au professionnel de santé téléconsultant de partager des
+     documents médicaux avec son patient, dont les documents de prescriptions
+      (dont ordonnance, certificat, …).
+    </p>
+
+    <em>
+        Je déclare que le logiciel est conforme à l’exigence ci-dessus :
+    </em>
+
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q4_doc_mtp_choice" id="id_q4_doc_mtp_choice_1" class="form-check-input"
+        value="Oui"
+        >
+        <label class="form-check-label" for="id_q4_doc_mtp_choice_1">Oui</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q4_doc_mtp_choice" id="id_q4_doc_mtp_choice_2" class="form-check-input"
+        value="Non"
+        >
+        <label class="form-check-label" for="id_q4_doc_mtp_choice_2">Non</label>
+    </div>                    
+
+    <br>
+    <div class="mt-2">
+        <em>
+            Justifications du déclarant (préciser le cas échéant les solutions avec lesquelles le logiciel de téléconsultation est interopérable) :
+        </em>
+        <textarea name="q4_doc_mtp" maxlength="1000" rows="2" class="form-control" id="id_q4_doc_mtp"
+        ></textarea>
+    </div>
+</div>  
+
+<div class="form-group">
+    <h5>
+        1-5 Partage de documents du patient vers le professionnel de santé
+    </h5>
+    <p class="text-justify">
+    Le logiciel permet au patient de partager avec le professionnel de santé 
+    téléconsultant des documents médicaux (résultats d’analyses, ordonnance, …).
+    </p>
+
+    <em>
+        Je déclare que le logiciel est conforme à l’exigence ci-dessus :
+    </em>
+
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q5_doc_ptm_choice" id="id_q5_doc_ptm_choice_1" class="form-check-input"
+        value="Oui"
+        >
+        <label class="form-check-label" for="id_q5_doc_ptm_choice_1">Oui</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q5_doc_ptm_choice" id="id_q5_doc_ptm_choice_2" class="form-check-input"
+        value="Non"
+        >
+        <label class="form-check-label" for="id_q5_doc_ptm_choice_2">Non</label>
+    </div>                    
+
+    <br>
+    <div class="mt-2">
+        <em>
+            <b>Si besoin</b>, justifications du déclarant :
+        </em>
+        <textarea name="q5_doc_ptm" maxlength="1000" rows="2" class="form-control" id="id_q5_doc_ptm"
+        ></textarea>
+    </div>
+</div>  
+
+<div class="form-group">
+    <h5>
+        1-6 Planification d’un rendez-vous
+    </h5>
+    <p class="text-justify">
+    Le logiciel permet à un patient autonome de prendre rendez-vous avec un professionnel de santé téléconsultant, sur la base d’un agenda de disponibilités géré par le professionnel de santé. Le professionnel de santé doit pouvoir également planifier un rendez-vous de téléconsultation avec son patient.
+    </p>
+
+    <em>
+        Je déclare que le logiciel est conforme à l’exigence ci-dessus :
+    </em>
+
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q3_rdv_choice" id="id_q3_rdv_choice_1" class="form-check-input"
+        value="Oui"
+        >
+        <label class="form-check-label" for="id_q3_rdv_choice_1">Oui</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q3_rdv_choice" id="id_q3_rdv_choice_2" class="form-check-input"
+        value="Non"
+        >
+        <label class="form-check-label" for="id_q3_rdv_choice_2">Non</label>
+    </div>                    
+
+    <br>
+    <div class="mt-2">
+        <em>
+             <b>Si besoin</b>, justifications du déclarant :
+        </em>
+        <textarea name="q3_rdv" maxlength="1000" rows="2" class="form-control" id="id_q3_rdv"
+        ></textarea>
+    </div>
+</div>  
+
+
+<div class="form-group">
+    <h5>
+        1-7 Paiement de l’acte
+    </h5>
+    <p class="text-justify">
+    Le logiciel permet au patient de régler son acte de téléconsultation. 
+    La solution de paiement intégrée au logiciel est conforme à la norme PCI DSS.
+    </p>
+
+    <em>
+        Je déclare que le logiciel est conforme à l’exigence ci-dessus :
+    </em>
+
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q6_pay_choice" id="id_q6_pay_choice_1" class="form-check-input"
+        value="Oui"
+        >
+        <label class="form-check-label" for="id_q6_pay_choice_1">Oui</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q6_pay_choice" id="id_q6_pay_choice_2" class="form-check-input"
+        value="Non"
+        >
+        <label class="form-check-label" for="id_q6_pay_choice_2">Non</label>
+    </div>                    
+
+    <br>
+    <div class="mt-2">
+        <em>
+             <b>Si besoin</b>, justifications du déclarant :
+        </em>
+        <textarea name="q6_pay" maxlength="1000" rows="2" class="form-control" id="id_q6_pay"
+        ></textarea>
+    </div>
+</div>  
+
+<div class="form-group">
+    <h5>
+        1-8 Facturation à l’assurance maladie
+    </h5>
+    <p class="text-justify">
+    Le logiciel permet de télétransmettre des feuilles de soin électroniques à l’assurance maladie (i.e. le logiciel est agréé ou homologué SESAM-Vitale).
+    </p>
+
+    <em>
+        Je déclare que le logiciel est conforme à l’exigence ci-dessus :
+    </em>
+
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q7_assu_choice" id="id_q7_assu_choice_1" class="form-check-input"
+        value="Oui"
+        >
+        <label class="form-check-label" for="id_q7_assu_choice_1">Oui</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q7_assu_choice" id="id_q7_assu_choice_2" class="form-check-input"
+        value="Non"
+        >
+        <label class="form-check-label" for="id_q7_assu_choice_2">Non</label>
+    </div>                    
+
+    <br>
+    <div class="mt-2">
+        <em>
+            Justifications du déclarant (préciser le cas échéant les logiciels de cabinet avec lesquels le logiciel de téléconsultation est interopérable) :
+        </em>
+        <textarea name="q7_assu" maxlength="1000" rows="2" class="form-control" id="id_q7_assu"
+        ></textarea>
+    </div>
+</div>  
+
+                
+                <div class="mb-4 mt-4">
+                    <h4>
+                        2. Sécurité
+                    </h4>
+                </div>                
+                <div class="form-group">
+    <h5>
+        2-1 Protection des données personnelles
+    </h5>
+    <p class="text-justify">
+    Le logiciel est conforme au RGPD.
+    </p>
+
+    <em>
+        Je déclare que le logiciel est conforme à l’exigence ci-dessus :
+    </em>
+
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q10_dataperso_choice" id="id_q10_dataperso_choice_1" class="form-check-input"
+        value="Oui"
+        >
+        <label class="form-check-label" for="id_q10_dataperso_choice_1">Oui</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q10_dataperso_choice" id="id_q10_dataperso_choice_2" class="form-check-input"
+        value="Non"
+        >
+        <label class="form-check-label" for="id_q10_dataperso_choice_2">Non</label>
+    </div>                    
+
+    <br>
+    <div class="mt-2">
+        <em>
+             <b>Si besoin</b>, justifications du déclarant :
+        </em>
+        <textarea name="q10_dataperso" maxlength="1000" rows="2" class="form-control" id="id_q10_dataperso"
+        ></textarea>
+    </div>
+</div>  
+
+<div class="form-group">
+    <h5>
+        2-2 Logiciel certifié HDS
+    </h5>
+    <p class="text-justify">
+    Le logiciel ou l’hébergeur de son serveur est certifié HDS (Hébergeur de Données de Santé).
+    </p>
+
+    <em>
+        Je déclare que le logiciel est conforme à l’exigence ci-dessus :
+    </em>
+
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q9_hds_choice" id="id_q9_hds_choice_1" class="form-check-input"
+        value="Oui"
+        >
+        <label class="form-check-label" for="id_q9_hds_choice_1">Oui</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q9_hds_choice" id="id_q9_hds_choice_2" class="form-check-input"
+        value="Non"
+        >
+        <label class="form-check-label" for="id_q9_hds_choice_2">Non</label>
+    </div>                    
+
+    <br>
+    <div class="mt-2">
+        <em>
+             <b>Si besoin</b>, justifications du déclarant :
+        </em>
+        <textarea name="q9_hds" maxlength="1000" rows="2" class="form-control" id="id_q9_hds"
+        ></textarea>
+    </div>
+</div>  
+
+
+<div class="form-group">
+    <h5>
+        2-3 Traçabilité de l’acte de téléconsultation ou de télésoin
+    </h5>
+    <p class="text-justify">
+    Le logiciel permet de tracer l’historique des actes de téléconsultation ou de télésoin réalisés 
+    par les professionnels de santé et les patients.
+    </p>
+
+    <em>
+        Je déclare que le logiciel est conforme à l’exigence ci-dessus :
+    </em>
+
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q8_trace_choice" id="id_q8_trace_choice_1" class="form-check-input"
+        value="Oui"
+        >
+        <label class="form-check-label" for="id_q8_trace_choice_1">Oui</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q8_trace_choice" id="id_q8_trace_choice_2" class="form-check-input"
+        value="Non"
+        >
+        <label class="form-check-label" for="id_q8_trace_choice_2">Non</label>
+    </div>                    
+
+    <br>
+    <div class="mt-2">
+        <em>
+             <b>Si besoin</b>, justifications de l'éditeur :
+        </em>
+        <textarea name="q8_trace" maxlength="1000" rows="2" class="form-control" id="id_q8_trace"
+        ></textarea>
+    </div>
+</div>  
+
+
+<div class="form-group">
+    <h5>
+        2-4 Sécurisation des flux
+    </h5>
+    <strong>
+        Sécurisation de l’échange interpersonnel (voix ou vidéo) :
+    </strong>
+    <br>
+    <p class="text-justify">
+        Confidentialité de l’échange sur Internet via chiffrement TLS ou autre.
+    </p>
+
+    <em>
+        Je déclare que le logiciel est conforme à l’exigence ci-dessus :
+    </em>
+
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q11_conf_perso_choice" id="id_q11_conf_perso_choice_1" class="form-check-input"
+        value="Oui"
+        >
+        <label class="form-check-label" for="id_q11_conf_perso_choice_1">Oui</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q11_conf_perso_choice" id="id_q11_conf_perso_choice_2" class="form-check-input"
+        value="Non"
+        >
+        <label class="form-check-label" for="id_q11_conf_perso_choice_2">Non</label>
+    </div>                    
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q11_conf_perso_choice" id="id_q11_conf_perso_choice_3" class="form-check-input"
+        value="NA"
+        >
+        <label class="form-check-label" for="id_q11_conf_perso_choice_3">NA</label>
+    </div> 
+
+    <br>
+    <div class="mt-2">
+        <em>
+             <b>Si besoin</b>, justifications de l'éditeur :
+        </em>
+        <textarea name="q11_ech_perso" maxlength="1000" rows="2" class="form-control" id="id_q11_ech_perso"
+        ></textarea>
+    </div>
+    <br>
+
+    <strong>
+        Sécurisation de l’échange de données :
+    </strong>
+    <br>
+    <p class="text-justify">
+        Confidentialité de l’échange sur Internet via chiffrement TLS ou autre.
+    </p>
+
+    <em>
+        Je déclare que le logiciel est conforme à l’exigence ci-dessus :
+    </em>
+
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q12_conf_data_choice" id="id_q12_conf_data_choice_1" class="form-check-input"
+        value="Oui"
+        >
+        <label class="form-check-label" for="id_q12_conf_data_choice_1">Oui</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q12_conf_data_choice" id="id_q12_conf_data_choice_2" class="form-check-input"
+        value="Non"
+        >
+        <label class="form-check-label" for="id_q12_conf_data_choice_2">Non</label>
+    </div>                    
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q12_conf_data_choice" id="id_q12_conf_data_choice_3" class="form-check-input"
+        value="NA"
+        >
+        <label class="form-check-label" for="id_q12_conf_data_choice_3">NA</label>
+    </div> 
+                   
+    <br>
+    <div class="mt-2">
+        <em>
+             <b>Si besoin</b>, justifications de l'éditeur :
+        </em>
+        <textarea name="q12_ech_data" maxlength="1000" rows="2" class="form-control" id="id_q12_ech_data"
+        ></textarea>
+    </div>
+
+</div>  
+
+
+<div class="form-group">
+    <h5>
+        2-5 Identification électronique des personnes
+    </h5>
+    <p class="text-justify">
+    La solution permet d’identifier les patients grâce à au moins 5 traits d’identité :
+    (nom de naissance ; prénom ; date de naissance ; lieu de naissance ; sexe).
+    </p>
+
+    <em>
+        Je déclare que le logiciel est conforme à l’exigence ci-dessus :
+    </em>
+
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q13_ident_choice" id="id_q13_ident_choice_1" class="form-check-input"
+        value="Oui"
+        >
+        <label class="form-check-label" for="id_q13_ident_choice_1">Oui</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q13_ident_choice" id="id_q13_ident_choice_2" class="form-check-input"
+        value="Non"
+        >
+        <label class="form-check-label" for="id_q13_ident_choice_2">Non</label>
+    </div>                    
+    <br>
+    <br>
+    <p class="text-justify">
+    La solution permet une identification électronique incluant au moins deux facteurs
+    d'authentification différents (ex : en complément d'un login/mot de passe, envoi d'un
+    code temporaire par SMS ou e-mail).
+    </p>
+
+    <em>
+        Je déclare que le logiciel est conforme à l’exigence ci-dessus :
+    </em>
+
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q13_auth_pat_choice" id="id_q13_auth_pat_choice_1" class="form-check-input"
+        value="Oui"
+        >
+        <label class="form-check-label" for="id_q13_auth_pat_choice_1">Oui</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q13_auth_pat_choice" id="id_q13_auth_pat_choice_2" class="form-check-input"
+        value="Non"
+        >
+        <label class="form-check-label" for="id_q13_auth_pat_choice_2">Non</label>
+    </div>                    
+    <br>
+
+    <div class="mt-2">
+        <em>
+             <b>Si besoin</b>, justifications de l'éditeur :
+        </em>
+        <textarea name="q13_auth_id_pat" maxlength="1000" rows="2" class="form-control" id="id_q13_auth_id_pat"
+        ></textarea>
+    </div>
+
+</div>  
+
+
+<div class="form-group">
+    <h5>
+        2-6 Identification électronique des professionnels de santé, personnes physiques ou morales
+    </h5>
+    <p class="text-justify">
+    La solution logicielle inclut une vérification du droit d’exercer du professionnel de santé 
+    au sein des répertoires d'identités professionnelles de référence (RPPS ou ADELI pour les professionnels,
+    accessibles sur <a href="https://annuaire.sante.fr/">https://annuaire.sante.fr/</a>) ou des
+    structures (FINESS ou SIREN).
+    </p>
+
+    <em>
+        Je déclare que le logiciel est conforme à l’exigence ci-dessus :
+    </em>
+
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q14_verif_pro_choice" id="id_q14_verif_pro_choice_1" class="form-check-input"
+        value="Oui"
+        >
+        <label class="form-check-label" for="id_q14_verif_pro_choice_1">Oui</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q14_verif_pro_choice" id="id_q14_verif_pro_choice_2" class="form-check-input"
+        value="Non"
+        >
+        <label class="form-check-label" for="id_q14_verif_pro_choice_2">Non</label>
+    </div>                    
+    <br>
+    <div class="mt-2">
+        <em>
+             <b>Si besoin</b>, justifications de l'éditeur :
+        </em>
+        <textarea name="q14_verif_pro" maxlength="1000" rows="2" class="form-control" id="id_q14_verif_pro"
+        ></textarea>
+    </div>
+    <br>
+    <br>
+    <p class="text-justify">
+    La solution permet une identification électronique incluant au moins deux facteurs
+    d'authentification différents (ex : en complément d'un login/mot de passe, envoi d'un code
+    temporaire par SMS ou e-mail) ou constituée par la carte professionel de santé (CPS) ou sa version dématérialisée (E-CPS).
+    </p>
+
+    <em>
+        Je déclare que le logiciel est conforme à l’exigence ci-dessus :
+    </em>
+
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q14_auth_pro_choice" id="id_q14_auth_pro_choice_1" class="form-check-input"
+        value="Oui"
+        >
+        <label class="form-check-label" for="id_q14_auth_pro_choice_1">Oui</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q14_auth_pro_choice" id="id_q14_auth_pro_choice_2" class="form-check-input"
+        value="Non"
+        >
+        <label class="form-check-label" for="id_q14_auth_pro_choice_2">Non</label>
+    </div>                    
+    <br>
+
+    <div class="mt-2">
+        <em>
+             <b>Si besoin</b>, justifications de l'éditeur :
+        </em>
+        <textarea name="q14_auth_id_pro" maxlength="1000" rows="2" class="form-control" id="id_q14_auth_id_pro"
+        ></textarea>
+    </div>
+    <br>
+    <br>
+   <!--  <p class="text-justify">
+    La solution permet une identification au travers du moyen d'identification électronique
+    constitué par la carte professionnel de santé (CPs) ou sa version dématérialisée (e-CPs) ou constituée par la carte professionel de santé (CPS) ou sa version dématérialisée (E-CPS).
+    </p>
+
+    <em>
+        Je déclare que le logiciel est conforme à l’exigence ci-dessus :
+    </em>
+
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q14_id_cps_choice" id="id_q14_id_cps_choice_1" class="form-check-input"
+        value="Oui"
+        >
+        <label class="form-check-label" for="id_q14_id_cps_choice_1">Oui</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input type="radio" name="q14_id_cps_choice" id="id_q14_id_cps_choice_2" class="form-check-input"
+        value="Non"
+        >
+        <label class="form-check-label" for="id_q14_id_cps_choice_2">Non</label>
+    </div>                    
+    <br>
+
+    <div class="mt-2">
+        <em>
+            Justifications de l'éditeur :
+        </em>
+        <textarea name="q14_id_cps" maxlength="1000" rows="4" class="form-control" id="id_q14_id_cps"
+        ></textarea>
+    </div>
+ -->
+</div>  
+
+            </div>      
+        </div>
+
+        <div class="row justify-content-center mt-4 mb-4">
+            <div class="col">
+                Je reconnais avoir pris connaissance des dispositions de l’article 441-7 du code pénal :
+                <br>
+                « est puni d'un an d'emprisonnement et de 15 000 euros d'amende le fait :
+                <br>
+                1° D'établir une attestation ou un certificat faisant état de faits matériellement inexacts ;
+                <br>
+                2° De falsifier une attestation ou un certificat originairement sincère ;
+                <br>
+                3° De faire usage d'une attestation ou d'un certificat inexact ou falsifié.
+                <br>
+                Les peines sont portées à trois ans d'emprisonnement et à 45 000 euros d'amende lorsque l'infraction est commise soit en vue de porter préjudice au Trésor public ou au patrimoine d'autrui, soit en vue d'obtenir un titre de séjour ou le bénéfice d'une protection contre l'éloignement. »                
+
+                <div class="form-group form-check mt-4 mb-4">
+                    <input type="checkbox" name="check_accept" 
+                        id="check_accept" class="form-check-input"
+                        value="accepted">
+                    <sup><small><i class="fas fa-asterisk text-danger"></i></small></sup>
+                    <label for="check_accept" class="form-check-label">
+                    En cochant cette case, vous attestez la validité des données.
+                    </label>
+                </div>
+            </div>      
+        </div>
+
+
+        <div class="row justify-content-between mt-3">
+            <div class="col text-right">
+                <input type="submit" name="commit" class="btn btn-success text-center" value="Valider">
+            </div>
+        </div>
+
+    </form>
+
+    
+
+</div>
+
+      
+      <!-- Footer -->
+      <footer>
+    <div class="footer container mb-4 mt-4">
+
+    </div>
+</footer>
+
+    
+    
+    <!-- JS -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    
+    
+    </body>
+  </html>

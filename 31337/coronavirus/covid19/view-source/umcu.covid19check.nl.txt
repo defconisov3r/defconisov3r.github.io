@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <title>Aanmeldformulier COVID-19 test </title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<link rel="stylesheet" href="css/css.css" type="text/css" media="all" />
+</head>
+<body>
+
+<p style="text-align: center; margin-top: 70px;"><img src="images/umcuwit.png" style="width: 200px;" /></p>
+
+<h1>Aanmeldformulier COVID-19 test </h1>
+
+<div class="center">
+			
+	<form name="aanmelden" id="aanmeldform" method="POST" action="">
+		<div id="step1">
+			<h2>Ik werk bij:</h2>
+
+			<div class="vlak" id="vlak1">
+				UMC Utrecht
+			</div>
+			<div class="vlak" id="vlak2" style="float: right;">
+				Extern / Overig			</div>
+			<div class="clear"></div>
+
+			<div id="step1extra" class="step1extra" style="display: none;">
+				<select name="origin" id="originselect">
+					<option value="0">---Maak een keuze---</option>
+					
+											<option value="3">Prinses Máxima Centrum</option>
+									</select>
+
+				<div class="vlakbutton" id="step1to2button" style="display: none;">
+					Doorgaan				</div>
+			</div>
+		</div>
+
+		<div id="step2" style="display: none;">
+			<h2>Vul uw gegevens in:</h2>
+
+			<label>Personeelsnummer:</label>
+			<input type="text" name="pnr" id="pnr" required />
+			<em>Je personeelspas kan verouderd zijn, controleer slaarisstrook voor juiste personeelsnummer</em>
+
+			<label>Volledige naam:</label>
+			<input type="text" name="name" id="name" required  />
+
+			<label>Geboortedatum:</label>
+			<input type="date" name="birthdate" id="birthdate" required  />
+
+			<label>Geslacht:</label>
+			<select name="sex" required>
+				<option value="0">---Maak een keuze---</option>
+				<option value="male">Man</option>
+				<option value="female">Vrouw</option>
+			</select>
+
+			<label>E-mail adres:</label>
+			<input type="email" name="email" id="email" required  />
+
+			<label>Telefoonnummer:</label>
+			<input type="tel" id="phone" name="phone" required  pattern="\d{10}">
+			
+			<label>Hoe kom je naar de test toe?</label>
+			<select name="travel" id="travel">
+				<option value="0">---Maak een keuze---</option>
+				<option value="car">Met de auto</option>
+				<option value="notcar">Zonder auto</option>
+			</select>
+
+			<div id="kentekenfield" style="display: none;">
+				<label>Kenteken auto:</label>
+				<input type="text" name="kenteken" id="kenteken" />
+			</div>
+		</div>
+
+		<input type="hidden" name="originid" id="originid" value="0" />
+
+		<div id="submitdiv" style="display: none;">
+			<input type="submit" name="submit" id="submit" value="Doorgaan" class="vlakbutton" />
+		</div>
+	</form>
+</div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>
