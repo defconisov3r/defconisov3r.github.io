@@ -1,0 +1,324 @@
+
+
+<!DOCTYPE html>
+
+<html>
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><meta name="description" content="Bootstrap Italia Playground" /><meta name="author" /><meta name="generator" /><meta name="robots" content="noindex" /><title>
+	Sorveglianza Covid-19
+</title>
+  <!-- Bootstrap Italia custom CSS -->
+  <link href="/css/compiled/bootstrap-italia-custom.min.css" rel="stylesheet" />
+
+  <!-- JQueryUI styles -->
+    <link href="Scripts/jquery-ui/jquery-ui.theme.min.css" rel="stylesheet" /><link href="Scripts/jquery-ui/jquery-ui.structure.min.css" rel="stylesheet" />
+
+  <!-- App styles -->
+  <link href="/css/main.css?rnd=23" rel="stylesheet" /><link href="/css/fa/css/all.min.css" rel="stylesheet" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png" /><link rel="icon" href="/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png" /><link rel="icon" href="/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png" /><link rel="manifest" href="/img/favicons/manifest.webmanifest" /><link rel="mask-icon" href="/img/favicons/safari-pinned-tab.svg" color="#0066CC" /><link rel="icon" href="/img/favicons/favicon.ico" /><meta name="msapplication-config" content="/img/favicons/browserconfig.xml" /><meta name="theme-color" content="#0066CC" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:site" content="@https://twitter.com/teamdigitaleIT" /><meta name="twitter:creator" content="Team per la Trasformazione Digitale" /><meta name="twitter:title" content="Bootstrap Italia" /><meta name="twitter:description" content="Bootstrap Italia è un tema Bootstrap 4 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA" /><meta name="twitter:image" content="/img/favicons/social-card.png" />
+
+  <!-- Facebook -->
+  <meta property="og:url" content="/" /><meta property="og:title" content="Bootstrap Italia" /><meta property="og:description" content="Bootstrap Italia è un tema Bootstrap 4 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA" /><meta property="og:type" content="website" /><meta property="og:image" content="/img/favicons/social-card.png" /><meta property="og:image:secure_url" content="/img/favicons/social-card.png" /><meta property="og:image:type" content="image/png" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" />
+
+    <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-ui/jquery-ui.min.js"></script>
+
+    
+    </head>
+<body>
+    <form method="post" action="./login.aspx?ReturnUrl=%2f" onsubmit="javascript:return WebForm_OnSubmit();" id="form1" class="needs-validation" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTk2ODk1NDc1MQ9kFgJmD2QWAgIDD2QWAgIJDw8WAh4HVmlzaWJsZWhkZGRbWbB5SQocKZ8DKG5emk8MFLb32aRHCWecMOKTUB97jg==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=-6FkIwUoLUQzLxAuIv4DVv_ypRZ1PE0RwiNRYbv-PjMu5sSBVbOut9ZuRUk-nkGBNMZrHfjdt4J1B-Z-OqI8eBHi3BwfpZ4TKndFk8FUIW41&amp;t=637116633193539752" type="text/javascript"></script>
+
+
+<script src="/WebResource.axd?d=h4nyZ_f8VD-0p-WBa4VlUX08r_QRgWFxx7L93j2qDbOcmdIS8IGiULc4ipcuArY7bxMhcYQ6xpBPIXpd7luMObBagYarLp3ccfmKaix__8JaEj02v2716U1ObLCV7DCV0&amp;t=637116633193539752" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C2EE9ABB" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAXwvzH0M1tpxnGu+mjYYuHCexAIb1cjB3p/gzcZcUqOEBS6plaOKMVbBhuPpHSAl/rC84khD2j+3Hm994TYQ7lm2WiJLbnc76zj+IEvQAmN3QPbs4aOmnvk1wezhsCRS2ATPbrkLplRxHNSPkNxYkMj" />
+</div>
+        <div class="it-header-wrapper">
+          <div class="it-header-slim-wrapper">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <div class="it-header-slim-wrapper-content">
+                    <a class="d-none d-lg-block navbar-brand" href="https://www.iss.it">Istituto Superiore di Sanità</a>
+                    <div class="nav-mobile">
+                      <nav>
+                        <a class="it-opener d-lg-none" data-toggle="collapse" href="#menu-principale" role="button" aria-expanded="false" aria-controls="menu-principale">
+                          <span>Istituto Superiore di Sanità</span>
+                          <svg class="icon">
+                            <use xlink:href="/node_modules/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
+                          </svg>
+                        </a>
+                        <div class="link-list-wrapper collapse" id="menu-principale">
+                          <ul class="link-list">
+                              <li id="liSito"><a href="https://www.iss.it">Sito dell'Istituto</a></li>
+                            </ul>
+                        </div>
+                      </nav>
+                    </div>
+                    <div class="header-slim-right-zone">
+              
+                      <div class="it-access-top-wrapper">
+                          <div class="dropdown">
+                              <a class="dropdown-toggle text-white" href="#" data-toggle="dropdown" aria-expanded="false">
+                                <span><i class="far fa-user px-2"> </i></span>
+                                <svg class="icon icon-xs icon-white">
+                                  <use xlink:href="/node_modules/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
+                                </svg>
+                              </a>
+                              <div class="dropdown-menu">
+                                <div class="link-list-wrapper">
+                                  <div class="p-2">
+                                      <p><i class="fa fa-users" title="Gruppo"></i> <span><span id="lblGroup" class="text-dark"></span></span></p>
+                                      <p><i class="fa fa-key" title="Gruppo"></i> <a href="PswChange.aspx" Class="text-dark">Cambia password</a></p>
+                                      <p><i class="fa fa12 fa-sign-out"></i> <a id="btnLogOut" class="text-dark" href="javascript:__doPostBack(&#39;ctl00$btnLogOut&#39;,&#39;&#39;)">LogOut</a></p>
+                                      <p></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        <!--<button class="btn btn-primary btn-sm" href="#" type="button">Accedi</button>-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="it-nav-wrapper">
+            <div class="it-header-center-wrapper">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="it-header-center-content-wrapper">
+                      <div class="it-brand-wrapper">
+                        <a href="#">
+                            <img src="img/isslogowhite.png" class="icon" />
+                          <!--<svg class="icon">
+                            <use xlink:href="/node_modules/bootstrap-italia/dist/svg/sprite.svg#it-code-circle"></use>
+                          </svg>-->
+                          <div class="it-brand-text">
+                            <h2 class="no_toc">Sorveglianza Covid-19</h2>
+                            <h3 class="no_toc d-none d-md-block">Sorveglianza casi di Coronavirus Covid-19 in Italia</h3>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="it-right-zone">
+                        <div class="it-socials d-none d-md-flex">
+
+                        </div>
+                        <div class="it-search-wrapper">
+                          
+                          <!--<a class="search-link rounded-icon" href="#" aria-label="Cerca">
+                            <svg class="icon">
+                              <use xlink:href="/node_modules/bootstrap-italia/dist/svg/sprite.svg#it-search"></use>
+                            </svg>
+                          </a>-->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="container my-4">
+          <div class="">
+            <div class="container">
+
+                
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <!--start card-->
+            <div class="card-wrapper card-space">
+              <div class="card card-bg">
+                <div class="card-body">
+                  <h5 class="card-title">Accesso riservato</h5>
+                  <p class="card-text">&nbsp;</p>
+                    <table id="cph_Login1" cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;">
+	<tr>
+		<td>
+                            <p class="form-inline row">
+                                <label for="cph_Login1_UserName" id="cph_Login1_UserNameLabel" class="col-2 offset-2 text-right">User Name:</label>
+                                <input name="ctl00$cph$Login1$UserName" type="text" id="cph_Login1_UserName" class="form-control col-6" />
+                                <span id="cph_Login1_UserNameRequired" title="User Name is required." style="visibility:hidden;">*</span>
+                            </p>
+                            <p class="form-inline row">
+                                <label for="cph_Login1_Password" id="cph_Login1_PasswordLabel" class="col-2 offset-2 text-right">Password:</label>
+                                <input name="ctl00$cph$Login1$Password" type="password" id="cph_Login1_Password" class="form-control col-6" />
+                                <span id="cph_Login1_PasswordRequired" title="Password is required." style="visibility:hidden;">*</span>
+                            </p>
+                            <p class="text-center ">
+                                <input type="submit" name="ctl00$cph$Login1$LoginButton" value="Log In" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cph$Login1$LoginButton&quot;, &quot;&quot;, true, &quot;Login1&quot;, &quot;&quot;, false, false))" id="cph_Login1_LoginButton" class="btn btnScheda pl-5 pr-5 pt-2 pb-2" />
+                            </p>
+                            <p>
+                                
+                            </p>
+                        </td>
+	</tr>
+</table>
+                </div>
+              </div>
+            </div>
+            <!--end card-->
+          </div>
+          <div class="col-12 col-lg-6">
+            <!--start card-->
+            <div class="card-wrapper card-space">
+              <div class="card card-bg">
+                <div class="card-body">
+                  <h5 class="card-title">Aggiornamenti piattaforma Sorveglianza Covid-19</h5>
+                  <p class="card-text">&nbsp;</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">10/03/2020 - aggiunto upload cartella clinica e foglio ISTAT decesso</li>
+                        <li class="list-group-item">10/03/2020 - aggiunto campo "note"</li>
+                        <li class="list-group-item">11/03/2020 - aggiornamento descrizione stati clinici</li>
+                        <li class="list-group-item">11/03/2020 - aggiunto campo "intubato" se stato clinico severo</li>
+                        <li class="list-group-item">13/03/2020 - edit mode su ricoveri e stati clinici</li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <!--end card-->
+          </div>
+        </div>
+
+
+
+            </div>
+          </div>
+        </div>
+
+
+        <footer class="it-footer">
+          <div class="it-footer-main">
+            <div class="container">
+
+
+
+            </div>
+          </div>
+          <div class="it-footer-small-prints clearfix">
+            <div class="container">
+              <h3 class="sr-only">Sezione Link Utili</h3>
+              <ul class="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row">
+                <li class="list-inline-item"><a href="https://www.iss.it/?page_id=156" title="Note Legali">Note legali</a></li>
+                <li class="list-inline-item"><a href="https://https://www.iss.it/?p=3012" title="Privacy-Cookies">Privacy policy</a></li>
+                <li class="list-inline-item"><a class="text-light">Supporto:</a> 
+                    <i class="fa fa-envelope text-light align-middle pl-3"></i> <a href="mailto:sorveglianzaCOVID-19@iss.it" title="Contatto sito"> sorveglianzaCOVID-19@iss.it</a> 
+                    <i class="fa fa-phone text-light align-middle pl-3"></i> <a href="tel:+390649903000"> 06 4990 3000</a>
+              </ul>
+            </div>
+          </div>
+        </footer>
+
+        <div class="cookiebar bg-dark p-4 hide" aria-hidden="true">
+          <div class="container">
+            <div class="row d-flex align-items-center">
+              <div class="col-12 col-md-6">
+                <span class="text-white small">Questo sito utilizza cookie tecnici, analytics e di terze parti.<br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.</span>
+              </div>
+              <div class="col-12 col-md-6 mt-4 mt-md-0 d-flex justify-content-end">
+                <a class="btn btn-link" href="https://https//www.iss.it/?p=3012/">Privacy policy</a>
+                <button class="btn btn-primary mr-2" data-accept="cookiebar">Accetto</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- window.__PUBLIC_PATH__ points to fonts folder location -->
+        <script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script>window.__PUBLIC_PATH__ = '/node_modules/bootstrap-italia/dist/fonts'</script>
+        
+        <script src="/node_modules/bootstrap-italia/dist/js/bootstrap-italia.min.js"></script>
+
+        <!-- alternatively, just use the bundled version of the library -->
+        <!-- <script src="/node_modules/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js"></script>-->
+
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("cph_Login1_UserNameRequired"), document.getElementById("cph_Login1_PasswordRequired"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var cph_Login1_UserNameRequired = document.all ? document.all["cph_Login1_UserNameRequired"] : document.getElementById("cph_Login1_UserNameRequired");
+cph_Login1_UserNameRequired.controltovalidate = "cph_Login1_UserName";
+cph_Login1_UserNameRequired.errormessage = "User Name is required.";
+cph_Login1_UserNameRequired.validationGroup = "Login1";
+cph_Login1_UserNameRequired.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+cph_Login1_UserNameRequired.initialvalue = "";
+var cph_Login1_PasswordRequired = document.all ? document.all["cph_Login1_PasswordRequired"] : document.getElementById("cph_Login1_PasswordRequired");
+cph_Login1_PasswordRequired.controltovalidate = "cph_Login1_Password";
+cph_Login1_PasswordRequired.errormessage = "Password is required.";
+cph_Login1_PasswordRequired.validationGroup = "Login1";
+cph_Login1_PasswordRequired.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+cph_Login1_PasswordRequired.initialvalue = "";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+</form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>Covid-19 Count</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="jquery.csv.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160652471-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-160652471-1');
+</script>
+</head>
+
+<body>
+<div id="loading">Loading...</div>
+<div class="grid-container">
+<div class="Total-Recovered"><h4>Recovered</h4><span></span></div>
+  <div class="Total-Deaths"><h4>Deaths</h4><span></span></div>
+  <div class="Recovered-Regional regional"></div>
+  <div class="Deaths-Regional regional"></div>
+  <div class="Total-Confirmed"><h4>Confirmed</h4><span></span></div>
+  <div class="Confirmed-Regional regional"></div>
+  <div class="Map" id=mapid></div>
+  <div class="Timeseries"></div>
+<div class="Headers"><h1>Covid-19 Count</h1></div>
+
+</div>
+
+    <div id="attribution">data source <a href="https://github.com/CSSEGISandData/COVID-19" target=_blank>Johns Hopkins CSSE</a>&nbsp; News source <a href="https://www.reddit.com/live/14d816ty1ylvo/" target=_blank> Reddit </a></div>
+
+   
+<script src="main.js"></script>
+
+</body></html>

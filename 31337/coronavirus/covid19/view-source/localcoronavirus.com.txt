@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		
+		<title>LocalCoronavirus –Coronavirus España información local</title>
+						<meta name="description" content="Coronavirus España. Noticias y alertas locales de Coronavirus España.">
+						<meta name="keywords" content="Coronavirus España, Coronavirus info, coronavirus local, noticias Coronavirus">		
+		<link rel="shortcut icon" type="image/png" href="favicon.png">
+		<link href='https://fonts.googleapis.com/css?family=Catamaran:100,400,200,300,500,600,700,800,900%7CBiryani:100,200,400,300italic,300,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="assets/css/simple-line-icons.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="assets/css/global.css" media="screen">
+		<link href="assets/css/settings.css" type="text/css" rel="stylesheet" media="screen">
+		<link href="assets/css/layers.css" type="text/css" rel="stylesheet" media="screen">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="assets/css/responsive.css" media="screen">
+		<link rel="stylesheet" type="text/less" href="assets/css/skin.less" media="screen">
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160283435-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-160283435-1');
+		</script>
+		<!-- Facebook Pixel Code -->
+		<script>
+			!function(f,b,e,v,n,t,s)
+			{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+			if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+			n.queue=[];t=b.createElement(e);t.async=!0;
+			t.src=v;s=b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t,s)}(window, document,'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+			fbq('init', '863871680303623');
+			fbq('track', 'PageView');
+		</script>
+		<noscript><img height="1" width="1" style="display:none"
+		src="https://www.facebook.com/tr?id=863871680303623&ev=PageView&noscript=1"
+		/></noscript>
+		<!-- End Facebook Pixel Code -->
+	
+</head>
+<body data-ng-app="websiteApp" data-ng-controller="homepageTwoCltr">  
+<div class="loader">
+  <div class="sk-folding-cube">
+  <div class="sk-cube1 sk-cube"></div>
+  <div class="sk-cube2 sk-cube"></div>
+  <div class="sk-cube4 sk-cube"></div>
+  <div class="sk-cube3 sk-cube"></div>
+</div>
+</div><!-- loader -->
+		<!--Page Wrapper Start-->
+		<div id="wrapper">
+			<!--Header Section Start-->
+			<header id="header" class="header-two">
+
+				<div class="main_header">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-3 logo-wrap">
+								<a href="https://localcoronavirus.com/" class="logo-one"><img src="assets/images/LOGO-WEB-MIN.png"  alt="logo"/></a>
+
+							</div>
+							<div class="col-xs-12 col-sm-8  col-md-5 pull-right contact-wrap-header">
+								<!-- <p>Info derecha</p> -->
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="primary_header">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12">
+								<nav class="navbar navbar-default">
+
+									<!-- Brand and toggle get grouped for better mobile display -->
+									<div class="navbar-header">
+										<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+											<span class="sr-only">Toggle navigation</span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+										</button>
+									</div>
+									<!-- Collect the nav links, forms, and other content for toggling -->
+									<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+										<ul class="nav navbar-nav">
+											<li class="active">
+												<a href="https://localcoronavirus.com/">Inicio</a>												
+											</li>
+											<!-- <li >
+												<a href="https://legalbox.es/legalbox-procuradores-espana/">Conócenos</a>												
+											</li>
+											<li>
+												<a href="https://legalbox.es/red-nacional-procuradores-espana/"> Procuradores </a>														
+											</li> -->
+											<!-- <li >
+												<a href="#">Servicios</a>
+													<ul class="dropdown">
+													<li>
+														<a href="https://legalbox.es/procuradores-servicios-judiciales-espana/">Gestión Judicial</a>	
+													</li>
+													<li>
+														<a href="https://legalbox.es/procuradores-servicios-extrajudiciales-espana/">Gestión Extrajudicial</a>	
+													</li>													
+												</ul>
+											</li>
+											<li >
+												<a href="https://legalbox.es/blog/">Blog</a>
+											</li>											
+											<li >
+												<a href="https://legalbox.es/intranet/">Acceso/Registro</a>
+											</li>
+											<li>
+												<a href="https://legalbox.es/contacto-red-procuradores-espana/">Contacto</a>
+											</li> -->
+											<li>
+												<a href="#">Coronavirus por localidades</a>
+													<ul class="dropdown" style="max-height: 500px;overflow-y:scroll">
+													<li>
+																		<a href="https://localcoronavirus.com/a-coruna-coronavirus">
+																		A Coruña Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/alava-coronavirus">
+																		Álava Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/albacete-coronavirus">
+																		Albacete Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/alicante-coronavirus">
+																		Alicante Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/almeria-coronavirus">
+																		Almería Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/asturias-coronavirus">
+																		Asturias Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/avila-coronavirus">
+																		Ávila Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/badajoz-coronavirus">
+																		Badajoz Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/barcelona-coronavirus">
+																		Barcelona Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/bizkaia-coronavirus">
+																		Bizkaia Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/burgos-coronavirus">
+																		Burgos Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/caceres-coronavirus">
+																		Cáceres Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/cadiz-coronavirus">
+																		Cádiz Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/cantabria-coronavirus">
+																		Cantabria Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/castellon-coronavirus">
+																		Castellón Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/ceuta-coronavirus">
+																		Ceuta Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/ciudad-real-coronavirus">
+																		Ciudad Real Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/cordoba-coronavirus">
+																		Córdoba Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/cuenca-coronavirus">
+																		Cuenca Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/gipuzkoa-coronavirus">
+																		Gipuzkoa Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/girona-coronavirus">
+																		Girona Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/granada-coronavirus">
+																		Granada Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/guadalajara-coronavirus">
+																		Guadalajara Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/huelva-coronavirus">
+																		Huelva Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/huesca-coronavirus">
+																		Huesca Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/islas-baleares-coronavirus">
+																		Islas Baleares Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/jaen-coronavirus">
+																		Jaén Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/la-rioja-coronavirus">
+																		La Rioja Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/las-palmas-coronavirus">
+																		Las Palmas Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/leon-coronavirus">
+																		León Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/lugo-coronavirus">
+																		Lugo Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/lleida-coronavirus">
+																		Lleida Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/madrid-coronavirus">
+																		Madrid Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/malaga-coronavirus">
+																		Málaga Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/melilla-coronavirus">
+																		Melilla Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/murcia-coronavirus">
+																		Murcia Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/navarra-coronavirus">
+																		Navarra Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/ourense-coronavirus">
+																		Ourense Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/palencia-coronavirus">
+																		Palencia Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/pontevedra-coronavirus">
+																		Pontevedra Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/salamanca-coronavirus">
+																		Salamanca Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/santa-cruz-de-tenerife-coronavirus">
+																		Santa Cruz de Tenerife Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/segovia-coronavirus">
+																		Segovia Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/sevilla-coronavirus">
+																		Sevilla Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/soria-coronavirus">
+																		Soria Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/tarragona-coronavirus">
+																		Tarragona Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/teruel-coronavirus">
+																		Teruel Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/toledo-coronavirus">
+																		Toledo Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/valencia-coronavirus">
+																		Valencia Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/valladolid-coronavirus">
+																		Valladolid Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/zamora-coronavirus">
+																		Zamora Coronavirus
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/zaragoza-coronavirus">
+																		Zaragoza Coronavirus
+																		</a>
+																	</li>													</ul>
+											</li>
+											<li>
+												<a href="#">Próximamente más</a>												
+											</li>
+											<!--<li>
+												<a href="#">Coronavirus de</a>
+													<ul class="dropdown">
+													<li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-a-coruna"> 																		
+																		Coronavirus  de A Coruña
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-alava"> 																		
+																		Coronavirus  de Álava
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-albacete"> 																		
+																		Coronavirus  de Albacete
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-alicante"> 																		
+																		Coronavirus  de Alicante
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-almeria"> 																		
+																		Coronavirus  de Almería
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-asturias"> 																		
+																		Coronavirus  de Asturias
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-avila"> 																		
+																		Coronavirus  de Ávila
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-badajoz"> 																		
+																		Coronavirus  de Badajoz
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-barcelona"> 																		
+																		Coronavirus  de Barcelona
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-bizkaia"> 																		
+																		Coronavirus  de Bizkaia
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-burgos"> 																		
+																		Coronavirus  de Burgos
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-caceres"> 																		
+																		Coronavirus  de Cáceres
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-cadiz"> 																		
+																		Coronavirus  de Cádiz
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-cantabria"> 																		
+																		Coronavirus  de Cantabria
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-castellon"> 																		
+																		Coronavirus  de Castellón
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-ceuta"> 																		
+																		Coronavirus  de Ceuta
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-ciudad-real"> 																		
+																		Coronavirus  de Ciudad Real
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-cordoba"> 																		
+																		Coronavirus  de Córdoba
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-cuenca"> 																		
+																		Coronavirus  de Cuenca
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-gipuzkoa"> 																		
+																		Coronavirus  de Gipuzkoa
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-girona"> 																		
+																		Coronavirus  de Girona
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-granada"> 																		
+																		Coronavirus  de Granada
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-guadalajara"> 																		
+																		Coronavirus  de Guadalajara
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-huelva"> 																		
+																		Coronavirus  de Huelva
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-huesca"> 																		
+																		Coronavirus  de Huesca
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-islas-baleares"> 																		
+																		Coronavirus  de Islas Baleares
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-jaen"> 																		
+																		Coronavirus  de Jaén
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-la-rioja"> 																		
+																		Coronavirus  de La Rioja
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-las-palmas"> 																		
+																		Coronavirus  de Las Palmas
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-leon"> 																		
+																		Coronavirus  de León
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-lugo"> 																		
+																		Coronavirus  de Lugo
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-lleida"> 																		
+																		Coronavirus  de Lleida
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-madrid"> 																		
+																		Coronavirus  de Madrid
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-malaga"> 																		
+																		Coronavirus  de Málaga
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-melilla"> 																		
+																		Coronavirus  de Melilla
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-murcia"> 																		
+																		Coronavirus  de Murcia
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-navarra"> 																		
+																		Coronavirus  de Navarra
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-ourense"> 																		
+																		Coronavirus  de Ourense
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-palencia"> 																		
+																		Coronavirus  de Palencia
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-pontevedra"> 																		
+																		Coronavirus  de Pontevedra
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-salamanca"> 																		
+																		Coronavirus  de Salamanca
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-santa-cruz-de-tenerife"> 																		
+																		Coronavirus  de Santa Cruz de Tenerife
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-segovia"> 																		
+																		Coronavirus  de Segovia
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-sevilla"> 																		
+																		Coronavirus  de Sevilla
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-soria"> 																		
+																		Coronavirus  de Soria
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-tarragona"> 																		
+																		Coronavirus  de Tarragona
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-teruel"> 																		
+																		Coronavirus  de Teruel
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-toledo"> 																		
+																		Coronavirus  de Toledo
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-valencia"> 																		
+																		Coronavirus  de Valencia
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-valladolid"> 																		
+																		Coronavirus  de Valladolid
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-zamora"> 																		
+																		Coronavirus  de Zamora
+																		</a>
+																	</li><li>
+																		<a href="https://localcoronavirus.com/coronavirus-de-zaragoza"> 																		
+																		Coronavirus  de Zaragoza
+																		</a>
+																	</li>													</ul>
+											</li>-->
+										</ul>
+									</div><!-- /.navbar-collapse -->
+
+								</nav>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+			</header>
+
+			<!--Header Section End-->
+			<!-- SLIDER EXAMPLE -->
+			<section class="example banner-one banner-style">
+				<article class="content">
+
+<div id="rev_slider_34_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="news-gallery34" style="margin:0px auto;background-color:#ffffff;padding:0px;margin-top:0px;margin-bottom:0px;">
+				<!-- START REVOLUTION SLIDER 5.0.7 fullwidth mode -->
+					<div id="rev_slider_34_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
+						<ul>	<!-- SLIDE  -->
+							<li data-index="rs-129" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="assets/images/coronavirus_mapa_localcoronavirus_slide_1.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="" data-description="">
+								<!-- MAIN IMAGE -->
+								<img src="assets/images/coronavirus_mapa_localcoronavirus_slide_1.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+								<!-- LAYERS -->
+
+								<!-- LAYER NR. 2 -->
+								<div class="tp-caption Newspaper-Title   tp-resizeme rs-parallaxlevel-0"
+									 id="slide-129-layer-1"
+									 data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']"
+									 data-y="['top','top','top','top']" data-voffset="['120','120','120','120']"
+												data-fontsize="['50','50','50','30']"
+									data-lineheight="['55','55','55','35']"
+									data-width="['600','600','600','420']"
+									data-height="none"
+									data-whitespace="normal"
+									data-transform_idle="o:1;"
+									data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+									data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
+									data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+									data-mask_out="x:0;y:0;s:inherit;e:inherit;"
+									data-start="1000"
+									data-splitin="none"
+									data-splitout="none"
+									data-responsive_offset="on"
+									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;"
+									>
+									<div class="banner-text" >
+										<p style="font-weight: 700;color: white;text-shadow: 1px 1px 0px #000000;font-size:18px">
+											Coronavirus España. <br/> Todo lo que necesitas saber de Coronavirus en España.
+										</p>
+									</div>
+								</div>
+							</li>
+							<!-- SLIDE  -->
+							<li data-index="rs-130" data-transition="parallaxvertical" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="assets/images/coronavirus_mapa_localcoronavirus_slide_3.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="" data-description="">
+								<!-- MAIN IMAGE -->
+								<img src="assets/images/coronavirus_mapa_localcoronavirus_slide_3.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+								<!-- LAYERS -->
+								<!-- LAYER NR. 2 -->
+								<div class="tp-caption Newspaper-Title   tp-resizeme rs-parallaxlevel-0"
+									id="slide-130-layer-1"
+									data-x="['left','left','left','left']" data-hoffset="['50','50','50','30']"
+									data-y="['top','top','top','top']" data-voffset="['120','120','120','120']"
+									data-fontsize="['50','50','50','30']"
+									data-lineheight="['55','55','55','35']"
+									data-width="['600','600','600','420']"
+									data-height="none"
+									data-whitespace="normal"
+									data-transform_idle="o:1;"
+									data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+									data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
+									data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+									data-mask_out="x:0;y:0;s:inherit;e:inherit;"
+									data-start="1000"
+									data-splitin="none"
+									data-splitout="none"
+									data-responsive_offset="on"
+									style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal;"
+								>
+									<div class="banner-text">
+										<p style="font-weight: 700;color: white;text-shadow: 1px 1px 0px #000000;font-size:18px">
+											Coronavirus España. <br/>Noticias y alertas locales de Coronavirus España.
+										</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="tp-bannertimer tp-bottom" style="height: 5px; background-color: rgba(166, 216, 236, 1.00);"></div>	
+					</div>
+				</div>
+
+					<!--Content Area Start-->
+					<div id="content" class="home-header-one">
+						<!-- service-wrap section start here -->
+						<section class="about-us">
+							<div class="container">
+								<div class="row">
+									<div class="12 col-sm-5 col-md -5">
+										<div class="heading-wrap">
+											<h2>INFO LOCAL SOBRE CORONAVIRUS</h2>
+											<span>Información local a través de diferentes fuentes sobre cómo transcurre la epidemia.</span>
+										</div>
+									</div>
+									<div class="12 col-sm-7 col-md -7">
+										<p>
+											<b>LocalCoronavirus</b>	 mediante la conexión de fuentes de información y gráficos 
+locales te permite conocer el día a día de la noticia.
+										</p>
+										<p>
+											Construyendo una red de información y comunicación en tiempo real sobre 
+alertas globales de forma local.
+										</p>										
+									</div>
+
+								</div>
+
+							</div>
+
+						</section>
+
+						<!-- service-wrap section End here -->
+						<!-- service-wrap section start here -->
+						<section class="service-wrap">
+							<div class="container">
+								<div class="heading-wrap">
+									<h2>NOTICIAS SOBRE CORONAVIRUS LOCALES</h2>
+									<!--<span></span>-->
+
+								</div>
+
+								<div class="row service-cont">
+																<article style="width:100%;max-width: 600px">
+									<img src="https://www.eluniversal.com.mx/sites/default/files/styles/f03-651x400/public/2020/03/16/guillermo_arriaga.jpg?itok=rG2bamwM" alt="8253-España -coronavirus" style="width:100%;max-width: 600px">
+									<br><br>
+									<h4>Suspende Guillermo Arriaga gira promocional del libro "Salvar el fuego" por Coronavirus</h4>
+									<p style="color: #999">Yanet Aguilar Sosa <small>2020-03-17 03:29:40</small></p>
+									<p><span style="font-size:0.8em">El escritor y guionista anunció en su cuenta de Twitter la cancelación de su gira promocional del libro "Salvar el fuego"</span></p>
+									<a href="https://www.eluniversal.com.mx/cultura/letras/suspende-guillermo-arriaga-gira-de-salvar-el-fuego-por-coronavirus" target="_blank">Saber más</a>
+								</article>
+								<br><br><br><br>
+																<article style="width:100%;max-width: 600px">
+									<img src="https://as01.epimg.net/futbol/imagenes/2020/03/16/primera/1584384380_361610_1584384759_noticia_normal.jpg" alt="8254-España -coronavirus" style="width:100%;max-width: 600px">
+									<br><br>
+									<h4>El coronavirus no para las obras del nuevo Bernabéu</h4>
+									<p style="color: #999">Tomás Roncero <small>2020-03-17 03:29:40</small></p>
+									<p><span style="font-size:0.8em">La actividad laboral en las obras del estadio del Real Madrid prosigue al mantenerse la luz verde a la construcción en toda España.</span></p>
+									<a href="https://as.com/futbol/2020/03/16/primera/1584384380_361610.html" target="_blank">Saber más</a>
+								</article>
+								<br><br><br><br>
+																<article style="width:100%;max-width: 600px">
+									<img src="https://as01.epimg.net/futbol/imagenes/2020/03/16/primera/1584372811_017416_1584372908_noticia_normal.jpg" alt="8255-España -coronavirus" style="width:100%;max-width: 600px">
+									<br><br>
+									<h4>"Se confirma con el coronavirus que trabajamos mejor unidos"</h4>
+									<p style="color: #999">Alfredo Matilla <small>2020-03-17 03:29:40</small></p>
+									<p><span style="font-size:0.8em">David Aganzo (Leganés, 1981) es presidente de AFE. Él, que fue el primero en pedir la suspensión del fútbol, aboga por la calma para volver a la normalidad y acabar la Liga.</span></p>
+									<a href="https://as.com/futbol/2020/03/16/primera/1584372811_017416.html" target="_blank">Saber más</a>
+								</article>
+								<br><br><br><br>
+																<article style="width:100%;max-width: 600px">
+									<img src="https://s1.eestatic.com/2020/03/16/ciencia/salud/Coronavirus-Enfermedades_infecciosas-Infecciones-Salud_475215187_148463200_1706x1280.jpg" alt="8256-España -coronavirus" style="width:100%;max-width: 600px">
+									<br><br>
+									<h4>Coronavirus: en 10 días se frenará la curva pero lo más peligroso será bajar la guardia entonces</h4>
+									<p style="color: #999"> <small>2020-03-17 03:29:40</small></p>
+									<p><span style="font-size:0.8em">Los expertos se atreven a poner fecha al final de aumento de nuevos contagios por coronavirus, pero advierten sobre la dificultad de la situación posterior.&nbsp;</span></p>
+									<a href="https://www.elespanol.com/ciencia/salud/20200317/coronavirus-frenara-curva-peligroso-bajar-guardia-entonces/475204553_0.html" target="_blank">Saber más</a>
+								</article>
+								<br><br><br><br>
+																<article style="width:100%;max-width: 600px">
+									<img src="https://s1.eestatic.com/2020/03/16/actualidad/Actualidad_475214710_148451234_1706x960.jpg" alt="8257-España -coronavirus" style="width:100%;max-width: 600px">
+									<br><br>
+									<h4>Coronavirus: Por qué no deberías tuitear el  aplauso sanitario  de tu calle</h4>
+									<p style="color: #999"> <small>2020-03-17 03:29:40</small></p>
+									<p><span style="font-size:0.8em">La lucha contra el coronavirus ha hecho que todos los españoles tengamos que estar en casa, pero hay que pensar dos veces qué compartimos en redes.</span></p>
+									<a href="https://www.elespanol.com/omicrono/20200317/coronavirus-no-deberias-tuitear-aplauso-sanitario-calle/475204119_0.html" target="_blank">Saber más</a>
+								</article>
+								<br><br><br><br>
+																<article style="width:100%;max-width: 600px">
+									<img src="https://img.huffingtonpost.com/asset/5e7017982300000d1e3a3647.jpeg?ops=1778_1000" alt="8258-España -coronavirus" style="width:100%;max-width: 600px">
+									<br><br>
+									<h4>¿Podrían escasear los medicamentos por culpa de la pandemia?</h4>
+									<p style="color: #999">The Conversation <small>2020-03-17 03:29:40</small></p>
+									<p><span style="font-size:0.8em">Por Pilar Almela Rojo, profesora del Departamento de Farmacología de la Universidad de Murcia, Universidad de Murcia; y Javier Navarro-Zaragoza, doctor del Departamento de Farmacología, Universidad de Murcia: Una semana antes de que la OMS declarara pandemia …</span></p>
+									<a href="https://www.huffingtonpost.es/entry/podrian-escasear-los-medicamentos-por-culpa-de-la-pandemia_es_5e7014d4c5b6eab7793b00db" target="_blank">Saber más</a>
+								</article>
+								<br><br><br><br>
+																<article style="width:100%;max-width: 600px">
+									<img src="https://img.huffingtonpost.com/asset/5e6f7400230000281ede473f.jpeg?ops=1200_630" alt="8259-España -coronavirus" style="width:100%;max-width: 600px">
+									<br><br>
+									<h4>Confinamiento y violencia</h4>
+									<p style="color: #999">Miguel Lorente <small>2020-03-17 03:29:40</small></p>
+									<p><span style="font-size:0.8em">Las paredes y cristales nos pueden proteger del contagio del Covid-19, pero no de los males que viven dentro del hogar, y la violencia de género habita la convivencia para poner muros y techos de cristal allí donde el maltratador decide. Según la OMS, referen…</span></p>
+									<a href="https://www.huffingtonpost.es/entry/confinamiento-y-violencia_es_5e6f6dfcc5b6bd8156fbd460" target="_blank">Saber más</a>
+								</article>
+								<br><br><br><br>
+																<article style="width:100%;max-width: 600px">
+									<img src="https://img.huffingtonpost.com/asset/5e701efd23000004220c624e.jpeg?ops=1200_630" alt="8260-España -coronavirus" style="width:100%;max-width: 600px">
+									<br><br>
+									<h4>Resistiremos</h4>
+									<p style="color: #999">Ángel Tristán <small>2020-03-17 03:29:40</small></p>
+									<p><span style="font-size:0.8em">De repente, en cuestión de meses, parece como si los acontecimientos circularan por nuestra vida a velocidad vertiginosa. Hechos extraordinarios en otras circunstancias y ocasiones históricas se vuelven normales. Y vemos como caen, como frágiles estructuras d…</span></p>
+									<a href="https://www.huffingtonpost.es/entry/resistiremos_es_5e70113cc5b6eab7793afb82" target="_blank">Saber más</a>
+								</article>
+								<br><br><br><br>
+																<article style="width:100%;max-width: 600px">
+									<img src="https://s1.eestatic.com/2020/03/16/ciencia/nutricion/Alimentacion-Dieta-Obesidad-Coronavirus-Nutricion_475214931_148455870_1706x960.jpg" alt="8261-España -coronavirus" style="width:100%;max-width: 600px">
+									<br><br>
+									<h4>Cuarentena: cuatro  snacks  saludables que no engordan y puedes tomar entre horas</h4>
+									<p style="color: #999">José Andrés Gómez <small>2020-03-17 03:29:40</small></p>
+									<p><span style="font-size:0.8em">Los nutricionistas recomiendan evitar la comida insana durante el periodo de confinamiento. Los picoteos con tantas horas muertas por delante pueden mandar al traste nuestra dieta.&nbsp;</span></p>
+									<a href="https://www.elespanol.com/ciencia/nutricion/20200317/cuarentena-snacks-saludables-no-engordan-puedes-tomar/475232479_3.html" target="_blank">Saber más</a>
+								</article>
+								<br><br><br><br>
+																<article style="width:100%;max-width: 600px">
+									<img src="https://s1.eestatic.com/2020/03/16/ciencia/nutricion/Nutricion_475214864_148453961_1706x1280.jpg" alt="8262-España -coronavirus" style="width:100%;max-width: 600px">
+									<br><br>
+									<h4>Coronavirus: así debes hacer la compra en el  súper  para reducir el riesgo de contagio</h4>
+									<p style="color: #999"> <small>2020-03-17 03:29:40</small></p>
+									<p><span style="font-size:0.8em">Aunque no es necesario ir al supermercado con guantes y mascarilla debemos cambiar ciertas costumbres para reducir el peligro de infección.</span></p>
+									<a href="https://www.elespanol.com/ciencia/nutricion/20200317/coronavirus-debes-hacer-compra-reducir-riesgo-contagio/475204267_0.html" target="_blank">Saber más</a>
+								</article>
+								<br><br><br><br>
+																<article style="width:100%;max-width: 600px">
+									<img src="https://www.eldiario.es/sociedad/escuela-Elcano-Espana-tecnica-Miami_EDIIMA20200317_0058_3.jpg" alt="8263-España -coronavirus" style="width:100%;max-width: 600px">
+									<br><br>
+									<h4>El buque escuela "Elcano" zarpa rumbo a España tras una escala técnica en Miami</h4>
+									<p style="color: #999">contacto@eldiario.es (EFE) <small>2020-03-17 03:29:40</small></p>
+									<p><span style="font-size:0.8em">El "Juan Sebastián Elcano", buque escuela de la Armada española, puso este lunes rumbo a España desde Miami, última escala de un viaje de instrucción que se ha visto marcado por la pandemia del coronavirus. El bergantín goleta de cuatro mástiles llegó este do…</span></p>
+									<a href="https://www.eldiario.es/sociedad/escuela-Elcano-Espana-tecnica-Miami_0_1006849349.html" target="_blank">Saber más</a>
+								</article>
+								<br><br><br><br>
+																<article style="width:100%;max-width: 600px">
+									<img src="https://www.lanacion.com.ar//bucket1.glanacion.com/anexos/fotos/22/3190022.jpg" alt="8264-España -coronavirus" style="width:100%;max-width: 600px">
+									<br><br>
+									<h4>Coronavirus: Nicolás Maduro ordenó que Venezuela entre en cuarentena total</h4>
+									<p style="color: #999">lanacion.com <small>2020-03-17 03:29:40</small></p>
+									<p><span style="font-size:0.8em"></span></p>
+									<a href="https://www.lanacion.com.ar/el-mundo/coronavirus-nicolas-maduro-ordeno-venezuela-cuarentena-total-nid2344119" target="_blank">Saber más</a>
+								</article>
+								<br><br><br><br>
+																<article style="width:100%;max-width: 600px">
+									<img src="https://cdn2.excelsior.com.mx/media/styles/imagen_redes_sociales/public/pictures/2020/03/16/2325646.jpg" alt="8265-España -coronavirus" style="width:100%;max-width: 600px">
+									<br><br>
+									<h4>Francia suspende pago de impuestos por Covid-19</h4>
+									<p style="color: #999">j.carlos.segundo <small>2020-03-17 03:29:40</small></p>
+									<p><span style="font-size:0.8em">Con información de AFP FRANCIA El presidente de Francia, Emmanuel Macron, prometió una garantía de 300,000 millones de euros para préstamos bancarios a empresas por la pandemia del Covid-19, a las que urgió a "adaptar su organización para respetar las medidas…</span></p>
+									<a href="https://www.excelsior.com.mx/global/francia-suspende-pago-de-impuestos-por-covid-19/1370128" target="_blank">Saber más</a>
+								</article>
+								<br><br><br><br>
+																<article style="width:100%;max-width: 600px">
+									<img src="https://www.eluniversal.com.mx/sites/default/files/styles/f03-651x400/public/2020/03/16/francisco-garcia-joven-entrenador-infantiles.jpg?itok=oLemRyLN" alt="8266-España -coronavirus" style="width:100%;max-width: 600px">
+									<br><br>
+									<h4>Muere director técnico en España por coronavirus</h4>
+									<p style="color: #999">Universal Deportes <small>2020-03-17 03:29:40</small></p>
+									<p><span style="font-size:0.8em">El entrenador falleció días después de ser diagnosticado con Covid-19 a los 21 años de edad</span></p>
+									<a href="https://www.eluniversal.com.mx/universal-deportes/futbol/muere-director-tecnico-en-espana-por-coronavirus" target="_blank">Saber más</a>
+								</article>
+								<br><br><br><br>
+																<article style="width:100%;max-width: 600px">
+									<img src="https://static4.abc.es/media/espana/2020/03/17/1423405440-k7HH--1024x512@abc.jpg" alt="8267-España -coronavirus" style="width:100%;max-width: 600px">
+									<br><br>
+									<h4>El «Elcano» zarpa rumbo a España tras escala técnica en Miami</h4>
+									<p style="color: #999">(abc) <small>2020-03-17 03:29:40</small></p>
+									<p><span style="font-size:0.8em">El «Juan Sebastián Elcano», buque-escuela de la Armada española, puso este lunes rumbo a España desde Miami, última escala de un viaje de instrucción que se ha visto marcado por la pandemia del coronavirus. El bergantín-goleta de cuatro mástiles llegó este do…</span></p>
+									<a href="https://www.abc.es/espana/abci-elcano-zarpa-rumbo-espana-tras-escala-tecnica-miami-202003170231_noticia.html" target="_blank">Saber más</a>
+								</article>
+								<br><br><br><br>
+																<article style="width:100%;max-width: 600px">
+									<img src="https://static2.abc.es/media/espana/2020/03/17/ejercito-malaga-ksbE--1024x512@abc.jpg" alt="8268-España -coronavirus" style="width:100%;max-width: 600px">
+									<br><br>
+									<h4>La guerra del Ejército contra el coronavirus alcanza a 15 provincias con 1.400 militares</h4>
+									<p style="color: #999">(abc) <small>2020-03-17 03:29:40</small></p>
+									<p><span style="font-size:0.8em">La Unidad Militar de Emergencias (UME) amplió ayer su «guerra» contra el Covid-19 a otras ocho provincias. En total, ya han actuado en quince con trabajos de desinfección en zonas de contagio masivo como aeropuertos o estaciones de trenes y autobuses, entre o…</span></p>
+									<a href="https://www.abc.es/espana/abci-guerra-ejercito-contra-coronavirus-alcanza-15-provincias-1400-militares-202003170227_noticia.html" target="_blank">Saber más</a>
+								</article>
+								<br><br><br><br>
+																<article style="width:100%;max-width: 600px">
+									<img src="https://static1.abc.es/media/noticias/2020/03/17/torra-kOQD-U61135474232dwp-620x349@abc.jpg" alt="8269-España -coronavirus" style="width:100%;max-width: 600px">
+									<br><br>
+									<h4>Torra se enfrenta a su suspensión inmediata y procesamiento si desacata el decreto</h4>
+									<p style="color: #999">(abc) <small>2020-03-17 03:29:40</small></p>
+									<p><span style="font-size:0.8em">El presidente de la Generalitat, Joaquim Torra, podría ser suspendido de forma inmediata y procesado si desobedeciera lo acordado en el real decreto de alarma del Gobierno. Así lo aseguran fuentes jurídicas consultadas por ABC, que añaden que sus facultades s…</span></p>
+									<a href="https://www.abc.es/espana/abci-torra-enfrenta-suspension-inmediata-y-procesamiento-si-desacata-decreto-202003170227_noticia.html" target="_blank">Saber más</a>
+								</article>
+								<br><br><br><br>
+																<article style="width:100%;max-width: 600px">
+									<img src="https://static4.abc.es/media/espana/2020/03/16/oficina-pnv-vitoria-U45017044645ggi-620x349@abc.jpg" alt="8270-España -coronavirus" style="width:100%;max-width: 600px">
+									<br><br>
+									<h4>País Vasco y Galicia aplazan las elecciones de forma indefinida</h4>
+									<p style="color: #999">(abc) <small>2020-03-17 03:29:40</small></p>
+									<p><span style="font-size:0.8em">Ni las elecciones vascas ni las gallegas se celebrarán finalmente el 5 de abril. Los gobiernos de ambas comunidades dejaron ayer a un lado las conjeturas y acordaron con los partidos políticos el aplazamiento de los comicios como medida de contención frente a…</span></p>
+									<a href="https://www.abc.es/espana/abci-pais-vasco-y-galicia-aplazan-elecciones-forma-indefinida-202003170224_noticia.html" target="_blank">Saber más</a>
+								</article>
+								<br><br><br><br>
+																<article style="width:100%;max-width: 600px">
+									<img src="https://www.eldiario.es/static/EDIDiario/images/edi_fb_default_logo.png" alt="8271-España -coronavirus" style="width:100%;max-width: 600px">
+									<br><br>
+									<h4>Más de 4.500 viajeros deben acatar la medida de aislamiento en Colombia</h4>
+									<p style="color: #999">contacto@eldiario.es (EFE) <small>2020-03-17 03:29:40</small></p>
+									<p><span style="font-size:0.8em">Más de 4.500 viajeros que llegaron a Colombia de China, España, Francia e Italia desde el pasado 11 de marzo deben acatar la medida de aislamiento decretada por el Gobierno para contener la expansión del COVID-19, pues de no hacerlo serán sancionados o, en el…</span></p>
+									<a href="https://www.eldiario.es/sociedad/viajeros-acatar-medida-aislamiento-Colombia_0_1006849348.html" target="_blank">Saber más</a>
+								</article>
+								<br><br><br><br>
+																<article style="width:100%;max-width: 600px">
+									<img src="https://static1.abc.es/media/espana/2020/03/16/encuesta-coronavirus-pieza1--620x349-U16052472408Xwr-620x349@abc.jpg" alt="8272-España -coronavirus" style="width:100%;max-width: 600px">
+									<br><br>
+									<h4>Siete de cada diez ciudadanos creen que el Gobierno reaccionó tarde</h4>
+									<p style="color: #999">(abc) <small>2020-03-17 03:29:40</small></p>
+									<p><span style="font-size:0.8em">La alarma nacional por la crisis del coronavirus está uniendo a los españoles, que reclaman de forma mayoritaria a los líderes políticos que aparquen sus peleas y remen juntos en la misma dirección para superar esta situación excepcional, según se refleja en …</span></p>
+									<a href="https://www.abc.es/espana/abci-siete-cada-diez-ciudadanos-creen-gobierno-reacciono-tarde-202003170222_noticia.html" target="_blank">Saber más</a>
+								</article>
+								<br><br><br><br>
+																	<a class="twitter-timeline"
+									href="https://twitter.com/CoronavirusESP?ref_src=twsrc%5Etfw">
+									Tweets by CoronavirusESP
+								</a>
+								<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+										
+
+									</div>
+									<!--<a class="btn more-btn read-more" href="services.html"> view more</a>-->
+
+								</div>
+								<div class="row pull-right">
+									<div class="col-xs-12 triangle-img">
+										<img src="assets/images/sky-blue-triangle.png" alt="sky-triangel" class="blue-triangle"/>
+										
+										<img src="assets/svg/triangle.svg" alt="yellow-triangel" class="triangle-svg  svg"/>
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</section>
+						
+
+					
+					</div>
+				</article>
+				</section>					<!--Content Area End-->
+	<!--Footer Section Start-->
+					<footer id="footer" class="footer-two">
+						
+						<div class="container">
+							<div class="row">								
+								<div class="col-sm-8 col-xs-12 foot-main-part">
+									<p>Localcoronavirus © 2019 <a href="http://legalbox.es/politica-de-privacidad/" target="_blank" rel="noopener noreferrer">Aviso legal y politica de privacidad</a>&nbsp;·&nbsp;<a href="http://legalbox.es/politica-de-cookies/" target="_blank" rel="noopener noreferrer">Política de Cookies</a>&nbsp;·&nbsp;<a href="http://legalbox.es/condiciones-del-servicio/" target="_blank" rel="noopener">Condiciones del servicio</a></p>
+								</div>
+								<div class="col-sm-4 col-xs-12 foot-main-part">
+								</div>
+							</div>
+							
+						</div>
+
+					</footer>
+					<!--Footer Section End-->
+
+		</div>
+		<!--Page Wrapper End-->
+		<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="assets/js/angular.js"></script>
+		<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+		<script type="text/javascript" src="assets/js/less.js"></script>
+		<!-- revolution Js -->
+		<script type="text/javascript" src="assets/js/jquery.themepunch.tools.min.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.themepunch.revolution.min.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.revolution2.js"></script>
+		<!-- revolution Js -->
+		<script type="text/javascript" src="assets/js/owl.carousel.js"></script>
+		<script type="text/javascript" src="assets/js/site.js"></script>
+		<script src="assets/js/app.js"></script>
+	</body>
+</html>				
