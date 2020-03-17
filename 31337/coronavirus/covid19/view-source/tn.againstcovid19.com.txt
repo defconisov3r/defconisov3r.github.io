@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Corona is the virus that I just want to minus. -->
+    <title>COVID-19 Tunisia Dashboard | UCA</title>
+<link rel="icon" type="image/x-icon" href="https://tn.againstcovid19.com/favicon.png">
+<meta name="description" content="A collection of useful data visualisation regarding the COVID-19 virus outbreak in Tunisia.">
+<link rel="canonical" href="https://tn.againstcovid19.com/">
+<meta property="og:title" content="COVID-19 Tunisia Dashboard">
+<meta property="og:url" content="https://tn.againstcovid19.com/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://tn.againstcovid19.com/og-dashboard-image.png">
+<meta property="og:description" content="A collection of useful data visualisation regarding the COVID-19 virus outbreak in Tunisia.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@co.vid19.sg">
+<meta name="twitter:creator" content="@zp_uca">
+<meta name="twitter:title" content="COVID-19 TN 🇹🇳 Dashboard | A Collection of Useful Data Reports.">
+<meta name="twitter:description" content="Tue 17th Mar 12:04pm: 0 total cases. 0 recovered. 0 in intensive care. 0 stabilised in hospitals.">
+<meta name="twitter:image" content="https://tn.againstcovid19.com/og-twitter-dashboard-image.png">
+<meta name="author" content="ZP">
+<meta name="author" content="UpCode Academy">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="eAZJHKGkSrgYsiNqJwFOLZq2ZMqzSYFW6+QSliJynzkjBByfyBvwRmkKAasbFmcF8qUthN4yIAMBwsxL48FZUA==" />
+    
+
+    <link rel="stylesheet" media="all" href="/assets/application-94beaf82973851e83753c3518b66c4f935b8e47562bc3a2b0b324e633d376a2d.css" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <!-- Matomo -->
+<script type="text/javascript">
+  var _paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setCookieDomain", "*.www.wuhanvirus.sg"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://upcodeacademy.innocraft.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '6']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src='//cdn.innocraft.cloud/upcodeacademy.innocraft.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="https://upcodeacademy.innocraft.cloud/matomo.php?idsite=6&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Matomo Code -->
+  <script type="text/javascript">
+  if(typeof ga === 'undefined') {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-103591913-7', {});
+  }
+  ga('send', 'pageview', window.location.pathname + window.location.search);
+</script>
+</head>
+
+  <body style="padding-bottom:45px;">
+    <!-- Everybody, we have a part to play. To help fight corona at the end of the day -->
+
+    
+
+    <!-- header start -->
+    <header class="navbar navbar-header navbar-header-fixed" style="z-index: 100;">
+  <a href="" id="mainMenuOpen" class="burger-menu"><i data-feather="menu"></i></a>
+  <div class="navbar-brand">
+    <a class="df-logo" href="/">
+      covid19<span>&nbsp;TN</span>
+</a>  </div><!-- navbar-brand -->
+  <div id="navbarMenu" class="navbar-menu-wrapper">
+    <div class="navbar-menu-header">
+      <a class="df-logo" href="/">
+        covid19<span>&nbsp;TN</span>
+</a>      <a id="mainMenuClose" href=""><i data-feather="x"></i></a>
+    </div><!-- navbar-menu-header -->
+    <ul class="nav navbar-menu">
+      <li class="nav-label pd-l-20 pd-lg-l-25 d-lg-none">Main Navigation</li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/dashboard">
+          <ion-icon class="d-lg-none mg-r-10" name="bar-chart-outline"></ion-icon>&nbsp;Home
+</a>      </li>
+
+      <li class="nav-item with-sub ">
+        <a href="" class="nav-link"><i data-feather="pie-chart"></i> Analytics</a>
+        <ul class="navbar-menu-sub">
+          <li class="nav-sub-item">
+            <a class="nav-sub-link" href="/dashboard/confirmed">
+              <i data-feather="check-circle"></i>Confirmed Cases
+</a>          </li>
+          <li class="nav-sub-item">
+            <a class="nav-sub-link" href="/dashboard/recovered">
+              <i data-feather="clipboard"></i>Recovered Cases
+</a>          </li>
+          <li class="nav-sub-item">
+            <a class="nav-sub-link" href="/dashboard/symptomatic">
+              <i data-feather="cloud-drizzle"></i>Symptomatic Cases
+</a>          </li>
+          <li class="nav-sub-item">
+            <a class="nav-sub-link" href="/dashboard/intensive_care_cases">
+              <i data-feather="alert-circle"></i>Intensive Care Cases
+</a>          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item with-sub ">
+        <a href="" class="nav-link"><i data-feather="sun"></i> Insights</a>
+        <ul class="navbar-menu-sub">
+          <li class="nav-sub-item">
+            <a class="nav-sub-link" href="/insights/current_cases">
+              <i data-feather="activity"></i>Current Cases In Hospital&nbsp;&nbsp;<span class="badge badge-danger">New</span>
+</a>          </li>
+          <li class="nav-sub-item">
+            <a class="nav-sub-link" href="/insights/recovery">
+              <i data-feather="clipboard"></i>Discharged Cases
+</a>          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item with-sub ">
+        <a href="" class="nav-link"><i data-feather="briefcase"></i> Cases</a>
+        <ul class="navbar-menu-sub">
+          <li class="nav-sub-item">
+            <a class="nav-sub-link" href="/cases">
+              <i data-feather="git-pull-request"></i>Network Graph
+</a>          </li>
+          <li class="nav-sub-item">
+            <a class="nav-sub-link" href="/cases/search">
+              <i data-feather="clipboard"></i>Search&nbsp;&nbsp;<span class="badge badge-danger">New</span>
+</a>          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item ">
+        <a class="nav-link" href="/map">
+          <ion-icon class="d-lg-none mg-r-10" name="map-outline"></ion-icon>&nbsp;Map
+</a>      </li>
+
+      <li class="nav-item">
+        <a href="#request-modal" data-toggle="modal", class="nav-link">
+          <ion-icon class="d-lg-none mg-r-10" name="map-outline"></ion-icon>&nbsp;Worldwide
+        </a>
+      </li>
+
+    </ul>
+  </div><!-- navbar-menu-wrapper -->
+
+  <div class="navbar-right">
+    <a id="navbarSearch" href="" class="search-link"><i data-feather="search"></i></a>
+      <div class="dropdown dropdown-message">
+        <a href="" class="dropdown-link new-indicator" data-toggle="dropdown">
+          <i data-feather="bell"></i>
+          <span>1</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <div class="dropdown-header">Notifications</div>
+          <a href="#request-modal" data-toggle="modal" class="dropdown-item">
+            <div class="media">
+
+              <div class="media-body mg-l-15">
+                <strong>Want this in your country?</strong>
+                <p>Sharing of information can help us fight against this disease. Help me to launch this in your country.</p>
+              </div>
+            </div><!-- media -->
+          </a>
+        </div>
+      </div>
+
+    <div class="navbar-search">
+      <form id="search_case_input" action="/cases/query" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="SN+3ZmukU9FG4KpNCYJ8eIUChs2drnYImbx+ZZld7k5Ean2WvmTvYWMXJKoTo2Ll+hxIY3574da88g5EgmElRA==" />
+        <div class="navbar-search-header">
+          <input type="text" name="number" id="number" class="form-control" placeholder="Type the case number and hit enter to view" />
+          <!-- <input type="search" class="form-control"  placeholder="Type the case number and hit enter to view"> -->
+          <button class="btn"><i data-feather="search"></i></button>
+          <a id="navbarSearchClose" href="" class="link-03 mg-l-5 mg-lg-l-10"><i data-feather="x"></i></a>
+        </div><!-- navbar-search-header -->
+</form>
+      <div class="navbar-search-body">
+        <label class="tx-10 tx-medium tx-uppercase tx-spacing-1 tx-color-03 mg-b-10 d-flex align-items-center">Recent Cases</label>
+        <ul class="list-unstyled">
+        </ul>
+
+        <hr class="mg-y-30 bd-0">
+
+        <label class="tx-10 tx-medium tx-uppercase tx-spacing-1 tx-color-03 mg-b-10 d-flex align-items-center">Currently being Viewed</label>
+
+        <ul class="list-unstyled">
+        </ul>
+      </div><!-- navbar-search-body -->
+    </div><!-- navbar-search -->
+
+  </div>
+
+
+</header><!-- navbar -->
+
+<div class="modal fade" id="request-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content tx-14">
+      <div class="modal-header">
+        <h6 class="modal-title" id="exampleModalLabel2">Help to Launch this in your Country</h6>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <form action="/requests" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="+bRBwHluOS/5JP9y887o56enw5UIPe27mTpGMqxjNbFqVGe21peLqRfKpfa/gu4+fj1PUvlsf+mUP1LegF4AIg==" />
+        <div class="modal-body">
+          <div class="mg-b-0 pd-t-5">
+            <p>Hi! This is ZP, the creator of this site.</p>
+            <p>I believe that sharing information can be very helpful in the fight against COVID-19.</p>
+            <p>I'm looking for volunteers/content moderators/admins etc to help me launch this in your country. I need lots of help. If you are interested, do fill in this form.</p>
+            <p>Please help to share this link around too. Thank you! ❤️</p>
+            <div class="form-group">
+              <label class="d-block" for="email">Email</label>
+              <input class="form-control" placeholder="Enter your email" type="email" name="email" id="email" />
+            </div>
+            <div class="form-group">
+              <label for="country">Country</label>
+              <select class="form-control" name="country" id="country"><option value="afghanistan">Afghanistan</option>
+<option value="albania">Albania</option>
+<option value="algeria">Algeria</option>
+<option value="american samoa">American samoa</option>
+<option value="andorre">Andorre</option>
+<option value="angola">Angola</option>
+<option value="anguilla">Anguilla</option>
+<option value="antarctica">Antarctica</option>
+<option value="antigua and barbuda">Antigua and barbuda</option>
+<option value="argentina">Argentina</option>
+<option value="armenia">Armenia</option>
+<option value="aruba">Aruba</option>
+<option value="australia">Australia</option>
+<option value="austria">Austria</option>
+<option value="azerbaijan">Azerbaijan</option>
+<option value="bahamas">Bahamas</option>
+<option value="bahrain">Bahrain</option>
+<option value="bangladesh">Bangladesh</option>
+<option value="barbade">Barbade</option>
+<option value="belarus">Belarus</option>
+<option value="belgium">Belgium</option>
+<option value="belize">Belize</option>
+<option value="benin">Benin</option>
+<option value="bermuda">Bermuda</option>
+<option value="bhutan">Bhutan</option>
+<option value="bolivia">Bolivia</option>
+<option value="bonaire, sint eustatius and saba">Bonaire, sint eustatius and saba</option>
+<option value="bosnia and herzegovina">Bosnia and herzegovina</option>
+<option value="botswana">Botswana</option>
+<option value="bouvet island">Bouvet island</option>
+<option value="brazil">Brazil</option>
+<option value="british indian ocean territory">British indian ocean territory</option>
+<option value="british virgin islands">British virgin islands</option>
+<option value="brunei">Brunei</option>
+<option value="bulgaria">Bulgaria</option>
+<option value="burkina faso">Burkina faso</option>
+<option value="burundi">Burundi</option>
+<option value="cambodia">Cambodia</option>
+<option value="cameroon">Cameroon</option>
+<option value="canada">Canada</option>
+<option value="cape verde">Cape verde</option>
+<option value="cayman islands">Cayman islands</option>
+<option value="central african republic">Central african republic</option>
+<option value="chad">Chad</option>
+<option value="chile">Chile</option>
+<option value="china">China</option>
+<option value="christmas island">Christmas island</option>
+<option value="cocos (keeling) islands">Cocos (keeling) islands</option>
+<option value="colombia">Colombia</option>
+<option value="comoros">Comoros</option>
+<option value="congo">Congo</option>
+<option value="congo (dem. rep.)">Congo (dem. rep.)</option>
+<option value="cook islands">Cook islands</option>
+<option value="costa rica">Costa rica</option>
+<option value="crna gora">Crna gora</option>
+<option value="croatia">Croatia</option>
+<option value="cuba">Cuba</option>
+<option value="curaçao">Curaçao</option>
+<option value="cyprus">Cyprus</option>
+<option value="czech republic">Czech republic</option>
+<option value="côte d&#39;ivoire">Côte d&#39;ivoire</option>
+<option value="denmark">Denmark</option>
+<option value="djibouti">Djibouti</option>
+<option value="dominica">Dominica</option>
+<option value="dominican republic">Dominican republic</option>
+<option value="east timor">East timor</option>
+<option value="ecuador">Ecuador</option>
+<option value="egypt">Egypt</option>
+<option value="el salvador">El salvador</option>
+<option value="equatorial guinea">Equatorial guinea</option>
+<option value="eritrea">Eritrea</option>
+<option value="estonia">Estonia</option>
+<option value="ethiopia">Ethiopia</option>
+<option value="falkland islands">Falkland islands</option>
+<option value="faroe islands">Faroe islands</option>
+<option value="fiji">Fiji</option>
+<option value="finland">Finland</option>
+<option value="france">France</option>
+<option value="french guiana">French guiana</option>
+<option value="french polynesia">French polynesia</option>
+<option value="french southern territories">French southern territories</option>
+<option value="gabon">Gabon</option>
+<option value="gambia">Gambia</option>
+<option value="georgia">Georgia</option>
+<option value="germany">Germany</option>
+<option value="ghana">Ghana</option>
+<option value="gibraltar">Gibraltar</option>
+<option value="greece">Greece</option>
+<option value="greenland">Greenland</option>
+<option value="grenada">Grenada</option>
+<option value="guadeloupe">Guadeloupe</option>
+<option value="guam">Guam</option>
+<option value="guatemala">Guatemala</option>
+<option value="guernsey and alderney">Guernsey and alderney</option>
+<option value="guinea">Guinea</option>
+<option value="guinea-bissau">Guinea-bissau</option>
+<option value="guyana">Guyana</option>
+<option value="haiti">Haiti</option>
+<option value="heard and mcdonald islands">Heard and mcdonald islands</option>
+<option value="honduras">Honduras</option>
+<option value="hong kong">Hong kong</option>
+<option value="hungary">Hungary</option>
+<option value="iceland">Iceland</option>
+<option value="india">India</option>
+<option value="indonesia">Indonesia</option>
+<option value="iran">Iran</option>
+<option value="iraq">Iraq</option>
+<option value="ireland">Ireland</option>
+<option value="isle of man">Isle of man</option>
+<option value="israel">Israel</option>
+<option value="italy">Italy</option>
+<option value="jamaica">Jamaica</option>
+<option value="japan">Japan</option>
+<option value="jersey">Jersey</option>
+<option value="jordan">Jordan</option>
+<option value="kazakhstan">Kazakhstan</option>
+<option value="kenya">Kenya</option>
+<option value="kiribati">Kiribati</option>
+<option value="korea (north)">Korea (north)</option>
+<option value="kuwait">Kuwait</option>
+<option value="kyrgyzstan">Kyrgyzstan</option>
+<option value="laos">Laos</option>
+<option value="latvia">Latvia</option>
+<option value="lebanon">Lebanon</option>
+<option value="lesotho">Lesotho</option>
+<option value="liberia">Liberia</option>
+<option value="libya">Libya</option>
+<option value="liechtenstein">Liechtenstein</option>
+<option value="lithuania">Lithuania</option>
+<option value="luxembourg">Luxembourg</option>
+<option value="macao">Macao</option>
+<option value="macedonia">Macedonia</option>
+<option value="madagascar">Madagascar</option>
+<option value="malawi">Malawi</option>
+<option value="malaysia">Malaysia</option>
+<option value="maldives">Maldives</option>
+<option value="mali">Mali</option>
+<option value="malta">Malta</option>
+<option value="marshall islands">Marshall islands</option>
+<option value="martinique">Martinique</option>
+<option value="mauritania">Mauritania</option>
+<option value="mauritius">Mauritius</option>
+<option value="mayotte">Mayotte</option>
+<option value="mexico">Mexico</option>
+<option value="micronesia">Micronesia</option>
+<option value="moldova">Moldova</option>
+<option value="monaco">Monaco</option>
+<option value="mongolia">Mongolia</option>
+<option value="montserrat">Montserrat</option>
+<option value="morocco">Morocco</option>
+<option value="mozambique">Mozambique</option>
+<option value="myanmar">Myanmar</option>
+<option value="namibia">Namibia</option>
+<option value="nauru">Nauru</option>
+<option value="nepal">Nepal</option>
+<option value="netherlands">Netherlands</option>
+<option value="new caledonia">New caledonia</option>
+<option value="new zealand">New zealand</option>
+<option value="nicaragua">Nicaragua</option>
+<option value="niger">Niger</option>
+<option value="nigeria">Nigeria</option>
+<option value="niue">Niue</option>
+<option value="norfolk island">Norfolk island</option>
+<option value="northern mariana islands">Northern mariana islands</option>
+<option value="norway">Norway</option>
+<option value="oman">Oman</option>
+<option value="pakistan">Pakistan</option>
+<option value="palau">Palau</option>
+<option value="palestine">Palestine</option>
+<option value="panama">Panama</option>
+<option value="papua new guinea">Papua new guinea</option>
+<option value="paraguay">Paraguay</option>
+<option value="peru">Peru</option>
+<option value="philippines">Philippines</option>
+<option value="pitcairn">Pitcairn</option>
+<option value="poland">Poland</option>
+<option value="portugal">Portugal</option>
+<option value="puerto rico">Puerto rico</option>
+<option value="qatar">Qatar</option>
+<option value="romania">Romania</option>
+<option value="russia">Russia</option>
+<option value="rwanda">Rwanda</option>
+<option value="réunion">Réunion</option>
+<option value="saint barthélemy">Saint barthélemy</option>
+<option value="saint helena">Saint helena</option>
+<option value="saint kitts and nevis">Saint kitts and nevis</option>
+<option value="saint lucia">Saint lucia</option>
+<option value="saint martin">Saint martin</option>
+<option value="saint pierre and miquelon">Saint pierre and miquelon</option>
+<option value="saint vincent and the grenadines">Saint vincent and the grenadines</option>
+<option value="samoa">Samoa</option>
+<option value="san marino">San marino</option>
+<option value="saudi arabia">Saudi arabia</option>
+<option value="senegal">Senegal</option>
+<option value="serbia">Serbia</option>
+<option value="seychelles">Seychelles</option>
+<option value="sierra leone">Sierra leone</option>
+<option value="singapore">Singapore</option>
+<option value="sint maarten">Sint maarten</option>
+<option value="slovakia">Slovakia</option>
+<option value="slovenia">Slovenia</option>
+<option value="solomon islands">Solomon islands</option>
+<option value="somalia">Somalia</option>
+<option value="south africa">South africa</option>
+<option value="south georgia">South georgia</option>
+<option value="south korea">South korea</option>
+<option value="south sudan">South sudan</option>
+<option value="spain">Spain</option>
+<option value="sri lanka">Sri lanka</option>
+<option value="sudan">Sudan</option>
+<option value="suriname">Suriname</option>
+<option value="svalbard and jan mayen">Svalbard and jan mayen</option>
+<option value="swaziland">Swaziland</option>
+<option value="sweden">Sweden</option>
+<option value="switzerland">Switzerland</option>
+<option value="syria">Syria</option>
+<option value="são tomé and príncipe">São tomé and príncipe</option>
+<option value="taiwan">Taiwan</option>
+<option value="tajikistan">Tajikistan</option>
+<option value="tanzania">Tanzania</option>
+<option value="thailand">Thailand</option>
+<option value="togo">Togo</option>
+<option value="tokelau">Tokelau</option>
+<option value="tonga">Tonga</option>
+<option value="trinidad and tobago">Trinidad and tobago</option>
+<option value="tunisia">Tunisia</option>
+<option value="turkey">Turkey</option>
+<option value="turkmenistan">Turkmenistan</option>
+<option value="turks and caicos islands">Turks and caicos islands</option>
+<option value="tuvalu">Tuvalu</option>
+<option value="uganda">Uganda</option>
+<option value="ukraine">Ukraine</option>
+<option value="united arab emirates">United arab emirates</option>
+<option value="united kingdom">United kingdom</option>
+<option value="united states">United states</option>
+<option value="united states minor outlying islands">United states minor outlying islands</option>
+<option value="uruguay">Uruguay</option>
+<option value="uzbekistan">Uzbekistan</option>
+<option value="vanuatu">Vanuatu</option>
+<option value="vatican city">Vatican city</option>
+<option value="venezuela">Venezuela</option>
+<option value="vietnam">Vietnam</option>
+<option value="virgin islands of the united states">Virgin islands of the united states</option>
+<option value="wallis and futuna">Wallis and futuna</option>
+<option value="western sahara">Western sahara</option>
+<option value="yemen">Yemen</option>
+<option value="zambia">Zambia</option>
+<option value="zimbabwe">Zimbabwe</option>
+<option value="åland islands">Åland islands</option></select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" name="message" id="message">
+</textarea>
+            </div>
+            <p>Tweet at me <a href="https://twitter.com/zp_uca" target="_blank">@zp_uca</a>.</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary tx-13" data-dismiss="modal">Close</button>
+          <input type="submit" name="commit" value="Submit" class="btn btn-primary tx-13" data-disable-with="Submit" />
+        </div>
+</form>
+    </div>
+  </div>
+</div>
+    <!-- header end -->
+
+    <!-- Main container start -->
+    
+<div class="content content-fixed">
+  <div class="container pd-x-0 pd-lg-x-10 pd-xl-x-0">
+    <div class="d-sm-flex justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
+      <div>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb breadcrumb-style1 mg-b-10">
+            <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+            <!-- <li class="breadcrumb-item active" aria-current="page">Sales Monitoring</li> -->
+          </ol>
+        </nav>
+        <h4 class="mg-b-0 tx-spacing--1">Dashboard of the COVID-19 Virus Outbreak in Tunisia</h4>
+      </div>
+        <div class="mg-t-10 d-flex justify-content-end">
+          <button class="btn btn-sm pd-x-15 btn-white btn-uppercase" id="daterangepicker"><i data-feather="calendar" class="wd-10 mg-r-5"></i>21 January 2020 to 16 March 2020</button>
+
+
+        </div>
+    </div>
+
+    <div class="row row-xs">
+      <div class="col-sm-6 col-lg-3">
+        <a href="/dashboard/confirmed">
+          <div class="card card-body">
+            <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Total Cases</h6>
+            <div class="d-flex d-lg-block d-xl-flex align-items-end">
+              <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1">0</h3>
+              <p class="tx-11 tx-color-03 mg-b-0"><span class="tx-medium tx-danger">0<i class="icon ion-md-arrow-up"></i></span> in ICU</p>
+            </div>
+            <div class="chart-three">
+              <div id="flotChart3" class="flot-chart ht-30"></div>
+            </div><!-- chart-three -->
+          </div>
+</a>      </div><!-- col -->
+      <div class="col-sm-6 col-lg-3 mg-t-10 mg-sm-t-0">
+        <a href="/insights/current_cases">
+          <div class="card card-body">
+            <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8"><span class="d-none d-md-inline">Currently </span>In Hospital</h6>
+            <div class="d-flex d-lg-block d-xl-flex align-items-end">
+              <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1">0</h3>
+              <p class="tx-11 tx-color-03 mg-b-0"><span class="tx-medium tx-success">NaN%<i class="icon ion-md-arrow-down"></i></span> of total cases</p>
+            </div>
+            <div class="chart-three">
+              <div id="flotChart4" class="flot-chart ht-30"></div>
+            </div><!-- chart-three -->
+          </div>
+</a>      </div><!-- col -->
+      <div class="col-sm-6 col-lg-3 mg-t-10 mg-lg-t-0">
+        <a href="/dashboard/deceased">
+          <div class="card card-body">
+            <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Deceased</h6>
+            <div class="d-flex d-lg-block d-xl-flex align-items-end">
+              <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1">0</h3>
+              <p class="tx-11 tx-color-03 mg-b-0"><span class="tx-medium tx-success">NaN%<i class="icon ion-md-arrow-down"></i></span> of total cases</p>
+            </div>
+            <div class="chart-three">
+              <div id="flotChart5" class="flot-chart ht-30"></div>
+            </div><!-- chart-three -->
+          </div>
+</a>      </div><!-- col -->
+      <div class="col-sm-6 col-lg-3 mg-t-10 mg-lg-t-0">
+        <a href="/dashboard/recovered">
+          <div class="card card-body">
+            <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Discharged</h6>
+            <div class="d-flex d-lg-block d-xl-flex align-items-end">
+              <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1">0</h3>
+              <p class="tx-11 tx-color-03 mg-b-0"><span class="tx-medium tx-success">NaN% <i class="icon ion-md-arrow-up"></i></span> of total cases</p>
+            </div>
+            <div class="chart-three">
+              <div id="flotChart6" class="flot-chart ht-30"></div>
+            </div><!-- chart-three -->
+          </div>
+</a>      </div><!-- col -->
+
+      <div class="col-lg-8 col-xl-9 mg-t-10">
+        <div class="card">
+          <div class="card-header">
+            <div class="d-sm-flex justify-content-between bd-b-0 pd-t-0 pd-b-0">
+              <div class="mg-b-0 mg-sm-b-0">
+                <h6 class="mg-b-0">Number Of Cases</h6>
+              </div>
+
+              <ul class="list-inline tx-uppercase tx-10 tx-medium tx-spacing-1 tx-color-03 mg-b-0">
+                <li class="list-inline-item">
+                  <a href="/dashboard/symptomatic">
+                    <span class="d-inline-block wd-7 ht-7 rounded-circle mg-r-5" style="background-color: #F8AF69;"></span>
+                    <span class="d-none d-md-inline">Reported </span>Symptomatic
+</a>                </li>
+                <li class="list-inline-item mg-l-10">
+                  <a href="/dashboard/confirmed">
+                    <span class="d-inline-block wd-7 ht-7 bg-df-2 rounded-circle mg-r-5"></span>
+                    Confirmed<span class="d-none d-md-inline"> Cases</span>
+</a>                </li>
+                <li class="list-inline-item mg-l-10">
+                  <a href="/dashboard/recovered">
+                    <span class="d-inline-block wd-7 ht-7 rounded-circle mg-r-5" style="background-color: #65e0e0"></span>
+                    Discharged
+</a>                </li>
+              </ul>
+            </div>
+
+
+            <div class="d-sm-flex justify-content-between bd-b-0 pd-t-0 pd-b-0">
+              <div class="mg-b-10 mg-sm-b-0">
+                <p class="tx-12 tx-color-03 mg-b-0">21 Jan 2020 to 16 Mar 2020</p>
+              </div>
+
+              <div class="dropdown show tx-12 tx-color-03 mg-b-0 mg-t-3">
+                <a href="#" role="button" id="dropdownMenuLink graphType" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bar <i class="icon ion-ios-arrow-down"></i></a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" onClick="changeGraphType('Bar')">Bar</a>
+                  <a class="dropdown-item" onClick="changeGraphType('Line')">Line</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="card-body">
+            <div class="chart-fifteen">
+              <div id="flotChart1" class="flot-chart"></div>
+            </div>
+          </div><!-- card-body -->
+        </div><!-- card -->
+      </div>
+
+      <div class="col-lg-4 col-xl-3 mg-t-10">
+        <div class="card">
+          <div class="card-header">
+            <h6 class="mg-b-0">Gender</h6>
+          </div><!-- card-header -->
+          <div class="card-body pd-lg-25">
+            <div class="chart-seven" style="height: 228px;"><canvas id="genderDonut"></canvas></div>
+          </div><!-- card-body -->
+          <div class="card-footer pd-20">
+            <div class="row">
+              <div class="col-6">
+                <p class="tx-10 tx-uppercase tx-medium tx-color-03 tx-spacing-1 mg-b-5">Male</p>
+                <div class="d-flex align-items-center">
+                  <div class="wd-10 ht-10 rounded-circle bg-primary mg-r-5"></div>
+                  <h5 class="tx-normal tx-rubik mg-b-0">0 <small class="tx-color-04">NaN%</small></h5>
+                </div>
+              </div><!-- col -->
+              <div class="col-6">
+                <p class="tx-10 tx-uppercase tx-medium tx-color-03 tx-spacing-1 tx-nowrap mg-b-5">Female</p>
+                <div class="d-flex align-items-center">
+                  <div class="wd-10 ht-10 rounded-circle bg-pink mg-r-5"></div>
+                  <h5 class="tx-normal tx-rubik mg-b-0">0 <small class="tx-color-04">NaN%</small></h5>
+                </div>
+              </div><!-- col -->
+
+              
+            </div><!-- row -->
+          </div><!-- card-footer -->
+        </div><!-- card -->
+
+      </div>
+
+      <div class="col-lg-3 mg-t-10">
+        <div class="card">
+          <div class="card-header d-flex justify-content-between">
+            <h6 class="lh-5 mg-b-0">Nationality</h6>
+            <!-- <a href="" class="tx-13 link-03"><i data-feather="more-horizontal" class="wd-20 ht-20"></i></a> -->
+          </div><!-- card-header -->
+          <div class="card-body pd-y-25">
+            <div class="row">
+              <div class="col-12">
+                <div class="chart-thirteen"><canvas id="chartDonut"></canvas></div>
+              </div>
+              <div class="col-12 tx-12 mg-t-40">
+              </div>
+            </div>
+          </div><!-- card-body -->
+        </div><!-- card -->
+      </div><!-- col -->
+
+      <div class="col-lg-6 mg-t-10">
+        <div class="card ht-100p">
+          <div class="card-header d-flex justify-content-between">
+            <h6 class="lh-5 mg-b-0">Age and Gender Distribution</h6>
+            <!-- <a href="" class="tx-13 link-03"><i data-feather="more-horizontal" class="wd-20 ht-20"></i></a> -->
+          </div><!-- card-header -->
+          <div class="card-body pd-y-25">
+            <div class="row">
+              <div class="col-12">
+                <div class="" style="height: 350px;"><div id="ageGenderBreakdown"></div></div>
+              </div>
+            </div>
+          </div><!-- card-body -->
+        </div><!-- card -->
+      </div>
+
+      <div class="col-lg-3 mg-t-10">
+        <div class="card ht-100p">
+          <div class="card-header d-flex justify-content-between">
+            <h6 class="lh-5 mg-b-0">Source</h6>
+            <!-- <a href="" class="tx-13 link-03"><i data-feather="more-horizontal" class="wd-20 ht-20"></i></a> -->
+          </div><!-- card-header -->
+          <div class="card-body pd-y-25">
+            <div class="row">
+              <div class="col-12">
+                <div class="chart-thirteen" style="height: 275px;"><canvas id="sourceChart"></canvas></div>
+              </div>
+              <div class="col-12 tx-12 mg-t-40">
+                <div class="d-flex align-items-center">
+                  <div class="wd-10 ht-10 rounded-circle pos-relative t--1" style="background-color: #ff7c8f"></div>
+                  <span class="tx-medium mg-l-10">Local Transmission</span>
+                  <span class="tx-rubik mg-l-auto">0</span>
+                  <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success">NaN% <i class="icon ion-md-arrow-up"></i></span>
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="wd-10 ht-10 rounded-circle pos-relative t--1" style="background-color: #66a4fb"></div>
+                  <span class="tx-medium mg-l-10">Imported Cases</span>
+                  <span class="tx-rubik mg-l-auto">0</span>
+                  <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success">NaN%<i class="icon ion-md-arrow-up"></i></span>
+                </div>
+              </div>
+            </div>
+          </div><!-- card-body -->
+        </div><!-- card -->
+      </div><!-- col -->
+
+      <!-- gender over time -->
+      <div class="col-lg-6 mg-t-10">
+        <div class="card">
+          <div class="card-header pd-b-0 bd-b-0 pd-t-20 pd-lg-t-25 pd-l-20 pd-lg-l-25">
+            <h6 class="mg-b-5">Gender over Time</h6>
+            <p class="tx-12 tx-color-03 mg-b-0">Showing Male Cases vs Female Over Time.
+          </div><!-- card-header -->
+          <div class="card-body pd-sm-20 pd-lg-25">
+            <div class="row row-sm">
+              <div class="col-6">
+                <div class="media">
+                  <div class="wd-40 ht-40 bg-primary tx-white d-flex align-items-center justify-content-center rounded op-5">
+                    <ion-icon name="man-outline" class="wd-20 ht-20"></ion-icon>
+                  </div>
+                  <div class="media-body mg-l-10">
+                    <h4 class="tx-normal tx-rubik tx-spacing--2 lh-1 mg-b-5">0</h4>
+                    <p class="tx-10 tx-uppercase tx-medium tx-color-03 tx-spacing-1 tx-nowrap mg-b-0">Male</p>
+                  </div><!-- media-body -->
+                </div><!-- media -->
+              </div><!-- col -->
+              <div class="col-6">
+                <div class="media">
+                  <div class="wd-40 ht-40 bg-pink tx-white d-flex align-items-center justify-content-center rounded op-5">
+                    <ion-icon name="woman-outline" class="wd-20 ht-20"></ion-icon>
+                  </div>
+                  <div class="media-body mg-l-10">
+                    <h4 class="tx-normal tx-rubik tx-spacing--2 lh-1 mg-b-5">0</h4>
+                    <p class="tx-10 tx-uppercase tx-medium tx-color-03 tx-spacing-1 tx-nowrap mg-b-0">Female</p>
+                  </div><!-- media-body -->
+                </div><!-- media -->
+              </div><!-- col -->
+            </div><!-- row -->
+
+            <div class="chart-eight">
+              <div id="age_flot" class="flot-chart"></div>
+            </div>
+          </div><!-- card-body -->
+        </div><!-- card -->
+      </div><!-- col -->
+
+      <!-- infection source over time -->
+      <div class="col-lg-6 mg-t-10">
+        <div class="card">
+          <div class="card-header pd-b-0 bd-b-0 pd-t-20 pd-lg-t-25 pd-l-20 pd-lg-l-25">
+            <h6 class="mg-b-5">Infection Source over Time</h6>
+            <p class="tx-12 tx-color-03 mg-b-0">Showing Number of Imported Cases vs Local Transmission Over Time.
+          </div><!-- card-header -->
+          <div class="card-body pd-sm-20 pd-lg-25">
+            <div class="row row-sm">
+              <div class="col-6">
+                <div class="media">
+                  <div class="wd-40 ht-40 bg-primary tx-white d-flex align-items-center justify-content-center rounded op-5">
+                    <i data-feather="wifi" class="wd-20 ht-20"></i>
+                  </div>
+                  <div class="media-body mg-l-10">
+                    <h4 class="tx-normal tx-rubik tx-spacing--2 lh-1 mg-b-5">0</h4>
+                    <p class="tx-10 tx-uppercase tx-medium tx-color-03 tx-spacing-1 tx-nowrap mg-b-0">Local <span class="d-none d-md-inline">Transmission</span></p>
+                  </div><!-- media-body -->
+                </div><!-- media -->
+              </div><!-- col -->
+              <div class="col-6">
+                <div class="media">
+                  <div class="wd-40 ht-40 bg-pink tx-white d-flex align-items-center justify-content-center rounded op-5">
+                    <i data-feather="send" class="wd-20 ht-20"></i>
+                  </div>
+                  <div class="media-body mg-l-10">
+                    <h4 class="tx-normal tx-rubik tx-spacing--2 lh-1 mg-b-5">0</h4>
+                    <p class="tx-10 tx-uppercase tx-medium tx-color-03 tx-spacing-1 tx-nowrap mg-b-0">Imported <span class="d-none d-md-inline">Case</span></p>
+                  </div><!-- media-body -->
+                </div><!-- media -->
+              </div><!-- col -->
+            </div><!-- row -->
+
+            <div class="chart-eight">
+              <div id="infection_source_flot" class="flot-chart"></div>
+            </div>
+          </div><!-- card-body -->
+        </div><!-- card -->
+      </div><!-- col -->
+
+
+      <!-- clusters -->
+      <div class="col-xl-4 mg-t-10 order-xl-1">
+        <div class="card ht-lg-100p">
+          <div class="card-header d-flex align-items-center justify-content-between">
+            <h6 class="mg-b-0">Clusters</h6>
+            <div class="tx-13 d-flex align-items-center">
+            </div>
+          </div><!-- card-header -->
+          <div class="card-body pd-0">
+            <div class="pd-y-25 pd-x-20">
+              <div id="vmap" class="ht-200"></div>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-borderless table-dashboard table-dashboard-one">
+                <thead>
+                  <tr>
+                    <th class="wd-40">Clusters</th>
+                    <th class="wd-25 text-right">Infection</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div><!-- table-responsive -->
+          </div><!-- card-body -->
+        </div><!-- card -->
+      </div><!-- col -->
+
+      <!-- table and help -->
+      <div class="col-lg-12 col-xl-8 mg-t-10">
+        <div class="card mg-b-10">
+          <div class="card-header pd-t-20 d-sm-flex align-items-start justify-content-between bd-b-0 pd-b-0">
+            <div>
+              <h6 class="mg-b-5">Cases</h6>
+              <p class="tx-13 tx-color-03 mg-b-0">Reported cases in Tunisia</p>
+            </div>
+          </div><!-- card-header -->
+          <div class="card-body pd-y-30">
+            <div class="d-sm-flex">
+              <div class="media">
+                <div class="wd-40 wd-md-50 ht-40 ht-md-50 bg-teal tx-white mg-r-10 mg-md-r-10 d-flex align-items-center justify-content-center rounded op-6">
+                  <i data-feather="clock"></i>
+                </div>
+                <div class="media-body">
+                  <h6 class="tx-sans tx-uppercase tx-10 tx-spacing-1 tx-color-03 tx-semibold tx-nowrap mg-b-5 mg-md-b-8">Average Age</h6>
+                  <h4 class="tx-20 tx-sm-18 tx-md-24 tx-normal tx-rubik mg-b-0">0</h4>
+                </div>
+              </div>
+              <div class="media mg-t-20 mg-sm-t-0 mg-sm-l-15 mg-md-l-40">
+                <div class="wd-40 wd-md-50 ht-40 ht-md-50 bg-pink tx-white mg-r-10 mg-md-r-10 d-flex align-items-center justify-content-center rounded op-5">
+                  <i data-feather="send"></i>
+                </div>
+                <div class="media-body">
+                  <h6 class="tx-sans tx-uppercase tx-10 tx-spacing-1 tx-color-03 tx-semibold mg-b-5 mg-md-b-8">Imported Cases</h6>
+                  <h4 class="tx-20 tx-sm-18 tx-md-24 tx-normal tx-rubik mg-b-0">0</h4>
+                </div>
+              </div>
+              <div class="media mg-t-20 mg-sm-t-0 mg-sm-l-15 mg-md-l-40">
+                <div class="wd-40 wd-md-50 ht-40 ht-md-50 bg-primary tx-white mg-r-10 mg-md-r-10 d-flex align-items-center justify-content-center rounded op-4">
+                  <i data-feather="wifi"></i>
+                </div>
+                <div class="media-body">
+                  <h6 class="tx-sans tx-uppercase tx-10 tx-spacing-1 tx-color-03 tx-semibold mg-b-5 mg-md-b-8">Local Transmissions</h6>
+                  <h4 class="tx-20 tx-sm-18 tx-md-24 tx-normal tx-rubik mg-b-0">0</small></h4>
+                </div>
+              </div>
+            </div>
+          </div><!-- card-body -->
+          <div class="table-responsive">
+            <table class="table table-dashboard mg-b-0">
+              <thead>
+                <tr>
+                  <th>Case</th>
+                  <th class="text-right">Confirmed Date</th>
+                  <th class="text-right">Age</th>
+                  <th class="text-right">Gender</th>
+                  <th class="text-right">Symptomatic At</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div><!-- table-responsive -->
+          <div class="card-footer text-center tx-13">
+            <a class="link-03" href="/cases/search">
+              View More Cases <i class="icon ion-md-arrow-down mg-l-5"></i>
+</a>          </div><!-- card-footer -->
+        </div><!-- card -->
+
+        <div class="card card-body ht-lg-100">
+          <div class="media">
+            <span class="tx-color-04"><i data-feather="alert-circle" class="wd-60 ht-60"></i></span>
+            <div class="media-body mg-l-20">
+              <h6 class="mg-b-10">
+                  We need your help!
+              </h6>
+              <p class="tx-color-03 mg-b-0">Interested to see this in your country?
+                <a href="#request-modal" data-toggle="modal">
+                  Help us launch this in your country.
+                </a>
+              </p>
+            </div>
+          </div><!-- media -->
+        </div>
+      </div><!-- col -->
+
+    </div><!-- row -->
+  </div><!-- container -->
+</div><!-- content -->
+
+    <!-- Main container end -->
+
+    <div style="clear: both;"></div>
+
+    <!-- footer start -->
+    <footer class="footer" style="display:block; position: fixed; bottom: 0; width: 100%; height: 45px; z-index: 100">
+  <div class="d-flex justify-content-between" style="margin-top: 0px !important;">
+    <div>
+      <span>Created by <a href="https://www.upcodeacademy.com">UpCode</a></span>
+    </div>
+    <div>
+      <nav class="nav">
+        <a href="https://t.me/upcodesupport" class="nav-link">Spot an Error?</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+    <!-- footer end -->
+
+
+    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <!-- <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script> -->
+    <!-- <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-timeline-graph2d.min.js"></script> -->
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+    <script src="/assets/application-58c1e11b9a4ca50a7941a20d9c73305f22039c73b2654675c9a6030c52d8d80d.js" media="all"></script>
+    <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/fixedcolumns/3.2.1/js/dataTables.fixedColumns.min.js"></script>
+    <script type="text/javascript">
+      /**
+       * This plug-in for DataTables represents the ultimate option in extensibility
+       * for sorting date / time strings correctly. It uses
+       * [Moment.js](http://momentjs.com) to create automatic type detection and
+       * sorting plug-ins for DataTables based on a given format. This way, DataTables
+       * will automatically detect your temporal information and sort it correctly.
+       *
+       * For usage instructions, please see the DataTables blog
+       * post that [introduces it](//datatables.net/blog/2014-12-18).
+       *
+       * @name Ultimate Date / Time sorting
+       * @summary Sort date and time in any format using Moment.js
+       * @author [Allan Jardine](//datatables.net)
+       * @depends DataTables 1.10+, Moment.js 1.7+
+       *
+       * @example
+       *    $.fn.dataTable.moment( 'HH:mm MMM D, YY' );
+       *    $.fn.dataTable.moment( 'dddd, MMMM Do, YYYY' );
+       *
+       *    $('#example').DataTable();
+       */
+
+      (function (factory) {
+          if (typeof define === "function" && define.amd) {
+              define(["jquery", "moment", "datatables.net"], factory);
+          } else {
+              factory(jQuery, moment);
+          }
+      }(function ($, moment) {
+   
+        $.fn.dataTable.moment = function (format, locale) {
+            var types = $.fn.dataTable.ext.type;
+     
+            // Add type detection
+            types.detect.unshift(function (d) {
+                if (d) {
+                    // Strip HTML tags and newline characters if possible
+                    if (d.replace) {
+                        d = d.replace(/(<.*?>)|(\r?\n|\r)/g, '');
+                    }
+     
+                    // Strip out surrounding white space
+                    d = $.trim(d);
+                }
+                if (d === '-') {
+                    return 'moment-' + format;
+                }
+     
+                // Null and empty values are acceptable
+                if (d === '' || d === null) {
+                    return 'moment-' + format;
+                }
+     
+                return moment(d, format, locale, true).isValid() ?
+                    'moment-' + format :
+                    null;
+            });
+     
+            // Add sorting method - use an integer for the sorting
+            types.order['moment-' + format + '-pre'] = function (d) {
+                if (d) {
+                    // Strip HTML tags and newline characters if possible
+                    if (d.replace) {
+                        d = d.replace(/(<.*?>)|(\r?\n|\r)/g, '');
+                    }
+                     if (d === '-') {
+                        d = 'Dec 31, 1985, 12:00 AM';
+                    }
+                    // Strip out surrounding white space
+                    d = $.trim(d);
+                }
+     
+                return !moment(d, format, locale, true).isValid() ?
+                    0 :
+                    parseInt(moment(d, format, locale, true).format('x'), 10);
+            };
+        };
+     
+      }));
+    </script>
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <script>
+      // <div style="margin-top: 120px;">#&lt;ActionDispatch::Flash::FlashHash:0x00007f7400952fd8 @discard=#&lt;Set: {}&gt;, @flashes={}, @now=nil&gt;</div>
+
+
+    </script>
+
+      <script type="text/javascript">
+
+    var confirmedData = [[0,0],[1,0],[2,0],[3,0],[4,0],[5,0],[6,0],[7,0],[8,0],[9,0],[10,0],[11,0],[12,0],[13,0],[14,0],[15,0],[16,0],[17,0],[18,0],[19,0],[20,0],[21,0],[22,0],[23,0],[24,0],[25,0],[26,0],[27,0],[28,0],[29,0],[30,0],[31,0],[32,0],[33,0],[34,0],[35,0],[36,0],[37,0],[38,0],[39,0],[40,0],[41,0],[42,0],[43,0],[44,0],[45,0],[46,0],[47,0],[48,0],[49,0],[50,0],[51,0],[52,0],[53,0],[54,0],[55,0]];
+var recoveredData = [[0,0],[1,0],[2,0],[3,0],[4,0],[5,0],[6,0],[7,0],[8,0],[9,0],[10,0],[11,0],[12,0],[13,0],[14,0],[15,0],[16,0],[17,0],[18,0],[19,0],[20,0],[21,0],[22,0],[23,0],[24,0],[25,0],[26,0],[27,0],[28,0],[29,0],[30,0],[31,0],[32,0],[33,0],[34,0],[35,0],[36,0],[37,0],[38,0],[39,0],[40,0],[41,0],[42,0],[43,0],[44,0],[45,0],[46,0],[47,0],[48,0],[49,0],[50,0],[51,0],[52,0],[53,0],[54,0],[55,0]];
+var symptomaticData = [[0,0],[1,0],[2,0],[3,0],[4,0],[5,0],[6,0],[7,0],[8,0],[9,0],[10,0],[11,0],[12,0],[13,0],[14,0],[15,0],[16,0],[17,0],[18,0],[19,0],[20,0],[21,0],[22,0],[23,0],[24,0],[25,0],[26,0],[27,0],[28,0],[29,0],[30,0],[31,0],[32,0],[33,0],[34,0],[35,0],[36,0],[37,0],[38,0],[39,0],[40,0],[41,0],[42,0],[43,0],[44,0],[45,0],[46,0],[47,0],[48,0],[49,0],[50,0],[51,0],[52,0],[53,0],[54,0],[55,0]];
+var deceasedCasesData = [[0,0],[1,0],[2,0],[3,0],[4,0],[5,0],[6,0],[7,0],[8,0],[9,0],[10,0],[11,0],[12,0],[13,0],[14,0],[15,0],[16,0],[17,0],[18,0],[19,0],[20,0],[21,0],[22,0],[23,0],[24,0],[25,0],[26,0],[27,0],[28,0],[29,0],[30,0],[31,0],[32,0],[33,0],[34,0],[35,0],[36,0],[37,0],[38,0],[39,0],[40,0],[41,0],[42,0],[43,0],[44,0],[45,0],[46,0],[47,0],[48,0],[49,0],[50,0],[51,0],[52,0],[53,0],[54,0],[55,0]];
+
+var intensiveCareCasesData = [[0,0],[1,0],[2,0],[3,0],[4,0],[5,0],[6,0],[7,0],[8,0],[9,0],[10,0],[11,0],[12,0],[13,0],[14,0],[15,0],[16,0],[17,0],[18,0],[19,0],[20,0],[21,0],[22,0],[23,0],[24,0],[25,0],[26,0],[27,0],[28,0],[29,0],[30,0],[31,0],[32,0],[33,0],[34,0],[35,0],[36,0],[37,0],[38,0],[39,0],[40,0],[41,0],[42,0],[43,0],[44,0],[45,0],[46,0],[47,0],[48,0],[49,0],[50,0],[51,0],[52,0],[53,0],[54,0],[55,0]];
+
+var localTransmissionData = [[0,0],[1,0],[2,0],[3,0],[4,0],[5,0],[6,0],[7,0],[8,0],[9,0],[10,0],[11,0],[12,0],[13,0],[14,0],[15,0],[16,0],[17,0],[18,0],[19,0],[20,0],[21,0],[22,0],[23,0],[24,0],[25,0],[26,0],[27,0],[28,0],[29,0],[30,0],[31,0],[32,0],[33,0],[34,0],[35,0],[36,0],[37,0],[38,0],[39,0],[40,0],[41,0],[42,0],[43,0],[44,0],[45,0],[46,0],[47,0],[48,0],[49,0],[50,0],[51,0],[52,0],[53,0],[54,0],[55,0]];
+var importedCasesData = [[0,0],[1,0],[2,0],[3,0],[4,0],[5,0],[6,0],[7,0],[8,0],[9,0],[10,0],[11,0],[12,0],[13,0],[14,0],[15,0],[16,0],[17,0],[18,0],[19,0],[20,0],[21,0],[22,0],[23,0],[24,0],[25,0],[26,0],[27,0],[28,0],[29,0],[30,0],[31,0],[32,0],[33,0],[34,0],[35,0],[36,0],[37,0],[38,0],[39,0],[40,0],[41,0],[42,0],[43,0],[44,0],[45,0],[46,0],[47,0],[48,0],[49,0],[50,0],[51,0],[52,0],[53,0],[54,0],[55,0]];
+
+var maleData = [[0,0],[1,0],[2,0],[3,0],[4,0],[5,0],[6,0],[7,0],[8,0],[9,0],[10,0],[11,0],[12,0],[13,0],[14,0],[15,0],[16,0],[17,0],[18,0],[19,0],[20,0],[21,0],[22,0],[23,0],[24,0],[25,0],[26,0],[27,0],[28,0],[29,0],[30,0],[31,0],[32,0],[33,0],[34,0],[35,0],[36,0],[37,0],[38,0],[39,0],[40,0],[41,0],[42,0],[43,0],[44,0],[45,0],[46,0],[47,0],[48,0],[49,0],[50,0],[51,0],[52,0],[53,0],[54,0],[55,0]];
+var femaleData = [[0,0],[1,0],[2,0],[3,0],[4,0],[5,0],[6,0],[7,0],[8,0],[9,0],[10,0],[11,0],[12,0],[13,0],[14,0],[15,0],[16,0],[17,0],[18,0],[19,0],[20,0],[21,0],[22,0],[23,0],[24,0],[25,0],[26,0],[27,0],[28,0],[29,0],[30,0],[31,0],[32,0],[33,0],[34,0],[35,0],[36,0],[37,0],[38,0],[39,0],[40,0],[41,0],[42,0],[43,0],[44,0],[45,0],[46,0],[47,0],[48,0],[49,0],[50,0],[51,0],[52,0],[53,0],[54,0],[55,0]];
+
+var i = 0;
+localTransmissionData.forEach(function(d) {
+  d[1] += importedCasesData[i][1];
+  i += 1;
+})
+
+var i = 0;
+maleData.forEach(function(d) {
+  d[1] += femaleData[i][1];
+  i += 1;
+})
+
+var dates = [[0, "21 Jan"], [1, "22 Jan"], [2, "23 Jan"], [3, "24 Jan"], [4, "25 Jan"], [5, "26 Jan"], [6, "27 Jan"], [7, "28 Jan"], [8, "29 Jan"], [9, "30 Jan"], [10, "31 Jan"], [11, "01 Feb"], [12, "02 Feb"], [13, "03 Feb"], [14, "04 Feb"], [15, "05 Feb"], [16, "06 Feb"], [17, "07 Feb"], [18, "08 Feb"], [19, "09 Feb"], [20, "10 Feb"], [21, "11 Feb"], [22, "12 Feb"], [23, "13 Feb"], [24, "14 Feb"], [25, "15 Feb"], [26, "16 Feb"], [27, "17 Feb"], [28, "18 Feb"], [29, "19 Feb"], [30, "20 Feb"], [31, "21 Feb"], [32, "22 Feb"], [33, "23 Feb"], [34, "24 Feb"], [35, "25 Feb"], [36, "26 Feb"], [37, "27 Feb"], [38, "28 Feb"], [39, "29 Feb"], [40, "01 Mar"], [41, "02 Mar"], [42, "03 Mar"], [43, "04 Mar"], [44, "05 Mar"], [45, "06 Mar"], [46, "07 Mar"], [47, "08 Mar"], [48, "09 Mar"], [49, "10 Mar"], [50, "11 Mar"], [51, "12 Mar"], [52, "13 Mar"], [53, "14 Mar"], [54, "15 Mar"], [55, "16 Mar"]];
+var nationalityLabels = [];
+var nationalityValues = [];
+
+var i = -1;
+var d = 0;
+var inHospitalData = confirmedData.map(function(data) {
+  i+=1;
+  d += data[1];
+  d -= recoveredData[i][1];
+  return [i, d];
+})
+
+$.plot('#flotChart3', [{
+  data: confirmedData,
+  color: '#9db2c6'
+}], {
+  series: {
+    shadowSize: 0,
+    lines: {
+      show: true,
+      lineWidth: 2,
+      fill: true,
+      fillColor: { colors: [{ opacity: 0 }, { opacity: .5 }] }
+    }
+  },
+  grid: {
+    borderWidth: 0,
+    labelMargin: 0
+  },
+  yaxis: {
+    show: false,
+    min: 0
+  },
+  xaxis: { show: false }
+});
+
+$.plot('#flotChart4', [{
+  data: inHospitalData,
+  color: '#9db2c6'
+}], {
+  series: {
+    shadowSize: 0,
+    lines: {
+      show: true,
+      lineWidth: 2,
+      fill: true,
+      fillColor: { colors: [{ opacity: 0 }, { opacity: .5 }] }
+    }
+  },
+  grid: {
+    borderWidth: 0,
+    labelMargin: 0
+  },
+  yaxis: {
+    show: false,
+    min: 0
+  },
+  xaxis: { show: false }
+});
+
+$.plot('#flotChart5', [{
+  data: deceasedCasesData,
+  color: '#9db2c6'
+}], {
+  series: {
+    shadowSize: 0,
+    lines: {
+      show: true,
+      lineWidth: 2,
+      fill: true,
+      fillColor: { colors: [{ opacity: 0 }, { opacity: .5 }] }
+    }
+  },
+  grid: {
+    borderWidth: 0,
+    labelMargin: 0
+  },
+  yaxis: {
+    show: false,
+    min: 0
+  },
+  xaxis: { show: false }
+});
+
+$.plot('#flotChart6', [{
+  data: recoveredData,
+  color: '#9db2c6'
+}], {
+  series: {
+    shadowSize: 0,
+    lines: {
+      show: true,
+      lineWidth: 2,
+      fill: true,
+      fillColor: { colors: [{ opacity: 0 }, { opacity: .5 }] }
+    }
+  },
+  grid: {
+    borderWidth: 0,
+    labelMargin: 0
+  },
+  yaxis: {
+    show: false,
+    min: 0
+  },
+  xaxis: { show: false }
+});
+
+function plotChart1(type) {
+  var data = [
+    {
+      label: "Developed Symptoms",
+      data: symptomaticData,
+      color: '#F8AF69'
+    },
+    {
+      label: "Confirmed Cases",
+      data: confirmedData,
+      color: '#69b2f8'
+    }, 
+    {
+      label: "Recovered Cases",
+      data: recoveredData,
+      color: '#65e0e0'
+    }
+  ]
+
+  var options = {
+    series: {
+      shadowSize: 0,
+      bars: {
+        show: true,
+        lineWidth: 0,
+        barWidth: .5,
+        fill: 1
+      }
+    },
+    grid: {
+      color: '#c0ccda',
+      borderWidth: 0,
+      labelMargin: 10,
+      hoverable: true
+    },
+    yaxis: {
+      show: true,
+      tickSize: 1,
+      tickDecimals: 0
+    },
+    xaxis: {
+      color: 'transparent',
+      show: true,
+      ticks: dates
+    },
+    legend: false
+  }
+
+  if (type == "bars") {
+    options.series.lines = false;
+    options.series.stack = 0;
+    options.series.bars = {
+      show: true,
+      lineWidth: 0,
+      barWidth: .5,
+      fill: 1
+    }
+  } else {
+    options.series.bars = false;
+    options.series.stack = false;
+    options.series.lines = {
+      show: true
+    }
+  }
+
+  $.plot('#flotChart1', data, options);
+}
+
+plotChart1('bars');
+
+$("<div id='tooltip'></div>").css({
+  position: "absolute",
+  display: "none",
+  border: "1px solid #fdd",
+  padding: "2px",
+  "background-color": "#fee",
+  opacity: 0.80
+}).appendTo("body");
+
+function createHTML(index) {
+  return `<b>${dates[index][1]}</b><br/>Developed Symptoms: <b>${symptomaticData[index][1]}</b><br/>Confirmed Cases: <b>${confirmedData[index][1]}</b><br/>Discharged: <b>${recoveredData[index][1]}</b>`
+};
+
+$("#flotChart1").bind("plothover", function (event, pos, item) {
+  if (!pos.x || !pos.y) {
+    return;
+  }
+
+  if (item) {
+    var y = item.datapoint[1];
+
+    // $("#tooltip").html(item.series.label + ": " + y)
+    $("#tooltip").html(createHTML(item.dataIndex))
+      .css({top: item.pageY+5, left: item.pageX+5})
+      .fadeIn(100);
+  } else {
+    $("#tooltip").hide();
+  }
+
+});
+
+$("#flotChart1").bind("plothovercleanup", function (event, pos, item) {
+    $("#tooltip").hide();
+});
+
+var datapie = {
+  labels: ['Female', 'Male'],
+  datasets: [{
+    data: [0, 0],
+    backgroundColor: ['#f77eb9', '#7ebcff']
+  }]
+};
+
+var optionpie = {
+  maintainAspectRatio: false,
+  responsive: true,
+  legend: {
+    display: false,
+  },
+  animation: {
+    animateScale: true,
+    animateRotate: true
+  }
+};
+
+var ctx2 = document.getElementById('genderDonut');
+var myDonutChart = new Chart(ctx2, {
+  type: 'doughnut',
+  data: datapie,
+  options: optionpie
+});
+
+
+function changeGraphType(type) {
+  document.getElementById("dropdownMenuLink graphType").innerHTML = `${type} <i class="icon ion-ios-arrow-down">`;
+  if (type == "Bar") {
+    plotChart1('bars');
+  } else {
+    plotChart1('lines');
+  }
+}
+
+var flotChart2 = $.plot('#age_flot', [{
+  data: maleData,
+  color: '#66a4fb',
+  lines: {
+    fill: 0.4,
+  }
+},{
+  data: femaleData,
+  color: '#ff7c8f', // redish
+  lines: {
+    fill: 0.9,
+  }
+}], {
+  series: {
+    shadowSize: 0,
+    lines: {
+      show: true,
+      lineWidth: 1.5
+    }
+  },
+  grid: {
+    borderWidth: 0,
+    labelMargin: 0
+  },
+  yaxis: {
+    show: false
+  },
+  xaxis: {
+    show: false
+  }
+});
+
+var flotChart1 = $.plot('#infection_source_flot', [{
+  data: localTransmissionData,
+  color: '#66a4fb',
+  lines: {
+    fill: 0.4,
+  }
+},{
+  data: importedCasesData,
+  color: '#ff7c8f', // redish
+  lines: {
+    fill: 0.9,
+  }
+}], {
+  series: {
+    shadowSize: 0,
+    lines: {
+      show: true,
+      lineWidth: 1.5
+    }
+  },
+  grid: {
+    borderWidth: 0,
+    labelMargin: 0
+  },
+  yaxis: {
+    show: false
+  },
+  xaxis: {
+    show: false
+  }
+});
+
+/** PIE CHART **/
+var datapie = {
+  labels: nationalityLabels,
+  datasets: [{
+    data: nationalityValues,
+    backgroundColor: ["#66a4fb", "#ff7c8f", "#a4e063", "#b2bece", "#a5d7fd", "#4cebb5", "#fec85e", "#F2B8FF"]
+  }]
+};
+
+var optionpie = {
+  maintainAspectRatio: false,
+  responsive: true,
+  legend: {
+    display: false,
+  },
+  animation: {
+    animateScale: true,
+    animateRotate: true
+  }
+};
+
+// For a pie chart
+var ctx2 = document.getElementById('chartDonut');
+var nationalityDonutChart = new Chart(ctx2, {
+  type: 'doughnut',
+  data: datapie,
+  options: optionpie
+});
+
+var sourcedatapie = {
+  labels: ['Imported', 'Local'],
+  datasets: [{
+    data: [0, 0],
+    backgroundColor: ["#66a4fb", "#ff7c8f", "#a4e063", "#b2bece", "#a5d7fd", "#4cebb5", "#fec85e", "#F2B8FF"]
+  }]
+};
+// For a pie chart
+var ctx2 = document.getElementById('sourceChart');
+var myDonutChart = new Chart(ctx2, {
+  type: 'doughnut',
+  data: sourcedatapie,
+  options: optionpie
+});
+
+var options = {
+    chart: {
+        height: '100%',
+        width: '100%',
+        type: 'bar',
+        stacked: true,
+        toolbar: {
+            show: false
+        }
+    },
+    colors: ["#66a4fb", "#ff7c8f"],
+    plotOptions: {
+        bar: {
+            horizontal: true,
+            barHeight: '80%',
+            
+        },
+    },
+    dataLabels: {
+        enabled: false
+    },
+    stroke: {
+        width: 1,
+        colors: ["#fff"]
+    },
+    series: [{
+        name: 'Males',
+        data: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    },
+    {
+        name: 'Females',
+        data: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    }],
+    grid: {
+        xaxis: {
+            showLines: false
+        }
+    },
+    yaxis: {
+        title: {
+           text: 'Age',
+        },
+        axisBorder: {
+            show: true,
+            color: '#bec7e0',
+          },  
+          axisTicks: {
+            show: true,
+            color: '#bec7e0',
+        }, 
+    },
+    tooltip: {
+        shared: false,
+        x: {
+            formatter: function(val) {
+                return val
+            }
+        },
+        y: {
+            formatter: function(val) {
+                return Math.abs(val)
+            }
+        }
+    },
+    xaxis: {
+      categories: ["81 - 100", "71 - 80", "61 - 70", "51 - 60", "41 - 50", "31 - 40", "21 - 30", "11 - 20", "1 - 10"],
+      
+      title: {
+          show: false
+      },
+      labels: {
+        formatter: function(val) {
+          return Math.abs(val)
+        }
+      }
+    },
+    legend: {
+        show: false,
+    },
+    grid: {
+        borderColor: '#f1f3fa'
+    }
+}
+
+var ctx2 = document.getElementById('ageGenderBreakdown');
+var chart = new ApexCharts(
+    ctx2,
+    options
+);
+
+chart.render();
+
+
+  </script>
+  <script type="text/javascript">
+    $('#daterangepicker').daterangepicker({
+  minDate: "21-01-2020",
+  maxDate: "17-03-2020",
+  startDate: "21-01-2020",
+  endDate: "16-03-2020",
+  locale: {
+    format: "DD-MM-YYYY"
+  }
+}, function(start, end, label) {
+  var format = "DD-MM-YYYY";
+  window.location.href = `/?start=${start.format(format)}&end=${end.format(format)}`;
+})
+  </script>
+
+
+  <script type="text/javascript">
+  if (typeof fbq == 'undefined') {
+
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '166196881378677');
+    fbq('track', "PageView");
+  }
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=166196881378677&ev=PageView&noscript=1"/>
+</noscript>
+
+</body>
+</html>

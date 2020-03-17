@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html ng-app="CoronaVirusApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.11.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.11.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.11.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.11.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.11.0/firebase-storage.js"></script>
+	<script defer src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+	<script defer src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+	<script data-ad-client="ca-pub-8995800059169786" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script
+			  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+			  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+			  crossorigin="anonymous"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+	
+	<!-- initialize the SDK after all desired features are loaded -->
+
+	<script defer src="/__/firebase/init.js"></script>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/css/ol.css" type="text/css">
+	    <style>
+	      .map {
+	        height: 400px;
+	        width: 100%;
+	      }
+	    </style>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/build/ol.js"></script>
+
+
+	    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+	  #message p.question { line-height: 140%; margin: 16px 0 24px; font-size: 22px; text-align: center }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+
+
+  </head>
+  <body>
+      <div ng-controller="ctrl" id="message">
+      <h2 translate="yes">Welcome to CoronaVirusControl</h2>
+      <h1 translate="yes">Help to contain the spread</h1>
+      <p translate="yes">You are able to give the authorities very important data about CoronaVirus!</p>
+      <p translate="yes">Please, tell us how you feel!</p>
+      <a ng-show="!user"" translate="yes" href="" onclick="Login()">Start Helping</a>
+	  <p class="question" ng-show="user != null && status == 0" translate="yes">You feel sick?</p>
+      <a href="" ng-show="user != null && status == 0" ng-click="status=1">YES</a>
+	  <a href="" ng-show="user != null && status == 0" ng-click="status=1">NO</a>
+
+	  <p class="question" ng-show="user != null && status == 1" translate="yes">Did you go to the doctor?</p>
+	  <a href="" ng-show="user != null && status == 1" ng-click="status=2">YES</a>
+	  <a href="" ng-show="user != null && status == 1" ng-click="status=2">NO</a>
+ 
+	  <p class="question" ng-show="user != null && status == 2" translate="yes">Did you get tested for CoVID-19?</p>
+	  <a href="" ng-show="user != null && status == 2" ng-click="status=3">YES</a>
+	  <a href="" ng-show="user != null && status == 2" ng-click="status=3">NO</a>
+
+	  <p class="question" ng-show="user != null && status == 3" translate="yes">Was the analysis positive?</p>
+	  <a href="" ng-show="user != null && status == 3" ng-click="status=4">YES</a>
+	  <a href="" ng-show="user != null && status == 3" ng-click="status=4">NO</a>
+
+	  <p class="question" ng-show="user != null && status == 4" translate="yes">Do you think you need or will need medical care?</p>
+	  <a href="" ng-show="user != null && status == 4" ng-click="status=5">YES</a>
+	  <a href="" ng-show="user != null && status == 4" ng-click="status=5">NO</a>
+
+	  <p class="question" ng-show="user != null && status == 5" translate="yes">Did you tavel recently?</p>
+	  <a href="" ng-show="user != null && status == 5" ng-click="status=6">YES</a>
+	  <a href="" ng-show="user != null && status == 5" ng-click="status=6">NO</a>
+
+      <p class="question" ng-show="user != null && status == 6" translate="yes"></p>
+	  <a href="" ng-show="user != null && status == 6" ng-click="status=7">YES</a>
+	  <a href="" ng-show="user != null && status == 6" ng-click="status=7">NO</a>
+
+	  <p class="question" ng-show="user != null && status == 7" translate="yes">Do you think you need or will need medical care?</p>
+	  <a href="" ng-show="user != null && status == 7" ng-click="status=8">YES</a>
+	  <a href="" ng-show="user != null && status == 7" ng-click="status=8">NO</a>
+
+	  
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+
+		var ui = new firebaseui.auth.AuthUI(firebase.auth());
+		
+		var app = angular.module('CoronaVirusApp', []);
+
+		app.controller('ctrl', ['$scope', function ($scope) {
+			$scope.ok=true;
+			$scope.user=null;
+			$scope.status=-1;
+		}]);
+		
+		
+		firebase.auth().onAuthStateChanged(function(user) {
+			  if (user) {
+				getLocation();
+			    // User is signed in.
+				angular.element($("#message")).scope().user = user;
+				angular.element($("#message")).scope().status = 0;
+				angular.element($("#message")).scope().$apply();
+				saveCase();
+			  }
+				});
+	      	}); 	
+
+
+		function getScope(ctrlName) {
+		    var sel = 'div[ng-controller="' + ctrlName + '"]';
+		    return angular.element(sel).scope();
+		}
+		
+
+		// Initialize Cloud Firestore through Firebase
+		
+		function saveCase()
+		{
+			var db = firebase.firestore();
+
+			db.collection("Case").add({
+				chestPressure:true,
+				confusion:true,
+				cough : true,
+				feelSick: true,
+				fever: true,
+				getAnalyzed: true,
+				isPositive: true,
+				peopleAtHome: 0,
+				peopleSickAtHome: 0,
+				shortbreath: true,
+				sleepiness: true,
+				traveledRecently: true,
+				wentToDoctor: true,
+				requiresAttention: true 
+			})
+			.then(function(docRef) {
+			    console.log("Document written with ID: ", docRef.id);
+			})
+			.catch(function(error) {
+			    console.error("Error adding document: ", error);
+			});
+		}
+		
+		
+
+	
+		function Login()
+		{
+			firebase.auth().signInAnonymously().catch(function(error) {
+			  // Handle Errors here.
+			  var errorCode = error.code;
+			  var errorMessage = error.message;
+			  if (errorCode === 'auth/operation-not-allowed') {
+			    alert('You must enable Anonymous auth in the Firebase Console.');
+			  } else {
+			    console.error(error);
+			  }
+			});
+			
+		}
+		
+	var x = document.getElementById("demo");
+	
+	function getLocation() {
+	  if (navigator.geolocation) {
+	    position=navigator.geolocation.getCurrentPosition(showPosition);
+	  } else {
+	    x.innerHTML = "Geolocation is not supported by this browser.";
+	  }
+	}
+	
+	
+	function showPosition(position) {
+    var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+    var img_url = "https://maps.googleapis.com/maps/api/staticmap\?center="+latlon+"\&zoom=14&size=400x300&sensor=false&key=YOUR_KEY";
+
+    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+}
+	
+    </script>
+
+  </body>
+</html>

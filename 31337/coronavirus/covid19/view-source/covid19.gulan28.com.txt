@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Kerala districtwise COVID-19 data</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+	<link rel="manifest" href="./favicon/site.webmanifest">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+
+	<!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160729457-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-160729457-1');
+	</script>
+	<script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+
+		.lowmargin {
+			margin-bottom: 1px !important;
+		}
+		@media only screen and (max-width: 768px) {
+		  /* For mobile phones: */
+		  [class="mapcontainer"] {
+		    padding: 0 !important;
+		  }
+		}
+		#map {
+			width: 100%;
+			max-width: 960px;
+			height: 480px;
+		}
+		.info {
+		    padding: 6px 8px;
+		    font: 14px/16px Arial, Helvetica, sans-serif;
+		    background: white;
+		    background: rgba(255,255,255,0.8);
+		    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+		    border-radius: 5px;
+		}
+		.info h4 {
+   			font: 14px/16px Arial, Helvetica, sans-serif;
+		    margin: 0 0 5px;
+		    color: #777;
+		}
+		.legend {
+			min-width: 120px;
+			line-height: 20px;
+			color: #555;
+		}
+		.legend i {
+		    width: 16px;
+		    height: 16px;
+		    float: right;
+		    margin-right: 8px;
+		    opacity: 0.7;
+		}
+	</style>
+
+
+</head>
+<body>
+
+<section class="section">
+<div class="container">
+	<div class="columns is-centered">
+		<div class="column is-half has-text-centered">
+			<h2 class="title">Kerala districtwise COVID-19 data</h2>
+			<hr class="lowmargin"/>
+		</div>
+	</div>
+
+<div class="columns is-centered">
+<div class="column is-half">
+
+<div class="level is-mobile">
+<div class="level-item">
+
+			<div class="field">
+				<label class="label is-small">
+					Date of observation
+				</label>
+				<div class="control">
+					<div class="select is-small">
+						<select name="date" id="dateSelect">
+						</select>
+					</div>
+				</div>
+			</div>
+</div>
+<div class="level-item">
+
+			<div class="field">
+				<label class="label is-small">
+					Type of observation
+				</label>
+				<div class="control">
+					<div class="select is-small">
+						<select name="type" id="featureSelect">
+							<option value="total_hospitalized">Total number of hospitalized people</option>
+							<option value="hospitalized_today">People hospitalized today</option>
+							<option value="isolation">Total people under isolation</option>
+							<option value="observation">Total people under observation</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+	<div class="columns is-centered">
+		<div class="column is-half-desktop is-full-mobile mapcontainer">
+			<div id="map" class="center"></div>
+		</div>
+	</div>
+	<div class="columns is-centered">
+		<div class="column is-half">
+			<div class="content">
+				<ul>
+					<li> Call center numbers: 0471 2309250, 2309251, 2309252, 2309253, 2309254, 2309255</li>
+					<li> <i>Hospitalized</i> <strong> does not </strong> mean that they have tested positive for COVID-19.</li>
+					<li> If you are a health practitioner, volunteer with the govt. by filling this <a href='https://docs.google.com/forms/d/e/1FAIpQLScBob6yePxWwt-Lx1s-1UlpCJ-pRwbwATs5tdtqTXWypfdL1Q/viewform'> form</a>.</li>
+					<li> Watch online health training videos released by Govt. of Kerala <a href="https://www.youtube.com/c/keralahealthonlinetraining"> here</a>.</li>
+					<li> Check this project out on <a href="https://github.com/gulan28/covid19-viz/">Github</a>.</li>
+        </ul>
+		</div>
+	</div>
+</div>
+</section>
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Data</strong> from <a href="http://dhs.kerala.gov.in/">DHS</a>, Govt. of Kerala.
+    </p>
+		<p><small>ഒരു ഗുലാൻ ഉല്പന്നം / A gulan product. <a href="https://twitter.com/gulan_28/">Twitter</a></small></p>
+  </div>
+</footer>
+
+<script type="text/javascript" src="dataIndex.js"></script>
+<script type="text/javascript" src="stateGeoData.js"></script>
+
+<script type="text/javascript">
+var map = L.map('map', {attributionControl: false}).setView([10.42, 76.47], 6.5);
+var lat, lng;
+var col_range = ['#ffeda0', '#f03b20'];
+var colorfunc = function(d) { return col_range[0] }
+
+// tile base layer from mapbox to give context
+var mapbox_token = 'pk.eyJ1IjoiZ3VsYW4yOCIsImEiOiJjazd2cGp5OGgwd21kM2xwMHV6ZjA3ZXNvIn0.1OeMxwjB5QV-2DgEhStX9w';
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token='+mapbox_token, {
+	maxZoom: 18,
+	id: 'gulan28/ck7vplv1i0tl91iqlb4oz6ofy',
+	tileSize: 512,
+	zoomOffset: -1
+}).addTo(map);
+
+// helper to get latest date from array
+function getLatestDate(dateArr) {
+	var dd, mm, yyyy, spl, newd;
+	var convDateList = dateArr.map(function(d) {
+		spl = d.split('-');
+		dd = spl[0];
+		mm = parseInt(spl[1]);
+		yyyy = spl[2];
+		return new Date(yyyy, mm-1, dd);
+	})
+	var nd = new Date(Math.max.apply(null, convDateList));
+	return nd.getDate() + '-' + (nd.getMonth() + 1) + '-' + nd.getFullYear();
+}
+
+var selectedFeatureMap = {
+	'hospitalized_today': 'Number of people hospitalized today',
+	'total_hospitalized': 'Total number of people hospitalized',
+	'isolation': 'Total number of people under isolation',
+	'observation': 'Total number of people under observation',
+};
+
+// load data
+var data = {},
+selected_date='',
+selected_feature='hospitalized_today';
+
+var queue = [],
+dates = [],
+dateSelect = d3.select('#dateSelect');
+Object.keys(dataIndex).forEach(function(key) {
+	dates.push(key);
+	selected_date = key;
+});
+selected_date = getLatestDate(dates);
+// add dates to select
+var opts = dateSelect.selectAll(null)
+  .data(dates)
+	.enter()
+	.append('option')
+	.attr('value', function(d) {
+		return d;
+	})
+	.text(function(d) {
+		return d;
+	})
+
+
+var info = L.control();
+
+info.onAdd = function(map) {
+	this._div = L.DomUtil.create('div', 'info');
+	this.update();
+	return this._div;
+};
+
+info.update = function(props) {
+	this._div.innerHTML = '<h4>' + (selected_feature.length > 0 ? selectedFeatureMap[selected_feature]: 'Select a feature to display') + '</h4>' +  (props ?
+		'<b>' + props.district + '</b><br />' + props[selected_feature] + ' people'
+		: 'Hover over a state');
+	};
+
+var legend = L.control({position: 'bottomleft'});
+
+legend.onAdd = function(map) {
+	this._div = L.DomUtil.create('div', 'info legend');
+	this.update();
+	return this._div;
+}
+
+legend.update = function() {
+	var rmin, rmax, intervals=[];
+	var self = this;
+	// clears innerHTML
+	self._div.innerHTML = '';
+	if (selected_date.length > 0 &&
+		selected_feature.length > 0 &&
+		Object.keys(data).length > 0) {
+  	var d = data[selected_date].filter(function(item) {
+			return item.district.toLowerCase() !== 'total'
+		});
+		rmin = d3.min(d, function(item){return parseInt(item[selected_feature])});
+		rmax = d3.max(d, function(item){return parseInt(item[selected_feature])});
+	} else {
+		rmin = 5;
+		rmax = 100;
+	}
+	for (var i=rmin; i<=rmax; i+=Math.floor((rmax - rmin)/5)) {
+		intervals.push(i);
+	}
+	for (var i=0; i<intervals.length; i++) {
+			self._div.innerHTML +=
+					'<i style="background:' + colorfunc(intervals[i] + 1) + '"></i> ' +
+					intervals[i] + (intervals[i + 1] ? '&ndash;' + intervals[i + 1] + '<br>' : '+');
+	}
+}
+
+function highlightFeature(e) {
+	var layer = e.target;
+	resetAll();
+	layer.setStyle({
+		weight: 5,
+		color: '#666',
+		dashArray: '',
+		fillOpacity: 0.7
+	});
+
+	if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+		layer.bringToFront();
+	}
+	info.update(getDataForDistrict(layer.feature.properties.DISTRICT));
+}
+
+function onEachFeature(feature, layer) {
+	layer.on({
+		mouseover: highlightFeature,
+		mouseout: resetHighlight,
+		click: highlightFeature,
+	});
+}
+
+function getColorRangeFunc(range_min, range_max) {
+	return d3.scaleLinear()
+	.range(col_range)
+	.domain([range_min, range_max])
+	.interpolate(d3.interpolateLab);
+}
+
+function getDataForDistrict(district) {
+	var focus_item = null;
+	if (Object.keys(data).length > 0) {
+		d = data[selected_date];
+		d.forEach(function(item) {
+			if (item.district.toLowerCase() === district.toLowerCase()) {
+				focus_item = item;
+			}
+		});
+	}
+	return focus_item;
+}
+
+function setDataColorFunc() {
+	if (selected_date.length > 0 &&
+		selected_feature.length > 0 &&
+		Object.keys(data).length > 0) {
+  	var d = data[selected_date].filter(function(item) {
+			return item.district.toLowerCase() !== 'total'
+		});
+		var rmin = d3.min(d, function(item){return parseInt(item[selected_feature])});
+		var rmax = d3.max(d, function(item){return parseInt(item[selected_feature])});
+		colorfunc = getColorRangeFunc(rmin, rmax);
+	}
+}
+
+function getDataColor(district) {
+  if (selected_date.length > 0 &&
+		district &&
+		selected_feature.length > 0 &&
+		Object.keys(data).length > 0) {
+	  var focus_item = getDataForDistrict(district);
+		if (focus_item) {
+			return colorfunc(focus_item[selected_feature]);
+		}
+
+	}
+	return col_range[0];
+}
+
+function style(feature) {
+	return {
+		fillColor: getDataColor(feature.properties.DISTRICT),
+		weight: 2,
+		opacity: 1,
+		color: 'white',
+		dashArray: '3',
+		fillOpacity: 0.6
+	};
+}
+
+var geojson = L.geoJson(stateData, {
+	style: style,
+	onEachFeature: onEachFeature,
+}).addTo(map);
+info.addTo(map);
+legend.addTo(map);
+
+function resetHighlight(e) {
+	var layer = e.target;
+	geojson.resetStyle(e.target);
+	layer.setStyle({
+		weight: 2,
+		opacity: 1,
+		color: 'white',
+		dashArray: '3',
+		fillOpacity: 0.7
+	});
+	info.update();
+}
+
+function resetAll() {
+	geojson.resetStyle();
+}
+
+function updateAll() {
+	setDataColorFunc();
+	geojson.setStyle(style);
+	legend.update();
+	info.update();
+}
+
+
+// set default for featureSelect and dateSelect
+var featureSelect = d3.select('#featureSelect')
+featureSelect.property('value', selected_feature);
+dateSelect.property('value', selected_date);
+
+featureSelect.on('change', featureChangeListener);
+dateSelect.on('change', dateChangeListener);
+// listener for feature change
+function featureChangeListener() {
+	if (this.selectedOptions.length > 0) {
+		var selOpt = this.selectedOptions[0].value;
+		selected_feature = selOpt;
+		updateAll();
+	}
+}
+// listener for date change
+
+function dateChangeListener() {
+	if (this.selectedOptions.length > 0) {
+		var date = this.selectedOptions[0].value;
+		fetchDataForDate(date);
+	}
+}
+
+function fetchDataForDate(date) {
+	if (Object.keys(data).includes(date)) {
+		selected_date = date;
+		updateAll();
+	} else {
+		var filename = './data/' + dataIndex[date].file;
+		d3.csv(filename).then(function(dat){
+			data[date] = dat;
+			selected_date = date;
+			updateAll();
+		});
+	}
+}
+
+// fetch data for initial date
+fetchDataForDate(selected_date);
+</script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cas suspects d'infection au Covid-19 : Que faire ? </title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="author" content="Mohammed KABBAJ">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css?v=1.0.0">
+    <script src="js/js.js?n=1.0.3"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="http://malsup.github.io/jquery.form.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <style>
+        /*
+        -----------------------------------------------
+        Author         : Mohammed KABBAJ
+        Author  Email  : kabbajmohammedmk@gmail.com
+        Date           : Mars 2020
+        -----------------------------------------------
+        */
+    </style>
+
+</head>
+
+<body onload="load()">
+    <header>
+        <img src="img/header1.jpg" width="100%" height="auto">
+    </header>
+    <div class="jumbotron text-center" id="form">
+        <!--
+        <form action="php/upload.php" method="POST" id="form_Epo" enctype="multipart/form-data">
+-->
+        <form id="form_Epo">
+            <div id="f_1">
+                <div>
+                    <h1>Formulaire d'inscription à la vidéoconférence:<strong>Cas suspects d'infection au Covid-19 : Que faire ?</strong> </h1><br>
+                    <h1 style="font-size:23px ;font-weight: bold">Recommandations</h1>
+                    <div>
+                        <br>
+                        <ul>
+                            <li>Tous les champs sont : <em style="color: red">OBLIGATOIRES</em>  </li>
+                            <li>L'Email et le numéro de téléphone doivent être Opérationnels</li>
+                            <li><em style="color: red">Ce site n'est pas destiné au public</em></li>
+                        </ul>
+                        <br> <br>
+                        <input class="button" type="button" value="S'inscrire" onclick="display_F_2()">
+                    </div>
+                </div>
+            </div>
+            <div id="f_2">
+                <div class="zone">
+                    <h1>Informations personnelles</h1>
+                        <br> <br>
+                    <table>
+                        <tr>
+                            <td>
+                                <p class="label">Nom : </p>
+                            </td>
+                            <td><input id="t_nom" name="t_nom" type="text" class="text" required></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="label">Prénom : </p>
+                            </td>
+                            <td><input id="t_pre" name="t_pre" type="text" class="text" required></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <p class="label">Secteur d'activité : </p>
+                            </td>
+                            <td>
+                                <select id="l_sect" name="l_sect" class="text" onchange="ver_spec()">
+                                    <option value="Public">Public</option>
+                                    <option value="Privé">Privé</option>
+                                    <option value="Militaire">Militaire</option>
+                                    <option value="Universitaire">Universitaire</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="label">Spécialité : </p>
+                            </td>
+                            <td>
+                                <select id="l_spec" name="l_spec" class="text" onchange="ver_spec(this)">
+                                    <option value="Généraliste">Généraliste</option>
+                                    <option value="Spécialiste">Spécialiste</option>
+                                </select>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <p class="label">Ville : </p>
+                            </td>
+                            <td>
+                                <select id="l_vill" name="l_vill" class="text" onchange="ver_vill(this)">
+                                    <option value="Fès">Fès</option>
+                                    <option value="Oujda">Oujda</option>
+                                    <option value="Rabat">Rabat</option>
+                                    <option value="Casablanca">Casablanca</option>
+                                    <option value="Tanger">Tanger</option>
+                                    <option value="Agadir">Agadir</option>
+                                    <option value="Marrakech">Marrakech</option>
+                                    <option value="Laayoune">Laayoune</option>
+                                    <option value="Autre">Autre</option>
+                                </select>
+                                <!--<input id="t_affi" name="t_affi" type="text" class="text" required>-->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">Téléphone : </td>
+                            <td>
+                                <input id="t_mob" name="t_mob" type="text" class="text"  >
+                            </td>
+                        </tr>
+                        
+                        
+                        <tr>
+                            <td class="label">E-mail : </td>
+                            <td><input id="t_eml" name="t_eml" type="email" class="text" onkeyup="color_t(this)" required></td>
+                        </tr>
+                        <tr>
+                            <td class="label">Mote de passe: </td>
+                            <td><input id="t_pass" name="t_pass" type="password" class="text" onkeyup="lodTest(this)" onfocus="lodTest(this)" required></td>
+                        </tr>
+                        <tr>
+                            <td class="label">Confirmer le mot de passe : </td>
+                            <td><input id="t_passC" name="t_passC" type="password" class="text" onkeyup="equalPass(this)" onfocus="countChar()"required></td>
+                        </tr>
+                        <tr><td>
+                            <p style="color:red">NB : Le numéro de téléphone n'est pas obligatoire</p>
+                        </td></tr>
+                                
+                    </table>
+                        <br> <br>
+                    <input type="hidden" id="h_vill" name="h_vill" Value="Fès" class="hd">
+                    <input type="hidden" id="h_spes" name="h_spes" Value="Généraliste" class="hd">
+                    <div><input class="button" type="button" value="S'inscrire" onclick="validate()"></div>
+            
+                </div>
+            </div>
+    
+        </form>
+        <div class="bloc" id="bloc">
+            <div class="container1" >
+                 <h1>Nous avons bien reçu votre demande d'inscription</h1>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div id="list" class="list"></div>
+    </div>
+</body>
+
+</html>

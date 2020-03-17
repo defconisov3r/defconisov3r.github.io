@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160387987-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+
+      gtag('config', 'UA-160387987-1');
+    </script>
+    <meta charset="utf-8">
+    <link href="/styles/table.css" rel="stylesheet" type="text/css">
+    <link href="/styles/style.css" rel="stylesheet" type="text/css">
+    <link href="/styles/cards.css" rel="stylesheet" type="text/css">
+    <link href="/styles/livenews.css" rel="stylesheet" type="text/css">
+    <script src="../external/popper.min.js"></script>
+    <script src="../external/jquery-3.4.1.min.js"></script>
+    <link href="../external/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="../external/bootstrap.min.js"></script>
+    <script src="../external/canvas-toBlob.js"></script>
+
+    <!-- <datatable>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+     -->
+
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.datatables.net/v/dt/dt-1.10.20/sc-2.0.1/datatables.min.css"/>
+
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/sc-2.0.1/datatables.min.js"></script>
+    <script src="../external/dataTables.numString.js"></script>
+    <!--  Essential META Tags -->
+
+    <meta property="og:title" content="Coronavirus Watch">
+    <meta property="og:description" content="Coronavirus real-time news across the world">
+    <meta property="og:image" content="http://coronaviruswatch.ircai.org/assets/thumbnail_2.png">
+    <meta property="og:url" content="http://coronaviruswatch.ircai.org/">
+
+    <!--  Non-Essential, But Recommended -->
+
+    <meta property="og:site_name" content="Coronavirus Watch">
+    <meta name="twitter:image:alt" content="Coronavirus Watch">
+    <title>Coronavirus Watch</title>
+    <script type="text/javascript">
+      function resizeIframe(iframe) {
+        let val = (iframe.contentWindow.document.body.scrollHeight + 10);
+        iframe.height = val + "px";
+      }
+    </script>
+</head>
+<body style="padding-top: 0;padding-bottom: 0">
+
+<div id="dashboard" class="d-flex flex-column p-2 bd-highlight">
+    <div id="bar" class="d-flex flex-row bd-highlight" style="margin: 0">
+        <div class="d-flex p-2 bd-highlight">
+            <img class="logo" src="/assets/oecd_ai_logo.png" onclick="window.location.href='https://oecd.ai'"
+                 alt="OECD AI Observatory Logo" target="_blank"
+                 style=" height: 60px !important; align-self: center">
+            <img class="logo" src="/assets/ircai_logo.png" onclick="window.location.href='https://ircai.org'"
+                 alt="IRCAI Logo" target="_blank"
+                 style=" height: 100px !important; align-self: center">
+
+        </div>
+        <div class="d-flex p-2 bd-highlight d-inline-flex flex-grow-1 flex-column">
+            <h1 id="title" style="margin: 0 auto; align-self: center" class="p-2 bd-highlight"><a style="text-decoration: none; color: black"
+                    href="http://coronaviruswatch.ircai.org">Coronavirus Watch</a></h1>
+            <h6 class="d-inline-block" data-toggle="modal" data-target="#embed-modal"
+                style="cursor: pointer; align-self: center;">Click here to embed into your website</h6>
+        </div>
+        <div class="d-flex p-2 bd-highlight flex-column d-inline-flex">
+            <div class="d-flex p-2 bd-highlight flex-row d-inline-flex">
+                <img class="logo" src="/assets/event_registry_logo.png"
+                     onclick="window.location.href='https://eventregistry.org'"
+                     alt="Event Registry Logo" target="_blank"
+                     style="width: 164px !important;; height: 27px !important; align-self: center">
+                <img class="logo" src="/assets/jsi_logo.png" onclick="window.location.href='https://ailab.ijs.si'"
+                     alt="Jozef Stefan Institute Logo" target="_blank"
+                     style="width: 164px !important; height: 50px !important; align-self: center">
+            </div>
+        </div>
+    </div>
+    <div id="draw-canvas" class="d-flex flex-row bd-highlight flex-grow-1">
+        <div id="disease-dashboard" class="d-flex flex-column bd-highlight" style="flex: 2"></div>
+
+        <div style="flex: 5" class="d-flex flex-column bd-highlight">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link" id="news-tab" data-toggle="tab" href="#news-tab-content" role="tab" aria-selected="true">Real-Time Media Monitoring</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="evolution-tab" data-toggle="tab" href="#evolution-tab-content" role="tab" aria-selected="false">Coronavirus Spread Visualization <i><strong style="color:red;">New!</strong></i></a>
+                </li>
+                <!--
+                <li class="nav-item">
+                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Behind Metric</a>
+                </li>
+                -->
+            </ul>
+            <div id="tabContent" class="tab-content d-flex flex-column bd-highlight flex-grow-1">
+                <div class="tab-pane fade" id="news-tab-content"
+                     role="tabpanel" aria-labelledby="news-tab">
+                    <div id="news-dashboard" class="d-flex flex-row bd-highlight flex-grow-1  iframe embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item d-flex flex-row bd-highlight flex-grow-1" allowfullscreen src=""  onload="resizeIframe(this)"></iframe>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="evolution-tab-content" role="tabpanel" aria-labelledby="evolution-tab">
+                    <div id="evolution-dashboard" class="d-flex flex-row bd-highlight flex-grow-1 iframe embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item d-flex flex-row bd-highlight flex-grow-1" allowfullscreen src=""  onload="resizeIframe(this)"></iframe>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="embed-modal" tabindex="-1" role="dialog"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            </div>
+            <div class="modal-body">
+                Select a country from the list if you want the default page on that country
+                <br>
+                <select id="country-selection-clipboard" style="width:100%;"></select>
+                <textarea id="embed-code" style="width:100%;height: 135px;resize: none" readonly>&ltiframe src="http://coronaviruswatch.ircai.org/?country=All" style="border:0px #ffffff none;" name="CoronaVirusWatch" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen&gt&lt/iframe&gt</textarea>
+            </div>
+            <div class="modal-footer">
+                <button id="embed-clipboard-button" type="button" class="btn btn-secondary" data-dismiss="modal">Copy to
+                    clipboard
+                </button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/javascripts/indexController.js"></script>
+
+</body>
+</html>

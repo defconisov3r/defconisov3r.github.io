@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='hr'>
+<head>
+<!-- meta -->
+<meta charset='utf-8' />
+<title>COVID-19</title>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<meta name='description' content='App'>
+<!-- default css-->
+<link href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'><link href='https://fonts.googleapis.com/css?family=Saira+Condensed&display=swap&subset=latin-ext' rel='stylesheet' type='text/css'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css' rel='stylesheet' type='text/css'>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css' rel='stylesheet' type='text/css'>
+<link href='https://covid-19.rocket-lab.net/templates/css/appTheme.css?v=b4730c9cc79aede4508391493c0b8791' rel='stylesheet' type='text/css' />
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script>
+<![endif]-->
+<!-- mobile -->
+<meta name='mobile-web-app-capable' content='yes' />
+<meta name='apple-mobile-web-app-capable' content='yes'>
+<!-- favicon -->
+<link rel='shortcut icon' href='https://covid-19.rocket-lab.net/files/manifest/favicon.ico' type='image/x-icon'>
+<!-- manifest -->
+<link rel='manifest' href='https://covid-19.rocket-lab.net/manifest.json'>
+<!-- dynamic css-->
+</head>
+<body>
+<div class='navbar rd-navbar navbar-fixed-top no-print'><div class='menu'><ul class='nav-links'><li class='dropdown'><a href='' class='dropdown-toggle' data-toggle='dropdown' aria-expanded='false'>Menu</a><div class='dropdown-menu' role='menu' aria-labelledby='dropdownMenu1' style='color:#000;'><div style='padding:10px; border-bottom:1px solid #d3d6db;'><b>Menu</b></div><div style='padding:10px; overflow:hidden;'><div class='row'><div class='col-md-4 col-sm-4 col-xs-4'><a href='#/' class='link'><i class='fas fa-home'></i><div>Dashboard</div><div class='text-muted hidden-sm hidden-xs' style='font-size:10px;'>F2</div></a></div><div class='col-md-4 col-sm-4 col-xs-4'><a href='#/?mod=artikli' class='link'><i class='fas fa-boxes'></i><div>Artikli</div><div class='text-muted hidden-sm hidden-xs' style='font-size:10px;'>F3</div></a></div><div class='col-md-4 col-sm-4 col-xs-4'><a href='#/?mod=racuni' class='link'><i class='fas fa-file-invoice-dollar'></i><div>Racuni</div><div class='text-muted hidden-sm hidden-xs' style='font-size:10px;'>F4</div></a></div><div class='col-md-4 col-sm-4 col-xs-4'><a href='#/?mod=kupci' class='link'><i class='fas fa-users'></i><div>Kupci</div><div class='text-muted hidden-sm hidden-xs' style='font-size:10px;'>F6</div></a></div><div class='col-md-4 col-sm-4 col-xs-4'><a href='#/?mod=kasa' class='link'><i class='fas fa-store-alt'></i><div>Objekti</div><div class='text-muted hidden-sm hidden-xs' style='font-size:10px;'>F7</div></a></div><div class='col-md-4 col-sm-4 col-xs-4'><a href='#/?mod=kasa' class='link'><i class='fas fa-cash-register'></i><div>POS Kase</div><div class='text-muted hidden-sm hidden-xs' style='font-size:10px;'>F8</div></a></div><div class='col-md-4 col-sm-4 col-xs-4'><a href='#/?mod=korisnici' class='link'><i class='fas fa-user'></i><div>Korisnici</div><div class='text-muted hidden-sm hidden-xs' style='font-size:10px;'>F9</div></a></div><div class='col-md-4 col-sm-4 col-xs-4'><a href='#/?mod=log' class='link'><i class='fas fa-file-alt'></i><div>System log</div><div class='text-muted hidden-sm hidden-xs' style='font-size:10px;'>F10</div></a></div></div></div><div style='padding:10px; border-top:1px solid #d3d6db;'><a href='https://covid-19.rocket-lab.net/?logout=yes' class='btn btn-sm btn-danger btn-block'><i class='fas fa-sign-out-alt'></i> Odjavi se!</a></div></div></li></ul></div></div><main id='content-wrapper'></div>
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+<!-- default js-->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.0/js/jquery.tablesorter.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/autosize.js/4.0.2/autosize.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/apexcharts'></script>
+<script>var baseurl = 'https://covid-19.rocket-lab.net/';var debuging = true;</script>
+<script src='https://covid-19.rocket-lab.net/templates/js/app.js?v=3b0db478a9ad3a9480293dca8b3aaff6'></script>
+<script>if (window.module) module = window.module;</script>
+<!-- dynamic js-->
+</body>
+</html>

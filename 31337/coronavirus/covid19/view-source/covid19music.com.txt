@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid19 Playlist</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160869372-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-160869372-1');
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <h1></h1>
+    </header>
+
+    <main>
+        <div class="spotifycontainer">
+            <div>
+                <iframe src="https://open.spotify.com/embed/playlist/3yPmsoXksrgMwd0x6Tvbew" width="400" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+            </div>
+            <div class="playercontainer">
+                <iframe src="https://open.spotify.com/embed/playlist/55V6HUzPnISl7ADpE3yfUD" width="400" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div>
+                <iframe src="https://open.spotify.com/embed/playlist/6808cinace0wqkw0hwMVe9" width="400" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+        </div>
+        <h1>
+            Follow the pandemic Live
+        </h1>
+
+        <div class="videocontainer">
+            <iframe width="1000" height="600" src="https://www.youtube.com/embed/qgylp3Td1Bw?rel=0&amp;autoplay=1&mute=1">
+        </iframe>
+        </div>
+
+    </main>
+
+
+
+
+
+
+    <script src=" js/index.js "></script>
+</body>
+
+</html>

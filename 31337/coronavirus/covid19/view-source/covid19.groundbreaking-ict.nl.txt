@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="https://www.groundbreaking-ict.nl/images/icon-round.png" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" />
+	<link rel="stylesheet" href="webjars/jquery-ui/1.12.1/jquery-ui.css" />
+	<link rel="stylesheet" href="webjars/leaflet/1.5.1/leaflet.css" />
+	<link rel="stylesheet" href="css/corona.css" />
+	<title>COVID-19 Trend Watcher</title>
+	<script src="webjars/jquery/3.4.1/jquery.min.js"></script>
+	<script src="webjars/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+	<script src="webjars/leaflet/1.5.1/leaflet.js"></script>
+	<script src="js/corona.js"></script>
+</head>
+<body>
+<header>
+<h1>COVID-19 Trend Watcher</h1>
+<div id="explain">Inner circle: new registered cases per day per country, border: 3 day trend (red: increasing; blue: decreasing)</div>
+</header>
+<div id="map"></div>
+<div id="hover"></div>
+<div id="slider"><div id="custom-handle" class="ui-slider-handle"></div></div>
+<div id="datasource">&copy; 2020 GroundBreaking - Data source: <a href="https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide">European Centre for Disease Prevention and Control</a></div>
+</body>
+</html>
