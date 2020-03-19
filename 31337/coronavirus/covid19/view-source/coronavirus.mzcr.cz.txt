@@ -140,6 +140,12 @@ th {
     display: inline-block;
     vertical-align: bottom;
     border: 1px solid #22557b;
+}
+
+
+.img-responsive {
+    max-width: 100%;
+	  height: auto;
 }		</style></head><body class="bodyCont live-site">
 <div class="mainWrapper">
   <header><div class="container-main">
@@ -162,27 +168,33 @@ th {
   </header><div class="contentWrapper">
   <div class="container-main">
     <nav id="menu"><div class="menumain">
-            <ul id="menu-main" class="menu"><li id="menu-item-11" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-11"><a href="https://koronavirus.mzcr.cz/" aria-current="page">Aktuální výskyt onemocnění COVID-19 v ČR</a></li>
-<li id="menu-item-716" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-716"><a href="https://koronavirus.mzcr.cz/rady-a-doporuceni-pro-domaci-karantenu/">Rady a doporučení pro domácí karanténu</a></li>
-<li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12"><a href="https://koronavirus.mzcr.cz/dulezite-kontakty/">Důležité kontakty, odkazy a zdroje informací</a></li>
-<li id="menu-item-1083" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1083"><a href="https://koronavirus.mzcr.cz/category/dulezite-informace-otazky-a-odpovedi/">Důležité informace, otázky a odpovědi</a></li>
-<li id="menu-item-16" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16"><a href="https://koronavirus.mzcr.cz/category/tiskove-zpravy-aktuality/">Tiskové zprávy a aktuality</a></li>
+            <ul id="menu-main" class="menu"><li id="menu-item-11" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-11"><a href="https://koronavirus.mzcr.cz/" aria-current="page">Aktuálně o koronaviru</a></li>
+<li id="menu-item-1326" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1326"><a href="https://koronavirus.mzcr.cz/category/pro-verejnost/">Pro veřejnost</a></li>
+<li id="menu-item-1552" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1552"><a href="https://koronavirus.mzcr.cz/otazky-odpovedi/">Otázky a odpovědi</a></li>
+<li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12"><a href="https://koronavirus.mzcr.cz/dulezite-kontakty-odkazy/">Důležité kontakty a odkazy</a></li>
+<li id="menu-item-1285" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1285"><a href="https://koronavirus.mzcr.cz/seznam-odberovych-center/">Seznam odběrových center</a></li>
+<li id="menu-item-1348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1348"><a href="https://koronavirus.mzcr.cz/seznam-laboratori/">Seznam laboratoří</a></li>
 <li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38"><a href="https://koronavirus.mzcr.cz/vyvoj-udalosti-v-case/">Vývoj událostí v čase</a></li>
-<li id="menu-item-15" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-15"><a href="https://koronavirus.mzcr.cz/category/mimoradna-opatreni-a-doporuceni/">Mimořádná opatření a doporučení</a></li>
-<li id="menu-item-530" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-530"><a href="https://koronavirus.mzcr.cz/seznam-laboratori-ktere-testuji-na-covid-19/">Seznam laboratoří, které testují na nový koronavirus</a></li>
-<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="https://koronavirus.mzcr.cz/informace-pro-zdravotniky/">Informace pro zdravotníky</a></li>
-<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34"><a href="https://koronavirus.mzcr.cz/informace-pro-zamestnance-a-zamestnavatele/">Informace pro zaměstnance a zaměstnavatele</a></li>
-<li id="menu-item-13" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13"><a href="https://koronavirus.mzcr.cz/staty-sveta-s-vysokym-rizikem-prenosu-nakazy/">Státy světa s vysokým rizikem přenosu nákazy / High risk countries</a></li>
-<li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="https://koronavirus.mzcr.cz/materialy-ke-stazeni/">Informační materiály ke stažení</a></li>
+<li id="menu-item-16" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16"><a href="https://koronavirus.mzcr.cz/category/tiskove-zpravy/">Tiskové zprávy</a></li>
+<li id="menu-item-15" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-15"><a href="https://koronavirus.mzcr.cz/category/mimoradna-opatreni/">Mimořádná opatření</a></li>
+<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="https://koronavirus.mzcr.cz/informace-pro-zdravotniky/">Pro zdravotníky</a></li>
+<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34"><a href="https://koronavirus.mzcr.cz/informace-pro-zamestnance-a-zamestnavatele/">Pro zaměstnance a zaměstnavatele</a></li>
+<li id="menu-item-13" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13"><a href="https://koronavirus.mzcr.cz/staty-sveta-s-vysokym-rizikem-prenosu-nakazy/">Státy světa s vysokým rizikem přenosu nákazy</a></li>
+<li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="https://koronavirus.mzcr.cz/materialy-ke-stazeni/">Materiály ke stažení</a></li>
+<li id="menu-item-1339" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1339"><a href="https://koronavirus.mzcr.cz/digitalni-karta-covid19/">Digitální karta COVID-19</a></li>
 </ul></div>
-    </nav><main><article id="page"><h1>Aktuální výskyt onemocnění COVID-19 v ČR</h1>
+	      </nav><main><article id="page"><h1>Aktuálně o koronaviru</h1>
             
-<figure class="wp-block-image size-large"><a aria-label="externí odkaz" title="externí odkaz" href="https://onemocneni-aktualne.mzcr.cz/covid-19" rel="noreferrer noopener" target="_blank"><img src="https://koronavirus.mzcr.cz/wp-content/uploads/2020/03/onemocneni-aktulane-covid-19-1.png" alt="onemocneni-aktulane-covid-19-1" class="wp-image-877" srcset="https://koronavirus.mzcr.cz/wp-content/uploads/2020/03/onemocneni-aktulane-covid-19-1.png 832w,https://koronavirus.mzcr.cz/wp-content/uploads/2020/03/onemocneni-aktulane-covid-19-1-300x36.png 300w,https://koronavirus.mzcr.cz/wp-content/uploads/2020/03/onemocneni-aktulane-covid-19-1-768x92.png 768w" sizes="(max-width: 832px) 100vw, 832px"></a></figure><p></p>
+<figure class="wp-block-image size-large"><a aria-label="externí odkaz" title="externí odkaz" href="https://onemocneni-aktualne.mzcr.cz/covid-19" rel="noreferrer noopener" target="_blank"><img src="https://koronavirus.mzcr.cz/wp-content/uploads/2020/03/onemocneni-aktulane-covid-19-1.png" alt="onemocneni-aktulane-covid-19-1" class="wp-image-877" srcset="https://koronavirus.mzcr.cz/wp-content/uploads/2020/03/onemocneni-aktulane-covid-19-1.png 832w,https://koronavirus.mzcr.cz/wp-content/uploads/2020/03/onemocneni-aktulane-covid-19-1-300x36.png 300w,https://koronavirus.mzcr.cz/wp-content/uploads/2020/03/onemocneni-aktulane-covid-19-1-768x92.png 768w" sizes="(max-width: 832px) 100vw, 832px"></a></figure><p class="has-text-color has-medium-font-size has-vivid-red-color"> Jak si jednoduše vyrobit jednorázovou roušku pro osobní použití? </p>
+
+
+
+<p>Jednorázová rouška z papírového kapesníku je určena k osobnímu krátkodobému použití a je hotová do minuty! Doporučujeme si jich vyrobit více, abyste u sebe měli stále k dispozici roušky na celý den. Nepoužité roušky uchovávejte ve sterilním sáčku.  <a aria-label="externí odkaz – Celý článek" title="externí odkaz – Celý článek" href="https://koronavirus.mzcr.cz/jak-si-jednoduse-vyrobit-jednorazovou-rousku-pro-osobni-pouziti/" target="_blank">Celý článek</a>.  </p>
 
 
 
 <figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
-<iframe title="Co byste měli vědět o koronaviru?" width="500" height="281" src="https://www.youtube.com/embed/Q06SePHkxxc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe title="Otázka dne pro Romana Prymulu" width="500" height="281" src="https://www.youtube.com/embed/IGGUtLkLvwg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div></figure></article></main><div class="clear"> </div>
   </div>
 </div>
@@ -194,123 +206,7 @@ th {
 	</div>
 </footer></div>
 <div class="overflow"></div>
-    <script src="https://koronavirus.mzcr.cz/wp-content/themes/skylab_responsive/js/loadWatsonAssistantChat.js"></script><script>
-        var watsonInstance;
-        var mluviiInstance;
-        var chatbot_history = [];
-        var prepis = '';
-        var enableMluvii = true;
- 
-        function receiveHandler(event) {
-            if (event.data && event.data.output && event.data.output.generic) {
-                event.data.output.generic.forEach(output => {
-                    if (output.response_type == 'text') {
-                        chatbot_history.push({
-                            source: 'chatbot',
-                            message: output.text
-                        });
-                    }
-                });
-            }
-            // handover detection
-            if (enableMluvii) {
-                if (event.data.output.user_defined && event.data.output.user_defined.handover) {
-                    watsonInstance.closeWindow();
-                    showWatsonChatButton(false);
-                    chatbot_history.forEach(function(msg) {
-                        console.log("msg: ", msg.message);
-                        if (msg.message != "") {
-                            if (msg.message.text != null) {
-                                prepis = prepis + msg.message.text + "; ";
-                            } else {
-                                prepis = prepis + msg.message + "; ";
-                            }
- 
-                        }
-                    });
-                    mluviiInstance.addCustomData('key1', prepis);
-                    mluviiInstance.openChat();
-                }
-            }
-        }
- 
-        function sendHandler(event) {
-            if (event.data && event.data.input && event.data.input.text != '') {
-                chatbot_history.push({
-                    source: 'user',
-                    message: event.data.input.text
-                });
-            }
-        }
- 
-        function showWatsonChatButton(show) {
-            var elements = document.getElementsByClassName("WatsonAssistantChatHost");
-            if (elements.length > 0) {
-                var button = elements[0];
-                button.style.display = show ? 'block' : 'none';
-            }
-        }
- 
-        if (enableMluvii) {
-            (function() {
-                var scr = document.createElement('script');
-                scr.type = 'text/javascript';
-                scr.async = true;
-                scr.charset = 'UTF-8';
-                scr.src = 'https://pomoc.mluvii.com/widget/OOWidget.js';
-                scr.$owidgetOnLoad = function(owidget) {
-                    if (!owidget.isSupported) {
-                        return;
-                    }
-                    owidget.init("3f9dc354-c0a7-41e8-a3f5-459802fd0138", "KoronavirusWEB");  
-                    owidget.connectToServer();
-                    owidget.setAppEventCallback(function(event) {
-                        if (event.type == "chatWindowClosed") {
-                            showWatsonChatButton(true);
-                            watsonInstance.openWindow();
-                            console.log("Mluvii window closed");
-                        }
-                    });
-                    mluviiInstance = owidget;
-                };
-                var ffs = document.getElementsByTagName('script')[0];
-                ffs.parentNode.insertBefore(scr, ffs);
-            })();
-        }
- 
-        window.loadWatsonAssistantChat({
-            integrationID: "f622e90a-d95c-4c3b-89e2-740ebbd8dc7b", // The ID of this integration.
-            region: "eu-de", // The region your integration is hosted in.
-        }).then(function(instance) {
-            instance.updateCSSVariables({
-                'BASE-accent-color': '#22557b'
-            });
-            instance.updateCSSVariables({
-                'BASE-primary-color': '#22557b'
-            });
-            instance.updateCSSVariables({
-                'BASE-background-color': 'rgb(240, 244, 247)'
-            });
-            instance.updateCSSVariables({
-                'BASE-primary-font-color': '#FFFFFF'
-            });
-            instance.updateCSSVariables({
-                'BASE-font-family': '"Segoe UI", "SF Optimized", system-ui, -apple-system, BlinkMacSystemFont, ".SFNSText-Regular", "Roboto", sans-serif;'
-            });
- 
-            instance.on({
-                type: "send",
-                handler: sendHandler
-            });
-            instance.on({
-                type: "receive",
-                handler: receiveHandler
-            });
-            instance.updateLocale('cs');
-            instance.render();
-            watsonInstance = instance;
-        });
-    </script><script>
+<script src="https://koronavirus.mzcr.cz/wp-content/themes/skylab_responsive/js/loadWatsonAssistantChat.js"></script><script src="https://koronavirus.mzcr.cz/wp-content/themes/skylab_responsive/js/runWatsonAssistantChat.js"></script><script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

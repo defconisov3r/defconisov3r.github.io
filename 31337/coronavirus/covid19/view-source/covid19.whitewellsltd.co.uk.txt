@@ -1,0 +1,71 @@
+<html lang="en" ng-app="app">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Visitor anti-robot validation</title>
+        
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="/css/flag.css" />
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="/css/style.css" />
+        <script src="/vendor/jquery.min.js"></script>
+        <script src="/vendor/bootstrap.min.js"></script>
+        <script src="/vendor/angular.min.js"></script>
+        <script src="/vendor/angular-translate.min.js"></script>
+        <script src="/js/app.config.js"></script>
+        <script src="/js/app.controller.js"></script>
+        <script>
+            var RecaptchaOptions = {
+                theme: 'white'
+            };
+        </script>
+    </head>
+    <body ng-controller="MainCtrl">
+        
+        <div id="language-selector">
+            <div class="dropdown">
+                <a href="#" data-toggle="dropdown" class="btn btn-default">
+                    <i class="flag-{{ selectedLanguage.flag }}"></i> {{ selectedLanguage.code | uppercase }}
+                </a>
+                <ul class="dropdown-menu">
+                    <li ng-repeat="lang in languages">
+                        <a ng-click="changeLanguage(lang);"><i class="flag-{{ lang.flag }}"></i> {{ lang.code | uppercase }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <div class="logo-container">
+                        <h2 class="security">Website Security</h2>
+                    </div>
+                    <div class="main">
+                        <p class="text-bold" translate="TITLE">Dear visitor</p>
+                        <p translate="SUBTITLE">To continue browsing and help us fight cybercrime, please type the characters you see below.</p>
+                    
+                        <form method="post" action="/verify.php" class="row">
+                            <div class="col-sm-8">
+                                <script src="https://recaptcha.net/recaptcha/api.js" async defer></script>
+                    <div class="g-recaptcha" data-sitekey="6LdvpRAUAAAAAJkr4psZnXC4TeOEVPwP_bEQrP24"></div>
+                                <input type="hidden" name="origin_url" value="http://covid19.whitewellsltd.co.uk/" />
+                                <input type="submit" translate translate-attr-value="SUBMIT" value="Delist" />
+                            </div>
+                        </form>
+                        <h3 translate="HEADING">Why is it necessary?</h3>
+                        <p><span translate="PRE_BODY"></span> (167.114.92.57) <span translate="POST_BODY"></span></p>
+                        <br />
+                        <p><span translate="BEST_REGARDS">Thank you.</span><br>
+                        <strong translate="SIGNATURE"></strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    
+
+    
+
+</html>

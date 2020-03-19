@@ -5,39 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="OJZO8s5VWtUxEOfA0mvR0aILWm4FZuYSeSHWwtDU">
+    <meta name="csrf-token" content="9lpAAXXRA0FxZ6txA5Or68XXv5tVqZpVltTexHGP">
 
-    <title>Laravel</title>
+    <title>ARS Norte</title>
 
     <!-- Scripts -->
-    <!-- <script src="http://www.covid19arsnorte.pt/js/app.js" defer></script> -->
+    <!-- <script src="/js/app.js?id=52aa3c5f3d7df5b993c1" defer></script> -->
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
 
     <!-- Styles -->
-    ;
-    <link href="http://www.covid19arsnorte.pt/css/app.css" rel="stylesheet">
+        <link href="/css/app.css?id=59cf9340fbdd31ddc835" rel="stylesheet">
 </head>
 <body>
+    <script>
+        window._env = { API_ENDPOINT: "https://www.covid19arsnorte.pt/api"}
+    </script>
     <div>
         <nav class="navbar navbar-sm">
             <div class="container">
-                <a class="navbar-brand" href="http://www.covid19arsnorte.pt">
-                    ARS Norte
-                </a>
-
+                
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto flex-row">
                     <!-- Authentication Links -->
                                             <li class="nav-item" style="margin-right: 40px">
-                            <a class="nav-link" href="http://www.covid19arsnorte.pt/login">Login</a>
+                            <a class="nav-link" href="https://www.covid19arsnorte.pt/login">Login</a>
                         </li>
-                                                    <li class="nav-item">
-                                <a class="nav-link" href="http://www.covid19arsnorte.pt/register">Register</a>
-                            </li>
-                                                            </ul>
+                                    </ul>
             </div>
         </nav>
 
@@ -49,24 +46,22 @@
                 <div class="card-header">Login</div>
 
                 <div class="card-body">
-                    <form method="POST" action="http://www.covid19arsnorte.pt/login">
-                        <input type="hidden" name="_token" value="OJZO8s5VWtUxEOfA0mvR0aILWm4FZuYSeSHWwtDU">
+                    <form method="POST" action="https://www.covid19arsnorte.pt/login">
+                        <input type="hidden" name="_token" value="9lpAAXXRA0FxZ6txA5Or68XXv5tVqZpVltTexHGP">
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control " name="email" value="" required autocomplete="email" autofocus>
-
-                                                            </div>
+                                <input id="email" type="email" class="form-control" name="email" value="" required autocomplete="email" autofocus>
+                            </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control " name="password" required autocomplete="current-password">
-
-                                                            </div>
+                                <input id="password" type="password" class="form-control" name="password" required autocomplete="current-password">
+                            </div>
                         </div>
 
                         <div class="form-group row">
@@ -81,13 +76,14 @@
                             </div>
                         </div>
 
+                        
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     Login
                                 </button>
 
-                                                                    <a class="btn btn-link" href="http://www.covid19arsnorte.pt/password/reset">
+                                                                    <a class="btn btn-link" href="https://www.covid19arsnorte.pt/password/reset">
                                         Forgot Your Password?
                                     </a>
                                                             </div>

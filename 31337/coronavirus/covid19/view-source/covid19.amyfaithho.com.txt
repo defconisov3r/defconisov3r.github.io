@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EM Docs: Welcome!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+      body {
+        /* take account of the floating navbar */
+        padding-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="">
+            EM Docs
+          </a>
+          <ul class="nav navbar-nav">
+            <li><a href="https://groupthink-emdocs.herokuapp.com">View proposals</a></li>
+          </ul>
+        </div>
+        <div>
+          <a href="https://groupthink-emdocs.herokuapp.com/edit/master/index.md" class='btn btn-primary navbar-btn pull-right'>
+            Suggest a change
+            <i class="fa fa-pencil"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>Welcome!</h1>
+      <div>
+        <p>This site is a collaborative effort, built with software from the <a href="https://openpolitics.org.uk">OpenPolitics project</a>. It’s a bit like a wiki, but with voting, and backed by <a href="https://git-scm.com">git</a>, an advanced version control system.</p>
+
+<ul>
+  <li>Anyone can edit a page - just click “suggest a change” in the top right.</li>
+  <li>Once a suggestion is made, project contributors vote on whether or not it’s accepted. Click “View proposals” above to see the current proposals.</li>
+  <li>Once a proposal is accepted, the author gets to vote on future proposals.</li>
+</ul>
+
+<p>For now, while you can edit any page, new pages must be created using GitHub’s built-in editor or by using a local git clone. Talk to a project administrator or a nearby coder for help there.</p>
+
+<h2 id="your-first-edits">Your first edits</h2>
+
+<ol>
+  <li>Visit <a href="https://creativecommons.org/">Creative Commons</a> and choose a license for this site, then edit <a href="license.html">the license page</a> to match.</li>
+  <li>Consider adding a code of conduct. We recommend the <a href="http://contributor-covenant.org/">Contributor Covenant</a>. Pop that into the <a href="contributing.html">Contributing</a> page.</li>
+</ol>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <footer>
+        <hr/>
+        <a href="contributing.html">contributing</a> |
+        <a href="license.html">license</a> |
+        code by <a href="https://openpolitics.org.uk">openpolitics</a>
+      </footer>
+    </div>
+
+  </body>
+</html>

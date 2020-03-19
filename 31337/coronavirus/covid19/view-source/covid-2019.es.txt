@@ -9,6 +9,7 @@
 
         gtag('config', 'UA-160807041-1');
 	</script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -23,9 +24,12 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/">CCAA <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="/provincias">Provincias</a>
+        </li>
+    	<li class="nav-item">
           <a class="nav-link" href="/json">JSON</a>
         </li>
         <li class="nav-item">
@@ -33,7 +37,7 @@
         </li>
       </ul>
       <span class="navbar-text">
-        Ultima actualizacion: 2020-03-17
+        Ultima actualizacion: 2020-03-19
       </span>
     </div>
   </nav>
@@ -45,15 +49,46 @@
   <div class="alert alert-warning" role="alert">
     Recuerda seguir las recomendaciones del gobierno y no salir de casa salvo necesidad.
   </div>
+  <canvas id="myChart" width="300" height="50"></canvas>
+    <script>
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['16/3', '17/3', '18/3', '19/3'],
+            datasets: [{
+                label: 'Total de infecciones por dia',
+                data: [9191, 11178, 13716, 17147],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+    </script>
     <div class="container-lg">
+	    <h4>+3431 afectados (2020-03-19)</h4>
       <button type="button" class="btn btn-primary">
-        Total afectados <span class="badge badge-light">11178</span>
+        Total afectados <span class="badge badge-light">17147</span>
       </button>
       <button type="button" class="btn btn-primary">
-        Total fallecidos <span class="badge badge-light">491</span>
+        Total fallecidos <span class="badge badge-light">767</span>
      </button>
      <button type="button" class="btn btn-primary">
-      Total en UCI <span class="badge badge-light">563</span>
+      Total en UCI <span class="badge badge-light">939</span>
    </button>
     </div>
   <br>
@@ -72,90 +107,90 @@
         
           <tr>
             <td>Andalucía</td>
-            <td>683</td>
-            <td>13</td>
-            <td>11</td>
-	    <td>129</td>
+            <td>1008</td>
+            <td>25</td>
+            <td>23</td>
+	    <td>149</td>
           </tr>
         
       
         
           <tr>
             <td>Aragón</td>
-            <td>207</td>
-            <td>9</td>
-            <td>12</td>
-	    <td>33</td>
+            <td>281</td>
+            <td>14</td>
+            <td>15</td>
+	    <td>55</td>
           </tr>
         
       
         
           <tr>
             <td>Asturias</td>
-            <td>193</td>
-            <td>5</td>
+            <td>292</td>
+            <td>6</td>
             <td>1</td>
-	    <td>16</td>
+	    <td>50</td>
           </tr>
         
       
         
           <tr>
             <td>Baleares</td>
-            <td>92</td>
-            <td>4</td>
-            <td>1</td>
-	    <td>19</td>
+            <td>169</td>
+            <td>7</td>
+            <td>2</td>
+	    <td>57</td>
           </tr>
         
       
         
           <tr>
             <td>Canarias</td>
-            <td>148</td>
-            <td>13</td>
-            <td>2</td>
-	    <td>29</td>
+            <td>220</td>
+            <td>23</td>
+            <td>3</td>
+	    <td>39</td>
           </tr>
         
       
         
           <tr>
             <td>Cantabria</td>
-            <td>58</td>
-            <td>2</td>
-            <td>0</td>
-	    <td>0</td>
+            <td>83</td>
+            <td>4</td>
+            <td>1</td>
+	    <td>15</td>
           </tr>
         
       
         
           <tr>
             <td>Castilla-La Mancha</td>
-            <td>567</td>
-            <td>23</td>
-            <td>17</td>
-	    <td>0</td>
+            <td>801</td>
+            <td>37</td>
+            <td>42</td>
+	    <td>126</td>
           </tr>
         
       
         
           <tr>
             <td>Castilla y León</td>
-            <td>431</td>
-            <td>24</td>
-            <td>12</td>
-	    <td>97</td>
+            <td>868</td>
+            <td>54</td>
+            <td>29</td>
+	    <td>200</td>
           </tr>
         
       
         
           <tr>
             <td>Cataluña</td>
-            <td>1394</td>
+            <td>2702</td>
             <td>33</td>
-            <td>18</td>
-	    <td>491</td>
+            <td>55</td>
+	    <td>836</td>
           </tr>
         
       
@@ -172,90 +207,90 @@
         
           <tr>
             <td>C Valenciana</td>
-            <td>541</td>
-            <td>27</td>
-            <td>13</td>
-	    <td>132</td>
+            <td>921</td>
+            <td>52</td>
+            <td>24</td>
+	    <td>195</td>
           </tr>
         
       
         
           <tr>
             <td>Extremadura</td>
-            <td>153</td>
-            <td>2</td>
+            <td>241</td>
             <td>3</td>
-	    <td>42</td>
-          </tr>
-        
-      
-        
-          <tr>
-            <td>Galicia</td>
-            <td>292</td>
-            <td>9</td>
-            <td>3</td>
+            <td>8</td>
 	    <td>47</td>
           </tr>
         
       
         
           <tr>
+            <td>Galicia</td>
+            <td>453</td>
+            <td>15</td>
+            <td>4</td>
+	    <td>112</td>
+          </tr>
+        
+      
+        
+          <tr>
             <td>Madrid</td>
-            <td>4871</td>
-            <td>340</td>
-            <td>355</td>
-	    <td>706</td>
+            <td>6777</td>
+            <td>590</td>
+            <td>498</td>
+	    <td>1140</td>
           </tr>
         
       
         
           <tr>
             <td>Melilla</td>
-            <td>17</td>
+            <td>23</td>
             <td>0</td>
             <td>0</td>
-	    <td>9</td>
+	    <td>3</td>
           </tr>
         
       
         
           <tr>
             <td>Murcia</td>
-            <td>97</td>
-            <td>3</td>
+            <td>167</td>
+            <td>6</td>
             <td>0</td>
-	    <td>20</td>
+	    <td>45</td>
           </tr>
         
       
         
           <tr>
             <td>Navarra</td>
-            <td>313</td>
-            <td>10</td>
-            <td>2</td>
-	    <td>39</td>
+            <td>482</td>
+            <td>11</td>
+            <td>4</td>
+	    <td>96</td>
           </tr>
         
       
         
           <tr>
             <td>País Vasco</td>
-            <td>765</td>
-            <td>33</td>
-            <td>36</td>
-	    <td>135</td>
+            <td>1190</td>
+            <td>44</td>
+            <td>53</td>
+	    <td>217</td>
           </tr>
         
       
         
           <tr>
             <td>La Rioja</td>
-            <td>355</td>
-            <td>13</td>
+            <td>468</td>
+            <td>15</td>
             <td>5</td>
-	    <td>43</td>
+	    <td>49</td>
           </tr>
         
       

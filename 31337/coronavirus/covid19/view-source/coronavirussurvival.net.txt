@@ -418,7 +418,7 @@ service imunify360-captchaserver-nginx restart
             </div>
 
             <p class="cap_mess cap_text text-center">
-                We have noticed an unusual activity from your <b>IP 94.102.51.78</b> and blocked access to this website.
+                We have noticed an unusual activity from your <b>IP 23.129.64.189</b> and blocked access to this website.
             </p>
 
             <p class="cap_mess cap_text text-center">
@@ -516,7 +516,7 @@ service imunify360-captchaserver-nginx restart
                 if (data['success']) {
                     captchaIsPassed = true;
                     $("#text").text(
-                        "IP 94.102.51.78 has been unblocked"
+                        "IP 23.129.64.189 has been unblocked"
                     );
                     setTimeout(do_reload, 1000);
                 } else {

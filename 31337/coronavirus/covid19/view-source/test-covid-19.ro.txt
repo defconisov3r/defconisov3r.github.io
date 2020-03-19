@@ -1,0 +1,1804 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+		<title>Aplicatie online / Chestionar statistic Coronavirus [COVID&#x2d;19]</title>
+<style type="text/css" media="screen">#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active,#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active:hover,body #booked-profile-page input[type=submit].button-primary:hover,body .booked-list-view button.button:hover, body .booked-list-view input[type=submit].button-primary:hover,body table.booked-calendar input[type=submit].button-primary:hover,body .booked-modal input[type=submit].button-primary:hover,body table.booked-calendar th,body table.booked-calendar thead,body table.booked-calendar thead th,body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover,body #booked-profile-page .booked-profile-header,body #booked-profile-page .booked-tabs li.active a,body #booked-profile-page .booked-tabs li.active a:hover,body #booked-profile-page .appt-block .google-cal-button > a:hover,#ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header{ background:#c4f2d4 !important; }body #booked-profile-page input[type=submit].button-primary:hover,body table.booked-calendar input[type=submit].button-primary:hover,body .booked-list-view button.button:hover, body .booked-list-view input[type=submit].button-primary:hover,body .booked-modal input[type=submit].button-primary:hover,body table.booked-calendar th,body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover,body #booked-profile-page .booked-profile-header,body #booked-profile-page .appt-block .google-cal-button > a:hover{ border-color:#c4f2d4 !important; }body table.booked-calendar tr.days,body table.booked-calendar tr.days th,body .booked-calendarSwitcher.calendar,body #booked-profile-page .booked-tabs,#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar thead,#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar thead th{ background:#039146 !important; }body table.booked-calendar tr.days th,body #booked-profile-page .booked-tabs{ border-color:#039146 !important; }#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td.ui-datepicker-today a,#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td.ui-datepicker-today a:hover,body #booked-profile-page input[type=submit].button-primary,body table.booked-calendar input[type=submit].button-primary,body .booked-list-view button.button, body .booked-list-view input[type=submit].button-primary,body .booked-list-view button.button, body .booked-list-view input[type=submit].button-primary,body .booked-modal input[type=submit].button-primary,body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button,body #booked-profile-page .booked-profile-appt-list .appt-block.approved .status-block,body #booked-profile-page .appt-block .google-cal-button > a,body .booked-modal p.booked-title-bar,body table.booked-calendar td:hover .date span,body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active,body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active:hover,.booked-ms-modal .booked-book-appt /* Multi-Slot Booking */{ background:#56c477; }body #booked-profile-page input[type=submit].button-primary,body table.booked-calendar input[type=submit].button-primary,body .booked-list-view button.button, body .booked-list-view input[type=submit].button-primary,body .booked-list-view button.button, body .booked-list-view input[type=submit].button-primary,body .booked-modal input[type=submit].button-primary,body #booked-profile-page .appt-block .google-cal-button > a,body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button,body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active,body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active:hover{ border-color:#56c477; }body .booked-modal .bm-window p i.fa,body .booked-modal .bm-window a,body .booked-appt-list .booked-public-appointment-title,body .booked-modal .bm-window p.appointment-title,.booked-ms-modal.visible:hover .booked-book-appt{ color:#56c477; }.booked-appt-list .timeslot.has-title .booked-public-appointment-title { color:inherit; }</style>
+<!-- The SEO Framework by Sybre Waaijer -->
+<meta name="robots" content="max-snippet:-1,max-image-preview:standard,max-video-preview:-1" />
+<meta name="description" content="Descopera aplicatia de informare Quiz COVID&#x2d;19. Completeaza chestionarul si informeaza&#x2d;te corect despre CORONAVIRUS! #sanatatepentrutoti" />
+<meta property="og:image" content="https://test-covid-19.ro/wp-content/uploads/2020/03/logo1.jpg" />
+<meta property="og:image" content="https://test-covid-19.ro/wp-content/uploads/2020/03/logo2.jpg" />
+<meta property="og:image" content="https://test-covid-19.ro/wp-content/uploads/2020/03/logo3.jpg" />
+<meta property="og:image" content="https://test-covid-19.ro/wp-content/uploads/2020/03/logo4.jpg" />
+<meta property="og:image" content="https://test-covid-19.ro/wp-content/uploads/2020/03/packages.png" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Aplicatie online / Chestionar statistic Coronavirus [COVID&#x2d;19]" />
+<meta property="og:description" content="Descopera aplicatia de informare Quiz COVID&#x2d;19. Completeaza chestionarul si informeaza&#x2d;te corect despre CORONAVIRUS! #sanatatepentrutoti" />
+<meta property="og:url" content="https://test-covid-19.ro/" />
+<meta property="og:site_name" content="QUIZ CORONAVIRUS &#8211; COVID-19" />
+<meta property="fb:app_id" content="802273913617318" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Aplicatie online / Chestionar statistic Coronavirus [COVID&#x2d;19]" />
+<meta name="twitter:description" content="Descopera aplicatia de informare Quiz COVID&#x2d;19. Completeaza chestionarul si informeaza&#x2d;te corect despre CORONAVIRUS! #sanatatepentrutoti" />
+<meta name="twitter:image" content="https://test-covid-19.ro/wp-content/uploads/2020/03/logo1.jpg" />
+<link rel="canonical" href="https://test-covid-19.ro/" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","url":"https://test-covid-19.ro/","name":"QUIZ CORONAVIRUS &#8211; COVID-19","potentialAction":{"@type":"SearchAction","target":"https://test-covid-19.ro/search/{search_term_string}","query-input":"required name=search_term_string"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","url":"https://test-covid-19.ro/","name":"QUIZ CORONAVIRUS &#8211; COVID-19"}</script>
+<!-- / The SEO Framework by Sybre Waaijer | 1.52ms meta | 1.61ms boot -->
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="QUIZ CORONAVIRUS - COVID-19 &raquo; Feed" href="https://test-covid-19.ro/feed/" />
+<link rel="alternate" type="application/rss+xml" title="QUIZ CORONAVIRUS - COVID-19 &raquo; Comments Feed" href="https://test-covid-19.ro/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/test-covid-19.ro\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='preload stylesheet' as='style'
+id='wc-block-style' href='https://test-covid-19.ro/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/style.css?ver=2.5.14' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='booked-icons' href='https://test-covid-19.ro/wp-content/plugins/booked/assets/css/icons.css?ver=2.2.6' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='booked-tooltipster' href='https://test-covid-19.ro/wp-content/plugins/booked/assets/js/tooltipster/css/tooltipster.css?ver=3.3.0' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='booked-tooltipster-theme' href='https://test-covid-19.ro/wp-content/plugins/booked/assets/js/tooltipster/css/themes/tooltipster-light.css?ver=3.3.0' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='booked-animations' href='https://test-covid-19.ro/wp-content/plugins/booked/assets/css/animations.css?ver=2.2.6' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='booked-styles' href='https://test-covid-19.ro/wp-content/plugins/booked/assets/css/styles.css?ver=2.2.6' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='booked-responsive' href='https://test-covid-19.ro/wp-content/plugins/booked/assets/css/responsive.css?ver=2.2.6' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='contact-form-7' href='https://test-covid-19.ro/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.7' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='i-agree-popups' href='https://test-covid-19.ro/wp-content/plugins/i-agree-popups/includes/assets/css/i-agree-popups.css?ver=5.3.2' type='text/css' media='screen' /><link rel='preload stylesheet' as='style'
+id='theme.css' href='https://test-covid-19.ro/wp-content/plugins/popup-builder/public/css/theme.css?ver=3.64.1' type='text/css' media='all' /><style id='woocommerce-inline-inline-css' type='text/css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='preload stylesheet' as='style'
+id='wpdp-style2' href='https://test-covid-19.ro/wp-content/plugins/wp-datepicker/css/front-styles.css?ver=5.3.2' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='wpdp-style3' href='https://test-covid-19.ro/wp-content/plugins/wp-datepicker/css/jquery-ui.css?ver=5.3.2' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='booked-fea-styles' href='https://test-covid-19.ro/wp-content/plugins/booked-frontend-agents/css/styles.css?ver=2.2.6' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='ninedok-general' href='https://test-covid-19.ro/wp-content/themes/ninedok/assets/css/general.css?ver=5.3.2' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='ninedok-shop' href='https://test-covid-19.ro/wp-content/themes/ninedok/assets/css/shop.css?ver=5.3.2' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='ninedok-style' href='https://test-covid-19.ro/wp-content/themes/ninedok/style.css?ver=5.3.2' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='elementor-icons' href='https://test-covid-19.ro/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.6.2' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='elementor-animations' href='https://test-covid-19.ro/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=2.9.6' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='elementor-frontend' href='https://test-covid-19.ro/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=2.9.6' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='elementor-global' href='https://test-covid-19.ro/wp-content/uploads/elementor/css/global.css?ver=1584285262' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='elementor-post-5125' href='https://test-covid-19.ro/wp-content/uploads/elementor/css/post-5125.css?ver=1584457844' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='elementor-post-5' href='https://test-covid-19.ro/wp-content/uploads/elementor/css/post-5.css?ver=1584383967' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='elementor-post-4172' href='https://test-covid-19.ro/wp-content/uploads/elementor/css/post-4172.css?ver=1584348504' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='booked-wc-fe-styles' href='https://test-covid-19.ro/wp-content/plugins/booked-woocommerce-payments//css/frontend-style.css?ver=5.3.2' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='preloader-with_text' href='https://test-covid-19.ro/wp-content/plugins/aheto/assets/frontend/css/preloader-with_text.css' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='aheto_google_fonts' href='https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&#038;display=swap' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='elegant' href='https://test-covid-19.ro/wp-content/plugins/aheto/assets/fonts/elegant.min.css' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='ionicons' href='https://test-covid-19.ro/wp-content/plugins/aheto/assets/fonts/ionicons.min.css' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='style-main' href='https://test-covid-19.ro/wp-content/plugins/aheto/assets/frontend/css/style.css' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='style-skin' href='//test-covid-19.ro/wp-content/uploads/aheto-styles/aheto-ninedok.css?timestamp=1584039170' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='google-fonts-1' href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CAldrich%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.3.2&display=swap' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='elementor-icons-shared-0' href='https://test-covid-19.ro/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.12.0' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='elementor-icons-fa-solid' href='https://test-covid-19.ro/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.12.0' type='text/css' media='all' /><script type='text/javascript' src='https://test-covid-19.ro/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://test-covid-19.ro/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://test-covid-19.ro/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://test-covid-19.ro/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"dd\/mm\/yy","firstDay":1,"isRTL":false});});
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sgpbPublicUrl = "https:\/\/test-covid-19.ro\/wp-content\/plugins\/popup-builder\/public\/";
+var SGPB_JS_LOCALIZATION = {"imageSupportAlertMessage":"Only image files supported","areYouSure":"Are you sure?","addButtonSpinner":"Add","audioSupportAlertMessage":"Only audio files supported (e.g.: mp3, wav, m4a, ogg)","publishPopupBeforeElementor":"Please, publish the popup before starting to use Elementor with it!","publishPopupBeforeDivi":"Please, publish the popup before starting to use Divi Builder with it!","closeButtonAltText":"Close"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://test-covid-19.ro/wp-content/plugins/popup-builder/public/js/Popup.js?ver=3.64.1'></script>
+<script type='text/javascript' src='https://test-covid-19.ro/wp-content/plugins/popup-builder/public/js/PopupConfig.js?ver=3.64.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var SGPB_POPUP_PARAMS = {"popupTypeAgeRestriction":"ageRestriction","defaultThemeImages":{"1":"iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAADHElEQVQ4jaWVQU8bRxiGHxYHrwdbHW8gFhU5IKurWM0plTiQC1SqUFD6C7hEorfmSv9ChBC39NZDFCm3xrkl6gWoKjBCizgRoS0uh0Y1BjQ7ks3sGkK2B2MLY4dE7Xvd93v0zXzfvNsXxzG9VKlUprXWk8aYceAOkAOqwK4QYlNKuToyMvJbr9q+q1Ct9bflcvkRMCuEsNKZDIn+\/vb39+fn1Gs1jDEfgBf5fP6ZlHL5o9D9\/f0flFLzQgjXGf4SkRrgRn8ftm23PVEUcXYeY8JT1NE\/GGN8x3EWx8bGfml5EleAT27lckOZdBopv+h5LbZtYwOZwRTJREytXncPq9UnAC1wonVkpdT8rVxuSGZvkhlM9QRelZSS\/htJgKHDanU+m83+JaVctgDK5fIjIYSbSac\/G9hSZjBFJp1GCOFezIJEpVKZBmallEgp2+a\/373jT98H4CvX5fboKABr6+s0ooikbXN\/YqLdcRiGGGNmK5XKC0trPSmEsFKpzg5l9iZ7e3uUSiXevH5N7SRkbX2d1ZUVSqUSTjbb4b+ot7TWk5YxZjydyXRMuHWsBzMzABwdHfHH7yusr60BUCgUKBQKHX7btnEcB2PMuEVzsXvq9ugok1NTAGxvb3N6esrw8DDfTT\/o8l5q6o5F86V0ddrSN\/fuMTAwQL1eZ2dnh6\/v3v3UMHMWUH1\/dvZRR7H4io2NDXzfp9Fo8PPTp2itr4NWLWAXmi\/lqra2tnj58lcA5ubmSCaTNBoNFhYWuryX6nctIcSmUqoLqrVmaWkJANd1mZmZ4cfHjwHwfZ9isdgFVUohhNhMSClXjTE\/hWFoXd7TnbdvefjwewCmpiYBuD8xQfXggChqEEWNDmgYhgAfpJSrxHGM53nPPc+LgyCI\/4uCIIg9z4s9z3sexzEWQD6ffwb4QRBQOwmvG0KXaichQRAA+BecJlRKuew4zqJS6vj48OBT021La83x4QFKqWPHcRZbudqOvlZsKaXmoyhywzAklUo1o+5KnkZRRBiGaK175um1yQ9YjuMAzcfR2hClFMDnJf9l\/Z9\/1L81r78oUzK1YgAAAABJRU5ErkJggg==","2":"iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABWWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgpMwidZAAABWUlEQVQ4Ee2SS46CQBCGf8gAcgHFG+jGtfEWXIBHOBcKR+EScAQfG90RSGCGvyY9MtIuTFzMYippuqur6qO6qozPQfBGMd\/IEtQ\/8F7R2+0GLorqm9qv16vYlH6PAj7Gijqfz2fs93sYhoEwDLFcLsVE\/XQ6Icsy0eM4xmKxUGGya5tSVRWappHFYEIoCkZb27Yoy1Luxx8tcLVaYTabSYYMJrQoCtmpU2zbxnq9HrPkbAx1mAw2ry6XC9I0Rdd16Pv+23l4Ms\/8WRRF8DxvAtRmyFrN53MkSQLLsn41hbZnMNK1QBoYyEy5THPqpnkYw54Dj8cj8jyX4vOZYwBryknQyfTXgxedCavrWmJc14Xv+3AcR3Q25nA4\/HR\/DNYC1djw2YQEQYDNZiO1U1CODf0eRQvcbrfSFNVNDjbh7CobQigHerfbPfKgHZuJ1wsX2gxfiJ+4\/n3gF7OOrAbt6WEPAAAAAElFTkSuQmCC","3":"iVBORw0KGgoAAAANSUhEUgAAACcAAAAUCAMAAAA5k9QEAAAAllBMVEVHcEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC0tbUhISHFxcYICAitr7EqKipKSkrMzMzHyMqIiouQkZO9vb0QEBB7e3tDRESlpaapq61qamvBw8Tk5ebe3t\/R0tMZGRo6Ojp\/gIGgoqRSUlLq6uuZmZnW1te3ubt2d3hf8fIfAAAAEXRSTlMAzFVEMRFmd7vumd2qbCKID4nBdwUAAADPSURBVCjPhdLXEoIwFATQBSIIVkKxACrdXv7\/50RCDQj7krk7hwyTBERa6KNZEIDIwhjTxDV+EdUhJRCUIQNQmKCOVNVntmzKedZkwLyoj1Eu3Me9KOQWg8haw9yZGXTjmLJCBZfi8+0+g06S0AOb57wTapimL7tgusK7qV7B\/a7cbch9vMg0t6MupO+n7XmnERcGtmsZAaWnQWfcfMfKFt92eo8PUFh\/uVq5P1psXvJu0nvFU+DPhu2QroPWZTL6suKUKqI\/ktb4yZnSfFFfkB8jKwCptUAAAAAASUVORK5CYII=","5":"iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAAAXNSR0IArs4c6QAAAVlpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KTMInWQAAAVRJREFUOBGtVDuugzAQXBwhIA1UUKWgoOMAnIETcJwchxNwEgokSiqQUtAEEL\/HWNongwJ6T8oWxti7w+CZtfZ6vdZ5nilNU2rblpIkIdd1qXu\/aVkW4hBCkHW\/U9M0MjcIAorjmMZxJMEA2ByGQSZgjgIUIo4AyMvznLIsI13X6fZ4PJ4o4gBoURTk+z45jkPrxsa0rF8GAOBAHdgLDMdQGZ0BcE1ZlqRtw4rzUL\/ACYZhyPOpqoqXdk\/s4wy1jckKWmdAuyrlhQEggoAKmAARG38JFQD1AjL+B+gIgHqpISZD35PneZLVFRv4A3nIZx9JEPjAME2q61pKeQUCNZCHfMVHeyd+UkkFVeVnQ35HnSt5cYiboz+qpjK6bfI+P\/0CqxBFkWwBtAJaQg1uEWHbtrou5wwA\/\/Rdd+kjqCW49RlJBYB\/pmk69VEYhvI60L5xn\/wAjtgb\/fA0ZZYAAAAASUVORK5CYII=","6":"iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAA6HWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgICAgICAgICAgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIgogICAgICAgICAgICB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIKICAgICAgICAgICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmV4aWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vZXhpZi8xLjAvIj4KICAgICAgICAgPHhtcDpDcmVhdGVEYXRlPjIwMTgtMDItMjdUMTQ6MTQ6MzgrMDQ6MDA8L3htcDpDcmVhdGVEYXRlPgogICAgICAgICA8eG1wOk1vZGlmeURhdGU+MjAxOC0wMi0yN1QxNDoxNjoxMSswNDowMDwveG1wOk1vZGlmeURhdGU+CiAgICAgICAgIDx4bXA6TWV0YWRhdGFEYXRlPjIwMTgtMDItMjdUMTQ6MTY6MTErMDQ6MDA8L3htcDpNZXRhZGF0YURhdGU+CiAgICAgICAgIDx4bXA6Q3JlYXRvclRvb2w+QWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpPC94bXA6Q3JlYXRvclRvb2w+CiAgICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2UvcG5nPC9kYzpmb3JtYXQ+CiAgICAgICAgIDxwaG90b3Nob3A6Q29sb3JNb2RlPjM8L3Bob3Rvc2hvcDpDb2xvck1vZGU+CiAgICAgICAgIDx4bXBNTTpJbnN0YW5jZUlEPnhtcC5paWQ6MWNlZWE3YWMtNTIxMC02MjQ2LWFiMDQtZTA1YmEwYjljOTQ1PC94bXBNTTpJbnN0YW5jZUlEPgogICAgICAgICA8eG1wTU06RG9jdW1lbnRJRD5hZG9iZTpkb2NpZDpwaG90b3Nob3A6MzFlZDk3OGEtMWJhNy0xMWU4LTg0YTctZjA4OTdlNjEzNGM0PC94bXBNTTpEb2N1bWVudElEPgogICAgICAgICA8eG1wTU06T3JpZ2luYWxEb2N1bWVudElEPnhtcC5kaWQ6OWFmYzkxOTgtOWNlNC1lZDQ4LThlNjYtNmFkMzdiNGFmOTQxPC94bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ+CiAgICAgICAgIDx4bXBNTTpIaXN0b3J5PgogICAgICAgICAgICA8cmRmOlNlcT4KICAgICAgICAgICAgICAgPHJkZjpsaSByZGY6cGFyc2VUeXBlPSJSZXNvdXJjZSI+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDphY3Rpb24+c2F2ZWQ8L3N0RXZ0OmFjdGlvbj4KICAgICAgICAgICAgICAgICAgPHN0RXZ0Omluc3RhbmNlSUQ+eG1wLmlpZDo5YWZjOTE5OC05Y2U0LWVkNDgtOGU2Ni02YWQzN2I0YWY5NDE8L3N0RXZ0Omluc3RhbmNlSUQ+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDp3aGVuPjIwMTgtMDItMjdUMTQ6MTY6MTErMDQ6MDA8L3N0RXZ0OndoZW4+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDpzb2Z0d2FyZUFnZW50PkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE3IChXaW5kb3dzKTwvc3RFdnQ6c29mdHdhcmVBZ2VudD4KICAgICAgICAgICAgICAgICAgPHN0RXZ0OmNoYW5nZWQ+Lzwvc3RFdnQ6Y2hhbmdlZD4KICAgICAgICAgICAgICAgPC9yZGY6bGk+CiAgICAgICAgICAgICAgIDxyZGY6bGkgcmRmOnBhcnNlVHlwZT0iUmVzb3VyY2UiPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6YWN0aW9uPnNhdmVkPC9zdEV2dDphY3Rpb24+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDppbnN0YW5jZUlEPnhtcC5paWQ6MWNlZWE3YWMtNTIxMC02MjQ2LWFiMDQtZTA1YmEwYjljOTQ1PC9zdEV2dDppbnN0YW5jZUlEPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6d2hlbj4yMDE4LTAyLTI3VDE0OjE2OjExKzA0OjAwPC9zdEV2dDp3aGVuPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6c29mdHdhcmVBZ2VudD5BZG9iZSBQaG90b3Nob3AgQ0MgMjAxNyAoV2luZG93cyk8L3N0RXZ0OnNvZnR3YXJlQWdlbnQ+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDpjaGFuZ2VkPi88L3N0RXZ0OmNoYW5nZWQ+CiAgICAgICAgICAgICAgIDwvcmRmOmxpPgogICAgICAgICAgICA8L3JkZjpTZXE+CiAgICAgICAgIDwveG1wTU06SGlzdG9yeT4KICAgICAgICAgPHRpZmY6T3JpZW50YXRpb24+MTwvdGlmZjpPcmllbnRhdGlvbj4KICAgICAgICAgPHRpZmY6WFJlc29sdXRpb24+NzIwMDAwLzEwMDAwPC90aWZmOlhSZXNvbHV0aW9uPgogICAgICAgICA8dGlmZjpZUmVzb2x1dGlvbj43MjAwMDAvMTAwMDA8L3RpZmY6WVJlc29sdXRpb24+CiAgICAgICAgIDx0aWZmOlJlc29sdXRpb25Vbml0PjI8L3RpZmY6UmVzb2x1dGlvblVuaXQ+CiAgICAgICAgIDxleGlmOkNvbG9yU3BhY2U+NjU1MzU8L2V4aWY6Q29sb3JTcGFjZT4KICAgICAgICAgPGV4aWY6UGl4ZWxYRGltZW5zaW9uPjMwPC9leGlmOlBpeGVsWERpbWVuc2lvbj4KICAgICAgICAgPGV4aWY6UGl4ZWxZRGltZW5zaW9uPjMwPC9leGlmOlBpeGVsWURpbWVuc2lvbj4KICAgICAgPC9yZGY6RGVzY3JpcHRpb24+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgCjw\/eHBhY2tldCBlbmQ9InciPz7HmtNXAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAjWSURBVHjanFd9bFPXFf\/d9\/zsZ\/v5ObZfAnbIUpI0fCxMhGlJkxaNKpFAKkqntUIIaYRJJR9FiEGoJqoOov1RMVE1UxvSsoIqbVJVCoJuomVlypYh8aERWEoZ6dwSlYJxkmcndj7s5\/d19k9s4TZM64509a7ufff+zjn3nHN\/l+HRwhhjICIAIAAIBoNuv9\/v1XVdBCAA4Fwul+F2u\/XZ2VnNNM2ZiYkJ27Is\/F\/CGGMcxzHGGHM6nS5FUb5XWVnZuHPnzhey2ewJIjpPRKNEdJeI\/kVEf83lcr+bn5\/\/6c6dO6uXL1\/u5TjuO2MyQRB4nuedHo9naWtra9ulS5fO0oJkMhlSVZXi8TjFYjGKx+Okqipls9n8Lyki+k1XV9fampqaPDr7FtA3+zzPcwAckUjk+z09PZ179uzZAcD54MEDOxqN2oODg45bt25hamoKuq7D5XIhGAyivr4ejY2NZl1dHR+JRBiADBHt37Jlyx9Onz49t7A\/LaYAA+AAEFyzZk3LtWvXPiYimp6eppMnTxotLS3k8\/koHA5TRUUFVVZWFlpFRQUtXbqUZFmmTZs20ZkzZ\/RUKpX3QP\/WrVuVR1rO87wAwBeJRDZcuHDhBhHR119\/Tdu3bydJkigSiVB1dTVVVVU9slVXV1MkEiFZlqmjo4NisVge\/PiWLVskp9NZfKZOp5MnIpdlWSuOHj36i87Ozp89ePAA3d3duHDhAsrLy\/PR\/T9LPB5HW1sb+vr6EA6HAeClcDjcNz4+bgEAD4C5XC53LpdbsmHDhrY33nhjXyaTsXt6etiHH36IioqK7wwKAH6\/H8PDw0gmk1i\/fj253e6GL7\/88tytW7cmLctinCAIfCaTkWVZXnfgwIHNAHDmzBnr5MmTWLZsGWzbBsdxME0TiUQCqqpC13Xk04XjOORyOUxOTiKRSMA0TTDGYNs2IpEI3nvvPZw7d44AlLz99tsvSJIkAiBeFEUvEZU3Nze39Pb2botGo+zQoUN8JpOBw+EAABiGAZ\/Ph40bN2Lt2rWIxWKYmpqCJEmYnp6Goihoa2tDbW0tVFWFpmkFxQRBwMTEBGtubkYgEPjh\/fv3\/zQyMhIHgDJFUX5y6tSpvxERvf766yQIAtXU1BSCxuv1Und3dz5QaGBggMLhMImiSEuWLKFjx44V5trb20mW5aKA83g8dOzYMbIsi4joV5WVlW4OgOx2u6uam5t\/MDs7i88++wyhUAi2bRfOi4gK1gNAd3c3enp6oCgK9u\/fj46OjsJ\/PM8XnTURIRAIYGRkBHNzc7Asq9Xr9fodAEoFQSiNRCKusbExXLt2DS6Xq2hxMBjERx99hJqaGuzevRuMMXR2dqK5uRn19fUAANM00dfXh6GhIfj9\/qL1DocDw8PDmJ2dhSzL6zRN8zgACBzHuQF4NU3D5OQkvF5v0UJRFJFOp3H48GHkcjns2LEDpaWlaGpqAgCMj4\/j+PHj6O\/vBxFBluUij\/E8j\/v370PXdQCQNE1zcwAEp9MpAIBt24umjm3bCAQCSCQSePPNN3H37t2i+Tt37uDo0aNIp9MoKSkpAs2LpmmwLIsWMoHjAIg8z3vzqbHYrcJxHKamphAMBrFnzx5UV1cXza9cuRK7d++GLMtIpVKL7uFwOMBYoWKSAwBpmjYDICMIgsfr9cKyrKIgyeVy8Pv92Lt3L3bt2lUY+\/zzz7F69WqEQiG8\/PLLcLlceOutt5DL5SAIQpHHFEWB0+lkAFIALA6Akc1mM6qqpgOBAFavXg3DMIq0TSaT2Lx5cwEUAAYGBvD888\/jnXfeKYz19PTg6aefRiqVKlpvWRaqqqrgdrsxMzMzbZqmwQGYm5mZyV66dGkmFArhySefRCqVetgtYIxB07Qi0CNHjmBsbAyvvvoqTpw4UeSdh13NGMPc3BwaGhrg9\/uh6\/q\/LcvK8oyxkK7rwVwuV7J169aVbrcbn3zyCUzTLGwgiiLGx8cRjUYxNDSEd999F3Nzc1i2bBnS6TQ+\/fRTxGIxnD17FpcvXy6KFdu2IUkSXnnlFZSXl2Pfvn29w8PD\/2QAKgH8SFGUpqtXr25\/7LHHlL1792JgYADLly8v1Gpd15FIJArnJYpiYS6bzSKZTILneYRCIQiCACICx3G4d+8edu3ahSNHjoDjuIQkST+en5+\/zXs8HrIsS9Y0zZ9MJtlzzz234vHHH8fo6Cii0SgkSSoASJIEn88HnucLaZevaj6fD5IkFSxljCGRSKC1tRW9vb0IBALo6Oj49cjIyN9N09R4APZCDZVHR0edq1atWvrUU08Famtrcf78eaiqCp\/P952uRo7joKoqysvL0d\/fjxUrVuDmzZt\/6erqOmwYxgQAxtu2TR6PxzAMg7dt2zs8PGw0NjaWPvHEE3JDQwO++OIL3LhxA5IkfasOL8IUYZom7t27h9bWVvT19WHdunWIx+NT7e3tB8bHx0eIyCIixjPGGBHZRKQzxrjp6WnH7du3cy0tLUvXrFnjbWhogG3b+OqrrxCPx+FwOMDzfCHq89xb0zQkEgkoioJt27bh4MGDqKurg6qq0+3t7b1DQ0Mf27adyReQh4mek+O4CgAtAF6qq6v7\/fvvv3+HiEjXdbp48SIdPHiQNm7cSCUlJSSKIkmSRKIoUiAQoGeeeYYOHTpEV65cIV3XiYhocHBwpKmp6ecAyvJsJ0\/42EPsjwA4GWNlRFQLYFUwGKzatGlTzWuvvbY+HA4HACAWi2FychKGYdiWZVkcx\/Eul4srKytDJBIBAMzOzqovvvjiB4ODg3+Ox+P\/ADAFwPxvFBcAnAsaNgDYBuCXVVVVv3322Wf\/ePHixZtElKTFJXH9+vWxzs7OD2pra7sA1AMoWdiPfZPaskXAyeFwOJxOpzuTyZQu5LkCoLSsrEwpLS1dIoqijzFGjDHONE3dMIyUZVnJdDqtxuPxO0QUdblcKcuycqZpGotZyh71WFsgbAIACYAPQACAZ6EvALABcAB0AGkA8wCmF75ZjuN0Iip69D0s\/xkAalh5iwp88nkAAAAASUVORK5CYII="},"homePageUrl":"https:\/\/test-covid-19.ro\/","isPreview":"","convertedIdsReverse":[],"dontShowPopupExpireTime":"365","conditionalJsClasses":[]};
+var SGPB_JS_PACKAGES = {"packages":{"current":1,"free":1,"silver":2,"gold":3,"platinum":4},"extensions":{"geo-targeting":false,"advanced-closing":false}};
+var SGPB_JS_PARAMS = {"ajaxUrl":"https:\/\/test-covid-19.ro\/wp-admin\/admin-ajax.php","nonce":"6a40f93384"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://test-covid-19.ro/wp-content/plugins/popup-builder/public/js/PopupBuilder.js?ver=3.64.1'></script>
+<script src='https://test-covid-19.ro/wp-content/plugins/wp-datepicker/js/scripts-front.js?ver=5.3.2' defer></script><script type='text/javascript'>
+/* <![CDATA[ */
+var booked_wc_variables = {"prefix":"booked_wc_","ajaxurl":"https:\/\/test-covid-19.ro\/wp-admin\/admin-ajax.php","i18n_confirm_appt_edit":"Are you sure you want to change the appointment date? By doing so, the appointment date will need to be approved again.","i18n_pay":"Are you sure you want to add the appointment to cart and go to checkout?","i18n_mark_paid":"Are you sure you want to mark this appointment as \"Paid\"?","i18n_paid":"Paid","i18n_awaiting_payment":"Awaiting Payment","checkout_page":"https:\/\/test-covid-19.ro\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://test-covid-19.ro/wp-content/plugins/booked-woocommerce-payments//js/frontend-functions.js?ver=5.3.2'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://test-covid-19.ro/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://test-covid-19.ro/wp-includes/wlwmanifest.xml" /> 
+<link rel="alternate" type="application/json+oembed" href="https://test-covid-19.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftest-covid-19.ro%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://test-covid-19.ro/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftest-covid-19.ro%2F&#038;format=xml" />
+
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136355449-36"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-136355449-36');
+		</script>
+
+		<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style type="text/css">body .aheto-footer{background-color:#223645;}body .aheto-footer, body .aheto-footer p{color:#bcc0c3;}body .aheto-footer a{color:#bcc0c3;}</style><style type="text/css"></style>		<style type="text/css" id="wp-custom-css">
+			#gform_wrapper_2.gf_browser_chrome, 
+#gform_wrapper_2.gf_browser_safari, 
+#gform_wrapper_2.gf_browser_opera, 
+#gform_wrapper_2.gf_browser_ie, 
+#gform_wrapper_2.gf_browser_unknown {
+    display: block !important;
+}
+
+.gform_wrapper .top_label label.gfield_label, .gform_wrapper .top_label legend.gfield_label {
+    text-transform: initial;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.73;
+    color: rgba(34,54,69,0.6);
+    font-style: normal;
+}
+
+.gform_wrapper ul.gform_fields li.gfield {
+    margin-bottom: 40px;
+}
+
+body .gform_wrapper ul li.field_description_below div.ginput_container_checkbox, body .gform_wrapper ul li.field_description_below div.ginput_container_radio {
+    margin-top: 5px !important;
+}
+
+.gfield_radio {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gf_stylespro li#field_3_13.gf_half {
+    width: 100%;
+}
+
+.gfield_radio > li {
+    width: 33%;
+    min-width: 190px;
+}
+
+.gfield_radio > li > label, .sp_material input[type="checkbox"]:not(old) + label, .sp_material input[type="checkbox"]:not(old) + span + label, .sp_material input[type="radio"]:not(old) + label, .sp_material input[type="radio"]:not(old) + span + label {
+    width: 100% !important;
+    min-height: 40px;
+    display: flex !important;
+    align-items: center !important;
+    padding-left: 10px !important;
+}
+
+.gfsp_choice_img label {
+    display: flex;
+    align-items: center;
+}
+
+.gfsp_choice_img .o_label {
+    display: flex !important;
+    align-items: center;
+}
+
+.o_label .o_img_wr {
+    width: unset;
+    height: 50px;
+    padding: 0 5px;
+    display: none;
+}
+
+.o_img_wr img {
+    height: 100%;
+    object-fit: contain;
+}
+
+.o_text {
+    flex-wrap: nowrap;
+    display: inline-block !important;
+    width: 100%;
+}
+
+
+.gfield_radio > li > label, .sp_material input[type="checkbox"]:not(old) + label, .sp_material input[type="checkbox"]:not(old) + span + label, .sp_material input[type="radio"]:not(old) + label, .sp_material input[type="radio"]:not(old) + span + label {
+  color: #333;
+  line-height: 1.3rem !important;
+  border-radius: 4px;
+  padding: 5px 10px 5px 10px !important; 
+}
+
+.sp_material input[type="radio"]:not(old) + label::before, 
+.sp_material input[type="radio"]:not(old) + span + label::before, 
+.gf_stylespro .gfsp_flip input[type="radio"]:not(old) + label::before {
+  display: none !important;
+}
+
+.gf_stylespro .gfsp_flip input[type="checkbox"]:not(old) + label::after, .gf_stylespro .gfsp_flip input[type="radio"]:not(old) + label::after {
+  display: none;
+}
+
+.gf_stylespro .gfsp_flip .o_label {
+    margin-left: 0;
+}
+
+.sp_material input[type="checkbox"]:not(old):checked + label, .sp_material input[type="checkbox"]:not(old):checked + span + label, .sp_material input[type="radio"]:not(old):checked + label, .sp_material input[type="radio"]:not(old):checked + span + label {
+  background-color: #def1f1;
+  border-color: #25b5b1;
+  color: #1c8885;
+  font-weight: 400 !important;
+}
+
+.gfield select[multiple=multiple] {
+    max-height: unset;
+    min-height: 520px;
+    border: none;
+    display: flex !important;
+    overflow: hidden;
+}
+
+.gfield select[multiple=multiple]:focus {
+    box-shadow: none;
+}
+
+.gfield select[multiple=multiple] option {
+    display: block;
+    border: 1px solid #25b5b1;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    width: 80%;
+    padding: 10px 15px;
+    font-size: .875rem;
+}
+
+.sp_material input[type="checkbox"]:not(old) + label.gfield_consent_label {
+    display: block !important;
+    font-family: Poppins;
+    border: none;
+}
+
+.sp_material .gform_body input[type=checkbox]:not(old)+label:before {
+    color: transparent;
+  	width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.sp_material input[type=checkbox]:not(old)+label, .sp_material input[type=radio]:not(old)+label {
+    border: 1px solid #ddd;
+}
+
+.gform_wrapper .gform_footer input.button {
+    background: #d9534f !important;
+    color: #fff !important;
+    padding: 15px 30px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-family: "Roboto", Sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.gfield_consent_label a {
+    cursor: pointer;
+    color: #25b5b1;
+}
+
+@media (max-width: 767px) {
+  .gfield_radio > li {
+    width: 49%;
+    min-width: unset;
+  }
+
+	.gform_wrapper .sp_material .gfield_checkbox li, .gform_wrapper .sp_material .gfield_radio li {
+    margin-bottom: 5px;
+}
+
+.gform_wrapper .sp_material .gfield_checkbox li input, .gform_wrapper .sp_material .gfield_checkbox li input[type=checkbox], .gform_wrapper .sp_material .gfield_radio li input[type=radio] {
+    display: none;
+}
+}
+
+@media (max-width: 500px) {
+	.gform_wrapper .sp_material .gfield_checkbox li, .gform_wrapper .sp_material .gfield_radio li 	{
+    width: 100%;
+	}
+}		</style>
+		    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body data-rsssl=1 class="home page-template page-template-aheto_canvas page page-id-5125 theme-ninedok woocommerce-no-js no-sidebar elementor-default elementor-kit-5126 elementor-page elementor-page-5125">
+
+                    <div class="aheto-preloader">
+                        <div class="aheto-preloader__wrap">
+                            <svg viewBox="0 0 600 300">
+                                <symbol id="aheto-preloader__text">
+                                    <text text-anchor="middle" x="50%" y="50%"
+                                          dy="0.35em">[COVID-19]</text>
+                                </symbol>
+                                <use class="aheto-preloader__text" xlink:href="#aheto-preloader__text"></use>
+                                <use class="aheto-preloader__text" xlink:href="#aheto-preloader__text"></use>
+                                <use class="aheto-preloader__text" xlink:href="#aheto-preloader__text"></use>
+                            </svg>
+                        </div>
+                    </div>
+					    <header id="masthead" itemscope="itemscope" itemtype="https://schema.org/WPHeader"
+            class="aheto-header  ">
+        <div class="container">
+
+					<div data-elementor-type="wp-post" data-elementor-id="5" class="elementor elementor-5" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-38a8bb5 elementor-section-stretched elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="38a8bb5" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-d5cb2ca elementor-column elementor-col-100 elementor-top-column" data-id="d5cb2ca" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-286026e elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="286026e" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-4357887 elementor-column elementor-col-100 elementor-inner-column" data-id="4357887" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-de8bfce elementor-widget elementor-widget-aheto_navbar" data-id="de8bfce" data-element_type="widget" data-widget_type="aheto_navbar.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto_navbar_5e73b963e93ea  aheto-navbar aheto-navbar--ninedok-modern two-columns ">
+	<div class="aheto-navbar--inner">
+
+					<div class="aheto-navbar--left ">
+
+				
+					<div class="aheto-navbar--item">
+
+						
+
+													<span class="aheto-navbar--item-label">
+
+                                 
+								
+								Informatii Coronavirus:                            </span>
+						
+													<a href="tel:0800800358"
+							   class="aheto-navbar--item-link">0800 800 358</a>
+						
+						
+						
+					</div>
+
+				
+					<div class="aheto-navbar--item">
+
+						
+
+													<span class="aheto-navbar--item-label">
+
+                                 
+								
+								Urgente:                            </span>
+						
+													<a href="tel:112"
+							   class="aheto-navbar--item-link">112</a>
+						
+						
+						
+					</div>
+
+				
+
+			</div>
+					<div class="aheto-navbar--right ">
+
+				
+					<div class="aheto-navbar--item">
+
+						
+						
+						
+						
+													<a href="http://www.ms.ro/coronavirus-covid-19/"
+							   class="aheto-navbar--item-link">Ministerul Sanatatii</a>
+						
+					</div>
+
+				
+					<div class="aheto-navbar--item">
+
+						
+						
+						
+						
+													<a href="https://www.mai.gov.ro/"
+							   class="aheto-navbar--item-link">Ministerul Afacerilor Interne</a>
+						
+					</div>
+
+				
+			</div>
+		
+	</div>
+</div>
+
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-25f3a14 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="25f3a14" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-f5d6978 elementor-column elementor-col-100 elementor-top-column" data-id="f5d6978" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d467580 elementor-widget elementor-widget-aheto_navigation" data-id="d467580" data-element_type="widget" data-widget_type="aheto_navigation.default">
+				<div class="elementor-widget-container">
+			<div class="aheto_navigation_5e73b963eaaec  main-header main-header--ninedok main-header-js transparent_dark">
+	<div class="main-header__main-line">
+		<div class="aheto-logo main-header__logo">
+			<a href="https://test-covid-19.ro/">
+				<img width="353" height="261" src="https://test-covid-19.ro/wp-content/uploads/2019/09/logo-corona.png" class="aheto-logo__image" alt="" srcset="https://test-covid-19.ro/wp-content/uploads/2019/09/logo-corona.png 353w, https://test-covid-19.ro/wp-content/uploads/2019/09/logo-corona-300x222.png 300w" sizes="(max-width: 353px) 100vw, 353px" /><img width="353" height="261" src="https://test-covid-19.ro/wp-content/uploads/2019/09/logo-corona.png" class="aheto-logo__image mob-logo" alt="" srcset="https://test-covid-19.ro/wp-content/uploads/2019/09/logo-corona.png 353w, https://test-covid-19.ro/wp-content/uploads/2019/09/logo-corona-300x222.png 300w" sizes="(max-width: 353px) 100vw, 353px" />
+			</a>
+					</div>
+		<div class="main-header__menu-box">
+			<span class="main-header__mob_menu_title">Menu</span>
+			<nav class="menu-home-page-container"><ul id="menu-corona" class="main-menu main-menu--inline"><li id="menu-item-5192" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5192"><a href="#impact">Impactul [CORONAVIRUS]</a></li>
+<li id="menu-item-5193" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5193"><a href="#masuri">Masuri pentru [prevenire]</a></li>
+<li id="menu-item-5194" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5194"><a href="#despre">Despre [Test-COVID-19]</a></li>
+</ul></nav>
+			<div class="main-header__widget-box-mobile">
+									<a href='/quiz-covid-19' class='aheto-btn aheto-btn--primary    ' target='_self'>Intra in aplicatie!</a>							</div>
+
+
+		</div>
+		<div class="main-header__widget-box">
+
+			<div class="main-header__widget-box-desktop">
+									<a href='/quiz-covid-19' class='cs-btn  aheto-btn--primary cs_layout1' target='_self'><i class='fa fa-adjust aheto-btn__icon--left'></i>Porneste quiz-ul!</a>							</div>
+
+			<button class="hamburger main-header__hamburger js-toggle-mobile-menu" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+			</button>
+		</div>
+	</div>
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+		
+        </div>
+
+    </header>
+	<div class="container">		<div data-elementor-type="page" data-elementor-id="5125" class="elementor elementor-5125" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-7ace587e elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section" data-id="7ace587e" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:5142,&quot;url&quot;:&quot;https:\/\/test-covid-19.ro\/wp-content\/uploads\/2020\/03\/shutterstock_1624415920.jpg&quot;},{&quot;id&quot;:5160,&quot;url&quot;:&quot;https:\/\/test-covid-19.ro\/wp-content\/uploads\/2020\/03\/shutterstock_1625661736.jpg&quot;}],&quot;background_slideshow_slide_transition&quot;:&quot;slide_up&quot;,&quot;background_slideshow_ken_burns&quot;:&quot;yes&quot;,&quot;shape_divider_bottom&quot;:&quot;opacity-fan&quot;,&quot;animation&quot;:&quot;fadeIn&quot;,&quot;background_slideshow_loop&quot;:&quot;yes&quot;,&quot;background_slideshow_slide_duration&quot;:5000,&quot;background_slideshow_transition_duration&quot;:500,&quot;background_slideshow_ken_burns_zoom_direction&quot;:&quot;in&quot;}">
+							<div class="elementor-background-overlay"></div>
+						<div class="elementor-shape elementor-shape-bottom" data-negative="false">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.5 19.6" preserveAspectRatio="none">
+	<path class="elementor-shape-fill" style="opacity:0.33" d="M0 0L0 18.8 141.8 4.1 283.5 18.8 283.5 0z"/>
+	<path class="elementor-shape-fill" style="opacity:0.33" d="M0 0L0 12.6 141.8 4 283.5 12.6 283.5 0z"/>
+	<path class="elementor-shape-fill" style="opacity:0.33" d="M0 0L0 6.4 141.8 4 283.5 6.4 283.5 0z"/>
+	<path class="elementor-shape-fill" d="M0 0L0 1.2 141.8 4 283.5 1.2 283.5 0z"/>
+</svg>		</div>
+					<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-3f456d4b elementor-column elementor-col-100 elementor-top-column" data-id="3f456d4b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-48435090 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="48435090" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-61460418 elementor-column elementor-col-100 elementor-inner-column" data-id="61460418" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3af26a19 elementor-widget elementor-widget-aheto_heading" data-id="3af26a19" data-element_type="widget" data-widget_type="aheto_heading.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-heading aheto-heading--ninedok__simple t-right align-mob- aheto_heading_5e73b963eca33 ">
+
+    		<p class="aheto-heading__subtitle">Aplicatia</p>
+	<h1 class="aheto-heading__title">[COVID-19]</h1>
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<div class="elementor-element elementor-element-e44b339 elementor-button-danger elementor-align-right elementor-widget elementor-widget-button" data-id="e44b339" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="/quiz-covid-19" class="elementor-button-link elementor-button elementor-size-md elementor-animation-pulse-grow" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon elementor-align-icon-left">
+				<i aria-hidden="true" class="fas fa-comment-medical"></i>			</span>
+						<span class="elementor-button-text">VREAU SI EU</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+				<section class="elementor-element elementor-element-249163dd elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="249163dd" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-70059fc0 elementor-column elementor-col-100 elementor-inner-column" data-id="70059fc0" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5797645a elementor-widget elementor-widget-aheto_heading" data-id="5797645a" data-element_type="widget" data-widget_type="aheto_heading.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-heading aheto-heading--ninedok__simple t-right align-mob- aheto_heading_5e73b963ed8b8 ">
+
+    <h5 class="aheto-heading__description">ATENTIE! Doar informat poti evita si preintampina efectele negative ale<br /> situatiei generale de sanatate, economice si sociale <br />din Romania!</h5>
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-245b10e1 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="245b10e1" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-47ad3495 elementor-column elementor-col-100 elementor-top-column" data-id="47ad3495" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a0c21cd elementor-widget elementor-widget-menu-anchor" data-id="a0c21cd" data-element_type="widget" data-widget_type="menu-anchor.default">
+				<div class="elementor-widget-container">
+					<div id="impact" class="elementor-menu-anchor"></div>
+				</div>
+				</div>
+				<section class="elementor-element elementor-element-8d0bc1 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="8d0bc1" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-9eda564 elementor-column elementor-col-100 elementor-inner-column" data-id="9eda564" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6bff9d0b elementor-widget elementor-widget-aheto_heading" data-id="6bff9d0b" data-element_type="widget" data-widget_type="aheto_heading.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-heading aheto-heading--ninedok__simple t-center align-mob- aheto_heading_5e73b963ef23b ">
+
+    <h2 class="aheto-heading__title">Impactul [CORONAVIRUS] in lume</h2>
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-3fd2aec9 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="3fd2aec9" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-5641af5e elementor-column elementor-col-100 elementor-inner-column" data-id="5641af5e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7018e86c elementor-widget elementor-widget-aheto_heading" data-id="7018e86c" data-element_type="widget" data-widget_type="aheto_heading.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-heading aheto-heading--ninedok__simple t-center align-mob- aheto_heading_5e73b963efff5 ">
+
+    		<p class="aheto-heading__subtitle">[ Informatii oficiale luate de pe https://www.worldometers.info ]</p>
+	<p class="aheto-heading__description">Pe zi ce trece, tot mai multe tari sunt cuprinse de Pandemia COVID-19. Dupa China si Korea de Sud, cele mai importante tari Europene au resimtit impactul raspandirii coronavirus. Iata cele mai recente date din lume si din Romania:</p>
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-39e62380 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="39e62380" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-6e29173a elementor-column elementor-col-25 elementor-top-column" data-id="6e29173a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-8e9fe50 elementor-widget elementor-widget-aheto_progress-bar" data-id="8e9fe50" data-element_type="widget" data-widget_type="aheto_progress-bar.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-progress aheto-progress--ninedok-modern aheto_progress-bar_5e73b963f1499 ">
+
+	<div class="aheto-progress aheto-progress--bar">
+
+					<div class="aheto-progress__image-wrap">
+				<div class="aheto-progress__image">
+					<img width="200" height="200" src="https://test-covid-19.ro/wp-content/uploads/2020/03/logo1.jpg" class="attachment-full size-full" alt="" srcset="https://test-covid-19.ro/wp-content/uploads/2020/03/logo1.jpg 200w, https://test-covid-19.ro/wp-content/uploads/2020/03/logo1-150x150.jpg 150w, https://test-covid-19.ro/wp-content/uploads/2020/03/logo1-100x100.jpg 100w" sizes="(max-width: 200px) 100vw, 200px" />				</div>
+			</div>
+		
+
+		<h6 class="aheto-counter__number js-counter">189102</h6><h5 class="aheto-counter__heading">Cazuri Coronavirus</h5>
+
+
+
+	</div>
+
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-10149864 elementor-column elementor-col-25 elementor-top-column" data-id="10149864" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1983a615 elementor-widget elementor-widget-aheto_progress-bar" data-id="1983a615" data-element_type="widget" data-widget_type="aheto_progress-bar.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-progress aheto-progress--ninedok-modern aheto_progress-bar_5e73b963f1f34 ">
+
+	<div class="aheto-progress aheto-progress--bar">
+
+					<div class="aheto-progress__image-wrap">
+				<div class="aheto-progress__image">
+					<img width="200" height="200" src="https://test-covid-19.ro/wp-content/uploads/2020/03/logo2.jpg" class="attachment-full size-full" alt="" srcset="https://test-covid-19.ro/wp-content/uploads/2020/03/logo2.jpg 200w, https://test-covid-19.ro/wp-content/uploads/2020/03/logo2-150x150.jpg 150w, https://test-covid-19.ro/wp-content/uploads/2020/03/logo2-100x100.jpg 100w" sizes="(max-width: 200px) 100vw, 200px" />				</div>
+			</div>
+		
+
+		<h6 class="aheto-counter__number js-counter">7546</h6><h5 class="aheto-counter__heading">Decese</h5>
+
+
+
+	</div>
+
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-5ab1554c elementor-column elementor-col-25 elementor-top-column" data-id="5ab1554c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2345c321 elementor-widget elementor-widget-aheto_progress-bar" data-id="2345c321" data-element_type="widget" data-widget_type="aheto_progress-bar.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-progress aheto-progress--ninedok-modern aheto_progress-bar_5e73b963f2b99 ">
+
+	<div class="aheto-progress aheto-progress--bar">
+
+					<div class="aheto-progress__image-wrap">
+				<div class="aheto-progress__image">
+					<img width="200" height="200" src="https://test-covid-19.ro/wp-content/uploads/2020/03/logo3.jpg" class="attachment-full size-full" alt="" srcset="https://test-covid-19.ro/wp-content/uploads/2020/03/logo3.jpg 200w, https://test-covid-19.ro/wp-content/uploads/2020/03/logo3-150x150.jpg 150w, https://test-covid-19.ro/wp-content/uploads/2020/03/logo3-100x100.jpg 100w" sizes="(max-width: 200px) 100vw, 200px" />				</div>
+			</div>
+		
+
+		<h6 class="aheto-counter__number js-counter">184</h6><h5 class="aheto-counter__heading">Cazuri in Romania</h5>
+
+
+
+	</div>
+
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-70d0fc51 elementor-column elementor-col-25 elementor-top-column" data-id="70d0fc51" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-378446ce elementor-widget elementor-widget-aheto_progress-bar" data-id="378446ce" data-element_type="widget" data-widget_type="aheto_progress-bar.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-progress aheto-progress--ninedok-modern aheto_progress-bar_5e73b963f363e ">
+
+	<div class="aheto-progress aheto-progress--bar">
+
+					<div class="aheto-progress__image-wrap">
+				<div class="aheto-progress__image">
+					<img width="200" height="200" src="https://test-covid-19.ro/wp-content/uploads/2020/03/logo4.jpg" class="attachment-full size-full" alt="" srcset="https://test-covid-19.ro/wp-content/uploads/2020/03/logo4.jpg 200w, https://test-covid-19.ro/wp-content/uploads/2020/03/logo4-150x150.jpg 150w, https://test-covid-19.ro/wp-content/uploads/2020/03/logo4-100x100.jpg 100w" sizes="(max-width: 200px) 100vw, 200px" />				</div>
+			</div>
+		
+
+		<h6 class="aheto-counter__number js-counter">16</h6><h5 class="aheto-counter__heading">in utlimele 24h</h5>
+
+
+
+	</div>
+
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-61e90c8 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="61e90c8" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-ca03a30 elementor-column elementor-col-100 elementor-top-column" data-id="ca03a30" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-63075eb elementor-button-danger elementor-align-center elementor-widget elementor-widget-button" data-id="63075eb" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="/quiz-covid-19" class="elementor-button-link elementor-button elementor-size-lg" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">PORNESTE APLICATIA</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-13822eb1 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="13822eb1" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-29dd9946 elementor-column elementor-col-100 elementor-top-column" data-id="29dd9946" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-67fcdbdf elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="67fcdbdf" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-6ef9e7d6 elementor-column elementor-col-100 elementor-inner-column" data-id="6ef9e7d6" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5467a484 elementor-widget elementor-widget-aheto_heading" data-id="5467a484" data-element_type="widget" data-widget_type="aheto_heading.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-heading aheto-heading--ninedok__simple t-center align-mob- aheto_heading_5e73b96400da3 ">
+
+    <h3 class="aheto-heading__title">"Coronavirsul nu are tratament si nici vaccin. Se tratează simptomatic. <br />Se recomanda ca aceia care au simptome sa nu se trateze singuri. (...) Cand vom avea vaccin, se va putea controla și se va putea reduce la maximum raspandirea lui."</h3>
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-347ecfdf elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="347ecfdf" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-6a7e386c elementor-column elementor-col-100 elementor-inner-column" data-id="6a7e386c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6c1d70c6 elementor-widget elementor-widget-aheto_heading" data-id="6c1d70c6" data-element_type="widget" data-widget_type="aheto_heading.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-heading aheto-heading--ninedok__simple t-center align-mob- aheto_heading_5e73b96401916 ">
+
+    <h5 class="aheto-heading__title">Raed Arafat</h5>
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-76db35a8 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="76db35a8" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-5975cd60 elementor-column elementor-col-100 elementor-inner-column" data-id="5975cd60" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7414cef8 elementor-widget elementor-widget-aheto_heading" data-id="7414cef8" data-element_type="widget" data-widget_type="aheto_heading.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-heading aheto-heading--ninedok__simple  align-mob- aheto_heading_5e73b9640246d ">
+
+    <h6 class="aheto-heading__title">Seful Departamentului pentru Situatii de Urgenta</h6>
+</div>
+		</div>
+				</div>
+				<div class="elementor-element elementor-element-5377ba7 elementor-button-danger elementor-align-center elementor-widget elementor-widget-button" data-id="5377ba7" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="/quiz-covid-19" class="elementor-button-link elementor-button elementor-size-md" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">INTRA IN APLICATIA DE TIP QUIZ</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-38c85372 elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="38c85372" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-5f7dbec9 elementor-column elementor-col-100 elementor-top-column" data-id="5f7dbec9" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-ffafbe3 elementor-widget elementor-widget-menu-anchor" data-id="ffafbe3" data-element_type="widget" data-widget_type="menu-anchor.default">
+				<div class="elementor-widget-container">
+					<div id="masuri" class="elementor-menu-anchor"></div>
+				</div>
+				</div>
+				<section class="elementor-element elementor-element-273b168e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="273b168e" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-591da99b elementor-column elementor-col-100 elementor-inner-column" data-id="591da99b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1fbc34e5 elementor-widget elementor-widget-aheto_heading" data-id="1fbc34e5" data-element_type="widget" data-widget_type="aheto_heading.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-heading aheto-heading--ninedok__simple t-center align-mob- aheto_heading_5e73b96403b33 ">
+
+    		<p class="aheto-heading__subtitle">[COVID-19]</p>
+	<h2 class="aheto-heading__title">Masuri esentiale pentru prevenirea contaminarii</h2><p class="aheto-heading__description">Mai jos gasiti cele mai recente recomandari facute de Guvernul Romaniei in vederea limitarii efectelor pandemiei de Coronavirus.</p>
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-5b02b85b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="5b02b85b" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-22682070 elementor-column elementor-col-100 elementor-inner-column" data-id="22682070" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-451b60d7 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="451b60d7" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-63127b4c elementor-column elementor-col-33 elementor-inner-column" data-id="63127b4c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6b2bef74 elementor-widget elementor-widget-aheto_features-single" data-id="6b2bef74" data-element_type="widget" data-widget_type="aheto_features-single.default">
+				<div class="elementor-widget-container">
+			<div class="widget widget_aheto aheto_features-single_5e73b964046d8 ">
+
+	<div class="aheto-content--ninedok-minimal">
+		<div class="aheto-content-block__wrap">
+
+			            <div class="aheto-content-block__image-wrap">
+				<div class="aheto-content-block__image">
+					<img width="55" height="59" src="https://test-covid-19.ro/wp-content/uploads/2020/03/packages.png" class="attachment-full size-full" alt="" />				</div>
+            </div>
+			
+            <div class="aheto-content-block__info">
+                                    <h5 class="aheto-content-block__title">Spalati-va mainile</h5>
+                
+                                    <p class="aheto-content-block__info-text">
+                        Spalarea si dezinfectarea mainilor sunt decisive pentru a preveni infecția. Mainile se spala cu apa si sapun cel putin 20 de secunde.                    </p>
+                            </div>
+
+		</div>
+
+	</div>
+
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-72abceac elementor-column elementor-col-33 elementor-inner-column" data-id="72abceac" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-78cb4f06 elementor-widget elementor-widget-aheto_features-single" data-id="78cb4f06" data-element_type="widget" data-widget_type="aheto_features-single.default">
+				<div class="elementor-widget-container">
+			<div class="widget widget_aheto aheto_features-single_5e73b96405165 ">
+
+	<div class="aheto-content--ninedok-minimal">
+		<div class="aheto-content-block__wrap">
+
+			            <div class="aheto-content-block__image-wrap">
+				<div class="aheto-content-block__image">
+					<img width="60" height="53" src="https://test-covid-19.ro/wp-content/uploads/2020/03/fags.png" class="attachment-full size-full" alt="" />				</div>
+            </div>
+			
+            <div class="aheto-content-block__info">
+                                    <h5 class="aheto-content-block__title">Nu va atingeți fața</h5>
+                
+                                    <p class="aheto-content-block__info-text">
+                        Virusul se transmite mai ales pe cale respiratorie, dar poate intra in corp prin ochi, nas si gura. Evitati sa va atingeti fata, ochii sau gura!                    </p>
+                            </div>
+
+		</div>
+
+	</div>
+
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-6c7a914 elementor-column elementor-col-33 elementor-inner-column" data-id="6c7a914" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3f1c484f elementor-widget elementor-widget-aheto_features-single" data-id="3f1c484f" data-element_type="widget" data-widget_type="aheto_features-single.default">
+				<div class="elementor-widget-container">
+			<div class="widget widget_aheto aheto_features-single_5e73b96405a70 ">
+
+	<div class="aheto-content--ninedok-minimal">
+		<div class="aheto-content-block__wrap">
+
+			            <div class="aheto-content-block__image-wrap">
+				<div class="aheto-content-block__image">
+					<img width="52" height="54" src="https://test-covid-19.ro/wp-content/uploads/2020/03/patronage.png" class="attachment-full size-full" alt="" />				</div>
+            </div>
+			
+            <div class="aheto-content-block__info">
+                                    <h5 class="aheto-content-block__title">Acoperiti-va gura</h5>
+                
+                                    <p class="aheto-content-block__info-text">
+                        Daca aveti infectie respiratoare acuta, tusiti cu gura acoperita sau intr-un servetel. Nu va acoperiti gura si nasul cu mainile!                    </p>
+                            </div>
+
+		</div>
+
+	</div>
+
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-45ba911c elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="45ba911c" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-6835a188 elementor-column elementor-col-33 elementor-inner-column" data-id="6835a188" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5dcfd3c7 elementor-widget elementor-widget-aheto_features-single" data-id="5dcfd3c7" data-element_type="widget" data-widget_type="aheto_features-single.default">
+				<div class="elementor-widget-container">
+			<div class="widget widget_aheto aheto_features-single_5e73b96406ebb ">
+
+	<div class="aheto-content--ninedok-minimal">
+		<div class="aheto-content-block__wrap">
+
+			            <div class="aheto-content-block__image-wrap">
+				<div class="aheto-content-block__image">
+					<img width="52" height="56" src="https://test-covid-19.ro/wp-content/uploads/2020/03/get_our_card.png" class="attachment-full size-full" alt="" />				</div>
+            </div>
+			
+            <div class="aheto-content-block__info">
+                                    <h5 class="aheto-content-block__title">Evitati contactul</h5>
+                
+                                    <p class="aheto-content-block__info-text">
+                        Mentineti distanta de cel putin 1-2 metri intre dumneavoastra si alte persoane, in special daca acestea tusesc, stranuta sau au febră.                    </p>
+                            </div>
+
+		</div>
+
+	</div>
+
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-2799cf7e elementor-column elementor-col-33 elementor-inner-column" data-id="2799cf7e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3851e7fa elementor-widget elementor-widget-aheto_features-single" data-id="3851e7fa" data-element_type="widget" data-widget_type="aheto_features-single.default">
+				<div class="elementor-widget-container">
+			<div class="widget widget_aheto aheto_features-single_5e73b9640785e ">
+
+	<div class="aheto-content--ninedok-minimal">
+		<div class="aheto-content-block__wrap">
+
+			            <div class="aheto-content-block__image-wrap">
+				<div class="aheto-content-block__image">
+					<img width="48" height="48" src="https://test-covid-19.ro/wp-content/uploads/2020/03/payment-ways.png" class="attachment-full size-full" alt="" />				</div>
+            </div>
+			
+            <div class="aheto-content-block__info">
+                                    <h5 class="aheto-content-block__title">Nu luati medicamente</h5>
+                
+                                    <p class="aheto-content-block__info-text">
+                        Nu s-a dovedit inca stiintific ca folosirea antiviralelor si a antibioticelor poate preveni infectarea cu COVID-19. Mare atentie!                    </p>
+                            </div>
+
+		</div>
+
+	</div>
+
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-1d99812a elementor-column elementor-col-33 elementor-inner-column" data-id="1d99812a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6986b18f elementor-widget elementor-widget-aheto_features-single" data-id="6986b18f" data-element_type="widget" data-widget_type="aheto_features-single.default">
+				<div class="elementor-widget-container">
+			<div class="widget widget_aheto aheto_features-single_5e73b96408215 ">
+
+	<div class="aheto-content--ninedok-minimal">
+		<div class="aheto-content-block__wrap">
+
+			            <div class="aheto-content-block__image-wrap">
+				<div class="aheto-content-block__image">
+					<img width="53" height="52" src="https://test-covid-19.ro/wp-content/uploads/2020/03/find-a-job.png" class="attachment-full size-full" alt="" />				</div>
+            </div>
+			
+            <div class="aheto-content-block__info">
+                                    <h5 class="aheto-content-block__title">Curatati suprafetele</h5>
+                
+                                    <p class="aheto-content-block__info-text">
+                        Folositi dezinfectanti ce contin clor, innalbitori, solvent, etanol de 75%, acid paracetic, pentru a curata periodic suprafetele cu care intrati in contact.                    </p>
+                            </div>
+
+		</div>
+
+	</div>
+
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-189c4251 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="189c4251" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-567817e2 elementor-column elementor-col-33 elementor-inner-column" data-id="567817e2" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1c020fc3 elementor-widget elementor-widget-aheto_features-single" data-id="1c020fc3" data-element_type="widget" data-widget_type="aheto_features-single.default">
+				<div class="elementor-widget-container">
+			<div class="widget widget_aheto aheto_features-single_5e73b96408ef5 ">
+
+	<div class="aheto-content--ninedok-minimal">
+		<div class="aheto-content-block__wrap">
+
+			            <div class="aheto-content-block__image-wrap">
+				<div class="aheto-content-block__image">
+					<img width="52" height="54" src="https://test-covid-19.ro/wp-content/uploads/2020/03/patronage.png" class="attachment-full size-full" alt="" />				</div>
+            </div>
+			
+            <div class="aheto-content-block__info">
+                                    <h5 class="aheto-content-block__title">Nu folositi masca</h5>
+                
+                                    <p class="aheto-content-block__info-text">
+                        Se recomanda folosirea  mastii de protectie <b>doar daca prezentati simptome</b> sau ati fost deja contaminat cu coronavirus.                    </p>
+                            </div>
+
+		</div>
+
+	</div>
+
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-41e282da elementor-column elementor-col-33 elementor-inner-column" data-id="41e282da" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7e3d842e elementor-widget elementor-widget-aheto_features-single" data-id="7e3d842e" data-element_type="widget" data-widget_type="aheto_features-single.default">
+				<div class="elementor-widget-container">
+			<div class="widget widget_aheto aheto_features-single_5e73b96409780 ">
+
+	<div class="aheto-content--ninedok-minimal">
+		<div class="aheto-content-block__wrap">
+
+			            <div class="aheto-content-block__image-wrap">
+				<div class="aheto-content-block__image">
+					<img width="55" height="59" src="https://test-covid-19.ro/wp-content/uploads/2020/03/packages.png" class="attachment-full size-full" alt="" />				</div>
+            </div>
+			
+            <div class="aheto-content-block__info">
+                                    <h5 class="aheto-content-block__title">Atentie la Fake News</h5>
+                
+                                    <p class="aheto-content-block__info-text">
+                        Stirile din aceasta perioada au o componenta de senzational. Atentie in a nu fi indusi in eroare de stiri neoficiale sau neverificate!
+                    </p>
+                            </div>
+
+		</div>
+
+	</div>
+
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-21d7b383 elementor-column elementor-col-33 elementor-inner-column" data-id="21d7b383" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-46da3333 elementor-widget elementor-widget-aheto_features-single" data-id="46da3333" data-element_type="widget" data-widget_type="aheto_features-single.default">
+				<div class="elementor-widget-container">
+			<div class="widget widget_aheto aheto_features-single_5e73b9640abf4 ">
+
+	<div class="aheto-content--ninedok-minimal">
+		<div class="aheto-content-block__wrap">
+
+			            <div class="aheto-content-block__image-wrap">
+				<div class="aheto-content-block__image">
+					<img width="60" height="53" src="https://test-covid-19.ro/wp-content/uploads/2020/03/fags.png" class="attachment-full size-full" alt="" />				</div>
+            </div>
+			
+            <div class="aheto-content-block__info">
+                                    <h5 class="aheto-content-block__title">Actionati corect</h5>
+                
+                                    <p class="aheto-content-block__info-text">
+                        Perioada de incubatie a coronavirusului este intre 2 și 14 zile. Daca v-ati intors dintr-o zona de risc si prezentati simptome, sunați la 112.                    </p>
+                            </div>
+
+		</div>
+
+	</div>
+
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-367c4199 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="367c4199" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-6a736649 elementor-column elementor-col-100 elementor-top-column" data-id="6a736649" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-63372057 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="63372057" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-38a92174 elementor-column elementor-col-100 elementor-inner-column" data-id="38a92174" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2514722 elementor-widget elementor-widget-menu-anchor" data-id="2514722" data-element_type="widget" data-widget_type="menu-anchor.default">
+				<div class="elementor-widget-container">
+					<div id="despre" class="elementor-menu-anchor"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-44201591 elementor-widget elementor-widget-aheto_heading" data-id="44201591" data-element_type="widget" data-widget_type="aheto_heading.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-heading aheto-heading--ninedok__simple t-center align-mob- aheto_heading_5e73b9640c888 ">
+
+    		<p class="aheto-heading__subtitle">De ce sa intri in aplicatia noastra de constientizare?</p>
+	<h2 class="aheto-heading__title">Intra si tu in jocul <span>COVID-19</span> daca...</h2>
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-23c06bad elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="23c06bad" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-188b7f46 elementor-column elementor-col-100 elementor-top-column" data-id="188b7f46" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-1e3922e1 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="1e3922e1" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-7381691a elementor-column elementor-col-25 elementor-inner-column" data-id="7381691a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-c3ca1c0 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="c3ca1c0" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-561b2304 elementor-column elementor-col-100 elementor-inner-column" data-id="561b2304" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7c378e41 elementor-widget elementor-widget-aheto_heading" data-id="7c378e41" data-element_type="widget" data-widget_type="aheto_heading.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-heading aheto-heading--ninedok__simple t-center align-mob- aheto_heading_5e73b9640d9e4 ">
+
+    <h4 class="aheto-heading__title">Vrei sa previi</h4>
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-62d32c6e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="62d32c6e" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-16a4c02c elementor-column elementor-col-100 elementor-inner-column" data-id="16a4c02c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-90d2598 elementor-widget elementor-widget-aheto_heading" data-id="90d2598" data-element_type="widget" data-widget_type="aheto_heading.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-heading aheto-heading--ninedok__simple  align-mob- aheto_heading_5e73b9640e4b1 ">
+
+    <p class="aheto-heading__description">Contribuie la statisticile noastre referitoare la Coronavirus [COVID-19] si <b>afla mai multe despre scenariile de risc.</b></p>
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-3ce227cc elementor-column elementor-col-25 elementor-inner-column" data-id="3ce227cc" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-6e30a18e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="6e30a18e" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-41b35492 elementor-column elementor-col-100 elementor-inner-column" data-id="41b35492" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-11b3ec03 elementor-widget elementor-widget-aheto_heading" data-id="11b3ec03" data-element_type="widget" data-widget_type="aheto_heading.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-heading aheto-heading--ninedok__simple t-center align-mob- aheto_heading_5e73b9640f2a0 ">
+
+    <h4 class="aheto-heading__title">Vrei informatii</h4>
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-6fcb01b9 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="6fcb01b9" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-475b2885 elementor-column elementor-col-100 elementor-inner-column" data-id="475b2885" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5af6ddf5 elementor-widget elementor-widget-aheto_heading" data-id="5af6ddf5" data-element_type="widget" data-widget_type="aheto_heading.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-heading aheto-heading--ninedok__simple  align-mob- aheto_heading_5e73b9640fdc5 ">
+
+    <p class="aheto-heading__description">Daca tu esti deja corect informat, intra totusi in aplicatia noastra <b>pentru a ne ajuta sa-i informam si pe ceilalti.</b></p>
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-e5120ab elementor-column elementor-col-25 elementor-inner-column" data-id="e5120ab" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-2f8047ea elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="2f8047ea" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-42df5f57 elementor-column elementor-col-100 elementor-inner-column" data-id="42df5f57" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3b96661c elementor-widget elementor-widget-aheto_heading" data-id="3b96661c" data-element_type="widget" data-widget_type="aheto_heading.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-heading aheto-heading--ninedok__simple t-center align-mob- aheto_heading_5e73b96410bb1 ">
+
+    <h4 class="aheto-heading__title">Esti responsabil</h4>
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-2ec964c1 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="2ec964c1" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-676282be elementor-column elementor-col-100 elementor-inner-column" data-id="676282be" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-26513c9e elementor-widget elementor-widget-aheto_heading" data-id="26513c9e" data-element_type="widget" data-widget_type="aheto_heading.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-heading aheto-heading--ninedok__simple  align-mob- aheto_heading_5e73b9641167f ">
+
+    <p class="aheto-heading__description">Da dovada de responsabilitate sociala si afla cat mai multe despre situatia actuala. Intra pentru <b>sfaturi si indicatii importante.</b></p>
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-24f07687 elementor-column elementor-col-25 elementor-inner-column" data-id="24f07687" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-2497f57f elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="2497f57f" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-603dce36 elementor-column elementor-col-100 elementor-inner-column" data-id="603dce36" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3d2329e9 elementor-widget elementor-widget-aheto_heading" data-id="3d2329e9" data-element_type="widget" data-widget_type="aheto_heading.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-heading aheto-heading--ninedok__simple t-center align-mob- aheto_heading_5e73b9641287e ">
+
+    <h4 class="aheto-heading__title">Esti curios</h4>
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-4709e3fa elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="4709e3fa" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-688dc91a elementor-column elementor-col-100 elementor-inner-column" data-id="688dc91a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6009e70b elementor-widget elementor-widget-aheto_heading" data-id="6009e70b" data-element_type="widget" data-widget_type="aheto_heading.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-heading aheto-heading--ninedok__simple  align-mob- aheto_heading_5e73b96413742 ">
+
+    <p class="aheto-heading__description">Daca esti pasionat de statistici <b>incearca modelul nostru matematic</b> si testeaza aplicatia noastra. Asteptam feedback-ul tau!</p>
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<div class="elementor-element elementor-element-27cfcf1 elementor-button-danger elementor-align-center elementor-widget elementor-widget-button" data-id="27cfcf1" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="/quiz-covid-19" class="elementor-button-link elementor-button elementor-size-md" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">INTRA IN APLICATIA DE TIP QUIZ</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-79293a7f elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="79293a7f" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-692ceaf7 elementor-column elementor-col-100 elementor-top-column" data-id="692ceaf7" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-1accf5cb elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="1accf5cb" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-4a7c1224 elementor-column elementor-col-100 elementor-inner-column" data-id="4a7c1224" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2eafaf33 elementor-widget elementor-widget-aheto_heading" data-id="2eafaf33" data-element_type="widget" data-widget_type="aheto_heading.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-heading aheto-heading--ninedok__simple t-center align-mob- aheto_heading_5e73b96415836 ">
+
+    		<p class="aheto-heading__subtitle">Cum functioneaza jocul COVID-19</p>
+	<h3 class="aheto-heading__title">#sanatateinaintedetoate</h3>
+</div>
+		</div>
+				</div>
+				<div class="elementor-element elementor-element-430bb560 elementor-widget elementor-widget-text-editor" data-id="430bb560" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5 style="font-weight: 400; color: #6f808a;"><strong>Aplicatia noastra online NU este un test medical!</strong></h5><h5 style="font-weight: 400; color: #6f808a;">Quiz-ul integreaza un algoritm complex ce are la baza un model matematic. Raspunsurile de la finalul testului se bazeaza pe statistici. Nu pretindem nici ca sunt oficiale, nici ca sunt cele mai precise, ci doar ca ele incearca sa creasca nivelul de constientizare asupra pericolului CoronaVirus, fiind corelate cu sfaturile autoritatilor.</h5><h5 style="font-weight: 400; color: #6f808a;"><strong>In niciun caz, daca esti suspect de Coronavirus, nu-ti recomandam sa intri in Quiz, ci sa te adresezi de indata autoritatilor competente din domeniul Sanatatii.</strong></h5></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-60f254e4 elementor-widget elementor-widget-aheto_button" data-id="60f254e4" data-element_type="widget" data-widget_type="aheto_button.default">
+				<div class="elementor-widget-container">
+			<div class="aheto_button_5e73b96415f7b   overflow-on ">
+	<div class="aheto-btn-container t-center tablet- mobile-">
+
+		<a href='/quiz-covid-19' class='aheto-btn aheto-btn--primary    ' target='_self'>Porneste Quiz-ul</a>
+	</div>
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+		</div>    <footer class="aheto-footer ">
+
+        <div class="container">
+
+					<div data-elementor-type="wp-post" data-elementor-id="4172" class="elementor elementor-4172" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-1f11270 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="1f11270" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-f498dcb elementor-column elementor-col-16 elementor-top-column" data-id="f498dcb" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-9de52f4 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="9de52f4" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-2490b60 elementor-column elementor-col-100 elementor-inner-column" data-id="2490b60" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7e9752d elementor-widget elementor-widget-image" data-id="7e9752d" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a href="https://w6.themedemo.co/ninedok/">
+							<img src="https://test-covid-19.ro/wp-content/uploads/elementor/thumbs/logo-corona-omh832gi72zkwj2qmf5oyu7gtrd9f9hvujx39yemm8.png" title="logo-corona" alt="logo-corona" />								</a>
+											</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-296c430 elementor-column elementor-col-66 elementor-top-column" data-id="296c430" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5cb4b36 elementor-widget elementor-widget-text-editor" data-id="5cb4b36" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><a href="/termeni-si-conditii/">Termeni si conditii</a>  |  <a href="/#TEST">Refa Testul COVID-19</a>  |  <a href="http://www.dsu.mai.gov.ro/">Departamentul pentru Situatii de Urgenta</a></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-766b78d elementor-column elementor-col-16 elementor-top-column" data-id="766b78d" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-603d11f elementor-widget elementor-widget-image" data-id="603d11f" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a href="https://test-covid-19.ro">
+							<img src="https://test-covid-19.ro/wp-content/uploads/elementor/thumbs/logo-corona-omh832gi72zkwj2qmf5oyu7gtrd9f9hvujx39yemm8.png" title="logo-corona" alt="logo-corona" />								</a>
+											</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-6e82a81 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="6e82a81" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-981b107 elementor-column elementor-col-100 elementor-top-column" data-id="981b107" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-b284ef7 elementor-widget elementor-widget-alert" data-id="b284ef7" data-element_type="widget" data-widget_type="alert.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-alert elementor-alert-info" role="alert">
+			<span class="elementor-alert-title">Disclaimer</span>
+							<span class="elementor-alert-description">Test-Covid-19.ro nu furnizeaza sfaturi medicale similare celor pe care le puteti primi de la medicii care pot oferi personal consultatii. Informatia prezentata in acest site are un caracter informativ si complementar. In nici un caz, aceasta informatie nu poate substitui recomandarile date de medici. Utilizatorii nu trebuie sa isi fundamenteze actiunile viitoare pe sfaturile si evaluarile furnizate de Test-covod-19.ro. Diagnosticul medical necesita consultarea in persoana a unui medic specialist.
+Testele, evaluarile si sfaturile oferite prin intermediul site-ului sunt doar de natura educationala si informativa si nu pot fi considerate, in nici un caz, ca fiind similare unor consultatii sau analize medicale de specialitate.
+Acest site trebuie utilizat doar in scopul obtinerii unor informatii generale pentru intelegerea cat mai buna a starii de sanatate a utilizatorilor.
+Testele, evaluarile si sfaturile de pe Test-covod-19.ro sunt formulate doar pe baza informatiilor si simptomelor descrise de utilizatori. O descriere incompleta sau incorecta a simptomelor transmise poate sa determine o neadaptare a evaluarilor la starea reala de sanatate a utilizatorului. In toate cazurile, sfatuim utilizatorii sa mearga la medicul de familie daca sunt ingrijorati de starea de sanatate.
+Prin urmare, Test-Covid-19.ro si Administratorul site-ului nu pot fi considerati, in nicio situatie raspunzatori pentru nici un fel de prejudiciu sau pierdere de orice fel.
+</span>
+								</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+		
+        </div>
+
+    </footer>
+	    <div class="site-search" id="search-box">
+        <button class="close-btn js-close-search"><i class="fa fa-times" aria-hidden="true"></i></button>
+        <div class="form-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form role="search" method="get" class="search-form" action="https://test-covid-19.ro/"
+                              autocomplete="off">
+                            <div class="input-group">
+                                <input type="search" value="" name="s" class="search-field"
+                                       placeholder="Enter Keyword" required="">
+                            </div>
+                        </form>
+                        <p class="search-description">Input your search keywords and press Enter.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+		<script type="text/javascript">
+		function qodeblockBlocksShare( url, title, w, h ){
+			var left = ( window.innerWidth / 2 )-( w / 2 );
+			var top  = ( window.innerHeight / 2 )-( h / 2 );
+			return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=600, height=600, top='+top+', left='+left);
+		}
+	</script>
+	<div style="position:fixed;bottom: -999999999999999999999px;">
+							<div class="sg-popup-builder-content" id="sg-popup-content-wrapper-5485" data-id="5485" data-events="[{&quot;param&quot;:&quot;load&quot;,&quot;value&quot;:&quot;10&quot;,&quot;hiddenOption&quot;:[]}]" data-options="YTo1MDp7czoyMDoic2dwYi1mYmxpa2UtbGlrZS11cmwiO3M6MjQ6Imh0dHBzOi8vdGVzdC1jb3ZpZC0xOS5ybyI7czoxODoic2dwYi1mYmxpa2UtbGF5b3V0IjtzOjg6InN0YW5kYXJkIjtzOjk6InNncGItdHlwZSI7czo2OiJmYmxpa2UiO3M6MTU6InNncGItaXMtcHJldmlldyI7czoxOiIwIjtzOjE0OiJzZ3BiLWlzLWFjdGl2ZSI7czo3OiJjaGVja2VkIjtzOjM0OiJzZ3BiLWJlaGF2aW9yLWFmdGVyLXNwZWNpYWwtZXZlbnRzIjthOjE6e2k6MDthOjE6e2k6MDthOjE6e3M6NToicGFyYW0iO3M6MTI6InNlbGVjdF9ldmVudCI7fX19czoyMDoic2dwYi1jb250ZW50LXBhZGRpbmciO3M6MToiNyI7czoxODoic2dwYi1wb3B1cC16LWluZGV4IjtzOjQ6Ijk5OTkiO3M6MTc6InNncGItcG9wdXAtdGhlbWVzIjtzOjEyOiJzZ3BiLXRoZW1lLTEiO3M6MjU6InNncGItb3ZlcmxheS1jdXN0b20tY2xhc3MiO3M6MTg6InNncGItcG9wdXAtb3ZlcmxheSI7czoxODoic2dwYi1vdmVybGF5LWNvbG9yIjtzOjA6IiI7czoyMDoic2dwYi1vdmVybGF5LW9wYWNpdHkiO3M6MzoiMC44IjtzOjI1OiJzZ3BiLWNvbnRlbnQtY3VzdG9tLWNsYXNzIjtzOjE2OiJzZy1wb3B1cC1jb250ZW50IjtzOjI2OiJzZ3BiLWJhY2tncm91bmQtaW1hZ2UtbW9kZSI7czo5OiJuby1yZXBlYXQiO3M6MTI6InNncGItZXNjLWtleSI7czoyOiJvbiI7czoyNDoic2dwYi1lbmFibGUtY2xvc2UtYnV0dG9uIjtzOjI6Im9uIjtzOjIzOiJzZ3BiLWNsb3NlLWJ1dHRvbi1kZWxheSI7czoxOiI1IjtzOjI2OiJzZ3BiLWNsb3NlLWJ1dHRvbi1wb3NpdGlvbiI7czoxMToiYm90dG9tUmlnaHQiO3M6MjQ6InNncGItYnV0dG9uLXBvc2l0aW9uLXRvcCI7czowOiIiO3M6MjY6InNncGItYnV0dG9uLXBvc2l0aW9uLXJpZ2h0IjtzOjE6IjkiO3M6Mjc6InNncGItYnV0dG9uLXBvc2l0aW9uLWJvdHRvbSI7czoxOiI5IjtzOjI1OiJzZ3BiLWJ1dHRvbi1wb3NpdGlvbi1sZWZ0IjtzOjA6IiI7czoxNzoic2dwYi1idXR0b24taW1hZ2UiO3M6MDoiIjtzOjIzOiJzZ3BiLWJ1dHRvbi1pbWFnZS13aWR0aCI7czoyOiIyMSI7czoyNDoic2dwYi1idXR0b24taW1hZ2UtaGVpZ2h0IjtzOjI6IjIxIjtzOjE3OiJzZ3BiLWJvcmRlci1jb2xvciI7czo3OiIjMDAwMDAwIjtzOjE4OiJzZ3BiLWJvcmRlci1yYWRpdXMiO3M6MToiMCI7czoyMzoic2dwYi1ib3JkZXItcmFkaXVzLXR5cGUiO3M6MToiJSI7czoxNjoic2dwYi1idXR0b24tdGV4dCI7czo1OiJDbG9zZSI7czoxODoic2dwYi1vdmVybGF5LWNsaWNrIjtzOjI6Im9uIjtzOjI1OiJzZ3BiLXBvcHVwLWRpbWVuc2lvbi1tb2RlIjtzOjE0OiJyZXNwb25zaXZlTW9kZSI7czozMzoic2dwYi1yZXNwb25zaXZlLWRpbWVuc2lvbi1tZWFzdXJlIjtzOjQ6ImF1dG8iO3M6MTA6InNncGItd2lkdGgiO3M6NToiNjQwcHgiO3M6MTE6InNncGItaGVpZ2h0IjtzOjU6IjQ4MHB4IjtzOjE0OiJzZ3BiLW1heC13aWR0aCI7czo2OiIxMDAwcHgiO3M6MTU6InNncGItbWF4LWhlaWdodCI7czowOiIiO3M6MTQ6InNncGItbWluLXdpZHRoIjtzOjM6IjEyMCI7czoxNToic2dwYi1taW4taGVpZ2h0IjtzOjA6IiI7czoyNjoic2dwYi1vcGVuLWFuaW1hdGlvbi1lZmZlY3QiO3M6OToiTm8gZWZmZWN0IjtzOjI3OiJzZ3BiLWNsb3NlLWFuaW1hdGlvbi1lZmZlY3QiO3M6OToiTm8gZWZmZWN0IjtzOjI5OiJzZ3BiLWVuYWJsZS1jb250ZW50LXNjcm9sbGluZyI7czoyOiJvbiI7czoxNjoic2dwYi1wb3B1cC1vcmRlciI7czoxOiIwIjtzOjE2OiJzZ3BiLXBvcHVwLWRlbGF5IjtzOjE6IjAiO3M6Nzoic2dwYi1qcyI7czoyOiJKUyI7czo4OiJzZ3BiLWNzcyI7czozOiJDU1MiO3M6MTI6InNncGItcG9zdC1pZCI7czo0OiI1NDg1IjtzOjI1OiJzZ3BiLWVuYWJsZS1wb3B1cC1vdmVybGF5IjtzOjI6Im9uIjtzOjIyOiJzZ3BiLWJ1dHRvbi1pbWFnZS1kYXRhIjtzOjA6IiI7czoyNjoic2dwYi1iYWNrZ3JvdW5kLWltYWdlLWRhdGEiO3M6MDoiIjtzOjE0OiJzZ3BiQ29uZGl0aW9ucyI7Tjt9">
+								<div class="sgpb-popup-builder-content-5485 sgpb-popup-builder-content-html"><h2 style="text-align: center;">Mesajul nostru este <strong>#staiacasa</strong></h2>
+<h4 style="text-align: center;">Informarea corecta este vitala. Te rugam sa distribui aceasta aplicatie online prietenilor tai pentru a contribui si tu la cresterea gradului de informare in randul populatiei si pentru a evita panica generala!</h4>
+		<div id="sg-facebook-like">
+			<div id="fb-root"></div>
+						<div class='sg-fb-buttons-wrapper sgpb-fb-wrapper-standard'>
+				<div class="fb-like"
+				     data-href="https://test-covid-19.ro"
+				     data-layout="standard"
+				     data-action="like"
+				     data-size="small"
+				     data-show-faces="true"
+				     data-share="1">
+				</div>
+			</div>
+							<script>
+			jQuery(window).on('sgpbDidOpen', function (e) {
+				var sgpbOldCB = window.fbAsyncInit;
+				window.fbAsyncInit = function () {
+					if (typeof sgpbOldCB === 'function') {
+						sgpbOldCB();
+					}
+					FB.init({
+						appId: 540547196484707				    });
+				};
+				(function(d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s); js.id = id;
+					js.src = 'https://connect.facebook.net/en_US/all.js#xfbml=1&version=v2.11&appId=540547196484707';
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+			});
+		</script>
+				</div>
+		</div>
+							</div>
+						  </div>	<script type="text/javascript">
+		var c = document.body.className;
+		c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+		document.body.className = c;
+	</script>
+	<link rel='preload stylesheet' as='style'
+id='ninedok-navbar-modern' href='https://test-covid-19.ro/wp-content/themes/ninedok/aheto/navbar/assets/css/cs_layout1.css' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='ninedok_navigation_modern' href='https://test-covid-19.ro/wp-content/themes/ninedok/aheto/navigation/assets/css/cs_layout1.css' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='ninedok-heading-simple' href='https://test-covid-19.ro/wp-content/themes/ninedok/aheto/heading/assets/css/cs_layout1.css' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='ninedok-progress-bar-numbers' href='https://test-covid-19.ro/wp-content/themes/ninedok/aheto/progress-bar/assets/css/cs_layout2.css' type='text/css' media='all' /><link rel='preload stylesheet' as='style'
+id='ninedok-features-single-minimal' href='https://test-covid-19.ro/wp-content/themes/ninedok/aheto/features-single/assets/css/cs_layout1.css' type='text/css' media='all' /><script type='text/javascript' src='https://test-covid-19.ro/wp-content/plugins/booked/assets/js/spin.min.js?ver=2.0.1'></script>
+<script type='text/javascript' src='https://test-covid-19.ro/wp-content/plugins/booked/assets/js/spin.jquery.js?ver=2.0.1'></script>
+<script type='text/javascript' src='https://test-covid-19.ro/wp-content/plugins/booked/assets/js/tooltipster/js/jquery.tooltipster.min.js?ver=3.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var booked_js_vars = {"ajax_url":"https:\/\/test-covid-19.ro\/wp-admin\/admin-ajax.php","profilePage":"","publicAppointments":"","i18n_confirm_appt_delete":"Are you sure you want to cancel this appointment?","i18n_please_wait":"Please wait ...","i18n_wrong_username_pass":"Wrong username\/password combination.","i18n_fill_out_required_fields":"Please fill out all required fields.","i18n_guest_appt_required_fields":"Please enter your name to book an appointment.","i18n_appt_required_fields":"Please enter your name, your email address and choose a password to book an appointment.","i18n_appt_required_fields_guest":"Please fill in all \"Information\" fields.","i18n_password_reset":"Please check your email for instructions on resetting your password.","i18n_password_reset_error":"That username or email is not recognized."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://test-covid-19.ro/wp-content/plugins/booked/assets/js/functions.js?ver=2.2.6'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var get = {"ajaxurl":"https:\/\/test-covid-19.ro\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://test-covid-19.ro/wp-content/plugins/aheto/assets/frontend/js/frontend.js?ver=1.0.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/test-covid-19.ro\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://test-covid-19.ro/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.7'></script>
+<script type='text/javascript' src='https://test-covid-19.ro/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/test-covid-19.ro","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://test-covid-19.ro/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=4.0.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var booked_fea_vars = {"ajax_url":"https:\/\/test-covid-19.ro\/wp-admin\/admin-ajax.php","i18n_confirm_appt_delete":"Are you sure you want to cancel this appointment?","i18n_confirm_appt_approve":"Are you sure you want to approve this appointment?"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://test-covid-19.ro/wp-content/plugins/booked-frontend-agents/js/functions.js?ver=2.2.6'></script>
+<script type='text/javascript' src='https://test-covid-19.ro/wp-content/plugins/qodeblock/dist/assets/js/dismiss.js?ver=1584028743'></script>
+<script type='text/javascript' src='https://test-covid-19.ro/wp-includes/js/comment-reply.min.js?ver=5.3.2'></script>
+<script type='text/javascript' src='https://test-covid-19.ro/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+<script type='text/javascript' src='https://test-covid-19.ro/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script src='https://test-covid-19.ro/wp-content/plugins/aheto/assets/frontend/vendors/script.min.js' defer></script><script type='text/javascript' src='https://test-covid-19.ro/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=2.9.6'></script>
+<script type='text/javascript' src='https://test-covid-19.ro/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://test-covid-19.ro/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.7.6'></script>
+<script type='text/javascript' src='https://test-covid-19.ro/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2'></script>
+<script src='https://test-covid-19.ro/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6' async></script><script type='text/javascript' src='https://test-covid-19.ro/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=2.9.6'></script>
+<script type='text/javascript'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","downloadImage":"Download image"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.9.6","urls":{"assets":"https:\/\/test-covid-19.ro\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes","elementor_lightbox_enable_counter":"yes","elementor_lightbox_enable_fullscreen":"yes","elementor_lightbox_enable_zoom":"yes","elementor_lightbox_enable_share":"yes","elementor_lightbox_title_src":"title","elementor_lightbox_description_src":"description"},"editorPreferences":[]},"post":{"id":5125,"title":"Aplicatie online \/ Chestionar statistic Coronavirus [COVID&#x2d;19]","excerpt":"","featuredImage":false}};
+</script>
+<script type='text/javascript' src='https://test-covid-19.ro/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=2.9.6'></script>
+        <script type="text/javascript">
+            if (typeof ElementorConfig !== 'undefined') {
+                ElementorConfig.widgets["aheto_custom-post-types"].controls.taxonomies.select2options.ajax = {
+                    url: 'https://test-covid-19.ro/wp-admin/admin-ajax.php',
+                    dataType: 'json',
+                    data: function (params) {
+                        return {
+                            query: params.term,
+                            action: 'autocomplete_aheto_taxonomies'
+                        }
+                    },
+                    processResults: function (data) {
+                        return {
+                            results: data
+                        }
+                    }
+                }
+
+                ElementorConfig.widgets["aheto_custom-post-types"].controls.exclude.select2options.ajax = {
+                    url: 'https://test-covid-19.ro/wp-admin/admin-ajax.php',
+                    dataType: 'json',
+                    data: function (params) {
+                        return {
+                            query: params.term,
+                            action: 'autocomplete_aheto_exclude_field_search',
+                            postType: jQuery('select', '.elementor-control-post_type.elementor-control-type-select').val()
+                        }
+                    },
+                    processResults: function (data) {
+                        return {
+                            results: data
+                        }
+                    }
+                }
+
+                ElementorConfig.widgets["aheto_custom-post-types"].controls.include.select2options.ajax = {
+                    url: 'https://test-covid-19.ro/wp-admin/admin-ajax.php',
+                    dataType: 'json',
+                    data: function (params) {
+                        return {
+                            query: params.term,
+                            action: 'autocomplete_aheto_include_field_search'
+                        }
+                    },
+                    processResults: function (data) {
+                        return {
+                            results: data
+                        }
+                    }
+                }
+            }
+        </script>
+		</body>
+</html>

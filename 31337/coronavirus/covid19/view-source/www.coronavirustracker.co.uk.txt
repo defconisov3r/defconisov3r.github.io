@@ -135,11 +135,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <section data-aos="fade-up" class="clean-block slider dark">
             <div class="container">
-                <div style="height: 68px;"></div><blockquote class="quote-card">
-    
-<p>Stay Safe</p>
-
-<cite></cite>            </blockquote></div>
+                <div style="height: 68px;"></div>
+                <blockquote class="quote-card">
+                    <div class="quotes">
+                        <p>Stay Safe</p>
+                        <cite></cite>
+                    </div>
+                    <div class="quotes">
+                        <p>Remember to wash your hands thoroughly</p>
+                        <cite></cite>
+                    </div>
+                    <div class="quotes">
+                        <p>Self isolate if you have any symptoms</p>
+                        <cite></cite>
+                    </div>
+                </blockquote>
+            </div>
         </section>
     </main>
     <footer class="page-footer dark">
@@ -183,6 +194,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="assets/js/Smooth-Scrool-1.js"></script>
     <script src="assets/js/Smooth-Scrool.js"></script>
     <script src="assets/js/Video-Parallax-Background-v2.js"></script>
+    
+    <!-- fading text https://stackoverflow.com/questions/37492106/quote-paragraphs-replacing-each-other-via-fade-in-and-out-in-a-typewriter-fashio -->
+    <script>
+        (function() {
+
+            var quotes = $(".quotes");
+            var quoteIndex = -1;
+
+            function showNextQuote() {
+                ++quoteIndex;
+                quotes.eq(quoteIndex % quotes.length)
+                    .fadeIn(5000)
+                    .delay(2000)
+                    .fadeOut(5000, showNextQuote);
+            }
+
+            showNextQuote();
+
+        })();
+    </script>
+    
 </body>
 
 </html>

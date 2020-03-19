@@ -3,11 +3,14 @@
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
 -->
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <meta http-equiv="refresh" content="180; URL=https://coronavirus-morts.fr/">
+    
     <meta name="google-site-verification" content="5i_qisSyIe4CzPYguTsltBz1RuGee_nSumzI-44C9wI" />
     <meta name="description" content="Tableau des morts du SRAS-COV-2 (Coronavirus)">
     <meta name="keywords" content="Coronavirus, virus, Corona, Covid-19, SRAS-COV-2, SARS-COV-2">
@@ -27,6 +30,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
     <!--  kassandra css-->
     <link rel="stylesheet" href="/static/css/corona.css?v=2">
     <!-- Page css -->
@@ -61,42 +68,769 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
 <div class="container">
-  <div class="row">
-    <div class="col-sm">
-      Situation globale:
-<ul>
-    <li>Contaminés: 183325
-</li>
-    <li>Morts: 7177
-</li>
-    <li>Mortalité: 3.91%
-    <li>Dernière mise à jour: il y a 14 minutes (17-03-2020 10:15:38)</li>
-</ul>
+    <div class="row">
+        <div class="col-sm">
+            Situation globale <a class="" href="#global_history_modal" data-toggle="modal">
+                        <i class="material-icons" style="font-size:110%;vertical-align:middle;">history</i>
+                    </a>:
+            <ul>
+                <li>Contaminés: 236920
+                    <a class="" href="#global_cases_history_modal" data-toggle="modal">
+                        <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+                    </a>
+                </li>
+                <li>Morts: 9829
+                    <a class="" href="#global_deaths_history_modal" data-toggle="modal">
+                        <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+                    </a>
+                </li>
+                <li>Mortalité: 4.15%
+                <a class="" href="#global_death_rate_history_modal" data-toggle="modal">
+                        <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm">
+            Dernières nouvelles:
+            <ul>
+                
+                <li>
+                    <a href="https://www.gouvernement.fr/sites/default/files/contenu/piece-jointe/2020/03/attestation_de_deplacement_derogatoire.pdf" target="_blank">ATTESTATION DE DÉPLACEMENT DÉROGATOIRE - gouvernement.fr</a>
+                </li>
+                
+                <li>
+                    <a href="https://www.pscp.tv/w/1gqGvEBLpbpKB?t=7s" target="_blank">Adresse aux Français. - </a>
+                </li>
+                
+            </ul>
+        </div>
     </div>
-    <div class="col-sm">
-      Dernières nouvelles:
-        <ul>
-    
-        <li>
-            <a href="https://www.pscp.tv/w/1gqGvEBLpbpKB?t=7s" target="_blank">Adresse aux Français. - </a>
-        </li>
-        
-</ul>
+</div>
+Dernière mise à jour: il y a 10 minutes (19-03-2020 19:01:04)
+
+<div class="modal fade" id="global_history_modal" tabindex="-1" role="dialog"
+     aria-labelledby="global_history_modal_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg  " role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="global_history_modal_label">Historique - Monde</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="modal_history_table table table-striped table-bordered" style="width:100%;font-size:75%">
+                    <thead align="left">
+                    <tr role="row">
+                        <th class="all">Date</th>
+                        <th class="all">Morts</th>
+                        <th class="all">Contaminés</th>
+                        <th class="not-mobile-p">Mortalité</th>
+                    </tr>
+                    </thead>
+                    <tbody
+                    [{&#39;date&#39;: &#39;2020-03-18&#39;, &#39;id&#39;: 369, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 218822, &#39;deaths&#39;: 8951, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 4.090539342479276, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-03-17&#39;, &#39;id&#39;: 368, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 198238, &#39;deaths&#39;: 7978, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 4.024455452536849, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-03-16&#39;, &#39;id&#39;: 367, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 182490, &#39;deaths&#39;: 7161, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.9240506329113924, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-03-15&#39;, &#39;id&#39;: 366, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 169593, &#39;deaths&#39;: 6519, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.8439086518901133, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-03-14&#39;, &#39;id&#39;: 365, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 156653, &#39;deaths&#39;: 5833, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.723516306741652, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-03-13&#39;, &#39;id&#39;: 364, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 145483, &#39;deaths&#39;: 5429, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.731707484723301, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-03-12&#39;, &#39;id&#39;: 363, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 134576, &#39;deaths&#39;: 4981, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.7012543098323625, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-03-11&#39;, &#39;id&#39;: 362, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 126214, &#39;deaths&#39;: 4628, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.666788153453658, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-03-10&#39;, &#39;id&#39;: 361, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 118948, &#39;deaths&#39;: 4296, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.611662238961563, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-03-09&#39;, &#39;id&#39;: 360, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 114381, &#39;deaths&#39;: 4025, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.5189410828721552, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-03-08&#39;, &#39;id&#39;: 359, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 109991, &#39;deaths&#39;: 3827, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.4793755852751587, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-03-07&#39;, &#39;id&#39;: 358, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 106099, &#39;deaths&#39;: 3599, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.392114911544878, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-03-06&#39;, &#39;id&#39;: 357, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 102050, &#39;deaths&#39;: 3494, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.423811856932876, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-03-05&#39;, &#39;id&#39;: 356, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 98425, &#39;deaths&#39;: 3387, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.4411988823977646, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-03-04&#39;, &#39;id&#39;: 355, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 95314, &#39;deaths&#39;: 3285, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.4465031369998114, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-03-03&#39;, &#39;id&#39;: 354, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 93016, &#39;deaths&#39;: 3202, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.4424185086436743, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-03-02&#39;, &#39;id&#39;: 353, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 90443, &#39;deaths&#39;: 3117, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.4463695366142213, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-03-01&#39;, &#39;id&#39;: 352, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 88585, &#39;deaths&#39;: 3050, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.443020827453858, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-29&#39;, &#39;id&#39;: 351, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 86604, &#39;deaths&#39;: 2977, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.4374855664865365, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-28&#39;, &#39;id&#39;: 350, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 84615, &#39;deaths&#39;: 2923, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.4544702475920346, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-27&#39;, &#39;id&#39;: 349, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 83112, &#39;deaths&#39;: 2858, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.4387332755799402, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-26&#39;, &#39;id&#39;: 348, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 81820, &#39;deaths&#39;: 2800, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.422146174529455, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-25&#39;, &#39;id&#39;: 347, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 80828, &#39;deaths&#39;: 2763, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.4183698718265947, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-24&#39;, &#39;id&#39;: 346, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 80087, &#39;deaths&#39;: 2699, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.3700850325271268, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-23&#39;, &#39;id&#39;: 345, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 79205, &#39;deaths&#39;: 2618, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.3053468846663723, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-22&#39;, &#39;id&#39;: 344, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 78651, &#39;deaths&#39;: 2460, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.127741541747721, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-21&#39;, &#39;id&#39;: 343, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 77673, &#39;deaths&#39;: 2360, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.03837884464357, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-20&#39;, &#39;id&#39;: 342, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 76677, &#39;deaths&#39;: 2247, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.930474588207676, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-19&#39;, &#39;id&#39;: 341, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 75700, &#39;deaths&#39;: 2126, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.808454425363276, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-18&#39;, &#39;id&#39;: 340, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 75184, &#39;deaths&#39;: 2009, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.672111087465418, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-17&#39;, &#39;id&#39;: 339, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 73332, &#39;deaths&#39;: 1873, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.554137347951781, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-16&#39;, &#39;id&#39;: 338, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 71329, &#39;deaths&#39;: 1775, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.488468925682401, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-15&#39;, &#39;id&#39;: 337, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 69197, &#39;deaths&#39;: 1669, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.41195427547437, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-14&#39;, &#39;id&#39;: 336, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 67100, &#39;deaths&#39;: 1526, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.2742175856929956, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-13&#39;, &#39;id&#39;: 335, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 64438, &#39;deaths&#39;: 1383, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.1462491076693877, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-12&#39;, &#39;id&#39;: 334, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 59287, &#39;deaths&#39;: 1261, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.126941825358004, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-11&#39;, &#39;id&#39;: 333, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 45134, &#39;deaths&#39;: 1115, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.4704214117959853, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-10&#39;, &#39;id&#39;: 332, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 43099, &#39;deaths&#39;: 1018, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.362003758787907, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-09&#39;, &#39;id&#39;: 331, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 40553, &#39;deaths&#39;: 910, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.2439770177298843, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-08&#39;, &#39;id&#39;: 330, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 37552, &#39;deaths&#39;: 813, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.1649978696207923, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-07&#39;, &#39;id&#39;: 329, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 34876, &#39;deaths&#39;: 724, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.0759261383186147, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-06&#39;, &#39;id&#39;: 328, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 31439, &#39;deaths&#39;: 638, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.02932663252648, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-05&#39;, &#39;id&#39;: 327, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 28266, &#39;deaths&#39;: 565, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 1.998867897827779, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-04&#39;, &#39;id&#39;: 326, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 24545, &#39;deaths&#39;: 492, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.004481564473416, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-03&#39;, &#39;id&#39;: 325, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 20630, &#39;deaths&#39;: 426, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.064953950557441, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-02&#39;, &#39;id&#39;: 324, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 17391, &#39;deaths&#39;: 362, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.0815364268874705, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-02-01&#39;, &#39;id&#39;: 323, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 14553, &#39;deaths&#39;: 304, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.0889163746306605, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-01-31&#39;, &#39;id&#39;: 322, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 11950, &#39;deaths&#39;: 259, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.1673640167364017, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-01-30&#39;, &#39;id&#39;: 321, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 9823, &#39;deaths&#39;: 213, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.168380331874173, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-01-29&#39;, &#39;id&#39;: 320, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 7813, &#39;deaths&#39;: 170, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.1758607449123257, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-01-28&#39;, &#39;id&#39;: 319, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 6058, &#39;deaths&#39;: 132, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.1789369428854406, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-01-27&#39;, &#39;id&#39;: 318, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 4581, &#39;deaths&#39;: 106, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.313905260860074, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-01-26&#39;, &#39;id&#39;: 317, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 2800, &#39;deaths&#39;: 80, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.857142857142857, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-01-25&#39;, &#39;id&#39;: 316, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 2015, &#39;deaths&#39;: 56, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.7791563275434243, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-01-24&#39;, &#39;id&#39;: 315, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 1317, &#39;deaths&#39;: 41, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 3.1131359149582383, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-01-23&#39;, &#39;id&#39;: 314, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 845, &#39;deaths&#39;: 25, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.9585798816568047, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}, {&#39;date&#39;: &#39;2020-01-22&#39;, &#39;id&#39;: 313, &#39;critical_cases&#39;: None, &#39;tested_cases&#39;: None, &#39;total_cases&#39;: 580, &#39;deaths&#39;: 17, &#39;new_deaths&#39;: None, &#39;death_rate&#39;: 2.9310344827586206, &#39;new_cases&#39;: None, &#39;id_country&#39;: 174}]
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-03-18</td>
+                        <td>8951</td>
+                        <td>218822</td>
+                        <td class="">4.09%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-03-17</td>
+                        <td>7978</td>
+                        <td>198238</td>
+                        <td class="">4.02%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-03-16</td>
+                        <td>7161</td>
+                        <td>182490</td>
+                        <td class="">3.92%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-03-15</td>
+                        <td>6519</td>
+                        <td>169593</td>
+                        <td class="">3.84%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-03-14</td>
+                        <td>5833</td>
+                        <td>156653</td>
+                        <td class="">3.72%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-03-13</td>
+                        <td>5429</td>
+                        <td>145483</td>
+                        <td class="">3.73%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-03-12</td>
+                        <td>4981</td>
+                        <td>134576</td>
+                        <td class="">3.70%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-03-11</td>
+                        <td>4628</td>
+                        <td>126214</td>
+                        <td class="">3.67%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-03-10</td>
+                        <td>4296</td>
+                        <td>118948</td>
+                        <td class="">3.61%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-03-09</td>
+                        <td>4025</td>
+                        <td>114381</td>
+                        <td class="">3.52%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-03-08</td>
+                        <td>3827</td>
+                        <td>109991</td>
+                        <td class="">3.48%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-03-07</td>
+                        <td>3599</td>
+                        <td>106099</td>
+                        <td class="">3.39%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-03-06</td>
+                        <td>3494</td>
+                        <td>102050</td>
+                        <td class="">3.42%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-03-05</td>
+                        <td>3387</td>
+                        <td>98425</td>
+                        <td class="">3.44%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-03-04</td>
+                        <td>3285</td>
+                        <td>95314</td>
+                        <td class="">3.45%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-03-03</td>
+                        <td>3202</td>
+                        <td>93016</td>
+                        <td class="">3.44%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-03-02</td>
+                        <td>3117</td>
+                        <td>90443</td>
+                        <td class="">3.45%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-03-01</td>
+                        <td>3050</td>
+                        <td>88585</td>
+                        <td class="">3.44%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-29</td>
+                        <td>2977</td>
+                        <td>86604</td>
+                        <td class="">3.44%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-28</td>
+                        <td>2923</td>
+                        <td>84615</td>
+                        <td class="">3.45%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-27</td>
+                        <td>2858</td>
+                        <td>83112</td>
+                        <td class="">3.44%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-26</td>
+                        <td>2800</td>
+                        <td>81820</td>
+                        <td class="">3.42%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-25</td>
+                        <td>2763</td>
+                        <td>80828</td>
+                        <td class="">3.42%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-24</td>
+                        <td>2699</td>
+                        <td>80087</td>
+                        <td class="">3.37%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-23</td>
+                        <td>2618</td>
+                        <td>79205</td>
+                        <td class="">3.31%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-22</td>
+                        <td>2460</td>
+                        <td>78651</td>
+                        <td class="">3.13%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-21</td>
+                        <td>2360</td>
+                        <td>77673</td>
+                        <td class="">3.04%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-20</td>
+                        <td>2247</td>
+                        <td>76677</td>
+                        <td class="">2.93%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-19</td>
+                        <td>2126</td>
+                        <td>75700</td>
+                        <td class="">2.81%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-18</td>
+                        <td>2009</td>
+                        <td>75184</td>
+                        <td class="">2.67%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-17</td>
+                        <td>1873</td>
+                        <td>73332</td>
+                        <td class="">2.55%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-16</td>
+                        <td>1775</td>
+                        <td>71329</td>
+                        <td class="">2.49%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-15</td>
+                        <td>1669</td>
+                        <td>69197</td>
+                        <td class="">2.41%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-14</td>
+                        <td>1526</td>
+                        <td>67100</td>
+                        <td class="">2.27%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-13</td>
+                        <td>1383</td>
+                        <td>64438</td>
+                        <td class="">2.15%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-12</td>
+                        <td>1261</td>
+                        <td>59287</td>
+                        <td class="">2.13%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-11</td>
+                        <td>1115</td>
+                        <td>45134</td>
+                        <td class="">2.47%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-10</td>
+                        <td>1018</td>
+                        <td>43099</td>
+                        <td class="">2.36%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-09</td>
+                        <td>910</td>
+                        <td>40553</td>
+                        <td class="">2.24%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-08</td>
+                        <td>813</td>
+                        <td>37552</td>
+                        <td class="">2.16%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-07</td>
+                        <td>724</td>
+                        <td>34876</td>
+                        <td class="">2.08%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-06</td>
+                        <td>638</td>
+                        <td>31439</td>
+                        <td class="">2.03%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-05</td>
+                        <td>565</td>
+                        <td>28266</td>
+                        <td class="">2.00%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-04</td>
+                        <td>492</td>
+                        <td>24545</td>
+                        <td class="">2.00%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-03</td>
+                        <td>426</td>
+                        <td>20630</td>
+                        <td class="">2.06%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-02</td>
+                        <td>362</td>
+                        <td>17391</td>
+                        <td class="">2.08%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-02-01</td>
+                        <td>304</td>
+                        <td>14553</td>
+                        <td class="">2.09%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-01-31</td>
+                        <td>259</td>
+                        <td>11950</td>
+                        <td class="">2.17%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-01-30</td>
+                        <td>213</td>
+                        <td>9823</td>
+                        <td class="">2.17%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-01-29</td>
+                        <td>170</td>
+                        <td>7813</td>
+                        <td class="">2.18%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-01-28</td>
+                        <td>132</td>
+                        <td>6058</td>
+                        <td class="">2.18%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-01-27</td>
+                        <td>106</td>
+                        <td>4581</td>
+                        <td class="">2.31%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-01-26</td>
+                        <td>80</td>
+                        <td>2800</td>
+                        <td class="">2.86%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-01-25</td>
+                        <td>56</td>
+                        <td>2015</td>
+                        <td class="">2.78%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-01-24</td>
+                        <td>41</td>
+                        <td>1317</td>
+                        <td class="">3.11%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-01-23</td>
+                        <td>25</td>
+                        <td>845</td>
+                        <td class="">2.96%</td>
+                    </tr>
+                    
+                    <tr role="row">
+                        <td class="text-nowrap">2020-01-22</td>
+                        <td>17</td>
+                        <td>580</td>
+                        <td class="">2.93%</td>
+                    </tr>
+                    
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <!--                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+                <!--                    <button type="button" class="btn btn-primary">Save changes</button>-->
+            </div>
+        </div>
     </div>
-  </div>
+</div>
+<div class="modal fade" id="global_cases_history_modal" tabindex="-1" role="dialog"
+     aria-labelledby="global_cases_history_modal_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg  " role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="global_cases_history_modal_chart_container" style="width:100%; height:400px;"></div>
+            </div>
+            <div class="modal-footer">
+                <!--                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+                <!--                    <button type="button" class="btn btn-primary">Save changes</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="global_deaths_history_modal" tabindex="-1" role="dialog"
+     aria-labelledby="global_deaths_history_modal_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg  " role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="global_deaths_history_modal_chart_container" style="width:100%; height:400px;"></div>
+            </div>
+            <div class="modal-footer">
+                <!--                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+                <!--                    <button type="button" class="btn btn-primary">Save changes</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="global_death_rate_history_modal" tabindex="-1" role="dialog"
+     aria-labelledby="global_death_rate_history_modal_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg  " role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="global_death_rate_history_modal_chart_container" style="width:100%; height:400px;"></div>
+            </div>
+            <div class="modal-footer">
+                <!--                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+                <!--                    <button type="button" class="btn btn-primary">Save changes</button>-->
+            </div>
+        </div>
+    </div>
 </div>
 
-    
-    
-<table id="death_rate_table" class="table table-striped table-bordered" style="width:100%;">
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let global_cases_history_modal_chart_container = Highcharts.chart('global_cases_history_modal_chart_container', {
+        title: {
+            text: 'Cas dus au SARS-CoV2 (Monde)'
+        },
+
+        subtitle: {
+            //text: 'Source:'
+        },
+
+        yAxis: {
+            title: {
+                text: 'Contaminés'
+            },
+            allowDecimals:false
+        },
+
+        xAxis: {
+            tickmarkPlacement: 'on',
+            type: 'datetime',
+            /*
+            labels: {
+                align: 'left',
+                rotation: 0
+            },
+            gridLineWidth: 1,
+            tickInterval: 24 * 3600 * 1000
+            */
+        },
+
+        /*
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle'
+        },
+        */
+
+        plotOptions: {
+            series: {
+                label: {
+                    connectorAllowed: false
+                },
+            }
+        },
+
+        series: [{
+            name: '',
+            showInLegend: false,
+            data: [ 580, 845, 1317, 2015, 2800, 4581, 6058, 7813, 9823, 11950, 14553, 17391, 20630, 24545, 28266, 31439, 34876, 37552, 40553, 43099, 45134, 59287, 64438, 67100, 69197, 71329, 73332, 75184, 75700, 76677, 77673, 78651, 79205, 80087, 80828, 81820, 83112, 84615, 86604, 88585, 90443, 93016, 95314, 98425, 102050, 106099, 109991, 114381, 118948, 126214, 134576, 145483, 156653, 169593, 182490, 198238, 218822,],
+            pointStart: Date.parse(' 2020-01-22'),
+            pointInterval: 24 * 3600 * 1000
+        }],
+
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        },
+        credits: {
+            enabled: false
+          }
+    });
+
+    let global_deaths_history_modal_chart_container = Highcharts.chart('global_deaths_history_modal_chart_container', {
+        title: {
+            text: 'Morts dus au SARS-CoV2 (Monde)'
+        },
+
+        subtitle: {
+            //text: 'Source:'
+        },
+
+        yAxis: {
+            title: {
+                text: 'Morts'
+            },
+            allowDecimals:false
+        },
+
+        xAxis: {
+            tickmarkPlacement: 'on',
+            type: 'datetime',
+            /*
+            labels: {
+                align: 'left',
+                rotation: 0
+            },
+            gridLineWidth: 1,
+            tickInterval: 24 * 3600 * 1000
+            */
+        },
+
+        /*
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle'
+        },
+        */
+
+        plotOptions: {
+            series: {
+                label: {
+                    connectorAllowed: false
+                },
+            }
+        },
+
+        series: [{
+            name: '',
+            showInLegend: false,
+            data: [ 17, 25, 41, 56, 80, 106, 132, 170, 213, 259, 304, 362, 426, 492, 565, 638, 724, 813, 910, 1018, 1115, 1261, 1383, 1526, 1669, 1775, 1873, 2009, 2126, 2247, 2360, 2460, 2618, 2699, 2763, 2800, 2858, 2923, 2977, 3050, 3117, 3202, 3285, 3387, 3494, 3599, 3827, 4025, 4296, 4628, 4981, 5429, 5833, 6519, 7161, 7978, 8951,],
+            pointStart: Date.parse(' 2020-01-22'),
+            pointInterval: 24 * 3600 * 1000
+        }],
+
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        },
+        credits: {
+            enabled: false
+          }
+    });
+
+    let global_death_rate_history_modal_chart_container = Highcharts.chart('global_death_rate_history_modal_chart_container', {
+        title: {
+            text: 'Mortalité dus au SARS-CoV2 (Monde)'
+        },
+
+        subtitle: {
+            //text: 'Source:'
+        },
+
+        yAxis: {
+            title: {
+                text: 'Mortalité %'
+            },
+            allowDecimals:false
+        },
+
+        xAxis: {
+            tickmarkPlacement: 'on',
+            type: 'datetime',
+            /*
+            labels: {
+                align: 'left',
+                rotation: 0
+            },
+            gridLineWidth: 1,
+            tickInterval: 24 * 3600 * 1000
+            */
+        },
+
+        /*
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle'
+        },
+        */
+
+        plotOptions: {
+            series: {
+                label: {
+                    connectorAllowed: false
+                },
+            }
+        },
+
+        series: [{
+            name: '',
+            showInLegend: false,
+            data: [ 2.93, 2.96, 3.11, 2.78, 2.86, 2.31, 2.18, 2.18, 2.17, 2.17, 2.09, 2.08, 2.06, 2.00, 2.00, 2.03, 2.08, 2.16, 2.24, 2.36, 2.47, 2.13, 2.15, 2.27, 2.41, 2.49, 2.55, 2.67, 2.81, 2.93, 3.04, 3.13, 3.31, 3.37, 3.42, 3.42, 3.44, 3.45, 3.44, 3.44, 3.45, 3.44, 3.45, 3.44, 3.42, 3.39, 3.48, 3.52, 3.61, 3.67, 3.70, 3.73, 3.72, 3.84, 3.92, 4.02, 4.09,],
+            pointStart: Date.parse(' 2020-01-22'),
+            pointInterval: 24 * 3600 * 1000
+        }],
+
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        },
+        credits: {
+            enabled: false
+          }
+    });
+
+});
+</script>
+
+
+
+<table id="death_rate_table" class="table table-striped table-bordered" style="width:100%;font-size:90%">
     <thead align="left">
     <tr role="row">
-        <th class="all" >Pays</th>
-        <th class="all" >Morts</th>
-        <th class="all" >Contaminés</th>
-        <th class="all" >Mortalité</th>
-        <th>Nouveaux cas (aujourd'hui)</th>
-        <th>Nouveaux morts (aujourd'hui)</th>
+        <th class="all">Pays</th>
+        <th class="all">Morts</th>
+        <th class="all">Contaminés</th>
+        <th class="all">Mortalité</th>
+        <th class="all">Nouveaux cas (aujourd'hui)</th>
+        <th class="all">Nouveaux morts (aujourd'hui)</th>
         <th>Cas testés</th>
         <th>Cas critiques</th>
     </tr>
@@ -105,1245 +839,346 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     
     <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Chine </td>
-        <td>3226</td>
-        <td>80881</td>
-        <td>3.99%</td>
-        <td>21</td>
-        <td>13</td>
-        <td></td>
-        <td>3226</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Italie </td>
-        <td>2158</td>
-        <td>27980</td>
-        <td>7.71%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>1851</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Iran </td>
-        <td>853</td>
-        <td>14991</td>
-        <td>5.69%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Espagne </td>
-        <td>342</td>
-        <td>9942</td>
-        <td>3.44%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>272</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >France </td>
-        <td>148</td>
-        <td>6633</td>
-        <td>2.23%</td>
-        <td></td>
-        <td></td>
-        <td>11895</td>
-        <td>400</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Etats-Unis </td>
-        <td>93</td>
-        <td>4743</td>
-        <td>1.96%</td>
-        <td>80</td>
-        <td>7</td>
-        <td></td>
-        <td>12</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Corée du Sud </td>
-        <td>81</td>
-        <td>8320</td>
-        <td>0.97%</td>
-        <td>84</td>
-        <td>6</td>
-        <td>210144</td>
-        <td>59</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Royaume-Uni </td>
-        <td>55</td>
-        <td>1543</td>
-        <td>3.56%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>20</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Japon </td>
-        <td>28</td>
-        <td>839</td>
-        <td>3.34%</td>
-        <td>6</td>
-        <td></td>
-        <td></td>
-        <td>41</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Pays-Bas </td>
-        <td>24</td>
-        <td>1413</td>
-        <td>1.70%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>45</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Suisse </td>
-        <td>21</td>
-        <td>2354</td>
-        <td>0.89%</td>
-        <td>1</td>
-        <td>2</td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Allemagne </td>
-        <td>17</td>
-        <td>7272</td>
-        <td>0.23%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Philippines </td>
-        <td>12</td>
-        <td>187</td>
-        <td>6.42%</td>
-        <td>45</td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Belgique </td>
-        <td>10</td>
-        <td>1058</td>
-        <td>0.95%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>33</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Iraq </td>
-        <td>10</td>
-        <td>133</td>
-        <td>7.52%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Diamond Princess </td>
-        <td>7</td>
-        <td>696</td>
-        <td>1.01%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>15</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Saint-Marin </td>
-        <td>7</td>
-        <td>109</td>
-        <td>6.42%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>11</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Suède </td>
-        <td>7</td>
-        <td>1121</td>
-        <td>0.62%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Australie </td>
-        <td>5</td>
-        <td>452</td>
-        <td>1.11%</td>
-        <td>51</td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Indonésie </td>
-        <td>5</td>
-        <td>172</td>
-        <td>2.91%</td>
-        <td>38</td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Pologne </td>
-        <td>5</td>
-        <td>205</td>
-        <td>2.44%</td>
-        <td>28</td>
-        <td>1</td>
-        <td></td>
-        <td>3</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Algérie </td>
-        <td>4</td>
-        <td>60</td>
-        <td>6.67%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Canada </td>
-        <td>4</td>
-        <td>441</td>
-        <td>0.91%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-    </tr>
-    
-    <tr role="row" class="text-danger">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Danemark </td>
-        <td>4</td>
-        <td>960</td>
-        <td>0.42%</td>
-        <td>46</td>
-        <td></td>
-        <td></td>
-        <td>10</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Egypte </td>
-        <td>4</td>
-        <td>166</td>
-        <td>2.41%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Grèce </td>
-        <td>4</td>
-        <td>352</td>
-        <td>1.14%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>5</td>
-    </tr>
-    
-    <tr role="row" class="text-danger">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Hong Kong </td>
-        <td>4</td>
-        <td>162</td>
-        <td>2.47%</td>
-        <td>7</td>
-        <td></td>
-        <td></td>
-        <td>4</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Autriche </td>
-        <td>3</td>
-        <td>1132</td>
-        <td>0.27%</td>
-        <td>114</td>
-        <td></td>
-        <td></td>
-        <td>12</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Inde </td>
-        <td>3</td>
-        <td>126</td>
-        <td>2.38%</td>
-        <td></td>
-        <td>1</td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Liban </td>
-        <td>3</td>
-        <td>120</td>
-        <td>2.50%</td>
-        <td>11</td>
-        <td></td>
-        <td></td>
-        <td>3</td>
-    </tr>
-    
-    <tr role="row" class="text-danger">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Norvège </td>
-        <td>3</td>
-        <td>1356</td>
-        <td>0.22%</td>
-        <td>8</td>
-        <td></td>
-        <td></td>
-        <td>27</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Argentine </td>
-        <td>2</td>
-        <td>65</td>
-        <td>3.08%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Bulgarie </td>
-        <td>2</td>
-        <td>67</td>
-        <td>2.99%</td>
-        <td>5</td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Equateur </td>
-        <td>2</td>
-        <td>58</td>
-        <td>3.45%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Irlande </td>
-        <td>2</td>
-        <td>223</td>
-        <td>0.90%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>6</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Albanie </td>
-        <td>1</td>
-        <td>51</td>
-        <td>1.96%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Azerbaïdjan </td>
-        <td>1</td>
-        <td>28</td>
-        <td>3.57%</td>
-        <td>3</td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Bahrain </td>
-        <td>1</td>
-        <td>228</td>
-        <td>0.44%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Guatemala </td>
-        <td>1</td>
-        <td>8</td>
-        <td>12.50%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Guyana </td>
-        <td>1</td>
-        <td>7</td>
-        <td>14.29%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Hongrie </td>
-        <td>1</td>
-        <td>50</td>
-        <td>2.00%</td>
-        <td>11</td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Luxembourg </td>
-        <td>1</td>
-        <td>94</td>
-        <td>1.06%</td>
-        <td>13</td>
-        <td></td>
-        <td></td>
-        <td>10</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Maroc </td>
-        <td>1</td>
-        <td>37</td>
-        <td>2.70%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Martinique </td>
-        <td>1</td>
-        <td>15</td>
-        <td>6.67%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Pakistan </td>
-        <td>1</td>
-        <td>194</td>
-        <td>0.52%</td>
-        <td>10</td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Panama </td>
-        <td>1</td>
-        <td>69</td>
-        <td>1.45%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Portugal </td>
-        <td>1</td>
-        <td>331</td>
-        <td>0.30%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>18</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >République dominicaine </td>
-        <td>1</td>
-        <td>21</td>
-        <td>4.76%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Slovénie </td>
-        <td>1</td>
-        <td>253</td>
-        <td>0.40%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>3</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Soudan </td>
-        <td>1</td>
-        <td>1</td>
-        <td>100.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="text-danger">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Taïwan </td>
-        <td>1</td>
-        <td>77</td>
-        <td>1.30%</td>
-        <td>10</td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Thaîlande </td>
-        <td>1</td>
-        <td>177</td>
-        <td>0.56%</td>
-        <td>30</td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Ukraine </td>
-        <td>1</td>
-        <td>7</td>
-        <td>14.29%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Îles Caïmans </td>
-        <td>1</td>
-        <td>1</td>
-        <td>100.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Afghanistan </td>
-        <td>0</td>
-        <td>22</td>
-        <td>0.00%</td>
-        <td>1</td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Afrique du Sud </td>
-        <td>0</td>
-        <td>64</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Andorre </td>
-        <td>0</td>
-        <td>14</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Antigua-et-Barbuda </td>
-        <td>0</td>
-        <td>1</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Arabie Saoudite </td>
-        <td>0</td>
-        <td>133</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Arménie </td>
-        <td>0</td>
-        <td>52</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-    </tr>
-    
-    <tr role="row" class="text-danger">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Aruba </td>
-        <td>0</td>
-        <td>3</td>
-        <td>0.00%</td>
-        <td>1</td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Bahamas </td>
-        <td>0</td>
-        <td>1</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Bangladesh </td>
-        <td>0</td>
-        <td>10</td>
-        <td>0.00%</td>
-        <td>2</td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Bhoutan </td>
-        <td>0</td>
-        <td>1</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Biélorussie </td>
-        <td>0</td>
-        <td>36</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Bolivie </td>
-        <td>0</td>
-        <td>11</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Bosnie-Herzégovine </td>
-        <td>0</td>
-        <td>25</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Brunei </td>
-        <td>0</td>
-        <td>54</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Brésil </td>
-        <td>0</td>
-        <td>234</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>2</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Burkina Faso </td>
-        <td>0</td>
-        <td>15</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Bénin </td>
-        <td>0</td>
-        <td>1</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Cambodia </td>
-        <td>0</td>
-        <td>24</td>
-        <td>0.00%</td>
-        <td>12</td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Cameroun </td>
-        <td>0</td>
-        <td>5</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Channel Islands de Californie </td>
-        <td>0</td>
-        <td>6</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Chilie </td>
-        <td>0</td>
-        <td>156</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Chypre </td>
-        <td>0</td>
-        <td>46</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Colombie </td>
-        <td>0</td>
-        <td>57</td>
-        <td>0.00%</td>
-        <td>3</td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Costa Rica </td>
-        <td>0</td>
-        <td>41</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>3</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Croatie </td>
-        <td>0</td>
-        <td>65</td>
-        <td>0.00%</td>
-        <td>8</td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Cuba </td>
-        <td>0</td>
-        <td>4</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Curaçao </td>
-        <td>0</td>
-        <td>2</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Côte d&#39;Ivoire </td>
-        <td>0</td>
-        <td>4</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Estonie </td>
-        <td>0</td>
-        <td>225</td>
-        <td>0.00%</td>
-        <td>20</td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Eswatini </td>
-        <td>0</td>
-        <td>1</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Ethiopie </td>
-        <td>0</td>
-        <td>5</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Finlande </td>
-        <td>0</td>
-        <td>278</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Gabon </td>
-        <td>0</td>
-        <td>1</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Georgie </td>
-        <td>0</td>
-        <td>34</td>
-        <td>0.00%</td>
-        <td>1</td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Ghana </td>
-        <td>0</td>
-        <td>6</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Gibraltar </td>
-        <td>0</td>
-        <td>3</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Groenland </td>
-        <td>0</td>
-        <td>1</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Guadeloupe </td>
-        <td>0</td>
-        <td>6</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Guam </td>
-        <td>0</td>
-        <td>5</td>
-        <td>0.00%</td>
-        <td>2</td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Guinée </td>
-        <td>0</td>
-        <td>1</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Guinée équatoriale </td>
-        <td>0</td>
-        <td>1</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Guyane </td>
-        <td>0</td>
-        <td>11</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Honduras </td>
-        <td>0</td>
-        <td>8</td>
-        <td>0.00%</td>
-        <td>2</td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Islande </td>
-        <td>0</td>
-        <td>199</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Israël </td>
-        <td>0</td>
-        <td>304</td>
-        <td>0.00%</td>
-        <td>6</td>
-        <td></td>
-        <td></td>
-        <td>4</td>
-    </tr>
-    
-    <tr role="row" class="">
-        <!-- old data, font awesome graphic-tooltip data-toggle="tooltip" data-placement="top" title="Tooltip on top" -->
-        <td >Jamaïque </td>
-        <td>0</td>
-        <td>12</td>
-        <td>0.00%</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    
-    </tbody>
-</table>
-    
+        <td class="text-nowrap">Italie
+            
+            <a class="" href="#history_modal" data-toggle="modal" data-target=#history_modal-2>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">history</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="3405">3405
+            
+            <a class="" href="#deaths_history_modal" data-toggle="modal"
+               data-target=#deaths_history_modal-2>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="41035">41035
+            
+            <a class="" href="#cases_history_modal" data-toggle="modal"
+               data-target=#cases_history_modal-2>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
+
+        </td>
+        <td class="text-nowrap" data-order="8.29779456561472">8.30%
+            
+            <a class="" href="#death_rate_history_modal"
+               data-toggle="modal"
+               data-target=#death_rate_history_modal-2>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="5322">5322
+            
+            <a class="" href="#new_cases_history_modal"
+               data-toggle="modal"
+               data-target=#new_cases_history_modal-2>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="427">427
+            
+            <a class="" href="#new_deaths_history_modal"
+               data-toggle="modal"
+               data-target=#new_deaths_history_modal-2>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="148657">
+            148657
+            
+            <a class="" href="#">
+                <i data-toggle="popover" title="Mise à jour"
+                   data-content="17 mars 2020" class="material-icons"
+                   style="font-size:110%;vertical-align:middle;">info</i>
+            </a>
+            
+        </td>
+        <td>2498</td>
+
+    </tr>
+    <!-- Modal -->
 
 
-<!-- REQUIRED SCRIPTS -->
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<!--<script src="/static/adminlte/plugins/jquery/jquery.min.js"></script>-->
-<!-- Bootstrap 4 -->
-<!--<script src="/static/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>-->
-<!-- AdminLTE App -->
-<!--<script src="/static/adminlte/dist/js/adminlte.min.js"></script>-->
+    
+    <tr role="row" class="">
+        <td class="text-nowrap">Chine
+            
+            <a class="" href="#history_modal" data-toggle="modal" data-target=#history_modal-1>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">history</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="3245">3245
+            
+            <a class="" href="#deaths_history_modal" data-toggle="modal"
+               data-target=#deaths_history_modal-1>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="80928">80928
+            
+            <a class="" href="#cases_history_modal" data-toggle="modal"
+               data-target=#cases_history_modal-1>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
 
-<!-- Page scripts -->
+        </td>
+        <td class="text-nowrap" data-order="4.009737050217478">4.01%
+            
+            <a class="" href="#death_rate_history_modal"
+               data-toggle="modal"
+               data-target=#death_rate_history_modal-1>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="34">34
+            
+            <a class="" href="#new_cases_history_modal"
+               data-toggle="modal"
+               data-target=#new_cases_history_modal-1>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="8">8
+            
+            <a class="" href="#new_deaths_history_modal"
+               data-toggle="modal"
+               data-target=#new_deaths_history_modal-1>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="None">
+            
+            
+        </td>
+        <td>2274</td>
 
-<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-
-<script src="/static/js/responsive/dataTables.responsive.min.js"></script>
-<script src="/static/js/responsive/responsive.bootstrap4.min.js"></script>
-
-<script>
-$(document).ready(function() {
-    $('#death_rate_table').DataTable(
-    {
-        responsive: true,
-        "paging":   false,
-        "ordering": true,
-        "order": [[ 1, "desc" ]],
-        "info":     false,
-        //"searching":false,
-        language:{
-        "search": ""
-        }
-    });
-} );
-</script>
+    </tr>
+    <!-- Modal -->
 
 
+    
+    <tr role="row" class="">
+        <td class="text-nowrap">Iran
+            
+            <a class="" href="#history_modal" data-toggle="modal" data-target=#history_modal-3>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">history</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="1284">1284
+            
+            <a class="" href="#deaths_history_modal" data-toggle="modal"
+               data-target=#deaths_history_modal-3>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="18407">18407
+            
+            <a class="" href="#cases_history_modal" data-toggle="modal"
+               data-target=#cases_history_modal-3>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
 
-</body>
-</html>
+        </td>
+        <td class="text-nowrap" data-order="6.975607105992286">6.98%
+            
+            <a class="" href="#death_rate_history_modal"
+               data-toggle="modal"
+               data-target=#death_rate_history_modal-3>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="1046">1046
+            
+            <a class="" href="#new_cases_history_modal"
+               data-toggle="modal"
+               data-target=#new_cases_history_modal-3>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="149">149
+            
+            <a class="" href="#new_deaths_history_modal"
+               data-toggle="modal"
+               data-target=#new_deaths_history_modal-3>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="None">
+            
+            
+        </td>
+        <td></td>
+
+    </tr>
+    <!-- Modal -->
+
+
+    
+    <tr role="row" class="">
+        <td class="text-nowrap">Espagne
+            
+            <a class="" href="#history_modal" data-toggle="modal" data-target=#history_modal-5>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">history</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="803">803
+            
+            <a class="" href="#deaths_history_modal" data-toggle="modal"
+               data-target=#deaths_history_modal-5>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="17395">17395
+            
+            <a class="" href="#cases_history_modal" data-toggle="modal"
+               data-target=#cases_history_modal-5>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
+
+        </td>
+        <td class="text-nowrap" data-order="4.6162690428283994">4.62%
+            
+            <a class="" href="#death_rate_history_modal"
+               data-toggle="modal"
+               data-target=#death_rate_history_modal-5>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="2626">2626
+            
+            <a class="" href="#new_cases_history_modal"
+               data-toggle="modal"
+               data-target=#new_cases_history_modal-5>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="165">165
+            
+            <a class="" href="#new_deaths_history_modal"
+               data-toggle="modal"
+               data-target=#new_deaths_history_modal-5>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="None">
+            
+            
+        </td>
+        <td>800</td>
+
+    </tr>
+    <!-- Modal -->
+
+
+    
+    <tr role="row" class="">
+        <td class="text-nowrap">France
+            
+            <a class="" href="#history_modal" data-toggle="modal" data-target=#history_modal-7>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">history</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="264">264
+            
+            <a class="" href="#deaths_history_modal" data-toggle="modal"
+               data-target=#deaths_history_modal-7>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="9134">9134
+            
+            <a class="" href="#cases_history_modal" data-toggle="modal"
+               data-target=#cases_history_modal-7>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
+
+        </td>
+        <td class="text-nowrap" data-order="2.890299978103788">2.89%
+            
+            <a class="" href="#death_rate_history_modal"
+               data-toggle="modal"
+               data-target=#death_rate_history_modal-7>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="None">
+            
+            <a class="" href="#new_cases_history_modal"
+               data-toggle="modal"
+               data-target=#new_cases_history_modal-7>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="None">
+            
+            <a class="" href="#new_deaths_history_modal"
+               data-toggle="modal"
+               data-target=#new_deaths_history_modal-7>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="42500">
+            42500
+            
+            <a class="" href="#">
+                <i data-toggle="popover" title="Mise à jour"
+                   data-content="17 mars 2020" class="material-icons"
+                   style="font-size:110%;vertical-align:middle;">info</i>
+            </a>
+            
+        </td>
+        <td>931</td>
+
+    </tr>
+    <!-- Modal -->
+
+
+    
+    <tr role="row" class="">
+        <td class="text-nowrap">Etats-Unis
+            
+            <a class="" href="#history_modal" data-toggle="modal" data-target=#history_modal-8>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">history</i>
+            </a>
+            
+        </td>
+        <td class="text-nowrap" data-order="171">171
+            
+            <a class="" href="#deaths_history_modal" data-toggle="modal"
+               data-target=#deaths_history_modal-8>
+            <i class="material-icons" style="font-size:110%;vertical-align:middle;">timeline</i>
+            </a>
+            
+        </td>
+        <td class="

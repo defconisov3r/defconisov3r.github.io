@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat:400,700&display=swap" rel="stylesheet">
+  <!--
+      Notice the use of  in the tag above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <!-- Primary Meta Tags -->
+  <title>COVID19.social - Essential COVID-19 Reads</title>
+  <meta name="title" content="COVID19.social - Essential COVID-19 Reads">
+  <meta name="description"
+    content="COVID19.social gives you an overview of the most essential reads about COVID-19, shared by experts.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.covid19.social/">
+  <meta property="og:title" content="COVID19.social - Essential COVID-19 Reads">
+  <meta property="og:description"
+    content="COVID19.social gives you an overview of the most essential reads about COVID-19, shared by experts.">
+  <meta property="og:image" content="https://www.covid19.social/covid19.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.covid19.social/">
+  <meta property="twitter:title" content="COVID19.social - Essential COVID-19 Reads">
+  <meta property="twitter:description"
+    content="COVID19.social gives you an overview of the most essential reads about COVID-19, shared by experts.">
+  <meta property="twitter:image" content="https://www.covid19.social/covid19.png">
+</head>
+
+<body>
+  <div id="root"></div>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+  <script>
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#ffffff",
+          "text": "#000000"
+        },
+        "button": {
+          "background": "#0E6EB8"
+        }
+      },
+      "theme": "classic",
+      "position": "bottom-left"
+    });
+  </script>
+  <script>
+    function GetIEVersion() {
+      var sAgent = window.navigator.userAgent;
+      var Idx = sAgent.indexOf("MSIE");
+
+      // If IE, return version number.
+      if (Idx > 0)
+        return parseInt(sAgent.substring(Idx + 5, sAgent.indexOf(".", Idx)));
+
+      // If IE 11 then look for Updated user agent string.
+      else if (!!navigator.userAgent.match(/Trident\/7\./))
+        return 11;
+
+      else
+        return 0; //It is not IE
+    }
+
+    if (GetIEVersion() > 0) {
+      var paraOne = document.createElement("h2");
+      var paraTwo = document.createElement("h3");
+      var textOne = document.createTextNode("You are using Internet Explorer which is an outdated browser not supported by HealthBuzz.be.");
+      var textTwo = document.createTextNode("We support Google Chrome, Mozzila Firefox, Safari, Opera and Microsoft Edge.");
+      paraOne.appendChild(textOne);
+      paraTwo.appendChild(textTwo);
+      document.getElementById("root").appendChild(paraOne);
+      document.getElementById("root").appendChild(paraTwo);
+    }
+  </script>
+<script src="/static/js/bundle.js"></script><script src="/static/js/0.chunk.js"></script><script src="/static/js/main.chunk.js"></script></body>
+
+</html>

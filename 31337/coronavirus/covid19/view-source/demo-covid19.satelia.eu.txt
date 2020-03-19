@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Évaluation du risque - Questionnaire Covid-19</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Questionnaire Covid-19" />
+    <meta property="og:title" content="Covid-19" />
+    <meta property="og:description " content="Questionnaire Covid-19" />
+    <meta property="og:type" content="siteweb" />
+    <meta property="og:url" content="http://demo-covid19.satelia.eu/" />
+    <meta property="og:image" content="http://demo-covid19.satelia.eu/assets/images/suivi-sante.jpg" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0070c0">
+
+            <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/css/font-awesome/all.css">
+        <link rel="stylesheet" type="text/css" href="/assets/css/app.css">
+
+        <style>
+            main > .container-fluid {
+                padding: 40px 15px 0;
+            }
+
+            div.form-group .row {
+                border-bottom: grey 1px solid;
+            }
+
+            .footer {
+                background-color: #0070c0;
+            }
+
+            .footer > .container {
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+
+            .form-group {
+                border-top: #E2E2E2 solid 1px;
+                padding-top: 1rem;
+            }
+
+            .btn-primary {
+                background-color: #0070c0;
+            }
+        </style>
+    
+        </head>
+<body class="d-flex flex-column h-100">
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark px-5" >
+        <a class="navbar-brand" href="/"><img src="/assets/img/logo.svg" alt="CHUB - Bordeaux"/>Questionnaire Covid-19</a>
+    </nav>
+</header>
+<main role="main" class="flex-shrink-0">
+            <div class="container-fluid">
+            <div class="row">
+                <div class="col m-4">
+                        <form name="patient" method="post">
+    <div id="patient"><div class="form-group row"><label class="col-form-label col-md-8 col-12 required" for="patient_phonenumber">Votre n° de téléphone</label><div class="col-md-4 col-12"><input type="tel" id="patient_phonenumber" name="patient[phonenumber]" required="required" size="10" minlength="10" maxlength="10" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" placeholder="ex: 06..." class="form-control" /></div>
+    </div><div class="form-group row"><label class="col-form-label col-md-8 col-12 required" for="patient_zipCode">Votre code postal</label><div class="col-md-4 col-12"><input type="text" id="patient_zipCode" name="patient[zipCode]" required="required" size="5" maxlength="5" placeholder="ex: 33000" class="form-control" /></div>
+    </div><div class="form-group row"><label class="col-form-label col-md-8 col-12 required" for="patient_gender">Êtes-vous ?</label><div class="col-md-4 col-12"><select id="patient_gender" name="patient[gender]" required="required" class="form-control"><option value="" selected="selected">- Sélectionner -</option><option value="m">Homme</option><option value="f">Femme</option></select></div>
+    </div><div class="form-child form-group row" data-parent="gender" data-show-if="f"><label class="col-form-label col-md-8 col-12" for="patient_pregnant">=&gt; Êtes-vous enceinte ?</label><div class="col-md-4 col-12"><select id="patient_pregnant" name="patient[pregnant]" class="form-control"><option value="">- Sélectionner -</option><option value="1">Oui</option><option value="0">Non</option></select></div>
+    </div><div class="form-group row"><label class="col-form-label col-md-8 col-12 required" for="patient_age">Quel est votre âge ?</label><div class="col-md-4 col-12"><select id="patient_age" name="patient[age]" required="required" class="form-control"><option value="" selected="selected">- Sélectionner -</option><option value="1">1 ans</option><option value="2">2 ans</option><option value="3">3 ans</option><option value="4">4 ans</option><option value="5">5 ans</option><option value="6">6 ans</option><option value="7">7 ans</option><option value="8">8 ans</option><option value="9">9 ans</option><option value="10">10 ans</option><option value="11">11 ans</option><option value="12">12 ans</option><option value="13">13 ans</option><option value="14">14 ans</option><option value="15">15 ans</option><option value="16">16 ans</option><option value="17">17 ans</option><option value="18">18 ans</option><option value="19">19 ans</option><option value="20">20 ans</option><option value="21">21 ans</option><option value="22">22 ans</option><option value="23">23 ans</option><option value="24">24 ans</option><option value="25">25 ans</option><option value="26">26 ans</option><option value="27">27 ans</option><option value="28">28 ans</option><option value="29">29 ans</option><option value="30">30 ans</option><option value="31">31 ans</option><option value="32">32 ans</option><option value="33">33 ans</option><option value="34">34 ans</option><option value="35">35 ans</option><option value="36">36 ans</option><option value="37">37 ans</option><option value="38">38 ans</option><option value="39">39 ans</option><option value="40">40 ans</option><option value="41">41 ans</option><option value="42">42 ans</option><option value="43">43 ans</option><option value="44">44 ans</option><option value="45">45 ans</option><option value="46">46 ans</option><option value="47">47 ans</option><option value="48">48 ans</option><option value="49">49 ans</option><option value="50">50 ans</option><option value="51">51 ans</option><option value="52">52 ans</option><option value="53">53 ans</option><option value="54">54 ans</option><option value="55">55 ans</option><option value="56">56 ans</option><option value="57">57 ans</option><option value="58">58 ans</option><option value="59">59 ans</option><option value="60">60 ans</option><option value="61">61 ans</option><option value="62">62 ans</option><option value="63">63 ans</option><option value="64">64 ans</option><option value="65">65 ans</option><option value="66">66 ans</option><option value="67">67 ans</option><option value="68">68 ans</option><option value="69">69 ans</option><option value="70">70 ans</option><option value="71">71 ans</option><option value="72">72 ans</option><option value="73">73 ans</option><option value="74">74 ans</option><option value="75">75 ans</option><option value="76">76 ans</option><option value="77">77 ans</option><option value="78">78 ans</option><option value="79">79 ans</option><option value="80">80 ans</option><option value="81">81 ans</option><option value="82">82 ans</option><option value="83">83 ans</option><option value="84">84 ans</option><option value="85">85 ans</option><option value="86">86 ans</option><option value="87">87 ans</option><option value="88">88 ans</option><option value="89">89 ans</option><option value="90">90 ans</option><option value="91">91 ans</option><option value="92">92 ans</option><option value="93">93 ans</option><option value="94">94 ans</option><option value="95">95 ans</option><option value="96">96 ans</option><option value="97">97 ans</option><option value="98">98 ans</option><option value="99">99 ans</option><option value="100">100 ans</option><option value="101">101 ans</option><option value="102">102 ans</option><option value="103">103 ans</option><option value="104">104 ans</option><option value="105">105 ans</option><option value="106">106 ans</option><option value="107">107 ans</option><option value="108">108 ans</option><option value="109">109 ans</option><option value="110">110 ans</option><option value="111">111 ans</option><option value="112">112 ans</option><option value="113">113 ans</option><option value="114">114 ans</option><option value="115">115 ans</option><option value="116">116 ans</option><option value="117">117 ans</option><option value="118">118 ans</option><option value="119">119 ans</option><option value="120">120 ans</option></select></div>
+    </div><div class="form-group row"><label class="col-form-label col-md-8 col-12 required" for="patient_respiratorySymptoms">Avez-vous des symptômes respiratoires, tel que la toux* ?</label><div class="col-md-4 col-12"><select id="patient_respiratorySymptoms" name="patient[respiratorySymptoms]" required="required" aria-describedby="patient_respiratorySymptoms_help" class="form-control"><option value="" selected="selected">- Sélectionner -</option><option value="1">Oui</option><option value="0">Non</option></select><small id="patient_respiratorySymptoms_help" class="form-text text-muted">*Un rhume ne suffit pas</small></div>
+    </div><div class="form-group row"><label class="col-form-label col-md-8 col-12 required" for="patient_difficultyToBreath">Avez-vous des difficultés à respirer ou des crachats ?</label><div class="col-md-4 col-12"><select id="patient_difficultyToBreath" name="patient[difficultyToBreath]" required="required" class="form-control"><option value="" selected="selected">- Sélectionner -</option><option value="1">Oui</option><option value="0">Non</option></select></div>
+    </div><div class="form-group row"><label class="col-form-label col-md-8 col-12 required" for="patient_fever">Avez-vous de la fièvre (température supérieure ou égale à 38°c) ?</label><div class="col-md-4 col-12"><select id="patient_fever" name="patient[fever]" required="required" class="form-control"><option value="" selected="selected">- Sélectionner -</option><option value="1">Oui</option><option value="0">Non</option></select></div>
+    </div><div class="form-group row"><label class="col-form-label col-md-8 col-12 required" for="patient_riskGroup">Faites-vous partie d’un groupe à risque (plus de 65 ans, hypertension, diabète, maladie cardiovasculaire, maladie respiratoire chronique, immunosuppression due à une maladie ou à un traitement, cancer) ?</label><div class="col-md-4 col-12"><select id="patient_riskGroup" name="patient[riskGroup]" required="required" class="form-control"><option value="" selected="selected">- Sélectionner -</option><option value="1">Oui</option><option value="0">Non</option></select></div>
+    </div><div class="form-group row"><label class="col-form-label col-md-8 col-12 required" for="patient_healthcareProfessional">Êtes-vous un.e professionnel le de la santé en contact avec des patients ou des résidents d’établissements sociaux medicaux ?</label><div class="col-md-4 col-12"><select id="patient_healthcareProfessional" name="patient[healthcareProfessional]" required="required" class="form-control"><option value="" selected="selected">- Sélectionner -</option><option value="1">Oui</option><option value="0">Non</option></select></div>
+    </div><div class="form-child form-group row" data-parent="healthcareProfessional" data-show-if="1"><label class="col-form-label col-md-8 col-12" for="patient_exposedWithoutProtectionAtWork">=&gt; Avez-vous été exposé.e sans dispositif de protection personnelle à un cas confirmé en laboratoire dans le cadre de votre activité professionnelle ?</label><div class="col-md-4 col-12"><select id="patient_exposedWithoutProtectionAtWork" name="patient[exposedWithoutProtectionAtWork]" class="form-control"><option value="">- Sélectionner -</option><option value="1">Oui</option><option value="0">Non</option></select></div>
+    </div><div class="form-group row"><label class="col-form-label col-md-8 col-12 required" for="patient_proximityConfirmedCase">Y a-t-il dans votre entourage proche (famille et personne vivant sous le même toit) un cas confirmé en laboratoire ?</label><div class="col-md-4 col-12"><select id="patient_proximityConfirmedCase" name="patient[proximityConfirmedCase]" required="required" class="form-control"><option value="" selected="selected">- Sélectionner -</option><option value="1">Oui</option><option value="0">Non</option></select></div>
+    </div><input type="hidden" id="patient__token" name="patient[_token]" value="_LqcGcpuEAsnIPjXYHB7Ipm-QvVEV1CZuwa7N95PV6w" /></div>
+    <div class="row mt-4 mb-4">
+        <div class="col text-center">
+            <button class="btn btn-primary">Soumettre</button>
+        </div>
+    </div>
+    </form>
+                </div>
+            </div>
+        </div>
+    
+    <div class="row">
+        <div class="col text-center mt-2">
+                            <a href="/gprd" class="text-center" title="RGPD">Mentions légales et RGPD</a>
+                    </div>
+    </div>
+</main>
+
+    
+    <script type="application/javascript">
+        function $$(selector, context) {
+            context = context || document;
+            var elements = context.querySelectorAll(selector);
+            return Array.prototype.slice.call(elements);
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var inputs = document.querySelectorAll("form-child");
+
+            inputs.forEach(function (item, idx) {
+                item.parentNode("")
+            });
+
+            $$('[data-parent]').forEach(function (element) {
+                element.classList.add('d-none');
+
+                $$('#patient_' + element.getAttribute('data-parent'))[0].addEventListener('change', function () {
+                    if (this.options[this.selectedIndex].value === element.getAttribute('data-show-if')) {
+                        element.classList.remove('d-none');
+                        element.classList.add('d-flex');
+                    } else {
+                        element.classList.remove('d-flex');
+                        element.classList.add('d-none');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

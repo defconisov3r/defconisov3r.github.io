@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
 <head>
-	<title>starbiography</title>
+	<title>Карта коронавируса онлайн</title>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=bc9fd63f-3623-4eec-90ee-ef97da50ced6&amp;lang=ru_RU" type="text/javascript">
+</script>
+<script src="https://coronaviruskarta.online/jquery-lite-8.js" type="text/javascript">
+</script>
+
 	
 <!-- This site is optimized with the Yoast SEO plugin v12.7.1 - https://yoast.com/wordpress/plugins/seo/ -->
-<meta name="description" content="Сайт о биографиях знаменитостей"/>
-<meta name="robots" content="noindex,follow"/>
+<meta name="description" content="Карта коронавируса онлайн в России и мире"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="https://coronaviruskarta.online/" />
 <meta property="og:locale" content="ru_RU" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="starbiography - Сайт о биографиях знаменитостей" />
-<meta property="og:description" content="Сайт о биографиях знаменитостей" />
+<meta property="og:title" content="Карта коронавируса онлайн - Карта коронавируса онлайн в России и мире" />
+<meta property="og:description" content="Карта коронавируса онлайн в России и мире" />
 <meta property="og:url" content="https://coronaviruskarta.online/" />
-<meta property="og:site_name" content="starbiography" />
+<meta property="og:site_name" content="Карта коронавируса онлайн" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:description" content="Сайт о биографиях знаменитостей" />
-<meta name="twitter:title" content="starbiography - Сайт о биографиях знаменитостей" />
-<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://coronaviruskarta.online/#website","url":"https://coronaviruskarta.online/","name":"starbiography","description":"\u0421\u0430\u0439\u0442 \u043e \u0431\u0438\u043e\u0433\u0440\u0430\u0444\u0438\u044f\u0445 \u0437\u043d\u0430\u043c\u0435\u043d\u0438\u0442\u043e\u0441\u0442\u0435\u0439","potentialAction":{"@type":"SearchAction","target":"https://coronaviruskarta.online/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"CollectionPage","@id":"https://coronaviruskarta.online/#webpage","url":"https://coronaviruskarta.online/","inLanguage":"ru-RU","name":"starbiography - \u0421\u0430\u0439\u0442 \u043e \u0431\u0438\u043e\u0433\u0440\u0430\u0444\u0438\u044f\u0445 \u0437\u043d\u0430\u043c\u0435\u043d\u0438\u0442\u043e\u0441\u0442\u0435\u0439","isPartOf":{"@id":"https://coronaviruskarta.online/#website"},"description":"\u0421\u0430\u0439\u0442 \u043e \u0431\u0438\u043e\u0433\u0440\u0430\u0444\u0438\u044f\u0445 \u0437\u043d\u0430\u043c\u0435\u043d\u0438\u0442\u043e\u0441\u0442\u0435\u0439"}]}</script>
+<meta name="twitter:description" content="Карта коронавируса онлайн в России и мире" />
+<meta name="twitter:title" content="Карта коронавируса онлайн - Карта коронавируса онлайн в России и мире" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://coronaviruskarta.online/#website","url":"https://coronaviruskarta.online/","name":"\u041a\u0430\u0440\u0442\u0430 \u043a\u043e\u0440\u043e\u043d\u0430\u0432\u0438\u0440\u0443\u0441\u0430 \u043e\u043d\u043b\u0430\u0439\u043d","description":"\u041a\u0430\u0440\u0442\u0430 \u043a\u043e\u0440\u043e\u043d\u0430\u0432\u0438\u0440\u0443\u0441\u0430 \u043e\u043d\u043b\u0430\u0439\u043d \u0432 \u0420\u043e\u0441\u0441\u0438\u0438 \u0438 \u043c\u0438\u0440\u0435","potentialAction":{"@type":"SearchAction","target":"https://coronaviruskarta.online/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"CollectionPage","@id":"https://coronaviruskarta.online/#webpage","url":"https://coronaviruskarta.online/","inLanguage":"ru-RU","name":"\u041a\u0430\u0440\u0442\u0430 \u043a\u043e\u0440\u043e\u043d\u0430\u0432\u0438\u0440\u0443\u0441\u0430 \u043e\u043d\u043b\u0430\u0439\u043d - \u041a\u0430\u0440\u0442\u0430 \u043a\u043e\u0440\u043e\u043d\u0430\u0432\u0438\u0440\u0443\u0441\u0430 \u043e\u043d\u043b\u0430\u0439\u043d \u0432 \u0420\u043e\u0441\u0441\u0438\u0438 \u0438 \u043c\u0438\u0440\u0435","isPartOf":{"@id":"https://coronaviruskarta.online/#website"},"description":"\u041a\u0430\u0440\u0442\u0430 \u043a\u043e\u0440\u043e\u043d\u0430\u0432\u0438\u0440\u0443\u0441\u0430 \u043e\u043d\u043b\u0430\u0439\u043d \u0432 \u0420\u043e\u0441\u0441\u0438\u0438 \u0438 \u043c\u0438\u0440\u0435"}]}</script>
 <!-- / Yoast SEO plugin. -->
 
 <link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
@@ -37,7 +43,11 @@
 <script type='text/javascript' src='https://coronaviruskarta.online/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
 <script type='text/javascript' src='https://coronaviruskarta.online/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
 <link rel='https://api.w.org/' href='https://coronaviruskarta.online/wp-json/' />
-<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>		<style type="text/css" id="wp-custom-css">
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="https://coronaviruskarta.online/wp-content/uploads/2020/03/cropped-unnamed-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://coronaviruskarta.online/wp-content/uploads/2020/03/cropped-unnamed-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://coronaviruskarta.online/wp-content/uploads/2020/03/cropped-unnamed-180x180.png" />
+<meta name="msapplication-TileImage" content="https://coronaviruskarta.online/wp-content/uploads/2020/03/cropped-unnamed-270x270.png" />
+		<style type="text/css" id="wp-custom-css">
 			.header__nav-2 > ul > li:hover > a {
     background: none;
     border-bottom: 3px solid #00b9eb;
@@ -564,227 +574,4 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 }
 .slick-slider {
     position: relative;
-    user-select: none;
-    -webkit-touch-callout: none;
-    -ms-touch-action: pan-y;
-    touch-action: pan-y;
-    -webkit-tap-highlight-color: transparent;
-}
-.questions__image img {
-    margin-bottom: 85px;
-}
-.post blockquote {
-    background: #00b9eb47;
-}
-.middle {
-    padding: 35px 0;
-}
-.post__headline:after {
-    margin: 15px auto 0;
-		background: #00b9eb;
-}
-.post__headline {
-    margin: 0 0 20px;
-		text-align: left !important;
-}
-		</style>
-				<style>
-	</style>
-<meta name="yandex-verification" content="c2291025a9fec994" />
-<script charset="utf-8" async src="https://bigreal.org/pushJs/FFx7XQmc.js"></script>	
-</head>
-
-<body>
-
-<div class="container">
-<div class="wrapper">
-
-	<header class="header">
-
-		<div class="header__top">
-
-					<div class="header__logo">
-		<div class="header__logo-image"><img src="" alt="" /></div>
-		<div class="header__logo-title">Биографии звезд<span></span></div>
-		<div class="header__logo-desc">Сайт о биографиях знаменитостей</div>
-		</div>
-		
-
-
-		<button class="header__menu-toggle" type="button"></button>
-		<div class="header__menu">
-			
-					<nav class="header__nav-2"><ul><li id="menu-item-144" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-144"><a href="https://coronaviruskarta.online/tv">ТВ</a></li>
-</ul></nav>
-									</div><!-- .header__menu -->
-			<form class="search" method="get" action="https://coronaviruskarta.online/">
-				<input class="search__input" type="search" name="s" placeholder="Поиск по сайту" value="" required />
-				<button class="search__button" type="submit"></button>
-			</form>
-
-		
-		</div><!-- .header__top -->
-
-
-
-	</header><!-- .header -->
-<div class="middle">
-			
-		<div class="wrap">
-
-				
-									
-		</div><!-- .wrap -->
-
-		<div class="questions">
-			<div class="questions__inner">
-
-										
-			
-				<div class="questions__aside">
-
-					<div class="ask">
-						<div class="ask__title">У вас есть свой вопрос?</div>
-						<div class="ask__text">Вы всегда можете задать любой интересующий Вас вопрос нашим экспертам и профессиональным журналистам</div>
-						<button class="ask__button  js-ask-form" data-theme="100bio">Задать свой вопрос</button>
-					</div><!-- .ask -->
-
-					<div class="stats">
-
-						<div class="stats__item  stats__item-1">
-							<div class="stats__title">2 865 довольных читателей</div>
-							<div class="stats__text">Столько человек уже получили интересующую информацию</div>
-						</div><!-- .stats__item -->
-
-						<div class="stats__item  stats__item-2">
-							<div class="stats__title">26 профессиональных специалистов</div>
-							<div class="stats__text">Работают в штате нашей редакции и отвечают на вопросы посетителей</div>
-						</div><!-- .stats__item -->
-
-					</div><!-- .stats -->
-
-				</div><!-- .questions__aside -->
-
-			</div><!-- .questions__inner -->
-		</div><!-- .questions -->
-
-		<div class="middle">
-
-			<div class="content">
-
-																										
-						
-			</div><!-- .content -->
-
-			<aside class="sidebar">
-
-																		
-			</aside><!-- .sidebar -->
-
-		</div><!-- .middle -->
-
-						<article class="post  post--home">
-			<h1 class="headline">О сайте</h1>
-			<div class="post__entry">
-											</div><!-- .post__entry -->
-		</article><!-- .post -->
-			
-	</div><!-- .middle -->
-
-	<footer class="footer">
-		<div class="footer__inner">
-
-			<div class="footer__section  copyright">
-
-				<div class="copyright__domain">
-					<div class="copyright__logo"><img src="" alt="" /></div>
-					Биографии звезд<span></span>
-				</div>
-
-				<div class="copyright__text">
-					© 2018–2020 – Сайт о биографиях знаменитостей				</div>
-
-			</div><!-- .copyright -->
-
-			
-					<nav class="footer__section  footer__nav"><ul><li id="menu-item-96" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-96"><a href="https://coronaviruskarta.online/sitemap">Карта сайта</a></li>
-</ul></nav>
-				
-			<div class="footer__section  footer__mid">
-
-			
-			
-			</div><!-- .footer__mid -->
-
-			<div class="footer__section  footer__info">
-
-				<p>Перепечатка материалов разрешена только с указанием первоисточника</p>
-
-				
-			</div><!-- .footer__info -->
-
-			
-
-		</div><!-- .footer__inner -->
-	</footer><!-- .footer -->
-
-</div><!-- .wrapper -->
-</div><!-- .container -->
-
-<script type='text/javascript'>
-/* <![CDATA[ */
-var wpcf7 = {"apiSettings":{"root":"https:\/\/coronaviruskarta.online\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='https://coronaviruskarta.online/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.6'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var tocplus = {"visibility_show":"show","visibility_hide":"hide","width":"Auto"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='https://coronaviruskarta.online/wp-content/plugins/table-of-contents-plus/front.min.js?ver=1509'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var ratingsL10n = {"plugin_url":"https:\/\/coronaviruskarta.online\/wp-content\/plugins\/wp-postratings","ajax_url":"https:\/\/coronaviruskarta.online\/wp-admin\/admin-ajax.php","text_wait":"\u041f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430, \u043d\u0435 \u0433\u043e\u043b\u043e\u0441\u0443\u0439\u0442\u0435 \u0437\u0430 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0437\u0430\u043f\u0438\u0441\u0435\u0439 \u043e\u0434\u043d\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u043e.","image":"stars","image_ext":"gif","max":"5","show_loading":"1","show_fading":"1","custom":"0"};
-var ratings_mouseover_image=new Image();ratings_mouseover_image.src="https://coronaviruskarta.online/wp-content/plugins/wp-postratings/images/stars/rating_over.gif";;
-/* ]]> */
-</script>
-<script type='text/javascript' src='https://coronaviruskarta.online/wp-content/plugins/wp-postratings/js/postratings-js.js?ver=1.87'></script>
-<script type='text/javascript' src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1'></script>
-<script type='text/javascript' src='https://coronaviruskarta.online/wp-content/themes/100bio/js/scripts.js'></script>
-<script type='text/javascript' src='https://coronaviruskarta.online/wp-content/plugins/q2w3-fixed-widget/js/q2w3-fixed-widget.min.js?ver=5.1.9'></script>
-<script type='text/javascript' src='https://coronaviruskarta.online/wp-content/plugins/easy-fancybox/js/jquery.fancybox.min.js?ver=1.3.24'></script>
-<script type='text/javascript'>
-var fb_timeout, fb_opts={'overlayShow':true,'hideOnOverlayClick':true,'showCloseButton':true,'margin':20,'centerOnScroll':false,'enableEscapeButton':true,'autoScale':true };
-if(typeof easy_fancybox_handler==='undefined'){
-var easy_fancybox_handler=function(){
-jQuery('.nofancybox,a.wp-block-file__button,a.pin-it-button,a[href*="pinterest.com/pin/create"],a[href*="facebook.com/share"],a[href*="twitter.com/share"]').addClass('nolightbox');
-/* IMG */
-var fb_IMG_select='a[href*=".jpg"]:not(.nolightbox,li.nolightbox>a),area[href*=".jpg"]:not(.nolightbox),a[href*=".jpeg"]:not(.nolightbox,li.nolightbox>a),area[href*=".jpeg"]:not(.nolightbox),a[href*=".png"]:not(.nolightbox,li.nolightbox>a),area[href*=".png"]:not(.nolightbox),a[href*=".webp"]:not(.nolightbox,li.nolightbox>a),area[href*=".webp"]:not(.nolightbox)';
-jQuery(fb_IMG_select).addClass('fancybox image');
-var fb_IMG_sections=jQuery('.gallery,.wp-block-gallery,.tiled-gallery,.wp-block-jetpack-tiled-gallery');
-fb_IMG_sections.each(function(){jQuery(this).find(fb_IMG_select).attr('rel','gallery-'+fb_IMG_sections.index(this));});
-jQuery('a.fancybox,area.fancybox,li.fancybox a').each(function(){jQuery(this).fancybox(jQuery.extend({},fb_opts,{'transitionIn':'elastic','easingIn':'easeOutBack','transitionOut':'elastic','easingOut':'easeInBack','opacity':false,'hideOnContentClick':false,'titleShow':true,'titlePosition':'over','titleFromAlt':true,'showNavArrows':true,'enableKeyboardNav':true,'cyclic':false}))});};
-jQuery('a.fancybox-close').on('click',function(e){e.preventDefault();jQuery.fancybox.close()});
-};
-var easy_fancybox_auto=function(){setTimeout(function(){jQuery('#fancybox-auto').trigger('click')},1000);};
-jQuery(easy_fancybox_handler);jQuery(document).on('post-load',easy_fancybox_handler);
-jQuery(easy_fancybox_auto);
-</script>
-<script type='text/javascript' src='https://coronaviruskarta.online/wp-content/plugins/easy-fancybox/js/jquery.easing.min.js?ver=1.4.1'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var a3_lazyload_params = {"apply_images":"1","apply_videos":"1"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='//coronaviruskarta.online/wp-content/plugins/a3-lazy-load/assets/js/jquery.lazyloadxt.extra.min.js?ver=2.2.2'></script>
-<script type='text/javascript' src='//coronaviruskarta.online/wp-content/plugins/a3-lazy-load/assets/js/jquery.lazyloadxt.srcset.min.js?ver=2.2.2'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var a3_lazyload_extend_params = {"edgeY":"0"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='//coronaviruskarta.online/wp-content/plugins/a3-lazy-load/assets/js/jquery.lazyloadxt.extend.js?ver=2.2.2'></script>
-<script type='text/javascript' src='https://coronaviruskarta.online/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
-</body>
-</html>
+    

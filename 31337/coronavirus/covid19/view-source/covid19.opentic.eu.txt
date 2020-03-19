@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="/css/login.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="/css/bootstrap2.min.css">
+    <link rel="icon" type="image/png" href="/images/favicon.jpg"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <title>COVID-19</title>
+    <script src="/js/jquery2.min.js"></script>
+    <script src="/js/bootstrap2.min.js"></script>
+    <style>
+        table, th, td {
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body style="background-image: url(/images/fondo.png)">
+<script type="text/javascript">
+
+    $(document).ready(function(){
+
+        var isChrome = window.chrome;
+        if(isChrome) {
+            $("#password").attr("autocomplete","new-password");
+        } else {
+            $("#password").attr("autocomplete","off");
+        }
+
+        $('#btnEntrar').click(function(e) {
+            $('.form-signin').submit();
+        });
+
+        $('#password').keyup(function(e){
+            if(e.keyCode == 13)
+            {
+                $('.form-signin').submit();
+            }
+        });
+
+    });
+</script>
+<div class="container">
+
+    <div class="center-signin" style="height: 458px">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-5 col-md-offset-4 col-lg-4 col-lg-offset-4">
+
+                        <img src="/images/logo-ceeiscat.gif" class="imgcenter" width="300px" height="125px" style="margin-top: -97px;" alt="">
+
+            
+            <div class="panel panel-default box-shadow">
+                <div class="panel-heading">
+                    <span class="text-success">Autenticació</span>
+                </div>
+
+                <div class="panel-body">
+
+                    <form class="form-signin" action="/login_check" method="POST" >
+
+                        <div class="form-group">
+                            <label for="usuario">Usuari</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
+                                <input type="text" id="username" class="form-control" placeholder="Usuari" name="_username" required="required" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Contrasenya</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></div>
+                                <input type="password" id="password" class="form-control" placeholder="Contrasenya" name="_password" required="required" readonly onfocus="this.removeAttribute('readonly');"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-xs-offset-2 col-xs-9 text-center">
+                                <br>
+                                <button type="button" name="entrar" id="btnEntrar" class="btn btn-success btn-block" value="Entrar">Entrar</button>
+                            </div>
+                        </div>
+
+                        <input type="hidden" name="_csrf_token" value="H5DOJ7zBdzzWWAJg4Vfdsj5lkYKK9HDTbWo_to8A5GI"/>
+
+                        
+                    </form>
+
+                </div>
+
+            </div>
+
+            <div class="form-group footer">
+                <div class="col-xs-9">
+                    <a href="http://www.opentic.eu" target="_blank" class="info"><span style="font-size: 10px;">COVID-19 by&nbsp;</span><img src="/images/logo_open.png" border="0" height="49" width="120"></a>
+                </div>
+                <br/>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Coronav&iacute;rus disease (COVID-19) | Unimed</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="title" content="Coronav&iacute;rus disease (COVID-19) | Unimed" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="robots" content="All">
+<meta name="author" content="SG&C - www.sgec.com.br">
+<meta name="page-topic" content="">
+<meta name="audience" content="All">
+<meta name="robots" content="NOINDEX,NOFOLLOW" >
+<meta name="owner" CONTENT="suporte.sgworks@sginterativa.com.br">
+<meta name="rating" CONTENT="General">
+
+<!-- FB -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Coronav&iacute;rus disease (COVID-19) | Unimed" />
+<meta property="og:description" content="" />
+<meta property="og:url" content="https://coronavirus.sgteste.com.br/" />
+<meta property="og:site_name" content="Coronav&iacute;rus disease (COVID-19) | Unimed" />
+<meta property="og:image" content="https://coronavirus.sgteste.com.br/fotos/logo-unimed-nordeste-paulista.png" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="twitter:card" content="summary" />
+<!-- FB -->
+
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/mediaqueries.css" />
+<link rel="stylesheet" href="/css/menumobile.css" />
+<link rel="stylesheet" href="/css/hover-min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body class="home inicial">
+
+<section>
+ <div class="container">
+  <div class="row">
+   <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12 logo center">
+    <img src="/images/logo-unimed.png" alt="Unimed" title="Unimed" />
+   </div>
+  </div>
+ </div>
+
+ <div class="container">
+  <div class="row">
+   <div class="col-lg-1 col-md-1 col-sm-6 col-xs-12"></div>
+   <div class="col-lg-10 col-md-10 col-sm-6 col-xs-12 form center">
+    <h1>Unimed contra o Coronavírus</h1>
+    <h3>Página oficial das Unimeds do Estado de São Paulo</h3>
+    <hr class="inicial" />
+    <p>É importante ignorar as notícias falsas e boatos e procurar sempre fontes confiáveis, como este aplicativo, o aplicativo do SUS ou, ainda, o site do Ministério da Saúde.</p>
+    <p>Se você chegou até aqui pode ser porque tem algumas dúvidas sobre o Coronavírus ou porque pode estar apresentando alguns sintomas. Nesse caso, podemos ajudar você logo após seguir os próximos passos.</p>
+    <p><strong>Lembramos que você precisa estar conectado à Internet para utilizar este serviço, que é gratuito e exclusivo para clientes Unimed.</strong></p>
+
+    <p><span class="verde">Coloque o número do seu cartão Unimed abaixo:</p>
+
+    <form method="GET" id="form_cidade" action="confirmacao">
+     <div class="form-inline">
+      <input type="tel" id="cartao" name="cartao" class="form-control" required>
+      <button type="submit" class="btn btn-continuar"><img src="/images/arrow.png"></button>
+     </div>
+    </form>
+
+    <hr class="final" style="padding-top: 0;" />
+    
+   </div>
+   <div class="col-lg-1 col-md-1 col-sm-6 col-xs-12"></div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="container infos">
+  <div class="row">
+   <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 topico1">
+    <h2>O serviço de orientação e triagem médica da Unimed conta com equipe técnica composta por médicos de família, clínicos, pediatras e enfermeiros, que são responsáveis pela condução e de todos os atendimentos</h2>
+   </div>
+   <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 topico2">
+    <h2>Beneficiários da Unimed têm à sua disposição uma série de serviços:</h2>
+    <p><span>&bull;</span> Esclarecimentos sobre a <strong>covid-19</strong>, doença causada pelo novo coronavírus.</p>
+    <p><span>&bull;</span> Condução e acompanhamento, por telefone e vídeo, de urgências e emergências.</p>
+    <p><span>&bull;</span> Orientações sobre preparo e realização de exames.</p>
+    <p><span>&bull;</span> Monitoramento de casos suspeitos.</p>
+    <p><span>&bull;</span> Encaminhamento ou direcionamento para a rede credenciada ou preferencial, definida pelo cliente.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="container">
+  <div class="row">
+   <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12 center">
+    <p>Todos os direitos reservados &copy; Federação das Unimeds do Estado de São Paulo.</p>
+   </div>
+  </div>
+ </div>
+</footer>
+<script src="/js/jquery.maskedinput.min.js" type="text/javascript"></script>
+
+</body>
+</html>

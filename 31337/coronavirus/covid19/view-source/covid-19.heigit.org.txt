@@ -1,0 +1,190 @@
+  <!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Research on Covid-19</title>
+
+  <!-- Start Component -->
+  <meta charset="utf-8">f
+
+<meta name="description" content="">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:image" content="">
+<meta name="twitter:card" content="summary">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Webflow">
+<link href="https://fonts.googleapis.com/css?family=Hind:400,700&display=swap" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="assets/css/style.css">
+
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" href="">
+
+<link rel="canonical" href="">
+
+<!-- Add jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.control.min.css" />
+
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+crossorigin=""></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>
+
+<body class="page-data" onload="loadAllMaps()">
+
+    <!-- Start Component -->
+    <header>
+    <div class="wrapper">
+      <div class="container">
+        <a class="mapswipe-logo" href="index.html">
+          <img class="logo" src="assets/img/svg/HeiGIT_Logo_base_white.svg">
+        </a>
+        <div class="mobile-menu hidden">
+          <div class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <nav class="nav-menu" role="navigation">
+          <div>
+            <a class="navlink active" href="index.html">Map</a>
+            <a class="navlink" href="data.html">Data</a>
+            <a class="navlink" href="about.html">About</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- End Component -->
+
+      <div class="hero-container">
+    <div class="wrapper">
+      <div class="hero-content">
+         <h1 class="hero-heading">Mapping COVID-19 Research</h1>
+        <p class="hero-subheading">Get a geospatial overview on planned, ongoing and finished clinical trials.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-container">
+      <div class="rich-text">
+        <h2>COVID-19 research activities</h2>
+        <p>Many informative maps are available that allow to follow the spread of COVID-19 and its recovery. This is importan information but only a part of the story. The global scientific community has immediately responded to the new threat by focused research activities.</p>
+          <p>This has led to scientific publications and clinical trials worldwide. Here we aim at providing an up to date overview about these activities and link to the underlying sources.</p>
+      </div><div>
+    </div><div>
+  </div><div>
+
+    <div class="section">
+      <div class="section-container">
+        <div class="rich-text">
+          <h2>Clinical Trials</h2>
+          
+          <p>The information on clinical trials is based on data from the <a href="https://apps.who.int/trialsearch/">WHO Clinical Trials Search Portal</a> about COVID-19 related clinical trials. The Clinical Trials Search Portal provides access to a central database containing the trial registration data sets provided by important international registries. </p>
+          <p>The WHO portal gets updated every Friday by six important registries and every 4 weeks by additional registries. We aim at updating our maps without too much delay.</p>
+        </div>
+      </div>
+    </div>
+
+  <hr class="wrapper">
+  <div class="section">
+    <div class="section-container">
+      <div id="plot-study-types" class="plot">
+        <!-- data table container -->
+        
+      </div>
+      <div class="map" id="map-study-types">
+        <!-- map container -->
+      </div>
+      <div class="map-caption">
+        <p>The map shows the location of different study types. The time slider allows to inquery the temporal dimension. The location of the studies is only accurate till the level of the cities and does not allow the identification of the institution there the study tool place. Click on an individual study to derive more detailed information or switch to the <i>Data</i> panel.</p>
+        <!-- Please verify -->
+      </div>
+    </div>
+  </div>
+
+    <hr class="wrapper">
+
+      <div class="section">
+      <div class="section-container">
+        <div class="rich-text">
+          <h2>Publications</h2>
+          <p>This is based on data we get from several journals. We collect publications in: CDC, NEJM, JAMA, Lancet. 
+            This is a very first draft intended to generate general feedback on how information is represented. 
+            It is by far not close to a proper cartographic representation and it is not intended to discuss about details such as color, 
+            scale bar, symbol form etc since all theser things will presumably change. 
+            Also the map surroundings (text, explanation etc.) will be added later on.</p>
+        </div>
+      </div>
+    </div>
+
+
+  <hr class="wrapper">
+  <div class="section">
+    <div class="section-container">
+      <div id="plot-study-phases" class="plot">
+        <!-- data table container -->
+      </div>
+      <div class="map" id="map-study-phases">
+        <!-- map container -->
+      </div>
+      <div class="map-caption">
+        <p>Fill with text.</p>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  <!-- Start Component -->
+  <div class="prefooter">
+  <div class="wrapper">
+      <div class="container">
+        <div class="footer-column">
+        </div>
+
+      </div>
+    </div>
+</div>
+<footer>
+  <div class="wrapper">
+    <div class="container">
+      <div class="footer-column">
+        <a href="cookiesandprivacy.html" class="navlink">Cookies and Privacy</a>
+        <a href="https://heigit.org/imprint/" class="navlink">Imprint</a>
+      </div>
+      <div class="footer-column last-footer">
+        <p>Copyright © <span id="year">2020</span> HeiGIT </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script async defer src="assets/js/index.js"></script>
+<script async defer src="assets/js/map.js"></script>
+<script async defer src="assets/js/plot.js"></script>
+
+  <!-- End Component -->
+
+</body>
+
+</html>

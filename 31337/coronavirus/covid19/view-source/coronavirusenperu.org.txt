@@ -1,149 +1,173 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <title>Waiting for the redirectiron...</title>
+        <style type="text/css">
+            body {background-color: #ffffff; font-family: "Helvetica Neue", Helvetica,Arial,sans-serif;}
+            html, body {width: 100%; height: 100%; margin: 0; padding: 0;}
+            span {color: #878787; font-size: 12pt;  text-align: center;}
+            h1 {color: #878787; font-size: 18pt; text-align: center;}
+            .link {margin-top: 40px;}
+            .sk-circle {margin: 80px auto;width: 100px;height: 100px;position: relative;}
+            .sk-circle .sk-child {width: 100%;height: 100%;position: absolute;left: 0;top: 0;}
+            .sk-circle .sk-child:before {content: '';display: block;margin: 0 auto;width: 15%;height: 15%;background-color: #666666;border-radius: 100%;-webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;}
+            .sk-circle .sk-circle2 {-webkit-transform: rotate(30deg);-ms-transform: rotate(30deg);transform: rotate(30deg); }
+            .sk-circle .sk-circle3 {-webkit-transform: rotate(60deg);-ms-transform: rotate(60deg);transform: rotate(60deg); }
+            .sk-circle .sk-circle4 {-webkit-transform: rotate(90deg);-ms-transform: rotate(90deg);transform: rotate(90deg); }
+            .sk-circle .sk-circle5 {-webkit-transform: rotate(120deg);-ms-transform: rotate(120deg);transform: rotate(120deg); }
+            .sk-circle .sk-circle6 {-webkit-transform: rotate(150deg);-ms-transform: rotate(150deg);transform: rotate(150deg); }
+            .sk-circle .sk-circle7 {-webkit-transform: rotate(180deg);-ms-transform: rotate(180deg);transform: rotate(180deg); }
+            .sk-circle .sk-circle8 {-webkit-transform: rotate(210deg);-ms-transform: rotate(210deg);transform: rotate(210deg); }
+            .sk-circle .sk-circle9 {-webkit-transform: rotate(240deg);-ms-transform: rotate(240deg);transform: rotate(240deg); }
+            .sk-circle .sk-circle10 {-webkit-transform: rotate(270deg);-ms-transform: rotate(270deg);transform: rotate(270deg); }
+            .sk-circle .sk-circle11 {-webkit-transform: rotate(300deg);-ms-transform: rotate(300deg);transform: rotate(300deg); }
+            .sk-circle .sk-circle12 {-webkit-transform: rotate(330deg);-ms-transform: rotate(330deg);transform: rotate(330deg); }
+            .sk-circle .sk-circle2:before {-webkit-animation-delay: -1.1s;animation-delay: -1.1s; }
+            .sk-circle .sk-circle3:before {-webkit-animation-delay: -1s;animation-delay: -1s; }
+            .sk-circle .sk-circle4:before {-webkit-animation-delay: -0.9s;animation-delay: -0.9s; }
+            .sk-circle .sk-circle5:before {-webkit-animation-delay: -0.8s;animation-delay: -0.8s; }
+            .sk-circle .sk-circle6:before {-webkit-animation-delay: -0.7s;animation-delay: -0.7s; }
+            .sk-circle .sk-circle7:before {-webkit-animation-delay: -0.6s;animation-delay: -0.6s; }
+            .sk-circle .sk-circle8:before {-webkit-animation-delay: -0.5s;animation-delay: -0.5s; }
+            .sk-circle .sk-circle9:before {-webkit-animation-delay: -0.4s;animation-delay: -0.4s; }
+            .sk-circle .sk-circle10:before {-webkit-animation-delay: -0.3s;animation-delay: -0.3s; }
+            .sk-circle .sk-circle11:before {-webkit-animation-delay: -0.2s;animation-delay: -0.2s; }
+            .sk-circle .sk-circle12:before {-webkit-animation-delay: -0.1s;animation-delay: -0.1s; }
+            @-webkit-keyframes sk-circleBounceDelay {0%, 80%, 100% {-webkit-transform: scale(0);transform: scale(0);}40% {-webkit-transform: scale(1);transform: scale(1);}}
+            @keyframes sk-circleBounceDelay {0%, 80%, 100% {-webkit-transform: scale(0);transform: scale(0);}40% {-webkit-transform: scale(1);transform: scale(1);}}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Visitor anti-robot validation</title>
-    
-    <link rel="stylesheet" type="text/css" href="v2/css/main.css">
+        </style>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1975075-20"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <script type="text/javascript">
+            //<![CDATA[
+            function startCountdown() {
+                setInterval(function () {
+                    var $secondsElement = document.getElementById('seconds');
+                    var seconds = parseInt($secondsElement.innerHTML);
+                    if (seconds > 0) {
+                        seconds--;
+                        $secondsElement.innerHTML = seconds;
+                    }
+                }, 1000);
+            }
+            function browserIntegrityCheck() {
+                w = window.innerWidth;
+                h = window.innerHeight;
+                arr = [w, h, Math.floor((Math.random() * 9) + 1)];
+                arr.push(arr[0] * arr[1] * arr[2]);
+                d = new Date().getTime();
+                arr = [];
+                b = navigator.appName;
+                div1 = document.createElement('div');
+                div1.style.display = 'none';
+                div2 = document.createElement('div');
+                div2.style.display = 'none';
+                div3 = document.createElement('div');
+                div3.style.display = 'none';
+                c = document.getElementById('content');
+                c.appendChild(div1);
+                div1.appendChild(div2);
+                div2.appendChild(div3);
+                div1.removeChild(div2);
+                r = genRandString();
+                if (r.search('asd')) {
+                    r.replace('asd', 'bsd');
+                }
+            }
 
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+            function redirect() {
+                setTimeout(function () {
+                    f = document.getElementById('challenge-form');
+                    f.submit();
+                }, 4000);
+            }
+            function genRandString() {
+                var text = "";
+                var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-        gtag('config', 'UA-1975075-20');
-        gtag('event', 'screen_view', {
-            'screen_name': 'Captcha Page'
-        });
+                for (var i = 0; i < 5; i++)
+                    text += possible.charAt(Math.floor(Math.random() * possible.length));
 
-    </script>
+                return text;
+            }
+            
+            (function () {
+                var a = function () {
+                    try {
+                        return !!window.addEventListener
+                    } catch (e) {
+                        return !1
+                    }
+                },
+                        b = function (b, c) {
+                            a() ? document.addEventListener("DOMContentLoaded", b, c) : document.attachEvent("onreadystatechange", b)
+                        };
+                b(function () {
+                    var a = document.getElementById('content').style.display = 'block';
 
-    <script src="v2/js/adaptive-color.js"></script>
-    <script src="v2/js/translations.js"></script>
-    <script src="v2/js/detect-browser-language.js"></script>
-
-</head>
-
-<body>
+                    setTimeout(startCountdown(), 0);
+                    setTimeout(browserIntegrityCheck(), 0);
+                    setTimeout(redirect(), 0);
 
 
-    <div class="page-container">
+                }, false);
+            })();
+            //]]>
+        </script>
 
-        <div class="contact-support info">
-            <!--
-        <div>
-            <p>Company</p>
-            <p>info@company.com</p>
-        </div>
-        <div>
-            <p>USA: +1 234 567 88</p>
-            <p>EU: +44 55 6666 777</p>
-        </div>
-        -->
-        </div>
 
-        <noscript>
-            <div class="alert card">
-                <div class="title">Your browser does not support JavaScript!</div>
-                <p>
-                    Please enable Javascript and refresh this page!
-                </p>
-            </div>
-        </noscript>
+    </head>
+    <body>
+        <table width="100%" height="100%" cellpadding="20">
+            <tr>
+                <td align="center" valign="middle">
+                    <div>
+                        <noscript>
+                        <h1 style="color:#990000;">Please, turn Javascript on in your browser then reload the page.</h1>
+                        </noscript>
+                        <div id="content" style="display:none">
 
-        <div class="card">
-            <div class="captcha-container">
-                <div class="right">
-                    <select id="languageDropdown" class="link"></select>
-                </div>
+                            <div class="sk-circle">
+                                <div class="sk-circle1 sk-child"></div>
+                                <div class="sk-circle2 sk-child"></div>
+                                <div class="sk-circle3 sk-child"></div>
+                                <div class="sk-circle4 sk-child"></div>
+                                <div class="sk-circle5 sk-child"></div>
+                                <div class="sk-circle6 sk-child"></div>
+                                <div class="sk-circle7 sk-child"></div>
+                                <div class="sk-circle8 sk-child"></div>
+                                <div class="sk-circle9 sk-child"></div>
+                                <div class="sk-circle10 sk-child"></div>
+                                <div class="sk-circle11 sk-child"></div>
+                                <div class="sk-circle12 sk-child"></div>
+                            </div>
+                            <h1>Accessing http://coronavirusenperu.org/ securely…</h1>
 
-                <img class="logo" alt="logo"
-                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAyIiBoZWlnaHQ9IjgyIiB2aWV3Qm94PSIwIDAgMTAyIDgyIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNODMuMzc2MyAyNy4yMjM5TDgyLjE2NzYgMzAuMDkxNUw4NS4yMjgzIDMwLjY1MzdDOTMuNTM5IDMyLjE4MDMgOTkuNSAzOC43ODQ5IDk5LjUgNDYuMzYzNkM5OS41IDU1LjAwNzUgOTEuNzE2NyA2Mi40MDkxIDgxLjYgNjIuNDA5MUgyMi45NUMxMS40MzA4IDYyLjQwOTEgMi41IDUzLjk2NDMgMi41IDQ0LjA0NTVDMi41IDM2LjE5MjggOC4wNDQyOSAyOS4zMTA3IDE2LjA5MzQgMjYuNzM2NkwxNy45MDczIDI2LjE1NjVMMTcuODI5OCAyNC4yNTM2QzE3LjgxMzUgMjMuODUzOSAxNy44IDIzLjUxMzYgMTcuOCAyMy4xODE4QzE3LjggMTEuOTczNSAyNy44NjI0IDIuNSA0MC44IDIuNUM0OS40MzM3IDIuNSA1Ni44NTg5IDYuNzU5NiA2MC43OTQ3IDEyLjk1OTdMNjIuMTEwOCAxNS4wMzMxTDY0LjIwNzMgMTMuNzU0MUM2Ni4yMzkxIDEyLjUxNDYgNjguNzIxNCAxMS43NzI3IDcxLjQgMTEuNzcyN0M3OC42OTU3IDExLjc3MjcgODQuMiAxNy4xMDI0IDg0LjIgMjMuMTgxOEM4NC4yIDI0LjYwMTIgODMuOTA2IDI1Ljk2NzEgODMuMzc2MyAyNy4yMjM5WiIgc3Ryb2tlPSIjQzQwMDAwIiBzdHJva2Utd2lkdGg9IjUiLz4KPHBhdGggZD0iTTQ2LjAwNjQgNjIuOTcwOEw0Ny43NzQyIDY0LjczODZMNDkuNTQyIDYyLjk3MDhMNjAuNzg4MSA1MS43MjQ3TDYwLjkwMjIgNTEuODM4N0w0Ny43NzQyIDY0Ljk2NjdMNDEuMDk3OCA1OC4yOTAzTDQxLjIxMTkgNTguMTc2M0w0Ni4wMDY0IDYyLjk3MDhaTTU5LjkzMjggNTAuODY5NEw1OS45MzM2IDUwLjg3MDJDNTkuOTMzMyA1MC44Njk5IDU5LjkzMyA1MC44Njk2IDU5LjkzMjcgNTAuODY5Mkw1OS45MzI4IDUwLjg2OTRaTTUxIDc5LjVDNjMuNDI2NCA3OS41IDczLjUgNjkuNDI2NCA3My41IDU3QzczLjUgNDQuNTczNiA2My40MjY0IDM0LjUgNTEgMzQuNUMzOC41NzM2IDM0LjUgMjguNSA0NC41NzM2IDI4LjUgNTdDMjguNSA2OS40MjY0IDM4LjU3MzYgNzkuNSA1MSA3OS41WiIgZmlsbD0iI0M0MDAwMCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI1Ii8+Cjwvc3ZnPgo=">
-                <div class="title js-lang-TITLE"></div>
+                            <span>This is an automatic process.  Your browser will redirect to your requested content in <span id="seconds">5</span> seconds.</span>
+                        </div>
 
-                <div class="description js-lang-SUBTITLE"></div>
-
-                <div class="ip-info info"><span class="js-lang-YOUR_IP"></span>: <b class="primary"> 198.98.59.161</b>
-                    <!-- ∘ BNI: 552aebbdf8d1b9f8 -->
-                </div>
-
-                <div class="center">
-
-                    <div class="captcha">
-                        <form method="post" action="/verify.php">
-                            <script src="https://recaptcha.net/recaptcha/api.js" async defer></script>
-                    <div class="g-recaptcha" data-sitekey="6LdvpRAUAAAAAJkr4psZnXC4TeOEVPwP_bEQrP24"></div>
-                            <input type="hidden" name="origin_url" value="http://coronavirusenperu.org/" />
-                            <input type="submit" class="delist-button" translate translate-attr-value="SUBMIT"
-                                value="Delist" />
+                        <form id="challenge-form" action="/verify.php" method="post">
+                            <input type="hidden" name="hash" value="57c47487caecc482f00343051096282fae400e89"/>
+                            <input type="hidden" name="origin_url" value="http://coronavirusenperu.org/"/>
                         </form>
                     </div>
 
-                    <div id="moreInfoDropdown" class="link"><span class="js-lang-HEADING"></span> ⌵</div>
-                    <div id="moreInfo">
-                        <span class="js-lang-PRE_BODY"></span>
-                        <span class="js-lang-POST_BODY"></span>
+
+                    <div class="link">
+                        <a href="https://bitninja.io" target="_blank" style="font-size: 12px;">Security check by BitNinja.IO</a>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                </td>
 
-    <footer class="info js-lang-CHECK"></footer>
+            </tr>
+        </table>
+    </body>
 
-    <script>
+    
 
-        // Use and calculate colors:
-
-        const primaryColor = "#c00000";
-        const backgroundColor = "#fff";
-
-        var fallbackLanguage = { code: 'en' };
-
-        // Detect browser language
-
-        var browserLanguages = [...parse(window.navigator.language), fallbackLanguage];
-
-        var languageDropdown = document.getElementById("languageDropdown");
-
-        languageDropdown.addEventListener("change", function () {
-            translate([{ code: languageDropdown.value }, fallbackLanguage]);
-        }, false);
-
-        for (const langCode in translations) {
-            var opt = document.createElement("option");
-            opt.value = langCode;
-            opt.innerHTML = languages[langCode];
-            opt.selected = browserLanguages[0].code === langCode;
-
-            languageDropdown.appendChild(opt);
-        }
-
-        // More info dropdown
-
-        var moreInfoDropdown = document.getElementById("moreInfoDropdown");
-
-        moreInfoDropdown.addEventListener("click", function () {
-            this.className = 'invisible';
-            document.getElementById("moreInfo").className = 'visible';
-        }, false);
-
-    </script>
-
-    <script src="v2/js/translate.js"></script>
-    <script src="v2/js/set-colors.js"></script>
-
-</body>
-
-
-
-
-
-<img src="https://admin.bitninja.io/cookieimg.php" rel="nofollow" style="display: none;" />
+    
 
 </html>

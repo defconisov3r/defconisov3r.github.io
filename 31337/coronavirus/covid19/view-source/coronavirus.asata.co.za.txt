@@ -1,588 +1,943 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-ZA" prefix="og: http://ogp.me/ns#">
 <head>
-    <meta charset="UTF-8">
-    <title>Captcha</title>
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
-          crossorigin="anonymous">
-    <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII="
-          rel="icon" type="image/x-icon"/>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans"
-          rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <script src="https://www.google.com/recaptcha/api.js?hl=en"
-            async defer>
-    </script>
-
-
-    <style>
-        html, body {
-            height: 100%;
-        }
-
-        .wraper {
-            padding-bottom: 56px;
-            position: relative;
-            min-height: 100%;
-        }
-        .invisible_mode .wraper {
-            display: none;
-        }
-
-        .header {
-            height: 63px;
-            background-color: white;
-        }
-
-        .middle {
-            height: 186px;
-            background-color: rgba(55, 171, 99, 0.75);
-        }
-
-        .bottom {
-            background-color: #f2f2f2;
-            position: absolute;
-            bottom: 0px;
-            top: 249px;
-            width: 100%;
-        }
-
-        .captcha_absolute {
-            margin-top: -153px;
-        }
-
-        .captcha_div {
-            width: 485px;
-            margin: 0 auto;
-            box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.18), 0 0 8px 0 rgba(0, 0, 0, 0.12);
-            background-color: white;
-            padding: 47px 48px 18px 48px;
-            position: relative;
-        }
-
-        .cap_head {
-            border-bottom: 1px solid #d8d8d8;
-            padding-bottom: 17px;
-            margin: 0 10px 20px 10px;
-        }
-
-        .logo_shield {
-            display: inline-block;
-        }
-
-        .logo_shield img {
-            width: 54px;
-            height: 72px;
-        }
-
-        .cap_side {
-            width: 295px;
-        }
-
-        h4#text {
-            font-size: 20px;
-            line-height: 1.38;
-            color: #000000;
-            font-weight: bold;
-            font-family: Noto Sans, sans-serif;
-            margin: 6px 0 0 0;
-        }
-
-        .cap_text {
-            font-family: Noto Sans, sans-serif;
-            font-weight: normal;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: 1.65;
-            color: #000000;
-        }
-
-        p.cap_note {
-            font-size: 20px;
-            margin: 0;
-        }
-
-        .captcha_passed h4#text, .captcha_passed p.cap_note { font-size: 18px }
-
-        .cap_mess {
-            font-size: 13px;
-        }
-
-        .powered_span {
-            position: absolute;
-            bottom: 15px;
-            width: 100%;
-            text-align: center;
-            height: 18px;
-            opacity: 0.45;
-            font-family: Noto Sans;
-            font-size: 13px;
-            font-weight: normal;
-            font-style: normal;
-            font-stretch: normal;
-            color: #1d1d1d;
-        }
-
-        /* A few hacks for re-captcha */
-
-        .invisible_mode .re-captcha-wrapper { /* shift reCAPTCHA below our text */
-            top: 350px !important;
-        }
-        .invisible_mode .re-captcha-wrapper > div:first-child { /* hide reCAPTCHA mask */
-            display: none !important;
-        }
-        .visible_mode #re-captcha {  /* align to center */
-            width: 305px;
-            margin: 0 auto;
-        }
-
-        /* Imunify360 preloader */
-
-        .big_loader {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 50%;
-            width: 90px;
-            height: 90px;
-            margin: -45px auto 0 auto;
-            opacity: 0.55;
-        }
-        .visible_mode .big_loader {
-            display: none;
-        }
-
-        .rot {
-            -webkit-animation: spin 2s ease-in-out infinite;
-            animation: spin 2s ease-in-out infinite
-        }
-
-        @keyframes spin {
-            0% {
-                -webkit-transform: rotate(0deg);
-                -moz-transform: rotate(0deg);
-                -ms-transform: rotate(0deg);
-                -o-transform: rotate(0deg);
-                transform: rotate(0deg);
-            }
-            100% {
-                -webkit-transform: rotate(360deg);
-                -moz-transform: rotate(360deg);
-                -ms-transform: rotate(360deg);
-                -o-transform: rotate(360deg);
-                transform: rotate(360deg);
-            }
-        }
-    </style>
-
-<!--
-This whole tempalte goes to inside <head></head> tags
-Modify this file to add javascript or css files for your page from customize/static folder
-Jinja2 (which is index.html template engine) is not allowed to use here.
-
-Please, restart captcha server after your changes.
-service imunify360-captcha restart
-service imunify360-captchaserver-nginx restart
-
-Example:
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-Add your custom css from customize/static/ folder
-<link type="text/css" rel="stylesheet" href="static/my.css">
--->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<!-- Search Engine Optimization by Rank Math - https://s.rankmath.com/home -->
+<title>Coronavirus - asata - ASATA</title>
+<meta name="description" content="UPDATES"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://coronavirus.asata.co.za/" />
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Coronavirus - asata - ASATA">
+<meta property="og:description" content="UPDATES">
+<meta property="og:url" content="https://coronavirus.asata.co.za/">
+<meta property="og:site_name" content="ASATA">
+<meta property="og:updated_time" content="2020-03-19T18:42:04+02:00">
+<meta property="og:image" content="https://coronavirus.asata.co.za/wp-content/uploads/2020/03/alert.png">
+<meta property="og:image:secure_url" content="https://coronavirus.asata.co.za/wp-content/uploads/2020/03/alert.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Coronavirus &#8211; asata">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Coronavirus - asata - ASATA">
+<meta name="twitter:description" content="UPDATES">
+<meta name="twitter:image" content="https://coronavirus.asata.co.za/wp-content/uploads/2020/03/alert.png">
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebSite","@id":"https:\/\/coronavirus.asata.co.za\/#website","url":"https:\/\/coronavirus.asata.co.za","name":"ASATA","potentialAction":{"@type":"SearchAction","target":"https:\/\/coronavirus.asata.co.za\/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"Article","headline":"Coronavirus - asata - ASATA","description":"UPDATES","datePublished":"2020-03-18T10:38:41+02:00","dateModified":"2020-03-19T18:42:04+02:00","publisher":{"@type":"Organization","name":"ASATA","logo":{"@type":"ImageObject","url":"https:\/\/coronavirus.asata.co.za\/wp-content\/uploads\/2020\/03\/asata-logo.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/coronavirus.asata.co.za\/"},"author":{"@type":"Person","name":"divemasterza"},"image":{"@type":"ImageObject","url":"https:\/\/coronavirus.asata.co.za\/wp-content\/uploads\/2020\/03\/header.jpg","width":200,"height":200}},{"@type":"Organization","@id":"https:\/\/coronavirus.asata.co.za#organization","name":"ASATA","url":"https:\/\/coronavirus.asata.co.za","sameAs":[],"logo":"https:\/\/coronavirus.asata.co.za\/wp-content\/uploads\/2020\/03\/asata-logo.png"}]}</script>
+<meta name="google-site-verification" content="FyVWI1bZCcZRAm8PrDgAzs1uxIwQXW7YKPCrZXnOXII" />
+<!-- /Rank Math WordPress SEO plugin -->
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="ASATA &raquo; Feed" href="https://coronavirus.asata.co.za/feed/" />
+<link rel="alternate" type="application/rss+xml" title="ASATA &raquo; Comments Feed" href="https://coronavirus.asata.co.za/comments/feed/" />
+<!-- <link rel='stylesheet' id='bdt-uikit-css'  href='https://coronavirus.asata.co.za/wp-content/plugins/bdthemes-element-pack/assets/css/bdt-uikit.css?ver=3.2' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='element-pack-site-css'  href='https://coronavirus.asata.co.za/wp-content/plugins/bdthemes-element-pack/assets/css/element-pack-site.css?ver=4.6.1' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='wp-block-library-css'  href='https://coronavirus.asata.co.za/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='ctf_styles-css'  href='https://coronavirus.asata.co.za/wp-content/plugins/custom-twitter-feeds/css/ctf-styles.min.css?ver=1.4.1' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='dale-live-events-css'  href='https://coronavirus.asata.co.za/wp-content/plugins/daext-live-events/public/assets/css/production/live-events.css?ver=1.24' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='dale-custom-css'  href='https://coronavirus.asata.co.za/wp-content/plugins/daext-live-events/public/assets/css/custom-1.css?ver=1.24' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='dale-fontello-css'  href='https://coronavirus.asata.co.za/wp-content/plugins/daext-live-events/public/assets/font/fontello/css/dale-fontello.css?ver=1.24' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='hello-elementor-css'  href='https://coronavirus.asata.co.za/wp-content/themes/hello-elementor/style.min.css?ver=2.2.0' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='hello-elementor-theme-style-css'  href='https://coronavirus.asata.co.za/wp-content/themes/hello-elementor/theme.min.css?ver=2.2.0' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='elementor-icons-css'  href='https://coronavirus.asata.co.za/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.6.2' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='elementor-animations-css'  href='https://coronavirus.asata.co.za/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=2.9.6' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='elementor-frontend-css'  href='https://coronavirus.asata.co.za/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=2.9.6' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='elementor-pro-css'  href='https://coronavirus.asata.co.za/wp-content/plugins/elementor-pro/assets/css/frontend.min.css?ver=2.9.1' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='elementor-global-css'  href='https://coronavirus.asata.co.za/wp-content/uploads/elementor/css/global.css?ver=1584454287' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//coronavirus.asata.co.za/wp-content/cache/wpfc-minified/l8o5redh/bnav2.css" media="all"/>
+<link rel='stylesheet' id='elementor-post-8-css'  href='https://coronavirus.asata.co.za/wp-content/uploads/elementor/css/post-8.css?ver=1584454287' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-8134-css'  href='https://coronavirus.asata.co.za/wp-content/uploads/elementor/css/post-8134.css?ver=1584636366' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-7838-css'  href='https://coronavirus.asata.co.za/wp-content/uploads/elementor/css/post-7838.css?ver=1584636053' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-7841-css'  href='https://coronavirus.asata.co.za/wp-content/uploads/elementor/css/post-7841.css?ver=1584637294' type='text/css' media='all' />
+<link rel='stylesheet' id='google-fonts-1-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.3.2' type='text/css' media='all' />
+<!-- <link rel='stylesheet' id='elementor-icons-shared-0-css'  href='https://coronavirus.asata.co.za/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.12.0' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='elementor-icons-fa-solid-css'  href='https://coronavirus.asata.co.za/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.12.0' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//coronavirus.asata.co.za/wp-content/cache/wpfc-minified/2za19vl/bnb2s.css" media="all"/>
+<script src='//coronavirus.asata.co.za/wp-content/cache/wpfc-minified/fpqsh0o5/bnav2.js' type="text/javascript"></script>
+<!-- <script type='text/javascript' src='https://coronavirus.asata.co.za/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script> -->
+<!-- <script type='text/javascript' src='https://coronavirus.asata.co.za/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script> -->
+<link rel='https://api.w.org/' href='https://coronavirus.asata.co.za/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://coronavirus.asata.co.za/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://coronavirus.asata.co.za/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.3.2" />
+<link rel='shortlink' href='https://coronavirus.asata.co.za/' />
+<link rel="alternate" type="application/json+oembed" href="https://coronavirus.asata.co.za/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcoronavirus.asata.co.za%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://coronavirus.asata.co.za/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcoronavirus.asata.co.za%2F&#038;format=xml" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&#038;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">      <meta name="onesignal" content="wordpress-plugin"/>
+<script>
+window.OneSignal = window.OneSignal || [];
+OneSignal.push( function() {
+OneSignal.SERVICE_WORKER_UPDATER_PATH = "OneSignalSDKUpdaterWorker.js.php";
+OneSignal.SERVICE_WORKER_PATH = "OneSignalSDKWorker.js.php";
+OneSignal.SERVICE_WORKER_PARAM = { scope: '/' };
+OneSignal.setDefaultNotificationUrl("https://coronavirus.asata.co.za");
+var oneSignal_options = {};
+window._oneSignalInitOptions = oneSignal_options;
+oneSignal_options['wordpress'] = true;
+oneSignal_options['appId'] = '0c867970-dd48-404d-a844-3382db2c710a';
+oneSignal_options['welcomeNotification'] = { };
+oneSignal_options['welcomeNotification']['title'] = "";
+oneSignal_options['welcomeNotification']['message'] = "Thank you for subscribing!";
+oneSignal_options['path'] = "https://coronavirus.asata.co.za/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/";
+oneSignal_options['safari_web_id'] = "web.onesignal.auto.511f3fe8-4f38-4cfd-9441-4579acc1dc24";
+oneSignal_options['promptOptions'] = { };
+oneSignal_options['notifyButton'] = { };
+oneSignal_options['notifyButton']['enable'] = true;
+oneSignal_options['notifyButton']['position'] = 'bottom-right';
+oneSignal_options['notifyButton']['theme'] = 'default';
+oneSignal_options['notifyButton']['size'] = 'medium';
+oneSignal_options['notifyButton']['showCredit'] = false;
+oneSignal_options['notifyButton']['text'] = {};
+OneSignal.init(window._oneSignalInitOptions);
+OneSignal.showSlidedownPrompt();      });
+function documentInitOneSignal() {
+var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
+var oneSignalLinkClickHandler = function(event) { OneSignal.push(['registerForPushNotifications']); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
+oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
+}
+if (document.readyState === 'complete') {
+documentInitOneSignal();
+}
+else {
+window.addEventListener("load", function(event){
+documentInitOneSignal();
+});
+}
+</script>
+<link rel="icon" href="https://coronavirus.asata.co.za/wp-content/uploads/2020/03/cropped-asata512x512-150x150.png" sizes="32x32" />
+<link rel="icon" href="https://coronavirus.asata.co.za/wp-content/uploads/2020/03/cropped-asata512x512-300x300.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://coronavirus.asata.co.za/wp-content/uploads/2020/03/cropped-asata512x512-300x300.png" />
+<meta name="msapplication-TileImage" content="https://coronavirus.asata.co.za/wp-content/uploads/2020/03/cropped-asata512x512-300x300.png" />
+<style type="text/css" id="wp-custom-css">
+.asata-bc a {
+color: #ed2127 !important;
+text-decoration: underline;
+}		</style>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9WNNZ72JYD"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-9WNNZ72JYD');
+</script>
 </head>
-<body class="invisible_mode">
-<div class="wraper">
-
-<!--
-You can add your css, javascript, images and other static files in /customize/static/ folder
-And add css, javascript into the end of `head` section of this template
-Please, restart webshield after your changes
-systemctl restart imunify360-webshield
--->
-<div class="header">
-  <!-- Header of the index page -->
+<body class="home page-template page-template-elementor_header_footer page page-id-8134 elementor-default elementor-template-full-width elementor-kit-8 elementor-page elementor-page-8134">
+<div data-elementor-type="header" data-elementor-id="7838" class="elementor elementor-7838 elementor-location-header" data-elementor-settings="[]">
+<div class="elementor-inner">
+<div class="elementor-section-wrap">
+<section bdt-sticky="animation: bdt-animation-slide-top; top: 100;media: 960" class="bdt-sticky elementor-element elementor-element-4256e6a1 elementor-section-content-bottom elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="4256e6a1" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-7b6d5a3f elementor-column elementor-col-33 elementor-top-column" data-id="7b6d5a3f" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-4437ec22 elementor-widget elementor-widget-image" data-id="4437ec22" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<div class="elementor-image">
+<a href="https://coronavirus.asata.co.za">
+<img width="435" height="247" src="https://coronavirus.asata.co.za/wp-content/uploads/2020/03/asata-logo.png" class="attachment-full size-full" alt="" srcset="https://coronavirus.asata.co.za/wp-content/uploads/2020/03/asata-logo.png 435w, https://coronavirus.asata.co.za/wp-content/uploads/2020/03/asata-logo-300x170.png 300w" sizes="(max-width: 435px) 100vw, 435px" />								</a>
 </div>
-
-<div class="middle">
-  <!-- Body of the index page -->
 </div>
-
-<div class="bottom">
-  <!-- Footer of the index page -->
-  <span class="powered_span">Powered by Imunify360</span>
 </div>
-
-    <div class="captcha_absolute">
-        <div class="captcha_div">
-            <style>
-    .dropdown {
-        position: absolute;
-        top: 10px;
-        right: 0;
-    }
-
-    .dropdown .dropdown-toggle {
-        background-color: #fff;
-        border: none;
-        outline: none;
-        color: #858585;
-        font-size: 13px;
-        height: 32px;
-        line-height: 1;
-        transition: all 0.4s;
-        font-family: 'Noto Sans', sans-serif;
-        margin-right: 22px;
-    }
-
-    .dropdown .dropdown-toggle:hover {
-        background-color: #e7e7e7;
-    }
-
-    .dropdown .dropdown-menu-content {
-        background-color: #ffffff;
-        box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.24);
-        border-width: 0px;
-        border-radius: 0;
-        padding: 11px 0 0;
-        overflow-y: scroll;
-        max-height: 365px;
-        margin: 0;
-    }
-
-    .dropdown .glyphicon {
-        margin-left: 6px;
-        top: 2px;
-        transition: 0.3s all;
-    }
-
-    .dropdown li {
-        height: 35px;
-        text-align: left;
-        padding-left: 24px;
-        font-size: 13px;
-        color: #4d4d4e;
-        line-height: 2.85;
-        font-family: 'Noto Sans', sans-serif;
-    }
-    .dropdown li:last-child {
-        margin-bottom: 14px;
-    }
-
-    .dropdown li.active {
-        font-weight: bold;
-    }
-
-    .dropdown li:focus, .dropdown li:hover {
-        color: #4d4d4e;
-        background-color: rgba(56, 171, 99, 0.11);
-    }
-
-    .dropdown .dropdown-menu-content > li:hover {
-        cursor: pointer;
-    }
-
-    .dropdown .dropdown-menu-container {
-        max-height: 365px;
-        overflow: hidden;
-        width: 164px;
-        padding: 0;
-        border: 0;
-        border-radius: 0;
-        box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.24);
-        z-index: 5000000000;
-    }
-
-    .dropdown.open .glyphicon {
-        transform: rotate(180deg);
-    }
-</style>
-
-
-<div class="dropdown">
-    <button type="button" class="dropdown-toggle" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-        <span class="dropdown-title">English</span>
-        <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
-    </button>
-    <div class="dropdown-menu dropdown-menu-container">
-        <ul class="dropdown-menu-content"></ul>
-    </div>
 </div>
-
-<script>
-    (function () {
-        var items = {
-            English: 'en',
-            Dutch: 'nl',
-            Ukrainian: 'uk',
-            Arabic: 'ar',
-            Italian: 'it',
-            Chinese: 'zh',
-            Polish: 'pl',
-            Danish: 'da',
-            Hungarian: 'hu',
-            Russian: 'ru',
-            French: 'fr',
-            Spanish: 'es',
-            Romanian: 'ro',
-            Greek: 'el',
-            Swedish: 'sv',
-            Turkish: 'tr',
-            Indonesian: 'id',
-            Portuguese: 'pt',
-            Hebrew: 'he',
-            German: 'de',
-            Malay: 'ms',
-            Norwegian: 'no',
-            Farsi: 'fa',
-        };
-        var currentLocale = $('html').attr('lang');
-
-        var currentLocaleName = Object.keys(items).find(function (key) {
-            return items[key] === currentLocale;
-        });
-
-        $('.dropdown-title').text(currentLocaleName);
-
-        $('.dropdown-menu-content')
-            .append(Object.keys(items).sort().map(function (item) {
-                return $('<li>').text(item);
-            }))
-            .click(function (e) {
-                var nextLocaleName = e.target.innerText;
-                if (nextLocaleName === currentLocaleName) {
-                    e.stopPropagation();
-                } else {
-                    document.cookie = 'locale=' + items[nextLocaleName] + ';path=/';
-                    location.reload(true);
-                }
-
-            });
-
-        $([].find.call($('.dropdown-menu li'), function (item) {
-            return item.innerText === currentLocaleName;
-        })).addClass('active');
-
-        function insertParam(key, value) {
-            key = encodeURIComponent(key);
-            value = encodeURIComponent(value);
-
-            var kvp = document.location.search.substr(1).split('&');
-            if (kvp == '') {
-                document.location.search = '?' + key + '=' + value;
-            }
-            else {
-
-                var i = kvp.length;
-                var x;
-                while (i--) {
-                    x = kvp[i].split('=');
-
-                    if (x[0] === key) {
-                        x[1] = value;
-                        kvp[i] = x.join('=');
-                        break;
-                    }
-                }
-
-                if (i < 0) {
-                    kvp[kvp.length] = [key, value].join('=');
-                }
-
-                //this will reload the page, it's likely better to store this until finished
-                document.location.search = kvp.join('&');
-            }
-        }
-    })();
-</script>
-
-            <div class="cap_head clearfix">
-                <div class="logo_shield">
-                    <img src="/a9bc224bd710f56d27affffddc764239b58c3faa0/shield.png">
-                </div>
-                <div class="cap_side pull-right">
-                    <h4 id="text">coronavirus.asata.co.za</h4>
-                    <p class="cap_note cap_text count_down">
-                        is protected by Imunify360
-                    </p>
-                </div>
-            </div>
-
-            <p class="cap_mess cap_text text-center">
-                We have noticed an unusual activity from your <b>IP 23.129.64.182</b> and blocked access to this website.
-            </p>
-
-            <p class="cap_mess cap_text text-center">
-                <b>Please confirm that you are not a robot</b>
-            </p>
-
-        </div>
-    </div>
 </div>
-
-<form class="form-group form-captcha">
-    <div id="re-captcha"
-         class="g-recaptcha"
-         data-sitekey="6LfwghwUAAAAAAYrFATHtss0Xe_bC7I6OWE_ayK4"
-         data-size="invisible"
-         data-callback="check"
-    ></div>
+</div>
+<div class="elementor-element elementor-element-197c34a elementor-column elementor-col-33 elementor-top-column" data-id="197c34a" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-4e5312ac elementor-nav-menu__align-center elementor-nav-menu--indicator-classic elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="4e5312ac" data-element_type="widget" data-settings="{&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+<div class="elementor-widget-container">
+<nav role="navigation" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-text e--animation-float"><ul id="menu-1-4e5312ac" class="elementor-nav-menu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7864"><a href="https://coronavirus.asata.co.za/category/asata-resources/" class="elementor-item">ASATA Coronavirus Resources</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8230"><a href="https://coronavirus.asata.co.za/category/other-resources/" class="elementor-item">Other Resources</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7866"><a href="https://coronavirus.asata.co.za/category/sa-government-updates/" class="elementor-item">SA Government Updates</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7865"><a href="https://coronavirus.asata.co.za/category/news-articles/" class="elementor-item">News Articles</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7939"><a href="https://coronavirus.asata.co.za/category/supplier-updates/" class="elementor-item">Supplier Updates</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8194"><a href="https://coronavirus.asata.co.za/faqs/" class="elementor-item">FAQs</a></li>
+</ul></nav>
+<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+<i class="eicon-menu-bar" aria-hidden="true"></i>
+<span class="elementor-screen-only">Menu</span>
+</div>
+<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" role="navigation" aria-hidden="true"><ul id="menu-2-4e5312ac" class="elementor-nav-menu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7864"><a href="https://coronavirus.asata.co.za/category/asata-resources/" class="elementor-item">ASATA Coronavirus Resources</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8230"><a href="https://coronavirus.asata.co.za/category/other-resources/" class="elementor-item">Other Resources</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7866"><a href="https://coronavirus.asata.co.za/category/sa-government-updates/" class="elementor-item">SA Government Updates</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7865"><a href="https://coronavirus.asata.co.za/category/news-articles/" class="elementor-item">News Articles</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7939"><a href="https://coronavirus.asata.co.za/category/supplier-updates/" class="elementor-item">Supplier Updates</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8194"><a href="https://coronavirus.asata.co.za/faqs/" class="elementor-item">FAQs</a></li>
+</ul></nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-08b1812 elementor-hidden-tablet elementor-hidden-phone elementor-column elementor-col-33 elementor-top-column" data-id="08b1812" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-33f09ff elementor-search-form-skin-modal elementor-widget elementor-widget-bdt-search" data-id="33f09ff" data-element_type="widget" data-widget_type="bdt-search.default">
+<div class="elementor-widget-container">
+<div class="bdt-search-container">
+<a  class="bdt-search-toggle" bdt-toggle="" href="#modal-search-33f09ff">
+<i aria-hidden="true" class="fa-fw fas fa-search"></i>				
+</a>
+<div id="modal-search-33f09ff" class="bdt-modal-full bdt-modal" bdt-modal>
+<div class="bdt-modal-dialog bdt-flex bdt-flex-center bdt-flex-middle" bdt-height-viewport>
+<button class="bdt-modal-close-full" type="button" bdt-close></button>
+<form class="bdt-search bdt-search-large" role="search" method="get" action="https://coronavirus.asata.co.za/">
+<div class="bdt-position-relative">	
+<span class="" bdt-search-icon></span>			                <input placeholder="Search..." class="bdt-search-input bdt-text-center" type="search" name="s" title="Search" value="" autofocus>
+</div>
+<input name="post_type" type="hidden" value="post">
 </form>
-
-<!-- imunify360 preloader -->
-<div class="big_loader">
-    <svg class="rot" width="90px" height="90px" viewBox="0 0 47 47"
-         version="1.1"
-         xmlns="http://www.w3.org/2000/svg"
-         xmlns:xlink="http://www.w3.org/1999/xlink">
-        <title>Loader</title>
-        <defs>
-            <polygon id="path-1"
-                     points="0 0.375484146 0 15.7255695 15.7013244 15.7255695 15.7013244 0.375484146 0 0.375484146"></polygon>
-        </defs>
-        <g id="Page-1" stroke="none" stroke-width="1" fill="none"
-           fill-rule="evenodd">
-            <g id="Logo" transform="translate(-5.000000, -2.000000)">
-                <g id="Group-2" transform="translate(5.000000, 2.000000)">
-                    <path d="M22.6150244,4.52988293 C23.1538049,3.06256585 23.6031707,1.59582195 24.231939,0.158882927 C25.1902805,2.22459024 25.8190488,4.43989512 26.7768171,6.47579756 C29.1417195,7.40376098 31.7164024,7.7929439 34.1116829,8.69110244 C28.9623171,11.2663585 23.7229634,13.7510537 18.4836098,16.176139 C19.7709512,12.2545049 21.2382683,8.4217122 22.6150244,4.52988293 L22.6150244,4.52988293 Z"
-                          id="Fill-1" fill="#467C45"></path>
-                    <path d="M13.7718598,8.94461585 C16.1424939,7.68077439 18.4500793,6.28968902 20.8207134,5.02527439 C18.9240915,10.8412378 16.7747012,16.5614817 14.8465549,22.3774451 C12.7292622,18.3950549 10.895689,14.2544695 8.9044939,10.2090305 C8.27228659,8.85004268 7.5455061,7.55353049 7.00844512,6.16359146 C9.31545732,6.95342073 11.4648476,8.24935976 13.7718598,8.94461585"
-                          id="Fill-3" fill="#467C45"></path>
-                    <path d="M24.2134256,15.0745049 C29.4602305,12.4969561 34.7379866,9.91940732 40.0157427,7.4031878 C39.1565598,9.61276098 38.1747183,11.7300537 37.2232549,13.9086756 C38.4504134,16.2099561 39.9544134,18.388578 41.0898646,20.7511878 C35.4435598,18.9405415 29.8287793,17.0381878 24.2134256,15.0745049"
-                          id="Fill-5" fill="#467C45"></path>
-                    <g id="Group-9"
-                       transform="translate(0.000000, 11.919659)">
-                        <mask id="mask-2" fill="white">
-                            <use xlink:href="#path-1"></use>
-                        </mask>
-                        <g id="Clip-8"></g>
-                        <path d="M8.34869024,0.375484146 C9.93064146,3.33419146 11.2781659,6.43963049 12.7426171,9.45622805 C13.7387878,11.5362646 14.793422,13.5876427 15.7013244,15.7255695 C10.4579585,13.9091915 5.21401951,12.03435 -0.000114634146,10.0718134 C2.05069024,9.1341061 4.21842195,8.4898622 6.29845854,7.61119146 C6.97193415,5.17980122 7.67521463,2.77706951 8.34869024,0.375484146"
-                              id="Fill-7" fill="#467C45"
-                              mask="url(#mask-2)"></path>
-                    </g>
-                    <path d="M29.1793195,18.0496049 C33.5600634,19.4670561 37.9081366,21.0776659 42.2888805,22.5593122 C43.6742341,23.0745927 45.1558805,23.4609098 46.5085634,24.1372512 C44.2216122,25.039422 41.9025634,25.9100683 39.6477098,26.8110927 C38.8103073,29.4195927 38.2302585,32.1261049 37.3607585,34.7346049 C35.5890878,31.4497634 34.0432463,28.0353854 32.3684415,24.6852024 C31.3052098,22.4945439 30.1456854,20.3044585 29.1793195,18.0496049"
-                          id="Fill-10" fill="#467C45"></path>
-                    <path d="M28.9972232,29.3489207 C29.5789915,27.69475 30.0684793,26.0113476 30.7419549,24.3887012 C31.538089,25.7660305 32.1811866,27.2356402 32.9154183,28.6444939 C34.7220524,32.4709817 36.68115,36.205189 38.4568329,40.0316768 C36.2827963,39.1449817 34.1402841,38.1654329 31.9364427,37.2460671 C29.6403207,38.4709329 27.4662841,39.9405427 25.1094061,41.1035061 C26.3033207,37.1549329 27.7419793,33.2671159 28.9972232,29.3489207"
-                          id="Fill-12" fill="#467C45"></path>
-                    <path d="M4.97133902,25.64555 C9.93385122,27.1873793 14.7737049,29.036428 19.6748878,30.6705378 C20.4148512,30.9170012 21.1542415,31.1944159 21.8328756,31.5337329 C16.5304732,33.9685622 11.3214976,36.6498549 5.95776585,38.99355 C6.82096098,36.8355622 7.89966829,34.7698549 8.7319122,32.581489 C7.68358293,30.1764646 6.11194878,28.01905 4.97133902,25.64555"
-                          id="Fill-14" fill="#467C45"></path>
-                    <path d="M15.4549183,35.8770488 C19.4671134,33.9317073 23.4483573,31.8952317 27.4915037,30.0433171 C26.4110768,33.6542927 25.0222841,37.203939 23.8186256,40.8143415 C23.1090402,42.7275854 22.5530646,44.7033049 21.7511988,46.5855976 C20.7630524,44.4866463 20.0534671,42.2650366 19.1277963,40.1351341 C16.6276256,39.2094634 14.0042232,38.684439 11.4736744,37.9748537 C12.6773329,37.0801341 14.1584061,36.586061 15.4549183,35.8770488"
-                          id="Fill-16" fill="#467C45"></path>
-                </g>
-            </g>
-        </g>
-    </svg>
 </div>
-
-<script>
-    $(document).ready(function () {
-        var visibleByDefault = false;
-        var captchaIsPassed = false;
-        var captchaIsVisible = visibleByDefault;
-        var reCaptchaWrapper;
-
-        function do_reload() {
-            $.ajax({
-                type: 'POST',
-                url: '/ungraylistcheck'
-            }).done(function(data){
-                if (data.ungraylisted && data.redirect == 'pending') {
-                    setTimeout(do_reload, 1000);
-                }
-                else {
-                    location.reload(true);
-                }
-            }).fail(function(){
-                location.reload(true);
-            });
-        }
-
-        window.check = function (value) {
-            $.ajax({
-                type: 'POST',
-                url: '/captchacheck',
-                data: {
-                    'captcha_value': value
-                }
-            }).done(function (data) {
-                if (data['success']) {
-                    captchaIsPassed = true;
-                    $("#text").text(
-                        "IP 23.129.64.182 has been unblocked"
-                    );
-                    setTimeout(do_reload, 1000);
-                } else {
-                    grecaptcha.reset();
-                }
-            }).fail(function () {
-                grecaptcha.reset();
-            });
-        };
-
-        function updateUI() {
-            // change the size of our block to fit the captcha block
-            var blockWithText = $('.captcha_div');
-            var captchaBlock = reCaptchaWrapper.find('> div:last-child');
-            var currentPadding;
-            (function update () {
-                var space = captchaBlock.offset().top + captchaBlock.height() - blockWithText.height() - 100;
-                var padding = captchaIsPassed ? '' : space + 'px';
-                if (currentPadding !== padding) {
-                    blockWithText.css({'padding-bottom': padding});
-                }
-                setTimeout(update, 500);
-            })();
-        }
-
-        function makeVisible() {
-            $('.big_loader').hide();  // hide our preloader
-            $('.wraper').show();  // show our text and stuff
-            // add class to reCAPTCHA wrapper so our css would apply to it
-            reCaptchaWrapper.addClass('re-captcha-wrapper');
-            captchaIsVisible = true;
-        }
-
-        function executeCaptcha() {
-            try {
-                grecaptcha.execute();
-            } catch (e) {
-                setTimeout(executeCaptcha, 2000);  // retry
-            }
-        }
-
-        if (!visibleByDefault) {
-            /**
-             * Detecting captcha when css is changed to visible.
-             * Invisible reCaptcha has no API calls when captcha will be visible,
-             * (captcha is shown to user).
-             * When captcha changed css "visibility" to the "visible", we should:
-             * 1. hide the loader and captcha mask
-             * 2. display some additional text
-             * 3. display a dropdown so user can switch to a different language
-             */
-            (function checkVisibility () {
-                reCaptchaWrapper = reCaptchaWrapper && reCaptchaWrapper.length
-                    ? reCaptchaWrapper
-                    : $('body > div:has(> div > iframe[src^="https://www.google.com/recaptcha"])');
-                if (reCaptchaWrapper.css('visibility') === 'visible') {
-                    makeVisible(reCaptchaWrapper);
-                    updateUI(reCaptchaWrapper);
-                } else {
-                    setTimeout(checkVisibility, 100);
-                }
-            })();
-
-            // start captcha challenge after loads all scripts
-            setTimeout(executeCaptcha, 2000);
-        }
-
-    });
-
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<div data-elementor-type="wp-page" data-elementor-id="8134" class="elementor elementor-8134" data-elementor-settings="[]">
+<div class="elementor-inner">
+<div class="elementor-section-wrap">
+<section class="elementor-element elementor-element-4e4f7a05 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="4e4f7a05" data-element_type="section">
+<div class="elementor-container elementor-column-gap-no">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-20e0e071 elementor-column elementor-col-100 elementor-top-column" data-id="20e0e071" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-4e0897dc elementor-widget elementor-widget-bdt-news-ticker" data-id="4e0897dc" data-element_type="widget" data-widget_type="bdt-news-ticker.default">
+<div class="elementor-widget-container">
+<div id="newsTicker1" class="bdt-news-ticker" data-settings="{&quot;effect&quot;:&quot;scroll&quot;,&quot;autoPlay&quot;:true,&quot;interval&quot;:5000,&quot;pauseOnHover&quot;:true,&quot;scrollSpeed&quot;:1}">
+<div class="bdt-news-ticker-label">
+<div class="bdt-news-ticker-label-inner">
+UPDATES	    			</div>
+</div>
+<div class="bdt-news-ticker-content">
+<ul>
+<li class="bdt-news-ticker-item">
+<a href="https://coronavirus.asata.co.za/government-of-namibia-declares-state-of-emergency/">
+<span class="bdt-news-ticker-date bdt-margin-small-right" title="Published on: Mar 19, 2020">
+<span class="bdt-news-ticker-date-month">03</span>
+<span class="bdt-news-ticker-date-sep">/</span>
+<span class="bdt-news-ticker-date-day">19</span>
+<span>:</span>
+</span>
+Government of Namibia declares State of Emergency		</a>
+</li>
+<li class="bdt-news-ticker-item">
+<a href="https://coronavirus.asata.co.za/city-of-cape-town-to-close-facilities-to-contain-spread-of-covid-19-encourages-use-of-online-services-where-possible/">
+<span class="bdt-news-ticker-date bdt-margin-small-right" title="Published on: Mar 19, 2020">
+<span class="bdt-news-ticker-date-month">03</span>
+<span class="bdt-news-ticker-date-sep">/</span>
+<span class="bdt-news-ticker-date-day">19</span>
+<span>:</span>
+</span>
+City of Cape Town to close facilities to contain spread of COVID-19, encourages use of online services where possible		</a>
+</li>
+<li class="bdt-news-ticker-item">
+<a href="https://coronavirus.asata.co.za/employment-law-covid-19-a-guideline-for-travel-businesses/">
+<span class="bdt-news-ticker-date bdt-margin-small-right" title="Published on: Mar 19, 2020">
+<span class="bdt-news-ticker-date-month">03</span>
+<span class="bdt-news-ticker-date-sep">/</span>
+<span class="bdt-news-ticker-date-day">19</span>
+<span>:</span>
+</span>
+Employment Law &#038; COVID-19: A guideline for travel businesses		</a>
+</li>
+<li class="bdt-news-ticker-item">
+<a href="https://coronavirus.asata.co.za/sa-government-gazette-18-march/">
+<span class="bdt-news-ticker-date bdt-margin-small-right" title="Published on: Mar 19, 2020">
+<span class="bdt-news-ticker-date-month">03</span>
+<span class="bdt-news-ticker-date-sep">/</span>
+<span class="bdt-news-ticker-date-day">19</span>
+<span>:</span>
+</span>
+SA Government Gazette: 18 March		</a>
+</li>
+<li class="bdt-news-ticker-item">
+<a href="https://coronavirus.asata.co.za/n/">
+<span class="bdt-news-ticker-date bdt-margin-small-right" title="Published on: Mar 19, 2020">
+<span class="bdt-news-ticker-date-month">03</span>
+<span class="bdt-news-ticker-date-sep">/</span>
+<span class="bdt-news-ticker-date-day">19</span>
+<span>:</span>
+</span>
+International SOS advises against non-essential international travel		</a>
+</li>
+</ul>
+</div>
+<div class="bdt-news-ticker-controls bdt-news-ticker-navigation">
+<button class="bdt-visible@m">
+<span class="bdt-news-ticker-arrow bdt-news-ticker-prev bdt-icon">
+<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="chevron-left">
+<polyline fill="none" stroke="#000" stroke-width="1.03" points="13 16 7 10 13 4"></polyline>
+</svg>
+</span>
+</button>
+<button>
+<span class="bdt-news-ticker-arrow bdt-news-ticker-next bdt-icon">
+<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="chevron-right">
+<polyline fill="none" stroke="#000" stroke-width="1.03" points="7 4 13 10 7 16"></polyline>
+</svg>
+</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-element elementor-element-74b50840 elementor-section-stretched elementor-section-content-top elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="74b50840" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+<div class="elementor-container elementor-column-gap-no">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-1d09fbbd elementor-column elementor-col-50 elementor-top-column" data-id="1d09fbbd" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-5b5aa818 elementor-widget elementor-widget-heading" data-id="5b5aa818" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Coronavirus updates</h2>		</div>
+</div>
+<div class="elementor-element elementor-element-6893c157 elementor-widget elementor-widget-text-editor" data-id="6893c157" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<div class="elementor-text-editor elementor-clearfix">With the sheer scale of unconfirmed and inaccurate information circulating on the Internet about the Coronavirus, ASATA has created a dedicated Coronavirus Site</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-6ea26831 elementor-widget elementor-widget-shortcode" data-id="6ea26831" data-element_type="widget" data-widget_type="shortcode.default">
+<div class="elementor-widget-container">
+<div class="elementor-shortcode"><!-- Custom Twitter Feeds by Smash Balloon --><div id="ctf" class="ctf ctf-type-search asata-tf ctf-styles ctf-no-duplicates" style="width: 100%;" data-ctfshortcode="{&quot;num&quot;: &quot;1&quot;}" data-ctfintents="1" data-ctfneeded="-1"><div class="ctf-tweets"><div class="ctf-item ctf-author-tagtravel_za ctf-new ctf-hide-avatar ctf-retweet ctf-quoted" id="1240615754082537474" style="" data-ctfretweetid="1240613487669321730"><div class="ctf-context"><a href="https://twitter.com/intent/user?screen_name=TAGTravel_Za" target="_blank" class="ctf-retweet-icon" rel="noopener"><svg class="svg-inline--fa fa-retweet fa-w-20" aria-hidden="true" aria-label="retweet" data-fa-processed="" data-prefix="fa" data-icon="retweet" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M629.657 343.598L528.971 444.284c-9.373 9.372-24.568 9.372-33.941 0L394.343 343.598c-9.373-9.373-9.373-24.569 0-33.941l10.823-10.823c9.562-9.562 25.133-9.34 34.419.492L480 342.118V160H292.451a24.005 24.005 0 0 1-16.971-7.029l-16-16C244.361 121.851 255.069 96 276.451 96H520c13.255 0 24 10.745 24 24v222.118l40.416-42.792c9.285-9.831 24.856-10.054 34.419-.492l10.823 10.823c9.372 9.372 9.372 24.569-.001 33.941zm-265.138 15.431A23.999 23.999 0 0 0 347.548 352H160V169.881l40.416 42.792c9.286 9.831 24.856 10.054 34.419.491l10.822-10.822c9.373-9.373 9.373-24.569 0-33.941L144.971 67.716c-9.373-9.373-24.569-9.373-33.941 0L10.343 168.402c-9.373 9.373-9.373 24.569 0 33.941l10.822 10.822c9.562 9.562 25.133 9.34 34.419-.491L96 169.881V392c0 13.255 10.745 24 24 24h243.549c21.382 0 32.09-25.851 16.971-40.971l-16.001-16z"></path></svg><span class="ctf-screenreader">Retweet on Twitter</span></a><a href="https://twitter.com/TAGTravel_Za" target="_blank" class="ctf-retweet-text" style rel="noopener">TAG Travel Assignment Group Retweeted</a></div><div class="ctf-author-box"><div class="ctf-author-box-link" style=""><a href="https://twitter.com/ASATA4ME" target="_blank" class="ctf-author-name" style rel="noopener">ASATA4ME</a><a href="https://twitter.com/ASATA4ME" class="ctf-author-screenname" target="_blank" style rel="noopener">@ASATA4ME</a><span class="ctf-screename-sep">&middot;</span><div class="ctf-tweet-meta"><a href="https://twitter.com/ASATA4ME/status/1240613487669321730" class="ctf-tweet-date" target="_blank" style rel="noopener">5h</a></div></div><div class="ctf-corner-logo" style=""><svg class="svg-inline--fa fa-twitter fa-w-16" aria-hidden="true" aria-label="twitter logo" data-fa-processed="" data-prefix="fab" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg></div></div><div class="ctf-tweet-content"><p class="ctf-tweet-text" style="">#ASATACorona https://twitter.com/presidencyza/status/1240610240078286848</div><a href="https://twitter.com/PresidencyZA/status/1240610240078286848" class="ctf-quoted-tweet" style target="_blank" rel="noopener"><span class="ctf-quoted-author-name">PresidencyZA</span><span class="ctf-quoted-verified"><svg class="svg-inline--fa fa-check-circle fa-w-16" aria-hidden="true" aria-label="verified" data-fa-processed="" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg></span><span class="ctf-quoted-author-screenname">@PresidencyZA</span><p class="ctf-quoted-tweet-text" style="">#COVID19 #CoronaVirusSA https://www.pscp.tv/w/cUIF8TFyYVFab3lnemVNS3p8MU1ueG5ReU1ibmRKT3SyT8IVtr-jz5D-idM8oVoxfZIO956QG-sjZhN2nBvt</p></a><div class="ctf-tweet-actions"><a href="https://twitter.com/intent/tweet?in_reply_to=1240613487669321730&amp;related=ASATA4ME" class="ctf-reply" target="_blank" style rel="noopener"><svg class="svg-inline--fa fa-reply fa-w-16" aria-hidden="true" aria-label="reply" data-fa-processed="" data-prefix="fa" data-icon="reply" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M8.309 189.836L184.313 37.851C199.719 24.546 224 35.347 224 56.015v80.053c160.629 1.839 288 34.032 288 186.258 0 61.441-39.581 122.309-83.333 154.132-13.653 9.931-33.111-2.533-28.077-18.631 45.344-145.012-21.507-183.51-176.59-185.742V360c0 20.7-24.3 31.453-39.687 18.164l-176.004-152c-11.071-9.562-11.086-26.753 0-36.328z"></path></svg><span class="ctf-screenreader">Reply on Twitter 1240613487669321730</span></a><a href="https://twitter.com/intent/retweet?tweet_id=1240613487669321730&amp;related=ASATA4ME" class="ctf-retweet" target="_blank" style rel="noopener"><svg class="svg-inline--fa fa-retweet fa-w-20" aria-hidden="true" aria-label="retweet" data-fa-processed="" data-prefix="fa" data-icon="retweet" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M629.657 343.598L528.971 444.284c-9.373 9.372-24.568 9.372-33.941 0L394.343 343.598c-9.373-9.373-9.373-24.569 0-33.941l10.823-10.823c9.562-9.562 25.133-9.34 34.419.492L480 342.118V160H292.451a24.005 24.005 0 0 1-16.971-7.029l-16-16C244.361 121.851 255.069 96 276.451 96H520c13.255 0 24 10.745 24 24v222.118l40.416-42.792c9.285-9.831 24.856-10.054 34.419-.492l10.823 10.823c9.372 9.372 9.372 24.569-.001 33.941zm-265.138 15.431A23.999 23.999 0 0 0 347.548 352H160V169.881l40.416 42.792c9.286 9.831 24.856 10.054 34.419.491l10.822-10.822c9.373-9.373 9.373-24.569 0-33.941L144.971 67.716c-9.373-9.373-24.569-9.373-33.941 0L10.343 168.402c-9.373 9.373-9.373 24.569 0 33.941l10.822 10.822c9.562 9.562 25.133 9.34 34.419-.491L96 169.881V392c0 13.255 10.745 24 24 24h243.549c21.382 0 32.09-25.851 16.971-40.971l-16.001-16z"></path></svg><span class="ctf-screenreader">Retweet on Twitter 1240613487669321730</span><span class="ctf-action-count ctf-retweet-count">1</span></a><a href="https://twitter.com/intent/like?tweet_id=1240613487669321730&amp;related=ASATA4ME" class="ctf-like" target="_blank" style rel="noopener"><svg class="svg-inline--fa fa-heart fa-w-18" aria-hidden="true" aria-label="like" data-fa-processed="" data-prefix="fa" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z"></path></svg><span class="ctf-screenreader">Like on Twitter 1240613487669321730</span><span class="ctf-action-count ctf-favorite-count"></span></a><a href="https://twitter.com/ASATA4ME/status/1240613487669321730" class="ctf-twitterlink" style target="_blank" rel="noopener">Twitter <span class="ctf-screenreader">1240613487669321730</span></a></div></div></div><a href="javascript:void(0);" id="ctf-more" class="ctf-more" style=""><span>Load More...</span></a></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-318e1394 elementor-column elementor-col-50 elementor-top-column" data-id="318e1394" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-6a0ea685 elementor-hidden-phone elementor-widget elementor-widget-html" data-id="6a0ea685" data-element_type="widget" data-widget_type="html.default">
+<div class="elementor-widget-container">
+<iframe title="Coronavirus COVID-19 cases in all countries" aria-label="Table" id="datawrapper-chart-QClzO" src="//datawrapper.dwcdn.net/QClzO/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="492"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();
+</script>		</div>
+</div>
+<div class="elementor-element elementor-element-374a6a15 elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-image" data-id="374a6a15" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<div class="elementor-image">
+<img width="1920" height="801" src="https://coronavirus.asata.co.za/wp-content/uploads/2020/03/header.jpg" class="attachment-full size-full" alt="Coronavirus - asata 1" srcset="https://coronavirus.asata.co.za/wp-content/uploads/2020/03/header.jpg 1920w, https://coronavirus.asata.co.za/wp-content/uploads/2020/03/header-300x125.jpg 300w, https://coronavirus.asata.co.za/wp-content/uploads/2020/03/header-1024x427.jpg 1024w, https://coronavirus.asata.co.za/wp-content/uploads/2020/03/header-768x320.jpg 768w, https://coronavirus.asata.co.za/wp-content/uploads/2020/03/header-1536x641.jpg 1536w" sizes="(max-width: 1920px) 100vw, 1920px" title="Coronavirus - asata 1">											</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-element elementor-element-2cca85cc elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="2cca85cc" data-element_type="section">
+<div class="elementor-background-overlay"></div>
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-4e36e800 elementor-column elementor-col-100 elementor-top-column" data-id="4e36e800" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-7ff45767 elementor-grid-2 elementor-posts--thumbnail-none elementor-grid-tablet-2 elementor-grid-mobile-1 elementor-widget elementor-widget-posts" data-id="7ff45767" data-element_type="widget" data-settings="{&quot;classic_columns&quot;:&quot;2&quot;,&quot;classic_columns_tablet&quot;:&quot;2&quot;,&quot;classic_columns_mobile&quot;:&quot;1&quot;,&quot;classic_row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:35,&quot;sizes&quot;:[]}}" data-widget_type="posts.classic">
+<div class="elementor-widget-container">
+<div class="elementor-posts-container elementor-posts elementor-posts--skin-classic elementor-grid">
+<article class="elementor-post elementor-grid-item post-7950 post type-post status-publish format-standard has-post-thumbnail hentry category-featured-posts category-supplier-updates">
+<div class="elementor-post__text">
+<h3 class="elementor-post__title">
+<a href="https://coronavirus.asata.co.za/iata-coronavirus-outbreak-update-14-03-2020/" >
+IATA Coronavirus Outbreak &#8211; Timatic Updates			</a>
+</h3>
+<div class="elementor-post__meta-data">
+<span class="elementor-post-date">
+Mar 14, 2020		</span>
+</div>
+<div class="elementor-post__excerpt">
+<p>In connection with the Coronavirus (COVID-19) outbreak, the following changes have been published in Timatic: Click here.</p>
+</div>
+<a class="elementor-post__read-more" href="https://coronavirus.asata.co.za/iata-coronavirus-outbreak-update-14-03-2020/" >
+Read More »			</a>
+</div>
+</article>
+<article class="elementor-post elementor-grid-item post-7729 post type-post status-publish format-standard has-post-thumbnail hentry category-featured-posts category-official-coronavirus-info-sources">
+<div class="elementor-post__text">
+<h3 class="elementor-post__title">
+<a href="https://coronavirus.asata.co.za/update-johns-hopkins-university-and-medicine-coronavirus-resource-centre/" >
+Update: Johns Hopkins University and Medicine Coronavirus Resource Centre			</a>
+</h3>
+<div class="elementor-post__meta-data">
+<span class="elementor-post-date">
+Mar 9, 2020		</span>
+</div>
+<div class="elementor-post__excerpt">
+<p>Johns Hopkins University and Medicine has introduced an online Coronavirus Resource Centre, providing live stats on the global situation regarding the current Coronavirus Outbreak. To</p>
+</div>
+<a class="elementor-post__read-more" href="https://coronavirus.asata.co.za/update-johns-hopkins-university-and-medicine-coronavirus-resource-centre/" >
+Read More »			</a>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-element elementor-element-2a9d51e1 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="2a9d51e1" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-c3c69d9 elementor-column elementor-col-100 elementor-top-column" data-id="c3c69d9" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<section class="elementor-element elementor-element-8d4ac1b elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="8d4ac1b" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-d4d367c elementor-column elementor-col-50 elementor-inner-column" data-id="d4d367c" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-3afc6147 elementor-widget elementor-widget-heading" data-id="3afc6147" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Latest ASATA Coronavirus resources</h2>		</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-be3691a elementor-column elementor-col-50 elementor-inner-column" data-id="be3691a" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-2500e98 elementor-align-right elementor-mobile-align-center elementor-widget elementor-widget-bdt-advanced-button" data-id="2500e98" data-element_type="widget" data-widget_type="bdt-advanced-button.default">
+<div class="elementor-widget-container">
+<div class="bdt-advanced-button-wrapper">
+<a href="https://coronavirus.asata.co.za/category/asata-resources/" class="bdt-advanced-button bdt-advanced-button-effect-e bdt-advanced-button-size-sm">
+<div class="bdt-advanced-button-content-wrapper  " data-text="view all">
+<div class="bdt-advanced-button-text">
+<span class="avdbtn-text">view all</span>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="elementor-element elementor-element-4efa8df0 elementor-grid-2 elementor-posts--thumbnail-none elementor-grid-tablet-2 elementor-grid-mobile-1 elementor-widget elementor-widget-posts" data-id="4efa8df0" data-element_type="widget" data-settings="{&quot;classic_columns&quot;:&quot;2&quot;,&quot;classic_columns_tablet&quot;:&quot;2&quot;,&quot;classic_columns_mobile&quot;:&quot;1&quot;,&quot;classic_row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:35,&quot;sizes&quot;:[]}}" data-widget_type="posts.classic">
+<div class="elementor-widget-container">
+<div class="elementor-posts-container elementor-posts elementor-posts--skin-classic elementor-grid">
+<article class="elementor-post elementor-grid-item post-8274 post type-post status-publish format-standard hentry category-asata-resources">
+<div class="elementor-post__text">
+<h3 class="elementor-post__title">
+<a href="https://coronavirus.asata.co.za/employment-law-covid-19-a-guideline-for-travel-businesses/" >
+Employment Law &#038; COVID-19: A guideline for travel businesses			</a>
+</h3>
+<div class="elementor-post__meta-data">
+<span class="elementor-post-date">
+Mar 19, 2020		</span>
+</div>
+<div class="elementor-post__excerpt">
+<p>By Novation Consulting In this article we will look at the employment laws that apply to the employment questions raised by the COVID-19 epidemic. It</p>
+</div>
+<a class="elementor-post__read-more" href="https://coronavirus.asata.co.za/employment-law-covid-19-a-guideline-for-travel-businesses/" >
+Read More »			</a>
+</div>
+</article>
+<article class="elementor-post elementor-grid-item post-8231 post type-post status-publish format-standard hentry category-asata-resources tag-asata tag-covid-19">
+<div class="elementor-post__text">
+<h3 class="elementor-post__title">
+<a href="https://coronavirus.asata.co.za/asata-live-webinar-with-asata-ceo-and-legal-advisor-on-agency-support-for-covid-19/" >
+ASATA Live: Webinar with ASATA CEO and Legal Advisor on agency support for COVID-19			</a>
+</h3>
+<div class="elementor-post__meta-data">
+<span class="elementor-post-date">
+Mar 18, 2020		</span>
+</div>
+<div class="elementor-post__excerpt">
+<p>ASATA CEO&nbsp;Otto de Vries&nbsp;and Legal Advisor&nbsp;Elizabeth de Stadler&nbsp;(Novation Consulting) hosted a&nbsp;webinar&nbsp;on ASATA’s support for its members as the COVID-19 situation evolves.&nbsp; Among those topics discussed</p>
+</div>
+<a class="elementor-post__read-more" href="https://coronavirus.asata.co.za/asata-live-webinar-with-asata-ceo-and-legal-advisor-on-agency-support-for-covid-19/" >
+Read More »			</a>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-element elementor-element-05e57c4 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="05e57c4" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-475674a elementor-column elementor-col-100 elementor-top-column" data-id="475674a" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<section class="elementor-element elementor-element-400f794 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="400f794" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-18c77a2 elementor-column elementor-col-50 elementor-inner-column" data-id="18c77a2" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-438d840 elementor-widget elementor-widget-heading" data-id="438d840" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Latest SA Government Update</h2>		</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-4f1d161 elementor-column elementor-col-50 elementor-inner-column" data-id="4f1d161" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-3f2ba80 elementor-align-right elementor-mobile-align-center elementor-widget elementor-widget-bdt-advanced-button" data-id="3f2ba80" data-element_type="widget" data-widget_type="bdt-advanced-button.default">
+<div class="elementor-widget-container">
+<div class="bdt-advanced-button-wrapper">
+<a href="https://coronavirus.asata.co.za/category/sa-government-updates/" class="bdt-advanced-button bdt-advanced-button-effect-e bdt-advanced-button-size-sm">
+<div class="bdt-advanced-button-content-wrapper  " data-text="view all">
+<div class="bdt-advanced-button-text">
+<span class="avdbtn-text">view all</span>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="elementor-element elementor-element-7f0838f elementor-grid-2 elementor-posts--thumbnail-none elementor-grid-tablet-2 elementor-grid-mobile-1 elementor-widget elementor-widget-posts" data-id="7f0838f" data-element_type="widget" data-settings="{&quot;classic_columns&quot;:&quot;2&quot;,&quot;classic_columns_tablet&quot;:&quot;2&quot;,&quot;classic_columns_mobile&quot;:&quot;1&quot;,&quot;classic_row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:35,&quot;sizes&quot;:[]}}" data-widget_type="posts.classic">
+<div class="elementor-widget-container">
+<div class="elementor-posts-container elementor-posts elementor-posts--skin-classic elementor-grid">
+<article class="elementor-post elementor-grid-item post-8269 post type-post status-publish format-standard has-post-thumbnail hentry category-sa-government-updates">
+<div class="elementor-post__text">
+<h3 class="elementor-post__title">
+<a href="https://coronavirus.asata.co.za/sa-government-gazette-18-march/" >
+SA Government Gazette: 18 March			</a>
+</h3>
+<div class="elementor-post__meta-data">
+<span class="elementor-post-date">
+Mar 19, 2020		</span>
+</div>
+<div class="elementor-post__excerpt">
+<p>The South African Government has released the Government Gazette on 18 March, outlining changes the updated Disaster Management amendments following the President&#8217;s declaration of a</p>
+</div>
+<a class="elementor-post__read-more" href="https://coronavirus.asata.co.za/sa-government-gazette-18-march/" >
+Read More »			</a>
+</div>
+</article>
+<article class="elementor-post elementor-grid-item post-8253 post type-post status-publish format-standard has-post-thumbnail hentry category-sa-government-updates">
+<div class="elementor-post__text">
+<h3 class="elementor-post__title">
+<a href="https://coronavirus.asata.co.za/withdrawal-of-visa-exemption-of-covid-19-risk-countries/" >
+Withdrawal of visa exemption of COVID-19 risk countries			</a>
+</h3>
+<div class="elementor-post__meta-data">
+<span class="elementor-post-date">
+Mar 19, 2020		</span>
+</div>
+<div class="elementor-post__excerpt">
+<p>On 15 March, President Cyril Ramaphosa announced that there would be a travel ban imposed on travellers from COVID-19 High-Risk Countries as determined by the</p>
+</div>
+<a class="elementor-post__read-more" href="https://coronavirus.asata.co.za/withdrawal-of-visa-exemption-of-covid-19-risk-countries/" >
+Read More »			</a>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-element elementor-element-e992e63 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="e992e63" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-d6de475 elementor-column elementor-col-100 elementor-top-column" data-id="d6de475" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<section class="elementor-element elementor-element-a320dc1 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="a320dc1" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-342af28 elementor-column elementor-col-50 elementor-inner-column" data-id="342af28" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-3e4d420 elementor-widget elementor-widget-heading" data-id="3e4d420" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Latest Other Resources</h2>		</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-d3e644e elementor-column elementor-col-50 elementor-inner-column" data-id="d3e644e" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-6e0b30c elementor-align-right elementor-mobile-align-center elementor-widget elementor-widget-bdt-advanced-button" data-id="6e0b30c" data-element_type="widget" data-widget_type="bdt-advanced-button.default">
+<div class="elementor-widget-container">
+<div class="bdt-advanced-button-wrapper">
+<a href="https://coronavirus.asata.co.za/category/other-resources/" class="bdt-advanced-button bdt-advanced-button-effect-e bdt-advanced-button-size-sm">
+<div class="bdt-advanced-button-content-wrapper  " data-text="view all">
+<div class="bdt-advanced-button-text">
+<span class="avdbtn-text">view all</span>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="elementor-element elementor-element-37d121b elementor-grid-2 elementor-posts--thumbnail-none elementor-grid-tablet-2 elementor-grid-mobile-1 elementor-widget elementor-widget-posts" data-id="37d121b" data-element_type="widget" data-settings="{&quot;classic_columns&quot;:&quot;2&quot;,&quot;classic_columns_tablet&quot;:&quot;2&quot;,&quot;classic_columns_mobile&quot;:&quot;1&quot;,&quot;classic_row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:35,&quot;sizes&quot;:[]}}" data-widget_type="posts.classic">
+<div class="elementor-widget-container">
+<div class="elementor-posts-container elementor-posts elementor-posts--skin-classic elementor-grid">
+<article class="elementor-post elementor-grid-item post-8308 post type-post status-publish format-standard has-post-thumbnail hentry category-official-coronavirus-info-sources">
+<div class="elementor-post__text">
+<h3 class="elementor-post__title">
+<a href="https://coronavirus.asata.co.za/government-of-namibia-declares-state-of-emergency/" >
+Government of Namibia declares State of Emergency			</a>
+</h3>
+<div class="elementor-post__meta-data">
+<span class="elementor-post-date">
+Mar 19, 2020		</span>
+</div>
+<div class="elementor-post__excerpt">
+<p>On 17 March, the Government of Namibia declared a State of Emergency, also imposing a number travel bans and restrictions. Please click here for the</p>
+</div>
+<a class="elementor-post__read-more" href="https://coronavirus.asata.co.za/government-of-namibia-declares-state-of-emergency/" >
+Read More »			</a>
+</div>
+</article>
+<article class="elementor-post elementor-grid-item post-8291 post type-post status-publish format-standard has-post-thumbnail hentry category-official-coronavirus-info-sources">
+<div class="elementor-post__text">
+<h3 class="elementor-post__title">
+<a href="https://coronavirus.asata.co.za/city-of-cape-town-to-close-facilities-to-contain-spread-of-covid-19-encourages-use-of-online-services-where-possible/" >
+City of Cape Town to close facilities to contain spread of COVID-19, encourages use of online services where possible			</a>
+</h3>
+<div class="elementor-post__meta-data">
+<span class="elementor-post-date">
+Mar 19, 2020		</span>
+</div>
+<div class="elementor-post__excerpt">
+<p>The City of Cape Town has noted the key containment and mitigation measures that are being implemented across the world and in South Africa in</p>
+</div>
+<a class="elementor-post__read-more" href="https://coronavirus.asata.co.za/city-of-cape-town-to-close-facilities-to-contain-spread-of-covid-19-encourages-use-of-online-services-where-possible/" >
+Read More »			</a>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-element elementor-element-5344a46 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="5344a46" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-ff97fd1 elementor-column elementor-col-100 elementor-top-column" data-id="ff97fd1" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<section class="elementor-element elementor-element-257e35c elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="257e35c" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-317ba09 elementor-column elementor-col-50 elementor-inner-column" data-id="317ba09" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-6cbf5b8 elementor-widget elementor-widget-heading" data-id="6cbf5b8" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Latest News Articles</h2>		</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-790b8ad elementor-column elementor-col-50 elementor-inner-column" data-id="790b8ad" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-f744fd0 elementor-align-right elementor-mobile-align-center elementor-widget elementor-widget-bdt-advanced-button" data-id="f744fd0" data-element_type="widget" data-widget_type="bdt-advanced-button.default">
+<div class="elementor-widget-container">
+<div class="bdt-advanced-button-wrapper">
+<a href="https://coronavirus.asata.co.za/category/news-articles/" class="bdt-advanced-button bdt-advanced-button-effect-e bdt-advanced-button-size-sm">
+<div class="bdt-advanced-button-content-wrapper  " data-text="view all">
+<div class="bdt-advanced-button-text">
+<span class="avdbtn-text">view all</span>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="elementor-element elementor-element-1f2f891 elementor-grid-2 elementor-posts--thumbnail-none elementor-grid-tablet-2 elementor-grid-mobile-1 elementor-widget elementor-widget-posts" data-id="1f2f891" data-element_type="widget" data-settings="{&quot;classic_columns&quot;:&quot;2&quot;,&quot;classic_columns_tablet&quot;:&quot;2&quot;,&quot;classic_columns_mobile&quot;:&quot;1&quot;,&quot;classic_row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:35,&quot;sizes&quot;:[]}}" data-widget_type="posts.classic">
+<div class="elementor-widget-container">
+<div class="elementor-posts-container elementor-posts elementor-posts--skin-classic elementor-grid">
+<article class="elementor-post elementor-grid-item post-8245 post type-post status-publish format-standard has-post-thumbnail hentry category-official-coronavirus-info-sources category-news-articles">
+<div class="elementor-post__text">
+<h3 class="elementor-post__title">
+<a href="https://coronavirus.asata.co.za/update-australian-high-commission/" >
+Update: Australian High Commission			</a>
+</h3>
+<div class="elementor-post__meta-data">
+<span class="elementor-post-date">
+Mar 19, 2020		</span>
+</div>
+<div class="elementor-post__excerpt">
+<p>The Home Affairs website has been updated with COVID-19 travel restrictions. This situation will evolve rapidly and we advise that you regularly check alerts on</p>
+</div>
+<a class="elementor-post__read-more" href="https://coronavirus.asata.co.za/update-australian-high-commission/" >
+Read More »			</a>
+</div>
+</article>
+<article class="elementor-post elementor-grid-item post-8238 post type-post status-publish format-standard has-post-thumbnail hentry category-live-updates category-news-articles">
+<div class="elementor-post__text">
+<h3 class="elementor-post__title">
+<a href="https://coronavirus.asata.co.za/additional-travel-restrictions-to-republic-mauritius/" >
+Additional travel restriction to the Republic of Mauritius			</a>
+</h3>
+<div class="elementor-post__meta-data">
+<span class="elementor-post-date">
+Mar 19, 2020		</span>
+</div>
+<div class="elementor-post__excerpt">
+<p>With the spread of the Covid-19 infection to a greater number of countries, Mauritian authorities have extended travel restrictions to the Republic of Mauritius as</p>
+</div>
+<a class="elementor-post__read-more" href="https://coronavirus.asata.co.za/additional-travel-restrictions-to-republic-mauritius/" >
+Read More »			</a>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-element elementor-element-efab127 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="efab127" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-fb6cd26 elementor-column elementor-col-100 elementor-top-column" data-id="fb6cd26" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<section class="elementor-element elementor-element-cee1192 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="cee1192" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-0cbaa00 elementor-column elementor-col-50 elementor-inner-column" data-id="0cbaa00" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-2a65a27 elementor-widget elementor-widget-heading" data-id="2a65a27" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Latest Supplier Updates</h2>		</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-59fd353 elementor-column elementor-col-50 elementor-inner-column" data-id="59fd353" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-b96726b elementor-align-right elementor-mobile-align-center elementor-widget elementor-widget-bdt-advanced-button" data-id="b96726b" data-element_type="widget" data-widget_type="bdt-advanced-button.default">
+<div class="elementor-widget-container">
+<div class="bdt-advanced-button-wrapper">
+<a href="https://coronavirus.asata.co.za/category/supplier-updates/" class="bdt-advanced-button bdt-advanced-button-effect-e bdt-advanced-button-size-sm">
+<div class="bdt-advanced-button-content-wrapper  " data-text="view all">
+<div class="bdt-advanced-button-text">
+<span class="avdbtn-text">view all</span>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="elementor-element elementor-element-cf1bac3 elementor-grid-2 elementor-posts--thumbnail-none elementor-grid-tablet-2 elementor-grid-mobile-1 elementor-widget elementor-widget-posts" data-id="cf1bac3" data-element_type="widget" data-settings="{&quot;classic_columns&quot;:&quot;2&quot;,&quot;classic_columns_tablet&quot;:&quot;2&quot;,&quot;classic_columns_mobile&quot;:&quot;1&quot;,&quot;classic_row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:35,&quot;sizes&quot;:[]}}" data-widget_type="posts.classic">
+<div class="elementor-widget-container">
+<div class="elementor-posts-container elementor-posts elementor-posts--skin-classic elementor-grid">
+<article class="elementor-post elementor-grid-item post-8263 post type-post status-publish format-standard has-post-thumbnail hentry category-supplier-updates">
+<div class="elementor-post__text">
+<h3 class="elementor-post__title">
+<a href="https://coronavirus.asata.co.za/saa-extends-trade-support-operation-hours/" >
+SAA extends trade support operation hours			</a>
+</h3>
+<div class="elementor-post__meta-data">
+<span class="elementor-post-date">
+Mar 19, 2020		</span>
+</div>
+<div class="elementor-post__excerpt">
+<p>SAA has extended its trade support hours by four hours. Normally trade support is available from 08h30 to 17h00. At present, the airline has extended</p>
+</div>
+<a class="elementor-post__read-more" href="https://coronavirus.asata.co.za/saa-extends-trade-support-operation-hours/" >
+Read More »			</a>
+</div>
+</article>
+<article class="elementor-post elementor-grid-item post-8260 post type-post status-publish format-standard has-post-thumbnail hentry category-supplier-updates">
+<div class="elementor-post__text">
+<h3 class="elementor-post__title">
+<a href="https://coronavirus.asata.co.za/hurtigruten-temporarily-suspends-operations/" >
+Hurtigruten temporarily suspends operations			</a>
+</h3>
+<div class="elementor-post__meta-data">
+<span class="elementor-post-date">
+Mar 19, 2020		</span>
+</div>
+<div class="elementor-post__excerpt">
+<p>As a response to the global coronavirus outbreak, Hurtigruten, will voluntarily stop operations from pole to pole until the end of April. &#8211; To temporarily</p>
+</div>
+<a class="elementor-post__read-more" href="https://coronavirus.asata.co.za/hurtigruten-temporarily-suspends-operations/" >
+Read More »			</a>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+		<div data-elementor-type="footer" data-elementor-id="7841" class="elementor elementor-7841 elementor-location-footer" data-elementor-settings="[]">
+<div class="elementor-inner">
+<div class="elementor-section-wrap">
+<section class="elementor-element elementor-element-d19e1cf elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="d19e1cf" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-cf3d490 elementor-column elementor-col-100 elementor-top-column" data-id="cf3d490" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-7b15f10 elementor-widget elementor-widget-text-editor" data-id="7b15f10" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<div class="elementor-text-editor elementor-clearfix"><p>Important links: <a href="https://coronavirus.asata.co.za/category/archived-posts/">Archive</a> &#8211; <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/events-as-they-happen">WHO</a> &#8211; <a href="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">Johns Hopkins Dashboard</a></p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="elementor-element elementor-element-56d917cb elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="56d917cb" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-0abcaf6 elementor-column elementor-col-100 elementor-top-column" data-id="0abcaf6" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-02259ca elementor-widget elementor-widget-text-editor" data-id="02259ca" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<div class="elementor-text-editor elementor-clearfix"><p>ASATA is reviewing and updating this website as frequently as possible, but the COVID-19 crisis is evolving very rapidly. Unfortunately, we cannot guarantee that the information is 100% up to date and accurate. We also cannot take responsibility for the accuracy of the content of third parties who we are linking to. You should always verify the information and advice made available on this website before you make any decisions.</p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<section class="elementor-element elementor-element-0c15c40 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="0c15c40" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-5a138ea elementor-column elementor-col-100 elementor-top-column" data-id="5a138ea" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-d26144b elementor-widget elementor-widget-text-editor" data-id="d26144b" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<div class="elementor-text-editor elementor-clearfix">ASATA &copy;2020 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<!-- <link rel='stylesheet' id='ep-search-css'  href='https://coronavirus.asata.co.za/wp-content/plugins/bdthemes-element-pack/assets/css/ep-search.css?ver=4.6.1' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='ep-news-ticker-css'  href='https://coronavirus.asata.co.za/wp-content/plugins/bdthemes-element-pack/assets/css/ep-news-ticker.css?ver=4.6.1' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='ep-advanced-button-css'  href='https://coronavirus.asata.co.za/wp-content/plugins/bdthemes-element-pack/assets/css/ep-advanced-button.css?ver=4.6.1' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//coronavirus.asata.co.za/wp-content/cache/wpfc-minified/7xdkgbfr/bnbe1.css" media="all"/>
+<script type='text/javascript' src='https://coronavirus.asata.co.za/wp-includes/js/jquery/ui/effect.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://coronavirus.asata.co.za/wp-includes/js/jquery/ui/effect-highlight.min.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var DALE_PHPDATA = {"nonce":"084a10e301","ajaxUrl":"https:\/\/coronavirus.asata.co.za\/wp-admin\/admin-ajax.php","commentEmptyCommentText":"Empty comments are not allowed","commentMessageUnderModerationText":"Message under moderation","commentCommentLimitText":"You have submitted too many comments","commentNumberOfCommentsSingleText":"Comment","commentNumberOfCommentsMultipleText":"Comments","commentSubmitCommentText":"Post Comment","commentSignInText":"Sign in to Comment","advancedUpdateTime":"10","advancedInstagramProcessEmbed":"1","advancedSignInUrl":"https:\/\/coronavirus.asata.co.za\/wp-login.php?redirect_to=https%3A%2F%2Fcoronavirus.asata.co.za%2F"};
+/* ]]> */
 </script>
-
+<script type='text/javascript' src='https://coronavirus.asata.co.za/wp-content/plugins/daext-live-events/public/assets/js/production/live-events.js?ver=1.24'></script>
+<script type='text/javascript' src='https://coronavirus.asata.co.za/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+<script type='text/javascript' src='https://cdn.onesignal.com/sdks/OneSignalSDK.js?ver=5.3.2' async='async'></script>
+<script type='text/javascript' src='https://coronavirus.asata.co.za/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.0.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var element_pack_ajax_login_config = {"ajaxurl":"https:\/\/coronavirus.asata.co.za\/wp-admin\/admin-ajax.php","loadingmessage":"Sending user info, please wait..."};
+var ElementPackConfig = {"ajaxurl":"https:\/\/coronavirus.asata.co.za\/wp-admin\/admin-ajax.php","nonce":"77f78a7889","data_table":{"language":{"lengthMenu":"Show _MENU_ Entries","info":"Showing _START_ to _END_ of _TOTAL_ entries","search":"Search :","paginate":{"previous":"Previous","next":"Next"}}},"contact_form":{"sending_msg":"Sending message please wait...","captcha_nd":"Invisible captcha not defined!","captcha_nr":"Could not get invisible captcha response!"},"mailchimp":{"subscribing":"Subscribing you please wait..."},"elements_data":{"sections":[],"columns":[],"widgets":[]}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://coronavirus.asata.co.za/wp-content/plugins/bdthemes-element-pack/assets/js/bdt-uikit.min.js?ver=4.6.1'></script>
+<script type='text/javascript' src='https://coronavirus.asata.co.za/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=2.9.6'></script>
+<script type='text/javascript' src='https://coronavirus.asata.co.za/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://coronavirus.asata.co.za/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.7.6'></script>
+<script type='text/javascript' src='https://coronavirus.asata.co.za/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2'></script>
+<script type='text/javascript' src='https://coronavirus.asata.co.za/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6'></script>
+<script type='text/javascript' src='https://coronavirus.asata.co.za/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=2.9.6'></script>
+<script type='text/javascript'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","downloadImage":"Download image"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.9.6","urls":{"assets":"https:\/\/coronavirus.asata.co.za\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes","elementor_lightbox_enable_counter":"yes","elementor_lightbox_enable_fullscreen":"yes","elementor_lightbox_enable_zoom":"yes","elementor_lightbox_enable_share":"yes","elementor_lightbox_title_src":"title","elementor_lightbox_description_src":"description"},"editorPreferences":[]},"post":{"id":8134,"title":"Coronavirus - asata - ASATA","excerpt":"","featuredImage":false}};
+</script>
+<script type='text/javascript' src='https://coronavirus.asata.co.za/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=2.9.6'></script>
+<script type='text/javascript' src='https://coronavirus.asata.co.za/wp-content/plugins/bdthemes-element-pack/assets/js/element-pack-site.min.js?ver=4.6.1'></script>
+<script type='text/javascript' src='https://coronavirus.asata.co.za/wp-content/plugins/bdthemes-element-pack/assets/js/widgets/ep-search.min.js?ver=4.6.1'></script>
+<script type='text/javascript' src='https://coronavirus.asata.co.za/wp-content/plugins/bdthemes-element-pack/assets/js/widgets/ep-section-sticky.min.js?ver=4.6.1'></script>
+<script type='text/javascript' src='https://coronavirus.asata.co.za/wp-content/plugins/bdthemes-element-pack/assets/js/widgets/ep-news-ticker.min.js?ver=4.6.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ctf = {"ajax_url":"https:\/\/coronavirus.asata.co.za\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://coronavirus.asata.co.za/wp-content/plugins/custom-twitter-feeds/js/ctf-scripts.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://coronavirus.asata.co.za/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='https://coronavirus.asata.co.za/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=2.9.1'></script>
+<script type='text/javascript'>
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/coronavirus.asata.co.za\/wp-admin\/admin-ajax.php","nonce":"ece08d3726","shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"delicious":{"title":"Delicious"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_ZA","app_id":""}};
+</script>
+<script type='text/javascript' src='https://coronavirus.asata.co.za/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=2.9.1'></script>
 </body>
-</html>
+</html><!-- WP Fastest Cache file was created in 1.0442569255829 seconds, on 19-03-20 19:02:43 -->

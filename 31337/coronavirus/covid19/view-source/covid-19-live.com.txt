@@ -1,0 +1,606 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<!-- Follow me on Twitter: @mauriciogior -->	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+	
+	<!-- Primary Meta Tags -->
+	<title>COVID-19 Global Chart</title>
+	<meta name="title" content="COVID-19 Global Chart">
+	<meta name="description" content="Data collected in real time from World Health Organization (WHO)">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://www.covid-19-live.com/">
+	<meta property="og:title" content="COVID-19 Global Chart">
+	<meta property="og:description" content="Data collected in real time from World Health Organization (WHO)">
+	<meta property="og:image" content="https://www.covid-19-live.com/covid19.jpg">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://www.covid-19-live.com/">
+	<meta property="twitter:title" content="COVID-19 Global Chart">
+	<meta property="twitter:description" content="Data collected in real time from World Health Organization (WHO)">
+	<meta property="twitter:image" content="https://www.covid-19-live.com/covid19.jpg">
+
+	<!-- Generated on https://www.favicon-generator.org/ -->
+	<!-- Icon source: https://freesvg.org/virus-green-color -->
+	<link rel="apple-touch-icon" sizes="57x57" href="https://www.covid-19-live.com/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="https://www.covid-19-live.com/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="https://www.covid-19-live.com/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="https://www.covid-19-live.com/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="https://www.covid-19-live.com/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://www.covid-19-live.com/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="https://www.covid-19-live.com/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://www.covid-19-live.com/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://www.covid-19-live.com/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="https://www.covid-19-live.com/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://www.covid-19-live.com/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="https://www.covid-19-live.com/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://www.covid-19-live.com/favicon-16x16.png">
+	<link rel="manifest" href="https://www.covid-19-live.com/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="https://www.covid-19-live.com/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/highcharts@8.0.4/css/highcharts.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" />
+	<style>
+	body {
+		font-family: 'Sen', sans-serif;
+	}
+
+	#app {
+		width: 100%;
+		height: 100%;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.chart {
+		width: 100%;
+		flex-grow: 1;
+		min-height: 400px;
+	}
+
+	.header h1, .header p {
+		text-align: center;
+	}
+
+	.header p {
+		margin-top: 0px;
+	}
+
+	.menu {
+		width: auto;
+		display: table;
+		margin: 0px auto 21px auto;
+		text-align: center;
+	}
+
+	.menu button {
+		color: #5f27cd;
+		font-size: 14px;
+		padding: 7px 14px;
+		margin: 0 7px 7px 0;
+		border: 1px solid transparent;
+		border-radius: 100px;
+		cursor: pointer;
+		transition: .15s all ease-in;
+		outline: none;
+	}
+
+	.menu button.active {
+		color: #fff;
+		background-color: #5f27cd;
+	}
+
+	.menu button:not(.active):hover {
+		border-color: #5f27cd;
+	}
+
+	input, select {
+		border: 1px solid #5f27cd;
+		border-radius: 100px;
+		padding: 3px 7px;
+	}
+
+	#table {
+		width: 100% !important;
+	}
+
+	#table_wrapper td {
+		text-align: center;
+	}
+
+	.follow-me {
+		position: absolute;
+		left: 10px;
+		top: 10px;
+	}
+
+	.follow-me svg {
+		width: 14px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.follow-me a {
+		color: #00aced;
+		display: inline-block;
+		text-decoration: none;
+		vertical-align: middle;
+		font-size: 12px;
+	}
+
+	@media(max-width: 800px) {
+		.chart {
+			min-height: 600px;
+		}
+	}
+
+	@media(max-width: 550px) {
+		thead th:nth-child(3), thead th:nth-child(4) {
+			display: none;
+		}
+		tbody td:nth-child(3), tbody td:nth-child(4) {
+			display: none;
+		}
+	}
+
+	[v-cloak] {
+		display: none;
+	}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<div class="header">
+			<h1>COVID-19 Global Chart</h1>
+			<p v-cloak>Data collected in real time from <span title="World Health Organization">WHO</span>.<br/>Last updated: {{lastUpdated}}</p>
+		</div>
+
+		<div class="menu">
+			<button @click="setMode('chartTotalCases')" :class="{active : mode == 'chartTotalCases'}">Total cases</button>
+			<button @click="setMode('chartTotalDeaths')" :class="{active : mode == 'chartTotalDeaths'}">Total deaths</button>
+			<button @click="setMode('chartNewCases')" :class="{active : mode == 'chartNewCases'}">New cases</button>
+			<button @click="setMode('chartNewDeaths')" :class="{active : mode == 'chartNewDeaths'}">New deaths</button>
+			<button @click="setMode('fullDataset')" :class="{active : mode == 'fullDataset'}">Full dataset</button>
+		</div>
+
+		<div class="follow-me" title="Found any problems? Send me a message, I'll fix it.">
+			<svg viewBox="0 0 24 24"><g><path fill="#00aced" d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"></path></g></svg> <a href="https://twitter.com/mauriciogior" target="_blank">@mauriciogior</a>
+		</div>
+
+		<div v-show="mode == 'chartTotalCases'" id="chart-total-cases" class="chart"></div>
+		<div v-show="mode == 'chartTotalDeaths'" id="chart-total-deaths" class="chart"></div>
+		<div v-show="mode == 'chartNewCases'" id="chart-new-cases" class="chart"></div>
+		<div v-show="mode == 'chartNewDeaths'" id="chart-new-deaths" class="chart"></div>
+		<div v-show="mode == 'fullDataset'">
+			<table id="table">
+				<thead>
+					<tr>
+						<th>Date</th>
+						<th>Location</th>
+						<th>New cases</th>
+						<th>New deaths</th>
+						<th>Total cases</th>
+						<th>Total Deaths</th>
+					</tr>
+				</thead>
+				<tbody v-if="data.length > 0">
+					<tr v-for="point in data">
+						<td v-for="col in point">{{col || "0"}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/highcharts@8.0.4/highcharts.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/papaparse@5.1.1/papaparse.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		new Vue({
+			el: "#app",
+			data: {
+				headers: {
+					date: 0,
+					location: 1,
+					new_cases: 2,
+					new_deaths: 3,
+					total_cases: 4,
+					total_deaths: 5
+				},
+				dataType: {
+					data: 0,
+					total_cases: 1,
+					total_deaths: 2,
+					new_cases: 3,
+					new_deaths: 4
+				},
+				mode: '',
+				dataString: null,
+				data: [],
+				loaded: []
+			},
+
+			mounted: function() {
+				this.download();
+			},
+
+			computed: {
+				lang: function() {
+					var lang = window.navigator.languages ? window.navigator.languages[0] : null;
+					return lang || window.navigator.language || window.navigator.browserLanguage || window.navigator.userLanguage;
+				},
+
+				lastUpdated: function() {
+					if (this.chartDataTotalCases.length == 0) return '-';
+					var world = this.chartDataTotalCases[0];
+					if (world.data.length == 0) return '-';
+					return new Date(world.data[world.data.length - 1][0]).toGMTString().split("00:00")[0].trim();
+				},
+
+				totalCases: function() {
+					if (this.chartDataTotalCases.length == 0) return 0;
+					var world = this.chartDataTotalCases[0];
+					if (world.data.length == 0) return 0;
+					return world.data[world.data.length - 1][1];
+				},
+
+				totalDeaths: function() {
+					if (this.chartDataTotalDeaths.length == 0) return 0;
+					var world = this.chartDataTotalDeaths[0];
+					if (world.data.length == 0) return 0;
+					return world.data[world.data.length - 1][1];
+				},
+
+				newCases: function() {
+					if (this.chartDataNewCases.length == 0) return 0;
+					var world = this.chartDataNewCases[0];
+					if (world.data.length == 0) return 0;
+					return world.data[world.data.length - 1][1];
+				},
+
+				newDeaths: function() {
+					if (this.chartDataNewDeaths.length == 0) return 0;
+					var world = this.chartDataNewDeaths[0];
+					if (world.data.length == 0) return 0;
+					return world.data[world.data.length - 1][1];
+				},
+
+				chartData: function() {
+					var self = this;
+					var locations = [];
+					var chartData = [];
+					var worldData = [];
+
+					this.data.map(function(point) {
+						var index = locations.indexOf(point[self.headers.location]);
+						if (index === -1) {
+							if (point[self.headers.location] === "World") return;
+
+							locations.push(point[self.headers.location]);
+							chartData.push({
+								name: point[self.headers.location],
+								data: []
+							});
+							index = chartData.length - 1;
+						}
+
+						var date = Date.parse(point[self.headers.date]);
+						var total_cases = parseInt(point[self.headers.total_cases] || 0);
+						var total_deaths = parseInt(point[self.headers.total_deaths] || 0);
+						var new_cases = parseInt(point[self.headers.new_cases] || 0);
+						var new_deaths = parseInt(point[self.headers.new_deaths] || 0);
+
+						chartData[index].data.push([date, total_cases, total_deaths, new_cases, new_deaths]);
+
+						var worldIndex = -1;
+						for (var i in worldData) {
+							if (worldData[i][0] == date) {
+								worldIndex = i; break;
+							}
+						}
+
+						if (worldIndex === -1) {
+							worldData.push([date, total_cases, total_deaths, new_cases, new_deaths]);
+						} else {
+							worldData[worldIndex][self.dataType.total_cases] += total_cases;
+							worldData[worldIndex][self.dataType.total_deaths] += total_deaths;
+							worldData[worldIndex][self.dataType.new_cases] += new_cases;
+							worldData[worldIndex][self.dataType.new_deaths] += new_deaths;
+						}
+					});
+
+					worldData.sort(function(a, b) {
+						return a[0] - b[0];
+					});
+
+					chartData.push({
+						name: "World",
+						data: worldData
+					});
+
+					return chartData;
+				},
+
+				chartDataTotalCases: function() {
+					var self = this;
+					var data = this.chartData.map(function(location) {
+						var total = 0;
+						if (location.data.length > 0) {
+							total = location.data[location.data.length - 1][self.dataType.total_cases];
+						}
+						return {
+							name: location.name + " (" + self.formatNumber(total) + ")",
+							data: location.data.map(function(point) {
+								return [ point[0], point[self.dataType.total_cases]];
+							})
+						};
+					});
+
+					data.sort(function(a, b) {
+						return (b.data.length > 0 ? b.data[b.data.length - 1][1] : 0) -
+							(a.data.length > 0 ? a.data[a.data.length - 1][1] : 0);
+					});
+
+					return data;
+				},
+
+				chartDataTotalDeaths: function() {
+					var self = this;
+					var data = this.chartData.map(function(location) {
+						var total = 0;
+						if (location.data.length > 0) {
+							total = location.data[location.data.length - 1][self.dataType.total_deaths];
+						}
+						return {
+							name: location.name + " (" + self.formatNumber(total) + ")",
+							data: location.data.map(function(point) {
+								return [ point[0], point[self.dataType.total_deaths]];
+							})
+						};
+					});
+
+					data.sort(function(a, b) {
+						return (b.data.length > 0 ? b.data[b.data.length - 1][1] : 0) -
+							(a.data.length > 0 ? a.data[a.data.length - 1][1] : 0);
+					});
+
+					return data;
+				},
+
+				chartDataNewCases: function() {
+					var self = this;
+					var data = this.chartData.map(function(location) {
+						return {
+							name: location.name,
+							data: location.data.map(function(point) {
+								return [ point[0], point[self.dataType.new_cases]];
+							})
+						};
+					});
+
+					data.sort(function(a, b) {
+						return (b.data.length > 0 ? b.data[b.data.length - 1][1] : 0) -
+							(a.data.length > 0 ? a.data[a.data.length - 1][1] : 0);
+					});
+
+					return data;
+				},
+
+				chartDataNewDeaths: function() {
+					var self = this;
+					var data = this.chartData.map(function(location) {
+						return {
+							name: location.name,
+							data: location.data.map(function(point) {
+								return [ point[0], point[self.dataType.new_deaths]];
+							})
+						};
+					});
+
+					data.sort(function(a, b) {
+						return (b.data.length > 0 ? b.data[b.data.length - 1][1] : 0) -
+							(a.data.length > 0 ? a.data[a.data.length - 1][1] : 0);
+					});
+
+					return data;
+				}
+			},
+
+			methods: {
+				download: function() {
+					var self = this;
+
+					axios.get('https://covid.ourworldindata.org/data/full_data.csv?v=' + (new Date().toLocaleDateString()))
+					.then(function (response) {
+						self.dataString = response.data;
+						self.parse();
+					})
+					.catch(function (error) {
+						alert('Something went wrong');
+					});
+				},
+
+				chart: function(id, title, subtitle, dataset) {
+					this.$nextTick(function() {
+						var legend = {};
+						if (window.innerWidth > 800) {
+							legend = {
+								layout: 'vertical',
+								align: 'right',
+								verticalAlign: 'middle'
+							};
+						}
+						Highcharts.chart(id, {
+							chart: {
+								zoomType: 'x',
+								style: {
+									fontFamily: "'Sen', sans-serif"
+								}
+							},
+
+							title: {
+								text: title
+							},
+
+							subtitle: {
+								text: subtitle
+							},
+
+							legend: legend,
+
+							xAxis: {
+								type: 'datetime'
+							},
+
+							series: dataset
+						});
+					});
+				},
+
+				chartTotalCases: function() {
+					if (this.loaded.indexOf('chartTotalCases') !== -1) return;
+					this.loaded.push('chartTotalCases');
+
+					var self = this;
+					var totalCases = this.totalCases;
+					this.chart(
+						'chart-total-cases',
+						'Total cases: ' + this.formatNumber(totalCases),
+						'Showing countries with more than 5% of total cases in the world',
+						this.chartDataTotalCases.map(function(serie) {
+							var total = 0;
+							if (serie.data.length > 0) {
+								total = serie.data[serie.data.length - 1][1];
+							}
+
+							if ((total * 100 / totalCases) <= 5) {
+								serie.visible = false;
+							}
+
+							return serie;
+						})
+					);
+				},
+
+				chartTotalDeaths: function() {
+					if (this.loaded.indexOf('chartTotalDeaths') !== -1) return;
+					this.loaded.push('chartTotalDeaths');
+					
+					var self = this;
+					var totalDeaths = this.totalDeaths;
+					this.chart(
+						'chart-total-deaths',
+						'Total deaths: ' + this.formatNumber(totalDeaths),
+						'Showing countries with more than 5% of total deaths in the world',
+						this.chartDataTotalDeaths.map(function(serie) {
+							var total = 0;
+							if (serie.data.length > 0) {
+								total = serie.data[serie.data.length - 1][1];
+							}
+
+							if ((total * 100 / totalDeaths) <= 5) {
+								serie.visible = false;
+							}
+
+							return serie;
+						})
+					);
+				},
+
+				chartNewCases: function() {
+					if (this.loaded.indexOf('chartNewCases') !== -1) return;
+					this.loaded.push('chartNewCases');
+
+					var self = this;
+					var newCases = this.newCases;
+					this.chart(
+						'chart-new-cases',
+						this.formatNumber(newCases) + ' new cases on ' + this.lastUpdated,
+						'Showing countries with more than 5% of new cases in the world',
+						this.chartDataNewCases.map(function(serie) {
+							var _new = 0;
+							if (serie.data.length > 0) {
+								_new = serie.data[serie.data.length - 1][1];
+							}
+
+							if ((_new * 100 / newCases) <= 5) {
+								serie.visible = false;
+							}
+
+							return serie;
+						})
+					);
+				},
+
+				chartNewDeaths: function() {
+					if (this.loaded.indexOf('chartNewDeaths') !== -1) return;
+					this.loaded.push('chartNewDeaths');
+					
+					var self = this;
+					var newDeaths = this.newDeaths;
+					this.chart(
+						'chart-new-deaths',
+						this.formatNumber(newDeaths) + ' new deaths on ' + this.lastUpdated,
+						'Showing countries with more than 5% of new deaths in the world',
+						this.chartDataNewDeaths.map(function(serie) {
+							var _new = 0;
+							if (serie.data.length > 0) {
+								_new = serie.data[serie.data.length - 1][1];
+							}
+
+							if ((_new * 100 / newDeaths) <= 5) {
+								serie.visible = false;
+							}
+
+							return serie;
+						})
+					);
+				},
+
+				fullDataset: function() {
+					if (this.loaded.indexOf('fullDataset') !== -1) return;
+					this.loaded.push('fullDataset');
+
+					this.$nextTick(function() {
+						$("#table").DataTable();
+					});
+				},
+
+				formatNumber: function(number) {
+					return parseFloat(number).toLocaleString(this.lang, { minimumFractionDigits: 0 });
+				},
+
+				parse: function() {
+					var results = Papa.parse(this.dataString).data;
+					results.shift();
+					results.pop();
+					this.data = results;
+					this.setMode('chartTotalCases');
+				},
+
+				setMode: function(mode) {
+					if (this.mode == mode) return;
+					this.mode = mode;
+
+					var fn = this[mode];
+					if (typeof fn === "function") fn();
+				}
+			}
+		});
+	});
+	</script>
+</body>
+</html>

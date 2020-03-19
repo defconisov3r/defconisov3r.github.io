@@ -13,30 +13,37 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 	<link rel="stylesheet" href="styles.css">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161007682-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-161007682-1');
+	</script>
+
 </head>
 <body>
 	<!-- BACK TO TOP -->
 	<button onclick="topFunction()" id="back-to-top" title="Go to top">Back to Top</button>
 	
-	<!-- MODAL SECTION -->
-	<div class="modal fade" id="myModal">
+	<!-- MODAL FIND TEST CENTER -->
+	<!-- <div class="modal fade" id="myModal">
 		<div class="modal-dialog modal-lg modal-dialog-centered">
 			<div class="modal-content">
 			
-			<!-- Modal Header -->
 			<div class="modal-header">
 				<h4 id="modal-title" class="modal-title">Find a Test Center</h4>
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
 			</div>
 			
-			<!-- Modal body -->
 			<div class="modal-body text-center">
 				<h3 id="modal-text"></h3>
 				<img class="img-fluid align-self-center" src="img/map.png" alt="Map Image">
 			</div>
 			
-			<!-- Modal footer -->
 			<div class="modal-footer">
 				<button id="modal-btn" type="button" class="my-btn" onclick="eatSpreadsheet()">
 					<div id="modal-spinner" class="hide-spinner spinner-border"></div>
@@ -46,7 +53,34 @@
 			
 			</div>
 		</div>
-	   </div>
+	</div> -->
+	
+	<!-- MODAL DISCLAIMER -->
+	<!-- <div class="modal fade show" id="myModalDisclaimer" data-keyboard="false" data-backdrop="static">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content">
+			
+			<div class="modal-header">
+				<h4 id="modal-title" class="modal-title">Disclaimer</h4>
+			</div>
+			
+			<div class="modal-body text-center">
+				<h3 id="modal-text" class="text-justify">
+					The information contained herein should NOT be used as a substitute for the advice of 
+					an appropriately qualified and licensed physician or other health care provider. If you think you 
+					have been exposed to COVID-19 and develop a fever and symptoms, such as cough or difficulty breathing, 
+					call your healthcare provider for medical advice.
+				</h3>
+				<img class="img-fluid align-self-center" src="img/patient-flow.png" alt="Patient Flow">
+			</div>
+			
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success" data-dismiss="modal">Okay</button>
+			</div>
+			
+			</div>
+		</div>
+	</div> -->
 
 	<!-- NAV SECTION -->
 	<div class="hero-bg"></div>
@@ -59,11 +93,14 @@
 				<li class="nav-item my-nav-item">
 					<a class="nav-link" href="https://github.com/ThouShawNotPass/PNW_COVID19_Triage">Open Source</a>
 				</li>
-				<li class="nav-item my-nav-item">
+				<!-- <li class="nav-item my-nav-item">
 					<a class="nav-link" href="https://forms.gle/6wn1bmg8XZ8Bdrad8">Add Testing Center</a>
-				</li>
+				</li> -->
 				<li class="nav-item my-nav-item">
 					<a class="nav-link" href="https://www.cdc.gov/coronavirus/2019-ncov/index.html">CDC Information</a>
+				</li>   
+				<li class="nav-item my-nav-item">
+					<a class="nav-link" href="screener.html">Take the Screener</a>
 				</li>   
 			</ul>
 		</div>  
@@ -83,16 +120,19 @@
 					<br>
 					<div class="row">
 						<h4>
-							Check your symptoms with cutting-edge A.I.
-							or find COVID-19 testing centers in your area
-							with our crowdsourced database.
+							If you are interested in getting tested 
+							for COVID-19, take the screener based on 
+							guidelines from public health officials.
 						</h4>
 					</div>
-					<br>
-					<div class="row d-flex justify-content-between">
+					<!-- <br> -->
+					<div class="row">
+						<button type="button" onclick="window.location.href='screener.html'" class="my-btn">Take the Screener</button>
+					</div>
+					<!-- <div class="row d-flex justify-content-between">
 						<button type="button" onclick="window.open('https://www.buoyhealth.com/symptom-checker/', '_blank')" class="my-btn">Check Symptoms</button>
 						<button type="button" class="my-btn" data-toggle="modal" data-target="#myModal">&nbsp;Find Test Center&nbsp;</button>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<div class="col-sm-6 hero-right">
@@ -103,6 +143,7 @@
 
 	<!-- KEEP YOURSELF SAFE -->
 	<section class="container">
+		<h5>HOW TO PROTECT YOURSELF</h5>
 		<div class="row tip">
 			<div class="col-sm-6 hero-left">
 				<img class="img-fluid" src="img/wash-hands.png" alt="Wash your hands">
@@ -114,19 +155,19 @@
 					<ul class="my-ul">
 						<li>
 							<h3>
-								Wash your hands often with soap and water for at least 20 seconds especially after you have been in a public place, or after blowing your nose, coughing, or sneezing.
+								<b>Wash your hands</b> often with soap and water for at least 20 seconds especially after you have been in a public place, or after blowing your nose, coughing, or sneezing.
 							</h3>
 						</li>
 						<br>
 						<li>
 							<h3>
-								If soap and water are not readily available, use a hand sanitizer that contains at least 60% alcohol. Cover all surfaces of your hands and rub them together until they feel dry.
+								If soap and water are not readily available, <b>use a hand sanitizer that contains at least 60% alcohol</b>. Cover all surfaces of your hands and rub them together until they feel dry.
 							</h3>
 						</li>
 						<br>
 						<li>
 							<h3>
-								Avoid touching your eyes, nose, and mouth with unwashed hands.
+								<b>Avoid touching your eyes, nose, and mouth</b> with unwashed hands.
 							</h3>
 						</li>
 					</ul>
@@ -142,13 +183,13 @@
 					<ul class="my-ul">
 						<li>
 							<h3>
-								Avoid close contact with people who are sick.
+								<b>Avoid close contact</b> with people who are sick.
 							</h3>
 						</li>
 						<br>
 						<li>
 							<h3>
-								Put distance between yourself and other people if COVID-19 is spreading in your community. This is especially important for people who are at higher risk of getting very sick.
+								Put <b>distance between yourself and other people</b> if COVID-19 is spreading in your community. This is especially important for <a href="https://www.cdc.gov/coronavirus/2019-ncov/specific-groups/high-risk-complications.html">people who are at higher risk of getting very sick</a>.
 							</h3>
 						</li>
 					</ul>
@@ -163,6 +204,7 @@
 	<!-- KEEP OTHERS SAFE -->
 	<section class="container-fluid keep-others-safe">
 		<div class="container">
+			<h5>HOW TO PROTECT OTHERS</h5>
 			<div class="row tip">
 				<div class="col-sm-6 hero-left">
 					<img class="img-fluid" src="img/stay-home.png" alt="Stay home">
@@ -174,7 +216,7 @@
 						<ul class="my-ul">
 							<li>
 								<h3>
-									Stay home if you are sick, except to get medical care. Learn what to do if you are sick.
+									<b>Stay home</b>Stay home if you are sick, except to get medical care. Learn <a href="https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/steps-when-sick.html">what to do if you are sick</a>.
 								</h3>
 							</li>
 						</ul>
@@ -190,19 +232,19 @@
 						<ul class="my-ul">
 							<li>
 								<h3>
-									Cover your mouth and nose with a tissue when you cough or sneeze or use the inside of your elbow.
+									<b></b>Cover your mouth and nose with a tissue when you cough or sneeze or use the inside of your elbow.
 								</h3>
 							</li>
 							<br>
 							<li>
 								<h3>
-									Throw used tissues in the trash.
+									<b></b>Throw used tissues in the trash.
 								</h3>
 							</li>
 							<br>
 							<li>
 								<h3>
-									Immediately wash your hands with soap and water for at least 20 seconds. If soap and water are not readily available, clean your hands with a hand sanitizer that contains at least 60% alcohol.
+									Immediately <b>wash your hands</b> with soap and water for at least 20 seconds. If soap and water are not readily available, clean your hands with a hand sanitizer that contains at least 60% alcohol.
 								</h3>
 							</li>
 						</ul>
@@ -224,7 +266,7 @@
 						<ul class="my-ul">
 							<li>
 								<h3>
-									<strong>If you are sick:</strong> You should wear a facemask when you are around other people (e.g., sharing a room or vehicle) and before you enter a healthcare provider’s office. If you are not able to wear a facemask (for example, because it causes trouble breathing), then you should do your best to cover your coughs and sneezes, and people who are caring for you should wear a facemask if they enter your room. Learn what to do if you are sick.
+									<strong>If you are sick:</strong> You should wear a facemask when you are around other people (e.g., sharing a room or vehicle) and before you enter a healthcare provider’s office. If you are not able to wear a facemask (for example, because it causes trouble breathing), then you should do your best to cover your coughs and sneezes, and people who are caring for you should wear a facemask if they enter your room. Learn <a href="https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/steps-when-sick.html">what to do if you are sick</a>.
 								</h3>
 							</li>
 							<br>
@@ -246,13 +288,13 @@
 						<ul class="my-ul">
 							<li>
 								<h3>
-									Clean AND disinfect frequently touched surfaces daily. This includes tables, doorknobs, light switches, countertops, handles, desks, phones, keyboards, toilets, faucets, and sinks.
+									<b>Clean AND disinfect <a href="https://www.cdc.gov/coronavirus/2019-ncov/prepare/cleaning-disinfection.html">frequently touched surfaces</a> daily</b>. This includes tables, doorknobs, light switches, countertops, handles, desks, phones, keyboards, toilets, faucets, and sinks.
 								</h3>
 							</li>
 							<br>
 							<li>
 								<h3>
-									If surfaces are dirty, clean them: Use detergent or soap and water prior to disinfection.
+									<b>If surfaces are dirty, clean them:</b> Use detergent or soap and water prior to disinfection.
 								</h3>
 							</li>
 						</ul>
@@ -266,30 +308,33 @@
 	</section>
 
 	<!-- FOOTER -->
-	<div id="snackbar" class="show">
+	<!-- <div id="snackbar"> 
 		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
 		DISCLAIMER: The information contained herein should NOT be used as a substitute for the advice of 
 		an appropriately qualified and licensed physician or other health care provider. If you think you 
 		have been exposed to COVID-19 and develop a fever and symptoms, such as cough or difficulty breathing, 
 		call your healthcare provider for medical advice.
-	</div>
+	</div> -->
 	<!-- <footer class="my-footer">
 		Contact <a target="_blank" href="https://thoushawnotpass.github.io/portfolio/">Justin Shaw</a> for website questions.
 	</footer> -->
 
 	<script type='text/javascript'>    
-		var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1zKvuJcQ4JGTSNwAnO7cDjTl0ACP99gEBLTeap9TRTkY/edit?usp=sharing';
+		//var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1zKvuJcQ4JGTSNwAnO7cDjTl0ACP99gEBLTeap9TRTkY/edit?usp=sharing';
 		var backToTop = document.getElementById("back-to-top");
-		var modalTitle = document.getElementById("modal-title");
-		var modalText = document.getElementById("modal-text");
-		var modalBtn = document.getElementById("modal-btn");
-		var modalSpinner = document.getElementById("modal-spinner");
-		var lat = 0;
-		var lon = 0;
-		clearText();
+		// var modalTitle = document.getElementById("modal-title");
+		// var modalText = document.getElementById("modal-text");
+		// var modalBtn = document.getElementById("modal-btn");
+		// var modalSpinner = document.getElementById("modal-spinner");
+		// var lat = 0;
+		// var lon = 0;
+		// clearText();
 
 		// When the user scrolls down 20px from the top of the document, show the button
 		window.onscroll = function() {scrollFunction()};
+		// $(document).ready(function(){
+		// 	$("#myModalDisclaimer").modal('show');
+		// });
 
 		function scrollFunction() {
 			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -305,81 +350,81 @@
 			document.documentElement.scrollTop = 0;
 		}
 		
-		function eatSpreadsheet() {
-			modalSpinner.classList.toggle("hide-spinner");
-			getLocation();
-		}
+		// function eatSpreadsheet() {
+		// 	modalSpinner.classList.toggle("hide-spinner");
+		// 	getLocation();
+		// }
 		
-		function showInfo(data) {
-			var minLat = data[0].latitude;
-			var minLon = data[0].longitude;
-			var min = distance(lat, lon, data[0].latitude, data[0].longitude);
-			for (var i = 1; i < data.length; i++) {
-				var newDist = distance(lat, lon, data[i].latitude, data[i].longitude);
-				if (newDist < min) {
-					min = newDist;
-					minLat = data[i].latitude;
-					minLon = data[i].longitude;
-				}
-			}
-			var currentPos = lat + "," + lon;
-			var testCenter = minLat + "," + minLon;
-			var googleMapsUrl = "https://www.google.com/maps/dir/" + currentPos + "/" + testCenter + "/@" + currentPos + ",14z"
-			console.log(data);
-			modalSpinner.classList.toggle("hide-spinner");
-			modalTitle.innerText = "Testing Center Found (" + min + "mi away)";
-			modalBtn.innerText = "Take me there";
-			modalBtn.onclick = function(){ window.open(googleMapsUrl, '_blank'); } ;
-		}
+		// function showInfo(data) {
+		// 	var minLat = data[0].latitude;
+		// 	var minLon = data[0].longitude;
+		// 	var min = distance(lat, lon, data[0].latitude, data[0].longitude);
+		// 	for (var i = 1; i < data.length; i++) {
+		// 		var newDist = distance(lat, lon, data[i].latitude, data[i].longitude);
+		// 		if (newDist < min) {
+		// 			min = newDist;
+		// 			minLat = data[i].latitude;
+		// 			minLon = data[i].longitude;
+		// 		}
+		// 	}
+		// 	var currentPos = lat + "," + lon;
+		// 	var testCenter = minLat + "," + minLon;
+		// 	var googleMapsUrl = "https://www.google.com/maps/dir/" + currentPos + "/" + testCenter + "/@" + currentPos + ",14z"
+		// 	console.log(data);
+		// 	modalSpinner.classList.toggle("hide-spinner");
+		// 	modalTitle.innerText = "Testing Center Found (" + min + "mi away)";
+		// 	modalBtn.innerText = "Take me there";
+		// 	modalBtn.onclick = function(){ window.open(googleMapsUrl, '_blank'); } ;
+		// }
 
-		// calculates dist between two pts in miles
-		function distance(lat1, lon1, lat2, lon2) {
-			var p = 0.017453292519943295; // Math.PI / 180
-			var c = Math.cos;
-			var a = 0.5 - c((lat2 - lat1) * p)/2 + c(lat1 * p) * c(lat2 * p) * (1 - c((lon2 - lon1) * p))/2;
-			var result = 0.621371 * 12742 * Math.asin(Math.sqrt(a)); // 2 * R; R = 6371 km => miles
-			return Math.round(result * 10) / 10;
-		}
+		// // calculates dist between two pts in miles
+		// function distance(lat1, lon1, lat2, lon2) {
+		// 	var p = 0.017453292519943295; // Math.PI / 180
+		// 	var c = Math.cos;
+		// 	var a = 0.5 - c((lat2 - lat1) * p)/2 + c(lat1 * p) * c(lat2 * p) * (1 - c((lon2 - lon1) * p))/2;
+		// 	var result = 0.621371 * 12742 * Math.asin(Math.sqrt(a)); // 2 * R; R = 6371 km => miles
+		// 	return Math.round(result * 10) / 10;
+		// }
 
-		function getLocation() {
-			if (navigator.geolocation) {
-				navigator.geolocation.getCurrentPosition(showPosition, showError);
-			} else {
-				alert('Geolocation is not supported by this browser.')
-			}
-			console.log('Processing location...');
-		}
+		// function getLocation() {
+		// 	if (navigator.geolocation) {
+		// 		navigator.geolocation.getCurrentPosition(showPosition, showError);
+		// 	} else {
+		// 		alert('Geolocation is not supported by this browser.')
+		// 	}
+		// 	console.log('Processing location...');
+		// }
 
-		function showPosition(position) {
-			lat = position.coords.latitude;
-			lon = position.coords.longitude;
-			console.log('Current Location: (' + lat + ', ' + lon + ')');
-			Tabletop.init({ 
-				key: publicSpreadsheetUrl, 
-				callback: showInfo, 
-				simpleSheet: true})
-		}
+		// function showPosition(position) {
+		// 	lat = position.coords.latitude;
+		// 	lon = position.coords.longitude;
+		// 	console.log('Current Location: (' + lat + ', ' + lon + ')');
+		// 	Tabletop.init({ 
+		// 		key: publicSpreadsheetUrl, 
+		// 		callback: showInfo, 
+		// 		simpleSheet: true})
+		// }
 
-		function showError(error) {
-			switch(error.code) {
-				case error.PERMISSION_DENIED:
-					alert("We need your location to find you the closest testing center. Please reload the page and try again.");
-					break;
-				case error.POSITION_UNAVAILABLE:
-					alert("Hmmm... Location information is unavailable. Please try again later.");
-					break;
-				case error.TIMEOUT:
-					alert("Well. The request to get your location timed out. Please try again later.");
-					break;
-				case error.UNKNOWN_ERROR:
-					alert("Oof. An unknown error occurred. Please try again later.");
-					break;
-			}
-		}
+		// function showError(error) {
+		// 	switch(error.code) {
+		// 		case error.PERMISSION_DENIED:
+		// 			alert("We need your location to find you the closest testing center. Please reload the page and try again.");
+		// 			break;
+		// 		case error.POSITION_UNAVAILABLE:
+		// 			alert("Hmmm... Location information is unavailable. Please try again later.");
+		// 			break;
+		// 		case error.TIMEOUT:
+		// 			alert("Well. The request to get your location timed out. Please try again later.");
+		// 			break;
+		// 		case error.UNKNOWN_ERROR:
+		// 			alert("Oof. An unknown error occurred. Please try again later.");
+		// 			break;
+		// 	}
+		// }
 
-		function clearText() {
-			modalText.innerHTML = "";
-		}
+		// function clearText() {
+		// 	modalText.innerHTML = "";
+		// }
 		
 	</script>
 </body>

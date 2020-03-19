@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="title" content="CORONAVIRUS KIT">
+  <meta name="description" content="COVID-19 Data and News APP">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="CORONAVIRUS KIT">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+  <title>CORONAVIRUS KIT</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!--REPRODUCTOR VÍDEOS-->
+  <!--script src="https://cdn.jsdelivr.net/npm/afterglowplayer@1.x"></script-->
+  <!--REPRODUCTOR VÍDEOS-->
+</head>
+<body>
+
+  <!--PARA HACER FETCH DE DATA A TRAVES DE API-->
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('flutter_service_worker.js');
+      });
+    }
+  </script>
+
+  <!--FIREBASE SDK-->
+  <!--AUTOMATIC VIA FIREBASE HOSTING-->
+  <script src="/__/firebase/7.4.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.4.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/init.js"></script>  <!--AUTO INIT-->
+  <!--fin FIREBASE SDK-->
+
+  <script src="main.dart.js" type="application/javascript"></script>
+
+  <!--VDEO PLAYER-->
+  <!--a id="triggerVideoPlayer" class="afterglow" href="#videoPlayer"></a>
+  <video id="videoPlayer" width="960" height="540" data-skin="dark"></video-->
+  <!--VDEO PLAYER-->
+
+  <!--GOOGLE MAPS-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIqENo4SX-pQ-gex8W1AeqALWAfTmkvMU"></script>
+  
+</body>
+</html>

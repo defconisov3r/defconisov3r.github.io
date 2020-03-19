@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<title>Coronavirus Remediation &#8211; Cleaning, Preventing &amp; Decontaminating of COVID-19</title>
+
+<!-- Async WordPress.com Remote Login -->
+<script id="wpcom_remote_login_js">
+var wpcom_remote_login_extra_auth = '';
+function wpcom_remote_login_remove_dom_node_id( element_id ) {
+	var dom_node = document.getElementById( element_id );
+	if ( dom_node ) { dom_node.remove(); }
+}
+function wpcom_remote_login_remove_dom_node_classes( class_name ) {
+	var dom_nodes = document.querySelectorAll( '.' + class_name );
+	for ( var i = 0; i < dom_nodes.length; i++ ) {
+		dom_nodes[i].remove();
+	}
+}
+function wpcom_remote_login_final_cleanup() {
+	wpcom_remote_login_remove_dom_node_classes( "wpcom_remote_login_msg" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_validate" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_js" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_iframe" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_styles" );
+}
+
+// Watch for messages back from the remote login
+window.addEventListener( "message", function( e ) {
+	if ( e.origin === "https://r-login.wordpress.com" ) {
+		var data = {};
+		try {
+			data = JSON.parse( e.data );
+		} catch( e ) {
+			wpcom_remote_login_final_cleanup();
+			return;
+		}
+
+		if ( data.msg === 'LOGIN' ) {
+			// Clean up the login check iframe
+			wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+
+			var id_regex = new RegExp( /^[0-9]+$/ );
+			var token_regex = new RegExp( /^.*|.*|.*$/ );
+			if (
+				token_regex.test( data.token )
+				&& id_regex.test( data.wpcomid )
+			) {
+				// We have everything we need to ask for a login
+				var script = document.createElement( "script" );
+				script.setAttribute( "id", "wpcom_remote_login_validate" );
+				script.src = '/remote-login.php?wpcom_remote_login=validate'
+					+ '&wpcomid=' + data.wpcomid
+					+ '&token=' + encodeURIComponent( data.token )
+					+ '&host=' + window.location.protocol
+						+ '//' + window.location.hostname;
+				document.body.appendChild( script );
+			}
+
+			return;
+		}
+
+		// Safari ITP, not logged in, so redirect
+		if ( data.msg === 'LOGIN-REDIRECT' ) {
+			window.location = 'https://wordpress.com/log-in?redirect_to=' + window.location.href;
+			return;
+		}
+
+		// Safari ITP, storage access failed, remove the request
+		if ( data.msg === 'LOGIN-REMOVE' ) {
+			var css_zap = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } @media screen and ( max-width: 782px ) { html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } }';
+			var style_zap = document.createElement( 'style' );
+			style_zap.type = 'text/css';
+			style_zap.appendChild( document.createTextNode( css_zap ) );
+			document.body.appendChild( style_zap );
+
+			var e = document.getElementById( 'wpcom_request_access_iframe' );
+			e.parentNode.removeChild( e );
+
+			document.cookie = 'wordpress_com_login_access=denied; path=/; max-age=31536000';
+
+			return;
+		}
+
+		// Safari ITP
+		if ( data.msg === 'REQUEST_ACCESS' ) {
+			console.log( 'request access: safari' );
+
+			// Check ITP iframe enable/disable knob
+			if ( wpcom_remote_login_extra_auth !== 'safari_itp_iframe' ) {
+				return;
+			}
+
+			// If we are in a "private window" there is no ITP.
+			var private_window = false;
+			try {
+				var opendb = window.openDatabase( null, null, null, null );
+			} catch( e ) {
+				private_window = true;
+			}
+
+			if ( private_window ) {
+				console.log( 'private window' );
+				return;
+			}
+
+			var iframe = document.createElement( 'iframe' );
+			iframe.id = 'wpcom_request_access_iframe';
+			iframe.setAttribute( 'scrolling', 'no' );
+			iframe.setAttribute( 'sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-top-navigation-by-user-activation' );
+			iframe.src = 'https://r-login.wordpress.com/remote-login.php?wpcom_remote_login=request_access&origin=' + encodeURIComponent( data.origin ) + '&wpcomid=' + encodeURIComponent( data.wpcomid );
+
+			var css = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 46px !important; } * html body { margin-top: 46px !important; } @media screen and ( max-width: 660px ) { html { margin-top: 71px !important; } * html body { margin-top: 71px !important; } #wpcom_request_access_iframe { display: block; height: 71px !important; } } #wpcom_request_access_iframe { border: 0px; height: 46px; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 99999; background: #23282d; } ';
+
+			var style = document.createElement( 'style' );
+			style.type = 'text/css';
+			style.id = 'wpcom_request_access_styles';
+			style.appendChild( document.createTextNode( css ) );
+			document.body.appendChild( style );
+
+			document.body.appendChild( iframe );
+		}
+
+		if ( data.msg === 'DONE' ) {
+			wpcom_remote_login_final_cleanup();
+		}
+	}
+}, false );
+
+// Inject the remote login iframe after the page has had a chance to load
+// more critical resources
+window.addEventListener( "DOMContentLoaded", function( e ) {
+	var iframe = document.createElement( "iframe" );
+	iframe.style.display = "none";
+	iframe.setAttribute( "scrolling", "no" );
+	iframe.setAttribute( "id", "wpcom_remote_login_key" );
+	iframe.src = "https://r-login.wordpress.com/remote-login.php"
+		+ "?wpcom_remote_login=key"
+		+ "&origin=aHR0cHM6Ly9jb3JvbmF2aXJ1c3JlbW92YWwub3Jn"
+		+ "&wpcomid=174132990"
+		+ "&time=1584642703";
+	document.body.appendChild( iframe );
+}, false );
+</script>
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//coronavirusremoval.wordpress.com' />
+<link rel='dns-prefetch' href='//wordpress.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Coronavirus Remediation &raquo; Feed" href="https://coronavirusremoval.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Coronavirus Remediation &raquo; Comments Feed" href="https://coronavirusremoval.org/comments/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s0.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1582709031h&ver=5.4-RC1-47426"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='all-css-0-1' href='https://s0.wp.com/_static/??-eJylk9tugzAMhl9oIaUFdb2Y9iwcPOY2BxQ7Rbz9DKFTR7WtEjdRbOf7/Stx9NCrxjsGx9pG1ZvYoSM99I23iiwaGFdR1hC96DvsxnRRwhpCJ5UA+pgdsp2uI5pW18Y3F2WwDlUYNfFoYLsMf4J9RmamSJ+B+2rCq9FHVl3A9mknK4lQMbqO/sE/ojGKkEFBixOw3K4ui1OxL8uThqucFy46bv3gUpvNqjeXjBYMOtgsKLYk6Ylpcdgisb4iDL+KNn65sjzb77JczROUuFTIkqn5XTdYS66M6N5bW2cfGtxN+jRkkrd9xdMJK50qMDJZjv/C0peo6z4AkZLVYrRqHsnHH/KjnZ2kxdwFJKJVJqGonWcUmr43U+HdvuXla5Hv8mNRnr8ActRg3A==?cssminify=yes' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify {
+	text-align:justify;
+}
+</style>
+<link rel='stylesheet' id='print-css-1-1' href='https://s0.wp.com/wp-content/themes/pub/varia/print.css?m=1571655471h&cssminify=yes' type='text/css' media='print' />
+<link rel='stylesheet' id='all-css-2-1' href='https://s0.wp.com/_static/??-eJx9i9EKwjAMAH/IGqaTPonf0pXYRdKktOmGf+/EF0Xx7Q7uYC0uqhiKgc2YsUHpE8y4YIVmd8Z9bG0Hv7MlVApAEl+pW0vU/DXk7gr3RNIgoTrWGIxUPsRdOVD9t1acWNOGCbbqTZ/TJZ+Hk/fD4TiO/vYAjSBOww==?cssminify=yes' type='text/css' media='all' />
+<link crossorigin="anonymous" rel='stylesheet' id='hever-fonts-css'  href='https://fonts.googleapis.com/css?family=PT%2BSans%3A400%2C400i%2C700%2C700i&#038;subset=latin%2Clatin-ext' media='all' />
+<link rel='stylesheet' id='all-css-4-1' href='https://s0.wp.com/_static/??-eJx9kNsKwjAMhl/IGictugvxWdratdGuHUuq+PZ2sKEy2FUS+P4DgdcgbE7sEgMH1zuCoRgI7ulGIH5Ht7dEO/jB+iKGWDwmAm0ZczJ6/G4rfGG7EqMgZCfcDRmTn11AyVYelWrBx2x0ZaZUquGa0YKJOj22OgyZWHRRY+0b9FiNl7mlomyxZsXs8/+xEs1fCXLuNwHX/tKos2wOzUmq+wfwindB?cssminify=yes' type='text/css' media='all' />
+<style id='jetpack-global-styles-frontend-style-inline-css'>
+:root { --font-headings: unset; --font-base: unset; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+</style>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJx9zUsKgDAMBNALWYtIixvxLH6itJhUmxTx9lbQnQgDs5gHo49NORrXNAFrn7MniOdTpedC/wGFbom9QImOXjwGEiC57RZYEJj7BT5WDINbQSWGmAFJvplDdh22lTFNbaw1tb8AOGU7DA=='></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://coronavirusremoval.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s0.wp.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress.com" />
+<link rel="canonical" href="https://coronavirusremoval.org/" />
+<link rel='shortlink' href='https://wp.me/PbMDWC-5' />
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Fcoronavirusremoval.org%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Fcoronavirusremoval.org%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Coronavirus Remediation" />
+<meta property="og:description" content="Cleaning, Preventing &amp; Decontaminating of COVID-19" />
+<meta property="og:url" content="https://coronavirusremoval.org/" />
+<meta property="og:site_name" content="Coronavirus Remediation" />
+<meta property="og:image" content="https://coronavirusremoval.files.wordpress.com/2020/03/finesseairduct.jpg" />
+<meta property="og:image:width" content="307" />
+<meta property="og:image:height" content="260" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+<meta name="twitter:text:title" content="Cleaning, Preventing &amp;&nbsp;Decontaminating" />
+<meta name="twitter:card" content="summary" />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="search" type="application/opensearchdescription+xml" href="https://coronavirusremoval.org/osd.xml" title="Coronavirus Remediation" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<meta name="application-name" content="Coronavirus Remediation" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="Cleaning, Preventing &amp; Decontaminating of COVID-19" /><meta name="msapplication-task" content="name=Subscribe;action-uri=https://coronavirusremoval.org/feed/;icon-uri=https://coronavirusremoval.files.wordpress.com/2020/03/cropped-cropped-dep-logo-1.png?w=16" /><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="description" content="Dependable Environmental Protection Let&#039;s clean this up! We are keeping your space clear and worry free! Call Us Today 609-713-0077 DEP has the solution to remove Coronavirus from local homes, schools and industries alike. We are Here to Help Due to the recent outbreak, we are here to keep our community safe, and to insure&hellip;" />
+<link rel="icon" href="https://coronavirusremoval.files.wordpress.com/2020/03/cropped-cropped-dep-logo-1.png?w=32" sizes="32x32" />
+<link rel="icon" href="https://coronavirusremoval.files.wordpress.com/2020/03/cropped-cropped-dep-logo-1.png?w=158" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://coronavirusremoval.files.wordpress.com/2020/03/cropped-cropped-dep-logo-1.png?w=158" />
+<meta name="msapplication-TileImage" content="https://coronavirusremoval.files.wordpress.com/2020/03/cropped-cropped-dep-logo-1.png?w=158" />
+</head>
+
+<body class="home page-template-default page page-id-5 wp-custom-logo wp-embed-responsive customizer-styles-applied singular image-filters-enabled hide-homepage-title highlander-enabled highlander-light">
+
+	
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	
+		<header id="masthead" class="site-header responsive-max-width">
+
+			
+	<div class="site-logo"><a href="https://coronavirusremoval.org/" class="custom-logo-link" rel="home"><img width="200" height="200" src="https://coronavirusremoval.files.wordpress.com/2020/03/dep-pic.png" class="custom-logo" alt="Coronavirus Remediation" srcset="https://coronavirusremoval.files.wordpress.com/2020/03/dep-pic.png 200w, https://coronavirusremoval.files.wordpress.com/2020/03/dep-pic.png?w=150&amp;h=150 150w" sizes="(max-width: 200px) 100vw, 200px" data-attachment-id="65" data-permalink="https://coronavirusremoval.org/dep-pic/" data-orig-file="https://coronavirusremoval.files.wordpress.com/2020/03/dep-pic.png" data-orig-size="200,200" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="dep-pic" data-image-description="" data-medium-file="https://coronavirusremoval.files.wordpress.com/2020/03/dep-pic.png?w=200" data-large-file="https://coronavirusremoval.files.wordpress.com/2020/03/dep-pic.png?w=200" /></a></div>
+
+			<p class="site-title"><a href="https://coronavirusremoval.org/" rel="home">Coronavirus Remediation</a></p>
+	
+		<p class="site-description">
+			Cleaning, Preventing &amp; Decontaminating of COVID-19		</p>
+
+							<nav id="site-navigation" class="main-navigation" aria-label="Main Navigation">
+					<input type="checkbox" role="button" aria-haspopup="true" id="toggle" class="hide-visually">
+					<label for="toggle" id="toggle-menu" class="button">
+						Menu						<span class="dropdown-icon open">+</span>
+						<span class="dropdown-icon close">&times;</span>
+						<span class="hide-visually expanded-text">expanded</span>
+						<span class="hide-visually collapsed-text">collapsed</span>
+					</label>
+					<div class="menu-primary-container"><ul id="menu-primary" class="main-menu" aria-label="submenu"><li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item menu-item-19"><a href="https://coronavirusremoval.org/" aria-current="page">Our Product and Process</a></li>
+<li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="https://coronavirusremoval.org/about/">The Team</a></li>
+<li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a href="https://coronavirusremoval.org/contact/">Get in Touch</a></li>
+<li id="menu-item-247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247"><a href="https://coronavirusremoval.org/mold-remediation/">Mold Remediation</a></li>
+<li id="menu-item-248" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-248"><a href="https://coronavirusremoval.org/mold-testing/">Mold Testing</a></li>
+<li id="menu-item-249" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-249"><a href="https://coronavirusremoval.org/air-duct-cleaning/">Air Duct Cleaning</a></li>
+</ul></div>				</nav><!-- #site-navigation -->
+			
+			
+		</header><!-- #masthead -->
+
+	
+	<div id="content" class="site-content">
+
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main">
+
+			
+<article id="post-5" class="post-5 page type-page status-publish hentry entry">
+
+	<header class="entry-header responsive-max-width">
+		
+<h1 class="entry-title">Cleaning, Preventing &amp;&nbsp;Decontaminating</h1>
+	</header>
+
+	<div class="entry-content">
+		
+<div class="wp-block-cover alignfull has-background-dim" style="background-image:url('https://coronavirusremoval.files.wordpress.com/2020/03/0_coronavirus-map-1.png');background-position:47% 41%;"><span aria-hidden="true" class="wp-block-cover__gradient-background has-pale-ocean-gradient-background"></span><div class="wp-block-cover__inner-container">
+<div class="wp-block-jetpack-layout-grid alignfull column1-desktop-grid__span-8 column1-desktop-grid__start-3 column1-desktop-grid__row-1 column1-tablet-grid__span-8 column1-tablet-grid__row-1 column1-mobile-grid__span-4 column1-mobile-grid__row-1">
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-none">
+<h1 class="has-text-align-center">Dependable Environmental Protection</h1>
+
+
+
+<p style="color:#ffffff;" class="has-text-color has-text-align-center">Let&#8217;s clean this up!  We are keeping your space clear and worry free!</p>
+
+
+
+<div class="wp-block-buttons aligncenter">
+<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-background has-luminous-vivid-orange-to-vivid-red-gradient-background" href="https://coronavirusremoval.wordpress.com/contact/" title="Contact" style="border-radius:41px;"> Call Us Today   <strong>609-</strong>713-0077</a></div>
+</div>
+</div>
+</div>
+
+
+
+<p class="has-text-align-center has-small-font-size">DEP has the solution to remove Coronavirus from local homes, schools and industries alike.</p>
+</div></div>
+
+
+
+<div class="wp-block-group alignfull has-background-background-color has-background"><div class="wp-block-group__inner-container">
+<div class="wp-block-jetpack-layout-grid alignfull column1-desktop-grid__span-12 column1-desktop-grid__row-1 column1-tablet-grid__span-8 column1-tablet-grid__row-1 column1-mobile-grid__span-4 column1-mobile-grid__row-1">
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-none">
+<h3>We are Here to Help</h3>
+
+
+
+<p>Due to the recent outbreak, we are here to keep our community safe, and to insure that everyone is protected. We are here to keep businesses running, schools operating and families healthy.  We are here to clean up the environment, and renew our day-to-day lives.</p>
+
+
+
+<h6 class="has-text-color" style="color:#b73802;">ALERT:<strong> Human COVID-19 infections can be transmitted by</strong></h6>
+
+
+
+<ul><li>Airborne or surface contact</li><li>Through the air by coughing and sneezing</li><li>Close personal contact, such as touching or shaking hands</li><li>Touching contaminated surfaces, then touching the mouth, nose, or eyes</li></ul>
+
+
+
+<p><strong>Bio-Oxygen Products EPA Registration Number: 90920-1 90920-2</strong><br>The decontamination formulation original technology, Patent No. 6,566,574B1 was developed by Sandia National Laboratories for the U.S. Department of Energy and National Security Administration for their Chemical and Biological National Security Program (CBNSP) In 2012, Bio-Solutions was granted a license from Sandia (LIC # C02678) to utilize this patented technology to formulate the Bio-Oxygen line of products for commercial use.</p>
+
+
+
+<p>Bio-Oxygen Products are EPA registered Antibacterial, Cleaner, Mildew stat, Decontaminant, Disinfectant, Virucide, Deodorizer, Fungicide and Algaecide.</p>
+
+
+
+<p>The Bio-Oxygen line of products consisting of Chem Decon, Mold 100 and Sani-Cloud IAQ, when used in accordance with the directions has tested effective to inactivate Hepatitis A Virus, Rotavirus, SARS associated Coronavirus and the Bovine Coronavirus viruses <strong>within 1-minute contact time </strong>therefore can be used effectively to inactivate Coronavirus- Wuhan (COVID-19) and exceeds the EPA criteria for emerging pathogens claim.</p>
+</div>
+</div>
+</div></div>
+
+
+
+<p style="background-color:#009cff;" class="has-text-color has-background has-background-color"><strong><em>Our Bio-Oxygen products inactivate COVID-19 via a unique EPA-registered fogging system that addresses airborne and surface contaminations</em></strong>.</p>
+
+
+
+<ul><li>The fogging solution inactivates the Coronavirus on contact, both airborne and on surfaces</li><li>Our materials are non-toxic to people and pets; re-entry after 1 – 2 hours</li><li>Our product provides a residual protection for up to <strong>90</strong> days.</li></ul>
+
+
+
+<h3>Places Made Safe</h3>
+
+
+
+<blockquote class="wp-block-quote"><p>Homes, Businesses, Libraries, Schools, Clinics, Hospitals, Retirement homes, Churches, Daycare centers, Stores, Gyms, Transit vehicles, Cruise liners and more&#8230;</p></blockquote>
+
+
+
+<div class="wp-block-group alignfull has-background-background-color has-background"><div class="wp-block-group__inner-container">
+<div class="wp-block-jetpack-layout-grid alignfull column1-desktop-grid__span-12 column1-desktop-grid__row-1 column1-tablet-grid__span-8 column1-tablet-grid__row-1 column1-mobile-grid__span-4 column1-mobile-grid__row-1">
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-none">
+<h2>What We Do</h2>
+
+
+
+<p>Here are three things that are unique to our product and our non-toxic process:</p>
+
+
+
+<ol><li><strong>True Deep Cleanse:</strong>&nbsp;We use a fogger as the vehicle in which to apply our product and will get into every nook and cranny of your space. &nbsp;The challenge with a traditional approach to a deep cleanse, done by even a cleaning professional, would result in human error and would leave surfaces untouched.<br><br></li><li><strong>90 Day&nbsp;Residual&nbsp;Barrier of Protection:</strong>&nbsp; &nbsp;We will provide a layer of protection for up to 90 days on non-use surfaces and up to 7 days on high traffic surfaces. &nbsp;The high traffic surfaces, like doorknobs, will require the normal cleaning maintenance. &nbsp;The difficulty with traditional cleaners is that they don’t have any residual barrier, they simply clean the viruses that are on the surface and as soon as that &nbsp;surface is compromised, the virus can live. Our process creates a barrier of protection for 7-90 days.<br><br></li><li><strong>Dwell Time:&nbsp;</strong>Our fogger will lay a wet material, that is then left alone to air dry, and will leave an unnoticeable film that will kill any virus that comes into contact with it. &nbsp;Other traditional applications of cleaners are wiped on and off, are never allowed to dry and do not provide this barrier.&nbsp;<br><br></li><li><strong>99.99999% </strong>  Yes, this is the actual number.  The COVID-19 is an envelope virus. Which means, that unless your cleaner has the capacity to break through the envelope surrounding the virus, the cleaner cannot kill the virus. There are many types of cleaners that do not break through this envelope (you may want to check your cleaners). The size of the envelope spore is .003 microns and for every &#8220;9&#8221; past the decimal point in 99.99999% is one million microbes, which means that our product is 4 X&#8217;s more effective than most cleaners.  We are unapologetic for being cleaner-geeks, but nobody kills it like we do.</li></ol>
+
+
+
+<p></p>
+
+
+
+<h5 class="has-foreground-dark-color has-text-color">We truly have a great product and process and can ensure a clean, safe and confident environment for you, your family and your customers! We can also provide you with the scientific data to confirm the science behind our process.<br></h5>
+
+
+
+<p></p>
+</div>
+</div>
+</div></div>
+
+
+
+<div class="wp-block-group alignfull has-foreground-dark-background-color has-background"><div class="wp-block-group__inner-container">
+<div class="wp-block-group alignfull"><div class="wp-block-group__inner-container">
+<div class="wp-block-jetpack-layout-grid alignfull column1-desktop-grid__span-4 column1-desktop-grid__row-1 column2-desktop-grid__span-4 column2-desktop-grid__start-5 column2-desktop-grid__row-1 column3-desktop-grid__span-4 column3-desktop-grid__start-9 column3-desktop-grid__row-1 column1-tablet-grid__span-4 column1-tablet-grid__row-1 column2-tablet-grid__span-4 column2-tablet-grid__start-5 column2-tablet-grid__row-1 column3-tablet-grid__span-8 column3-tablet-grid__row-2 column1-mobile-grid__span-4 column1-mobile-grid__row-1 column2-mobile-grid__span-4 column2-mobile-grid__row-2 column3-mobile-grid__span-4 column3-mobile-grid__row-3">
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-none">
+<p class="has-text-align-left has-huge-font-size">Cleaning &amp; Clearing out your worry.</p>
+</div>
+
+
+
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-none">
+<div class="wp-block-buttons">
+<div class="wp-block-button"><a class="wp-block-button__link has-background has-midnight-gradient-background" href="https://coronavirusremoval.wordpress.com/contact/" title="Contact">Call to Remediate</a></div>
+</div>
+
+
+
+<p></p>
+</div>
+
+
+
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-none">
+<div class="wp-block-buttons">
+<div class="wp-block-button"><a class="wp-block-button__link has-background has-light-green-cyan-to-vivid-green-cyan-gradient-background" href="https://coronavirusremoval.wordpress.com/about/" title="About">More about DEP</a></div>
+</div>
+</div>
+</div>
+</div></div>
+</div></div>
+
+
+
+<h3 class="has-text-color" style="color:#db1a00;">Protect yourself from COVID-19</h3>
+
+
+
+<ul><li>Wash hands with soap and water</li><li>Avoid touching eyes, nose or mouth</li><li>Keep away from sick people</li></ul>
+
+
+
+<div class="wp-block-group"><div class="wp-block-group__inner-container">
+<h2>What Else We Do:</h2>
+</div></div>
+
+
+
+<div class="wp-block-jetpack-layout-grid alignfull column1-desktop-grid__span-4 column1-desktop-grid__row-1 column2-desktop-grid__span-4 column2-desktop-grid__start-5 column2-desktop-grid__row-1 column3-desktop-grid__span-4 column3-desktop-grid__start-9 column3-desktop-grid__row-1 column1-tablet-grid__span-4 column1-tablet-grid__row-1 column2-tablet-grid__span-4 column2-tablet-grid__start-5 column2-tablet-grid__row-1 column3-tablet-grid__span-8 column3-tablet-grid__row-2 column1-mobile-grid__span-4 column1-mobile-grid__row-1 column2-mobile-grid__span-4 column2-mobile-grid__row-2 column3-mobile-grid__span-4 column3-mobile-grid__row-3">
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-medium has-background has-background-light-background-color">
+<h4 class="has-text-color has-text-align-right" style="color:#05f1aa;">Testing Mold Constructively</h4>
+
+
+
+<p style="background-color:#05f1aa;" class="has-text-color has-background has-text-align-right has-background-color"><strong>Having trouble getting rid of mold? Dependable Environmental Protection can help. Rely on us for <a href="https://coronavirusremoval.org/mold-testing/">mold testing</a>.</strong></p>
+
+
+
+<figure class="wp-block-image alignwide size-large is-style-rounded"><img data-attachment-id="251" data-permalink="https://coronavirusremoval.org/moldwall/" data-orig-file="https://coronavirusremoval.files.wordpress.com/2020/03/moldwall.jpg" data-orig-size="307,260" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="moldwall" data-image-description="" data-medium-file="https://coronavirusremoval.files.wordpress.com/2020/03/moldwall.jpg?w=300" data-large-file="https://coronavirusremoval.files.wordpress.com/2020/03/moldwall.jpg?w=307" src="https://coronavirusremoval.files.wordpress.com/2020/03/moldwall.jpg?w=307" alt="" class="wp-image-251" srcset="https://coronavirusremoval.files.wordpress.com/2020/03/moldwall.jpg 307w, https://coronavirusremoval.files.wordpress.com/2020/03/moldwall.jpg?w=150 150w, https://coronavirusremoval.files.wordpress.com/2020/03/moldwall.jpg?w=300 300w" sizes="(max-width: 307px) 100vw, 307px" /></figure>
+</div>
+
+
+
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-medium has-background has-background-light-background-color">
+<h4 class="has-text-color has-text-align-center" style="color:#ff960a;">Mold Remediation Performed Efficiently</h4>
+
+
+
+<figure class="wp-block-image alignwide size-large is-style-rounded"><img data-attachment-id="252" data-permalink="https://coronavirusremoval.org/moldcap/" data-orig-file="https://coronavirusremoval.files.wordpress.com/2020/03/moldcap.jpg" data-orig-size="307,260" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="moldcap" data-image-description="" data-medium-file="https://coronavirusremoval.files.wordpress.com/2020/03/moldcap.jpg?w=300" data-large-file="https://coronavirusremoval.files.wordpress.com/2020/03/moldcap.jpg?w=307" src="https://coronavirusremoval.files.wordpress.com/2020/03/moldcap.jpg?w=307" alt="" class="wp-image-252" srcset="https://coronavirusremoval.files.wordpress.com/2020/03/moldcap.jpg 307w, https://coronavirusremoval.files.wordpress.com/2020/03/moldcap.jpg?w=150 150w, https://coronavirusremoval.files.wordpress.com/2020/03/moldcap.jpg?w=300 300w" sizes="(max-width: 307px) 100vw, 307px" /></figure>
+
+
+
+<p style="background-color:#ff960a;" class="has-text-color has-background has-text-align-center has-background-color"><strong>Count on our years of experience to keep your home <a href="https://coronavirusremoval.org/mold-remediation/">mold-free</a>!</strong></p>
+</div>
+
+
+
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-medium has-background has-background-light-background-color">
+<h4 class="has-text-color" style="color:#66e3ff;">Cleaning Your Air Ducts With Finesse</h4>
+
+
+
+<p style="background-color:#66e3ff;" class="has-text-color has-background has-background-color"><strong>Breathe fresh, clean air again with a thorough cleanup of your <a href="https://coronavirusremoval.org/air-duct-cleaning/">air ducts</a>. We&#8217;ll clean your home and office air ducts too!</strong></p>
+
+
+
+<figure class="wp-block-image alignwide size-large is-style-rounded"><img data-attachment-id="253" data-permalink="https://coronavirusremoval.org/finesseairduct/" data-orig-file="https://coronavirusremoval.files.wordpress.com/2020/03/finesseairduct.jpg" data-orig-size="307,260" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="finesseairduct" data-image-description="" data-medium-file="https://coronavirusremoval.files.wordpress.com/2020/03/finesseairduct.jpg?w=300" data-large-file="https://coronavirusremoval.files.wordpress.com/2020/03/finesseairduct.jpg?w=307" src="https://coronavirusremoval.files.wordpress.com/2020/03/finesseairduct.jpg?w=307" alt="" class="wp-image-253" srcset="https://coronavirusremoval.files.wordpress.com/2020/03/finesseairduct.jpg 307w, https://coronavirusremoval.files.wordpress.com/2020/03/finesseairduct.jpg?w=150 150w, https://coronavirusremoval.files.wordpress.com/2020/03/finesseairduct.jpg?w=300 300w" sizes="(max-width: 307px) 100vw, 307px" /></figure>
+</div>
+</div>
+	</div><!-- .entry-content -->
+
+	</article><!-- #post-5 -->
+
+		</main><!-- #main -->
+	</section><!-- #primary -->
+
+
+	</div><!-- #content -->
+
+		<footer id="colophon" class="site-footer responsive-max-width">
+	
+		<div class="site-info">
+										<a class="site-name" href="https://coronavirusremoval.org/" rel="home">Coronavirus Remediation</a><span class="comma">,</span>
+						<a href="https://wordpress.com/?ref=footer_blog" rel="nofollow">Blog at WordPress.com.</a>					</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+
+</div><!-- #page -->
+
+<!--  -->
+<script src='//0.gravatar.com/js/gprofiles.js?ver=202012y'></script>
+<script>
+var WPGroHo = {"my_hash":""};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781h'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	</div>
+
+	<div id="carousel-reblog-box">
+		<form action="#" name="carousel-reblog">
+			<textarea id="carousel-reblog-content" name="carousel-reblog-content" placeholder="Add your thoughts here... (optional)"></textarea>
+			<label for="carousel-reblog-to-blog-id" id="carousel-reblog-lblogid">Post to</label>
+			<select name="carousel-reblog-to-blog-id" id="carousel-reblog-to-blog-id">
+						</select>
+
+			<div class="submit">
+				<span class="canceltext"><a href="#" class="cancel">Cancel</a></span>
+				<input type="submit" name="carousel-reblog-submit" class="button" id="carousel-reblog-submit" value="Reblog Post" />
+				<input type="hidden" id="carousel-reblog-blog-id" value="174132990" />
+				<input type="hidden" id="carousel-reblog-blog-url" value="https://coronavirusremoval.org" />
+				<input type="hidden" id="carousel-reblog-blog-title" value="Coronavirus Remediation" />
+				<input type="hidden" id="carousel-reblog-post-url" value="" />
+				<input type="hidden" id="carousel-reblog-post-title" value="" />
+			</div>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="58fdd1f103" /><input type="hidden" name="_wp_http_referer" value="/" />		</form>
+
+		<div class="arrow"></div>
+	</div>
+<link rel='stylesheet' id='all-css-0-2' href='https://s0.wp.com/_static/??/wp-content/plugins/gutenberg-blocks/jetpack-layout-grid/blocks/front.css,/wp-content/mu-plugins/carousel/jetpack-carousel.css?m=1583834955j&cssminify=yes' type='text/css' media='all' />
+<script>
+var comment_like_text = {"loading":"Loading..."};
+</script>
+<script>
+var actionbardata = {"siteID":"174132990","siteName":"Coronavirus Remediation","siteURL":"https:\/\/coronavirusremoval.org","icon":"<img alt='' src='https:\/\/coronavirusremoval.files.wordpress.com\/2020\/03\/cropped-cropped-dep-logo-1.png?w=50' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/hever","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Fcoronavirusremoval.org%2F&signup_flow=account&domain=coronavirusremoval.org","themeURL":"https:\/\/wordpress.com\/theme\/hever\/","xhrURL":"https:\/\/coronavirusremoval.org\/wp-admin\/admin-ajax.php","nonce":"96ce0d996d","isSingular":"1","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"b881d5071f\" \/>","referer":"https:\/\/coronavirusremoval.org\/","canFollow":"1","feedID":"104253950","statusMessage":"","customizeLink":"https:\/\/coronavirusremoval.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Fcoronavirusremoval.wordpress.com%2F","postID":"5","shortlink":"https:\/\/wp.me\/PbMDWC-5","canEditPost":"","editLink":"https:\/\/wordpress.com\/page\/coronavirusremoval.org\/5","statsLink":"https:\/\/wordpress.com\/stats\/post\/5\/coronavirusremoval.org","i18n":{"view":"View site","follow":"Follow","following":"Following","edit":"Edit","login":"Log in","signup":"Sign up","customize":"Customize","report":"Report this content","themeInfo":"Get theme: Hever","shortlink":"Copy shortlink","copied":"Copied","followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/read\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar","editSubs":"Manage subscriptions","viewReader":"View site in Reader","viewReadPost":"View post in Reader","subscribe":"Sign me up","enterEmail":"Enter your email address","followers":"","alreadyUser":"Already have a WordPress.com account? <a href=\"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Fcoronavirusremoval.org%2F&signup_flow=account&domain=coronavirusremoval.org\">Log in now.<\/a>","stats":"Stats"}};
+</script>
+<script>
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/coronavirusremoval.org\/wp-admin\/admin-ajax.php","nonce":"17d5061c7a","display_exif":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/coronavirusremoval.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fcoronavirusremoval.org%2F","blog_id":"174132990","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Reblog","reblogged":"Reblogged","reblog_add_thoughts":"Add your thoughts here... (optional)","reblogging":"Reblogging...","post_reblog":"Post Reblog","stats_query_args":"blog=174132990&v=wpcom&tz=-4&user_id=0&subd=coronavirusremoval","is_public":"1","reblog_enabled":""};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJydUe1uwjAMfKGlXqdWGz+mPUubGOTifCxOWnj7pdAyhhAS+5NYd7nL2YYpKO1dQpdgEDA4ksZwqAZ5gUKR05wNyokjSTCiMz7OVPB83BJzZcmtz1enwHlHTmCbmZVQQoWGErmdOjPQNpvmrW030LMvoJckqpR6v/xCON162qxWW+2tLZBi2p+jMfUgEwV8RvQH+H8HOM4m2meXjJ/c0sbplFvyQbzOlDmqvotgO0kYS6X8iDHSPP4L9qRDil2J8UikE3k3iy7Vvd1L+F3yNT58Z4zH5aquX93bQBd9FmQYMIWSS61A0XzZz7r9aOrX+r1phx8IjvXr'></script>
+<script type='text/javascript'>
+( 'fetch' in window ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?m=1573572739h&#038;ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?m=1540208548h&#038;ver=3.26.0-0"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?m=1550600082h&#038;ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?m=1540208548h&#038;ver=2.0.2"></scr' + 'ipt>' );
+</script>
+	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="//stats.wp.com/w.js?61" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'174132990','blog_tz':'-4','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'174132990','v':'wpcom','tz':'-4','user_id':'0','post':'5','subd':'coronavirusremoval'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1mJVY3bm9aR3VCbS9mWm1pRyZuJS1LX1t5NE84SWQsc2J8a3kvOS9ufHlFc2gmTk9WWlF2Lit2cCVUNnFGN2FKMVkuU2cxa3g1SThLSFg/RDFXcU42RG0udEFiRzhkOEhKOWU4N0RwOVh6VGxkLm18a2ZBfFNrPXBVR0JnejkwMn5TJWpKdD1yMUNxckszd0oycD1fLCZKZ1RLLGNhL11lZ1FEZUxpXWUzQi12MndDPTU3WDZGciUuMjNzd3Q1eXpQXUVaaSZBPzh0QStJLSZQam16cWtsaUhDdVFTT0J5bzF8NC9aSms4alVXUD8weVFQJWdjemJj'}]);
+_stq.push([ 'clickTrackerInit', '174132990', '5' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+</body>
+</html>

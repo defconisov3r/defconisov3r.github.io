@@ -1,0 +1,250 @@
+<footer><center><p>Il s'agit d'une aide au remplissage de l'attestation PDF, vous pouvez l'imprimer, par la suite.<br> Notre formulaire sans le bloc signature <a href="https://covid19.edovel.fr/index.php">Cliquez ici pour afficher l'autre version</a><br></center></footer>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attestation de déplacement</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<style type="text/css">
+    html { width: 100%; text-size-adjust: none; }
+
+    body {
+        width: 210mm;
+        margin: 1em auto;
+        font-family: Verdana, Geneva, sans-serif;
+    }
+
+    button {font-size: 2em; border: 1px solid black;}
+    footer {font-size: 1em; margin-top: 50px;}
+    canvas {border-radius: 8px;}
+
+    #page {
+        border: 1px solid black;
+        padding: 1em;
+    }
+	
+   .bouton {
+  user-appearance: none; /* "navigateur, laisse-moi faire */
+  border: none;
+  font-weight: bold; /* gras */
+  font-size: 1rem; /* si le texte devient piti, mettre la valeur 1.6rem */
+  color: white; /* blanc sur rouge foncé */
+  background: grey;
+}
+
+
+    input, label, p {
+        font-size: 1em;
+    }
+
+    .lbl {
+        display: inline-block;
+        width: 8em;
+    }
+
+    #name, #born, #address {
+        width: 10em;
+        border: 1px solid #999;
+        margin-bottom: 1em;
+    }
+
+    #date, #place {
+        border: 1px solid #999;
+    }
+
+    #warning {
+        border: 1px solid #c00;
+        background-color: #fcc;
+        padding: 1em;
+        margin-bottom: 1em;
+    }
+
+    @media screen and (max-width : 640px) {
+        html { font-size: 200%;}
+        input[type=radio] {zoom: 200%;}
+        canvas {font-size: 100%;}
+        #page {padding: 1em; border: 0;}
+    }
+
+    @media print {
+        #reset_btn {display: none;}
+        footer {display: none;}
+        body {margin: 0;}
+        #page {padding: 0; border: 0;}
+        #warning {display: none;}
+    }
+
+
+</style>
+
+<div id='page'>
+
+<center><h1>Attestation de déplacement dérogatoire</h1></center>
+
+<p>En application de l'article 1er du décret du 16 mars 2020 portant réglementation des déplacements dans le cadre de la lutte contre la propagation du virus Covid-19 :</p>
+
+<form>
+    <p><b>Je soussigné(e)</b></p>
+    <br/>
+    <label class="lbl" for="name"><b>Mme / M.</b></label>
+    <input id="name" type="text"><br/>
+
+    <label class="lbl" for="born"><b>Né(e) le :</b></label>
+    <input id="born" type="date"><br/>
+
+    <label class="lbl" for="address"><b>Demeurant :</b></label>
+    <input id="address" type="text"><br/>
+
+    <br/>
+    <p><center>certifie que mon déplacement est lié au motif suivant (cocher la case) autorisé par l'article 1er du décret du 16 mars 2020 portant réglementation des déplacements dans le cadre de la lutte contre la propagation du virus Covid-19:</center></p>
+    <br/>
+    <p>
+        <input id="choix_a" type="radio" name="choix">
+        <label for="choix_a" id="label_choix_a">déplacements entre le domicile et le lieu d'exercice de l'activité professionnelle, lorsqu'ils sont indispensables à l'exercice d'activités ne pouvant être organisées sous forme de télétravail (sur justificatif permanent) ou déplacements professionnels ne pouvant être différés;</label>
+    </p>
+
+    <p>
+        <input id="choix_b" type="radio" name="choix">
+        <label for="choix_b" id="label_choix_b">déplacements pour effectuer des achats de première nécessité dans des établissements autorisés (liste sur gouvernement.fr);</label>
+    </p>
+
+    <p>
+        <input id="choix_c" type="radio" name="choix">
+        <label for="choix_c" id="label_choix_c">déplacements pour motif de santé;</label>
+    </p>
+
+    <p>
+        <input id="choix_d" type="radio" name="choix">
+        <label for="choix_d" id="label_choix_d">déplacements pour motif familial impérieux, pour l'assistance aux personnes vulnérables ou la garde d'enfants;</label>
+    </p>
+
+    <p>
+        <input id="choix_e" type="radio" name="choix">
+        <label for="choix_e" id="label_choix_e">déplacements brefs, à proximité du domicile, liés à l'activité physique individuelle des personnes, à l'exclusion de toute pratique sportive collective, et aux besoins des animaux de compagnie.</label>
+    </p>
+
+    <p align="right">
+        <label for="place">Fait à </label><input type="text" id="place">
+        <label for="date">&nbsp;le </label><input type="date" id="date"><br><br>Faite votre signature ci-dessous<br/><br/>
+        <canvas style="border: 1px solid #999" id="signature" width="600" height="200"></canvas><br/>
+        <button onclick="can_clear();" id="clear_btn" class="bouton">Effacer</button>
+
+    </p>
+
+</form>
+
+<center><button onclick="render();" id="render_btn" >Génerer le fichier en PDF</button></center><br/><br/><br/>
+<center><button onclick="window.location.reload();" id="reset_btn" class="bouton">Remise à zéro</button></center>
+
+</div>
+
+<center><footer>Nous ne récupérons aucune information saisie, il s'agit d'une aide pour obtenir un document sous PDF automatiquement saisie, pour venir en aide aux personnes qui n'arrivent pas à le remplir sous son format PDF. Ceci est totalement gratuit et n'a aucune vocation commerciale.</footer></center>
+
+<script type="text/javascript">
+
+    function $(id) { return document.getElementById(id); }
+    var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    if (is_safari) {
+        $('date').value = new Date().toLocaleDateString();
+    } else {
+        $('date').valueAsDate = new Date();
+    }
+
+    // CANVAS HANDLING
+
+    var canvas = $('signature');
+    canvas.addEventListener('mousedown', ev_mousedown, false);
+    canvas.addEventListener('mousemove', ev_mousemove, false);
+    window.addEventListener('mouseup', ev_mouseup, false);
+
+    canvas.addEventListener('touchstart', ev_touchstart, false);
+    canvas.addEventListener('touchmove', ev_touchmove, false);
+    window.addEventListener('touchend', ev_mouseup, false);
+
+    ctx = canvas.getContext('2d');
+
+    var started = false;
+
+    function ev_mouseup(ev) {
+        started = false;
+    }
+
+    function ev_touchstart(ev) {
+        ev.preventDefault();
+        started = true;
+        var rect = canvas.getBoundingClientRect();
+        var x = ev.touches[0].clientX;
+        var y = ev.touches[0].clientY;
+        x = x - rect.left;
+        y = y - rect.top;
+
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+    }
+
+    function ev_touchmove(ev) {
+        ev.preventDefault();
+        var rect = canvas.getBoundingClientRect();
+        var x = ev.touches[0].clientX;
+        var y = ev.touches[0].clientY;
+        x = x - rect.left;
+        y = y - rect.top;
+
+        if (started) {
+            ctx.lineTo(x, y);
+            ctx.stroke();
+        }
+    }
+
+    function ev_mousedown(ev) {
+        started = true;
+        ctx.beginPath();
+        ctx.moveTo(ev.offsetX, ev.offsetY);
+    }
+
+    function ev_mousemove(ev) {
+        if (started) {
+            ctx.lineTo(ev.offsetX, ev.offsetY);
+            ctx.stroke();
+        }
+    }
+
+    function can_clear() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        return false;
+    }
+
+    // RENDERING
+
+    function render() {
+        canvas.removeEventListener('mousedown', ev_mousedown);
+        canvas.style.cssText = "border: none;";
+
+        $("clear_btn").remove();
+        $("render_btn").remove();
+
+        to_render = ['name', 'born', 'address', 'place', 'date'];
+        to_render.forEach(function(el) {
+            $(el).insertAdjacentHTML('afterend', $(el).value);
+            $(el).remove();
+        });
+
+        to_disable = ['choix_a', 'choix_b', 'choix_c', 'choix_d', 'choix_e'];
+        to_disable.forEach(function(el) {
+            if (!$(el).checked) {
+                $(el).remove();
+                $('label_' + el).remove();
+            }
+        });
+
+        window.print();
+    }
+
+</script>
+
+</body>
+</html>

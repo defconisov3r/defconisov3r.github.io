@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+<head><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"705f61895b",applicationID:"335642089"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<title>TOP Q&amp;A pentru angajatori in contextul COVID-19</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Concedii fara plata, telemunca, disponibilizari, somaj tehnic, acte aditionale la CIM.
+Sunt zeci de astfel de intrebari si simpla lor parcurgere dovedeste cat de complexe sunt lucrurile in realitate si cate chestiuni de detaliu pot aparea, mai ales ca, evident, nici angajatorii si nici autoritatile nu s-au mai confruntat cu gestionarea relatiilor de munca in cazul unei pandemii" />
+<meta name="keywords" content="modificare CIM, telemunca, concediu carantina, somaj tehnic, covid-19, coronavirus, coronavirus telemunca, coronavirus somaj tehnic, coronavirus legislatie, legea 19/2020" />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://spete-coronavirus.legislatiamuncii.ro" />
+<meta http-equiv="expires" content="0">
+<meta http-equiv="content-language" content="ro">
+<meta http-equiv="pragma" content="cache">
+<meta http-equiv="reply-to" content="rs@rs.ro">
+<meta name="resource-type" content="document">
+<link rel="shortcut icon" href="https://www.rs.ro/favicon.ico" type="image/x-icon" /> 
+
+<meta name="distribution" content="global">
+<meta name="copyright" content="(c)2020 - Rentrop & Straton">
+<meta name="country" content="ro">
+<meta name="language" content="ro">
+<meta name="language" content="romanian">
+<meta name="resource-type" content="document">
+<meta name="revisit-after" content="15 days">
+<meta name="classification" content="business site">
+<meta http-equiv="imagetoolbar" content="no" />
+<meta property="og:title" content="TOP Q&amp;A pentru angajatori in contextul COVID-19" />
+<meta property="og:description" content="Concedii fara plata, telemunca, disponibilizari, somaj tehnic, acte aditionale la CIM.
+Sunt zeci de astfel de intrebari si simpla lor parcurgere dovedeste cat de complexe sunt lucrurile in realitate si cate chestiuni de detaliu pot aparea, mai ales ca, evident, nici angajatorii si nici autoritatile nu s-au mai confruntat cu gestionarea relatiilor de munca in cazul unei pandemii" />
+<meta property="og:image" content="https://lp.rs.ro/upload_img/5686_spete-coronavirus.legislatiamuncii.ro/foto_2_small_e9cfd72392.png" />
+<script type="text/javascript" src="https://lp.rs.ro/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="https://lp.rs.ro/js/jquery-ui-1.11.1.js"></script>
+<script type="text/javascript" src="https://lp.rs.ro/js/jquery.1.8.2.min.js"></script>
+<script type="text/javascript" src="https://lp.rs.ro/js/countDownTimer.js"></script>
+<script type="text/javascript" src="https://lp.rs.ro/js/ajax.js"></script>
+<link href="//spete-coronavirus.legislatiamuncii.ro/style1.css" type="text/css" rel="stylesheet" />
+	 
+<link rel="stylesheet" type="text/css" href="https://lp.rs.ro/css/component.css" />
+
+<style>
+img {image-rendering: -webkit-optimize-contrast;}
+@media only screen and (min-device-width : 769px){
+#img_mobile {display:none !important;}
+}
+@media only screen and (max-device-width: 768px) {
+#img_norm {display:none !important;}
+#headdiv {margin:0 auto !important;}
+/*.sigla > a img {max-width: 80px !important;}*/
+}
+.product_image {
+	width:200px;
+	}  
+  
+        
+</style>
+<script>
+		dataLayer = [{
+		'dynx_itemid' : 'CVD901',
+		'dynx_pagetype' : 'product',
+		'dynx_totalvalue' : 83.30
+		}];
+		</script>
+	<!-- Google Tag Manager  -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KCGK2W3');</script>
+	<!-- End Google Tag Manager --><link href="https://lp.rs.ro/css/default_style.css" type="text/css" rel="stylesheet" />
+</head>
+<body style="background-color:#DCD5C9" onLoad="popupFlyingWindow()">
+
+						<style type="text/css">
+							#flying_z_ph {position:fixed;right:0;top:20px;z-index:9999;}
+							#flying_z2 {position:fixed;right:0;bottom:0;z-index:9999;}
+						 * html #flying_ph {
+							position: absolute;height:130px;width:<?= $widthWindow ?>px;display:block;overflow:hidden;
+							top: expression(eval(document.compatMode && document.compatMode=="CSS1Compat") ? documentElement.scrollTop +(documentElement.clientHeight-this.clientHeight) : document.body.scrollTop +(document.body.clientHeight-this.clientHeight));
+							}
+							.notice-item-ph {
+							width: <?= ($widthWindow - 5) ?>px;
+							border: <?= $borderBox ?>;
+							border-radius: 6px;
+							-moz-border-radius: 6px;
+							-webkit-border-radius: 6px;
+							padding: 6px 10px;
+							background-color:#008c23;
+							font-family: Arial, Helvetica, sans-serif;
+							font-size: 14px;
+							color:#000000;
+							}
+							.notice-item h6 {
+							color:#990000;
+							font-size:11px;
+							margin:0px;
+							padding:0px;
+							}
+							
+							.notice-item-close-ph {
+							position: relative;
+							font-family: Arial;
+							font-size: 12px;
+							font-weight: bold;
+							right: <?= $rightPosClose ?>px;
+							cursor: pointer;
+							width:8px; 
+							float:right;
+							}
+							.notice-title-ph {display:none;}
+
+								.notice-item-ph {border:0px;border-radius:0px;-moz-border-radius:0px;-webkit-border-radius:0px;padding:0px;background-color:#336310;}
+								.notice-title-ph {display:block !important;font-size:16px;line-height:20px;padding:10px;text-transform:uppercase;background:#336310  url(https://lp.rs.ro/images/ph_ico2.png) 10px 5px no-repeat ;color:#ededf1;border-bottom:4px solid #CCC;}
+								.notice-title_yellow {display:block !important;font-size:20px;line-height:20px;padding:10px;text-transform:uppercase;background:#7396ff ;color:#ededf1;border-bottom:4px solid #CCC;}
+								.notice-item-close-ph {font-weight:normal;top:-18px;color:#FFF !important;font-size:21px !important;}
+
+							</style>
+							<script type="text/javascript">
+								<!--
+								function changeBackPh() {
+									var flyingDiv = document.getElementById('flying_ph');
+									$("#flying_ph").fadeOut();
+									setTimeout(function(){
+										$("#flying_ph").fadeIn();
+									},6000);
+								}
+								function changeVisibilityPh() {
+									setTimeout('changeBackPh();', 4000);
+									$("#flying_ph").fadeIn();
+								}
+								function popupFlyingWindowPh() {
+									(function($) {
+										setTimeout('changeVisibilityPh();', 2000);
+									})(jQuery);
+								}
+								function closeDivPh() {
+									var flyingDiv = document.getElementById('flying_ph');
+									$("#flying_ph").fadeOut();
+								}
+								popupFlyingWindowPh();
+							</script>
+							<div id="flying_z_ph">
+								<div id="flying_ph" class="notice-wrap" style="display:none;">
+									<div class="notice-item-ph">
+										<div class="notice-title-ph">
+											<img src="https://lp.rs.ro/images/ph_ico3.png" onclick = "_gaq.push(['thirdTracker._trackEvent', 'click', 'telefon', 'spete-coronavirus.legislatiamuncii.ro', 1]);" style="width: 70px;height: auto;margin: 5px;position: absolute;left: -20px; top: -20px;" align="right">
+											<div style="margin-left: 55px; width: 200px;" onclick = "_gaq.push(['thirdTracker._trackEvent', 'click', 'telefon', 'spete-coronavirus.legislatiamuncii.ro', 1]);">Comanda telefonica</div>
+											<div onclick="closeDivPh();" class="notice-item-close-ph">x</div>
+										</div>
+										<div style="padding:15px 10px 10px 30px; color:#ffffff;font-size:16px" onclick = "_gaq.push(['thirdTracker._trackEvent', 'click', 'telefon', 'spete-coronavirus.legislatiamuncii.ro', 1]);">
+										
+											Vreti sa comandati prin telefon?
+											<br />
+											Nimic mai simplu:
+											<br />
+											sunati la <strong>021 209 45 12</strong>
+											<br />
+											<span style="font-style:italic">(luni - vineri, intre 08:30-18:00)</span>
+										</div>
+									</div>
+								</div>	
+							</div>
+				
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCGK2W3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><center>
+    <div class="container" style="width:960px;line-height:140%;">		<div class="inner">
+            				<div id="LPadresa" style="width:auto;"/>
+                                            <h2 id="supra_h1" style="color:#000000;text-align:left;font-size:14px;margin-top:0px;">
+                                                    </h2>
+						                </div><!--#LPadresa-->
+                                <div class="sigla" >
+                                        
+                   <a href="/" rel="nofollow" title="Rentrop &amp; Straton"> 
+						<img src="https://lp.rs.ro/images/rs-sigla/RSlogo-up-2020_250x54.png" alt="Rentrop &amp; Straton" /></a>
+					                </div><!--sigla-->
+                				<div style="clear:both;height:1px;border-bottom:1px solid #CCC;"></div>
+				            
+       <div class="inner">
+                
+                 
+                <h1 id="lp_h1" style="color:#003399;text-align:center;font-size:30px;">
+                    Cum afecteaza criza Coronavirus relatiile de munca? <br />
+Solutii pentru cele mai frecvente<br />
+situatii intalnite in practica!                </h1>
+                <h3 id="sub_h1" style="color:#000000;text-align:center;font-size:16px;">
+                    Consultati acum pe platforma www.rsonline.ro un material exceptional:<br />
+„Spete de interes pentru angajatori in contextul creat de COVID-19”!                </h3>
+				<div class="fix"></div>               
+                                <div class="product_image">
+                                            <a href="#form" title="">
+                                                            <div class="sticker">
+                                    <div class="sticker-msg"> <span class="line-one">NOU</span> <br />
+                                        <span class="line-two">
+                                            MAR.2020                                        </span> 
+									</div>
+                                </div>
+                                                            <img style="" src="https://lp.rs.ro/upload_img/5686_spete-coronavirus.legislatiamuncii.ro/foto_1_small_e9cfd72392.png" alt="" /> 
+						</a>
+                        <div class="fix" style="clear:both; height:5px;"></div>
+                                        </div><!--product_image-->
+                <div>
+	<br />
+	Stimate angajator,</div>
+<div>
+	&nbsp;</div>
+<div>
+	Serviciul de consultanta al Grupului Rentrop &amp; Straton a fost asaltat zilele acestea de intrebari punctuale din partea angajatorilor, privind situatii concrete care apar in relatia cu salariatii in contextul creat de coronavirus.</div>
+<div>
+	&nbsp;</div>
+<div>
+	<strong>Concedii fara plata, telemunca, disponibilizari, somaj tehnic, acte aditionale la CIM&hellip;</strong></div>
+<div>
+	Sunt zeci de astfel de intrebari si simpla lor parcurgere dovedeste cat de complexe sunt lucrurile in realitate si cate chestiuni de detaliu pot aparea, mai ales ca, evident, nici angajatorii si nici autoritatile nu s-au mai confruntat cu gestionarea relatiilor de munca in cazul unei pandemii (!).</div>
+<div>
+	&nbsp;</div>
+<div>
+	Gasiti aceste spete si solutiile lor pe platforma<span style="color: rgb(0, 0, 128);"> <strong>www.rsonline.ro</strong></span>!</div>
+<div>
+	&nbsp;</div>
+<div>
+	Intr-adevar, expertii Rentrop &amp; Straton au solutionat impecabil intrebarile primite, iar noi am grupat raspunsurile lor intr-un material extrem de util:<br />
+	<br />
+	<strong>- <span style="color: rgb(0, 0, 128);">Spete de interes pentru angajatori in contextul creat de COVID-19</span></strong> &ndash; si vi-l punem la dispozitie in cel mai rapid mod cu putinta: online, pe platforma <strong>www.rsonline.ro</strong>, cu acces pe baza de username si parola pe care le primiti prin e-mail imediat dupa confirmarea platii <strong>(doar 70 de lei + TVA) *.<br />
+	<br />
+	* Achitati acum si&nbsp;veti avea acces la informatiile din lucrare incepand cu data de 23 martie.</strong></div>
+<div>
+<!--buton_comanda-->	<p align="center">
+		<a href="#form"><button class="btn btn-3 btn-3a icon-cart">Da, vreau sa comand<br />
+		</button></a></p>
+<!--end_buton_comanda--></div>
+<div>
+	<span style="font-size: 18px;"><span style="color: rgb(0, 0, 128);"><strong>Exemple de spete solutionate de experti!</strong></span></span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size: 16px;"><span style="text-align:center;color: rgb(233, 122, 5);font-size: 18px;background: linear-gradient(19deg, rgba(252, 223, 207, 0) 0%, rgb(255, 252, 251) 28%, rgba(253, 238, 229, 0.58) 49%, rgba(244, 132, 69, 0.32) 77%, rgba(233, 122, 5, 0.32) 98%); padding: 10px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02), 0 3px 3px rgb(239, 235, 233);"><span style="color: rgb(0, 0, 128);"><strong>Speta nr. 1</strong></span></span></span></div>
+<br />
+<div>
+	&bdquo;In cazul unei familii in care unul dintre soti este in concediu medical, exista posibilitatea ca celalalt sot sa beneficieze de zile libere conform legii 19/2020? Mentionez ca acestia au un copil cu varsta pana in 12 ani, inscris la o forma de invatamant.&rdquo;<br />
+	&nbsp;</div>
+<div>
+	<span style="font-size: 16px;"><span style="text-align:center;color: rgb(233, 122, 5);font-size: 18px;background: linear-gradient(19deg, rgba(252, 223, 207, 0) 0%, rgb(255, 252, 251) 28%, rgba(253, 238, 229, 0.58) 49%, rgba(244, 132, 69, 0.32) 77%, rgba(233, 122, 5, 0.32) 98%); padding: 10px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02), 0 3px 3px rgb(239, 235, 233);"><span style="color: rgb(0, 0, 128);"><strong>Speta nr. 2</strong></span></span></span></div>
+<br />
+<div>
+	&bdquo;Va rog sa ne spuneti daca pentru indemnizatia acordata parintilor in vederea supravegherii copiilor sub 12 ani (conform Legii 19/2020) se plateste contributia la sanatate si pensii? Dar CAM?&rdquo;&nbsp;<br />
+	&nbsp;</div>
+<div>
+	<span style="font-size: 16px;"><span style="text-align:center;color: rgb(233, 122, 5);font-size: 18px;background: linear-gradient(19deg, rgba(252, 223, 207, 0) 0%, rgb(255, 252, 251) 28%, rgba(253, 238, 229, 0.58) 49%, rgba(244, 132, 69, 0.32) 77%, rgba(233, 122, 5, 0.32) 98%); padding: 10px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02), 0 3px 3px rgb(239, 235, 233);"><span style="color: rgb(0, 0, 128);"><strong>Speta nr. 3</strong></span></span></span></div>
+<br />
+<div>
+	&bdquo;Avand in vedere situatia de fata, daca modificam temporar locul si felul muncii in baza art. 48 din Codul muncii, astfel incat timp de o luna angajatii sa munceasca de acasa, trebuie sa intocmim un act aditional sau o decizie? Punem clauza de telemunca sau schimbam tipul contractului in contract de munca la domiciliu? In acest caz, care este termenul prevazut de legiuitor pentru transmiterea in Revisal?&rdquo;<br />
+	&nbsp;</div>
+<div>
+	<span style="font-size: 16px;"><span style="text-align:center;color: rgb(233, 122, 5);font-size: 18px;background: linear-gradient(19deg, rgba(252, 223, 207, 0) 0%, rgb(255, 252, 251) 28%, rgba(253, 238, 229, 0.58) 49%, rgba(244, 132, 69, 0.32) 77%, rgba(233, 122, 5, 0.32) 98%); padding: 10px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02), 0 3px 3px rgb(239, 235, 233);"><span style="color: rgb(0, 0, 128);"><strong>Speta nr. 4</strong></span></span></span></div>
+<br />
+<div>
+	&bdquo;In cazul in care se vrea reducerea timpului de munca de la 5 la 4 zile pe saptamana, conform art. 52 alin. 3) din Codul muncii, este de ajuns o decizie a adminstratorului in acest sens?</div>
+<div>
+	Trebuie raportat si in REVISAL?&rdquo;</div>
+<br />
+<div>
+	<span style="font-size: 16px;"><span style="text-align:center;color: rgb(233, 122, 5);font-size: 18px;background: linear-gradient(19deg, rgba(252, 223, 207, 0) 0%, rgb(255, 252, 251) 28%, rgba(253, 238, 229, 0.58) 49%, rgba(244, 132, 69, 0.32) 77%, rgba(233, 122, 5, 0.32) 98%); padding: 10px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02), 0 3px 3px rgb(239, 235, 233);"><span style="color: rgb(0, 0, 128);"><strong>Speta nr. 5</strong></span></span></span></div>
+<br />
+<div>
+	&bdquo;Cum procedam in situatia trimiterii acasa a unui angajat suspect de Covid-19 sau care declara ca a avut contact cu o persoana infectata?&rdquo;</div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size: 16px;"><span style="text-align:center;color: rgb(233, 122, 5);font-size: 18px;background: linear-gradient(19deg, rgba(252, 223, 207, 0) 0%, rgb(255, 252, 251) 28%, rgba(253, 238, 229, 0.58) 49%, rgba(244, 132, 69, 0.32) 77%, rgba(233, 122, 5, 0.32) 98%); padding: 10px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02), 0 3px 3px rgb(239, 235, 233);"><span style="color: rgb(0, 0, 128);"><strong>Speta nr. 6</strong></span></span></span></div>
+<br />
+<div>
+	&bdquo;Daca se decide suspendarea partiala a activitatii, cum procedez cu cei care nu pot face munca la domiciliu?&rdquo;</div>
+<br />
+<div>
+	<span style="font-size: 16px;"><span style="text-align:center;color: rgb(233, 122, 5);font-size: 18px;background: linear-gradient(19deg, rgba(252, 223, 207, 0) 0%, rgb(255, 252, 251) 28%, rgba(253, 238, 229, 0.58) 49%, rgba(244, 132, 69, 0.32) 77%, rgba(233, 122, 5, 0.32) 98%); padding: 10px;box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02), 0 3px 3px rgb(239, 235, 233);"><span style="color: rgb(0, 0, 128);"><strong>Speta nr. 7</strong></span></span></span></div>
+<br />
+<div>
+	&bdquo;Legea 19/2020 se aplica si la firmele private cu cod CAEN 2229? Cum pontam salariatii si cum calculam salariul pentru o salariata care sta acasa conform acestei legi?&rdquo;</div>
+<div>
+	&nbsp;</div>
+<div>
+	In materialul pe care vi-l punem la dispozitie sunt zeci de astfel de spete, rezolvate impecabil, cu temeiuri legale si insotite de explicatii clare, complete, profesioniste. Obtineti chiar acum acces la materialul Spete de interes pentru angajatori in contextul creat de <strong>COVID-19</strong>, pe platforma<span style="color: rgb(0, 0, 128);"><strong> www.rsonline.ro!</strong></span></div>
+<div>
+<!--buton_comanda-->	<p align="center">
+		<a href="#form"><button class="btn btn-3 btn-3a icon-cart">Da, vreau sa comand<br />
+		</button></a></p>
+<!--end_buton_comanda--></div>
+<div>
+	<span style="font-size: 18px;"><strong><span style="color: rgb(0, 0, 128);">Spetele rezolvate acopera teme vitale&nbsp;</span></strong></span></div>
+<div>
+	<span style="font-size: 18px;"><strong><span style="color: rgb(0, 0, 128);">pentru angajatori in aceasta perioada!</span></strong></span></div>
+<div>
+	&nbsp;</div>
+<div style="margin:0px;background-color:#ffffff !important;color:#000000;padding-top: 15px; padding-left: 20px;padding-bottom: 15px;font-size: 16px !important;box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 6px;">
+	<strong>1. Telemunca</strong><br />
+	<strong>2. Somaj tehnic</strong><br />
+	<strong>3. Legea 19/2020</strong><br />
+	<strong>4. Carantina</strong><br />
+	<strong>5. Modificari ale contractului de munca&nbsp;</strong></div>
+<div>
+	&nbsp;</div>
+<div>
+	Parcurgeti materialul <span style="color: rgb(0, 0, 128);"><strong>Spete de interes pentru angajatori in contextul creat de COVID-19</strong></span> si veti descoperi ca puteti gestiona criza cu mult mai putin stres. Veti fi mai linistit avand la indemana solutiile unor specialisti de top si totodata veti beneficia de garantia ca, in relatia cu angajatii dvs., procedati corect si avantajos pentru ambele parti.&nbsp;</div>
+<div>
+	<br />
+	<strong style="color: rgb(0, 0, 128);"><span style="font-size: 18px;">Problemele prezentate si rezolvate in acest&nbsp;</span></strong></div>
+<div>
+	<span style="color: rgb(0, 0, 128);"><strong><span style="font-size: 18px;">material pot deveni oricand si problemele dvs!</span></strong></span></div>
+<div>
+	&nbsp;</div>
+<div>
+	Evident, in materialul pe care vi-l punem la dispozitie veti gasi, garantat, situatii cu care va confruntati si dvs. acum. Si solutiile lor au, deci, o utilitate imediata.</div>
+<div>
+	&nbsp;</div>
+<div>
+	Veti descoperi insa si spete inedite, care prezinta aspecte la care poate nu v-ati fi gandit, dar cu care este foarte posibil sa va intalniti si dvs. foarte curand.&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	De exemplu, poate ca in momentul de fata nu aveti in plan sa trimiteti niste oameni in <strong>somaj tehnic</strong>, dar cine stie ce va fi peste 10 zile? E bine sa fiti pregatit, sa cunoasteti procedura corecta si chestiunile de detaliu, mai subtile, de care va trebui sa va ocupati.&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	Apoi, nu pierdeti din vedere lucruri practice, concrete, unde materialul nostru va ajuta:</div>
+<ol>
+	<li>
+		Exista diferente intre telemunca si munca la domiciliu, nu le confundati!</li>
+	<li>
+		Ce documente trebuie intocmite in cazul unui concediu de carantina?</li>
+	<li>
+		Cum se schimba fisele de post ale angajatilor care lucreaza de acasa?</li>
+	<li>
+		Ce faceti daca un angajat refuza o deplasare care i se pare riscanta?</li>
+	<li>
+		Ce masuri de dezinfectie in firma trebuie sa luati?</li>
+</ol>
+<div>
+<!--buton_comanda-->	<p align="center">
+		<a href="#form"><button class="btn btn-3 btn-3a icon-cart">Da, vreau sa comand<br />
+		</button></a></p>
+<!--end_buton_comanda-->	<span style="font-size: 18px;"><span style="color: rgb(0, 0, 128);"><strong>Colectia de spete rezolvate pe care v-o punem&nbsp;</strong></span></span></div>
+<div>
+	<span style="font-size: 18px;"><span style="color: rgb(0, 0, 128);"><strong>la dispozitie chiar va este extraordinar de utila!</strong></span></span></div>
+<div>
+	&nbsp;</div>
+<div style="
+    border: 3px solid #186cac14;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    background: #dededf24;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0), 0 5px 5px rgba(0, 0, 0, 0.05);
+">
+	<span>Profitati si obtineti acces imediat!</span><br />
+	Dati clic acum pe butonul de comanda de mai jos, achitati contravaloarea de doar <strong>70 de lei + TVA</strong> si primiti acces la vizualizarea lucrarii in data de 23 martie.&nbsp; Veti primi prin e-mail username-ul si parola de acces pe platforma <span style="color: rgb(0, 0, 128);"><strong>www.rsonline.ro</strong></span>! Ce poate fi mai simplu?</div>
+<div>
+	Va asteptam cu placere!</div>
+<div>
+	Expertii Grupului Rentrop &amp; Straton va stau cu promptitudine la dispozitie, pentru a va oferi cele mai bune solutii pentru dvs., pentru angajatii dvs., pentru afacerea dvs.!<br />
+	<br />
+	<br />
+	&nbsp;</div>
+<div style="text-align: right;">
+	<span style="text-align: right;">Oana Banu</span></div>
+<div>
+	<div style="text-align: right;">
+		<img src="https://lp.rs.ro/upload_img/922_250fisedepost.resurseumane.org/images/semnatura_medium.png" style="-webkit-user-select: none;margin: auto;" /></div>
+	<div style="text-align: right;">
+		Manager produs</div>
+	<div style="text-align: right;">
+		Divizia Legislatia Muncii</div>
+	<div style="text-align: right;">
+		Grupul romano-german de informatii specializate Rentrop &amp; Straton</div>
+</div><div class="info_garantie" style="border-color:#DCD5C9;"><h4>GARANTIE 100%<br />
+						Nu este nicio problema daca va razganditi asupra achizitiei dvs.!<br />
+						Primiti toti banii inapoi!</h4><img src="https://lp.rs.ro/images/garantie_30_zile.png" alt="Garantie 100%"><div class="info_box"><p>Aveti la dispozitie o perioada de 30 de zile in care puteti solicita oricand restituirea sumei achitate.</p><p>In cazul in care ati achizitionat un <strong>produs fizic</strong>, va rugam sa il expediati pe adresa Rentrop & Straton, Bd. Basarabia nr. 256, Incinta Faur, sector 3, Bucuresti. 
+						Avem doar rugamintea sa suportati taxa de transport. In cazul unui <strong>serviciu</strong> sau <strong>produs online</strong>, e suficient sa ne comunicati intentia dvs. de a apela la garantie, prin e-mail (<a href="mailto:rs@rs.ro">rs@rs.ro</a>) sau telefonic (021-209.45.45). Banii va vor fi restituiti cu promptitudine fie direct in cont, fie prin mandat postal.</p></div><div class="fix"></div></div>            </div><!--inner--> 
+            <br style="clear:both;" />
+            <h2 id="form_title">Formular de comanda</h2><div class="comForm">	<script type="text/javascript" src="https://lp.rs.ro/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="https://lp.rs.ro/js/jquery-ui-1.11.1.js"></script>
+	<script type="text/javascript" src="https://lp.rs.ro/js/jquery.validate.min.js"></script>
+	<link rel="stylesheet" href="https://lp.rs.ro/js/prettyCheckable/prettyCheckable.css" />
+	<link rel="stylesheet" href="https://lp.rs.ro/js/prettyCheckable/square/_all.css" />
+			<script type="text/javascript" src="https://lp.rs.ro/js/prettyCheckable/jquery.icheck.js"></script>	<script type="text/javascript" src="https://lp.rs.ro/js/form.ajax.js"></script>
+	<script type="text/javascript">
+	var nLpProducts = 5;
+	var idProducts={"1":"2346201","2":"2346202","3":"2346203","4":"2346204","5":"2346205"};
+	var keyLPoption=[0,1,2,3,4];
+	var lp_id=5686;
+	var tipOption='produs++';
+			var discount2second='no';
+			</script>
+	<a href="javascript:;" id="shopping_top"></a>
+		<div id="formContainer" align="center"><a name="form"></a>
+	<div id="commandForm" style="border-color:#DCD5C9;"> 
+    
+    <a name="anchor-form-error-products-top" id="anchor-form-error-products-top"></a>
+    <div class="form-error-products-top" id="form-error-products-top" style="display:none;"></div>
+    <form action="pasul2.php" method="post" name="formular" id="formular" class="">
+		<input type="hidden" name="url" value="/" />
+		<input type="hidden" name="retry" value="0" />
+		<!-- TOMBOLA -->
+		<div id="form_tombola">
+				</div>
+		<!--form_tombola--> 
+		<!-- EXTRAOPTIUNI -->      
+				<!-- INCEP MODIFICARILE PTR. PRODUSE-->
+						<div id="shopping_popup" class="popup"></div>
+				<script type="text/javascript">
+				$(document).ready(function() {	
+					var no_max = 0;
+					if (no_max>0) {
+						blockMaximS(no_max,false);
+						$('input[id^="produs"]').on('ifChanged', function(event){
+							var isChecked = event.currentTarget.checked;
+							blockMaximS(no_max,true);
+						});
+					}
+				});
+				</script>
+				<div id="LPproducts">
+					<h4>
+					  					  Bifati produsele dorite:
+					  					  
+					  	
+					</h4>
+					<br />
+					<div id="product-container-0" class="product-container"><label style="cursor:hand;cursor:pointer;">       							 
+                                <input type="checkbox" class="tip_radio" id="produs0" data-id="2346201" name="produs0" value="83.30"  								style="width:22px;float:left;">
+         <span class="radio" onmouseover="this.style.color='#2489c5'" onmouseout="this.style.color='#000000'"><img src="https://lp.rs.ro/upload_img/5686_spete-coronavirus.legislatiamuncii.ro/pphoto_1_small_4a949868fa.jpg" 
+													style="max-width:60px;height:60px;float:left;margin:0px 10px 0 0;padding:3px;border:0px dotted #CCC;background:#f0f0f0;" />
+											<strong>Spete de interes pentru angajatori in contextul creat de COVID-19</strong>
+											<span class="radio_description">
+											
+											<br>
+											</span>
+											<span style="font-weight:normal;"> Pret cu TVA: 83.30 lei	</span> </span><!--radio-->
+										   <div style="clear:both;height:1px;"></div></label></div><!--product-container--><div style="clear:both;"></div><div id="product-container-1" class="product-container"><label style="cursor:hand;cursor:pointer;">       							 
+                                <input type="checkbox" class="tip_radio" id="produs1" data-id="2346202" name="produs1" value="96.39"  								style="width:22px;float:left;">
+         <span class="radio" onmouseover="this.style.color='#2489c5'" onmouseout="this.style.color='#000000'"><img src="https://lp.rs.ro/upload_img/5686_spete-coronavirus.legislatiamuncii.ro/pphoto_1_small_da3160fa5a.jpg" 
+													style="max-width:60px;height:60px;float:left;margin:0px 10px 0 0;padding:3px;border:0px dotted #CCC;background:#f0f0f0;" />
+											<strong>Ghid practic. Somajul tehnic</strong>
+											<span class="radio_description">
+											
+											<br>
+											</span>
+											<span style="font-weight:normal;"> Pret cu TVA: 96.39 lei	</span> </span><!--radio-->
+										   <div style="clear:both;height:1px;"></div></label></div><!--product-container--><div style="clear:both;"></div><div id="product-container-2" class="product-container"><label style="cursor:hand;cursor:pointer;">       							 
+                                <input type="checkbox" class="tip_radio" id="produs2" data-id="2346203" name="produs2" value="97.58"  								style="width:22px;float:left;">
+         <span class="radio" onmouseover="this.style.color='#2489c5'" onmouseout="this.style.color='#000000'"><img src="https://lp.rs.ro/upload_img/5686_spete-coronavirus.legislatiamuncii.ro/pphoto_1_small_04172f3636.jpg" 
+													style="max-width:60px;height:60px;float:left;margin:0px 10px 0 0;padding:3px;border:0px dotted #CCC;background:#f0f0f0;" />
+											<strong>Webinarul Alerta Coronavirus - Solutii practice pentru Departamentul HR Totul despre Munca de Acasa (Telemunca) + Concedii, Acte obligatorii si Legislatie la zi -</strong>
+											<span class="radio_description">
+											
+											<br>
+											</span>
+											<span style="font-weight:normal;"> Pret cu TVA: 97.58 lei	</span> </span><!--radio-->
+										   <div style="clear:both;height:1px;"></div></label></div><!--product-container--><div style="clear:both;"></div><div id="product-container-3" class="product-container"><label style="cursor:hand;cursor:pointer;">       							 
+                                <input type="checkbox" class="tip_radio" id="produs3" data-id="2346204" name="produs3" value="97.58"  								style="width:22px;float:left;">
+         <span class="radio" onmouseover="this.style.color='#2489c5'" onmouseout="this.style.color='#000000'"><img src="https://lp.rs.ro/upload_img/5686_spete-coronavirus.legislatiamuncii.ro/pphoto_1_small_86be46e6e6.jpg" 
+													style="max-width:60px;height:60px;float:left;margin:0px 10px 0 0;padding:3px;border:0px dotted #CCC;background:#f0f0f0;" />
+											<strong>Telemunca sau munca si de acasa. 33 de studii de caz. Legislatie explicata. Modele de documente </strong>
+											<span class="radio_description">
+											
+											<br>
+											</span>
+											<span style="font-weight:normal;"> Pret cu TVA: 97.58 lei	</span> </span><!--radio-->
+										   <div style="clear:both;height:1px;"></div></label></div><!--product-container--><div style="clear:both;"></div><div id="product-container-4" class="product-container"><label style="cursor:hand;cursor:pointer;">       							 
+                                <input type="checkbox" class="tip_radio" id="produs4" data-id="2346205" name="produs4" value="107.10"  								style="width:22px;float:left;">
+         <span class="radio" onmouseover="this.style.color='#2489c5'" onmouseout="this.style.color='#000000'"><img src="https://lp.rs.ro/upload_img/5686_spete-coronavirus.legislatiamuncii.ro/pphoto_1_small_7c5a8c7021.jpg" 
+													style="max-width:60px;height:60px;float:left;margin:0px 10px 0 0;padding:3px;border:0px dotted #CCC;background:#f0f0f0;" />
+											<strong>14 tipuri de concedii. Regim juridic si fiscal </strong>
+											<span class="radio_description">
+											
+											<br>
+											</span>
+											<span style="font-weight:normal;"> Pret cu TVA: 107.10 lei	</span> </span><!--radio-->
+										   <div style="clear:both;height:1px;"></div></label></div><!--product-container--><div style="clear:both;"></div>      </div>
+      <!--LPproducts-->
+                  
+      <!-- INCEP MODIFICARILE PTR. PRODUSE-->
+            <div id="LPformImage" style="width:122;"><img src="https://lp.rs.ro/upload_img/5686_spete-coronavirus.legislatiamuncii.ro/foto_2_small_e9cfd72392.png" style="width:120px;" alt="" title="" /> </div>
+      <!--LPformImage-->
+            <br />
+      <a name="anchor-form-error" id="anchor-form-error"></a> 
+      <!--Header-->
+      <div>
+
+	<div id="anchor-start-user-data-section"></div>
+	    <h4 style="text-align:left;font-weight:normal;font-family:Verdana, Geneva, sans-serif;font-size:20px;color:#000000;padding:0px;margin:0px 0px 10px 10px;line-height:140%">
+        Va rugam completati
+		</h4>
+
+	<style>
+	fieldset{display:block;margin:0px;padding:0px;border:none;}
+	</style>
+        <div class="LPformAttention" style="font-size:10px;text-align:left;margin-left:10px;position:relative;margin-right:120px;"><em style="font-size:12px;"><sup>*</sup> Campurile marcate cu steluta sunt obligatorii!</em></div>
+        <div class="form-error" id="form-error" style="background:#ffabab;border:1px dotted #CCC;padding:10px 40px;margin:10px 5px 10px 10px;display:none;z-index:2;min-width:350px;"></div>        <div class="LPformBorder" style="border-bottom:1px dotted #CCC;padding:5px;"></div>
+      <!--</div>-->
+      <div style="clear:left;"></div>
+            
+
+
+      <!--nume-->
+	  <fieldset class="LPnume">
+      <div id="t_form" style=" width:130px;"><span id="field-nume">Nume<sup>*</sup></span></div>
+      <input type="text" id="nume" name="nume" class="contur" style=" width:250px;" value="" title="Numele dvs." placeholder="Numele dvs." />      
+      <div id="error-nume" class="field-error-msg"></div>
+      <div style="clear:left;height:10px;"></div>
+      </fieldset><fieldset class="LPprenume">
+	  <!--prenume-->
+      <div id="t_form" style=" width:130px;"><span id="field-prenume">Prenume<sup>*</sup></span></div>
+      <input type="text" id="prenume" name="prenume" class="contur" style=" width:250px;"  value="" title="Prenumele dvs." placeholder="Prenumele dvs." />
+      <div id="error-prenume" class="field-error-msg"></div>
+      <div style="clear:left;height:10px;"></div>
+      </fieldset><fieldset class="LPtelefon">
+      <!--telefon-->
+      <div id="t_form" style=" width:130px;"><span id="field-telefon">Telefon
+         &nbsp;        </span></div>
+      <input type="text" id="telefon" name="telefon" class="contur" style=" width:250px;"  value="" title="Numarul de telefon" placeholder="Numarul de telefon" />
+      <div id="error-telefon" class="field-error-msg"></div>
+      			<!--<div style="margin:5px;"><font size="1">Telefonul este necesar pentru contactarea dvs. de catre un reprezentant Orhideea Gardens!</font></div>-->
+			<div style="margin-bottom:10px;"></div>      <!--certsign_cod-->
+      	  </fieldset><fieldset class="LPemail">      
+      <!--email-->
+      <div id="t_form" style=" width:130px;"><span id="field-email">E-mail<sup>*</sup></span></div>
+      <input type="text" id="email" name="email" class="contur" style=" width:250px;"  value="" title="Adresa dvs. de email" placeholder="Adresa dvs. de email" />
+      <div id="error-email" class="field-error-msg"></div>
+      <div style="margin-bottom:10px;"></div>
+	   </fieldset><fieldset class="checkbox">
+      		  <!--conform_legii-->
+		  <div class="LPcheckbox">
+			<input type="checkbox" value="Da" id="conform_legii" name="conform_legii" class="icheckbox" />
+		  </div>
+		  <div class="LPcheckboxTitle" id="field-conform_legii">
+			<label for="conform_legii" style="cursor:pointer;cursor:hand;">Conform cerintelor</label> <a href="javascript:void window.open('https://www.rs.ro/pag/termeni-si-conditii-11.html#gdpr','RegulamentUE','height=500,width=600,status=yes,toolbar=no,menubar=no,location=no,scrollbars=yes');" title="Regulamentul UE 679/2016" />Regulamentului UE 679/2016</a> sunt de acord ca SC Rentrop & Straton S.R.L. sa colecteze si sa prelucreze datele din formular in scopuri comerciale.</div>
+		  <div id="error-conform_legii" class="field-error-msg"></div>
+		  <br clear="all" />
+		   </fieldset><fieldset class="checkbox">	  
+		  <!--accept_comunicari-->
+		  <div class="LPcheckbox">
+			<input type="checkbox" value="Da" id="accept_comunicari" name="accept_comunicari" class="icheckbox"  />
+		  </div>
+		  <div class="LPcheckboxTitle" id="field-accept_comunicari">
+			<label for="accept_comunicari" style="cursor:pointer;cursor:hand;">Sunt de acord cu</label>
+			<a href="javascript:void window.open('https://www.rs.ro/pag/termeni-si-conditii-11.html#termeni_si_conditii','TermeniSiConditii','height=500,width=600,status=yes,toolbar=no,menubar=no,location=no,scrollbars=yes');" title="Termeni si conditii" />termenii si conditiile</a> site-ului!</div>
+		  <div id="error-accept_comunicari" class="field-error-msg"></div>
+		  <div style="clear:both;height:10px;"></div>
+		   </fieldset><fieldset>      <div style="text-align:center;">
+        <input type="submit" name="pasul1" id="pasul1" class="tip_buton" value="Da, vreau sa comand!" style=" background-color:#660000;" />
+      </div>
+	  </fieldset>
+      <br clear="all" />
+	      </form>
+        <div class="rspro" style="margin:0px; border: 1px solid #cccccc;margin-bottom:10px; background-color:#ffffff !important;color:#000000;padding:15px;text-align:center;"> <strong>Produsele achizitionate pot fi vizualizate si online, folosind platforma RS Online, unica in Romania.
+      Veti putea sa va logati imediat ce plata produsului este confirmata in contul nostru.</strong><br />
+      <strong><a href="https://www.rsonline.ro/" target="_blank" style="color: #2D3882;text-decoration: none;">www.RSonline.ro</a></strong> 
+    </div>
+        <script>
+(function($) {
+$(document).ready(function(){
+	$("input.icheckbox").iCheck({
+		checkboxClass: "icheckbox_square-blue",
+		radioClass: "iradio_square-blue"
+	});
+	
+	$("input.tip_radio").iCheck({
+		checkboxClass: "icheckbox_square-blue",
+		radioClass: "iradio_square-blue"
+	});
+	
+	function ShowFormError(idErrorDiv, error) {
+		if (idErrorDiv == 'form-error') {
+			$("html,body").animate({
+				scrollTop: $("#anchor-start-user-data-section").offset().top - 150
+			},'slow');
+		} else {
+			$("html,body").animate({
+				scrollTop: $("#anchor-"+idErrorDiv).offset().top
+			},'slow');
+		}
+		
+		$("div."+idErrorDiv).css('display', 'block');
+		$("div."+idErrorDiv).html(error);
+	}
+	function HideFormError(idErrorDiv) {
+		$("div."+idErrorDiv).css('display', 'none');
+		$("div."+idErrorDiv).html();
+	}
+	
+	//----------------------------------------------------------------------------------//
+	String.prototype.capitalize = function() {
+		return this.replace(/\w+/g, function(a){
+			return a.charAt(0).toUpperCase() + a.substr(1).toLowerCase();
+		});
+	};
+
+	//----------------------------------------------------------------------------------//
+	$("#nume").keyup(function(){
+		$("#nume").val($("#nume").val().capitalize());
+	});
+	$("#prenume").keyup(function(){
+		$("#prenume").val($("#prenume").val().capitalize());
+	});
+	$("#email").keyup(function(){
+		$("#email").val($("#email").val().toLowerCase());
+	});
+	// add method to validate names
+	$.validator.addMethod("codLoz_value", function(value, element) {
+		if (value=="091214" || value=="REDUCERE30RS" ||  value=="511611" || value=="2788" || value=="2708" || value=="RSYX16" || value=="12345") return true;
+				else return false;
+	}, "Nu ati introdus codul promotional corect.");
+	
+	//----------------------------------------------------------------------------------//
+
+	$('#formular').validate({ 
+		onkeyup: false,
+		onclick: false,
+		onblur: false,
+		onfocusout: false,
+   		rules: {
+			nume: {
+				required: true,
+				minlength: 2
+			},
+			prenume: {
+				required: true,
+				minlength: 2
+			},
+			email: {
+				required: true,
+				email: true
+			},
+			conform_legii: {
+				required: true
+			},		
+			accept_comunicari: {
+				required: true
+			},
+					
+		},
+		messages: {
+			codLoz: 'Nu ati introdus codul promotional corect.',
+			nume: 'Nu ati introdus numele.',
+			prenume: 'Nu ati introdus prenumele.',
+			email: 'Nu ati introdus o adresa de email valida.',
+			telefon: 'Nu ati introdus numarul de telefon',
+			conform_legii: 'Trebuie sa fiti de acord ca SC Rentrop & Straton S.R.L. sa colecteze si sa prelucreze datele inscrise in acest talon.',
+			accept_comunicari: 'Trebuie sa fiti de acord cu termenii si conditiile site-ului.'
+		}, 
+		errorPlacement: function(error, element) {
+			//field = element.attr('id');
+			//$('#field-'+field).css("color", "#ff0000");
+			//$('#'+field).css("border", "1px solid #e77575");
+			//$('#'+field).css("backgroundColor", "#ffffbb");
+		},
+		showErrors: function(errorMap, errorList) {
+			var summary = "";
+			$.each(errorList, function() { 
+				summary += ' - ' + this.message + '<br />';
+				field = this.element;
+				$(field).css("border", "1px solid #e77575");
+				$(field).css("backgroundColor", "#ffffbb");
+				$(field).css("color", "#000000");
+			});
+			if (summary) ShowFormError("form-error", summary);
+		},
+  		submitHandler: function (form) { // for demo
+			HideFormError("form-error");
+			//Verificare produse selectate
+			var atLeastOneProductIsChecked = 1;
+                            
+			if (!atLeastOneProductIsChecked) {
+				var summary = "Selectati cel putin un produs";
+				if (summary) ShowFormError("form-error-products-top", summary);
+			}
+            else {
+				//alert('TESTLOCAL: valid form submitted');
+				this.submit();
+				return true;
+			}
+			return false; //demo
+		}
+	});
+})
+})(jQuery);
+</script>
+    <div class="LPformMenu" align="right"><a href="//www.anpc.gov.ro/" target="_blank" rel="nofollow" style="font-size:10px;color:#777;text-decoration:none;">PROTECTIA CONSUMATORILOR - A.N.P.C.</a></div>
+</div>
+  <small class="digital2" style=" display:block;text-align:left;">* Pentru produsele in format digital, la cererea clientilor, Rentrop&amp;Straton a decis sa ofere posibilitatea utilizarii produselor pe 3 computere diferite.</small>
+</div>
+<br />
+            </div><!--container-->
+            <div class="container_mobile" style="margin-top:0px;">
+                				<div class="copyright">
+                <div class="copy" style="width:100%; ">
+		
+	<div style="position:relative;right:5px;width:140px;background-color:#0C4CA3;padding:3px 0px;color:#FFFFFF;float:right;text-align:center;display:block;font-size:10px;line-height:14px;font-family:Arial;">powered by<br /><a href="http://www.fokusdigitalservices.com/" title="Fokus Digital Services" target="_blank" style="text-decoration:none;color:#FFFFFF;font-family:Calibri;font-size:12px;line-height:14px;" target="_blank">Fokus Digital Services</a></div>
+
+<b>Copyright</b>
+	<strong>&copy; 1995 - 2020 Rentrop&amp;Straton - Grup de Editura si Consultanta in Afaceri</strong><br /> 
+	<strong>Adresa:</strong> Bdul. Natiunile Unite 4, Gemenii Center, Sector 5, Bucuresti.<br />
+	<div style="width:80px;float:right;">
+		<!--/Start Trafic.ro/-->
+		<!--/End Trafic.ro/-->
+	</div>
+	<!--<strong>Librarie:</strong> Str.Anghel Saligny, Nr 6, Sector 5, Bucuresti; <strong>Program:</strong> Luni - Vineri: 10:00
+	- 19:00; <br />
+<a href="//www.rs.ro/librarie/contact-5.pag" target="_blank" title="Harta librarie Rentrop&Straton" style="color:#0000FF">Clic aici pentru harta!</a><br />-->
+	<strong>Tel. Dep Comenzi:</strong> 021 209.45.12<br />
+	<strong>Email:</strong> <a href="mailto:oferte@rs.ro" class="redish" target="_blank">oferte@rs.ro</a><br />
+
+<div align="center" style="margin:10px auto; padding:20px; border-top:2px solid #eee;">
+<a href="//www.rs.ro/" rel="nofollow" title="Rentrop &amp; Straton" target="_blank">Rentrop &amp; Straton</a> | 
+<a href="//www.rs.ro/pag/termeni-si-conditii-11.html" rel="nofollow" title="Termeni si conditii" target="_blank">Termeni si conditii</a> | 
+<a href="//www.rs.ro/pag/termeni-si-conditii-11.html#gdpr" rel="nofollow" title="Politica de confidentialitate" target="_blank">Politica de confidentialitate</a> | 
+<a href="//ec.europa.eu/consumers/odr/" rel="nofollow" title="Platforma SOL" target="_blank">Platforma SOL</a>
+</div>
+	</div>                <br clear="all"/>
+                            </div>
+            <!--copyright--> 
+        </div>
+        <!--comForm-->
+    </div>
+    <!--container/container_mobile--> 
+    <!--legal_footer-->
+</center>
+    <style type="text/css">
+        #flying {position:fixed;right:0;bottom:0;z-index:9999;}
+        * html #flying {
+            position: absolute;height:130px;width:310px;display:block;overflow:hidden;
+            top: expression(eval(document.compatMode && document.compatMode=="CSS1Compat") ? documentElement.scrollTop +(documentElement.clientHeight-this.clientHeight) : document.body.scrollTop +(document.body.clientHeight-this.clientHeight));
+        }
+        .notice-item {
+            width: 305px;
+            border: 1px solid #999;;
+            border-radius: 6px;
+            -moz-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            padding: 6px 10px;
+            background-color:#FFFFCC;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            color:#000000;
+        }
+        .notice-item h6 {
+            color:#990000;
+            font-size:11px;
+            margin:0px;
+            padding:0px;
+        }
+
+        .notice-item-close {
+            position: absolute;
+            font-family: Arial;
+            font-size: 12px;
+            font-weight: bold;
+            right: 6px;
+            top: 0px;
+            cursor: pointer;
+        }
+        .notice-title {display:none;}
+        .notice-item {border:0px;border-radius:0px;-moz-border-radius:0px;-webkit-border-radius:0px;padding:0px;background-color:#ededf1;}
+        .notice-title {display:block !important;font-size:20px;line-height:20px;padding:10px;text-transform:uppercase;background:#003FA0;color:#ededf1;border-bottom:4px solid #CCC;}
+        .notice-item-close {font-weight:normal;top:2px;color:#FFF !important;font-size:25px !important;line-height:30px;}
+    </style>
+    <script type="text/javascript">
+        <!--
+        function changeBack() {
+            var flyingDiv = document.getElementById('flying');
+            flyingDiv.style.visibility = "hidden";
+        }
+        function changeVisibility() {
+            var flyingDiv = document.getElementById('flying');
+            flyingDiv.style.visibility = "visible";
+            setTimeout('changeBack();', 20000);
+        }
+        function popupFlyingWindow() {
+            setTimeout('changeVisibility();', 2000);
+        }
+        function closeDiv() {
+            var flyingDiv = document.getElementById('flying');
+            flyingDiv.style.visibility = "hidden";
+        }
+
+    -->
+    </script>
+            <div id="flying" class="notice-wrap" style="visibility:hidden;">
+            <div class="notice-item">
+                <div class="notice-title">ATENTIE!</div>
+                <div onclick="closeDiv();" class="notice-item-close">x</div>
+                <div style='padding:10px;'>Oferta este valabila in limita stocului/locurilor disponibil(e)!<br /><br />In acest moment, aceasta <strong>oferta speciala</strong> mai este citita de <strong>5</strong> utilizatori!<br /><br />Completati acum <a href='#form'>formularul de inscriere</a>!<br /><a href='#form'>Clic aici</a> pentru a va rezerva un exemplar/loc!</div>            </div></div>
+    
+    	
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"705f61895b","applicationID":"335642089","transactionName":"YVEANkYFXxFXV0FRWlgbNxBdS1gMUlFNFkVeRA==","queueTime":0,"applicationTime":86,"atts":"TRYDQA4fTB8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html><link href="https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

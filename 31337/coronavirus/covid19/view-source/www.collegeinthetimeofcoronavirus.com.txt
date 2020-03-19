@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+<title>College in the Time of Coronavirus &#8211; A Media Studies Class Learns to Adapt </title>
+
+<!-- Async WordPress.com Remote Login -->
+<script id="wpcom_remote_login_js">
+var wpcom_remote_login_extra_auth = '';
+function wpcom_remote_login_remove_dom_node_id( element_id ) {
+	var dom_node = document.getElementById( element_id );
+	if ( dom_node ) { dom_node.remove(); }
+}
+function wpcom_remote_login_remove_dom_node_classes( class_name ) {
+	var dom_nodes = document.querySelectorAll( '.' + class_name );
+	for ( var i = 0; i < dom_nodes.length; i++ ) {
+		dom_nodes[i].remove();
+	}
+}
+function wpcom_remote_login_final_cleanup() {
+	wpcom_remote_login_remove_dom_node_classes( "wpcom_remote_login_msg" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_validate" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_js" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_iframe" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_styles" );
+}
+
+// Watch for messages back from the remote login
+window.addEventListener( "message", function( e ) {
+	if ( e.origin === "https://r-login.wordpress.com" ) {
+		var data = {};
+		try {
+			data = JSON.parse( e.data );
+		} catch( e ) {
+			wpcom_remote_login_final_cleanup();
+			return;
+		}
+
+		if ( data.msg === 'LOGIN' ) {
+			// Clean up the login check iframe
+			wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+
+			var id_regex = new RegExp( /^[0-9]+$/ );
+			var token_regex = new RegExp( /^.*|.*|.*$/ );
+			if (
+				token_regex.test( data.token )
+				&& id_regex.test( data.wpcomid )
+			) {
+				// We have everything we need to ask for a login
+				var script = document.createElement( "script" );
+				script.setAttribute( "id", "wpcom_remote_login_validate" );
+				script.src = '/remote-login.php?wpcom_remote_login=validate'
+					+ '&wpcomid=' + data.wpcomid
+					+ '&token=' + encodeURIComponent( data.token )
+					+ '&host=' + window.location.protocol
+						+ '//' + window.location.hostname;
+				document.body.appendChild( script );
+			}
+
+			return;
+		}
+
+		// Safari ITP, not logged in, so redirect
+		if ( data.msg === 'LOGIN-REDIRECT' ) {
+			window.location = 'https://wordpress.com/log-in?redirect_to=' + window.location.href;
+			return;
+		}
+
+		// Safari ITP, storage access failed, remove the request
+		if ( data.msg === 'LOGIN-REMOVE' ) {
+			var css_zap = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } @media screen and ( max-width: 782px ) { html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } }';
+			var style_zap = document.createElement( 'style' );
+			style_zap.type = 'text/css';
+			style_zap.appendChild( document.createTextNode( css_zap ) );
+			document.body.appendChild( style_zap );
+
+			var e = document.getElementById( 'wpcom_request_access_iframe' );
+			e.parentNode.removeChild( e );
+
+			document.cookie = 'wordpress_com_login_access=denied; path=/; max-age=31536000';
+
+			return;
+		}
+
+		// Safari ITP
+		if ( data.msg === 'REQUEST_ACCESS' ) {
+			console.log( 'request access: safari' );
+
+			// Check ITP iframe enable/disable knob
+			if ( wpcom_remote_login_extra_auth !== 'safari_itp_iframe' ) {
+				return;
+			}
+
+			// If we are in a "private window" there is no ITP.
+			var private_window = false;
+			try {
+				var opendb = window.openDatabase( null, null, null, null );
+			} catch( e ) {
+				private_window = true;
+			}
+
+			if ( private_window ) {
+				console.log( 'private window' );
+				return;
+			}
+
+			var iframe = document.createElement( 'iframe' );
+			iframe.id = 'wpcom_request_access_iframe';
+			iframe.setAttribute( 'scrolling', 'no' );
+			iframe.setAttribute( 'sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-top-navigation-by-user-activation' );
+			iframe.src = 'https://r-login.wordpress.com/remote-login.php?wpcom_remote_login=request_access&origin=' + encodeURIComponent( data.origin ) + '&wpcomid=' + encodeURIComponent( data.wpcomid );
+
+			var css = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 46px !important; } * html body { margin-top: 46px !important; } @media screen and ( max-width: 660px ) { html { margin-top: 71px !important; } * html body { margin-top: 71px !important; } #wpcom_request_access_iframe { display: block; height: 71px !important; } } #wpcom_request_access_iframe { border: 0px; height: 46px; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 99999; background: #23282d; } ';
+
+			var style = document.createElement( 'style' );
+			style.type = 'text/css';
+			style.id = 'wpcom_request_access_styles';
+			style.appendChild( document.createTextNode( css ) );
+			document.body.appendChild( style );
+
+			document.body.appendChild( iframe );
+		}
+
+		if ( data.msg === 'DONE' ) {
+			wpcom_remote_login_final_cleanup();
+		}
+	}
+}, false );
+
+// Inject the remote login iframe after the page has had a chance to load
+// more critical resources
+window.addEventListener( "DOMContentLoaded", function( e ) {
+	var iframe = document.createElement( "iframe" );
+	iframe.style.display = "none";
+	iframe.setAttribute( "scrolling", "no" );
+	iframe.setAttribute( "id", "wpcom_remote_login_key" );
+	iframe.src = "https://r-login.wordpress.com/remote-login.php"
+		+ "?wpcom_remote_login=key"
+		+ "&origin=aHR0cHM6Ly9jb2xsZWdlaW50aGV0aW1lb2Zjb3JvbmF2aXJ1cy5jb20%3D"
+		+ "&wpcomid=174138073"
+		+ "&time=1584639883";
+	document.body.appendChild( iframe );
+}, false );
+</script>
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//collegeinthetimeofcoronavirus.wordpress.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="College in the Time of Coronavirus &raquo; Feed" href="https://collegeinthetimeofcoronavirus.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="College in the Time of Coronavirus &raquo; Comments Feed" href="https://collegeinthetimeofcoronavirus.com/comments/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s0.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1582709031h&ver=5.4-RC1-47426"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='all-css-0-1' href='https://s0.wp.com/_static/??-eJylU+1uwjAMfKGlpqwV48e0Z2la05nlS4lD1befS2CaYLBp/IkS5+58ci4wBdV7x+gYbFbB5JFcgin03qpkyeB8car6lJ7gZxq5HTni+WtzBT4jxyxHjXGUm4iwqZ6rFehMZgBtfP+hDOnYxRkSzwb/IHNkJdgjh26hd7PPrMZIw38lYsfkxvQLfZeNUYkYFQ60EE7DgLbZNuu23QIeBC+87HjwkyttHlY9u2SyaMjhw4JiS4o+cTo5HCgxHAinm6K9P42srtarqlbHnBReuaiKqeO7PmCtuDKi+93aZfVeMJeQSd2GjheElU4dGrQCu0crwdc6RExJyWopW8XvQrz+B6UMIWtYwotqfeNNfgAK5Dwy2b7Z17p9aepVvWna/SdcoFhO?cssminify=yes' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify {
+	text-align:justify;
+}
+</style>
+<link crossorigin="anonymous" rel='stylesheet' id='libre-2-fonts-css'  href='https://fonts.googleapis.com/css?family=Libre+Baskerville%3A400%2C400italic%2C700&#038;subset=latin%2Clatin-ext' media='all' />
+<link rel='stylesheet' id='all-css-2-1' href='https://s0.wp.com/_static/??-eJzTLy/QTc7PK0nNK9HPLdUtyClNz8wr1k9PzdfNyU9OLMnMz0Ph6KblJGYW6SUXF+voY9dalJqUk58OZKbrA1UhcUGa7HNtDU1MLU1MLMwNTbIAmkQtqg==?cssminify=yes' type='text/css' media='all' />
+<link rel='stylesheet' id='print-css-3-1' href='https://s0.wp.com/wp-content/mu-plugins/global-print/global-print.css?m=1465851035h&cssminify=yes' type='text/css' media='print' />
+<link rel='stylesheet' id='all-css-4-1' href='https://s0.wp.com/_static/??-eJx1zcEOwiAQBNAfEtc2EO3B+C2ASFeXhZQljX9vNTWaGG9zeDMDc1E+swQWSE0VahG5gvWCmZ2dPmnra93AF3/bSyNSFSWocEZBjusKGD3o3pgBImVnFyN3ChWqWEEPjizffkZlDGkxpTkgdFNQPSB7eFXVXHxO/yqjXn+e4JSOnTnobtfttbk+ACX8UrI=?cssminify=yes' type='text/css' media='all' />
+<style id='jetpack-global-styles-frontend-style-inline-css'>
+:root { --font-headings: unset; --font-base: unset; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+</style>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJx9zk0KhDAMBeALWYtIZTbiWfyJ0mLS2qQM3t4KymwcIZBFPt6L/gZlaVzTBKxdni1B3K9VOi70G1Bol9gLlGjpxqMnAZLTBs+CwNwv8HBFP9gVVGKIGZDkmtk/VXL4pf//9VIdtpUxn9o0jandAcDzUjU='></script>
+<link rel='stylesheet' id='all-css-0-2' href='https://s0.wp.com/wp-content/mu-plugins/highlander-comments/style.css?m=1530132353h&cssminify=yes' type='text/css' media='all' />
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s0.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563h&#038;ver=20110606' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://collegeinthetimeofcoronavirus.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s0.wp.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress.com" />
+<link rel='shortlink' href='https://wp.me/bMFgB' />
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="College in the Time of Coronavirus" />
+<meta property="og:description" content="A Media Studies Class Learns to Adapt " />
+<meta property="og:url" content="https://collegeinthetimeofcoronavirus.com/" />
+<meta property="og:site_name" content="College in the Time of Coronavirus" />
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="shortcut icon" type="image/x-icon" href="https://s0.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="icon" type="image/x-icon" href="https://s0.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="apple-touch-icon" href="https://s0.wp.com/i/webclip.png" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://collegeinthetimeofcoronavirus.com/osd.xml" title="College in the Time of Coronavirus" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<meta name="application-name" content="College in the Time of Coronavirus" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="A Media Studies Class Learns to Adapt " /><meta name="msapplication-task" content="name=Subscribe;action-uri=https://collegeinthetimeofcoronavirus.com/feed/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="description" content="A Media Studies Class Learns to Adapt" />
+</head>
+
+<body class="home blog wp-embed-responsive customizer-styles-applied no-sidebar highlander-enabled highlander-light infinite-scroll neverending">
+<div class="site-wrapper">
+	<div id="page" class="hfeed site">
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+				<header id="masthead" class="site-header" role="banner">
+			<div class="site-branding">
+																						<h1 class="site-title"><a href="https://collegeinthetimeofcoronavirus.com/" rel="home">College in the Time of Coronavirus</a></h1>
+										<p class="site-description">A Media Studies Class Learns to Adapt </p>
+							</div><!-- .site-branding -->
+
+			<div class="nav-wrapper">
+				<nav id="site-navigation" class="main-navigation" role="navigation">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">&#9776; Menu</button>
+					<div class="menu-primary-container"><ul id="primary-menu" class="menu"><li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-19"><a href="https://collegeinthetimeofcoronavirus.com/college-in-the-time-of-the-coronavirus-2/">College in the Time of The Coronavirus</a></li>
+<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="https://collegeinthetimeofcoronavirus.com/blog-2/">Blog</a></li>
+<li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="https://collegeinthetimeofcoronavirus.com/about/">About</a></li>
+<li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a href="https://collegeinthetimeofcoronavirus.com/contact/">Contact</a></li>
+</ul></div>									</nav><!-- #site-navigation -->
+
+							</div>
+
+		</header><!-- #masthead -->
+
+		<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+					
+				
+<article id="post-157" class="post-157 post type-post status-publish format-standard hentry category-uncategorized">
+ 	<header class="entry-header">
+					<h2 class="entry-title"><a href="https://collegeinthetimeofcoronavirus.com/2020/03/18/want-to-watch-netflix-with-your-socially-distanced-friends-heres-how-via-vulture/" rel="bookmark">“Want To Watch Netflix With Your Socially Distanced Friends? Here’s How.” Via Vulture</a></h2>		
+				<div class="entry-meta">
+			<span class="posted-on"><a href="https://collegeinthetimeofcoronavirus.com/2020/03/18/want-to-watch-netflix-with-your-socially-distanced-friends-heres-how-via-vulture/" rel="bookmark"><time class="entry-date published updated" datetime="2020-03-18T17:39:58+00:00">March 18, 2020</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="https://collegeinthetimeofcoronavirus.com/author/collegeinthetimeofcoronavirus/">collegeinthetimeofcoronavirus</a></span></span><span class="comments-link"><a href="https://collegeinthetimeofcoronavirus.com/2020/03/18/want-to-watch-netflix-with-your-socially-distanced-friends-heres-how-via-vulture/#respond">Leave a comment</a></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Link <a href="https://www.vulture.com/2020/03/how-to-watch-netflix-with-friends-during-coronavirus.html?utm_source=instagram&amp;utm_medium=social_acct&amp;utm_campaign=vulture&amp;utm_term=curalate_like2buy_giEFHzyk__875581b7-c2e7-4a93-9b11-12f32a98f629" target="_blank" rel="noopener">here</a>.</p>
+<p>A lot of our upcoming screenings are streaming on Netflix. This could be a really fun way to still watch them together!</p>
+<p>&#8220;<strong style="box-sizing:inherit;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;color:rgb(0,0,0);font-family:miller-text, Georgia, serif;font-size:18px;font-style:normal;font-variant-caps:normal;letter-spacing:normal;orphans:auto;text-align:start;text-indent:0;text-transform:none;white-space:normal;widows:auto;word-spacing:0;-webkit-text-size-adjust:100%;text-decoration:none;">Step 1:<span class="Apple-converted-space">&nbsp;</span></strong><a href="https://chrome.google.com/webstore/detail/netflix-party/oocalimimngaihdkbihfgmpkcpnmlaoa" style="box-sizing:inherit;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;box-shadow:rgb(0,0,0) 0 1px 0;color:rgb(0,0,0);padding:0;text-decoration:none;font-family:miller-text, Georgia, serif;font-size:18px;font-style:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:auto;text-align:start;text-indent:0;text-transform:none;white-space:normal;widows:auto;word-spacing:0;-webkit-text-size-adjust:100%;">Download Netflix Party</a><span style="color:rgb(0,0,0);font-family:miller-text, Georgia, serif;font-size:18px;font-style:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:auto;text-align:start;text-indent:0;text-transform:none;white-space:normal;widows:auto;word-spacing:0;-webkit-text-size-adjust:100%;text-decoration:none;display:inline !important;float:none;"><span class="Apple-converted-space">&nbsp;</span></span><span style="color:rgb(0,0,0);font-family:miller-text, Georgia, serif;font-size:18px;font-style:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:auto;text-align:start;text-indent:0;text-transform:none;white-space:normal;widows:auto;word-spacing:0;-webkit-text-size-adjust:100%;text-decoration:none;display:inline !important;float:none;">and install it. If you don’t have Google Chrome installed, you’ll have to download that first because the extension won’t work with other browsers like Firefox or Safari.</span></p>
+<p class="clay-paragraph" style="box-sizing:inherit;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-style:normal;font-variant-caps:normal;font-weight:normal;font-stretch:normal;font-size:18px;line-height:1.5;font-family:miller-text, Georgia, serif;color:rgb(0,0,0);margin:0 0 20px;position:relative;letter-spacing:normal;orphans:auto;text-align:start;text-indent:0;text-transform:none;white-space:normal;widows:auto;word-spacing:0;-webkit-text-size-adjust:100%;text-decoration:none;"><strong style="box-sizing:inherit;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;">Step 2:<span class="Apple-converted-space">&nbsp;</span></strong>Open Netflix and pick out what you want to watch with your friends. (Need inspiration? Try one of the shows on<span class="Apple-converted-space">&nbsp;</span><a href="https://www.vulture.com/2020/03/comfort-shows-binge-watch-coronavirus-quarantine.html" style="box-sizing:inherit;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;box-shadow:rgb(0,0,0) 0 1px 0;color:rgb(0,0,0);padding:0;text-decoration:none;">our list of comfort food TV</a>.)</p>
+<p class="clay-paragraph" style="box-sizing:inherit;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-style:normal;font-variant-caps:normal;font-weight:normal;font-stretch:normal;font-size:18px;line-height:1.5;font-family:miller-text, Georgia, serif;color:rgb(0,0,0);margin:0 0 20px;position:relative;letter-spacing:normal;orphans:auto;text-align:start;text-indent:0;text-transform:none;white-space:normal;widows:auto;word-spacing:0;-webkit-text-size-adjust:100%;text-decoration:none;"><strong style="box-sizing:inherit;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;">Step 3:<span class="Apple-converted-space">&nbsp;</span></strong>Once the TV show or movie you chose is playing, the “NP” icon on your browser will turn red. Click that icon to get things going. You can choose if everyone in the party will be able to control the video, or just you.</p>
+<p class="clay-paragraph" style="box-sizing:inherit;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-style:normal;font-variant-caps:normal;font-weight:normal;font-stretch:normal;font-size:18px;line-height:1.5;font-family:miller-text, Georgia, serif;color:rgb(0,0,0);margin:0 0 20px;position:relative;letter-spacing:normal;orphans:auto;text-align:start;text-indent:0;text-transform:none;white-space:normal;widows:auto;word-spacing:0;-webkit-text-size-adjust:100%;text-decoration:none;"><strong style="box-sizing:inherit;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;">Step 4:<span class="Apple-converted-space">&nbsp;</span></strong>Share the URL with your friends.</p>
+<p class="clay-paragraph" style="box-sizing:inherit;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-style:normal;font-variant-caps:normal;font-weight:normal;font-stretch:normal;font-size:18px;line-height:1.5;font-family:miller-text, Georgia, serif;color:rgb(0,0,0);margin:0 0 20px;position:relative;letter-spacing:normal;orphans:auto;text-align:start;text-indent:0;text-transform:none;white-space:normal;widows:auto;word-spacing:0;-webkit-text-size-adjust:100%;text-decoration:none;">That’s it. Playback rates and results may vary. Go wash your hands.&#8221;</p>
+
+			</div><!-- .entry-content -->
+
+    <footer class="entry-footer">
+            </footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-156" class="post-156 post type-post status-publish format-standard hentry category-uncategorized">
+ 	<header class="entry-header">
+					<h2 class="entry-title"><a href="https://collegeinthetimeofcoronavirus.com/2020/03/18/good-practices-for-return-to-school-work/" rel="bookmark">Good practices for return to school work</a></h2>		
+				<div class="entry-meta">
+			<span class="posted-on"><a href="https://collegeinthetimeofcoronavirus.com/2020/03/18/good-practices-for-return-to-school-work/" rel="bookmark"><time class="entry-date published updated" datetime="2020-03-18T17:26:13+00:00">March 18, 2020</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="https://collegeinthetimeofcoronavirus.com/author/collegeinthetimeofcoronavirus/">collegeinthetimeofcoronavirus</a></span></span><span class="comments-link"><a href="https://collegeinthetimeofcoronavirus.com/2020/03/18/good-practices-for-return-to-school-work/#respond">Leave a comment</a></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p><img data-attachment-id="152" data-permalink="https://collegeinthetimeofcoronavirus.com/2020/03/18/good-practices-for-return-to-school-work/img_5975/" data-orig-file="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5975.jpg" data-orig-size="744,1000" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="img_5975" data-image-description="" data-medium-file="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5975.jpg?w=223" data-large-file="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5975.jpg?w=739" src="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5975.jpg?w=739" class="size-full wp-image-152" srcset="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5975.jpg?w=739 739w, https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5975.jpg?w=112 112w, https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5975.jpg?w=223 223w, https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5975.jpg 744w" sizes="(max-width: 739px) 100vw, 739px"  ><img data-attachment-id="153" data-permalink="https://collegeinthetimeofcoronavirus.com/2020/03/18/good-practices-for-return-to-school-work/img_5976/" data-orig-file="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5976.jpg" data-orig-size="750,1083" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="img_5976" data-image-description="" data-medium-file="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5976.jpg?w=208" data-large-file="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5976.jpg?w=709" src="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5976.jpg?w=739" class="size-full wp-image-153" srcset="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5976.jpg?w=739 739w, https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5976.jpg?w=104 104w, https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5976.jpg?w=208 208w, https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5976.jpg 750w" sizes="(max-width: 739px) 100vw, 739px"  ><img src="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5977.png?w=739" class="size-full"  ><img src="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5978.jpg?w=739" class="size-full"  ></p>
+
+			</div><!-- .entry-content -->
+
+    <footer class="entry-footer">
+            </footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-151" class="post-151 post type-post status-publish format-standard hentry category-uncategorized">
+ 	<header class="entry-header">
+					<h2 class="entry-title"><a href="https://collegeinthetimeofcoronavirus.com/2020/03/18/stay-in-from-the-mind-do-jordan-peele/" rel="bookmark">Stay In (from the mind do Jordan Peele)</a></h2>		
+				<div class="entry-meta">
+			<span class="posted-on"><a href="https://collegeinthetimeofcoronavirus.com/2020/03/18/stay-in-from-the-mind-do-jordan-peele/" rel="bookmark"><time class="entry-date published updated" datetime="2020-03-18T17:25:31+00:00">March 18, 2020</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="https://collegeinthetimeofcoronavirus.com/author/collegeinthetimeofcoronavirus/">collegeinthetimeofcoronavirus</a></span></span><span class="comments-link"><a href="https://collegeinthetimeofcoronavirus.com/2020/03/18/stay-in-from-the-mind-do-jordan-peele/#respond">Leave a comment</a></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p><img src="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5980.jpg?w=739" class="size-full"  ></p>
+
+			</div><!-- .entry-content -->
+
+    <footer class="entry-footer">
+            </footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-149" class="post-149 post type-post status-publish format-standard hentry category-uncategorized">
+ 	<header class="entry-header">
+					<h2 class="entry-title"><a href="https://collegeinthetimeofcoronavirus.com/2020/03/17/reward-yourself-with-good-practice/" rel="bookmark">Reward yourself with good practice !</a></h2>		
+				<div class="entry-meta">
+			<span class="posted-on"><a href="https://collegeinthetimeofcoronavirus.com/2020/03/17/reward-yourself-with-good-practice/" rel="bookmark"><time class="entry-date published updated" datetime="2020-03-17T21:52:21+00:00">March 17, 2020</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="https://collegeinthetimeofcoronavirus.com/author/collegeinthetimeofcoronavirus/">collegeinthetimeofcoronavirus</a></span></span><span class="comments-link"><a href="https://collegeinthetimeofcoronavirus.com/2020/03/17/reward-yourself-with-good-practice/#respond">Leave a comment</a></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p><img data-attachment-id="148" data-permalink="https://collegeinthetimeofcoronavirus.com/2020/03/17/reward-yourself-with-good-practice/img_5825/" data-orig-file="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5825.jpg" data-orig-size="750,882" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="img_5825" data-image-description="" data-medium-file="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5825.jpg?w=255" data-large-file="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5825.jpg?w=739" src="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5825.jpg?w=739" class="size-full wp-image-148" srcset="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5825.jpg?w=739 739w, https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5825.jpg?w=128 128w, https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5825.jpg?w=255 255w, https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5825.jpg 750w" sizes="(max-width: 739px) 100vw, 739px"  ></p>
+
+			</div><!-- .entry-content -->
+
+    <footer class="entry-footer">
+            </footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-147" class="post-147 post type-post status-publish format-standard hentry category-uncategorized">
+ 	<header class="entry-header">
+					<h2 class="entry-title"><a href="https://collegeinthetimeofcoronavirus.com/2020/03/17/28-days-later/" rel="bookmark">28 Days Later</a></h2>		
+				<div class="entry-meta">
+			<span class="posted-on"><a href="https://collegeinthetimeofcoronavirus.com/2020/03/17/28-days-later/" rel="bookmark"><time class="entry-date published updated" datetime="2020-03-17T19:58:23+00:00">March 17, 2020</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="https://collegeinthetimeofcoronavirus.com/author/collegeinthetimeofcoronavirus/">collegeinthetimeofcoronavirus</a></span></span><span class="comments-link"><a href="https://collegeinthetimeofcoronavirus.com/2020/03/17/28-days-later/#respond">Leave a comment</a></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p><img data-attachment-id="146" data-permalink="https://collegeinthetimeofcoronavirus.com/2020/03/17/28-days-later/1385e923-88aa-4523-97cb-a742233d56a0/" data-orig-file="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/1385e923-88aa-4523-97cb-a742233d56a0.jpg" data-orig-size="750,1334" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="1385e923-88aa-4523-97cb-a742233d56a0" data-image-description="" data-medium-file="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/1385e923-88aa-4523-97cb-a742233d56a0.jpg?w=169" data-large-file="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/1385e923-88aa-4523-97cb-a742233d56a0.jpg?w=576" src="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/1385e923-88aa-4523-97cb-a742233d56a0.jpg?w=739" class="size-full wp-image-146" srcset="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/1385e923-88aa-4523-97cb-a742233d56a0.jpg?w=739 739w, https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/1385e923-88aa-4523-97cb-a742233d56a0.jpg?w=84 84w, https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/1385e923-88aa-4523-97cb-a742233d56a0.jpg?w=169 169w, https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/1385e923-88aa-4523-97cb-a742233d56a0.jpg 750w" sizes="(max-width: 739px) 100vw, 739px"  ></p>
+
+			</div><!-- .entry-content -->
+
+    <footer class="entry-footer">
+            </footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-145" class="post-145 post type-post status-publish format-standard hentry category-uncategorized">
+ 	<header class="entry-header">
+					<h2 class="entry-title"><a href="https://collegeinthetimeofcoronavirus.com/2020/03/15/one-hundred-museums-transformed-their-collections-into-free-coloring-pages/" rel="bookmark">“One Hundred Museums Transformed Their Collections Into Free Coloring Pages”</a></h2>		
+				<div class="entry-meta">
+			<span class="posted-on"><a href="https://collegeinthetimeofcoronavirus.com/2020/03/15/one-hundred-museums-transformed-their-collections-into-free-coloring-pages/" rel="bookmark"><time class="entry-date published updated" datetime="2020-03-15T23:34:15+00:00">March 15, 2020</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="https://collegeinthetimeofcoronavirus.com/author/collegeinthetimeofcoronavirus/">collegeinthetimeofcoronavirus</a></span></span><span class="comments-link"><a href="https://collegeinthetimeofcoronavirus.com/2020/03/15/one-hundred-museums-transformed-their-collections-into-free-coloring-pages/#respond">Leave a comment</a></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Link <a href="https://www.smithsonianmag.com/smart-news/100-museums-transformed-their-collections-free-coloring-pages-just-you-180974116/" target="_blank" rel="noopener">here</a>.</p>
+
+			</div><!-- .entry-content -->
+
+    <footer class="entry-footer">
+            </footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-144" class="post-144 post type-post status-publish format-standard hentry category-uncategorized">
+ 	<header class="entry-header">
+					<h2 class="entry-title"><a href="https://collegeinthetimeofcoronavirus.com/2020/03/15/these-12-famous-museums-offer-virtual-tours-you-can-take-on-your-couch-video/" rel="bookmark">“These 12 Famous Museums Offer Virtual Tours You Can Take on Your Couch (Video)”</a></h2>		
+				<div class="entry-meta">
+			<span class="posted-on"><a href="https://collegeinthetimeofcoronavirus.com/2020/03/15/these-12-famous-museums-offer-virtual-tours-you-can-take-on-your-couch-video/" rel="bookmark"><time class="entry-date published updated" datetime="2020-03-15T00:56:39+00:00">March 15, 2020</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="https://collegeinthetimeofcoronavirus.com/author/collegeinthetimeofcoronavirus/">collegeinthetimeofcoronavirus</a></span></span><span class="comments-link"><a href="https://collegeinthetimeofcoronavirus.com/2020/03/15/these-12-famous-museums-offer-virtual-tours-you-can-take-on-your-couch-video/#respond">Leave a comment</a></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Via <em><a href="https://www.travelandleisure.com/attractions/museums-galleries/museums-with-virtual-tours?utm_source=facebook.com&amp;utm_medium=social&amp;utm_campaign=social-share-article&amp;utm_content=20200313&amp;fbclid=IwAR0x5pDgK9zspUcOwl7fLXmkYzxtoC2b8j7BQqepuBXm6iDV5cK8QdnMVbw">Travel and Leisure</a></em>:</p>
+<p><span style="color:rgba(0,0,0,0.952941);font-family:Roboto, Arial, sans-serif;font-size:18px;font-style:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:auto;text-align:start;text-indent:0;text-transform:none;white-space:normal;widows:auto;word-spacing:0;-webkit-text-size-adjust:100%;background-color:rgb(255,255,255);text-decoration:none;display:inline !important;float:none;">&#8220;According to</span><span style="color:rgba(0,0,0,0.952941);font-family:Roboto, Arial, sans-serif;font-size:18px;font-style:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:auto;text-align:start;text-indent:0;text-transform:none;white-space:normal;widows:auto;word-spacing:0;-webkit-text-size-adjust:100%;background-color:rgb(255,255,255);text-decoration:none;display:inline !important;float:none;"><span class="Apple-converted-space">&nbsp;</span></span><em style="box-sizing:border-box;color:rgba(0,0,0,0.952941);font-family:Roboto, Arial, sans-serif;font-size:18px;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:auto;text-align:start;text-indent:0;text-transform:none;white-space:normal;widows:auto;word-spacing:0;-webkit-text-size-adjust:100%;text-decoration:none;"><a href="https://www.fastcompany.com/90475447/stuck-at-home-because-of-coronavirus-how-to-get-your-art-and-design-fix-from-your-couch" class="external-link" target="_blank" aria-describedby="external-disclaimer" title="(opens new window)" style="box-sizing:border-box;background-color:transparent;color:rgb(89,89,89);font-weight:400;text-decoration:none;font-size:18px;line-height:28px;letter-spacing:0;padding:2px 0;box-shadow:rgb(89,89,89) 0 -2px 0 inset;transition:all .1s ease-in-out;">Fast Company</a></em><span style="color:rgba(0,0,0,0.952941);font-family:Roboto, Arial, sans-serif;font-size:18px;font-style:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:auto;text-align:start;text-indent:0;text-transform:none;white-space:normal;widows:auto;word-spacing:0;-webkit-text-size-adjust:100%;background-color:rgb(255,255,255);text-decoration:none;display:inline !important;float:none;">,</span><span style="color:rgba(0,0,0,0.952941);font-family:Roboto, Arial, sans-serif;font-size:18px;font-style:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:auto;text-align:start;text-indent:0;text-transform:none;white-space:normal;widows:auto;word-spacing:0;-webkit-text-size-adjust:100%;background-color:rgb(255,255,255);text-decoration:none;display:inline !important;float:none;"><span class="Apple-converted-space">&nbsp;</span></span><a href="https://www.travelandleisure.com/travel-tips/mobile-apps/google-maps-15th-birthday-new-updates" style="box-sizing:border-box;background-color:transparent;color:rgb(89,89,89);font-weight:normal;text-decoration:none;font-size:18px;line-height:28px;letter-spacing:normal;padding:2px 0;box-shadow:rgb(89,89,89) 0 -2px 0 inset;transition:all .1s ease-in-out;font-family:Roboto, Arial, sans-serif;font-style:normal;font-variant-caps:normal;orphans:auto;text-align:start;text-indent:0;text-transform:none;white-space:normal;widows:auto;word-spacing:0;-webkit-text-size-adjust:100%;">Google</a><span style="color:rgba(0,0,0,0.952941);font-family:Roboto, Arial, sans-serif;font-size:18px;font-style:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:auto;text-align:start;text-indent:0;text-transform:none;white-space:normal;widows:auto;word-spacing:0;-webkit-text-size-adjust:100%;background-color:rgb(255,255,255);text-decoration:none;display:inline !important;float:none;"> Arts &amp; Culture teamed up with over</span><span style="color:rgba(0,0,0,0.952941);font-family:Roboto, Arial, sans-serif;font-size:18px;font-style:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:auto;text-align:start;text-indent:0;text-transform:none;white-space:normal;widows:auto;word-spacing:0;-webkit-text-size-adjust:100%;background-color:rgb(255,255,255);text-decoration:none;display:inline !important;float:none;"><span class="Apple-converted-space">&nbsp;</span></span><a href="https://artsandculture.google.com/partner?hl=en" class="external-link" target="_blank" aria-describedby="external-disclaimer" title="(opens new window)" style="box-sizing:border-box;background-color:transparent;color:rgb(89,89,89);font-weight:normal;text-decoration:none;font-size:18px;line-height:28px;letter-spacing:normal;padding:2px 0;box-shadow:rgb(89,89,89) 0 -2px 0 inset;transition:all .1s ease-in-out;font-family:Roboto, Arial, sans-serif;font-style:normal;font-variant-caps:normal;orphans:auto;text-align:start;text-indent:0;text-transform:none;white-space:normal;widows:auto;word-spacing:0;-webkit-text-size-adjust:100%;">500 museums and galleries</a><span style="color:rgba(0,0,0,0.952941);font-family:Roboto, Arial, sans-serif;font-size:18px;font-style:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:auto;text-align:start;text-indent:0;text-transform:none;white-space:normal;widows:auto;word-spacing:0;-webkit-text-size-adjust:100%;background-color:rgb(255,255,255);text-decoration:none;display:inline !important;float:none;"><span class="Apple-converted-space">&nbsp;</span></span><span style="color:rgba(0,0,0,0.952941);font-family:Roboto, Arial, sans-serif;font-size:18px;font-style:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:auto;text-align:start;text-indent:0;text-transform:none;white-space:normal;widows:auto;word-spacing:0;-webkit-text-size-adjust:100%;background-color:rgb(255,255,255);text-decoration:none;display:inline !important;float:none;">around the world to bring anyone and everyone virtual tours and online exhibits of some of the most famous</span><span style="color:rgba(0,0,0,0.952941);font-family:Roboto, Arial, sans-serif;font-size:18px;font-style:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:auto;text-align:start;text-indent:0;text-transform:none;white-space:normal;widows:auto;word-spacing:0;-webkit-text-size-adjust:100%;background-color:rgb(255,255,255);text-decoration:none;display:inline !important;float:none;"><span class="Apple-converted-space">&nbsp;</span></span><a href="https://www.travelandleisure.com/attractions/museums-galleries/best-american-museums" style="box-sizing:border-box;background-color:transparent;color:rgb(89,89,89);font-weight:normal;text-decoration:none;font-size:18px;line-height:28px;letter-spacing:normal;padding:2px 0;box-shadow:rgb(89,89,89) 0 -2px 0 inset;transition:all .1s ease-in-out;font-family:Roboto, Arial, sans-serif;font-style:normal;font-variant-caps:normal;orphans:auto;text-align:start;text-indent:0;text-transform:none;white-space:normal;widows:auto;word-spacing:0;-webkit-text-size-adjust:100%;">museums</a><span style="color:rgba(0,0,0,0.952941);font-family:Roboto, Arial, sans-serif;font-size:18px;font-style:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:auto;text-align:start;text-indent:0;text-transform:none;white-space:normal;widows:auto;word-spacing:0;-webkit-text-size-adjust:100%;background-color:rgb(255,255,255);text-decoration:none;display:inline !important;float:none;"><span class="Apple-converted-space">&nbsp;</span></span><span style="color:rgba(0,0,0,0.952941);font-family:Roboto, Arial, sans-serif;font-size:18px;font-style:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:auto;text-align:start;text-indent:0;text-transform:none;white-space:normal;widows:auto;word-spacing:0;-webkit-text-size-adjust:100%;background-color:rgb(255,255,255);text-decoration:none;display:inline !important;float:none;">around the world..</span>&#8221;</p>
+<p><img data-attachment-id="143" data-permalink="https://collegeinthetimeofcoronavirus.com/2020/03/15/these-12-famous-museums-offer-virtual-tours-you-can-take-on-your-couch-video/galleria-degli-uffizi/" data-orig-file="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5540.jpg" data-orig-size="1600,1000" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;Getty Images&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1584013393&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;Galleria degli Uffizi&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="Galleria degli Uffizi" data-image-description="" data-medium-file="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5540.jpg?w=300" data-large-file="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5540.jpg?w=739" src="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5540.jpg?w=739" class="size-full wp-image-143" srcset="https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5540.jpg?w=739 739w, https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5540.jpg?w=1478 1478w, https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5540.jpg?w=150 150w, https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5540.jpg?w=300 300w, https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5540.jpg?w=768 768w, https://collegeinthetimeofcoronavirus.files.wordpress.com/2020/03/img_5540.jpg?w=1024 1024w" sizes="(max-width: 739px) 100vw, 739px"  ></p>
+
+			</div><!-- .entry-content -->
+
+    <footer class="entry-footer">
+            </footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+			
+			
+	<nav class="navigation posts-navigation" role="navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Posts navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://collegeinthetimeofcoronavirus.com/page/2/" >Older posts</a></div></div>
+	</nav>
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+		</div><!-- #content -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+			
+			<div class="site-info">
+				<a href="https://wordpress.com/?ref=footer_blog" rel="nofollow">Blog at WordPress.com.</a>
+				
+							</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+	</div><!-- #page -->
+</div><!-- .site-wrapper -->
+
+		<script type="text/javascript">
+		//<![CDATA[
+		var infiniteScroll = JSON.parse( decodeURIComponent( '%7B%22settings%22%3A%7B%22id%22%3A%22main%22%2C%22ajaxurl%22%3A%22https%3A%5C%2F%5C%2Fcollegeinthetimeofcoronavirus.com%5C%2F%3Finfinity%3Dscrolling%22%2C%22type%22%3A%22scroll%22%2C%22wrapper%22%3Afalse%2C%22wrapper_class%22%3A%22infinite-wrap%22%2C%22footer%22%3A%22masthead%22%2C%22click_handle%22%3A%221%22%2C%22text%22%3A%22Older%20posts%22%2C%22totop%22%3A%22Scroll%20back%20to%20top%22%2C%22currentday%22%3A%2215.03.20%22%2C%22order%22%3A%22DESC%22%2C%22scripts%22%3A%5B%5D%2C%22styles%22%3A%5B%5D%2C%22google_analytics%22%3Afalse%2C%22offset%22%3A0%2C%22history%22%3A%7B%22host%22%3A%22collegeinthetimeofcoronavirus.com%22%2C%22path%22%3A%22%5C%2Fpage%5C%2F%25d%5C%2F%22%2C%22use_trailing_slashes%22%3Atrue%2C%22parameters%22%3A%22%22%7D%2C%22query_args%22%3A%7B%22error%22%3A%22%22%2C%22m%22%3A%22%22%2C%22p%22%3A0%2C%22post_parent%22%3A%22%22%2C%22subpost%22%3A%22%22%2C%22subpost_id%22%3A%22%22%2C%22attachment%22%3A%22%22%2C%22attachment_id%22%3A0%2C%22name%22%3A%22%22%2C%22pagename%22%3A%22%22%2C%22page_id%22%3A0%2C%22second%22%3A%22%22%2C%22minute%22%3A%22%22%2C%22hour%22%3A%22%22%2C%22day%22%3A0%2C%22monthnum%22%3A0%2C%22year%22%3A0%2C%22w%22%3A0%2C%22category_name%22%3A%22%22%2C%22tag%22%3A%22%22%2C%22cat%22%3A%22%22%2C%22tag_id%22%3A%22%22%2C%22author%22%3A%22%22%2C%22author_name%22%3A%22%22%2C%22feed%22%3A%22%22%2C%22tb%22%3A%22%22%2C%22paged%22%3A0%2C%22meta_key%22%3A%22%22%2C%22meta_value%22%3A%22%22%2C%22preview%22%3A%22%22%2C%22s%22%3A%22%22%2C%22sentence%22%3A%22%22%2C%22title%22%3A%22%22%2C%22fields%22%3A%22%22%2C%22menu_order%22%3A%22%22%2C%22embed%22%3A%22%22%2C%22category__in%22%3A%5B%5D%2C%22category__not_in%22%3A%5B%5D%2C%22category__and%22%3A%5B%5D%2C%22post__in%22%3A%5B%5D%2C%22post__not_in%22%3A%5B%5D%2C%22post_name__in%22%3A%5B%5D%2C%22tag__in%22%3A%5B%5D%2C%22tag__not_in%22%3A%5B%5D%2C%22tag__and%22%3A%5B%5D%2C%22tag_slug__in%22%3A%5B%5D%2C%22tag_slug__and%22%3A%5B%5D%2C%22post_parent__in%22%3A%5B%5D%2C%22post_parent__not_in%22%3A%5B%5D%2C%22author__in%22%3A%5B%5D%2C%22author__not_in%22%3A%5B%5D%2C%22posts_per_page%22%3A7%2C%22ignore_sticky_posts%22%3Afalse%2C%22suppress_filters%22%3Afalse%2C%22cache_results%22%3Afalse%2C%22update_post_term_cache%22%3Atrue%2C%22lazy_load_term_meta%22%3Atrue%2C%22update_post_meta_cache%22%3Atrue%2C%22post_type%22%3A%22%22%2C%22nopaging%22%3Afalse%2C%22comments_per_page%22%3A%2250%22%2C%22no_found_rows%22%3Afalse%2C%22order%22%3A%22DESC%22%7D%2C%22last_post_date%22%3A%222020-03-15%2000%3A56%3A39%22%2C%22stats%22%3A%22blog%3D174138073%26v%3Dwpcom%26tz%3D0%26user_id%3D0%26subd%3Dcollegeinthetimeofcoronavirus%26x_pagetype%3Dinfinite%22%7D%7D' ) );
+		//]]>
+		</script>
+		<!--  -->
+<script src='//0.gravatar.com/js/gprofiles.js?ver=202012y'></script>
+<script>
+var WPGroHo = {"my_hash":""};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781h'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	</div>
+<script>
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"https:\/\/collegeinthetimeofcoronavirus.wordpress.com\/public.api\/connect\/?action=request&domain=collegeinthetimeofcoronavirus.com","logoutURL":"https:\/\/collegeinthetimeofcoronavirus.wordpress.com\/wp-login.php?action=logout&_wpnonce=b2fdac2926","homeURL":"https:\/\/collegeinthetimeofcoronavirus.com\/","postID":"157","gravDefault":"identicon","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"0","userIsLoggedIn":"","isJetpack":"","text_direction":"ltr"};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??/wp-content/js/jquery/jquery.autoresize.js,/wp-content/mu-plugins/highlander-comments/script.js?m=1573483029j'></script>
+		<div id="infinite-footer">
+			<div class="container">
+				<div class="blog-info">
+					<a id="infinity-blog-title" href="https://collegeinthetimeofcoronavirus.com/" rel="home">
+						College in the Time of Coronavirus					</a>
+				</div>
+				<div class="blog-credits">
+					<a href="https://wordpress.com/?ref=footer_blog" rel="nofollow">Blog at WordPress.com.</a> 				</div>
+			</div>
+		</div><!-- #infinite-footer -->
+		
+	<div id="carousel-reblog-box">
+		<form action="#" name="carousel-reblog">
+			<textarea id="carousel-reblog-content" name="carousel-reblog-content" placeholder="Add your thoughts here... (optional)"></textarea>
+			<label for="carousel-reblog-to-blog-id" id="carousel-reblog-lblogid">Post to</label>
+			<select name="carousel-reblog-to-blog-id" id="carousel-reblog-to-blog-id">
+						</select>
+
+			<div class="submit">
+				<span class="canceltext"><a href="#" class="cancel">Cancel</a></span>
+				<input type="submit" name="carousel-reblog-submit" class="button" id="carousel-reblog-submit" value="Reblog Post" />
+				<input type="hidden" id="carousel-reblog-blog-id" value="174138073" />
+				<input type="hidden" id="carousel-reblog-blog-url" value="https://collegeinthetimeofcoronavirus.com" />
+				<input type="hidden" id="carousel-reblog-blog-title" value="College in the Time of Coronavirus" />
+				<input type="hidden" id="carousel-reblog-post-url" value="" />
+				<input type="hidden" id="carousel-reblog-post-title" value="" />
+			</div>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="58fdd1f103" /><input type="hidden" name="_wp_http_referer" value="/" />		</form>
+
+		<div class="arrow"></div>
+	</div>
+<link rel='stylesheet' id='all-css-0-3' href='https://s0.wp.com/_static/??-eJx9jNEKwjAMRX/IGGQW5oP4LV0XS7esLUmK7O+d4ERffDz3cg4+KoSSjbJh5RZTVoxtw4EkwsAlzIoTWfVhBvZraQZR0ojv6y6bfAyqB/wqLQ32WPBSmhJ/IvvwT7LENEL0zCTrL72023I9ub7ru/PFuekJkfFIxQ==?cssminify=yes' type='text/css' media='all' />
+<script>
+var libreadminbar = [""];
+</script>
+<script>
+var actionbardata = {"siteID":"174138073","siteName":"College in the Time of Coronavirus","siteURL":"https:\/\/collegeinthetimeofcoronavirus.com","icon":"<img alt='' src='https:\/\/s0.wp.com\/i\/logo\/wpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/libre-2","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Fcollegeinthetimeofcoronavirus.com%2F2020%2F03%2F18%2Fwant-to-watch-netflix-with-your-socially-distanced-friends-heres-how-via-vulture%2F&signup_flow=account&domain=collegeinthetimeofcoronavirus.com","themeURL":"https:\/\/wordpress.com\/theme\/libre-2\/","xhrURL":"https:\/\/collegeinthetimeofcoronavirus.com\/wp-admin\/admin-ajax.php","nonce":"96ce0d996d","isSingular":"","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"1fa0c10708\" \/>","referer":"https:\/\/collegeinthetimeofcoronavirus.com\/","canFollow":"1","feedID":"104214754","statusMessage":"","customizeLink":"https:\/\/collegeinthetimeofcoronavirus.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Fcollegeinthetimeofcoronavirus.wordpress.com%2F","i18n":{"view":"View site","follow":"Follow","following":"Following","edit":"Edit","login":"Log in","signup":"Sign up","customize":"Customize","report":"Report this content","themeInfo":"Get theme: Libre 2","shortlink":"Copy shortlink","copied":"Copied","followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/read\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar","editSubs":"Manage subscriptions","viewReader":"View site in Reader","viewReadPost":"View post in Reader","subscribe":"Sign me up","enterEmail":"Enter your email address","followers":"","alreadyUser":"Already have a WordPress.com account? <a href=\"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Fcollegeinthetimeofcoronavirus.com%2F2020%2F03%2F18%2Fwant-to-watch-netflix-with-your-socially-distanced-friends-heres-how-via-vulture%2F&signup_flow=account&domain=collegeinthetimeofcoronavirus.com\">Log in now.<\/a>","stats":"Stats"}};
+</script>
+<script>
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/collegeinthetimeofcoronavirus.com\/wp-admin\/admin-ajax.php","nonce":"17d5061c7a","display_exif":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/collegeinthetimeofcoronavirus.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fcollegeinthetimeofcoronavirus.com%2F2020%2F03%2F18%2Fgood-practices-for-return-to-school-work%2F","blog_id":"174138073","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Reblog","reblogged":"Reblogged","reblog_add_thoughts":"Add your thoughts here... (optional)","reblogging":"Reblogging...","post_reblog":"Post Reblog","stats_query_args":"blog=174138073&v=wpcom&tz=0&user_id=0&subd=collegeinthetimeofcoronavirus","is_public":"1","reblog_enabled":""};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJydUttOwzAM/SGysKkV7AHxLWniFnduEsVOu/49abVNMEE1eImOL+f4Fj1FZYMX8KJ71g5GtBDPu56f9JfQkFWk3KFnjb5FjzLfwDUXvaXsgFcdZNEjeBfSEoqB5haJdgP6e+mrbpuJFKOAAoeCvrtU1HV1rA51fdQNheIMLKwKtKdLFYTp/5pQmpTCy15cmPxFeH35PnhfRT5gKOPG3GjCJoE6LKOv8LFUb0bsjGB4UJpPGBWhP6k22Myqxa1DGVe2rRqT9GBYIBWkwggp4XKkm++PCpJMWc0WyS4DLaQb2si2JoXMQLoHiUVZXR0//Sqe2tD0YOW3e49ltKANM8hKWO2YgLcaFiRwqjNEkObvVmG9D2/7+rXaP+9fqrr/BII0Lqs='></script>
+<script type='text/javascript'>
+( 'fetch' in window ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?m=1573572739h&#038;ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?m=1540208548h&#038;ver=3.26.0-0"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?m=1550600082h&#038;ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?m=1540208548h&#038;ver=2.0.2"></scr' + 'ipt>' );
+</script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script type="text/javascript">
+			jQuery.extend( infiniteScroll.settings.scripts, ["jquery-core","jquery-migrate","jquery","postmessage","mobile-useragent-info","spin","jquery.spin","grofiles-cards","wpgroho","jquery.autoresize","highlander-comments","devicepx","the-neverending-homepage","wp-polyfill","blog-posts-block-view","event-countdown-js","libre-2-script","libre-2-navigation","libre-2-skip-link-focus-fix","wpcom-masterbar-js","wpcom-masterbar-tracks-js","wpcom-actionbar-bar","jetpack-carousel","swfobject","videopress","tiled-gallery"] );
+			jQuery.extend( infiniteScroll.settings.styles, ["wpcom-smileys","the-neverending-homepage","wp-block-library","jetpack-layout-grid","jetpack-ratings","jetpack-event-countdown","jetpack-timeline","blog-posts-block-view","coblocks-frontend","posts-list-block-style","wpcom-core-compat-playlist-styles","wpcom-bbpress2-staff-css","libre-2-style","libre-2-block-style","geo-location-flair","reblogging","a8c-global-print","wpcom-actionbar-bar","jetpack-global-styles-frontend-style","libre-2-wpcom","h4-global","libre-2-fonts","highlander-comments","highlander-comments-ie7","wpcom-layout-grid-front","jetpack-carousel","tiled-gallery"] );
+		</script><script src="//stats.wp.com/w.js?61" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'174138073','blog_tz':'0','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'174138073','v':'wpcom','tz':'0','user_id':'0','subd':'collegeinthetimeofcoronavirus'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1mJVY3bm9aR3VCbS9mWm1pRyZuJS1LX1t5NE84SWQsc2J8a3kvOS9ufHlFc2gmTk9WWlF2Lit2cCVUNnFGN2FKMVkuU2cxa3g1SThLSFg/RDFXZF9ydFZhdk1KNklFK2J6SSUvZnx4QTJwLi0uTVMrRENYbyVWfGk2TCZVeldLMis9OXM2Qy0sX0IrY2JbSVImLyVQbmNyJj92Qzg4Llt+LXoxVHJRdlhpYmNXRGtGSkhQaCZodCtROGpUTFFObS5ib3xGSGNJNmdjSz0wc1FpT1dUen5QJTdiQnBOVS1ZeUUxYl9TQXJQcV1bUnhbRXhQRCxbLGZBRmk='}]);
+_stq.push([ 'clickTrackerInit', '174138073', '0' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+</body>
+</html>
+<!--
+	generated in 0.138 seconds
+	65689 bytes batcached for 300 seconds
+-->

@@ -1,0 +1,149 @@
+
+<!doctype html>
+<!--
+                                     Made With ❤ By
+
+ _____ _           ___                                _    _ _ _
+|_   _| |__   ___ / _ \ _ __ __ _ _ __   __ _  ___   / \  | | (_) __ _ _ __   ___ ___
+  | | | '_ \ / _ \ | | | '__/ _` | '_ \ / _` |/ _ \ / _ \ | | | |/ _` | '_ \ / __/ _ \
+  | | | | | |  __/ |_| | | | (_| | | | | (_| |  __// ___ \| | | | (_| | | | | (_|  __/
+  |_| |_| |_|\___|\___/|_|  \__,_|_| |_|\__, |\___/_/   \_\_|_|_|\__,_|_| |_|\___\___|
+                                        |___/
+
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>The Orange Alliance</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="https://theorangealliance.org/assets/imgs/favicon.png">
+    <meta name="theme-color" content="#f89808">
+
+    <style>
+      .header {
+        background: #f89808;
+        color: rgba(0, 0, 0, 0.75);
+      }
+      .header a, .header a:hover {
+        color: unset !important;
+      }
+      .media {
+        align-items: center !important;
+      }
+      .media svg {
+        fill: rgba(0, 0, 0, 0.12);
+      }
+      .media img, .media svg {
+        margin-right: 1rem;
+        border-radius: .5rem;
+        width: 36px;
+        height: 36px;
+      }
+      hr {
+        margin: 2px 0;
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <main role="main" class="container">
+      <div class="d-flex align-items-center p-3 my-3 header rounded shadow-sm">
+        <img class="mr-3" src="./imgs/logo.png" width="48" height="48" title="The Orange Alliance Logo">
+        <div class="lh-100">
+          <h6 class="mb-0 text-black lh-100">Activities</h6>
+          <small>Powered by <a href="https://revrobotics.com" target="_blank">REV Robotics</a> & <a href="https://theorangealliance.org" target="_blank">The Orange Alliance</a></small>
+        </div>
+      </div>
+
+      <div class="my-3 p-3 pb-0 bg-white rounded shadow-sm">
+        <h6 class="pb-1 mb-0">Welcome!</h6>
+        <div class="text-secondary pb-1">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/>
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>
+          Duis aute irure dolor in reprehenderit in voluptate. 
+        </div>
+      </div>
+
+      <div class="my-3 p-3 pb-0 bg-white rounded shadow-sm">
+        <h6 class="border-bottom border-gray pb-2 mb-1">Games</h6>
+
+        <div class="media text-muted py-2">
+          <img src="./imgs/minecraft.png" title="Minecraft Logo">
+          <p class="media-body mb-0 small lh-125">
+            <strong class="d-block text-dark">Minecraft</strong>
+            Join our <i>FIRST</i> Minecraft server!<br/>
+            Server Address: <code>mc.theorangealliance.org:25600</code>
+          </p>
+        </div>
+      </div>
+
+      <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <h6 class="border-bottom border-gray pb-2 mb-1">Coding Challenges</h6>
+
+        <div class="media text-muted py-2">
+          <img src="./imgs/website.png" title="Website Icon">
+          <p class="media-body mb-0 small lh-125">
+            <strong class="d-block text-dark">Create Your Personal Website</strong>
+            Build a personal website that shows off your projects, interests, and skills.
+          </p>
+        </div>
+        <hr>
+        <div class="media text-muted py-2">
+          <img src="./imgs/password.png" title="Lock Icon">
+          <p class="media-body mb-0 small lh-125">
+            <strong class="d-block text-dark">Random Password Generator</strong>
+            Create a Python script to generate a random password of 12 characters.
+          </p>
+        </div>
+        <hr>
+        <div class="media text-muted py-2">
+          <img src="./imgs/computer-vision.png" title="Computer Vision Icon">
+          <p class="media-body mb-0 small lh-125">
+            <strong class="d-block text-dark">Identify the height of this Skyscraper
+            </strong>
+            Coming Soon!
+            <!-- OpenCV or TensorFlow -->
+          </p>
+        </div>
+        <hr/>
+        <small class="d-block text-right mt-3">
+          <a href="https://www.hackerrank.com" target="_blank">See more challenges at HackerRank</a>
+        </small>    
+      </div>
+
+      <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <h6 class="border-bottom border-gray pb-2 mb-1">Design Challenges</h6>
+
+        <div class="media text-muted py-2">
+          <svg xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%"/></svg>
+          <p class="media-body mb-0 small lh-125">
+            <strong class="d-block text-dark">Title</strong>
+            Description
+          </p>
+        </div>
+        <hr>
+        <div class="media text-muted py-2">
+          <svg xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%"/></svg>
+          <p class="media-body mb-0 small lh-125">
+            <strong class="d-block text-dark">Title</strong>
+            Description
+          </p>
+        </div>
+        <hr>
+        <div class="media text-muted py-2">
+          <svg xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%"/></svg>
+          <p class="media-body mb-0 small lh-125">
+            <strong class="d-block text-dark">Title</strong>
+            Description
+          </p>
+        </div>
+      </div>
+    </main>
+</html>

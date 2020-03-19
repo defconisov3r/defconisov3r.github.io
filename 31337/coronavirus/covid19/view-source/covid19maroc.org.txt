@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Cas suspects d'infection au Covid-19 : Que faire ? </title>
+    <title>Cas suspect d'infection au Covid-19 : Que faire ? </title>
     <meta charset="utf-8" />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
@@ -10,8 +10,8 @@
     <meta name="author" content="Mohammed KABBAJ">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css?v=1.0.0">
-    <script src="js/js.js?n=1.0.3"></script>
+    <link rel="stylesheet" href="css/style.css?v=1.0.1">
+    <script src="js/js.js?n=1.1.0"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -22,18 +22,57 @@
     <style>
         /*
         -----------------------------------------------
+        Name           : CNN 2020
         Author         : Mohammed KABBAJ
         Author  Email  : kabbajmohammedmk@gmail.com
-        Date           : Mars 2020
+        Date           : Fevrier 2020
         -----------------------------------------------
         */
     </style>
+    <script>
+         eta = 0;
+         //alert(eta);
+        var morte = "";
+        var geri = "";
+        var infec = "";
+        var no = "";
+        var arrayData ="";
+    </script>
 
 </head>
 
 <body onload="load()">
+    <script>
+    
+       /* $(function() {
+            startRefresh();
+        });*/
+    </script>
     <header>
-        <img src="img/header1.jpg" width="100%" height="auto">
+        <img src="img/header.jpg" width="100%" height="auto">
+        <!--
+        <div id="news-bar">
+            <script>
+            
+                   setInterval("startRefresh();",5000);    
+        
+                    function startRefresh() {
+                          //setTimeout(startRefresh,5000);
+                          $.get('php/countCo.php', function(data) {
+                              // alert("Med");
+                               $("#list").html(data);    
+                          });
+                     }
+            </script>
+              <marquee direction="left" scrollamount="3" behavior="scroll" onmouseover="this.stop()" onmouseout="this.start()" id="newsBar">
+                  
+                  <script>
+            //alert("Hello WOrld");
+                      document.getElementById("newsBar").innerHTML="<a href='#'>Nombre de cas confirmer : "+infec+"</a><span> -*- </span>";
+                  </script>
+              </marquee>
+        </div>
+-->
     </header>
     <div class="jumbotron text-center" id="form">
         <!--
@@ -42,7 +81,7 @@
         <form id="form_Epo">
             <div id="f_1">
                 <div>
-                    <h1>Formulaire d'inscription à la vidéoconférence:<strong>Cas suspects d'infection au Covid-19 : Que faire ?</strong> </h1><br>
+                    <h1>Formulaire d'inscription à la vidéoconférence:<strong>Cas suspect d'infection au Covid-19 : Que faire ?</strong> </h1><br>
                     <h1 style="font-size:23px ;font-weight: bold">Recommandations</h1>
                     <div>
                         <br>
@@ -52,7 +91,10 @@
                             <li><em style="color: red">Ce site n'est pas destiné au public</em></li>
                         </ul>
                         <br> <br>
-                        <input class="button" type="button" value="S'inscrire" onclick="display_F_2()">
+                        <div id="butonNav">
+                            <input class="button" type="button" value="S'inscrire" onclick="display_F_2()">
+                            <input class="button" type="button" value="S'identifier" onclick="shwoLogin()">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -94,6 +136,9 @@
                             <td>
                                 <select id="l_spec" name="l_spec" class="text" onchange="ver_spec(this)">
                                     <option value="Généraliste">Généraliste</option>
+                                    <option value="Etudiants">Etudiants</option>
+                                    <option value="Infirmiers">Infirmiers</option>
+                                    <option value="Pharmacien">Pharmacien</option>
                                     <option value="Spécialiste">Spécialiste</option>
                                 </select>
                             </td>
@@ -146,7 +191,7 @@
                         <br> <br>
                     <input type="hidden" id="h_vill" name="h_vill" Value="Fès" class="hd">
                     <input type="hidden" id="h_spes" name="h_spes" Value="Généraliste" class="hd">
-                    <div><input class="button" type="button" value="S'inscrire" onclick="validate()"></div>
+                    <div ><input class="button" type="button" value="S'inscrire" onclick="validate()"></div>
             
                 </div>
             </div>
@@ -156,6 +201,10 @@
             <div class="container1" >
                  <h1>Nous avons bien reçu votre demande d'inscription</h1>
             </div>
+        </div>
+        
+    
+        <div id="loginDiv">
         </div>
         <br>
         <br>

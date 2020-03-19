@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<title>Love in the time of coronavirus* &#8211; Musings in uncertain times</title>
+
+<!-- Async WordPress.com Remote Login -->
+<script id="wpcom_remote_login_js">
+var wpcom_remote_login_extra_auth = '';
+function wpcom_remote_login_remove_dom_node_id( element_id ) {
+	var dom_node = document.getElementById( element_id );
+	if ( dom_node ) { dom_node.remove(); }
+}
+function wpcom_remote_login_remove_dom_node_classes( class_name ) {
+	var dom_nodes = document.querySelectorAll( '.' + class_name );
+	for ( var i = 0; i < dom_nodes.length; i++ ) {
+		dom_nodes[i].remove();
+	}
+}
+function wpcom_remote_login_final_cleanup() {
+	wpcom_remote_login_remove_dom_node_classes( "wpcom_remote_login_msg" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_validate" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_js" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_iframe" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_styles" );
+}
+
+// Watch for messages back from the remote login
+window.addEventListener( "message", function( e ) {
+	if ( e.origin === "https://r-login.wordpress.com" ) {
+		var data = {};
+		try {
+			data = JSON.parse( e.data );
+		} catch( e ) {
+			wpcom_remote_login_final_cleanup();
+			return;
+		}
+
+		if ( data.msg === 'LOGIN' ) {
+			// Clean up the login check iframe
+			wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+
+			var id_regex = new RegExp( /^[0-9]+$/ );
+			var token_regex = new RegExp( /^.*|.*|.*$/ );
+			if (
+				token_regex.test( data.token )
+				&& id_regex.test( data.wpcomid )
+			) {
+				// We have everything we need to ask for a login
+				var script = document.createElement( "script" );
+				script.setAttribute( "id", "wpcom_remote_login_validate" );
+				script.src = '/remote-login.php?wpcom_remote_login=validate'
+					+ '&wpcomid=' + data.wpcomid
+					+ '&token=' + encodeURIComponent( data.token )
+					+ '&host=' + window.location.protocol
+						+ '//' + window.location.hostname;
+				document.body.appendChild( script );
+			}
+
+			return;
+		}
+
+		// Safari ITP, not logged in, so redirect
+		if ( data.msg === 'LOGIN-REDIRECT' ) {
+			window.location = 'https://wordpress.com/log-in?redirect_to=' + window.location.href;
+			return;
+		}
+
+		// Safari ITP, storage access failed, remove the request
+		if ( data.msg === 'LOGIN-REMOVE' ) {
+			var css_zap = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } @media screen and ( max-width: 782px ) { html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } }';
+			var style_zap = document.createElement( 'style' );
+			style_zap.type = 'text/css';
+			style_zap.appendChild( document.createTextNode( css_zap ) );
+			document.body.appendChild( style_zap );
+
+			var e = document.getElementById( 'wpcom_request_access_iframe' );
+			e.parentNode.removeChild( e );
+
+			document.cookie = 'wordpress_com_login_access=denied; path=/; max-age=31536000';
+
+			return;
+		}
+
+		// Safari ITP
+		if ( data.msg === 'REQUEST_ACCESS' ) {
+			console.log( 'request access: safari' );
+
+			// Check ITP iframe enable/disable knob
+			if ( wpcom_remote_login_extra_auth !== 'safari_itp_iframe' ) {
+				return;
+			}
+
+			// If we are in a "private window" there is no ITP.
+			var private_window = false;
+			try {
+				var opendb = window.openDatabase( null, null, null, null );
+			} catch( e ) {
+				private_window = true;
+			}
+
+			if ( private_window ) {
+				console.log( 'private window' );
+				return;
+			}
+
+			var iframe = document.createElement( 'iframe' );
+			iframe.id = 'wpcom_request_access_iframe';
+			iframe.setAttribute( 'scrolling', 'no' );
+			iframe.setAttribute( 'sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-top-navigation-by-user-activation' );
+			iframe.src = 'https://r-login.wordpress.com/remote-login.php?wpcom_remote_login=request_access&origin=' + encodeURIComponent( data.origin ) + '&wpcomid=' + encodeURIComponent( data.wpcomid );
+
+			var css = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 46px !important; } * html body { margin-top: 46px !important; } @media screen and ( max-width: 660px ) { html { margin-top: 71px !important; } * html body { margin-top: 71px !important; } #wpcom_request_access_iframe { display: block; height: 71px !important; } } #wpcom_request_access_iframe { border: 0px; height: 46px; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 99999; background: #23282d; } ';
+
+			var style = document.createElement( 'style' );
+			style.type = 'text/css';
+			style.id = 'wpcom_request_access_styles';
+			style.appendChild( document.createTextNode( css ) );
+			document.body.appendChild( style );
+
+			document.body.appendChild( iframe );
+		}
+
+		if ( data.msg === 'DONE' ) {
+			wpcom_remote_login_final_cleanup();
+		}
+	}
+}, false );
+
+// Inject the remote login iframe after the page has had a chance to load
+// more critical resources
+window.addEventListener( "DOMContentLoaded", function( e ) {
+	var iframe = document.createElement( "iframe" );
+	iframe.style.display = "none";
+	iframe.setAttribute( "scrolling", "no" );
+	iframe.setAttribute( "id", "wpcom_remote_login_key" );
+	iframe.src = "https://r-login.wordpress.com/remote-login.php"
+		+ "?wpcom_remote_login=key"
+		+ "&origin=aHR0cHM6Ly9sb3ZlaW50aGV0aW1lb2Zjb3JvbmF2aXJ1cy5saWZl"
+		+ "&wpcomid=173976183"
+		+ "&time=1584642276";
+	document.body.appendChild( iframe );
+}, false );
+</script>
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//loveinthetimeofcovid19.wordpress.com' />
+<link rel='dns-prefetch' href='//wordpress.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Love in the time of coronavirus* &raquo; Feed" href="https://loveinthetimeofcoronavirus.life/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Love in the time of coronavirus* &raquo; Comments Feed" href="https://loveinthetimeofcoronavirus.life/comments/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s0.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1582709031h&ver=5.4-RC1-47426"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='all-css-0-1' href='https://s0.wp.com/_static/??-eJylk9tugzAMhl9oIaUFdb2Y9iwcPOY2BxQ7Rbz9DKFTR7WtEjdRbOf7/Stx9NCrxjsGx9pG1ZvYoSM99I23iiwaGFdR1hC96DvsxnRRwhpCJ5UA+pgdsp2uI5pW18Y3F2WwDlUYNfFoYLsMf4J9RmamSJ+B+2rCq9FHVl3A9mknK4lQMbqO/sE/ojGKkEFBixOw3K4ui1OxL8uThqucFy46bv3gUpvNqjeXjBYMOtgsKLYk6Ylpcdgisb4iDL+KNn65sjzb77JczROUuFTIkqn5XTdYS66M6N5bW2cfGtxN+jRkkrd9xdMJK50qMDJZjv/C0peo6z4AkZLVYrRqHsnHH/KjnZ2kxdwFJKJVJqGonWcUmr43U+HdvuXla5Hv8mNRnr8ActRg3A==?cssminify=yes' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify {
+	text-align:justify;
+}
+</style>
+<link rel='stylesheet' id='print-css-1-1' href='https://s0.wp.com/wp-content/themes/pub/varia/print.css?m=1571655471h&cssminify=yes' type='text/css' media='print' />
+<link rel='stylesheet' id='all-css-2-1' href='https://s0.wp.com/_static/??-eJx9i9EKwjAMAH/IGqaTPonf0pXYRdKktOmGf+/EF0Xx7Q7uYC0uqhiKgc2YsUHpE8y4YIVmd8Z9bG0Hv7MlVApAEl+pW0vU/DXk7gr3RNIgoTrWGIxUPsRdOVD9t1acWNOGCbbqTZ/TJZ+Hk/fD4TiO/vYAjSBOww==?cssminify=yes' type='text/css' media='all' />
+<link crossorigin="anonymous" rel='stylesheet' id='hever-fonts-css'  href='https://fonts.googleapis.com/css?family=PT%2BSans%3A400%2C400i%2C700%2C700i&#038;subset=latin%2Clatin-ext' media='all' />
+<link rel='stylesheet' id='all-css-4-1' href='https://s0.wp.com/_static/??-eJx9kNsKwjAMhl/IGictugvxWdratdGuHUuq+PZ2sKEy2FUS+P4DgdcgbE7sEgMH1zuCoRgI7ulGIH5Ht7dEO/jB+iKGWDwmAm0ZczJ6/G4rfGG7EqMgZCfcDRmTn11AyVYelWrBx2x0ZaZUquGa0YKJOj22OgyZWHRRY+0b9FiNl7mlomyxZsXs8/+xEs1fCXLuNwHX/tKos2wOzUmq+wfwindB?cssminify=yes' type='text/css' media='all' />
+<style id='jetpack-global-styles-frontend-style-inline-css'>
+:root { --font-headings: unset; --font-base: unset; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+</style>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJx9zUsKgDAMBNALWYtIixvxLH6itJhUmxTx9lbQnQgDs5gHo49NORrXNAFrn7MniOdTpedC/wGFbom9QImOXjwGEiC57RZYEJj7BT5WDINbQSWGmAFJvplDdh22lTFNbaw1tb8AOGU7DA=='></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://loveinthetimeofcovid19.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s0.wp.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress.com" />
+<link rel="canonical" href="https://loveinthetimeofcoronavirus.life/" />
+<link rel='shortlink' href='https://wp.me/PbLZ9t-5' />
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Floveinthetimeofcoronavirus.life%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Floveinthetimeofcoronavirus.life%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Love in the time of coronavirus*" />
+<meta property="og:description" content="Musings in uncertain times" />
+<meta property="og:url" content="https://loveinthetimeofcoronavirus.life/" />
+<meta property="og:site_name" content="Love in the time of coronavirus*" />
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+<meta name="twitter:text:title" content="Love in the time of&nbsp;coronavirus*" />
+<meta name="twitter:card" content="summary" />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="shortcut icon" type="image/x-icon" href="https://s0.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="icon" type="image/x-icon" href="https://s0.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="apple-touch-icon" href="https://s0.wp.com/i/webclip.png" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://loveinthetimeofcoronavirus.life/osd.xml" title="Love in the time of coronavirus*" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<meta name="application-name" content="Love in the time of coronavirus*" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="Musings in uncertain times" /><meta name="msapplication-task" content="name=Subscribe;action-uri=https://loveinthetimeofcoronavirus.life/feed/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="description" content="*Full disclosure: I&#039;ve never read Love in the Time of Cholera, and credit Gabriel García Márquez for the catchy title A bit of light in the dark Follow My Blog! Get new content delivered directly to your inbox." />
+</head>
+
+<body class="home page-template-default page page-id-5 page-parent wp-embed-responsive customizer-styles-applied singular image-filters-enabled hide-homepage-title highlander-enabled highlander-light">
+
+	
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	
+		<header id="masthead" class="site-header responsive-max-width">
+
+			
+
+			<p class="site-title"><a href="https://loveinthetimeofcoronavirus.life/" rel="home">Love in the time of coronavirus*</a></p>
+	
+		<p class="site-description">
+			Musings in uncertain times		</p>
+
+							<nav id="site-navigation" class="main-navigation" aria-label="Main Navigation">
+					<input type="checkbox" role="button" aria-haspopup="true" id="toggle" class="hide-visually">
+					<label for="toggle" id="toggle-menu" class="button">
+						Menu						<span class="dropdown-icon open">+</span>
+						<span class="dropdown-icon close">&times;</span>
+						<span class="hide-visually expanded-text">expanded</span>
+						<span class="hide-visually collapsed-text">collapsed</span>
+					</label>
+					<div class="menu-primary-container"><ul id="menu-primary" class="main-menu" aria-label="submenu"><li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item menu-item-19"><a href="https://loveinthetimeofcoronavirus.life/" aria-current="page">Blog</a></li>
+<li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="https://loveinthetimeofcoronavirus.life/about/">About</a></li>
+<li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a href="https://loveinthetimeofcoronavirus.life/?page_id=7">Contact</a></li>
+</ul></div>				</nav><!-- #site-navigation -->
+			
+			
+		</header><!-- #masthead -->
+
+	
+	<div id="content" class="site-content">
+
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main">
+
+			
+<article id="post-5" class="post-5 page type-page status-publish hentry entry">
+
+	<header class="entry-header responsive-max-width">
+		
+<h1 class="entry-title">Love in the time of&nbsp;coronavirus*</h1>
+	</header>
+
+	<div class="entry-content">
+		
+<p class="has-small-font-size">*Full disclosure: I&#8217;ve never read <em>Love in the Time of Cholera,</em> and credit Gabriel García Márquez for the catchy title</p>
+
+
+
+<div class="wp-block-cover alignfull has-background-dim-20 has-background-dim" style="background-image:url('https://a8ctm1.files.wordpress.com/2019/08/adventure-calm-clouds-1.jpg');"><div class="wp-block-cover__inner-container">
+<h1 class="has-text-align-center">A bit of light in the dark</h1>
+</div></div>
+
+
+
+<div style="height:16px;" aria-hidden="true" class="wp-block-spacer desktop-only"></div>
+
+
+				<div
+			class="wp-block-newspack-blocks-homepage-articles  wpnbha show-image image-aligntop ts-4 is-3 "
+			style=""
+			>
+			<div data-posts>
+									<article data-post-id="238"
+						>
+		
+		<div class="entry-wrapper">
+			<h2 class="entry-title"><a href="https://loveinthetimeofcoronavirus.life/2020/03/18/follow-along-on-twitter/" rel="bookmark">Follow along on&nbsp;Twitter!</a></h2>						<p>&#8220;Call me, beep me, if ya wanna reach me When ya wanna [Tweet] me it&#8217;s okay&#8221; Adapted from Kim Possible theme song by Christina Milian Most original content will be posted here on the blog, but Follow me @LoveInCorona_20 for some re-Tweets and Sharing of some uplifting Internet content in this time of crisis! #LoveInTheTimeOfCoronavirus</p>
+				<div class="entry-meta">
+											<span class="byline">
+							by <span class="author vcard"><a class="url fn n" href="https://loveinthetimeofcoronavirus.life/author/LoveInCorona_20/">LoveInCorona_20</a></span>						</span><!-- .author-name -->
+						<time class="entry-date published updated" datetime="2020-03-18T22:40:26+00:00">March 18, 2020</time>				</div><!-- .entry-meta -->
+					</div><!-- .entry-wrapper -->
+	</article>
+
+			<article data-post-id="218"
+						>
+		
+		<div class="entry-wrapper">
+			<h2 class="entry-title"><a href="https://loveinthetimeofcoronavirus.life/2020/03/18/there-are-good-people-on-the-internet/" rel="bookmark">There are good people on the&nbsp;Internet</a></h2>						<p>&#8220;On the Internet, nobody knows you&#8217;re a dog.&#8221; Peter Steiner, The New Yorker (5 July 1993) I really appreciate how people are coming together virtually to support each other and build community through this crisis. In the past few days, I have been avoiding Twitter (most of it has been doom and gloom and scary<a class="more-link" href="https://loveinthetimeofcoronavirus.life/2020/03/18/there-are-good-people-on-the-internet/">Continue reading <span class="screen-reader-text">&#8220;There are good people on the&nbsp;Internet&#8221;</span></a></p>
+				<div class="entry-meta">
+											<span class="byline">
+							by <span class="author vcard"><a class="url fn n" href="https://loveinthetimeofcoronavirus.life/author/LoveInCorona_20/">LoveInCorona_20</a></span>						</span><!-- .author-name -->
+						<time class="entry-date published" datetime="2020-03-18T22:22:37+00:00">March 18, 2020</time><time class="updated" datetime="2020-03-19T16:30:20+00:00">March 19, 2020</time>				</div><!-- .entry-meta -->
+					</div><!-- .entry-wrapper -->
+	</article>
+
+					</div>
+			
+		</div>
+				
+
+
+<div style="height:16px;" aria-hidden="true" class="wp-block-spacer desktop-only"></div>
+
+
+
+<hr class="wp-block-separator is-style-wide" />
+
+
+
+<div style="height:16px;" aria-hidden="true" class="wp-block-spacer desktop-only"></div>
+
+
+
+<h4 class="has-text-align-left">Follow My Blog!</h4>
+
+
+
+<p class="has-text-align-left">Get new content delivered directly to your inbox.</p>
+
+
+
+<div class="wp-block-jetpack-subscriptions"><div class="jetpack_subscription_widget">            <form action="https://subscribe.wordpress.com" method="post" accept-charset="utf-8"
+                  id="subscribe-blog">
+									                    <p><input type="text" name="email" style="width: 95%; padding: 1px 2px"
+                              placeholder="Enter your email address" value=""
+                              id="subscribe-field"/></p>
+				
+                <p>
+                    <input type="hidden" name="action" value="subscribe"/>
+                    <input type="hidden" name="blog_id" value="173976183"/>
+                    <input type="hidden" name="source" value="https://loveinthetimeofcoronavirus.life/"/>
+                    <input type="hidden" name="sub-type" value="widget"/>
+                    <input type="hidden" name="redirect_fragment" value="547"/>
+					<input type="hidden" id="_wpnonce" name="_wpnonce" value="4cf4d617f0" />                    <button type="submit"
+	                    	                        class="undefined"
+	                    		                			                style="background-color: undefined; color: undefined;"
+		                	                >
+	                    Subscribe                    </button>
+                </p>
+            </form>
+			
+</div></div>
+	</div><!-- .entry-content -->
+
+	</article><!-- #post-5 -->
+
+		</main><!-- #main -->
+	</section><!-- #primary -->
+
+
+	</div><!-- #content -->
+
+		<footer id="colophon" class="site-footer responsive-max-width">
+	
+	<aside class="widget-area responsive-max-width" role="complementary" aria-label="Footer">
+		<section id="twitter_timeline-3" class="widget widget_twitter_timeline"><h2 class="widget-title">Follow me on Twitter</h2><a class="twitter-timeline" data-theme="light" data-border-color="#e8e8e8" data-tweet-limit="1" data-lang="EN" data-partner="jetpack" href="https://twitter.com/LoveInCorona_20" href="https://twitter.com/LoveInCorona_20">My Tweets</a></section>	</aside><!-- .widget-area -->
+
+			<nav class="footer-navigation" aria-label="Footer Menu">
+				<div class="menu-primary-container"><ul id="menu-primary-1" class="footer-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item menu-item-19"><a href="https://loveinthetimeofcoronavirus.life/" aria-current="page">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="https://loveinthetimeofcoronavirus.life/about/">About</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a href="https://loveinthetimeofcoronavirus.life/?page_id=7">Contact</a></li>
+</ul></div>			</nav><!-- .footer-navigation -->
+		
+		<div class="site-info">
+										<a class="site-name" href="https://loveinthetimeofcoronavirus.life/" rel="home">Love in the time of coronavirus*</a><span class="comma">,</span>
+						<a href="https://wordpress.com/?ref=footer_custom_svg" title="Create a website or blog at WordPress.com" rel="nofollow"><svg style="fill: currentColor; position: relative; top: 1px;" width="14px" height="15px" viewBox="0 0 14 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-labelledby="title" role="img">
+				<desc id="title">Create a website or blog at WordPress.com</desc>
+				<path d="M12.5225848,4.97949746 C13.0138466,5.87586309 13.2934037,6.90452431 13.2934037,7.99874074 C13.2934037,10.3205803 12.0351007,12.3476807 10.1640538,13.4385638 L12.0862862,7.88081544 C12.4453251,6.98296834 12.5648813,6.26504621 12.5648813,5.62667922 C12.5648813,5.39497674 12.549622,5.17994084 12.5225848,4.97949746 L12.5225848,4.97949746 Z M7.86730089,5.04801561 C8.24619178,5.02808979 8.58760099,4.98823815 8.58760099,4.98823815 C8.9267139,4.94809022 8.88671369,4.44972248 8.54745263,4.46957423 C8.54745263,4.46957423 7.52803983,4.54957381 6.86996227,4.54957381 C6.25158863,4.54957381 5.21247202,4.46957423 5.21247202,4.46957423 C4.87306282,4.44972248 4.83328483,4.96816418 5.17254589,4.98823815 C5.17254589,4.98823815 5.49358462,5.02808979 5.83269753,5.04801561 L6.81314716,7.73459399 L5.43565839,11.8651647 L3.14394256,5.04801561 C3.52312975,5.02808979 3.86416859,4.98823815 3.86416859,4.98823815 C4.20305928,4.94809022 4.16305906,4.44972248 3.82394616,4.46957423 C3.82394616,4.46957423 2.80475558,4.54957381 2.14660395,4.54957381 C2.02852925,4.54957381 1.88934333,4.54668493 1.74156477,4.54194422 C2.86690406,2.83350881 4.80113651,1.70529256 6.99996296,1.70529256 C8.638342,1.70529256 10.1302017,2.33173369 11.2498373,3.35765419 C11.222726,3.35602457 11.1962815,3.35261718 11.1683554,3.35261718 C10.5501299,3.35261718 10.1114609,3.89113285 10.1114609,4.46957423 C10.1114609,4.98823815 10.4107217,5.42705065 10.7296864,5.94564049 C10.969021,6.36482346 11.248578,6.90326506 11.248578,7.68133501 C11.248578,8.21992476 11.0413918,8.84503256 10.7696866,9.71584277 L10.1417574,11.8132391 L7.86730089,5.04801561 Z M6.99996296,14.2927074 C6.38218192,14.2927074 5.78595654,14.2021153 5.22195356,14.0362644 L7.11048207,8.54925635 L9.04486267,13.8491542 C9.05760348,13.8802652 9.07323319,13.9089317 9.08989995,13.9358945 C8.43574834,14.1661896 7.73285573,14.2927074 6.99996296,14.2927074 L6.99996296,14.2927074 Z M0.706448182,7.99874074 C0.706448182,7.08630113 0.902152921,6.22015756 1.25141403,5.43749503 L4.25357806,13.6627848 C2.15393732,12.6427902 0.706448182,10.4898387 0.706448182,7.99874074 L0.706448182,7.99874074 Z M6.99996296,0.999 C3.14016476,0.999 0,4.13905746 0,7.99874074 C0,11.8585722 3.14016476,14.999 6.99996296,14.999 C10.8596871,14.999 14,11.8585722 14,7.99874074 C14,4.13905746 10.8596871,0.999 6.99996296,0.999 L6.99996296,0.999 Z" id="wordpress-logo-simplified-cmyk" stroke="none" fill=“currentColor” fill-rule="evenodd"></path>
+			</svg></a>					</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+
+</div><!-- #page -->
+
+<!--  -->
+<script src='//0.gravatar.com/js/gprofiles.js?ver=202012y'></script>
+<script>
+var WPGroHo = {"my_hash":""};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781h'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-ad568082c52e10c92dff37546669abef">
+	</div>
+	</div>
+<link rel='stylesheet' id='all-css-0-2' href='https://s0.wp.com/wp-content/plugins/gutenberg-blocks/jetpack-layout-grid/blocks/front.css?m=1583834955h&cssminify=yes' type='text/css' media='all' />
+<script>
+var comment_like_text = {"loading":"Loading..."};
+</script>
+<script>
+var actionbardata = {"siteID":"173976183","siteName":"Love in the time of coronavirus*","siteURL":"https:\/\/loveinthetimeofcoronavirus.life","icon":"<img alt='' src='https:\/\/s0.wp.com\/i\/logo\/wpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/hever","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Floveinthetimeofcoronavirus.life%2F&signup_flow=account&domain=loveinthetimeofcoronavirus.life","themeURL":"https:\/\/wordpress.com\/theme\/hever\/","xhrURL":"https:\/\/loveinthetimeofcoronavirus.life\/wp-admin\/admin-ajax.php","nonce":"96ce0d996d","isSingular":"1","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"4cf4d617f0\" \/>","referer":"https:\/\/loveinthetimeofcoronavirus.life\/","canFollow":"1","feedID":"104258155","statusMessage":"","customizeLink":"https:\/\/loveinthetimeofcovid19.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Floveinthetimeofcovid19.wordpress.com%2F","postID":"5","shortlink":"https:\/\/wp.me\/PbLZ9t-5","canEditPost":"","editLink":"https:\/\/wordpress.com\/page\/loveinthetimeofcoronavirus.life\/5","statsLink":"https:\/\/wordpress.com\/stats\/post\/5\/loveinthetimeofcoronavirus.life","i18n":{"view":"View site","follow":"Follow","following":"Following","edit":"Edit","login":"Log in","signup":"Sign up","customize":"Customize","report":"Report this content","themeInfo":"Get theme: Hever","shortlink":"Copy shortlink","copied":"Copied","followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/read\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar","editSubs":"Manage subscriptions","viewReader":"View site in Reader","viewReadPost":"View post in Reader","subscribe":"Sign me up","enterEmail":"Enter your email address","followers":"","alreadyUser":"Already have a WordPress.com account? <a href=\"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Floveinthetimeofcoronavirus.life%2F&signup_flow=account&domain=loveinthetimeofcoronavirus.life\">Log in now.<\/a>","stats":"Stats"}};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJydUdFOwzAM/CGyUNQK9oD4FNQm3uTOcaLYacffk27rBEOaNF4i6853Pjt2TsZFVmC1o1gPEzpIx80oT7ZSyI6KBzlxKGonYB/zQqVIXzsk2gTktX11SlT2yGJ3hcgIKhjwqMh7c2Zs127bl67b2oFiBaOomFq6w2UKwnzrGYpZbV0MoUKG8HCORjhYmTHBI6JfwP83gGkxcbGw+jjzZY3TK7fknXgjaOqr8LOe3OqMqpCNYgBCvrdW7+v9zdBnG3qpmlqZOEHOuHzbFXvQQXPN8ucoP0VOMfIiula1+yO8N91b2zw3r203fgOAtOA4'></script>
+<script type='text/javascript'>
+( 'fetch' in window ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?m=1573572739h&#038;ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?m=1540208548h&#038;ver=3.26.0-0"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?m=1550600082h&#038;ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?m=1540208548h&#038;ver=2.0.2"></scr' + 'ipt>' );
+</script>
+	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="//stats.wp.com/w.js?61" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'173976183','blog_tz':'0','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'173976183','v':'wpcom','tz':'0','user_id':'0','post':'5','subd':'loveinthetimeofcovid19'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1mJVY3bm9aR3VCbS9mWm1pRyZuJS1LX1t5NE84SWQsc2J8a3kvOS9ufHlFc2gmTk9WWlF2Lit2cCVUNnFGN2FKMVkuU2cxa3g1SThLSFg/RDFXcU42RG0udEFiRzhkOEhKOWU4N0RwOVh6VGxkLm18a2ZBfFNrPXBVR0JnejkwMn5TJWpKdD1yJXV6X2dMNjU0SnJSODFGRjdJTEVKXXZZcFY5RWstL2dyXXNCciUxaEgtVSVhMndZaDZWPVdPUj9Gb0Y3Vkk9YmZnMFpOWnpudFFYZD1YVkZ8dG1palRDVnxDd2lRLmVKZjdEaD94NEFUL0Qua2J1OGo4bk5QLEJ2aFl+OC0/flZqRUIySH5QZWczaUZCXzZyS18lc11wcWhpRg=='}]);
+_stq.push([ 'clickTrackerInit', '173976183', '5' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+</body>
+</html>
+<!--
+	generated in 0.086 seconds
+	34523 bytes batcached for 300 seconds
+-->

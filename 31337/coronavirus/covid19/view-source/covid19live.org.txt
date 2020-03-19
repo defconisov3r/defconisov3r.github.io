@@ -1,0 +1,2465 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="Dd65cFos8sEE9lMkiPWNi7KFD9bIYGK1Lp/1wMip+4KnWPWd7PiiU7FfpjinLm6cLTsvEBeju2CNQoTJ11SAbA==" />
+    
+
+    <link rel="stylesheet" media="all" href="/packs/css/application-4cf4e484.css" data-turbolinks-track="reload" />
+    <script src="/packs/js/application-5b590675bf3181dfa880.js" data-turbolinks-track="reload"></script>
+
+        <title>Coronavirus Update (Live): 240,628 Cases and 9,953 Deaths from COVID-19 Virus Outbreak - Covid19 Data</title>
+
+	<meta name='description' content='Covid19 (Coronavirus) current death toll, and live data metrics. Track the number of confirmed cases, recovered cases, and death toll by country due to the COVID 19 coronavirus from Wuhan, China. Get historic, and live data for the Covid19 Corona/Wuhan virus.' />
+
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Font Awesome -->
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<!-- Add Open Graph -->
+	<!-- Facebook Card -->
+	<meta property="og:url"                content="https://covid19live.org/" />
+	<meta property="og:type"               content="website" />
+	<meta property="og:title"              content="Coronavirus Update (Live): 240,628 Cases and 9,953 Deaths from COVID-19 Virus Outbreak - Covid19 Data" />
+	<meta property="og:description"        content="Covid19 (Coronavirus) current death toll, and live data metrics. Track the number of confirmed cases, recovered cases, and death toll by country due to the COVID 19 coronavirus from Wuhan, China. Get historic, and live data for the Covid19 Corona/Wuhan virus." />
+	
+	<meta property="og:image" content="https://covid19live.org/assets/covid19-og-806f1638e7cbd894fe3e2564443881ba201a5e83ca3dd2fc32580ff7656700e1.jpg" />
+	
+
+
+	<!-- Twitter Card -->
+	<!-- <meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@oneSEOGrowth" />
+	<meta name="twitter:creator" content="@oneSEOGrowth" />
+	<meta property="og:url" content="" />
+	<meta property="og:title" content="" />
+	<meta property="og:description" content="" />
+	<meta property="og:image" content="" /> -->
+	
+	
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="https://covid19live.org/assets/favicon.ico/apple-icon-57x57-c1a420ca541d5b1616587db398ae8197c9e052d81feada257328492aeff8eb28.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://covid19live.org/assets/favicon.ico/apple-icon-60x60-078451f35c52cc750d8817610539baf2553a7eecb353106966f40589e0b4f03b.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://covid19live.org/assets/favicon.ico/apple-icon-72x72-cee084ae6411aa1385739fc0ed2be57f6efc31189e7f9697d3bc17178705b826.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://covid19live.org/assets/favicon.ico/apple-icon-76x76-8a1094b0a4800bcf8735a4dbf1811421f3938947fa15fdf9d7920a1d227a89c5.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://covid19live.org/assets/favicon.ico/apple-icon-114x114-6c20b6993cd059e955cdf1a813f11ddc6f4d31dbe27461cd7a6d904ab2e2edd3.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://covid19live.org/assets/favicon.ico/apple-icon-120x120-40eb4427e8b6f59ddb0e82ebfabf48ff48dd512a7d675f4ba7acada9f1134d07.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://covid19live.org/assets/favicon.ico/apple-icon-144x144-25fa269c26a519c1712d34313fc539564e9493be4cc49f1f006b4194233463b4.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://covid19live.org/assets/favicon.ico/apple-icon-152x152-78871a8d1f997a0c7e0cd53a5ba10e2108c08ad5a9c275785eb910c774d4b241.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://covid19live.org/assets/favicon.ico/apple-icon-180x180-4a864febd5166a5231273d0b6a14dc6a2a3f580daabf15dbe4810c8fceaedc81.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://covid19live.org/assets/favicon.ico/android-icon-192x192-8b9acbf50edbf5c559923614ecbd99b60f72dfe267f01ce70ae5d48bb3659bb4.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://covid19live.org/assets/favicon.ico/favicon-32x32-ff84f9e955f4011e7fa5c5bf084f2e740780a75455b6850eb51fdf5d402cd98c.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://covid19live.org/assets/favicon.ico/favicon-96x96-fb43c0667b5934c3fe12fb2651852157161deb687976b31c7e2e2c8c13a37b2b.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://covid19live.org/assets/favicon.ico/favicon-16x16-47338f214019ebc8c4ffaaf9f22e7d333dec4fcf9d6cdae9ddfed4156a35124f.png">
+<link rel="manifest" href="https://covid19live.org/assets/favicon.ico/manifest-e95672d4553092f574d19ee4bf1d17197b734d61b67a30e5463c91fd875095d4.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://covid19live.org/assets/favicon.ico/ms-icon-144x144-25fa269c26a519c1712d34313fc539564e9493be4cc49f1f006b4194233463b4.png">
+<meta name="theme-color" content="#ffffff">
+    
+  </head>
+
+  <body>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154689302-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-154689302-2');
+</script>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/"><img style="width: 220px;" src="/assets/covid19-logo-white-7f64246d51b7c269e5a7d9bd8a9e92eb1ddf4ceb09dc6770d4bd450af5c71bc3.png" /></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Live Data </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/#latest_news_section">Latest News </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="https://twitter.com/DataCovid" rel="nofollow">Twitter </a>
+        </li>
+      </ul>
+       <form class="form-inline my-2 my-lg-0" action="/search" accept-charset="UTF-8" method="get">
+        <input placeholder="Search Country... " data-behavior="autocomplete" class="form-control mr-sm-2" type="text" name="country" id="country" />
+        <button name="button" type="submit" class="btn btn-outline-success my-2 my-sm-0">Search</button>
+</form>    </div>
+  </div>
+</nav>
+<div style="height: 63px;"></div>
+    <section class="pt-4">
+	<div class="container">
+		<h2>Live World Data:</h2>
+		<div class="row">
+			<div class="col-md-12">				
+				<table style="font-weight: bold;" class="table table-bordered">
+					<thead>
+						<th scope="col">Total Cases</th>
+						<th scope="col">Deaths Today</th>
+						<th scope="col">Total Deaths</th>
+						<th scope="col">Total Recovered</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>240,628</td>
+							
+							
+							<td style="background: red">+1,010 </td>
+
+							<td style="color: red">9,953 </td>
+							
+							<td style="color: green;">86,689 <img style="width: 18px;top: -2px;position: relative;" src="/assets/healthy-3fd6db6e57cef0a762fdaa5c1216ef1344da309e19da12135e51c32ab4d15ccf.png" /></td>
+						</tr>
+					</tbody>
+				</table>
+				<button class="btn btn-primary sroll_to_latest_news_btn">View Latest News</button>
+			</div>
+		</div>
+	</div>
+</section>	
+
+<div class="container">
+	<hr>	
+</div>
+<section class="pt-4 country_data_table">
+	<div class="container">
+		<h2>Live Country Data:</h2>
+		<div class="row">
+			<div class="col-md-12">
+				<table style="font-weight: bold;" id="dtBasicExample" class="table-fixed table sortable table-striped table-bordered">
+			  <thead id="country_table_header">
+			    <tr>
+			      <th scope="col">Country</th>
+			      <th scope="col">Cases</th>
+			      <th scope="col">Cases Today</th>
+			      <th scope="col">Deaths</th>
+			      <th scope="col">Deaths Today</th>
+			      <th scope="col">Recovered</th>
+			      <th scope="col">Critical</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+				    <tr>
+				    	<td>China</td>
+				    	<td>80,928</td>
+				    	
+				    	<td style="background: yellow">+34</td>
+				    	<td>3,245</td>
+				    	
+				    	<td style="background: red">+8 </td>
+
+				    	<td>70,420</td>
+				    	<td>2,274</td>
+				    </tr>
+				    <tr>
+				    	<td>Italy</td>
+				    	<td>41,035</td>
+				    	
+				    	<td style="background: yellow">+5,322</td>
+				    	<td>3,405</td>
+				    	
+				    	<td style="background: red">+427 </td>
+
+				    	<td>4,440</td>
+				    	<td>2,498</td>
+				    </tr>
+				    <tr>
+				    	<td>Iran</td>
+				    	<td>18,407</td>
+				    	
+				    	<td style="background: yellow">+1,046</td>
+				    	<td>1,284</td>
+				    	
+				    	<td style="background: red">+149 </td>
+
+				    	<td>5,979</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Spain</td>
+				    	<td>17,395</td>
+				    	
+				    	<td style="background: yellow">+2,626</td>
+				    	<td>803</td>
+				    	
+				    	<td style="background: red">+165 </td>
+
+				    	<td>1,107</td>
+				    	<td>800</td>
+				    </tr>
+				    <tr>
+				    	<td>Germany</td>
+				    	<td>15,309</td>
+				    	
+				    	<td style="background: yellow">+2,982</td>
+				    	<td>44</td>
+				    	
+				    	<td style="background: red">+16 </td>
+
+				    	<td>114</td>
+				    	<td>2</td>
+				    </tr>
+				    <tr>
+				    	<td>USA</td>
+				    	<td>11,413</td>
+				    	
+				    	<td style="background: yellow">+2,154</td>
+				    	<td>171</td>
+				    	
+				    	<td style="background: red">+21 </td>
+
+				    	<td>108</td>
+				    	<td>64</td>
+				    </tr>
+				    <tr>
+				    	<td>France</td>
+				    	<td>10,995</td>
+				    	
+				    	<td style="background: yellow">+1,861</td>
+				    	<td>372</td>
+				    	
+				    	<td style="background: red">+108 </td>
+
+				    	<td>602</td>
+				    	<td>931</td>
+				    </tr>
+				    <tr>
+				    	<td>S. Korea</td>
+				    	<td>8,565</td>
+				    	
+				    	<td style="background: yellow">+152</td>
+				    	<td>91</td>
+				    	
+				    	<td style="background: red">+7 </td>
+
+				    	<td>1,947</td>
+				    	<td>59</td>
+				    </tr>
+				    <tr>
+				    	<td>Switzerland</td>
+				    	<td>3,944</td>
+				    	
+				    	<td style="background: yellow">+829</td>
+				    	<td>41</td>
+				    	
+				    	<td style="background: red">+8 </td>
+
+				    	<td>15</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>UK</td>
+				    	<td>3,269</td>
+				    	
+				    	<td style="background: yellow">+643</td>
+				    	<td>144</td>
+				    	
+				    	<td style="background: red">+40 </td>
+
+				    	<td>65</td>
+				    	<td>20</td>
+				    </tr>
+				    <tr>
+				    	<td>Netherlands</td>
+				    	<td>2,460</td>
+				    	
+				    	<td style="background: yellow">+409</td>
+				    	<td>76</td>
+				    	
+				    	<td style="background: red">+18 </td>
+
+				    	<td>2</td>
+				    	<td>45</td>
+				    </tr>
+				    <tr>
+				    	<td>Austria</td>
+				    	<td>2,013</td>
+				    	
+				    	<td style="background: yellow">+367</td>
+				    	<td>6</td>
+				    	
+				    	<td style="background: red">+2 </td>
+
+				    	<td>9</td>
+				    	<td>12</td>
+				    </tr>
+				    <tr>
+				    	<td>Belgium</td>
+				    	<td>1,795</td>
+				    	
+				    	<td style="background: yellow">+309</td>
+				    	<td>21</td>
+				    	
+				    	<td style="background: red">+7 </td>
+
+				    	<td>165</td>
+				    	<td>130</td>
+				    </tr>
+				    <tr>
+				    	<td>Norway</td>
+				    	<td>1,759</td>
+				    	
+				    	<td style="background: yellow">+168</td>
+				    	<td>7</td>
+				    	
+				    	<td style="background: red">+1 </td>
+
+				    	<td>1</td>
+				    	<td>27</td>
+				    </tr>
+				    <tr>
+				    	<td>Sweden</td>
+				    	<td>1,439</td>
+				    	
+				    	<td style="background: yellow">+138</td>
+				    	<td>11</td>
+				    	
+				    	<td style="background: red">+1 </td>
+
+				    	<td>16</td>
+				    	<td>21</td>
+				    </tr>
+				    <tr>
+				    	<td>Denmark</td>
+				    	<td>1,151</td>
+				    	
+				    	<td style="background: yellow">+94</td>
+				    	<td>6</td>
+				    	
+				    	<td style="background: red">+2 </td>
+
+				    	<td>1</td>
+				    	<td>30</td>
+				    </tr>
+				    <tr>
+				    	<td>Japan</td>
+				    	<td>923</td>
+				    	
+				    	<td style="background: yellow">+9</td>
+				    	<td>32</td>
+				    	
+				    	<td style="background: red">+3 </td>
+
+				    	<td>191</td>
+				    	<td>46</td>
+				    </tr>
+				    <tr>
+				    	<td>Malaysia</td>
+				    	<td>900</td>
+				    	
+				    	<td style="background: yellow">+110</td>
+				    	<td>2</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>75</td>
+				    	<td>15</td>
+				    </tr>
+				    <tr>
+				    	<td>Canada</td>
+				    	<td>801</td>
+				    	
+				    	<td style="background: yellow">+74</td>
+				    	<td>10</td>
+				    	
+				    	<td style="background: red">+1 </td>
+
+				    	<td>11</td>
+				    	<td>1</td>
+				    </tr>
+				    <tr>
+				    	<td>Portugal</td>
+				    	<td>785</td>
+				    	
+				    	<td style="background: yellow">+143</td>
+				    	<td>3</td>
+				    	
+				    	<td style="background: red">+1 </td>
+
+				    	<td>4</td>
+				    	<td>20</td>
+				    </tr>
+				    <tr>
+				    	<td>Diamond Princess</td>
+				    	<td>712</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>7</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>527</td>
+				    	<td>14</td>
+				    </tr>
+				    <tr>
+				    	<td>Australia</td>
+				    	<td>709</td>
+				    	
+				    	<td style="background: yellow">+113</td>
+				    	<td>6</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>46</td>
+				    	<td>1</td>
+				    </tr>
+				    <tr>
+				    	<td>Czechia</td>
+				    	<td>694</td>
+				    	
+				    	<td style="background: yellow">+172</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>3</td>
+				    	<td>6</td>
+				    </tr>
+				    <tr>
+				    	<td>Israel</td>
+				    	<td>573</td>
+				    	
+				    	<td style="background: yellow">+140</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>14</td>
+				    	<td>6</td>
+				    </tr>
+				    <tr>
+				    	<td>Ireland</td>
+				    	<td>557</td>
+				    	
+				    	<td style="background: yellow">+191</td>
+				    	<td>3</td>
+				    	
+				    	<td style="background: red">+1 </td>
+
+				    	<td>5</td>
+				    	<td>6</td>
+				    </tr>
+				    <tr>
+				    	<td>Brazil</td>
+				    	<td>534</td>
+				    	
+				    	<td style="background: yellow">+5</td>
+				    	<td>6</td>
+				    	
+				    	<td style="background: red">+2 </td>
+
+				    	<td>2</td>
+				    	<td>18</td>
+				    </tr>
+				    <tr>
+				    	<td>Greece</td>
+				    	<td>464</td>
+				    	
+				    	<td style="background: yellow">+46</td>
+				    	<td>6</td>
+				    	
+				    	<td style="background: red">+1 </td>
+
+				    	<td>19</td>
+				    	<td>16</td>
+				    </tr>
+				    <tr>
+				    	<td>Qatar</td>
+				    	<td>460</td>
+				    	
+				    	<td style="background: yellow">+8</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>10</td>
+				    	<td>6</td>
+				    </tr>
+				    <tr>
+				    	<td>Pakistan</td>
+				    	<td>454</td>
+				    	
+				    	<td style="background: yellow">+147</td>
+				    	<td>2</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>13</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Finland</td>
+				    	<td>400</td>
+				    	
+				    	<td style="background: yellow">+41</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>10</td>
+				    	<td>2</td>
+				    </tr>
+				    <tr>
+				    	<td>Poland</td>
+				    	<td>355</td>
+				    	
+				    	<td style="background: yellow">+68</td>
+				    	<td>5</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>13</td>
+				    	<td>3</td>
+				    </tr>
+				    <tr>
+				    	<td>Singapore</td>
+				    	<td>345</td>
+				    	
+				    	<td style="background: yellow">+32</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>124</td>
+				    	<td>14</td>
+				    </tr>
+				    <tr>
+				    	<td>Chile</td>
+				    	<td>342</td>
+				    	
+				    	<td style="background: yellow">+104</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>6</td>
+				    </tr>
+				    <tr>
+				    	<td>Luxembourg</td>
+				    	<td>335</td>
+				    	
+				    	<td style="background: yellow">+132</td>
+				    	<td>4</td>
+				    	
+				    	<td style="background: red">+2 </td>
+
+				    	<td>6</td>
+				    	<td>1</td>
+				    </tr>
+				    <tr>
+				    	<td>Iceland</td>
+				    	<td>330</td>
+				    	
+				    	<td style="background: yellow">+80</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>5</td>
+				    	<td>1</td>
+				    </tr>
+				    <tr>
+				    	<td>Slovenia</td>
+				    	<td>319</td>
+				    	
+				    	<td style="background: yellow">+33</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>6</td>
+				    </tr>
+				    <tr>
+				    	<td>Indonesia</td>
+				    	<td>308</td>
+				    	
+				    	<td style="background: yellow">+81</td>
+				    	<td>25</td>
+				    	
+				    	<td style="background: red">+6 </td>
+
+				    	<td>15</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Bahrain</td>
+				    	<td>277</td>
+				    	
+				    	<td style="background: yellow">+21</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>100</td>
+				    	<td>4</td>
+				    </tr>
+				    <tr>
+				    	<td>Romania</td>
+				    	<td>277</td>
+				    	
+				    	<td style="background: yellow">+17</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>25</td>
+				    	<td>5</td>
+				    </tr>
+				    <tr>
+				    	<td>Saudi Arabia</td>
+				    	<td>274</td>
+				    	
+				    	<td style="background: yellow">+36</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>8</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Thailand</td>
+				    	<td>272</td>
+				    	
+				    	<td style="background: yellow">+60</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>42</td>
+				    	<td>1</td>
+				    </tr>
+				    <tr>
+				    	<td>Estonia</td>
+				    	<td>267</td>
+				    	
+				    	<td style="background: yellow">+9</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>1</td>
+				    	<td>1</td>
+				    </tr>
+				    <tr>
+				    	<td>Egypt</td>
+				    	<td>256</td>
+				    	
+				    	<td style="background: yellow">+46</td>
+				    	<td>7</td>
+				    	
+				    	<td style="background: red">+1 </td>
+
+				    	<td>28</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Peru</td>
+				    	<td>234</td>
+				    	
+				    	<td style="background: yellow">+89</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>1</td>
+				    	<td>7</td>
+				    </tr>
+				    <tr>
+				    	<td>Philippines</td>
+				    	<td>217</td>
+				    	
+				    	<td style="background: yellow">+15</td>
+				    	<td>17</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>8</td>
+				    	<td>1</td>
+				    </tr>
+				    <tr>
+				    	<td>Hong Kong</td>
+				    	<td>208</td>
+				    	
+				    	<td style="background: yellow">+15</td>
+				    	<td>4</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>98</td>
+				    	<td>4</td>
+				    </tr>
+				    <tr>
+				    	<td>Ecuador</td>
+				    	<td>199</td>
+				    	
+				    	<td style="background: yellow">+31</td>
+				    	<td>3</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>1</td>
+				    	<td>2</td>
+				    </tr>
+				    <tr>
+				    	<td>Russia</td>
+				    	<td>199</td>
+				    	
+				    	<td style="background: yellow">+52</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: red">+1 </td>
+
+				    	<td>8</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>India</td>
+				    	<td>194</td>
+				    	
+				    	<td style="background: yellow">+25</td>
+				    	<td>4</td>
+				    	
+				    	<td style="background: red">+1 </td>
+
+				    	<td>20</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Turkey</td>
+				    	<td>192</td>
+				    	
+				    	<td style="background: yellow">+1</td>
+				    	<td>3</td>
+				    	
+				    	<td style="background: red">+1 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Iraq</td>
+				    	<td>177</td>
+				    	
+				    	<td style="background: yellow">+13</td>
+				    	<td>12</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>49</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Lebanon</td>
+				    	<td>157</td>
+				    	
+				    	<td style="background: yellow">+24</td>
+				    	<td>4</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>4</td>
+				    	<td>3</td>
+				    </tr>
+				    <tr>
+				    	<td>South Africa</td>
+				    	<td>150</td>
+				    	
+				    	<td style="background: yellow">+34</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Kuwait</td>
+				    	<td>148</td>
+				    	
+				    	<td style="background: yellow">+6</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>18</td>
+				    	<td>5</td>
+				    </tr>
+				    <tr>
+				    	<td>San Marino</td>
+				    	<td>140</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>14</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>4</td>
+				    	<td>11</td>
+				    </tr>
+				    <tr>
+				    	<td>UAE</td>
+				    	<td>140</td>
+				    	
+				    	<td style="background: yellow">+27</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>31</td>
+				    	<td>2</td>
+				    </tr>
+				    <tr>
+				    	<td>Slovakia</td>
+				    	<td>124</td>
+				    	
+				    	<td style="background: yellow">+19</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>2</td>
+				    </tr>
+				    <tr>
+				    	<td>Armenia</td>
+				    	<td>122</td>
+				    	
+				    	<td style="background: yellow">+12</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>1</td>
+				    	<td>2</td>
+				    </tr>
+				    <tr>
+				    	<td>Mexico</td>
+				    	<td>118</td>
+				    	
+				    	<td style="background: yellow">+25</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: red">+1 </td>
+
+				    	<td>4</td>
+				    	<td>1</td>
+				    </tr>
+				    <tr>
+				    	<td>Croatia</td>
+				    	<td>110</td>
+				    	
+				    	<td style="background: yellow">+21</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: red">+1 </td>
+
+				    	<td>5</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Panama</td>
+				    	<td>109</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>7</td>
+				    </tr>
+				    <tr>
+				    	<td>Taiwan</td>
+				    	<td>108</td>
+				    	
+				    	<td style="background: yellow">+8</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>26</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Colombia</td>
+				    	<td>108</td>
+				    	
+				    	<td style="background: yellow">+15</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>1</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Bulgaria</td>
+				    	<td>107</td>
+				    	
+				    	<td style="background: yellow">+15</td>
+				    	<td>3</td>
+				    	
+				    	<td style="background: red">+1 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Serbia</td>
+				    	<td>103</td>
+				    	
+				    	<td style="background: yellow">+14</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>1</td>
+				    	<td>4</td>
+				    </tr>
+				    <tr>
+				    	<td>Argentina</td>
+				    	<td>97</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>3</td>
+				    	
+				    	<td style="background: red">+1 </td>
+
+				    	<td>3</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Algeria</td>
+				    	<td>90</td>
+				    	
+				    	<td style="background: yellow">+15</td>
+				    	<td>9</td>
+				    	
+				    	<td style="background: red">+2 </td>
+
+				    	<td>32</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Costa Rica</td>
+				    	<td>87</td>
+				    	
+				    	<td style="background: yellow">+18</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>2</td>
+				    </tr>
+				    <tr>
+				    	<td>Latvia</td>
+				    	<td>86</td>
+				    	
+				    	<td style="background: yellow">+15</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>1</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Vietnam</td>
+				    	<td>85</td>
+				    	
+				    	<td style="background: yellow">+9</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>16</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Uruguay</td>
+				    	<td>79</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Hungary</td>
+				    	<td>73</td>
+				    	
+				    	<td style="background: yellow">+15</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>2</td>
+				    	<td>4</td>
+				    </tr>
+				    <tr>
+				    	<td>Brunei</td>
+				    	<td>73</td>
+				    	
+				    	<td style="background: yellow">+5</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>2</td>
+				    </tr>
+				    <tr>
+				    	<td>Faeroe Islands</td>
+				    	<td>72</td>
+				    	
+				    	<td style="background: yellow">+14</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>1</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Jordan</td>
+				    	<td>69</td>
+				    	
+				    	<td style="background: yellow">+13</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>1</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Cyprus</td>
+				    	<td>67</td>
+				    	
+				    	<td style="background: yellow">+9</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>1</td>
+				    </tr>
+				    <tr>
+				    	<td>Albania</td>
+				    	<td>64</td>
+				    	
+				    	<td style="background: yellow">+5</td>
+				    	<td>2</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>2</td>
+				    </tr>
+				    <tr>
+				    	<td>Bosnia and Herzegovina</td>
+				    	<td>64</td>
+				    	
+				    	<td style="background: yellow">+25</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>2</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Morocco</td>
+				    	<td>61</td>
+				    	
+				    	<td style="background: yellow">+7</td>
+				    	<td>2</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>2</td>
+				    	<td>1</td>
+				    </tr>
+				    <tr>
+				    	<td>Sri Lanka</td>
+				    	<td>60</td>
+				    	
+				    	<td style="background: yellow">+9</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>3</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Andorra</td>
+				    	<td>53</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>1</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Malta</td>
+				    	<td>53</td>
+				    	
+				    	<td style="background: yellow">+5</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>2</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Belarus</td>
+				    	<td>51</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>5</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Moldova</td>
+				    	<td>49</td>
+				    	
+				    	<td style="background: yellow">+13</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>1</td>
+				    	<td>3</td>
+				    </tr>
+				    <tr>
+				    	<td>North Macedonia</td>
+				    	<td>49</td>
+				    	
+				    	<td style="background: yellow">+6</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>1</td>
+				    	<td>1</td>
+				    </tr>
+				    <tr>
+				    	<td>Oman</td>
+				    	<td>48</td>
+				    	
+				    	<td style="background: yellow">+9</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>13</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Palestine</td>
+				    	<td>47</td>
+				    	
+				    	<td style="background: yellow">+3</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Azerbaijan</td>
+				    	<td>44</td>
+				    	
+				    	<td style="background: yellow">+10</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>7</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Kazakhstan</td>
+				    	<td>44</td>
+				    	
+				    	<td style="background: yellow">+8</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Venezuela</td>
+				    	<td>42</td>
+				    	
+				    	<td style="background: yellow">+6</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Lithuania</td>
+				    	<td>41</td>
+				    	
+				    	<td style="background: yellow">+7</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>1</td>
+				    	<td>1</td>
+				    </tr>
+				    <tr>
+				    	<td>Georgia</td>
+				    	<td>40</td>
+				    	
+				    	<td style="background: yellow">+2</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>1</td>
+				    	<td>1</td>
+				    </tr>
+				    <tr>
+				    	<td>Tunisia</td>
+				    	<td>39</td>
+				    	
+				    	<td style="background: yellow">+10</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: red">+1 </td>
+
+				    	<td>1</td>
+				    	<td>2</td>
+				    </tr>
+				    <tr>
+				    	<td>Cambodia</td>
+				    	<td>37</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>1</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Senegal</td>
+				    	<td>36</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>2</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Dominican Republic</td>
+				    	<td>34</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>2</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Burkina Faso</td>
+				    	<td>33</td>
+				    	
+				    	<td style="background: yellow">+6</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Guadeloupe</td>
+				    	<td>33</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>New Zealand</td>
+				    	<td>28</td>
+				    	
+				    	<td style="background: yellow">+8</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Liechtenstein</td>
+				    	<td>28</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Martinique</td>
+				    	<td>23</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Uzbekistan</td>
+				    	<td>23</td>
+				    	
+				    	<td style="background: yellow">+5</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Afghanistan</td>
+				    	<td>22</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>1</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Ukraine</td>
+				    	<td>21</td>
+				    	
+				    	<td style="background: yellow">+5</td>
+				    	<td>3</td>
+				    	
+				    	<td style="background: red">+1 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Réunion</td>
+				    	<td>19</td>
+				    	
+				    	<td style="background: yellow">+5</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Bangladesh</td>
+				    	<td>18</td>
+				    	
+				    	<td style="background: yellow">+4</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>3</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Macao</td>
+				    	<td>17</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>10</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Jamaica</td>
+				    	<td>15</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>2</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Bolivia</td>
+				    	<td>15</td>
+				    	
+				    	<td style="background: yellow">+3</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>French Guiana</td>
+				    	<td>15</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>DRC</td>
+				    	<td>14</td>
+				    	
+				    	<td style="background: yellow">+7</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Cameroon</td>
+				    	<td>13</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Maldives</td>
+				    	<td>13</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Nigeria</td>
+				    	<td>12</td>
+				    	
+				    	<td style="background: yellow">+4</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>1</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Guam</td>
+				    	<td>12</td>
+				    	
+				    	<td style="background: yellow">+4</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Honduras</td>
+				    	<td>12</td>
+				    	
+				    	<td style="background: yellow">+3</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Cuba</td>
+				    	<td>11</td>
+				    	
+				    	<td style="background: yellow">+1</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Ghana</td>
+				    	<td>11</td>
+				    	
+				    	<td style="background: yellow">+4</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Paraguay</td>
+				    	<td>11</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>1</td>
+				    </tr>
+				    <tr>
+				    	<td>Rwanda</td>
+				    	<td>11</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Monaco</td>
+				    	<td>10</td>
+				    	
+				    	<td style="background: yellow">+1</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Montenegro</td>
+				    	<td>10</td>
+				    	
+				    	<td style="background: yellow">+2</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Guatemala</td>
+				    	<td>9</td>
+				    	
+				    	<td style="background: yellow">+1</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Ivory Coast</td>
+				    	<td>9</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>1</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Trinidad and Tobago</td>
+				    	<td>9</td>
+				    	
+				    	<td style="background: yellow">+2</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Gibraltar</td>
+				    	<td>8</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>2</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Channel Islands</td>
+				    	<td>7</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Ethiopia</td>
+				    	<td>7</td>
+				    	
+				    	<td style="background: yellow">+1</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Kenya</td>
+				    	<td>7</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Mauritius</td>
+				    	<td>7</td>
+				    	
+				    	<td style="background: yellow">+4</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>French Polynesia</td>
+				    	<td>6</td>
+				    	
+				    	<td style="background: yellow">+1</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Mongolia</td>
+				    	<td>6</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Puerto Rico</td>
+				    	<td>6</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Seychelles</td>
+				    	<td>6</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Tanzania</td>
+				    	<td>6</td>
+				    	
+				    	<td style="background: yellow">+3</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Guyana</td>
+				    	<td>5</td>
+				    	
+				    	<td style="background: yellow">+1</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Aruba</td>
+				    	<td>5</td>
+				    	
+				    	<td style="background: yellow">+1</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>1</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Barbados</td>
+				    	<td>5</td>
+				    	
+				    	<td style="background: yellow">+3</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Equatorial Guinea</td>
+				    	<td>4</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Curaçao</td>
+				    	<td>3</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: red">+1 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Bahamas</td>
+				    	<td>3</td>
+				    	
+				    	<td style="background: yellow">+2</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Congo</td>
+				    	<td>3</td>
+				    	
+				    	<td style="background: yellow">+2</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Gabon</td>
+				    	<td>3</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Kyrgyzstan</td>
+				    	<td>3</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Mayotte</td>
+				    	<td>3</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Namibia</td>
+				    	<td>3</td>
+				    	
+				    	<td style="background: yellow">+1</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>St. Barth</td>
+				    	<td>3</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Saint Martin</td>
+				    	<td>3</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>U.S. Virgin Islands</td>
+				    	<td>3</td>
+				    	
+				    	<td style="background: yellow">+1</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Sudan</td>
+				    	<td>2</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Benin</td>
+				    	<td>2</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Bermuda</td>
+				    	<td>2</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Greenland</td>
+				    	<td>2</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Liberia</td>
+				    	<td>2</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Mauritania</td>
+				    	<td>2</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>New Caledonia</td>
+				    	<td>2</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Saint Lucia</td>
+				    	<td>2</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Zambia</td>
+				    	<td>2</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Cayman Islands</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Nepal</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>1</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Antigua and Barbuda</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Bhutan</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>CAR</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Chad</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: yellow">+1</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Djibouti</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>El Salvador</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: yellow">+1</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Fiji</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: yellow">+1</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Gambia</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Guinea</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Vatican City</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Montserrat</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Nicaragua</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: yellow">+1</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>St. Vincent Grenadines</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Sint Maarten</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Somalia</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Suriname</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Eswatini</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+				    <tr>
+				    	<td>Togo</td>
+				    	<td>1</td>
+				    	
+				    	<td style="background: inherit">0</td>
+				    	<td>0</td>
+				    	
+				    	<td style="background: inherit">0 </td>
+
+				    	<td>0</td>
+				    	<td>0</td>
+				    </tr>
+			    
+			  </tbody>
+			</table>
+			</div>
+		</div>
+	</div>
+</section>			
+
+<div class="container" id="latest_news_section">
+	<hr>	
+</div>
+
+<section class="pt-4 latest_news_section" id="">
+	<div class="container">
+		<h2>Covid-19 Latest News:</h2>
+		<div class="row">
+			<div class="col-md-12 news_div">
+				<div class="row">
+					<div class="news_list">
+						<div class="col-md-10">
+							<p class="by_line">By: Phil LeBeau | CNBC | Date: 2020-03-19T18:47:47Z</p>
+							<h4><a rel="nofollow" target="_blank" href="https://www.cnbc.com/2020/03/19/american-airlines-ceo-says-the-coronavirus-crisis-is-worse-than-911-for-the-industry.html">American Airlines CEO says the coronavirus crisis is worse than 9/11 for the industry - CNBC</a> </h4>
+							<p class="news_desc">With the COVID-19 outbreak that has brought global demand for flights to a near standstill, there&#39;s no indication of when it might end.</p>
+						</div>
+					</div>
+					<div class="news_list">
+						<div class="col-md-10">
+							<p class="by_line">By:  | Npr.org | Date: 2020-03-19T18:20:44Z</p>
+							<h4><a rel="nofollow" target="_blank" href="https://www.npr.org/2020/03/19/817974987/every-single-individual-must-stay-home-italy-s-coronavirus-deaths-pass-china-s">As Italy&#39;s Coronavirus Deaths Pass China&#39;s, Hospitals Strain To Keep Up - NPR</a> </h4>
+							<p class="news_desc">The country has universal health care. But now, fighting tens of thousands of coronavirus cases, Italian hospitals and medical staff are overwhelmed, prompting anguished debate.</p>
+						</div>
+					</div>
+					<div class="news_list">
+						<div class="col-md-10">
+							<p class="by_line">By: Kevin Liptak and Betsy Klein, CNN | CNN | Date: 2020-03-19T17:49:00Z</p>
+							<h4><a rel="nofollow" target="_blank" href="https://www.cnn.com/2020/03/19/politics/trump-fda-anti-viral-treatments-coronavirus/index.html">Trump says FDA will fast track anti-viral treatments but FDA chief says it could take 1 year - CNN</a> </h4>
+							<p class="news_desc">President Donald Trump says he&#39;s pushed the Food and Drug Administration to eliminate barriers to getting therapeutics for coronavirus to patients.</p>
+						</div>
+					</div>
+					<div class="news_list">
+						<div class="col-md-10">
+							<p class="by_line">By: William Feuer | CNBC | Date: 2020-03-19T17:46:19Z</p>
+							<h4><a rel="nofollow" target="_blank" href="https://www.cnbc.com/2020/03/19/us-coronavirus-cases-surpass-10000-doubling-in-two-days.html">US coronavirus cases surpass 10,000, doubling in two days - CNBC</a> </h4>
+							<p class="news_desc">The number of confirmed U.S. COVID-19 cases surpassed 10,000, doubling over two days as states ramp up testing and the coronavirus sweeps across the country.</p>
+						</div>
+					</div>
+					<div class="news_list">
+						<div class="col-md-10">
+							<p class="by_line">By: Dan Mangan | CNBC | Date: 2020-03-19T16:21:39Z</p>
+							<h4><a rel="nofollow" target="_blank" href="https://www.cnbc.com/2020/03/19/coronavirus-tests-2-congressmen-positive-others-quarantine.html">Two congressmen test positive for coronavirus, others are in self-quarantine - CNBC</a> </h4>
+							<p class="news_desc">Two House members have tested positive for the coronavirus illness, and a number of other members of Congress are in self-quarantine after exposure to infected people.</p>
+						</div>
+					</div>
+					<div class="news_list">
+						<div class="col-md-10">
+							<p class="by_line">By:  | Youtube.com | Date: 2020-03-19T16:19:05Z</p>
+							<h4><a rel="nofollow" target="_blank" href="https://www.youtube.com/watch?v=oa4i9Ap6dCg">Spring-breakers express frustration over coronavirus precautions in Miami - CBS News</a> </h4>
+							<p class="news_desc">&quot;If I get corona, I get corona,&quot; said Florida beachgoer Brady Sluder. Subscribe to the CBS News Channel HERE: https://bit.ly/2uz8qYE Watch CBSN live HERE: ht...</p>
+						</div>
+					</div>
+					<div class="news_list">
+						<div class="col-md-10">
+							<p class="by_line">By: Alexandria Hein | Fox News | Date: 2020-03-19T15:49:41Z</p>
+							<h4><a rel="nofollow" target="_blank" href="https://www.foxnews.com/health/race-coronavirus-treatment-2-generic-drugs-tested">Race for coronavirus treatment sees 2 generic drugs tested - Fox News</a> </h4>
+							<p class="news_desc">Researchers are racing to find a possible treatment for COVID-19.</p>
+						</div>
+					</div>
+					<div class="news_list">
+						<div class="col-md-10">
+							<p class="by_line">By: Loren Grush | The Verge | Date: 2020-03-19T15:10:41Z</p>
+							<h4><a rel="nofollow" target="_blank" href="https://www.theverge.com/2020/3/19/21186511/spacex-nasa-crew-dragon-astronauts-launch-may-international-space-station">NASA and SpaceX still targeting May for first crewed mission to space amid coronavirus pandemic - The Verge</a> </h4>
+							<p class="news_desc">On March 18th, NASA put out a call for press to cover SpaceX’s first crewed mission to space out of Cape Canaveral, Florida, but if current restrictions remain in place over the next couple of months, changes will likely need to be made as the mission proceed…</p>
+						</div>
+					</div>
+					<div class="news_list">
+						<div class="col-md-10">
+							<p class="by_line">By: Kim Masters | Hollywoodreporter.com | Date: 2020-03-19T15:00:25Z</p>
+							<h4><a rel="nofollow" target="_blank" href="https://www.hollywoodreporter.com/news/virus-crisis-forces-hollywood-reckon-collapsing-theatrical-windows-1285366">Coronavirus Forces Movie Studios to Reckon With Collapsing Theatrical Windows - Hollywood Reporter</a> </h4>
+							<p class="news_desc">As theaters across the U.S. shut down, studios are experimenting with releasing on-demand, but for tentpoles &quot;the math really doesn&#39;t work.&quot;</p>
+						</div>
+					</div>
+					<div class="news_list">
+						<div class="col-md-10">
+							<p class="by_line">By:  | Npr.org | Date: 2020-03-19T14:56:53Z</p>
+							<h4><a rel="nofollow" target="_blank" href="https://www.npr.org/2020/03/19/818192535/burr-recording-sparks-questions-about-private-comments-on-covid-19">Senator Richard Burr Warned Of Coronavirus Effects In Private Meeting - NPR</a> </h4>
+							<p class="news_desc">Sen. Richard Burr issued a warning at a private event weeks ago to prepare for dire effects from the coronavirus, going further than his more public comments, according to a recording obtained by NPR.</p>
+						</div>
+					</div>
+					<div class="news_list">
+						<div class="col-md-10">
+							<p class="by_line">By: Adam Button | Forexlive.com | Date: 2020-03-19T14:11:06Z</p>
+							<h4><a rel="nofollow" target="_blank" href="https://www.forexlive.com/news/!/a-positive-headline-on-pharmaceutical-treatments-can-turn-this-entire-market-20200319">A positive headline on pharmaceutical treatments could turn the entire market - ForexLive</a> </h4>
+							<p class="news_desc">Yesterday&#39;s headline was negative but test results are coming It may be time to bet on medical technology. All the smartest people in the field are working at breakneck pace on coronavirus.</p>
+						</div>
+					</div>
+					<div class="news_list">
+						<div class="col-md-10">
+							<p class="by_line">By: Ben Fox Rubin | Cnet.com | Date: 2020-03-19T14:10:36Z</p>
+							<h4><a rel="nofollow" target="_blank" href="https://www.cnet.com/news/whole-foods-walmart-target-change-store-hours-amid-coronavirus-pandemic/">Whole Foods, Walmart, Target change store hours amid coronavirus pandemic - CNET</a> </h4>
+							<p class="news_desc">The companies are also setting aside certain times for older shoppers.</p>
+						</div>
+					</div>
+					<div class="news_list">
+						<div class="col-md-10">
+							<p class="by_line">By: Jon Blistein, Jon Blistein | Rollingstone.com | Date: 2020-03-19T13:46:10Z</p>
+							<h4><a rel="nofollow" target="_blank" href="https://www.rollingstone.com/tv/tv-news/trevor-noah-daily-show-social-distancing-coronavirus-969559/">Trevor Noah Offers Coronavirus Updates From His Couch on Homemade ‘Daily Show’ - Rolling Stone</a> </h4>
+							<p class="news_desc">Host says they’ll continue to produce special Daily Social Distancing Show from their homes</p>
+						</div>
+					</div>
+					<div class="news_list">
+						<div class="col-md-10">
+							<p class="by_line">By: Rob Picheta, CNN | CNN | Date: 2020-03-19T13:34:14Z</p>
+							<h4><a rel="nofollow" target="_blank" href="https://www.cnn.com/2020/03/19/uk/london-underground-closures-coronavirus-gbr-intl-scli/index.html">London Tube stations close but UK government plays down prospect of full lockdown - CNN</a> </h4>
+							<p class="news_desc">London&#39;s Tube network is closing dozens of stations and limiting its service from Thursday, but the British government attempted to play down the prospect of an imminent coronavirus lockdown in London.</p>
+						</div>
+					</div>
+					<div class="news_list">
+						<div class="col-md-10">
+							<p class="by_line">By: Petra Cahill | NBC News | Date: 2020-03-19T12:28:00Z</p>
+							<h4><a rel="nofollow" target="_blank" href="https://www.nbcnews.com/news/morning-briefing/coronavirus-crisis-moves-china-europe-trump-signs-aid-bill-hospitals-n1163636">Coronavirus: Crisis moves from China to Europe, Trump signs aid bill, and hospitals prepare for tough decisions - NBCNews.com</a> </h4>
+							<p class="news_desc">Coronavirus: China reports no new local cases as Europe becomes new epicenter of pandemic.</p>
+						</div>
+					</div>
+					<div class="news_list">
+						<div class="col-md-10">
+							<p class="by_line">By: Hannah Leone | Chicagotribune.com | Date: 2020-03-19T12:00:00Z</p>
+							<h4><a rel="nofollow" target="_blank" href="https://www.chicagotribune.com/coronavirus/ct-coronavirus-illinois-schools-closed-how-long-20200318-jrpng7mx55aibanox7zypguow4-story.html">‘Very real possibility’ that Illinois school shutdown will be extended as coronavirus cases nearly double over - Chicago Tribune</a> </h4>
+							<p class="news_desc">Schools and parents are gearing up for a possible extension of the unprecedented shutdown.</p>
+						</div>
+					</div>
+					<div class="news_list">
+						<div class="col-md-10">
+							<p class="by_line">By:  | 9and10news.com | Date: 2020-03-19T10:30:52Z</p>
+							<h4><a rel="nofollow" target="_blank" href="https://www.9and10news.com/2020/03/19/coronavirus-crisis-federal-response-100-billion-relief-package/">Coronavirus Crisis Federal Response: $100 Billion Relief Package - 9&amp;10 News</a> </h4>
+							<p class="news_desc">President Trump is taking more steps in the national effort to combat the coronavirus in the U.S. The president signed a $100 billion coronavirus relief package into law on Wednesday. It includes provisions for free testing and paid emergency leave. Lawmakers…</p>
+						</div>
+					</div>
+					<div class="news_list">
+						<div class="col-md-10">
+							<p class="by_line">By: Associated Press | Fox News | Date: 2020-03-19T08:55:41Z</p>
+							<h4><a rel="nofollow" target="_blank" href="https://www.foxnews.com/sports/mlb-could-skip-draft-service-time-big-issue">MLB could skip draft; service time big issue - Fox News</a> </h4>
+							<p class="news_desc">Major League Baseball is considering skipping its amateur draft this year and putting off the next international signing period as a way to preserve cash while games are affected by the new coronavirus, people familiar with the discussions told The Associated…</p>
+						</div>
+					</div>
+					<div class="news_list">
+						<div class="col-md-10">
+							<p class="by_line">By: Maysam Bizaer | Al Jazeera English | Date: 2020-03-19T06:54:00Z</p>
+							<h4><a rel="nofollow" target="_blank" href="https://www.aljazeera.com/ajimpact/coronavirus-outbreak-eclipses-bright-spot-iran-economy-200318003647869.html">Coronavirus outbreak eclipses last bright spot in Iran&#39;s economy - Aljazeera.com</a> </h4>
+							<p class="news_desc">Tourism was bringing in much-needed foreign exchange to Iran&#39;s sanctions-ravaged economy. Then coronavirus struck.</p>
+						</div>
+					</div>
+					<div class="news_list">
+						<div class="col-md-10">
+							<p class="by_line">By: Jeffery Martin | Newsweek | Date: 2020-03-19T04:37:19Z</p>
+							<h4><a rel="nofollow" target="_blank" href="https://www.newsweek.com/trump-signs-emergency-bill-make-companies-manufacture-medical-supplies-fight-coronavirus-1493142">Trump Signs Emergency Bill to Make Companies Manufacture Medical Supplies to Fight Coronavirus - Newsweek</a> </h4>
+							<p class="news_desc">&quot;It is critical that all health and medical resources needed to respond to the spread of COVID-19 are properly distributed to the Nation&#39;s healthcare system and others that need them most at this...</p>
+						</div>
+					</div>
+				</div>
+				<p style="font-style: italic;">Powered by <a href="https://newsapi.org/">News API</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+    <footer class="footer mt-auto py-3">
+  <div class="container">
+    <span style="color: #6c757d;" > <small> Copyright © 2020 Covid19live.org. All rights reserved. <br>
+      Developed by (<a href="https://samerawada.com">Samer Awada - samerawada.com</a>). You can contact him on <a href="https://twitter.com/sam_devWorld" target="_blank" rel="nofollow">Twitter</a>, or via <a href="mailto:samerawada92@gmail.com?subject=Covid19+Feedback">email
+        <i class="fa fa-envelope fa-1x mx-1"></i></a>.<br>
+        Stay safe and enjoy the rest of your Thursday! </small></span>
+  </div>
+</footer>
+
+  </body>
+</html>

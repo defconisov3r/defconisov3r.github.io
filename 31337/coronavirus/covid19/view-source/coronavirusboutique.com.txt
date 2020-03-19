@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en-US" >
+<head>
+		<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="format-detection" content="telephone=no"><title>Home | Coronavirus Boutique</title>
+<script type="text/javascript">var ajaxurl = "https://coronavirusboutique.com/wp-admin/admin-ajax.php";</script><script>window._wca = window._wca || [];</script>
+
+		<style id="critical-path-css" type="text/css">
+			body,html{width:100%;height:100%;margin:0;padding:0}.page-preloader{top:0;left:0;z-index:999;position:fixed;height:100%;width:100%;text-align:center}.preloader-preview-area{animation-delay:-.2s;top:50%;-ms-transform:translateY(100%);transform:translateY(100%);margin-top:10px;max-height:calc(50% - 20px);opacity:1;width:100%;text-align:center;position:absolute}.preloader-logo{max-width:90%;top:50%;-ms-transform:translateY(-100%);transform:translateY(-100%);margin:-10px auto 0 auto;max-height:calc(50% - 20px);opacity:1;position:relative}.ball-pulse>div{width:15px;height:15px;border-radius:100%;margin:2px;animation-fill-mode:both;display:inline-block;animation:ball-pulse .75s infinite cubic-bezier(.2,.68,.18,1.08)}.ball-pulse>div:nth-child(1){animation-delay:-.36s}.ball-pulse>div:nth-child(2){animation-delay:-.24s}.ball-pulse>div:nth-child(3){animation-delay:-.12s}@keyframes ball-pulse{0%{transform:scale(1);opacity:1}45%{transform:scale(.1);opacity:.7}80%{transform:scale(1);opacity:1}}.ball-clip-rotate-pulse{position:relative;-ms-transform:translateY(-15px) translateX(-10px);transform:translateY(-15px) translateX(-10px);display:inline-block}.ball-clip-rotate-pulse>div{animation-fill-mode:both;position:absolute;top:0;left:0;border-radius:100%}.ball-clip-rotate-pulse>div:first-child{height:36px;width:36px;top:7px;left:-7px;animation:ball-clip-rotate-pulse-scale 1s 0s cubic-bezier(.09,.57,.49,.9) infinite}.ball-clip-rotate-pulse>div:last-child{position:absolute;width:50px;height:50px;left:-16px;top:-2px;background:0 0;border:2px solid;animation:ball-clip-rotate-pulse-rotate 1s 0s cubic-bezier(.09,.57,.49,.9) infinite;animation-duration:1s}@keyframes ball-clip-rotate-pulse-rotate{0%{transform:rotate(0) scale(1)}50%{transform:rotate(180deg) scale(.6)}100%{transform:rotate(360deg) scale(1)}}@keyframes ball-clip-rotate-pulse-scale{30%{transform:scale(.3)}100%{transform:scale(1)}}@keyframes square-spin{25%{transform:perspective(100px) rotateX(180deg) rotateY(0)}50%{transform:perspective(100px) rotateX(180deg) rotateY(180deg)}75%{transform:perspective(100px) rotateX(0) rotateY(180deg)}100%{transform:perspective(100px) rotateX(0) rotateY(0)}}.square-spin{display:inline-block}.square-spin>div{animation-fill-mode:both;width:50px;height:50px;animation:square-spin 3s 0s cubic-bezier(.09,.57,.49,.9) infinite}.cube-transition{position:relative;-ms-transform:translate(-25px,-25px);transform:translate(-25px,-25px);display:inline-block}.cube-transition>div{animation-fill-mode:both;width:15px;height:15px;position:absolute;top:-5px;left:-5px;animation:cube-transition 1.6s 0s infinite ease-in-out}.cube-transition>div:last-child{animation-delay:-.8s}@keyframes cube-transition{25%{transform:translateX(50px) scale(.5) rotate(-90deg)}50%{transform:translate(50px,50px) rotate(-180deg)}75%{transform:translateY(50px) scale(.5) rotate(-270deg)}100%{transform:rotate(-360deg)}}.ball-scale>div{border-radius:100%;margin:2px;animation-fill-mode:both;display:inline-block;height:60px;width:60px;animation:ball-scale 1s 0s ease-in-out infinite}@keyframes ball-scale{0%{transform:scale(0)}100%{transform:scale(1);opacity:0}}.line-scale>div{animation-fill-mode:both;display:inline-block;width:5px;height:50px;border-radius:2px;margin:2px}.line-scale>div:nth-child(1){animation:line-scale 1s -.5s infinite cubic-bezier(.2,.68,.18,1.08)}.line-scale>div:nth-child(2){animation:line-scale 1s -.4s infinite cubic-bezier(.2,.68,.18,1.08)}.line-scale>div:nth-child(3){animation:line-scale 1s -.3s infinite cubic-bezier(.2,.68,.18,1.08)}.line-scale>div:nth-child(4){animation:line-scale 1s -.2s infinite cubic-bezier(.2,.68,.18,1.08)}.line-scale>div:nth-child(5){animation:line-scale 1s -.1s infinite cubic-bezier(.2,.68,.18,1.08)}@keyframes line-scale{0%{transform:scaley(1)}50%{transform:scaley(.4)}100%{transform:scaley(1)}}.ball-scale-multiple{position:relative;-ms-transform:translateY(30px);transform:translateY(30px);display:inline-block}.ball-scale-multiple>div{border-radius:100%;animation-fill-mode:both;margin:2px;position:absolute;left:-30px;top:0;opacity:0;margin:0;width:50px;height:50px;animation:ball-scale-multiple 1s 0s linear infinite}.ball-scale-multiple>div:nth-child(2){animation-delay:-.2s}.ball-scale-multiple>div:nth-child(3){animation-delay:-.2s}@keyframes ball-scale-multiple{0%{transform:scale(0);opacity:0}5%{opacity:1}100%{transform:scale(1);opacity:0}}.ball-pulse-sync{display:inline-block}.ball-pulse-sync>div{width:15px;height:15px;border-radius:100%;margin:2px;animation-fill-mode:both;display:inline-block}.ball-pulse-sync>div:nth-child(1){animation:ball-pulse-sync .6s -.21s infinite ease-in-out}.ball-pulse-sync>div:nth-child(2){animation:ball-pulse-sync .6s -.14s infinite ease-in-out}.ball-pulse-sync>div:nth-child(3){animation:ball-pulse-sync .6s -70ms infinite ease-in-out}@keyframes ball-pulse-sync{33%{transform:translateY(10px)}66%{transform:translateY(-10px)}100%{transform:translateY(0)}}.transparent-circle{display:inline-block;border-top:.5em solid rgba(255,255,255,.2);border-right:.5em solid rgba(255,255,255,.2);border-bottom:.5em solid rgba(255,255,255,.2);border-left:.5em solid #fff;transform:translateZ(0);animation:transparent-circle 1.1s infinite linear;width:50px;height:50px;border-radius:50%}.transparent-circle:after{border-radius:50%;width:10em;height:10em}@keyframes transparent-circle{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}.ball-spin-fade-loader{position:relative;top:-10px;left:-10px;display:inline-block}.ball-spin-fade-loader>div{width:15px;height:15px;border-radius:100%;margin:2px;animation-fill-mode:both;position:absolute;animation:ball-spin-fade-loader 1s infinite linear}.ball-spin-fade-loader>div:nth-child(1){top:25px;left:0;animation-delay:-.84s;-webkit-animation-delay:-.84s}.ball-spin-fade-loader>div:nth-child(2){top:17.05px;left:17.05px;animation-delay:-.72s;-webkit-animation-delay:-.72s}.ball-spin-fade-loader>div:nth-child(3){top:0;left:25px;animation-delay:-.6s;-webkit-animation-delay:-.6s}.ball-spin-fade-loader>div:nth-child(4){top:-17.05px;left:17.05px;animation-delay:-.48s;-webkit-animation-delay:-.48s}.ball-spin-fade-loader>div:nth-child(5){top:-25px;left:0;animation-delay:-.36s;-webkit-animation-delay:-.36s}.ball-spin-fade-loader>div:nth-child(6){top:-17.05px;left:-17.05px;animation-delay:-.24s;-webkit-animation-delay:-.24s}.ball-spin-fade-loader>div:nth-child(7){top:0;left:-25px;animation-delay:-.12s;-webkit-animation-delay:-.12s}.ball-spin-fade-loader>div:nth-child(8){top:17.05px;left:-17.05px;animation-delay:0s;-webkit-animation-delay:0s}@keyframes ball-spin-fade-loader{50%{opacity:.3;transform:scale(.4)}100%{opacity:1;transform:scale(1)}}		</style>
+
+		<link rel='dns-prefetch' href='//stats.wp.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Coronavirus Boutique &raquo; Feed" href="https://coronavirusboutique.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Coronavirus Boutique &raquo; Comments Feed" href="https://coronavirusboutique.com/comments/feed/" />
+
+<link rel="shortcut icon" href="https://demos.artbees.net/jupiter/hestia/wp-content/uploads/sites/145/2016/10/favicon.png"  />
+<link rel="alternate" type="application/rss+xml" title="Coronavirus Boutique &raquo; Products Feed" href="https://coronavirusboutique.com/home/feed/" />
+<script type="text/javascript">window.abb = {};php = {};window.PHP = {};PHP.ajax = "https://coronavirusboutique.com/wp-admin/admin-ajax.php";PHP.wp_p_id = "5";var mk_header_parallax, mk_banner_parallax, mk_page_parallax, mk_footer_parallax, mk_body_parallax;var mk_images_dir = "http://coronavirusboutique.com/wp-content/themes/jupiter/assets/images",mk_theme_js_path = "http://coronavirusboutique.com/wp-content/themes/jupiter/assets/js",mk_theme_dir = "http://coronavirusboutique.com/wp-content/themes/jupiter",mk_captcha_placeholder = "Enter Captcha",mk_captcha_invalid_txt = "Invalid. Try again.",mk_captcha_correct_txt = "Captcha correct.",mk_responsive_nav_width = 1140,mk_vertical_header_back = "Back",mk_vertical_header_anim = "1",mk_check_rtl = true,mk_grid_width = 1140,mk_ajax_search_option = "fullscreen_search",mk_preloader_bg_color = "#14c14e",mk_accent_color = "#14c14e",mk_go_to_top =  "true",mk_smooth_scroll =  "true",mk_preloader_bar_color = "#14c14e",mk_preloader_logo = "https://demos.artbees.net/jupiter/hestia/wp-content/uploads/sites/145/2016/10/light-logo.png";var mk_header_parallax = false,mk_banner_parallax = false,mk_footer_parallax = false,mk_body_parallax = false,mk_no_more_posts = "No More Posts",mk_typekit_id   = "",mk_google_fonts = ["Open Sans:100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic,100,200,300,400,500,600,700,800,900"],mk_global_lazyload = true;</script><link rel='stylesheet' id='layerslider-css'  href='http://coronavirusboutique.com/wp-content/plugins/layerslider/static/layerslider/css/layerslider.css?ver=6.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://coronavirusboutique.com/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css' media='all' />
+<style id='wp-block-library-inline-css' type='text/css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='http://coronavirusboutique.com/wp-includes/css/dist/block-library/theme.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wc-block-style-css'  href='http://coronavirusboutique.com/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/style.css?ver=2.5.14' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://coronavirusboutique.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.7' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css'  href='http://coronavirusboutique.com/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.1.3' type='text/css' media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+#rs-demo-id {}
+</style>
+<link rel='stylesheet' id='woocommerce-layout-css'  href='http://coronavirusboutique.com/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=4.0.0' type='text/css' media='all' />
+<style id='woocommerce-layout-inline-css' type='text/css'>
+
+	.infinite-scroll .woocommerce-pagination {
+		display: none;
+	}
+</style>
+<link rel='stylesheet' id='woocommerce-smallscreen-css'  href='http://coronavirusboutique.com/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=4.0.0' type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css'  href='http://coronavirusboutique.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=4.0.0' type='text/css' media='all' />
+<style id='woocommerce-inline-inline-css' type='text/css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='theme-styles-css'  href='http://coronavirusboutique.com/wp-content/themes/jupiter/assets/stylesheet/min/full-styles.6.5.1.css?ver=1584540088' type='text/css' media='all' />
+<style id='theme-styles-inline-css' type='text/css'>
+
+			#wpadminbar {
+				-webkit-backface-visibility: hidden;
+				backface-visibility: hidden;
+				-webkit-perspective: 1000;
+				-ms-perspective: 1000;
+				perspective: 1000;
+				-webkit-transform: translateZ(0px);
+				-ms-transform: translateZ(0px);
+				transform: translateZ(0px);
+			}
+			@media screen and (max-width: 600px) {
+				#wpadminbar {
+					position: fixed !important;
+				}
+			}
+		
+body { background-color:#fff; } .hb-custom-header #mk-page-introduce, .mk-header { background-color:#ffffff;background-size:cover;-webkit-background-size:cover;-moz-background-size:cover; } .hb-custom-header > div, .mk-header-bg { background-color:#fff; } .mk-classic-nav-bg { background-color:#fff; } .master-holder-bg { background-color:#f7f7f7; } #mk-footer { background-color:#ffffff; } #mk-boxed-layout { -webkit-box-shadow:0 0 0px rgba(0, 0, 0, 0); -moz-box-shadow:0 0 0px rgba(0, 0, 0, 0); box-shadow:0 0 0px rgba(0, 0, 0, 0); } .mk-news-tab .mk-tabs-tabs .is-active a, .mk-fancy-title.pattern-style span, .mk-fancy-title.pattern-style.color-gradient span:after, .page-bg-color { background-color:#f7f7f7; } .page-title { font-size:20px; color:#4d4d4d; text-transform:uppercase; font-weight:400; letter-spacing:2px; } .page-subtitle { font-size:14px; line-height:100%; color:#a3a3a3; font-size:14px; text-transform:none; } .header-style-1 .mk-header-padding-wrapper, .header-style-2 .mk-header-padding-wrapper, .header-style-3 .mk-header-padding-wrapper { padding-top:111px; } .mk-process-steps[max-width~="950px"] ul::before { display:none !important; } .mk-process-steps[max-width~="950px"] li { margin-bottom:30px !important; width:100% !important; text-align:center; } .mk-event-countdown-ul[max-width~="750px"] li { width:90%; display:block; margin:0 auto 15px; } .compose-mode .vc_element-name .vc_btn-content { height:auto !important; } body { font-family:Arial, Helvetica, sans-serif } body { font-family:Open Sans } @font-face { font-family:'star'; src:url('http://coronavirusboutique.com/wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.eot'); src:url('http://coronavirusboutique.com/wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.eot?#iefix') format('embedded-opentype'), url('http://coronavirusboutique.com/wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.woff') format('woff'), url('http://coronavirusboutique.com/wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.ttf') format('truetype'), url('http://coronavirusboutique.com/wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.svg#star') format('svg'); font-weight:normal; font-style:normal; } @font-face { font-family:'WooCommerce'; src:url('http://coronavirusboutique.com/wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.eot'); src:url('http://coronavirusboutique.com/wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.eot?#iefix') format('embedded-opentype'), url('http://coronavirusboutique.com/wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.woff') format('woff'), url('http://coronavirusboutique.com/wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.ttf') format('truetype'), url('http://coronavirusboutique.com/wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.svg#WooCommerce') format('svg'); font-weight:normal; font-style:normal; }@media handheld, only screen and (max-width:768px) { #mk-footer, #mk-footer .widget_social_networks .align-left { text-align:center!important; } #sub-footer { text-align:center; } .mk-footer-copyright { width:93%; } }
+</style>
+<link rel='stylesheet' id='mkhb-render-css'  href='http://coronavirusboutique.com/wp-content/themes/jupiter/header-builder/includes/assets/css/mkhb-render.css?ver=6.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='mkhb-row-css'  href='http://coronavirusboutique.com/wp-content/themes/jupiter/header-builder/includes/assets/css/mkhb-row.css?ver=6.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='mkhb-column-css'  href='http://coronavirusboutique.com/wp-content/themes/jupiter/header-builder/includes/assets/css/mkhb-column.css?ver=6.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='mk-woocommerce-common-css'  href='http://coronavirusboutique.com/wp-content/themes/jupiter/assets/stylesheet/plugins/min/woocommerce-common.6.5.1.css?ver=1584540088' type='text/css' media='all' />
+<link rel='stylesheet' id='mk-cz-woocommerce-css'  href='http://coronavirusboutique.com/wp-content/themes/jupiter/framework/admin/customizer/woocommerce/assets/css/woocommerce.6.5.1.css?ver=1584540089' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-options-css'  href='https://coronavirusboutique.com/wp-content/uploads/mk_assets/theme-options-production-1584542481.css?ver=1584542089' type='text/css' media='all' />
+<link rel='stylesheet' id='ms-main-css'  href='http://coronavirusboutique.com/wp-content/plugins/masterslider/public/assets/css/masterslider.main.css?ver=3.2.14' type='text/css' media='all' />
+<link rel='stylesheet' id='ms-custom-css'  href='http://coronavirusboutique.com/wp-content/uploads/masterslider/custom.css?ver=1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='jupiter-donut-shortcodes-css'  href='http://coronavirusboutique.com/wp-content/plugins/jupiter-donut/assets/css/shortcodes-styles.min.css?ver=1.0.4' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='http://coronavirusboutique.com/wp-content/plugins/jetpack/css/jetpack.css?ver=8.3' type='text/css' media='all' />
+<script type='text/javascript' data-noptimize='' data-no-minify='' src='http://coronavirusboutique.com/wp-content/themes/jupiter/assets/js/plugins/wp-enqueue/webfontloader.js?ver=5.3.2'></script>
+<script type='text/javascript'>
+WebFontConfig = {
+	timeout: 2000
+}
+
+if ( mk_typekit_id.length > 0 ) {
+	WebFontConfig.typekit = {
+		id: mk_typekit_id
+	}
+}
+
+if ( mk_google_fonts.length > 0 ) {
+	WebFontConfig.google = {
+		families:  mk_google_fonts
+	}
+}
+
+if ( (mk_google_fonts.length > 0 || mk_typekit_id.length > 0) && navigator.userAgent.indexOf("Speed Insights") == -1) {
+	WebFont.load( WebFontConfig );
+}
+		
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var LS_Meta = {"v":"6.9.2"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://coronavirusboutique.com/wp-content/plugins/layerslider/static/layerslider/js/greensock.js?ver=1.19.0'></script>
+<script type='text/javascript' src='http://coronavirusboutique.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://coronavirusboutique.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://coronavirusboutique.com/wp-content/plugins/layerslider/static/layerslider/js/layerslider.kreaturamedia.jquery.js?ver=6.9.2'></script>
+<script type='text/javascript' src='http://coronavirusboutique.com/wp-content/plugins/layerslider/static/layerslider/js/layerslider.transitions.js?ver=6.9.2'></script>
+<script type='text/javascript' src='http://coronavirusboutique.com/wp-content/plugins/revslider/public/assets/js/revolution.tools.min.js?ver=6.0'></script>
+<script type='text/javascript' src='http://coronavirusboutique.com/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.1.3'></script>
+<script type='text/javascript' src='http://coronavirusboutique.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/coronavirusboutique.com\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://coronavirusboutique.com/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=4.0.0'></script>
+<script type='text/javascript' src='http://coronavirusboutique.com/wp-content/plugins/js_composer_theme/assets/js/vendors/woocommerce-add-to-cart.js?ver=6.1'></script>
+<script async type='text/javascript' src='https://stats.wp.com/s-202012.js'></script>
+<meta name="generator" content="Powered by LayerSlider 6.9.2 - Multi-Purpose, Responsive, Parallax, Mobile-Friendly Slider Plugin for WordPress." />
+<!-- LayerSlider updates and docs at: https://layerslider.kreaturamedia.com -->
+<link rel='https://api.w.org/' href='https://coronavirusboutique.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://coronavirusboutique.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://coronavirusboutique.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.3.2" />
+<meta name="generator" content="WooCommerce 4.0.0" />
+<script>var ms_grabbing_curosr='http://coronavirusboutique.com/wp-content/plugins/masterslider/public/assets/css/common/grabbing.cur',ms_grab_curosr='http://coronavirusboutique.com/wp-content/plugins/masterslider/public/assets/css/common/grab.cur';</script>
+<meta name="generator" content="MasterSlider 3.2.14 - Responsive Touch Image Slider" />
+<!-- SEO meta tags powered by SmartCrawl https://premium.wpmudev.org/project/smartcrawl-wordpress-seo/ -->
+<link rel="canonical" href="https://coronavirusboutique.com/" />
+<meta name="description" content="Are you a talented writer looking for a side project regarding design? CONTACT US" />
+<script type="application/ld+json">[{"@context":"http:\/\/schema.org","@type":"WebSite","about":"Everything to survive To the ( Cov19 ) Coronavirus Era","dateModified":"2020-03-18 14:51:25.000000","description":"Everything to survive To the ( Cov19 ) Coronavirus Era","encoding":"UTF-8","headline":"Coronavirus Boutique","inLanguage":"en-US","name":"Coronavirus Boutique","publisher":{"@type":"Organization","name":"Coronavirus Boutique"},"url":"http:\/\/coronavirusboutique.com"}]</script>
+<!-- /SEO -->
+<meta itemprop="author" content="" /><meta itemprop="datePublished" content="March 18, 2020" /><meta itemprop="dateModified" content="March 18, 2020" /><meta itemprop="publisher" content="Coronavirus Boutique" /><meta name="referrer" content="always"/><style type='text/css'>img#wpstats{display:none}</style><script> var isTest = false; </script>	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<meta name="generator" content="Powered by Slider Revolution 6.1.3 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<script type="text/javascript">function setREVStartSize(t){try{var h,e=document.getElementById(t.c).parentNode.offsetWidth;if(e=0===e||isNaN(e)?window.innerWidth:e,t.tabw=void 0===t.tabw?0:parseInt(t.tabw),t.thumbw=void 0===t.thumbw?0:parseInt(t.thumbw),t.tabh=void 0===t.tabh?0:parseInt(t.tabh),t.thumbh=void 0===t.thumbh?0:parseInt(t.thumbh),t.tabhide=void 0===t.tabhide?0:parseInt(t.tabhide),t.thumbhide=void 0===t.thumbhide?0:parseInt(t.thumbhide),t.mh=void 0===t.mh||""==t.mh||"auto"===t.mh?0:parseInt(t.mh,0),"fullscreen"===t.layout||"fullscreen"===t.l)h=Math.max(t.mh,window.innerHeight);else{for(var i in t.gw=Array.isArray(t.gw)?t.gw:[t.gw],t.rl)void 0!==t.gw[i]&&0!==t.gw[i]||(t.gw[i]=t.gw[i-1]);for(var i in t.gh=void 0===t.el||""===t.el||Array.isArray(t.el)&&0==t.el.length?t.gh:t.el,t.gh=Array.isArray(t.gh)?t.gh:[t.gh],t.rl)void 0!==t.gh[i]&&0!==t.gh[i]||(t.gh[i]=t.gh[i-1]);var r,a=new Array(t.rl.length),n=0;for(var i in t.tabw=t.tabhide>=e?0:t.tabw,t.thumbw=t.thumbhide>=e?0:t.thumbw,t.tabh=t.tabhide>=e?0:t.tabh,t.thumbh=t.thumbhide>=e?0:t.thumbh,t.rl)a[i]=t.rl[i]<window.innerWidth?0:t.rl[i];for(var i in r=a[0],a)r>a[i]&&0<a[i]&&(r=a[i],n=i);var d=e>t.gw[n]+t.tabw+t.thumbw?1:(e-(t.tabw+t.thumbw))/t.gw[n];h=t.gh[n]*d+(t.tabh+t.thumbh)}void 0===window.rs_init_css&&(window.rs_init_css=document.head.appendChild(document.createElement("style"))),document.getElementById(t.c).height=h,window.rs_init_css.innerHTML+="#"+t.c+"_wrapper { height: "+h+"px }"}catch(t){console.log("Failure at Presize of Slider:"+t)}};</script>
+<meta name="generator" content="Jupiter 6.5.1" /><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>	</head>
+
+<body class="home archive post-type-archive post-type-archive-product theme-jupiter _masterslider _msp_version_3.2.14 woocommerce woocommerce-page woocommerce-no-js mk-customizer columns-3 mk-sh-pl-hover-style-none wpb-js-composer js-comp-ver-6.1 vc_responsive" itemscope="itemscope" itemtype="https://schema.org/WebPage"  data-adminbar="">
+
+	
+	
+	<!-- Target for scroll anchors to achieve native browser bahaviour + possible enhancements like smooth scrolling -->
+	<div id="top-of-page"></div>
+
+		<div id="mk-boxed-layout">
+
+			<div id="mk-theme-container" >
+
+				 
+    <header data-height='110'
+                data-sticky-height='80'
+                data-responsive-height='90'
+                data-transparent-skin=''
+                data-header-style='1'
+                data-sticky-style='fixed'
+                data-sticky-offset='header' id="mk-header-1" class="mk-header header-style-1 header-align-left  toolbar-false menu-hover-5 sticky-style-fixed mk-background-stretch boxed-header " role="banner" itemscope="itemscope" itemtype="https://schema.org/WPHeader" >
+                    <div class="mk-header-holder">
+                                <div class="mk-header-inner add-header-height">
+
+                    <div class="mk-header-bg "></div>
+
+                    
+                                                <div class="mk-grid header-grid">
+                    
+                            <div class="mk-header-nav-container one-row-style menu-hover-style-5" role="navigation" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" >
+                                
+	<div class="main-nav-side-search">
+		<a class="mk-search-trigger add-header-height mk-fullscreen-trigger" href="#"><i class="mk-svg-icon-wrapper"><svg  class="mk-svg-icon" data-name="mk-icon-search" data-cacheid="icon-5e73bdc332594" style=" height:16px; width: 14.857142857143px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1664 1792"><path d="M1152 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z"/></svg></i></a>
+	</div>
+
+
+<div class="shopping-cart-header add-header-height">
+	
+	<a class="mk-shoping-cart-link" href="https://coronavirusboutique.com/cart/">
+		<svg  class="mk-svg-icon" data-name="mk-moon-cart-2" data-cacheid="icon-5e73bdc3328dc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M423.609 288c17.6 0 35.956-13.846 40.791-30.769l46.418-162.463c4.835-16.922-5.609-30.768-23.209-30.768h-327.609c0-35.346-28.654-64-64-64h-96v64h96v272c0 26.51 21.49 48 48 48h304c17.673 0 32-14.327 32-32s-14.327-32-32-32h-288v-32h263.609zm-263.609-160h289.403l-27.429 96h-261.974v-96zm32 344c0 22-18 40-40 40h-16c-22 0-40-18-40-40v-16c0-22 18-40 40-40h16c22 0 40 18 40 40v16zm288 0c0 22-18 40-40 40h-16c-22 0-40-18-40-40v-16c0-22 18-40 40-40h16c22 0 40 18 40 40v16z"/></svg>		<span class="mk-header-cart-count">0</span>
+	</a>
+
+	<div class="mk-shopping-cart-box">
+		<div class="widget woocommerce widget_shopping_cart"><h2 class="widgettitle">Cart</h2><div class="widget_shopping_cart_content"></div></div>		<div class="clearboth"></div>
+	</div>
+
+</div>
+                            </div>
+                            	<div class=" header-logo fit-logo-img add-header-height  ">
+		<a href="https://coronavirusboutique.com/" title="Coronavirus Boutique">
+
+			<img class="mk-desktop-logo dark-logo "
+				title="Everything to survive To the ( Cov19 ) Coronavirus Era"
+				alt="Everything to survive To the ( Cov19 ) Coronavirus Era"
+				src="https://demos.artbees.net/jupiter/hestia/wp-content/uploads/sites/145/2016/10/dark-logo.png" />
+
+							<img class="mk-desktop-logo light-logo "
+					title="Everything to survive To the ( Cov19 ) Coronavirus Era"
+					alt="Everything to survive To the ( Cov19 ) Coronavirus Era"
+					src="https://demos.artbees.net/jupiter/hestia/wp-content/uploads/sites/145/2016/10/light-logo.png" />
+			
+			
+					</a>
+	</div>
+
+                                            </div>
+                    
+                    <div class="mk-header-right">
+                                            </div>
+
+                </div>
+                
+<div class="mk-responsive-wrap">
+
+	
+			<form class="responsive-searchform" method="get" action="https://coronavirusboutique.com/">
+		    <input type="text" class="text-input" value="" name="s" id="s" placeholder="Search.." />
+		    <i><input value="" type="submit" /><svg  class="mk-svg-icon" data-name="mk-icon-search" data-cacheid="icon-5e73bdc332d82" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1664 1792"><path d="M1152 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z"/></svg></i>
+		</form>
+		
+
+</div>
+        
+            </div>
+        
+        <div class="mk-header-padding-wrapper"></div>
+ 
+                
+    </header>
+	<div id="theme-page" class="master-holder clearfix" role="main" itemprop="mainContentOfPage" >
+		<div class="master-holder-bg-holder">
+			<div id="theme-page-bg" class="master-holder-bg js-el"></div>
+		</div>
+		<div class="mk-main-wrapper-holder">
+			<div class="theme-page-wrapper full-layout no-padding mk-grid">
+				<div class="theme-content no-padding">
+	<header class="woocommerce-products-header">
+	
+	
+<div  data-mk-stretch-content="true" class="wpb_row vc_row vc_row-fluid jupiter-donut- mk-fullwidth-false  attched-false     js-master-row  mk-grid">
+				
+<div class="vc_col-sm-12 wpb_column column_container  jupiter-donut- _ jupiter-donut-height-full">
+	
+<div id="padding-3" class="mk-padding-divider jupiter-donut-visible-sm  jupiter-donut-clearfix"></div>
+
+<div  class="mk-image mk-image-4 jupiter-donut-  align-center simple-frame inside-image " style="margin-bottom:0px"><div class="mk-image-container" style="max-width: px;"><div  class="mk-image-holder" style="max-width: px;"><div class="mk-image-inner  "><img class="lightbox-false" alt="100 pièces visage bouche Anti Virus masque jetable protéger 3 couches filtre Anti poussière Earloop Non tissé bouche masques 48 heures d&#8217;expédition|Masques| |  &#8211; AliExpress" title="100 pièces visage bouche Anti Virus masque jetable protéger 3 couches filtre Anti poussière Earloop Non tissé bouche masques 48 heures d&#8217;expédition|Masques| |  &#8211; AliExpress" width="" height="" src="https://demos.artbees.net/jupiter/hestia/wp-content/uploads/sites/145/2016/10/home-head.jpg" /></div></div><div class="clearboth"></div></div></div></div>
+	</div>
+
+<div class="mk-page-section-wrapper" data-mk-full-width="true" data-mk-full-width-init="true" data-mk-stretch-content="true">
+	<div id="page-section-5" class="mk-page-section self-hosted   full_layout full-width-5 js-el js-master-row jupiter-donut-   "    data-intro-effect="false">
+
+			
+			<div class="mk-page-section-inner">
+				
+
+
+<div class="mk-video-color-mask"></div>
+
+				
+							</div>
+
+			
+        <div class="page-section-content vc_row-fluid mk-grid " >
+            <div class="mk-padding-wrapper wpb_row">
+<div class="vc_col-sm-9 wpb_column column_container  jupiter-donut- _ jupiter-donut-height-full">
+	
+<h1 id="fancy-title-7" class="mk-fancy-title  simple-style jupiter-donut-  color-single">
+	<span>
+				<p>Are you a talented writer looking for a side project regarding design?</p>
+			</span>
+</h1>
+<div class="clearboth"></div>
+
+
+
+<style>#fancy-title-7 {font-family: "Open Sans"}</style></div>
+
+<div class="vc_col-sm-3 wpb_column column_container  jupiter-donut- _ jupiter-donut-height-full">
+	
+<div id="mk-button-9" class="mk-button-container _ jupiter-donut-relative    jupiter-donut-inline-block jupiter-donut-left ">
+
+	
+		<a href="#" target="_self" class="mk-button js-smooth-scroll mk-button--dimension-flat mk-button--size-medium mk-button--corner-pointed text-color-dark _ jupiter-donut-relative jupiter-donut-text-center jupiter-donut-font-weight-700 jupiter-donut-no-backface  letter-spacing-1 jupiter-donut-inline-block"><span class="mk-button--text">CONTACT US</span></a>
+
+	
+</div>
+</div>
+</div>
+            <div class="clearboth"></div>
+        </div>
+
+
+			
+			
+			
+		<div class="clearboth"></div>
+	</div>
+</div>
+<div class="vc_row-full-width vc_clearfix"></div>
+
+
+<div  data-mk-stretch-content="true" class="wpb_row vc_row vc_row-fluid jupiter-donut- mk-fullwidth-false  attched-false     js-master-row  mk-grid">
+				
+<div class="vc_col-sm-12 wpb_column column_container  jupiter-donut- _ jupiter-donut-height-full">
+	
+<div id="padding-11" class="mk-padding-divider jupiter-donut-  jupiter-donut-clearfix"></div>
+
+</div>
+	</div>
+
+</header>
+<div class="woocommerce-notices-wrapper"></div><h4 class="mk-woocommerce-shop-loop__title">ALL PRODUCTS</h4><form class="woocommerce-ordering" method="get">
+	<select name="orderby" class="orderby" aria-label="Shop order">
+					<option value="menu_order"  selected='selected'>Default sorting</option>
+					<option value="popularity" >Sort by popularity</option>
+					<option value="rating" >Sort by average rating</option>
+					<option value="date" >Sort by latest</option>
+					<option value="price" >Sort by price: low to high</option>
+					<option value="price-desc" >Sort by price: high to low</option>
+			</select>
+	<input type="hidden" name="paged" value="1" />
+	</form>
+<ul class="products columns-3">
+<li class="mk-info-sticky product type-product post-106 status-publish first instock has-post-thumbnail sale taxable shipping-taxable purchasable product-type-variable">
+	<div class="mk-product-warp"><a href="https://coronavirusboutique.com/product/100-pieces-visage-bouche-anti-virus-masque-jetable-proteger-3-couches-filtre-anti-poussiere-earloop-non-tisse-bouche-masques-48-heures-dexpeditionmasques-aliexpress/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">	<div class="mk-product-thumbnail-warp">
+	<img width="300" height="300" src="https://coronavirusboutique.com/wp-content/uploads/2020/03/100-pi-ces-visage-bouche-Anti-Virus-masque-jetable-prot-ger-3-couches-filtre-Anti-poussi-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="https://coronavirusboutique.com/wp-content/uploads/2020/03/100-pi-ces-visage-bouche-Anti-Virus-masque-jetable-prot-ger-3-couches-filtre-Anti-poussi-300x300.jpg 300w, https://coronavirusboutique.com/wp-content/uploads/2020/03/100-pi-ces-visage-bouche-Anti-Virus-masque-jetable-prot-ger-3-couches-filtre-Anti-poussi-1024x1024.jpg 1024w, https://coronavirusboutique.com/wp-content/uploads/2020/03/100-pi-ces-visage-bouche-Anti-Virus-masque-jetable-prot-ger-3-couches-filtre-Anti-poussi-150x150.jpg 150w, https://coronavirusboutique.com/wp-content/uploads/2020/03/100-pi-ces-visage-bouche-Anti-Virus-masque-jetable-prot-ger-3-couches-filtre-Anti-poussi-768x768.jpg 768w, https://coronavirusboutique.com/wp-content/uploads/2020/03/100-pi-ces-visage-bouche-Anti-Virus-masque-jetable-prot-ger-3-couches-filtre-Anti-poussi-1536x1536.jpg 1536w, https://coronavirusboutique.com/wp-content/uploads/2020/03/100-pi-ces-visage-bouche-Anti-Virus-masque-jetable-prot-ger-3-couches-filtre-Anti-poussi-2048x2048.jpg 2048w, https://coronavirusboutique.com/wp-content/uploads/2020/03/100-pi-ces-visage-bouche-Anti-Virus-masque-jetable-prot-ger-3-couches-filtre-Anti-poussi-600x600.jpg 600w, https://coronavirusboutique.com/wp-content/uploads/2020/03/100-pi-ces-visage-bouche-Anti-Virus-masque-jetable-prot-ger-3-couches-filtre-Anti-poussi-100x100.jpg 100w, https://coronavirusboutique.com/wp-content/uploads/2020/03/100-pi-ces-visage-bouche-Anti-Virus-masque-jetable-prot-ger-3-couches-filtre-Anti-poussi.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" itemprop="image" />	</div>
+	
+	<span class="onsale">Sale!</span>
+	<h2 class="woocommerce-loop-product__title">100 pièces visage bouche Anti Virus masque jetable protéger 3 couches filtre Anti poussière Earloop Non tissé bouche masques 48 heures d&#8217;expédition|Masques| |  &#8211; AliExpress</h2>
+	<span class="price"><del><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>193.15</span></del> <ins><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>108.44</span></ins></span>
+</a><a rel="nofollow" href="https://coronavirusboutique.com/product/100-pieces-visage-bouche-anti-virus-masque-jetable-proteger-3-couches-filtre-anti-poussiere-earloop-non-tisse-bouche-masques-48-heures-dexpeditionmasques-aliexpress/" data-quantity="1" data-product_id="106" data-product_sku="" class="button product_type_variable add_to_cart_button" data-product_id="106" data-product_sku="" aria-label="Select options for &ldquo;100 pièces visage bouche Anti Virus masque jetable protéger 3 couches filtre Anti poussière Earloop Non tissé bouche masques 48 heures d&#039;expédition|Masques| |  - AliExpress&rdquo;" rel="nofollow"><svg  class="mk-svg-icon" data-name="mk-moon-cart-plus" data-cacheid="icon-5e73bdc337932" style=" height:15px; width: 15px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 96h-272c-16.138 0-29.751 12.018-31.753 28.031l-28.496 227.969h-51.751c-17.673 0-32 14.327-32 32s14.327 32 32 32h80c16.138 0 29.751-12.017 31.753-28.031l28.496-227.969h219.613l57.369 200.791c4.854 16.993 22.567 26.832 39.56 21.978 16.993-4.855 26.833-22.567 21.978-39.56l-64-224c-3.925-13.737-16.482-23.209-30.769-23.209zm-288-80a48 48 2700 1 0 96 0 48 48 2700 1 0-96 0zm192 0a48 48 2700 1 0 96 0 48 48 2700 1 0-96 0zm64 240h-64v-64h-64v64h-64v64h64v64h64v-64h64z" transform="scale(1 -1) translate(0 -480)"/></svg><span class="button-text">Select options</span></a></div></li>
+<li class="mk-info-sticky product type-product post-30 status-publish instock product_cat-high-quality product_cat-mockup product_cat-psd has-post-thumbnail taxable shipping-taxable purchasable product-type-simple">
+	<div class="mk-product-warp"><a href="https://coronavirusboutique.com/product/vitae-ultrices/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">	<div class="mk-product-thumbnail-warp">
+	<img src="http://coronavirusboutique.com/wp-content/plugins/woocommerce/assets/images/placeholder.png" width="300" height="300" class="woocommerce-placeholder wp-post-image" alt="Placeholder"/>	</div>
+	<div class="star-rating" title="Rated 4.00 out of 5"><span style="width:80%"></span></div><h2 class="woocommerce-loop-product__title">A4 Paper Mockup</h2>
+	<span class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>70.00</span></span>
+</a><a rel="nofollow" href="?add-to-cart=30" data-quantity="1" data-product_id="30" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="30" data-product_sku="" aria-label="Add &ldquo;A4 Paper Mockup&rdquo; to your cart" rel="nofollow"><svg  class="mk-svg-icon" data-name="mk-moon-cart-plus" data-cacheid="icon-5e73bdc338776" style=" height:15px; width: 15px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 96h-272c-16.138 0-29.751 12.018-31.753 28.031l-28.496 227.969h-51.751c-17.673 0-32 14.327-32 32s14.327 32 32 32h80c16.138 0 29.751-12.017 31.753-28.031l28.496-227.969h219.613l57.369 200.791c4.854 16.993 22.567 26.832 39.56 21.978 16.993-4.855 26.833-22.567 21.978-39.56l-64-224c-3.925-13.737-16.482-23.209-30.769-23.209zm-288-80a48 48 2700 1 0 96 0 48 48 2700 1 0-96 0zm192 0a48 48 2700 1 0 96 0 48 48 2700 1 0-96 0zm64 240h-64v-64h-64v64h-64v64h64v64h64v-64h64z" transform="scale(1 -1) translate(0 -480)"/></svg><span class="button-text">Add to cart</span></a></div></li>
+<li class="mk-info-sticky product type-product post-28 status-publish last instock product_cat-art product_cat-branding product_cat-psd has-post-thumbnail taxable shipping-taxable purchasable product-type-simple">
+	<div class="mk-product-warp"><a href="https://coronavirusboutique.com/product/vivamus-eget/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">	<div class="mk-product-thumbnail-warp">
+	<img src="http://coronavirusboutique.com/wp-content/plugins/woocommerce/assets/images/placeholder.png" width="300" height="300" class="woocommerce-placeholder wp-post-image" alt="Placeholder"/>	</div>
+	<div class="star-rating" title="Rated 3.00 out of 5"><span style="width:60%"></span></div><h2 class="woocommerce-loop-product__title">Branding Identity Mockup</h2>
+	<span class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>120.00</span></span>
+</a><a rel="nofollow" href="?add-to-cart=28" data-quantity="1" data-product_id="28" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="28" data-product_sku="" aria-label="Add &ldquo;Branding Identity Mockup&rdquo; to your cart" rel="nofollow"><svg  class="mk-svg-icon" data-name="mk-moon-cart-plus" data-cacheid="icon-5e73bdc339445" style=" height:15px; width: 15px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 96h-272c-16.138 0-29.751 12.018-31.753 28.031l-28.496 227.969h-51.751c-17.673 0-32 14.327-32 32s14.327 32 32 32h80c16.138 0 29.751-12.017 31.753-28.031l28.496-227.969h219.613l57.369 200.791c4.854 16.993 22.567 26.832 39.56 21.978 16.993-4.855 26.833-22.567 21.978-39.56l-64-224c-3.925-13.737-16.482-23.209-30.769-23.209zm-288-80a48 48 2700 1 0 96 0 48 48 2700 1 0-96 0zm192 0a48 48 2700 1 0 96 0 48 48 2700 1 0-96 0zm64 240h-64v-64h-64v64h-64v64h64v64h64v-64h64z" transform="scale(1 -1) translate(0 -480)"/></svg><span class="button-text">Add to cart</span></a></div></li>
+<li class="mk-info-sticky product type-product post-34 status-publish first instock product_cat-branding product_cat-mockup has-post-thumbnail taxable shipping-taxable purchasable product-type-variable">
+	<div class="mk-product-warp"><a href="https://coronavirusboutique.com/product/nunc-mauris/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">	<div class="mk-product-thumbnail-warp">
+	<img src="http://coronavirusboutique.com/wp-content/plugins/woocommerce/assets/images/placeholder.png" width="300" height="300" class="woocommerce-placeholder wp-post-image" alt="Placeholder"/>	</div>
+	<h2 class="woocommerce-loop-product__title">Branding Identity Mockup</h2>
+	<span class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>40.00</span></span>
+</a><a rel="nofollow" href="https://coronavirusboutique.com/product/nunc-mauris/" data-quantity="1" data-product_id="34" data-product_sku="" class="button product_type_variable add_to_cart_button" data-product_id="34" data-product_sku="" aria-label="Select options for &ldquo;Branding Identity Mockup&rdquo;" rel="nofollow"><svg  class="mk-svg-icon" data-name="mk-moon-cart-plus" data-cacheid="icon-5e73bdc33a39b" style=" height:15px; width: 15px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 96h-272c-16.138 0-29.751 12.018-31.753 28.031l-28.496 227.969h-51.751c-17.673 0-32 14.327-32 32s14.327 32 32 32h80c16.138 0 29.751-12.017 31.753-28.031l28.496-227.969h219.613l57.369 200.791c4.854 16.993 22.567 26.832 39.56 21.978 16.993-4.855 26.833-22.567 21.978-39.56l-64-224c-3.925-13.737-16.482-23.209-30.769-23.209zm-288-80a48 48 2700 1 0 96 0 48 48 2700 1 0-96 0zm192 0a48 48 2700 1 0 96 0 48 48 2700 1 0-96 0zm64 240h-64v-64h-64v64h-64v64h64v64h64v-64h64z" transform="scale(1 -1) translate(0 -480)"/></svg><span class="button-text">Select options</span></a></div></li>
+<li class="mk-info-sticky product type-product post-31 status-publish instock product_cat-art product_cat-branding product_cat-mockup has-post-thumbnail taxable shipping-taxable purchasable product-type-simple">
+	<div class="mk-product-warp"><a href="https://coronavirusboutique.com/product/dolor-quis/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">	<div class="mk-product-thumbnail-warp">
+	<img src="http://coronavirusboutique.com/wp-content/plugins/woocommerce/assets/images/placeholder.png" width="300" height="300" class="woocommerce-placeholder wp-post-image" alt="Placeholder"/>	</div>
+	<div class="star-rating" title="Rated 5.00 out of 5"><span style="width:100%"></span></div><h2 class="woocommerce-loop-product__title">Food Branding Mockup</h2>
+	<span class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>85.00</span></span>
+</a><a rel="nofollow" href="?add-to-cart=31" data-quantity="1" data-product_id="31" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="31" data-product_sku="" aria-label="Add &ldquo;Food Branding Mockup&rdquo; to your cart" rel="nofollow"><svg  class="mk-svg-icon" data-name="mk-moon-cart-plus" data-cacheid="icon-5e73bdc33b0c7" style=" height:15px; width: 15px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 96h-272c-16.138 0-29.751 12.018-31.753 28.031l-28.496 227.969h-51.751c-17.673 0-32 14.327-32 32s14.327 32 32 32h80c16.138 0 29.751-12.017 31.753-28.031l28.496-227.969h219.613l57.369 200.791c4.854 16.993 22.567 26.832 39.56 21.978 16.993-4.855 26.833-22.567 21.978-39.56l-64-224c-3.925-13.737-16.482-23.209-30.769-23.209zm-288-80a48 48 2700 1 0 96 0 48 48 2700 1 0-96 0zm192 0a48 48 2700 1 0 96 0 48 48 2700 1 0-96 0zm64 240h-64v-64h-64v64h-64v64h64v64h64v-64h64z" transform="scale(1 -1) translate(0 -480)"/></svg><span class="button-text">Add to cart</span></a></div></li>
+<li class="mk-info-sticky product type-product post-35 status-publish last outofstock product_cat-art product_cat-high-quality product_cat-psd has-post-thumbnail taxable shipping-taxable purchasable product-type-simple">
+	<div class="mk-product-warp"><a href="https://coronavirusboutique.com/product/tortor-ultrices/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">	<div class="mk-product-thumbnail-warp">
+	<img src="http://coronavirusboutique.com/wp-content/plugins/woocommerce/assets/images/placeholder.png" width="300" height="300" class="woocommerce-placeholder wp-post-image" alt="Placeholder"/>	</div>
+	<h2 class="woocommerce-loop-product__title">Food Branding Mockup</h2><span class="mk-out-of-stock">Out of Stock</span>
+	<span class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>55.00</span></span>
+</a><a rel="nofollow" href="https://coronavirusboutique.com/product/tortor-ultrices/" data-quantity="1" data-product_id="35" data-product_sku="" class="button product_type_simple" data-product_id="35" data-product_sku="" aria-label="Read more about &ldquo;Food Branding Mockup&rdquo;" rel="nofollow"><svg  class="mk-svg-icon" data-name="mk-moon-search-3" data-cacheid="icon-5e73bdc33bd94" style=" height:15px; width: 15px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M496.131 435.698l-121.276-103.147c-12.537-11.283-25.945-16.463-36.776-15.963 28.628-33.534 45.921-77.039 45.921-124.588 0-106.039-85.961-192-192-192-106.038 0-192 85.961-192 192s85.961 192 192 192c47.549 0 91.054-17.293 124.588-45.922-.5 10.831 4.68 24.239 15.963 36.776l103.147 121.276c17.661 19.623 46.511 21.277 64.11 3.678s15.946-46.449-3.677-64.11zm-304.131-115.698c-70.692 0-128-57.308-128-128s57.308-128 128-128 128 57.308 128 128-57.307 128-128 128z"/></svg><span class="button-text">Read more</span></a></div></li>
+<li class="mk-info-sticky product type-product post-91 status-publish first instock product_cat-masks has-post-thumbnail taxable shipping-taxable product-type-variable has-default-attributes">
+	<div class="mk-product-warp"><a href="https://coronavirusboutique.com/product/masques-mascarilla-coronavirus-anti-poussiere-polyurethane-eponge-anti-preuve-reutilisable-masque-respiratoire-tapabocas-masque-livraison-rapidemasques-aliexpress/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">	<div class="mk-product-thumbnail-warp">
+	<img width="300" height="300" src="https://coronavirusboutique.com/wp-content/uploads/2020/03/Masques-Mascarilla-Coronavirus-Anti-poussi-re-polyur-thane-ponge-Anti-preuve-r-utilisable-Masque-respiratoire-Tapabocas-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="https://coronavirusboutique.com/wp-content/uploads/2020/03/Masques-Mascarilla-Coronavirus-Anti-poussi-re-polyur-thane-ponge-Anti-preuve-r-utilisable-Masque-respiratoire-Tapabocas-300x300.jpg 300w, https://coronavirusboutique.com/wp-content/uploads/2020/03/Masques-Mascarilla-Coronavirus-Anti-poussi-re-polyur-thane-ponge-Anti-preuve-r-utilisable-Masque-respiratoire-Tapabocas-1024x1024.jpg 1024w, https://coronavirusboutique.com/wp-content/uploads/2020/03/Masques-Mascarilla-Coronavirus-Anti-poussi-re-polyur-thane-ponge-Anti-preuve-r-utilisable-Masque-respiratoire-Tapabocas-150x150.jpg 150w, https://coronavirusboutique.com/wp-content/uploads/2020/03/Masques-Mascarilla-Coronavirus-Anti-poussi-re-polyur-thane-ponge-Anti-preuve-r-utilisable-Masque-respiratoire-Tapabocas-768x768.jpg 768w, https://coronavirusboutique.com/wp-content/uploads/2020/03/Masques-Mascarilla-Coronavirus-Anti-poussi-re-polyur-thane-ponge-Anti-preuve-r-utilisable-Masque-respiratoire-Tapabocas-1536x1536.jpg 1536w, https://coronavirusboutique.com/wp-content/uploads/2020/03/Masques-Mascarilla-Coronavirus-Anti-poussi-re-polyur-thane-ponge-Anti-preuve-r-utilisable-Masque-respiratoire-Tapabocas-2048x2048.jpg 2048w, https://coronavirusboutique.com/wp-content/uploads/2020/03/Masques-Mascarilla-Coronavirus-Anti-poussi-re-polyur-thane-ponge-Anti-preuve-r-utilisable-Masque-respiratoire-Tapabocas-600x600.jpg 600w, https://coronavirusboutique.com/wp-content/uploads/2020/03/Masques-Mascarilla-Coronavirus-Anti-poussi-re-polyur-thane-ponge-Anti-preuve-r-utilisable-Masque-respiratoire-Tapabocas-100x100.jpg 100w, https://coronavirusboutique.com/wp-content/uploads/2020/03/Masques-Mascarilla-Coronavirus-Anti-poussi-re-polyur-thane-ponge-Anti-preuve-r-utilisable-Masque-respiratoire-Tapabocas.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" itemprop="image" />	</div>
+	<h2 class="woocommerce-loop-product__title">Masques Mascarilla Coronavirus Anti poussière polyuréthane éponge Anti preuve réutilisable Masque respiratoire Tapabocas Masque livraison rapide|Masques| |  &#8211; AliExpress</h2>
+</a><a rel="nofollow" href="https://coronavirusboutique.com/product/masques-mascarilla-coronavirus-anti-poussiere-polyurethane-eponge-anti-preuve-reutilisable-masque-respiratoire-tapabocas-masque-livraison-rapidemasques-aliexpress/" data-quantity="1" data-product_id="91" data-product_sku="Jui" class="button product_type_variable" data-product_id="91" data-product_sku="Jui" aria-label="Select options for &ldquo;Masques Mascarilla Coronavirus Anti poussière polyuréthane éponge Anti preuve réutilisable Masque respiratoire Tapabocas Masque livraison rapide|Masques| |  - AliExpress&rdquo;" rel="nofollow"><svg  class="mk-svg-icon" data-name="mk-moon-search-3" data-cacheid="icon-5e73bdc33cdaa" style=" height:15px; width: 15px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M496.131 435.698l-121.276-103.147c-12.537-11.283-25.945-16.463-36.776-15.963 28.628-33.534 45.921-77.039 45.921-124.588 0-106.039-85.961-192-192-192-106.038 0-192 85.961-192 192s85.961 192 192 192c47.549 0 91.054-17.293 124.588-45.922-.5 10.831 4.68 24.239 15.963 36.776l103.147 121.276c17.661 19.623 46.511 21.277 64.11 3.678s15.946-46.449-3.677-64.11zm-304.131-115.698c-70.692 0-128-57.308-128-128s57.308-128 128-128 128 57.308 128 128-57.307 128-128 128z"/></svg><span class="button-text">Read more</span></a></div></li>
+<li class="mk-info-sticky product type-product post-33 status-publish instock product_cat-art product_cat-branding product_cat-mockup has-post-thumbnail sale taxable shipping-taxable purchasable product-type-variable">
+	<div class="mk-product-warp"><a href="https://coronavirusboutique.com/product/vitae-ante/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">	<div class="mk-product-thumbnail-warp">
+	<img src="http://coronavirusboutique.com/wp-content/plugins/woocommerce/assets/images/placeholder.png" width="300" height="300" class="woocommerce-placeholder wp-post-image" alt="Placeholder"/>	</div>
+	
+	<span class="onsale">Sale!</span>
+	<h2 class="woocommerce-loop-product__title">Paper Mockup PSD</h2>
+	<span class="price"><del><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>180.00</span></del> <ins><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>150.00</span></ins></span>
+</a><a rel="nofollow" href="https://coronavirusboutique.com/product/vitae-ante/" data-quantity="1" data-product_id="33" data-product_sku="" class="button product_type_variable add_to_cart_button" data-product_id="33" data-product_sku="" aria-label="Select options for &ldquo;Paper Mockup PSD&rdquo;" rel="nofollow"><svg  class="mk-svg-icon" data-name="mk-moon-cart-plus" data-cacheid="icon-5e73bdc33ddae" style=" height:15px; width: 15px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 96h-272c-16.138 0-29.751 12.018-31.753 28.031l-28.496 227.969h-51.751c-17.673 0-32 14.327-32 32s14.327 32 32 32h80c16.138 0 29.751-12.017 31.753-28.031l28.496-227.969h219.613l57.369 200.791c4.854 16.993 22.567 26.832 39.56 21.978 16.993-4.855 26.833-22.567 21.978-39.56l-64-224c-3.925-13.737-16.482-23.209-30.769-23.209zm-288-80a48 48 2700 1 0 96 0 48 48 2700 1 0-96 0zm192 0a48 48 2700 1 0 96 0 48 48 2700 1 0-96 0zm64 240h-64v-64h-64v64h-64v64h64v64h64v-64h64z" transform="scale(1 -1) translate(0 -480)"/></svg><span class="button-text">Select options</span></a></div></li>
+<li class="mk-info-sticky product type-product post-26 status-publish last instock product_cat-high-quality product_cat-mockup product_cat-psd has-post-thumbnail taxable shipping-taxable purchasable product-type-simple">
+	<div class="mk-product-warp"><a href="https://coronavirusboutique.com/product/lorem-ipsum/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">	<div class="mk-product-thumbnail-warp">
+	<img src="http://coronavirusboutique.com/wp-content/plugins/woocommerce/assets/images/placeholder.png" width="300" height="300" class="woocommerce-placeholder wp-post-image" alt="Placeholder"/>	</div>
+	<div class="star-rating" title="Rated 2.00 out of 5"><span style="width:40%"></span></div><h2 class="woocommerce-loop-product__title">Sketchbook Mockup PSD</h2>
+	<span class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>70.00</span></span>
+</a><a rel="nofollow" href="?add-to-cart=26" data-quantity="1" data-product_id="26" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="26" data-product_sku="" aria-label="Add &ldquo;Sketchbook Mockup PSD&rdquo; to your cart" rel="nofollow"><svg  class="mk-svg-icon" data-name="mk-moon-cart-plus" data-cacheid="icon-5e73bdc33ea45" style=" height:15px; width: 15px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 96h-272c-16.138 0-29.751 12.018-31.753 28.031l-28.496 227.969h-51.751c-17.673 0-32 14.327-32 32s14.327 32 32 32h80c16.138 0 29.751-12.017 31.753-28.031l28.496-227.969h219.613l57.369 200.791c4.854 16.993 22.567 26.832 39.56 21.978 16.993-4.855 26.833-22.567 21.978-39.56l-64-224c-3.925-13.737-16.482-23.209-30.769-23.209zm-288-80a48 48 2700 1 0 96 0 48 48 2700 1 0-96 0zm192 0a48 48 2700 1 0 96 0 48 48 2700 1 0-96 0zm64 240h-64v-64h-64v64h-64v64h64v64h64v-64h64z" transform="scale(1 -1) translate(0 -480)"/></svg><span class="button-text">Add to cart</span></a></div></li>
+</ul>
+<nav class="woocommerce-pagination">
+	<ul class='page-numbers'>
+	<li><span aria-current="page" class="page-numbers current">1</span></li>
+	<li><a class="page-numbers" href="https://coronavirusboutique.com/page/2/">2</a></li>
+	<li><a class="next page-numbers" href="https://coronavirusboutique.com/page/2/">&rarr;</a></li>
+</ul>
+</nav>
+<p class="woocommerce-result-count">
+	Showing 1&ndash;9 of 11 results</p>
+
+					</div>
+							<div class="clearboth"></div>
+				</div>
+			</div>
+		</div>
+
+	
+<section id="mk-footer-unfold-spacer"></section>
+
+<section id="mk-footer" class="" role="contentinfo" itemscope="itemscope" itemtype="https://schema.org/WPFooter" >
+		<div class="footer-wrapper mk-grid">
+		<div class="mk-padding-wrapper">
+					<div class="mk-col-1-3"><section id="text-1" class="widget widget_text">			<div class="textwidget"><img src="https://demos.artbees.net/jupiter/hestia/wp-content/uploads/sites/145/2016/10/footer-logo.png"></div>
+		</section><section id="text-2" class="widget widget_text">			<div class="textwidget">Showcase your design <br>
+the best way</div>
+		</section></div>
+			<div class="mk-col-1-3"><section id="text-3" class="widget widget_text">			<div class="textwidget"><div style="padding-bottom: 55px;"></div>
+Patricia C. Amedee 4401 <br>
+Waldeck Street Grapevine <br> 
+Nashville, TX 76051<br>
+<br>
+Email: info@yourdomain.com <br>
+Phone: +99 (0) 101 0000 888</div>
+		</section></div>
+			<div class="mk-col-1-3"><section id="text-4" class="widget widget_text">			<div class="textwidget"><div style="padding-bottom: 55px;"></div></div>
+		</section><section id="social-1" class="widget widget_social_networks"><div id="social-5e73bdc33f5b7" class="align-left"><a href="https://www.facebook.com/artbees" rel="nofollow" class="builtin-icons mk-square-rounded custom large facebook-hover" target="_blank" alt="Follow Us on facebook" title="Follow Us on facebook"><svg  class="mk-svg-icon" data-name="mk-jupiter-icon-simple-facebook" data-cacheid="icon-5e73bdc33f655" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M192.191 92.743v60.485h-63.638v96.181h63.637v256.135h97.069v-256.135h84.168s6.674-51.322 9.885-96.508h-93.666v-42.921c0-8.807 11.565-20.661 23.01-20.661h71.791v-95.719h-83.57c-111.317 0-108.686 86.262-108.686 99.142z"/></svg></a><a href="https://www.instagram.com/artbees/" rel="nofollow" class="builtin-icons mk-square-rounded custom large instagram-hover" target="_blank" alt="Follow Us on instagram" title="Follow Us on instagram"><svg  class="mk-svg-icon" data-name="mk-jupiter-icon-simple-instagram" data-cacheid="icon-5e73bdc33f6e5" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.2 81.2"><path d="M81,23.9c-0.2-4.3-0.9-7.3-1.9-9.9c-1-2.7-2.4-4.9-4.7-7.2c-2.3-2.3-4.5-3.6-7.2-4.7c-2.6-1-5.5-1.7-9.9-1.9 C53,0,51.6,0,40.6,0c-11,0-12.4,0-16.7,0.2c-4.3,0.2-7.3,0.9-9.9,1.9c-2.7,1-4.9,2.4-7.2,4.7C4.6,9.1,3.2,11.3,2.1,14 c-1,2.6-1.7,5.5-1.9,9.9C0,28.2,0,29.6,0,40.6c0,11,0,12.4,0.2,16.7c0.2,4.3,0.9,7.3,1.9,9.9c1,2.7,2.4,4.9,4.7,7.2 c2.3,2.3,4.5,3.6,7.2,4.7c2.6,1,5.5,1.7,9.9,1.9c4.3,0.2,5.7,0.2,16.7,0.2c11,0,12.4,0,16.7-0.2c4.3-0.2,7.3-0.9,9.9-1.9 c2.7-1,4.9-2.4,7.2-4.7c2.3-2.3,3.6-4.5,4.7-7.2c1-2.6,1.7-5.5,1.9-9.9c0.2-4.3,0.2-5.7,0.2-16.7C81.2,29.6,81.2,28.2,81,23.9z  M73.6,57c-0.2,4-0.8,6.1-1.4,7.5c-0.7,1.9-1.6,3.2-3,4.7c-1.4,1.4-2.8,2.3-4.7,3c-1.4,0.6-3.6,1.2-7.5,1.4 c-4.3,0.2-5.6,0.2-16.4,0.2c-10.8,0-12.1,0-16.4-0.2c-4-0.2-6.1-0.8-7.5-1.4c-1.9-0.7-3.2-1.6-4.7-3c-1.4-1.4-2.3-2.8-3-4.7 C8.4,63.1,7.7,61,7.6,57c-0.2-4.3-0.2-5.6-0.2-16.4c0-10.8,0-12.1,0.2-16.4c0.2-4,0.8-6.1,1.4-7.5c0.7-1.9,1.6-3.2,3-4.7 c1.4-1.4,2.8-2.3,4.7-3c1.4-0.6,3.6-1.2,7.5-1.4c4.3-0.2,5.6-0.2,16.4-0.2c10.8,0,12.1,0,16.4,0.2c4,0.2,6.1,0.8,7.5,1.4 c1.9,0.7,3.2,1.6,4.7,3c1.4,1.4,2.3,2.8,3,4.7c0.6,1.4,1.2,3.6,1.4,7.5c0.2,4.3,0.2,5.6,0.2,16.4C73.9,51.4,73.8,52.7,73.6,57z"/><path d="M40.6,19.8c-11.5,0-20.8,9.3-20.8,20.8c0,11.5,9.3,20.8,20.8,20.8c11.5,0,20.8-9.3,20.8-20.8 C61.4,29.1,52.1,19.8,40.6,19.8z M40.6,54.1c-7.5,0-13.5-6.1-13.5-13.5c0-7.5,6.1-13.5,13.5-13.5c7.5,0,13.5,6.1,13.5,13.5 C54.1,48.1,48.1,54.1,40.6,54.1z"/><circle cx="62.3" cy="18.9" r="4.9"/></svg></a><a href="https://twitter.com/artbees_design" rel="nofollow" class="builtin-icons mk-square-rounded custom large twitter-hover" target="_blank" alt="Follow Us on twitter" title="Follow Us on twitter"><svg  class="mk-svg-icon" data-name="mk-jupiter-icon-simple-twitter" data-cacheid="icon-5e73bdc33f764" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M454.058 213.822c28.724-2.382 48.193-15.423 55.683-33.132-10.365 6.373-42.524 13.301-60.269 6.681-.877-4.162-1.835-8.132-2.792-11.706-13.527-49.679-59.846-89.698-108.382-84.865 3.916-1.589 7.914-3.053 11.885-4.388 5.325-1.923 36.678-7.003 31.749-18.079-4.176-9.728-42.471 7.352-49.672 9.597 9.501-3.581 25.26-9.735 26.93-20.667-14.569 1.991-28.901 8.885-39.937 18.908 3.998-4.293 7.01-9.536 7.666-15.171-38.91 24.85-61.624 74.932-80.025 123.523-14.438-13.972-27.239-25.008-38.712-31.114-32.209-17.285-70.722-35.303-131.156-57.736-1.862 19.996 9.899 46.591 43.723 64.273-7.325-.986-20.736 1.219-31.462 3.773 4.382 22.912 18.627 41.805 57.251 50.918-17.642 1.163-26.767 5.182-35.036 13.841 8.043 15.923 27.656 34.709 62.931 30.82-39.225 16.935-15.998 48.234 15.93 43.565-54.444 56.244-140.294 52.123-189.596 5.08 128.712 175.385 408.493 103.724 450.21-65.225 31.23.261 49.605-10.823 60.994-23.05-17.99 3.053-44.072-.095-57.914-5.846z"/></svg></a>
+					<style>
+						#social-5e73bdc33f5b7 a {
+							opacity: 1 !important;color: #cccccc !important;}
+						#social-5e73bdc33f5b7 a:hover { color: #ffffff !important;background-color: #14c14e !important;}
+						#social-5e73bdc33f5b7 a:hover .mk-svg-icon { fill: #ffffff !important;}</style></div></section></div>
+				<div class="clearboth"></div>
+		</div>
+	</div>
+		
+<div id="sub-footer">
+	<div class=" mk-grid">
+		
+		<span class="mk-footer-copyright">Copyright All Rights Reserved © 2016</span>
+			</div>
+	<div class="clearboth"></div>
+</div>
+</section>
+</div>
+</div>
+
+<div class="bottom-corner-btns js-bottom-corner-btns">
+
+<a href="#top-of-page" class="mk-go-top  js-smooth-scroll js-bottom-corner-btn js-bottom-corner-btn--back">
+	<svg  class="mk-svg-icon" data-name="mk-icon-chevron-up" data-cacheid="icon-5e73bdc33f994" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792"><path d="M1683 1331l-166 165q-19 19-45 19t-45-19l-531-531-531 531q-19 19-45 19t-45-19l-166-165q-19-19-19-45.5t19-45.5l742-741q19-19 45-19t45 19l742 741q19 19 19 45.5t-19 45.5z"/></svg></a>
+	<div class="mk-quick-contact-wrapper js-bottom-corner-btn js-bottom-corner-btn--contact">
+			
+		<a href="#" class="mk-quick-contact-link"><svg  class="mk-svg-icon" data-name="mk-icon-envelope" data-cacheid="icon-5e73bdc33fad3" style=" height:20px; width: 20px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/></svg></a>
+		<div id="mk-quick-contact">
+			<div class="mk-quick-contact-title">Contact Us</div>
+			<p>We&#039;re not around right now. But you can send us an email and we&#039;ll get back to you, asap.</p>
+			<form class="mk-contact-form" method="post" novalidate="novalidate">
+				<input type="text" placeholder="Name*" required="required" id="name" name="name" class="text-input" value="" tabindex="1275" />
+				<input type="email" data-type="email" required="required" placeholder="Email*" id="email" name="email" class="text-input" value="" tabindex="1276"  />
+				<textarea placeholder="Message*" required="required" id="content" name="content" class="textarea" tabindex="1277"></textarea>
+								<input placeholder="Enter Captcha" type="text" data-type="captcha" name="captcha" class="captcha-form text-input full" required="required" autocomplete="off" />
+				<a href="#" class="captcha-change-image">Not readable? Change text.</a>
+				<span class="captcha-image-holder">
+					<img src="http://coronavirusboutique.com/wp-content/plugins/artbees-captcha/generate-captcha.php" class="captcha-image" alt="captcha txt"/>
+				</span>
+				<br/>
+				
+								<div class="mk-quick-contact-gdpr-consent">
+					<div>
+					<input type="checkbox" name="contact_form_gdpr_check" id="gdpr_check_1278" class="mk-checkbox" required="required" value="" tabindex="1278" /><label for="gdpr_check_1278">I consent to Coronavirus Boutique collecting my details through this form.</label>
+					</div>
+				</div>
+				
+				<div class="btn-cont">
+					<button tabindex="1279" class="mk-progress-button mk-contact-button accent-bg-color button" data-style="move-up">
+						<span class="mk-progress-button-content">Send</span>
+						<span class="mk-progress">
+							<span class="mk-progress-inner"></span>
+						</span>
+						<span class="state-success"><svg  class="mk-svg-icon" data-name="mk-moon-checkmark" data-cacheid="icon-5e73bdc33fd3d" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M432 64l-240 240-112-112-80 80 192 192 320-320z"/></svg></span>
+						<span class="state-error"><svg  class="mk-svg-icon" data-name="mk-moon-close" data-cacheid="icon-5e73bdc33febf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M507.331 411.33l-.006-.005-155.322-155.325 155.322-155.325.006-.005c1.672-1.673 2.881-3.627 3.656-5.708 2.123-5.688.912-12.341-3.662-16.915l-73.373-73.373c-4.574-4.573-11.225-5.783-16.914-3.66-2.08.775-4.035 1.984-5.709 3.655l-.004.005-155.324 155.326-155.324-155.325-.005-.005c-1.673-1.671-3.627-2.88-5.707-3.655-5.69-2.124-12.341-.913-16.915 3.66l-73.374 73.374c-4.574 4.574-5.784 11.226-3.661 16.914.776 2.08 1.985 4.036 3.656 5.708l.005.005 155.325 155.324-155.325 155.326-.004.005c-1.671 1.673-2.88 3.627-3.657 5.707-2.124 5.688-.913 12.341 3.661 16.915l73.374 73.373c4.575 4.574 11.226 5.784 16.915 3.661 2.08-.776 4.035-1.985 5.708-3.656l.005-.005 155.324-155.325 155.324 155.325.006.004c1.674 1.672 3.627 2.881 5.707 3.657 5.689 2.123 12.342.913 16.914-3.661l73.373-73.374c4.574-4.574 5.785-11.227 3.662-16.915-.776-2.08-1.985-4.034-3.657-5.707z"/></svg></span>
+					</button>
+				</div>
+				<input type="hidden" id="security" name="security" value="c19a85d417" /><input type="hidden" name="_wp_http_referer" value="/" />				<input type="hidden" id="sh_id" name="sh_id" value="15"><input type="hidden" id="p_id" name="p_id" value="2342">				<div class="contact-form-message clearfix"></div>  
+			</form>
+			<div class="bottom-arrow"></div>
+		</div>
+	</div>
+		<div class="add-cart-responsive-state">
+			<a class="mk-shoping-cart-link" href="https://coronavirusboutique.com/cart/">
+				<svg  class="mk-svg-icon" data-name="mk-moon-cart-2" data-cacheid="icon-5e73bdc3400fd" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M423.609 288c17.6 0 35.956-13.846 40.791-30.769l46.418-162.463c4.835-16.922-5.609-30.768-23.209-30.768h-327.609c0-35.346-28.654-64-64-64h-96v64h96v272c0 26.51 21.49 48 48 48h304c17.673 0 32-14.327 32-32s-14.327-32-32-32h-288v-32h263.609zm-263.609-160h289.403l-27.429 96h-261.974v-96zm32 344c0 22-18 40-40 40h-16c-22 0-40-18-40-40v-16c0-22 18-40 40-40h16c22 0 40 18 40 40v16zm288 0c0 22-18 40-40 40h-16c-22 0-40-18-40-40v-16c0-22 18-40 40-40h16c22 0 40 18 40 40v16z"/></svg>				<span class="mk-header-cart-count">0</span>
+			</a>
+		</div>
+		</div>
+
+
+
+<div class="mk-fullscreen-search-overlay">
+	<a href="#" class="mk-fullscreen-close"><svg  class="mk-svg-icon" data-name="mk-moon-close-2" data-cacheid="icon-5e73bdc340309" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M390.628 345.372l-45.256 45.256-89.372-89.373-89.373 89.372-45.255-45.255 89.373-89.372-89.372-89.373 45.254-45.254 89.373 89.372 89.372-89.373 45.256 45.255-89.373 89.373 89.373 89.372z"/></svg></a>
+	<div class="mk-fullscreen-search-wrapper">
+		<p>Start typing and press Enter to search</p>
+		<form method="get" id="mk-fullscreen-searchform" action="https://coronavirusboutique.com/">
+			<input type="text" value="" name="s" id="mk-fullscreen-search-input" />
+			<i class="fullscreen-search-icon"><svg  class="mk-svg-icon" data-name="mk-icon-search" data-cacheid="icon-5e73bdc3403f0" style=" height:25px; width: 23.214285714286px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1664 1792"><path d="M1152 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z"/></svg></i>
+		</form>
+	</div>
+</div>
+
+
+	<style type='text/css'></style><style id="mk-shortcode-static-styles" type="text/css"> #padding-3 { height:80px; }  #fancy-title-7{letter-spacing:0px;text-transform:initial;font-size:24px;color:#ffffff;text-align:left;font-style:inherit;font-weight:400;padding-top:0px;padding-bottom:0px;}#fancy-title-7 span{}#fancy-title-7 span i{font-style:inherit;} @media handheld, only screen and (max-width:767px) { #fancy-title-7 { text-align:center !important; } } @media handheld, only screen and (max-width:767px) { #fancy-title-7 { font-size:15px; } }  #mk-button-9 { margin-bottom:0px; margin-top:0px; margin-right:0px; } #mk-button-9 .mk-button { display:inline-block; max-width:100%; } #mk-button-9 .mk-button { background-color:#ffffff; } #mk-button-9 .mk-button:hover { } #mk-button-9 .mk-button:hover .mk-svg-icon { } .full-width-5 { min-height:0px; margin-bottom:0px; background-color:#14c14e; } .full-width-5 .page-section-content { padding:30px 0 20px; } #background-layer--5 { ; background-position:center center; background-repeat:no-repeat; ; } #background-layer--5 .mk-color-layer { ; width:100%; height:100%; position:absolute; top:0; left:0; } .full-width-5 .mk-fancy-title.pattern-style span, .full-width-5 .mk-blog-view-all { background-color:#14c14e !important; }  #padding-11 { height:125px; }</style><script type="text/javascript">
+    php = {
+        hasAdminbar: false,
+        json: (null != null) ? null : "",
+        jsPath: 'http://coronavirusboutique.com/wp-content/themes/jupiter/assets/js'
+      };
+    </script><script type="application/ld+json">{"@context":"https:\/\/schema.org\/","@type":"WebSite","name":"Coronavirus Boutique","url":"https:\/\/coronavirusboutique.com","potentialAction":{"@type":"SearchAction","target":"https:\/\/coronavirusboutique.com\/?s={search_term_string}&amp;post_type=product","query-input":"required name=search_term_string"}}</script><script type="text/html" id="wpb-modifications"></script>	<script type="text/javascript">
+		var c = document.body.className;
+		c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+		document.body.className = c;
+	</script>
+	<link rel='stylesheet' id='js_composer_front-css'  href='http://coronavirusboutique.com/wp-content/plugins/js_composer_theme/assets/css/js_composer.min.css?ver=6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='Open+Sans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A100italic%2C200italic%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%2C100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900&#038;ver=5.3.2' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/coronavirusboutique.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://coronavirusboutique.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.7'></script>
+<script type='text/javascript' src='http://coronavirusboutique.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://coronavirusboutique.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=4.0.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_c6e95012f2273a95329cef67945dacdd","fragment_name":"wc_fragments_c6e95012f2273a95329cef67945dacdd","request_timeout":"5000"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://coronavirusboutique.com/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=4.0.0'></script>
+<script type='text/javascript'>
+		jQuery( 'body' ).bind( 'wc_fragments_refreshed', function() {
+			jQuery( 'body' ).trigger( 'jetpack-lazy-images-load' );
+		} );
+	
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mailchimp_public_data = {"site_url":"http:\/\/coronavirusboutique.com","ajax_url":"https:\/\/coronavirusboutique.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://coronavirusboutique.com/wp-content/plugins/mailchimp-for-woocommerce/public/js/mailchimp-woocommerce-public.min.js?ver=2.3.5'></script>
+<script type='text/javascript' src='http://coronavirusboutique.com/wp-content/themes/jupiter/assets/js/core-scripts.6.5.1.js?ver=1584540088'></script>
+<script type='text/javascript' src='http://coronavirusboutique.com/wp-content/themes/jupiter/assets/js/components-full.6.5.1.js?ver=1584540088'></script>
+<script type='text/javascript' src='http://coronavirusboutique.com/wp-content/themes/jupiter/assets/js/plugins/wp-enqueue/smoothscroll.js?ver=1584540088'></script>
+<script type='text/javascript' src='http://coronavirusboutique.com/wp-content/themes/jupiter/header-builder/includes/assets/js/mkhb-render.js?ver=6.5.1'></script>
+<script type='text/javascript' src='http://coronavirusboutique.com/wp-content/themes/jupiter/header-builder/includes/assets/js/mkhb-column.js?ver=6.5.1'></script>
+<script type='text/javascript' src='http://coronavirusboutique.com/wp-content/themes/jupiter/framework/admin/customizer/woocommerce/assets/js/woocommerce.6.5.1.js?ver=1584540089'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var jupiterDonutVars = {"themeDir":"http:\/\/coronavirusboutique.com\/wp-content\/themes\/jupiter","assetsUrl":"http:\/\/coronavirusboutique.com\/wp-content\/plugins\/jupiter-donut\/assets","gridWidth":"1140","ajaxUrl":"https:\/\/coronavirusboutique.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://coronavirusboutique.com/wp-content/plugins/jupiter-donut/assets/js/shortcodes-scripts.min.js?ver=1.0.4'></script>
+<script type='text/javascript' src='http://coronavirusboutique.com/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+<script type='text/javascript' src='http://coronavirusboutique.com/wp-content/plugins/js_composer_theme/assets/js/dist/js_composer_front.min.js?ver=6.1'></script>
+<script type='text/javascript' src='https://stats.wp.com/e-202012.js' async='async' defer='defer'></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:8.3',blog:'174382684',post:'0',tz:'0',srv:'coronavirusboutique.com'} ]);
+	_stq.push([ 'clickTrackerInit', '174382684', '0' ]);
+</script>
+<script type="text/javascript">	window.get = {};	window.get.captcha = function(enteredCaptcha) {
+                  return jQuery.get(ajaxurl, { action : "mk_validate_captcha_input", captcha: enteredCaptcha });
+              	};</script>
+	</body>
+</html>

@@ -4,16 +4,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Коронавирус Онлайн: Карта, графики, новости Росиии и мира &#8212; Ещё один сайт на WordPress</title>
+	<title>Коронавирус Онлайн: Карта, графики, новости России и мира &#8212; Самые актуальные цифры и информация</title>
 <link rel='stylesheet' id='wp-block-library-theme-css'  href='https://coronavirus2.online/wp-includes/css/dist/block-library/theme.min.css'  media='all' />
-<link rel='stylesheet' id='google-fonts-css'  href='https://fonts.googleapis.com/css?family=Montserrat%3A400%2C400i%2C700&#038;subset=cyrillic'  media='all' />
+<link rel='stylesheet' id='google-fonts-css'  href='https://fonts.googleapis.com/css?family=Montserrat%3A400%2C400i%2C700&#038;subset=cyrillic&#038;display=swap'  media='all' />
 <link rel='stylesheet' id='reboot-style-css'  href='https://coronavirus2.online/wp-content/themes/reboot/assets/css/style.min.css'  media='all' />
 <script  src='https://coronavirus2.online/wp-includes/js/jquery/jquery.js'></script>
 <script  src='https://coronavirus2.online/wp-includes/js/jquery/jquery-migrate.min.js'></script>
-<link rel="canonical" href="https://coronavirus2.online/" />
-<style>.pseudo-clearfy-link { color: #008acf; cursor: pointer;}.pseudo-clearfy-link:hover { text-decoration: none;}</style>    </head>
+<style>.pseudo-clearfy-link { color: #008acf; cursor: pointer;}.pseudo-clearfy-link:hover { text-decoration: none;}</style>
+    <style>.site-title, .site-title a{color:#ba3412}</style>
+<link rel="icon" href="https://coronavirus2.online/wp-content/uploads/2020/03/cropped-favikon-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="https://coronavirus2.online/wp-content/uploads/2020/03/cropped-favikon-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://coronavirus2.online/wp-content/uploads/2020/03/cropped-favikon-180x180.jpg" />
+<meta name="msapplication-TileImage" content="https://coronavirus2.online/wp-content/uploads/2020/03/cropped-favikon-270x270.jpg" />
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-<body class="home page-template-default page page-id-6 wp-embed-responsive sidebar-right">
+   ym(61122385, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/61122385" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></head>
+
+<body class="home blog wp-embed-responsive sidebar-none">
 
 
 
@@ -23,12 +41,42 @@
     
 
 <header id="masthead" class="site-header full" itemscope itemtype="http://schema.org/WPHeader">
-    <div class="site-header-inner fixed">
+    <div class="site-header-inner full">
 
         <div class="humburger js-humburger"><span></span><span></span><span></span></div>
 
         <div class="site-branding">
-    <div class="site-branding__body"><div class="site-title">Коронавирус Онлайн: Карта, графики, новости Росиии и мира</div><p class="site-description">Ещё один сайт на WordPress</p></div></div><!-- .site-branding -->                <div class="header-search">
+    <div class="site-logotype"><img src="https://coronavirus2.online/wp-content/uploads/2020/03/logo-white.png" alt="Коронавирус Онлайн: Карта, графики, новости России и мира"></div><div class="site-branding__body"><h1 class="site-title">Коронавирус Онлайн: Карта, графики, новости России и мира</h1><p class="site-description">Самые актуальные цифры и информация</p></div></div><!-- .site-branding -->                <div class="header-html-1">
+                    <script>
+	Data = new Date();
+	Data.setMinutes(Data.getMinutes() - 1);
+	
+	Hour = ('0' + Data.getHours()).slice(-2);
+	Minutes = ('0' + Data.getMinutes()).slice(-2);
+	Year = Data.getFullYear();
+Month = Data.getMonth();
+Day = Data.getDate();
+ 
+// Преобразуем месяца
+switch (Month)
+{
+  case 0: fMonth="января"; break;
+  case 1: fMonth="февраля"; break;
+  case 2: fMonth="марта"; break;
+  case 3: fMonth="апреля"; break;
+  case 4: fMonth="мае"; break;
+  case 5: fMonth="июня"; break;
+  case 6: fMonth="июля"; break;
+  case 7: fMonth="августа"; break;
+  case 8: fMonth="сентября"; break;
+  case 9: fMonth="октября"; break;
+  case 10: fMonth="ноября"; break;
+  case 11: fMonth="декабря"; break;
+}
+	// Вывод
+	document.write("<b>Обновлено: "+Day+" "+fMonth+" "+Year+", "+Hour+":"+Minutes+":"+30+"</b>");
+</script>                </div>
+                            <div class="header-search">
                     <span class="search-icon js-search-icon"></span>
                 </div>
             
@@ -37,6 +85,16 @@
 
 
     
+    
+    <nav id="site-navigation" class="main-navigation full">
+        <div class="main-navigation-inner full">
+            <div class="menu-verhnee-menyu-container"><ul id="header_menu" class="menu"><li id="menu-item-56" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-56"><span class="removed-link">Онлайн карта короновируса</span></li>
+<li id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-17"><a href="https://coronavirus2.online/test/">Тест</a></li>
+</ul></div>        </div>
+    </nav><!-- #site-navigation -->
+
+    
+
     <div class="mobile-menu-placeholder js-mobile-menu-placeholder"></div>
     <div class="search-screen-overlay js-search-screen-overlay"></div>
     <div class="search-screen js-search-screen">
@@ -55,71 +113,37 @@
 
         
         <div class="site-content-inner">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
+
+            
+<div class="section-block section-html section-preset--bgc-14">
     
-        
-        <div id="primary" class="content-area" itemscope itemtype="http://schema.org/Article">
-            <main id="main" class="site-main">
-
-                
-<article id="post-6" class="article-post post-6 page type-page status-publish ">
-
+    <div class="section-html__body">
+        <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="2019-nCoV" src="https://coronavirus.jhu.edu/map.html"></iframe>    </div>
+</div><!--.section-posts-->
+<div class="section-block section-html section-preset--none">
     
-        <div class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList"><span class="breadcrumb-item breadcrumb_last" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><span itemprop="name">Главная</span><meta itemprop="position" content="0"></span></div>
-                                <h1 class="entry-title" itemprop="headline">Коронавирус Онлайн</h1>
-                    
-        
-        
+    <div class="section-html__body">
+        <iframe src="https://coronavirus-monitor.ru/map" frameBorder="0" height="400" width="100%" style="max-width: 100%;"></iframe>    </div>
+</div><!--.section-posts-->
+<div class="section-block section-html ">
+            <div class="section-block__header">
+            <div class="section-block__title">Статистика заражения коронавирусом</div>
+        </div>
     
-	<div class="entry-content">
-			</div><!-- .entry-content -->
-
-</article>
-
-
-    <div class="entry-social">
-                    <div class="entry-bottom__header">Поделиться с друзьями</div>
-                <div class="social-buttons"><span class="social-button social-button--vkontakte" data-social="vkontakte"></span><span class="social-button social-button--facebook" data-social="facebook"></span><span class="social-button social-button--telegram" data-social="telegram"></span><span class="social-button social-button--odnoklassniki" data-social="odnoklassniki"></span><span class="social-button social-button--twitter" data-social="twitter"></span><span class="social-button social-button--sms" data-social="sms"></span><span class="social-button social-button--whatsapp" data-social="whatsapp"></span></div>    </div>
-
-
-
-<meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="https://coronavirus2.online/" content="Коронавирус Онлайн">
-<meta itemprop="dateModified" content="2020-03-18">
-<meta itemprop="datePublished" content="2020-03-18T01:55:22+03:00">
-<meta itemprop="author" content="admincr">
-<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization" style="display: none;"><meta itemprop="name" content="Коронавирус Онлайн: Карта, графики, новости Росиии и мира"><meta itemprop="telephone" content="Коронавирус Онлайн: Карта, графики, новости Росиии и мира"><meta itemprop="address" content="https://coronavirus2.online"></div>
-            </main><!-- #main -->
-        </div><!-- #primary -->
-
-        
-<aside id="secondary" class="widget-area" itemscope itemtype="http://schema.org/WPSideBar">
-    <div class="sticky-sidebar js-sticky-sidebar">
-	    <div id="search-2" class="widget widget_search">
-<form role="search" method="get" class="search-form" action="https://coronavirus2.online/">
-    <label>
-        <span class="screen-reader-text">Search for:</span>
-        <input type="search" class="search-field" placeholder="Поиск..." value="" name="s">
-    </label>
-    <button type="submit" class="search-submit"></button>
-</form></div><div id="recent-comments-2" class="widget widget_recent_comments"><div class="widget-header">Свежие комментарии</div><ul id="recentcomments"></ul></div><div id="archives-2" class="widget widget_archive"><div class="widget-header">Архивы</div>		<ul>
-					</ul>
-			</div><div id="categories-2" class="widget widget_categories"><div class="widget-header">Рубрики</div>		<ul>
-			<li class="cat-item-none">Рубрик нет</li>		</ul>
-			</div><div id="meta-2" class="widget widget_meta"><div class="widget-header">Мета</div>			<ul>
-						<li><a href="https://coronavirus2.online/wp-login.php">Войти</a></li>
-			<li><a href="https://coronavirus2.online/feed/">Лента записей</a></li>
-			<li><a href="https://coronavirus2.online/comments/feed/">Лента комментариев</a></li>
-			<li><a href="https://ru.wordpress.org/">WordPress.org</a></li>			</ul>
-			</div>    </div>
-</aside><!-- #secondary -->
+    <div class="section-html__body">
+        [update]    </div>
+</div><!--.section-posts-->
+		</main><!-- #main -->
+	</div><!-- #primary -->
 
     
-                                
+
     </div><!--.site-content-inner-->
 
+    
 </div><!--.site-content-->
-
-
-    <div class="advertising-after-site fixed"></div>
 
     
     
@@ -129,13 +153,13 @@
     
 
     <footer id="colophon" class="site-footer site-footer--style-gray full">
-        <div class="site-footer-inner fixed">
+        <div class="site-footer-inner full">
 
             
             
 <div class="footer-bottom">
     <div class="footer-info">
-        © 2020 Коронавирус Онлайн: Карта, графики, новости Росиии и мира
+        © 2020 Коронавирус Онлайн: Карта, графики, новости России и мира
 	        </div>
 
     <div class="footer-counters">
@@ -153,7 +177,7 @@
 <script type="text/javascript">var pseudo_links = document.querySelectorAll(".pseudo-clearfy-link");for (var i=0;i<pseudo_links.length;i++ ) { pseudo_links[i].addEventListener("click", function(e){   window.open( e.target.getAttribute("data-uri") ); }); }</script><script>document.oncopy = function () {var bodyElement = document.body;var selection = getSelection();var link_url = document.URL;var page_link = "<br>Источник: %link%";page_link = page_link.replace("%link%", " " + link_url + " ");var copy_text = selection + page_link;var divElement = document.createElement("div");divElement.style.position="absolute";divElement.style.left="-99999px";bodyElement.appendChild(divElement);divElement.innerHTML = copy_text;selection.selectAllChildren(divElement);window.setTimeout(function() {bodyElement.removeChild(divElement);},0);}</script><script type='text/javascript'>
 /* <![CDATA[ */
 var settings_array = {"rating_text_average":"\u0441\u0440\u0435\u0434\u043d\u0435\u0435","rating_text_from":"\u0438\u0437","lightbox_display":"1","sidebar_fixed":"1"};
-var wps_ajax = {"url":"https:\/\/coronavirus2.online\/wp-admin\/admin-ajax.php","nonce":"fc4520be32"};
+var wps_ajax = {"url":"https:\/\/coronavirus2.online\/wp-admin\/admin-ajax.php","nonce":"b543eadf43"};
 /* ]]> */
 </script>
 <script  src='https://coronavirus2.online/wp-content/themes/reboot/assets/js/all.min.js'></script>

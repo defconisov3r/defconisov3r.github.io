@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Live Mapping for COVID-19 Cases on World.">
+    <meta name="keywords" content="coronavirus map,covid 19 map,corona virus cases">
+    <meta name="author" content="CoronaCasesCounter">
+    <title>Corona Virus Cases - LIVE MAP</title>
+    <link rel="apple-touch-icon" href="../../../app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,600%7CIBM+Plex+Sans:300,400,500,600,700" rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/charts/apexcharts.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/extensions/swiper.min.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/semi-dark-layout.css">
+    <!-- END: Theme CSS-->
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/horizontal-menu.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/widgets.min.css">
+    <!-- END: Page CSS-->
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
+    <!-- END: Custom CSS-->
+
+</head>
+<!-- END: Head-->
+
+<!-- BEGIN: Body-->
+
+<body class="horizontal-layout horizontal-menu navbar-static dark-layout 2-columns   footer-static  " data-open="hover" data-menu="horizontal-menu" data-col="2-columns" data-layout="dark-layout">
+
+    <!-- BEGIN: Header-->
+    <nav class="header-navbar navbar-expand-lg navbar navbar-with-menu navbar-static-top bg-primary navbar-brand-center">
+        <div class="navbar-header d-xl-block d-none">
+            <ul class="nav navbar-nav flex-row">
+                <li class="nav-item"><a class="navbar-brand" href="../../../html/ltr/horizontal-menu-template-dark/index.html">
+                        <div class="brand-logo"></div>
+                        <h2 class="brand-text mb-0">Corona Virus Cases LIVE</h2> 
+                    </a></li>
+            </ul>
+        </div>
+        <div class="navbar-wrapper">
+            <div class="navbar-container content">
+                <div class="navbar-collapse" id="navbar-mobile">
+                    <div class="mr-auto float-left bookmark-wrapper d-flex align-items-center">
+               
+                    </div>
+                   </div>
+            </div>
+        </div>
+    </nav>
+    <!-- END: Header-->
+
+
+
+  <!-- BEGIN: Content-->
+    <div class="app-content content">
+      <div class="content-overlay"></div>
+      <div class="content-wrapper">
+  
+        <div class="content-body"><!-- Widgets Statistics start -->
+<section id="widgets-Statistics">
+  <div class="row">
+ 
+  </div>
+  <div class="row">
+  
+<div class="col-lg-8 col-md-12">
+ <!-- Styles -->
+<style>
+#chartdiv {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+</style>
+
+<!-- Resources -->
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+<script src="https://www.amcharts.com/lib/4/maps.js"></script>
+<script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+<!-- Chart code -->
+<script>
+am4core.ready(function() {
+
+// Themes begin
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+// Create map instance
+var chart = am4core.create("chartdiv", am4maps.MapChart);
+
+// Set map definition
+chart.geodata = am4geodata_worldLow;
+
+// Set projection
+chart.projection = new am4maps.projections.Miller();
+
+// Create map polygon series
+var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
+
+// Exclude Antartica
+polygonSeries.exclude = ["AQ"];
+
+// Make map load polygon (like country names) data from GeoJSON
+polygonSeries.useGeodata = true;
+
+// Configure series
+var polygonTemplate = polygonSeries.mapPolygons.template;
+polygonTemplate.tooltipText = "{name}";
+polygonTemplate.polygon.fillOpacity = 0.6;
+
+
+// Create hover state and set alternative fill color
+var hs = polygonTemplate.states.create("hover");
+hs.properties.fill = chart.colors.getIndex(0);
+
+// Add image series
+var imageSeries = chart.series.push(new am4maps.MapImageSeries());
+imageSeries.mapImages.template.propertyFields.longitude = "longitude";
+imageSeries.mapImages.template.propertyFields.latitude = "latitude";
+imageSeries.mapImages.template.tooltipText = "{title}";
+imageSeries.mapImages.template.propertyFields.url = "url";
+
+var circle = imageSeries.mapImages.template.createChild(am4core.Circle);
+circle.radius = 3;
+circle.propertyFields.fill = "color";
+
+var circle2 = imageSeries.mapImages.template.createChild(am4core.Circle);
+circle2.radius = 3;
+circle2.propertyFields.fill = "color";
+
+
+circle2.events.on("inited", function(event){
+  animateBullet(event.target);
+})
+
+
+function animateBullet(circle) {
+    var animation = circle.animate([{ property: "scale", from: 1, to: 5 }, { property: "opacity", from: 1, to: 0 }], 1000, am4core.ease.circleOut);
+    animation.events.on("animationended", function(event){
+      animateBullet(event.target.object);
+    })
+}
+
+var colorSet = new am4core.ColorSet();
+
+imageSeries.data = [ {
+  "title": "Brussels",
+  "latitude": 50.8371,
+  "longitude": 4.3676,
+  "color":colorSet.next()
+}, {
+  "title": "Copenhagen",
+  "latitude": 55.6763,
+  "longitude": 12.5681,
+  "color":colorSet.next()
+}, {
+  "title": "Paris",
+  "latitude": 48.8567,
+  "longitude": 2.3510,
+  "color":colorSet.next()
+}, {
+  "title": "Reykjavik",
+  "latitude": 64.1353,
+  "longitude": -21.8952,
+  "color":colorSet.next()
+}, {
+  "title": "Moscow",
+  "latitude": 55.7558,
+  "longitude": 37.6176,
+  "color":colorSet.next()
+}, {
+  "title": "Madrid",
+  "latitude": 40.4167,
+  "longitude": -3.7033,
+  "color":colorSet.next()
+}, {
+  "title": "London",
+  "latitude": 51.5002,
+  "longitude": -0.1262,
+  "url": "http://www.google.co.uk",
+  "color":colorSet.next()
+}, {
+  "title": "Peking",
+  "latitude": 39.9056,
+  "longitude": 116.3958,
+  "color":colorSet.next()
+}, {
+  "title": "New Delhi",
+  "latitude": 28.6353,
+  "longitude": 77.2250,
+  "color":colorSet.next()
+}, {
+  "title": "Tokyo",
+  "latitude": 35.6785,
+  "longitude": 139.6823,
+  "url": "http://www.google.co.jp",
+  "color":colorSet.next()
+}, {
+  "title": "Ankara",
+  "latitude": 39.9439,
+  "longitude": 32.8560,
+  "color":colorSet.next()
+}, {
+  "title": "Buenos Aires",
+  "latitude": -34.6118,
+  "longitude": -58.4173,
+  "color":colorSet.next()
+}, {
+  "title": "Brasilia",
+  "latitude": -15.7801,
+  "longitude": -47.9292,
+  "color":colorSet.next()
+}, {
+  "title": "Ottawa",
+  "latitude": 45.4235,
+  "longitude": -75.6979,
+  "color":colorSet.next()
+}, {
+  "title": "Washington",
+  "latitude": 38.8921,
+  "longitude": -77.0241,
+  "color":colorSet.next()
+}, {
+  "title": "Kinshasa",
+  "latitude": -4.3369,
+  "longitude": 15.3271,
+  "color":colorSet.next()
+}, {
+  "title": "Cairo",
+  "latitude": 30.0571,
+  "longitude": 31.2272,
+  "color":colorSet.next()
+}, {
+  "title": "Pretoria",
+  "latitude": -25.7463,
+  "longitude": 28.1876,
+  "color":colorSet.next()
+} ];
+
+
+
+}); // end am4core.ready()
+</script>
+
+<!-- HTML -->
+<div id="chartdiv"></div>
+    </div>
+<div class="col-lg-4 col-md-6">
+      <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center border-bottom">
+          <h4 class="card-title">Statistics</h4>
+          <i class="bx bx-dots-vertical-rounded font-medium-3 cursor-pointer"></i>
+        </div>
+        <div class="card-content">
+          <div class="card-body" style="position: relative;">
+            <div class="pb-1 pt-3" id="donut-chart-statistics" style="min-height: 229.561px;"><div id="apexcharts01fi3i2p" class="apexcharts-canvas apexcharts01fi3i2p light" style="width: 280px; height: 229.561px;"><svg id="SvgjsSvg2272" width="280" height="229.56097560975613" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" class="apexcharts-svg" xmlns:data="ApexChartsNS" transform="translate(0, 0)" style="background: transparent;"><g id="SvgjsG2274" class="apexcharts-inner apexcharts-graphical" transform="translate(29.5, 0)"><defs id="SvgjsDefs2273"><clipPath id="gridRectMask01fi3i2p"><rect id="SvgjsRect2275" width="223" height="245" x="0" y="0" rx="0" ry="0" fill="#ffffff" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0"></rect></clipPath><clipPath id="gridRectMarkerMask01fi3i2p"><rect id="SvgjsRect2276" width="225" height="247" x="-1" y="-1" rx="0" ry="0" fill="#ffffff" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0"></rect></clipPath></defs><g id="SvgjsG2278" class="apexcharts-pie" data:innerTranslateX="0" data:innerTranslateY="-25"><g id="SvgjsG2280" class="apexcharts-datalabels-group" transform="translate(0, 0)"><text id="SvgjsText2281" font-family="Rubik" x="111.5" y="131.5" text-anchor="middle" dominant-baseline="auto" font-size="22px" fill="#828d99" class="apexcharts-datalabel-label" style="font-family: Rubik;">Copies</text><text id="SvgjsText2282" font-family="Rubik" x="111.5" y="97.5" text-anchor="middle" dominant-baseline="auto" font-size="32px" fill="#373d3f" class="apexcharts-datalabel-value" style="font-family: Rubik;">140</text></g><g id="SvgjsG2279" transform="translate(0, -5) scale(1)"><circle id="SvgjsCircle2283" r="99.54146341463417" cx="111.5" cy="111.5" fill="transparent"></circle><g id="SvgjsG2284" class="apexcharts-slices"><g id="SvgjsG2285" class="apexcharts-series apexcharts-pie-series" seriesName="Installation" rel="1" data:realIndex="0"><path id="SvgjsPath2286" d="M 111.5 6.719512195121936 A 104.78048780487806 104.78048780487806 0 0 1 111.5 216.28048780487808 L 111.5 211.04146341463417 A 99.54146341463417 99.54146341463417 0 0 0 111.5 11.958536585365835 L 111.5 6.719512195121936 z" fill="rgba(90,141,238,1)" fill-opacity="1" stroke-opacity="1" stroke-linecap="butt" stroke-width="0" stroke-dasharray="0" class="apexcharts-pie-area apexcharts-donut-slice-0" index="0" j="0" data:angle="180" data:startAngle="0" data:strokeWidth="0" data:value="70" data:pathOrig="M 111.5 6.719512195121936 A 104.78048780487806 104.78048780487806 0 0 1 111.5 216.28048780487808 L 111.5 211.04146341463417 A 99.54146341463417 99.54146341463417 0 0 0 111.5 11.958536585365835 L 111.5 6.719512195121936 z"></path></g><g id="SvgjsG2287" class="apexcharts-series apexcharts-pie-series" seriesName="PagexViews" rel="2" data:realIndex="1"><path id="SvgjsPath2288" d="M 111.5 216.28048780487808 A 104.78048780487806 104.78048780487806 0 0 1 9.346577786997216 134.81585200673973 L 14.454248897647346 133.65005940640276 A 99.54146341463417 99.54146341463417 0 0 0 111.5 211.04146341463417 L 111.5 216.28048780487808 z" fill="rgba(253,172,65,1)" fill-opacity="1" stroke-opacity="1" stroke-linecap="butt" stroke-width="0" stroke-dasharray="0" class="apexcharts-pie-area apexcharts-donut-slice-1" index="0" j="1" data:angle="77.14285714285711" data:startAngle="180" data:strokeWidth="0" data:value="30" data:pathOrig="M 111.5 216.28048780487808 A 104.78048780487806 104.78048780487806 0 0 1 9.346577786997216 134.81585200673973 L 14.454248897647346 133.65005940640276 A 99.54146341463417 99.54146341463417 0 0 0 111.5 211.04146341463417 L 111.5 216.28048780487808 z"></path></g><g id="SvgjsG2289" class="apexcharts-series apexcharts-pie-series" seriesName="ActivexUsers" rel="3" data:realIndex="2"><path id="SvgjsPath2290" d="M 9.346577786997216 134.81585200673973 A 104.78048780487806 104.78048780487806 0 0 1 111.48171235505242 6.71951379102002 L 111.4826267372998 11.958538101469017 A 99.54146341463417 99.54146341463417 0 0 0 14.454248897647346 133.65005940640276 L 9.346577786997216 134.81585200673973 z" fill="rgba(255,91,92,1)" fill-opacity="1" stroke-opacity="1" stroke-linecap="butt" stroke-width="0" stroke-dasharray="0" class="apexcharts-pie-area apexcharts-donut-slice-2" index="0" j="2" data:angle="102.85714285714289" data:startAngle="257.1428571428571" data:strokeWidth="0" data:value="40" data:pathOrig="M 9.346577786997216 134.81585200673973 A 104.78048780487806 104.78048780487806 0 0 1 111.48171235505242 6.71951379102002 L 111.4826267372998 11.958538101469017 A 99.54146341463417 99.54146341463417 0 0 0 14.454248897647346 133.65005940640276 L 9.346577786997216 134.81585200673973 z"></path></g></g></g></g><line id="SvgjsLine2291" x1="0" y1="0" x2="223" y2="0" stroke="#b6b6b6" stroke-dasharray="0" stroke-width="1" class="apexcharts-ycrosshairs"></line><line id="SvgjsLine2292" x1="0" y1="0" x2="223" y2="0" stroke-dasharray="0" stroke-width="0" class="apexcharts-ycrosshairs-hidden"></line></g></svg><div class="apexcharts-legend"></div><div class="apexcharts-tooltip dark"><div class="apexcharts-tooltip-series-group"><span class="apexcharts-tooltip-marker" style="background-color: rgb(90, 141, 238);"></span><div class="apexcharts-tooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"><div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-label"></span><span class="apexcharts-tooltip-text-value"></span></div><div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div></div></div><div class="apexcharts-tooltip-series-group"><span class="apexcharts-tooltip-marker" style="background-color: rgb(253, 172, 65);"></span><div class="apexcharts-tooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"><div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-label"></span><span class="apexcharts-tooltip-text-value"></span></div><div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div></div></div><div class="apexcharts-tooltip-series-group"><span class="apexcharts-tooltip-marker" style="background-color: rgb(255, 91, 92);"></span><div class="apexcharts-tooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"><div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-label"></span><span class="apexcharts-tooltip-text-value"></span></div><div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div></div></div></div></div></div>
+            <div class="chart-info d-flex justify-content-between mb-1">
+              <div class="d-flex align-items-center">
+                <i class="bullet bullet-xs bullet-primary mr-50"></i>
+                <span class="text-muted text-bold-600 ml-50">Installation</span>
+              </div>
+              <div class="text-muted">70%</div>
+            </div>
+            <div class="chart-info d-flex justify-content-between mb-1">
+              <div class="d-flex align-items-center">
+                <i class="bullet bullet-xs bullet-warning mr-50"></i>
+                <span class="text-muted text-bold-600 ml-50">Page Views</span>
+              </div>
+              <div class="text-muted">30%</div>
+            </div>
+            <div class="chart-info d-flex justify-content-between">
+              <div class="d-flex align-items-center">
+                <i class="bullet bullet-xs bullet-danger mr-50"></i>
+                <span class="text-muted text-bold-600 ml-50">Active Users</span>
+              </div>
+              <div class="text-muted">40%</div>
+            </div>
+          <div class="resize-triggers"><div class="expand-trigger"><div style="width: 380px; height: 409px;"></div></div><div class="contract-trigger"></div></div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+<div class="row">
+
+</div>
+</section>
+<!-- Widgets Statistics End -->
+
+
+        </div>
+      </div>
+    </div>
+    <!-- END: Content-->
+
+
+    <!-- demo chat-->
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+    <!-- BEGIN: Footer-->
+    <footer class="footer footer-static footer-dark"> 
+        <p class="clearfix mb-0"><span class="float-left d-inline-block">2020 &copy; CORONA COUNTER</span> 
+            <button class="btn btn-primary btn-icon scroll-top" type="button"><i class="bx bx-up-arrow-alt"></i></button>
+        </p>
+    </footer>
+    <!-- END: Footer-->
+
+
+
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="../../../app-assets/vendors/js/vendors.min.js"></script>
+    <script src="../../../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.min.js"></script>
+    <script src="../../../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.min.js"></script>
+    <script src="../../../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="../../../app-assets/vendors/js/pickers/daterange/moment.min.js"></script>
+    <script src="../../../app-assets/vendors/js/pickers/daterange/daterangepicker.js"></script>
+    <script src="../../../app-assets/vendors/js/charts/apexcharts.min.js"></script>
+    <script src="../../../app-assets/vendors/js/extensions/dragula.min.js"></script>
+    <script src="../../../app-assets/vendors/js/extensions/swiper.min.js"></script>
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="../../../app-assets/js/scripts/configs/vertical-menu-light.min.js"></script>
+    <script src="../../../app-assets/js/core/app-menu.min.js"></script>
+    <script src="../../../app-assets/js/core/app.min.js"></script>
+    <script src="../../../app-assets/js/scripts/components.min.js"></script>
+    <script src="../../../app-assets/js/scripts/footer.min.js"></script>
+    <script src="../../../app-assets/js/scripts/customizer.min.js"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="../../../app-assets/js/scripts/cards/widgets.min.js"></script>
+    <!-- END: Page JS-->
+
+</body>
+<!-- END: Body-->
+
+</html>

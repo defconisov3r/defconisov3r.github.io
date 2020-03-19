@@ -1,218 +1,370 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html class="" lang="en-US">
 <head>
-<title> &mdash; Coming Soon</title>
-<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-<style type='text/css'>
-body{
-	background-color: #2D2A25;
-	background-image: url( http://coronaviruscleanupusa.com/wp-content/plugins/mojo-marketplace-wp-plugin/images/cs-mojo-bg.jpg );
-	background-position: top right;
-	background-repeat: no-repeat;
-	font-family: 'Montserrat', sans-serif;
-	color: #fff;
-}
-a{
-	color: #fff;
-	text-decoration: none;
-}
-#wrap{
-	max-width: 900px;
-	margin: 0 auto;
-}
-#logo{height: auto;width: 204px;padding: 30px 10px 10px 10px;max-width: 90%;}
-.cta{
-	background-color: #93C933;
-	color: #35393A;
-	padding: 10px 20px;
-	text-decoration: none;
-	margin: 10px 0;
-	display: inline-block;
-	border-radius: 3px;
-}
-.cta:hover{color: #fff;}
-.content{
-	margin: 5rem 0;
-	font-size: 1.2rem;
-	padding: 0 15px;
-}
-.powered-by {
-	text-align: right;
-	padding: 50px;
-	font-size: 12px;
-}
-h1 span{
-	color: #93C933;
-}
-footer{
-	border-top: 1px solid #333;
-}
-footer a:hover{color: #ccc;}
-footer .col{
-	padding: 10px 4%;
-	display: inline-block;
-	vertical-align: top;
-	max-width: 100%;
-}
-footer h2, footer h2 a{
-	color: #93C933;
-	font-size: 1rem;
-	text-decoration: none;
-}
-footer ul{
-	list-style: none;
-	padding:0;
-}
-footer li{
-	height: 26px;
-}
-#what-is-this-content{
-	display:none;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	margin-top: -200px;
-	margin-left: -200px;
-	width: 300px;
-	height: 200px;
-	background-color: #fff;
-	color: #aaa;
-	padding: 50px;
-}
-.btn{display: inline-block;margin-top:50px;text-align:center;padding: 10px 50px; border-radius: 3px;}
-.green{
-	color: #343537;
-	background: #92c835; /* Old browsers */
-	background: -moz-linear-gradient(top,  #92c835 0%, #6d9628 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#92c835), color-stop(100%,#6d9628)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #92c835 0%,#6d9628 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #92c835 0%,#6d9628 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #92c835 0%,#6d9628 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #92c835 0%,#6d9628 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#92c835', endColorstr='#6d9628',GradientType=0 ); /* IE6-9 */
-}
-#what-is-this-content a{width: 50%;display:inline-block;color: #666;text-align:center;}
-.footer-actions a{width: 50%; text-align:center; display:inline-block;}
-.split-content > div:first-of-type{
-	padding-right: 10%;
-}
-.split-content > div{
-	width: 40%;
-	display: inline-block;
-	vertical-align: top;
-	padding: 50px 80px 0 0;
-	font-family: Arial;
-	font-weight: lighter;
-	line-height: 1.8rem;
-}
-#wrap .highlight{color:#90C534;}
-@media (max-width: 859px) {
-	.split-content > div{
-		width: 100%;
-		box-sizing: border-box;
-		padding: 5% 20%;
+	<meta charset="UTF-8">
+
+	<title>corona virus clean up usa</title>
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="corona virus clean up usa &raquo; Feed" href="http://coronaviruscleanupusa.com/index.php/feed/" />
+<link rel="alternate" type="application/rss+xml" title="corona virus clean up usa &raquo; Comments Feed" href="http://coronaviruscleanupusa.com/index.php/comments/feed/" />
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE"><meta name="theme-color" content="#f5f5f5"><meta property="og:title" content="corona virus clean up usa"><meta property="og:type" content="website"><meta property="og:url" content="http://coronaviruscleanupusa.com/"><meta property="og:image" content="http://coronaviruscleanupusa.com/wp-content/uploads/2020/03/Untitled-3.jpg"><!-- This site uses the Google Analytics by MonsterInsights plugin v7.10.4 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.10.4';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-160807029-1';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
 	}
-	.btn{
-		width: 122px;
-		display:block;
-		margin: 50px auto;
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
 	}
-	footer .col {
-		width: 100%;
-		box-sizing: border-box;
-		padding: 5%;
-		text-align:center;
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
 	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-160807029-1', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/coronaviruscleanupusa.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
 }
 </style>
-</head>
-<body>
-<div id='wrap'>
-	<div class='content'>
-		<h1>Website Coming Soon</h1>
-		<p>This page is used to test the proper operation of your recent <a class='highlight' href='https://www.mojomarketplace.com/explore?utm_source=mojo_wp_plugin&utm_campaign=mojo_wp_plugin&utm_medium=plugin_landing&utm_content=description_link'>MOJO Marketplace</a> installation of WordPress! If you can read this page it means your installation was successful!</p>
-		<a class='btn green' href='http://coronaviruscleanupusa.com/wp-login.php'>Admin Login</a>
-		<div class='split-content'>
-			<div>
-				<h3>Just visiting?</h3>
-				<p>
-					The owner of this website is working on making this site awesome. Why not <a class='highlight' href='#' onclick='bookmark();'>bookmark it</a> and come back again later. We are sure you will not be disappointed.
-				</p>
-			</div>
-			<div>
-				<h3>Are you the Site Owner?</h3>
-				<p>
-					You should <a class='highlight' href='http://coronaviruscleanupusa.com/wp-login.php'>login</a> to your WordPress installation and prepare your site for launch.
-				</p>
-				<p>
-					To launch your site just click the link in the banner at the top of the screen.
-				</p>
-			</div>
-		</div>
-	</div>
-	<footer>
-		<div class='col'>
-			<h2><a href='https://www.mojomarketplace.com/themes/wordpress?utm_source=mojo_wp_plugin&utm_campaign=mojo_wp_plugin&utm_medium=plugin_landing&utm_content=wordpress_themes'>WordPress Themes</a></h2>
-			<ul>
-				<li><a target='_blank' href='https://www.mojomarketplace.com/themes/wordpress/woocommerce?utm_source=mojo_wp_plugin&utm_campaign=mojo_wp_plugin&utm_medium=plugin_landing&utm_content=woocommerce_themes'>WooCommerce Themes</a></li>
-				<li><a target='_blank' href='https://www.mojomarketplace.com/themes/wordpress/responsive?utm_source=mojo_wp_plugin&utm_campaign=mojo_wp_plugin&utm_medium=plugin_landing&utm_content=responsive_themes'>Responsive WordPress Themes</a></li>
-				<li><a target='_blank' href='https://www.mojomarketplace.com/themes/wordpress/business?utm_source=mojo_wp_plugin&utm_campaign=mojo_wp_plugin&utm_medium=plugin_landing&utm_content=business_themes'>Business WordPress Themes</a></li>
-				<li><a target='_blank' href='https://www.mojomarketplace.com/themes/wordpress/blog?utm_source=mojo_wp_plugin&utm_campaign=mojo_wp_plugin&utm_medium=plugin_landing&utm_content=blog_themes'>Blog WordPress Themes</a></li>
-			</ul>
-		</div>
-		<div class='col'>
-			<h2><a href='https://www.mojomarketplace.com/services/all/wordpress?utm_source=mojo_wp_plugin&utm_campaign=mojo_wp_plugin&utm_medium=plugin_landing&utm_content=wordpress_services'>WordPress Services</a></h2>
-			<ul>
-				<li><a target='_blank' href='https://www.mojomarketplace.com/item/install-your-wordpress-theme?utm_source=mojo_wp_plugin&utm_campaign=mojo_wp_plugin&utm_medium=plugin_landing&utm_content=install_theme_service'>Install WordPress Theme</a></li>
-				<li><a target='_blank' href='https://www.mojomarketplace.com/item/make-my-wordpress-site-look-like-the-theme-demo?utm_source=mojo_wp_plugin&utm_campaign=mojo_wp_plugin&utm_medium=plugin_landing&utm_content=theme_demo_service'>Make My Site Look Like the Demo</a></li>
-				<li><a target='_blank' href='https://www.mojomarketplace.com/item/backup-your-wordpress-website?utm_source=mojo_wp_plugin&utm_campaign=mojo_wp_plugin&utm_medium=plugin_landing&utm_content=website_backup_service'>Backup Your WordPress Website</a></li>
-				<li><a target='_blank' href='https://www.mojomarketplace.com/item/wordpress-theme-training?utm_source=mojo_wp_plugin&utm_campaign=mojo_wp_plugin&utm_medium=plugin_landing&utm_content=wp_theme_training_service'>WordPress Theme Training</a></li>
-			</ul>
-		</div>
-		<div class='col'>
-			<h2><a href='https://www.mojomarketplace.com/?utm_source=mojo_wp_plugin&utm_campaign=mojo_wp_plugin&utm_medium=plugin_landing&utm_content=about_mojo'>About MOJO</a></h2>
-			<ul>
-				<li><a target='_blank' href='https://www.mojomarketplace.com/explore?utm_source=mojo_wp_plugin&utm_campaign=mojo_wp_plugin&utm_medium=plugin_landing&utm_content=explore_mojo'>Explore MOJO</a></li>
-				<li><a target='_blank' href='https://www.mojomarketplace.com/sellers?utm_source=mojo_wp_plugin&utm_campaign=mojo_wp_plugin&utm_medium=plugin_landing&utm_content=sell_w_mojo'>Sell with MOJO</a></li>
-				<li><a target='_blank' href='https://www.mojomarketplace.com/affiliates?utm_source=mojo_wp_plugin&utm_campaign=mojo_wp_plugin&utm_medium=plugin_landing&utm_content=mojo_affiliates'>MOJO Affiliates</a></li>
-				<li><a target='_blank' href='https://www.mojomarketplace.com/how-it-works/faq?utm_source=mojo_wp_plugin&utm_campaign=mojo_wp_plugin&utm_medium=plugin_landing&utm_content=faqs'>FAQs</a></li>
-			</ul>
-		</div>
-		<div class='footer-actions'>
-			<a href='http://coronaviruscleanupusa.com/wp-login.php'>Login</a>
-			<a href='#' id='what-is-this' onClick='what_is_this_show()'>What is this?</a>
-		</div>
-	</footer>
-</div>
-<div id='what-is-this-content'>
-	<p>This is the default coming soon page for this site because it was installed via MOJO Marketplace.</p>
-	<p>If you are the site owner and are finished building the site you can click the link in the banner of the administration panel to disable it.</p>
-	<div>
-		<a href='#' onClick='what_is_this_hide()'>close</a>
-		<a href='http://coronaviruscleanupusa.com/wp-login.php'>login</a>
-	</div>
-</div>
+	<link rel='stylesheet' id='wp-block-library-css'  href='http://coronaviruscleanupusa.com/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css' media='all' />
+<style id='wp-block-library-inline-css' type='text/css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel='stylesheet' id='contact-form-7-css'  href='http://coronaviruscleanupusa.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.7' type='text/css' media='all' />
+<link rel='stylesheet' id='super-rss-reader-css-css'  href='http://coronaviruscleanupusa.com/wp-content/plugins/super-rss-reader/public/css/style.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='us-style-css'  href='//coronaviruscleanupusa.com/wp-content/themes/Armstrong/css/style.min.css?ver=5.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='us-responsive-css'  href='//coronaviruscleanupusa.com/wp-content/themes/Armstrong/css/responsive.min.css?ver=5.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='http://coronaviruscleanupusa.com/wp-content/plugins/jetpack/css/jetpack.css?ver=8.3' type='text/css' media='all' />
 <script type='text/javascript'>
-function what_is_this_show() {
-	document.getElementById('what-is-this-content').style.display = 'block';
-}
-function what_is_this_hide() {
-	document.getElementById('what-is-this-content').style.display = 'none';
-}
-function bookmark() {
-	var title = '';
-	var url = 'http://coronaviruscleanupusa.com';
-	if ( window.sidebar && window.sidebar.addPanel ) {
-		window.sidebar.addPanel( title, href, '' );
-	} else if( window.external && ( 'AddFavorite' in window.external ) ) {
-		window.external.AddFavorite( href,title );
-	} else if( window.opera && window.print ) {
-		this.title=title;
-		return true;
-	} else {
-		alert( 'Press ' + (navigator.userAgent.toLowerCase().indexOf( 'mac' ) != - 1 ? 'Command/Cmd' : 'CTRL' ) + ' + D to bookmark this page.' );
-	}
-}
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"http:\/\/coronaviruscleanupusa.com","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://coronaviruscleanupusa.com/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js?ver=7.10.4'></script>
+<script type='text/javascript' src='http://coronaviruscleanupusa.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://coronaviruscleanupusa.com/wp-content/plugins/super-rss-reader/public/js/script.min.js?ver=5.3.2'></script>
+<script type='text/javascript' src='http://coronaviruscleanupusa.com/wp-content/plugins/super-rss-reader/public/js/jquery.easy-ticker.min.js?ver=5.3.2'></script>
+<link rel='https://api.w.org/' href='http://coronaviruscleanupusa.com/index.php/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://coronaviruscleanupusa.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://coronaviruscleanupusa.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.3.2" />
+<link rel="canonical" href="http://coronaviruscleanupusa.com/" />
+<link rel='shortlink' href='http://coronaviruscleanupusa.com/' />
+<link rel="alternate" type="application/json+oembed" href="http://coronaviruscleanupusa.com/index.php/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fcoronaviruscleanupusa.com%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://coronaviruscleanupusa.com/index.php/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fcoronaviruscleanupusa.com%2F&#038;format=xml" />
+
+<link rel='dns-prefetch' href='//i0.wp.com'/>
+<link rel='dns-prefetch' href='//i1.wp.com'/>
+<link rel='dns-prefetch' href='//i2.wp.com'/>
+<style type='text/css'>img#wpstats{display:none}</style>	<script>
+		if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+			var root = document.getElementsByTagName('html')[0]
+			root.className += " no-touch";
+		}
+	</script>
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="http://coronaviruscleanupusa.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
+			<style id="us-theme-options-css">@font-face{font-family:'Font Awesome 5 Brands';font-style:normal;font-weight:normal;src:url("http://coronaviruscleanupusa.com/wp-content/themes/Armstrong/fonts/fa-brands-400.woff2") format("woff2"),url("http://coronaviruscleanupusa.com/wp-content/themes/Armstrong/fonts/fa-brands-400.woff") format("woff")}.fab{font-family:'Font Awesome 5 Brands'}@font-face{font-family:'fontawesome';font-style:normal;font-weight:300;src:url("http://coronaviruscleanupusa.com/wp-content/themes/Armstrong/fonts/fa-light-300.woff2") format("woff2"),url("http://coronaviruscleanupusa.com/wp-content/themes/Armstrong/fonts/fa-light-300.woff") format("woff")}.fal{font-family:'fontawesome';font-weight:300}@font-face{font-family:'fontawesome';font-style:normal;font-weight:400;src:url("http://coronaviruscleanupusa.com/wp-content/themes/Armstrong/fonts/fa-regular-400.woff2") format("woff2"),url("http://coronaviruscleanupusa.com/wp-content/themes/Armstrong/fonts/fa-regular-400.woff") format("woff")}.far{font-family:'fontawesome';font-weight:400}@font-face{font-family:'fontawesome';font-style:normal;font-weight:900;src:url("http://coronaviruscleanupusa.com/wp-content/themes/Armstrong/fonts/fa-solid-900.woff2") format("woff2"),url("http://coronaviruscleanupusa.com/wp-content/themes/Armstrong/fonts/fa-solid-900.woff") format("woff")}.fa,.fas{font-family:'fontawesome';font-weight:900}.style_phone6-1>div{background-image:url(http://coronaviruscleanupusa.com/wp-content/themes/Armstrong/framework/img/phone-6-black-real.png)}.style_phone6-2>div{background-image:url(http://coronaviruscleanupusa.com/wp-content/themes/Armstrong/framework/img/phone-6-white-real.png)}.style_phone6-3>div{background-image:url(http://coronaviruscleanupusa.com/wp-content/themes/Armstrong/framework/img/phone-6-black-flat.png)}.style_phone6-4>div{background-image:url(http://coronaviruscleanupusa.com/wp-content/themes/Armstrong/framework/img/phone-6-white-flat.png)}html,.l-header .widget{font-family:Georgia, serif;font-weight:400;font-size:16px;line-height:25px}h1, h2, h3, h4, h5, h6{}h1{font-size:3rem;line-height:1.2;font-weight:400;letter-spacing:0}h2{font-size:2rem;line-height:1.4;font-weight:400;letter-spacing:0}h3{font-size:1.8rem;line-height:1.4;font-weight:400;letter-spacing:0}h4,.widgettitle,.comment-reply-title{font-size:1.4rem;line-height:1.4;font-weight:400;letter-spacing:0}h5{font-size:1.2rem;line-height:1.4;font-weight:400;letter-spacing:0}h6{font-size:1rem;line-height:1.4;font-weight:400;letter-spacing:0}@media (max-width:767px){html{font-size:15px;line-height:25px}h1{font-size:2rem}h1.vc_custom_heading{font-size:2rem !important}h2{font-size:1.8rem}h2.vc_custom_heading{font-size:1.8rem !important}h3{font-size:1.6rem}h3.vc_custom_heading{font-size:1.6rem !important}h4,.widgettitle,.comment-reply-title{font-size:1.4rem}h4.vc_custom_heading{font-size:1.4rem !important}h5{font-size:1.2rem}h5.vc_custom_heading{font-size:1.2rem !important}h6{font-size:1rem}h6.vc_custom_heading{font-size:1rem !important}}body,.l-header.pos_fixed{min-width:1300px}.l-canvas.type_boxed,.l-canvas.type_boxed .l-subheader,.l-canvas.type_boxed .l-section.type_sticky,.l-canvas.type_boxed~.l-footer{max-width:1300px}.l-subheader-h,.l-main-h,.l-section-h,.w-tabs-section-content-h,.w-blogpost-body{max-width:1140px}.l-sidebar{width:25%}.l-content{width:70%}@media (max-width:767px){.g-cols>div:not([class*=" vc_col-"]){width:100%;margin:0 0 1rem}.g-cols.type_boxes>div,.g-cols>div:last-child,.g-cols>div.has-fill{margin-bottom:0}.vc_wp_custommenu.layout_hor,.align_center_xs,.align_center_xs .w-socials{text-align:center}}.tribe-events-button,button[type="submit"]:not(.w-btn),input[type="submit"]{text-transform:none;font-style:normal;font-weight:700;letter-spacing:0;border-radius:0.3;padding:0.8 1.8;box-shadow:0 0em 0 rgba(0,0,0,0.2);background-color:#e95095;border-color:transparent;color:#fff!important}.tribe-events-button,button[type="submit"]:not(.w-btn):before,input[type="submit"]{border-width:2}.no-touch .tribe-events-button:hover,.no-touch button[type="submit"]:not(.w-btn):hover,.no-touch input[type="submit"]:hover{box-shadow:0 0em 0 rgba(0,0,0,0.2);background-color:#7049ba;border-color:transparent;color:#fff!important}.us-btn-style_1{color:#fff!important;font-family:Georgia, serif;font-weight:700;font-style:normal;text-transform:none;letter-spacing:0;border-radius:0.3;padding:0.8 1.8;background-color:#e95095;border-color:transparent;box-shadow:none}.us-btn-style_1:before{border-width:2}.no-touch .us-btn-style_1:hover{color:#fff!important;box-shadow:0 0em 0 rgba(0,0,0,0.2);background-color:#7049ba;border-color:transparent}.us-btn-style_2{color:#333!important;font-family:Georgia, serif;font-weight:700;font-style:normal;text-transform:none;letter-spacing:0;border-radius:0.3;padding:0.8 1.8;background-color:#e8e8e8;border-color:transparent;box-shadow:none}.us-btn-style_2:before{border-width:2}.no-touch .us-btn-style_2:hover{color:#fff!important;box-shadow:0 0em 0 rgba(0,0,0,0.2);background-color:#7049ba;border-color:transparent}a,button,input[type="submit"],.ui-slider-handle{outline:none !important}.w-header-show,.w-toplink{background-color:rgba(0,0,0,0.3)}body{background-color:#eee;-webkit-tap-highlight-color:rgba(233,80,149,0.2)}.l-subheader.at_top,.l-subheader.at_top .w-dropdown-list,.l-subheader.at_top .type_mobile .w-nav-list.level_1{background-color:#f5f5f5}.l-subheader.at_top,.l-subheader.at_top .w-dropdown.opened,.l-subheader.at_top .type_mobile .w-nav-list.level_1{color:#333}.no-touch .l-subheader.at_top a:hover,.no-touch .l-header.bg_transparent .l-subheader.at_top .w-dropdown.opened a:hover{color:#e95095}.l-subheader.at_middle,.l-subheader.at_middle .w-dropdown-list,.l-subheader.at_middle .type_mobile .w-nav-list.level_1{background-color:#fff}.l-subheader.at_middle,.l-subheader.at_middle .w-dropdown.opened,.l-subheader.at_middle .type_mobile .w-nav-list.level_1{color:#333}.no-touch .l-subheader.at_middle a:hover,.no-touch .l-header.bg_transparent .l-subheader.at_middle .w-dropdown.opened a:hover{color:#e95095}.l-subheader.at_bottom,.l-subheader.at_bottom .w-dropdown-list,.l-subheader.at_bottom .type_mobile .w-nav-list.level_1{background-color:#f5f5f5}.l-subheader.at_bottom,.l-subheader.at_bottom .w-dropdown.opened,.l-subheader.at_bottom .type_mobile .w-nav-list.level_1{color:#333}.no-touch .l-subheader.at_bottom a:hover,.no-touch .l-header.bg_transparent .l-subheader.at_bottom .w-dropdown.opened a:hover{color:#e95095}.l-header.bg_transparent:not(.sticky) .l-subheader{color:#fff}.no-touch .l-header.bg_transparent:not(.sticky) .w-text a:hover,.no-touch .l-header.bg_transparent:not(.sticky) .w-html a:hover,.no-touch .l-header.bg_transparent:not(.sticky) .w-dropdown a:hover,.no-touch .l-header.bg_transparent:not(.sticky) .type_desktop .menu-item.level_1:hover>.w-nav-anchor{color:#fff}.l-header.bg_transparent:not(.sticky) .w-nav-title:after{background-color:#fff}.w-search-form{background-color:rgba(233,80,149,0.95);color:#fff}.menu-item.level_1>.w-nav-anchor:focus,.no-touch .menu-item.level_1.opened>.w-nav-anchor,.no-touch .menu-item.level_1:hover>.w-nav-anchor{background-color:transparent;color:#e95095}.w-nav-title:after{background-color:#e95095}.menu-item.level_1.current-menu-item>.w-nav-anchor,.menu-item.level_1.current-menu-parent>.w-nav-anchor,.menu-item.level_1.current-menu-ancestor>.w-nav-anchor{background-color:transparent;color:#e95095}.l-header.bg_transparent:not(.sticky) .type_desktop .menu-item.level_1.current-menu-item>.w-nav-anchor,.l-header.bg_transparent:not(.sticky) .type_desktop .menu-item.level_1.current-menu-ancestor>.w-nav-anchor{background-color:transparent;color:#ff6ba9}.w-nav-list:not(.level_1){background-color:#fff;color:#333}.no-touch .menu-item:not(.level_1)>.w-nav-anchor:focus,.no-touch .menu-item:not(.level_1):hover>.w-nav-anchor{background-color:#e95095;color:#fff}.menu-item:not(.level_1).current-menu-item>.w-nav-anchor,.menu-item:not(.level_1).current-menu-parent>.w-nav-anchor,.menu-item:not(.level_1).current-menu-ancestor>.w-nav-anchor{background-color:transparent;color:#e95095}.btn.menu-item>a{background-color:#e95095 !important;color:#fff !important}.no-touch .btn.menu-item>a:hover{background-color:#7049ba !important;color:#fff !important}body.us_iframe,.l-preloader,.l-canvas,.l-footer,.l-popup-box-content,.g-filters.style_1 .g-filters-item.active,.w-pricing-item-h,.w-tabs.layout_default .w-tabs-item.active,.w-tabs.layout_ver .w-tabs-item.active,.no-touch .w-tabs.layout_default .w-tabs-item.active:hover,.no-touch .w-tabs.layout_ver .w-tabs-item.active:hover,.w-tabs.layout_timeline .w-tabs-item,.w-tabs.layout_timeline .w-tabs-section-header-h,.leaflet-popup-content-wrapper,.leaflet-popup-tip,.wpml-ls-statics-footer,.select2-selection__choice,.select2-search input{background-color:#fff}.w-tabs.layout_modern .w-tabs-item:after{border-bottom-color:#fff}.w-iconbox.style_circle.color_contrast .w-iconbox-icon{color:#fff}input,textarea,select,.l-section.for_blogpost .w-blogpost-preview,.w-actionbox.color_light,.w-form-row.for_checkbox label>i,.g-filters.style_1,.g-filters.style_2 .g-filters-item.active,.w-flipbox-front,.w-grid-none,.w-iconbox.style_circle.color_light .w-iconbox-icon,.w-pricing-item-header,.w-progbar-bar,.w-progbar.style_3 .w-progbar-bar:before,.w-progbar.style_3 .w-progbar-bar-count,.w-socials.style_solid .w-socials-item-link,.w-tabs.layout_default .w-tabs-list,.w-tabs.layout_ver .w-tabs-list,.no-touch .l-main .widget_nav_menu a:hover,.wp-caption-text,.smile-icon-timeline-wrap .timeline-wrapper .timeline-block,.smile-icon-timeline-wrap .timeline-feature-item.feat-item,.wpml-ls-legacy-dropdown a,.wpml-ls-legacy-dropdown-click a,.tablepress .row-hover tr:hover td,.select2-selection,.select2-dropdown{background-color:#f5f5f5}.timeline-wrapper .timeline-post-right .ult-timeline-arrow l,.timeline-wrapper .timeline-post-left .ult-timeline-arrow l,.timeline-feature-item.feat-item .ult-timeline-arrow l{border-color:#f5f5f5}hr,td,th,.l-section,.vc_column_container,.vc_column-inner,.w-author,.w-comments .children,.w-image,.w-pricing-item-h,.w-profile,.w-sharing-item,.w-tabs-list,.w-tabs-section,.widget_calendar #calendar_wrap,.l-main .widget_nav_menu .menu,.l-main .widget_nav_menu .menu-item a,.smile-icon-timeline-wrap .timeline-line{border-color:#e8e8e8}blockquote:before,.w-separator.color_border,.w-iconbox.color_light .w-iconbox-icon{color:#e8e8e8}.w-flipbox-back,.w-iconbox.style_circle.color_light .w-iconbox-icon,.no-touch .wpml-ls-sub-menu a:hover{background-color:#e8e8e8}.w-iconbox.style_outlined.color_light .w-iconbox-icon,.w-person-links-item,.w-socials.style_outlined .w-socials-item-link,.pagination .page-numbers{box-shadow:0 0 0 2px #e8e8e8 inset}.w-tabs.layout_trendy .w-tabs-list{box-shadow:0 -1px 0 #e8e8e8 inset}h1, h2, h3, h4, h5, h6,.w-counter.color_heading .w-counter-value{color:#1a1a1a}.w-progbar.color_heading .w-progbar-bar-h{background-color:#1a1a1a}input,textarea,select,.l-canvas,.l-footer,.l-popup-box-content,.w-form-row-field:before,.w-iconbox.color_light.style_circle .w-iconbox-icon,.w-tabs.layout_timeline .w-tabs-item,.w-tabs.layout_timeline .w-tabs-section-header-h,.leaflet-popup-content-wrapper,.leaflet-popup-tip,.select2-dropdown{color:#333}.w-iconbox.style_circle.color_contrast .w-iconbox-icon,.w-progbar.color_text .w-progbar-bar-h,.w-scroller-dot span{background-color:#333}.w-iconbox.style_outlined.color_contrast .w-iconbox-icon{box-shadow:0 0 0 2px #333 inset}.w-scroller-dot span{box-shadow:0 0 0 2px #333}a{color:#e95095}.no-touch a:hover,.no-touch .tablepress .sorting:hover{color:#7049ba}.highlight_primary,.g-preloader,.l-main .w-contacts-item:before,.w-counter.color_primary .w-counter-value,.g-filters.style_1 .g-filters-item.active,.g-filters.style_3 .g-filters-item.active,.w-form-row.focused .w-form-row-field:before,.w-iconbox.color_primary .w-iconbox-icon,.w-separator.color_primary,.w-sharing.type_outlined.color_primary .w-sharing-item,.no-touch .w-sharing.type_simple.color_primary .w-sharing-item:hover .w-sharing-icon,.w-tabs.layout_default .w-tabs-item.active,.w-tabs.layout_trendy .w-tabs-item.active,.w-tabs.layout_ver .w-tabs-item.active,.w-tabs-section.active .w-tabs-section-header,.tablepress .sorting_asc,.tablepress .sorting_desc,.no-touch .owl-prev:hover,.no-touch .owl-next:hover{color:#e95095}.l-section.color_primary,.no-touch .l-navigation-item:hover .l-navigation-item-arrow,.g-placeholder,.highlight_primary_bg,.w-actionbox.color_primary,.w-form-row.for_checkbox label>input:checked + i,.no-touch .g-filters.style_1 .g-filters-item:hover,.no-touch .g-filters.style_2 .g-filters-item:hover,.w-grid-item-placeholder,.w-grid-item-elm.post_taxonomy.style_badge a,.w-iconbox.style_circle.color_primary .w-iconbox-icon,.no-touch .w-iconbox.style_circle .w-iconbox-icon:before,.no-touch .w-iconbox.style_outlined .w-iconbox-icon:before,.no-touch .w-person-links-item:before,.w-pricing-item.type_featured .w-pricing-item-header,.w-progbar.color_primary .w-progbar-bar-h,.w-sharing.type_solid.color_primary .w-sharing-item,.w-sharing.type_fixed.color_primary .w-sharing-item,.w-sharing.type_outlined.color_primary .w-sharing-item:before,.w-socials-item-link-hover,.w-tabs.layout_modern .w-tabs-list,.w-tabs.layout_trendy .w-tabs-item:after,.w-tabs.layout_timeline .w-tabs-item:before,.w-tabs.layout_timeline .w-tabs-section-header-h:before,.no-touch .w-header-show:hover,.no-touch .w-toplink.active:hover,.no-touch .pagination .page-numbers:before,.pagination .page-numbers.current,.l-main .widget_nav_menu .menu-item.current-menu-item>a,.rsThumb.rsNavSelected,.no-touch .tp-leftarrow.custom:before,.no-touch .tp-rightarrow.custom:before,.smile-icon-timeline-wrap .timeline-separator-text .sep-text,.smile-icon-timeline-wrap .timeline-wrapper .timeline-dot,.smile-icon-timeline-wrap .timeline-feature-item .timeline-dot,.select2-results__option--highlighted{background-color:#e95095}.no-touch .owl-prev:hover,.no-touch .owl-next:hover,.no-touch .w-logos.style_1 .w-logos-item:hover,.w-tabs.layout_default .w-tabs-item.active,.w-tabs.layout_ver .w-tabs-item.active,.owl-dot.active span,.rsBullet.rsNavSelected span,.tp-bullets.custom .tp-bullet{border-color:#e95095}.l-main .w-contacts-item:before,.w-iconbox.color_primary.style_outlined .w-iconbox-icon,.w-sharing.type_outlined.color_primary .w-sharing-item,.w-tabs.layout_timeline .w-tabs-item,.w-tabs.layout_timeline .w-tabs-section-header-h{box-shadow:0 0 0 2px #e95095 inset}input:focus,textarea:focus,select:focus,.select2-container--focus .select2-selection{box-shadow:0 0 0 2px #e95095}.no-touch .w-blognav-item:hover .w-blognav-title,.w-counter.color_secondary .w-counter-value,.w-iconbox.color_secondary .w-iconbox-icon,.w-separator.color_secondary,.w-sharing.type_outlined.color_secondary .w-sharing-item,.no-touch .w-sharing.type_simple.color_secondary .w-sharing-item:hover .w-sharing-icon,.highlight_secondary{color:#7049ba}.l-section.color_secondary,.no-touch .w-grid-item-elm.post_taxonomy.style_badge a:hover,.no-touch .l-section.preview_trendy .w-blogpost-meta-category a:hover,.w-actionbox.color_secondary,.w-iconbox.style_circle.color_secondary .w-iconbox-icon,.w-progbar.color_secondary .w-progbar-bar-h,.w-sharing.type_solid.color_secondary .w-sharing-item,.w-sharing.type_fixed.color_secondary .w-sharing-item,.w-sharing.type_outlined.color_secondary .w-sharing-item:before,.highlight_secondary_bg{background-color:#7049ba}.w-separator.color_secondary{border-color:#7049ba}.w-iconbox.color_secondary.style_outlined .w-iconbox-icon,.w-sharing.type_outlined.color_secondary .w-sharing-item{box-shadow:0 0 0 2px #7049ba inset}.l-main .w-author-url,.l-main .w-blogpost-meta>*,.l-main .w-profile-link.for_logout,.l-main .widget_tag_cloud,.highlight_faded{color:#999}.l-section.color_alternate,.color_alternate .g-filters.style_1 .g-filters-item.active,.color_alternate .w-pricing-item-h,.color_alternate .w-tabs.layout_default .w-tabs-item.active,.no-touch .color_alternate .w-tabs.layout_default .w-tabs-item.active:hover,.color_alternate .w-tabs.layout_ver .w-tabs-item.active,.no-touch .color_alternate .w-tabs.layout_ver .w-tabs-item.active:hover,.color_alternate .w-tabs.layout_timeline .w-tabs-item,.color_alternate .w-tabs.layout_timeline .w-tabs-section-header-h{background-color:#f5f5f5}.color_alternate .w-iconbox.style_circle.color_contrast .w-iconbox-icon{color:#f5f5f5}.color_alternate .w-tabs.layout_modern .w-tabs-item:after{border-bottom-color:#f5f5f5}.color_alternate input,.color_alternate textarea,.color_alternate select,.color_alternate .g-filters.style_1,.color_alternate .g-filters.style_2 .g-filters-item.active,.color_alternate .w-grid-none,.color_alternate .w-iconbox.style_circle.color_light .w-iconbox-icon,.color_alternate .w-pricing-item-header,.color_alternate .w-progbar-bar,.color_alternate .w-socials.style_solid .w-socials-item-link,.color_alternate .w-tabs.layout_default .w-tabs-list,.color_alternate .wp-caption-text,.color_alternate .ginput_container_creditcard{background-color:#fff}.l-section.color_alternate,.color_alternate td,.color_alternate th,.color_alternate .vc_column_container,.color_alternate .vc_column-inner,.color_alternate .w-author,.color_alternate .w-comments .children,.color_alternate .w-image,.color_alternate .w-pricing-item-h,.color_alternate .w-profile,.color_alternate .w-sharing-item,.color_alternate .w-tabs-list,.color_alternate .w-tabs-section{border-color:#ddd}.color_alternate .w-separator.color_border,.color_alternate .w-iconbox.color_light .w-iconbox-icon{color:#ddd}.color_alternate .w-iconbox.style_circle.color_light .w-iconbox-icon{background-color:#ddd}.color_alternate .w-iconbox.style_outlined.color_light .w-iconbox-icon,.color_alternate .w-person-links-item,.color_alternate .w-socials.style_outlined .w-socials-item-link,.color_alternate .pagination .page-numbers{box-shadow:0 0 0 2px #ddd inset}.color_alternate .w-tabs.layout_trendy .w-tabs-list{box-shadow:0 -1px 0 #ddd inset}.l-section.color_alternate h1,.l-section.color_alternate h2,.l-section.color_alternate h3,.l-section.color_alternate h4,.l-section.color_alternate h5,.l-section.color_alternate h6,.l-section.color_alternate .w-counter-value{color:#1a1a1a}.color_alternate .w-progbar.color_contrast .w-progbar-bar-h{background-color:#1a1a1a}.l-section.color_alternate,.color_alternate input,.color_alternate textarea,.color_alternate select,.color_alternate .w-iconbox.color_contrast .w-iconbox-icon,.color_alternate .w-iconbox.color_light.style_circle .w-iconbox-icon,.color_alternate .w-tabs.layout_timeline .w-tabs-item,.color_alternate .w-tabs.layout_timeline .w-tabs-section-header-h{color:#333}.color_alternate .w-iconbox.style_circle.color_contrast .w-iconbox-icon{background-color:#333}.color_alternate .w-iconbox.style_outlined.color_contrast .w-iconbox-icon{box-shadow:0 0 0 2px #333 inset}.color_alternate a{color:#e95095}.no-touch .color_alternate a:hover{color:#7049ba}.color_alternate .highlight_primary,.l-main .color_alternate .w-contacts-item:before,.color_alternate .w-counter.color_primary .w-counter-value,.color_alternate .g-preloader,.color_alternate .g-filters.style_1 .g-filters-item.active,.color_alternate .g-filters.style_3 .g-filters-item.active,.color_alternate .w-form-row.focused .w-form-row-field:before,.color_alternate .w-iconbox.color_primary .w-iconbox-icon,.no-touch .color_alternate .owl-prev:hover,.no-touch .color_alternate .owl-next:hover,.color_alternate .w-separator.color_primary,.color_alternate .w-tabs.layout_default .w-tabs-item.active,.color_alternate .w-tabs.layout_trendy .w-tabs-item.active,.color_alternate .w-tabs.layout_ver .w-tabs-item.active,.color_alternate .w-tabs-section.active .w-tabs-section-header{color:#e95095}.color_alternate .highlight_primary_bg,.color_alternate .w-actionbox.color_primary,.no-touch .color_alternate .g-filters.style_1 .g-filters-item:hover,.no-touch .color_alternate .g-filters.style_2 .g-filters-item:hover,.color_alternate .w-iconbox.style_circle.color_primary .w-iconbox-icon,.no-touch .color_alternate .w-iconbox.style_circle .w-iconbox-icon:before,.no-touch .color_alternate .w-iconbox.style_outlined .w-iconbox-icon:before,.color_alternate .w-pricing-item.type_featured .w-pricing-item-header,.color_alternate .w-progbar.color_primary .w-progbar-bar-h,.color_alternate .w-tabs.layout_modern .w-tabs-list,.color_alternate .w-tabs.layout_trendy .w-tabs-item:after,.color_alternate .w-tabs.layout_timeline .w-tabs-item:before,.color_alternate .w-tabs.layout_timeline .w-tabs-section-header-h:before,.no-touch .color_alternate .pagination .page-numbers:before,.color_alternate .pagination .page-numbers.current{background-color:#e95095}.no-touch .color_alternate .owl-prev:hover,.no-touch .color_alternate .owl-next:hover,.no-touch .color_alternate .w-logos.style_1 .w-logos-item:hover,.color_alternate .w-tabs.layout_default .w-tabs-item.active,.color_alternate .w-tabs.layout_ver .w-tabs-item.active,.no-touch .color_alternate .w-tabs.layout_default .w-tabs-item.active:hover,.no-touch .color_alternate .w-tabs.layout_ver .w-tabs-item.active:hover{border-color:#e95095}.l-main .color_alternate .w-contacts-item:before,.color_alternate .w-iconbox.color_primary.style_outlined .w-iconbox-icon,.color_alternate .w-tabs.layout_timeline .w-tabs-item,.color_alternate .w-tabs.layout_timeline .w-tabs-section-header-h{box-shadow:0 0 0 2px #e95095 inset}.color_alternate input:focus,.color_alternate textarea:focus,.color_alternate select:focus{box-shadow:0 0 0 2px #e95095}.color_alternate .highlight_secondary,.color_alternate .w-counter.color_secondary .w-counter-value,.color_alternate .w-iconbox.color_secondary .w-iconbox-icon,.color_alternate .w-separator.color_secondary{color:#7049ba}.color_alternate .highlight_secondary_bg,.color_alternate .w-actionbox.color_secondary,.color_alternate .w-iconbox.style_circle.color_secondary .w-iconbox-icon,.color_alternate .w-progbar.color_secondary .w-progbar-bar-h{background-color:#7049ba}.color_alternate .w-iconbox.color_secondary.style_outlined .w-iconbox-icon{box-shadow:0 0 0 2px #7049ba inset}.color_alternate .highlight_faded,.color_alternate .w-profile-link.for_logout{color:#999}.color_footer-top{background-color:#1a1a1a}.color_footer-top input:not([type="submit"]),.color_footer-top textarea,.color_footer-top select,.color_footer-top .w-socials.style_solid .w-socials-item-link{background-color:#222}.color_footer-top,.color_footer-top td,.color_footer-top th,.color_footer-top .vc_column_container,.color_footer-top .vc_column-inner,.color_footer-top .w-author,.color_footer-top .w-image,.color_footer-top .w-pricing-item-h,.color_footer-top .w-profile,.color_footer-top .w-sharing-item,.color_footer-top .w-tabs-list,.color_footer-top .w-tabs-section{border-color:#282828}.color_footer-top .w-separator.color_border{color:#282828}.color_footer-top .w-socials.style_outlined .w-socials-item-link{box-shadow:0 0 0 2px #282828 inset}.color_footer-top,.color_footer-top input,.color_footer-top textarea,.color_footer-top select{color:#999}.color_footer-top a{color:#ccc}.no-touch .color_footer-top a:hover,.no-touch .color_footer-top .w-form-row.focused .w-form-row-field:before{color:#fff}.color_footer-top input:focus,.color_footer-top textarea:focus,.color_footer-top select:focus{box-shadow:0 0 0 2px #fff}.color_footer-bottom{background-color:#222}.color_footer-bottom input:not([type="submit"]),.color_footer-bottom textarea,.color_footer-bottom select,.color_footer-bottom .w-socials.style_solid .w-socials-item-link{background-color:#1a1a1a}.color_footer-bottom,.color_footer-bottom td,.color_footer-bottom th,.color_footer-bottom .vc_column_container,.color_footer-bottom .vc_column-inner,.color_footer-bottom .w-author,.color_footer-bottom .w-image,.color_footer-bottom .w-pricing-item-h,.color_footer-bottom .w-profile,.color_footer-bottom .w-sharing-item,.color_footer-bottom .w-tabs-list,.color_footer-bottom .w-tabs-section{border-color:#333}.color_footer-bottom .w-separator.color_border{color:#333}.color_footer-bottom .w-socials.style_outlined .w-socials-item-link{box-shadow:0 0 0 2px #333 inset}.color_footer-bottom,.color_footer-bottom input,.color_footer-bottom textarea,.color_footer-bottom select{color:#999}.color_footer-bottom a{color:#ccc}.no-touch .color_footer-bottom a:hover,.no-touch .color_footer-bottom .w-form-row.focused .w-form-row-field:before{color:#fff}.color_footer-bottom input:focus,.color_footer-bottom textarea:focus,.color_footer-bottom select:focus{box-shadow:0 0 0 2px #fff}</style>
+				
+</head>
+<body class="home page-template-default page page-id-7342 l-body Armstrong_5.6.1 header_none header_inpos_top state_default wpb-js-composer js-comp-ver-5.7 vc_responsive" itemscope itemtype="https://schema.org/WebPage">
+
+<div class="l-canvas sidebar_none type_wide">
+
+	<div class="l-main">
+	<div class="l-main-h i-cf">
+
+		<main class="l-content" itemprop="mainContentOfPage">
+
+			
+			<section class="l-section wpb_row height_medium"><div class="l-section-h i-cf"><div class="g-cols vc_row type_default valign_top"><div class="vc_col-sm-12 wpb_column vc_column_container"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column ">
+		<div class="wpb_wrapper">
+			<p style="text-align: center;"><strong>Corona Virus Clean Up USA<br />
+</strong></p>
+<p style="text-align: center;"><img class="wp-image-7359 aligncenter" src="https://i1.wp.com/coronaviruscleanupusa.com/wp-content/uploads/2020/03/Untitled-3.jpg?resize=120%2C123" alt="" width="120" height="123" data-recalc-dims="1" /></p>
+<p style="text-align: center;">We will be updating this site,</p>
+<p style="text-align: center;">Offering cleaning services for business. If you are looking to have your business cleaned, please contact us.</p>
+
+		</div>
+	</div>
+<div class="w-form for_cform align_left us_form_1">
+	<form class="w-form-h" autocomplete="off" action="http://coronaviruscleanupusa.com/" method="post">
+				<div class="w-form-row for_name required">
+	<div class="w-form-row-label">
+		<label for="us_form_1_name"></label>
+	</div>
+	<div class="w-form-row-field">
+				<input type="text" aria-label="name" name="name" id="us_form_1_name" value=""
+			   placeholder="Name *" data-required="true" aria-required="true"/>
+		<span class="w-form-row-field-bar"></span>
+			</div>
+	<div class="w-form-row-state"></div>
+	</div>
+		<div class="w-form-row for_email required">
+	<div class="w-form-row-label">
+		<label for="us_form_1_email"></label>
+	</div>
+	<div class="w-form-row-field">
+				<input type="email" aria-label="email" name="email" id="us_form_1_email" value=""
+			   placeholder="Email *" data-required="true" aria-required="true"/>
+		<span class="w-form-row-field-bar"></span>
+			</div>
+	<div class="w-form-row-state"></div>
+	</div>
+		<div class="w-form-row for_phone required">
+	<div class="w-form-row-label">
+		<label for="us_form_1_phone"></label>
+	</div>
+	<div class="w-form-row-field">
+				<input type="text" aria-label="phone" name="phone" id="us_form_1_phone" value=""
+			   placeholder="Phone Number *" data-required="true" aria-required="true"/>
+		<span class="w-form-row-field-bar"></span>
+			</div>
+	<div class="w-form-row-state"></div>
+	</div>
+		<div class="w-form-row for_message required">
+	<div class="w-form-row-label">
+		<label for="us_form_1_message"></label>
+	</div>
+	<div class="w-form-row-field">
+				<textarea aria-label="message" name="message" id="us_form_1_message" cols="30" rows="10" placeholder="Message *"
+			 data-required="true" aria-required="true"></textarea>
+		<span class="w-form-row-field-bar"></span>
+			</div>
+	<div class="w-form-row-state"></div>
+	</div>
+		<div class="w-form-row for_captcha required">
+	<div class="w-form-row-label">
+		<label for="us_form_1_captcha">Just to prove you are a human, please solve the equation: <span>21 - 6 = ?</span></label>
+	</div>
+	<div class="w-form-row-field">
+				<input type="hidden" name="captcha_hash" value="b43f89135c69199acda00bb19b371795" />
+		<input type="text" aria-label="captcha" name="captcha" id="us_form_1_captcha" value=""
+			   data-required="1" placeholder="" aria-required="true" />
+		<span class="w-form-row-field-bar"></span>
+			</div>
+	<div class="w-form-row-state"></div>
+	</div>
+		<input type="hidden" name="action" value="us_ajax_cform" />
+		<input type="hidden" name="post_id" value="7342" />
+		<input type="hidden" name="form_index" value="1" />
+		<div class="w-form-row for_submit">
+	<div class="w-form-row-field">
+				<button class="w-btn icon_none us-btn-style_1"  style="font-size:16px;" type="submit" aria-label="contact us">
+			<span class="g-preloader type_1"></span>
+						<span class="w-btn-label">contact us</span>
+					</button>
+	</div>
+</div>
+				<div class="w-form-message"></div>
+			</form>
+			<div class="w-form-json hidden" onclick='return {&quot;ajaxurl&quot;:&quot;http:\/\/coronaviruscleanupusa.com\/wp-admin\/admin-ajax.php&quot;,&quot;success&quot;:&quot;Thank you! Your message was sent.&quot;,&quot;errors&quot;:{&quot;name&quot;:&quot;Please enter your Name&quot;,&quot;email&quot;:&quot;Please enter a valid email address.&quot;,&quot;phone&quot;:&quot;Please enter your Phone Number&quot;,&quot;message&quot;:&quot;Please enter a Message&quot;,&quot;captcha&quot;:&quot;Please enter the equation result&quot;}}'></div>
+	</div>
+<div class="w-separator size_large with_line width_default thick_1 style_solid color_border align_center"><div class="w-separator-h"></div></div><div  class="vc_wp_text wpb_content_element"><div class="widget widget_text">			<div class="textwidget"><p>If you are a commercial cleaning company please contact us.</p>
+</div>
+		</div></div><div class="w-form for_cform align_left us_form_2">
+	<form class="w-form-h" autocomplete="off" action="http://coronaviruscleanupusa.com/" method="post">
+				<div class="w-form-row for_name required">
+	<div class="w-form-row-label">
+		<label for="us_form_2_name"></label>
+	</div>
+	<div class="w-form-row-field">
+				<input type="text" aria-label="name" name="name" id="us_form_2_name" value=""
+			   placeholder="Name *" data-required="true" aria-required="true"/>
+		<span class="w-form-row-field-bar"></span>
+			</div>
+	<div class="w-form-row-state"></div>
+	</div>
+		<div class="w-form-row for_email required">
+	<div class="w-form-row-label">
+		<label for="us_form_2_email"></label>
+	</div>
+	<div class="w-form-row-field">
+				<input type="email" aria-label="email" name="email" id="us_form_2_email" value=""
+			   placeholder="Email *" data-required="true" aria-required="true"/>
+		<span class="w-form-row-field-bar"></span>
+			</div>
+	<div class="w-form-row-state"></div>
+	</div>
+		<div class="w-form-row for_phone required">
+	<div class="w-form-row-label">
+		<label for="us_form_2_phone"></label>
+	</div>
+	<div class="w-form-row-field">
+				<input type="text" aria-label="phone" name="phone" id="us_form_2_phone" value=""
+			   placeholder="Phone Number *" data-required="true" aria-required="true"/>
+		<span class="w-form-row-field-bar"></span>
+			</div>
+	<div class="w-form-row-state"></div>
+	</div>
+		<div class="w-form-row for_message required">
+	<div class="w-form-row-label">
+		<label for="us_form_2_message"></label>
+	</div>
+	<div class="w-form-row-field">
+				<textarea aria-label="message" name="message" id="us_form_2_message" cols="30" rows="10" placeholder="Message *"
+			 data-required="true" aria-required="true"></textarea>
+		<span class="w-form-row-field-bar"></span>
+			</div>
+	<div class="w-form-row-state"></div>
+	</div>
+		<div class="w-form-row for_captcha required">
+	<div class="w-form-row-label">
+		<label for="us_form_2_captcha">Just to prove you are a human, please solve the equation: <span>27 + 8 = ?</span></label>
+	</div>
+	<div class="w-form-row-field">
+				<input type="hidden" name="captcha_hash" value="6e23a789c77900195d98b5cd3095ed90" />
+		<input type="text" aria-label="captcha" name="captcha" id="us_form_2_captcha" value=""
+			   data-required="1" placeholder="" aria-required="true" />
+		<span class="w-form-row-field-bar"></span>
+			</div>
+	<div class="w-form-row-state"></div>
+	</div>
+		<input type="hidden" name="action" value="us_ajax_cform" />
+		<input type="hidden" name="post_id" value="7342" />
+		<input type="hidden" name="form_index" value="2" />
+		<div class="w-form-row for_submit">
+	<div class="w-form-row-field">
+				<button class="w-btn icon_none us-btn-style_1"  style="font-size:16px;" type="submit" aria-label="contact us">
+			<span class="g-preloader type_1"></span>
+						<span class="w-btn-label">contact us</span>
+					</button>
+	</div>
+</div>
+				<div class="w-form-message"></div>
+			</form>
+			<div class="w-form-json hidden" onclick='return {&quot;ajaxurl&quot;:&quot;http:\/\/coronaviruscleanupusa.com\/wp-admin\/admin-ajax.php&quot;,&quot;success&quot;:&quot;Thank you! Your message was sent.&quot;,&quot;errors&quot;:{&quot;name&quot;:&quot;Please enter your Name&quot;,&quot;email&quot;:&quot;Please enter a valid email address.&quot;,&quot;phone&quot;:&quot;Please enter your Phone Number&quot;,&quot;message&quot;:&quot;Please enter a Message&quot;,&quot;captcha&quot;:&quot;Please enter the equation result&quot;}}'></div>
+	</div>
+</div></div></div></div></div></section><section class="l-section wpb_row height_medium"><div class="l-section-h i-cf"><div class="g-cols vc_row type_default valign_top"><div class="vc_col-sm-12 wpb_column vc_column_container"><div class="vc_column-inner"><div class="wpb_wrapper"><div  class="vc_wp_text wpb_content_element"><div class="widget widget_text">			<div class="textwidget"><div id="footer-copyright" class="col-mb-12 col-12 col-dt-4 footer-text">© 2020 corona virus clean up usa, an cci company. All rights reserved.</div>
+</div>
+		</div></div></div></div></div></div></div></section>
+
+			
+		</main>
+
+		
+	</div>
+</div>
+
+</div>
+	<footer class="l-footer" itemscope itemtype="https://schema.org/WPFooter">
+			</footer>
+		<a class="w-toplink pos_right" href="#" title="Back to top" aria-hidden="true"></a>
+	<script>
+	// Store some global theme options used in JS
+	if (window.$us === undefined) window.$us = {};
+	$us.canvasOptions = ($us.canvasOptions || {});
+	$us.canvasOptions.disableEffectsWidth = 900;
+	$us.canvasOptions.responsive = true;
+	$us.canvasOptions.backToTopDisplay = 100;
+	$us.canvasOptions.scrollDuration = 1000;
+
+	$us.langOptions = ($us.langOptions || {});
+	$us.langOptions.magnificPopup = ($us.langOptions.magnificPopup || {});
+	$us.langOptions.magnificPopup.tPrev = 'Previous (Left arrow key)';
+	$us.langOptions.magnificPopup.tNext = 'Next (Right arrow key)';
+	$us.langOptions.magnificPopup.tCounter = '%curr% of %total%';
+
+	$us.navOptions = ($us.navOptions || {});
+	$us.navOptions.mobileWidth = 900;
+	$us.navOptions.togglable = true;
+	$us.ajaxLoadJs = true;
+	$us.templateDirectoryUri = '//coronaviruscleanupusa.com/wp-content/themes/Armstrong';
+</script>
+<script>$us.headerSettings = {"default":{"options":{"breakpoint":"900px","orientation":"hor","sticky":true,"scroll_breakpoint":"100px","transparent":0,"width":"300px","elm_align":"center","shadow":"thin","top_show":false,"top_height":"40px","top_sticky_height":"0px","top_fullwidth":0,"top_centering":false,"middle_height":"100px","middle_sticky_height":"50px","middle_fullwidth":0,"middle_centering":false,"elm_valign":"top","bg_img":"","bg_img_wrapper_start":"","bg_img_size":"cover","bg_img_repeat":"repeat","bg_img_position":"top left","bg_img_attachment":true,"bg_img_wrapper_end":"","bottom_show":false,"bottom_height":"50px","bottom_sticky_height":"50px","bottom_fullwidth":0,"bottom_centering":false},"layout":{"top_left":[],"top_center":[],"top_right":[],"middle_left":["text:1"],"middle_center":[],"middle_right":["menu:1","search:1","cart:1"],"bottom_left":[],"bottom_center":[],"bottom_right":[],"hidden":["image:1"]}},"tablets":{"options":{"breakpoint":"900px","orientation":"hor","sticky":true,"scroll_breakpoint":"100px","transparent":false,"width":"300px","elm_align":"center","shadow":"thin","top_show":false,"top_height":"40px","top_sticky_height":"40px","top_fullwidth":false,"top_centering":false,"middle_height":"80px","middle_sticky_height":"50px","middle_fullwidth":false,"middle_centering":false,"elm_valign":"top","bg_img":"","bg_img_wrapper_start":"","bg_img_size":"cover","bg_img_repeat":"repeat","bg_img_position":"top left","bg_img_attachment":true,"bg_img_wrapper_end":"","bottom_show":false,"bottom_height":"50px","bottom_sticky_height":"50px","bottom_fullwidth":false,"bottom_centering":false},"layout":{"top_left":[],"top_center":[],"top_right":[],"middle_left":["text:1"],"middle_center":[],"middle_right":["menu:1","search:1","cart:1"],"bottom_left":[],"bottom_center":[],"bottom_right":[],"hidden":["image:1"]}},"mobiles":{"options":{"breakpoint":"600px","orientation":"hor","sticky":true,"scroll_breakpoint":"50px","transparent":false,"width":"300px","elm_align":"center","shadow":"thin","top_show":false,"top_height":"40px","top_sticky_height":"40px","top_fullwidth":false,"top_centering":false,"middle_height":"50px","middle_sticky_height":"50px","middle_fullwidth":false,"middle_centering":false,"elm_valign":"top","bg_img":"","bg_img_wrapper_start":"","bg_img_size":"cover","bg_img_repeat":"repeat","bg_img_position":"top left","bg_img_attachment":true,"bg_img_wrapper_end":"","bottom_show":false,"bottom_height":"50px","bottom_sticky_height":"50px","bottom_fullwidth":false,"bottom_centering":false},"layout":{"top_left":[],"top_center":[],"top_right":[],"middle_left":["text:1"],"middle_center":[],"middle_right":["menu:1","search:1","cart:1"],"bottom_left":[],"bottom_center":[],"bottom_right":[],"hidden":["image:1"]}}};</script><script type='text/javascript' src='http://coronaviruscleanupusa.com/wp-content/plugins/jetpack/_inc/build/photon/photon.min.js?ver=20191001'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/coronaviruscleanupusa.com\/index.php\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://coronaviruscleanupusa.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.7'></script>
+<script type='text/javascript' src='//coronaviruscleanupusa.com/wp-content/themes/Armstrong/js/us.core.min.js?ver=5.6.1'></script>
+<script type='text/javascript' src='http://coronaviruscleanupusa.com/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+<script type='text/javascript' src='https://stats.wp.com/e-202012.js' async='async' defer='defer'></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:8.3',blog:'174325552',post:'7342',tz:'0',srv:'coronaviruscleanupusa.com'} ]);
+	_stq.push([ 'clickTrackerInit', '174325552', '7342' ]);
 </script>
 </body>
 </html>

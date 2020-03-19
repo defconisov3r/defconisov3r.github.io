@@ -1,0 +1,1858 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/all.css">
+    <link rel="stylesheet" href="/static/css/custom.css">
+    <link href="/static/tellme/feedback.min.css" rel="stylesheet">
+    <link rel="icon" href="/static/favicon_io/favicon.ico">
+    <!-- <script src="https://kit.fontawesome.com/7662451199.js" crossorigin="anonymous"></script> -->
+
+    <style>
+      .dropdown-menu>.dropdown-item:focus {
+        background-color: var(--secondary-color);
+      }
+      #marquee {
+        background-color: var(--secondary-color);
+      }
+    </style>
+    
+<style>
+    .card-img-top {
+      width: 100%;
+      max-height: 21vh;
+      object-fit: cover;
+    }
+    /*.discuss-it {
+      vertical-align: super;
+    */}
+</style>
+
+    <title>Fight COVID-19</title>
+  </head>
+  <body>
+
+
+<nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <a class="navbar-brand text-info" href="/">Fight COVID-19</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mt-2 mt-lg-0 ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">News</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/by-the-numbers/">By the numbers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/discussions/covid-19">Discussions</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/protect-yourself/">Protect Yourself</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/travel-alerts/">Travel Alerts</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="/contact/">Contact</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto">
+      
+        <li class="nav-item">
+          <a href="/accounts/login/" class="btn btn-outline-secondary ml-2">Log in</a>
+        </li>
+        <li class="nav-item">
+          <a href="/accounts/signup" class="btn btn-info ml-2">Sign up</a>
+        </li>
+      
+
+<form action="https://www.paypal.com/cgi-bin/webscr" class="ml-2 mt-2" method="post" target="_top">
+<input type="hidden" name="cmd" value="_donations" />
+<input type="hidden" name="business" value="WKTYY6U67TEMW" />
+<input type="hidden" name="currency_code" value="USD" />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+</form>
+<!-- <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=WKTYY6U67TEMW&currency_code=USD&source=url"> -->
+    </ul>
+
+ <!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+
+    <!-- <div class="dropdown my-2 my-lg-0">
+      <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Language
+      </button>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+          
+          
+          
+
+            
+            <a class="dropdown-item" href="/en/"
+               class="selected">
+              English
+            </a>
+            
+            <a class="dropdown-item" href="/zh-hans/"
+              >
+              简体中文
+            </a>
+            
+            <a class="dropdown-item" href="/zh-hant/"
+              >
+              繁體中文
+            </a>
+            
+      </div>
+    </div> -->
+ <!--    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+    </form> -->
+  </div>
+</nav>
+
+
+<marquee scrollamount="9" id="marquee" class="text-warning bg-dark">Oregon, Michigan latest to order statewide school closures&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;President bans travel from Europe; Biden speaks about outbreak&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;NBA suspends season; Broadway goes dark&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Tom Hanks says he has COVID-19&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;WHO declares COVID-19 a worldwide pandemic; U.S. cases top 1,500&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Virus shedding is high early in illness, study finds&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</marquee>
+
+
+    <div class="container">
+      <div class="d-flex">
+        
+<div class="form-check pt-3 pb-2">
+  <input class="form-check-input" type="checkbox" id="newtab-setting" onchange="newtabBoxChanged()">
+  <label class="form-check-label" for="newtab-setting">
+    Open Links in New Tab
+  </label>
+</div>
+
+
+        
+          <div class="pt-3 pb-2 ml-auto">
+            <p id="time-clock" class="pb-3"></p>
+          </div>
+        
+      </div>
+
+      
+      <button type="button" id="feedback-btn" class="btn btn-info vertical-right-aligned">
+    Feedback <span class="fas fa-bullhorn" aria-hidden="true"></span>
+</button>
+      
+
+      
+
+
+      
+      
+
+      
+  <form method="get" class="pb-3">
+    <div class="form-group">
+      <select class="form-control" name="news-category" onchange="this.form.submit()">
+        <option>Choose a News Category</option>
+        <option value="all">All</option>
+        
+        <option value="latest">Latest</option>
+        
+        <option value="world">World</option>
+        
+        <option value="business">Business</option>
+        
+        <option value="economy">Economy</option>
+        
+        <option value="health">Health</option>
+        
+        <option value="politics">Politics</option>
+        
+        <option value="travel">Travel</option>
+        
+        <option value="sports">Sports</option>
+        
+        <option value="money">Money</option>
+        
+        <option value="technology">Technology</option>
+        
+        <option value="entertainment">Entertainment</option>
+        
+        <option value="opinion">Opinion</option>
+        
+      </select>
+    </div>
+    <a href="/" type="button" class="btn btn-outline-secondary btn-sm mr-2">I want all the news</a>
+
+    <a class="btn btn-info btn-sm" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    # Filter with tags
+    </a>
+    <div class="collapse mb-4" id="collapseExample">
+  <div class="card card-body" style="display: block;">
+    
+    <a class="text-info" style="display:inline" href="/tag/masks/">masks</a>&emsp;
+    
+    <a class="text-info" style="display:inline" href="/tag/prevent/">prevent</a>&emsp;
+    
+    <a class="text-info" style="display:inline" href="/tag/job/">job</a>&emsp;
+    
+    <a class="text-info" style="display:inline" href="/tag/office/">office</a>&emsp;
+    
+    <a class="text-info" style="display:inline" href="/tag/misinform/">misinform</a>&emsp;
+    
+    <a class="text-info" style="display:inline" href="/tag/myth/">myth</a>&emsp;
+    
+    <a class="text-info" style="display:inline" href="/tag/nba/">NBA</a>&emsp;
+    
+    <a class="text-info" style="display:inline" href="/tag/remote-work/">remote work</a>&emsp;
+    
+    <a class="text-info" style="display:inline" href="/tag/fake/">fake</a>&emsp;
+    
+    <a class="text-info" style="display:inline" href="/tag/update/">update</a>&emsp;
+    
+    <a class="text-info" style="display:inline" href="/tag/trump/">Trump</a>&emsp;
+    
+    <a class="text-info" style="display:inline" href="/tag/lockdown/">lockdown</a>&emsp;
+    
+    <a class="text-info" style="display:inline" href="/tag/hollywood/">Hollywood</a>
+    
+  </div>
+</div>
+  </form>
+
+  
+
+  
+
+    <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 infinite-container">
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <img src="https://www.gannett-cdn.com/presto/2020/02/05/USAT/8627a046-55b1-413d-bcce-f6663716d8c1-6-remote.jpg" class="card-img-top" alt="image of 'Amid coronavirus pandemic, Netflix reduces video stream to EU users for 30 days'">
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=technology" class="text-dark">Technology</p>
+
+            <h5 class="card-title"><a href="http://rssfeeds.usatoday.com/~/620054320/0/usatoday-techtopstories~Amid-coronavirus-pandemic-Netflix-reduces-video-stream-to-EU-users-for-days/" class="text-info external-link">Amid coronavirus pandemic, Netflix reduces video stream to EU users for 30 days</a></h5>
+            <p class="card-text">Netflix is responding to an European Union commissioner&#x27;s concerns about broadband bandwidth and reducing streaming video data for 30 days.</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">7 minutes ago |
+              <span class="text-dark">USA Today</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20Amid%20coronavirus%20pandemic%2C%20Netflix%20reduces%20video%20stream%20to%20EU%20users%20for%2030%20days.%20Chec%E2%80%A6%20http%3A//rssfeeds.usatoday.com/%7E/620054320/0/usatoday-techtopstories%7EAmid-coronavirus-pandemic-Netflix-reduces-video-stream-to-EU-users-for-days/" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//rssfeeds.usatoday.com/%7E/620054320/0/usatoday-techtopstories%7EAmid-coronavirus-pandemic-Netflix-reduces-video-stream-to-EU-users-for-days/" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=latest" class="text-dark">Latest</p>
+
+            <h5 class="card-title"><a href="https://www.business-standard.com/article/companies/coronavirus-outbreak-productivity-educational-apps-come-to-the-rescue-120031901859_1.html" class="text-info external-link">Coronavirus outbreak: Productivity, educational apps come to the rescue</a></h5>
+            <p class="card-text">Technology firms and start-ups are making the most of available resources to ensure employees are connected and productive while they work from home</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">8 minutes ago |
+              <span class="text-dark">Business Standards</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20Coronavirus%20outbreak%3A%20Productivity%2C%20educational%20apps%20come%20to%20the%20rescue.%20Check%20it%20out%21%20https%3A//www.business-standard.com/article/companies/coronavirus-outbreak-productivity-educational-apps-come-to-the-rescue-120031901859_1.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.business-standard.com/article/companies/coronavirus-outbreak-productivity-educational-apps-come-to-the-rescue-120031901859_1.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <img src="https://static01.nyt.com/images/2020/03/19/world/19virus-briefing-italy2/19virus-briefing-italy2-moth.jpg" class="card-img-top" alt="image of 'Coronavirus Live Updates: Italy’s Death Toll Surpasses China’s as State Dept. Is Expected to Warn Against Travel Abroad'">
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=world" class="text-dark">World</p>
+
+            <h5 class="card-title"><a href="https://www.nytimes.com/2020/03/19/world/coronavirus-news.html" class="text-info external-link">Coronavirus Live Updates: Italy’s Death Toll Surpasses China’s as State Dept. Is Expected to Warn Against Travel Abroad</a></h5>
+            <p class="card-text">As U.S. cases soared past 10,000 and doctors pleaded for protective gear, the president said the government had “slashed red tape” to try to expand trials for possible treatments. Last year, the U.S. tested its pandemic response and found significant problems.</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">8 minutes ago |
+              <span class="text-dark">New York Times</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+                  <a href="/tag/update/" class="badge badge-info">update</a>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20Coronavirus%20Live%20Updates%3A%20Italy%E2%80%99s%20Death%20Toll%20Surpasses%20China%E2%80%99s%20as%20State%20Dept.%20Is%20Expe%E2%80%A6%20https%3A//www.nytimes.com/2020/03/19/world/coronavirus-news.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.nytimes.com/2020/03/19/world/coronavirus-news.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=business" class="text-dark">Business</p>
+
+            <h5 class="card-title"><a href="https://www.cnbc.com/2020/03/19/coronavirus-live-updates.html" class="text-info external-link">Coronavirus live updates: Italy death toll overtakes China&#x27;s, 25 million jobs at risk</a></h5>
+            <p class="card-text">As of Thursday, more than 229,000 cases of coronavirus have been reported, resulting in at least 9,300 deaths.</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">9 minutes ago |
+              <span class="text-dark">CNBC</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+                  <a href="/tag/job/" class="badge badge-info">job</a>
+                
+                  <a href="/tag/update/" class="badge badge-info">update</a>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20Coronavirus%20live%20updates%3A%20Italy%20death%20toll%20overtakes%20China%26%23x27%3Bs%2C%2025%20million%20jobs%20at%E2%80%A6%20https%3A//www.cnbc.com/2020/03/19/coronavirus-live-updates.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.cnbc.com/2020/03/19/coronavirus-live-updates.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=business" class="text-dark">Business</p>
+
+            <h5 class="card-title"><a href="https://www.cnbc.com/2020/03/19/coronavirus-prompts-us-regional-us-airline-compass-to-shut.html" class="text-info external-link">Regional US airline Compass shutting down as coronavirus presents &#x27;insurmountable obstacles&#x27;</a></h5>
+            <p class="card-text">Compass flies for American Airlines, which said it would make deep cuts to compensate for a sharp drop in travel demand amid coronavirus.</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">10 minutes ago |
+              <span class="text-dark">CNBC</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20Regional%20US%20airline%20Compass%20shutting%20down%20as%20coronavirus%20presents%20%26%23x27%3Binsurmountabl%E2%80%A6%20https%3A//www.cnbc.com/2020/03/19/coronavirus-prompts-us-regional-us-airline-compass-to-shut.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.cnbc.com/2020/03/19/coronavirus-prompts-us-regional-us-airline-compass-to-shut.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <img src="https://www.gannett-cdn.com/presto/2020/01/14/USAT/3f1fdad6-b360-40ac-9942-6eea61c936f2-USP_NCAA_Football__College_Football_Playoff_Nation.JPG" class="card-img-top" alt="image of 'Opinion: Americans need inspiration in coronavirus fight. We need LSU coach Ed Orgeron.'">
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=sports" class="text-dark">Sports</p>
+
+            <h5 class="card-title"><a href="http://rssfeeds.usatoday.com/~/620057554/0/usatodaycomsports-topstories~Opinion-Americans-need-inspiration-in-coronavirus-fight-We-need-LSU-coach-Ed-Orgeron/" class="text-info external-link">Opinion: Americans need inspiration in coronavirus fight. We need LSU coach Ed Orgeron.</a></h5>
+            <p class="card-text">America is facing a coronavirus crisis and must pull together. LSU football coach Ed Orgeron can inspire our team, reminding us, &quot;We tough.&quot;</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">16 minutes ago |
+              <span class="text-dark">USA Today</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20Opinion%3A%20Americans%20need%20inspiration%20in%20coronavirus%20fight.%20We%20need%20LSU%20coach%20Ed%20Orgero%E2%80%A6%20http%3A//rssfeeds.usatoday.com/%7E/620057554/0/usatodaycomsports-topstories%7EOpinion-Americans-need-inspiration-in-coronavirus-fight-We-need-LSU-coach-Ed-Orgeron/" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//rssfeeds.usatoday.com/%7E/620057554/0/usatodaycomsports-topstories%7EOpinion-Americans-need-inspiration-in-coronavirus-fight-We-need-LSU-coach-Ed-Orgeron/" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=latest" class="text-dark">Latest</p>
+
+            <h5 class="card-title"><a href="https://www.business-standard.com/article/companies/start-ups-come-up-with-tech-driven-solutions-to-track-coronavirus-patients-120031901849_1.html" class="text-info external-link">Start-ups come up with tech-driven solutions to track coronavirus patients</a></h5>
+            <p class="card-text">Healthcare company Portea has developed a chatbot called Cobot-19 which will disseminate information related to coronavirus</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">16 minutes ago |
+              <span class="text-dark">Business Standards</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20Start-ups%20come%20up%20with%20tech-driven%20solutions%20to%20track%20coronavirus%20patients.%20Check%20it%20%E2%80%A6%20https%3A//www.business-standard.com/article/companies/start-ups-come-up-with-tech-driven-solutions-to-track-coronavirus-patients-120031901849_1.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.business-standard.com/article/companies/start-ups-come-up-with-tech-driven-solutions-to-track-coronavirus-patients-120031901849_1.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=latest" class="text-dark">Latest</p>
+
+            <h5 class="card-title"><a href="https://www.business-standard.com/article/companies/e-tailers-helping-states-for-continuing-services-during-coronavirus-120031901838_1.html" class="text-info external-link">E-tailers helping states for continuing services during coronavirus</a></h5>
+            <p class="card-text">According to industry insiders, Flipkart, Amazon, Bigbasket, and Grofers have witnessed about 30 per cent spike in orders</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">22 minutes ago |
+              <span class="text-dark">Business Standards</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20E-tailers%20helping%20states%20for%20continuing%20services%20during%20coronavirus.%20Check%20it%20out%21%20https%3A//www.business-standard.com/article/companies/e-tailers-helping-states-for-continuing-services-during-coronavirus-120031901838_1.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.business-standard.com/article/companies/e-tailers-helping-states-for-continuing-services-during-coronavirus-120031901838_1.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=latest" class="text-dark">Latest</p>
+
+            <h5 class="card-title"><a href="https://www.business-standard.com/article/pti-stories/metro-issues-advisory-random-thermal-scanning-of-passengers-for-at-all-stations-120031901837_1.html" class="text-info external-link">Mind the gap: Delhi Metro issues coronavirus dos, don&#x27;ts for commuters</a></h5>
+            <p class="card-text">Any passenger who has symptoms similar to those infected by the virus are strictly advised to avoid travel by the metro or any other mode of public transport, the statement said</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">23 minutes ago |
+              <span class="text-dark">Business Standards</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20Mind%20the%20gap%3A%20Delhi%20Metro%20issues%20coronavirus%20dos%2C%20don%26%23x27%3Bts%20for%20commuters.%20Check%20it%E2%80%A6%20https%3A//www.business-standard.com/article/pti-stories/metro-issues-advisory-random-thermal-scanning-of-passengers-for-at-all-stations-120031901837_1.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.business-standard.com/article/pti-stories/metro-issues-advisory-random-thermal-scanning-of-passengers-for-at-all-stations-120031901837_1.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <img src="https://cdn.cnn.com/cnnnext/dam/assets/200319155017-02-nowruz-iran-file-super-169.jpg" class="card-img-top" alt="image of 'Persian New Year traditions transformed by coronavirus in Iran'">
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=latest" class="text-dark">Latest</p>
+
+            <h5 class="card-title"><a href="http://rss.cnn.com/~r/rss/cnn_latest/~3/eHIBxnvGY5c/index.html" class="text-info external-link">Persian New Year traditions transformed by coronavirus in Iran</a></h5>
+            <p class="card-text">The Persian New Year is a time of coming together, but the coronavirus is forcing Iranians to celebrate the holiday apart. CNN speaks to a university student in Tehran who describes how traditions are being transformed by the pandemic.</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">25 minutes ago |
+              <span class="text-dark">CNN</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20Persian%20New%20Year%20traditions%20transformed%20by%20coronavirus%20in%20Iran.%20Check%20it%20out%21%20http%3A//rss.cnn.com/%7Er/rss/cnn_latest/%7E3/eHIBxnvGY5c/index.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//rss.cnn.com/%7Er/rss/cnn_latest/%7E3/eHIBxnvGY5c/index.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=latest" class="text-dark">Latest</p>
+
+            <h5 class="card-title"><a href="https://www.business-standard.com/article/companies/sebi-gives-india-inc-more-time-for-q4-filings-amid-coronavirus-outbreak-120031901831_1.html" class="text-info external-link">Sebi gives India Inc more time for Q4 filings amid coronavirus outbreak</a></h5>
+            <p class="card-text">The deadlines to file the March quarter and full-year results have been extended by 45 days and 30 days, respectively, to June 2020</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">27 minutes ago |
+              <span class="text-dark">Business Standards</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20Sebi%20gives%20India%20Inc%20more%20time%20for%20Q4%20filings%20amid%20coronavirus%20outbreak.%20Check%20it%20out%21%20https%3A//www.business-standard.com/article/companies/sebi-gives-india-inc-more-time-for-q4-filings-amid-coronavirus-outbreak-120031901831_1.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.business-standard.com/article/companies/sebi-gives-india-inc-more-time-for-q4-filings-amid-coronavirus-outbreak-120031901831_1.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <img src="https://cdn.cnn.com/cnnnext/dam/assets/200318170009-01-coronavirus-ventilator-0316-israel-super-169.jpg" class="card-img-top" alt="image of 'Ford, GM and Tesla may make ventilators to combat coronavirus'">
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=latest" class="text-dark">Latest</p>
+
+            <h5 class="card-title"><a href="http://rss.cnn.com/~r/rss/cnn_latest/~3/cJdENVVC7K4/index.html" class="text-info external-link">Ford, GM and Tesla may make ventilators to combat coronavirus</a></h5>
+            <p class="card-text">In a move reminiscent of the World Wars, when America&#x27;s car factories shifted to producing tanks, bombers and aircraft engines, some US automakers are looking into making ventilators and other medical equipment to help combat the coronavirus pandemic.</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">29 minutes ago |
+              <span class="text-dark">CNN</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20Ford%2C%20GM%20and%20Tesla%20may%20make%20ventilators%20to%20combat%20coronavirus.%20Check%20it%20out%21%20http%3A//rss.cnn.com/%7Er/rss/cnn_latest/%7E3/cJdENVVC7K4/index.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//rss.cnn.com/%7Er/rss/cnn_latest/%7E3/cJdENVVC7K4/index.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <img src="https://cdn.cnn.com/cnnnext/dam/assets/200319112213-empty-street-san-francisco-0317-super-169.jpg" class="card-img-top" alt="image of 'Coronavirus could spark another Great Depression, former Trump adviser warns'">
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=latest" class="text-dark">Latest</p>
+
+            <h5 class="card-title"><a href="http://rss.cnn.com/~r/rss/cnn_latest/~3/cwIk4U5JzK4/index.html" class="text-info external-link">Coronavirus could spark another Great Depression, former Trump adviser warns</a></h5>
+            <p class="card-text">The widespread shutdown of the American economy because of the coronavirus could spark a repeat of the Great Depression, former Trump economist Kevin Hassett told CNN on Thursday.</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">30 minutes ago |
+              <span class="text-dark">CNN</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+                  <a href="/tag/trump/" class="badge badge-info">Trump</a>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20Coronavirus%20could%20spark%20another%20Great%20Depression%2C%20former%20Trump%20adviser%20warns.%20Check%20i%E2%80%A6%20http%3A//rss.cnn.com/%7Er/rss/cnn_latest/%7E3/cwIk4U5JzK4/index.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//rss.cnn.com/%7Er/rss/cnn_latest/%7E3/cwIk4U5JzK4/index.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=latest" class="text-dark">Latest</p>
+
+            <h5 class="card-title"><a href="https://www.business-standard.com/article/companies/mall-operators-revenues-may-take-30-hit-amid-coronavirus-spread-experts-120031901824_1.html" class="text-info external-link">Mall operators&#x27; revenues may take 30% hit amid coronavirus spread: Experts</a></h5>
+            <p class="card-text">The analyst said since servicing of principal and interest on loans will become challenging for mall operatos in the next couple of months</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">32 minutes ago |
+              <span class="text-dark">Business Standards</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20Mall%20operators%26%23x27%3B%20revenues%20may%20take%2030%25%20hit%20amid%20coronavirus%20spread%3A%20Experts.%20Chec%E2%80%A6%20https%3A//www.business-standard.com/article/companies/mall-operators-revenues-may-take-30-hit-amid-coronavirus-spread-experts-120031901824_1.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.business-standard.com/article/companies/mall-operators-revenues-may-take-30-hit-amid-coronavirus-spread-experts-120031901824_1.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=business" class="text-dark">Business</p>
+
+            <h5 class="card-title"><a href="https://www.cnbc.com/2020/03/19/american-airlines-ceo-says-the-coronavirus-crisis-is-worse-than-911-for-the-industry.html" class="text-info external-link">American Airlines CEO says the coronavirus crisis is worse than 9/11 for the industry</a></h5>
+            <p class="card-text">With the COVID-19 outbreak that has brought global demand for flights to a near standstill, there&#x27;s no indication of when it might end.</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">35 minutes ago |
+              <span class="text-dark">CNBC</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20American%20Airlines%20CEO%20says%20the%20coronavirus%20crisis%20is%20worse%20than%209/11%20for%20the%20industry%E2%80%A6%20https%3A//www.cnbc.com/2020/03/19/american-airlines-ceo-says-the-coronavirus-crisis-is-worse-than-911-for-the-industry.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.cnbc.com/2020/03/19/american-airlines-ceo-says-the-coronavirus-crisis-is-worse-than-911-for-the-industry.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <img src="https://cdn.cnn.com/cnnnext/dam/assets/200318052820-coronavirus-italy-0317-super-169.jpg" class="card-img-top" alt="image of 'Italy surpasses China in number of coronavirus deaths'">
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=latest" class="text-dark">Latest</p>
+
+            <h5 class="card-title"><a href="http://rss.cnn.com/~r/rss/cnn_latest/~3/_V4BwaHjrts/index.html" class="text-info external-link">Italy surpasses China in number of coronavirus deaths</a></h5>
+            <p class="card-text">Italy has just surpassed China for the most number of deaths related to coronavirus.</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">35 minutes ago |
+              <span class="text-dark">CNN</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20Italy%20surpasses%20China%20in%20number%20of%20coronavirus%20deaths.%20Check%20it%20out%21%20http%3A//rss.cnn.com/%7Er/rss/cnn_latest/%7E3/_V4BwaHjrts/index.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//rss.cnn.com/%7Er/rss/cnn_latest/%7E3/_V4BwaHjrts/index.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <img src="https://static01.nyt.com/images/2020/03/19/world/19virus-briefing-italy2/19virus-briefing-italy2-moth.jpg" class="card-img-top" alt="image of 'Coronavirus Live Updates: Italy’s Death Toll Surpasses China’s as State Dept. Is Expected to Warn Against International Travel'">
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=world" class="text-dark">World</p>
+
+            <h5 class="card-title"><a href="https://www.nytimes.com/2020/03/19/world/coronavirus-news.html" class="text-info external-link">Coronavirus Live Updates: Italy’s Death Toll Surpasses China’s as State Dept. Is Expected to Warn Against International Travel</a></h5>
+            <p class="card-text">As U.S. cases soared past 10,000, officials said a large backlog of pending tests would be released soon. A proposed $1 trillion relief package would make payments of $1,000 to adults. Doctors and nurses are pleading for protective gear.</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">37 minutes ago |
+              <span class="text-dark">New York Times</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+                  <a href="/tag/update/" class="badge badge-info">update</a>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20Coronavirus%20Live%20Updates%3A%20Italy%E2%80%99s%20Death%20Toll%20Surpasses%20China%E2%80%99s%20as%20State%20Dept.%20Is%20Expe%E2%80%A6%20https%3A//www.nytimes.com/2020/03/19/world/coronavirus-news.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.nytimes.com/2020/03/19/world/coronavirus-news.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=latest" class="text-dark">Latest</p>
+
+            <h5 class="card-title"><a href="https://www.business-standard.com/article/companies/social-distancing-amid-virus-pushes-patients-to-consult-doctors-online-120031901825_1.html" class="text-info external-link">Social distancing amid virus pushes patients to consult doctors online</a></h5>
+            <p class="card-text">Digital healthcare platform Practo, for example, has seen a jump of three to four times in requests for consultation with general physicians</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">37 minutes ago |
+              <span class="text-dark">Business Standards</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20Social%20distancing%20amid%20virus%20pushes%20patients%20to%20consult%20doctors%20online.%20Check%20it%20out%21%20https%3A//www.business-standard.com/article/companies/social-distancing-amid-virus-pushes-patients-to-consult-doctors-online-120031901825_1.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.business-standard.com/article/companies/social-distancing-amid-virus-pushes-patients-to-consult-doctors-online-120031901825_1.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=latest" class="text-dark">Latest</p>
+
+            <h5 class="card-title"><a href="https://www.business-standard.com/article/companies/coronavirus-spread-retailers-multiplexes-mall-owners-spar-over-rentals-120031901813_1.html" class="text-info external-link">Coronavirus spread: Retailers, multiplexes, mall owners spar over rentals</a></h5>
+            <p class="card-text">Chains, multiplexes to invoke force majeure clause; litigations to increase</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">38 minutes ago |
+              <span class="text-dark">Business Standards</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20Coronavirus%20spread%3A%20Retailers%2C%20multiplexes%2C%20mall%20owners%20spar%20over%20rentals.%20Check%20it%20o%E2%80%A6%20https%3A//www.business-standard.com/article/companies/coronavirus-spread-retailers-multiplexes-mall-owners-spar-over-rentals-120031901813_1.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.business-standard.com/article/companies/coronavirus-spread-retailers-multiplexes-mall-owners-spar-over-rentals-120031901813_1.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=business" class="text-dark">Business</p>
+
+            <h5 class="card-title"><a href="https://www.cnbc.com/2020/03/19/coronavirus-uk-boris-johnson-says-uk-can-turn-the-tide-in-12-weeks.html" class="text-info external-link">Boris Johnson says the UK can turn the tide against coronavirus within 12 weeks</a></h5>
+            <p class="card-text">The U.K. prime minister offered citizens a piece of optimism Thursday.</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">40 minutes ago |
+              <span class="text-dark">CNBC</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20Boris%20Johnson%20says%20the%20UK%20can%20turn%20the%20tide%20against%20coronavirus%20within%2012%20weeks.%20Chec%E2%80%A6%20https%3A//www.cnbc.com/2020/03/19/coronavirus-uk-boris-johnson-says-uk-can-turn-the-tide-in-12-weeks.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.cnbc.com/2020/03/19/coronavirus-uk-boris-johnson-says-uk-can-turn-the-tide-in-12-weeks.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <img src="https://www.gannett-cdn.com/presto/2020/03/18/USAT/2a2ca733-0590-42a5-9c44-c6d23545084a-GTY_1213100943.JPG" class="card-img-top" alt="image of 'Get aggressive, governors and mayors. Show that the buck and coronavirus stop with you.'">
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=opinion" class="text-dark">Opinion</p>
+
+            <h5 class="card-title"><a href="http://rssfeeds.usatoday.com/~/620056810/0/news-opinion~Get-aggressive-governors-and-mayors-Show-that-the-buck-and-coronavirus-stop-with-you/" class="text-info external-link">Get aggressive, governors and mayors. Show that the buck and coronavirus stop with you.</a></h5>
+            <p class="card-text">This pandemic is a fast-moving emergency. Governors and mayors must quickly fill the Trump leadership vacuum with strong policies to slow the spread.</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">41 minutes ago |
+              <span class="text-dark">USA Today</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+                  <a href="/tag/trump/" class="badge badge-info">Trump</a>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20Get%20aggressive%2C%20governors%20and%20mayors.%20Show%20that%20the%20buck%20and%20coronavirus%20stop%20with%20yo%E2%80%A6%20http%3A//rssfeeds.usatoday.com/%7E/620056810/0/news-opinion%7EGet-aggressive-governors-and-mayors-Show-that-the-buck-and-coronavirus-stop-with-you/" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//rssfeeds.usatoday.com/%7E/620056810/0/news-opinion%7EGet-aggressive-governors-and-mayors-Show-that-the-buck-and-coronavirus-stop-with-you/" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=latest" class="text-dark">Latest</p>
+
+            <h5 class="card-title"><a href="https://www.business-standard.com/article/economy-policy/coronavirus-impact-may-render-38-mn-jobless-in-indian-tourism-industry-120031901851_1.html" class="text-info external-link">Coronavirus impact may render 38 mn jobless in Indian tourism industry</a></h5>
+            <p class="card-text">In a letter to the PM, the industry body has urged the Prime Minister&#x27;s Office (PMO) to intervene to minimise the damage.</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">41 minutes ago |
+              <span class="text-dark">Business Standards</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+                  <a href="/tag/job/" class="badge badge-info">job</a>
+                
+                  <a href="/tag/office/" class="badge badge-info">office</a>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20Coronavirus%20impact%20may%20render%2038%20mn%20jobless%20in%20Indian%20tourism%20industry.%20Check%20it%20out%21%20https%3A//www.business-standard.com/article/economy-policy/coronavirus-impact-may-render-38-mn-jobless-in-indian-tourism-industry-120031901851_1.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.business-standard.com/article/economy-policy/coronavirus-impact-may-render-38-mn-jobless-in-indian-tourism-industry-120031901851_1.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=latest" class="text-dark">Latest</p>
+
+            <h5 class="card-title"><a href="https://www.business-standard.com/article/international/un-chief-says-global-recession-due-to-coronavirus-a-near-certainty-120031901810_1.html" class="text-info external-link">UN chief says global recession due to coronavirus &#x27;a near certainty&#x27;</a></h5>
+            <p class="card-text">The world&#x27;s wealthiest nations poured unprecedented aid into the traumatized global economy on Thursday as coronavirus cases ballooned in Europe, the current epicenter</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">43 minutes ago |
+              <span class="text-dark">Business Standards</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20UN%20chief%20says%20global%20recession%20due%20to%20coronavirus%20%26%23x27%3Ba%20near%20certainty%26%23x27%3B.%20Check%E2%80%A6%20https%3A//www.business-standard.com/article/international/un-chief-says-global-recession-due-to-coronavirus-a-near-certainty-120031901810_1.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.business-standard.com/article/international/un-chief-says-global-recession-due-to-coronavirus-a-near-certainty-120031901810_1.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <img src="https://www.gannett-cdn.com/presto/2020/03/19/USAT/6a58ed73-63ed-4a80-8c9f-e673e93ca28d-USATSI_13817573.jpg" class="card-img-top" alt="image of 'Coronavirus shutdown can alter legacy of legends – from LeBron James to Serena Williams'">
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=sports" class="text-dark">Sports</p>
+
+            <h5 class="card-title"><a href="http://rssfeeds.usatoday.com/~/620056770/0/usatodaycomsports-topstories~Coronavirus-shutdown-can-alter-legacy-of-legends-%e2%80%93-from-LeBron-James-to-Serena-Williams/" class="text-info external-link">Coronavirus shutdown can alter legacy of legends – from LeBron James to Serena Williams</a></h5>
+            <p class="card-text">Sports are on hold as coronavirus spreads around the world and this layoff could have a profound impact on the legacies of the top athletes.</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">44 minutes ago |
+              <span class="text-dark">USA Today</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20Coronavirus%20shutdown%20can%20alter%20legacy%20of%20legends%20%E2%80%93%20from%20LeBron%20James%20to%20Serena%20Willia%E2%80%A6%20http%3A//rssfeeds.usatoday.com/%7E/620056770/0/usatodaycomsports-topstories%7ECoronavirus-shutdown-can-alter-legacy-of-legends-%25e2%2580%2593-from-LeBron-James-to-Serena-Williams/" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//rssfeeds.usatoday.com/%7E/620056770/0/usatodaycomsports-topstories%7ECoronavirus-shutdown-can-alter-legacy-of-legends-%25e2%2580%2593-from-LeBron-James-to-Serena-Williams/" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=business" class="text-dark">Business</p>
+
+            <h5 class="card-title"><a href="https://www.cnbc.com/2020/03/19/coronavirus-pushes-minions-the-rise-of-gru-from-july-release-date.html" class="text-info external-link">&#x27;Minions: The Rise of Gru&#x27; no longer coming to theaters in July after coronavirus halts production in France</a></h5>
+            <p class="card-text">&quot;Minions: The Rise of Gru&quot; will no longer be arriving in theaters on July 3 as coronavirus-related restrictions put in place in Paris, meant the company would be unable to finish production in time for its original release.</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">45 minutes ago |
+              <span class="text-dark">CNBC</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20%26%23x27%3BMinions%3A%20The%20Rise%20of%20Gru%26%23x27%3B%20no%20longer%20coming%20to%20theaters%20in%20July%20after%20coron%E2%80%A6%20https%3A//www.cnbc.com/2020/03/19/coronavirus-pushes-minions-the-rise-of-gru-from-july-release-date.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.cnbc.com/2020/03/19/coronavirus-pushes-minions-the-rise-of-gru-from-july-release-date.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=latest" class="text-dark">Latest</p>
+
+            <h5 class="card-title"><a href="https://www.business-standard.com/article/economy-policy/exporters-want-extension-of-promotion-schemes-amid-coronavirus-spread-120031901805_1.html" class="text-info external-link">Exporters want extension of promotion schemes amid coronavirus spread</a></h5>
+            <p class="card-text">Collateral free lending up to Rs 2 crore with the collateral requirement capped at 35-40 per cent for lending beyond Rs 2 crore, also feature in the list of demands</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">47 minutes ago |
+              <span class="text-dark">Business Standards</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20Exporters%20want%20extension%20of%20promotion%20schemes%20amid%20coronavirus%20spread.%20Check%20it%20out%21%20https%3A//www.business-standard.com/article/economy-policy/exporters-want-extension-of-promotion-schemes-amid-coronavirus-spread-120031901805_1.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.business-standard.com/article/economy-policy/exporters-want-extension-of-promotion-schemes-amid-coronavirus-spread-120031901805_1.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <img src="https://www.gannett-cdn.com/presto/2020/03/19/USAT/8271d5fa-f94c-4726-b177-28492dc71318-USATSI_14140791.jpg" class="card-img-top" alt="image of 'What we know about college football today as coronavirus creates uncertainty'">
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=sports" class="text-dark">Sports</p>
+
+            <h5 class="card-title"><a href="http://rssfeeds.usatoday.com/~/620056606/0/usatodaycomsports-topstories~What-we-know-about-college-football-today-as-coronavirus-creates-uncertainty/" class="text-info external-link">What we know about college football today as coronavirus creates uncertainty</a></h5>
+            <p class="card-text">The coronavirus pandemic has ground college football to a halt as most teams stopped spring practices and disrupted the normal flow of the offseason.</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">48 minutes ago |
+              <span class="text-dark">USA Today</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20What%20we%20know%20about%20college%20football%20today%20as%20coronavirus%20creates%20uncertainty.%20Check%20i%E2%80%A6%20http%3A//rssfeeds.usatoday.com/%7E/620056606/0/usatodaycomsports-topstories%7EWhat-we-know-about-college-football-today-as-coronavirus-creates-uncertainty/" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//rssfeeds.usatoday.com/%7E/620056606/0/usatodaycomsports-topstories%7EWhat-we-know-about-college-football-today-as-coronavirus-creates-uncertainty/" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <img src="https://cdn.cnn.com/cnnnext/dam/assets/200317163647-doordash-food-delivery-app-super-169.jpg" class="card-img-top" alt="image of 'The IPO window may be sealed shut because of coronavirus'">
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=latest" class="text-dark">Latest</p>
+
+            <h5 class="card-title"><a href="http://rss.cnn.com/~r/rss/cnn_latest/~3/UNw3rhlGudI/index.html" class="text-info external-link">The IPO window may be sealed shut because of coronavirus</a></h5>
+            <p class="card-text">Buzzy privately held unicorns like DoorDash, Robinhood and Airbnb started 2020 with hopes to go public.</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">48 minutes ago |
+              <span class="text-dark">CNN</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20The%20IPO%20window%20may%20be%20sealed%20shut%20because%20of%20coronavirus.%20Check%20it%20out%21%20http%3A//rss.cnn.com/%7Er/rss/cnn_latest/%7E3/UNw3rhlGudI/index.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//rss.cnn.com/%7Er/rss/cnn_latest/%7E3/UNw3rhlGudI/index.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <img src="https://cdn.cnn.com/cnnnext/dam/assets/200319093409-italy-patient-triage-naples-super-169.jpg" class="card-img-top" alt="image of 'Thousands of medical students are being fast-tracked into doctors to help fight the coronavirus'">
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=latest" class="text-dark">Latest</p>
+
+            <h5 class="card-title"><a href="http://rss.cnn.com/~r/rss/cnn_latest/~3/agG0FNt7Qu0/index.html" class="text-info external-link">Thousands of medical students are being fast-tracked into doctors to help fight the coronavirus</a></h5>
+            <p class="card-text">Thousands of medical students across Europe are being fast-tracked into early service in an attempt to boost health systems across the continent that are struggling to cope with the coronavirus outbreak.</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">59 minutes ago |
+              <span class="text-dark">CNN</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20Thousands%20of%20medical%20students%20are%20being%20fast-tracked%20into%20doctors%20to%20help%20fight%20the%20c%E2%80%A6%20http%3A//rss.cnn.com/%7Er/rss/cnn_latest/%7E3/agG0FNt7Qu0/index.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//rss.cnn.com/%7Er/rss/cnn_latest/%7E3/agG0FNt7Qu0/index.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col mb-4 infinite-item">
+
+        <div class="card h-100">
+
+          
+          <div class="card-body">
+
+            <p class="bg-warning text-center"><a href="/?news-category=business" class="text-dark">Business</p>
+
+            <h5 class="card-title"><a href="https://www.cnbc.com/2020/03/19/coronavirus-live-updates.html" class="text-info external-link">Coronavirus live updates: Italy death toll overtakes China&#x27;s, Trump eyes banning buybacks for bailouts</a></h5>
+            <p class="card-text">As of Thursday, more than 229,000 cases of coronavirus have been reported, resulting in at least 9,300 deaths.</p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <div>
+              <small class="text-muted">1 hour, 7 minutes ago |
+              <span class="text-dark">CNBC</span></small>
+            </div>
+              
+            </div>
+            <div>
+                
+                  <a href="/tag/update/" class="badge badge-info">update</a>
+                
+                  <a href="/tag/trump/" class="badge badge-info">Trump</a>
+                
+              </div>
+            <div class="social-btns d-flex">
+                <div>
+                <a href="https://twitter.com/intent/tweet?text=An%20article%20about%20Coronavrius%3A%20Coronavirus%20live%20updates%3A%20Italy%20death%20toll%20overtakes%20China%26%23x27%3Bs%2C%20Trump%20eyes%20banning%E2%80%A6%20https%3A//www.cnbc.com/2020/03/19/coronavirus-live-updates.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-twitter-square"></i></span></a>
+
+
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.cnbc.com/2020/03/19/coronavirus-live-updates.html" class="text-muted external-link"><span style='font-size: 2em;'><i class="fab fa-facebook-square"></i></span></a>
+
+
+
+                <a href="mailto:" class="text-muted external-link"><span style='font-size: 2em;'><i class="fas fa-envelope-square"></i></span></a>
+
+                </div>
+              
+              <div class="ml-auto">
+                <a href="/discussions/coronavirus/start-a-discussion" class="text-right discuss-it text-info align-bottom">Discuss it</a>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+    </div>
+
+    
+      
+
+
+
+<nav aria-label="pagination">
+      <ul class="pagination justify-content-center pagination-md">
+
+        
+        <li class="page-item disabled"><span class="page-link">Previous</span></li>
+        
+
+        
+            
+                
+                <li class="page-item active">
+                  <span class="page-link">
+                    1
+                    <span class="sr-only">(current)</span>
+                  </span>
+                </li>
+                
+            
+        
+            
+                
+                    <li class="page-item"><a class="page-link" href="?page=2">2</a></li>
+                
+            
+        
+            
+                
+                    <li class="page-item"><a class="page-link" href="?page=3">3</a></li>
+                
+            
+        
+            
+                
+                    <li class="page-item"><a class="page-link" href="?page=4">4</a></li>
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+
+        
+        <li class="page-item">
+          <a class="page-link" href="?page=2">Next</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="?page=30"><i class="fas fa-step-forward"></i></a>
+        </li>
+        
+      </ul>
+    </nav>
+
+    
+
+
+
+    </div>
+    
+
+
+    
+      
+
+<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/tellme/feedback.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        function getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    var csrftoken = getCookie('csrftoken');
+
+        function csrfSafeMethod(method) {
+        // these HTTP methods do not require CSRF protection
+            return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+        }
+
+        $.ajaxSetup({
+            beforeSend: function(xhr, settings) {
+                if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                    xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                }
+            }
+        });
+
+        $.feedback({
+            ajaxURL: "/tellme/post_feedback/",
+            html2canvasURL: "/static/tellme/html2canvas.min.js",
+            feedbackButton: "#feedback-btn",
+            initButtonText: "\u000ASend feedback",
+            postHTML: false,
+            tpl: {
+                description: "\u000A\u003Cdiv id\u003D\u0022feedback\u002Dwelcome\u0022\u003E\u000A    \u003Cdiv class\u003D\u0022feedback\u002Dlogo\u0022\u003EFeedback\u003C/div\u003E\u000A    \u003Cp\u003EFeedback lets you send us suggestions about this site. We welcome problem reports, feature ideas and general comments.\u003C/p\u003E\u000A    \u000A        \u003Cp\u003EIf you wish to be contacted please leave us your email:\u003C/p\u003E\u000A        \u003Cinput type\u003D\u0027text\u0027 name\u003D\u0022Email\u0022 id\u003D\u0022feedback\u002Duser\u002Demail\u0022\u003E\u000A    \u000A    \u003Cp\u003EStart by writing a brief description:\u003C/p\u003E\u000A    \u003Ctextarea id\u003D\u0022feedback\u002Dnote\u002Dtmp\u0022\u003E\u003C/textarea\u003E\u000A    \u003Cp\u003ENext we\u0027ll let you identify areas of the page related to your description.\u003C/p\u003E\u000A    \u003Cbutton id\u003D\u0022feedback\u002Dwelcome\u002Dnext\u0022 class\u003D\u0022feedback\u002Dnext\u002Dbtn feedback\u002Dbtn\u002Dgray\u0022\u003ENext\u003C/button\u003E\u000A    \u003Cdiv id\u003D\u0022feedback\u002Dwelcome\u002Derror\u0022\u003EPlease enter a description.\u003C/div\u003E\u000A    \u003Cdiv class\u003D\u0022feedback\u002Dwizard\u002Dclose\u0022\u003E\u003C/div\u003E\u000A\u003C/div\u003E\u000A",
+                highlighter: "\u000A\u003Cdiv id\u003D\u0022feedback\u002Dhighlighter\u0022\u003E\u000A    \u003Cdiv class\u003D\u0022feedback\u002Dlogo\u0022\u003EFeedback\u003C/div\u003E\u000A    \u003Cp\u003EClick and drag on the page to help us better understand your feedback. You can move this dialog if it\u0027s in the way.\u003C/p\u003E\u000A    \u003Cbutton class\u003D\u0022feedback\u002Dsethighlight feedback\u002Dactive\u0022\u003E\u000A        \u003Cspan class\u003D\u0022ico\u0022\u003E\u003C/span\u003E\u000A        \u003Cspan\u003EHighlight\u003C/span\u003E\u003C/button\u003E\u000A    \u003Clabel\u003EHighlight areas relevant to your feedback.\u003C/label\u003E\u000A    \u003Cbutton class\u003D\u0022feedback\u002Dsetblackout\u0022\u003E\u000A        \u003Cspan class\u003D\u0022ico\u0022\u003E\u003C/span\u003E\u000A        \u003Cspan\u003EBlack out\u003C/span\u003E\u003C/button\u003E\u000A    \u003Clabel class\u003D\u0022lower\u0022\u003EBlack out any personal information.\u003C/label\u003E\u000A    \u003Cdiv class\u003D\u0022feedback\u002Dbuttons\u0022\u003E\u000A        \u003Cbutton id\u003D\u0022feedback\u002Dhighlighter\u002Dnext\u0022 class\u003D\u0022feedback\u002Dnext\u002Dbtn feedback\u002Dbtn\u002Dgray\u0022\u003E\u000A            Next\u000A        \u003C/button\u003E\u000A        \u003Cbutton id\u003D\u0022feedback\u002Dhighlighter\u002Dback\u0022 class\u003D\u0022feedback\u002Dback\u002Dbtn feedback\u002Dbtn\u002Dgray\u0022\u003E\u000A            Back\u000A        \u003C/button\u003E\u000A    \u003C/div\u003E\u000A    \u003Cdiv class\u003D\u0022feedback\u002Dwizard\u002Dclose\u0022\u003E\u003C/div\u003E\u000A\u003C/div\u003E",
+              overview:        "\u000A\u003Cdiv id\u003D\u0022feedback\u002Doverview\u0022\u003E\u000A    \u003Cdiv class\u003D\u0022feedback\u002Dlogo\u0022\u003EFeedback\u003C/div\u003E\u000A    \u003Cdiv id\u003D\u0022feedback\u002Doverview\u002Ddescription\u0022\u003E\u000A        \u003Cdiv id\u003D\u0022feedback\u002Doverview\u002Ddescription\u002Dtext\u0022\u003E\u003Ch3\u003EDescription\u003C/h3\u003E\u000A            \u003Ch3 class\u003D\u0022feedback\u002Dadditional\u0022\u003EAdditional info\u003C/h3\u003E\u000A            \u003Cdiv id\u003D\u0022feedback\u002Dadditional\u002Dnone\u0022\u003E\u003Cspan\u003ENone\u003C/span\u003E\u003C/div\u003E\u000A            \u003Cdiv id\u003D\u0022feedback\u002Dbrowser\u002Dinfo\u0022\u003E\u003Cspan\u003EBrowser Info\u003C/span\u003E\u003C/div\u003E\u000A            \u003Cdiv id\u003D\u0022feedback\u002Dpage\u002Dinfo\u0022\u003E\u003Cspan\u003EPage Info\u003C/span\u003E\u003C/div\u003E\u000A            \u003Cdiv id\u003D\u0022feedback\u002Dpage\u002Dstructure\u0022\u003E\u003Cspan\u003EPage Structure\u003C/span\u003E\u003C/div\u003E\u000A        \u003C/div\u003E\u000A    \u003C/div\u003E\u000A    \u003Cdiv id\u003D\u0022feedback\u002Doverview\u002Dscreenshot\u0022\u003E\u003Ch3\u003EScreenshot\u003C/h3\u003E\u003C/div\u003E\u000A    \u003Cdiv class\u003D\u0022feedback\u002Dbuttons\u0022\u003E\u000A        \u003Cbutton id\u003D\u0022feedback\u002Dsubmit\u0022 class\u003D\u0022feedback\u002Dsubmit\u002Dbtn feedback\u002Dbtn\u002Dblue\u0022\u003ESubmit\u003C/button\u003E\u000A        \u003Cbutton id\u003D\u0022feedback\u002Doverview\u002Dback\u0022 class\u003D\u0022feedback\u002Dback\u002Dbtn feedback\u002Dbtn\u002Dgray\u0022\u003EBack\u003C/button\u003E\u000A    \u003C/div\u003E\u000A    \u003Cdiv id\u003D\u0022feedback\u002Doverview\u002Derror\u0022\u003EPlease enter a description.\u003C/div\u003E\u000A    \u003Cdiv class\u003D\u0022feedback\u002Dwizard\u002Dclose\u0022\u003E\u003C/div\u003E\u000A\u003C/div\u003E",
+              submitSuccess:"\u000A\u003Cdiv id\u003D\u0022feedback\u002Dsubmit\u002Dsuccess\u0022\u003E\u000A    \u003Cdiv class\u003D\u0022feedback\u002Dlogo\u0022\u003EFeedback\u003C/div\u003E\u000A    \u003Cp\u003EThank you for your feedback. We value every piece of feedback we receive.\u003C/p\u003E\u000A    \u003Cp\u003EWe cannot respond individually to every one, but we will use your comments as we strive to improve your experience.\u003C/p\u003E\u000A    \u003Cbutton class\u003D\u0022feedback\u002Dclose\u002Dbtn feedback\u002Dbtn\u002Dblue\u0022\u003EOK\u003C/button\u003E\u000A    \u003Cdiv class\u003D\u0022feedback\u002Dwizard\u002Dclose\u0022\u003E\u003C/div\u003E\u000A\u003C/div\u003E",
+              submitError: "\u000A\u003Cdiv id\u003D\u0022feedback\u002Dsubmit\u002Derror\u0022\u003E\u000A    \u003Cdiv class\u003D\u0022feedback\u002Dlogo\u0022\u003EFeedback\u003C/div\u003E\u000A    \u003Cp\u003ESadly an error occurred while sending your feedback. Please try again.\u003C/p\u003E\u000A    \u003Cbutton class\u003D\u0022feedback\u002Dclose\u002Dbtn feedback\u002Dbtn\u002Dblue\u0022\u003EOK\u003C/button\u003E\u000A    \u003Cdiv class\u003D\u0022feedback\u002Dwizard\u002Dclose\u0022\u003E\u003C/div\u003E\u000A\u003C/div\u003E"
+            },
+            initialBox: true
+        });
+    });
+</script>
+    
+
+    <script src="/static/js/jqscript.js"></script>
+    <script src="/static/js/script.js"></script>
+
+    
+  <script src="/static/js/bookmark.js"></script>
+
+
+  </body>
+</html>

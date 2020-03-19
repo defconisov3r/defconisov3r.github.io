@@ -17,9 +17,27 @@
 <h1>COVID-19 Trend Watcher</h1>
 <div id="explain">Inner circle: new registered cases per day per country, border: 3 day trend (red: increasing; blue: decreasing)</div>
 </header>
-<div id="map"></div>
-<div id="hover"></div>
-<div id="slider"><div id="custom-handle" class="ui-slider-handle"></div></div>
-<div id="datasource">&copy; 2020 GroundBreaking - Data source: <a href="https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide">European Centre for Disease Prevention and Control</a></div>
+<div id="ecdc">
+<h1>Confirmed daily new cases based on ECDC data</h1>
+<div class="map"></div>
+<div class="hover"></div>
+<div class="mapcontrols"><button class="play">Play</button><div class="slider"><div class="custom-handle ui-slider-handle"></div></div></div>
+<div class="datasource">Data source: <a href="https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide">European Centre for Disease Prevention and Control</a>, last updated 18 March 2020 14:00</div>
+</div>
+<div id="khan">
+<h1>Estimated daily new cases based on confirmed deaths from ECDC data</h1>
+<div class="explain">In short: since the actual number of cases may differ greatly from the registered cases (availability of testing kits, different approaches between countries, ...), we take the confirmed deaths as a more precise indicator. 
+Suppose the mortality rate is x%, the incubation period is y days, and the time between first symptoms and actual death is z days, every confirmed death on one single day would be the result of 100 / x new cases, (y + z) days earlier.</div>
+<div class="controls">
+<label>Incubation period: </label><input class="incubation"><span>days</span>
+<label>Time from symptom onset to death: </label><input class="timetodeath"><span>days</span>
+<label>Mortality rate: </label><input class="mortality"><span>%</span>
+</div>
+<div class="map"></div>
+<div class="hover"></div>
+<div class="mapcontrols"><button class="play">Play</button><div class="slider"><div class="custom-handle ui-slider-handle"></div></div></div>
+<div class="datasource">Data source: <a href="https://www.youtube.com/watch?v=mCa0JXEwDEk&feature=youtu.be">Khan Academy</a></div>
+</div>
+<footer>&copy; 2020 GroundBreaking</footer>
 </body>
 </html>

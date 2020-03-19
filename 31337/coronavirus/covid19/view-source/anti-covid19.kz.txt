@@ -1,0 +1,842 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head> 
+  <title>Добро пожаловать</title> 
+  <meta name="description" content="Добро пожаловать" /> 
+  <meta name="keywords" content="Добро пожаловать" />
+  <meta http-equiv="X-UA-Compatible" content="IE=11" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <meta http-equiv="Content-Language" content="ru" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no">
+  <link rel="icon" href="//d.stat01.com/d499200/favicon.ico?design=infinity" type="image/x-icon" /> 
+  <link rel="shortcut icon" href="//d.stat01.com/d499200/favicon.ico?design=infinity" type="image/x-icon" /> 
+  
+  
+      <link rel="canonical" href="http://anti-covid19.kz/" />
+    
+  
+  <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,600italic,400italic,300italic,300,700,700italic&subset=latin,cyrillic-ext'>
+  
+  <link rel="stylesheet" type="text/css" href="//d.stat01.com/design/forall/css/fancybox/2.1.4/jquery.fancybox.css">
+  <link rel="stylesheet" type="text/css" href="//d.stat01.com/design/forall/css/jquery-ui/jquery.ui.all.min.css">
+  <link rel="stylesheet" type="text/css" href="/design/font-awesome.css?design=infinity">
+  <link rel="stylesheet" type="text/css" href="//d.stat01.com/d499200/main.css?design=infinity&lc=1584600733">
+  
+  <script type="text/javascript">var zoomloaderPath = '/design/Ajaxloader.gif?design=infinity';</script>
+  <script type="text/javascript" src="//d.stat01.com/d499200/forall.js?design=infinity&lc=1584600733"></script>
+  <script type="text/javascript" src="//d.stat01.com/design/forall/css/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="//d.stat01.com/d499200/main.js?design=infinity&lc=1584600733"></script>
+  
+    
+  
+    
+    <script>
+    // Запуск основных скриптов для главной страницы
+    $(function(){ indexPage(); });
+    $(function(){ slideNews(); });
+    // Анимация перед загружаемым слайдером
+    $(window).on('load', function () {
+      var $preloader = $('.preloader'),
+        $spinner   = $preloader.find('.content-loading');
+      $spinner.fadeOut();
+      $preloader.delay(350).fadeOut('slow');
+    });
+  </script>
+    
+    
+</head>
+<body>
+  <div class="wrapper">
+    
+    <noscript>
+      <div class="noscript"> 
+        <div class="noscript-inner"> 
+          <h4><strong>Мы заметили, что у Вас выключен JavaScript.</strong></h4>
+          <h5>Необходимо включить его для корректной работы сайта.</h5>
+        </div> 
+      </div> 
+    </noscript>
+    
+    
+    <div id="header">
+      <div class="header-container">
+        
+        <div class="form-search">
+          <form id="search_mini_form" action="http://anti-covid19.kz/search" method="get" title="Поиск по магазину" onsubmit="if($(this).find('.form-search').val()) return false;">
+            <input type="text" name="q" value="" class="input-text search-string" placeholder="Поиск по магазину...">
+            <input type="hidden" name="goods_search_field_id" value="0">
+            <button type="submit" title="Искать" class="button search-submit fa fa-search"></button>
+          </form>
+        </div>
+        
+        <div class="logo">
+          <a href="http://anti-covid19.kz/" title="Anti-Covid19">
+            <img src="//d.stat01.com/d499200/logo.png?design=infinity&lc=1584503242" alt="Anti-Covid19">
+          </a>
+        </div>
+        
+        <ul id="custommenu">
+                                                    <li  class="level0  ">
+                  <a href="http://anti-covid19.kz/catalog/Maski" class="title-lv0 " title="Маски"><span>Маски</span></a>
+                </li>                                                        <li  class="level0  ">
+                  <a href="http://anti-covid19.kz/catalog/Antiseptiki" class="title-lv0 " title="Антисептики"><span>Антисептики</span></a>
+                </li>                                                        <li  class="level0  ">
+                  <a href="http://anti-covid19.kz/catalog/Salfetki-antisepticheskie-2" class="title-lv0 " title="Салфетки антисептические"><span>Салфетки антисептические</span></a>
+                </li>                                                        <li  class="level0  ">
+                  <a href="http://anti-covid19.kz/catalog/Perchatki-medicinskie" class="title-lv0 " title="Перчатки медицинские"><span>Перчатки медицинские</span></a>
+                </li>              </ul>                               </ul>
+        
+        <div class="header-bottom">
+          
+          <div class="block-menu">
+            <i class="fa fa-home"></i>
+            <ul class="links">
+                                                                    <li><a href="http://anti-covid19.kz/" class="active" title="Добро пожаловать">Главная</a></li>
+                                      <li><a href="http://anti-covid19.kz/page/Garantii"  title="Гарантии">Гарантии</a></li>
+                                      <li><a href="http://anti-covid19.kz/page/Oplata"  title="Оплата">Оплата</a></li>
+                                      <li><a href="http://anti-covid19.kz/page/dostavka"  title="Доставка">Доставка</a></li>
+                                      <li><a href="http://anti-covid19.kz/cart"  title="Ваша корзина">Корзина</a></li>
+                                      <li><a href="http://anti-covid19.kz/catalog"  title="Полный список товаров на сайте">Каталог</a></li>
+                                      <li><a href="http://anti-covid19.kz/feedback"  title="Связь с администрацией магазина">Контакты</a></li>
+                                      <li><a href="http://anti-covid19.kz/user/login"  title="Вход в личный кабинет покупателя">Войти в ЛК</a></li>
+                                                            </ul>
+          </div>
+          
+          <div class="block-menu">
+            <i class="fa fa-user"></i>
+            <ul class="links">
+                            <li><a href="http://anti-covid19.kz/user/login" title="Вход в личный кабинет">Вход</a></li>
+              <li><a href="http://anti-covid19.kz/user/register" title="Регистрация">Регистрация</a></li>
+                                        </ul>
+          </div>
+          
+                    
+                    
+          <div class="opt">
+            <a href="http://anti-covid19.kz/page/Informaciya-o-minimalnom-zakaze"><img src="//d.stat01.com/d499200/KNOPKA.png?lc=1584550634" alt="" title="" /></a>
+          </div>
+          
+          
+          <div class="block-cart  ">
+            <div class="title">
+              <a href="http://anti-covid19.kz/cart" title="Перейти в корзину"><i class="fa fa-shopping-bag">&nbsp;</i>В Корзине:<span class="cart-count" data-count="0">0</span></a>
+            </div>
+            <div class="dropdown-cart">
+              <div class="cart-content">
+                                <div class="cart-empty">Ваша корзина пуста</div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-mobile">
+        
+        <div class="logo">
+          <a href="http://anti-covid19.kz/" title="Anti-Covid19">
+            <img src="//d.stat01.com/d499200/logo.png?design=infinity&lc=1584503242" alt="Anti-Covid19">
+          </a>
+        </div>
+        
+                <div class="header-phone">
+          <a class="title" href="tel:+7777186-32-70 Whats App"><i class="fa fa-phone"></i><span>+7(777)186-32-70 Whats App</span></a>
+        </div>
+                
+        <div class="form-search-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <div class="form-search">
+          <form id="search_mini_form" action="http://anti-covid19.kz/search" method="get" title="Поиск по магазину" onsubmit="if($(this).find('.form-search').val()) return false;">
+            <input type="text" name="q" value="" class="input-text search-string" placeholder="Поиск по магазину...">
+            <input type="hidden" name="goods_search_field_id" value="0">
+            <button type="submit" title="Искать" class="button search-submit fa fa-search"></button>
+          </form>
+        </div>
+        
+        <div class="block-cart  ">
+          <a href="http://anti-covid19.kz/cart" title="Перейти в корзину"><i class="fa fa-shopping-bag">&nbsp;</i><span class="cart-count-mobile" data-count="0">0</span></a>
+        </div>
+        
+        <div id="mommenu" class="menu-offcanvas">
+          <span class="btn-navbar"><i class="fa fa-bars"></i></span>
+          <div id="menu_offcanvas" class="offcanvas">
+            
+            <ul class="mobile-top-links">
+              <li class="cart">
+                <a href="http://anti-covid19.kz/cart" title="Перейти в корзину"><i class="fa fa-shopping-cart"></i><span>Корзина</span></a>
+              </li>
+                          </ul>
+            
+            <div class="catalog menu-list">
+              <a href="http://anti-covid19.kz/catalog" title="Перейти в Каталог" class="title"><i class="fa fa-bars"></i><span>Каталог</span></a>
+              <span class="fa fa-caret-down open"></span>
+              <ul class="mainnav" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                                                                    <li  class="level0  subhead ">
+                      <a href="http://anti-covid19.kz/catalog/Maski" class="title-lv0 " itemprop="url">Маски</a>
+                    </li>                                                                        <li  class="level0  subhead ">
+                      <a href="http://anti-covid19.kz/catalog/Antiseptiki" class="title-lv0 " itemprop="url">Антисептики</a>
+                    </li>                                                                        <li  class="level0  subhead ">
+                      <a href="http://anti-covid19.kz/catalog/Salfetki-antisepticheskie-2" class="title-lv0 " itemprop="url">Салфетки антисептические</a>
+                    </li>                                                                        <li  class="level0  subhead ">
+                      <a href="http://anti-covid19.kz/catalog/Perchatki-medicinskie" class="title-lv0 " itemprop="url">Перчатки медицинские</a>
+                    </li>                  </ul>                                             </ul>
+            </div>
+            
+            <div class="header-menu menu-list">
+              <a href="#" class="title"><i class="fa fa-home"></i><span>Меню</span></a>
+              <span class="fa fa-caret-down open"></span>
+              <ul class="mainnav" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                                                                            <li><a href="http://anti-covid19.kz/" class="active" title="Добро пожаловать" itemprop="url">Главная</a></li>
+                                          <li><a href="http://anti-covid19.kz/page/Garantii"  title="Гарантии" itemprop="url">Гарантии</a></li>
+                                          <li><a href="http://anti-covid19.kz/page/Oplata"  title="Оплата" itemprop="url">Оплата</a></li>
+                                          <li><a href="http://anti-covid19.kz/page/dostavka"  title="Доставка" itemprop="url">Доставка</a></li>
+                                          <li><a href="http://anti-covid19.kz/cart"  title="Ваша корзина" itemprop="url">Корзина</a></li>
+                                          <li><a href="http://anti-covid19.kz/catalog"  title="Полный список товаров на сайте" itemprop="url">Каталог</a></li>
+                                          <li><a href="http://anti-covid19.kz/feedback"  title="Связь с администрацией магазина" itemprop="url">Контакты</a></li>
+                                          <li><a href="http://anti-covid19.kz/user/login"  title="Вход в личный кабинет покупателя" itemprop="url">Войти в ЛК</a></li>
+                                                                    </ul>
+            </div>
+            
+            <div class="header-user-menu menu-list">
+              <a href="#" title="Перейти в Личный Кабинет" class="title"><i class="fa fa-user"></i><span>Личный Кабинет</span></a>
+              <span class="fa fa-caret-down open"></span>
+              <ul class="mainnav">
+                                <li><a href="http://anti-covid19.kz/user/login" title="Вход в личный кабинет">Вход</a></li>
+                <li><a href="http://anti-covid19.kz/user/register" title="Регистрация">Регистрация</a></li>
+                                              </ul>
+            </div>
+            
+                        <div class="phone menu-list">
+              <a class="title" href="tel:+7777186-32-70 Whats App"><i class="fa fa-phone"></i><span>+7(777)186-32-70 Whats App</span></a>
+            </div>
+                                    <div class="email menu-list">
+              <a class="title" href="mailto:order@anti-covid19.kz"><i class="fa fa-envelope"></i><span>order@anti-covid19.kz</span></a>
+            </div>
+                        
+            <div class="logo">
+              <a href="http://anti-covid19.kz/" title="Anti-Covid19">
+                <img src="//d.stat01.com/d499200/logo.png?design=infinity&lc=1584503242" alt="Anti-Covid19">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="main">
+      
+            <div id="slideshow">
+        <div class="preloader"><span class="content-loading"></span></div>
+        <div id="slider" class="owl-carousel owl-theme">
+          <div class="item">
+            <a href="#" u="image"><img class="lazyOwl" src="//d.stat01.com/d499200/slide1.jpg?design=infinity&lc=1584534973" /></a>
+          </div>
+        </div>
+      </div>
+            
+      
+            
+      
+      <div class="main">
+        <div class="container">
+          <div class="row">
+            
+                                    <div id="producttabs" class="box-up-sell">
+                            <div class="pdt-sale">
+                <h3 class="title"><span>Товары на главной</span></h3>
+                <div class="navigation">
+                  <a href="#" class="prev"><i class="fa fa-angle-left"></i></a>
+                  <a href="#" class="next"><i class="fa fa-angle-right"></i></a>
+                </div>
+                <div class="products-grid">
+                                      <div class="item">
+                      <div class="item-inner" itemscope itemtype="https://schema.org/Product">
+                        <form action="/cart/add/" method="post" class="product-form-226841476 goodsListForm">
+                          <input type="hidden" name="hash" value="80e49fe9" />
+                          <input type="hidden" name="form[goods_from]" value="ZWUz" />
+                          <input type="hidden" name="form[goods_mod_id]" value="226841476" />
+                          <div class="product-image">
+                            <a href="http://anti-covid19.kz/goods/Respirator-A-210-P-maska-s-klapanom-vyhoda?from=ZWUz&amp;amp;mod_id=226841476" title="Респиратор А - 210/П маска с клапаном выхода" class="product-img">
+                              <img class="goods-image-small" src="http://i5.stat01.com/2/2774/127737413/075a3e/6009390729-jpg.jpg?lc=1584499726" alt="Респиратор А - 210/П маска с клапаном выхода" title="Респиратор А - 210/П маска с клапаном выхода"  itemprop="image">
+                                                                                        </a>
+                            <div class="ratings">
+                              <a href="http://anti-covid19.kz/goods/Respirator-A-210-P-maska-s-klapanom-vyhoda?from=ZWUz#show_tab_4" title="Перейти к отзывам">
+                                <div class="rating-box">
+                                                                      <div class="rating" style="width:0%" alt="Рейтинг не определён" title="Рейтинг не определён"></div>
+                                                                  </div>
+                              </a>
+                            </div>
+                            <div class="actions">
+                              
+                              <a class="add-cart" title="В корзину" data-tooltip="В корзину" href="/cart/add/?hash=80e49fe9&amp;form%5Bgoods_from%5D=ZWUz&amp;form%5Bgoods_mod_id%5D=226841476"><i class="fa fa-shopping-cart"></i></a>
+                              
+                                                              <a class="add-wishlist"
+                                  data-action-is-add="1"
+                                  data-action-add-url="/favorites/add"
+                                  data-action-delete-url="/favorites/delete"
+                                  data-action-add-title="Добавить &laquo;Респиратор А - 210/П маска с клапаном выхода&raquo; в избранное"
+                                  data-action-delete-title="Убрать &laquo;Респиратор А - 210/П маска с клапаном выхода&raquo; из избранного"
+                                  data-add-tooltip="В Избранное"
+                                  data-del-tooltip="Убрать из избранного"
+                                  data-tooltip="В Избранное"
+                                  title="Добавить &laquo;Респиратор А - 210/П маска с клапаном выхода&raquo; в избранное" href="/favorites/add?id=226841476&amp;return_to=http%3A%2F%2Fanti-covid19.kz%2F"
+                                  href="/favorites/add?id=226841476&amp;return_to=http%3A%2F%2Fanti-covid19.kz%2F"
+                                ><i class="fa fa-heart"></i></a>
+                                                            
+                              
+                                                            
+                            </div>
+                          </div>
+                          <div class="product-shop">
+                            <div class="f-fix">
+                              <meta itemprop="name" content="Респиратор А - 210/П маска с клапаном выхода">
+                              <meta itemprop="description" content="Описание отсутствует">
+                              <div class="product-name"><a href="http://anti-covid19.kz/goods/Respirator-A-210-P-maska-s-klapanom-vyhoda?from=ZWUz&amp;amp;mod_id=226841476" title="Респиратор А - 210/П маска с клапаном выхода" itemprop="url">Респиратор А - 210/П маска с клапаном выхода</a></div>
+                              <div class="price-box" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <meta itemprop="priceCurrency" content="KZT"/>
+                                                                  <span class="price KZT" itemprop="price" content="494"><span title="494 казахских тенге"><span class="num">494</span> <span>тенге</span></span></span>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                                      <div class="item">
+                      <div class="item-inner" itemscope itemtype="https://schema.org/Product">
+                        <form action="/cart/add/" method="post" class="product-form-226841430 goodsListForm">
+                          <input type="hidden" name="hash" value="80e49fe9" />
+                          <input type="hidden" name="form[goods_from]" value="ZWUz" />
+                          <input type="hidden" name="form[goods_mod_id]" value="226841430" />
+                          <div class="product-image">
+                            <a href="http://anti-covid19.kz/goods/Maska-medicinskaya-detskaya-s-risunkom-500-sht?from=ZWUz&amp;amp;mod_id=226841430" title="Маска медицинская детская с рисунком" class="product-img">
+                              <img class="goods-image-small" src="http://i4.stat01.com/2/2774/127737177/075a3e/1-jpg.jpg?lc=1584499726" alt="Маска медицинская детская с рисунком" title="Маска медицинская детская с рисунком"  itemprop="image">
+                                                                                        </a>
+                            <div class="ratings">
+                              <a href="http://anti-covid19.kz/goods/Maska-medicinskaya-detskaya-s-risunkom-500-sht?from=ZWUz#show_tab_4" title="Перейти к отзывам">
+                                <div class="rating-box">
+                                                                      <div class="rating" style="width:0%" alt="Рейтинг не определён" title="Рейтинг не определён"></div>
+                                                                  </div>
+                              </a>
+                            </div>
+                            <div class="actions">
+                              
+                              <a class="add-cart" title="В корзину" data-tooltip="В корзину" href="/cart/add/?hash=80e49fe9&amp;form%5Bgoods_from%5D=ZWUz&amp;form%5Bgoods_mod_id%5D=226841430"><i class="fa fa-shopping-cart"></i></a>
+                              
+                                                              <a class="add-wishlist"
+                                  data-action-is-add="1"
+                                  data-action-add-url="/favorites/add"
+                                  data-action-delete-url="/favorites/delete"
+                                  data-action-add-title="Добавить &laquo;Маска медицинская детская с рисунком&raquo; в избранное"
+                                  data-action-delete-title="Убрать &laquo;Маска медицинская детская с рисунком&raquo; из избранного"
+                                  data-add-tooltip="В Избранное"
+                                  data-del-tooltip="Убрать из избранного"
+                                  data-tooltip="В Избранное"
+                                  title="Добавить &laquo;Маска медицинская детская с рисунком&raquo; в избранное" href="/favorites/add?id=226841430&amp;return_to=http%3A%2F%2Fanti-covid19.kz%2F"
+                                  href="/favorites/add?id=226841430&amp;return_to=http%3A%2F%2Fanti-covid19.kz%2F"
+                                ><i class="fa fa-heart"></i></a>
+                                                            
+                              
+                                                            
+                            </div>
+                          </div>
+                          <div class="product-shop">
+                            <div class="f-fix">
+                              <meta itemprop="name" content="Маска медицинская детская с рисунком">
+                              <meta itemprop="description" content="Описание отсутствует">
+                              <div class="product-name"><a href="http://anti-covid19.kz/goods/Maska-medicinskaya-detskaya-s-risunkom-500-sht?from=ZWUz&amp;amp;mod_id=226841430" title="Маска медицинская детская с рисунком" itemprop="url">Маска медицинская детская с рисунком</a></div>
+                              <div class="price-box" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <meta itemprop="priceCurrency" content="KZT"/>
+                                                                  <span class="price KZT" itemprop="price" content="295"><span title="295 казахских тенге"><span class="num">295</span> <span>тенге</span></span></span>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                                      <div class="item">
+                      <div class="item-inner" itemscope itemtype="https://schema.org/Product">
+                        <form action="/cart/add/" method="post" class="product-form-226840755 goodsListForm">
+                          <input type="hidden" name="hash" value="80e49fe9" />
+                          <input type="hidden" name="form[goods_from]" value="ZWUz" />
+                          <input type="hidden" name="form[goods_mod_id]" value="226840755" />
+                          <div class="product-image">
+                            <a href="http://anti-covid19.kz/goods/Maska-medicinskaya-trehslojnaya-5000-shtuk?from=ZWUz&amp;amp;mod_id=226840755" title="Маска медицинская трехслойная" class="product-img">
+                              <img class="goods-image-small" src="http://i1.stat01.com/2/2774/127737163/075a3e/6009302614-jpg.jpg?lc=1584499726" alt="Маска медицинская трехслойная" title="Маска медицинская трехслойная"  itemprop="image">
+                                                                                        </a>
+                            <div class="ratings">
+                              <a href="http://anti-covid19.kz/goods/Maska-medicinskaya-trehslojnaya-5000-shtuk?from=ZWUz#show_tab_4" title="Перейти к отзывам">
+                                <div class="rating-box">
+                                                                    <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                    <meta itemprop="worstRating" content = "1">
+                                    <meta itemprop="bestRating" content = "10">
+                                    <meta itemprop="ratingValue" content = "10">
+                                    <meta itemprop="reviewCount" content = "2">
+                                    <div class="rating" style="width:100%" alt="10" title="Рейтинг товара"></div>
+                                  </span>
+                                                                  </div>
+                              </a>
+                            </div>
+                            <div class="actions">
+                              
+                              <a class="add-cart" title="В корзину" data-tooltip="В корзину" href="/cart/add/?hash=80e49fe9&amp;form%5Bgoods_from%5D=ZWUz&amp;form%5Bgoods_mod_id%5D=226840755"><i class="fa fa-shopping-cart"></i></a>
+                              
+                                                              <a class="add-wishlist"
+                                  data-action-is-add="1"
+                                  data-action-add-url="/favorites/add"
+                                  data-action-delete-url="/favorites/delete"
+                                  data-action-add-title="Добавить &laquo;Маска медицинская трехслойная&raquo; в избранное"
+                                  data-action-delete-title="Убрать &laquo;Маска медицинская трехслойная&raquo; из избранного"
+                                  data-add-tooltip="В Избранное"
+                                  data-del-tooltip="Убрать из избранного"
+                                  data-tooltip="В Избранное"
+                                  title="Добавить &laquo;Маска медицинская трехслойная&raquo; в избранное" href="/favorites/add?id=226840755&amp;return_to=http%3A%2F%2Fanti-covid19.kz%2F"
+                                  href="/favorites/add?id=226840755&amp;return_to=http%3A%2F%2Fanti-covid19.kz%2F"
+                                ><i class="fa fa-heart"></i></a>
+                                                            
+                              
+                                                            
+                            </div>
+                          </div>
+                          <div class="product-shop">
+                            <div class="f-fix">
+                              <meta itemprop="name" content="Маска медицинская трехслойная">
+                              <meta itemprop="description" content="Описание отсутствует">
+                              <div class="product-name"><a href="http://anti-covid19.kz/goods/Maska-medicinskaya-trehslojnaya-5000-shtuk?from=ZWUz&amp;amp;mod_id=226840755" title="Маска медицинская трехслойная" itemprop="url">Маска медицинская трехслойная</a></div>
+                              <div class="price-box" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <meta itemprop="priceCurrency" content="KZT"/>
+                                                                  <span class="price KZT" itemprop="price" content="70"><span title="70 казахских тенге"><span class="num">70</span> <span>тенге</span></span></span>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                                      <div class="item">
+                      <div class="item-inner" itemscope itemtype="https://schema.org/Product">
+                        <form action="/cart/add/" method="post" class="product-form-226840751 goodsListForm">
+                          <input type="hidden" name="hash" value="80e49fe9" />
+                          <input type="hidden" name="form[goods_from]" value="ZWUz" />
+                          <input type="hidden" name="form[goods_mod_id]" value="226840751" />
+                          <div class="product-image">
+                            <a href="http://anti-covid19.kz/goods/Antiseptik-dlya-ruk-MELI?from=ZWUz&amp;amp;mod_id=226840751" title="Антисептик для рук MELI 30 мл." class="product-img">
+                              <img class="goods-image-small" src="http://i4.stat01.com/2/2774/127737154/075a3e/anti2-png.png?lc=1584499726" alt="Антисептик для рук MELI 30 мл." title="Антисептик для рук MELI 30 мл."  itemprop="image">
+                                                                                        </a>
+                            <div class="ratings">
+                              <a href="http://anti-covid19.kz/goods/Antiseptik-dlya-ruk-MELI?from=ZWUz#show_tab_4" title="Перейти к отзывам">
+                                <div class="rating-box">
+                                                                    <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                    <meta itemprop="worstRating" content = "1">
+                                    <meta itemprop="bestRating" content = "10">
+                                    <meta itemprop="ratingValue" content = "10">
+                                    <meta itemprop="reviewCount" content = "1">
+                                    <div class="rating" style="width:100%" alt="10" title="Рейтинг товара"></div>
+                                  </span>
+                                                                  </div>
+                              </a>
+                            </div>
+                            <div class="actions">
+                              
+                              <a class="add-cart" title="В корзину" data-tooltip="В корзину" href="/cart/add/?hash=80e49fe9&amp;form%5Bgoods_from%5D=ZWUz&amp;form%5Bgoods_mod_id%5D=226840751"><i class="fa fa-shopping-cart"></i></a>
+                              
+                                                              <a class="add-wishlist"
+                                  data-action-is-add="1"
+                                  data-action-add-url="/favorites/add"
+                                  data-action-delete-url="/favorites/delete"
+                                  data-action-add-title="Добавить &laquo;Антисептик для рук MELI 30 мл.&raquo; в избранное"
+                                  data-action-delete-title="Убрать &laquo;Антисептик для рук MELI 30 мл.&raquo; из избранного"
+                                  data-add-tooltip="В Избранное"
+                                  data-del-tooltip="Убрать из избранного"
+                                  data-tooltip="В Избранное"
+                                  title="Добавить &laquo;Антисептик для рук MELI 30 мл.&raquo; в избранное" href="/favorites/add?id=226840751&amp;return_to=http%3A%2F%2Fanti-covid19.kz%2F"
+                                  href="/favorites/add?id=226840751&amp;return_to=http%3A%2F%2Fanti-covid19.kz%2F"
+                                ><i class="fa fa-heart"></i></a>
+                                                            
+                              
+                                                            
+                            </div>
+                          </div>
+                          <div class="product-shop">
+                            <div class="f-fix">
+                              <meta itemprop="name" content="Антисептик для рук MELI 30 мл.">
+                              <meta itemprop="description" content="Описание отсутствует">
+                              <div class="product-name"><a href="http://anti-covid19.kz/goods/Antiseptik-dlya-ruk-MELI?from=ZWUz&amp;amp;mod_id=226840751" title="Антисептик для рук MELI 30 мл." itemprop="url">Антисептик для рук MELI 30 мл.</a></div>
+                              <div class="price-box" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <meta itemprop="priceCurrency" content="KZT"/>
+                                                                  <span class="price KZT" itemprop="price" content="145"><span title="145 казахских тенге"><span class="num">145</span> <span>тенге</span></span></span>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                                      <div class="item">
+                      <div class="item-inner" itemscope itemtype="https://schema.org/Product">
+                        <form action="/cart/add/" method="post" class="product-form-226840594 goodsListForm">
+                          <input type="hidden" name="hash" value="80e49fe9" />
+                          <input type="hidden" name="form[goods_from]" value="ZWUz" />
+                          <input type="hidden" name="form[goods_mod_id]" value="226840594" />
+                          <div class="product-image">
+                            <a href="http://anti-covid19.kz/goods/Antiseptik-dlya-detej-50-ml-MASTeRSePT-GeL-KIDS?from=ZWUz&amp;amp;mod_id=226840594" title="Антисептик для детей 50 мл МАСТЕРСЕПТ ГЕЛЬ KIDS" class="product-img">
+                              <img class="goods-image-small" src="http://i3.stat01.com/2/2774/127737084/075a3e/6008428489-jpg.jpg?lc=1584499726" alt="Антисептик для детей 50 мл МАСТЕРСЕПТ ГЕЛЬ KIDS" title="Антисептик для детей 50 мл МАСТЕРСЕПТ ГЕЛЬ KIDS"  itemprop="image">
+                                                                                        </a>
+                            <div class="ratings">
+                              <a href="http://anti-covid19.kz/goods/Antiseptik-dlya-detej-50-ml-MASTeRSePT-GeL-KIDS?from=ZWUz#show_tab_4" title="Перейти к отзывам">
+                                <div class="rating-box">
+                                                                      <div class="rating" style="width:0%" alt="Рейтинг не определён" title="Рейтинг не определён"></div>
+                                                                  </div>
+                              </a>
+                            </div>
+                            <div class="actions">
+                              
+                              <a class="add-cart" title="В корзину" data-tooltip="В корзину" href="/cart/add/?hash=80e49fe9&amp;form%5Bgoods_from%5D=ZWUz&amp;form%5Bgoods_mod_id%5D=226840594"><i class="fa fa-shopping-cart"></i></a>
+                              
+                                                              <a class="add-wishlist"
+                                  data-action-is-add="1"
+                                  data-action-add-url="/favorites/add"
+                                  data-action-delete-url="/favorites/delete"
+                                  data-action-add-title="Добавить &laquo;Антисептик для детей 50 мл МАСТЕРСЕПТ ГЕЛЬ KIDS&raquo; в избранное"
+                                  data-action-delete-title="Убрать &laquo;Антисептик для детей 50 мл МАСТЕРСЕПТ ГЕЛЬ KIDS&raquo; из избранного"
+                                  data-add-tooltip="В Избранное"
+                                  data-del-tooltip="Убрать из избранного"
+                                  data-tooltip="В Избранное"
+                                  title="Добавить &laquo;Антисептик для детей 50 мл МАСТЕРСЕПТ ГЕЛЬ KIDS&raquo; в избранное" href="/favorites/add?id=226840594&amp;return_to=http%3A%2F%2Fanti-covid19.kz%2F"
+                                  href="/favorites/add?id=226840594&amp;return_to=http%3A%2F%2Fanti-covid19.kz%2F"
+                                ><i class="fa fa-heart"></i></a>
+                                                            
+                              
+                                                            
+                            </div>
+                          </div>
+                          <div class="product-shop">
+                            <div class="f-fix">
+                              <meta itemprop="name" content="Антисептик для детей 50 мл МАСТЕРСЕПТ ГЕЛЬ KIDS">
+                              <meta itemprop="description" content="Описание отсутствует">
+                              <div class="product-name"><a href="http://anti-covid19.kz/goods/Antiseptik-dlya-detej-50-ml-MASTeRSePT-GeL-KIDS?from=ZWUz&amp;amp;mod_id=226840594" title="Антисептик для детей 50 мл МАСТЕРСЕПТ ГЕЛЬ KIDS" itemprop="url">Антисептик для детей 50 мл МАСТЕРСЕПТ ГЕЛЬ KIDS</a></div>
+                              <div class="price-box" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <meta itemprop="priceCurrency" content="KZT"/>
+                                                                  <span class="price KZT" itemprop="price" content="407"><span title="407 казахских тенге"><span class="num">407</span> <span>тенге</span></span></span>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                                      <div class="item">
+                      <div class="item-inner" itemscope itemtype="https://schema.org/Product">
+                        <form action="/cart/add/" method="post" class="product-form-226840573 goodsListForm">
+                          <input type="hidden" name="hash" value="80e49fe9" />
+                          <input type="hidden" name="form[goods_from]" value="ZWUz" />
+                          <input type="hidden" name="form[goods_mod_id]" value="226840573" />
+                          <div class="product-image">
+                            <a href="http://anti-covid19.kz/goods/Dettol-Gel-dlya-ruk-s-aloje-50-ml?from=ZWUz&amp;amp;mod_id=226840573" title="Dettol Гель для рук, с алоэ, 50 мл" class="product-img">
+                              <img class="goods-image-small" src="http://i1.stat01.com/2/2774/127736998/075a3e/1007019069-jpg.jpg?lc=1584499726" alt="Dettol Гель для рук, с алоэ, 50 мл" title="Dettol Гель для рук, с алоэ, 50 мл"  itemprop="image">
+                                                                                        </a>
+                            <div class="ratings">
+                              <a href="http://anti-covid19.kz/goods/Dettol-Gel-dlya-ruk-s-aloje-50-ml?from=ZWUz#show_tab_4" title="Перейти к отзывам">
+                                <div class="rating-box">
+                                                                    <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                    <meta itemprop="worstRating" content = "1">
+                                    <meta itemprop="bestRating" content = "10">
+                                    <meta itemprop="ratingValue" content = "10">
+                                    <meta itemprop="reviewCount" content = "1">
+                                    <div class="rating" style="width:100%" alt="10" title="Рейтинг товара"></div>
+                                  </span>
+                                                                  </div>
+                              </a>
+                            </div>
+                            <div class="actions">
+                              
+                              <a class="add-cart" title="В корзину" data-tooltip="В корзину" href="/cart/add/?hash=80e49fe9&amp;form%5Bgoods_from%5D=ZWUz&amp;form%5Bgoods_mod_id%5D=226840573"><i class="fa fa-shopping-cart"></i></a>
+                              
+                                                              <a class="add-wishlist"
+                                  data-action-is-add="1"
+                                  data-action-add-url="/favorites/add"
+                                  data-action-delete-url="/favorites/delete"
+                                  data-action-add-title="Добавить &laquo;Dettol Гель для рук, с алоэ, 50 мл&raquo; в избранное"
+                                  data-action-delete-title="Убрать &laquo;Dettol Гель для рук, с алоэ, 50 мл&raquo; из избранного"
+                                  data-add-tooltip="В Избранное"
+                                  data-del-tooltip="Убрать из избранного"
+                                  data-tooltip="В Избранное"
+                                  title="Добавить &laquo;Dettol Гель для рук, с алоэ, 50 мл&raquo; в избранное" href="/favorites/add?id=226840573&amp;return_to=http%3A%2F%2Fanti-covid19.kz%2F"
+                                  href="/favorites/add?id=226840573&amp;return_to=http%3A%2F%2Fanti-covid19.kz%2F"
+                                ><i class="fa fa-heart"></i></a>
+                                                            
+                              
+                                                            
+                            </div>
+                          </div>
+                          <div class="product-shop">
+                            <div class="f-fix">
+                              <meta itemprop="name" content="Dettol Гель для рук, с алоэ, 50 мл">
+                              <meta itemprop="description" content="Описание отсутствует">
+                              <div class="product-name"><a href="http://anti-covid19.kz/goods/Dettol-Gel-dlya-ruk-s-aloje-50-ml?from=ZWUz&amp;amp;mod_id=226840573" title="Dettol Гель для рук, с алоэ, 50 мл" itemprop="url">Dettol Гель для рук, с алоэ, 50 мл</a></div>
+                              <div class="price-box" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <meta itemprop="priceCurrency" content="KZT"/>
+                                                                  <span class="price KZT" itemprop="price" content="349"><span title="349 казахских тенге"><span class="num">349</span> <span>тенге</span></span></span>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                                      <div class="item">
+                      <div class="item-inner" itemscope itemtype="https://schema.org/Product">
+                        <form action="/cart/add/" method="post" class="product-form-226840569 goodsListForm">
+                          <input type="hidden" name="hash" value="80e49fe9" />
+                          <input type="hidden" name="form[goods_from]" value="ZWUz" />
+                          <input type="hidden" name="form[goods_mod_id]" value="226840569" />
+                          <div class="product-image">
+                            <a href="http://anti-covid19.kz/goods/Sredstvo-dlya-dezinfekcii-lyubyh-poverhnostej-MultiDez-Tefleks-0-5-litrov?from=ZWUz&amp;amp;mod_id=226840569" title="Средство для дезинфекции любых поверхностей MultiDez Тефлекс 0,5 литров" class="product-img">
+                              <img class="goods-image-small" src="http://i5.stat01.com/2/2774/127736921/075a3e/6001882198-jpg.jpg?lc=1584499726" alt="Средство для дезинфекции любых поверхностей MultiDez Тефлекс 0,5 литров" title="Средство для дезинфекции любых поверхностей MultiDez Тефлекс 0,5 литров"  itemprop="image">
+                                                                                        </a>
+                            <div class="ratings">
+                              <a href="http://anti-covid19.kz/goods/Sredstvo-dlya-dezinfekcii-lyubyh-poverhnostej-MultiDez-Tefleks-0-5-litrov?from=ZWUz#show_tab_4" title="Перейти к отзывам">
+                                <div class="rating-box">
+                                                                      <div class="rating" style="width:0%" alt="Рейтинг не определён" title="Рейтинг не определён"></div>
+                                                                  </div>
+                              </a>
+                            </div>
+                            <div class="actions">
+                              
+                              <a class="add-cart" title="В корзину" data-tooltip="В корзину" href="/cart/add/?hash=80e49fe9&amp;form%5Bgoods_from%5D=ZWUz&amp;form%5Bgoods_mod_id%5D=226840569"><i class="fa fa-shopping-cart"></i></a>
+                              
+                                                              <a class="add-wishlist"
+                                  data-action-is-add="1"
+                                  data-action-add-url="/favorites/add"
+                                  data-action-delete-url="/favorites/delete"
+                                  data-action-add-title="Добавить &laquo;Средство для дезинфекции любых поверхностей MultiDez Тефлекс 0,5 литров&raquo; в избранное"
+                                  data-action-delete-title="Убрать &laquo;Средство для дезинфекции любых поверхностей MultiDez Тефлекс 0,5 литров&raquo; из избранного"
+                                  data-add-tooltip="В Избранное"
+                                  data-del-tooltip="Убрать из избранного"
+                                  data-tooltip="В Избранное"
+                                  title="Добавить &laquo;Средство для дезинфекции любых поверхностей MultiDez Тефлекс 0,5 литров&raquo; в избранное" href="/favorites/add?id=226840569&amp;return_to=http%3A%2F%2Fanti-covid19.kz%2F"
+                                  href="/favorites/add?id=226840569&amp;return_to=http%3A%2F%2Fanti-covid19.kz%2F"
+                                ><i class="fa fa-heart"></i></a>
+                                                            
+                              
+                                                            
+                            </div>
+                          </div>
+                          <div class="product-shop">
+                            <div class="f-fix">
+                              <meta itemprop="name" content="Средство для дезинфекции любых поверхностей MultiDez Тефлекс 0,5 литров">
+                              <meta itemprop="description" content="Описание отсутствует">
+                              <div class="product-name"><a href="http://anti-covid19.kz/goods/Sredstvo-dlya-dezinfekcii-lyubyh-poverhnostej-MultiDez-Tefleks-0-5-litrov?from=ZWUz&amp;amp;mod_id=226840569" title="Средство для дезинфекции любых поверхностей MultiDez Тефлекс 0,5 литров" itemprop="url">Средство для дезинфекции любых поверхностей MultiDez Тефлекс 0,5 литров</a></div>
+                              <div class="price-box" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <meta itemprop="priceCurrency" content="KZT"/>
+                                                                  <span class="price KZT" itemprop="price" content="698"><span title="698 казахских тенге"><span class="num">698</span> <span>тенге</span></span></span>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                                  </div>
+              </div>
+                                                      </div>
+                                    
+            
+            <div class="col-xs-12">
+              
+              <div class="page-title">
+                                  <h1 class="title">Добро пожаловать</h1>
+                            
+              </div>
+              
+              <div class="DescriptionBlock">
+  <div class="htmlDataBlock">
+        Приветствуем всех в нашем интернет-магазине . Мы предлагаем медицинское оборудование для защиты себя и своих детей от надвигающейся эпидемии коронавируса. Мы работаем напрямую с поставщиками поэтому наши цены весьма консервативны . Покупка осуществляется только ОПТОМ . Мы не продаем товары в розницу. Доставку осуществляем по Казахстану , Кыргызстану и России.<br />
+<br />
+Желаем вам не болеть и приятных покупок !
+  </div>
+ 
+</div>
+<script type="text/javascript" src="//statistics3.storeland.ru/stat.js?site_id=499200&amp;time=1584642573" async></script><script>document.stat = '{"site_id":"499200","client_id":0,"goods_action":0,"s_ip":1833329698,"s_uri":"http:\/\/anti-covid19.kz\/","s_referer":null,"s_referer_url":"\/","f_fingerprint":"","f_user_agent":"Mozilla\/5.0 (Windows NT 10.0; rv:68.0) Gecko\/20100101 Firefox\/68.0","traffic_source_id":null,"traffic_source_ip":1833329698,"traffic_source_utm_source":null,"traffic_source_utm_medium":null,"traffic_source_utm_campaign":null,"traffic_source_utm_term":null,"traffic_source_utm_content":null,"traffic_source_utm_position":null,"traffic_source_utm_matchtype":null,"traffic_source_utm_placement":null,"traffic_source_utm_network":null,"traffic_source_utm_referer":null,"goods_id":[]}';</script><script type="text/javascript" src="//sl-h-statistics-ch-1.storeland.ru/static/fp.js" async></script>
+            </div>
+            
+                      </div>
+        </div>
+      </div>
+      
+      
+            <div class="block-info">
+        <div class="container">
+          <div class="row">
+            <ul class="info-list">
+              <li class="info-item col-sm-4 col-xs-12">
+                <a href="http://anti-covid19.kz/page/Доставка">
+                  <div class="info-icon">
+                    <i class="fa fa-truck"></i>
+                  </div>
+                  <div class="info-content">
+                    <h6>Быстрая доставка</h6>
+                    <p class="text-italic">Доставляем в течении 3-х дней!</p>
+                  </div>
+                </a>
+              </li>
+              <li class="info-item col-sm-4 col-xs-12">
+                <a href="http://anti-covid19.kz/page/Доставка">
+                  <div class="info-icon">
+                    <i class="fa fa-gift"></i>
+                  </div>
+                  <div class="info-content">
+                    <h6>Прием заказов 24/7</h6>
+                    <p class="text-italic">Скидки при оформлении заказа!</p>
+                  </div>
+                </a>
+              </li>
+              <li class="info-item col-sm-4 col-xs-12">
+                <a href="http://anti-covid19.kz/page/Доставка">
+                  <div class="info-icon">
+                    <i class="fa fa-money"></i>
+                  </div>
+                  <div class="info-content">
+                    <h6>Лучшая цена</h6>
+                    <p class="text-italic">Гарантируем адекватную цену!</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+            
+      
+      
+                  <div class="block-news">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <h3 class="title"><a href="http://anti-covid19.kz/news"><span>Новости</span></a></h3>
+              <div class="navigation">
+                <a href="#" class="prev"><i class="fa fa-angle-left"></i></a>
+                <a href="#" class="next"><i class="fa fa-angle-right"></i></a>
+              </div>
+              <div class="block-content">
+                <div class="preloader"><span class="content-loading"></span></div>
+                <ul class="list-blog owl-carousel owl-theme">
+                
+                                
+                
+                                
+                
+                                
+                
+                                  <li class="item">
+                                      <div class="item-post">
+                                            <div class="postTitle">
+                        <a href="http://anti-covid19.kz/news/Postupilo-bolshoe-kolichestvo-masok-i-antiseptikov" title="Перейти к странице &laquo;Поступило большое количество масок и антисептиков!&raquo;">Поступило большое количество масок и антисептиков!</a>
+                      </div>
+                      <div class="postContent">
+                        <p></p>
+                      </div>
+                    </div>
+                                    </li>
+                                
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+                  
+      
+      
+      <div id="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="logo">
+                  <a href="http://anti-covid19.kz/" title="Anti-Covid19"><img src="//d.stat01.com/d499200/logo.png?design=infinity&lc=1584503242" alt="Anti-Covid19"></a>
+                </div>
+                <ul class="links">
+                                                                                    <li><a href="http://anti-covid19.kz/" class="active" title="Добро пожаловать">Главная</a></li>
+                                              <li><a href="http://anti-covid19.kz/page/Garantii"  title="Гарантии">Гарантии</a></li>
+                                              <li><a href="http://anti-covid19.kz/page/Oplata"  title="Оплата">Оплата</a></li>
+                                              <li><a href="http://anti-covid19.kz/page/dostavka"  title="Доставка">Доставка</a></li>
+                                              <li><a href="http://anti-covid19.kz/cart"  title="Ваша корзина">Корзина</a></li>
+                                              <li><a href="http://anti-covid19.kz/feedback"  title="Связь с администрацией магазина">Связь с администрацией</a></li>
+                                                                            </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-middle">
+          <div class="container">
+            <div class="row">
+              <div class="contact col-md-12 col-xs-12">
+                
+                <div class="contacts">
+                  <h4 class="title">Контакты</h4>
+                <p><i class="fa fa-map-marker">&nbsp;</i>Казахстан</p>                <p><i class="fa fa-clock-o">&nbsp;</i>Режим работы: с 10:00 до 19:00</p>                <p><i class="fa fa-phone">&nbsp;</i>Телефон: <a href="tel:+7777186-32-70 Whats App">+7(777)186-32-70 Whats App</a></p>                                                <p><i class="fa fa-envelope">&nbsp;</i>Email: <a href="mailto:order@anti-covid19.kz">order@anti-covid19.kz</a></p>                                </div>
+                
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="row">
+              <div id="payment_services" class="col-sm-8 col-xs-12">
+                <a href="#" title="Перейти на страницу описания оплаты">
+                  <span class="icon_1" title="Мы принимаем к оплате квитанции сбербанка">&nbsp;</span>
+                  <span class="icon_2" title="Мы принимаем к оплате кредитные карты VISA">&nbsp;</span>
+                  <span class="icon_3" title="Мы принимаем к оплате кредитные карты MasterCard">&nbsp;</span>
+                  <span class="icon_4" title="Мы принимаем оплату через кредитные карты Maestro" >&nbsp;</span>
+                  <span class="icon_5" title="Мы принимаем к оплате Яндекс.Деньги">&nbsp;</span>
+                  <span class="icon_6" title="Мы принимаем к оплате Webmoney">&nbsp;</span>
+                  <span class="icon_7" title="Мы принимаем оплату через систему РБК money">&nbsp;</span>
+                  <span class="icon_8" title="Мы принимаем оплату через SMS">&nbsp;</span>
+                  <span class="icon_9" title="Мы принимаем оплату через терминалы оплаты Qiwi">&nbsp;</span>
+                  <span class="icon_10" title="Мы принимаем оплату через Робокассу">&nbsp;</span>
+                </a>
+              </div>
+              <div class="copyright col-sm-4 col-xs-12">
+                Anti-Covid19 &copy; 2020. Все права защищены.
+                <br>Anti-Covid19.
+                <br>
+              </div>
+              <p>
+                <script src="//code.jivosite.com/widget/UKVlPukx53" async></script>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+    
+    <div id="back-top" class="fa fa-angle-up" title="Наверх"></div>
+    
+    
+    
+    <div id="fancybox-pp" style="display:none">
+      <div class="modal">
+        <h2>Политика конфиденциальности</h2>
+        <br/>
+        <div>
+          <h4>Общие положения</h4>
+          <p>Некоторые объекты, размещенные на сайте, являются интеллектуальной собственностью компании StoreLand. Использование таких объектов установлено действующим законодательством РФ.</p>
+          <p>На сайте StoreLand имеются ссылки, позволяющие перейти на другие сайты. Компания StoreLand не несет ответственности за сведения, публикуемые на этих сайтах и предоставляет ссылки на них только в целях обеспечения удобства для посетителей своего сайта.</p>
+        </div>
+        <br/>
+        <div>
+          <h4>Личные сведения и безопасность</h4>
+          <p>Компания StoreLand гарантирует, что никакая полученная от Вас информация никогда и ни при каких условиях не будет предоставлена третьим лицам, за исключением случаев, предусмотренных действующим законодательством Российской Федерации.</p>
+          <p>В определенных обстоятельствах компания StoreLand может попросить Вас зарегистрироваться и предоставить личные сведения. Предоставленная информация используется исключительно в служебных целях, а также для предоставления доступа к специальной информации.</p>
+          <p>Личные сведения можно изменить, обновить или удалить в любое время в разделе "Аккаунт" > "Профиль".</p>
+          <p>Чтобы обеспечить Вас информацией определенного рода, компания StoreLand с Вашего явного согласия может присылать на указанный при регистрации адрес электронный почты информационные сообщения. В любой момент Вы можете изменить тематику такой рассылки или отказаться от нее.</p>
+          <p>Как и многие другие сайты, StoreLand использует технологию cookie, которая может быть использована для продвижения нашего продукта и измерения эффективности рекламы. Кроме того, с помощь этой технологии StoreLand настраивается на работу лично с Вами. В частности без этой технологии невозможна работа с авторизацией в панели управления.</p>
+          <p>Сведения на данном сайте имеют чисто информативный характер, в них могут быть внесены любые изменения без какого-либо предварительного уведомления.</p>
+          <p>Чтобы отказаться от дальнейших коммуникаций с нашей компанией, изменить или удалить свою личную информацию, напишите нам через форму обратной связи</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</body> 
+</html><script type="text/javascript">(function(){var b=document.createElement("script");b.type="text/javascript";b.async=true;b.src="http://anti-covid19.storeland.ru/setcookie?sid=499200&u=80e49fe9";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);})();</script><noscript><img width="1" height="1" src="http://anti-covid19.storeland.ru/setcookie?sid=499200&u=80e49fe9&img=1" alt=""/></noscript>

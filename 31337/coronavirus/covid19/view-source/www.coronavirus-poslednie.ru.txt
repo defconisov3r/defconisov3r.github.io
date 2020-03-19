@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+<meta http-equiv="Cache-Control" content="no-cache" />
+<title> Коронавирус последние новости, коронавирус, коронавирус новости </title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="https://www.coronavirus-poslednie.ru/favicons/favicon.ico" type="image/x-icon" />
+<meta name="keywords" content="Коронавирус последние новости, коронавирус, коронавирус новости">
+<meta name="description" content="Наш сервис предоставляет последние новости о Коронавирусе COVID-19 в течение дня, а также постоянно обновляет информацию. Данные берутся из открытых источников В том числе западных СМИ.">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="https://www.coronavirus-poslednie.ru/layout/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://www.coronavirus-poslednie.ru/layout/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://www.coronavirus-poslednie.ru/layout/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" type="text/css" href="https://www.coronavirus-poslednie.ru/layout/css/style.css">
+  <!-- Bootstrap -->
+
+  <!-- Choosen -->
+  <link rel="stylesheet" type="text/css" href="https://www.coronavirus-poslednie.ru/layout/chosen/chosen.min.css" />
+
+  <!-- Summernote Editor -->
+  <link href="https://www.coronavirus-poslednie.ru/layout/summernote/dist/summernote-lite.css" rel="stylesheet" type="text/css" />
+
+  <!-- Jodit Editor -->
+  <link rel="stylesheet" type="text/css" href="https://www.coronavirus-poslednie.ru/layout/jodit/build/jodit.min.css">
+  <script type="text/javascript" src="https://www.coronavirus-poslednie.ru/layout/jodit/build/jodit.min.js"></script>
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+  <!-- container -->
+  <a class="navbar-brand" href="/"> Коронавирус COVID-19 </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      
+        <li class="nav-item"> <a class="nav-link" href="/"> Главная </a> </li>
+        <li class="nav-item"> <a class="nav-link" href="/about"> О нас </a> </li>       
+        <li class="nav-item"> <a class="nav-link" href="/virus-simptomy"> Симптомы Вируса </a> </li>       
+        
+    </ul>
+  </div>
+  <!-- container -->
+</div>
+</nav>
+<!-- Navbar -->
+
+<!-- Load new messages -->
+
+<script async type="text/javascript">
+// Start load
+setTimeout(function() {
+   checkNewMsg();
+}, 1000);
+
+// Load new check
+setInterval(function() {
+   checkNewMsg();
+}, 60000);
+
+// AJAX creat
+function checkNewMsg() {
+  var dataMsg = {};
+  dataMsg["id_user_to"] = "";
+ $.ajax({
+     data: dataMsg,
+     url: "https://www.coronavirus-poslednie.ru/?action=ajax/checkNewMsg",
+     type: "POST",
+     response: "text",
+     cache: false,
+     success: function (data_response_msg_new) {
+         $('#response_chk_new_msg').html(data_response_msg_new);
+     },
+     error: function (error_response) {
+      location.reload();
+      //alert('Error: ' + error_response);
+     }
+ })
+     
+}
+</script>
+<!-- /. Load new messages --><!-- This header -->
+
+
+<div class="container-fluid">
+
+<div style=" position:absolute; z-index:999; width:80%; height:45px; padding:0.5em; background:#000; color:#fff; "> <h4> Coronavirus-poslednie.ru - Онлайн сервис новостей о Пандемии Коронавируса </h4> </div>
+
+<iframe src="https://coronavirus-monitor.ru/map" frameBorder="0" height="400" width="100%"></iframe>
+</div>
+
+
+<!-- This Content -->
+<!-- Screen #1 -->
+<div class="container-fluid" style="min-height:70vh;">
+<!-- container-fluid -->
+
+<!-- container -->
+<div class="container">
+
+<!-- row -->
+<div class="row">
+
+<!-- col-md-12 -->
+<div class="col-md-12 p-3">
+
+<h2 class="font-weight-bold"> Последние новости о Коронавирусе COVID-19 </h2>
+
+<br/>
+<hr/>
+<br/>
+
+
+
+<div class="row">
+	
+<div class="col-lg-7">
+<h3 class="font-weight-bold mb-2"> Видео Последние новости </h3>
+<!-- Video -->
+<iframe width="100%" height="515" src="https://www.youtube.com/embed/QA8zCWnG4pE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!-- /. Video -->	
+</div>
+
+
+<div class="col-lg-5" style="max-height:550px; overflow-y:auto;">
+
+<h3 class="mb-3 text-info"> Онлайн Лента ВОЗ(Всемирная Организация Здравоохранения): </h3>
+
+<h5 class='font-weight-bold'>ВОЗ и ЮНИСЕФ выпускают новое руководство по содействию практике грудного вскармливания в медицинских учреждениях на глобальном уровне</h5> <p> «Десять шагов на пути к успешному грудному вскармливанию» лежат в основе Инициативы по созданию в больницах благоприятных условий для грудного вскармливания, провозглашенной обеими организациями в 1991 году. Практическое руководство побуждает молодых матерей к грудному вскармливанию и содержит информацию для работников здравоохранения в отношении наилучших способов поддержки грудного вскармливания.  Грудное вскармливание повышает коэффициент умственного развития, уровни подготовки к школе и показатели ее посещаемости и связано с более высоким уровнем дохода в зрелом возрасте. Оно также снижает риск развития рака молочной железы у матери.</p><br/><hr/><h5 class='font-weight-bold'>ВОЗ обеспокоена в связи с предполагаемым применением химического оружия в Сирии</h5> <p> Всемирная организация здравоохранения выражает глубокую обеспокоенность в связи с сообщениями о возможно имевшем место факте применения токсичных химических веществ в городе Дума провинции Восточная Гута.</p><br/><hr/><h5 class='font-weight-bold'>К 2026 году почти миллиард жителей Африки будет защищен от желтой лихорадки</h5> <p> Новости ВОЗ: Почти один миллиард человек в 27 странах Африки с высоким риском передачи желтой лихорадки получит вакцину от этой болезни благодаря поддержке ВОЗ, Альянса по вакцинам ГАВИ, ЮНИСЕФ и более 50 партнеров по здравоохранению до 2026 г.</p><br/><hr/><h5 class='font-weight-bold'>ВОЗ 70 лет – работа для улучшения здоровья всех и везде</h5> <p> Женева – 7 апреля, во Всемирный день здоровья, Всемирная организация здравоохранения отмечает свое 70-летие. Хорошее здоровье – это самое ценное, что может быть у каждого человека, - заявил д-р Тедрос Адханом Гебрейесус, Генеральный директор ВОЗ. С момента создания ВОЗ ожидаемая продолжительность жизни в глобальных масштабах возросла на 25 лет. Наиболее значимые результаты в отношении здоровья наблюдаются среди детей в возрасте до 5 лет: число детей, умерших в возрасте до пяти лет, в 2016 г. было на 6 миллионов меньше, чем в 1990 году. Побеждена оспа, и близится к завершению ликвидация полиомиелита. Многие страны успешно ликвидировали корь, малярию и такие изнурительные тропические болезни, как дракункулез и элефантизм, а также передачу ВИЧ и сифилиса от матери ребенку.</p><br/><hr/><h5 class='font-weight-bold'>Семь лет трагедии в области здравоохранения Сирии</h5> <p> За последние семь лет система здравоохранения Сирии серьезно пострадала в результате продолжающегося в стране конфликта. Более половины государственных больниц и медицинских учреждений страны закрыты или функционируют только частично, и более 11,3 миллиона человек нуждаются в медицинской помощи, включая 3 миллиона человек с тяжелыми травмами и нарушениями функций. ВОЗ вновь обращается с призывом защитить работников здравоохранения и немедленно предоставить доступ к жителям осажденных районов.</p><br/><hr/></div>
+<!-- /. Parser -->
+
+
+</div>
+
+
+
+</div>
+<!-- col-md-12 -->
+
+</div>
+<!-- row -->
+
+
+
+
+
+<br/>
+<hr>
+<br/>
+<!-- Simptomy -->
+<h2 class="mb-3 font-weight-bold"> Симптомы Коронавируса COVID-19 </h2>
+<div class="row">
+	
+<div class="col-md-3">
+	<img src="https://www.mos.ru/upload/motilda/version-de3eebf9859036d639d168ac6bd5ef56/1__19.svg" width="200" height="200" alt="Коронавирус последние новости, коронавирус, коронавирус новости" />
+	<h4> Повышенная температура </h4>
+</div>
+
+<div class="col-md-3">
+	<img src="https://www.mos.ru/upload/motilda/version-de3eebf9859036d639d168ac6bd5ef56/1__22.svg" width="200" height="200" alt="Коронавирус последние новости, коронавирус, коронавирус новости" />
+	<h4> Чихание </h4>
+</div>
+
+<div class="col-md-3">
+	<img src="https://www.mos.ru/upload/motilda/version-de3eebf9859036d639d168ac6bd5ef56/1__20.svg" width="200" height="200" alt="Коронавирус последние новости, коронавирус, коронавирус новости" />
+	<h4> Кашель </h4>
+</div>
+
+<div class="col-md-3">
+	<img src="https://www.mos.ru/upload/motilda/version-de3eebf9859036d639d168ac6bd5ef56/1__23.svg" width="200" height="200" alt="Коронавирус последние новости, коронавирус, коронавирус новости" />
+	<h4> Затрудненное дыхание </h4>
+</div>
+
+</div>
+<!-- /. Simptomy -->
+<br/>
+<hr>
+<br/>
+
+<h4 class="text-right"> <a class="btn btn-primary btn-lg" href="/virus-simptomy">Узнать больше о Лечении и Симптомах</a> </h4>
+
+<br/>
+<br/>
+
+
+<!-- Pogoda -->
+<div class="row">
+	
+<div class="col-md-6">
+<h4 class="mb-2"> Погода: </h4>
+	
+<iframe src="//ru.euronews.com/embed/weather/europe/russia/moscow" scrolling="no" style="border:none;min-height:570px; width:100%; height:100%;"></iframe>
+
+</div>
+</div>
+
+
+
+<!-- row -->
+<div class="row">
+<div class="col">
+	
+<h2> Коронавирус последние новости </h2>
+<p>
+  В Интернете появились новые снимки микробов Коронавируса
+</p>
+
+<a style="cursor:zoom-in;" href="images/promo_home_1.jpg" target="_blanc">
+<img src="images/promo_home_1.jpg" width="450" height="450" alt="Коронавирус последние новости, коронавирус, коронавирус новости" />
+</a>
+
+</div>
+</div>
+<!-- /. row -->
+
+
+
+
+
+
+
+<!-- CEO box -->
+<div class="row">
+<div class="col-md-8">
+	
+<p class="lead my-4">
+	
+Основные меры предосторожности для защиты от новой коронавирусной инфекции
+Следите за новейшей информацией о вспышке COVID-19, которую можно найти на веб-сайте ВОЗ, а также получить от органов общественного здравоохранения вашей страны и населенного пункта. Наибольшее число случаев COVID-19 по-прежнему выявлено в Китае, тогда как в других странах отмечаются вспышки локального характера. В большинстве случаев заболевание характеризуется легким течением и заканчивается выздоровлением, хотя встречаются осложнения. Защитить свое здоровье и здоровье окружающих можно, соблюдая следующие правила: 
+
+Регулярно мойте руки
+Регулярно обрабатывайте руки спиртосодержащим средством или мойте их с мылом. 
+
+Зачем это нужно?  Если на поверхности рук присутствует вирус, то обработка рук спиртосодержащим средством или мытье их с мылом убьет его.
+
+Соблюдайте дистанцию в общественных местах
+Держитесь от людей на расстоянии как минимум 1 метра, особенно если у них кашель, насморк и повышенная температура.
+
+Зачем это нужно? Кашляя или чихая, человек, болеющий респираторной инфекцией, такой как 2019-nCoV, распространяет вокруг себя мельчайшие капли, содержащие вирус. Если вы находитесь слишком близко к такому человеку, то можете заразиться вирусом при вдыхании воздуха.
+
+По возможности, не трогайте руками глаза, нос и рот
+Зачем это нужно? Руки касаются многих поверхностей, на которых может присутствовать вирус. Прикасаясь содержащими инфекцию руками к глазам, носу или рту, можно перенести вирус с кожи рук в организм.
+
+Соблюдайте правила респираторной гигиены
+При кашле и чихании прикрывайте рот и нос салфеткой или сгибом локтя; сразу выкидывайте салфетку в контейнер для мусора с крышкой и обрабатывайте руки спиртосодержащим антисептиком или мойте их водой с мылом.
+
+Зачем это нужно? Прикрывание рта и носа при кашле и чихании позволяет предотвратить распространение вирусов и других болезнетворных микроорганизмов. Если при кашле или чихании прикрывать нос и рот рукой, микробы могут попасть на ваши руки, а затем на предметы или людей, к которым вы прикасаетесь.
+
+При повышении температуры, появлении кашля и затруднении дыхания как можно быстрее обращайтесь за медицинской помощью
+Если вы посещали районы Китая, где регистрируется 2019-nCoV, или тесно общались с кем-то, у кого после поездки из Китая наблюдаются симптомы респираторного заболевания, сообщите об этом медицинскому работнику.
+
+Зачем это нужно? Повышение температуры, кашель и затруднение дыхания требуют незамедлительного обращения за медицинской помощью, поскольку могут быть вызваны респираторной инфекцией или другим серьезным заболеванием. Симптомы поражения органов дыхания в сочетании с повышением температуры могут иметь самые различные причины, среди которых в зависимости от совершенных пациентом поездок и его контактов может быть 2019-nCoV.
+
+Следите за новейшей информацией и выполняйте рекомендации медицинских специалистов
+Следите за новейшей информацией о COVID-19. Выполняйте рекомендации специалистов, центральных и местных органов общественного здравоохранения, а также организации, в которой вы работаете, по защите себя и окружающих от COVID-19.
+
+Зачем это нужно? У центральных и местных органов здравоохранения имеется самая актуальная информация о динамике заболеваемости COVID-19 в вашем районе. Они могут выдать наиболее подходящие рекомендации о мерах индивидуальной защиты для жителей вашего района. 
+
+ 
+
+Меры индивидуальной защиты для тех, кто недавно (в последние 14 дней) посещал районы распространения COVID-19
+Следуйте рекомендациям, представленным выше.
+Если вы почувствовали себя плохо, оставайтесь дома до выздоровления, даже если у вас легкие симптомы заболевания, например, головная боль или небольшой насморк. Зачем это нужно? Воздерживаясь от контакта с окружающими и не посещая лечебные учреждения, вы помогаете этим учреждениям работать эффективнее и защищаете себя и окружающих от возможного заражения COVID-19 или другими вирусными инфекциями.
+Если у вас повышенная температура тела, кашель и затруднение дыхания, не откладывайте обращение за медицинской помощью, так как эти симптомы могут быть вызваны респираторной инфекцией или другим серьезным заболеванием. Сначала позвоните в медицинское учреждение и сообщите обо всех последних поездках или контактах с путешествующими людьми. Зачем это нужно? Обращение за медицинской помощью по телефону позволит специалистам оперативно направить вас в подходящее лечебное учреждение. Кроме того, это поможет избежать возможного распространения COVID-19 и других вирусных инфекций.
+	
+</p>
+
+</div>
+</div>
+<!-- CEO box -->
+
+
+
+
+</div>
+<!-- container -->
+
+<!-- container-fluid -->
+</div>
+<!-- Screen #1 -->
+<!-- This Content -->
+
+<br/>
+<br/>
+<br/>
+
+<!-- This Footer -->
+<!-- Footer -->
+<div class="container-fluid bg-light text-secondary" style="min-height:100px;">
+<!-- container-fluid -->
+
+<!-- container -->
+<div class="container">
+
+<!-- row -->
+<div class="row my-3">
+
+<!-- col-md-8 -->
+<div class="col-md-8 text-justify p-3">
+<p>
+<a class="text-muted text-under" href="/"> Главная </a>
+<a class="text-muted text-under ml-1" href="https://www.coronavirus-poslednie.ru/?action=about"> О нас </a>
+</p>
+</div>
+<!-- col-md-8 -->
+
+<!-- col-md-4 -->
+<div class="col-md-4 text-center p-3">
+<h4> Коронавирус последние новости </h4>
+<p> Реклама на сайте: 707808gg@gmail.com </p>
+</div>
+<!-- col-md-4 -->
+
+</div>
+<!-- row -->
+
+<!-- row -->
+<div class="row mt-3 border-top">
+
+<!-- col-md-12 -->
+<div class="col-10 mt-3">
+<p> &copy;2020 Все права защищены. </p>
+</div>
+<!-- col-md-12 -->
+
+</div>
+<!-- row -->
+
+</div>
+<!-- container -->
+
+<!-- container-fluid -->
+</div>
+<!-- Footer -->
+
+<!-- JS Scripts -->
+<script type="text/javascript">
+// Полная версия
+var editor = new Jodit("#editor", {
+ "buttons": "|,bold,strikethrough,underline,italic,|,,ul,ol,,|,brush,paragraph,|,link,,align,undo,redo,\n,cut,hr,|,fullsize",
+});
+// Короткая версия
+/*
+var editor = new Jodit("#editor", {
+  "buttons": "|,bold,strikethrough,underline,italic,|,,ul,ol,,|,paragraph,,link,|,\n,|,hr"
+});
+*/
+</script>
+
+<script type="text/javascript" src="https://www.coronavirus-poslednie.ru/ajax/liveOutput.js"></script>
+<script type="text/javascript" async src="https://www.coronavirus-poslednie.ru/ajax/ajaxForm.js"></script>
+<script type="text/javascript" src="https://www.coronavirus-poslednie.ru/layout/jquery/jquery.js"></script>
+
+<script type="text/javascript" src="https://www.coronavirus-poslednie.ru/layout/notify/notify.min.js"></script>
+<script type="text/javascript">
+function Noti( typeNoti, textNoti ) {
+  $.notify(textNoti, typeNoti);
+}
+</script>
+
+<!-- Chosen -->
+<script type="text/javascript" src="https://www.coronavirus-poslednie.ru/layout/chosen/chosen.jquery.min.js"></script>
+
+<!-- Summernote Editor -->
+<script type="text/javascript" src="https://www.coronavirus-poslednie.ru/layout/summernote/dist/summernote-lite.js"></script>
+<script defer type="text/javascript" src="https://www.coronavirus-poslednie.ru/layout/summernote/dist/lang/summernote-ru-RU.js"></script>
+<script defer type="text/javascript" src="https://www.coronavirus-poslednie.ru/layout/summernote/dist/lang/summernote-en-EN.js"></script>
+
+<script type="text/javascript" src="https://www.coronavirus-poslednie.ru/layout/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://www.coronavirus-poslednie.ru/layout/bootstrap/js/bootstrap.bundle.js"></script>
+<script type="text/javascript">
+$(function () {
+  $('[data-toggle="popover"]').popover();
+  $('.dropdown-toggle').dropdown()
+  $('[data-toggle="tooltip"]').tooltip()
+  $('.toast').toast('show'); // toasts
+  //$('.collapse').collapse()
+
+  // Summernote editor
+  $('#summernote').summernote({
+  placeholder: 'Текст здесь...',
+  tabsize: 2,
+  height: 170,
+  maxHeight: 375,
+  lang: 'ru-RU', // default: 'en-US' russian: ru-RU
+  // Toobar buttons
+  toolbar: [
+     // ['style', ['style'] ],
+      ['font', ['bold', 'italic', 'underline', ] ],
+     // ['fontname', ['fontname'] ],
+     // ['color', ['color'] ],
+      ['para', ['ul', ] ],
+     // ['height', ['height'] ],
+      //['table', ['table'] ],
+      ['insert', ['link',] ],
+     // ['view', ['fullscreen', 'codeview'] ],
+     // ['help', ['help'] ]
+    ],
+  });
+
+  // Fancybox
+  $(".fancybox").fancybox({
+    openEffect  : 'none',
+    closeEffect : 'none',
+    openMethod: 'zoomIn',
+  });
+
+  // Choosen
+  $("#chosen-select").chosen({
+	  //disable_search: false,
+	  //disable_search_threshold: 5,
+	  //enable_split_word_search: false,
+	  //max_selected_options: 10,
+	  no_results_text: "Ничего не найдено",
+	  placeholder_text_multiple: "Выберите несколько параметров",
+	  placeholder_text_single: "Выберите параметр",
+	  //search_contains: true,
+	  //display_disabled_options: false,
+	  //display_selected_options: false,
+	  //max_shown_results: Infinity
+  })
+
+});
+</script>
+
+  </body>
+</html>
+<!-- This footer -->

@@ -413,7 +413,7 @@ systemctl restart imunify360-webshield
             </div>
 
             <p class="cap_mess cap_text text-center">
-                We have noticed an unusual activity from your <b>IP 185.220.100.248</b> and blocked access to this website.
+                We have noticed an unusual activity from your <b>IP 185.220.100.240</b> and blocked access to this website.
             </p>
 
             <p class="cap_mess cap_text text-center">
@@ -512,7 +512,7 @@ systemctl restart imunify360-webshield
                 if (data['success']) {
                     captchaIsPassed = true;
                     $("#text").text(
-                        "IP 185.220.100.248 has been unblocked"
+                        "IP 185.220.100.240 has been unblocked"
                     );
                     setTimeout(do_reload, 1000);
                 } else {

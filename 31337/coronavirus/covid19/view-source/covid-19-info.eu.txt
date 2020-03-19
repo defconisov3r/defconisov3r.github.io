@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Aktuální informace o COVID-19 na jednom místě. Novinky jak ze světa, tak České Republiky</title>
+<meta property="og:title" content="Aktuální informace o COVID-19 na jednom místě. Interaktivní mapa a novinky jak ze světa, tak České Republiky">
+<meta property="og:site_name" content="covid-19-info">
+<meta property="og:url" content="https://covid-19-info.eu">
+<meta property="og:description" content="Informace o covid-19 aka novém koronaviru. Kolik je nakažených a kolik je vyléčených? Interaktivní mapa a všechny důležité informace na jednom místě">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://i.ibb.co/wYrQMv0/image.png">
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="https://covid-19-info.eu/mapa/dist/svgMap.css" rel="stylesheet">
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <style>
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, rgb(122,153,217)),
+									   color-stop(0.72, rgb(73,125,189)),
+									   color-stop(0.86, rgb(28,58,148)));
+}
+
+.Blink {
+  animation: blinker 1.5s cubic-bezier(.5, 0, 1, 1) infinite alternate;  
+}
+@keyframes blinker {  
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+  </style>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="https://covid-19-info.eu/">
+        <div class="sidebar-brand-text mx-3">COVID-19</div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Heading -->
+
+ <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137708699-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-137708699-2');
+</script>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="https://covid-19-info.eu/covid-19-v-ceske-republice/">
+          <i class="fas fa-home"></i>
+          <span>COVID-19 V ČR</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="https://covid-19-info.eu/co-je-covid-19">
+          <i class="far fa-question-circle"></i>
+          <span>Co je to COVID-19?</span>
+        </a>
+      </li>      
+
+      <li class="nav-item">
+        <a class="nav-link" href="https://covid-19-info.eu/jak-predchazet-nakazeni">
+          <i class="far fa-question-circle"></i>
+          <span>Jak předcházet nakažení?</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="https://covid-19-info.eu/priznaky-nakazeni">
+          <i class="fas fa-info-circle"></i>
+          <span>Příznaky nakažení</span></a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="https://covid-19-info.eu/sirejici-se-dezinformace-o-novem-koronaviru/">
+          <i class="fas fa-exclamation-triangle"></i>
+          <span>Dezinformace o COVID-19</span></a>
+      </li> 
+      
+      <li class="nav-item">
+        <a class="nav-link" href="https://covid-19-info.eu/aktuality-zive/">
+          <i class="fas fa-rss"></i>
+          <span>Aktuality živě</span></a>
+      </li>            
+
+      <li class="nav-item">
+        <a class="nav-link" href="https://covid-19-info.eu/seznam-hygienickych-stanic">
+          <i class="fas fa-ambulance"></i>
+          <span>Hygienické stanice</span></a>
+      </li>  
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>                                           
+<a href="https://covid-19-info.eu/covid-19-v-ceske-republice/" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm"><i class="fas fa-circle text-danger Blink"></i> <span style="color:#00FF33">ŽIVĚ</span> - ZOBRAZIT ČESKOU REPUBLIKU</a>           
+<a href="https://covid-19-info.eu/covid-19-v-ceske-republice/" class="btn btn-secondary d-md-none mr-3"><i class="fas fa-circle text-danger Blink"></i> <span style="color:#00FF33">ŽIVĚ</span> - ZOBRAZIT ČR</a>           
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">AKTUÁLNÍ INFORMACE ZE SVĚTA</h1>           
+          </div>
+
+          <!-- Content Row -->
+          <div class="row">
+
+
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">CELKOVÝ POČET VÝSKYTŮ VČETNĚ VYLÉČENÝCH</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                      <span class='numscroller' data-min='0' data-max='240628' data-delay='5' data-increment='1300'>0</span>                  
+                      </div>
+                    </div>
+                    <div class="col-auto">               
+                      <i class="fas fa-users fa-2x text-primary"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">CELKOVÝ POČET JIŽ VYLÉČENÝCH</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                      <span class='numscroller' data-min='0' data-max='86689' data-delay='7' data-increment='130'>0</span>
+                      (36.03%)                          
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-user-shield fa-2x text-success"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">CELKOVÝ POČET AKTUÁLNĚ NAKAŽENÝCH</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                      <span class='numscroller' data-min='0' data-max='153939' data-delay='9' data-increment='130'>0</span>
+                      (59.84%)
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-user-injured fa-2x text-warning"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>  
+
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-secondary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">CELKOVÝ POČET ZEMŘELÝCH</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                      <span class='numscroller' data-min='0' data-max='9953' data-delay='11' data-increment='13'>0</span>
+                      (4.14%)
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-skull-crossbones fa-2x text-secondary"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>                        
+
+
+            <div class="col-lg-6 mb-4">
+
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">DOSAVADNÍ CELOSVĚTOVÝ VÝSKYT V INTERAKTIVNÍ MAPĚ</h6>
+                </div>
+                <div class="card-body">
+      <div id="svgMapGPD"></div>
+        <script src="https://covid-19-info.eu/mapa/dist/svgMap.js"></script>
+
+      <script>
+var svgMapDataGPD = {
+  data: {
+    celv: {
+      name: 'Celkový výskyt',
+      format: '{0}',
+      thousandSeparator: ','     
+    },
+    actna: {
+      name: 'Aktuálně nakažených',
+      format: '{0}',
+      thousandSeparator: ','    
+    },
+    actvyl: {
+      name: 'Vyléčených',
+      format: '{0}',
+      thousandSeparator: ','
+    },
+    actum: {
+      name: 'Úmrtí',
+      format: '{0}'
+    }   
+  },
+  applyData: 'celv',
+  values: {
+CN: {celv: 80928, actna: 8946, actvyl: 70420, actum: 3245},
+IT: {celv: 41035, actna: 33190, actvyl: 4440, actum: 3405},
+IR: {celv: 18407, actna: 11413, actvyl: 5979, actum: 1284},
+ES: {celv: 17395, actna: 15485, actvyl: 1107, actum: 803},
+DE: {celv: 15309, actna: 15151, actvyl: 114, actum: 44},
+US: {celv: 11413, actna: 11134, actvyl: 108, actum: 171},
+FR: {celv: 10995, actna: 10021, actvyl: 602, actum: 372},
+KR: {celv: 8565, actna: 6838, actvyl: 1947, actum: 91},
+CH: {celv: 3944, actna: 3888, actvyl: 15, actum: 41},
+GB: {celv: 3269, actna: 3060, actvyl: 65, actum: 144},
+NL: {celv: 2460, actna: 2382, actvyl: 2, actum: 76},
+AT: {celv: 2013, actna: 1998, actvyl: 9, actum: 7},
+BE: {celv: 1795, actna: 1743, actvyl: 165, actum: 21},
+NO: {celv: 1759, actna: 1751, actvyl: 1, actum: 7},
+SE: {celv: 1439, actna: 1412, actvyl: 16, actum: 11},
+DK: {celv: 1223, actna: 1216, actvyl: 1, actum: 6},
+JP: {celv: 986, actna: 762, actvyl: 191, actum: 33},
+MY: {celv: 900, actna: 823, actvyl: 75, actum: 2},
+CA: {celv: 801, actna: 780, actvyl: 12, actum: 10},
+PT: {celv: 785, actna: 779, actvyl: 4, actum: 3},
+AU: {celv: 710, actna: 677, actvyl: 46, actum: 6},
+CZ: {celv: 694, actna: 691, actvyl: 3, actum: 0},
+IL: {celv: 573, actna: 560, actvyl: 14, actum: 0},
+IE: {celv: 557, actna: 550, actvyl: 5, actum: 3},
+BR: {celv: 534, actna: 527, actvyl: 2, actum: 6},
+GR: {celv: 464, actna: 439, actvyl: 19, actum: 6},
+QA: {celv: 460, actna: 450, actvyl: 10, actum: 0},
+PK: {celv: 454, actna: 439, actvyl: 13, actum: 2},
+FI: {celv: 400, actna: 390, actvyl: 10, actum: 0},
+PL: {celv: 355, actna: 337, actvyl: 13, actum: 5},
+SG: {celv: 345, actna: 228, actvyl: 124, actum: 0},
+CL: {celv: 342, actna: 342, actvyl: 0, actum: 0},
+LU: {celv: 335, actna: 331, actvyl: 6, actum: 4},
+IS: {celv: 330, actna: 325, actvyl: 5, actum: 1},
+SI: {celv: 319, actna: 318, actvyl: 0, actum: 1},
+ID: {celv: 311, actna: 275, actvyl: 15, actum: 25},
+BH: {celv: 277, actna: 176, actvyl: 100, actum: 1},
+RO: {celv: 277, actna: 252, actvyl: 25, actum: 0},
+SA: {celv: 274, actna: 266, actvyl: 8, actum: 0},
+TH: {celv: 272, actna: 229, actvyl: 42, actum: 1},
+EE: {celv: 267, actna: 266, actvyl: 1, actum: 0},
+EG: {celv: 256, actna: 221, actvyl: 32, actum: 7},
+PE: {celv: 234, actna: 233, actvyl: 1, actum: 0},
+PH: {celv: 217, actna: 193, actvyl: 8, actum: 17},
+HK: {celv: 208, actna: 109, actvyl: 98, actum: 4},
+EC: {celv: 199, actna: 195, actvyl: 1, actum: 3},
+RU: {celv: 199, actna: 190, actvyl: 8, actum: 1},
+IN: {celv: 197, actna: 173, actvyl: 20, actum: 4},
+TR: {celv: 192, actna: 189, actvyl: 0, actum: 3},
+IQ: {celv: 177, actna: 116, actvyl: 49, actum: 12},
+LB: {celv: 157, actna: 149, actvyl: 4, actum: 4},
+ZA: {celv: 150, actna: 150, actvyl: 0, actum: 0},
+KW: {celv: 148, actna: 133, actvyl: 18, actum: 0},
+AE: {celv: 140, actna: 114, actvyl: 31, actum: 0},
+SM: {celv: 140, actna: 122, actvyl: 4, actum: 14},
+SK: {celv: 124, actna: 124, actvyl: 0, actum: 1},
+AM: {celv: 122, actna: 121, actvyl: 1, actum: 0},
+MX: {celv: 118, actna: 114, actvyl: 4, actum: 1},
+HR: {celv: 110, actna: 104, actvyl: 5, actum: 1},
+PA: {celv: 109, actna: 108, actvyl: 0, actum: 1},
+CO: {celv: 108, actna: 107, actvyl: 1, actum: 0},
+TW: {celv: 108, actna: 85, actvyl: 26, actum: 1},
+BG: {celv: 107, actna: 104, actvyl: 0, actum: 3},
+RS: {celv: 103, actna: 102, actvyl: 1, actum: 0},
+AR: {celv: 97, actna: 92, actvyl: 3, actum: 3},
+DZ: {celv: 90, actna: 57, actvyl: 32, actum: 9},
+CR: {celv: 87, actna: 86, actvyl: 0, actum: 1},
+LV: {celv: 86, actna: 85, actvyl: 1, actum: 0},
+VN: {celv: 85, actna: 69, actvyl: 16, actum: 0},
+UY: {celv: 79, actna: 79, actvyl: 2, actum: 0},
+AF: {celv: 73, actna: 73, actvyl: 1, actum: 0},
+HU: {celv: 73, actna: 70, actvyl: 2, actum: 1},
+BN: {celv: 73, actna: 73, actvyl: 0, actum: 0},
+FO: {celv: 72, actna: 71, actvyl: 1, actum: 0},
+JO: {celv: 69, actna: 68, actvyl: 1, actum: 0},
+CY: {celv: 67, actna: 67, actvyl: 0, actum: 0},
+BA: {celv: 64, actna: 62, actvyl: 2, actum: 0},
+AL: {celv: 64, actna: 62, actvyl: 0, actum: 2},
+MA: {celv: 61, actna: 58, actvyl: 2, actum: 2},
+LK: {celv: 60, actna: 57, actvyl: 3, actum: 0},
+AD: {celv: 53, actna: 52, actvyl: 1, actum: 0},
+MT: {celv: 53, actna: 51, actvyl: 2, actum: 0},
+BY: {celv: 51, actna: 46, actvyl: 5, actum: 0},
+MD: {celv: 49, actna: 47, actvyl: 1, actum: 1},
+OM: {celv: 48, actna: 35, actvyl: 13, actum: 0},
+PS: {celv: 47, actna: 47, actvyl: 0, actum: 0},
+AZ: {celv: 44, actna: 36, actvyl: 10, actum: 1},
+KZ: {celv: 44, actna: 44, actvyl: 0, actum: 0},
+VE: {celv: 42, actna: 42, actvyl: 0, actum: 0},
+MK: {celv: 42, actna: 41, actvyl: 1, actum: 0},
+LT: {celv: 41, actna: 40, actvyl: 1, actum: 0},
+GE: {celv: 40, actna: 39, actvyl: 1, actum: 0},
+TN: {celv: 39, actna: 38, actvyl: 1, actum: 1},
+KH: {celv: 37, actna: 36, actvyl: 1, actum: 0},
+SN: {celv: 36, actna: 34, actvyl: 2, actum: 0},
+DO: {celv: 34, actna: 32, actvyl: 0, actum: 2},
+GP: {celv: 33, actna: 33, actvyl: 0, actum: 0},
+BF: {celv: 33, actna: 32, actvyl: 0, actum: 1},
+LI: {celv: 28, actna: 28, actvyl: 0, actum: 0},
+NZ: {celv: 28, actna: 28, actvyl: 0, actum: 0},
+MQ: {celv: 23, actna: 22, actvyl: 0, actum: 1},
+UZ: {celv: 23, actna: 23, actvyl: 0, actum: 0},
+UA: {celv: 21, actna: 19, actvyl: 0, actum: 3},
+BD: {celv: 18, actna: 14, actvyl: 3, actum: 1},
+MO: {celv: 17, actna: 7, actvyl: 10, actum: 0},
+JM: {celv: 15, actna: 13, actvyl: 2, actum: 1},
+GF: {celv: 15, actna: 15, actvyl: 0, actum: 0},
+BO: {celv: 15, actna: 15, actvyl: 0, actum: 0},
+CD: {celv: 14, actna: 14, actvyl: 0, actum: 0},
+MV: {celv: 13, actna: 13, actvyl: 0, actum: 0},
+CM: {celv: 13, actna: 13, actvyl: 0, actum: 0},
+NG: {celv: 12, actna: 11, actvyl: 1, actum: 0},
+HN: {celv: 12, actna: 12, actvyl: 0, actum: 0},
+GU: {celv: 12, actna: 12, actvyl: 0, actum: 0},
+GY: {celv: 11, actna: 10, actvyl: 0, actum: 1},
+PY: {celv: 11, actna: 11, actvyl: 0, actum: 0},
+GH: {celv: 11, actna: 11, actvyl: 0, actum: 0},
+RW: {celv: 11, actna: 11, actvyl: 0, actum: 0},
+CU: {celv: 11, actna: 10, actvyl: 0, actum: 1},
+KE: {celv: 10, actna: 10, actvyl: 0, actum: 0},
+MC: {celv: 10, actna: 10, actvyl: 0, actum: 0},
+ME: {celv: 10, actna: 10, actvyl: 0, actum: 0},
+GT: {celv: 9, actna: 8, actvyl: 0, actum: 1},
+TT: {celv: 9, actna: 9, actvyl: 0, actum: 0},
+GI: {celv: 8, actna: 6, actvyl: 2, actum: 0},
+MU: {celv: 7, actna: 7, actvyl: 0, actum: 0},
+ET: {celv: 7, actna: 7, actvyl: 0, actum: 0},
+CIV: {celv: 6, actna: 6, actvyl: 0, actum: 0},
+MN: {celv: 6, actna: 6, actvyl: 0, actum: 0},
+SC: {celv: 6, actna: 6, actvyl: 0, actum: 0},
+PR: {celv: 6, actna: 6, actvyl: 0, actum: 0},
+PF: {celv: 6, actna: 6, actvyl: 0, actum: 0},
+JE: {celv: 6, actna: 6, actvyl: 0, actum: 0},
+TZ: {celv: 6, actna: 6, actvyl: 0, actum: 0},
+BB: {celv: 5, actna: 5, actvyl: 0, actum: 0},
+AW: {celv: 5, actna: 5, actvyl: 1, actum: 0},
+GQ: {celv: 4, actna: 4, actvyl: 0, actum: 0},
+BL: {celv: 3, actna: 3, actvyl: 0, actum: 0},
+YT: {celv: 3, actna: 3, actvyl: 0, actum: 0},
+KG: {celv: 3, actna: 3, actvyl: 0, actum: 0},
+NA: {celv: 3, actna: 3, actvyl: 0, actum: 0},
+GA: {celv: 3, actna: 3, actvyl: 0, actum: 0},
+MF: {celv: 3, actna: 3, actvyl: 0, actum: 0},
+BS: {celv: 3, actna: 3, actvyl: 0, actum: 0},
+VI: {celv: 3, actna: 3, actvyl: 0, actum: 0},
+CG: {celv: 3, actna: 3, actvyl: 0, actum: 0},
+LR: {celv: 2, actna: 2, actvyl: 0, actum: 0},
+LC: {celv: 2, actna: 2, actvyl: 0, actum: 0},
+SD: {celv: 2, actna: 1, actvyl: 0, actum: 1},
+NC: {celv: 2, actna: 2, actvyl: 0, actum: 0},
+ZM: {celv: 2, actna: 2, actvyl: 0, actum: 0},
+BJ: {celv: 2, actna: 2, actvyl: 0, actum: 0},
+MR: {celv: 2, actna: 2, actvyl: 0, actum: 0},
+GL: {celv: 2, actna: 2, actvyl: 0, actum: 0},
+BM: {celv: 2, actna: 2, actvyl: 0, actum: 0},
+GN: {celv: 2, actna: 2, actvyl: 0, actum: 0},
+KY: {celv: 1, actna: 0, actvyl: 0, actum: 1},
+NP: {celv: 1, actna: 0, actvyl: 1, actum: 0},
+AG: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+BT: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+CF: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+VA: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+VC: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+SO: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+SR: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+SZ: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+TG: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+GM: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+MS: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+DJ: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+TD: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+NI: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+SV: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+FJ: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+GG: {celv: 1, actna: 1, actvyl: 0, actum: 0}  }
+}      
+      
+        new svgMap({
+          targetElementID: 'svgMapGPD',
+          data: svgMapDataGPD,
+          maxValue: '80928',
+          minValue: '1',  
+                    
+        });
+      </script>
+                </div>
+              </div>
+
+            </div>
+            
+            <div class="col-lg-6 mb-4">
+
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">AKTUÁLNÍ CELOSVĚTOVÝ VÝSKYT V INTERAKTIVNÍ MAPĚ</h6>
+                </div>
+                <div class="card-body">
+      <div id="svgMapGPD1"></div>
+        <script src="https://covid-19-info.eu/mapa/dist/svgMap.js"></script>
+
+      <script>
+var svgMapDataGPD1 = {
+  data: {
+    celv: {
+      name: 'Celkový výskyt',
+      format: '{0}',
+      thousandSeparator: ','     
+    },
+    actna: {
+      name: 'Aktuálně nakažených',
+      format: '{0}',
+      thousandSeparator: ','    
+    },
+    actvyl: {
+      name: 'Vyléčených',
+      format: '{0}',
+      thousandSeparator: ','
+    },
+    actum: {
+      name: 'Úmrtí',
+      format: '{0}'
+    }   
+  },
+  applyData: 'actna',
+  values: {
+IT: {celv: 41035, actna: 33190, actvyl: 4440, actum: 3405},
+ES: {celv: 17395, actna: 15485, actvyl: 1107, actum: 803},
+DE: {celv: 15309, actna: 15151, actvyl: 114, actum: 44},
+IR: {celv: 18407, actna: 11413, actvyl: 5979, actum: 1284},
+US: {celv: 11413, actna: 11134, actvyl: 108, actum: 171},
+FR: {celv: 10995, actna: 10021, actvyl: 602, actum: 372},
+CN: {celv: 80928, actna: 8946, actvyl: 70420, actum: 3245},
+KR: {celv: 8565, actna: 6838, actvyl: 1947, actum: 91},
+CH: {celv: 3944, actna: 3888, actvyl: 15, actum: 41},
+GB: {celv: 3269, actna: 3060, actvyl: 65, actum: 144},
+NL: {celv: 2460, actna: 2382, actvyl: 2, actum: 76},
+AT: {celv: 2013, actna: 1998, actvyl: 9, actum: 7},
+NO: {celv: 1759, actna: 1751, actvyl: 1, actum: 7},
+BE: {celv: 1795, actna: 1743, actvyl: 165, actum: 21},
+SE: {celv: 1439, actna: 1412, actvyl: 16, actum: 11},
+DK: {celv: 1223, actna: 1216, actvyl: 1, actum: 6},
+MY: {celv: 900, actna: 823, actvyl: 75, actum: 2},
+CA: {celv: 801, actna: 780, actvyl: 12, actum: 10},
+PT: {celv: 785, actna: 779, actvyl: 4, actum: 3},
+JP: {celv: 986, actna: 762, actvyl: 191, actum: 33},
+CZ: {celv: 694, actna: 691, actvyl: 3, actum: 0},
+AU: {celv: 710, actna: 677, actvyl: 46, actum: 6},
+IL: {celv: 573, actna: 560, actvyl: 14, actum: 0},
+IE: {celv: 557, actna: 550, actvyl: 5, actum: 3},
+BR: {celv: 534, actna: 527, actvyl: 2, actum: 6},
+QA: {celv: 460, actna: 450, actvyl: 10, actum: 0},
+PK: {celv: 454, actna: 439, actvyl: 13, actum: 2},
+GR: {celv: 464, actna: 439, actvyl: 19, actum: 6},
+FI: {celv: 400, actna: 390, actvyl: 10, actum: 0},
+CL: {celv: 342, actna: 342, actvyl: 0, actum: 0},
+PL: {celv: 355, actna: 337, actvyl: 13, actum: 5},
+LU: {celv: 335, actna: 331, actvyl: 6, actum: 4},
+IS: {celv: 330, actna: 325, actvyl: 5, actum: 1},
+SI: {celv: 319, actna: 318, actvyl: 0, actum: 1},
+ID: {celv: 311, actna: 275, actvyl: 15, actum: 25},
+SA: {celv: 274, actna: 266, actvyl: 8, actum: 0},
+EE: {celv: 267, actna: 266, actvyl: 1, actum: 0},
+RO: {celv: 277, actna: 252, actvyl: 25, actum: 0},
+PE: {celv: 234, actna: 233, actvyl: 1, actum: 0},
+TH: {celv: 272, actna: 229, actvyl: 42, actum: 1},
+SG: {celv: 345, actna: 228, actvyl: 124, actum: 0},
+EG: {celv: 256, actna: 221, actvyl: 32, actum: 7},
+EC: {celv: 199, actna: 195, actvyl: 1, actum: 3},
+PH: {celv: 217, actna: 193, actvyl: 8, actum: 17},
+RU: {celv: 199, actna: 190, actvyl: 8, actum: 1},
+TR: {celv: 192, actna: 189, actvyl: 0, actum: 3},
+BH: {celv: 277, actna: 176, actvyl: 100, actum: 1},
+IN: {celv: 197, actna: 173, actvyl: 20, actum: 4},
+ZA: {celv: 150, actna: 150, actvyl: 0, actum: 0},
+LB: {celv: 157, actna: 149, actvyl: 4, actum: 4},
+KW: {celv: 148, actna: 133, actvyl: 18, actum: 0},
+SK: {celv: 124, actna: 124, actvyl: 0, actum: 1},
+SM: {celv: 140, actna: 122, actvyl: 4, actum: 14},
+AM: {celv: 122, actna: 121, actvyl: 1, actum: 0},
+IQ: {celv: 177, actna: 116, actvyl: 49, actum: 12},
+AE: {celv: 140, actna: 114, actvyl: 31, actum: 0},
+MX: {celv: 118, actna: 114, actvyl: 4, actum: 1},
+HK: {celv: 208, actna: 109, actvyl: 98, actum: 4},
+PA: {celv: 109, actna: 108, actvyl: 0, actum: 1},
+CO: {celv: 108, actna: 107, actvyl: 1, actum: 0},
+HR: {celv: 110, actna: 104, actvyl: 5, actum: 1},
+BG: {celv: 107, actna: 104, actvyl: 0, actum: 3},
+RS: {celv: 103, actna: 102, actvyl: 1, actum: 0},
+AR: {celv: 97, actna: 92, actvyl: 3, actum: 3},
+CR: {celv: 87, actna: 86, actvyl: 0, actum: 1},
+TW: {celv: 108, actna: 85, actvyl: 26, actum: 1},
+LV: {celv: 86, actna: 85, actvyl: 1, actum: 0},
+UY: {celv: 79, actna: 79, actvyl: 2, actum: 0},
+AF: {celv: 73, actna: 73, actvyl: 1, actum: 0},
+BN: {celv: 73, actna: 73, actvyl: 0, actum: 0},
+FO: {celv: 72, actna: 71, actvyl: 1, actum: 0},
+HU: {celv: 73, actna: 70, actvyl: 2, actum: 1},
+VN: {celv: 85, actna: 69, actvyl: 16, actum: 0},
+JO: {celv: 69, actna: 68, actvyl: 1, actum: 0},
+CY: {celv: 67, actna: 67, actvyl: 0, actum: 0},
+BA: {celv: 64, actna: 62, actvyl: 2, actum: 0},
+AL: {celv: 64, actna: 62, actvyl: 0, actum: 2},
+MA: {celv: 61, actna: 58, actvyl: 2, actum: 2},
+DZ: {celv: 90, actna: 57, actvyl: 32, actum: 9},
+LK: {celv: 60, actna: 57, actvyl: 3, actum: 0},
+AD: {celv: 53, actna: 52, actvyl: 1, actum: 0},
+MT: {celv: 53, actna: 51, actvyl: 2, actum: 0},
+MD: {celv: 49, actna: 47, actvyl: 1, actum: 1},
+PS: {celv: 47, actna: 47, actvyl: 0, actum: 0},
+BY: {celv: 51, actna: 46, actvyl: 5, actum: 0},
+KZ: {celv: 44, actna: 44, actvyl: 0, actum: 0},
+VE: {celv: 42, actna: 42, actvyl: 0, actum: 0},
+MK: {celv: 42, actna: 41, actvyl: 1, actum: 0},
+LT: {celv: 41, actna: 40, actvyl: 1, actum: 0},
+GE: {celv: 40, actna: 39, actvyl: 1, actum: 0},
+TN: {celv: 39, actna: 38, actvyl: 1, actum: 1},
+KH: {celv: 37, actna: 36, actvyl: 1, actum: 0},
+AZ: {celv: 44, actna: 36, actvyl: 10, actum: 1},
+OM: {celv: 48, actna: 35, actvyl: 13, actum: 0},
+SN: {celv: 36, actna: 34, actvyl: 2, actum: 0},
+GP: {celv: 33, actna: 33, actvyl: 0, actum: 0},
+DO: {celv: 34, actna: 32, actvyl: 0, actum: 2},
+BF: {celv: 33, actna: 32, actvyl: 0, actum: 1},
+LI: {celv: 28, actna: 28, actvyl: 0, actum: 0},
+NZ: {celv: 28, actna: 28, actvyl: 0, actum: 0},
+UZ: {celv: 23, actna: 23, actvyl: 0, actum: 0},
+MQ: {celv: 23, actna: 22, actvyl: 0, actum: 1},
+UA: {celv: 21, actna: 19, actvyl: 0, actum: 3},
+GF: {celv: 15, actna: 15, actvyl: 0, actum: 0},
+BO: {celv: 15, actna: 15, actvyl: 0, actum: 0},
+CD: {celv: 14, actna: 14, actvyl: 0, actum: 0},
+BD: {celv: 18, actna: 14, actvyl: 3, actum: 1},
+MV: {celv: 13, actna: 13, actvyl: 0, actum: 0},
+CM: {celv: 13, actna: 13, actvyl: 0, actum: 0},
+JM: {celv: 15, actna: 13, actvyl: 2, actum: 1},
+HN: {celv: 12, actna: 12, actvyl: 0, actum: 0},
+GU: {celv: 12, actna: 12, actvyl: 0, actum: 0},
+PY: {celv: 11, actna: 11, actvyl: 0, actum: 0},
+GH: {celv: 11, actna: 11, actvyl: 0, actum: 0},
+RW: {celv: 11, actna: 11, actvyl: 0, actum: 0},
+NG: {celv: 12, actna: 11, actvyl: 1, actum: 0},
+GY: {celv: 11, actna: 10, actvyl: 0, actum: 1},
+KE: {celv: 10, actna: 10, actvyl: 0, actum: 0},
+MC: {celv: 10, actna: 10, actvyl: 0, actum: 0},
+ME: {celv: 10, actna: 10, actvyl: 0, actum: 0},
+CU: {celv: 11, actna: 10, actvyl: 0, actum: 1},
+TT: {celv: 9, actna: 9, actvyl: 0, actum: 0},
+GT: {celv: 9, actna: 8, actvyl: 0, actum: 1},
+MU: {celv: 7, actna: 7, actvyl: 0, actum: 0},
+ET: {celv: 7, actna: 7, actvyl: 0, actum: 0},
+MO: {celv: 17, actna: 7, actvyl: 10, actum: 0},
+CIV: {celv: 6, actna: 6, actvyl: 0, actum: 0},
+MN: {celv: 6, actna: 6, actvyl: 0, actum: 0},
+GI: {celv: 8, actna: 6, actvyl: 2, actum: 0},
+SC: {celv: 6, actna: 6, actvyl: 0, actum: 0},
+PR: {celv: 6, actna: 6, actvyl: 0, actum: 0},
+PF: {celv: 6, actna: 6, actvyl: 0, actum: 0},
+JE: {celv: 6, actna: 6, actvyl: 0, actum: 0},
+TZ: {celv: 6, actna: 6, actvyl: 0, actum: 0},
+BB: {celv: 5, actna: 5, actvyl: 0, actum: 0},
+AW: {celv: 5, actna: 5, actvyl: 1, actum: 0},
+GQ: {celv: 4, actna: 4, actvyl: 0, actum: 0},
+BL: {celv: 3, actna: 3, actvyl: 0, actum: 0},
+YT: {celv: 3, actna: 3, actvyl: 0, actum: 0},
+KG: {celv: 3, actna: 3, actvyl: 0, actum: 0},
+NA: {celv: 3, actna: 3, actvyl: 0, actum: 0},
+GA: {celv: 3, actna: 3, actvyl: 0, actum: 0},
+MF: {celv: 3, actna: 3, actvyl: 0, actum: 0},
+BS: {celv: 3, actna: 3, actvyl: 0, actum: 0},
+VI: {celv: 3, actna: 3, actvyl: 0, actum: 0},
+CG: {celv: 3, actna: 3, actvyl: 0, actum: 0},
+LR: {celv: 2, actna: 2, actvyl: 0, actum: 0},
+LC: {celv: 2, actna: 2, actvyl: 0, actum: 0},
+NC: {celv: 2, actna: 2, actvyl: 0, actum: 0},
+ZM: {celv: 2, actna: 2, actvyl: 0, actum: 0},
+BJ: {celv: 2, actna: 2, actvyl: 0, actum: 0},
+MR: {celv: 2, actna: 2, actvyl: 0, actum: 0},
+GL: {celv: 2, actna: 2, actvyl: 0, actum: 0},
+BM: {celv: 2, actna: 2, actvyl: 0, actum: 0},
+GN: {celv: 2, actna: 2, actvyl: 0, actum: 0},
+AG: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+BT: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+CF: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+VA: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+VC: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+SO: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+SR: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+SZ: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+TG: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+GM: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+MS: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+SD: {celv: 2, actna: 1, actvyl: 0, actum: 1},
+DJ: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+TD: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+NI: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+SV: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+FJ: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+GG: {celv: 1, actna: 1, actvyl: 0, actum: 0},
+KY: {celv: 1, actna: 0, actvyl: 0, actum: 1},
+NP: {celv: 1, actna: 0, actvyl: 1, actum: 0}  }
+}      
+      
+        new svgMap({
+          targetElementID: 'svgMapGPD1',
+          data: svgMapDataGPD1,
+          maxValue: '33190',
+          minValue: '1',  
+                    
+        });
+      </script>
+                </div>
+              </div>
+
+            </div>            
+
+</div>
+</div>
+
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; WLTN1</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>  
+  <script src="js/num.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js?18-03-2020"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+</body>
+
+</html>

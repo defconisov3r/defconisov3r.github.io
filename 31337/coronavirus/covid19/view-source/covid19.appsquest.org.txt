@@ -1,0 +1,43 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1"> <meta name="description" content=""> <meta name="author" content=""> <title>COVID19 Monitoring System</title> <link rel="stylesheet" href="/public/css/bootstrap.css"> <link rel="stylesheet" href="/public/css/style-0606.css"> <link rel="stylesheet" href="/public/css/font-awesome.css"> <link rel="stylesheet" href="/public/js/jquery-1.11.1.js"> <link rel="stylesheet" href="/public/js/bootstrap.js"> <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]--> </head> <body id="login"> 	<div class="container">    
+		<div style="text-align:center;">
+		<br/><br/><br/>
+		<br/><br/><br/>
+			<a href="/">
+				<img id="public-logo" style="max-width:200px;" src="/public/img/logo.jpg" />
+			</a>
+		</div>
+		<div id="loginbox" style="margin-top:20px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2"> 
+										<form action="/login" id="loginform" method="post" class="form-horizontal">
+					<input id="login-username" type="text" style="width:100%;border-radius:10px;margin-bottom:20px;border:2px solid gray;background:white;color:black;" class="form-control" name="staff_id" value="" placeholder="Username"/>
+					<input id="login-password" type="password" style="width:100%;border-radius:10px;margin-bottom:20px;border:2px solid gray;background:white;color:black;" class="form-control" name="password" placeholder="Password">
+
+					<div style="text-align:right;float:right;">							
+						<a href="/login/forgot-password" style="color:#fff">Forgot Password</a>
+					</div>
+					<br/><br/>
+					<div style="text-align:center;">
+						<input class="btn btn-primary" type="submit" name="login" style="background: #0B8FCF;font-weight: bold;font-size: 20px;padding: 5px 15px;border-radius: 15px;color: white;width: 100%;" value="SIGN IN"/>
+					</div>
+				</form> 
+			        </div>
+    </div>
+	<script>
+	$(document).ready(function(){
+		$('#language').change(function(){
+			window.location = '/login/set-lang/'+$(this).val();
+		});
+		/*
+		$('input[name=login]').click(function(e){
+			e.preventDefault();
+			if($('input[name=agreement]').prop('checked')){
+				$('#loginform').submit();
+			}
+			else{
+				alert("form.login_check_agreement");
+				$('input[name=agreement]').focus();
+			}
+		});
+		*/
+	});
+	</script>
+ <footer style="width:100%;display:block;text-align:center;position:absolute;bottom:30px;"> <p style="color:black;width:300px;margin:0 auto;">&copy 2020 Apps Quest Sdn Bhd</p> </footer> </body> </html>

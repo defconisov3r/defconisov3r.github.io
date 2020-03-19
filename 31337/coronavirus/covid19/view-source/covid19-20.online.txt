@@ -1,945 +1,768 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru-RU">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=cyrillic,latin-ext" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption&amp;subset=cyrillic,latin-ext" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/solid.css"
-          integrity="sha384-wnAC7ln+XN0UKdcPvJvtqIH3jOjs9pnKnq9qX68ImXvOGz2JuFoEiCjT8jyZQX2z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css"
-          integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
-    <meta charset="UTF-8">
-    <title>Домен не прилинкован ни к одной из директорий на сервере!</title>
-    <!-- b0a8e2d8ccb04b24683d347076e80d29e451a385:3e6fb410018eac605cd88a63abcb1c147c858d33 -->
-    <style>
-        html {
-            height: 100%;
-        }
-
-        body {
-            font-family: 'PT Sans', Arial, sans-serif;
-            font-size: 16px;
-            height: 100%;
-            margin: 0;
-        }
-
-        #ru, #en {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            font-family: 'PT Sans', Arial, sans-serif;
-            font-size: 16px;
-            height: 100%;
-            min-height: 768px;
-            margin: 0;
-        }
-
-        .top, .bottom, hr {
-            flex-shrink: 0;
-        }
-
-        hr {
-            height: 2px;
-            border: 0;
-            box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
-            margin: 0;
-        }
-
-        a {
-            color: #2fa3e7;
-            text-decoration: none;
-        }
-
-        a:focus, a:hover {
-            color: #157ab5;
-            text-decoration: none;
-        }
-
-        .b-alert {
-            font-family: 'PT Sans', Arial, sans-serif;
-            position: relative;
-            padding: 20px 20px 20px 65px;
-            min-height: 60px;
-            box-sizing: border-box;
-            border: 1px solid #000;
-            border-radius: 0;
-            background-color: #fff;
-            background-repeat: no-repeat;
-            color: #000;
-            text-align: left;
-            font-size: 16px;
-            line-height: 20px;
-            -webkit-box-shadow: 0 2px 4px rgba(146,149,163,.5);
-            box-shadow: 0 2px 4px rgba(146,149,163,.5)
-        }
-
-        .b-alert:before {
-            background-image: url(https://cp.beget.com/img/icons/new_alert/alert.svg)
-        }
-
-        .b-alert:before {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 19px;
-            left: 0;
-            width: 45px;
-            height: 20px;
-            border-radius: 0 4px 4px 0;
-            background-repeat: no-repeat;
-            background-position: center right 4px
-        }
-
-        .b-alert.b-alert--info {
-            border-color: #2fa3e7
-        }
-
-        .b-alert.b-alert--info:before {
-            background-color: #2fa3e7
-        }
-
-        .b-alert.b-alert--warning {
-            border-color: #fba700
-        }
-
-        .b-alert.b-alert--warning:before {
-            background-color: #fba700
-        }
-
-        .b-alert.b-alert--danger {
-            border-color: #bd2327
-        }
-
-        .b-alert.b-alert--danger:before {
-            background-color: #bd2327
-        }
-
-        .b-alert.b-alert--success {
-            border-color: #6ec331
-        }
-
-        .b-alert.b-alert--success:before {
-            background-color: #6ec331
-        }
-
-        .b-alert.b-alert--icon-alarm:before {
-            background-image: url(https://cp.beget.com/img/icons/new_alert/alarm.svg)
-        }
-
-        .b-alert.b-alert--icon-backup:before {
-            background-image: url(https://cp.beget.com/img/icons/new_alert/backup.svg)
-        }
-
-        .b-alert.b-alert--icon-card:before {
-            background-image: url(https://cp.beget.com/img/icons/new_alert/card.svg)
-        }
-
-        .b-alert.b-alert--icon-check:before {
-            background-image: url(https://cp.beget.com/img/icons/new_alert/check.svg)
-        }
-
-        .b-alert.b-alert--icon-database:before {
-            background-image: url(https://cp.beget.com/img/icons/new_alert/database.svg)
-        }
-
-        .b-alert.b-alert--icon-delete:before {
-            background-image: url(https://cp.beget.com/img/icons/new_alert/delete.svg)
-        }
-
-        .b-alert.b-alert--icon-domain:before {
-            background-image: url(https://cp.beget.com/img/icons/new_alert/domain.svg)
-        }
-
-        .b-alert.b-alert--icon-info:before {
-            background-image: url(https://cp.beget.com/img/icons/new_alert/info.svg)
-        }
-
-        .b-alert.b-alert--icon-locked:before {
-            background-image: url(https://cp.beget.com/img/icons/new_alert/locked.svg)
-        }
-
-        .b-alert.b-alert--icon-mail:before {
-            background-image: url(https://cp.beget.com/img/icons/new_alert/mail.svg)
-        }
-
-        .b-alert.b-alert--icon-phone:before {
-            background-image: url(https://cp.beget.com/img/icons/new_alert/phone.svg)
-        }
-
-        .b-alert.b-alert--icon-php:before {
-            background-image: url(https://cp.beget.com/img/icons/new_alert/php.svg)
-        }
-
-        .b-alert.b-alert--icon-redis:before {
-            background-image: url(https://cp.beget.com/img/icons/new_alert/redis.svg)
-        }
-
-        .b-alert.b-alert--icon-setup:before {
-            background-image: url(https://cp.beget.com/img/icons/new_alert/setup.svg)
-        }
-
-        .b-alert.b-alert--icon-support:before {
-            background-image: url(https://cp.beget.com/img/icons/new_alert/support.svg)
-        }
-
-        h1, h2 {
-            font-family: 'PT Sans Caption', Arial, sans-serif;
-            font-weight: normal;
-            margin: 0;
-        }
-
-        h1 {
-            font-size: 21px;
-            line-height: 30px;
-        }
-
-        h2 {
-            font-size: 18px;
-        }
-
-        @media screen and (min-width: 801px) {
-            body {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-orient: vertical;
-                -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                flex-direction: column;
-                min-height: 768px;
-            }
-
-            .top {
-                background-color: #f7f9fa;
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-orient: vertical;
-                -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                flex-direction: column;
-                -webkit-box-flex: 1;
-                -ms-flex-positive: 1;
-                flex-grow: 1;
-            }
-
-            .bottom {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-            }
-
-            header, footer, .hint {
-                width: 690px;
-                margin: 0 auto;
-            }
-
-            header {
-                display: -webkit-inline-box;
-                display: -ms-inline-flexbox;
-                display: inline-flex;
-                -webkit-box-orient: horizontal;
-                -webkit-box-direction: normal;
-                -ms-flex-direction: row;
-                flex-direction: row;
-                -webkit-box-pack: justify;
-                -ms-flex-pack: justify;
-                justify-content: space-between;
-            }
-
-            main {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-pack: start;
-                -ms-flex-pack: start;
-                justify-content: flex-start;
-                -webkit-box-orient: vertical;
-                -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                flex-direction: column;
-                width: 740px;
-                margin: 0 auto;
-            }
-
-            footer {
-                display: -webkit-inline-box;
-                display: -ms-inline-flexbox;
-                display: inline-flex;
-                -webkit-box-orient: horizontal;
-                -webkit-box-direction: normal;
-                -ms-flex-direction: row;
-                flex-direction: row;
-                -webkit-box-pack: justify;
-                -ms-flex-pack: justify;
-                justify-content: space-between;
-                width: 690px;
-            }
-
-            .logo img {
-                max-width: 100%;
-                max-height: 75px;
-                position: relative;
-                top: 15px;
-            }
-
-            nav {
-                display: -webkit-inline-box;
-                display: -ms-inline-flexbox;
-                display: inline-flex;
-                -webkit-box-pack: end;
-                -ms-flex-pack: end;
-                justify-content: flex-end;
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                align-items: center;
-                padding-right: 10px;
-            }
-
-            nav a {
-                padding: 0 15px;
-            }
-
-            .octo {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                justify-content: center;
-            }
-
-            .octo img {
-                height: 230px;
-                max-height: 230px;
-            }
-
-            .hint {
-                padding-top: 30px;
-            }
-
-            .footer-col {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-orient: vertical;
-                -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                flex-direction: column;
-                padding: 15px 0;
-            }
-
-            .footer-col > * {
-                padding: 2px;
-            }
-
-            .bottom-mobile {
-                display: none;
-            }
-        }
-
-        @media screen and (max-width: 800px) {
-            .top {
-                margin: 0 auto;
-                background-color: #f7f9fa;
-            }
-
-            .bottom {
-                margin: 0 auto;
-                width: 95%;
-            }
-
-            header, footer, main {
-                width: 95%;
-            }
-
-            header, footer, main, .hint {
-                margin: 0 auto;
-            }
-
-            .logo {
-                display: block;
-                width: 60%;
-                margin: 0 auto;
-            }
-
-            .logo img {
-                width: 100%;
-            }
-
-            .icon img {
-                display: none;
-            }
-
-            .octo {
-                width: 60%;
-                margin: 0 auto;
-            }
-
-            .octo img {
-                width: 100%;
-            }
-
-            .hint {
-                padding-top: 30px;
-                margin-bottom: 30px;
-            }
-
-            header nav {
-                display: none;
-            }
-
-            .bottom {
-                display: none;
-            }
-
-            .bottom-mobile footer {
-                display: table;
-                width: 95%;
-                margin-bottom: 35px;
-            }
-
-            .bottom-mobile footer span {
-                text-align: right;
-                display: table-cell;
-            }
-
-            .bottom-mobile footer txt {
-                display: table-cell;
-            }
-
-            .bottom-mobile footer h2 {
-                margin-top: 20px;
-                margin-bottom: 5px;
-            }
-
-            .bottom-mobile footer p {
-                display: table-row;
-                width: 100%;
-                line-height: 25px;
-            }
-        }
-
-
-        .instruction-row, li {
-            margin-bottom: .5rem;
-        }
-
-        .fa-li {
-            color: #84c738;
-        }
-
-        .fa-ul {
-            margin-left: 1.3em;
-        }
-
-        span.key {
-            background-color: white;
-            padding: 5px;
-            border-radius: 5px;
-            box-shadow: 0 0 4px 0 rgba(86, 94, 113, 0.2);
-        }
-
-        .gallery {
-            padding-top: 20px;
-            display: none;
-        }
-
-        .gallery a {
-            display: block;
-            margin-bottom: 30px;
-            margin-top: 15px;
-        }
-    </style>
-</head>
-<body>
-<div id="ru">
-    <div class="top">
-        <header>
-            <a href="http://beget.com" target="_blank" title="Перейти на сайт хостинг-провайдера" class="logo">
-                <img src="https://cp.beget.com/i/logo.png">
-            </a>
-            <nav>
-                <a href="https://cp.beget.com" target="_blank">Панель управления</a>
-                <a href="https://beget.com/ru/domain-register" target="_blank">Регистрация доменов</a>
-                <a href="https://beget.com/ru/virtual-hosting" target="_blank">Тарифы</a>
-            </nav>
-        </header>
-        <main>
-            <div class="octo">
-                <img src="https://cp.beget.com/img/octo/octo_error.png">
-            </div>
-            <div class="b-alert b-alert--danger">
-                Домен не прилинкован к директории на сервере!
-            </div>
-            <div class="hint">
-                <h2>Что это значит и как прилинковать домен?</h2>
-                "Линковка" - это направление домена на директорию на сервере, которая становится доступна в интернете. Если
-                домен никуда не направлен, Вы видите данную страницу.<br><br>
-                Если Вы владелец домена - прилинкуйте домен в разделе <a href="https://cp.beget.com/sites" target="_blank">"Сайты"</a>
-                Панели Управления. <br>Подробнее об этом можно прочитать <a href="https://beget.com/ru/manual/sites"
-                                                                            target="_blank">здесь.</a>
-            </div>
-            <div class="hint" id="cache-hint"></div>
-        </main>
-
-    </div>
-    <hr>
-    <div class="bottom-mobile">
-        <footer>
-            <h2>Тех. поддержка</h2>
-            <p>
-                <txt>Почта:</txt>
-                <span><a href="mailto:support@beget.com">support@beget.com</a></span></p>
-            <p>
-                <txt>Россия:</txt>
-                <span>+7 (800) 700-06-08</span></p>
-            <p>
-                <txt>Украина:</txt>
-                <span>+380 (800) 802-192</span></p>
-        </footer>
-    </div>
-    <div class="bottom">
-        <footer>
-            <div class="footer-col">
-                <div>Тех. поддержка:</div>
-                <div>Бухгалтерия:</div>
-                <div>Руководство:</div>
-                <div>Telegram:</div>
-                <div>Skype:</div>
-            </div>
-            <div class="footer-col" style="padding-right: 100px;">
-                <a href="mailto:support@beget.com">support@beget.com</a>
-                <a href="mailto:bills@beget.com">bills@beget.com</a>
-                <a href="mailto:manager@beget.com">manager@beget.com</a>
-                <a href="tg://resolve?domain=begetbot">@begetbot</a>
-                <a href="https://join.skype.com/bot/ceda3526-d09b-4157-b6f0-91a646073c7e?add" target="_blank">Добавить в
-                    контакты</a>
-            </div>
-            <div class="footer-col">
-                <div>Россия:</div>
-                <div>СПб:</div>
-                <div>Москва:</div>
-                <div>Украина:</div>
-                <div>Киев:</div>
-            </div>
-            <div class="footer-col">
-                <b>+7 (800) 700-06-08</b>
-                <b>+7 (812) 3854136</b>
-                <b>+7 (495) 721-80-88</b>
-                <b>+380 (800) 802-192</b>
-                <b>+380 (44) 300-02-18</b>
-            </div>
-        </footer>
-    </div>
-</div>
-
-<div id="en" style="display: none">
-    <div class="top">
-        <header>
-            <a href="http://beget.com" target="_blank" title="Web hosting home page" class="logo">
-                <img src="https://cp.beget.com/i/logo.png">
-            </a>
-            <nav>
-                <a href="https://cp.beget.com" target="_blank">Control Panel</a>
-                <a href="https://beget.com/en/domain-register" target="_blank">Domain registration</a>
-                <a href="https://beget.com/en/virtual-hosting" target="_blank">Plans</a>
-            </nav>
-        </header>
-        <main>
-            <div class="octo">
-                <img src="https://cp.beget.com/img/octo/octo_error.png">
-            </div>
-            <div class="b-alert b-alert--danger">
-                This domain is not linked to any directory on the server!
-            </div>
-            <div class="hint">
-                <h2>What does it mean, and how do I link it?</h2>
-                Linking domain means mapping it to its directory, thus making the website online. If the domain is not linked,
-                you will be able to view this page only.<br><br>
-                If you're the domain owner please link it in the
-                <a href="https://cp.beget.com/sites" target="_blank">"Sites"</a> section of the control panel.
-                <br>You can read more <a href="https://beget.com/en/manual/sites" target="_blank">here.</a>
-            </div>
-            <div class="hint" id="cache-hint"></div>
-        </main>
-    </div>
-    <hr>
-    <div class="bottom-mobile">
-        <footer>
-            <h2>Support</h2>
-            <p>
-                <txt>Mail:</txt>
-                <span><a href="mailto:support@beget.com">support@beget.com</a></span></p>
-        </footer>
-    </div>
-    <div class="bottom">
-        <footer>
-            <div class="footer-col">
-                <div>Support:</div>
-            </div>
-            <div class="footer-col" style="padding-right: 100px;">
-                <a href="mailto:support@beget.com">support@beget.com</a>
-            </div>
-            <div class="footer-col">
-                <div>Management:</div>
-            </div>
-            <div class="footer-col">
-                <a href="mailto:manager@beget.com">manager@beget.com</a>
-            </div>
-        </footer>
-    </div>
-</div>
-<script type="text/template" id="hotkeyTemplate">
-    <% if ((browser.isOpera || browser.isFirefox || browser.isChrome) && browser.isMac) { %>
-    <span class="key">⌘</span> + <span class="key">R</span>
-    <% } %>
-    <% if ((browser.isOpera || browser.isFirefox || browser.isChrome) && !browser.isMac) { %>
-    <span class="key">Ctrl</span> + <span class="key">R</span>
-    <% } %>
-    <% if (browser.isIE || browser.isEdge) { %>
-    <span class="key">Ctrl</span> + <span class="key">F5</span>
-    <% } %>
-    <% if (browser.isSafari) { %>
-    <span class="key">⌥</span> + <span class="key">⌘</span> + <span class="key">E</span>
-    <% } %>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11"/>
+	<title>Home - Коронавирус - пандемия</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v13.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="https://covid19-20.ru/" />
+<meta property="og:locale" content="ru_RU" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Home - Коронавирус - пандемия" />
+<meta property="og:description" content="Актуальное&nbsp; Симптомы коронавируса Коронавирус онлайн&nbsp; Распространение коронавируса в реальном времени Актуальные статьи Актуальное&nbsp; Симптомы коронавируса 18.03.2020 abervv 0 Воздействие нового" />
+<meta property="og:url" content="https://covid19-20.ru/" />
+<meta property="og:site_name" content="Коронавирус - пандемия" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Актуальное&nbsp; Симптомы коронавируса Коронавирус онлайн&nbsp; Распространение коронавируса в реальном времени Актуальные статьи Актуальное&nbsp; Симптомы коронавируса 18.03.2020 abervv 0 Воздействие нового" />
+<meta name="twitter:title" content="Home - Коронавирус - пандемия" />
+<meta name="twitter:image" content="https://covid19-20.ru/wp-content/uploads/2020/03/simptomy-1-600x417.jpg" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://covid19-20.ru/#website","url":"https://covid19-20.ru/","name":"\u041a\u043e\u0440\u043e\u043d\u0430\u0432\u0438\u0440\u0443\u0441 - \u043f\u0430\u043d\u0434\u0435\u043c\u0438\u044f","inLanguage":"ru-RU","description":"\u041a\u043e\u0440\u043e\u043d\u0430\u0432\u0438\u0440\u0443\u0441 \u043e\u043d\u043b\u0430\u0439\u043d - \u0412\u0441\u044f \u0432\u0430\u0436\u043d\u0430\u044f \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f \u043e \u043f\u0430\u043d\u0434\u0435\u043c\u0438\u0438 \u0437\u0434\u0435\u0441\u044c","potentialAction":[{"@type":"SearchAction","target":"https://covid19-20.ru/?s={search_term_string}","query-input":"required name=search_term_string"}]},{"@type":"ImageObject","@id":"https://covid19-20.ru/#primaryimage","inLanguage":"ru-RU","url":"https://covid19-20.ru/wp-content/uploads/2020/03/simptomy-1.jpg","width":850,"height":500},{"@type":"WebPage","@id":"https://covid19-20.ru/#webpage","url":"https://covid19-20.ru/","name":"Home - \u041a\u043e\u0440\u043e\u043d\u0430\u0432\u0438\u0440\u0443\u0441 - \u043f\u0430\u043d\u0434\u0435\u043c\u0438\u044f","isPartOf":{"@id":"https://covid19-20.ru/#website"},"inLanguage":"ru-RU","primaryImageOfPage":{"@id":"https://covid19-20.ru/#primaryimage"},"datePublished":"2017-12-08T10:57:38+00:00","dateModified":"2020-03-18T08:28:34+00:00","potentialAction":[{"@type":"ReadAction","target":["https://covid19-20.ru/"]}]}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Коронавирус - пандемия &raquo; Лента" href="https://covid19-20.ru/feed" />
+<link rel="alternate" type="application/rss+xml" title="Коронавирус - пандемия &raquo; Лента комментариев" href="https://covid19-20.ru/comments/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/covid19-20.ru\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://covid19-20.ru/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='https://covid19-20.ru/wp-includes/css/dashicons.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='everest-forms-general-css'  href='https://covid19-20.ru/wp-content/plugins/everest-forms/assets/css/everest-forms.css?ver=1.6.4' type='text/css' media='all' />
+<link rel='stylesheet' id='colormag_google_fonts-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A400%2C600&#038;ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='colormag_style-css'  href='https://covid19-20.ru/wp-content/themes/colormag/style.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='colormag-fontawesome-css'  href='https://covid19-20.ru/wp-content/themes/colormag/fontawesome/css/font-awesome.css?ver=4.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-css'  href='https://covid19-20.ru/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.6.2' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-animations-css'  href='https://covid19-20.ru/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=2.9.6' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css'  href='https://covid19-20.ru/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=2.9.6' type='text/css' media='all' />
+<link rel='stylesheet' id='colormag-elementor-css'  href='https://covid19-20.ru/wp-content/themes/colormag/inc/elementor/assets/css/elementor.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-global-css'  href='https://covid19-20.ru/wp-content/uploads/elementor/css/global.css?ver=1584464130' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-38-css'  href='https://covid19-20.ru/wp-content/uploads/elementor/css/post-38.css?ver=1584520128' type='text/css' media='all' />
+<link rel='stylesheet' id='google-fonts-1-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;subset=cyrillic&#038;ver=5.3.2' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var theme_data = {"themeLogo":["https:\/\/covid19-20.ru\/wp-content\/uploads\/2017\/12\/cropped-header-logo-150x90.png",150,90,true]};
+/* ]]> */
 </script>
-<script type="text/template" id="instructionTemplateRu">
-    <div>
-        <% _.forEach(data, function(item, index) { %>
-        <div class="instruction-row">
-            <div><%- index + 1 %>. <%- item.text %></div>
-            <% if (item.image) { %>
-            <a href="<%- item.image.normal %>" data-srcset="<%- item.image.normal %> 1x, <%- item.image.retina %> 2x"
-               data-fancybox="instruction" data-caption="<%- item.text %>">
-                <img src="<%- item.image.normal %>" srcset="<%- item.image.normal %> 1x, <%- item.image.retina %> 2x" width="99"
-                     alt="<%- item.text %>">
-            </a>
-            <% } %>
-        </div>
-        <% }) %>
-    </div>
-</script>
-<script type="text/template" id="instructionTemplateEn">
-    <% if (browser.isFirefox) { %>
-    <div>
-        <div class="instruction-row">1. Open the browser menu (three horizontal bars in the upper right corner of the window)</div>
-        <div class="instruction-row">2. Select "Preferences"</div>
-        <div class="instruction-row">3. Go to the "Privacy & Security" section.</div>
-        <div class="instruction-row">4. Click "Clear history..."</div>
-        <div class="instruction-row">5. In the window that appears, click "Clear Now”</div>
-    </div>
-    <% } %>
-    <% if (browser.isChrome && !browser.isYandex) { %>
-    <div>
-        <div class="instruction-row">1. Open the browser menu (three horizontal bars in the upper right corner of the window)</div>
-        <div class="instruction-row">2. Select "More tools" > "Clear browsing data..."</div>
-        <div class="instruction-row">3. Click "Clear data"</div>
-    </div>
-    <% } %>
-    <% if (browser.isSafari) { %>
-    <div>
-        <div class="instruction-row">1. In the menu bar select “Safari” > “Preferences”</div>
-        <div class="instruction-row">2. Enable “Show Develop menu in menu bar” in Advanced section and close the window</div>
-        <div class="instruction-row">3. In the menu bar select “Develop” > “Empty caches”</div>
-    </div>
-    <% } %>
-    <% if (browser.isYandex) { %>
-    <div>
-        <div class="instruction-row">1. Open the browser menu (three horizontal bars in the upper right corner of the window)</div>
-        <div class="instruction-row">2. Go to the "History" > "Settings - Clear browsing data"</div>
-        <div class="instruction-row">3. Select "Cookies and other site data" and "Cached files", click "Clear browsing data"</div>
-    </div>
-    <% } %>
-    <% if (browser.isOpera) { %>
-    <div>
-        <div class="instruction-row">1. Type ”opera://settings/clearBrowserData" in the address bar, press Enter</div>
-        <div class="instruction-row">2. Select "Cookies and other site data" and "Cached images and files", click "Clear browsing data"</div>
-    </div>
-    <% } %>
-    <% if (browser.isIE) { %>
-    <div>
-        <div class="instruction-row">1. Select “Tools” > “Delete browsing history"</div>
-        <div class="instruction-row">2. Select “Temporary Internet files and website files” and press “Delete”</div>
-    </div>
-    <% } %>
-</script>
-<script type="text/template" id="cacheTemplateRu">
-    <div class="hint">
-        <h2>Проблема уже решена? Попробуйте сбросить кэш</h2>
-        <ul class="fa-ul">
-            <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a class="clear-cache"
-                                                                                onclick="clearCache(event)" href="#">Очистите
-                кэш автоматически</a></li>
-            <% if (browser.isSafari) { %>
-            <li><span class="fa-li"><i class="fas fa-angle-right"></i></span>Нажмите <b id="hotkey"></b>, затем перезагрузите
-                страницу.
-            </li>
-            <% } else { %>
-            <li><span class="fa-li"><i class="fas fa-angle-right"></i></span>Перезагрузите страницу, нажав <b id="hotkey"></b>
-            </li>
-            <% } %>
-            <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a onclick="toggleInstruction(event)" href="#">Очистите кэш из настроек браузера <i class="fas fa-angle-down instruction-collapse-angle"></i></a>
-                <div class="gallery">
-                    <div id="instruction"></div>
-                    Если не помогло - вы можете связаться с нашей службой технической поддержки с помощью раздела «Обратная связь»
-                    в панели управления хостингом или любым удобным для вас способом.
-                </div>
-            </li>
-        </ul>
-    </div>
-</script>
-<script type="text/template" id="cacheTemplateEn">
-    <div class="hint">
-        <h2>Is the problem solved? Try to reset the cache</h2>
-        <ul class="fa-ul">
-            <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a class="clear-cache"
-                                                                                onclick="clearCache(event)" href="#">Clear the
-                cache automatically</a></li>
-            <% if (browser.isSafari) { %>
-            <li><span class="fa-li"><i class="fas fa-angle-right"></i></span>Press <b id="hotkey"></b> and reload the page
-            </li>
-            <% } else { %>
-            <li><span class="fa-li"><i class="fas fa-angle-right"></i></span>Reload the page by pressing <b id="hotkey"></b>
-            </li>
-            <% } %>
-            <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a onclick="toggleInstruction(event)" href="#">Clear the cache from your browser settings <i class="fas fa-angle-down instruction-collapse-angle"></i></a>
-                <div class="gallery">
-                    <div id="instruction"></div>
-                    If it does not help - you can contact our technical support service using the "Feedback" section in the
-                    hosting management panel or in any way convenient for you.
-                </div>
-            </li>
-        </ul>
-    </div>
-</script>
-<script>
-  var browser = {
-    // Opera 8.0+
-    isOpera: (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0,
-    // Firefox 1.0+
-    isFirefox: typeof InstallTrigger !== 'undefined',
-    // Safari 3.0+ "[object HTMLElementConstructor]"
-    isSafari: /constructor/i.test(window.HTMLElement) || (function (p) {
-      return p.toString() === "[object SafariRemoteNotification]";
-    })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification)),
-    // Internet Explorer 6-11
-    isIE: /*@cc_on!@*/false || !!document.documentMode,
-    // Edge 20+
-    isEdge: !(/*@cc_on!@*/false || !!document.documentMode) && !!window.StyleMedia,
-    // Chrome 1+
-    isChrome: !!window.chrome && !!window.chrome.webstore,
-    isYandex: !!window.yandex,
-    isMac: window.navigator.platform.toUpperCase().indexOf('MAC') >= 0
-  };
+<script type='text/javascript' src='https://covid19-20.ru/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://covid19-20.ru/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<!--[if lte IE 8]>
+<script type='text/javascript' src='https://covid19-20.ru/wp-content/themes/colormag/js/html5shiv.min.js?ver=5.3.2'></script>
+<![endif]-->
+<link rel='https://api.w.org/' href='https://covid19-20.ru/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://covid19-20.ru/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://covid19-20.ru/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.3.2" />
+<meta name="generator" content="Everest Forms 1.6.4" />
+<link rel='shortlink' href='https://covid19-20.ru/' />
+<link rel="alternate" type="application/json+oembed" href="https://covid19-20.ru/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcovid19-20.ru%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://covid19-20.ru/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcovid19-20.ru%2F&#038;format=xml" />
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #1e73be; }
+</style>
+	<!-- Коронавирус - пандемия Internal Styles -->		<style type="text/css"> .colormag-button,blockquote,button,input[type=reset],input[type=button],input[type=submit],
+		#masthead.colormag-header-clean #site-navigation.main-small-navigation .menu-toggle{background-color:#02cdab}
+		#site-title a,.next a:hover,.previous a:hover,.social-links i.fa:hover,a,
+		#masthead.colormag-header-clean .social-links li:hover i.fa,
+		#masthead.colormag-header-classic .social-links li:hover i.fa,
+		#masthead.colormag-header-clean .breaking-news .newsticker a:hover,
+		#masthead.colormag-header-classic .breaking-news .newsticker a:hover,
+		#masthead.colormag-header-classic #site-navigation .fa.search-top:hover,
+		#masthead.colormag-header-classic #site-navigation.main-navigation .random-post a:hover .fa-random,
+		.dark-skin #masthead.colormag-header-classic #site-navigation.main-navigation .home-icon:hover .fa,
+		#masthead .main-small-navigation li:hover > .sub-toggle i,
+		.better-responsive-menu #masthead .main-small-navigation .sub-toggle.active .fa {color:#02cdab}
+		.fa.search-top:hover,
+		#masthead.colormag-header-classic #site-navigation.main-small-navigation .menu-toggle,
+		.main-navigation ul li.focus > a,
+        #masthead.colormag-header-classic .main-navigation ul ul.sub-menu li.focus > a {background-color:#02cdab}
+		#site-navigation{border-top:4px solid #02cdab}
+		.home-icon.front_page_on,.main-navigation a:hover,.main-navigation ul li ul li a:hover,
+		.main-navigation ul li ul li:hover>a,
+		.main-navigation ul li.current-menu-ancestor>a,
+		.main-navigation ul li.current-menu-item ul li a:hover,
+		.main-navigation ul li.current-menu-item>a,
+		.main-navigation ul li.current_page_ancestor>a,
+		.main-navigation ul li.current_page_item>a,
+		.main-navigation ul li:hover>a,
+		.main-small-navigation li a:hover,
+		.site-header .menu-toggle:hover,
+		#masthead.colormag-header-classic .main-navigation ul ul.sub-menu li:hover > a,
+		#masthead.colormag-header-classic .main-navigation ul ul.sub-menu li.current-menu-ancestor > a,
+		#masthead.colormag-header-classic .main-navigation ul ul.sub-menu li.current-menu-item > a,
+		#masthead .main-small-navigation li:hover > a,
+		#masthead .main-small-navigation li.current-page-ancestor > a,
+		#masthead .main-small-navigation li.current-menu-ancestor > a,
+		#masthead .main-small-navigation li.current-page-item > a,
+		#masthead .main-small-navigation li.current-menu-item > a{background-color:#02cdab}
+		#masthead.colormag-header-classic .main-navigation .home-icon a:hover .fa { color:#02cdab}
+		.main-small-navigation .current-menu-item>a,.main-small-navigation .current_page_item>a {background:#02cdab}
+		#masthead.colormag-header-classic .main-navigation ul ul.sub-menu li:hover,
+		#masthead.colormag-header-classic .main-navigation ul ul.sub-menu li.current-menu-ancestor,
+		#masthead.colormag-header-classic .main-navigation ul ul.sub-menu li.current-menu-item,
+		#masthead.colormag-header-classic #site-navigation .menu-toggle,
+		#masthead.colormag-header-classic #site-navigation .menu-toggle:hover,
+		#masthead.colormag-header-classic .main-navigation ul > li:hover > a,
+        #masthead.colormag-header-classic .main-navigation ul > li.current-menu-item > a,
+        #masthead.colormag-header-classic .main-navigation ul > li.current-menu-ancestor > a,
+        #masthead.colormag-header-classic .main-navigation ul li.focus > a{ border-color:#02cdab}
+		.promo-button-area a:hover{border:2px solid #02cdab;background-color:#02cdab}
+		#content .wp-pagenavi .current,
+		#content .wp-pagenavi a:hover,.format-link .entry-content a,.pagination span{ background-color:#02cdab}
+		.pagination a span:hover{color:#02cdab;border-color:#02cdab}
+		#content .comments-area a.comment-edit-link:hover,#content .comments-area a.comment-permalink:hover,
+		#content .comments-area article header cite a:hover,.comments-area .comment-author-link a:hover{color:#02cdab}
+		.comments-area .comment-author-link span{background-color:#02cdab}
+		.comment .comment-reply-link:hover,.nav-next a,.nav-previous a{color:#02cdab}
+		#secondary .widget-title{border-bottom:2px solid #02cdab}
+		#secondary .widget-title span{background-color:#02cdab}
+		.footer-widgets-area .widget-title{border-bottom:2px solid #02cdab}
+		.footer-widgets-area .widget-title span,
+		.colormag-footer--classic .footer-widgets-area .widget-title span::before{background-color:#02cdab}
+		.footer-widgets-area a:hover{color:#02cdab}
+		.advertisement_above_footer .widget-title{ border-bottom:2px solid #02cdab}
+		.advertisement_above_footer .widget-title span{background-color:#02cdab}
+		a#scroll-up i{color:#02cdab}
+		.page-header .page-title{border-bottom:2px solid #02cdab}
+		#content .post .article-content .above-entry-meta .cat-links a,
+		.page-header .page-title span{ background-color:#02cdab}
+		#content .post .article-content .entry-title a:hover,
+		.entry-meta .byline i,.entry-meta .cat-links i,.entry-meta a,
+		.post .entry-title a:hover,.search .entry-title a:hover{color:#02cdab}
+		.entry-meta .post-format i{background-color:#02cdab}
+		.entry-meta .comments-link a:hover,.entry-meta .edit-link a:hover,.entry-meta .posted-on a:hover,
+		.entry-meta .tag-links a:hover,.single #content .tags a:hover{color:#02cdab}.more-link,
+		.no-post-thumbnail{background-color:#02cdab}
+		.post-box .entry-meta .cat-links a:hover,.post-box .entry-meta .posted-on a:hover,
+		.post.post-box .entry-title a:hover{color:#02cdab}
+		.widget_featured_slider .slide-content .above-entry-meta .cat-links a{background-color:#02cdab}
+		.widget_featured_slider .slide-content .below-entry-meta .byline a:hover,
+		.widget_featured_slider .slide-content .below-entry-meta .comments a:hover,
+		.widget_featured_slider .slide-content .below-entry-meta .posted-on a:hover,
+		.widget_featured_slider .slide-content .entry-title a:hover{color:#02cdab}
+		.widget_highlighted_posts .article-content .above-entry-meta .cat-links a {background-color:#02cdab}
+		.byline a:hover,.comments a:hover,.edit-link a:hover,.posted-on a:hover,.tag-links a:hover,
+		.widget_highlighted_posts .article-content .below-entry-meta .byline a:hover,
+		.widget_highlighted_posts .article-content .below-entry-meta .comments a:hover,
+		.widget_highlighted_posts .article-content .below-entry-meta .posted-on a:hover,
+		.widget_highlighted_posts .article-content .entry-title a:hover{color:#02cdab}
+		.widget_featured_posts .article-content .above-entry-meta .cat-links a{background-color:#02cdab}
+		.widget_featured_posts .article-content .entry-title a:hover{color:#02cdab}
+		.widget_featured_posts .widget-title{border-bottom:2px solid #02cdab}
+		.widget_featured_posts .widget-title span{background-color:#02cdab}
+		.related-posts-main-title .fa,.single-related-posts .article-content .entry-title a:hover{color:#02cdab} .widget_slider_area .widget-title,.widget_beside_slider .widget-title { border-bottom:2px solid #02cdab} .widget_slider_area .widget-title span,.widget_beside_slider .widget-title span { background-color:#02cdab}
+		 @media (max-width: 768px) {.better-responsive-menu .sub-toggle{background-color:#00af8d}}</style>
+		<!-- Коронавирус - пандемия Elementor Internal Styles -->			<style type="text/css">.elementor .tg-module-wrapper .module-title{border-bottom:1px solid #02cdab}.elementor .tg-module-wrapper .module-title span,.elementor .tg-module-wrapper .tg-post-category{background-color:#02cdab}.elementor .tg-module-wrapper .tg-module-meta .tg-module-comments a:hover,.elementor .tg-module-wrapper .tg-module-meta .tg-post-auther-name a:hover,.elementor .tg-module-wrapper .tg-module-meta .tg-post-date a:hover,.elementor .tg-module-wrapper .tg-module-title:hover a,.elementor .tg-module-wrapper.tg-module-grid .tg_module_grid .tg-module-info .tg-module-meta a:hover{color:#02cdab}</style>
+			</head>
 
-  var instructions = {
-    firefox: [
-      {
-        "text": "Откройте меню браузера (три горизонтальные полоски в правом верхнем углу окна)"
-      },
-      {
-        "text": 'Выберите "Настройки"',
-        "image": {
-          normal: "https://cp.beget.com/shared/9fc46578a3f3beebbc6e3058537a3fcf/firefox2.png",
-          "retina": "https://cp.beget.com/shared/5fc2dd546f53e0902e15a3a70e4fe653/firefox22x.png"
-        }
-      },
-      {
-        "text": 'Перейдите в раздел “Приватность и защита”',
-        "image": {
-          normal: "https://cp.beget.com/shared/6b5c3dfee3602b060a644965f11eabed/firefox3.png",
-          "retina": "https://cp.beget.com/shared/1f93b61fdeeed1161d5ff5aa36e76dc4/firefox32x.png"
-        }
-      },
-      {
-        "text": 'Нажмите кнопку "Удалить историю"',
-        "image": {
-          normal: "https://cp.beget.com/shared/a41c785d3b44adcba2e1b90db2b77a37/firefox4.png",
-          "retina": "https://cp.beget.com/shared/1a512f91bcc8975205f979acf71d7d29/firefox42x.png"
-        }
-      },
-      {
-        "text": 'В появившемся окне нажмите “Удалить сейчас”',
-        "image": {
-          "normal": "https://cp.beget.com/shared/a4f7c26338626b94ead39246a91aa4b3/firefox5.png",
-          "retina": "https://cp.beget.com/shared/745b3450fc1f4471ff21f6d64fc737b1/firefox52x.png"
-        }
-      }
+<body class="home page-template page-template-page-templates page-template-page-builder page-template-page-templatespage-builder-php page page-id-38 custom-background wp-custom-logo everest-forms-no-js no-sidebar-full-width wide better-responsive-menu elementor-default elementor-kit-437 elementor-page elementor-page-38">
 
-    ],
-    chrome: [
-      {
-        "text": "Откройте меню браузера (три горизонтальные полоски в правом верхнем углу окна)"
-      },
-      {
-        "text": 'Выберите "Дополнительные инструменты" > "Очистить данные просмотров"',
-        "image": {
-          "normal": "https://cp.beget.com/shared/f38d02735868ba6f0f0f6d0056fcb600/chrome2.png",
-          "retina": "https://cp.beget.com/shared/3c7ced0b4d09861e1884f5661f239fc0/chrome22x.png"
-        }
-      },
-      {
-        "text": 'В окне "Очистить историю" выберите "Изображения и другие файлы, сохранённые в кэше" и нажмите кнопку "Удалить данные"',
-        "image": {
-          "normal": "https://cp.beget.com/shared/82ed82f2d8ca8099998398f34f6aa01a/chrome3.png",
-          "retina": "https://cp.beget.com/shared/5433ccd2ab6359de9db5b621c3a0b633/chrome32x.png"
-        }
-      }
 
-    ],
-    safari: [
-      {
-        "text": 'В меню браузера выберите пункт “Safari” > “Настройки”',
-        "image": {
-          "normal": "https://cp.beget.com/shared/80113015aafa3f261ff2fe54ebd6508d/safari1.png",
-          "retina": "https://cp.beget.com/shared/f8f7096f67c0e3d82446d0ce6217b27d/safari12x.png"
-        }
-      },
-      {
-        "text": 'В  дополнениях включите опцию “Показывать меню «Разработка» в строке меню” и закройте окно',
-        "image": {
-          "normal": "https://cp.beget.com/shared/1193ae0503f94daafb5dd14c87a1ddde/safari2.png",
-          "retina": "https://cp.beget.com/shared/138c05f2803ea0b167a7f975265ce43b/safari22x.png"
-        }
-      },
-      {
-        "text": 'В меню браузера выберите пункт “Разработка” > “Очистить кэши”',
-        "image": {
-          "normal": "https://cp.beget.com/shared/87421068ec6d6013cade7cc6a37e9566/safari3.png",
-          "retina": "https://cp.beget.com/shared/13520f6e24d62a88aa7c54519eb1a647/safari32x.png"
-        }
-      }
 
-    ],
-    yandex: [
-      {
-        "text": 'Откройте меню браузера (три горизонтальные полоски в правом верхнем углу окна)'
-      },
-      {
-        "text": 'Перейдите во вкладку "История"',
-        "image": {
-          "normal": "https://cp.beget.com/shared/80ce1ee88a6a1cec9f2c7620f08a58c2/yandex2.png",
-          "retina": "https://cp.beget.com/shared/0693faca5588f69ca7da9fe4212cdc97/yandex22x.png"
-        }
-      },
-      {
-        "text": 'Нажмите "Очистить историю" (справа)',
-        "image": {
-          "normal": "https://cp.beget.com/shared/ff268c78b70d486538ecede196a9c1f2/yandex3.png",
-          "retina": "https://cp.beget.com/shared/12096cc377f80dda5798cfe745bb66ec/yandex32x.png"
-        }
-      },
-      {
-        "text": 'Отметьте пункты "Файлы cookie и другие данные сайтов и модулей" и "файлы, сохраненные в кэше",  нажмите кнопку "Очистить историю"',
-        "image": {
-          "normal": "https://cp.beget.com/shared/80e7ada09ac4b7da555a5119237ff108/yandex4.png",
-          "retina": "https://cp.beget.com/shared/daa75ad57baee73ff347e589e11fc90f/yandex42x.png"
-        }
-      }
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
 
-    ],
-    opera: [
-      {
-        "text": 'Введите в адресной строке “opera://settings/clearBrowserData”, нажмите клавишу Enter',
-        "image": {
-          "normal": "https://cp.beget.com/shared/cfb3606fa62fb6a2f951d3e7cd24a8d9/opera1.png",
-          "retina": "https://cp.beget.com/shared/f72a61de7929ef3236d54a7eda5f27e2/opera12x.png"
-        }
-      },
-      {
-        "text": 'Поставьте галочки у пунктов "Файлы cookie и прочие данные сайтов" и "Кэшированные изображения и файлы", нажмите кнопку "Очистить историю посещений"',
-        "image": {
-          "normal": "https://cp.beget.com/shared/d336439cc49a04a1885186dc1930c02c/opera2.png",
-          "retina": "https://cp.beget.com/shared/6d6888aac8d3896da5cd201e8d31670b/opera22x.png"
-        }
-      }
-    ],
-    ie: [
-      {
-        "text": 'Выберите “Сервис” > “Удаление журнала обозревателя…”',
-        "image": {
-          "normal": "https://cp.beget.com/shared/3585ac62cef9f65d999df211007ce578/explorer.png",
-          "retina": "https://cp.beget.com/shared/33ae907b8ce690fe724d9616cb809d35/explorer2x.png"
-        }
-      }
-    ],
-  };
+	
+	
+	<header id="masthead" class="site-header clearfix colormag-header-clean">
+		<div id="header-text-nav-container" class="clearfix">
 
-  function clearCache(event) {
-    event.preventDefault();
-    window.location.reload(true);
-  }
+						<div class="news-bar">
+				<div class="inner-wrap clearfix">
+					
+							<div class="breaking-news">
+			<strong class="breaking-news-latest">Последние:</strong>
+			<ul class="newsticker">
+									<li>
+						<a href="https://covid19-20.ru/news/rossiya-koronavirus-dannye-na-19-03-2020.html"
+						   title="Россия, коронавирус, данные на 19.03.2020">Россия, коронавирус, данные на 19.03.2020</a>
+					</li>
+									<li>
+						<a href="https://covid19-20.ru/aktualnoe/ukraina-koronavirus-dannye-na-19-03-2020.html"
+						   title="Украина, коронавирус, данные на 19.03.2020">Украина, коронавирус, данные на 19.03.2020</a>
+					</li>
+									<li>
+						<a href="https://covid19-20.ru/mir/poland/polsha-koronavirus-dannye-na-19-03-2020.html"
+						   title="Польша, коронавирус, данные на 19.03.2020">Польша, коронавирус, данные на 19.03.2020</a>
+					</li>
+									<li>
+						<a href="https://covid19-20.ru/aktualnoe/faq-po-koronavirusu.html"
+						   title="FAQ по коронавирусу">FAQ по коронавирусу</a>
+					</li>
+									<li>
+						<a href="https://covid19-20.ru/mir/poland/17-novyx-sluchaev-koronavirusnoj-infekcii-v-polshe.html"
+						   title="17 новых случаев коронавирусной инфекции в Польше">17 новых случаев коронавирусной инфекции в Польше</a>
+					</li>
+							</ul>
+		</div>
+		
+									</div>
+			</div>
+		
+			
+			
+		<div class="inner-wrap">
 
-  function toggleInstruction(e) {
-    e.preventDefault();
-    $(".gallery").slideToggle();
-  };
+			<div id="header-text-nav-wrap" class="clearfix">
+				<div id="header-left-section">
+										<div id="header-text" class="">
+													<h1 id="site-title">
+								<a href="https://covid19-20.ru/" title="Коронавирус &#8212; пандемия" rel="home">Коронавирус &#8212; пандемия</a>
+							</h1>
+																		<p id="site-description">Коронавирус онлайн &#8212; Вся важная информация о пандемии здесь</p>
+						<!-- #site-description -->
+					</div><!-- #header-text -->
+				</div><!-- #header-left-section -->
+				<div id="header-right-section">
+									</div><!-- #header-right-section -->
 
-  var language = window.navigator.language || navigator.userLanguage,
-    ru = document.getElementById("ru"),
-    en = document.getElementById("en");
+			</div><!-- #header-text-nav-wrap -->
 
-  language = language.substr(0, 2).toLowerCase();
+		</div><!-- .inner-wrap -->
 
-  var mainDiv = ru;
+		
+			
+			
+		<nav id="site-navigation" class="main-navigation clearfix" role="navigation">
+			<div class="inner-wrap clearfix">
+				
+									<div class="search-random-icons-container">
+								<div class="random-post">
+							<a href="https://covid19-20.ru/mir/poland/17-novyx-sluchaev-koronavirusnoj-infekcii-v-polshe.html" title="Посмотреть случайную запись"><i
+							class="fa fa-random"></i></a>
+					</div>
+									<div class="top-search-wrap">
+								<i class="fa fa-search search-top"></i>
+								<div class="search-form-top">
+									<form action="https://covid19-20.ru/" class="search-form searchform clearfix" method="get">
+   <div class="search-wrap">
+      <input type="text" placeholder="Поиск" class="s field" name="s">
+      <button class="search-icon" type="submit"></button>
+   </div>
+</form><!-- .searchform -->								</div>
+							</div>
+											</div>
+				
+				<p class="menu-toggle"></p>
+				<div class="menu-primary-container"><ul id="menu-top" class="menu"><li id="menu-item-455" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-455"><a href="https://covid19-20.ru/category/online">Коронавирус онлайн</a>
+<ul class="sub-menu">
+	<li id="menu-item-510" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-510"><a href="https://covid19-20.ru/online/v-realnom-vremeni.html">Распространение коронавируса в реальном времени</a></li>
+</ul>
+</li>
+<li id="menu-item-454" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-454"><a href="https://covid19-20.ru/category/aktualnoe">Актуальное</a></li>
+<li id="menu-item-525" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-525"><a href="https://covid19-20.ru/category/mir">Мировое сообщество</a>
+<ul class="sub-menu">
+	<li id="menu-item-532" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-532"><a href="https://covid19-20.ru/category/mir/ua">Украина</a></li>
+	<li id="menu-item-531" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-531"><a href="https://covid19-20.ru/category/mir/ru">Россия</a></li>
+	<li id="menu-item-530" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-530"><a href="https://covid19-20.ru/category/mir/poland">Польша</a></li>
+	<li id="menu-item-528" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-528"><a href="https://covid19-20.ru/category/mir/de">Германия</a></li>
+	<li id="menu-item-529" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-529"><a href="https://covid19-20.ru/category/mir/it">Италия</a></li>
+</ul>
+</li>
+<li id="menu-item-526" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-526"><a href="https://covid19-20.ru/category/news">Новости</a></li>
+</ul></div>
+			</div>
+		</nav>
 
-  if (language !== "ru") {
-    document.title = "This domain is not linked to any directory on the server!";
-    ru.style.display = "none";
-    en.style.display = "flex";
-    mainDiv = en;
-  }
-  var data = instructions.chrome;
+		
+		</div><!-- #header-text-nav-container -->
 
-  if (browser.isFirefox) {
-    data = instructions.firefox;
-  }
-  if (browser.isChrome && !browser.isYandex) {
-    data = instructions.chrome;
-  }
-  if (browser.isYandex) {
-    data = instructions.yandex;
-  }
-  if (browser.isSafari) {
-    data = instructions.safari;
-  }
-  if (browser.isOpera) {
-    data = instructions.opera;
-  }
-  if (browser.isIE) {
-    data = instructions.ie;
-  }
+		
+	</header>
 
-  window.onload = function () {
-    if (language === "ru") {
-      mainDiv.querySelector("#cache-hint").innerHTML = _.template(document.getElementById("cacheTemplateRu").innerHTML)({browser: browser});
-      mainDiv.querySelector("#hotkey").innerHTML = _.template(document.getElementById("hotkeyTemplate").innerHTML)({browser: browser});
-      mainDiv.querySelector("#instruction").innerHTML = _.template(document.getElementById("instructionTemplateRu").innerHTML)({data: data});
-    } else {
-      mainDiv.querySelector("#cache-hint").innerHTML = _.template(document.getElementById("cacheTemplateEn").innerHTML)({browser: browser});
-      mainDiv.querySelector("#hotkey").innerHTML = _.template(document.getElementById("hotkeyTemplate").innerHTML)({browser: browser});
-      mainDiv.querySelector("#instruction").innerHTML = _.template(document.getElementById("instructionTemplateEn").innerHTML)({data: data});
-    }
-    $('[data-fancybox="instruction"]').fancybox({
-      afterLoad: function (instance, current) {
-        var pixelRatio = window.devicePixelRatio || 1;
+		
+	<div id="main" class="clearfix">
+		<div class="inner-wrap clearfix">
 
-        if (pixelRatio > 1.5) {
-          current.width = current.width / pixelRatio;
-          current.height = current.height / pixelRatio;
-        }
-      }
-    });
-  };
-</script>
-</body>
-</html>
+	<div class="main-content-section clearfix">
+		<div id="primary">
+			<div id="content" class="clearfix">
+
+				
+					<div class="article-container">
+						
+							
+								
+<article id="post-38" class="post-38 page type-page status-publish hentry">
+	
+	
+	<header class="entry-header">
+         		<h2 class="entry-title">
+   			Home   		</h2>
+      	</header>
+
+	<div class="entry-content clearfix">
+				<div data-elementor-type="wp-post" data-elementor-id="38" class="elementor elementor-38" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-fae47d9 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="fae47d9" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-2f27d34 elementor-column elementor-col-100 elementor-top-column" data-id="2f27d34" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1f4d924 elementor-widget elementor-widget-ColorMag-Posts-Grid-2" data-id="1f4d924" data-element_type="widget" data-widget_type="ColorMag-Posts-Grid-2.default">
+				<div class="elementor-widget-container">
+			
+		<div class="tg-module-grid tg-module-grid--style-2 tg-module-wrapper">
+			
+			<div class="tg-row thinner">
+				
+					<div class="tg-col-control">
+					<div class="tg_module_grid tg_module_grid--full">
+													<figure class="tg-module-thumb">
+								<a href="https://covid19-20.ru/news/rossiya-koronavirus-dannye-na-19-03-2020.html" class="tg-thumb-link">
+									<img width="600" height="417" src="https://covid19-20.ru/wp-content/uploads/2020/03/rus-600x417.jpg" class="attachment-colormag-elementor-grid-large-thumbnail size-colormag-elementor-grid-large-thumbnail wp-post-image" alt="" srcset="https://covid19-20.ru/wp-content/uploads/2020/03/rus-600x417.jpg 600w, https://covid19-20.ru/wp-content/uploads/2020/03/rus-392x272.jpg 392w, https://covid19-20.ru/wp-content/uploads/2020/03/rus-130x90.jpg 130w" sizes="(max-width: 600px) 100vw, 600px" />								</a>
+							</figure>
+						
+						<div class="tg-module-info">
+							<div class="tg-post-categories"><a href="https://covid19-20.ru/category/news" class="tg-post-category" rel="category tag">Новости</a>&nbsp;<a href="https://covid19-20.ru/category/mir/ru" class="tg-post-category" rel="category tag">Россия</a>&nbsp;</div>
+							<h3 class="tg-module-title entry-title">
+								<a href="https://covid19-20.ru/news/rossiya-koronavirus-dannye-na-19-03-2020.html">Россия, коронавирус, данные на 19.03.2020</a>
+							</h3>
+						</div>
+					</div>
+
+					</div>
+					<div class="tg-col-control"><div class="tg-row thinner">
+					<div class="tg_module_grid tg_module_grid--small tg_module_grid--full tg-col-control">
+													<figure class="tg-module-thumb">
+								<a href="https://covid19-20.ru/aktualnoe/ukraina-koronavirus-dannye-na-19-03-2020.html" class="tg-thumb-link">
+									<img width="575" height="198" src="https://covid19-20.ru/wp-content/uploads/2020/03/UA-575x198.jpg" class="attachment-colormag-elementor-grid-medium-large-thumbnail size-colormag-elementor-grid-medium-large-thumbnail wp-post-image" alt="" />								</a>
+							</figure>
+						
+						<div class="tg-module-info">
+							<div class="tg-post-categories"><a href="https://covid19-20.ru/category/aktualnoe" class="tg-post-category" rel="category tag">Актуальное</a>&nbsp;<a href="https://covid19-20.ru/category/news" class="tg-post-category" rel="category tag">Новости</a>&nbsp;<a href="https://covid19-20.ru/category/mir/ua" class="tg-post-category" rel="category tag">Украина</a>&nbsp;</div>
+							<h3 class="tg-module-title entry-title">
+								<a href="https://covid19-20.ru/aktualnoe/ukraina-koronavirus-dannye-na-19-03-2020.html">Украина, коронавирус, данные на 19.03.2020</a>
+							</h3>
+						</div>
+					</div>
+
+					
+					
+					<div class="tg_module_grid tg_module_grid--small tg_module_grid--half tg-col-control">
+													<figure class="tg-module-thumb">
+								<a href="https://covid19-20.ru/mir/poland/polsha-koronavirus-dannye-na-19-03-2020.html" class="tg-thumb-link">
+									<img width="392" height="272" src="https://covid19-20.ru/wp-content/uploads/2020/03/pol-2-392x272.jpg" class="attachment-colormag-highlighted-post size-colormag-highlighted-post wp-post-image" alt="" srcset="https://covid19-20.ru/wp-content/uploads/2020/03/pol-2-392x272.jpg 392w, https://covid19-20.ru/wp-content/uploads/2020/03/pol-2-130x90.jpg 130w, https://covid19-20.ru/wp-content/uploads/2020/03/pol-2-600x417.jpg 600w" sizes="(max-width: 392px) 100vw, 392px" />								</a>
+							</figure>
+						
+						<div class="tg-module-info">
+							<div class="tg-post-categories"><a href="https://covid19-20.ru/category/news" class="tg-post-category" rel="category tag">Новости</a>&nbsp;<a href="https://covid19-20.ru/category/mir/poland" class="tg-post-category" rel="category tag">Польша</a>&nbsp;</div>
+							<h3 class="tg-module-title entry-title">
+								<a href="https://covid19-20.ru/mir/poland/polsha-koronavirus-dannye-na-19-03-2020.html">Польша, коронавирус, данные на 19.03.2020</a>
+							</h3>
+						</div>
+					</div>
+
+					
+					
+					<div class="tg_module_grid tg_module_grid--small tg_module_grid--half tg-col-control">
+													<figure class="tg-module-thumb">
+								<a href="https://covid19-20.ru/aktualnoe/faq-po-koronavirusu.html" class="tg-thumb-link">
+									<img width="392" height="272" src="https://covid19-20.ru/wp-content/uploads/2020/03/faq-392x272.jpg" class="attachment-colormag-highlighted-post size-colormag-highlighted-post wp-post-image" alt="" srcset="https://covid19-20.ru/wp-content/uploads/2020/03/faq-392x272.jpg 392w, https://covid19-20.ru/wp-content/uploads/2020/03/faq-130x90.jpg 130w, https://covid19-20.ru/wp-content/uploads/2020/03/faq-600x417.jpg 600w" sizes="(max-width: 392px) 100vw, 392px" />								</a>
+							</figure>
+						
+						<div class="tg-module-info">
+							<div class="tg-post-categories"><a href="https://covid19-20.ru/category/aktualnoe" class="tg-post-category" rel="category tag">Актуальное</a>&nbsp;</div>
+							<h3 class="tg-module-title entry-title">
+								<a href="https://covid19-20.ru/aktualnoe/faq-po-koronavirusu.html">FAQ по коронавирусу</a>
+							</h3>
+						</div>
+					</div>
+
+					</div></div>			</div>
+		</div>
+
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-d56ab8b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="d56ab8b" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-2ac8baf elementor-column elementor-col-66 elementor-top-column" data-id="2ac8baf" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-e9dd295 elementor-widget elementor-widget-ColorMag-Posts-Block-1" data-id="e9dd295" data-element_type="widget" data-widget_type="ColorMag-Posts-Block-1.default">
+				<div class="elementor-widget-container">
+			
+		<div class="tg-module-block tg-module-block--style-1 tg-module-wrapper">
+							<div class="tg-module-title-wrap">
+					<h4 class="module-title">
+						<span>Актуальные статьи</span>
+					</h4>
+				</div><!-- tg-module-title-wrap -->
+			
+			<div class="tg-row">
+				
+										<div class="tg-col-control">
+					<div class="tg_module_block">
+													<figure class="tg-module-thumb">
+								<a href="https://covid19-20.ru/aktualnoe/ukraina-koronavirus-dannye-na-19-03-2020.html" class="tg-thumb-link">
+									<img width="800" height="445" src="https://covid19-20.ru/wp-content/uploads/2020/03/UA-800x445.jpg" class="attachment-colormag-featured-image size-colormag-featured-image wp-post-image" alt="" />								</a>
+								<div class="tg-post-categories"><a href="https://covid19-20.ru/category/aktualnoe" class="tg-post-category" rel="category tag">Актуальное</a>&nbsp;<a href="https://covid19-20.ru/category/news" class="tg-post-category" rel="category tag">Новости</a>&nbsp;<a href="https://covid19-20.ru/category/mir/ua" class="tg-post-category" rel="category tag">Украина</a>&nbsp;</div>							</figure>
+													<h3 class="tg-module-title entry-title">
+							<a href="https://covid19-20.ru/aktualnoe/ukraina-koronavirus-dannye-na-19-03-2020.html">Украина, коронавирус, данные на 19.03.2020</a>
+						</h3>
+
+						
+		<div class="tg-module-meta">
+			
+			<span class="tg-post-date entry-date">
+				<a href="https://covid19-20.ru/aktualnoe/ukraina-koronavirus-dannye-na-19-03-2020.html" rel="bookmark"><time class="entry-date published" datetime="2020-03-19T13:48:46+03:00">19.03.2020</time><time class="updated" datetime="2020-03-19T13:48:58+03:00">19.03.2020</time></a>			</span>
+
+			<span class="tg-post-auther-name author vcard">
+				<a class="url fn n" href="https://covid19-20.ru/author/abervv">abervv</a>			</span>
+
+							<span class="tg-module-comments">
+					<a href="https://covid19-20.ru/aktualnoe/ukraina-koronavirus-dannye-na-19-03-2020.html#respond">0</a>				</span>
+					</div>
+
+								<div class="tg-expert entry-content">
+							<p>В Украине подтверждено только 16 случаев заболевания коронавирусом, 2 человека скончались. Центр общественного здоровья Минздрава с начала года получил 260</p>
+						</div>
+					</div>
+				</div>
+											
+													<div class="tg-col-control">
+																<div class="tg_module_block tg_module_block--list-small">
+															<figure class="tg-module-thumb">
+									<a href="https://covid19-20.ru/aktualnoe/faq-po-koronavirusu.html" class="tg-thumb-link">
+										<img width="130" height="90" src="https://covid19-20.ru/wp-content/uploads/2020/03/faq-130x90.jpg" class="attachment-colormag-featured-post-small size-colormag-featured-post-small wp-post-image" alt="" srcset="https://covid19-20.ru/wp-content/uploads/2020/03/faq-130x90.jpg 130w, https://covid19-20.ru/wp-content/uploads/2020/03/faq-392x272.jpg 392w, https://covid19-20.ru/wp-content/uploads/2020/03/faq-600x417.jpg 600w" sizes="(max-width: 130px) 100vw, 130px" />									</a>
+								</figure>
+															<div class="tg-module-info">
+								<h3 class="tg-module-title entry-title">
+									<a href="https://covid19-20.ru/aktualnoe/faq-po-koronavirusu.html">FAQ по коронавирусу</a>
+								</h3>
+
+								
+		<div class="tg-module-meta">
+			
+			<span class="tg-post-date entry-date">
+				<a href="https://covid19-20.ru/aktualnoe/faq-po-koronavirusu.html" rel="bookmark"><time class="entry-date published" datetime="2020-03-18T12:18:55+03:00">18.03.2020</time><time class="updated" datetime="2020-03-18T12:19:36+03:00">18.03.2020</time></a>			</span>
+
+			<span class="tg-post-auther-name author vcard">
+				<a class="url fn n" href="https://covid19-20.ru/author/abervv">abervv</a>			</span>
+
+							<span class="tg-module-comments">
+					<a href="https://covid19-20.ru/aktualnoe/faq-po-koronavirusu.html#respond">0</a>				</span>
+					</div>
+
+									</div>
+						</div>
+					
+																				<div class="tg_module_block tg_module_block--list-small">
+															<figure class="tg-module-thumb">
+									<a href="https://covid19-20.ru/aktualnoe/simptomy-koronavirusa.html" class="tg-thumb-link">
+										<img width="130" height="90" src="https://covid19-20.ru/wp-content/uploads/2020/03/simptomy-1-130x90.jpg" class="attachment-colormag-featured-post-small size-colormag-featured-post-small wp-post-image" alt="" srcset="https://covid19-20.ru/wp-content/uploads/2020/03/simptomy-1-130x90.jpg 130w, https://covid19-20.ru/wp-content/uploads/2020/03/simptomy-1-392x272.jpg 392w, https://covid19-20.ru/wp-content/uploads/2020/03/simptomy-1-600x417.jpg 600w" sizes="(max-width: 130px) 100vw, 130px" />									</a>
+								</figure>
+															<div class="tg-module-info">
+								<h3 class="tg-module-title entry-title">
+									<a href="https://covid19-20.ru/aktualnoe/simptomy-koronavirusa.html">Симптомы коронавируса</a>
+								</h3>
+
+								
+		<div class="tg-module-meta">
+			
+			<span class="tg-post-date entry-date">
+				<a href="https://covid19-20.ru/aktualnoe/simptomy-koronavirusa.html" rel="bookmark"><time class="entry-date published updated" datetime="2020-03-18T11:22:19+03:00">18.03.2020</time></a>			</span>
+
+			<span class="tg-post-auther-name author vcard">
+				<a class="url fn n" href="https://covid19-20.ru/author/abervv">abervv</a>			</span>
+
+							<span class="tg-module-comments">
+					<a href="https://covid19-20.ru/aktualnoe/simptomy-koronavirusa.html#respond">0</a>				</span>
+					</div>
+
+									</div>
+						</div>
+														</div>
+										</div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-a0879c7 elementor-column elementor-col-33 elementor-top-column" data-id="a0879c7" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-8c9411b elementor-widget elementor-widget-ColorMag-Posts-Block-6" data-id="8c9411b" data-element_type="widget" data-widget_type="ColorMag-Posts-Block-6.default">
+				<div class="elementor-widget-container">
+			
+		<div class="tg-module-block tg-module-block--style-6 tg-module-wrapper">
+							<div class="tg-module-title-wrap">
+					<h4 class="module-title">
+						<span>Популярное</span>
+					</h4>
+				</div>
+						<div class="tg-row">
+									<div class="tg_module_block tg_module_block--list-small tg-col-control">
+													<figure class="tg-module-thumb">
+								<a href="https://covid19-20.ru/news/rossiya-koronavirus-dannye-na-19-03-2020.html" class="tg-thumb-link">
+									<img width="130" height="90" src="https://covid19-20.ru/wp-content/uploads/2020/03/rus-130x90.jpg" class="attachment-colormag-featured-post-small size-colormag-featured-post-small wp-post-image" alt="" srcset="https://covid19-20.ru/wp-content/uploads/2020/03/rus-130x90.jpg 130w, https://covid19-20.ru/wp-content/uploads/2020/03/rus-392x272.jpg 392w, https://covid19-20.ru/wp-content/uploads/2020/03/rus-600x417.jpg 600w" sizes="(max-width: 130px) 100vw, 130px" />								</a>
+							</figure>
+						
+						<div class="tg-module-info">
+							<h3 class="tg-module-title entry-title">
+								<a href="https://covid19-20.ru/news/rossiya-koronavirus-dannye-na-19-03-2020.html">Россия, коронавирус, данные на 19.03.2020</a>
+							</h3>
+
+							
+		<div class="tg-module-meta">
+			
+			<span class="tg-post-date entry-date">
+				<a href="https://covid19-20.ru/news/rossiya-koronavirus-dannye-na-19-03-2020.html" rel="bookmark"><time class="entry-date published" datetime="2020-03-19T13:55:41+03:00">19.03.2020</time><time class="updated" datetime="2020-03-19T13:56:03+03:00">19.03.2020</time></a>			</span>
+
+			<span class="tg-post-auther-name author vcard">
+				<a class="url fn n" href="https://covid19-20.ru/author/abervv">abervv</a>			</span>
+
+							<span class="tg-module-comments">
+					<a href="https://covid19-20.ru/news/rossiya-koronavirus-dannye-na-19-03-2020.html#respond">0</a>				</span>
+					</div>
+
+								</div>
+					</div>
+										<div class="tg_module_block tg_module_block--list-small tg-col-control">
+													<figure class="tg-module-thumb">
+								<a href="https://covid19-20.ru/aktualnoe/ukraina-koronavirus-dannye-na-19-03-2020.html" class="tg-thumb-link">
+									<img width="130" height="90" src="https://covid19-20.ru/wp-content/uploads/2020/03/UA-130x90.jpg" class="attachment-colormag-featured-post-small size-colormag-featured-post-small wp-post-image" alt="" srcset="https://covid19-20.ru/wp-content/uploads/2020/03/UA-130x90.jpg 130w, https://covid19-20.ru/wp-content/uploads/2020/03/UA-392x272.jpg 392w, https://covid19-20.ru/wp-content/uploads/2020/03/UA-600x417.jpg 600w" sizes="(max-width: 130px) 100vw, 130px" />								</a>
+							</figure>
+						
+						<div class="tg-module-info">
+							<h3 class="tg-module-title entry-title">
+								<a href="https://covid19-20.ru/aktualnoe/ukraina-koronavirus-dannye-na-19-03-2020.html">Украина, коронавирус, данные на 19.03.2020</a>
+							</h3>
+
+							
+		<div class="tg-module-meta">
+			
+			<span class="tg-post-date entry-date">
+				<a href="https://covid19-20.ru/aktualnoe/ukraina-koronavirus-dannye-na-19-03-2020.html" rel="bookmark"><time class="entry-date published" datetime="2020-03-19T13:48:46+03:00">19.03.2020</time><time class="updated" datetime="2020-03-19T13:48:58+03:00">19.03.2020</time></a>			</span>
+
+			<span class="tg-post-auther-name author vcard">
+				<a class="url fn n" href="https://covid19-20.ru/author/abervv">abervv</a>			</span>
+
+							<span class="tg-module-comments">
+					<a href="https://covid19-20.ru/aktualnoe/ukraina-koronavirus-dannye-na-19-03-2020.html#respond">0</a>				</span>
+					</div>
+
+								</div>
+					</div>
+										<div class="tg_module_block tg_module_block--list-small tg-col-control">
+													<figure class="tg-module-thumb">
+								<a href="https://covid19-20.ru/mir/poland/polsha-koronavirus-dannye-na-19-03-2020.html" class="tg-thumb-link">
+									<img width="130" height="90" src="https://covid19-20.ru/wp-content/uploads/2020/03/pol-2-130x90.jpg" class="attachment-colormag-featured-post-small size-colormag-featured-post-small wp-post-image" alt="" srcset="https://covid19-20.ru/wp-content/uploads/2020/03/pol-2-130x90.jpg 130w, https://covid19-20.ru/wp-content/uploads/2020/03/pol-2-392x272.jpg 392w, https://covid19-20.ru/wp-content/uploads/2020/03/pol-2-600x417.jpg 600w" sizes="(max-width: 130px) 100vw, 130px" />								</a>
+							</figure>
+						
+						<div class="tg-module-info">
+							<h3 class="tg-module-title entry-title">
+								<a href="https://covid19-20.ru/mir/poland/polsha-koronavirus-dannye-na-19-03-2020.html">Польша, коронавирус, данные на 19.03.2020</a>
+							</h3>
+
+							
+		<div class="tg-module-meta">
+			
+			<span class="tg-post-date entry-date">
+				<a href="https://covid19-20.ru/mir/poland/polsha-koronavirus-dannye-na-19-03-2020.html" rel="bookmark"><time class="entry-date published updated" datetime="2020-03-19T13:36:38+03:00">19.03.2020</time></a>			</span>
+
+			<span class="tg-post-auther-name author vcard">
+				<a class="url fn n" href="https://covid19-20.ru/author/abervv">abervv</a>			</span>
+
+							<span class="tg-module-comments">
+					<a href="https://covid19-20.ru/mir/poland/polsha-koronavirus-dannye-na-19-03-2020.html#respond">0</a>				</span>
+					</div>
+
+								</div>
+					</div>
+										<div class="tg_module_block tg_module_block--list-small tg-col-control">
+													<figure class="tg-module-thumb">
+								<a href="https://covid19-20.ru/aktualnoe/faq-po-koronavirusu.html" class="tg-thumb-link">
+									<img width="130" height="90" src="https://covid19-20.ru/wp-content/uploads/2020/03/faq-130x90.jpg" class="attachment-colormag-featured-post-small size-colormag-featured-post-small wp-post-image" alt="" srcset="https://covid19-20.ru/wp-content/uploads/2020/03/faq-130x90.jpg 130w, https://covid19-20.ru/wp-content/uploads/2020/03/faq-392x272.jpg 392w, https://covid19-20.ru/wp-content/uploads/2020/03/faq-600x417.jpg 600w" sizes="(max-width: 130px) 100vw, 130px" />								</a>
+							</figure>
+						
+						<div class="tg-module-info">
+							<h3 class="tg-module-title entry-title">
+								<a href="https://covid19-20.ru/aktualnoe/faq-po-koronavirusu.html">FAQ по коронавирусу</a>
+							</h3>
+
+							
+		<div class="tg-module-meta">
+			
+			<span class="tg-post-date entry-date">
+				<a href="https://covid19-20.ru/aktualnoe/faq-po-koronavirusu.html" rel="bookmark"><time class="entry-date published" datetime="2020-03-18T12:18:55+03:00">18.03.2020</time><time class="updated" datetime="2020-03-18T12:19:36+03:00">18.03.2020</time></a>			</span>
+
+			<span class="tg-post-auther-name author vcard">
+				<a class="url fn n" href="https://covid19-20.ru/author/abervv">abervv</a>			</span>
+
+							<span class="tg-module-comments">
+					<a href="https://covid19-20.ru/aktualnoe/faq-po-koronavirusu.html#respond">0</a>				</span>
+					</div>
+
+								</div>
+					</div>
+										<div class="tg_module_block tg_module_block--list-small tg-col-control">
+													<figure class="tg-module-thumb">
+								<a href="https://covid19-20.ru/mir/poland/17-novyx-sluchaev-koronavirusnoj-infekcii-v-polshe.html" class="tg-thumb-link">
+									<img width="130" height="90" src="https://covid19-20.ru/wp-content/uploads/2020/03/pol-2-130x90.jpg" class="attachment-colormag-featured-post-small size-colormag-featured-post-small wp-post-image" alt="" srcset="https://covid19-20.ru/wp-content/uploads/2020/03/pol-2-130x90.jpg 130w, https://covid19-20.ru/wp-content/uploads/2020/03/pol-2-392x272.jpg 392w, https://covid19-20.ru/wp-content/uploads/2020/03/pol-2-600x417.jpg 600w" sizes="(max-width: 130px) 100vw, 130px" />								</a>
+							</figure>
+						
+						<div class="tg-module-info">
+							<h3 class="tg-module-title entry-title">
+								<a href="https://covid19-20.ru/mir/poland/17-novyx-sluchaev-koronavirusnoj-infekcii-v-polshe.html">17 новых случаев коронавирусной инфекции в Польше</a>
+							</h3>
+
+							
+		<div class="tg-module-meta">
+			
+			<span class="tg-post-date entry-date">
+				<a href="https://covid19-20.ru/mir/poland/17-novyx-sluchaev-koronavirusnoj-infekcii-v-polshe.html" rel="bookmark"><time class="entry-date published updated" datetime="2020-03-18T12:01:36+03:00">18.03.2020</time></a>			</span>
+
+			<span class="tg-post-auther-name author vcard">
+				<a class="url fn n" href="https://covid19-20.ru/author/abervv">abervv</a>			</span>
+
+							<span class="tg-module-comments">
+					<a href="https://covid19-20.ru/mir/poland/17-novyx-sluchaev-koronavirusnoj-infekcii-v-polshe.html#respond">0</a>				</span>
+					</div>
+
+								</div>
+					</div>
+								</div>
+		</div>
+
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-450ad9c elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="450ad9c" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-746d058 elementor-column elementor-col-100 elementor-top-column" data-id="746d058" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-43d3e0e elementor-widget elementor-widget-ColorMag-Posts-Grid-5" data-id="43d3e0e" data-element_type="widget" data-widget_type="ColorMag-Posts-Grid-5.default">
+				<div class="elementor-widget-container">
+			
+		<div class="tg-module-grid tg-module-grid--style-5 tg-module-wrapper">
+							<div class="tg-module-title-wrap">
+					<h4 class="module-title">
+						<span>Employment</span>
+					</h4>
+				</div>
+			
+			<div class="tg-row thinner">
+							</div>
+		</div>
+
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-20d0e5f elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="20d0e5f" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-05aeac3 elementor-column elementor-col-66 elementor-top-column" data-id="05aeac3" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-ddd0900 elementor-widget elementor-widget-ColorMag-Posts-Block-6" data-id="ddd0900" data-element_type="widget" data-widget_type="ColorMag-Posts-Block-6.default">
+				<div class="elementor-widget-container">
+			
+		<div class="tg-module-block tg-module-block--style-6 tg-module-wrapper">
+							<div class="tg-module-title-wrap">
+					<h4 class="module-title">
+						<span>Investment</span>
+					</h4>
+				</div>
+						<div class="tg-row">
+							</div>
+		</div>
+
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-2c497eb elementor-column elementor-col-33 elementor-top-column" data-id="2c497eb" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5b6ff4b elementor-widget elementor-widget-ColorMag-Posts-Block-9" data-id="5b6ff4b" data-element_type="widget" data-widget_type="ColorMag-Posts-Block-9.default">
+				<div class="elementor-widget-container">
+			
+		<div class="tg-module-block tg-module-block--style-9 no-module-thub tg-module-wrapper">
+							<div class="tg-module-title-wrap">
+					<h4 class="module-title">
+						<span>Market</span>
+					</h4>
+				</div>
+			
+			<div class="tg-row">
+							</div>
+		</div>
+
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-c5592de elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="c5592de" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-930d6f5 elementor-column elementor-col-66 elementor-top-column" data-id="930d6f5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-92e61e7 elementor-widget elementor-widget-ColorMag-Posts-Block-4" data-id="92e61e7" data-element_type="widget" data-widget_type="ColorMag-Posts-Block-4.default">
+				<div class="elementor-widget-container">
+			
+		<div class="tg-module-block tg-module-block--style-4 tg-module-wrapper">
+							<div class="tg-module-title-wrap">
+					<h4 class="module-title">
+						<span>Money</span>
+					</h4>
+				</div>
+								</div>
+
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-729313a elementor-column elementor-col-33 elementor-top-column" data-id="729313a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-88c3c87 elementor-widget elementor-widget-ColorMag-Global-Widgets-Title" data-id="88c3c87" data-element_type="widget" data-widget_type="ColorMag-Global-Widgets-Title.default">
+				<div class="elementor-widget-container">
+				

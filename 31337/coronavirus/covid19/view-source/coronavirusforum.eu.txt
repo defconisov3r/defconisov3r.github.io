@@ -1,29 +1,1407 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><!-- start: index -->
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>401 Authorization Required</title>
-  <link rel="stylesheet" href="/error_docs/styles.css">
+<title>Corona Virus Forum</title>
+<!-- start: headerinclude -->
+<link rel="alternate" type="application/rss+xml" title="Latest Threads (RSS 2.0)" href="https://coronavirusforum.eu/syndication.php" />
+<link rel="alternate" type="application/atom+xml" title="Latest Threads (Atom 1.0)" href="https://coronavirusforum.eu/syndication.php?type=atom1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<script type="text/javascript" src="https://coronavirusforum.eu/jscripts/jquery.js?ver=1821"></script>
+<script type="text/javascript" src="https://coronavirusforum.eu/jscripts/jquery.plugins.min.js?ver=1821"></script>
+<script type="text/javascript" src="https://coronavirusforum.eu/jscripts/general.js?ver=1821"></script>
+
+<link type="text/css" rel="stylesheet" href="https://coronavirusforum.eu/cache/themes/theme1/global.css" />
+<link type="text/css" rel="stylesheet" href="https://coronavirusforum.eu/cache/themes/theme1/css3.css" />
+
+<script type="text/javascript">
+<!--
+	lang.unknown_error = "An unknown error has occurred.";
+
+	lang.select2_match = "One result is available, press enter to select it.";
+	lang.select2_matches = "{1} results are available, use up and down arrow keys to navigate.";
+	lang.select2_nomatches = "No matches found";
+	lang.select2_inputtooshort_single = "Please enter one or more character";
+	lang.select2_inputtooshort_plural = "Please enter {1} or more characters";
+	lang.select2_inputtoolong_single = "Please delete one character";
+	lang.select2_inputtoolong_plural = "Please delete {1} characters";
+	lang.select2_selectiontoobig_single = "You can only select one item";
+	lang.select2_selectiontoobig_plural = "You can only select {1} items";
+	lang.select2_loadmore = "Loading more results&hellip;";
+	lang.select2_searching = "Searching&hellip;";
+
+	var templates = {
+		modal: '<div class=\"modal\">\
+	<div style=\"overflow-y: auto; max-height: 400px;\">\
+		<table border=\"0\" cellspacing=\"0\" cellpadding=\"5\" class=\"tborder\">\
+			<tr>\
+				<td class=\"thead\" colspan=\"2\"><strong>__message__</strong></td>\
+			</tr>\
+			<tr>\
+				<td colspan=\"2\" class=\"trow1\">\
+				<div style=\"text-align: center\" class=\"modal_buttons\">__buttons__</div></td>\
+			</tr>\
+		</table>\
+	</div>\
+</div>',
+		modal_button: '<input type=\"submit\" class=\"button\" value=\"__title__\"/>&nbsp;'
+	};
+
+	var cookieDomain = ".coronavirusforum.eu";
+	var cookiePath = "/";
+	var cookiePrefix = "";
+	var cookieSecureFlag = "0";
+	var deleteevent_confirm = "Are you sure you want to delete this event?";
+	var removeattach_confirm = "Are you sure you want to remove the selected attachment from this post?";
+	var loading_text = 'Loading. <br />Please Wait&hellip;';
+	var saving_changes = 'Saving changes&hellip;';
+	var use_xmlhttprequest = "1";
+	var my_post_key = "e50743863ad868d47e39cdfb5fb007ae";
+	var rootpath = "https://coronavirusforum.eu";
+	var imagepath = "https://coronavirusforum.eu/images";
+  	var yes_confirm = "Yes";
+	var no_confirm = "No";
+	var MyBBEditor = null;
+	var spinner_image = "https://coronavirusforum.eu/images/spinner.gif";
+	var spinner = "<img src='" + spinner_image +"' alt='' />";
+	var modal_zindex = 9999;
+// -->
+</script>
+<!-- end: headerinclude -->
+<script type="text/javascript">
+<!--
+	lang.no_new_posts = "Forum Contains No New Posts";
+	lang.click_mark_read = "Click to mark this forum as read";
+// -->
+</script>
 </head>
 <body>
-<div class="page">
-  <div class="main">
-    <h1>Server Error</h1>
-    <div class="error-code">401</div>
-    <h2>Authorization Required</h2>
-    <div class="error-description">
-      <p class="lead">This server could not verify that you are authorized to access the document requested.  Either you supplied the wrong credentials (e.g., bad password), or your browser doesn't understand how to supply the credentials required.</p>
-      <hr/>
-    </div>
-    <p>That's what you can do</p>
-    <div class="help-actions">
-      <a href="javascript:location.reload();">Reload Page</a>
-      <a href="javascript:history.back();">Back to Previous Page</a>
-      <a href="/">Home Page</a>
-    </div>
-  </div>
+<!-- start: header -->
+<div id="container">
+		<a name="top" id="top"></a>
+		<div id="header">
+			<div id="logo">
+				<div class="wrapper">
+					<a href="https://coronavirusforum.eu/index.php"><img src="https://coronavirusforum.eu/images/cvflogo.svg" alt="Corona Virus Forum" title="Corona Virus Forum" /></a>
+					<ul class="menu top_links">
+						<!-- start: header_menu_portal -->
+<li><a href="https://coronavirusforum.eu/portal.php" class="portal">Portal</a></li>
+<!-- end: header_menu_portal -->
+						<!-- start: header_menu_search -->
+<li><a href="https://coronavirusforum.eu/search.php" class="search">Search</a></li>
+<!-- end: header_menu_search -->
+						<!-- start: header_menu_memberlist -->
+<li><a href="https://coronavirusforum.eu/memberlist.php" class="memberlist">Member List</a></li>
+<!-- end: header_menu_memberlist -->
+						<!-- start: header_menu_calendar -->
+<li><a href="https://coronavirusforum.eu/calendar.php" class="calendar">Calendar</a></li>
+<!-- end: header_menu_calendar -->
+						<li><a href="https://coronavirusforum.eu/misc.php?action=help" class="help">Help</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="panel">
+				<div class="upper">
+					<div class="wrapper">
+						<!-- start: header_quicksearch -->
+						<form action="https://coronavirusforum.eu/search.php">
+						<fieldset id="search">
+							<input name="keywords" type="text" class="textbox" />
+							<input value="Search" type="submit" class="button" />
+							<input type="hidden" name="action" value="do_search" />
+							<input type="hidden" name="postthread" value="1" />
+						</fieldset>
+						</form>
+<!-- end: header_quicksearch -->
+						<!-- start: header_welcomeblock_guest -->
+						<!-- Continuation of div(class="upper") as opened in the header template -->
+						<span class="welcome">Hello There, Guest! <a href="https://coronavirusforum.eu/member.php?action=login" onclick="$('#quick_login').modal({ fadeDuration: 250, keepelement: true, zIndex: (typeof modal_zindex !== 'undefined' ? modal_zindex : 9999) }); return false;" class="login">Login</a> <a href="https://coronavirusforum.eu/member.php?action=register" class="register">Register</a></span>
+					</div>
+				</div>
+				<div class="modal" id="quick_login" style="display: none;">
+					<form method="post" action="https://coronavirusforum.eu/member.php">
+						<input name="action" type="hidden" value="do_login" />
+						<input name="url" type="hidden" value="" />
+						<input name="quick_login" type="hidden" value="1" />
+						<input name="my_post_key" type="hidden" value="e50743863ad868d47e39cdfb5fb007ae" />
+						<table width="100%" cellspacing="0" cellpadding="5" border="0" class="tborder">
+							<tr>
+								<td class="thead" colspan="2"><strong>Login</strong></td>
+							</tr>
+							<!-- start: header_welcomeblock_guest_login_modal -->
+<tr>
+	<td class="trow1" width="25%"><strong>Username:</strong></td>
+	<td class="trow1"><input name="quick_username" id="quick_login_username" type="text" value="" class="textbox initial_focus" /></td>
+</tr>
+<tr>
+	<td class="trow2"><strong>Password:</strong></td>
+	<td class="trow2">
+		<input name="quick_password" id="quick_login_password" type="password" value="" class="textbox" /> <a href="https://coronavirusforum.eu/member.php?action=lostpw" class="lost_password">Lost Password?</a>
+	</td>
+</tr>
+<tr>
+	<td class="trow1">&nbsp;</td>
+	<td class="trow1 remember_me">
+		<input name="quick_remember" id="quick_login_remember" type="checkbox" value="yes" class="checkbox" checked="checked" />
+		<label for="quick_login_remember">Remember me</label>
+	</td>
+</tr>
+<tr>
+	<td class="trow2" colspan="2">
+		<div align="center"><input name="submit" type="submit" class="button" value="Login" /></div>
+	</td>
+</tr>
+<!-- end: header_welcomeblock_guest_login_modal -->
+						</table>
+					</form>
+				</div>
+				<script type="text/javascript">
+					$("#quick_login input[name='url']").val($(location).attr('href'));
+				</script>
+<!-- end: header_welcomeblock_guest -->
+					<!-- </div> in header_welcomeblock_member and header_welcomeblock_guest -->
+				<!-- </div> in header_welcomeblock_member and header_welcomeblock_guest -->
+			</div>
+		</div>
+		<div id="content">
+			<div class="wrapper">
+				
+				
+				
+				
+				
+				
+				
+				<!-- start: nav -->
+
+<div class="navigation">
+<!-- start: nav_bit_active -->
+<span class="active">Corona Virus Forum</span>
+<!-- end: nav_bit_active -->
 </div>
+<!-- end: nav -->
+				<br />
+<!-- end: header -->
+<!-- start: forumbit_depth1_cat -->
+<table border="0" cellspacing="0" cellpadding="5" class="tborder">
+<thead>
+<tr>
+<td class="thead" colspan="5">
+<div class="expcolimage"><img src="https://coronavirusforum.eu/images/collapse.png" id="cat_37_img" class="expander" alt="[-]" title="[-]" /></div>
+<div><strong><a href="forum-37.html">News</a></strong><br /><div class="smalltext"></div></div>
+</td>
+</tr>
+</thead>
+<tbody style="" id="cat_37_e">
+<tr>
+<td class="tcat" colspan="2"><span class="smalltext"><strong>Forum</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Threads</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Posts</strong></span></td>
+<td class="tcat" width="200" align="center"><span class="smalltext"><strong>Last Post</strong></span></td>
+</tr>
+<!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_38"></span></td>
+<td class="trow1">
+<strong><a href="forum-38.html">Crisis Development</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_39"></span></td>
+<td class="trow2">
+<strong><a href="forum-39.html">Medical Progress</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_on ajax_mark_read" title="Forum Contains New Posts" id="mark_read_40"></span></td>
+<td class="trow1">
+<strong><a href="forum-40.html">Other</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">1</td>
+<td class="trow1" align="center" style="white-space: nowrap">1</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="thread-4-lastpost.html" title="DIY breathing mask"><strong>DIY breathing mask</strong></a>
+<br /><span title="03-19-2020, 05:15 PM">37 minutes ago</span><br />by <a href="https://coronavirusforum.eu/user-1.html">Steven</a></span>
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum -->
+</tbody>
+</table>
+<br />
+<!-- end: forumbit_depth1_cat --><!-- start: forumbit_depth1_cat -->
+<table border="0" cellspacing="0" cellpadding="5" class="tborder">
+<thead>
+<tr>
+<td class="thead" colspan="5">
+<div class="expcolimage"><img src="https://coronavirusforum.eu/images/collapse.png" id="cat_1_img" class="expander" alt="[-]" title="[-]" /></div>
+<div><strong><a href="forum-1.html">General Questions</a></strong><br /><div class="smalltext"></div></div>
+</td>
+</tr>
+</thead>
+<tbody style="" id="cat_1_e">
+<tr>
+<td class="tcat" colspan="2"><span class="smalltext"><strong>Forum</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Threads</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Posts</strong></span></td>
+<td class="tcat" width="200" align="center"><span class="smalltext"><strong>Last Post</strong></span></td>
+</tr>
+<!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_4"></span></td>
+<td class="trow1">
+<strong><a href="forum-4.html">What should I do?</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_on ajax_mark_read" title="Forum Contains New Posts" id="mark_read_2"></span></td>
+<td class="trow2">
+<strong><a href="forum-2.html">Medical Aspects</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">1</td>
+<td class="trow2" align="center" style="white-space: nowrap">1</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="thread-3-lastpost.html" title="Transmission of pathogens"><strong>Transmission of pathogens</strong></a>
+<br /><span title="03-19-2020, 12:05 PM">5 hours ago</span><br />by <a href="https://coronavirusforum.eu/user-1.html">Steven</a></span>
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_3"></span></td>
+<td class="trow1">
+<strong><a href="forum-3.html">Practical Recommendations</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_29"></span></td>
+<td class="trow2">
+<strong><a href="forum-29.html">Concerning this Forum</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_22"></span></td>
+<td class="trow1">
+<strong><a href="forum-22.html">Other</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum -->
+</tbody>
+</table>
+<br />
+<!-- end: forumbit_depth1_cat --><!-- start: forumbit_depth1_cat -->
+<table border="0" cellspacing="0" cellpadding="5" class="tborder">
+<thead>
+<tr>
+<td class="thead" colspan="5">
+<div class="expcolimage"><img src="https://coronavirusforum.eu/images/collapse.png" id="cat_5_img" class="expander" alt="[-]" title="[-]" /></div>
+<div><strong><a href="forum-5.html">Germany // Deutschland</a></strong><br /><div class="smalltext"></div></div>
+</td>
+</tr>
+</thead>
+<tbody style="" id="cat_5_e">
+<tr>
+<td class="tcat" colspan="2"><span class="smalltext"><strong>Forum</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Threads</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Posts</strong></span></td>
+<td class="tcat" width="200" align="center"><span class="smalltext"><strong>Last Post</strong></span></td>
+</tr>
+<!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_13"></span></td>
+<td class="trow1">
+<strong><a href="forum-13.html">News // Aktuelle Meldungen</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_on ajax_mark_read" title="Forum Contains New Posts" id="mark_read_8"></span></td>
+<td class="trow2">
+<strong><a href="forum-8.html">Personal Life // Privatleben</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">1</td>
+<td class="trow2" align="center" style="white-space: nowrap">1</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="thread-2-lastpost.html" title="HomeSports für Kinder"><strong>HomeSports für Kinder</strong></a>
+<br /><span title="03-19-2020, 10:08 AM">7 hours ago</span><br />by <a href="https://coronavirusforum.eu/user-1.html">Steven</a></span>
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_76"></span></td>
+<td class="trow1">
+<strong><a href="forum-76.html">Public Supply // Öffentliche Versorgung</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_on ajax_mark_read" title="Forum Contains New Posts" id="mark_read_9"></span></td>
+<td class="trow2">
+<strong><a href="forum-9.html">Job &amp; Economy // Beruf &amp; Wirtschaft </a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">1</td>
+<td class="trow2" align="center" style="white-space: nowrap">1</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost -->
+<span class="smalltext">
+<a href="thread-1-lastpost.html" title="Homeoffice-Guide von t3n"><strong>Homeoffice-Guide von t3n</strong></a>
+<br /><span title="03-19-2020, 10:00 AM">7 hours ago</span><br />by <a href="https://coronavirusforum.eu/user-1.html">Steven</a></span>
+<!-- end: forumbit_depth2_forum_lastpost --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_10"></span></td>
+<td class="trow1">
+<strong><a href="forum-10.html">Help needed // Hilfe gesucht</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_11"></span></td>
+<td class="trow2">
+<strong><a href="forum-11.html">Job Exchange // Stellenbörse</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_12"></span></td>
+<td class="trow1">
+<strong><a href="forum-12.html">Other // Sonstiges</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum -->
+</tbody>
+</table>
+<br />
+<!-- end: forumbit_depth1_cat --><!-- start: forumbit_depth1_cat -->
+<table border="0" cellspacing="0" cellpadding="5" class="tborder">
+<thead>
+<tr>
+<td class="thead" colspan="5">
+<div class="expcolimage"><img src="https://coronavirusforum.eu/images/collapse.png" id="cat_14_img" class="expander" alt="[-]" title="[-]" /></div>
+<div><strong><a href="forum-14.html">Italy // Italia</a></strong><br /><div class="smalltext"></div></div>
+</td>
+</tr>
+</thead>
+<tbody style="" id="cat_14_e">
+<tr>
+<td class="tcat" colspan="2"><span class="smalltext"><strong>Forum</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Threads</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Posts</strong></span></td>
+<td class="tcat" width="200" align="center"><span class="smalltext"><strong>Last Post</strong></span></td>
+</tr>
+<!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_15"></span></td>
+<td class="trow1">
+<strong><a href="forum-15.html">News // Notizie</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_16"></span></td>
+<td class="trow2">
+<strong><a href="forum-16.html">Personal Life // Vita personale</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_77"></span></td>
+<td class="trow1">
+<strong><a href="forum-77.html">Public Supply // Offerta pubblica</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_17"></span></td>
+<td class="trow2">
+<strong><a href="forum-17.html">Job &amp; Economy // Lavoro &amp; Economia</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_18"></span></td>
+<td class="trow1">
+<strong><a href="forum-18.html">Help needed // Aiuto necessario</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_19"></span></td>
+<td class="trow2">
+<strong><a href="forum-19.html">Job Exchange // Scambio di Lavoro</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_20"></span></td>
+<td class="trow1">
+<strong><a href="forum-20.html">Other // Altro</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum -->
+</tbody>
+</table>
+<br />
+<!-- end: forumbit_depth1_cat --><!-- start: forumbit_depth1_cat -->
+<table border="0" cellspacing="0" cellpadding="5" class="tborder">
+<thead>
+<tr>
+<td class="thead" colspan="5">
+<div class="expcolimage"><img src="https://coronavirusforum.eu/images/collapse.png" id="cat_21_img" class="expander" alt="[-]" title="[-]" /></div>
+<div><strong><a href="forum-21.html">Spain // España</a></strong><br /><div class="smalltext"></div></div>
+</td>
+</tr>
+</thead>
+<tbody style="" id="cat_21_e">
+<tr>
+<td class="tcat" colspan="2"><span class="smalltext"><strong>Forum</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Threads</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Posts</strong></span></td>
+<td class="tcat" width="200" align="center"><span class="smalltext"><strong>Last Post</strong></span></td>
+</tr>
+<!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_23"></span></td>
+<td class="trow1">
+<strong><a href="forum-23.html">News // Noticias</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_24"></span></td>
+<td class="trow2">
+<strong><a href="forum-24.html">Personal Life // Vida Privada</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_78"></span></td>
+<td class="trow1">
+<strong><a href="forum-78.html">Public Supply // Suministro público</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_25"></span></td>
+<td class="trow2">
+<strong><a href="forum-25.html">Job &amp; Economy // Trabajo y Economía</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_26"></span></td>
+<td class="trow1">
+<strong><a href="forum-26.html">Help needed // se necesita ayuda</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_27"></span></td>
+<td class="trow2">
+<strong><a href="forum-27.html">Job Exchange // Bolsa de Empleo</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_28"></span></td>
+<td class="trow1">
+<strong><a href="forum-28.html">Other // Otros</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum -->
+</tbody>
+</table>
+<br />
+<!-- end: forumbit_depth1_cat --><!-- start: forumbit_depth1_cat -->
+<table border="0" cellspacing="0" cellpadding="5" class="tborder">
+<thead>
+<tr>
+<td class="thead" colspan="5">
+<div class="expcolimage"><img src="https://coronavirusforum.eu/images/collapse.png" id="cat_30_img" class="expander" alt="[-]" title="[-]" /></div>
+<div><strong><a href="forum-30.html">France</a></strong><br /><div class="smalltext"></div></div>
+</td>
+</tr>
+</thead>
+<tbody style="" id="cat_30_e">
+<tr>
+<td class="tcat" colspan="2"><span class="smalltext"><strong>Forum</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Threads</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Posts</strong></span></td>
+<td class="tcat" width="200" align="center"><span class="smalltext"><strong>Last Post</strong></span></td>
+</tr>
+<!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_31"></span></td>
+<td class="trow1">
+<strong><a href="forum-31.html">News // Nouvelles</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_32"></span></td>
+<td class="trow2">
+<strong><a href="forum-32.html">Personal Life // La vie privée</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_79"></span></td>
+<td class="trow1">
+<strong><a href="forum-79.html">Public Supply // Approvisionnement public</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_33"></span></td>
+<td class="trow2">
+<strong><a href="forum-33.html">Job &amp; Economy // Emploi &amp; Économie</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_34"></span></td>
+<td class="trow1">
+<strong><a href="forum-34.html">Help needed // L'aide nécessaire</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_35"></span></td>
+<td class="trow2">
+<strong><a href="forum-35.html">Job Exchange // Bourse de l'emploi</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_36"></span></td>
+<td class="trow1">
+<strong><a href="forum-36.html">Other // Autres</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum -->
+</tbody>
+</table>
+<br />
+<!-- end: forumbit_depth1_cat --><!-- start: forumbit_depth1_cat -->
+<table border="0" cellspacing="0" cellpadding="5" class="tborder">
+<thead>
+<tr>
+<td class="thead" colspan="5">
+<div class="expcolimage"><img src="https://coronavirusforum.eu/images/collapse.png" id="cat_41_img" class="expander" alt="[-]" title="[-]" /></div>
+<div><strong><a href="forum-41.html">Switzerland // Schweiz</a></strong><br /><div class="smalltext"></div></div>
+</td>
+</tr>
+</thead>
+<tbody style="" id="cat_41_e">
+<tr>
+<td class="tcat" colspan="2"><span class="smalltext"><strong>Forum</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Threads</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Posts</strong></span></td>
+<td class="tcat" width="200" align="center"><span class="smalltext"><strong>Last Post</strong></span></td>
+</tr>
+<!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_42"></span></td>
+<td class="trow1">
+<strong><a href="forum-42.html">News // Aktuelle Meldungen</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_43"></span></td>
+<td class="trow2">
+<strong><a href="forum-43.html">Personal Life // Privatleben</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_80"></span></td>
+<td class="trow1">
+<strong><a href="forum-80.html">Public Supply // Öffentliche Versorgung</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_44"></span></td>
+<td class="trow2">
+<strong><a href="forum-44.html">Job &amp; Economy // Beruf &amp; Wirtschaft </a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_45"></span></td>
+<td class="trow1">
+<strong><a href="forum-45.html">Help needed // Hilfe gesucht</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_46"></span></td>
+<td class="trow2">
+<strong><a href="forum-46.html">Job Exchange // Stellenbörse</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_47"></span></td>
+<td class="trow1">
+<strong><a href="forum-47.html">Other // Sonstiges</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum -->
+</tbody>
+</table>
+<br />
+<!-- end: forumbit_depth1_cat --><!-- start: forumbit_depth1_cat -->
+<table border="0" cellspacing="0" cellpadding="5" class="tborder">
+<thead>
+<tr>
+<td class="thead" colspan="5">
+<div class="expcolimage"><img src="https://coronavirusforum.eu/images/collapse.png" id="cat_48_img" class="expander" alt="[-]" title="[-]" /></div>
+<div><strong><a href="forum-48.html">Austria // Österreich</a></strong><br /><div class="smalltext"></div></div>
+</td>
+</tr>
+</thead>
+<tbody style="" id="cat_48_e">
+<tr>
+<td class="tcat" colspan="2"><span class="smalltext"><strong>Forum</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Threads</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Posts</strong></span></td>
+<td class="tcat" width="200" align="center"><span class="smalltext"><strong>Last Post</strong></span></td>
+</tr>
+<!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_49"></span></td>
+<td class="trow1">
+<strong><a href="forum-49.html">News // Aktuelle Meldungen</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_50"></span></td>
+<td class="trow2">
+<strong><a href="forum-50.html">Personal Life // Privatleben</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_81"></span></td>
+<td class="trow1">
+<strong><a href="forum-81.html">Public Supply // Öffentliche Versorgung</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_51"></span></td>
+<td class="trow2">
+<strong><a href="forum-51.html">Job &amp; Economy // Beruf &amp; Wirtschaft </a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_52"></span></td>
+<td class="trow1">
+<strong><a href="forum-52.html">Help needed // Hilfe gesucht</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_53"></span></td>
+<td class="trow2">
+<strong><a href="forum-53.html">Job Exchange // Stellenbörse</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_54"></span></td>
+<td class="trow1">
+<strong><a href="forum-54.html">Other // Sonstiges</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum -->
+</tbody>
+</table>
+<br />
+<!-- end: forumbit_depth1_cat --><!-- start: forumbit_depth1_cat -->
+<table border="0" cellspacing="0" cellpadding="5" class="tborder">
+<thead>
+<tr>
+<td class="thead" colspan="5">
+<div class="expcolimage"><img src="https://coronavirusforum.eu/images/collapse.png" id="cat_55_img" class="expander" alt="[-]" title="[-]" /></div>
+<div><strong><a href="forum-55.html">Sweden // Sverige</a></strong><br /><div class="smalltext"></div></div>
+</td>
+</tr>
+</thead>
+<tbody style="" id="cat_55_e">
+<tr>
+<td class="tcat" colspan="2"><span class="smalltext"><strong>Forum</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Threads</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Posts</strong></span></td>
+<td class="tcat" width="200" align="center"><span class="smalltext"><strong>Last Post</strong></span></td>
+</tr>
+<!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_56"></span></td>
+<td class="trow1">
+<strong><a href="forum-56.html">News // Nyheter</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_57"></span></td>
+<td class="trow2">
+<strong><a href="forum-57.html">Personal Life // Privatliv</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_82"></span></td>
+<td class="trow1">
+<strong><a href="forum-82.html">Public Supply // Offentligt utbud</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_58"></span></td>
+<td class="trow2">
+<strong><a href="forum-58.html">Job &amp; Economy // Jobb &amp; Ekonomi</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_59"></span></td>
+<td class="trow1">
+<strong><a href="forum-59.html">Help needed // Hjälp ville</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_60"></span></td>
+<td class="trow2">
+<strong><a href="forum-60.html">Job Exchange // Jobbutbyte</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_61"></span></td>
+<td class="trow1">
+<strong><a href="forum-61.html">Other // Andra</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum -->
+</tbody>
+</table>
+<br />
+<!-- end: forumbit_depth1_cat --><!-- start: forumbit_depth1_cat -->
+<table border="0" cellspacing="0" cellpadding="5" class="tborder">
+<thead>
+<tr>
+<td class="thead" colspan="5">
+<div class="expcolimage"><img src="https://coronavirusforum.eu/images/collapse.png" id="cat_62_img" class="expander" alt="[-]" title="[-]" /></div>
+<div><strong><a href="forum-62.html">Denmark // Danmark</a></strong><br /><div class="smalltext"></div></div>
+</td>
+</tr>
+</thead>
+<tbody style="" id="cat_62_e">
+<tr>
+<td class="tcat" colspan="2"><span class="smalltext"><strong>Forum</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Threads</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Posts</strong></span></td>
+<td class="tcat" width="200" align="center"><span class="smalltext"><strong>Last Post</strong></span></td>
+</tr>
+<!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_64"></span></td>
+<td class="trow1">
+<strong><a href="forum-64.html">News // Nyheder</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_63"></span></td>
+<td class="trow2">
+<strong><a href="forum-63.html">Personal Life // Privatliv</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_83"></span></td>
+<td class="trow1">
+<strong><a href="forum-83.html">Public Supply // Offentlig levering</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_65"></span></td>
+<td class="trow2">
+<strong><a href="forum-65.html">Job &amp; Economy // Erhverv og økonomi</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_66"></span></td>
+<td class="trow1">
+<strong><a href="forum-66.html">Help needed // Hjælp ønsket</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_67"></span></td>
+<td class="trow2">
+<strong><a href="forum-67.html">Job Exchange // Jobudveksling</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_68"></span></td>
+<td class="trow1">
+<strong><a href="forum-68.html">Other // Andre</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum -->
+</tbody>
+</table>
+<br />
+<!-- end: forumbit_depth1_cat --><!-- start: forumbit_depth1_cat -->
+<table border="0" cellspacing="0" cellpadding="5" class="tborder">
+<thead>
+<tr>
+<td class="thead" colspan="5">
+<div class="expcolimage"><img src="https://coronavirusforum.eu/images/collapse.png" id="cat_69_img" class="expander" alt="[-]" title="[-]" /></div>
+<div><strong><a href="forum-69.html">Netherlands // Nederland</a></strong><br /><div class="smalltext"></div></div>
+</td>
+</tr>
+</thead>
+<tbody style="" id="cat_69_e">
+<tr>
+<td class="tcat" colspan="2"><span class="smalltext"><strong>Forum</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Threads</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>Posts</strong></span></td>
+<td class="tcat" width="200" align="center"><span class="smalltext"><strong>Last Post</strong></span></td>
+</tr>
+<!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_70"></span></td>
+<td class="trow1">
+<strong><a href="forum-70.html">News // Nieuws</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_71"></span></td>
+<td class="trow2">
+<strong><a href="forum-71.html">Personal Life // Privéleven</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_84"></span></td>
+<td class="trow1">
+<strong><a href="forum-84.html">Public Supply // Publieke voorziening</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_72"></span></td>
+<td class="trow2">
+<strong><a href="forum-72.html">Job &amp; Economy // Beroep &amp; Economie</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_73"></span></td>
+<td class="trow1">
+<strong><a href="forum-73.html">Help needed // Gewenste hulp</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow2" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_74"></span></td>
+<td class="trow2">
+<strong><a href="forum-74.html">Job Exchange // Jobruil</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="center" style="white-space: nowrap">0</td>
+<td class="trow2" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum --><!-- start: forumbit_depth2_forum -->
+<tr>
+<td class="trow1" align="center" width="1"><span class="forum_status forum_off ajax_mark_read" title="Forum Contains No New Posts" id="mark_read_75"></span></td>
+<td class="trow1">
+<strong><a href="forum-75.html">Other / Andere</a></strong><div class="smalltext"></div>
+</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="center" style="white-space: nowrap">0</td>
+<td class="trow1" align="right" style="white-space: nowrap"><!-- start: forumbit_depth2_forum_lastpost_never -->
+<div style="text-align: center;">Never</div>
+<!-- end: forumbit_depth2_forum_lastpost_never --></td>
+</tr>
+<!-- end: forumbit_depth2_forum -->
+</tbody>
+</table>
+<br />
+<!-- end: forumbit_depth1_cat -->
+<!-- start: index_boardstats -->
+<table border="0" cellspacing="0" cellpadding="5" class="tborder">
+<thead>
+<tr>
+<td class="thead">
+<div class="expcolimage"><img src="https://coronavirusforum.eu/images/collapse.png" id="boardstats_img" class="expander" alt="[-]" title="[-]" /></div>
+<div><strong>Board Statistics</strong></div>
+</td>
+</tr>
+</thead>
+<tbody style="" id="boardstats_e">
+<!-- start: index_whosonline -->
+<tr>
+<td class="tcat"><span class="smalltext"><strong>Who's Online</strong> [<a href="online.php">Complete List</a>]</span></td>
+</tr>
+<tr>
+<td class="trow1"><span class="smalltext">1 user active in the past 15 minutes (0 members, 0 of whom are invisible, and 1 guest).<br /></span></td>
+</tr>
+<!-- end: index_whosonline -->
+
+<!-- start: index_stats -->
+<tr><td class="tcat"><span class="smalltext"><strong>Board Statistics</strong></span></td></tr>
+<tr>
+<td class="trow1"><span class="smalltext">
+Our members have made a total of 4 posts in 4 threads.<br />
+We currently have 2 members registered.<br />
+Please welcome our newest member, <b><a href="https://coronavirusforum.eu/user-19.html">omega</a></b><br />
+The most users online at one time was 22 on Today at 08:26 AM
+</span>
+</td>
+</tr>
+<!-- end: index_stats -->
+<tr>
+	<td class="tfoot" style="text-align: right">
+		<span class="smalltext">
+			
+			<!-- start: index_statspage -->
+<a href="stats.php">Forum Statistics</a>
+<!-- end: index_statspage -->
+		</span>
+	</td>
+</tr>
+</tbody>
+</table>
+<br />
+<!-- end: index_boardstats -->
+
+<dl class="forum_legend smalltext">
+	<dt><span class="forum_status forum_on" title="Forum Contains New Posts"></span></dt>
+	<dd>Forum Contains New Posts</dd>
+
+	<dt><span class="forum_status forum_off" title="Forum Contains No New Posts"></span></dt>
+	<dd>Forum Contains No New Posts</dd>
+
+	<dt><span class="forum_status forum_offclose" title="Forum is Closed"></span></dt>
+	<dd>Forum is Closed</dd>
+
+	<dt><span class="forum_status forum_offlink" title="Redirect Forum"></span></dt>
+	<dd>Redirect Forum</dd>
+</dl>
+<br class="clear" />
+<!-- start: footer -->
+
+	</div>
+</div>
+<div id="footer">
+	<div class="upper">
+		<div class="wrapper">
+			
+			<!-- start: footer_themeselect -->
+<div class="theme">
+<form method="POST" action="/index.php" id="theme_select">
+	
+	<input type="hidden" name="my_post_key" value="e50743863ad868d47e39cdfb5fb007ae" />
+	<!-- start: footer_themeselector -->
+<select name="theme" onchange="MyBB.changeTheme();">
+<optgroup label="Quick Theme Select">
+<!-- start: usercp_themeselector_option -->
+<option value="2">Default</option>
+<!-- end: usercp_themeselector_option --><!-- start: usercp_themeselector_option -->
+<option value="3">Emerald (Release)</option>
+<!-- end: usercp_themeselector_option -->
+</optgroup>
+</select>
+<!-- end: footer_themeselector -->
+	<!-- start: gobutton -->
+<input type="submit" class="button" value="Go" />
+<!-- end: gobutton -->
+</form>
+</div>
+<!-- end: footer_themeselect -->
+			<ul class="menu bottom_links">
+				<!-- start: footer_showteamlink -->
+<li><a href="showteam.php">Forum Team</a></li>
+<!-- end: footer_showteamlink -->
+				<!-- start: footer_contactus -->
+<li><a href="https://coronavirusforum.eu/info@coronavirusforum.eu">Contact Us</a></li>
+<!-- end: footer_contactus -->
+				<li><a href="https://coronavirusforum.eu/">Corona Virus Forum</a></li>
+				<li><a href="#top">Return to Top</a></li>
+				<li><a href="https://coronavirusforum.eu/archive/index.php">Lite (Archive) Mode</a></li>
+				<li><a href="https://coronavirusforum.eu/misc.php?action=markread">Mark all forums read</a></li>
+				<li><a href="https://coronavirusforum.eu/misc.php?action=syndication">RSS Syndication</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="lower">
+		<div class="wrapper">
+			<span id="current_time"><strong>Current time:</strong> 03-19-2020, 05:53 PM</span>
+			<span id="copyright">
+				<!-- MyBB is free software developed and maintained by a volunteer community.
+					It would be much appreciated by the MyBB Group if you left the full copyright and "powered by" notice intact,
+					to show your support for MyBB.  If you choose to remove or modify the copyright below,
+					you may be refused support on the MyBB Community Forums.
+
+					This is free software, support us and we'll support you. -->
+				This forum is a non-governmental service | Steven Broschart - Am Ziegelberg 12 - 85259 Wiedenzhausen - Germany | info@coronavirusforum.eu
+				<!-- End powered by -->
+			</span>
+		</div>
+	</div>
+</div>
+<!-- The following piece of code allows MyBB to run scheduled tasks. DO NOT REMOVE --><!-- start: task_image -->
+<img src="https://coronavirusforum.eu/task.php" width="1" height="1" alt="" />
+<!-- end: task_image --><!-- End task image code -->
+
+</div>
+<!-- end: footer -->
 </body>
 </html>
+<!-- end: index -->

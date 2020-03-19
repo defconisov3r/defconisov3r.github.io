@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="it-IT"
+    xmlns="https://www.w3.org/1999/xhtml"
+    xmlns:og="https://ogp.me/ns#" 
+    xmlns:fb="http://www.facebook.com/2008/fbml">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>diAry &#8211; digital Arianna &#8211; App per il contenimento di COVID-19</title>
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="diAry - digital Arianna &raquo; Feed" href="https://covid19app.uniurb.it/feed/" />
+<link rel="alternate" type="application/rss+xml" title="diAry - digital Arianna &raquo; Feed dei commenti" href="https://covid19app.uniurb.it/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="diAry - digital Arianna &raquo; diAry: fermiamo insieme COVID-19 Feed dei commenti" href="https://covid19app.uniurb.it/applicazione/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/covid19app.uniurb.it\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://covid19app.uniurb.it/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='lineawesome-icon-min-css'  href='https://covid19app.uniurb.it/wp-content/themes/design-italia/lib/bootstrap-italia/css/line-awesome.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-italia-min-css'  href='https://covid19app.uniurb.it/wp-content/themes/design-italia/lib/bootstrap-italia/css/bootstrap-italia.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-italia-map-css'  href='https://covid19app.uniurb.it/wp-content/themes/design-italia/lib/bootstrap-italia/css/bootstrap-italia.min.css.map?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-italia-icon-font-css'  href='https://covid19app.uniurb.it/wp-content/themes/design-italia/lib/bootstrap-italia/css/italia-icon-font.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='general-style-css'  href='https://covid19app.uniurb.it/wp-content/themes/design-italia/style.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='https://api.w.org/' href='https://covid19app.uniurb.it/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://covid19app.uniurb.it/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://covid19app.uniurb.it/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.3.2" />
+<link rel="canonical" href="https://covid19app.uniurb.it/" />
+<link rel='shortlink' href='https://covid19app.uniurb.it/' />
+<link rel="alternate" type="application/json+oembed" href="https://covid19app.uniurb.it/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcovid19app.uniurb.it%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://covid19app.uniurb.it/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcovid19app.uniurb.it%2F&#038;format=xml" />
+<meta property="og:locale" content="it_IT" /><meta property="og:type" content="article" /><meta property="og:title" content="diAry: fermiamo insieme COVID-19 | diAry - digital Arianna" /><meta property="og:description" content="&quot;Digital Arianna&quot;, diAry, è un’applicazione mobile che consente di tenere traccia, sul proprio dispositivo, degli spostamenti e delle circostanze rilevanti ai fini del contenimento del&hellip;" /><meta property="og:url" content="https://covid19app.uniurb.it/" /><meta property="og:site_name" content="diAry - digital Arianna" /><meta property="og:image" content="https://covid19app.uniurb.it/wp-content/uploads/2020/03/mockup.png" /><meta name="twitter:card" content="summary_large_image" />  <style type="text/css">
+    .it-header-center-wrapper, .it-header-navbar-wrapper, .it-header-wrapper { background-color: #006699; }
+    a, a:hover, a.read-more, .menu-main .nav li ul a, .menu-main .nav li ul a:hover, .menu-main .nav li:hover ul a { color: #006699; }
+    button, input[type="submit"], .btn-primary { background-color: #006699; }
+    .btn-primary:hover, .btn-primary:not(:disabled):not(.disabled):active { background-color: #006699; box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.1); }
+    .btn-outline-primary { color: #006699; box-shadow: inset 0 0 0 1px #006699; }
+    .btn-outline-primary:hover, .btn-outline-primary:not(:disabled):not(.disabled):active { color: #006699; box-shadow: inset 0 0 0 2px #006699; }
+    html, #footer, .it-footer-main { background-color: #003366; }
+    #footer a { color: #ffffff; }
+  </style>
+  <link rel="icon" href="https://covid19app.uniurb.it/wp-content/uploads/2020/03/cropped-logoSfondoTrasp-1-1-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://covid19app.uniurb.it/wp-content/uploads/2020/03/cropped-logoSfondoTrasp-1-1-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://covid19app.uniurb.it/wp-content/uploads/2020/03/cropped-logoSfondoTrasp-1-1-180x180.png" />
+<meta name="msapplication-TileImage" content="https://covid19app.uniurb.it/wp-content/uploads/2020/03/cropped-logoSfondoTrasp-1-1-270x270.png" />
+   </head>
+   <body class="home page-template-default page page-id-17 wp-custom-logo" ontouchstart>
+      <div id="wrapper" class="hfeed">
+         <header id="header" class="" role="banner">
+
+         <div class="it-header-wrapper">
+           <div class="it-header-slim-wrapper">
+             <div class="container">
+               <div class="row">
+                 <div class="col-12">
+                   <div class="it-header-slim-wrapper-content">
+                     <!-- <a class="d-none d-lg-block navbar-brand" href="#"> -->
+                        <img class="header-slim-img" alt="" src="https://covid19app.uniurb.it/wp-content/uploads/2020/03/cropped-uniurbit-2.png">
+                     <!-- </a> -->
+                                        </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <div class="it-nav-wrapper">
+             <div class="it-header-center-wrapper">
+               <div class="container">
+                 <div class="row">
+                   <div class="col-12">
+                     <div class="it-header-center-content-wrapper">
+                       <div class="it-brand-wrapper">
+                         <a href="https://covid19app.uniurb.it/" title="diAry - digital Arianna" rel="home">
+                           <img class="icon" src="https://covid19app.uniurb.it/wp-content/uploads/2020/03/cropped-logoBiancoSfondo-1.png" alt="diAry - digital Arianna">                           <div class="it-brand-text">
+                             <h2 class="no_toc">diAry - digital Arianna</h2>
+                             <h3 class="no_toc d-none d-md-block">App per il contenimento di COVID-19</h3>
+                           </div>
+                         </a>
+                       </div>
+                       <div class="it-right-zone">
+                         <div class="it-socials d-none d-md-flex">
+                                                    </div>
+                         <div class="it-search-wrapper">
+                           <form role="search" method="get" id="searchform" class="searchform" action="https://covid19app.uniurb.it/">
+				<div>
+					<label class="screen-reader-text" for="s">Ricerca per:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Cerca" />
+				</div>
+			</form>                         </div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+
+             <div class="it-header-navbar-wrapper">
+               <nav class="menu-main" role="navigation">
+               <div class="container">
+                 <div class="row">
+                   <div class="col-12">
+                     <input type="checkbox" id="show-menu-main" role="button">
+                     <label for="show-menu-main" class="show-menu-main">Menu</label>
+
+                                        </div>
+                 </div>
+               </div>
+               </nav>
+             </div>
+
+           </div>
+         </div>
+         </header>
+
+         <div id="container"><section id="content" role="main" class="container">
+   <div class="container">
+      <div class="row">
+
+      <div class="col-lg-8 offset-lg-2">
+                  <article id="post-17" class="post-17 page type-page status-publish has-post-thumbnail hentry">
+            <header class="header mt-5">
+               <h1 class="entry-title">diAry: fermiamo insieme COVID-19</h1>
+                           </header>
+            <section class="entry-content">
+               <img width="1268" height="1169" src="https://covid19app.uniurb.it/wp-content/uploads/2020/03/mockup.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://covid19app.uniurb.it/wp-content/uploads/2020/03/mockup.png 1268w, https://covid19app.uniurb.it/wp-content/uploads/2020/03/mockup-300x277.png 300w, https://covid19app.uniurb.it/wp-content/uploads/2020/03/mockup-1024x944.png 1024w, https://covid19app.uniurb.it/wp-content/uploads/2020/03/mockup-768x708.png 768w" sizes="(max-width: 1268px) 100vw, 1268px" />               
+<p>&#8220;Digital Arianna&#8221;,<strong> diAry,</strong> è un’applicazione mobile che consente di <strong>tenere traccia</strong>, sul proprio dispositivo, <strong>degli spostamenti e delle circostanze</strong> rilevanti ai fini del contenimento del contagio da <strong>COVID-19</strong>. Per fronteggiare la diffusione del virus è infatti essenziale risalire ai luoghi e alle persone frequentati durante il periodo di incubazione.&nbsp;<br></p>
+
+
+
+<p>I dati sono conservati <strong>sul dispositivo personale dell’utente</strong>, che può decidere liberamente di consultarli, esportarli ed eventualmente incrociarli con informazioni di pubblica utilità.<br></p>
+
+
+
+<p>Adottare <strong>comportamenti responsabili</strong> e conservarne memoria è il modo più efficace con cui ogni individuo può contribuire alla salute pubblica. Tale contributo viene riconosciuto e quantificato in termini di WOM, speciali certificati che riconoscono il valore sociale delle azioni individuali.&nbsp;<br></p>
+
+
+
+<p>I <strong>WOM</strong> (acronimo di <em>Worth One Minute</em>) possono essere utilizzati come voucher, ai quali esercenti e fornitori di servizi possono attribuire un valore concedendo sconti e agevolazioni. Questo semplice meccanismo premiale contribuisce alla <strong>coesione sociale</strong>, attribuendo un valore al rispetto delle misure contenitive e offrendo un semplice meccanismo per legare questo atto di responsabilità all’<strong>economia</strong> dei territori coinvolti.<br></p>
+
+
+
+<p><strong>Come un filo d’Arianna</strong>, i dati conservati sul proprio smartphone offrono una traccia attendibile per uscire dal labirinto del COVID-19.<br></p>
+
+
+
+<h2>Come funziona diAry?</h2>
+
+
+
+<div class="wp-block-cover has-background-dim" style="background-image:url(https://covid19app.uniurb.it/wp-content/uploads/2020/03/close-up-hand-using-smartphone-PPVQNRE-1.jpg)"><div class="wp-block-cover__inner-container">
+<p class="has-text-align-center has-big-font-size"><img class="wp-image-28" style="width: 150px;" src="https://covid19app.uniurb.it/wp-content/uploads/2020/03/logoBiancoSfondo-1.png" alt="" srcset="https://covid19app.uniurb.it/wp-content/uploads/2020/03/logoBiancoSfondo-1.png 1000w, https://covid19app.uniurb.it/wp-content/uploads/2020/03/logoBiancoSfondo-1-278x300.png 278w, https://covid19app.uniurb.it/wp-content/uploads/2020/03/logoBiancoSfondo-1-948x1024.png 948w, https://covid19app.uniurb.it/wp-content/uploads/2020/03/logoBiancoSfondo-1-768x829.png 768w" sizes="(max-width: 1000px) 100vw, 1000px" /></p>
+</div></div>
+
+
+
+<ol><li>rileva automaticamente la <strong>posizione </strong>e gli <strong>spostamenti </strong>dell’utente e ne conserva <strong>memoria locale</strong> (cioè sul dispositivo personale), senza interferire con il normale funzionamento dello smartphone e campionando la posizione in modo intelligente, cioè solo quando cambia significativamente, in modo da impegnare al minimo risorse e memoria;</li><li>permette all&#8217;utente di <strong>etichettare tutti i luoghi</strong> in cui si ferma per almeno 5 minuti e ne mantiene memoria riconoscendoli nei giorni successivi;</li><li>calcola <strong>statistiche giornaliere</strong> del tempo trascorso in ciascun luogo o in movimento, riconoscendo se gli spostamenti avvengono a piedi, in bicicletta o su veicoli a motore (che permette di classificare);</li><li>consente di <strong>annotare</strong> in qualsiasi momento <strong>eventi o situazioni</strong> di rilievo;</li><li>permette di <strong>conferire</strong> <strong>statistiche</strong> giornaliere ad un database centrale, <strong>in modo anonimo e volontario</strong>, contribuendo alla costruzione di un <strong>open data set</strong>;</li><li><strong>premia i comportamenti responsabili</strong>, permettendo di riscuotere a fine giornata un numero di <strong>WOM</strong> (voucher per il riconoscimento del valore sociale) proporzionale al tempo di utilizzo dell&#8217;App e al tempo trascorso a casa;</li><li>permette all&#8217;utente di <strong>visionare in qualsiasi momento tutte le tracce </strong>raccolte nel proprio dispositivo<strong>, </strong>di<strong> condividerle, </strong>di<strong> interrogarle</strong> e di <strong>incrociarle con dati di pubblica utilità.</strong></li></ol>
+
+
+
+<h2>Che garanzie offre diAry?</h2>
+
+
+
+<p><strong>Open source e open data.</strong> Digital Arianna è sviluppato senza finalità di lucro dall’Università di Urbino e da DIGIT srl, spinoff universitario, srl innovativa e società benefit, con il contributo volontario di civic hackers, sviluppatori e ricercatori. L’applicazione è distribuita liberamente. La specifica e gli algoritmi sono pubblici. Il codice sorgente verrà rilasciato in aprile 2020 per permettere alla comunità open source di contribuire al progetto. Tutte le statistiche raccolte verranno rese disponibili come open data set. Anche la piattaforma WOM, utilizzata per riconoscere il valore sociale dei comportamenti individuali, è una tecnologia open source.<br></p>
+
+
+
+<p><strong>Voucher per impegno sociale.</strong> Utilizzare l’app è una scelta individuale che genera valore sociale. Tale valore è quantificato in termini di WOM, voucher concepiti nell’ambito di un progetto europeo e inclusi tra gli strumenti di innovazione sociale digitale della Commissione Europea. I WOM possono essere guadagnati impegnandosi in azioni di interesse collettivo compiute tramite strumenti riconosciuti dalla piattaforma. L&#8217;app diAry rientra tra questi strumenti, perché contribuisce alla mobilità responsabile e al contenimento del rischio epidemico. I WOM possono essere utilizzati come voucher, che valgono il riconoscimento di sconti e agevolazioni da parte di esercenti e fornitori di servizi intenzionati a premiare chi dimostri di aver adottato comportamenti sostenibili e socialmente responsabili. Le applicazioni per la gestione dei WOM sono gratuite e il loro utilizzo è libero e privo di costi di transazione. <a href="https://wom.social/">https://wom.social/</a>&nbsp;<br></p>
+
+
+
+<p><strong>Dati personali.</strong> diAry non richiede la registrazione o la creazione di account, poichè conserva sul dispositivo personale tutti i dati che raccoglie. L’app non prevede alcuna modalità di caricamento in rete delle tracce. Consente solo di estrarle in formato csv per lasciarne all’utente piena libertà di utilizzo all’esterno dell’app. Le statistiche che vengono calcolate quotidianamente non contengono dati personali, nè informazioni puntuali che consentano di risalire alla persona a cui si riferiscono, ai suoi spostamenti, o a i luoghi che ha visitato. Solo queste informazioni statistiche possono essere conferite ad un server, in modo anonimo e su esplicita richiesta dell’utente, al fine di contribuire a formare un open data set.<br></p>
+
+
+
+<p><strong>Soggetti promotori.&nbsp;</strong></p>
+
+
+
+<ol><li><strong>Università degli Studi di Urbino Carlo Bo</strong> <a href="https://uniurb.it">https://uniurb.it</a></li><li><strong>DIGIT srl innovativa società benefit</strong> <a href="https://digit.srl/">https://digit.srl</a><br></li></ol>
+
+
+
+<h2>Quando</h2>
+
+
+
+<p>Roadmap di breve periodo</p>
+
+
+
+<ol><li> Venerdì <strong>21 marzo</strong> 2020 &#8211; Pubblicazione <strong>formato open data set</strong></li><li> Lunedì <strong>23 marzo</strong> 2020 &#8211; Distribuzione app ai <strong>beta tester</strong></li><li>Entro <strong>fine marzo</strong> 2020 &#8211; <strong>Rilascio </strong>versione beta su store <strong>Android </strong>e <strong>iOS</strong></li><li>Entro <strong>aprile</strong> 2020 &#8211; Pubblicazione <strong>progetto open source</strong></li></ol>
+
+
+
+<h2>Come contribuire al progetto</h2>
+
+
+
+<p>Il progetto è aperto alla partecipazione e al contributo di chiunque ne condivida l’intento e pensi di poter contribuire ad aumentarne l’efficacia. A titolo di esempio, sono forme di partecipazione attiva al progetto:</p>
+
+
+
+<ol><li><strong>Tutti</strong>: Commenti costruttivi e consigli su specifiche, usabilità e funzionalità</li><li><strong>Tutti</strong>: <a href="http://eepurl.com/gBCOIb">Partecipazione ai test dell’applicazione prototipo</a></li><li><strong>Sviluppatori e civic hackers</strong>: Elaborazione e visualizzazione dei dati dell’open data set</li><li><strong>Sviluppatori</strong>: Sviluppo di connettori WOM per le piattaforma di acquisto online</li><li><strong>Esercenti</strong>: Offerta di sconti e agevolazioni ai titolari di WOM</li><li><strong>Esperti di comunicazione</strong>: Organizzare campagne di sensibilizzazione all’utilizzo</li><li><strong>Influencer / testimonial</strong>: Promuovere l’adozione dell’app</li><li><strong>Tutti</strong>: Utilizzo personale dell’app!</li></ol>
+
+
+
+<!-- Begin Mailchimp Signup Form -->
+<div id="mc_embed_signup" style="text-align: center">
+<form action="https://srl.us20.list-manage.com/subscribe/post?u=a1447705c9ce8d14f34eb5f77&amp;id=7320ee21d3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<label for="mce-EMAIL">Registrati come Beta Tester</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="indirizzo e-mail" required>
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a1447705c9ce8d14f34eb5f77_7320ee21d3" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Registrati" name="subscribe" id="mc-embedded-subscribe" class="button" style="margin: 0.4em auto; color: white"></div>
+    </div>
+</form>
+</div>
+
+<!--End mc_embed_signup-->
+
+
+
+<h2>Credits</h2>
+
+
+
+<p><strong>Coordinamento</strong></p>
+
+
+
+<ol><li>Alessandro Bogliolo</li></ol>
+
+
+
+<p><strong>Sviluppo</strong></p>
+
+
+
+<ol><li>Saverio Delpriori</li><li>Gian Marco Di Francesco</li><li>Lorenz Cuno Klopfenstein</li><li>Riccardo Maldini</li><li>Brendan Paolini</li></ol>
+
+
+
+<p><strong>Competenze tematiche</strong></p>
+
+
+
+<ol><li>Mauro Magnani</li><li>Emanuela Frangipani&nbsp;</li><li>Fabio Giglietto</li><li>Cristiano-Maria Bellei</li><li>Vincenzo Fano</li><li>Marina Garassino</li><li>Gian Italo Bischi</li><li>Marco Rocchi<br></li></ol>
+
+
+
+<p><strong>Supporto e collaborazione</strong></p>
+
+
+
+<ol><li>Massimiliano Aiello</li><li>Matteo Fortini</li><li>Igor Guida</li><li>Francesco Piersoft Paolicelli</li><li>Matteo Tempestini<br></li></ol>
+
+
+
+<p class="has-text-align-right"><strong>Per informazioni:</strong> <a href="mailto:covid19app@uniurb.it">covid19app@uniurb.it</a></p>
+               <div class="entry-links"></div>
+            </section>
+         </article>
+         <section id="comments">
+<section id="comments-list" class="comments">
+<h3 class="comments-title">3 commenti</h3>
+<ul>
+		<li class="comment even thread-even depth-1" id="comment-3">
+				<div id="div-comment-3" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/f56a107d5aa1300d9031ccb73ee78f38?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/f56a107d5aa1300d9031ccb73ee78f38?s=64&#038;d=mm&#038;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn">Elena</cite> <span class="says">ha detto:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://covid19app.uniurb.it/#comment-3">
+			19 Marzo, 2020 alle 12:04 pm				</a>
+						</div>
+
+		<p>Benissimo, sono pronta</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://covid19app.uniurb.it/?replytocom=3#respond' data-commentid="3" data-postid="17" data-belowelement="div-comment-3" data-respondelement="respond" aria-label='Rispondi a Elena'>Rispondi</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-4">
+				<div id="div-comment-4" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/b00f801511ed8cb2abe5963e627e927e?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/b00f801511ed8cb2abe5963e627e927e?s=64&#038;d=mm&#038;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn">Utente</cite> <span class="says">ha detto:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://covid19app.uniurb.it/#comment-4">
+			19 Marzo, 2020 alle 1:34 pm				</a>
+						</div>
+
+		<p>Complimenti per l&#8217;idea! Dai che ce la facciamo!</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://covid19app.uniurb.it/?replytocom=4#respond' data-commentid="4" data-postid="17" data-belowelement="div-comment-4" data-respondelement="respond" aria-label='Rispondi a Utente'>Rispondi</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-5">
+				<div id="div-comment-5" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/e08071c49e8974cd15762356b94860f9?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/e08071c49e8974cd15762356b94860f9?s=64&#038;d=mm&#038;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn">giuseppe campagnoli</cite> <span class="says">ha detto:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://covid19app.uniurb.it/#comment-5">
+			19 Marzo, 2020 alle 4:03 pm				</a>
+						</div>
+
+		<p>Un’ottima idea. È appena il caso di segnalare che  la nostra associazione SETA che si occupa da tempo con sede nelle Marche di protezione civile aveva proposto già dal 2016 una applicazione denominata Escape! dedicata alla educazione e gestione in relazione a numerosi rischi compreso quello biologico. Nessuno, dico nessuno, comprese alcune università volle neppure approfondire l’idea. Il progetto è naufragato per mancanza di fondi nel giro di un triennio.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://covid19app.uniurb.it/?replytocom=5#respond' data-commentid="5" data-postid="17" data-belowelement="div-comment-5" data-respondelement="respond" aria-label='Rispondi a giuseppe campagnoli'>Rispondi</a></div>
+				</div>
+				</li><!-- #comment-## -->
+</ul>
+</section>
+	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Lascia un commento <small><a rel="nofollow" id="cancel-comment-reply-link" href="/#respond" style="display:none;">Annulla risposta</a></small></h3><form action="https://covid19app.uniurb.it/wp-comments-post.php" method="post" id="commentform" class="comment-form"><p class="comment-notes"><span id="email-notes">Il tuo indirizzo email non sarà pubblicato.</span> I campi obbligatori sono contrassegnati <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Commento</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Nome <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" required='required' /></p>
+<p class="comment-form-url"><label for="url">Sito web</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200" /></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Do il mio consenso affinché un cookie salvi i miei dati  (nome, email, sito web) per il prossimo commento.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Pubblica il commento" /> <input type='hidden' name='comment_post_ID' value='17' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p></form>	</div><!-- #respond -->
+	</section>               </div>
+
+      </div>
+   </div>
+</section>
+
+<div class="clear"></div>
+</div>
+
+
+<footer id="footer" class="it-footer" role="contentinfo">
+  <div class="it-footer-main">
+    <div class="container">
+      <section>
+        <div class="row clearfix">
+          <div class="col-sm-12">
+            <div class="it-brand-wrapper">
+              <a href="https://covid19app.uniurb.it/" title="diAry - digital Arianna" rel="home">
+	               <img class="icon" src="https://covid19app.uniurb.it/wp-content/uploads/2020/03/cropped-logoBiancoSfondo-1.png" alt="diAry - digital Arianna">                <div class="it-brand-text">
+                  <h2 class="no_toc">diAry - digital Arianna</h2>
+                  <h3 class="no_toc d-none d-md-block">App per il contenimento di COVID-19</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+				          
+    </div>
+  </div>
+  <div class="it-footer-small-prints clearfix">
+   <div class="container">
+   	<div class="row">
+			<div class="col-md">
+				<ul class="nav"><li class="page_item page-item-17 current_page_item"><a href="https://covid19app.uniurb.it/" aria-current="page">diAry: fermiamo insieme COVID-19</a></li>
+</ul>
+			</div>
+			<div class="col-md text-right copyright">
+				<small>&copy; 2020 diAry - digital Arianna</small>
+			</div>
+   		
+   	</div>
+	</div>
+  </div>
+</footer>
+
+
+
+</div>
+  <script>
+    var isMobile = false; //initiate as false
+    // device detection
+    if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
+        || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))) {
+    document.body.classList.add('touch')
+    }
+    
+    const elements = document.querySelectorAll('.menu-item-has-children');
+    elements.forEach(function(el, index){
+      el.onclick = function() {
+        el.classList.toggle('active');
+      }
+    })
+
+  </script>
+<script type='text/javascript' src='https://covid19app.uniurb.it/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+<script type='text/javascript' src='https://covid19app.uniurb.it/wp-includes/js/comment-reply.min.js?ver=5.3.2'></script>
+</body>
+</html>

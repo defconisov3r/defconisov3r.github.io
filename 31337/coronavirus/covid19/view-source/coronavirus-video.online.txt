@@ -1,985 +1,1038 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title>Новый сайт успешно создан и готов к работе</title>
-  <!-- b0a8e2d8ccb04b24683d347076e80d29e451a385:d3aa2e6571e673001cb012eda23bd97d02234f0b -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=cyrillic,latin-ext" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption&amp;subset=cyrillic,latin-ext" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/solid.css"
-        integrity="sha384-wnAC7ln+XN0UKdcPvJvtqIH3jOjs9pnKnq9qX68ImXvOGz2JuFoEiCjT8jyZQX2z" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css"
-        integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
-  <style>
-
-
-    #ru, #en {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      font-family: 'PT Sans', Arial, sans-serif;
-      font-size: 16px;
-      height: 100%;
-      min-height: 768px;
-      margin: 0;
-    }
-
-    html {
-      height: 100%;
-    }
-
-    .top, .bottom, hr {
-      flex-shrink: 0;
-    }
-
-    hr {
-      height: 2px;
-      border: 0;
-      box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
-      margin: 0;
-    }
-
-    a {
-      color: #2fa3e7;
-      text-decoration: none
-    }
-
-    a:focus, a:hover {
-      color: #157ab5;
-      text-decoration: none
-    }
-
-    body {
-      font-family: 'PT Sans', Arial, sans-serif;
-      font-size: 16px;
-      height: 100%;
-      margin: 0;
-    }
-
-    .b-alert {
-        font-family: 'PT Sans', Arial, sans-serif;
-        position: relative;
-        padding: 20px 20px 20px 65px;
-        min-height: 60px;
-        box-sizing: border-box;
-        border: 1px solid #000;
-        border-radius: 0;
-        background-color: #fff;
-        background-repeat: no-repeat;
-        color: #000;
-        text-align: left;
-        font-size: 16px;
-        line-height: 20px;
-        -webkit-box-shadow: 0 2px 4px rgba(146,149,163,.5);
-        box-shadow: 0 2px 4px rgba(146,149,163,.5)
-    }
-
-    .b-alert:before {
-        background-image: url(https://cp.beget.com/img/icons/new_alert/alert.svg)
-    }
-
-    .b-alert:before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 19px;
-        left: 0;
-        width: 45px;
-        height: 20px;
-        border-radius: 0 4px 4px 0;
-        background-repeat: no-repeat;
-        background-position: center right 4px
-    }
-
-    .b-alert.b-alert--info {
-        border-color: #2fa3e7
-    }
-
-    .b-alert.b-alert--info:before {
-        background-color: #2fa3e7
-    }
-
-    .b-alert.b-alert--warning {
-        border-color: #fba700
-    }
-
-    .b-alert.b-alert--warning:before {
-        background-color: #fba700
-    }
-
-    .b-alert.b-alert--danger {
-        border-color: #bd2327
-    }
-
-    .b-alert.b-alert--danger:before {
-        background-color: #bd2327
-    }
-
-    .b-alert.b-alert--success {
-        border-color: #6ec331
-    }
-
-    .b-alert.b-alert--success:before {
-        background-color: #6ec331
-    }
-
-    .b-alert.b-alert--icon-alarm:before {
-        background-image: url(https://cp.beget.com/img/icons/new_alert/alarm.svg)
-    }
-
-    .b-alert.b-alert--icon-backup:before {
-        background-image: url(https://cp.beget.com/img/icons/new_alert/backup.svg)
-    }
-
-    .b-alert.b-alert--icon-card:before {
-        background-image: url(https://cp.beget.com/img/icons/new_alert/card.svg)
-    }
-
-    .b-alert.b-alert--icon-check:before {
-        background-image: url(https://cp.beget.com/img/icons/new_alert/check.svg)
-    }
-
-    .b-alert.b-alert--icon-database:before {
-        background-image: url(https://cp.beget.com/img/icons/new_alert/database.svg)
-    }
-
-    .b-alert.b-alert--icon-delete:before {
-        background-image: url(https://cp.beget.com/img/icons/new_alert/delete.svg)
-    }
-
-    .b-alert.b-alert--icon-domain:before {
-        background-image: url(https://cp.beget.com/img/icons/new_alert/domain.svg)
-    }
-
-    .b-alert.b-alert--icon-info:before {
-        background-image: url(https://cp.beget.com/img/icons/new_alert/info.svg)
-    }
-
-    .b-alert.b-alert--icon-locked:before {
-        background-image: url(https://cp.beget.com/img/icons/new_alert/locked.svg)
-    }
-
-    .b-alert.b-alert--icon-mail:before {
-        background-image: url(https://cp.beget.com/img/icons/new_alert/mail.svg)
-    }
-
-    .b-alert.b-alert--icon-phone:before {
-        background-image: url(https://cp.beget.com/img/icons/new_alert/phone.svg)
-    }
-
-    .b-alert.b-alert--icon-php:before {
-        background-image: url(https://cp.beget.com/img/icons/new_alert/php.svg)
-    }
-
-    .b-alert.b-alert--icon-redis:before {
-        background-image: url(https://cp.beget.com/img/icons/new_alert/redis.svg)
-    }
-
-    .b-alert.b-alert--icon-setup:before {
-        background-image: url(https://cp.beget.com/img/icons/new_alert/setup.svg)
-    }
-
-    .b-alert.b-alert--icon-support:before {
-        background-image: url(https://cp.beget.com/img/icons/new_alert/support.svg)
-    }
-
-    h1, h2 {
-      font-family: 'PT Sans Caption', Arial, sans-serif;
-      font-weight: normal;
-      margin: 0;
-    }
-
-    h1 {
-      font-size: 21px;
-      line-height: 30px;
-    }
-
-    h2 {
-      font-size: 18px;
-    }
-
-    @media screen and (min-width: 801px) {
-
-      body {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        min-height: 768px;
-      }
-
-      .top {
-        background-color: #f7f9fa;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-        flex-grow: 1;
-      }
-
-      .bottom {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-      }
-
-      header, footer, .hint {
-        width: 690px;
-        margin: 0 auto;
-      }
-
-      .hint {
-        padding-top: 30px;
-      }
-
-      header {
-        display: -webkit-inline-box;
-        display: -ms-inline-flexbox;
-        display: inline-flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-      }
-
-      main {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        width: 740px;
-        margin: 0 auto;
-      }
-
-      footer {
-        display: -webkit-inline-box;
-        display: -ms-inline-flexbox;
-        display: inline-flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        width: 690px;
-      }
-
-      .logo img {
-        max-width: 100%;
-        max-height: 75px;
-        position: relative;
-        top: 15px;
-      }
-
-      nav {
-        display: -webkit-inline-box;
-        display: -ms-inline-flexbox;
-        display: inline-flex;
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
-        justify-content: flex-end;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        padding-right: 10px;
-      }
-
-      nav a {
-        padding: 0 15px
-      }
-
-      .octo {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-      }
-
-      .octo img {
-        height: 230px;
-        max-height: 230px;
-      }
-
-      .icon img {
-        height: 75px;
-      }
-
-      .footer-col {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        padding: 15px 0;
-      }
-
-      .footer-col > * {
-        padding: 2px;
-      }
-
-      .bottom-mobile {
-        display: none;
-      }
-    }
-
-    @media screen and (max-width: 800px) {
-
-      .top {
-        margin: 0 auto;
-        background-color: #f7f9fa;
-      }
-
-      .bottom {
-        margin: 0 auto;
-        width: 95%;
-      }
-
-      header, footer, main {
-        width: 95%;
-      }
-
-      header, footer, main, .hint {
-        margin: 0 auto;
-      }
-
-      .hint {
-        padding-top: 30px;
-        margin-bottom: 30px;
-      }
-
-      .logo {
-        display: block;
-        width: 60%;
-        margin: 0 auto;
-      }
-
-      .logo img {
-        width: 100%;
-      }
-
-      .icon img {
-        display: none;
-      }
-
-      .octo {
-        width: 60%;
-        margin: 0 auto;
-      }
-
-      .octo img {
-        width: 100%;
-      }
-
-      header nav {
-        display: none;
-      }
-
-      .bottom {
-        display: none;
-      }
-
-      .bottom-mobile footer {
-        display: table;
-        width: 95%;
-        margin-bottom: 35px;
-      }
-
-      .bottom-mobile footer span {
-        text-align: right;
-        display: table-cell;
-      }
-
-      .bottom-mobile footer txt {
-        display: table-cell;
-      }
-
-      .bottom-mobile footer h2 {
-        margin-top: 20px;
-        margin-bottom: 5px;
-      }
-
-      .bottom-mobile footer p {
-        display: table-row;
-        width: 100%;
-        line-height: 25px;
-      }
-    }
-
-    .instruction-row, li {
-      margin-bottom: .5rem;
-    }
-
-    .fa-li {
-      color: #84c738;
-    }
-
-    .fa-ul {
-      margin-left: 1.3em;
-    }
-
-    span.key {
-      background-color: white;
-      padding: 5px;
-      border-radius: 5px;
-      box-shadow: 0 0 4px 0 rgba(86, 94, 113, 0.2);
-    }
-
-    .gallery {
-      padding-top: 20px;
-      display: none;
-    }
-
-    .gallery a {
-      display: block;
-      margin-bottom: 30px;
-      margin-top: 15px;
-    }
-  </style>
-</head>
-<body>
-<div id="ru">
-  <div class="top">
-    <header>
-      <a href="http://beget.com" target="_blank" title="Перейти на сайт хостинг-провайдера" class="logo">
-        <img src="https://cp.beget.com/i/logo.png">
-      </a>
-      <nav>
-        <a href="https://cp.beget.com" target="_blank">Панель управления</a>
-        <a href="https://beget.com/ru/domain-register" target="_blank">Регистрация доменов</a>
-        <a href="https://beget.com/ru/virtual-hosting" target="_blank">Тарифы</a>
-      </nav>
-    </header>
-    <main>
-      <div class="octo">
-        <img src="https://cp.beget.com/img/octo/octo_coffee.png">
-      </div>
-      <div class="b-alert b-alert--success b-alert--icon-check">
-          Новый сайт успешно создан и готов к работе. Если у Вас возникли вопросы, мы с удовольствием ответим на них.
-      </div>
-      <div class="hint" id="cache-hint"></div>
-    </main>
-  </div>
-  <hr>
-  <div class="bottom-mobile">
-    <footer>
-      <h2>Тех. поддержка</h2>
-      <p>
-        <txt>Почта:</txt>
-        <span><a href="mailto:support@beget.com">support@beget.com</a></span></p>
-      <p>
-        <txt>Россия:</txt>
-        <span>+7 (800) 700-06-08</span></p>
-      <p>
-        <txt>Украина:</txt>
-        <span>+380 (800) 802-192</span></p>
-    </footer>
-  </div>
-  <div class="bottom">
-    <footer>
-      <div class="footer-col">
-        <div>Тех. поддержка:</div>
-        <div>Бухгалтерия:</div>
-        <div>Руководство:</div>
-        <div>Telegram:</div>
-        <div>Skype:</div>
-      </div>
-      <div class="footer-col" style="padding-right: 100px;">
-        <a href="mailto:support@beget.com">support@beget.com</a>
-        <a href="mailto:bills@beget.com">bills@beget.com</a>
-        <a href="mailto:manager@beget.com">manager@beget.com</a>
-        <a href="tg://resolve?domain=begetbot">@begetbot</a>
-        <a href="https://join.skype.com/bot/ceda3526-d09b-4157-b6f0-91a646073c7e?add" target="_blank">Добавить в
-          контакты</a>
-      </div>
-      <div class="footer-col">
-        <div>Россия:</div>
-        <div>СПб:</div>
-        <div>Москва:</div>
-        <div>Украина:</div>
-        <div>Киев:</div>
-      </div>
-      <div class="footer-col">
-        <b>+7 (800) 700-06-08</b>
-        <b>+7 (812) 3854136</b>
-        <b>+7 (495) 721-80-88</b>
-        <b>+380 (800) 802-192</b>
-        <b>+380 (44) 300-02-18</b>
-      </div>
-    </footer>
-  </div>
-</div>
-
-<div id="en" style="display: none">
-  <div class="top">
-    <header>
-      <a href="http://beget.com" target="_blank" title="Web hosting home page" class="logo">
-        <img src="https://cp.beget.com/i/logo.png">
-      </a>
-      <nav>
-        <a href="https://cp.beget.com" target="_blank">Control Panel</a>
-        <a href="https://beget.com/en/domain-register" target="_blank">Domain registration</a>
-        <a href="https://beget.com/en/virtual-hosting" target="_blank">Plans</a>
-      </nav>
-    </header>
-    <main>
-      <div class="octo">
-        <img src="https://cp.beget.com/img/octo/octo_coffee.png">
-      </div>
-      <div class="b-alert b-alert--success b-alert--icon-check">
-          The new site has been successfully created and is ready to work. If you have any questions we will be happy to answer them.
-      </div>
-      <div class="hint" id="cache-hint"></div>
-    </main>
-  </div>
-  <hr>
-  <div class="bottom-mobile">
-  </div>
-  <div class="bottom">
-  </div>
-</div>
-<script type="text/template" id="hotkeyTemplate">
-  <% if ((browser.isOpera || browser.isFirefox || browser.isChrome) && browser.isMac) { %>
-  <span class="key">⌘</span> + <span class="key">R</span>
-  <% } %>
-  <% if ((browser.isOpera || browser.isFirefox || browser.isChrome) && !browser.isMac) { %>
-  <span class="key">Ctrl</span> + <span class="key">R</span>
-  <% } %>
-  <% if (browser.isIE || browser.isEdge) { %>
-  <span class="key">Ctrl</span> + <span class="key">F5</span>
-  <% } %>
-  <% if (browser.isSafari) { %>
-  <span class="key">⌥</span> + <span class="key">⌘</span> + <span class="key">E</span>
-  <% } %>
+	<!DOCTYPE html>
+		<!--[if IE 8]>
+	<html class="ie ie8" lang="ru-RU"> <![endif]-->
+	<!--[if IE 9]>
+	<html class="ie ie9" lang="ru-RU"> <![endif]-->
+	<!--[if gt IE 9]><!-->
+<html lang="ru-RU"> <!--<![endif]-->
+	<head>
+				<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="pingback" href="http://coronavirus-video.online/xmlrpc.php"/>
+
+		<title>Коронавирус онлайн последние новости на сегодня</title>
+
+<!-- All in One SEO Pack 3.3.5 от Michael Torbert из Semper Fi Web Design[451,491] -->
+<meta name="description"  content="Что такое коронавирус, что надо знать о нем, как не заразиться, профилактика. Карта распространения по странам. Признаки, симптомы, как лечить коронавирус." />
+
+<meta name="keywords"  content="коронавирус, пандемия, эпидемия, карта, лечение, новости, видео." />
+<link rel="next" href="https://coronavirus-video.online/page/2" />
+
+<script type="application/ld+json" class="aioseop-schema">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://coronavirus-video.online/#organization","url":"https://coronavirus-video.online/","name":"\u041d\u043e\u0432\u043e\u0441\u0442\u0438 \u043e \u041a\u043e\u0440\u043e\u043d\u0430\u0432\u0438\u0440\u0443\u0441\u0435 \u043d\u0430 \u0441\u0435\u0433\u043e\u0434\u043d\u044f","sameAs":[]},{"@type":"WebSite","@id":"https://coronavirus-video.online/#website","url":"https://coronavirus-video.online/","name":"\u041d\u043e\u0432\u043e\u0441\u0442\u0438 \u043e \u041a\u043e\u0440\u043e\u043d\u0430\u0432\u0438\u0440\u0443\u0441\u0435 \u043d\u0430 \u0441\u0435\u0433\u043e\u0434\u043d\u044f","publisher":{"@id":"https://coronavirus-video.online/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://coronavirus-video.online/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://coronavirus-video.online/#webpage","url":"https://coronavirus-video.online/","inLanguage":"ru-RU","name":"\u041d\u043e\u0432\u043e\u0441\u0442\u0438 \u043e \u041a\u043e\u0440\u043e\u043d\u0430\u0432\u0438\u0440\u0443\u0441\u0435 \u043d\u0430 \u0441\u0435\u0433\u043e\u0434\u043d\u044f","isPartOf":{"@id":"https://coronavirus-video.online/#website"},"about":{"@id":"https://coronavirus-video.online/#organization"}}]}</script>
+<link rel="canonical" href="https://coronavirus-video.online/" />
+<!-- All in One SEO Pack -->
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Новости о Коронавирусе на сегодня &raquo; Лента" href="https://coronavirus-video.online/feed" />
+<link rel="alternate" type="application/rss+xml" title="Новости о Коронавирусе на сегодня &raquo; Лента комментариев" href="https://coronavirus-video.online/comments/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/coronavirus-video.online\/wp-includes\/js\/wp-emoji-release.min.js?ver=dd2d6e842b763487df2ffe502e75cbfb"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='http://coronavirus-video.online/wp-includes/css/dist/block-library/style.min.css?ver=dd2d6e842b763487df2ffe502e75cbfb' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://coronavirus-video.online/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.7' type='text/css' media='all' />
+<link rel='stylesheet' id='toc-screen-css'  href='http://coronavirus-video.online/wp-content/plugins/table-of-contents-plus/screen.min.css?ver=2002' type='text/css' media='all' />
+<link rel='stylesheet' id='better-framework-main-fonts-css'  href='https://fonts.googleapis.com/css?family=Poppins:400,600,500,300%7CLora:700,400%7CRoboto:400%7CLato:400' type='text/css' media='all' />
+<script type='text/javascript' src='http://coronavirus-video.online/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://coronavirus-video.online/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='http://coronavirus-video.online/wp-content/plugins/better-reviews/includes/libs/better-framework/assets/js/html5shiv.min.js?ver=3.10.14'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script type='text/javascript' src='http://coronavirus-video.online/wp-content/plugins/better-reviews/includes/libs/better-framework/assets/js/respond.min.js?ver=3.10.14'></script>
+<![endif]-->
+<link rel='https://api.w.org/' href='https://coronavirus-video.online/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://coronavirus-video.online/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://coronavirus-video.online/wp-includes/wlwmanifest.xml" /> 
+
+<style type="text/css">div#toc_container {width: 100%;}</style><!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(61114309, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
 </script>
-<script type="text/template" id="instructionTemplateRu">
-  <div>
-    <% _.forEach(data, function(item, index) { %>
-    <div class="instruction-row">
-      <div><%- index + 1 %>. <%- item.text %></div>
-      <% if (item.image) { %>
-      <a href="<%- item.image.normal %>" data-srcset="<%- item.image.normal %> 1x, <%- item.image.retina %> 2x"
-         data-fancybox="instruction" data-caption="<%- item.text %>">
-        <img src="<%- item.image.normal %>" srcset="<%- item.image.normal %> 1x, <%- item.image.retina %> 2x" width="99"
-             alt="<%- item.text %>">
-      </a>
-      <% } %>
-    </div>
+<noscript><div><img src="https://mc.yandex.ru/watch/61114309" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --><meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="http://coronavirus-video.online/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><script type="application/ld+json">{
+    "@context": "http:\/\/schema.org\/",
+    "@type": "organization",
+    "@id": "#organization",
+    "url": "https:\/\/coronavirus-video.online\/",
+    "name": "\u041d\u043e\u0432\u043e\u0441\u0442\u0438 \u043e \u041a\u043e\u0440\u043e\u043d\u0430\u0432\u0438\u0440\u0443\u0441\u0435 \u043d\u0430 \u0441\u0435\u0433\u043e\u0434\u043d\u044f",
+    "description": ""
+}</script>
+<script type="application/ld+json">{
+    "@context": "http:\/\/schema.org\/",
+    "@type": "WebSite",
+    "name": "\u041d\u043e\u0432\u043e\u0441\u0442\u0438 \u043e \u041a\u043e\u0440\u043e\u043d\u0430\u0432\u0438\u0440\u0443\u0441\u0435 \u043d\u0430 \u0441\u0435\u0433\u043e\u0434\u043d\u044f",
+    "alternateName": "",
+    "url": "https:\/\/coronavirus-video.online\/",
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https:\/\/coronavirus-video.online\/search{search_term}",
+        "query-input": "required name=search_term"
+    }
+}</script>
+<link rel='stylesheet' id='bf-slick' href='http://coronavirus-video.online/wp-content/plugins/better-reviews/includes/libs/better-framework/assets/css/slick.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='br-numbers' href='https://fonts.googleapis.com/css?family=Oswald&text=0123456789./\%' type='text/css' media='all' />
+<link rel='stylesheet' id='better-reviews' href='http://coronavirus-video.online/wp-content/plugins/better-reviews/css/better-reviews.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='pretty-photo' href='http://coronavirus-video.online/wp-content/plugins/better-reviews/includes/libs/better-framework/assets/css/pretty-photo.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bs-icons' href='http://coronavirus-video.online/wp-content/plugins/better-reviews/includes/libs/better-framework/assets/css/bs-icons.css' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-libs' href='http://coronavirus-video.online/wp-content/themes/theme/css/theme-libs.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontawesome' href='http://coronavirus-video.online/wp-content/plugins/better-reviews/includes/libs/better-framework/assets/css/font-awesome.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='publisher' href='http://coronavirus-video.online/wp-content/themes/theme/style-7.5.4.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='-1584639378' href='http://coronavirus-video.online/wp-content/bs-booster-cache/16f744f86ca8b190d4e170df54a50d20.css' type='text/css' media='all' />
+<noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>	</head>
 
-    <% }) %>
-  </div>
-</script>
-<script type="text/template" id="instructionTemplateEn">
-  <% if (browser.isFirefox) { %>
-  <div>
-    <div class="instruction-row">1. Open the browser menu (three horizontal bars in the upper right corner of the window)</div>
-    <div class="instruction-row">2. Select "Preferences"</div>
-    <div class="instruction-row">3. Go to the "Privacy & Security" section.</div>
-    <div class="instruction-row">4. Click "Clear history..."</div>
-    <div class="instruction-row">5. In the window that appears, click "Clear Now”</div>
-  </div>
-  <% } %>
-  <% if (browser.isChrome && !browser.isYandex) { %>
-  <div>
-    <div class="instruction-row">1. Open the browser menu (three horizontal bars in the upper right corner of the window)</div>
-    <div class="instruction-row">2. Select "More tools" > "Clear browsing data..."</div>
-    <div class="instruction-row">3. Click "Clear data"</div>
-  </div>
-  <% } %>
-  <% if (browser.isSafari) { %>
-  <div>
-    <div class="instruction-row">1. In the menu bar select “Safari” > “Preferences”</div>
-    <div class="instruction-row">2. Enable “Show Develop menu in menu bar” in Advanced section and close the window</div>
-    <div class="instruction-row">3. In the menu bar select “Develop” > “Empty caches”</div>
-  </div>
-  <% } %>
-  <% if (browser.isYandex) { %>
-  <div>
-    <div class="instruction-row">1. Open the browser menu (three horizontal bars in the upper right corner of the window)</div>
-    <div class="instruction-row">2. Go to the "History" > "Settings - Clear browsing data"</div>
-    <div class="instruction-row">3. Select "Cookies and other site data" and "Cached files", click "Clear browsing data"</div>
-  </div>
-  <% } %>
-  <% if (browser.isOpera) { %>
-  <div>
-    <div class="instruction-row">1. Type ”opera://settings/clearBrowserData" in the address bar, press Enter</div>
-    <div class="instruction-row">2. Select "Cookies and other site data" and "Cached images and files", click "Clear browsing data"</div>
-  </div>
-  <% } %>
-  <% if (browser.isIE) { %>
-  <div>
-    <div class="instruction-row">1. Select “Tools” > “Delete browsing history"</div>
-    <div class="instruction-row">2. Select “Temporary Internet files and website files” and press “Delete”</div>
-  </div>
-  <% } %>
-</script>
-<script type="text/template" id="cacheTemplateRu">
-  <div class="hint">
-    <h2>Проблема уже решена? Попробуйте сбросить кэш</h2>
-    <ul class="fa-ul">
-      <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a class="clear-cache"
-                                                                          onclick="clearCache(event)" href="#">Очистите
-        кэш автоматически</a></li>
-      <% if (browser.isSafari) { %>
-      <li><span class="fa-li"><i class="fas fa-angle-right"></i></span>Нажмите <b id="hotkey"></b>, затем перезагрузите
-        страницу.
-      </li>
-      <% } else { %>
-      <li><span class="fa-li"><i class="fas fa-angle-right"></i></span>Перезагрузите страницу, нажав <b id="hotkey"></b>
-      </li>
-      <% } %>
-      <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a onclick="toggleInstruction(event)" href="#">Очистите кэш из настроек браузера <i class="fas fa-angle-down instruction-collapse-angle"></i></a>
-        <div class="gallery">
-          <div id="instruction"></div>
-          Если не помогло - вы можете связаться с нашей службой технической поддержки с помощью раздела «Обратная связь»
-          в панели управления хостингом или любым удобным для вас способом.
-        </div>
-      </li>
+<body class="home blog active-light-box ltr close-rh page-layout-2-col-right full-width main-menu-sticky-smart active-ajax-search  wpb-js-composer js-comp-ver-5.7 vc_responsive bs-ll-a" dir="ltr">
+		<div class="main-wrap content-main-wrap">
+			<header id="header" class="site-header header-style-2 boxed" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 
-    </ul>
-  </div>
-</script>
-<script type="text/template" id="cacheTemplateEn">
-  <div class="hint">
-    <h2>Is the problem solved? Try to reset the cache</h2>
-    <ul class="fa-ul">
-      <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a class="clear-cache"
-                                                                          onclick="clearCache(event)" href="#">Clear the
-        cache automatically</a></li>
-      <% if (browser.isSafari) { %>
-      <li><span class="fa-li"><i class="fas fa-angle-right"></i></span>Press <b id="hotkey"></b> and reload the page
-      </li>
-      <% } else { %>
-      <li><span class="fa-li"><i class="fas fa-angle-right"></i></span>Reload the page by pressing <b id="hotkey"></b>
-      </li>
-      <% } %>
-      <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a onclick="toggleInstruction(event)" href="#">Clear the cache from your browser settings <i class="fas fa-angle-down instruction-collapse-angle"></i></a>
-        <div class="gallery">
-          <div id="instruction"></div>
-          If it does not help - you can contact our technical support service using the "Feedback" section in the
-          hosting management panel or in any way convenient for you.
-        </div>
-      </li>
-    </ul>
-  </div>
-</script>
-<script type="text/template" id="bottomEn">
-  <footer>
-    <div class="footer-col">
-      <div>Support:</div>
-    </div>
-    <div class="footer-col" style="padding-right: 100px;">
-      <a href="mailto:support@beget.com">support@beget.com</a>
-    </div>
-    <div class="footer-col">
-      <div>Management:</div>
-    </div>
-    <div class="footer-col">
-      <a href="mailto:manager@beget.com">manager@beget.com</a>
-    </div>
-  </footer>
-</script>
-<script type="text/template" id="bottomRu">
-  <footer>
-    <div class="footer-col">
-      <div>Тех. поддержка:</div>
-      <div>Бухгалтерия:</div>
-      <div>Руководство:</div>
-      <div>Telegram:</div>
-      <div>Skype:</div>
-    </div>
-    <div class="footer-col" style="padding-right: 100px;">
-      <a href="mailto:support@beget.com">support@beget.com</a>
-      <a href="mailto:bills@beget.com">bills@beget.com</a>
-      <a href="mailto:manager@beget.com">manager@beget.com</a>
-      <a href="tg://resolve?domain=begetbot">@begetbot</a>
-      <a href="https://join.skype.com/bot/ceda3526-d09b-4157-b6f0-91a646073c7e?add" target="_blank">Добавить в контакты</a>
-    </div>
-    <div class="footer-col">
-      <div>Россия:</div>
-      <div>СПб:</div>
-      <div>Москва:</div>
-      <div>Украина:</div>
-      <div>Киев:</div>
-    </div>
-    <div class="footer-col">
-      <b>+7 (800) 700-06-08</b>
-      <b>+7 (812) 3854136</b>
-      <b>+7 (495) 721-80-88</b>
-      <b>+380 (800) 802-192</b>
-      <b>+380 (44) 300-02-18</b>
-    </div>
-  </footer>
-</script>
-<script type="text/template" id="bottomMobileEn">
-  <footer>
-    <h2>Support</h2>
-    <p><txt>Mail: </txt><span><a href="mailto:support@beget.com">support@beget.com</a></span></p>
-  </footer>
-</script>
-<script type="text/template" id="bottomMobileRu">
-  <footer>
-    <h2>Тех. поддержка</h2>
-    <p><txt>Почта: </txt><span><a href="mailto:support@beget.com">support@beget.com</a></span></p>
-    <p><txt>Россия:</txt> <span>+7 (800) 700-06-08</span></p>
-    <p><txt>Украина:</txt> <span>+380 (800) 802-192</span></p>
-  </footer>
-</script>
+		<section class="topbar topbar-style-1 hidden-xs hidden-xs">
+	<div class="content-wrap">
+		<div class="container">
+			<div class="topbar-inner clearfix">
+
+				
+				<div class="section-menu">
+						<div id="menu-top" class="menu top-menu-wrapper" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+		<nav class="top-menu-container">
+
+			<ul id="top-navigation" class="top-menu menu clearfix bsm-pure">
+							</ul>
+
+		</nav>
+	</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+		<div class="header-inner">
+			<div class="content-wrap">
+				<div class="container">
+					<div class="row">
+						<div class="row-height">
+							<div class="logo-col col-xs-12">
+								<div class="col-inside">
+									<div id="site-branding" class="site-branding">
+	<h1  id="site-title" class="logo h1 text-logo">
+	<a href="https://coronavirus-video.online/" itemprop="url" rel="home">
+		Coronavirus (COVID-19)	</a>
+</h1>
+</div><!-- .site-branding -->
+								</div>
+							</div>
+													</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="menu-main" class="menu main-menu-wrapper show-search-item menu-actions-btn-width-1" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<div class="main-menu-inner">
+		<div class="content-wrap">
+			<div class="container">
+
+				<nav class="main-menu-container">
+					<ul id="main-navigation" class="main-menu menu bsm-pure clearfix">
+						<li id="menu-item-124" class="menu-item menu-item-type-post_type menu-item-object-page better-anim-fade menu-item-124"><a href="https://coronavirus-video.online/karta-koronavirusa-onlajn">Карта коронавируса</a></li>
+<li id="menu-item-35" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-term-1 better-anim-fade menu-item-has-children menu-item-has-mega menu-item-mega-grid-posts menu-item-35"><a href="https://coronavirus-video.online/category/novosti-coronavirus">Коронавирус новости</a>
+<!-- Mega Menu Start -->
+	<div class="mega-menu mega-grid-posts">
+		<div class="content-wrap bs-tab-anim bs-tab-animated active">
+					<div class="bs-pagination-wrapper main-term-1 next_prev ">
+			<div class="listing listing-grid listing-grid-1 clearfix columns-4">
+		<div class="post-243 type-post format-standard has-post-thumbnail  simple-grid  listing-item listing-item-grid listing-item-grid-1 main-term-1">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-1"><a href="https://coronavirus-video.online/category/novosti-coronavirus">Коронавирус новости</a></span></div>				<a  title="В России зафиксировали новые случаи заражения коронавирусом" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/e5617d0d8b95909644cd21863bbc57e8.png" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;600&quot;:&quot;e5617d0d8b95909644cd21863bbc57e8.png&quot;}}"						class="img-holder" href="https://coronavirus-video.online/v-rossii-zafiksirovali-novye-slychai-zarajeniia-koronavirysom.html"></a>
+
+							</div>
+		<p class="title">		<a href="https://coronavirus-video.online/v-rossii-zafiksirovali-novye-slychai-zarajeniia-koronavirysom.html" class="post-title post-url">
+			В России зафиксировали новые случаи заражения коронавирусом		</a>
+		</p>	</div>
+	</div >
+	<div class="post-241 type-post format-standard has-post-thumbnail  simple-grid  listing-item listing-item-grid listing-item-grid-1 main-term-1">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-1"><a href="https://coronavirus-video.online/category/novosti-coronavirus">Коронавирус новости</a></span></div>				<a  title="Врачи назвали причину смерти пациентки с коронавирусом в Москве" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/vrachi-nazvali-prichinu-smerti-pacientki-s-koronavirusom-v-moskve-b11fc54.jpeg.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;600&quot;:&quot;vrachi-nazvali-prichinu-smerti-pacientki-s-koronavirusom-v-moskve-b11fc54.jpeg.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/vrachi-nazvali-prichiny-smerti-pacientki-s-koronavirysom-v-moskve.html"></a>
+
+							</div>
+		<p class="title">		<a href="https://coronavirus-video.online/vrachi-nazvali-prichiny-smerti-pacientki-s-koronavirysom-v-moskve.html" class="post-title post-url">
+			Врачи назвали причину смерти пациентки с коронавирусом в Москве		</a>
+		</p>	</div>
+	</div >
+	<div class="post-239 type-post format-standard has-post-thumbnail  simple-grid  listing-item listing-item-grid listing-item-grid-1 main-term-1">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-1"><a href="https://coronavirus-video.online/category/novosti-coronavirus">Коронавирус новости</a></span></div>				<a  title="Карантин из-за коронавируса на Украине. Фоторепортаж" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/karantin-iz-za-koronavirusa-na-ukraine-fotoreportazh-6a795f0.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;590&quot;:&quot;karantin-iz-za-koronavirusa-na-ukraine-fotoreportazh-6a795f0.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/karantin-iz-za-koronavirysa-na-ykraine-fotoreportaj.html"></a>
+
+							</div>
+		<p class="title">		<a href="https://coronavirus-video.online/karantin-iz-za-koronavirysa-na-ykraine-fotoreportaj.html" class="post-title post-url">
+			Карантин из-за коронавируса на Украине. Фоторепортаж		</a>
+		</p>	</div>
+	</div >
+	<div class="post-236 type-post format-standard has-post-thumbnail  simple-grid  listing-item listing-item-grid listing-item-grid-1 main-term-1">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-1"><a href="https://coronavirus-video.online/category/novosti-coronavirus">Коронавирус новости</a></span></div>				<a  title="В 80 регионах России введен режим повышенной готовности" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/v-80-regionah-rossii-vveden-rezhim-povyshennoj-gotovnosti-1927a16.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;600&quot;:&quot;v-80-regionah-rossii-vveden-rezhim-povyshennoj-gotovnosti-1927a16.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/v-80-regionah-rossii-vveden-rejim-povyshennoi-gotovnosti.html"></a>
+
+							</div>
+		<p class="title">		<a href="https://coronavirus-video.online/v-80-regionah-rossii-vveden-rejim-povyshennoi-gotovnosti.html" class="post-title post-url">
+			В 80 регионах России введен режим повышенной готовности		</a>
+		</p>	</div>
+	</div >
+	</div>
+	
+	</div><div class="bs-pagination bs-ajax-pagination next_prev main-term-1 clearfix">
+			<script>var bs_ajax_paginate_799500642 = '{"query":{"paginate":"next_prev","show_label":1,"order_by":"date","count":4,"category":"1","_layout":{"state":"1|1|0","page":"2-col-right"}},"type":"wp_query","view":"Publisher::bs_pagin_ajax_mega_grid_posts","current_page":1,"ajax_url":"\/wp-admin\/admin-ajax.php","remove_duplicates":"0","paginate":"next_prev","_layout":{"state":"1|1|0","page":"2-col-right"},"_bs_pagin_token":"a22faea"}';</script>				<a class="btn-bs-pagination prev disabled" rel="prev" data-id="799500642"
+				   title="предыдущий">
+					<i class="fa fa-angle-left"
+					   aria-hidden="true"></i> Prev				</a>
+				<a  rel="next" class="btn-bs-pagination next"
+				   data-id="799500642" title="следующий">
+					Next <i
+							class="fa fa-angle-right" aria-hidden="true"></i>
+				</a>
+				</div>		</div>
+	</div>
+
+<!-- Mega Menu End -->
+</li>
+<li id="menu-item-36" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-term-5 better-anim-fade menu-item-has-children menu-item-has-mega menu-item-mega-grid-posts menu-item-36"><a href="https://coronavirus-video.online/category/covid-2019">COVID-2019</a>
+<!-- Mega Menu Start -->
+	<div class="mega-menu mega-grid-posts">
+		<div class="content-wrap bs-tab-anim bs-tab-animated active">
+					<div class="bs-pagination-wrapper main-term-5 next_prev ">
+			<div class="listing listing-grid listing-grid-1 clearfix columns-4">
+		<div class="post-248 type-post format-standard has-post-thumbnail  simple-grid  listing-item listing-item-grid listing-item-grid-1 main-term-5">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-5"><a href="https://coronavirus-video.online/category/covid-2019">COVID-2019</a></span></div>				<a  title="Актриса «Игр престолов» заразилась коронавирусом" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/96eba25ef027eb207cf499649271018a.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;600&quot;:&quot;96eba25ef027eb207cf499649271018a.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/aktrisa-igr-prestolov-zarazilas-koronavirysom.html"></a>
+
+							</div>
+		<p class="title">		<a href="https://coronavirus-video.online/aktrisa-igr-prestolov-zarazilas-koronavirysom.html" class="post-title post-url">
+			Актриса «Игр престолов» заразилась коронавирусом		</a>
+		</p>	</div>
+	</div >
+	<div class="post-245 type-post format-standard has-post-thumbnail  simple-grid  listing-item listing-item-grid listing-item-grid-1 main-term-5">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-5"><a href="https://coronavirus-video.online/category/covid-2019">COVID-2019</a></span></div>				<a  title="В Италии продлят карантин из-за пандемии COVID-19" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/ad887b654e53128bdfacee00cc1f1049.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;610&quot;:&quot;ad887b654e53128bdfacee00cc1f1049.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/v-italii-prodlyat-karantin-iz-za-pandemii-covid-19.html"></a>
+
+							</div>
+		<p class="title">		<a href="https://coronavirus-video.online/v-italii-prodlyat-karantin-iz-za-pandemii-covid-19.html" class="post-title post-url">
+			В Италии продлят карантин из-за пандемии COVID-19		</a>
+		</p>	</div>
+	</div >
+	<div class="post-226 type-post format-standard has-post-thumbnail  simple-grid  listing-item listing-item-grid listing-item-grid-1 main-term-5">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-5"><a href="https://coronavirus-video.online/category/covid-2019">COVID-2019</a></span></div>				<a  title="Последние данные о распространении и ущербе от заболевания — в хронике “Ъ”" data-src="http://coronavirus-video.online/wp-content/themes/theme/images/default-thumb/publisher-md.png"						class="img-holder" href="https://coronavirus-video.online/poslednie-dannye-o-rasprostranenii-i-ysherbe-ot-zabolevaniia-v-hronike.html"></a>
+
+							</div>
+		<p class="title">		<a href="https://coronavirus-video.online/poslednie-dannye-o-rasprostranenii-i-ysherbe-ot-zabolevaniia-v-hronike.html" class="post-title post-url">
+			Последние данные о распространении и ущербе от заболевания — в хронике “Ъ”		</a>
+		</p>	</div>
+	</div >
+	<div class="post-209 type-post format-standard has-post-thumbnail  simple-grid  listing-item listing-item-grid listing-item-grid-1 main-term-5">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-5"><a href="https://coronavirus-video.online/category/covid-2019">COVID-2019</a></span></div>				<a  title="В Казахстане госпитализирован россиянин с коронавирусом" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/0b54e28761cdee3b791512cefe4ad0bc.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;600&quot;:&quot;0b54e28761cdee3b791512cefe4ad0bc.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/v-kazahstane-gospitalizirovan-rossiianin-s-koronavirysom.html"></a>
+
+							</div>
+		<p class="title">		<a href="https://coronavirus-video.online/v-kazahstane-gospitalizirovan-rossiianin-s-koronavirysom.html" class="post-title post-url">
+			В Казахстане госпитализирован россиянин с коронавирусом		</a>
+		</p>	</div>
+	</div >
+	</div>
+	
+	</div><div class="bs-pagination bs-ajax-pagination next_prev main-term-5 clearfix">
+			<script>var bs_ajax_paginate_1882979363 = '{"query":{"paginate":"next_prev","show_label":1,"order_by":"date","count":4,"category":"5","_layout":{"state":"1|1|0","page":"2-col-right"}},"type":"wp_query","view":"Publisher::bs_pagin_ajax_mega_grid_posts","current_page":1,"ajax_url":"\/wp-admin\/admin-ajax.php","remove_duplicates":"0","paginate":"next_prev","_layout":{"state":"1|1|0","page":"2-col-right"},"_bs_pagin_token":"1a5e893"}';</script>				<a class="btn-bs-pagination prev disabled" rel="prev" data-id="1882979363"
+				   title="предыдущий">
+					<i class="fa fa-angle-left"
+					   aria-hidden="true"></i> Prev				</a>
+				<a  rel="next" class="btn-bs-pagination next"
+				   data-id="1882979363" title="следующий">
+					Next <i
+							class="fa fa-angle-right" aria-hidden="true"></i>
+				</a>
+				</div>		</div>
+	</div>
+
+<!-- Mega Menu End -->
+</li>
+<li id="menu-item-77" class="menu-item menu-item-type-post_type menu-item-object-page better-anim-fade menu-item-77"><a href="https://coronavirus-video.online/profilaktika-koronavirusa-u-cheloveka">Информация о коронавирусе</a></li>
+<li id="menu-item-235" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-term-10 better-anim-fade menu-item-235"><a href="https://coronavirus-video.online/category/stati-o-koronaviruse">Статьи о коронавирусе</a></li>
+					</ul><!-- #main-navigation -->
+											<div class="menu-action-buttons width-1">
+															<div class="search-container close">
+									<span class="search-handler"><i class="fa fa-search"></i></span>
+
+									<div class="search-box clearfix">
+										<form role="search" method="get" class="search-form clearfix" action="https://coronavirus-video.online">
+	<input type="search" class="search-field"
+	       placeholder="Поиск..."
+	       value="" name="s"
+	       title="Искать:"
+	       autocomplete="off">
+	<input type="submit" class="search-submit" value="Поиск">
+</form><!-- .search-form -->
+									</div>
+								</div>
+														</div>
+										</nav><!-- .main-menu-container -->
+
+			</div>
+		</div>
+	</div>
+</div><!-- .menu -->
+	</header><!-- .header -->
+	<div class="rh-header clearfix dark deferred-block-exclude">
+		<div class="rh-container clearfix">
+
+			<div class="menu-container close">
+				<span class="menu-handler"><span class="lines"></span></span>
+			</div><!-- .menu-container -->
+
+			<div class="logo-container rh-text-logo">
+				<a href="https://coronavirus-video.online/" itemprop="url" rel="home">
+					Новости о Коронавирусе на сегодня				</a>
+			</div><!-- .logo-container -->
+		</div><!-- .rh-container -->
+	</div><!-- .rh-header -->
+<div class="slider-container clearfix slider-type-custom-blocks  slider-style-3-container slider-overlay-simple-gr">
+	<div class="content-wrap">
+	<div class="container">
+	<div class="row">
+	<div class="col-sm-12">
+		<div class="listing listing-modern-grid listing-modern-grid-2 clearfix slider-overlay-simple-gr">
+		<div class="mg-col mg-col-1">
+				<article class="post-248 type-post format-standard has-post-thumbnail  listing-item-1 listing-item listing-mg-item listing-mg-2-item listing-mg-type-1 main-term-5">
+	<div class="item-content">
+		<a  title="Актриса «Игр престолов» заразилась коронавирусом" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/96eba25ef027eb207cf499649271018a.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;600&quot;:&quot;96eba25ef027eb207cf499649271018a.jpg&quot;}}"				class="img-cont" href="https://coronavirus-video.online/aktrisa-igr-prestolov-zarazilas-koronavirysom.html"></a>
+		<div class="term-badges floated"><span class="term-badge term-5"><a href="https://coronavirus-video.online/category/covid-2019">COVID-2019</a></span></div>		<div class="content-container">
+			<h2 class="title">			<a href="https://coronavirus-video.online/aktrisa-igr-prestolov-zarazilas-koronavirysom.html" class="post-url post-title">
+				Актриса «Игр престолов» заразилась коронавирусом			</a>
+			</h2>		<div class="post-meta">
+
+							<a href="https://coronavirus-video.online/author/admin"
+				   title="Обзор Автор статьи"
+				   class="post-author-a">
+					<i class="post-author author">
+						admin					</i>
+				</a>
+							<span class="time"><time class="post-published updated"
+				                         datetime="2020-03-19T17:30:10+03:00">Мар 19, 2020</time></span>
+				<a href="https://coronavirus-video.online/aktrisa-igr-prestolov-zarazilas-koronavirysom.html#respond" title="Оставить комментарий дальше: &quot;Актриса «Игр престолов» заразилась коронавирусом&quot;" class="comments"><i class="fa fa-comments-o"></i> 0</a>		</div>
+				</div>
+	</div>
+	</article >
+		</div>
+		<div class="mg-col mg-col-2">
+			<div class="mg-row mg-row-1 clearfix">
+				<div class="item-2-cont">
+						<article class="post-245 type-post format-standard has-post-thumbnail  listing-item-2 listing-item listing-mg-item listing-mg-2-item listing-mg-type-1 main-term-5">
+	<div class="item-content">
+		<a  title="В Италии продлят карантин из-за пандемии COVID-19" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/ad887b654e53128bdfacee00cc1f1049.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;610&quot;:&quot;ad887b654e53128bdfacee00cc1f1049.jpg&quot;}}"				class="img-cont" href="https://coronavirus-video.online/v-italii-prodlyat-karantin-iz-za-pandemii-covid-19.html"></a>
+		<div class="term-badges floated"><span class="term-badge term-5"><a href="https://coronavirus-video.online/category/covid-2019">COVID-2019</a></span></div>		<div class="content-container">
+			<h2 class="title">			<a href="https://coronavirus-video.online/v-italii-prodlyat-karantin-iz-za-pandemii-covid-19.html" class="post-url post-title">
+				В Италии продлят карантин из-за пандемии COVID-19			</a>
+			</h2>		</div>
+	</div>
+	</article >
+				</div>
+				<div class="item-3-cont">
+						<article class="post-243 type-post format-standard has-post-thumbnail  listing-item-3 listing-item listing-mg-item listing-mg-2-item listing-mg-type-1 main-term-1">
+	<div class="item-content">
+		<a  title="В России зафиксировали новые случаи заражения коронавирусом" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/e5617d0d8b95909644cd21863bbc57e8.png" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;600&quot;:&quot;e5617d0d8b95909644cd21863bbc57e8.png&quot;}}"				class="img-cont" href="https://coronavirus-video.online/v-rossii-zafiksirovali-novye-slychai-zarajeniia-koronavirysom.html"></a>
+		<div class="term-badges floated"><span class="term-badge term-1"><a href="https://coronavirus-video.online/category/novosti-coronavirus">Коронавирус новости</a></span></div>		<div class="content-container">
+			<h2 class="title">			<a href="https://coronavirus-video.online/v-rossii-zafiksirovali-novye-slychai-zarajeniia-koronavirysom.html" class="post-url post-title">
+				В России зафиксировали новые случаи заражения коронавирусом			</a>
+			</h2>		</div>
+	</div>
+	</article >
+				</div>
+			</div>
+			<div class="mg-row mg-row-2 clearfix">
+				<div class="item-4-cont">
+						<article class="post-241 type-post format-standard has-post-thumbnail  listing-item-4 listing-item listing-mg-item listing-mg-2-item listing-mg-type-1 main-term-1">
+	<div class="item-content">
+		<a  title="Врачи назвали причину смерти пациентки с коронавирусом в Москве" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/vrachi-nazvali-prichinu-smerti-pacientki-s-koronavirusom-v-moskve-b11fc54.jpeg.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;600&quot;:&quot;vrachi-nazvali-prichinu-smerti-pacientki-s-koronavirusom-v-moskve-b11fc54.jpeg.jpg&quot;}}"				class="img-cont" href="https://coronavirus-video.online/vrachi-nazvali-prichiny-smerti-pacientki-s-koronavirysom-v-moskve.html"></a>
+		<div class="term-badges floated"><span class="term-badge term-1"><a href="https://coronavirus-video.online/category/novosti-coronavirus">Коронавирус новости</a></span></div>		<div class="content-container">
+			<h2 class="title">			<a href="https://coronavirus-video.online/vrachi-nazvali-prichiny-smerti-pacientki-s-koronavirysom-v-moskve.html" class="post-url post-title">
+				Врачи назвали причину смерти пациентки с коронавирусом в Москве			</a>
+			</h2>		</div>
+	</div>
+	</article >
+				</div>
+				<div class="item-5-cont">
+						<article class="post-239 type-post format-standard has-post-thumbnail  listing-item-5 listing-item listing-mg-item listing-mg-2-item listing-mg-type-1 main-term-1">
+	<div class="item-content">
+		<a  title="Карантин из-за коронавируса на Украине. Фоторепортаж" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/karantin-iz-za-koronavirusa-na-ukraine-fotoreportazh-6a795f0.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;590&quot;:&quot;karantin-iz-za-koronavirusa-na-ukraine-fotoreportazh-6a795f0.jpg&quot;}}"				class="img-cont" href="https://coronavirus-video.online/karantin-iz-za-koronavirysa-na-ykraine-fotoreportaj.html"></a>
+		<div class="term-badges floated"><span class="term-badge term-1"><a href="https://coronavirus-video.online/category/novosti-coronavirus">Коронавирус новости</a></span></div>		<div class="content-container">
+			<h2 class="title">			<a href="https://coronavirus-video.online/karantin-iz-za-koronavirysa-na-ykraine-fotoreportaj.html" class="post-url post-title">
+				Карантин из-за коронавируса на Украине. Фоторепортаж			</a>
+			</h2>		</div>
+	</div>
+	</article >
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+		</div><div class="content-wrap">
+	<main id="content" class="content-container">
+
+		<div class="container layout-2-col layout-2-col-1 layout-right-sidebar">
+			<div class="row main-section">
+										<div class="col-sm-8 content-column">
+								<div class="listing listing-grid listing-grid-1 clearfix columns-2">
+		<article class="post-236 type-post format-standard has-post-thumbnail   listing-item listing-item-grid listing-item-grid-1 main-term-1">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-1"><a href="https://coronavirus-video.online/category/novosti-coronavirus">Коронавирус новости</a></span></div>				<a  title="В 80 регионах России введен режим повышенной готовности" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/v-80-regionah-rossii-vveden-rezhim-povyshennoj-gotovnosti-1927a16.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;600&quot;:&quot;v-80-regionah-rossii-vveden-rezhim-povyshennoj-gotovnosti-1927a16.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/v-80-regionah-rossii-vveden-rejim-povyshennoi-gotovnosti.html"></a>
+
+							</div>
+		<h2 class="title">		<a href="https://coronavirus-video.online/v-80-regionah-rossii-vveden-rejim-povyshennoi-gotovnosti.html" class="post-title post-url">
+			В 80 регионах России введен режим повышенной готовности		</a>
+		</h2>			<div class="post-summary">
+				Фото: РИА Новости/Евгений Епанчинцев&hellip;			</div>
+			</div>
+	</article >
+	<article class="post-229 type-post format-standard has-post-thumbnail   listing-item listing-item-grid listing-item-grid-1 main-term-10">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-10"><a href="https://coronavirus-video.online/category/stati-o-koronaviruse">Статьи о коронавирусе</a></span></div>				<a  alt="симптомы заражения вирусом" title="Симптомы коронавируса" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/227395462501e5f4381d885aab1968b0.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;600&quot;:&quot;227395462501e5f4381d885aab1968b0.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/simptomy-koronavirusa.html"></a>
+
+							</div>
+		<h2 class="title">		<a href="https://coronavirus-video.online/simptomy-koronavirusa.html" class="post-title post-url">
+			Симптомы коронавируса		</a>
+		</h2>			<div class="post-summary">
+				Признаки коронавируса у человека
+Новый коронавирус попадает в организм через слизистые (дыхательных путей,&hellip;			</div>
+			</div>
+	</article >
+	<article class="post-226 type-post format-standard has-post-thumbnail   listing-item listing-item-grid listing-item-grid-1 main-term-5">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-5"><a href="https://coronavirus-video.online/category/covid-2019">COVID-2019</a></span></div>				<a  title="Последние данные о распространении и ущербе от заболевания — в хронике “Ъ”" data-src="http://coronavirus-video.online/wp-content/themes/theme/images/default-thumb/publisher-md.png"						class="img-holder" href="https://coronavirus-video.online/poslednie-dannye-o-rasprostranenii-i-ysherbe-ot-zabolevaniia-v-hronike.html"></a>
+
+							</div>
+		<h2 class="title">		<a href="https://coronavirus-video.online/poslednie-dannye-o-rasprostranenii-i-ysherbe-ot-zabolevaniia-v-hronike.html" class="post-title post-url">
+			Последние данные о распространении и ущербе от заболевания — в хронике “Ъ”		</a>
+		</h2>			<div class="post-summary">
+				Коронавирус-2020 в Китае и мире
+
+								
+
+							
+
+
+
+
+
+						
+
+						
+Число заразившихся новым видом&hellip;			</div>
+			</div>
+	</article >
+	<article class="post-217 type-post format-standard has-post-thumbnail   listing-item listing-item-grid listing-item-grid-1 main-term-1">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-1"><a href="https://coronavirus-video.online/category/novosti-coronavirus">Коронавирус новости</a></span></div>				<a  title="Как проявляется легкая форма нового коронавируса" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/e248806495b9c0f4908b325bed63acff.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;600&quot;:&quot;e248806495b9c0f4908b325bed63acff.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/kak-proiavliaetsia-legkaia-forma-novogo-koronavirysa.html"></a>
+
+							</div>
+		<h2 class="title">		<a href="https://coronavirus-video.online/kak-proiavliaetsia-legkaia-forma-novogo-koronavirysa.html" class="post-title post-url">
+			Как проявляется легкая форма нового коронавируса		</a>
+		</h2>			<div class="post-summary">
+				Большинство заразившихся новым коронавирусом — 80 процентов — переносят болезнь в легкой форме. Попробуем&hellip;			</div>
+			</div>
+	</article >
+	<article class="post-209 type-post format-standard has-post-thumbnail   listing-item listing-item-grid listing-item-grid-1 main-term-5">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-5"><a href="https://coronavirus-video.online/category/covid-2019">COVID-2019</a></span></div>				<a  title="В Казахстане госпитализирован россиянин с коронавирусом" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/0b54e28761cdee3b791512cefe4ad0bc.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;600&quot;:&quot;0b54e28761cdee3b791512cefe4ad0bc.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/v-kazahstane-gospitalizirovan-rossiianin-s-koronavirysom.html"></a>
+
+							</div>
+		<h2 class="title">		<a href="https://coronavirus-video.online/v-kazahstane-gospitalizirovan-rossiianin-s-koronavirysom.html" class="post-title post-url">
+			В Казахстане госпитализирован россиянин с коронавирусом		</a>
+		</h2>			<div class="post-summary">
+				В соответствии с данными, которые сегодня представил казахский замминистерства здравоохранения Диас Ахметшарип,&hellip;			</div>
+			</div>
+	</article >
+	<article class="post-207 type-post format-standard has-post-thumbnail   listing-item listing-item-grid listing-item-grid-1 main-term-5">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-5"><a href="https://coronavirus-video.online/category/covid-2019">COVID-2019</a></span></div>				<a  title="В Москве умерла пациентка с коронавирусом" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/c8e367ccbbb29bc2d2861765d359edbd.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;600&quot;:&quot;c8e367ccbbb29bc2d2861765d359edbd.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/v-moskve-umerla-paczientka-s-koronavirusom.html"></a>
+
+							</div>
+		<h2 class="title">		<a href="https://coronavirus-video.online/v-moskve-umerla-paczientka-s-koronavirusom.html" class="post-title post-url">
+			В Москве умерла пациентка с коронавирусом		</a>
+		</h2>			<div class="post-summary">
+				Это первый в РФ случай летального исхода от заражения коронавирусом&hellip;			</div>
+			</div>
+	</article >
+	<article class="post-204 type-post format-standard has-post-thumbnail   listing-item listing-item-grid listing-item-grid-1 main-term-1">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-1"><a href="https://coronavirus-video.online/category/novosti-coronavirus">Коронавирус новости</a></span></div>				<a  title="В оперштабе опровергли сообщения о комендантском часе в Москве" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/b989a0be575db6c872953c21f7f98ab7.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;600&quot;:&quot;b989a0be575db6c872953c21f7f98ab7.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/v-opershtabe-oprovergli-soobsheniia-o-komendantskom-chase-v-moskve.html"></a>
+
+							</div>
+		<h2 class="title">		<a href="https://coronavirus-video.online/v-opershtabe-oprovergli-soobsheniia-o-komendantskom-chase-v-moskve.html" class="post-title post-url">
+			В оперштабе опровергли сообщения о комендантском часе в Москве		</a>
+		</h2>			<div class="post-summary">
+				Информация о введении комендантского часа в Москве в связи с коронавирусом является ложной, сообщает оперативный&hellip;			</div>
+			</div>
+	</article >
+	<article class="post-197 type-post format-standard has-post-thumbnail   listing-item listing-item-grid listing-item-grid-1 main-term-1">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-1"><a href="https://coronavirus-video.online/category/novosti-coronavirus">Коронавирус новости</a></span></div>				<a  title="Из-за коронавируса в Югре ввели режим повышенной готовности" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/iz-za-koronavirusa-v-jugre-vveli-rezhim-povyshennoj-gotovnosti-4ebaf4b.jpeg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;500&quot;:&quot;iz-za-koronavirusa-v-jugre-vveli-rezhim-povyshennoj-gotovnosti-4ebaf4b.jpeg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/iz-za-koronavirysa-v-ugre-vveli-rejim-povyshennoi-gotovnosti.html"></a>
+
+							</div>
+		<h2 class="title">		<a href="https://coronavirus-video.online/iz-za-koronavirysa-v-ugre-vveli-rejim-povyshennoi-gotovnosti.html" class="post-title post-url">
+			Из-за коронавируса в Югре ввели режим повышенной готовности		</a>
+		</h2>			<div class="post-summary">
+				Коронавирус 2020
+
+&raquo;
+
+
+	Последние новости
+
+&raquo;
+
+Из-за коронавируса в Югре ввел...&hellip;			</div>
+			</div>
+	</article >
+	<article class="post-193 type-post format-standard has-post-thumbnail   listing-item listing-item-grid listing-item-grid-1 main-term-1">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-1"><a href="https://coronavirus-video.online/category/novosti-coronavirus">Коронавирус новости</a></span></div>				<a  title="«Дочка» АФК «Система» разработала экспресс-тест на коронавирус" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/dochka-afk-sistema-razrabotala-ekspress-test-na-koronavirus-405ceb3.jpeg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;600&quot;:&quot;dochka-afk-sistema-razrabotala-ekspress-test-na-koronavirus-405ceb3.jpeg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/dochka-afk-sistema-razrabotala-ekspress-test-na-koronavirys.html"></a>
+
+							</div>
+		<h2 class="title">		<a href="https://coronavirus-video.online/dochka-afk-sistema-razrabotala-ekspress-test-na-koronavirys.html" class="post-title post-url">
+			«Дочка» АФК «Система» разработала экспресс-тест на коронавирус		</a>
+		</h2>			<div class="post-summary">
+				Коронавирус 2020
+
+&raquo;
+
+
+	Последние новости
+
+&raquo;
+
+«Дочка» АФК «Система» разработ...&hellip;			</div>
+			</div>
+	</article >
+	<article class="post-185 type-post format-standard has-post-thumbnail   listing-item listing-item-grid listing-item-grid-1 main-term-5">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-5"><a href="https://coronavirus-video.online/category/covid-2019">COVID-2019</a></span></div>				<a  title="Новых зараженных в Ухане – всего по одному в день: карантин могут снять в апреле" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/489514d8d272a64e0d8c4ed69b9a4759.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;660&quot;:&quot;489514d8d272a64e0d8c4ed69b9a4759.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/novyh-zarazhennyh-v-uhane-vsego-po-odnomu-v-den-karantin-mogut-snyat-v-aprele.html"></a>
+
+							</div>
+		<h2 class="title">		<a href="https://coronavirus-video.online/novyh-zarazhennyh-v-uhane-vsego-po-odnomu-v-den-karantin-mogut-snyat-v-aprele.html" class="post-title post-url">
+			Новых зараженных в Ухане – всего по одному в день: карантин могут снять в апреле		</a>
+		</h2>			<div class="post-summary">
+				Медик проводит дезинфекцию в госпитале Уханя&hellip;			</div>
+			</div>
+	</article >
+	<article class="post-183 type-post format-standard has-post-thumbnail   listing-item listing-item-grid listing-item-grid-1 main-term-1">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-1"><a href="https://coronavirus-video.online/category/novosti-coronavirus">Коронавирус новости</a></span></div>				<a  title="В Казахстане госпитализировали россиянина с коронавирусом" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/v-kazahstane-gospitalizirovali-rossijanina-s-koronavirusom-ac1681c.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;600&quot;:&quot;v-kazahstane-gospitalizirovali-rossijanina-s-koronavirusom-ac1681c.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/v-kazahstane-gospitalizirovali-rossiianina-s-koronavirysom.html"></a>
+
+							</div>
+		<h2 class="title">		<a href="https://coronavirus-video.online/v-kazahstane-gospitalizirovali-rossiianina-s-koronavirysom.html" class="post-title post-url">
+			В Казахстане госпитализировали россиянина с коронавирусом		</a>
+		</h2>			<div class="post-summary">
+				&hellip;			</div>
+			</div>
+	</article >
+	<article class="post-181 type-post format-standard has-post-thumbnail   listing-item listing-item-grid listing-item-grid-1 main-term-5">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-5"><a href="https://coronavirus-video.online/category/covid-2019">COVID-2019</a></span></div>				<a  title="Что мы знаем и не знаем о COVID-19" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/chto-my-znaem-i-ne-znaem-o-covid-19-b45911d.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;600&quot;:&quot;chto-my-znaem-i-ne-znaem-o-covid-19-b45911d.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/chto-my-znaem-i-ne-znaem-o-covid-19.html"></a>
+
+							</div>
+		<h2 class="title">		<a href="https://coronavirus-video.online/chto-my-znaem-i-ne-znaem-o-covid-19.html" class="post-title post-url">
+			Что мы знаем и не знаем о COVID-19		</a>
+		</h2>			<div class="post-summary">
+				&hellip;			</div>
+			</div>
+	</article >
+	</div>
+	<div class="pagination bs-numbered-pagination" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement/Pagination"><span aria-current="page" class="page-numbers current">1</span>
+<a class="page-numbers" href="https://coronavirus-video.online/page/2">2</a>
+<a class="page-numbers" href="https://coronavirus-video.online/page/3">3</a>
+<a class="page-numbers" href="https://coronavirus-video.online/page/4">4</a>
+<a class="next page-numbers" href="https://coronavirus-video.online/page/2">следующий <i class="fa fa-angle-right"></i></a></div>						</div><!-- .content-column -->
+												<div class="col-sm-4 sidebar-column sidebar-column-primary">
+							<aside id="sidebar-primary-sidebar" class="sidebar" role="complementary" aria-label="Primary Sidebar Sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+	<div id="search-2" class=" h-ni w-nt primary-sidebar-widget widget widget_search"><form role="search" method="get" class="search-form clearfix" action="https://coronavirus-video.online">
+	<input type="search" class="search-field"
+	       placeholder="Поиск..."
+	       value="" name="s"
+	       title="Искать:"
+	       autocomplete="off">
+	<input type="submit" class="search-submit" value="Поиск">
+</form><!-- .search-form -->
+</div><div id="bs-mix-listing-3-4-2" class=" h-ni h-c h-c-ffffff h-bg h-bg-131a20 w-t primary-sidebar-widget widget widget_bs-mix-listing-3-4"><div class=" bs-listing bs-listing-listing-mix-3-4 bs-listing-single-tab">			<p class="section-heading sh-t6 sh-s6 main-term-none">
+
+			
+									<span class="h-text main-term-none main-link">
+						 Интересное					</span>
+				
+			
+			</p>
+				<div class="listing listing-mix-3-4 clearfix ">
+		<div class="item-inner">
+			<div class="row-1">
+					<div class="listing listing-modern-grid listing-modern-grid-3 clearfix columns-1 slider-overlay-simple-gr">
+			<div class="post-137 type-post format-standard has-post-thumbnail  listing-item-1 listing-item listing-mg-item listing-mg-3-item main-term-5 bsw-350">
+	<div class="item-content">
+		<a  title="В ВСУ ввели ограничения для борьбы с COVID-19" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/d20f443bab87c99048b96c1f7cec011c.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;610&quot;:&quot;d20f443bab87c99048b96c1f7cec011c.jpg&quot;}}"				class="img-cont" href="https://coronavirus-video.online/v-vsu-vveli-ogranicheniya-dlya-borby-s-covid-19.html"></a>
+				<div class="content-container">
+			<div class="term-badges floated"><span class="term-badge term-5"><a href="https://coronavirus-video.online/category/covid-2019">COVID-2019</a></span></div><p class="title">			<a href="https://coronavirus-video.online/v-vsu-vveli-ogranicheniya-dlya-borby-s-covid-19.html" class="post-title post-url">
+				В ВСУ ввели ограничения для борьбы с COVID-19			</a>
+			</p>		<div class="post-meta">
+
+							<a href="https://coronavirus-video.online/author/admin"
+				   title="Обзор Автор статьи"
+				   class="post-author-a">
+					<i class="post-author author">
+						admin					</i>
+				</a>
+							<span class="time"><time class="post-published updated"
+				                         datetime="2020-03-18T15:16:11+03:00">Мар 18, 2020</time></span>
+				<a href="https://coronavirus-video.online/v-vsu-vveli-ogranicheniya-dlya-borby-s-covid-19.html#respond" title="Оставить комментарий дальше: &quot;В ВСУ ввели ограничения для борьбы с COVID-19&quot;" class="comments"><i class="fa fa-comments-o"></i> 0</a>		</div>
+				</div>
+	</div>
+	</div >
+	</div>
+			</div>
+							<div class="row-2">
+						<div class="listing listing-thumbnail listing-tb-1 clearfix columns-1">
+		<div class="post-151 type-post format-standard has-post-thumbnail  listing-item-1 listing-item listing-item-thumbnail listing-item-tb-1 main-term-1">
+	<div class="item-inner clearfix">
+					<div class="featured featured-type-featured-image">
+				<a  title="ВОЗ сообщила о более 200 тыс. заразившихся коронавирусом" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/voz-soobshhila-o-bolee-200-tys-zarazivshihsja-koronavirusom-47756e1.jpeg.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;500&quot;:&quot;voz-soobshhila-o-bolee-200-tys-zarazivshihsja-koronavirusom-47756e1.jpeg.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/voz-soobshila-o-bolee-200-tys-zarazivshihsia-koronavirysom.html"></a>
+							</div>
+		<p class="title">		<a href="https://coronavirus-video.online/voz-soobshila-o-bolee-200-tys-zarazivshihsia-koronavirysom.html" class="post-url post-title">
+			ВОЗ сообщила о более 200 тыс. заразившихся коронавирусом		</a>
+		</p>		<div class="post-meta">
+
+							<span class="time"><time class="post-published updated"
+				                         datetime="2020-03-18T20:07:04+03:00">Мар 18, 2020</time></span>
+						</div>
+			</div>
+	</div >
+	<div class="post-209 type-post format-standard has-post-thumbnail  listing-item-1 listing-item listing-item-thumbnail listing-item-tb-1 main-term-5">
+	<div class="item-inner clearfix">
+					<div class="featured featured-type-featured-image">
+				<a  title="В Казахстане госпитализирован россиянин с коронавирусом" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/0b54e28761cdee3b791512cefe4ad0bc.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;600&quot;:&quot;0b54e28761cdee3b791512cefe4ad0bc.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/v-kazahstane-gospitalizirovan-rossiianin-s-koronavirysom.html"></a>
+							</div>
+		<p class="title">		<a href="https://coronavirus-video.online/v-kazahstane-gospitalizirovan-rossiianin-s-koronavirysom.html" class="post-url post-title">
+			В Казахстане госпитализирован россиянин с коронавирусом		</a>
+		</p>		<div class="post-meta">
+
+							<span class="time"><time class="post-published updated"
+				                         datetime="2020-03-19T11:49:02+03:00">Мар 19, 2020</time></span>
+						</div>
+			</div>
+	</div >
+	<div class="post-241 type-post format-standard has-post-thumbnail  listing-item-1 listing-item listing-item-thumbnail listing-item-tb-1 main-term-1">
+	<div class="item-inner clearfix">
+					<div class="featured featured-type-featured-image">
+				<a  title="Врачи назвали причину смерти пациентки с коронавирусом в Москве" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/vrachi-nazvali-prichinu-smerti-pacientki-s-koronavirusom-v-moskve-b11fc54.jpeg.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;600&quot;:&quot;vrachi-nazvali-prichinu-smerti-pacientki-s-koronavirusom-v-moskve-b11fc54.jpeg.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/vrachi-nazvali-prichiny-smerti-pacientki-s-koronavirysom-v-moskve.html"></a>
+							</div>
+		<p class="title">		<a href="https://coronavirus-video.online/vrachi-nazvali-prichiny-smerti-pacientki-s-koronavirysom-v-moskve.html" class="post-url post-title">
+			Врачи назвали причину смерти пациентки с коронавирусом в Москве		</a>
+		</p>		<div class="post-meta">
+
+							<span class="time"><time class="post-published updated"
+				                         datetime="2020-03-19T15:30:55+03:00">Мар 19, 2020</time></span>
+						</div>
+			</div>
+	</div >
+	<div class="post-113 type-post format-standard has-post-thumbnail  listing-item-1 listing-item listing-item-thumbnail listing-item-tb-1 main-term-5">
+	<div class="item-inner clearfix">
+					<div class="featured featured-type-featured-image">
+				<a  title="В Казани выписали поправившихся россиян, подхвативших COVID-19 на Diamond Princess" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/d4b2741e8ce18043518969704d2c7594.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;600&quot;:&quot;d4b2741e8ce18043518969704d2c7594.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/v-kazani-vypisali-popravivshihsya-rossiyan-podhvativshih-covid-19-na-diamond-princess.html"></a>
+							</div>
+		<p class="title">		<a href="https://coronavirus-video.online/v-kazani-vypisali-popravivshihsya-rossiyan-podhvativshih-covid-19-na-diamond-princess.html" class="post-url post-title">
+			В Казани выписали поправившихся россиян, подхвативших COVID-19 на&hellip;		</a>
+		</p>		<div class="post-meta">
+
+							<span class="time"><time class="post-published updated"
+				                         datetime="2020-03-10T12:50:51+03:00">Мар 10, 2020</time></span>
+						</div>
+			</div>
+	</div >
+	<div class="post-157 type-post format-standard has-post-thumbnail  listing-item-1 listing-item listing-item-thumbnail listing-item-tb-1 main-term-5">
+	<div class="item-inner clearfix">
+					<div class="featured featured-type-featured-image">
+				<a  title="Польша выделит $52 млрд на помощь экономике" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/e51791576d54cf53a5eaa3967081623c.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;610&quot;:&quot;e51791576d54cf53a5eaa3967081623c.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/polsha-vydelit-52-mlrd-na-pomoshh-ekonomike.html"></a>
+							</div>
+		<p class="title">		<a href="https://coronavirus-video.online/polsha-vydelit-52-mlrd-na-pomoshh-ekonomike.html" class="post-url post-title">
+			Польша выделит $52 млрд на помощь экономике		</a>
+		</p>		<div class="post-meta">
+
+							<span class="time"><time class="post-published updated"
+				                         datetime="2020-03-18T21:55:41+03:00">Мар 18, 2020</time></span>
+						</div>
+			</div>
+	</div >
+	<div class="post-100 type-post format-standard has-post-thumbnail  listing-item-1 listing-item listing-item-thumbnail listing-item-tb-1 main-term-5">
+	<div class="item-inner clearfix">
+					<div class="featured featured-type-featured-image">
+				<a  title="В &#171;ДНР&#187; попала в больницу женщина с подозрением на коронавирус" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/b53c4dc411a5c28433f1b7b87246ff97.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;610&quot;:&quot;b53c4dc411a5c28433f1b7b87246ff97.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/v-dnr-popala-v-bolniczu-zhenshhina-s-podozreniem-na-koronavirus.html"></a>
+							</div>
+		<p class="title">		<a href="https://coronavirus-video.online/v-dnr-popala-v-bolniczu-zhenshhina-s-podozreniem-na-koronavirus.html" class="post-url post-title">
+			В &#171;ДНР&#187; попала в больницу женщина с подозрением на&hellip;		</a>
+		</p>		<div class="post-meta">
+
+							<span class="time"><time class="post-published updated"
+				                         datetime="2020-03-10T12:36:39+03:00">Мар 10, 2020</time></span>
+						</div>
+			</div>
+	</div >
+	</div>
+					</div>
+						</div>
+	</div>
+</div></div></aside>
+						</div><!-- .primary-sidebar-column -->
+									</div><!-- .main-section -->
+		</div>
+
+	</main><!-- main -->
+</div><!-- .content-wrap -->
+	<footer id="site-footer" class="site-footer full-width">
+				<div class="copy-footer">
+			<div class="content-wrap">
+				<div class="container">
+						<div class="row">
+		<div class="col-lg-12">
+			<div id="menu-footer" class="menu footer-menu-wrapper" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+				<nav class="footer-menu-container">
+					<ul id="footer-navigation" class="footer-menu menu clearfix">
+						<li id="menu-item-28" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item better-anim-fade menu-item-28"><a href="https://coronavirus-video.online/" aria-current="page">Главная</a></li>
+<li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-page better-anim-fade menu-item-31"><a href="https://coronavirus-video.online/lenta">Карта сайта</a></li>
+<li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy better-anim-fade menu-item-29"><a href="https://coronavirus-video.online/privacy-policy">Политика конфиденциальности</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+					<div class="row footer-copy-row">
+						<div class="copy-1 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							© 2020 - Новости о Коронавирусе на сегодня. All Rights Reserved.						</div>
+						<div class="copy-2 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+													</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer><!-- .footer -->
+		</div><!-- .main-wrap -->
+			<span class="back-top"><i class="fa fa-arrow-up"></i></span>
 
 <script>
-    var browser = {
-        // Opera 8.0+
-        isOpera: (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0,
-        // Firefox 1.0+
-        isFirefox: typeof InstallTrigger !== 'undefined',
-        // Safari 3.0+ "[object HTMLElementConstructor]"
-        isSafari: /constructor/i.test(window.HTMLElement) || (function (p) {
-            return p.toString() === "[object SafariRemoteNotification]";
-        })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification)),
-        // Internet Explorer 6-11
-        isIE: /*@cc_on!@*/false || !!document.documentMode,
-        // Edge 20+
-        isEdge: !(/*@cc_on!@*/false || !!document.documentMode) && !!window.StyleMedia,
-        // Chrome 1+
-        isChrome: !!window.chrome && !!window.chrome.webstore,
-        isYandex: !!window.yandex,
-        isMac: window.navigator.platform.toUpperCase().indexOf('MAC') >= 0
-    };
+var bs_pagination_loc = {"loading":"<div class=\"bs-loading\"><div><\/div><div><\/div><div><\/div><div><\/div><div><\/div><div><\/div><div><\/div><div><\/div><div><\/div><\/div>"};
+</script>
+<script>
+var betterReviewsLoc = {"ajax_url":"https:\/\/coronavirus-video.online\/wp-admin\/admin-ajax.php","cp":"\/"};
+</script>
+<script>
+var publisher_theme_global_loc = {"page":{"boxed":"full-width"},"header":{"style":"style-2","boxed":"boxed"},"ajax_url":"https:\/\/coronavirus-video.online\/wp-admin\/admin-ajax.php","loading":"<div class=\"bs-loading\"><div><\/div><div><\/div><div><\/div><div><\/div><div><\/div><div><\/div><div><\/div><div><\/div><div><\/div><\/div>","translations":{"tabs_all":"\u0412\u0441\u0435","tabs_more":"\u0411\u043e\u043b\u044c\u0448\u0435","lightbox_expand":"Expand the image","lightbox_close":"Close"},"lightbox":{"not_classes":""},"main_menu":{"more_menu":"enable"},"skyscraper":{"sticky_gap":30,"sticky":true,"position":"after-header"},"share":{"more":true},"refresh_googletagads":"1","notification":{"subscribe_msg":"By clicking the subscribe button you will never miss the new articles!","subscribed_msg":"You're subscribed to notifications","subscribe_btn":"Subscribe","subscribed_btn":"Unsubscribe"}};
+var publisher_theme_ajax_search_loc = {"ajax_url":"https:\/\/coronavirus-video.online\/wp-admin\/admin-ajax.php","previewMarkup":"<div class=\"ajax-search-results-wrapper ajax-search-no-product ajax-search-fullwidth\">\n\t<div class=\"ajax-search-results\">\n\t\t<div class=\"ajax-ajax-posts-list\">\n\t\t\t<div class=\"clean-title heading-typo\">\n\t\t\t\t<span>\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0439<\/span>\n\t\t\t<\/div>\n\t\t\t<div class=\"posts-lists\" data-section-name=\"posts\"><\/div>\n\t\t<\/div>\n\t\t<div class=\"ajax-taxonomy-list\">\n\t\t\t<div class=\"ajax-categories-columns\">\n\t\t\t\t<div class=\"clean-title heading-typo\">\n\t\t\t\t\t<span>\u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438<\/span>\n\t\t\t\t<\/div>\n\t\t\t\t<div class=\"posts-lists\" data-section-name=\"categories\"><\/div>\n\t\t\t<\/div>\n\t\t\t<div class=\"ajax-tags-columns\">\n\t\t\t\t<div class=\"clean-title heading-typo\">\n\t\t\t\t\t<span>\u0422\u0435\u0433\u0438<\/span>\n\t\t\t\t<\/div>\n\t\t\t\t<div class=\"posts-lists\" data-section-name=\"tags\"><\/div>\n\t\t\t<\/div>\n\t\t<\/div>\n\t<\/div>\n<\/div>","full_width":"1"};
+</script>
+		<div class="rh-cover noscroll gr-5" >
+			<span class="rh-close"></span>
+			<div class="rh-panel rh-pm">
+				<div class="rh-p-h">
+											<span class="user-login">
+													<span class="user-avatar user-avatar-icon"><i class="fa fa-user-circle"></i></span>
+							Войти						</span>				</div>
 
-    var instructions = {
-        firefox: [
-            {
-                "text": "Откройте меню браузера (три горизонтальные полоски в правом верхнем углу окна)"
-            },
-            {
-                "text": 'Выберите "Настройки"',
-                "image": {
-                    normal: "https://cp.beget.com/shared/9fc46578a3f3beebbc6e3058537a3fcf/firefox2.png",
-                    "retina": "https://cp.beget.com/shared/5fc2dd546f53e0902e15a3a70e4fe653/firefox22x.png"
-                }
-            },
-            {
-                "text": 'Перейдите в раздел “Приватность и защита”',
-                "image": {
-                    normal: "https://cp.beget.com/shared/6b5c3dfee3602b060a644965f11eabed/firefox3.png",
-                    "retina": "https://cp.beget.com/shared/1f93b61fdeeed1161d5ff5aa36e76dc4/firefox32x.png"
-                }
-            },
-            {
-                "text": 'Нажмите кнопку "Удалить историю"',
-                "image": {
-                    normal: "https://cp.beget.com/shared/a41c785d3b44adcba2e1b90db2b77a37/firefox4.png",
-                    "retina": "https://cp.beget.com/shared/1a512f91bcc8975205f979acf71d7d29/firefox42x.png"
-                }
-            },
-            {
-                "text": 'В появившемся окне нажмите “Удалить сейчас”',
-                "image": {
-                    "normal": "https://cp.beget.com/shared/a4f7c26338626b94ead39246a91aa4b3/firefox5.png",
-                    "retina": "https://cp.beget.com/shared/745b3450fc1f4471ff21f6d64fc737b1/firefox52x.png"
-                }
-            }
+				<div class="rh-p-b">
+										<div class="rh-c-m clearfix"><ul id="resp-navigation" class="resp-menu menu clearfix"><li class="menu-item menu-item-type-post_type menu-item-object-page better-anim-fade menu-item-124"><a href="https://coronavirus-video.online/karta-koronavirusa-onlajn">Карта коронавируса</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-term-1 better-anim-fade menu-item-has-children menu-item-has-mega menu-item-mega-grid-posts menu-item-35"><a href="https://coronavirus-video.online/category/novosti-coronavirus">Коронавирус новости</a>
+<!-- Mega Menu Start -->
+	<div class="mega-menu mega-grid-posts">
+		<div class="content-wrap bs-tab-anim bs-tab-animated active">
+					<div class="bs-pagination-wrapper main-term-1 next_prev ">
+			<div class="listing listing-grid listing-grid-1 clearfix columns-4">
+		<div class="post-243 type-post format-standard has-post-thumbnail  simple-grid  listing-item listing-item-grid listing-item-grid-1 main-term-1">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-1"><a href="https://coronavirus-video.online/category/novosti-coronavirus">Коронавирус новости</a></span></div>				<a  title="В России зафиксировали новые случаи заражения коронавирусом" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/e5617d0d8b95909644cd21863bbc57e8.png" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;600&quot;:&quot;e5617d0d8b95909644cd21863bbc57e8.png&quot;}}"						class="img-holder" href="https://coronavirus-video.online/v-rossii-zafiksirovali-novye-slychai-zarajeniia-koronavirysom.html"></a>
 
-        ],
-        chrome: [
-            {
-                "text": "Откройте меню браузера (три горизонтальные полоски в правом верхнем углу окна)"
-            },
-            {
-                "text": 'Выберите "Дополнительные инструменты" > "Очистить данные просмотров"',
-                "image": {
-                    "normal": "https://cp.beget.com/shared/f38d02735868ba6f0f0f6d0056fcb600/chrome2.png",
-                    "retina": "https://cp.beget.com/shared/3c7ced0b4d09861e1884f5661f239fc0/chrome22x.png"
-                }
-            },
-            {
-                "text": 'В окне "Очистить историю" выберите "Изображения и другие файлы, сохранённые в кэше" и нажмите кнопку "Удалить данные"',
-                "image": {
-                    "normal": "https://cp.beget.com/shared/82ed82f2d8ca8099998398f34f6aa01a/chrome3.png",
-                    "retina": "https://cp.beget.com/shared/5433ccd2ab6359de9db5b621c3a0b633/chrome32x.png"
-                }
-            }
+							</div>
+		<p class="title">		<a href="https://coronavirus-video.online/v-rossii-zafiksirovali-novye-slychai-zarajeniia-koronavirysom.html" class="post-title post-url">
+			В России зафиксировали новые случаи заражения коронавирусом		</a>
+		</p>	</div>
+	</div >
+	<div class="post-241 type-post format-standard has-post-thumbnail  simple-grid  listing-item listing-item-grid listing-item-grid-1 main-term-1">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-1"><a href="https://coronavirus-video.online/category/novosti-coronavirus">Коронавирус новости</a></span></div>				<a  title="Врачи назвали причину смерти пациентки с коронавирусом в Москве" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/vrachi-nazvali-prichinu-smerti-pacientki-s-koronavirusom-v-moskve-b11fc54.jpeg.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;600&quot;:&quot;vrachi-nazvali-prichinu-smerti-pacientki-s-koronavirusom-v-moskve-b11fc54.jpeg.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/vrachi-nazvali-prichiny-smerti-pacientki-s-koronavirysom-v-moskve.html"></a>
 
-        ],
-        safari: [
-            {
-                "text": 'В меню браузера выберите пункт “Safari” > “Настройки”',
-                "image": {
-                    "normal": "https://cp.beget.com/shared/80113015aafa3f261ff2fe54ebd6508d/safari1.png",
-                    "retina": "https://cp.beget.com/shared/f8f7096f67c0e3d82446d0ce6217b27d/safari12x.png"
-                }
-            },
-            {
-                "text": 'В  дополнениях включите опцию “Показывать меню «Разработка» в строке меню” и закройте окно',
-                "image": {
-                    "normal": "https://cp.beget.com/shared/1193ae0503f94daafb5dd14c87a1ddde/safari2.png",
-                    "retina": "https://cp.beget.com/shared/138c05f2803ea0b167a7f975265ce43b/safari22x.png"
-                }
-            },
-            {
-                "text": 'В меню браузера выберите пункт “Разработка” > “Очистить кэши”',
-                "image": {
-                    "normal": "https://cp.beget.com/shared/87421068ec6d6013cade7cc6a37e9566/safari3.png",
-                    "retina": "https://cp.beget.com/shared/13520f6e24d62a88aa7c54519eb1a647/safari32x.png"
-                }
-            }
+							</div>
+		<p class="title">		<a href="https://coronavirus-video.online/vrachi-nazvali-prichiny-smerti-pacientki-s-koronavirysom-v-moskve.html" class="post-title post-url">
+			Врачи назвали причину смерти пациентки с коронавирусом в Москве		</a>
+		</p>	</div>
+	</div >
+	<div class="post-239 type-post format-standard has-post-thumbnail  simple-grid  listing-item listing-item-grid listing-item-grid-1 main-term-1">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-1"><a href="https://coronavirus-video.online/category/novosti-coronavirus">Коронавирус новости</a></span></div>				<a  title="Карантин из-за коронавируса на Украине. Фоторепортаж" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/karantin-iz-za-koronavirusa-na-ukraine-fotoreportazh-6a795f0.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;590&quot;:&quot;karantin-iz-za-koronavirusa-na-ukraine-fotoreportazh-6a795f0.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/karantin-iz-za-koronavirysa-na-ykraine-fotoreportaj.html"></a>
 
-        ],
-        yandex: [
-            {
-                "text": 'Откройте меню браузера (три горизонтальные полоски в правом верхнем углу окна)'
-            },
-            {
-                "text": 'Перейдите во вкладку "История"',
-                "image": {
-                    "normal": "https://cp.beget.com/shared/80ce1ee88a6a1cec9f2c7620f08a58c2/yandex2.png",
-                    "retina": "https://cp.beget.com/shared/0693faca5588f69ca7da9fe4212cdc97/yandex22x.png"
-                }
-            },
-            {
-                "text": 'Нажмите "Очистить историю" (справа)',
-                "image": {
-                    "normal": "https://cp.beget.com/shared/ff268c78b70d486538ecede196a9c1f2/yandex3.png",
-                    "retina": "https://cp.beget.com/shared/12096cc377f80dda5798cfe745bb66ec/yandex32x.png"
-                }
-            },
-            {
-                "text": 'Отметьте пункты "Файлы cookie и другие данные сайтов и модулей" и "файлы, сохраненные в кэше",  нажмите кнопку "Очистить историю"',
-                "image": {
-                    "normal": "https://cp.beget.com/shared/80e7ada09ac4b7da555a5119237ff108/yandex4.png",
-                    "retina": "https://cp.beget.com/shared/daa75ad57baee73ff347e589e11fc90f/yandex42x.png"
-                }
-            }
+							</div>
+		<p class="title">		<a href="https://coronavirus-video.online/karantin-iz-za-koronavirysa-na-ykraine-fotoreportaj.html" class="post-title post-url">
+			Карантин из-за коронавируса на Украине. Фоторепортаж		</a>
+		</p>	</div>
+	</div >
+	<div class="post-236 type-post format-standard has-post-thumbnail  simple-grid  listing-item listing-item-grid listing-item-grid-1 main-term-1">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-1"><a href="https://coronavirus-video.online/category/novosti-coronavirus">Коронавирус новости</a></span></div>				<a  title="В 80 регионах России введен режим повышенной готовности" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/v-80-regionah-rossii-vveden-rezhim-povyshennoj-gotovnosti-1927a16.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;600&quot;:&quot;v-80-regionah-rossii-vveden-rezhim-povyshennoj-gotovnosti-1927a16.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/v-80-regionah-rossii-vveden-rejim-povyshennoi-gotovnosti.html"></a>
 
-        ],
-        opera: [
-            {
-                "text": 'Введите в адресной строке “opera://settings/clearBrowserData”, нажмите клавишу Enter',
-                "image": {
-                    "normal": "https://cp.beget.com/shared/cfb3606fa62fb6a2f951d3e7cd24a8d9/opera1.png",
-                    "retina": "https://cp.beget.com/shared/f72a61de7929ef3236d54a7eda5f27e2/opera12x.png"
-                }
-            },
-            {
-                "text": 'Поставьте галочки у пунктов "Файлы cookie и прочие данные сайтов" и "Кэшированные изображения и файлы", нажмите кнопку "Очистить историю посещений"',
-                "image": {
-                    "normal": "https://cp.beget.com/shared/d336439cc49a04a1885186dc1930c02c/opera2.png",
-                    "retina": "https://cp.beget.com/shared/6d6888aac8d3896da5cd201e8d31670b/opera22x.png"
-                }
-            }
-        ],
-        ie: [
-            {
-                "text": 'Выберите “Сервис” > “Удаление журнала обозревателя…”',
-                "image": {
-                    "normal": "https://cp.beget.com/shared/3585ac62cef9f65d999df211007ce578/explorer.png",
-                    "retina": "https://cp.beget.com/shared/33ae907b8ce690fe724d9616cb809d35/explorer2x.png"
-                }
-            }
-        ],
-    };
+							</div>
+		<p class="title">		<a href="https://coronavirus-video.online/v-80-regionah-rossii-vveden-rejim-povyshennoi-gotovnosti.html" class="post-title post-url">
+			В 80 регионах России введен режим повышенной готовности		</a>
+		</p>	</div>
+	</div >
+	</div>
+	
+	</div><div class="bs-pagination bs-ajax-pagination next_prev main-term-1 clearfix">
+			<script>var bs_ajax_paginate_799500642 = '{"query":{"paginate":"next_prev","show_label":1,"order_by":"date","count":4,"category":"1","_layout":{"state":"1|1|0","page":"2-col-right"}},"type":"wp_query","view":"Publisher::bs_pagin_ajax_mega_grid_posts","current_page":1,"ajax_url":"\/wp-admin\/admin-ajax.php","remove_duplicates":"0","paginate":"next_prev","_layout":{"state":"1|1|0","page":"2-col-right"},"_bs_pagin_token":"a22faea"}';</script>				<a class="btn-bs-pagination prev disabled" rel="prev" data-id="799500642"
+				   title="предыдущий">
+					<i class="fa fa-angle-left"
+					   aria-hidden="true"></i> Prev				</a>
+				<a  rel="next" class="btn-bs-pagination next"
+				   data-id="799500642" title="следующий">
+					Next <i
+							class="fa fa-angle-right" aria-hidden="true"></i>
+				</a>
+				</div>		</div>
+	</div>
 
-    function clearCache(event) {
-        event.preventDefault();
-        window.location.reload(true);
-    }
+<!-- Mega Menu End -->
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-term-5 better-anim-fade menu-item-has-children menu-item-has-mega menu-item-mega-grid-posts menu-item-36"><a href="https://coronavirus-video.online/category/covid-2019">COVID-2019</a>
+<!-- Mega Menu Start -->
+	<div class="mega-menu mega-grid-posts">
+		<div class="content-wrap bs-tab-anim bs-tab-animated active">
+					<div class="bs-pagination-wrapper main-term-5 next_prev ">
+			<div class="listing listing-grid listing-grid-1 clearfix columns-4">
+		<div class="post-248 type-post format-standard has-post-thumbnail  simple-grid  listing-item listing-item-grid listing-item-grid-1 main-term-5">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-5"><a href="https://coronavirus-video.online/category/covid-2019">COVID-2019</a></span></div>				<a  title="Актриса «Игр престолов» заразилась коронавирусом" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/96eba25ef027eb207cf499649271018a.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;600&quot;:&quot;96eba25ef027eb207cf499649271018a.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/aktrisa-igr-prestolov-zarazilas-koronavirysom.html"></a>
 
-    function toggleInstruction(e) {
-        e.preventDefault();
-        $(".gallery").slideToggle();
-    };
+							</div>
+		<p class="title">		<a href="https://coronavirus-video.online/aktrisa-igr-prestolov-zarazilas-koronavirysom.html" class="post-title post-url">
+			Актриса «Игр престолов» заразилась коронавирусом		</a>
+		</p>	</div>
+	</div >
+	<div class="post-245 type-post format-standard has-post-thumbnail  simple-grid  listing-item listing-item-grid listing-item-grid-1 main-term-5">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-5"><a href="https://coronavirus-video.online/category/covid-2019">COVID-2019</a></span></div>				<a  title="В Италии продлят карантин из-за пандемии COVID-19" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/ad887b654e53128bdfacee00cc1f1049.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;610&quot;:&quot;ad887b654e53128bdfacee00cc1f1049.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/v-italii-prodlyat-karantin-iz-za-pandemii-covid-19.html"></a>
 
-    var language = window.navigator.language || navigator.userLanguage,
-        ru = document.getElementById("ru"),
-        en = document.getElementById("en");
+							</div>
+		<p class="title">		<a href="https://coronavirus-video.online/v-italii-prodlyat-karantin-iz-za-pandemii-covid-19.html" class="post-title post-url">
+			В Италии продлят карантин из-за пандемии COVID-19		</a>
+		</p>	</div>
+	</div >
+	<div class="post-226 type-post format-standard has-post-thumbnail  simple-grid  listing-item listing-item-grid listing-item-grid-1 main-term-5">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-5"><a href="https://coronavirus-video.online/category/covid-2019">COVID-2019</a></span></div>				<a  title="Последние данные о распространении и ущербе от заболевания — в хронике “Ъ”" data-src="http://coronavirus-video.online/wp-content/themes/theme/images/default-thumb/publisher-md.png"						class="img-holder" href="https://coronavirus-video.online/poslednie-dannye-o-rasprostranenii-i-ysherbe-ot-zabolevaniia-v-hronike.html"></a>
 
-    language = language.substr(0, 2).toLowerCase();
+							</div>
+		<p class="title">		<a href="https://coronavirus-video.online/poslednie-dannye-o-rasprostranenii-i-ysherbe-ot-zabolevaniia-v-hronike.html" class="post-title post-url">
+			Последние данные о распространении и ущербе от заболевания — в хронике “Ъ”		</a>
+		</p>	</div>
+	</div >
+	<div class="post-209 type-post format-standard has-post-thumbnail  simple-grid  listing-item listing-item-grid listing-item-grid-1 main-term-5">
+	<div class="item-inner">
+					<div class="featured clearfix">
+				<div class="term-badges floated"><span class="term-badge term-5"><a href="https://coronavirus-video.online/category/covid-2019">COVID-2019</a></span></div>				<a  title="В Казахстане госпитализирован россиянин с коронавирусом" data-src="https://coronavirus-video.online/wp-content/uploads/2020/03/0b54e28761cdee3b791512cefe4ad0bc.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/coronavirus-video.online\/wp-content\/uploads\/2020\/03\/&quot;,&quot;sizes&quot;:{&quot;600&quot;:&quot;0b54e28761cdee3b791512cefe4ad0bc.jpg&quot;}}"						class="img-holder" href="https://coronavirus-video.online/v-kazahstane-gospitalizirovan-rossiianin-s-koronavirysom.html"></a>
 
-    var mainDiv = ru;
+							</div>
+		<p class="title">		<a href="https://coronavirus-video.online/v-kazahstane-gospitalizirovan-rossiianin-s-koronavirysom.html" class="post-title post-url">
+			В Казахстане госпитализирован россиянин с коронавирусом		</a>
+		</p>	</div>
+	</div >
+	</div>
+	
+	</div><div class="bs-pagination bs-ajax-pagination next_prev main-term-5 clearfix">
+			<script>var bs_ajax_paginate_1882979363 = '{"query":{"paginate":"next_prev","show_label":1,"order_by":"date","count":4,"category":"5","_layout":{"state":"1|1|0","page":"2-col-right"}},"type":"wp_query","view":"Publisher::bs_pagin_ajax_mega_grid_posts","current_page":1,"ajax_url":"\/wp-admin\/admin-ajax.php","remove_duplicates":"0","paginate":"next_prev","_layout":{"state":"1|1|0","page":"2-col-right"},"_bs_pagin_token":"1a5e893"}';</script>				<a class="btn-bs-pagination prev disabled" rel="prev" data-id="1882979363"
+				   title="предыдущий">
+					<i class="fa fa-angle-left"
+					   aria-hidden="true"></i> Prev				</a>
+				<a  rel="next" class="btn-bs-pagination next"
+				   data-id="1882979363" title="следующий">
+					Next <i
+							class="fa fa-angle-right" aria-hidden="true"></i>
+				</a>
+				</div>		</div>
+	</div>
 
-    if (language !== "ru") {
-        document.title = "The new site has been successfully created and is ready to work"
-        ru.style.display = "none"
-        en.style.display = "flex"
-        mainDiv = en;
-    }
-    var data = instructions.chrome;
+<!-- Mega Menu End -->
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page better-anim-fade menu-item-77"><a href="https://coronavirus-video.online/profilaktika-koronavirusa-u-cheloveka">Информация о коронавирусе</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-term-10 better-anim-fade menu-item-235"><a href="https://coronavirus-video.online/category/stati-o-koronaviruse">Статьи о коронавирусе</a></li>
+</ul></div>
 
-    if (browser.isFirefox) {
-        data = instructions.firefox;
-    }
-    if (browser.isChrome && !browser.isYandex) {
-        data = instructions.chrome;
-    }
-    if (browser.isYandex) {
-        data = instructions.yandex;
-    }
-    if (browser.isSafari) {
-        data = instructions.safari;
-    }
-    if (browser.isOpera) {
-        data = instructions.opera;
-    }
-    if (browser.isIE) {
-        data = instructions.ie;
-    }
+											<form role="search" method="get" class="search-form" action="https://coronavirus-video.online">
+							<input type="search" class="search-field"
+							       placeholder="Поиск..."
+							       value="" name="s"
+							       title="Искать:"
+							       autocomplete="off">
+						</form>
+										</div>
+			</div>
+							<div class="rh-panel rh-p-u">
+					<div class="rh-p-h">
+						<span class="rh-back-menu"><i></i></span>
+					</div>
 
-    window.onload = function () {
-        if (language === "ru") {
-            mainDiv.querySelector("#cache-hint").innerHTML = _.template(document.getElementById("cacheTemplateRu").innerHTML)({browser: browser});
-            mainDiv.querySelector("#hotkey").innerHTML = _.template(document.getElementById("hotkeyTemplate").innerHTML)({browser: browser});
-            mainDiv.querySelector("#instruction").innerHTML = _.template(document.getElementById("instructionTemplateRu").innerHTML)({data: data});
-            mainDiv.querySelector(".bottom").innerHTML = document.getElementById("bottomRu").innerHTML;
-            mainDiv.querySelector(".bottom-mobile").innerHTML = document.getElementById("bottomMobileRu").innerHTML;
-        } else {
-            mainDiv.querySelector("#cache-hint").innerHTML = _.template(document.getElementById("cacheTemplateEn").innerHTML)({browser: browser});
-            mainDiv.querySelector("#hotkey").innerHTML = _.template(document.getElementById("hotkeyTemplate").innerHTML)({browser: browser});
-            mainDiv.querySelector("#instruction").innerHTML = _.template(document.getElementById("instructionTemplateEn").innerHTML)({data: data});
-            mainDiv.querySelector(".bottom").innerHTML = document.getElementById("bottomEn").innerHTML;
-            mainDiv.querySelector(".bottom-mobile").innerHTML = document.getElementById("bottomMobileEn").innerHTML;
-        }
-        $('[data-fancybox="instruction"]').fancybox({
-            afterLoad: function (instance, current) {
-                var pixelRatio = window.devicePixelRatio || 1;
+					<div class="rh-p-b">
+						<div  class="bs-shortcode bs-login-shortcode ">
+		<div class="bs-login bs-type-login"  style="display:none">
 
-                if (pixelRatio > 1.5) {
-                    current.width = current.width / pixelRatio;
-                    current.height = current.height / pixelRatio;
-                }
-            }
-        });
-    };
+					<div class="bs-login-panel bs-login-sign-panel bs-current-login-panel">
+								<form name="loginform"
+				      action="https://coronavirus-video.online/wp-login.php" method="post">
+
+					
+					<div class="login-header">
+						<span class="login-icon fa fa-user-circle main-color"></span>
+						<p>Добро пожаловать, Войдите в свой аккаунт.</p>
+					</div>
+					
+					<div class="login-field login-username">
+						<input type="text" name="log" id="user_login" class="input"
+						       value="" size="20"
+						       placeholder="Имя пользователя или адрес электронной почты..." required/>
+					</div>
+
+					<div class="login-field login-password">
+						<input type="password" name="pwd" id="user_pass"
+						       class="input"
+						       value="" size="20" placeholder="Пароль..."
+						       required/>
+					</div>
+
+					
+					<div class="login-field">
+						<a href="https://coronavirus-video.online/wp-login.php?action=lostpassword&redirect_to=http%3A%2F%2Fcoronavirus-video.online%2F"
+						   class="go-reset-panel">Забыть пароль?</a>
+
+													<span class="login-remember">
+														<input class="remember-checkbox" name="rememberme" type="checkbox"
+								       id="rememberme"
+								       value="forever"  />
+							<label class="remember-label">Запомни меня</label>
+						</span>
+											</div>
+
+					
+					<div class="login-field login-submit">
+						<input type="submit" name="wp-submit"
+						       class="button-primary login-btn"
+						       value="Авторизоваться"/>
+						<input type="hidden" name="redirect_to" value="http://coronavirus-video.online/"/>
+					</div>
+
+									</form>
+			</div>
+
+			<div class="bs-login-panel bs-login-reset-panel">
+
+				<span class="go-login-panel"><i
+							class="fa fa-angle-left"></i> Войти</span>
+
+				<div class="bs-login-reset-panel-inner">
+					<div class="login-header">
+						<span class="login-icon fa fa-support"></span>
+						<p>Восстановите свой пароль.</p>
+						<p>Пароль будет отправлен вам по электронной почте.</p>
+					</div>
+										<form name="lostpasswordform" id="lostpasswordform"
+					      action="https://coronavirus-video.online/wp-login.php?action=lostpassword"
+					      method="post">
+
+						<div class="login-field reset-username">
+							<input type="text" name="user_login" class="input" value=""
+							       placeholder="Имя пользователя или адрес электронной почты..."
+							       required/>
+						</div>
+
+						
+						<div class="login-field reset-submit">
+
+							<input type="hidden" name="redirect_to" value=""/>
+							<input type="submit" name="wp-submit" class="login-btn"
+							       value="Отправить мой пароль"/>
+
+						</div>
+					</form>
+				</div>
+			</div>
+			</div>
+	</div>
+					</div>
+				</div>
+						</div>
+		<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/coronavirus-video.online\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://coronavirus-video.online/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.7'></script>
+<script type='text/javascript' src='http://coronavirus-video.online/wp-content/plugins/table-of-contents-plus/front.min.js?ver=2002'></script>
+<script type='text/javascript' src='http://coronavirus-video.online/wp-includes/js/wp-embed.min.js?ver=dd2d6e842b763487df2ffe502e75cbfb'></script>
+<script type='text/javascript' async="async" src='http://coronavirus-video.online/wp-content/bs-booster-cache/162fa7b546b76354a64bf64f0e139cef.js?ver=dd2d6e842b763487df2ffe502e75cbfb'></script>
+
+<script>
+var otpxur=function(a){"use strict";return{init:function(){0==otpxur.ads_state()&&otpxur.blocked_ads_fallback()},ads_state:function(){return void 0!==window.better_ads_adblock},blocked_ads_fallback:function(){var e=[];a(".otpxur-container").each(function(){if("image"==a(this).data("type"))return 0;e.push({element_id:a(this).attr("id"),ad_id:a(this).data("adid")})}),e.length<1||jQuery.ajax({url:'https://coronavirus-video.online/wp-admin/admin-ajax.php',type:"POST",data:{action:"better_ads_manager_blocked_fallback",ads:e},success:function(e){var t=JSON.parse(e);a.each(t.ads,function(e,t){a("#"+t.element_id).html(t.code)})}})}}}(jQuery);jQuery(document).ready(function(){otpxur.init()});
 
 </script>
+
 </body>
 </html>

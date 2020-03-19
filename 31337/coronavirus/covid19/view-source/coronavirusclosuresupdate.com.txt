@@ -1,339 +1,487 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
-<meta name="viewport" content="width=device-width">
-<title>Coronavirus Closures Update &mdash; Coming Soon</title>
-<script src="http://coronavirusclosuresupdate.com/wp-includes/js/jquery/jquery.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
-<style type="text/css">
-body {
-	background-color: #fff;
-	background-image: url( "http://coronavirusclosuresupdate.com/wp-content/plugins/mojo-marketplace-wp-plugin/images/cs-bluehost-bg.jpg" );
-	background-position: top right;
-	background-repeat: no-repeat;
-	font-family: "Open Sans", sans-serif;
-	overflow-x: hidden;
-}
-* {
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
-input {
-	font-family: "Open Sans", sans-serif;
-}
-::-webkit-input-placeholder {
-  color: #9DAFBD;
-}
-::-moz-placeholder {
-  color: #9DAFBD;
-}
-:-ms-input-placeholder {
-  color: #9DAFBD;
-}
-:-moz-placeholder {
-  color: #9DAFBD;
-}
-#wrap {
-	max-width: 560px;
-	margin: 320px auto 120px;
-	color: #444;
-	text-align: center;
-}
-#wrap h1 {
-	font-weight: 300;
-	font-size: 28px;
-}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://coronavirusclosuresupdate.com/xmlrpc.php" />
 
-#wrap h2 {
-	font-weight: 300;
-	font-size: 38px;
-}
+<title>Coronavirus Closures Update - Up-To-Date Coronavirus Closures and News</title>
 
-#wrap p {
-	color: #666;
-	line-height: 1.5;
-}
+<!-- This site is optimized with the Yoast SEO plugin v13.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Up-To-Date Coronavirus Closures and News"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="http://coronavirusclosuresupdate.com/" />
+<link rel="next" href="http://coronavirusclosuresupdate.com/page/2/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Coronavirus Closures Update - Up-To-Date Coronavirus Closures and News" />
+<meta property="og:description" content="Up-To-Date Coronavirus Closures and News" />
+<meta property="og:url" content="http://coronavirusclosuresupdate.com/" />
+<meta property="og:site_name" content="Coronavirus Closures Update" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Up-To-Date Coronavirus Closures and News" />
+<meta name="twitter:title" content="Coronavirus Closures Update - Up-To-Date Coronavirus Closures and News" />
+<meta name="msvalidate.01" content="7FF92A4D15DEB822ECAF6437BCF1DB92" />
+<meta name="google-site-verification" content="7OzSSDM5DIuQI2_dYZdNGCfd3LJ61YnJw0nPAj0o1g8" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"http://coronavirusclosuresupdate.com/#organization","name":"Coronavirus Closures Update","url":"http://coronavirusclosuresupdate.com/","sameAs":[],"logo":{"@type":"ImageObject","@id":"http://coronavirusclosuresupdate.com/#logo","inLanguage":"en-US","url":"https://i1.wp.com/coronavirusclosuresupdate.com/wp-content/uploads/2020/03/Site-Icon.png?fit=512%2C512","width":512,"height":512,"caption":"Coronavirus Closures Update"},"image":{"@id":"http://coronavirusclosuresupdate.com/#logo"}},{"@type":"WebSite","@id":"http://coronavirusclosuresupdate.com/#website","url":"http://coronavirusclosuresupdate.com/","name":"Coronavirus Closures Update","inLanguage":"en-US","description":"Up-To-Date Coronavirus Closures and News","publisher":{"@id":"http://coronavirusclosuresupdate.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"http://coronavirusclosuresupdate.com/?s={search_term_string}","query-input":"required name=search_term_string"}]},{"@type":"CollectionPage","@id":"http://coronavirusclosuresupdate.com/#webpage","url":"http://coronavirusclosuresupdate.com/","name":"Coronavirus Closures Update - Up-To-Date Coronavirus Closures and News","isPartOf":{"@id":"http://coronavirusclosuresupdate.com/#website"},"inLanguage":"en-US","about":{"@id":"http://coronavirusclosuresupdate.com/#organization"},"description":"Up-To-Date Coronavirus Closures and News"}]}</script>
+<!-- / Yoast SEO plugin. -->
 
-footer {
-	background-color: #fff;
-	width: 100%;
-	position: fixed;
-	bottom:0;
-	left:0;
-	color: #666;
-}
-footer p {
-	font-size: 14px;
-	line-height: 22px;
-	color: #5B5B5B;
-	padding: 8px;
-	text-align: center;
-}
-footer p a {
-	color: #3575D3;
-	text-decoration: none;
-}
-footer p a:hover {
-	text-decoration: underline;
-}
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Coronavirus Closures Update &raquo; Feed" href="http://coronavirusclosuresupdate.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Coronavirus Closures Update &raquo; Comments Feed" href="http://coronavirusclosuresupdate.com/comments/feed/" />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.10.4 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.10.4';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-161208523-1';
 
-.btn {
-	display: inline-block;
-	font-weight: 400;
-	text-align: center;
-	vertical-align: middle;
-	-ms-touch-action: manipulation;
-	touch-action: manipulation;
-	cursor: pointer;
-	background-image: none;
-	border: 1px solid transparent;
-	white-space: nowrap;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	padding: 8px 16px;
-	font-size: 14px;
-	line-height: 1.5;
-	border: 1px solid #2e66ba;
-	background: #2e66ba;
-	color: #fff;
-	box-shadow: none;
-	border-radius: 3px;
-	text-decoration: none;
-	margin-top: 60px;
-}
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
 
-.btn:hover {
-	border: 1px solid #2e66ba;
-	background-color: #fff;
-	color: #2e66ba;
-}
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
 
-.bh_subscription_widget {
-}
-.bh_subscription_widget h2.widgettitle {
-	color: #5B5B5B;
-	font-size: 38px;
-	letter-spacing: -1px;
-	line-height: 54px;
-	margin-bottom: 10px;
-}
-.bh_subscription_widget #subscribe-text p {
-	color: #5B5B5B;
-	font-size: 16px;
-	letter-spacing: 0;
-	line-height: 24px;
-	margin-bottom: 25px;
-}
-.bh_subscription_widget #success,
-.bh_subscription_widget #error {
-    border-radius: 4px;
-    font-size: 14px;
-    line-height: 24px;
-    color: #5B5B5B;
-    margin-bottom: 25px;
-    display: none;
-    padding: 8px 40px;
-}
-.bh_subscription_widget #success {
-    background: #CCE9D0;
-    border: 1px solid #009013;
-}
-.bh_subscription_widget #error {
-    background: #FFEAE9;
-    border: 1px solid #F72F26;
-}
-.bh_subscription_widget form .bh-inputs {
-	display: inline-block;
-	position: relative;
-	vertical-align: middle;
-	-webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
-}
-.bh_subscription_widget form .bh-inputs.active {
-	-webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
-}
-.bh_subscription_widget form .bh-inputs.email.active #bh-subscribe-label {
-	color: #5B5B5B;
-    clip: auto !important;
-    height: auto !important;
-    position: absolute !important;
-    overflow: visible !important;
-    width: auto !important;
-    left: 16px;
-    font-size: 11px;
-    top: 2px;
-}
-.bh_subscription_widget form .bh-inputs.email input[type="email"] {
-	background-color: #fff;
-	background-image: url( "http://coronavirusclosuresupdate.com/wp-content/plugins/mojo-marketplace-wp-plugin/images/icon-email.svg" );
-	background-position: 10px center;
-	background-repeat: no-repeat;
-    border: 1px solid #5B5B5B;
-    border-radius: 3px;
-    color: #5B5B5B;
-    font-size: 11px;
-    margin-right: 6px;
-    min-width: 300px;
-    padding: 14px 15px 14px 45px;
-    max-height: 45px;
-    -webkit-transition: all 0.05s ease-in-out;
-    -moz-transition: all 0.05s ease-in-out;
-    -o-transition: all 0.05s ease-in-out;
-    transition: all 0.05s ease-in-out;
-}
-.bh_subscription_widget form .bh-inputs.email.active input[type="email"] {
-	background-image: none;
-    font-size: 14px;
-    padding: 16px 15px 12px 15px;
-    max-height: 45px;
-}
-.bh_subscription_widget form .bh-inputs.submit input[type="submit"] {
-    background-color: #3575D3;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 13px;
-    margin: 0;
-    padding: 15px 30px;
-    border: 1px solid #3575D3;
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
-}
-.bh_subscription_widget form .bh-inputs.submit input[type="submit"]:hover {
-    background-color: #5B5B5B;
-    border-color: #5B5B5B;
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
-}
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
 
-@media (max-width: 1024px) {
-	#wrap {
-		margin: 240px auto 120px;
-	}
-}
-@media (max-width: 960px) {
-	#wrap {
-		margin: 120px auto;
-	}
-}
-@media (max-width: 640px) {
-	#wrap {
-		margin: 60px auto 120px;
-		max-width: 100%;
-		color: #444;
-		padding: 0 20px;
-	}
-	.btn {
-		margin-top: 10px;
-	}
-	.bh_subscription_widget form .bh-inputs,
-	.bh_subscription_widget form .bh-inputs.email input[type="email"],
-	.bh_subscription_widget form .bh-inputs.submit input[type="submit"] {
-	    width: 100%;
-	}
-	.bh_subscription_widget form .bh-inputs.email input[type="email"] {
-	    min-width: 0;
-	}
-	.bh_subscription_widget form .bh-inputs {
-	    margin-bottom: 10px;
-	}
-}
-@media (max-width: 360px) {
-	#wrap h1 {
-		font-size: 26px;
-	}
-	.btn {
-		margin-top: 40px;
-	}
+		__gaTracker('create', 'UA-161208523-1', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/coronavirusclosuresupdate.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
 }
 </style>
-</head>
-<body>
-	<div id="wrap">
-		<div class="content">
-			
-			
-				<h1>A New WordPress Site</h1>
-				<h2>Coming Soon!</h2>
-				<a class="btn" href="http://coronavirusclosuresupdate.com/wp-login.php">Admin Login</a>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://c0.wp.com/c/5.3.2/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />
+<style id='wp-block-library-inline-css' type='text/css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel='stylesheet' id='anther-bootstrap-grid-css'  href='http://coronavirusclosuresupdate.com/wp-content/themes/anther/dist/css/bootstrap-grid.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-5-css'  href='http://coronavirusclosuresupdate.com/wp-content/themes/anther/dist/css/fontawesome-all.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='anther-fonts-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A400%2C400i%2C700%2C700i%7COpen+Sans%3A400%2C400i%2C700%2C700i%7CPlayfair+Display%3A400%2C400i%2C700%2C700i%7COswald%3A400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='anther-style-css'  href='http://coronavirusclosuresupdate.com/wp-content/themes/anther/style.css?ver=5.3.2' type='text/css' media='all' />
+<style id='anther-style-inline-css' type='text/css'>
+.archive-title-control { clip: rect(1px, 1px, 1px, 1px); position: absolute; }
+</style>
+<link rel='stylesheet' id='jetpack_css-css'  href='https://c0.wp.com/p/jetpack/8.3/css/jetpack.css' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"http:\/\/coronavirusclosuresupdate.com","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://coronavirusclosuresupdate.com/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js?ver=7.10.4'></script>
+<script type='text/javascript' src='https://c0.wp.com/c/5.3.2/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='https://c0.wp.com/c/5.3.2/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<link rel='https://api.w.org/' href='http://coronavirusclosuresupdate.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://coronavirusclosuresupdate.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://coronavirusclosuresupdate.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.3.2" />
 
-			
-		</div>
-	</div>
-	<footer>
-			<p class="text-center">A <a target="_blank" href="https://bluehost.com/wordpress" class="bluehost" rel="nofollow">Bluehost</a> powered website. Is this your website? Log in to <a href="http://coronavirusclosuresupdate.com/wp-login.php">WordPress</a> or <a target="_blank" href="https://my.bluehost.com/" class="bluehost" rel="nofollow">Bluehost</a></p>
-	</footer>
-<script>
-	jQuery(document).ready( function($){
+<link rel='dns-prefetch' href='//i0.wp.com'/>
+<link rel='dns-prefetch' href='//i1.wp.com'/>
+<link rel='dns-prefetch' href='//i2.wp.com'/>
+<link rel='dns-prefetch' href='//c0.wp.com'/>
+<style type='text/css'>img#wpstats{display:none}</style><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
 	
-		$( '#subscribe-submit input' ).click(function(e){
-			e.preventDefault();
+	<link rel="icon" href="https://i1.wp.com/coronavirusclosuresupdate.com/wp-content/uploads/2020/03/cropped-Site-Icon.png?fit=32%2C32" sizes="32x32" />
+<link rel="icon" href="https://i1.wp.com/coronavirusclosuresupdate.com/wp-content/uploads/2020/03/cropped-Site-Icon.png?fit=192%2C192" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://i1.wp.com/coronavirusclosuresupdate.com/wp-content/uploads/2020/03/cropped-Site-Icon.png?fit=180%2C180" />
+<meta name="msapplication-TileImage" content="https://i1.wp.com/coronavirusclosuresupdate.com/wp-content/uploads/2020/03/cropped-Site-Icon.png?fit=270%2C270" />
+		<style type="text/css" id="wp-custom-css">
+			/* Overrides */
+  body.postid-20 .entry-image-wrapper-single, body.postid-146 .entry-image-wrapper-single {
+	display: none !important;
+}
+.credits.credits-designer {
+	display: none !important;
+}		</style>
+		</head>
+<body class="home blog hfeed has-site-branding has-wide-layout has-right-sidebar has-search-header">
+<div id="page" class="site-wrapper site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
-			$( '#success' ).hide();
-			$( '#error' ).hide();
+	
+<header id="masthead" class="site-header">
+	<div class="container">
+		<div class="row">
+			<div class="col">
 
-			var email 		= $( '#subscribe-field-bh' ).val();
-			var nonce 		= $( '#mm_nonce-coming-soon-subscribe' ).val();
-			var ajaxscript 	= { ajax_url : 'http://coronavirusclosuresupdate.com/wp-admin/admin-ajax.php' }
-
-			$.ajax({
-				type: 'POST',
-				url: ajaxscript.ajax_url,
-				data: { 
-					'action': 'mm_coming_soon_subscribe',
-					'email': email,
-					'nonce': nonce
-				},
-				success: function( response ){
+				<div class="site-header-inside-wrapper">
 					
-					//console.log( response );
+<div class="site-branding-wrapper">
+	<div class="site-logo-wrapper"></div>
+	<div class="site-branding">
+					<h1 class="site-title"><a href="http://coronavirusclosuresupdate.com/" title="Coronavirus Closures Update" rel="home">Coronavirus Closures Update</a></h1>
+		
+				<p class="site-description">
+			Up-To-Date Coronavirus Closures and News		</p>
+			</div>
+</div><!-- .site-branding-wrapper -->
 
-					var status = response.status;
+<nav id="site-navigation" class="main-navigation">
+	<div class="main-navigation-inside">
+		<div class="toggle-menu-wrapper">
+			<a href="#header-menu-responsive" title="Menu" class="toggle-menu-control">
+				<span class="toggle-menu-label">Menu</span>
+			</a>
+		</div>
 
-					if ( status == 'success' ){
+		<div class="site-header-menu"><ul id="menu-1" class="header-menu sf-menu"><li id="menu-item-19" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-19"><a href="/" aria-current="page">Home</a></li>
+<li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a href="/restaurants-fast-food-information">Restaurants &#038; Fast Food Information</a></li>
+<li id="menu-item-40" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a href="/grocery-store-shortages">Grocery Store Shortages</a></li>
+<li id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18"><a href="/tracker">Case Tracker</a></li>
+<li id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43"><a href="/category/current-news">Current News</a></li>
+<li id="menu-item-45" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45"><a target="_blank" rel="noopener noreferrer" href="https://www.cdc.gov/coronavirus/2019-nCoV/index.html">CDC</a></li>
+<li id="menu-item-55" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55"><a href="http://coronavirusclosuresupdate.com/contact-us/">Contact Us</a></li>
+<li id="menu-item-63" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-63"><a href="/sports">Sports</a>
+<ul class="sub-menu">
+	<li id="menu-item-67" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-67"><a href="/category/sports/nfl/">NFL</a></li>
+	<li id="menu-item-64" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-64"><a href="/category/sports/nba">NBA</a></li>
+	<li id="menu-item-65" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65"><a href="/category/sports/mlb">MLB</a></li>
+	<li id="menu-item-66" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-66"><a href="/category/sports/nhl">NHL</a></li>
+</ul>
+</li>
+</ul></div>	</div><!-- .main-navigation-inside -->
+</nav><!-- .main-navigation -->
+<div class="site-search-header-wrapper">
+	<a href="#" title="Search" class="toggle-site-search-header-control">
+		<span>Search</span>
+	</a>
+</div><!-- .site-search-header-wrapper -->
+				</div><!-- .site-header-inside-wrapper -->
 
-						$( '#success' ).show();
+			</div><!-- .col -->
+		</div><!-- .row -->
+	</div><!-- .container -->
 
-					} else if ( status == 'active' ) {
+	<div class="site-search-header-form-wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="site-search-header-form-wrapper-inside">
+					
+<form role="search" method="get" class="search-form" action="http://coronavirusclosuresupdate.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:" />
+	</label>
+	<button type="submit" class="search-submit"><span class="screen-reader-text">Search</span></button>
+</form>
+				</div>
+			</div><!-- .col -->
+		</div><!-- .row -->
+	</div><!-- .container -->
+</div><!-- .site-search-header-form-wrapper -->
+</header><!-- #masthead -->
+
+
+	<div id="content" class="site-content">
+
+	
+	<div class="site-content-inside">
+		<div class="container">
+			<div class="row">
+
+				<div id="primary" class="content-area col">
+					<main id="main" class="site-main">
+
+					
+						<div id="post-wrapper" class="post-wrapper post-wrapper-archive">
+												
+							
+<div class="post-wrapper-hentry">
+	<article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail sticky hentry category-dining tag-dining tag-fast-food tag-restaurants">
+		<div class="post-content-wrapper post-content-wrapper-archive">
+
+			<div class="entry-image-wrapper"><figure class="post-thumbnail"><a href="http://coronavirusclosuresupdate.com/restaurants-fast-food-information/"><img width="650" height="400" src="https://i1.wp.com/coronavirusclosuresupdate.com/wp-content/uploads/2020/03/Fast-Food-Restaurants.jpg?resize=650%2C400" class="img-featured img-responsive wp-post-image" alt="" /></a></figure></div>
+			<div class="entry-header-wrapper">
+								<div class="entry-meta entry-meta-header-before">
+					<span class="post-category cat-links entry-meta-icon"><a href="http://coronavirusclosuresupdate.com/category/dining/" title="Dining">Dining</a></span><span class="post-label post-label-sticky entry-meta-icon">Featured</span>				</div><!-- .entry-meta -->
+				
+				<header class="entry-header">
+					<h2 class="entry-title"><a href="http://coronavirusclosuresupdate.com/restaurants-fast-food-information/" rel="bookmark">Restaurants/Fast Food Information</a></h2>				</header><!-- .entry-header -->
+			</div><!-- .entry-header-wrapper -->
+
+						<div class="entry-data-wrapper">
+								<div class="entry-summary">
+					<p>Here is a list detailing how some restaurants and fast food locations are handling their closures for most locations as of March 16th. We will&hellip;</p>
+				</div><!-- .entry-summary -->
+				
+				<div class="more-link-wrapper"><a href="http://coronavirusclosuresupdate.com/restaurants-fast-food-information/" class="more-link">Read More</a></div>			</div><!-- .entry-data-wrapper -->
+			
+		</div><!-- .post-content-wrapper -->
+	</article><!-- #post-## -->
+</div><!-- .post-wrapper-hentry -->
+
 						
-						$( '#error' ).show().text( 'Your email address is already subscribed to this website. Stay tuned to your inbox for our updates or try a different email address.' );
+							
+<div class="post-wrapper-hentry">
+	<article id="post-13" class="post-13 post type-post status-publish format-standard has-post-thumbnail sticky hentry category-grocery tag-grocery-store tag-merchandise tag-shopping">
+		<div class="post-content-wrapper post-content-wrapper-archive">
 
-					} else if ( status == 'invalid_email' ){
+			<div class="entry-image-wrapper"><figure class="post-thumbnail"><a href="http://coronavirusclosuresupdate.com/grocery-store-shortages/"><img width="650" height="400" src="https://i2.wp.com/coronavirusclosuresupdate.com/wp-content/uploads/2020/03/products.jpg?resize=650%2C400" class="img-featured img-responsive wp-post-image" alt="" /></a></figure></div>
+			<div class="entry-header-wrapper">
+								<div class="entry-meta entry-meta-header-before">
+					<span class="post-category cat-links entry-meta-icon"><a href="http://coronavirusclosuresupdate.com/category/grocery/" title="Grocery">Grocery</a></span><span class="post-label post-label-sticky entry-meta-icon">Featured</span>				</div><!-- .entry-meta -->
+				
+				<header class="entry-header">
+					<h2 class="entry-title"><a href="http://coronavirusclosuresupdate.com/grocery-store-shortages/" rel="bookmark">Grocery Store Shortages</a></h2>				</header><!-- .entry-header -->
+			</div><!-- .entry-header-wrapper -->
 
-						$( '#error' ).show().text( 'There was an error with your submission and you were not subscribed. Please try again with a valid email address.' );
+						<div class="entry-data-wrapper">
+								<div class="entry-summary">
+					<p>This page will give you an idea of what products are in low to high demand. Every city across the country is going to be&hellip;</p>
+				</div><!-- .entry-summary -->
+				
+				<div class="more-link-wrapper"><a href="http://coronavirusclosuresupdate.com/grocery-store-shortages/" class="more-link">Read More</a></div>			</div><!-- .entry-data-wrapper -->
+			
+		</div><!-- .post-content-wrapper -->
+	</article><!-- #post-## -->
+</div><!-- .post-wrapper-hentry -->
 
-					} else {
+						
+							
+<div class="post-wrapper-hentry">
+	<article id="post-20" class="post-20 post type-post status-publish format-standard has-post-thumbnail sticky hentry category-tracker tag-map tag-tracker">
+		<div class="post-content-wrapper post-content-wrapper-archive">
 
-						$( '#error' ).show();
+			<div class="entry-image-wrapper"><figure class="post-thumbnail"><a href="http://coronavirusclosuresupdate.com/tracker/"><img width="650" height="400" src="https://i1.wp.com/coronavirusclosuresupdate.com/wp-content/uploads/2020/03/Tracker-Map.jpg?resize=650%2C400" class="img-featured img-responsive wp-post-image" alt="" srcset="https://i1.wp.com/coronavirusclosuresupdate.com/wp-content/uploads/2020/03/Tracker-Map.jpg?resize=650%2C400 650w, https://i1.wp.com/coronavirusclosuresupdate.com/wp-content/uploads/2020/03/Tracker-Map.jpg?zoom=2&amp;resize=650%2C400 1300w" sizes="(max-width: 650px) 100vw, 650px" /></a></figure></div>
+			<div class="entry-header-wrapper">
+								<div class="entry-meta entry-meta-header-before">
+					<span class="post-category cat-links entry-meta-icon"><a href="http://coronavirusclosuresupdate.com/category/tracker/" title="Tracker">Tracker</a></span><span class="post-label post-label-sticky entry-meta-icon">Featured</span>				</div><!-- .entry-meta -->
+				
+				<header class="entry-header">
+					<h2 class="entry-title"><a href="http://coronavirusclosuresupdate.com/tracker/" rel="bookmark">COVID-19 Case Tracker</a></h2>				</header><!-- .entry-header -->
+			</div><!-- .entry-header-wrapper -->
 
-					}
+						<div class="entry-data-wrapper">
+								<div class="entry-summary">
+					<p>Here is an amazing tool to use to track the current cases across the world.</p>
+				</div><!-- .entry-summary -->
+				
+				<div class="more-link-wrapper"><a href="http://coronavirusclosuresupdate.com/tracker/" class="more-link">Read More</a></div>			</div><!-- .entry-data-wrapper -->
+			
+		</div><!-- .post-content-wrapper -->
+	</article><!-- #post-## -->
+</div><!-- .post-wrapper-hentry -->
+
+						
+							
+<div class="post-wrapper-hentry">
+	<article id="post-155" class="post-155 post type-post status-publish format-standard has-post-thumbnail hentry category-dining tag-dining tag-news">
+		<div class="post-content-wrapper post-content-wrapper-archive">
+
+			<div class="entry-image-wrapper"><figure class="post-thumbnail"><a href="http://coronavirusclosuresupdate.com/all-the-states-that-have-closed-restaurants-and-bars-due-to-coronavirus/"><img width="650" height="400" src="https://i1.wp.com/coronavirusclosuresupdate.com/wp-content/uploads/2020/03/restaurant-closers-1.jpg?resize=650%2C400" class="img-featured img-responsive wp-post-image" alt="" /></a></figure></div>
+			<div class="entry-header-wrapper">
+								<div class="entry-meta entry-meta-header-before">
+					<span class="posted-on entry-meta-icon"><span class="screen-reader-text">Posted on</span><a href="http://coronavirusclosuresupdate.com/all-the-states-that-have-closed-restaurants-and-bars-due-to-coronavirus/" rel="bookmark"><time class="entry-date published" datetime="2020-03-18T23:36:20+00:00">March 18, 2020</time><time class="updated" datetime="2020-03-18T23:36:53+00:00">March 18, 2020</time></a></span><span class="post-category cat-links entry-meta-icon"><a href="http://coronavirusclosuresupdate.com/category/dining/" title="Dining">Dining</a></span>				</div><!-- .entry-meta -->
+				
+				<header class="entry-header">
+					<h2 class="entry-title"><a href="http://coronavirusclosuresupdate.com/all-the-states-that-have-closed-restaurants-and-bars-due-to-coronavirus/" rel="bookmark">All the States That Have Closed Restaurants and Bars Due to Coronavirus</a></h2>				</header><!-- .entry-header -->
+			</div><!-- .entry-header-wrapper -->
+
+						<div class="entry-data-wrapper">
+								<div class="entry-summary">
+					<p>Delivery and carryout services will be the only options in multiple states for weeks to come. Updated as of Wednesday, March 18 at 1:40 p.m.&hellip;</p>
+				</div><!-- .entry-summary -->
+				
+				<div class="more-link-wrapper"><a href="http://coronavirusclosuresupdate.com/all-the-states-that-have-closed-restaurants-and-bars-due-to-coronavirus/" class="more-link">Read More</a></div>			</div><!-- .entry-data-wrapper -->
+			
+		</div><!-- .post-content-wrapper -->
+	</article><!-- #post-## -->
+</div><!-- .post-wrapper-hentry -->
+
+						
+							
+<div class="post-wrapper-hentry">
+	<article id="post-151" class="post-151 post type-post status-publish format-standard has-post-thumbnail hentry category-nba category-sports tag-nba tag-sports">
+		<div class="post-content-wrapper post-content-wrapper-archive">
+
+			<div class="entry-image-wrapper"><figure class="post-thumbnail"><a href="http://coronavirusclosuresupdate.com/why-nba-players-can-get-coronavirus-tests-but-regular-americans-are-struggling-to/"><img width="650" height="400" src="https://i0.wp.com/coronavirusclosuresupdate.com/wp-content/uploads/2020/03/NBA-testing.jpg?resize=650%2C400" class="img-featured img-responsive wp-post-image" alt="" /></a></figure></div>
+			<div class="entry-header-wrapper">
+								<div class="entry-meta entry-meta-header-before">
+					<span class="posted-on entry-meta-icon"><span class="screen-reader-text">Posted on</span><a href="http://coronavirusclosuresupdate.com/why-nba-players-can-get-coronavirus-tests-but-regular-americans-are-struggling-to/" rel="bookmark"><time class="entry-date published" datetime="2020-03-18T23:29:57+00:00">March 18, 2020</time><time class="updated" datetime="2020-03-18T23:30:23+00:00">March 18, 2020</time></a></span><span class="post-category cat-links entry-meta-icon"><a href="http://coronavirusclosuresupdate.com/category/sports/nba/" title="NBA">NBA</a></span>				</div><!-- .entry-meta -->
+				
+				<header class="entry-header">
+					<h2 class="entry-title"><a href="http://coronavirusclosuresupdate.com/why-nba-players-can-get-coronavirus-tests-but-regular-americans-are-struggling-to/" rel="bookmark">Why NBA players can get coronavirus tests but regular Americans are struggling to</a></h2>				</header><!-- .entry-header -->
+			</div><!-- .entry-header-wrapper -->
+
+						<div class="entry-data-wrapper">
+								<div class="entry-summary">
+					<p>Because of a widespread testing shortage, Americans across the country with symptoms of the novel coronavirus have struggled to get tested. Yet on Tuesday, the NBA&#8217;s Brooklyn&hellip;</p>
+				</div><!-- .entry-summary -->
+				
+				<div class="more-link-wrapper"><a href="http://coronavirusclosuresupdate.com/why-nba-players-can-get-coronavirus-tests-but-regular-americans-are-struggling-to/" class="more-link">Read More</a></div>			</div><!-- .entry-data-wrapper -->
+			
+		</div><!-- .post-content-wrapper -->
+	</article><!-- #post-## -->
+</div><!-- .post-wrapper-hentry -->
+
+						
+							
+<div class="post-wrapper-hentry">
+	<article id="post-146" class="post-146 post type-post status-publish format-standard has-post-thumbnail hentry category-nfl category-sports tag-nfl tag-sports">
+		<div class="post-content-wrapper post-content-wrapper-archive">
+
+			<div class="entry-image-wrapper"><figure class="post-thumbnail"><a href="http://coronavirusclosuresupdate.com/nfl-coronavirus-updates-draft-will-proceed-without-fans-league-prohibits-pre-draft-visits/"><img width="629" height="394" src="https://i0.wp.com/coronavirusclosuresupdate.com/wp-content/uploads/2020/03/Nfl-Draft.jpg?resize=629%2C394" class="img-featured img-responsive wp-post-image" alt="" srcset="https://i0.wp.com/coronavirusclosuresupdate.com/wp-content/uploads/2020/03/Nfl-Draft.jpg?w=629 629w, https://i0.wp.com/coronavirusclosuresupdate.com/wp-content/uploads/2020/03/Nfl-Draft.jpg?resize=300%2C188 300w" sizes="(max-width: 629px) 100vw, 629px" /></a></figure></div>
+			<div class="entry-header-wrapper">
+								<div class="entry-meta entry-meta-header-before">
+					<span class="posted-on entry-meta-icon"><span class="screen-reader-text">Posted on</span><a href="http://coronavirusclosuresupdate.com/nfl-coronavirus-updates-draft-will-proceed-without-fans-league-prohibits-pre-draft-visits/" rel="bookmark"><time class="entry-date published" datetime="2020-03-18T23:20:34+00:00">March 18, 2020</time><time class="updated" datetime="2020-03-18T23:20:42+00:00">March 18, 2020</time></a></span><span class="post-category cat-links entry-meta-icon"><a href="http://coronavirusclosuresupdate.com/category/sports/nfl/" title="NFL">NFL</a></span>				</div><!-- .entry-meta -->
+				
+				<header class="entry-header">
+					<h2 class="entry-title"><a href="http://coronavirusclosuresupdate.com/nfl-coronavirus-updates-draft-will-proceed-without-fans-league-prohibits-pre-draft-visits/" rel="bookmark">NFL coronavirus updates: Draft will proceed without fans, league prohibits pre-draft visits</a></h2>				</header><!-- .entry-header -->
+			</div><!-- .entry-header-wrapper -->
+
+						<div class="entry-data-wrapper">
+								<div class="entry-summary">
+					<p>The coronavirus has unfortunately begun sweeping the globe and sports leagues are faced with uncertainty in the near-term as they try to manage what&#8217;s now&hellip;</p>
+				</div><!-- .entry-summary -->
+				
+				<div class="more-link-wrapper"><a href="http://coronavirusclosuresupdate.com/nfl-coronavirus-updates-draft-will-proceed-without-fans-league-prohibits-pre-draft-visits/" class="more-link">Read More</a></div>			</div><!-- .entry-data-wrapper -->
+			
+		</div><!-- .post-content-wrapper -->
+	</article><!-- #post-## -->
+</div><!-- .post-wrapper-hentry -->
+
+												</div><!-- .post-wrapper -->
+
+						
+	<nav class="navigation pagination" role="navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Posts navigation</h2>
+		<div class="nav-links"><span aria-current="page" class="page-numbers current"><span class="meta-nav screen-reader-text">Page </span>1</span>
+<a class="page-numbers" href="http://coronavirusclosuresupdate.com/page/2/"><span class="meta-nav screen-reader-text">Page </span>2</a>
+<span class="page-numbers dots">&hellip;</span>
+<a class="page-numbers" href="http://coronavirusclosuresupdate.com/page/6/"><span class="meta-nav screen-reader-text">Page </span>6</a>
+<a class="next page-numbers" href="http://coronavirusclosuresupdate.com/page/2/"><span class="screen-reader-text">Next Page</span></a></div>
+	</nav>
 					
-				},
-			});
-		});
+					</main><!-- #main -->
+				</div><!-- #primary -->
 
-	    var input = $( '#subscribe-email' );
-	    input.focusin( function() {
-	        $(this).addClass( 'active' );
-	    });
-	    input.focusout( function() {
-	        $(this).removeClass( 'active' );
-	    });
-    });
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</div><!-- .site-content-inside -->
+
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer">
+		
+<div class="site-info">
+	<div class="site-info-inside">
+
+		<div class="container">
+
+			<div class="row">
+				<div class="col">
+					<div class="credits-wrapper">
+						<div class="credits credits-blog"><a href="mailto:info@coronavirusclosuresupdate.com">info@coronavirusclosuresupdate.com</a>  
+<br />
+© Copyright 2020 &#8211; <a href="http://coronavirusclosuresupdate.com/">Coronavirus Closures Update</a></div><div class="credits credits-designer">Anther Theme by <a href="https://designorbital.com" title="DesignOrbital">DesignOrbital</a> <span>&sdot;</span> Powered by <a href="https://wordpress.org/" title="WordPress">WordPress</a></div>					</div><!-- .credits -->
+				</div><!-- .col -->
+			</div><!-- .row -->
+
+		</div><!-- .container -->
+
+	</div><!-- .site-info-inside -->
+</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+
+</div><!-- #page .site-wrapper -->
+
+<div class="overlay-effect"></div><!-- .overlay-effect -->
+
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/8.3/_inc/build/photon/photon.min.js'></script>
+<script type='text/javascript' src='http://coronavirusclosuresupdate.com/wp-content/themes/anther/dist/js/enquire.js?ver=2.1.6'></script>
+<script type='text/javascript' src='http://coronavirusclosuresupdate.com/wp-content/themes/anther/dist/js/fitvids.js?ver=1.1'></script>
+<script type='text/javascript' src='http://coronavirusclosuresupdate.com/wp-content/themes/anther/dist/js/hover-intent.js?ver=r7'></script>
+<script type='text/javascript' src='http://coronavirusclosuresupdate.com/wp-content/themes/anther/dist/js/superfish.js?ver=1.7.10'></script>
+<script type='text/javascript' src='http://coronavirusclosuresupdate.com/wp-content/themes/anther/dist/js/custom.js?ver=1.0'></script>
+<script type='text/javascript' src='https://c0.wp.com/c/5.3.2/wp-includes/js/wp-embed.min.js'></script>
+<script type='text/javascript' src='https://stats.wp.com/e-202012.js' async='async' defer='defer'></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:8.3',blog:'174305756',post:'0',tz:'0',srv:'coronavirusclosuresupdate.com'} ]);
+	_stq.push([ 'clickTrackerInit', '174305756', '0' ]);
 </script>
 </body>
 </html>
+
+<!--Generated by Endurance Page Cache-->

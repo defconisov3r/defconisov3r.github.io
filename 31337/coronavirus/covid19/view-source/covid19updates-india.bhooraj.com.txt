@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="en-us">
+
 
   <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,15 +17,15 @@
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="public/css/poole.css">
-  <link rel="stylesheet" href="public/css/syntax.css">
-  <link rel="stylesheet" href="public/css/hyde.css">
-  <link rel="stylesheet" href="public/css/forms.css">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="/public/css/forms.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
   <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="public/bhooraj-logo.png">
-                                 <link rel="shortcut icon" href="public/bhooraj-logo.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/bhooraj-logo.png">
+                                 <link rel="shortcut icon" href="/public/bhooraj-logo.png">
 
   <!--JQuery-->
   <script
@@ -55,22 +57,26 @@
        });
     </script>
     
-
+    
     <script type="text/javascript">
       window.onload = function calC(argument) {
-        var x = document.getElementsByTagName("table")[0].rows, totalCases = 0, totalRecovered = 0, totalDeaths = 0 ;
+        var x = document.getElementsByTagName("table")[0].rows, totalCases = 0, totalRecovered = 0, totalDeaths = 0, totalActive = 0 ;
         var y = x.length;
         for(i = 1; i < y; i++)
           {
-            totalCases += parseInt(x[i].cells[1].innerHTML);
-            totalRecovered += parseInt(x[i].cells[2].innerHTML);
-            totalDeaths += parseInt(x[i].cells[3].innerHTML);
+            totalCases += (parseInt(x[i].cells[1].innerHTML) + parseInt(x[i].cells[2].innerHTML));
+            totalRecovered += parseInt(x[i].cells[3].innerHTML);
+            totalDeaths += parseInt(x[i].cells[4].innerHTML);
           }
-        document.getElementById("totalcases").innerHTML = "Total Cases &colon;" + totalCases;
-        document.getElementById("totalrecovered").innerHTML = "Total Recovered / Discharged &colon;" + totalRecovered;
-        document.getElementById("totaldeaths").innerHTML = "Total Deaths &colon;" + totalDeaths;
+        totalActive = (totalCases - (totalRecovered + totalDeaths));
+        document.getElementById("totalcases").innerHTML = "Total Cases&colon; " + totalCases;
+        document.getElementById("totalrecovered").innerHTML = "Total Recovered / Discharged / Migrated&colon; " + totalRecovered;
+        document.getElementById("totaldeaths").innerHTML = "Total Deaths&colon; " + totalDeaths;
+        document.getElementById("totalactive").innerHTML = "Total Active Cases&colon; " + totalActive;
       }
     </script>
+    
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 
@@ -80,7 +86,7 @@
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h1>
-        <a href="">
+        <a href="https://covid19updates-india.bhooraj.com">
           COVID-19 Updates from India
         </a>
       </h1>
@@ -88,7 +94,7 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="">Home</a>
+      <a class="sidebar-nav-item active " href="https://covid19updates-india.bhooraj.com">Home</a>
 
       
 
@@ -100,7 +106,7 @@
       
         
           
-            <a class="sidebar-nav-item" href="/about/">About</a>
+            <a class="sidebar-nav-item" href="https://covid19updates-india.bhooraj.com/about/">About</a>
           
         
       
@@ -108,6 +114,16 @@
       
         
           
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="https://covid19updates-india.bhooraj.com/prevention_from_Coronavirus_hindi/">कोरोनावायरस से बाचाव</a>
+          
+        
+      
+        
+      
         
       
         
@@ -118,7 +134,7 @@
        
     </nav>
     
-      <span class="sidebar-nav-item">Last updated &colon; 18.03.2020 at 5:50 PM IST</span>
+      <span class="sidebar-nav-item">Last updated &colon; 19.03.2020 at 07:14 PM IST</span>
     
   </div>
 </div>
@@ -129,19 +145,25 @@
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2020/03/16/home/">
+      <a href="/2020/03/19/home/">
         COVID-19 Updates from India
       </a>
     </h1>
     
-    <span class="post-date">18.03.2020 at 5:50 PM IST</span>
+    <span class="post-date"></span>
     
     <p>COVID-19 is the infectious disease caused by the most recently discovered coronavirus (2019-nCoV). This new virus and disease were unknown before the outbreak began in Wuhan, China, in December 2019.</p>
 
-<h2 id="covid-19-cases-in-india">COVID-19 Cases in India</h2>
+<h2 id="covid-19-cases-in-india-including-foreign-nationals-as-on-19032020-at-0500-pm">COVID-19 Cases in India (including foreign nationals, as on 19.03.2020 at 05:00 PM)</h2>
 <p id="totalcases" style="font-size: 1.2rem; font-weight: bold;"></p>
 <p id="totalrecovered" style="font-size: 1.2rem; font-weight: bold;"></p>
 <p id="totaldeaths" style="font-size: 1.2rem; font-weight: bold;"></p>
+<p id="totalactive" style="font-size: 1.2rem; font-weight: bold;"></p>
+<p>Source: <a href="https://www.mohfw.gov.in/">Ministry of Health and Family Welfare</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>We measure the Number of Active cases as: 
+Active Cases = Total cases - (Total Recovered/Discharged/Migrated + Total Deaths) 
+</code></pre></div></div>
 
 <h2 id="state-wise-covid-19-cases-in-india">State-wise COVID-19 cases in India</h2>
 
@@ -150,109 +172,153 @@
 <table>
   <thead>
     <tr>
-      <th>State / Union Territory</th>
-      <th>Total Cases</th>
-      <th>Total Recovered / Discharged</th>
-      <th>Total Deaths</th>
+      <th>Name of State / UT</th>
+      <th>Total Confirmed cases (Indian National)</th>
+      <th>Total Confirmed cases ( Foreign National )</th>
+      <th>Cured/Discharged/Migrated</th>
+      <th>Death</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Maharashtra</td>
-      <td>39</td>
-      <td>00</td>
-      <td>01</td>
+      <td>Andhra Pradesh</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
-      <td>Kerala</td>
-      <td>26</td>
-      <td>03</td>
-      <td>00</td>
+      <td>Chattisgarh</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <td>Delhi</td>
-      <td>08</td>
-      <td>02</td>
-      <td>01</td>
-    </tr>
-    <tr>
-      <td>Uttar Pradesh</td>
-      <td>15</td>
-      <td>05</td>
-      <td>00</td>
-    </tr>
-    <tr>
-      <td>Andhra Pradesh</td>
-      <td>01</td>
-      <td>00</td>
-      <td>00</td>
+      <td>11</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
     </tr>
     <tr>
       <td>Haryana</td>
-      <td>15</td>
-      <td>00</td>
-      <td>00</td>
+      <td>3</td>
+      <td>14</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <td>Karnataka</td>
-      <td>11</td>
-      <td>00</td>
-      <td>01</td>
+      <td>14</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Kerala</td>
+      <td>25</td>
+      <td>2</td>
+      <td>3</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Maharashtra</td>
+      <td>44</td>
+      <td>3</td>
+      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <td>Odisha</td>
-      <td>01</td>
-      <td>00</td>
-      <td>00</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Pondicherry</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <td>Punjab</td>
-      <td>01</td>
-      <td>00</td>
-      <td>00</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <td>Rajasthan</td>
-      <td>04</td>
-      <td>03</td>
-      <td>00</td>
+      <td>5</td>
+      <td>2</td>
+      <td>3</td>
+      <td>0</td>
     </tr>
     <tr>
       <td>Tamil Nadu</td>
-      <td>01</td>
-      <td>00</td>
-      <td>00</td>
+      <td>2</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
-      <td>Telangana</td>
-      <td>05</td>
-      <td>00</td>
-      <td>00</td>
+      <td>Telengana</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
-      <td>Union Territory of J&amp;K</td>
-      <td>03</td>
-      <td>00</td>
-      <td>00</td>
+      <td>Union Territory of Chandigarh</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Union Territory of Jammu and Kashmir</td>
+      <td>4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <td>Union Territory of Ladakh</td>
-      <td>06</td>
-      <td>00</td>
-      <td>00</td>
+      <td>8</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Uttar Pradesh</td>
+      <td>18</td>
+      <td>1</td>
+      <td>9</td>
+      <td>0</td>
     </tr>
     <tr>
       <td>Uttarakhand</td>
-      <td>01</td>
-      <td>00</td>
-      <td>00</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>West Bengal</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
 
 <div class="datatable-end"></div>
 
-<p><em>Data shown in the table is collected through Newspaper articles, Govt. sites and Press releases.</em></p>
+<p><em><strong>Note:</strong> Data shown in the table is collected through Newspaper articles, Govt. sites and Press releases.</em></p>
 
 <p><strong>Data is updated twice daily (Morning: 9-10 AM, Night: 9-10 PM).</strong></p>
 
@@ -260,19 +326,27 @@
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/2020/03/16/Latest-updates/">
+      <a href="/2020/03/19/Latest-updates/">
         Latest Updates
       </a>
     </h1>
     
-    <h3 id="17th-march-2020">17<sup>th</sup> March, 2020</h3>
+    <h3 id="19th-march-2020">19<sup>th</sup> March, 2020</h3>
 <ul>
-  <li>
-    <p>Exams cancelled in Uttar Pradesh. Schools and Colleges closed till April 2, 2020. [<a href="https://www.livemint.com/news/india/coronavirus-update-up-cancels-exams-extends-closure-of-schools-colleges-till-april-2-11584436122730.html">Source</a>]</p>
-  </li>
-  <li>
-    <p>West Bengal reports first positive case of coronavirus.[<a href="http://timesofindia.indiatimes.com/articleshow/74679605.cms?utm_source=contentofinterest&amp;utm_medium=text&amp;utm_campaign=cppst">Source</a>]</p>
-  </li>
+  <li>China hits a Coronavirus milestone: No new local infections. [<a href="https://timesofindia.indiatimes.com/world/china/china-hits-a-coronavirus-milestone-no-new-local-infections/articleshow/74703255.cms">Source</a>]</li>
+  <li>Chandigarh reports first COVID-19 case. [<a href="https://www.thehindu.com/news/national/coronavirus-live-updates-march-19-2020/article31105138.ece">Source</a>]</li>
+  <li>Section 144 imposed in Noida till April 5, mass gathering banned. [<a href="https://www.livemint.com/news/india/coronavirus-in-noida-section-144-imposed-mass-gathering-banned-11584585228542.html">Source</a>]</li>
+  <li>India’s fourth Coronavirus death reported from Punjab. [<a href="https://www.ndtv.com/india-news/indias-fourth-coronavirus-death-reported-from-punjab-2197462">Source</a>]</li>
+  <li>India bans entry of all international commercial passenger flights for one week. [<a href="https://www.livemint.com/news/india/india-bans-entry-of-all-international-commercial-passenger-flights-from-march-22-to-march-29-official-statement-11584619951721.html">Source</a>]</li>
+</ul>
+
+<h3 id="18th-march-2020">18<sup>th</sup> March, 2020</h3>
+<ul>
+  <li>Centre asks private hospitals to reserve beds for isolation. [<a href="http://timesofindia.indiatimes.com/articleshow/74681875.cms?utm_source=contentofinterest&amp;utm_medium=text&amp;utm_campaign=cppst">Source</a>]</li>
+  <li>Classes 1-8 Students in Uttar Pradesh to get promoted without exams. [<a href="https://timesofindia.indiatimes.com/india/coronavirus-confirmed-cases-deaths-india-around-the-world/articleshow/74666727.cms">Source</a>]</li>
+  <li>First case in armed forces as jawan tests positive in Leh. [<a href="https://www.thehindu.com/news/national/covid-19-first-case-in-armed-forces-as-jawan-tests-positive-in-leh/article31096756.ece">Source</a>]</li>
+  <li>Roche Diagnostics is India’s first private firm to get COVID-19 test approval. [<a href="https://www.thehindu.com/news/national/roche-diagnostics-is-indias-first-private-firm-to-get-covid-19-test-approval/article31098827.ece">Source</a>]</li>
+  <li>PM Modi Chairs meeting on Coronavirus, will address nation tomorrow (19<sup>th</sup> March, 2020) at 8 pm. [<a href="https://www.ndtv.com/india-news/pm-modi-chairs-meeting-on-coronavirus-will-address-nation-tomorrow-at-8-pm-2197035">Source</a>]</li>
 </ul>
 
   </div>
@@ -287,7 +361,18 @@
     <span class="pagination-item newer">Newer</span>
   
 </div>
+
     </div>
+    
+    	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-144707193-2', 'auto');
+  ga('send', 'pageview');
+</script>
     
     	
   </body>

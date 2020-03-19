@@ -1,25 +1,1090 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+
+
 <head>
-<title>Welcome to nginx!</title>
-<style>
-    body {
-        width: 35em;
-        margin: 0 auto;
-        font-family: Tahoma, Verdana, Arial, sans-serif;
-    }
-</style>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+
+    <script type="text/javascript" src="/static/cu-scripts.js"></script>
+    <script type="text/javascript" src="/static/web-audio-recording/RecorderService.js"></script>
+    <script type="text/javascript" src="/static/web-audio-recording/encoder-wav-worker.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/cu.css">
+
+    <!-- download from https://github.com/xcash/bootstrap-autocomplete -->
+    <script src="/static/bootstrap-autocomplete.js"></script>
+
+    <link rel="shortcut icon" href="/static/favicon.png">
+    <title>Sorcero Ask a question</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                    event.preventDefault();
+                    $(this).ekkoLightbox();
+                });
+        }
+    </script>
+
 </head>
+
+
 <body>
-<h1>Welcome to nginx!</h1>
-<p>If you see this page, the nginx web server is successfully installed and
-working. Further configuration is required.</p>
 
-<p>For online documentation and support please refer to
-<a href="http://nginx.org/">nginx.org</a>.<br/>
-Commercial support is available at
-<a href="http://nginx.com/">nginx.com</a>.</p>
+<!--- HEADER -->
+<style type="text/css">
+  .nav-link {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.25px;
+  font-feature-settings: 'kern' off;
+  /* Sorcero Gray 4 */
+  color: #808080;
+  }
 
-<p><em>Thank you for using nginx.</em></p>
+  .navbar-toggler {
+    border-color: transparent !important;
+  }
+</style>
+<nav id="cuNavbar" class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <a class="navbar-brand" href="#">
+  
+    <img id="botAvatar" onclick="javascript:window.location='/ask/coronavirus'" class="navbar-icon"/>
+    
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto" style="padding-top: 10px;">
+      
+      <li class="nav-item   active ">
+        <a class="nav-link" href="/ask/coronavirus">Ask</a>
+      </li>
+
+      
+
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="/questions/coronavirus">Q&nbsp;&&nbsp;A</a>
+      </li>
+      
+
+      
+      <li class="nav-item ">
+        <a class="nav-link" href="/library/coronavirus">Library</a>
+      </li>
+      
+
+      
+
+      
+      
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/?login=Y">Login</a>
+        </li>
+      
+    </ul>
+  </div>
+</nav>
+
+<script type="text/javascript">
+
+  function displayNotifications() {
+    
+    $.get("/get_notifications/coronavirus", function(data) {
+      if (data.length > 0) {
+        $('#notificationItem').removeClass('link-disable');
+        $('#newNotificationMark').css('display', 'block' );
+        var dropItems = "";
+        data.forEach(function(element) {
+          dropItems += notificationHtml(element['notification_id'], element['subject'] , element['body']);
+        });
+        $("#notificationDropDown").html(dropItems);
+        $('#notificationDropDown').dropdown();
+      } else {
+        $('#notificationItem').addClass('link-disable');
+      }
+    });
+    $.get("/get_bot_config/coronavirus", function(data) {
+      $("#botAvatar").attr("src", data['botAvatarUrl'] || '/static/logo.png');
+    });
+    
+  }
+
+  function notificationHtml(id, subject, body) {
+    return `
+      <a class="dropdown-item" onclick="window.location='/display_notification/${id}'">
+        <b>${subject}</b><br/>${body}
+      </a>
+      <div class="separator"></div>`
+  }
+
+  function markAllAsRead(bot_id) {
+    $.get("/mark_all_notification/" + bot_id, function(data) {
+      $('#notificationItem').addClass('link-disable');
+      $('#newNotificationMark').css('display', 'none' );
+    });
+  }
+
+  function getUserPreferences() {
+    // bot is sent as a parameter because is not available on all the pages
+    $.get("/get_user_preferences/?bot=coronavirus", function(data) {
+      if (data['accept-cookies'] == undefined) {
+        $("#cookies-overlay").show();
+        $("#cookies-msg").show();
+      } else {
+        // do not show the tour if the user has not accepted the cookies
+        if (data['tour-completed'] == undefined) {
+          // if we have in the ask page and a question is not set
+          // as a parameter, start the tour
+          if (window.location.href.indexOf('/ask/') > -1 && window.location.href.indexOf('question=') == -1) {
+            document.getElementById('tour_button').click();
+          }
+        }
+      }
+      var displayName = data['display-name'] ? "Hey " + data['display-name'] : data['email'];
+      displayName = displayName ? displayName : data['phone-number']
+
+      $("#userAvatar").attr("src", );
+      $("#userAvatar").css('background-image', 'url(' + (data['avatar-url'] || '/static/empty-avatar.jpg') + ')');
+    });
+  }
+
+  function acceptCookies() {
+    $.get("/accept_cookies", function( data ) {
+      $("#cookies-overlay").hide();
+      $("#cookies-msg").hide();
+    });
+  }
+
+
+  
+</script>
+
+<div id="cookies-overlay" class="overlay" style="display:none">
+    <div class="row cm-background" id="cookies-msg" style="display:none">
+        <div class="row cm-message">
+            <div class="col-md-11">
+                <span>
+                    We use cookies to improve your experience on our website. We do not share these data with any third parties. By browsing our website, you consent to our use of cookies. For more details about our privacy policies.<a href="../privacy-conditions" target="_blank"> Learn more</a>
+                </span>
+            </div>
+            <div class="col-md-1">
+                <div class="text-center">
+                    <button class="btn btn-success" onclick="acceptCookies()">I Agree</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    var BOT = 'coronavirus';
+    var LOG_ID = '';
+    var total_results = 0;
+
+    function get_bot() {
+        return BOT;
+    }
+
+    function clean() {
+        window.location = '/ask/' + get_bot();
+    }
+
+    function ask(question) {
+        clean_results();
+        $("#question").val(question);
+        $("#askForm")[0].submit();
+    }
+
+    function display_quantity_message(total_results) {
+        if (total_results == 0) {
+            $('#results_found').hide();
+            $('#error-area').html('0 results found. Please try and refine your search.');
+            $('#error-area').show();
+            return;
+        }
+        if (total_results == 1) {
+            $('#results_found').show();
+            $('#results_found').html('We found 1 response');
+        } else if (total_results > 1) {
+            $('#results_found').show();
+            $('#results_found').html(`We found ${total_results} responses`);
+        }
+    }
+
+    function add_answer_text(answers_texts, answer_text) {
+        if (answer_text != undefined) {
+            if (answers_texts.indexOf(answer_text) == -1) {
+                answers_texts.push(answer_text);
+            }
+        }
+    }
+
+    function store_comment(escaped_input_id, escaped_response_id) {
+        var comment = $('#comment_' + escaped_input_id + '_' + escaped_response_id).val().trim();
+        if (comment == '') {
+            show_feedback_box(escaped_input_id, escaped_response_id, 'You should write a comment', true);
+            return;
+        }
+
+        const data = new FormData();
+        data.append('input_text', $('#question_text').text());
+        data.append('log_id', LOG_ID);
+        data.append('comment', comment);
+        data.append('escaped_input_id', escaped_input_id);
+        data.append('escaped_response_id', escaped_response_id);
+
+        store_internal(data, '/store_comment/' + get_bot(),
+            function(response_data){
+                if (response_data.ok) {
+                    show_feedback_box(escaped_input_id, escaped_response_id,
+                                      'Thank you. Your feedback has been shared..');
+                    $('#comment').val('');
+                }
+            });
+    }
+
+    function show_feedback_box(escaped_input_id, escaped_response_id, message, error) {
+        /* message: str, error: boolean (if true show read, if false show green) */
+        if (error == undefined) {
+            error = false;
+        }
+        div_id = "#feedback_msg_" + escaped_input_id + '_' + escaped_response_id;
+        if (error) {
+            $(div_id).removeClass('alert-success');
+            $(div_id).addClass('alert-danger');
+        } else {
+            $(div_id).removeClass('alert-danger');
+            $(div_id).addClass('alert-success');
+        }
+
+        var msg = message + '<button type="button" class="close pt-2" data-dismiss="alert" aria-label="Close">&times;</span></button>';
+        $(div_id).html(msg);
+        $(div_id).removeClass('d-none');
+    }
+
+    function store_internal(data, url, callback) {
+        fetch(url, {
+            method: 'POST',
+            body: data
+        })
+        .then(function (response_data) {
+            callback(response_data);
+        })
+        .catch(reason => console.error(reason));
+    }
+
+    function ask_for_help() {
+        
+            bootbox.alert('To use the Sorcero, simply ask questions (e.g., how do I book a meeting room?). The Sorcero will guide you from there.');
+        
+    }
+
+    function toggleHelpMenu() {
+        $("#helpMenu").toggle();
+    }
+
+    function search_qa_pairs() {
+        var text = $("#question").val();
+        if (text == '') {
+            return;
+        }
+        $('#message-area').hide();
+        $('#error-area').hide();
+        $('body').css('cursor', 'wait');
+        $.ajax({ url: '/inputs_json/' + get_bot(),
+                data: { text_filter: text, status: 3}, // status 3 => questions with answers
+                })
+            .done(function (questions_data) {
+                var grid = '';
+                var counter = 0;
+                questions_data.forEach(function(question_data) {
+                    var question_id = clean_id(question_data['id']);
+                    grid += "<div class='card' style='padding:10px;margin-bottom:10px'>" +
+                        "<div class='row'>" +
+                        "<div class='col-12' style='white-space: pre-wrap'><b>" +question_data['highlighted_text'] + "</b>" +
+                        " <a href='/question/" + get_bot() + "/" + question_id +
+                            "' target='_blank' title='Open question in a new tab'>" +
+                        "<i class='fas fa-external-link-alt'></i></a>" + "</div>" +
+                        "</div>" +
+                        "<div class='row'>" +
+                        "<div class='col-12' style='padding-top:15px'>" + question_data['answers'][0]['highlighted_text'] + "</div>" +
+                        "</div>" +
+                        "</div>";
+                    counter++;
+
+                });
+                $('#search_results').html(grid);
+                var counterMessage = 'Text not found on Questions and Answers';
+                if (counter == 1) {
+                    counterMessage = counter + ' result found';
+                } else if (counter > 1) {
+                    counterMessage = counter + ' results found';
+                }
+
+                $('#message-area').html(counterMessage);
+                $('#message-area').show();
+
+                $('body').css('cursor', 'auto');
+            });
+    }
+
+    // ***************************************
+    // Speech to text ************************
+    // ***************************************
+    var recorder, stream, micStatus;
+    var spoke = false;
+    recorder = new RecorderService();
+    recorder.em.addEventListener('recording', onRecordingReady);
+
+    recorder.on('volume_change', function(currentVolumen) {
+        var vol = currentVolumen * 3 + 5; // Shadow box radius in function of vol
+        $('#record-background').css('box-shadow', '0 0 0 '+ vol + 'px rgba(0, 0, 0, 0.1)');
+        $("#debugLabel").text("Volume: " + currentVolumen);
+    });
+
+    recorder.on('start_record', function() {
+        spoke = true;
+        $("#debugStatus").text("SPEAKING");
+    });
+
+    recorder.on('stop_record', function() {
+        $("#debugStatus").text("STOP SPEAKING");
+    });
+
+    function startRecord() {
+        $('#question').attr("placeholder", "Speak now to ask your question...");
+        $('.audio-btn button i').css("color", "#5ca451");
+        recorder.startRecording();
+    }
+
+    function stopRecord() {
+        recorder.stopRecording();
+    }
+
+    function onRecordingReady(e) {
+        if(spoke) {
+            $('#question').attr("placeholder", "Processing...");
+        }
+        $("#debugLabel").text("Finish Record");
+        var reader = new FileReader();
+        reader.onload = function(event){
+            var fd = new FormData();
+            fd.append('file_name', 'mugi.webm');
+            fd.append('mime_type', e.detail.recording.mimeType);
+            fd.append('data', event.target.result);
+            $.ajax({
+                type: 'POST',
+                url: '/speech-to-text/coronavirus',
+                data: fd,
+                processData: false,
+                contentType: false
+            }).done(askRecognizedAudio);
+        };
+        reader.readAsDataURL(e.detail.recording.data);
+    }
+
+    function askRecognizedAudio(data) {
+        $('.audio-btn button i').css("color", "#6d757c");
+        if (data.error_code === 0) {
+            ask(data.text)
+        } else {
+            $('#question').attr("placeholder", "Your question...");
+        }
+    }
+
+    function search_original_question() {
+        question = escape($('#original_question_text').text());
+        window.location = '/ask/' + get_bot() + '?spell_check=False&question=' + question;
+    }
+
+    function search_pasages(question, qa_founds) {
+        // question: str to search
+        // qa_founds: int, number of questions found
+        var fd = new FormData();
+        fd.append('question', question);
+        fd.append('log_id', LOG_ID);
+        fetch('/ask_search_passages/' + get_bot(), {
+            method: 'POST',
+            body: fd
+        })
+        .then(function (response) {
+            return response.text();
+        }).then(function(passages_html) {
+            $('#search_passages_results').html(passages_html);
+        })
+    }
+
+    function store_reaction(reaction_type, escaped_input_id, escaped_response_id) {
+        // reaction_type should be 'smile' or 'frown'
+        var confirmation_msg =
+        'Thank you for helping to train the AI. To provide more information, please enter feedback below.';
+        var error = (reaction_type == 'frown');
+        const data = new FormData();
+        data.append('input_text', $('#question_text').text());
+        data.append('log_id', LOG_ID);
+        data.append('reaction_type', reaction_type);
+        data.append('escaped_input_id', escaped_input_id);
+        data.append('escaped_response_id', escaped_response_id);
+
+        store_internal(data, '/store_reaction/' + get_bot(), function(response_data) {
+            if (response_data.ok) {
+                show_feedback_box(escaped_input_id, escaped_response_id, confirmation_msg, error);
+                display_feedback(escaped_response_id);
+            }
+        });
+    }
+
+    var noteMaxLength = 500;
+    var commentMaxLength = 500;
+
+    $('comment').keyup(function() {
+        var length = $(this).val().length;
+        var length = maxLength-length;
+        $('#chars').text(length);
+    });
+
+    $('comment').keyup(charactes_countdown(noteMaxLength, 'commentCharacters'));
+    $('note_text').keyup(charactes_countdown(noteMaxLength, 'commentCharacters'));
+
+    function charactes_countdown(max, labelId) {
+        return function() {
+            var length = $(this).val().length;
+            var length = max-length;
+            $('#' + labelId).text(length);
+        }
+    }
+
+    function show_note_input(input_id) {
+        $("#edit_note_div_" + input_id).show();
+        $("#display_note_div_" + input_id).hide();
+    }
+
+    function hide_note_input(input_id) {
+        $("#edit_note_div_" + input_id).hide();
+        $("#display_note_div_" + input_id).show();
+    }
+
+    function edit_note(input_id) {
+        show_note_input(input_id);
+        $("#note_text_" + input_id).focus();
+    }
+
+    function store_note(espcaped_input_id, escaped_response_id) {
+        var note = $('#note_text_' + espcaped_input_id).val().trim();
+        if (note == '') {
+            show_feedback_box(espcaped_input_id, escaped_response_id, 'You should write a note', true)
+            return;
+        }
+
+        const data = new FormData();
+        data.append('input_path', '/input/' + espcaped_input_id);
+        data.append('comment', note);
+        data.append('log_id', LOG_ID);
+
+        store_internal(data, '/store_note/' + get_bot(), function(response_data) {
+            if (response_data.ok) {
+                show_feedback_box(espcaped_input_id, escaped_response_id, 'Your note was not saved.')
+                $('#note_label_' + espcaped_input_id).text(note);
+                $('#note_modified_' + espcaped_input_id).text('Now');
+                hide_note_input(espcaped_input_id);
+            }
+        });
+    }
+
+    function delete_note(escaped_id, note_type) {
+        const data = new FormData();
+        data.append('escaped_id', escaped_id);
+        data.append('note_type', note_type);
+        store_internal(data, '/delete_note/' + get_bot(), function(response_data) {
+            $('#note_text_' + escaped_id).val('');
+            show_note_input(escaped_id);
+            if (note_type == 'input') {
+                $('#message-area').html("Your note was deleted");
+                $('#message-area').show();
+            } else {
+                show_feedback_box_psg(escaped_id, "Your note was deleted");
+            }
+        });
+    }
+
+    function update_pin(pin, escaped_response_id, uri) {
+        var image_name = pin.css('background-image');
+        var cleanup = /\"|\'|\)/g;
+        var formatted_image_name = image_name.split('/').pop().replace(cleanup, '')
+
+        var pressed = !formatted_image_name.includes('pressed');
+
+        var data = {
+            response_id: escaped_response_id,
+            log_id: LOG_ID,
+            is_pinned: pressed
+        }
+
+        url = "/" + uri + "/coronavirus";
+
+        $.post(url, data).then(function(response) {
+            var new_icon_class = "pin-icon" + (pressed ? '-pressed' : '');
+            var old_icon_class = "pin-icon" + (pressed ? '' : '-pressed');
+            pin.addClass(new_icon_class).removeClass(old_icon_class);
+        });
+    }
+
+    function pin_qa(escaped_input_id) {
+        var pin = $('#input_pin_icon_' + escaped_input_id);
+        update_pin(pin, escaped_input_id, 'update_question_pin');
+    }
+
+    function pin_passage(escaped_passage_id) {
+        var pin = $('#passage_pin_icon_' + escaped_passage_id);
+        update_pin(pin, escaped_passage_id, 'update_passage_pin');
+    }
+
+    function thumbs_up(escaped_input_id, escaped_response_id) {
+        $('#thumbs_up_icon_' + escaped_input_id + '_' + escaped_response_id).css("color", "#007bff");
+        $('#thumbs_down_icon_' + escaped_input_id + '_' + escaped_response_id).css("color", "#BABABA");
+        store_reaction('smile', escaped_input_id, escaped_response_id);
+    }
+
+    function thumbs_down(escaped_input_id, escaped_response_id) {
+        $('#thumbs_down_icon_' + escaped_input_id + '_' + escaped_response_id).css("color", "#007bff");
+        $('#thumbs_up_icon_' + escaped_input_id + '_' + escaped_response_id).css("color", "#BABABA");
+        store_reaction('frown', escaped_input_id, escaped_response_id);
+    }
+
+    function display_feedback(escaped_input_id, escaped_response_id) {
+        display_reaction_area(escaped_input_id, escaped_response_id);
+        $('#feedback-tab_' + escaped_input_id + '_' + escaped_response_id).addClass('active');
+        $('#feedback_' + escaped_input_id + '_' + escaped_response_id).show();
+        $('#note-tab_' + escaped_input_id + '_' + escaped_response_id).removeClass('active');
+        $('#note_' + escaped_input_id + '_' + escaped_response_id).hide();
+    }
+
+    function display_note(escaped_input_id, escaped_response_id) {
+        display_reaction_area(escaped_input_id, escaped_response_id);
+        $('#feedback-tab_' + escaped_input_id + '_' + escaped_response_id).removeClass('active');
+        $('#feedback_' + escaped_input_id + '_' + escaped_response_id).hide();
+        $('#note-tab_' + escaped_input_id + '_' + escaped_response_id).addClass('active');
+        $('#note_' + escaped_input_id + '_' + escaped_response_id).show();
+    }
+
+    function display_reaction_area(escaped_input_id, escaped_response_id) {
+        $('#tab_content_' + escaped_input_id + '_' +escaped_response_id).removeClass('d-none');
+    }
+
+    function validate_and_send(event, form) {
+        if (form.question.value == '') {
+            event.preventDefault();
+            return;
+        }
+        clean_results();
+    }
+
+    function show_searching() {
+        $('#results_found').show();
+        $('#results_found').html('<div id="wave"><span>Searching' +
+            '</span><span class="dot">' +
+            '</span><span class="dot"></span><span class="dot"></span></div>');
+    }
+
+    function clean_results() {
+        show_searching();
+        $('#search_results').hide();
+        $('#search_passages_results').hide();
+    }
+
+    $(document).ready(function() {
+        var searchParams = new URLSearchParams(window.location.search);
+        var qasearch = searchParams.get('qa-search');
+        if (qasearch) {
+            $("#question").val(qasearch);
+            // TODO:
+            // search_qa_pairs();
+        }
+        var lib_search = searchParams.get('library-search');
+        if (lib_search) {
+            search_pasages(lib_search);
+        }
+    });
+
+    // reaction on passages
+
+    function display_feedback_psg(escaped_passage_id) {
+        display_reaction_area_psg(escaped_passage_id);
+        $('#feedback-tab_' + escaped_passage_id).addClass('active');
+        $('#feedback_' + escaped_passage_id).show();
+        $('#note-tab_' + escaped_passage_id).removeClass('active');
+        $('#note_' + escaped_passage_id).hide();
+    }
+
+    function display_note_psg(escaped_passage_id) {
+        display_reaction_area_psg(escaped_passage_id);
+        $('#feedback-tab_' + escaped_passage_id).removeClass('active');
+        $('#feedback_' + escaped_passage_id).hide();
+        $('#note-tab_' + escaped_passage_id).addClass('active');
+        $('#note_' + escaped_passage_id).show();
+    }
+
+    function display_reaction_area_psg(escaped_passage_id) {
+        $('#tab_content_' + escaped_passage_id).removeClass('d-none');
+    }
+
+    function store_reaction_passage(reaction_type, escaped_passage_id) {
+        // reaction_type should be 'smile' or 'frown'
+        var confirmation_msg =
+        'Thank you for helping to train the AI. To provide more information, please enter feedback below.';
+        var error = (reaction_type == 'frown');
+        const data = new FormData();
+        data.append('input_text', $('#question_text').text());
+        data.append('log_id', LOG_ID);
+        data.append('reaction_type', reaction_type);
+        data.append('escaped_passage_id', escaped_passage_id);
+
+        store_internal(data, '/store_reaction/' + get_bot(), function(response_data) {
+            if (response_data.ok) {
+                show_feedback_box_psg(escaped_passage_id, confirmation_msg, error);
+                display_feedback_psg(escaped_passage_id);
+            }
+        });
+    }
+
+    function thumbs_up_psg(escaped_passage_id) {
+        $('#thumbs_up_psg_icon_' + escaped_passage_id).css("color", "#007bff");
+        $('#thumbs_down_psg_icon_' + escaped_passage_id).css("color", "#BABABA");
+        store_reaction_passage('smile', escaped_passage_id);
+    }
+
+    function thumbs_down_psg(escaped_passage_id) {
+        $('#thumbs_down_psg_icon_' + escaped_passage_id).css("color", "#007bff");
+        $('#thumbs_up_psg_icon_' + escaped_passage_id).css("color", "#BABABA");
+        store_reaction_passage('frown', escaped_passage_id);
+    }
+
+    function store_comment_psg(escaped_passage_id) {
+        var comment = $('#comment_' + escaped_passage_id).val().trim();
+        if (comment == '') {
+            show_feedback_box_psg(escaped_passage_id, 'You should write a comment', true);
+            return;
+        }
+
+        const data = new FormData();
+        data.append('input_text', $('#question_text').text());
+        data.append('log_id', LOG_ID);
+        data.append('comment', comment);
+        data.append('escaped_passage_id', escaped_passage_id);
+
+        store_internal(data, '/store_comment/' + get_bot(),
+            function(response_data){
+                if (response_data.ok) {
+                    show_feedback_box_psg(escaped_passage_id, 'Thank you. Your feedback has been shared..');
+                    $('#comment').val('');
+                }
+            });
+    }
+
+    function show_feedback_box_psg(passage_id, message, error) {
+        /* message: str, error: boolean (if true show read, if false show green) */
+        if (error == undefined) {
+            error = false;
+        }
+        div_id = "#feedback_msg_psg_" + passage_id;
+        if (error) {
+            $(div_id).removeClass('alert-success');
+            $(div_id).addClass('alert-danger');
+        } else {
+            $(div_id).removeClass('alert-danger');
+            $(div_id).addClass('alert-success');
+        }
+
+        var msg = message + '<button type="button" class="close pt-2" data-dismiss="alert" aria-label="Close">&times;</span></button>';
+        $(div_id).html(msg);
+        $(div_id).removeClass('d-none');
+    }
+
+    function store_note_psg(escaped_passage_id) {
+        var note = $('#note_text_' + escaped_passage_id).val().trim();
+        if (note == '') {
+            show_feedback_box_psg(escaped_passage_id, 'You should write a note', true)
+            return;
+        }
+
+        const data = new FormData();
+        data.append('input_path', '/passage/' + escaped_passage_id);
+        data.append('comment', note);
+        data.append('log_id', LOG_ID);
+
+        store_internal(data, '/store_note/' + get_bot(), function(response_data) {
+            if (response_data.ok) {
+                show_feedback_box_psg(escaped_passage_id, 'Your note was not saved.')
+                $('#note_label_' + escaped_passage_id).text(note);
+                $('#note_modified_' + escaped_passage_id).text('Now');
+                hide_note_input(escaped_passage_id);
+            }
+        });
+    }
+
+
+    function store_misunderstanding_and_show(message) {
+        message = message ? message : "We’re sorry our response was not adequate. Our team has been notified.";
+        $('#message-area').hide();
+        const data = new FormData();
+        data.append('input_text', $('#question').val());
+        data.append('log_id', LOG_ID);
+        data.append('comment', $('#misunderstandingComment').val());
+
+        store_internal(data, '/store_misunderstanding/' + get_bot(), function(response_data){
+            $('#cantFindAnswerModal').modal('toggle');
+            $('#misunderstandingComment').val('');
+            if (response_data.ok) {
+                $('#message-area').html(message);
+                $('#message-area').show();
+            }
+        });
+    }
+
+    function store_misunderstanding() {
+        $('#cantFindAnswerModal').modal('show');
+    }
+
+    function copyPassageLink(docId, passageId) {
+        var current_location = new URL(window.location);
+        var botId = "coronavirus";
+        docId = docId.replace('/', '_')
+        var passageLink = `${current_location.origin}/document/${botId}/${docId}#${passageId}`;
+        copy(passageLink);
+    }
+
+    function copyPassage(passageId) {
+        var passageText = $('#passageText' + passageId).val();
+        copy(passageText);
+    }
+
+    function copyQALink(qaId) {
+        var current_location = new URL(window.location);
+        var botId = "coronavirus";
+        var passageLink = `${current_location.origin}/question/${botId}/${qaId}`;
+        copy(passageLink);
+    }
+
+    function copy(text) {
+        const textElem = document.createElement('textarea');
+        textElem.value = text;
+        document.body.appendChild(textElem);
+        textElem.select();
+        document.execCommand('copy');
+        document.body.removeChild(textElem)
+    }
+
+</script>
+
+
+<div id="welcomeArea" class="row ml-0 collapse show col-12 ask-panel">
+    <div class="col-0 col-md-2 col-lg-3 col-xl-3"></div>
+    <div class="col-12 col-md-8 col-lg-6 col-xl-6 px-0">
+        <div class="d-flex align-items-start flex-column">
+            <span id="debugLabel" class="badge badge-danger d-none">Ready to Record</span>
+            <span id="debugStatus" class="badge badge-danger d-none">Status: NONE</span>
+        </div>
+        <script>
+            var searchParams = new URLSearchParams(window.location.search);
+            var debug = searchParams.get('debug');
+            if (debug) {
+                $("#debugLabel").removeClass('d-none');
+                $("#debugStatus").removeClass('d-none');
+            }
+        </script>
+
+
+        <form action="/ask/coronavirus" id="askForm" method="post" onsubmit="validate_and_send(event, this)" class="d-block">
+            <div class="form-row">
+                <div class="col-12">
+                    
+                    <div class="d-flex">
+                        <input type="hidden" name="from_tour" id="from_tour" value="false"/>
+                        <input type="text" class="form-control basic form-control-lg mr-1 pr-5" id="question" name="question" value=""
+                               placeholder="Your question..." autocomplete="off"/>
+                        <div id="speech-button" class="audio-btn">
+                            <div id="record-background" class="record-animation"></div>
+                            <button id="record" type="button" onclick="startRecord()">
+                                <i class="fa fa-microphone" data-content="Search by voice" data-toggle="popover" data-placement="top" data-trigger="hover"></i>
+                            </button>
+                            <script type="text/javascript">
+                                $('[data-toggle="popover"]').popover();
+                            </script>
+                        </div>
+                        <button id="search-btn" type="submit" class="btn ask-btn btn-primary btn-lg d-none d-sm-block">SEARCH</button>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $('.basic').autoComplete({
+                    resolverSettings: {
+                        url: '/inputs_typeahead/' + get_bot(),
+                        minLength: 3,
+                        autoSelect: false
+                    }
+                });
+                $('.basic').on('autocomplete.select', function(evt, item) {
+                    ask(item);
+                });
+            </script>
+
+        </form>
+
+      <div class="response-counter mb-4 mt-4" id="results_found" style="display:none; padding:0px 20px;">
+        <!-- We found  responses -->
+      </div>
+      <div id="search_results" style="padding:0px 20px;">
+
+            <div id="info-area" style="display:none"></div>
+
+            <div id="error-area" class="alert alert-danger mt-2" role="alert" style="display:none"></div>
+
+            <div id="message-area" class="alert alert-primary mt-2" role="alert" style="display:none"></div>
+
+            
+
+            <div id="search_passages_results"></div>
+
+        </div>
+    </div>
+    <div class="col-0 col-md-2 col-lg-3 col-xl-3"></div>
+    <div class="col-0 col-md-2 col-lg-3 col-xl-3"></div>
+    <div class="col-12 col-md-8 col-lg-6 col-xl-6 px-0 mt-5">
+        
+        <div class="popular-questions-title ml-0">Popular Questions</div>
+        <div class="popular-questions-counter mb-4">You have 6 entries.</div>
+
+        <div class="pb-0">
+            <ul class="list-unstyled">
+            
+                <div style="display:none" id="fav_1">Will warm weather stop the outbreak of COVID-19?</div>
+                <li class="pb-3"><a class="popular-questions-item" onclick="ask($('#fav_1').text())">Will warm weather stop the outbreak of COVID-19?</a></li>
+            
+                <div style="display:none" id="fav_2">What are the symptoms of COVID-19?</div>
+                <li class="pb-3"><a class="popular-questions-item" onclick="ask($('#fav_2').text())">What are the symptoms of COVID-19?</a></li>
+            
+                <div style="display:none" id="fav_3">Where can I get tested for COVID-19?</div>
+                <li class="pb-3"><a class="popular-questions-item" onclick="ask($('#fav_3').text())">Where can I get tested for COVID-19?</a></li>
+            
+                <div style="display:none" id="fav_4">Can my dog or cat get COVID-19?</div>
+                <li class="pb-3"><a class="popular-questions-item" onclick="ask($('#fav_4').text())">Can my dog or cat get COVID-19?</a></li>
+            
+                <div style="display:none" id="fav_5">Frequently Asked Questions about this site</div>
+                <li class="pb-3"><a class="popular-questions-item" onclick="ask($('#fav_5').text())">Frequently Asked Questions about this site</a></li>
+            
+                <div style="display:none" id="fav_6">How long does COVID-19 last on surfaces?</div>
+                <li class="pb-3"><a class="popular-questions-item" onclick="ask($('#fav_6').text())">How long does COVID-19 last on surfaces?</a></li>
+            
+            </ul>
+        </div>
+      
+    </div>
+    <div class="col-0 col-md-2 col-lg-3 col-xl-3"></div>
+    <div>
+        
+        <div id="helpMenu" style="display:none;">
+            <button class="dropdown-item" id="ask_for_help" onclick="javascript:ask_for_help()">Want more help? &#x2B07</button>
+            <button class="dropdown-item" id="tour_button" onclick="javascript:start_tour()">Take a tour</button>
+            
+        </div>
+        <div id="helpButton" onclick="toggleHelpMenu()"><a><i class="fas fa-question"></i></a></div>
+    </div>
+
+</div>
+
+<link href="/static/css/bootstrap-tour.min.css" rel="stylesheet">
+<script src="/static/bootstrap-tour.min.js"></script>
+
+<style>
+
+  .popover-header {
+    background-color: #53A451;
+    color: white;
+    border-radius: 5px 5px 0px 0px;
+  }
+
+  .tour-tour {
+    border: 0;
+  }
+
+</style>
+
+<script type="text/javascript">
+
+var questionTour = 'How do I use Sorcero?';
+
+function autoType(inputId, text) {
+    var input = $(inputId);
+    input.val('');
+    var i = 0;
+    function typeWriter() {
+        if (i < text.length) {
+            input.val(input.val() + text.charAt(i));
+            i++;
+            setTimeout(typeWriter, 50);
+        }
+    }
+
+    typeWriter();
+}
+
+
+function tourCompleted() {
+    $.get("/tour_completed", function( data ) {
+        console.log('Store tour completed');
+    });
+}
+
+var THUMBS_BTN_STEP = 1;
+
+var tourSteps = [{
+  element: "#search-btn",
+  title: "Welcome to Sorcero",
+  content: "To use Sorcero, speak or type your question, and click \"Search\"",
+  onShow: function (tour) {
+    autoType('#question', questionTour);
+  },
+  onNext: function() {
+    if (document.location.href.indexOf('question=') == -1) {
+      $("#from_tour").val(true);
+      $("#askForm").submit();
+    }
+  }
+}, {
+  element: "#thumbs_down_icon_tour_id_tour_id",
+  title: "Log the results",
+  content: "Click \"thumbs up\" for results that answer your question and \"thumbs down\" for results that don't. Your feedback improves Sorcero's AI.",
+  onNext: function() {
+    display_feedback('tour_id', 'tour_id');
+  },
+  reflex: true
+}, {
+  element: "#feedback-tab_tour_id_tour_id",
+  title: "Send a message to your expert",
+  content: "Send more information to your expert so they can improve the answer to your question.",
+  onNext: function() {
+    display_note('tour_id','tour_id')
+  },
+}, {
+  element: "#note-tab_tour_id_tour_id",
+  title: "Personal Notes",
+  content: "Use the Note feature to save information for later. Notes are associated with specific answers, and only you can see your notes.",
+  onNext: function() {
+    $("#helpMenu").show();
+  }
+}, {
+  element: "#ask_for_help",
+  title: "Want more help?",
+  content: "If you have any further questions, just ask Sorcero!"
+}];
+
+var tourTemplate = '<div class="popover tour-tour tour-tour-1 fade show bs-popover-right shadow" role="tooltip">  ' +
+  '<div class="arrow" style="top: 48px;"></div>  ' +
+  '<h3 class="popover-header"></h3>  ' +
+  '<div class="popover-body"></div> ' +
+  '<div class="popover-navigation">  ' +
+  '  <button class="btn btn-sm btn-outline-success" data-role="prev"><i class="fas fa-arrow-left"></i> Prev</button>  ' +
+  '  <button class="btn btn-sm btn-success" data-role="next">Next <i class="fas fa-arrow-right"></i></button>   ' +
+  '  <button class="btn btn-sm btn-outline-secondary" data-role="end">End tour</button>  ' +
+  '</div>  ' +
+'</div>';
+
+var tour = new Tour({
+  name: "tour",
+  steps: tourSteps,
+  container: "body",
+  smartPlacement: true,
+  keyboard: true,
+  storage: window.localStorage,
+  debug: false,
+  redirect: true,
+  orphan: false,
+  basePath: "",
+  template: tourTemplate,
+  onEnd: function() {
+      tourCompleted();
+      $("#helpMenu").hide();
+  }
+});
+
+
+function start_tour() {
+  tour.init();
+  // Start the tour
+  if (tour.ended()) {
+      tour.restart()
+  }
+  tour.start(true);
+}
+
+function continue_tour() {
+  if ($('#question').val() == questionTour) {
+    tour.init();
+    // Start the tour
+    tour.setCurrentStep(THUMBS_BTN_STEP);
+    // HACK: click in the button is the only way to restart the tour
+    // I have tried all the other options
+    document.getElementById('tour_button').click();
+  }
+}
+
+$(document).ready(function() {
+  continue_tour();
+});
+
+</script>
+
 </body>
+<footer class="footer">
+    <hr>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-9">
+                <!-- <h5>Sorcero</h5> -->
+                <!-- <br> -->
+                <a href="/privacy-conditions" target="_blank">Privacy Policy</a>,
+                <a href="/terms-of-use" target="_blank">Terms and Conditions</a>
+            </div>
+
+            <div class="col-lg-3">
+                <p><strong>© 2020 Sorcero - All Rights Reserved</strong></p>
+            </div>
+
+
+            <!-- <div class="col-lg-2 col-md-6 col-sm-12">
+                <p>Follow us</p>
+                <hr>
+                <p><a href="https://www.facebook.com/SorceroAI/" target="_blank"><i class="fab fa-facebook "></i> Facebook</a></p>
+                <p><a href="https://www.linkedin.com/company/sorceroai/" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a></p>
+                <p><a href="https://twitter.com/SorceroCo/" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></p>
+            </div>
+
+            <div class="col-lg-5 col-sm-12">
+                <p>Contact us</p>
+                <hr>
+                <p><i class="far fa-map"></i>1808 Adams Mill Road, NW, Third Floor Washington, DC 20009</p>
+                <p><i class="far fa-envelope"></i> info@sorcero.com</p>
+            </div> -->
+        </div>
+    </div>
+</footer>
 </html>

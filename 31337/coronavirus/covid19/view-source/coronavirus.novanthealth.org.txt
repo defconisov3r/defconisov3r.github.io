@@ -1,30 +1,45 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html
     class=" mod-js mod-flexbox mod-canvas mod-canvastext mod-webgl mod-no-touch mod-geolocation mod-postmessage mod-no-websqldatabase mod-indexeddb mod-hashchange mod-history mod-draganddrop mod-websockets mod-rgba mod-hsla mod-multiplebgs mod-backgroundsize mod-borderimage mod-borderradius mod-boxshadow mod-textshadow mod-opacity mod-cssanimations mod-csscolumns mod-cssgradients mod-no-cssreflections mod-csstransforms mod-csstransforms3d mod-csstransitions mod-fontface mod-generatedcontent mod-video mod-audio mod-localstorage mod-sessionstorage mod-webworkers mod-applicationcache mod-svg mod-inlinesvg mod-smil mod-svgclippaths wf-myriadpro-n7-active wf-myriadpro-i7-active wf-myriadpro-i4-active wf-myriadpro-n3-active wf-myriadpro-i3-active wf-myriadpro-n4-active wf-myriadpro-n6-active wf-myriadpro-i6-active wf-schoolbookweb-n4-active wf-schoolbookweb-n7-active wf-active"
     style="height: 100%;" lang="en-US">
 
 <head id="Head">
-<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-1550481-1"></script><script>  window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'UA-1550481-1');</script>
-
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W24LG2');</script>
+    <!-- End Google Tag Manager -->
+    
     <title>
-        Coronavirus | Novant Health
+        Coronavirus care, testing and resources | Novant Health
     </title>
     <meta id="MetaDescription" name="DESCRIPTION"
         content="Medical teams at Novant Health are prepared to care for patients who may have come into contact with an emerging infectious disease, including the novel coronavirus, also known as COVID-19. Get general information about the coronavirus, see a list of symptoms and find out what you should do if you think you are infected.">
     <meta id="MetaRobots" name="ROBOTS" content="INDEX, FOLLOW">
-    <link href="https://novanthealth.org/Resources/Shared/stylesheets/dnndefault/7.0.0/default.css?cdv=1226" type="text/css" rel="stylesheet">
-    <link href="https://novanthealth.org/DesktopModules/Orizonti_MegaMenu/module.css?cdv=1226" type="text/css" rel="stylesheet">
-    <link href="https://novanthealth.org/Resources/Search/SearchSkinObjectPreview.css?cdv=1226" type="text/css" rel="stylesheet">
+    <link href="https://novanthealth.org/Resources/Shared/stylesheets/dnndefault/7.0.0/default.css?cdv=1226"
+        type="text/css" rel="stylesheet">
+    <link href="https://novanthealth.org/DesktopModules/Orizonti_MegaMenu/module.css?cdv=1226" type="text/css"
+        rel="stylesheet">
+    <link href="https://novanthealth.org/Resources/Search/SearchSkinObjectPreview.css?cdv=1226" type="text/css"
+        rel="stylesheet">
     <link href="https://novanthealth.org/Portals/92/skins/novant/skin.css?cdv=1226" type="text/css" rel="stylesheet">
     <link href="https://novanthealth.org/Portals/92/portal.css?cdv=1226" type="text/css" rel="stylesheet">
-    <link href="https://novanthealth.org/Portals/92/skins/novant/DDRBreadcrumbs/DDRBreadcrumbs.css?cdv=1226" type="text/css" rel="stylesheet">
-    <link href="https://novanthealth.org/DesktopModules/DnnSharp/Common/static/bootstrap337/css/bootstrap.min.css?cdv=1226" type="text/css"
-        rel="stylesheet">
-    <link href="https://novanthealth.org/DesktopModules/DnnSharp/TabsPro/templates/Bootstrap/styles.min.css?cdv=1226" type="text/css"
-        rel="stylesheet">
-    <link href="https://novanthealth.org/DesktopModules/DnnSharp/Common/static/font-awesome/css/font-awesome.css?cdv=1226" type="text/css"
-        rel="stylesheet">
+    <link href="https://novanthealth.org/Portals/92/skins/novant/DDRBreadcrumbs/DDRBreadcrumbs.css?cdv=1226"
+        type="text/css" rel="stylesheet">
+    <link
+        href="https://novanthealth.org/DesktopModules/DnnSharp/Common/static/bootstrap337/css/bootstrap.min.css?cdv=1226"
+        type="text/css" rel="stylesheet">
+    <link href="https://novanthealth.org/DesktopModules/DnnSharp/TabsPro/templates/Bootstrap/styles.min.css?cdv=1226"
+        type="text/css" rel="stylesheet">
+    <link
+        href="https://novanthealth.org/DesktopModules/DnnSharp/Common/static/font-awesome/css/font-awesome.css?cdv=1226"
+        type="text/css" rel="stylesheet">
     <script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/ec.js"></script>
     <script src="https://connect.facebook.net/signals/config/1530225520470420?v=2.9.15&amp;r=stable" async=""></script>
     <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
@@ -45,12 +60,16 @@
         .fusejs [data-fuse] {
             opacity: 0 !important
         }
+
+        .search-item {
+            display: none !important;
+        }
     </style>
 
-   
-    
+
+
     <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6236876/6487012/css/fonts.css">
-        
+
     <link type="text/css" rel="stylesheet" charset="UTF-8"
         href="https://translate.googleapis.com/translate_static/css/translateelement.css">
     <script type="text/javascript" charset="UTF-8"
@@ -75,6 +94,11 @@
 </head>
 
 <body id="Body" style="position: relative; min-height: 100%; top: 0px;">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W24LG2" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
     <style>
         .container .default-container {
             max-width: 630.325px !important;
@@ -88,7 +112,7 @@
 
         /*Raises z-index of skin header title bar to prevent overlap of header banner module */
     </style>
-    
+
     <script async="" type="text/javascript" src="https://dnnapi.com/analytics/js/2033904.js"></script>
     <script language="javascript" type="text/javascript" src="/Portals/92/skins/novant/js/scripts.js"></script>
     <script language="javascript" type="text/javascript"
@@ -484,7 +508,6 @@
                 style="padding:6px 12px;text-align: center;font-weight: 600;color: #1a3f4f;background-color: #f0b323;">
                 <p style="font-weight: 600; padding: 0px !important; margin: 0px !important;">Novant Health is prepared
                     to care for you. Call your physician if you think you have the coronavirus or call <a
-                        style="color: #840b55; text-decoration: underline;" href="tel:8774991697">877-499-1697</a> or <a
                         style="color: #840b55; text-decoration: underline;" href="tel:8779668268">877-9NOVANT</a> if you
                     don’t have one. <a
                         href="https://www.novanthealth.org/home/about-us/newsroom/coronavirus.aspx?utm_source=alertRibbon"
@@ -514,7 +537,7 @@
                                                 <div id="navSearchWrap"></div>
                                                 <ul class="quick-menu">
                                                     <li class="even-item"><a
-                                                            href="https://novanthealth.org/home/patients--visitors/our-doctors/find-a-doctor.aspx"
+                                                            href="https://www.novanthealth.org/pf"
                                                             data-tk-action="INTERNALLINK" data-tk-type="LINK"
                                                             data-tk-location="HEADER"><img alt="Find a doctor"
                                                                 src="/portals/92/skins/Novant/images/Find_Doctor.svg"
@@ -528,17 +551,22 @@
                                                                 width="20px" height="20px">Find a location</a></li>
                                                     <li class="sub-menus">
                                                         <ul>
-                                                            <li><a href="https://novanthealth.org/careers.aspx">Careers</a></li>
+                                                            <li><a
+                                                                    href="https://novanthealth.org/careers.aspx">Careers</a>
+                                                            </li>
                                                             <li data-tk-action="INTERNALLINK" data-tk-type="LINK"
-                                                                data-tk-location="HEADER"><a href="https://novanthealth.org/pf">Make an
+                                                                data-tk-location="HEADER"><a
+                                                                    href="https://novanthealth.org/pf">Make an
                                                                     appointment</a></li>
                                                         </ul>
                                                     </li>
                                                     <li class="sub-menus">
                                                         <ul>
-                                                            <li><a href="https://novanthealth.org/for-healthcare-providers.aspx"><em>for
+                                                            <li><a
+                                                                    href="https://novanthealth.org/for-healthcare-providers.aspx"><em>for
                                                                     </em>Healthcare providers</a></li>
-                                                            <li><a href="https://novanthealth.org/team-member-connections.aspx"><em>for
+                                                            <li><a
+                                                                    href="https://novanthealth.org/team-member-connections.aspx"><em>for
                                                                     </em>Employees</a></li>
                                                         </ul>
                                                     </li>
@@ -561,30 +589,17 @@
                     </div>
                 </div>
             </div><!-- /headerWrap -->
-            <div id="mobileLocWrap" class="mobile-toggle toggle-menu">
-                <ul id="locScroll" class="mobile-dropdown">undefined</ul>
-            </div>
+
             <div id="mobileNavWrap" class="mobile-toggle toggle-menu">
                 <ul id="navScroll" class="mobile-dropdown">
-                    <li class="search-item">
 
-
-                        <span class="searchInputContainer" data-moreresults="See More Results"
-                            data-noresult="No Results Found">
-                            <input name="dnn$siteSearch$txtSearch" type="text" maxlength="255" size="20"
-                                id="dnn_siteSearch_txtSearch" class="NormalTextBox" aria-label="Search"
-                                autocomplete="off" placeholder="Search" title="Search">
-                            <a class="dnnSearchBoxClearText" title="Clear search text"></a>
-                        </span>
-                        <a id="dnn_siteSearch_cmdSearch" class="header-search"
-                            href="javascript:__doPostBack('dnn$siteSearch$cmdSearch','')">Go</a>
-                    </li>
-                    <li class="even-item"><a href="https://novanthealth.org/home/patients--visitors/our-doctors/find-a-doctor.aspx"><img
+                    <li class="even-item"><a
+                            href="https://novanthealth.org/home/patients--visitors/our-doctors/find-a-doctor.aspx"><img
                                 alt="Find a doctor" src="/portals/92/skins/Novant/images/Find_Doctor.svg"
                                 style="display: block; margin: 0px auto -5px;" width="20px" height="20px">Find a
                             doctor</a></li>
-                    <li class="odd-item"><a href="https://novanthealth.org/home/patients--visitors/locations.aspx"><img alt="Find a doctor"
-                                src="/portals/92/skins/Novant/images/Find_Location.svg"
+                    <li class="odd-item"><a href="https://novanthealth.org/home/patients--visitors/locations.aspx"><img
+                                alt="Find a doctor" src="/portals/92/skins/Novant/images/Find_Location.svg"
                                 style="display: block; margin: 0px auto -5px;" width="20px" height="20px">Find a
                             location</a></li>
                     <li class="sub-menus even-item">
@@ -595,9 +610,12 @@
                     </li>
                     <li class="sub-menus">
                         <ul>
-                            <li class="even-item"><a href="https://novanthealth.org/for-healthcare-providers.aspx"><em>for </em>Healthcare
+                            <li class="even-item"><a
+                                    href="https://novanthealth.org/for-healthcare-providers.aspx"><em>for
+                                    </em>Healthcare
                                     providers</a></li>
-                            <li><a href="https://novanthealth.org/team-member-connections.aspx"><em>for </em>Employees</a></li>
+                            <li><a href="https://novanthealth.org/team-member-connections.aspx"><em>for
+                                    </em>Employees</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -636,8 +654,7 @@
                                                     before driving to the clinic.</li>
                                                 <li>Don’t have a primary care provider? Use our 24/7 helpline&nbsp;if
                                                     you are experiencing symptoms and have questions on how to best seek
-                                                    care:&nbsp; <a href="tel:// 1-877-499-1697"
-                                                        target="_blank">877-499-1697</a> or <a
+                                                    care:&nbsp; <a
                                                         href="tel:// 1-877-966-8268" target="_blank">877-9NOVANT</a><br>
                                                 </li>
                                             </ul>
@@ -701,7 +718,6 @@
                                                     need them most.</li>
                                             </ul>
                                             <p>For information on screening centers or coronavirus, please call <a
-                                                    href="tel:// 1-877-499-1697" target="_blank">877-499-1697</a> or <a
                                                     href="tel:// 1-877-966-8268" target="_blank">877-9NOVANT</a>.
 
 
@@ -743,8 +759,7 @@
                                             <br>
                                             <ul>
                                                 <li>Consider visiting screening sites, calling your provider or calling
-                                                    our 24/7 helpline:&nbsp;<a href="tel:// 1-877-499-1697"
-                                                        target="_blank">877-499-1697</a> or <a
+                                                    our 24/7 helpline:&nbsp;<a
                                                         href="tel:// 1-877-966-8268" target="_blank">877-9NOVANT</a>.
                                                 </li>
                                                 <li>Triage tents for coronavirus screening&nbsp;will be set up outside
@@ -905,7 +920,9 @@
                                                         system in the Carolinas with the FDA-approved TytoHome device.
                                                         In light of the current climate, NH Digital Devices, LLC is
                                                         offering TytoHome devices at 50% off, to support you and your
-                                                        family. <a href="https://novanthealth.org/mynovant/tytohome.aspx"><br>Get your TytoHome
+                                                        family. <a
+                                                            href="https://novanthealth.org/mynovant/tytohome.aspx"><br>Get
+                                                            your TytoHome
                                                             device.</a>
                                                     </p>
                                                     <a href="https://www.novanthealth.org/mynovant/virtual-care.aspx"
@@ -1343,6 +1360,8 @@
                                                                                                                 surfaces.
                                                                                                             </li>
                                                                                                         </ul>
+
+                                                                                                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/2I_aCeZafC0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                                                                     </div>
 
 
@@ -1681,6 +1700,7 @@
                                                                                                                 </ul>
                                                                                                             </li>
                                                                                                         </ul>
+                                                                                                        •	<iframe width="100%" height="315" src="https://www.youtube.com/embed/fPere24HCK0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                                                                     </div>
 
 
@@ -1783,6 +1803,7 @@
                                                                                                             recommends
                                                                                                             it.
                                                                                                         </p>
+                                                                                                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/4aPjBJp5HkU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
                                                                                                     </div>
 
 
@@ -2072,6 +2093,30 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <div class="" style="">
+                                                           
+                                                        <div class="bstrap30 panel-default accordion-root tp-bs-accordion  tp-collapsible ">
+                                                           <div class="panel-heading">
+                                                            <a style="color: inherit;" href="#demo" class="" data-toggle="collapse">Why is Novant Health rescheduling non-essential surgeries, procedures and preventive care appointments?</a>
+                                                        </div>
+                                                            <div id="demo" class="collapse">
+                                                                <p>
+                                                                Following guidelines from the U.S. Surgeon General and the American College of Surgeons, Novant Health has made the decision to reschedule non-essential surgeries, procedures and preventive care appointments, effective Wednesday, March 18 until at least the end of April.
+                                                            </p><p>
+                                                                Rescheduling these appointments will minimize the risk of spreading the coronavirus among patients, visitors and healthcare providers. It also allows us to conserve critical resources and focus care on those who need it most.
+                                                            </p>                                                                                                                                    </div>
+                                                          </div>
+
+                                                          <div class="bstrap30 panel-default accordion-root tp-bs-accordion  tp-collapsible ">
+                                                            <div class="panel-heading">
+                                                             <a style="color: inherit;" href="#demo1" class="" data-toggle="collapse">How do I know what is non-essential?</a>
+                                                         </div>
+                                                             <div id="demo1" class="collapse">
+                                                                 <p>
+                                                                    Non-essential appointments include physical and well-checkups, as well as mammograms. All Novant Health providers will be assessing other appointments to determine what non-preventive care should be postponed. Patients who fall into this category will receive communication from their healthcare provider with further instructions.
+                                                             </p>                                                                                                                                   </div>
+                                                           </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -2094,8 +2139,8 @@
                                 <div id="dnn_ctr104769_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
                                     <div id="dnn_ctr104769_HtmlModule_lblContent" class="Normal">
                                         <h3 style="color: #ffffff; font-size: 32px;"><a class="copper-callout"
-                                                href="https://novanthealth.org/healthy-headlines/search?q=coronavirus" tabindex="0"
-                                                title="Get updates on coronavirus"><span>Get updates on
+                                                href="https://novanthealth.org/healthy-headlines/search?q=coronavirus"
+                                                tabindex="0" title="Get updates on coronavirus"><span>Get updates on
                                                     coronavirus</span></a></h3>
 
                                         <br>
@@ -2161,14 +2206,20 @@
                         <div class="footerNav">
                             <li><a href="https://novanthealth.org/home/contact-center.aspx">Contact center</a></li>
                             <li><a href="https://novanthealth.org/home/privacystatement.aspx">Privacy statement</a></li>
-                            <li><a href="https://novanthealth.org/home/digital-privacy-policy.aspx">Digital privacy policy</a></li>
-                            <li><a href="https://novanthealth.org/home/patientsvisitors/patientbillofrights.aspx">Patient bill of rights</a>
+                            <li><a href="https://novanthealth.org/home/digital-privacy-policy.aspx">Digital privacy
+                                    policy</a></li>
+                            <li><a href="https://novanthealth.org/home/patientsvisitors/patientbillofrights.aspx">Patient
+                                    bill of rights</a>
                             </li>
-                            <li><a href="https://novanthealth.org/home/nondiscrimination.aspx">Notice of nondiscrimination</a></li>
-                            <li><a href="https://novanthealth.org/team-member-connections.aspx">Team member connections</a></li>
+                            <li><a href="https://novanthealth.org/home/nondiscrimination.aspx">Notice of
+                                    nondiscrimination</a></li>
+                            <li><a href="https://novanthealth.org/team-member-connections.aspx">Team member
+                                    connections</a></li>
                             <li><a href="https://novanthealth.org/employerservices.aspx">Employer services</a></li>
-                            <li><a href="https://novanthealth.org/employerservices/vendorconnections.aspx">Vendor connections</a></li>
-                            <li><a href="https://novanthealth.org/novant-health-trustees.aspx">Novant Health Trustees</a></li>
+                            <li><a href="https://novanthealth.org/employerservices/vendorconnections.aspx">Vendor
+                                    connections</a></li>
+                            <li><a href="https://novanthealth.org/novant-health-trustees.aspx">Novant Health
+                                    Trustees</a></li>
                         </div>
                     </ul><!-- /footerLinks -->
                 </div><!-- /footerAnchor -->
@@ -2245,6 +2296,18 @@
 
             #spanish_site a:hover {
                 color: #53565A
+            }
+
+            @media(max-width:480px){
+            #forPostyouradd,
+            #spinner {
+                top: 55px;
+            }
+            #nhBotLogo, 
+            #closebutton
+            {
+               top:62px; 
+            }
             }
         </style>
         <div id="botbutton">
@@ -2417,26 +2480,25 @@
         </div>
         <div class="status-message" style="display: none;"></div>
     </div>
-    <script type="text/javascript"
-        id="">(function () {
-                function w(b, k) { var c = k + "\x3d"; if (0 < b.length) return k = b.indexOf(c), -1 !== k ? (k += c.length, c = b.indexOf("\x26", k), -1 === c && (c = b.length), unescape(b.substring(k, c))) : "" } function x() { var b = document.referrer.split("."); if (y.includes(b[1])) return z; if (A.includes(b[1])) return B; if ("" !== b[0]) return C; if ("" === b[0]) return D } function t(b, k, c) { var a = new Date; c ? (a.setTime(a.getTime() + 864E5 * c), c = "; expires\x3d" + a.toGMTString()) : c = ""; document.cookie = b + "\x3d" + k + c + "; path\x3d/" } function n(b) {
-                    b = new RegExp(b +
-                        "\x3d([^;]+)"); b = b.exec(document.cookie); null !== b && (b[1] = b[1].replace(/,/g, "."), b[1] = b[1].replace(/:/g, "_")); return null !== b ? unescape(b[1]) : null
-                } function v(b, a) { a = " " + a + " "; return -1 < (" " + b.className + " ").replace(/[\n\t]/g, " ").indexOf(a) ? !0 : !1 } var g = parent.document.URL, a = (new Date).getFullYear().toString().substr(-2), h = "NovantECID", p = "", e = "", u = 90, D = "n" + a + "orgdrcdrcdrc", z = "n" + a + "orgseaseasea", y = "google bing yahoo duckduckgo ask aol yellowpages live search dogpile msn goo".split(" "), B = "n" + a + "orgsocsocsoc",
-                    A = "instagram facebook linkedin t twitter youtube".split(" "), C = "n" + a + "orgrfsrfsrfs", l = [{ type: "id", value: "00N3k00000HwytQ" }, { type: "id", value: "ECID__c" }, { type: "data", name: "data-af-field", value: "ecid" }]; a = e = e = ""; var q = 0, f = new Date, r = f.getFullYear() + "-" + (f.getMonth() + 1) + "-" + f.getDate(), d; if (e = w(g, "ecid").split("#")[0]) {
-                        if (null !== n(h).split("_")) {
-                            a = n(h).split("_"); for (d = 0; d < a.length; d++) {
-                                var m = a[d].split("."); if (e === m[0]) {
-                                    g = new Date(m[1]); if (f === g) return !1; f > g && (m[1] = f.getFullYear() + "-" + (f.getMonth() +
-                                        1) + "-" + f.getDate(), q += 1)
-                                }
-                            } 0 === q && a.push(e.concat(".", r)); 8 < a.length && a.shift(); e = a.join("_")
-                        } else e = e.concat(".", r); t(h, e, u)
-                    } else if (e = x(), (a = n(h)) && (a = n(h).split("_")), a) { for (d = 0; d < a.length; d++)if (m = a[d].split("."), e === m[0]) { g = new Date(m[1]); if (f === g) return !1; f > g && (m[1] = f.getFullYear() + "-" + (f.getMonth() + 1) + "-" + f.getDate(), q += 1) } 0 === q && a.push(e.concat(".", r)); 8 < a.length && a.shift(); e = a.join("_"); t(h, e, u) } else g = e.concat(".", r), t(h, g, u); (function () {
-                        var b; "" !== n(h) && (p = n(h)); var a = document.getElementsByTagName("input");
-                        for (d = 0; d < a.length; d++)if ("hidden" === a[d].getAttribute("type")) for (b = 0; b < l.length; b++) { var c = a[d].getAttribute("id"); if ("id" === l[b].type && null !== c) l[b].value === c && (a[d].value = p); else if ("class" === l[b].type) { if (c = l[b].value, v(a[d].parentElement, c) || v(a[d], c)) a[d].value = p } else "data" === l[b].type && a[d].matches("[" + l[b].name + '\x3d"' + l[b].value + '"]') && (c = p, c = c.replace(/,/g, "."), c = c.replace(/:/g, "_"), a[d].value = c) }
-                    })()
-            })();</script>
+    <script type="text/javascript" id="">(function () {
+            function w(b, k) { var c = k + "\x3d"; if (0 < b.length) return k = b.indexOf(c), -1 !== k ? (k += c.length, c = b.indexOf("\x26", k), -1 === c && (c = b.length), unescape(b.substring(k, c))) : "" } function x() { var b = document.referrer.split("."); if (y.includes(b[1])) return z; if (A.includes(b[1])) return B; if ("" !== b[0]) return C; if ("" === b[0]) return D } function t(b, k, c) { var a = new Date; c ? (a.setTime(a.getTime() + 864E5 * c), c = "; expires\x3d" + a.toGMTString()) : c = ""; document.cookie = b + "\x3d" + k + c + "; path\x3d/" } function n(b) {
+                b = new RegExp(b +
+                    "\x3d([^;]+)"); b = b.exec(document.cookie); null !== b && (b[1] = b[1].replace(/,/g, "."), b[1] = b[1].replace(/:/g, "_")); return null !== b ? unescape(b[1]) : null
+            } function v(b, a) { a = " " + a + " "; return -1 < (" " + b.className + " ").replace(/[\n\t]/g, " ").indexOf(a) ? !0 : !1 } var g = parent.document.URL, a = (new Date).getFullYear().toString().substr(-2), h = "NovantECID", p = "", e = "", u = 90, D = "n" + a + "orgdrcdrcdrc", z = "n" + a + "orgseaseasea", y = "google bing yahoo duckduckgo ask aol yellowpages live search dogpile msn goo".split(" "), B = "n" + a + "orgsocsocsoc",
+                A = "instagram facebook linkedin t twitter youtube".split(" "), C = "n" + a + "orgrfsrfsrfs", l = [{ type: "id", value: "00N3k00000HwytQ" }, { type: "id", value: "ECID__c" }, { type: "data", name: "data-af-field", value: "ecid" }]; a = e = e = ""; var q = 0, f = new Date, r = f.getFullYear() + "-" + (f.getMonth() + 1) + "-" + f.getDate(), d; if (e = w(g, "ecid").split("#")[0]) {
+                    if (null !== n(h).split("_")) {
+                        a = n(h).split("_"); for (d = 0; d < a.length; d++) {
+                            var m = a[d].split("."); if (e === m[0]) {
+                                g = new Date(m[1]); if (f === g) return !1; f > g && (m[1] = f.getFullYear() + "-" + (f.getMonth() +
+                                    1) + "-" + f.getDate(), q += 1)
+                            }
+                        } 0 === q && a.push(e.concat(".", r)); 8 < a.length && a.shift(); e = a.join("_")
+                    } else e = e.concat(".", r); t(h, e, u)
+                } else if (e = x(), (a = n(h)) && (a = n(h).split("_")), a) { for (d = 0; d < a.length; d++)if (m = a[d].split("."), e === m[0]) { g = new Date(m[1]); if (f === g) return !1; f > g && (m[1] = f.getFullYear() + "-" + (f.getMonth() + 1) + "-" + f.getDate(), q += 1) } 0 === q && a.push(e.concat(".", r)); 8 < a.length && a.shift(); e = a.join("_"); t(h, e, u) } else g = e.concat(".", r), t(h, g, u); (function () {
+                    var b; "" !== n(h) && (p = n(h)); var a = document.getElementsByTagName("input");
+                    for (d = 0; d < a.length; d++)if ("hidden" === a[d].getAttribute("type")) for (b = 0; b < l.length; b++) { var c = a[d].getAttribute("id"); if ("id" === l[b].type && null !== c) l[b].value === c && (a[d].value = p); else if ("class" === l[b].type) { if (c = l[b].value, v(a[d].parentElement, c) || v(a[d], c)) a[d].value = p } else "data" === l[b].type && a[d].matches("[" + l[b].name + '\x3d"' + l[b].value + '"]') && (c = p, c = c.replace(/,/g, "."), c = c.replace(/:/g, "_"), a[d].value = c) }
+                })()
+        })();</script>
     <div class="goog-te-spinner-pos">
         <div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner"
                 width="96px" height="96px" viewBox="0 0 66 66">
@@ -2446,7 +2508,7 @@
     </div><iframe class="goog-te-menu-frame skiptranslate" title="Language Translate Widget"
         style="visibility: visible; box-sizing: content-box; width: 135px; height: 126px; display: none;"
         frameborder="0"></iframe>
-    
+
     <iframe style="width: 0px; height: 0px; position: absolute; top: -1000px; left: -1000px; display: none;"
         tabindex="-1" aria-hidden="true" role="presentation" title="Intentionally blank" name="lpSS_60688020413"
         id="lpSS_60688020413"

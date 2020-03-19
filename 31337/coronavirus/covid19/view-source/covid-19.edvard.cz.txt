@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-32512269-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-32512269-2');
+        </script>
+
+        <!--<link rel="stylesheet" type="text/css" href="https://covid-19.edvard.cz/plugins/plugins.css" />-->
+        <link rel="stylesheet" type="text/css" href="https://covid-19.edvard.cz/style.css" />
+
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <!--Plugin CSS file with desired skin-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+        <title>Another covid-19 outbreak charts</title>
+        <script src="https://covid-19.edvard.cz/static/calculation.js"></script>
+        <script src="https://covid-19.edvard.cz/static/helper_functions.js"></script>
+        <script src="https://covid-19.edvard.cz/static/model.js"></script>  <!-- XXX get rid of-->
+
+        <script src="https://covid-19.edvard.cz/static/plot.js"></script>
+        <script src="https://covid-19.edvard.cz/static/figure.js"></script>
+        <script src="https://covid-19.edvard.cz/static/territory.js"></script>
+        <script src="https://covid-19.edvard.cz/static/mappings.js"></script>
+            </head>
+    <body class="hp ">
+        <!--        <header id="logo">
+                    <a href="https://covid-19.edvard.cz/">Another covid-19 charts</a>
+
+                </header>-->
+
+        <main>
+            <div class="alert alert-info">
+    <strong>Dynamic correlation searching covid-19 dashboard</strong>
+</div>
+
+<form id="setup">
+    <div class="range-container">
+        <label for="outbreak-threshold">Outbreak</label>
+        <div>
+            <input type="range" id="outbreak-threshold" value="20">
+        </div>
+    </div>
+
+    <div class="range-container">
+        <label for="day-range">Show days since outbreak:</label>
+        <div>
+            <input type="range" id="day-range"  max="25"/>
+        </div>
+    </div>
+
+    <div>
+        <input class="refresh" type="checkbox"  id="log-switch" value="off">
+        <label for="log-switch">Log scale</label>
+    </div>
+</form>
+
+<!--Plot expression: <input type="text" id="plot" />
+Use C/R/D for (confirmed/recovered/dead)-->
+
+<canvas id="chart"></canvas>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+            <h1>State <span></span></h1>
+        </div>
+        <div class="col-md">
+            <h1>Country <span></span></h1>
+        </div>
+        <div class="col-md">
+            <h1>Continent <span></span></h1>
+        </div>
+    </div>
+
+    <div id="territories-legend" class="row">
+        <div class="col-md">
+            <span class='off'>☆</span> – hightlight curve
+            <span>👁</span> – show/hide all non-active descendants
+            <span class='off'>✓</span> – activate all children curves
+        </div>
+        <div class="col-md-4">
+            <a id="uncheck-all">Uncheck all</a>
+        </div>
+    </div>
+
+    <div id="territories" class="row">
+        <div class="col-md">
+        </div>
+        <div class="col-md">
+        </div>
+        <div class="col-md">
+        </div>
+    </div>
+</div>
+
+<p>
+    <br><br>
+    Source: <a href="https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data">Johns Hopkins CSSE</a> (data updated once a day)
+    <br>
+    Help development at <a href="https://github.com/e3rd/covid-19/tree/master/">github</a>.
+</p>        </main>
+
+
+
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <!--Plugin JavaScript file-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@0.7.4"></script>
+
+        <script src="https://covid-19.edvard.cz/static/main.js"></script>
+    </body>
+</html>

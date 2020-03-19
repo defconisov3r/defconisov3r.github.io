@@ -405,7 +405,7 @@ systemctl restart imunify360-webshield
                     <img src="/a9bc224bd710f56d27affffddc764239b58c3faa0/shield.png">
                 </div>
                 <div class="cap_side pull-right">
-                    <h4 id="text">anthurian.com</h4>
+                    <h4 id="text">covid19.anthurian.com</h4>
                     <p class="cap_note cap_text count_down">
                         is protected by Imunify360
                     </p>
@@ -413,7 +413,7 @@ systemctl restart imunify360-webshield
             </div>
 
             <p class="cap_mess cap_text text-center">
-                We have noticed an unusual activity from your <b>IP 109.70.100.25</b> and blocked access to this website.
+                We have noticed an unusual activity from your <b>IP 185.220.100.249</b> and blocked access to this website.
             </p>
 
             <p class="cap_mess cap_text text-center">
@@ -512,7 +512,7 @@ systemctl restart imunify360-webshield
                 if (data['success']) {
                     captchaIsPassed = true;
                     $("#text").text(
-                        "IP 109.70.100.25 has been unblocked"
+                        "IP 185.220.100.249 has been unblocked"
                     );
                     setTimeout(do_reload, 1000);
                 } else {

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Covid19 Playlist</title>
+    <title>Covid19 Playlists</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
@@ -21,29 +21,30 @@
 
         gtag('config', 'UA-160869372-1');
     </script>
+    <script data-ad-client="ca-pub-1502664755435109" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 </head>
 
 <body>
     <header>
-        <h1></h1>
+        <h1>Party till we die!</h1>
     </header>
 
     <main>
-        <div class="spotifycontainer">
-            <div>
+        <section class="spotifycontainer">
+            <div class="col-1">
                 <iframe src="https://open.spotify.com/embed/playlist/3yPmsoXksrgMwd0x6Tvbew" width="400" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
             </div>
-            <div class="playercontainer">
+            <div class="col-2">
                 <iframe src="https://open.spotify.com/embed/playlist/55V6HUzPnISl7ADpE3yfUD" width="400" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
-            <div>
+            <div class="col-3">
                 <iframe src="https://open.spotify.com/embed/playlist/6808cinace0wqkw0hwMVe9" width="400" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
-        </div>
+        </section>
         <h1>
-            Follow the pandemic Live
+            Follow the Live pandemic
         </h1>
 
         <div class="videocontainer">
@@ -52,10 +53,6 @@
         </div>
 
     </main>
-
-
-
-
 
 
     <script src=" js/index.js "></script>

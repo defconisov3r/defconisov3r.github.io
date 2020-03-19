@@ -1,0 +1,188 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Безкоштовний онлайн тест на коронавірус</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+p {
+ font-size:20px;
+}
+input {
+ font-size:20px;
+}
+</style>
+</head>
+<body>
+<div class="site">
+		<!-- выравниваем без обтекания -->
+	<div class="first_block">
+		<div id="line_block">
+			<div class="help_icon">
+				<h1>Безкоштовний онлайн тест <br> на Коронавірус</h1>
+				<div style="display: inline-block;">
+					<img src="ambu.png" alt="#">
+				</div>
+				<div style="display: inline-block; margin-left: 5px;">
+					<a href="tel:102" style="text-decoration: none;color: red;">
+						<p class="pulse">
+							103 Швидка допомога		
+						</p>
+					</a>
+				</div>
+			</div>
+			<div id="line_block">
+			<div class="help_icon">
+				<!-- <h1>Онлайн тест <br> на Коронавірус</h1> -->
+				<div style="display: inline-block;">
+					<a href="https://moz.gov.ua/">
+						<img style=" width:70%; cursor: pointer;" src="logo.jpg" alt="#">
+						<p style="text-decoration: none; color: black; ">Перейдіть на сайт МОЗ щоб дізнатися більше інформації про коронавірус</p>
+ 					</a>
+				</div>
+	<!-- 			<div style="display: inline-block; margin-left: 5px;">
+					<a href="tel:102" style="text-decoration: none;color: red;"> -->
+						<!-- <p class="pulse">
+							103 Швидка допомога		
+						</p> -->
+					</a>
+				</div>
+			</div>
+		</div> 
+	</div>
+
+	<div class="second">
+			<div class="first">
+				<div id="line_block">
+					<div class="content">
+							<p><b>Дайте відповідь на декілька питань</b></p>
+							<p>(Відповідайте тільки <b>"так"</b> чи <b>"ні"</b>)</p>
+							<p>У вас  є температура більша ніж 38 ?   <br>
+							<input type="text" id="z_1" placeholder="так / ні">
+							</p>
+							<p> У вас є задишка? Вам важко дихати?  <br> 
+							  <input type="text" id="z_2" placeholder="так / ні">
+							</p>
+							<p>У Вас є сухий кашель?<br>
+								<input type="text" id="z_3" placeholder="так / ні">
+							</p>
+							<p> У вас є головний біль?<br>
+								<input type="text" id="z_4" placeholder="так / ні" >
+							</p>
+							<p>У вас є нежить?<br>
+								<input type="text" id="z_5" placeholder="так / ні">
+							</p>
+							<p>У вас є біль у горлі?<br>
+								<input type="text" id="z_6" placeholder="так / ні">
+							</p>
+							<p>У вас є діарея?<br>
+								<input type="text" id="z_7" placeholder="так / ні">
+							</p> 
+							<p>У вас є кволість? <br>
+								<input type="text" id="z_8" placeholder="так / ні">
+							</p>
+							<button onclick="proverit();">Перевірити</button>
+							<p  id="rezultat"></p>
+							
+					</div>
+				</div> 
+			</div>
+		</div>
+		<div class="tree_block">
+			<div class="first">
+				<div id="line_block" style=" background:#f1f1f1; width: 100%;padding: 0 !important;">
+					<p style="font-size: 15px; margin: 10px;" >Данний тест був створенний після дослідження всіх відомих симптомів данного вірусу, цей вірус набирає великих масштабів, тому данний тест дає можливість допомогти людям швидше зреагувати, та не втратити найголовніше - життя.<br>
+						<b>Якщо ваша відповідь більше ніж 60% зверніться у<a href="tel:103"> лікарню 103</a></b>
+					</p>
+				</div>
+				<div id="line_block" style="background:#f1f1f1; width: 100%;padding: 0 !important;">
+					<p style="font-size: 15px; margin: 10px;"><b>Якщо Ваша відповідь менше ніж 60% притримуйтесь простих правил безпеки: </b> <br> <br>
+						1) НІЯКИХ рукостискань! Використовуйте інші способи привітатися: кивок, зіткнення кулаками, ліктями і тому подібне. <br>
+						2) Використовуйте тільки свій кулак, щоб торкнутися вимикачів світла, кнопки ліфта і так далі. Піднімайте дозатор бензину паперовим рушником або використовуйте одноразові рукавички. <br>
+						3) Відкривайте двері закритим кулаком або стегном – не беріться за ручку рукою, якщо немає іншого способу відкрити двері. Особливо це важливо відносно туалетів і дверей в публічних місцях. <br>
+						4) Використовуйте дезинфікуючі серветки в магазинах, коли вони є в наявності, включно з протиранням ручки і дитячого сидіння в продуктових візках. <br>
+						5) Мийте руки з милом не менше 20 секунд і / або використовуйте дезинфікуючий засіб для рук на спиртовій основі, котрий містить понад 60% спирту. Робіть це щоразу, коли ви повертаєтеся додому з БУДЬ-ЯКОГО місця, де були інші люди. <br>
+						6) Тримайте пляшку з дезинфікуючим засобом коло кожного входу в ваш будинок. І в вашому автомобілі теж – для використання після заправки або дотику до інших забруднених предметів, коли ви не можете відразу ж вимити руки. <br>
+						7) Якщо можливо, кашляйте або чхайте в одноразову серветку і викидайте її. Використовуйте свій лікоть, тільки в тому разі, якщо немає іншої можливості. Одяг на вашому лікті буде містити інфекційний вірус, який може бути активним і передаватися протягом тижня і довше!
+					</p>
+				</div>
+				<div id="line_block" style=" background:#f1f1f1; width: 100%;padding: 0 !important;">
+					<p style="font-size: 15px; margin: 10px;">Зокрема, в ОП закликають залишатися вдома у разі, якщо у людини є симптоми вірусної інфекції. Офіс президента запевняє, що Україна готова до можливого поширення нового коронавірусу.
+					</p>
+				</div>
+				<div id="line_block" style=" background:#f1f1f1; width: 100%;padding: 0 !important;">
+					<p style="font-size: 15px; margin: 10px;"> <b>Характерні симптоми коронавірусу при респіраторній формі: 		</b><br>	<br>
+біль при ковтанні, чханні;
+риніт;<br>
+головний біль;<br>
+кашель;<br>
+прояви гіпоксії;<br>
+підвищення температури; <br>
+лихоманка; <br>
+м'язовий біль. <br>
+					</p>
+				</div>
+				
+
+				<div id="line_block" style="background:#f1f1f1; width: 100%;padding: 0 !important;">
+					<p style="font-size: 15px; margin: 10px; " ><b>Даний тест визначає лише можливість Вашого зараження короновірусом.</b> Якщо результат дорівнює чи більше 60% - це не привід для паніки, якомога швидше зверніться до швидкої допомоги і розкажіть про свої симптоми. Пам'ятайте! Самолікування може бути шкідливим для Вашого здоров' я. Бережіть себе та близьких. 
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="width:100%; height:1px; clear:both;"></div> <!-- выравниваем без обтекания -->
+</div>
+
+
+
+<script>
+function proverit(){
+pr_otv_zadachi_1 = "так";
+pr_otv_zadachi_2 = "так";
+pr_otv_zadachi_3 = "так";
+pr_otv_zadachi_4 = "так";
+pr_otv_zadachi_5 = "так";
+pr_otv_zadachi_6 = "так";
+pr_otv_zadachi_7 = "так";
+pr_otv_zadachi_8 = "так";
+otv_uch_1 = document.getElementById('z_1').value.toLowerCase();
+otv_uch_2 = document.getElementById('z_2').value.toLowerCase();
+otv_uch_3 = document.getElementById('z_3').value.toLowerCase();
+otv_uch_4 = document.getElementById('z_4').value.toLowerCase();
+otv_uch_5 = document.getElementById('z_5').value.toLowerCase();
+otv_uch_6 = document.getElementById('z_6').value.toLowerCase();
+otv_uch_7 = document.getElementById('z_7').value.toLowerCase();
+otv_uch_8 = document.getElementById('z_8').value.toLowerCase();
+ball = 0;
+if(otv_uch_1 == pr_otv_zadachi_1){
+ball +=3.6;
+}
+if(otv_uch_2 == pr_otv_zadachi_2){
+ball +=1.2;
+}
+if(otv_uch_3 == pr_otv_zadachi_3){
+ball +=1.2;
+}
+if(otv_uch_4 == pr_otv_zadachi_3){
+ball +=0.4;
+}
+if(otv_uch_5 == pr_otv_zadachi_3){
+ball +=0.4;
+}
+if(otv_uch_6 == pr_otv_zadachi_3){
+ball +=0.4;
+}
+if(otv_uch_7 == pr_otv_zadachi_3){
+ball +=0.4;
+}
+if(otv_uch_8 == pr_otv_zadachi_3){
+ball +=0.39;
+}
+vsego_zadach = 8;
+procent_vip = ball/vsego_zadach * 100;
+document.getElementById('rezultat').innerHTML = "Відсоток захворювання! Якщо більше або рівно 60% телефонуйте в швидку. 103.       РЕЗУЛЬТАТ  = "+procent_vip+"%.";
+}
+</script>
+</body>
+</html>
+

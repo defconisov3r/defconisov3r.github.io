@@ -1,7 +1,459 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>403 Forbidden</title>
-</head><body>
-<h1>Forbidden</h1>
-<p>You don't have permission to access this resource.</p>
-</body></html>
+<!DOCTYPE html>
+<html dir="ltr" lang="fr">
+<head>
+<meta charset="utf-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Coronavirus Suisse, forum pour les familles - Coronavirus suisse</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Flux - Coronavirus Suisse, forum pour les familles" href="/app.php/feed?sid=1b3ba0788fdcd90c5d75c0618910e3e3">			<link rel="alternate" type="application/atom+xml" title="Flux - Nouveaux sujets" href="/app.php/feed/topics?sid=1b3ba0788fdcd90c5d75c0618910e3e3">				
+
+
+<!--
+	phpBB style name: Milk v2
+	Based on style:   Merlin Framework (http://www.planetstyles.net)
+-->
+
+
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <style type="text/css">body {font-family: "Roboto", Arial, Helvetica, sans-serif; font-size: 14px;}</style>
+
+
+<link href="./assets/css/font-awesome.min.css?assets_version=6" rel="stylesheet">
+<link href="./styles/Milk_v2/theme/stylesheet.css?assets_version=6" rel="stylesheet">
+<link href="./styles/Milk_v2/theme/fr/stylesheet.css?assets_version=6?assets_version=6" rel="stylesheet">
+
+<link href="./styles/Milk_v2/theme/blank.css?assets_version=6" rel="stylesheet" class="colour_switch_link"  />
+
+	<link href="./styles/Milk_v2/theme/rounded.css?assets_version=6" rel="stylesheet" />
+
+        	<link href="./styles/Milk_v2/theme/colour-presets/Pacific_Dream.css?assets_version=6" rel="stylesheet" class="preset_stylesheet">
+    
+
+
+<style type="text/css">
+			.forums .row-item:before, .topics .row-item:before, .pmlist .row-item:before, .cplist .row-item:before {
+			border-radius: 50%;
+		}
+	</style>
+
+
+
+
+
+
+
+<!--[if lte IE 9]>
+	<link href="./styles/Milk_v2/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+
+
+
+<link href="./styles/Milk_v2/theme/extensions.css?assets_version=6" rel="stylesheet">
+
+
+
+
+</head>
+<body id="phpbb" class="nojs notouch section-index ltr  body-layout-Fluid content_block_header_block high_contrast_links navbar_o_header css_icons_enabled">
+
+    <div id="wrap" class="wrap">
+        <a id="top" class="top-anchor" accesskey="t"></a>
+
+        <div id="page-header">
+
+
+                <div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Accès rapide</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="./search.php?search_id=unanswered&amp;sid=1b3ba0788fdcd90c5d75c0618910e3e3" role="menuitem">
+									<i class="icon fa-file-o fa-fw" aria-hidden="true"></i><span>Sujets sans réponse</span>
+								</a>
+							</li>
+							<li>
+								<a href="./search.php?search_id=active_topics&amp;sid=1b3ba0788fdcd90c5d75c0618910e3e3" role="menuitem">
+									<i class="icon fa-file-o fa-fw" aria-hidden="true"></i><span>Sujets actifs</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="./search.php?sid=1b3ba0788fdcd90c5d75c0618910e3e3" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Rechercher</span>
+								</a>
+							</li>
+					
+										<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="/app.php/help/faq?sid=1b3ba0788fdcd90c5d75c0618910e3e3" rel="help" title="Foire aux questions (Questions posées fréquemment)" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="./ucp.php?mode=login&amp;redirect=index.php&amp;sid=1b3ba0788fdcd90c5d75c0618910e3e3" title="Connexion" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Connexion</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="./ucp.php?mode=register&amp;sid=1b3ba0788fdcd90c5d75c0618910e3e3" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>S’enregistrer</span>
+				</a>
+			</li>
+					    	</ul>
+
+	</div>
+</div>
+
+            	
+            <div class="headerbar" role="banner"
+            	>
+
+			<div class="headerbar_overlay_container">
+            	<div class="particles_container">
+					<!-- Headerbar Elements Start -->
+
+
+
+                        <div id="site-description" class="site-description">
+                                                                                            	<a id="logo" class="logo" href="https://forum.coronavirussuisse.ch" title="Accueil"><span
+
+class="site_logo"></span></a>
+								                                                    </div>
+
+
+
+                    <!-- Headerbar Elements End -->
+                </div>
+            </div>
+
+            </div><!-- /.headerbar -->
+            
+        </div><!-- /#page-header -->
+
+        <div id="inner-wrap">
+
+        
+
+            <ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+            												                		<li class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+
+                    					<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope><a href="https://forum.coronavirussuisse.ch" itemtype="https://schema.org/Thing" itemprop="item" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span itemprop="name">Accueil</span></a><meta itemprop="position" content="1" /></span>
+                                        					<span class="crumb"  itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope><a href="./index.php?sid=1b3ba0788fdcd90c5d75c0618910e3e3" itemtype="https://schema.org/Thing" itemprop="item" accesskey="h" data-navbar-reference="index"><span itemprop="name">Coronavirus suisse</span></a><meta itemprop="position" content="2" /></span>
+
+					                                    </li>
+                
+                                    <li class="rightside responsive-search">
+                        <a href="./search.php?sid=1b3ba0788fdcd90c5d75c0618910e3e3" title="Voir les options de recherche avancée" role="menuitem">
+                            <i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Rechercher</span>
+                        </a>
+                    </li>
+                            </ul>
+
+
+        
+        <a id="start_here" class="anchor"></a>
+        <div id="page-body" class="page-body" role="main">
+            
+            
+            
+
+
+<div id="forumlist_collapse">
+	<div class="forumlist_simple">
+
+
+	
+				<div class="forabg">
+			<div class="inner">
+			<ul class="topiclist">
+				<li class="header">
+										<dl class="row-item">
+						<dt><div class="list-inner">
+																	<a href="./viewforum.php?f=1&amp;sid=1b3ba0788fdcd90c5d75c0618910e3e3">Votre première catégorie</a>
+														</div></dt>
+                                                	                            	<dd class="simpleposts"><span class="icon fa-comments"></span></dd>
+                                                        <dd class="lastpost"><span><span class="icon fa-clock-o"></span></span></dd>
+                        					</dl>
+									</li>
+			</ul>
+                        	<div class="collapse-trigger open">
+                	<span class="icon fa-minus tooltip-left" title="Collapse"></span>
+                    <span class="icon fa-plus tooltip-left" title="Expand"></span>
+                </div>
+            			<ul class="topiclist forums">
+		
+	
+	
+
+	
+			
+					<li class="row">
+			            			<dl class="row-item forum_read">
+				<dt title="Aucun message non lu">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Flux - Votre premier forum" href="/app.php/feed?sid=1b3ba0788fdcd90c5d75c0618910e3e3?f=2">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Flux - Votre premier forum</span>
+								</a>
+							-->
+						                        						                        						<a href="./viewforum.php?f=2&amp;sid=1b3ba0788fdcd90c5d75c0618910e3e3" class="forumtitle">Votre premier forum</a>
+						<br /><span class="forum_description">Description de votre premier forum.</span>						 								                            <div class="responsive-show responsive_forumlist_row_stats" style="display: none;">
+                                                                    Sujets : <strong>1</strong> &nbsp;&nbsp;&nbsp; Messages : <strong>1</strong>
+                                                            </div>
+                                                                                                            <!-- /if not: Grid -->
+					</div>
+				</dt>
+                                                        	                        	<dd class="simpleposts"><span>1</span>Messages</dd>
+                                                <dd class="lastpost">
+                            <span>
+                                                                                                    <dfn>Dernier message</dfn>
+                                                                                                                    <a href="./viewtopic.php?f=2&amp;p=1&amp;sid=1b3ba0788fdcd90c5d75c0618910e3e3#p1" title="Bienvenue sur phpBB3" class="lastsubject">Bienvenue sur phpBB3</a> <br />
+                                                                        									par <a href="./memberlist.php?mode=viewprofile&amp;u=2&amp;sid=1b3ba0788fdcd90c5d75c0618910e3e3" style="color: #AA0000;" class="username-coloured">ddx</a>                                        <a href="./viewtopic.php?f=2&amp;p=1&amp;sid=1b3ba0788fdcd90c5d75c0618910e3e3#p1" title="Voir le dernier message">
+                                            <i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Voir le dernier message</span>
+                                        </a>
+                                                                        <br /><time datetime="2020-03-19T06:45:02+00:00">jeu. 19 mars 2020 06:45</time>
+                                                            </span>
+                        </dd>
+                                    <!-- /if not: Grid -->
+			</dl>
+					</li>
+			
+				</ul>
+
+			</div>
+		</div>
+		
+
+</div>
+
+<div class="post_forumlist_links">
+	    </div>
+
+
+<div class="forumbg alt_block">
+    <div class="inner">
+    <ul class="topiclist">
+        <li class="header">
+            <dl class="row-item">
+                <dt><div class="list-inner"><i class="fa fa-line-chart"></i> &nbsp;Informations</div></dt>
+            </dl>
+        </li>
+    </ul>
+            <div class="collapse-trigger open">
+            <span class="icon fa-minus tooltip-left" title="Collapse"></span>
+            <span class="icon fa-plus tooltip-left" title="Expand"></span>
+        </div>
+                
+    <ul class="topiclist forums">
+    	
+        
+                            <li class="row">
+                    <form method="post" action="./ucp.php?mode=login&amp;sid=1b3ba0788fdcd90c5d75c0618910e3e3" class="headerspace">
+                    <h3><a href="./ucp.php?mode=login&amp;redirect=index.php&amp;sid=1b3ba0788fdcd90c5d75c0618910e3e3">Connexion</a>&nbsp; &bull; &nbsp;<a href="./ucp.php?mode=register&amp;sid=1b3ba0788fdcd90c5d75c0618910e3e3">S’enregistrer</a></h3>
+                        <fieldset class="quick-login">
+                            <label for="username"><span>Nom d’utilisateur :</span> <input type="text" tabindex="1" name="username" id="username" size="10" class="inputbox" title="Nom d’utilisateur" /></label>
+                            <label for="password"><span>Mot de passe :</span> <input type="password" tabindex="2" name="password" id="password" size="10" class="inputbox" title="Mot de passe" autocomplete="off" /></label>
+                                                            <a href="./ucp.php?mode=sendpassword&amp;sid=1b3ba0788fdcd90c5d75c0618910e3e3">J’ai oublié mon mot de passe</a>
+                                                                                        <span class="responsive-hide">|</span> <label for="autologin">Se souvenir de moi <input type="checkbox" tabindex="4" name="autologin" id="autologin" /></label>
+                                                        <input type="submit" tabindex="5" name="login" value="Connexion" class="button2" />
+                            <input type="hidden" name="redirect" value="./index.php?sid=1b3ba0788fdcd90c5d75c0618910e3e3" />
+<input type="hidden" name="creation_time" value="1584639279" />
+<input type="hidden" name="form_token" value="f7313fef4c4dbbca505d8c3d12c394bffdfef241" />
+
+							
+                        </fieldset>
+                    </form>
+                </li>
+                        
+            
+                        
+                        <li class="row">
+                <div class="stat-block online-list">
+                    <h3>Qui est en ligne</h3>                    <p>
+                                                Au total il y a <strong>1</strong> utilisateur en ligne : 0 enregistré, 0 invisible et 1 invité (d’après le nombre d’utilisateurs actifs ces 5 dernières minutes)<br />Le record du nombre d’utilisateurs en ligne est de <strong>7</strong>, le jeu. 19 mars 2020 10:13<br /> 
+                                                <br /><strong>Légende : <a style="color:#AA0000" href="./memberlist.php?mode=group&amp;g=5&amp;sid=1b3ba0788fdcd90c5d75c0618910e3e3">Administrateurs</a>, <a style="color:#00AA00" href="./memberlist.php?mode=group&amp;g=4&amp;sid=1b3ba0788fdcd90c5d75c0618910e3e3">Modérateurs globaux</a></strong>                                            </p>
+                </div>
+            </li>
+                                    	<li class="row">
+                    <div class="stat-block statistics">
+                        <h3>Statistiques</h3>
+                        <p>
+                                                        <strong>1</strong> messages &bull; <strong>1</strong> sujets &bull; <strong>1</strong> membres &bull; Le membre enregistré le plus récent est <strong><a href="./memberlist.php?mode=viewprofile&amp;u=2&amp;sid=1b3ba0788fdcd90c5d75c0618910e3e3" style="color: #AA0000;" class="username-coloured">ddx</a></strong>.
+                                                    </p>
+                    </div>
+                </li>
+                          
+                        
+                    </li>
+    </ul>
+    </div>
+</div>
+
+</div>        
+
+					
+
+                                    </div>
+
+            
+            	</div><!-- /#inner-wrap -->
+
+                
+
+            <div id="page-footer" class="page-footer" role="contentinfo">
+                <div class="navbar_footer" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+							<span class="crumb"><a href="https://forum.coronavirussuisse.ch" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Accueil</span></a></span>									<span class="crumb"><a href="./index.php?sid=1b3ba0788fdcd90c5d75c0618910e3e3" data-navbar-reference="index"><span>Coronavirus suisse</span></a></span>					</li>
+		
+				<li class="rightside">Heures au format <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="./ucp.php?mode=delete_cookies&amp;sid=1b3ba0788fdcd90c5d75c0618910e3e3" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Supprimer les cookies</span>
+				</a>
+			</li>
+									<li class="rightside">
+        	<a class="footer-link" href="./ucp.php?mode=privacy&amp;sid=1b3ba0788fdcd90c5d75c0618910e3e3" title="Confidentialité" role="menuitem">
+            	<i class="icon fa-lock" aria-hidden="true"></i><span class="footer-link-text">Confidentialité</span>
+            </a>
+        </li>
+        <li class="rightside">
+            <a class="footer-link" href="./ucp.php?mode=terms&amp;sid=1b3ba0788fdcd90c5d75c0618910e3e3" title="Conditions" role="menuitem">
+                <i class="icon fa-check fa-fw" aria-hidden="true"></i><span class="footer-link-text">Conditions</span>
+            </a>           
+        </li>
+
+     
+									<li class="rightside" data-last-responsive="true">
+				<a href="./memberlist.php?mode=contactadmin&amp;sid=1b3ba0788fdcd90c5d75c0618910e3e3" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Nous contacter</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+                <div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="Erreur AJAX" data-ajax-error-text="Quelque chose s’est mal passé lors du traitement de votre demande." data-ajax-error-text-abort="Requête annulée par l’utilisateur." data-ajax-error-text-timeout="Votre demande a expiré. Essayez à nouveau." data-ajax-error-text-parsererror="Quelque chose s’est mal passé lors du traitement de votre demande et le serveur a renvoyé une réponse invalide.">
+                    <div id="darken" class="darken">&nbsp;</div>
+                </div>
+
+                <div id="phpbb_alert" class="phpbb_alert" data-l-err="Erreur" data-l-timeout-processing-req="Délai d’attente de la demande dépassé.">
+                    <a href="#" class="alert_close">
+                        <i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+                    </a>
+                    <h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+                </div>
+                <div id="phpbb_confirm" class="phpbb_alert">
+                    <a href="#" class="alert_close">
+                        <i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+                    </a>
+                    <div class="alert_text"></div>
+                </div>
+            </div>
+
+
+
+            <div class="copyright_bar">
+                Powered by <a href="http://www.phpBB.com/">phpBB</a>&trade; <span class="planetstyles_credit planetstyles_credit_hidden">&bull; Design by <a href="http://www.planetstyles.net">PlanetStyles</a></span>
+                                <br />Traduit par <a href="http://www.phpbb-fr.com">phpBB-fr.com</a>                                            </div>
+
+            </div> <!-- /#wrap -->
+
+            <div style="display: none;">
+                <a id="bottom" class="anchor" accesskey="z"></a>
+                <img src="/app.php/cron/cron.task.core.tidy_search?sid=1b3ba0788fdcd90c5d75c0618910e3e3" width="1" height="1" alt="cron" />            </div>
+
+            <script type="text/javascript" src="./assets/javascript/jquery-3.4.1.min.js?assets_version=6"></script>
+
+            
+            <script type="text/javascript" src="./assets/javascript/core.js?assets_version=6"></script>
+
+			
+                                                                    
+                        
+            
+            
+            
+                        <script src="./styles/Milk_v2/template/tooltipster.bundle.min.js?assets_version=6"></script>
+<script src="./styles/Milk_v2/template/jquery.collapse.js?assets_version=6"></script>
+<script src="./styles/Milk_v2/template/jquery.collapse_storage.js?assets_version=6"></script>
+<script src="./styles/Milk_v2/template/forum_fn.js?assets_version=6"></script>
+<script src="./styles/prosilver/template/ajax.js?assets_version=6"></script>
+
+
+            
+			<script type="text/javascript">
+            $(function($) {
+                var num_cols = 3,
+                container = $('.sub-forumlist'),
+                listItem = 'li',
+                listClass = 'sub-list';
+                container.each(function() {
+                    var items_per_col = new Array(),
+                    items = $(this).find(listItem),
+                    min_items_per_col = Math.floor(items.length / num_cols),
+                    difference = items.length - (min_items_per_col * num_cols);
+                    for (var i = 0; i < num_cols; i++) {
+                        if (i < difference) {
+                            items_per_col[i] = min_items_per_col + 1;
+                        } else {
+                            items_per_col[i] = min_items_per_col;
+                        }
+                    }
+                    for (var i = 0; i < num_cols; i++) {
+                        $(this).append($('<ul ></ul>').addClass(listClass));
+                        for (var j = 0; j < items_per_col[i]; j++) {
+                            var pointer = 0;
+                            for (var k = 0; k < i; k++) {
+                                pointer += items_per_col[k];
+                            }
+                            $(this).find('.' + listClass).last().append(items[j + pointer]);
+                        }
+                    }
+                });
+            });
+            </script>
+
+			
+            
+            <script type="text/javascript">
+                // Add user icon in front of forumlist mods
+            	$("span.forumlist_mods a").each(function(i) {
+            		$(this).prepend("<i class='icon fa-shield fa-fw'></i>");
+            	});
+            	// Remove the comma seperator
+            	$("span.forumlist_mods").each(function() {
+            		$(this).html($(this).html().replace(/,/g , ''));
+            	});
+            </script>
+
+            
+            
+      
+			        <a href="#" class="scrollToTop"><span class="fa fa-arrow-up"></span></a>
+      
+</body>
+</html>

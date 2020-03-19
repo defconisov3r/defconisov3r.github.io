@@ -1,1 +1,111 @@
-﻿<!DOCTYPE html><html lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta http-equiv=X-UA-Compatible content="IE=edge"> <title>Microsoft Azure App Service - Welcome</title> <link rel="shortcut icon" href="https://appservice.azureedge.net/images/app-service/v3/favicon.ico" type="image/x-icon"/> <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.1.1/css/bootstrap.min.css" crossorigin="anonymous"> <link rel="stylesheet" type="text/css" href="https://appservice.azureedge.net/css/app-service/v3/main.css"> <script src="https://appservice.azureedge.net/scripts/app-service/v3/loc.min.js" crossorigin="anonymous"></script> <script type="text/javascript">window.onload=function (){try{var a=window.location.hostname; if (a.includes(".azurewebsites.net")){a=a.replace(".azurewebsites.net", "")}var b=document.getElementById("depCenterLink1"); b.setAttribute("href", b.getAttribute("href") + "&sitename=" + a); loc();}catch (d){}}</script></head><body> <nav class="navbar navbar-light bg-light"> <div class="navbar-brand "> <div class="container pl-4 ml-5"> <img src="https://appservice.azureedge.net/images/app-service/v3/microsoft_azure_logo.svg" width="270" height="108" alt=""> </div></div></nav> <div class="container-fluid container-height mr-2"> <div class="pt-10 pb-10 mt-10 mb-10 d-xxs-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block" style="height:20px; width:100%; clear:both;"></div><div class="row"> <div class="row col-xs-12 col-sm-12 d-block d-lg-none d-xl-none d-md-block d-sm-block d-xs-block"> <div class="text-center"> <img src="https://appservice.azureedge.net/images/app-service/v3/generic.svg"> </div></div><div class=" extra-pl-small-scr offset-xl-1 offset-lg-1 offset-md-2 offset-sm-2 offset-xs-4 col-xl-5 col-lg-5 col-md-10 col-sm-11 col-xs-11 div-vertical-center"> <div class="container-fluid"> <div class="row"> <h2 id="heyDevelopers">Hey, App Service developers!</h2> </div><br><div class="row"> <h4 id="upRunning">Your app service is up and running.</h4> </div><div class="row"> <h4 id="nextSteps">Time to take the next step and deploy your code.</h4> </div><div class="row info-mg-top"> <p class=" pl-0 col-md-6 col-sm-12 info-mg-top"><span id="codeReady">Have your code ready?</span><br><span id="useDCenter"> Use deployment center to get code published from your client or setup continuous deployment.</span><br><a id="depCenterLink1" href="https://go.microsoft.com/fwlink/?linkid=2057852"><button class="btn btn-primary btn-mg-top" type="submit" id="deplCenter">Deployment Center</button></a></p><p class="pl-0 offset-md-1 col-md-5 col-sm-12 info-mg-top"> <span id="codeNotReady">Don't have your code yet?</span><br><span id="followQS">Follow our quickstart guide and you'll have a full app ready in 5 minutes or less.</span> <br><a href="https://go.microsoft.com/fwlink/?linkid=2084231"><button class="btn btn-primary btn-mg-top" type="submit" id="quickStart">Quickstart</button></a></p></div></div></div><div class="col-xl-5 col-lg-5 col-md-12 d-none d-lg-block"> <div class="text-center"><img src="https://appservice.azureedge.net/images/app-service/v3/generic.svg"> </div></div><div class="col-xl-1 col-lg-1 col-md-1"></div></div></div><script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.2.1.min.js" crossorigin="anonymous"></script> <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/4.1.1/bootstrap.min.js" crossorigin="anonymous"></script></body></html>
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="https://california.azureedge.net/response/favicon.ico">
+    <link href="https://california.azureedge.net/response/cagov.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <script src="https://kendo.cdn.telerik.com/2019.3.1023/js/jquery.min.js"></script>
+    <script>if (typeof jQuery == "undefined") { document.write(decodeURIComponent('%3Cscript src="/path/to/local/jquery.min.js" %3E%3C/script%3E')); }</script>
+</head>
+<body>
+    <div class="utility-header text-light p-1">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <div class="social-media-links">
+                </div>
+                <div>
+                        <span>
+        <a class="btn btn-sm btn-secondary" href="/AzureAD/Account/SignIn">Sign in</a>
+    </span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light static-top pt-0 pb-0">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="https://california.azureedge.net/response/ca.gov-portal-logo-bear.png" style="height: 50px" alt="State of California" title="State of California" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto align-items-end">
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="nav-search-container">
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-light p-4">
+                <form class="form-inline my-lg-0 d-flex justify-content-center">
+                    <input class="form-control mr-sm-2 col-4" type="search" placeholder="Search this website"><button class="btn btn-outline-dark my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                    <div class="jumbotron">
+        <h1>COVID-19 Portal</h1>
+        <p class="lead">Government Operations Agency</p><hr class="my-4">
+        <p>
+            This website provides State agencies guidance and information regarding the COVID-19 virus. To access this site
+            you must have been given an account.
+        </p>
+        <a class="btn btn-lg btn-primary" href="/AzureAD/Account/SignIn">Sign in</a>
+    </div>
+            </div>
+        </div>
+    </div><br />
+    <footer id="footer">
+        <div class="bg-dark">
+            <div class="container">
+                <div class="row d-flex justify-content-between align-items-center">
+                    <ul class="footer-links nav">
+                        <li>
+                            <a href="#skip-to-content" class="nav-link text-light">Back to Top</a>
+                        </li>
+                        <li>
+                            <a href="/Use" class="nav-link text-light">Conditions of Use</a>
+                        </li>
+                        <li>
+                            <a href="/Privacy" class="nav-link text-light">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="/Accessibility" class="nav-link text-light">Accessibility</a>
+                        </li>
+                        <li>
+                            <a href="/Contact" class="nav-link text-light">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container mb-4">
+            <div class="container text-center">Copyright &copy; 2020 State of California</div>
+        </div>
+    </footer>
+    <script src="https://california.azureedge.net/response/bootstrap.bundle.min.js"></script>
+    <script defer type="text/javascript">
+    function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        }
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() { dataLayer.push(arguments); }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-21970760-40');
+    </script>
+    
+</body>
+</html>

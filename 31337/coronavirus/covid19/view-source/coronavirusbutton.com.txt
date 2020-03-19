@@ -1,105 +1,187 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-46109534-2"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
 
-    <title>Page Not Found</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-      background: rgb(14, 30, 37);
-      color: white;
-      overflow: hidden;
-      margin: 0;
-      padding: 0;
-    }
+			gtag('config', 'UA-46109534-2');
+		</script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta property="og:url"                content="https://www.coronavirusbutton.com/" />
+		<meta property="og:type"               content="website" />
+		<meta property="og:title"              content="The Coronavirus Button" />
+		<meta property="og:description"        content="Press me and see what happens" />
+		<meta property="og:image"              content="https://www.coronavirusbutton.com/assets/img/share.png" />
+		<meta property="og:image:width"        content="300" />
+		<meta property="og:image:height"       content="300" />
+		<meta property="fb:app_id"             content="2796472733773353" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+		<title>The Coronavirus Button</title>
+		<style>
+			body {
+				background-image: url(assets/img/background.png);
+			}
+			a {
+				color: #606c76;
+			}
+			.pad {
+				background-image: url(assets/img/pad.png);
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: center;
+				padding: 50px;
+			}
 
-    h1 {
-      margin: 0;
-      font-size: 22px;
-      line-height: 24px;
-    }
+			.text-center {
+				text-align: center;
+			}
 
-    .main {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      width: 100vw;
-    }
+			.shrinked {
+				height: 0;
+			}
 
-    .card {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      width: 75%;
-      max-width: 364px;
-      padding: 24px;
-      background: white;
-      color: rgb(14, 30, 37);
-      border-radius: 8px;
-      box-shadow: 0 2px 4px 0 rgba(14, 30, 37, .16);
-    }
+			.updated {
+				height: 200px;
+			}
 
-    a {
-      margin: 0;
-      text-decoration: none;
-      font-weight: 600;
-      line-height: 24px;
-      color: #00ad9f;
-    }
+			.animated {
+				transition: height 200ms;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="fb-root"></div>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=2796472733773353&autoLogAppEvents=1"></script>
 
-    a svg {
-      position: relative;
-      top: 2px;
-    }
+		<div class="container">
+			<div class="row" style="padding-top: 15px">
+				<div class="column column-100 text-center">
+					<h1>The Coronavirus Button</h1>
+					<h2>Press me and see what happens</h2>
+				</div>
+			</div>
+			<div class="row shrinked animated" id="gif-holder">
+				<div class="column column-100 text-center">
+					<img src="" style="display: none; max-height: 200px;" id="gif"/>
+				</div>
+			</div>
+			<div class="row" style="padding-top: 15px">
+				<div class="column column-100 text-center">
+					<div class="fb-like" data-href="https://www.coronavirusbutton.com/" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column column-100">
+					<div class="pad text-center">
+						<audio preload="auto" audio.currenttime="0" id="audio" src="assets/audio/audio.mp3"></audio>
+						<img src="assets/img/button1.png" id="button">
+					</div>
+				</div>
+			</div>
+			<footer class="footer">
+				<section class="container text-center" style="padding: 15px">
+					<p>
+						<a href="https://giphy.com/" target="_blank">Gifs from giphy.com</a> | <a href="https://www.youtube.com/watch?v=zG7KShvqg9A" target="_blank">Coronavirus Song</a>
+						| <a href="http://www.freepik.com" target="_blank">Art by gstudioimagen / Freepik</a> | Coronavirusbutton &copy; 2020
+					</p>
+				</section>
+			</footer>
+		</div>
 
-    a:hover,
-    a:focus {
-      text-decoration: underline;
-      color: #007A70;
-    }
+		<script>
+			var button = document.getElementById('button');
+			var audio = document.getElementById('audio');
+			var gifs = [
+				'https://media.giphy.com/media/XgXj1tk82ho7ZNPb48/giphy.gif',
+				'https://media.giphy.com/media/chVgEkHr9oYz4ZPGeU/giphy.gif',
+				'https://media.giphy.com/media/l4FGo3IonE0SdQYeY/giphy.gif',
+				'https://media.giphy.com/media/QXgBrbZ8HPLcyuqxwv/giphy.gif',
+				'https://media.giphy.com/media/IbmS6XKR5fTVchlxcN/giphy.gif',
+				'https://media.giphy.com/media/YOBaPbnrTa4y7S5dmo/giphy.gif',
+				'https://media.giphy.com/media/3ohs7P0THOHKBlYFLG/giphy.gif',
+				'https://media.giphy.com/media/yfo9ccvoRPu8w/giphy.gif',
+				'https://media.giphy.com/media/3o7ZezSB4ckAYlcCRy/giphy.gif',
+				'https://media.giphy.com/media/kGLbYYE3qVuJYRaiET/giphy.gif',
+				'https://media.giphy.com/media/cj2Jay0wKyqFgprCUM/giphy.gif',
+				'https://media.giphy.com/media/XD2tFPHUcJqK3H7nFq/giphy.gif',
+				'https://media.giphy.com/media/UodwSIvYidsdVvuyvg/giphy.gif',
+				'https://media.giphy.com/media/Zb0VHhMeoJxWuzXpbp/giphy.gif',
+				'https://media.giphy.com/media/cmx0KbekJ7hUJIxVYt/giphy.gif',
+				'https://media.giphy.com/media/ViHloEhQG0AksfzK3y/giphy.gif',
+				'https://media.giphy.com/media/YkmWKg4osLYMnIBaTi/giphy.gif',
+				'https://media.giphy.com/media/giXLnhxp60zEEIkq8K/giphy.gif',
+				'https://media.giphy.com/media/McfiD4Bnk64Lo425SF/giphy.gif',
+				'https://media.giphy.com/media/Wpru2d3USeIla/giphy.gif',
+				'https://media.giphy.com/media/iJ2ab0mrvqnJHCqKro/giphy.gif',
+				'https://media.giphy.com/media/PfGZfvrugfsTS/giphy.gif',
+				'https://media.giphy.com/media/IAJgO0wjstQvS/giphy.gif',
+				'https://media.giphy.com/media/LLx6QHEXleZFa1qNsV/giphy.gif',
+				'https://media.giphy.com/media/gIZbsQsQOP0cpoq8fx/giphy.gif',
+				'https://media.giphy.com/media/FdyL0FaHLdX7W/giphy.gif',
+				'https://media.giphy.com/media/xUPGcAoaCe7iCV0BHO/giphy.gif',
+				'https://media.giphy.com/media/H3NXbLWLwv4b52X4ih/giphy.gif',
+				'https://media.giphy.com/media/YPhuwt9pV2XLM2HIq4/giphy.gif',
+				];
 
-    a:hover svg path{
-      fill: #007A70;
-    }
+			var preloadImg = new Image();
+			preloadImg.src = 'assets/img/button2.png';
 
-    p:last-of-type {
-      margin: 0;
-    }
+			var handling = false;
+			function handleButtonClick() {
+				if (handling) {
+					return;
+				}
 
-    </style>
-  </head>
-  <body>
-    <div class="main">
-      <div class="card">
-        <div class="header">
-          <h1>Page Not Found</h1>
-        </div>
-        <div class="body">
-          <p>Looks like you've followed a broken link or entered a URL that doesn't exist on this site.</p>
-          <p>
-            <a id="back-link" href="/">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                <path fill="#00ad9f" d="M11.9998836,4.09370803 L8.55809517,7.43294953 C8.23531459,7.74611298 8.23531459,8.25388736 8.55809517,8.56693769 L12,11.9062921 L9.84187871,14 L4.24208544,8.56693751 C3.91930485,8.25388719 3.91930485,7.74611281 4.24208544,7.43294936 L9.84199531,2 L11.9998836,4.09370803 Z"/>
-              </svg>
-              Back to our site
-             </a>
-          </p>
-        </div>
-      </div>
-    </div>
-    <script>
-      (function() {
-        if (document.referrer && document.location.host && document.referrer.match(new RegExp("^https?://" + document.location.host))) {
-          document.getElementById("back-link").setAttribute("href", document.referrer);
-        }
-      })();
-    </script>
-  </body>
+				handling = true;
+				button.src = 'assets/img/button2.png';
+
+				var el = document.getElementById('gif-holder');
+				el.className = 'row animated updated';
+
+				var index = Math.floor(Math.random() * (gifs.length));
+				console.log(index);
+				var el = document.getElementById('gif');
+				el.src = gifs[index];
+				el.style.display = 'initial';
+				handling = false;
+			}
+
+			function handleButtonReleased() {
+				audio.play();
+
+				setTimeout(function() {
+					button.src = 'assets/img/button1.png';
+				}, 100);
+			}
+
+			button.addEventListener('mousedown', handleButtonClick);
+			button.addEventListener('touchstart', handleButtonClick);
+
+			button.addEventListener('mouseup', handleButtonReleased);
+			button.addEventListener('touchend', handleButtonReleased);
+		</script>
+	</body>
 </html>
-

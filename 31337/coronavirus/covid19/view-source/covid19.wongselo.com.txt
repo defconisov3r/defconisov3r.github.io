@@ -142,7 +142,7 @@
                     
 
 <div style="max-width:400px;" class="covid-case-container">
-	<b style="font-size:23px;">Kondisi 18 March 2020</b>
+	<b style="font-size:23px;">Kondisi 20 March 2020</b>
 <br>	&nbsp;
 		
 	
@@ -150,27 +150,27 @@
 		<tbody><tr>
 			<td class="description">Jumlah orang yang diperiksa</td>
 			<td class="dot">:</td>
-			<td class="case">1255</td>
+			<td class="case">1727</td>
 		</tr>
 		<tr>
 			<td class="description">Positif COVID-19</td>
 			<td class="dot">:</td>
-			<td class="case">172</td>
+			<td class="case">309</td>
 		</tr>
 		<tr>
 			<td class="description">Sembuh (Positif COVID-19)</td>
 			<td class="dot">:</td>
-			<td class="case">9</td>
+			<td class="case">15</td>
 		</tr>
 		<tr>
 			<td class="description">Meninggal (Positif COVID-19)</td>
 			<td class="dot">:</td>
-			<td class="case">5</td>
+			<td class="case">25</td>
 		</tr>
 		<tr>
 			<td class="description">Negatif COVID-19</td>
 			<td class="dot">:</td>
-			<td class="case">1083</td>
+			<td class="case">1418</td>
 		</tr>
 		</tbody></table><br>
 </div>
@@ -220,7 +220,7 @@
 					 <p>Potensi Terjangkit COVID-19<br>
 					</p>
 					<h3><b>
-					13.7%					</b></h3>
+					17.9%					</b></h3>
 
                 </div>
                 <div class="icon">
@@ -237,10 +237,10 @@
 			<div style="width:100%;">
            <div class="small-box bg-green" style="width:50%; float:left;">
                 <div class="inner">
-					 <p>Peluang Pasien Sembuh<br>
+					 <p>Tingkat Kesembuhan<br>
 					</p>
 					<h3><b>
-					5.2%					</b></h3>
+					4.9%					</b></h3>
 
                 </div>
                 <div class="icon">
@@ -251,10 +251,10 @@
             
             <div class="small-box bg-red" style="width:50%; float:left;">
                 <div class="inner">
-					 <p>Peluang Pasien Meninggal<br>
+					 <p>Tingkat Kematian<br>
 					</p>
 					<h3><b>
-					2.9%					</b></h3>
+					8.1%					</b></h3>
 
                 </div>
                 <div class="icon">
@@ -288,7 +288,7 @@
           
 			<div class="row">
 			
-			<div class="col-md-6">
+			<div class="col-md-12">
             <!-- TABLE: LATEST ORDERS -->
             <div class="box box-info">
                 <div class="box-header with-border">
@@ -311,7 +311,34 @@
             </div><!-- /.box -->
 			
 			
-        <div class="col-md-6">
+        
+			
+				
+			
+			
+			
+			
+        </div><!-- /.col -->
+		 
+		
+		
+		
+	
+</section>
+
+
+
+
+
+<section class="col-lg-12 ">
+            <!-- Custom tabs (Charts with tabs)-->
+          
+			<div class="row">
+			
+			
+			
+			
+        <div class="col-md-12">
             <!-- TABLE: LATEST ORDERS -->
             <div class="box box-info">
                 <div class="box-header with-border">
@@ -347,6 +374,51 @@
 </section>
 
 
+    <section class="col-lg-12 ">
+            <!-- Custom tabs (Charts with tabs)-->
+          
+			<div class="row">
+			
+			
+			
+        <div class="col-md-12">
+            <!-- TABLE: LATEST ORDERS -->
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">
+                                    Grafik Jumlah Kasus Positif COVID-19 per Propinsi di Indonesia
+                    </h3>
+                    <div class="box-tools pull-right">
+                        <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                    </div>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                    
+                    
+		<div id="container4"></div>
+                    
+                    
+            </div>
+                    
+                </div><!-- /.box-body -->
+            </div><!-- /.box -->
+			
+				
+			
+			
+			
+			
+        </div><!-- /.col -->
+		 
+		
+		
+		
+	
+</section>
+
+
+
+
 <section class="col-lg-12 ">
             <!-- Custom tabs (Charts with tabs)-->
           
@@ -366,8 +438,20 @@
                     
                     
 		<div id = "map" style = "width: 100%; height: 400px; margin: 0 auto">
-      </div>
-                    
+      </div><br>
+            
+            <table style="font-size:18px; width: 300px;" cellspacing="0" cellpadding="0">
+		<tbody>
+		    <tr>
+			<td class="description"><img src="http://maps.google.com/mapfiles/ms/icons/green-dot.png"></img>: 0 kasus</td>
+			<td class="description"><img src="http://maps.google.com/mapfiles/ms/icons/orange-dot.png"></img>: 11-50 kasus</td>
+		</tr>
+		<tr>
+			<td class="description"><img src="http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"></img>: 1-10 kasus</td>
+			<td class="description"><img src="http://maps.google.com/mapfiles/ms/icons/red-dot.png"></img>: > 50 kasus</td>
+		</tr>
+		</tbody></table>
+            
             </div>
                     
                 </div><!-- /.box-body -->
@@ -404,7 +488,7 @@
                 </div><!-- /.box-header -->
                 <div class="box-body">
                     
-                <iframe style="width:100%; height:480px;"  src="https://www.youtube.com/embed/LMxpgVwyWNY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe style="width:100%; height:480px;"  src="https://www.youtube.com/embed/k1pTxWp8pZY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     
                     
             </div>
@@ -488,25 +572,39 @@ $(function () {
 		title: {
 			text: ''
 		},
-//		tooltip: {
-//			pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-//		},
+        yAxis: {
+                title: {
+                    text: 'Jumlah Kasus'
+                }
+            },
+        
+            xAxis: {
+                accessibility: {
+                   // rangeDescription: 'Range: 2010 to 2017'
+                }
+            },
 		plotOptions: {
-			pie: {
+        series: {
+            label: {
+                connectorAllowed: false
+            },
+            pointStart: 0
+        },
+			line: {
 				allowPointSelect: true,
 				cursor: 'pointer',
 				dataLabels: {
 					enabled: true,
-					format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+					format: '{point.y:,.0f}',
 					style: {
 						color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
 					}
 				}
 			}
-		},
+        },
 		series: [{
 			type: 'line',
-			name: 'Total Kasus (172)',
+			name: 'Total Kasus',
 			data: [
 					['02 March 2020',2],
 ['03 March 2020',2],
@@ -524,12 +622,14 @@ $(function () {
 ['15 March 2020',117],
 ['16 March 2020',134],
 ['17 March 2020',172],
-['18 March 2020',172],
+['18 March 2020',227],
+['19 March 2020',309],
+['20 March 2020',309],
 			]
 		},
 		{
 			type: 'line',
-			name: 'Kasus Meninggal (5)',
+			name: 'Kasus Meninggal',
 			data: [
 					['02 March 2020',0],
 ['03 March 2020',0],
@@ -547,13 +647,15 @@ $(function () {
 ['15 March 2020',5],
 ['16 March 2020',5],
 ['17 March 2020',5],
-['18 March 2020',5],
+['18 March 2020',19],
+['19 March 2020',25],
+['20 March 2020',25],
 					
 			]
 		},
 		{
 			type: 'line',
-			name: 'Kasus Sembuh (9)',
+			name: 'Kasus Sembuh',
 			data: [
 					['02 March 2020',0],
 ['03 March 2020',0],
@@ -571,7 +673,9 @@ $(function () {
 ['15 March 2020',8],
 ['16 March 2020',8],
 ['17 March 2020',9],
-['18 March 2020',9],
+['18 March 2020',11],
+['19 March 2020',15],
+['20 March 2020',15],
 					
 			]
 		}]
@@ -617,9 +721,9 @@ $(function () {
 			type: 'pie',
 			name: 'Total Kasus',
 			data: [
-				['Masih Dirawat',158],
-                    ['Meninggal',5],
-                    ['Sudah Sembuh',9]
+				['Masih Dirawat',269],
+                    ['Meninggal',25],
+                    ['Sudah Sembuh',15]
 			]
 		}]
 	});
@@ -632,16 +736,83 @@ $(function () {
 </script>
   
 
+<script type="text/javascript">
+ 
+$(function () {
+	$('#container4').highcharts({
+	chart: {
+			plotBackgroundColor: null,
+			plotBorderWidth: null,
+			plotShadow: false
+		},
+		title: {
+			text: ''
+		},
+        yAxis: {
+                title: {
+                    text: 'Jumlah Kasus'
+                }
+            },
+        
+            xAxis: {
+                visible: false
+            },
+//		tooltip: {
+//			pointFormat: '{series.name}: <b>{point.percentage:.1f}</b>'
+//		},
+		plotOptions: {
+			column: {
+				allowPointSelect: true,
+				cursor: 'pointer',
+				dataLabels: {
+					enabled: true,
+					format: '<b>{point.name}</b>: {point.y:,.0f}',
+					style: {
+						color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+					}
+				}
+			}
+		},
+		series: [{
+			type: 'column',
+			name: 'Jumlah Kasus',
+			data: [
+					['DKI Jakarta',210],
+['Banten',27],
+['Jabar',26],
+['Jateng',12],
+['Jatim',9],
+['DIY',5],
+['Kaltim',3],
+['Sultra',3],
+['Kepri',3],
+['Kalbar',2],
+['Riau',2],
+['Sulsel',2],
+['Sumut',2],
+			]
+		}]
+	});
+	
+	
+
+});
+ 
+ 
+</script>
 
 <script>
       var customLabel = {
-        Alien: {
+        Hijau: {
           icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
         },
-        Invasive: {
+        Merah: {
           icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
         },
-        "Potentially invasive": {
+        Jingga: {
+          icon: 'http://maps.google.com/mapfiles/ms/icons/orange-dot.png'
+        },
+        Kuning: {
           icon: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png'
         }
       };
@@ -830,8 +1001,20 @@ $(function () {
             Array.prototype.forEach.call(markers, function(markerElem) {
               var id = markerElem.getAttribute('id');
               var name = markerElem.getAttribute('name');
-              var address = "";
-              var type = "Invasive";
+              var address = markerElem.getAttribute('jumlah');
+              var type;
+              
+              if(address == 0){
+                  type = "Hijau";
+              }else if(address < 11){
+                  type = "Kuning";
+              }else if(address < 51){
+                  type = "Jingga";
+              }else{
+                  type = "Merah";
+              } 
+              
+              
               var point = new google.maps.LatLng(
                   parseFloat(markerElem.getAttribute('lat')),
                   parseFloat(markerElem.getAttribute('lng')));
@@ -844,13 +1027,13 @@ $(function () {
               
               
         	var createA = document.createTextNode(name);
-              
+        	  
               
               infowincontent.appendChild(createA);
               infowincontent.appendChild(document.createElement('br'));
 
               var text = document.createElement('text');
-              text.textContent = address
+              text.textContent = address+" kasus";
               infowincontent.appendChild(text);
               var icon = customLabel[type] || {};
               var marker = new google.maps.Marker({

@@ -1,116 +1,246 @@
-
 <!DOCTYPE html>
-
-<!-- WordPress Theme by WPExplorer (http://www.wpexplorer.com) -->
 <html lang="ru-RU">
+
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width" />
-	<title> My Blog</title>
-	<link rel="pingback" href="http://coronavirusglobal.ru/xmlrpc.php" />
-	<link rel='dns-prefetch' href='//coronavirusglobal.ru' />
-<link rel='dns-prefetch' href='//s.w.org' />
-<link rel="alternate" type="application/rss+xml" title="My Blog &raquo; Лента" href="https://coronavirusglobal.ru/feed/" />
-<link rel="alternate" type="application/rss+xml" title="My Blog &raquo; Лента комментариев" href="https://coronavirusglobal.ru/comments/feed/" />
-		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/coronavirusglobal.ru\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
-			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script>
-		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://coronavirusglobal.ru/xmlrpc.php">
+
+<link rel="icon" href="https://sitename.ru/favicon.png" type="image/x-icon">
+<link rel="shortcut icon" href="https://sitename.ru/favicon.png" type="image/x-icon">
+<meta name="yandex-verification" content="cd184fd9fb95038e" />
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(61128232, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/61128232" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<title>Коронавирус. Онлайн карта распространения коронавируса.</title>
+
+<!-- All in One SEO Pack 3.3.5 от Michael Torbert из Semper Fi Web Design[1128,1240] -->
+<meta name="description"  content="Сайт о коронавирусе. Онлайн карта заражения, статистика по странам, свежие новости на сегодня о COVID-19. Россия, Европа, весь мир." />
+
+<script type="application/ld+json" class="aioseop-schema">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://coronavirusglobal.ru/#organization","url":"https://coronavirusglobal.ru/","name":"Coronavirus (Covid-19)","sameAs":[]},{"@type":"WebSite","@id":"https://coronavirusglobal.ru/#website","url":"https://coronavirusglobal.ru/","name":"Coronavirus (Covid-19)","publisher":{"@id":"https://coronavirusglobal.ru/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://coronavirusglobal.ru/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://coronavirusglobal.ru/#webpage","url":"https://coronavirusglobal.ru/","inLanguage":"ru-RU","name":"\u041a\u0430\u0440\u0442\u0430 \u0440\u0430\u0441\u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0435\u043d\u0438\u044f \u043a\u043e\u0440\u043e\u043d\u0430\u0432\u0438\u0440\u0443\u0441\u0430 \u0432 \u0440\u0435\u0436\u0438\u043c\u0435 \u043e\u043d\u043b\u0430\u0439\u043d","isPartOf":{"@id":"https://coronavirusglobal.ru/#website"},"datePublished":"2020-03-18T05:00:59+00:00","dateModified":"2020-03-19T16:15:34+00:00","about":{"@id":"https://coronavirusglobal.ru/#organization"}}]}</script>
+<link rel="canonical" href="https://coronavirusglobal.ru/" />
+<!-- All in One SEO Pack -->
+<link rel='dns-prefetch' href='//yastatic.net' />
+<link rel='stylesheet' id='gridbox-custom-fonts-css'  href='https://coronavirusglobal.ru/wp-content/themes/gridbox/assets/css/custom-fonts.css?ver=20180413' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://coronavirusglobal.ru/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='gridbox-stylesheet-css'  href='https://coronavirusglobal.ru/wp-content/themes/gridbox/style.css?ver=1.8.3' type='text/css' media='all' />
+<style id='gridbox-stylesheet-inline-css' type='text/css'>
+.type-post .entry-footer .entry-tags, .type-post .entry-footer .post-navigation { position: absolute; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; overflow: hidden; }
 </style>
-	<link rel='stylesheet' id='wp-block-library-css'  href='http://coronavirusglobal.ru/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css' media='all' />
-<link rel='stylesheet' id='pytheas-style-css'  href='http://coronavirusglobal.ru/wp-content/themes/wpex-pytheas/style.css?ver=5.3.2' type='text/css' media='all' />
-<script type='text/javascript' src='http://coronavirusglobal.ru/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
-<script type='text/javascript' src='http://coronavirusglobal.ru/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='stylesheet' id='genericons-css'  href='https://coronavirusglobal.ru/wp-content/themes/gridbox/assets/genericons/genericons.css?ver=3.4.1' type='text/css' media='all' />
+<script type='text/javascript' async src='//yastatic.net/share2/share.js'></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://coronavirusglobal.ru/wp-content/themes/gridbox/assets/js/html5shiv.min.js?ver=3.7.3'></script>
+<![endif]-->
+<script type='text/javascript' src='https://coronavirusglobal.ru/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://coronavirusglobal.ru/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://coronavirusglobal.ru/wp-content/themes/gridbox/assets/js/navigation.js?ver=20170127'></script>
 <link rel='https://api.w.org/' href='https://coronavirusglobal.ru/wp-json/' />
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://coronavirusglobal.ru/xmlrpc.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://coronavirusglobal.ru/wp-includes/wlwmanifest.xml" /> 
-<meta name="generator" content="WordPress 5.3.2" />
-<!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="http://coronavirusglobal.ru/wp-content/themes/wpex-pytheas/css/ancient-ie.css" /><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]--><!--[if IE 7]><link rel="stylesheet" type="text/css" href="http://coronavirusglobal.ru/wp-content/themes/wpex-pytheas/css/font-awesome-ie7.min.css" media="screen" /><link rel="stylesheet" type="text/css" href="http://coronavirusglobal.ru/wp-content/themes/wpex-pytheas/css/css/antient-ie.css" media="screen" /><![endif]--><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style></head>
+<link rel="alternate" type="application/json+oembed" href="https://coronavirusglobal.ru/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcoronavirusglobal.ru%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://coronavirusglobal.ru/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcoronavirusglobal.ru%2F&#038;format=xml" />
+<style>
+.ya-share2__link{border: none!important;box-shadow:none!important;}
+.ya-share2__container {display: inline-block;}
+.ya-share2__list{padding: 0!important;margin: 0!important;}
+.ya-share2__item {padding: 0!important;background:none!important;}
+.ya-share2__container_size_m .ya-share2__item {margin: 0px 4px 4px 0!important;}
+.ya-share2__container_size_m .ya-share2__icon {height: 48px!important;width: 48px!important;background-size: 48px 48px!important;}
+.ya-share2__container_size_m .ya-share2__counter, .ya-share2__icon_more:before,.ya-share2__container_size_m .ya-share2__title {font-size: 18px!important;line-height: 48px!important;}
+.ya-share2__container_size_m .ya-share2__popup_direction_bottom {top: 52px!important;}</style>
+</head>
 
-<!-- Begin Body -->
-<body class="home blog body">
+<body class="home page-template page-template-template-fullwidth page-template-template-fullwidth-php page page-id-24 wp-embed-responsive post-layout-three-columns post-layout-columns no-sidebar author-hidden">
 
-	<div id="wrap" class="container clr">
-		<header id="masthead" class="site-header clr" role="banner">
-			<div class="logo">
-														<h1><a href="https://coronavirusglobal.ru/" title="My Blog" rel="home">My Blog</a></h1>
-					<p class="site-description">My WordPress Blog</p>							</div><!-- .logo -->
-			<div class="masthead-right">
-									<div class="masthead-right-content">
-						<i class="fa fa-phone"></i>Call us: 999-99-99					</div><!-- .masterhead-right-content -->
-													<div class="masthead-search clr">
-						<form method="get" id="searchform" class="searchform" action="https://coronavirusglobal.ru/" role="search">
-							<input type="search" class="field" name="s" value="" id="s" placeholder="Search&hellip;" />
-							<button type="submit" class="submit" id="searchsubmit"><i class="fa fa-search"></i></button>
-						</form>
-					</div><!-- /masthead-search -->
-							</div><!-- .masthead-right -->
-		</header><!-- .header -->
+	<div id="page" class="hfeed site">
+
+		<a class="skip-link screen-reader-text" href="#content">Пропустить и перейти к содержимому</a>
+
 		
-		<div id="navbar" class="navbar clr">
-			<nav id="site-navigation" class="navigation main-navigation clr" role="navigation">
-				<span class="nav-toggle">Menu<i class="toggle-icon fa fa-arrow-down"></i></span>
-							</nav><!-- #site-navigation -->
-			<ul id="social" class="clr"></ul><!-- #social -->		</div><!-- #navbar -->
+		<header id="masthead" class="site-header clearfix" role="banner">
+
+			<div class="header-main container clearfix">
+
+				<div id="logo" class="site-branding clearfix">
+
+										
+			<p class="site-title"><a href="https://coronavirusglobal.ru/" rel="home">Coronavirus (Covid-19)</a></p>
+
+							
+			<p class="site-description">Онлайн карта распространения коронавируса по всему миру. Последние новости</p>
+
 		
-	<div id="main" class="site-main row clr fitvids">
-				
-	<header class="page-header clr">
-		<h1>The Blog</h1>
-	</header><!-- /.page-header -->
+				</div><!-- .site-branding -->
+
+				<nav id="main-navigation" class="primary-navigation navigation clearfix" role="navigation">
+					<ul id="menu-menu-1" class="main-navigation-menu"><li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-24 current_page_item menu-item-26"><a href="https://coronavirusglobal.ru/" aria-current="page">Карта заражения вирусом</a></li>
+<li id="menu-item-46" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46"><a href="https://coronavirusglobal.ru/koronavirus-v-rossii">Коронавирус в России</a></li>
+</ul>				</nav><!-- #main-navigation -->
+
+			</div><!-- .header-main -->
+
+		</header><!-- #masthead -->
+
+		
+		
+		<div id="content" class="site-content container clearfix">
+
+	<section id="primary" class="fullwidth-content-area content-area">
+		<main id="main" class="site-main" role="main">
+
+			
+<article id="post-24" class="post-24 page type-page status-publish hentry">
+
 	
-	<div id="primary" class="content-area span_16 col clr clr-margin">
-		<div id="content" class="site-content" role="main">
-													<article id="post-1" class="blog-entry clr  post-1 post type-post status-publish format-standard hentry category-uncategorized">
-				<div class="blog-entry-details">
-			<header><h2><a href="https://coronavirusglobal.ru/2020/03/17/hello-world/" title="Hello world!" rel="bookmark">Hello world!</a></h2></header>
-			<ul class="meta clr">
-				<li><span class="fa fa-clock-o"></span>17 марта, 2020</li>
-				<li><span class="fa fa-folder-open"></span><a href="https://coronavirusglobal.ru/category/uncategorized/" rel="category tag">Uncategorized</a></li>
-									<li><span class="fa fa-comment"></span><a href="https://coronavirusglobal.ru/2020/03/17/hello-world/#comments" class="comments-link" >1 Comment</a></li>
-								<li><span class="fa fa-user"></span><a href="https://coronavirusglobal.ru/author/adminvirusa/" title="Записи adminvirusa" rel="author">adminvirusa</a></li>
-			</ul><!-- .meta -->
-			<div class="blog-entry-content">
-				<p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing!</p>
-			</div><!-- /entry-content -->
-		</div><!-- /blog-entry-details -->
-	</article><!-- /blog-entry-entry -->
+	<header class="entry-header">
 
-													</div><!-- #content -->
-	</div><!-- #primary -->
+		<h1 class="page-title">Карта распространения коронавируса в режиме онлайн</h1>
+	</header><!-- .entry-header -->
+
+	<div class="entry-content clearfix">
+
+		
+<p></p>
+
+
+<p style="text-align: left;">Данная интерактивная карта показывает в реальном времени общую ситуацию с распространением коронавируса во всем мире. Кликните по интересующей стране (или городу России), чтобы получить актуальную информацию (количество зараженных, умерших и выздоровевших). Для масштабирования используйте ползунок слева.</p>
+
+
+<iframe src="https://coronavirus-monitor.ru/map" frameBorder="0" height="500" width="1500tyle="max-width: 100%;"></iframe>
 
 
 
-	</div><!-- /main-content -->
-				<div id="footer-bottom" class="row clr">
-			<div id="copyright" class="span_12 col clr-margin" role="contentinfo">
-							</div><!-- /copyright -->
-			<div id="footer-menu" class="span_12 col">
-							</div><!-- /footer-menu -->
-		</div><!-- /footer-bottom -->
-	</div><!-- /wrap -->
+<h2>Статистика случаев заражения коронавирусом на сегодня (19.03.2020, в России)</h2>
 
+
+
+<figure class="wp-block-table aligncenter is-style-stripes"><table class=""><tbody><tr><td></td><td><strong>Заражений</strong></td><td><strong>Смертей</strong></td><td><strong>Выздоровлений</strong></td></tr><tr><td>Москва</td><td>98</td><td>1</td><td>1</td></tr><tr><td>Московская область</td><td>17</td><td>0</td><td>0</td></tr><tr><td>Санкт-Петербург</td><td>10</td><td>0</td><td>2</td></tr><tr><td>Свердловская область</td><td>6</td><td>0</td><td>0</td></tr><tr><td> Калининград </td><td>5</td><td>0</td><td>0</td></tr><tr><td> Самарская область</td><td>5</td><td>0</td><td>0</td></tr><tr><td> Липецк </td><td>3</td><td>0</td><td>3</td></tr><tr><td> Пермский край</td><td>3</td><td>0</td><td>1</td></tr><tr><td> Тверская область</td><td>3</td><td>0</td><td>0</td></tr><tr><td> Красноярский край</td><td>3</td><td>0</td><td>0</td></tr><tr><td> Нижегородская область </td><td>3</td><td>0</td><td>1</td></tr><tr><td> Тверская область </td><td>2</td><td>0</td><td>0</td></tr><tr><td> Тульская область </td><td>3</td><td>0</td><td>0</td></tr><tr><td> Хабаровский край </td><td>3</td><td>0</td><td>0</td></tr><tr><td> Тюменская область </td><td>2</td><td>0</td><td>1</td></tr><tr><td> Краснодарский край</td><td>2</td><td>0</td><td>0</td></tr><tr><td> Кемерово </td><td>2</td><td>0</td><td>0</td></tr><tr><td> Тамбовская область</td><td>2</td><td>0</td><td>0</td></tr><tr><td> Новосибирская область</td><td>2</td><td>0</td><td>0</td></tr><tr><td> Воронежская область</td><td>2</td><td>0</td><td>0</td></tr><tr><td> Белгород </td><td>1</td><td>0</td><td>0</td></tr><tr><td> Забайкальский край </td><td>1</td><td>0</td><td>1</td></tr><tr><td> Казань </td><td>1</td><td>0</td><td>0</td></tr><tr><td> Ленинградская область </td><td>1</td><td>0</td><td>0</td></tr><tr><td> Сыктывкар </td><td>1</td><td>0</td><td>0</td></tr><tr><td> Архангельская область</td><td>1</td><td>0</td><td>0</td></tr><tr><td> Калужская область</td><td>1</td><td>0</td><td>0</td></tr><tr><td> Пензенская область</td><td>1</td><td>0</td><td>0</td></tr><tr><td> Республика Хакасия </td><td>1</td><td> 0</td><td>0</td></tr><tr><td> Ярославская область </td><td>1</td><td>0</td><td>0</td></tr><tr><td> Томская область</td><td>1</td><td>0</td><td>0</td></tr><tr><td> Ивановская область</td><td>1</td><td>0</td><td>0</td></tr><tr><td> Оренбургская область</td><td>1</td><td>0</td><td>0</td></tr><tr><td> Якутия </td><td>1</td><td>0</td><td>0</td></tr><tr><td> Рязанская область</td><td>1</td><td>0</td><td>0</td></tr><tr><td> Саратовская область</td><td>1</td><td>0</td><td>0</td></tr><tr><td> Мурманская область</td><td>1</td><td>0</td><td>0</td></tr><tr><td> Чувашская республика</td><td>1</td><td>0</td><td>0</td></tr><tr><td> Ханты-Мансийском АО</td><td>1</td><td>0</td><td>0</td></tr></tbody></table></figure>
+
+
+
+<div class="wp-block-button aligncenter"><a class="wp-block-button__link has-background" href="https://coronavirusglobal.ru/koronavirus-v-rossii" style="background-color:#cc391f">Подробная статистика по России</a></div>
+
+
+
+<h2 class="has-text-align-center">Статистика случаев заражения коронавирусом в Европе</h2>
+
+
+
+<figure class="wp-block-table aligncenter is-style-stripes"><table class=""><tbody><tr><td></td><td><strong>Заражений</strong></td><td><strong>Смертей</strong></td><td><strong>Выздоровлений</strong></td></tr><tr><td>Италия</td><td> 35713 </td><td> 2978  </td><td> 4025 </td></tr><tr><td> Испания</td><td> 14769 </td><td> 638 </td><td> 1081 </td></tr><tr><td> Германия</td><td> 12327 </td><td> 28 </td><td> 105 </td></tr><tr><td> Франция</td><td> 9134 </td><td> 264 </td><td> 12 </td></tr><tr><td> Швейцария</td><td> 3028 </td><td> 33 </td><td> 4 </td></tr><tr><td> Великобритания</td><td> 2626 </td><td> 104 </td><td> 65 </td></tr><tr><td> Нидерланды</td><td> 2051 </td><td> 58 </td><td> 2 </td></tr><tr><td> Норвегия </td><td> 1479 </td><td> 4 </td><td> 0 </td></tr><tr><td> Австрия</td><td> 1471 </td><td> 3   </td><td> 9 </td></tr><tr><td> Швеция </td><td> 1279 </td><td> 10 </td><td> 0 </td></tr><tr><td> Дания </td><td> 1091 </td><td> 4 </td><td> 0 </td></tr><tr><td> Чехия </td><td> 464 </td><td> 0 </td><td> 3 </td></tr><tr><td> Португалия </td><td> 448 </td><td> 1 </td><td> 3 </td></tr><tr><td> Греция </td><td> 387 </td><td> 5 </td><td> 10 </td></tr><tr><td> Ирландия </td><td> 366 </td><td> 2 </td><td> 0 </td></tr><tr><td> Финляндия </td><td> 333 </td><td> 0 </td><td> 10 </td></tr><tr><td> Польша </td><td> 287 </td><td> 5 </td><td> 0 </td></tr><tr><td> Словения </td><td>  275 </td><td> 1 </td><td> 0 </td></tr><tr><td>  Эстония </td><td>  258 </td><td> 0 </td><td> 1 </td></tr><tr><td> Исландия </td><td> 247 </td><td> 0 </td><td> 5 </td></tr><tr><td> Румыния </td><td> 217 </td><td> 0 </td><td> 19 </td></tr><tr><td> Люксембург </td><td> 203 </td><td> 2  </td><td> 0 </td></tr><tr><td> Турция </td><td> 191 </td><td> 2 </td><td> 0 </td></tr><tr><td> Россия </td><td> 147 </td><td> 0 </td><td> 6 </td></tr><tr><td> Сан-Марино </td><td> 126 </td><td> 11 </td><td> 4 </td></tr><tr><td> Словакия </td><td> 97 </td><td> 0 </td><td> 0 </td></tr><tr><td> Болгария </td><td> 92 </td><td> 2 </td><td> 0 </td></tr><tr><td> Сербия </td><td> 89 </td><td> 0 </td><td> 0 </td></tr><tr><td> Латвия </td><td> 71 </td><td> 0 </td><td> 0 </td></tr><tr><td> Хорватия </td><td> 65 </td><td> 0 </td><td> 4 </td></tr><tr><td> Албания </td><td> 55 </td><td> 1 </td><td> 0 </td></tr><tr><td> Беларусь </td><td> 51 </td><td> 0 </td><td> 5 </td></tr><tr><td> Венгрия </td><td> 50 </td><td> 1 </td><td> 2 </td></tr><tr><td> Кипр </td><td> 49 </td><td> 0 </td><td> 0 </td></tr><tr><td> Андорра </td><td> 39 </td><td> 0 </td><td> 0 </td></tr><tr><td> Мальта </td><td> 38 </td><td> 0 </td><td> 2 </td></tr><tr><td> Литва </td><td> 33 </td><td> 0 </td><td> 1</td></tr><tr><td> Молдова </td><td> 30 </td><td> 1 </td><td> 1 </td></tr><tr><td> Босния и Герцеговина</td><td> 23 </td><td> 0 </td><td> 0 </td></tr><tr><td> Лихтенштейн </td><td> 19 </td><td> 0 </td><td> 0 </td></tr><tr><td> Украина </td><td> 14 </td><td> 2 </td><td> 1 </td></tr><tr><td> Монако </td><td> 9 </td><td> 0 </td><td> 0 </td></tr><tr><td>Гибралтар</td><td> 3 </td><td> 0 </td><td> 1 </td></tr><tr><td>Ватикан</td><td> 1 </td><td> 0 </td><td> 0 </td></tr></tbody></table></figure>
+
+
+
+<h2 class="has-text-align-center">Статистика заражения коронавирусом во всем мире</h2>
+
+
+
+<figure class="wp-block-table aligncenter is-style-regular"><table class=""><tbody><tr><td class="has-text-align-left" data-align="left"></td><td class="has-text-align-center" data-align="center"><strong>Заражений</strong></td><td class="has-text-align-center" data-align="center"><strong>Смертей</strong></td><td class="has-text-align-center" data-align="center"><strong>Выздоровлений</strong></td></tr><tr><td class="has-text-align-left" data-align="left"> Китай </td><td class="has-text-align-center" data-align="center"> 80929 </td><td class="has-text-align-center" data-align="center"> 3245 </td><td class="has-text-align-center" data-align="center"> 70548 </td></tr><tr><td class="has-text-align-left" data-align="left"> Италия </td><td class="has-text-align-center" data-align="center"> 35713 </td><td class="has-text-align-center" data-align="center"> 2978 </td><td class="has-text-align-center" data-align="center"> 4025 </td></tr><tr><td class="has-text-align-left" data-align="left"> Иран </td><td class="has-text-align-center" data-align="center"> 17361 </td><td class="has-text-align-center" data-align="center"> 1135 </td><td class="has-text-align-center" data-align="center"> 5710 </td></tr><tr><td class="has-text-align-left" data-align="left"> Испания </td><td class="has-text-align-center" data-align="center"> 14769 </td><td class="has-text-align-center" data-align="center"> 638 </td><td class="has-text-align-center" data-align="center"> 1081 </td></tr><tr><td class="has-text-align-left" data-align="left"> Германия </td><td class="has-text-align-center" data-align="center"> 12327 </td><td class="has-text-align-center" data-align="center"> 28 </td><td class="has-text-align-center" data-align="center"> 105 </td></tr><tr><td class="has-text-align-left" data-align="left"> Франция </td><td class="has-text-align-center" data-align="center"> 9134 </td><td class="has-text-align-center" data-align="center"> 264 </td><td class="has-text-align-center" data-align="center"> 12 </td></tr><tr><td class="has-text-align-left" data-align="left"> США </td><td class="has-text-align-center" data-align="center"> 9025 </td><td class="has-text-align-center" data-align="center"> 139 </td><td class="has-text-align-center" data-align="center"> 9 </td></tr><tr><td class="has-text-align-left" data-align="left"> Южная Корея </td><td class="has-text-align-center" data-align="center"> 8565 </td><td class="has-text-align-center" data-align="center"> 91 </td><td class="has-text-align-center" data-align="center"> 1947 </td></tr><tr><td class="has-text-align-left" data-align="left"> Швейцария </td><td class="has-text-align-center" data-align="center"> 3028 </td><td class="has-text-align-center" data-align="center"> 33 </td><td class="has-text-align-center" data-align="center"> 4 </td></tr><tr><td class="has-text-align-left" data-align="left"> Великобритания </td><td class="has-text-align-center" data-align="center"> 2626 </td><td class="has-text-align-center" data-align="center"> 104 </td><td class="has-text-align-center" data-align="center">  65 </td></tr><tr><td class="has-text-align-left" data-align="left"> Нидерланды </td><td class="has-text-align-center" data-align="center"> 2051 </td><td class="has-text-align-center" data-align="center"> 58 </td><td class="has-text-align-center" data-align="center"> 2 </td></tr><tr><td class="has-text-align-left" data-align="left"> Бельгия </td><td class="has-text-align-center" data-align="center"> 1486 </td><td class="has-text-align-center" data-align="center"> 14  </td><td class="has-text-align-center" data-align="center"> 31 </td></tr><tr><td class="has-text-align-left" data-align="left"> Норвегия </td><td class="has-text-align-center" data-align="center"> 1479 </td><td class="has-text-align-center" data-align="center"> 4 </td><td class="has-text-align-center" data-align="center">  0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Австрия </td><td class="has-text-align-center" data-align="center"> 1471 </td><td class="has-text-align-center" data-align="center"> 3 </td><td class="has-text-align-center" data-align="center"> 9 </td></tr><tr><td class="has-text-align-left" data-align="left"> Швеция </td><td class="has-text-align-center" data-align="center"> 1279 </td><td class="has-text-align-center" data-align="center"> 10 </td><td class="has-text-align-center" data-align="center">  0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Япония </td><td class="has-text-align-center" data-align="center"> 1151 </td><td class="has-text-align-center" data-align="center"> 29 </td><td class="has-text-align-center" data-align="center"> 164 </td></tr><tr><td class="has-text-align-left" data-align="left"> Дания </td><td class="has-text-align-center" data-align="center"> 1091 </td><td class="has-text-align-center" data-align="center"> 4 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Малайзия </td><td class="has-text-align-center" data-align="center"> 790 </td><td class="has-text-align-center" data-align="center"> 2 </td><td class="has-text-align-center" data-align="center"> 60 </td></tr><tr><td class="has-text-align-left" data-align="left"> Канада </td><td class="has-text-align-center" data-align="center"> 716 </td><td class="has-text-align-center" data-align="center"> 9 </td><td class="has-text-align-center" data-align="center"> 12 </td></tr><tr><td class="has-text-align-left" data-align="left"> Австралия </td><td class="has-text-align-center" data-align="center"> 568 </td><td class="has-text-align-center" data-align="center"> 6 </td><td class="has-text-align-center" data-align="center"> 27 </td></tr><tr><td class="has-text-align-left" data-align="left"> Бразилия </td><td class="has-text-align-center" data-align="center"> 509 </td><td class="has-text-align-center" data-align="center"> 4 </td><td class="has-text-align-center" data-align="center"> 1 </td></tr><tr><td class="has-text-align-left" data-align="left"> Чехия </td><td class="has-text-align-center" data-align="center"> 464 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 3 </td></tr><tr><td class="has-text-align-left" data-align="left"> Португалия </td><td class="has-text-align-center" data-align="center">  448 </td><td class="has-text-align-center" data-align="center"> 1 </td><td class="has-text-align-center" data-align="center"> 3 </td></tr><tr><td class="has-text-align-left" data-align="left"> Катар </td><td class="has-text-align-center" data-align="center"> 442 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 4 </td></tr><tr><td class="has-text-align-left" data-align="left"> Греция </td><td class="has-text-align-center" data-align="center"> 387  </td><td class="has-text-align-center" data-align="center">  5 </td><td class="has-text-align-center" data-align="center"> 10 </td></tr><tr><td class="has-text-align-left" data-align="left"> Ирландия </td><td class="has-text-align-center" data-align="center"> 366 </td><td class="has-text-align-center" data-align="center"> 2 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Финляндия </td><td class="has-text-align-center" data-align="center"> 272 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 1</td></tr><tr><td class="has-text-align-left" data-align="left"> Израиль </td><td class="has-text-align-center" data-align="center"> 337 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center">  5 </td></tr><tr><td class="has-text-align-left" data-align="left"> Финляндия</td><td class="has-text-align-center" data-align="center"> 333 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 10 </td></tr><tr><td class="has-text-align-left" data-align="left"> Сингапур </td><td class="has-text-align-center" data-align="center"> 313 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 117 </td></tr><tr><td class="has-text-align-left" data-align="left"> Пакистан </td><td class="has-text-align-center" data-align="center"> 301 </td><td class="has-text-align-center" data-align="center"> 2 </td><td class="has-text-align-center" data-align="center"> 4 </td></tr><tr><td class="has-text-align-left" data-align="left"> Польша </td><td class="has-text-align-center" data-align="center"> 287 </td><td class="has-text-align-center" data-align="center"> 5 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Словения </td><td class="has-text-align-center" data-align="center"> 275 </td><td class="has-text-align-center" data-align="center"> 1 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left">  Эстония </td><td class="has-text-align-center" data-align="center"> 258 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center">  1 </td></tr><tr><td class="has-text-align-left" data-align="left">  Исландия </td><td class="has-text-align-center" data-align="center"> 247 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 5 </td></tr><tr><td class="has-text-align-left" data-align="left"> Бахрейн </td><td class="has-text-align-center" data-align="center"> 242 </td><td class="has-text-align-center" data-align="center"> 1 </td><td class="has-text-align-center" data-align="center"> 88 </td></tr><tr><td class="has-text-align-left" data-align="left"> Саудовская Аравия </td><td class="has-text-align-center" data-align="center"> 238 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 6 </td></tr><tr><td class="has-text-align-left" data-align="left"> Чили </td><td class="has-text-align-center" data-align="center"> 238 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Индонезия </td><td class="has-text-align-center" data-align="center"> 227 </td><td class="has-text-align-center" data-align="center"> 19 </td><td class="has-text-align-center" data-align="center"> 11 </td></tr><tr><td class="has-text-align-left" data-align="left"> Румыния </td><td class="has-text-align-center" data-align="center"> 217 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 19 </td></tr><tr><td class="has-text-align-left" data-align="left"> Таиланд </td><td class="has-text-align-center" data-align="center">  212 </td><td class="has-text-align-center" data-align="center"> 1 </td><td class="has-text-align-center" data-align="center"> 38 </td></tr><tr><td class="has-text-align-left" data-align="left"> Люксембург </td><td class="has-text-align-center" data-align="center"> 203  </td><td class="has-text-align-center" data-align="center"> 2 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Египет </td><td class="has-text-align-center" data-align="center"> 196 </td><td class="has-text-align-center" data-align="center"> 6 </td><td class="has-text-align-center" data-align="center"> 27 </td></tr><tr><td class="has-text-align-left" data-align="left"> Гонконг </td><td class="has-text-align-center" data-align="center"> 193  </td><td class="has-text-align-center" data-align="center"> 4  </td><td class="has-text-align-center" data-align="center"> 95 </td></tr><tr><td class="has-text-align-left" data-align="left"> Филиппины </td><td class="has-text-align-center" data-align="center"> 193 </td><td class="has-text-align-center" data-align="center"> 14 </td><td class="has-text-align-center" data-align="center"> 4 </td></tr><tr><td class="has-text-align-left" data-align="left"> Турция </td><td class="has-text-align-center" data-align="center"> 191 </td><td class="has-text-align-center" data-align="center"> 2 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Эквадор </td><td class="has-text-align-center" data-align="center"> 168 </td><td class="has-text-align-center" data-align="center"> 3 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Ирак </td><td class="has-text-align-center" data-align="center"> 154 </td><td class="has-text-align-center" data-align="center"> 11  </td><td class="has-text-align-center" data-align="center"> 41 </td></tr><tr><td class="has-text-align-left" data-align="left"> Индия </td><td class="has-text-align-center" data-align="center"> 147 </td><td class="has-text-align-center" data-align="center"> 3 </td><td class="has-text-align-center" data-align="center"> 14 </td></tr><tr><td class="has-text-align-left" data-align="left"> Россия </td><td class="has-text-align-center" data-align="center"> 147 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 6  </td></tr><tr><td class="has-text-align-left" data-align="left"> Ливан </td><td class="has-text-align-center" data-align="center"> 133 </td><td class="has-text-align-center" data-align="center"> 3 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Кувейт </td><td class="has-text-align-center" data-align="center"> 130 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 15 </td></tr><tr><td class="has-text-align-left" data-align="left"> Сан-Марино </td><td class="has-text-align-center" data-align="center"> 126 </td><td class="has-text-align-center" data-align="center"> 11 </td><td class="has-text-align-center" data-align="center"> 4 </td></tr><tr><td class="has-text-align-left" data-align="left"> Мексика </td><td class="has-text-align-center" data-align="center"> 118 </td><td class="has-text-align-center" data-align="center"> 1 </td><td class="has-text-align-center" data-align="center"> 4  </td></tr><tr><td class="has-text-align-left" data-align="left"> Перу </td><td class="has-text-align-center" data-align="center"> 117 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 1 </td></tr><tr><td class="has-text-align-left" data-align="left"> ЮАР </td><td class="has-text-align-center" data-align="center"> 116 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Армения </td><td class="has-text-align-center" data-align="center"> 110 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 1 </td></tr><tr><td class="has-text-align-left" data-align="left"> Колумбия </td><td class="has-text-align-center" data-align="center"> 102 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Тайвань </td><td class="has-text-align-center" data-align="center"> 100  </td><td class="has-text-align-center" data-align="center"> 1 </td><td class="has-text-align-center" data-align="center"> 22 </td></tr><tr><td class="has-text-align-left" data-align="left"> Словакия </td><td class="has-text-align-center" data-align="center"> 97 </td><td class="has-text-align-center" data-align="center"> 0</td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Болгария </td><td class="has-text-align-center" data-align="center"> 92 </td><td class="has-text-align-center" data-align="center"> 2 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Сербия </td><td class="has-text-align-center" data-align="center"> 89 </td><td class="has-text-align-center" data-align="center"> 0</td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Панама </td><td class="has-text-align-center" data-align="center"> 86  </td><td class="has-text-align-center" data-align="center"> 1 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> ОАЭ </td><td class="has-text-align-center" data-align="center"> 85 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 20 </td></tr><tr><td class="has-text-align-left" data-align="left"> Аргентина </td><td class="has-text-align-center" data-align="center"> 79 </td><td class="has-text-align-center" data-align="center"> 2 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Вьетнам </td><td class="has-text-align-center" data-align="center"> 76 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 16 </td></tr><tr><td class="has-text-align-left" data-align="left"> Афганистан </td><td class="has-text-align-center" data-align="center"> 73 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 1 </td></tr><tr><td class="has-text-align-left" data-align="left"> Алжир </td><td class="has-text-align-center" data-align="center"> 72 </td><td class="has-text-align-center" data-align="center"> 6 </td><td class="has-text-align-center" data-align="center"> 12 </td></tr><tr><td class="has-text-align-left" data-align="left"> Латвия </td><td class="has-text-align-center" data-align="center"> 71 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Хорватия </td><td class="has-text-align-center" data-align="center"> 65 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 4 </td></tr><tr><td class="has-text-align-left" data-align="left"> Албания </td><td class="has-text-align-center" data-align="center"> 55 </td><td class="has-text-align-center" data-align="center"> 1 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Беларусь </td><td class="has-text-align-center" data-align="center"> 51 </td><td class="has-text-align-center" data-align="center"> 0</td><td class="has-text-align-center" data-align="center"> 5 </td></tr><tr><td class="has-text-align-left" data-align="left"> Венгрия </td><td class="has-text-align-center" data-align="center"> 50 </td><td class="has-text-align-center" data-align="center"> 1 </td><td class="has-text-align-center" data-align="center"> 2 </td></tr><tr><td class="has-text-align-left" data-align="left"> Уругвай </td><td class="has-text-align-center" data-align="center"> 50 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Марокко </td><td class="has-text-align-center" data-align="center"> 49 </td><td class="has-text-align-center" data-align="center"> 2 </td><td class="has-text-align-center" data-align="center"> 1 </td></tr><tr><td class="has-text-align-left" data-align="left"> Кипр </td><td class="has-text-align-center" data-align="center"> 49 </td><td class="has-text-align-center" data-align="center"> 0  </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Иордания </td><td class="has-text-align-center" data-align="center"> 48 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 1 </td></tr><tr><td class="has-text-align-left" data-align="left"> Шри-Ланка </td><td class="has-text-align-center" data-align="center"> 44  </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 1 </td></tr><tr><td class="has-text-align-left" data-align="left"> Андорра </td><td class="has-text-align-center" data-align="center"> 39 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Грузия </td><td class="has-text-align-center" data-align="center"> 38  </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 1 </td></tr><tr><td class="has-text-align-left" data-align="left"> Мальта </td><td class="has-text-align-center" data-align="center"> 38 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 2 </td></tr><tr><td class="has-text-align-left" data-align="left"> Казахстан </td><td class="has-text-align-center" data-align="center"> 36 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Камбоджа </td><td class="has-text-align-center" data-align="center"> 33 </td><td class="has-text-align-center" data-align="center"> 0</td><td class="has-text-align-center" data-align="center"> 1 </td></tr><tr><td class="has-text-align-left" data-align="left"> Оман</td><td class="has-text-align-center" data-align="center"> 33 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 12 </td></tr><tr><td class="has-text-align-left" data-align="left"> Литва </td><td class="has-text-align-center" data-align="center"> 33</td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 1 </td></tr><tr><td class="has-text-align-left" data-align="left"> Северная Македония</td><td class="has-text-align-center" data-align="center"> 31 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 1 </td></tr><tr><td class="has-text-align-left" data-align="left"> Сенегал </td><td class="has-text-align-center" data-align="center"> 31 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Азербайджан </td><td class="has-text-align-center" data-align="center"> 30 </td><td class="has-text-align-center" data-align="center"> 1 </td><td class="has-text-align-center" data-align="center"> 7 </td></tr><tr><td class="has-text-align-left" data-align="left"> Молдова </td><td class="has-text-align-center" data-align="center"> 30 </td><td class="has-text-align-center" data-align="center"> 1 </td><td class="has-text-align-center" data-align="center"> 1 </td></tr><tr><td class="has-text-align-left" data-align="left"> Новая Зеландия </td><td class="has-text-align-center" data-align="center"> 28 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Тунис </td><td class="has-text-align-center" data-align="center"> 27 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Доминиканская Республика</td><td class="has-text-align-center" data-align="center"> 21 </td><td class="has-text-align-center" data-align="center"> 1 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Лихтенштейн </td><td class="has-text-align-center" data-align="center"> 19 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Узбекистан </td><td class="has-text-align-center" data-align="center"> 18 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Макао </td><td class="has-text-align-center" data-align="center"> 17 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center">10 </td></tr><tr><td class="has-text-align-left" data-align="left"> Украина </td><td class="has-text-align-center" data-align="center"> 14 </td><td class="has-text-align-center" data-align="center"> 2 </td><td class="has-text-align-center" data-align="center"> 1 </td></tr><tr><td class="has-text-align-left" data-align="left"> Бангладеш </td><td class="has-text-align-center" data-align="center"> 14 </td><td class="has-text-align-center" data-align="center"> 1 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Украина </td><td class="has-text-align-center" data-align="center"> 7 </td><td class="has-text-align-center" data-align="center"> 1 </td><td class="has-text-align-center" data-align="center"> 1 </td></tr><tr><td class="has-text-align-left" data-align="left"> Мальдивы </td><td class="has-text-align-center" data-align="center"> 13 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Боливия </td><td class="has-text-align-center" data-align="center"> 12 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Парагвай </td><td class="has-text-align-center" data-align="center"> 11</td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Куба </td><td class="has-text-align-center" data-align="center"> 11 </td><td class="has-text-align-center" data-align="center"> 1 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Камерун </td><td class="has-text-align-center" data-align="center"> 10 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Кения </td><td class="has-text-align-center" data-align="center"> 10 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Монако </td><td class="has-text-align-center" data-align="center"> 9 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Гана </td><td class="has-text-align-center" data-align="center"> 7 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left">  Эфиопия </td><td class="has-text-align-center" data-align="center"> 6 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left">  Коста Рика</td><td class="has-text-align-center" data-align="center"> 5 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Нигерия </td><td class="has-text-align-center" data-align="center"> 3 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Гибралтар </td><td class="has-text-align-center" data-align="center"> 3 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 1 </td></tr><tr><td class="has-text-align-left" data-align="left"> Габон </td><td class="has-text-align-center" data-align="center"> 3 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Киргизия </td><td class="has-text-align-center" data-align="center"> 3 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Намибия </td><td class="has-text-align-center" data-align="center"> 2 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Конго </td><td class="has-text-align-center" data-align="center"> 2 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Непал </td><td class="has-text-align-center" data-align="center"> 1 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 1 </td></tr><tr><td class="has-text-align-left" data-align="left"> Бутан  </td><td class="has-text-align-center" data-align="center"> 1 </td><td class="has-text-align-center" data-align="center"> 0 </td><td class="has-text-align-center" data-align="center"> 0 </td></tr><tr><td class="has-text-align-left" data-align="left"> Ватикан </td><td class="has-text-align-center" data-align="center"> 1</td><td class="has-text-align-center" data-align="center"> 0</td><td class="has-text-align-center" data-align="center"> 0</td></tr><tr><td class="has-text-align-left" data-align="left"> Донецкая республика </td><td class="has-text-align-center" data-align="center"> 1</td><td class="has-text-align-center" data-align="center"> 0</td><td class="has-text-align-center" data-align="center"> 0</td></tr><tr><td class="has-text-align-left" data-align="left"> Монголия </td><td class="has-text-align-center" data-align="center"> 1</td><td class="has-text-align-center" data-align="center"> 0</td><td class="has-text-align-center" data-align="center"> 0</td></tr><tr><td class="has-text-align-left" data-align="left"> Центральноафриканская Республика </td><td class="has-text-align-center" data-align="center">1</td><td class="has-text-align-center" data-align="center">0</td><td class="has-text-align-center" data-align="center">0</td></tr></tbody></table></figure>
+
+
+<div id="visualizer-63-1699965807" class="visualizer-front  visualizer-front-63"></div>
+
+
+<p>В приведенных таблицах указана официальная статистика случаев заболевания коронавирусом. Отдельно по городам России, по странам Европы, а также мировая статистика. Информация обновляется каждый день (<strong>с задержкой</strong>). Данные в реальном времени можно посмотреть в онлайн карте, представленной выше.</p>
+<p><em><span style="color: #333399;"><strong>Источниками информации служат </strong></span>: <a href="https://bnonews.com/index.php/2020/02/the-latest-coronavirus-cases/">BNO</a>, <a href="https://ncov.dxy.cn/ncovh5/view/pneumonia?scene=2">DXY</a>, <a href="https://www.who.int/ru/emergencies/diseases/novel-coronavirus-2019">WHO</a>, <a href="https://www.rospotrebnadzor.ru/">Роспотребнадзор</a> .</em></p>
+
+
+<h2>Коронавирус (Coronavirus COVID-19) &#8212; общая информация</h2>
+
+
+<p>Официальное название вируса &#171;SARS-CoV-2&#187;. Данный вирус относится к семейству коронавирусов (на данный момент туда входят 40 видов возбудителей), способных поражать человека и животных.</p>
+<p>Название семейства произошло из-за характерного строения этих вирусов, они имеют шиповидные отростки на оболочке, с помощью которых &#171;проникают&#187; в здоровые клетки.</p>
+<ul>
+<li>Первая известная коронавирусная эпидемия была в 2002 году. вирус SARS-CoV, возбудитель атипичной пневмонии.</li>
+<li>Также была зафиксирована вспышка вируса из данного семейства в 2015 году. Вирус MERS-CoV, возбудитель ближневосточного респираторного синдрома.</li>
+<li>Пневмония нового типа ( <em>COVID</em>&#8212;<em>19)</em>, вспышка которой случилась в конце 2019 года, ставшая пандемией в 2020 году, вызвана новым штаммом коронавирусов SARS-CoV-2.</li>
+</ul>
+<p>COVID-19 &#8212; острая респираторная инфекция, которая может протекать как в легкой, так и в тяжелой форме. Осложнения могут включать вирусную пневмонию, которая влечет за собой острый респираторный дистресс-синдром, дыхательную недостаточность с риском смерти.</p>
+<p>Тяжесть протекания данной вирусной инфекции зависит от возраста. Наибольший риск имеют пожилые люди (выше вероятность осложнений или смертельного исхода), а также люди с хроническими заболеваниями (диабет, астма, болезни сердца и т.д.).</p>
+<p>У людей нет приобретенного иммунитета к новому вирусу. Против COVID-19 пока не существует специальных противовирусных средств лечения и профилактики. В большинстве случаев (около 80%) выздоровление происходит само по себе (общие меры поддержки как при ОРВИ).</p>
+
+
+<h2>Симптомы коронавируса ( COVID-19 )</h2>
+
+
+
+<p>Инкубационный период коронавируса может продолжаться более двух недель. Симптомы Covid-19 схожи с острым респираторным синдромом (ОРВИ), а также с пневмонией.</p>
+
+
+
+<ul><li> Общее недомогание;</li><li>Головная боль;</li><li>Боль в мышцах;</li><li>Боли в области груди;</li><li>Затрудненное дыхание;</li><li>Сильный кашель;</li><li>Повышенная температура и лихорадка (37,5 °C и выше);</li><li>Потеря сознания; </li></ul>
+
+
+
+<h2>Меры профилактики коронавируса у человека</h2>
+
+
+
+<ul><li>Частое и тщательное мытье рук с мылом;</li><li>Не касаться грязными руками глаз, носа, рта, слизистых;</li><li>Избегать массовых скоплений людей, не контактировать с зараженными;</li><li>Ограничить поездки, путешествия в страны, в которых зафиксированы случаи заражения;</li><li>Использование защитных масок (медицинские респираторы);</li><li>При первых признаках заболевания обратиться в лечебные учреждения (для сдачи теста на коронавирус в том числе);</li><li>Влажная уборка с использованием дезинфицирующих средств;</li></ul>
+<h3>Поделиться ссылкой</h3><div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,twitter,viber,whatsapp,telegram," data-size="m" data-direction="horizontal" data-lang="ru" data-access-token:facebook="" data-url="https://coronavirusglobal.ru/" ></div>
+		
+	</div><!-- .entry-content -->
+
+</article>
+
+<div id="comments" class="comments-area">
+
+	
+	
+	
+	
+</div><!-- #comments -->
+
+		</main><!-- #main -->
+	</section><!-- #primary -->
+
+	
+	</div><!-- #content -->
+	
+	
+	<div id="footer" class="footer-wrap">
+	
+		<footer id="colophon" class="site-footer container clearfix" role="contentinfo">
+
+			<div id="footer-text" class="site-info">
+				
+	<span class="credit-link">
+		© 2020 Коронавирус. Онлайн карта коронавируса COVID-19. Статистика заражения и новости.	</span>
+
+				</div><!-- .site-info -->
+			
+			
+		</footer><!-- #colophon -->
+		
+	</div>
+
+</div><!-- #page -->
+
+<link rel='stylesheet' id='visualizer-front-css'  href='https://coronavirusglobal.ru/wp-content/plugins/visualizer/css/front.css?ver=3.4.2' type='text/css' media='all' />
+<script type='text/javascript' src='https://coronavirusglobal.ru/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+<script type='text/javascript' src='https://coronavirusglobal.ru/wp-content/uploads/visualizer/customization.js'></script>
+<script type='text/javascript' defer="defer" src='//www.gstatic.com/charts/loader.js'></script>
+<script type='text/javascript' defer="defer" src='//www.google.com/jsapi'></script>
+<script type='text/javascript' defer="defer" src='https://coronavirusglobal.ru/wp-content/plugins/visualizer/js/render-google.js?ver=3.4.2'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-var lightboxLocalize = {"theme":""};
+var visualizer = {"charts":{"visualizer-63-11526232":{"type":"pie","series":[{"label":"\u0421\u043e\u043e\u0442\u043d\u043e\u0448\u0435\u043d\u0438\u0435 \u0432\u0441\u0435\u0445 \u0441\u043b\u0443\u0447\u0430\u0435\u0432 \u0437\u0430\u0431\u043e\u043b\u0435\u0432\u0430\u043d\u0438\u044f","type":"string"},{"label":"\u0427\u0435\u043b\u043e\u0432\u0435\u043a","type":"number"}],"settings":{"save":"1","title":"","titleTextStyle":{"color":"#000"},"fontName":"","fontSize":"","legend":{"position":"","alignment":"","textStyle":{"color":"#000"}},"tooltip":{"trigger":"","showColorCode":"","text":""},"format":"","is3D":"","reverseCategories":"","pieSliceText":"","pieHole":"","pieStartAngle":"","pieSliceBorderColor":"#fff","sliceVisibilityThreshold":"","pieResidueSliceLabel":"","pieResidueSliceColor":"#ccc","slices":[{"offset":"","color":""},{"offset":"","color":""},{"offset":"","color":""},{"offset":"","color":""},{"offset":"","color":""}],"width":"","height":"400","backgroundColor":{"strokeWidth":"","stroke":"#666","fill":"#fff"},"chartArea":{"left":"","top":"","width":"","height":""},"manual":"","internal_title":63},"data":[["\u0417\u0430\u0440\u0430\u0436\u0435\u043d\u0438\u0439",227757],["\u0421\u043c\u0435\u0440\u0442\u0435\u0439",9274],["\u0412\u044b\u0437\u0434\u043e\u0440\u043e\u0432\u043b\u0435\u043d\u0438\u0439",85275],["",null],["",null]],"library":"google"}},"language":"ru","map_api_key":"","rest_url":"https:\/\/coronavirusglobal.ru\/wp-json\/visualizer\/v1\/action\/#id#\/#type#\/","i10n":{"copied":"Copied!"},"page_type":"frontend","is_front":"1"};
+var visualizer = {"charts":{"visualizer-63-11526232":{"type":"pie","series":[{"label":"\u0421\u043e\u043e\u0442\u043d\u043e\u0448\u0435\u043d\u0438\u0435 \u0432\u0441\u0435\u0445 \u0441\u043b\u0443\u0447\u0430\u0435\u0432 \u0437\u0430\u0431\u043e\u043b\u0435\u0432\u0430\u043d\u0438\u044f","type":"string"},{"label":"\u0427\u0435\u043b\u043e\u0432\u0435\u043a","type":"number"}],"settings":{"save":"1","title":"","titleTextStyle":{"color":"#000"},"fontName":"","fontSize":"","legend":{"position":"","alignment":"","textStyle":{"color":"#000"}},"tooltip":{"trigger":"","showColorCode":"","text":""},"format":"","is3D":"","reverseCategories":"","pieSliceText":"","pieHole":"","pieStartAngle":"","pieSliceBorderColor":"#fff","sliceVisibilityThreshold":"","pieResidueSliceLabel":"","pieResidueSliceColor":"#ccc","slices":[{"offset":"","color":""},{"offset":"","color":""},{"offset":"","color":""},{"offset":"","color":""},{"offset":"","color":""}],"width":"","height":"400","backgroundColor":{"strokeWidth":"","stroke":"#666","fill":"#fff"},"chartArea":{"left":"","top":"","width":"","height":""},"manual":"","internal_title":63},"data":[["\u0417\u0430\u0440\u0430\u0436\u0435\u043d\u0438\u0439",227757],["\u0421\u043c\u0435\u0440\u0442\u0435\u0439",9274],["\u0412\u044b\u0437\u0434\u043e\u0440\u043e\u0432\u043b\u0435\u043d\u0438\u0439",85275],["",null],["",null]],"library":"google"},"visualizer-63-1699965807":{"type":"pie","series":[{"label":"\u0421\u043e\u043e\u0442\u043d\u043e\u0448\u0435\u043d\u0438\u0435 \u0432\u0441\u0435\u0445 \u0441\u043b\u0443\u0447\u0430\u0435\u0432 \u0437\u0430\u0431\u043e\u043b\u0435\u0432\u0430\u043d\u0438\u044f","type":"string"},{"label":"\u0427\u0435\u043b\u043e\u0432\u0435\u043a","type":"number"}],"settings":{"save":"1","title":"","titleTextStyle":{"color":"#000"},"fontName":"","fontSize":"","legend":{"position":"","alignment":"","textStyle":{"color":"#000"}},"tooltip":{"trigger":"","showColorCode":"","text":""},"format":"","is3D":"","reverseCategories":"","pieSliceText":"","pieHole":"","pieStartAngle":"","pieSliceBorderColor":"#fff","sliceVisibilityThreshold":"","pieResidueSliceLabel":"","pieResidueSliceColor":"#ccc","slices":[{"offset":"","color":""},{"offset":"","color":""},{"offset":"","color":""},{"offset":"","color":""},{"offset":"","color":""}],"width":"","height":"400","backgroundColor":{"strokeWidth":"","stroke":"#666","fill":"#fff"},"chartArea":{"left":"","top":"","width":"","height":""},"manual":"","internal_title":63},"data":[["\u0417\u0430\u0440\u0430\u0436\u0435\u043d\u0438\u0439",227757],["\u0421\u043c\u0435\u0440\u0442\u0435\u0439",9274],["\u0412\u044b\u0437\u0434\u043e\u0440\u043e\u0432\u043b\u0435\u043d\u0438\u0439",85275],["",null],["",null]],"library":"google"}},"language":"ru","map_api_key":"","rest_url":"https:\/\/coronavirusglobal.ru\/wp-json\/visualizer\/v1\/action\/#id#\/#type#\/","i10n":{"copied":"Copied!"},"page_type":"frontend","is_front":"1"};
+var visualizer = {"charts":{"visualizer-63-11526232":{"type":"pie","series":[{"label":"\u0421\u043e\u043e\u0442\u043d\u043e\u0448\u0435\u043d\u0438\u0435 \u0432\u0441\u0435\u0445 \u0441\u043b\u0443\u0447\u0430\u0435\u0432 \u0437\u0430\u0431\u043e\u043b\u0435\u0432\u0430\u043d\u0438\u044f","type":"string"},{"label":"\u0427\u0435\u043b\u043e\u0432\u0435\u043a","type":"number"}],"settings":{"save":"1","title":"","titleTextStyle":{"color":"#000"},"fontName":"","fontSize":"","legend":{"position":"","alignment":"","textStyle":{"color":"#000"}},"tooltip":{"trigger":"","showColorCode":"","text":""},"format":"","is3D":"","reverseCategories":"","pieSliceText":"","pieHole":"","pieStartAngle":"","pieSliceBorderColor":"#fff","sliceVisibilityThreshold":"","pieResidueSliceLabel":"","pieResidueSliceColor":"#ccc","slices":[{"offset":"","color":""},{"offset":"","color":""},{"offset":"","color":""},{"offset":"","color":""},{"offset":"","color":""}],"width":"","height":"400","backgroundColor":{"strokeWidth":"","stroke":"#666","fill":"#fff"},"chartArea":{"left":"","top":"","width":"","height":""},"manual":"","internal_title":63},"data":[["\u0417\u0430\u0440\u0430\u0436\u0435\u043d\u0438\u0439",227757],["\u0421\u043c\u0435\u0440\u0442\u0435\u0439",9274],["\u0412\u044b\u0437\u0434\u043e\u0440\u043e\u0432\u043b\u0435\u043d\u0438\u0439",85275],["",null],["",null]],"library":"google"},"visualizer-63-1699965807":{"type":"pie","series":[{"label":"\u0421\u043e\u043e\u0442\u043d\u043e\u0448\u0435\u043d\u0438\u0435 \u0432\u0441\u0435\u0445 \u0441\u043b\u0443\u0447\u0430\u0435\u0432 \u0437\u0430\u0431\u043e\u043b\u0435\u0432\u0430\u043d\u0438\u044f","type":"string"},{"label":"\u0427\u0435\u043b\u043e\u0432\u0435\u043a","type":"number"}],"settings":{"save":"1","title":"","titleTextStyle":{"color":"#000"},"fontName":"","fontSize":"","legend":{"position":"","alignment":"","textStyle":{"color":"#000"}},"tooltip":{"trigger":"","showColorCode":"","text":""},"format":"","is3D":"","reverseCategories":"","pieSliceText":"","pieHole":"","pieStartAngle":"","pieSliceBorderColor":"#fff","sliceVisibilityThreshold":"","pieResidueSliceLabel":"","pieResidueSliceColor":"#ccc","slices":[{"offset":"","color":""},{"offset":"","color":""},{"offset":"","color":""},{"offset":"","color":""},{"offset":"","color":""}],"width":"","height":"400","backgroundColor":{"strokeWidth":"","stroke":"#666","fill":"#fff"},"chartArea":{"left":"","top":"","width":"","height":""},"manual":"","internal_title":63},"data":[["\u0417\u0430\u0440\u0430\u0436\u0435\u043d\u0438\u0439",227757],["\u0421\u043c\u0435\u0440\u0442\u0435\u0439",9274],["\u0412\u044b\u0437\u0434\u043e\u0440\u043e\u0432\u043b\u0435\u043d\u0438\u0439",85275],["",null],["",null]],"library":"google"}},"language":"ru","map_api_key":"","rest_url":"https:\/\/coronavirusglobal.ru\/wp-json\/visualizer\/v1\/action\/#id#\/#type#\/","i10n":{"copied":"Copied!"},"page_type":"frontend","is_front":"1"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='http://coronavirusglobal.ru/wp-content/themes/wpex-pytheas/js/prettyphoto.js?ver=3.1.4'></script>
-<script type='text/javascript' src='http://coronavirusglobal.ru/wp-content/themes/wpex-pytheas/js/prettyphoto-init.js?ver=1.0'></script>
-<script type='text/javascript' src='http://coronavirusglobal.ru/wp-content/themes/wpex-pytheas/js/global.js?ver=1.0'></script>
-<script type='text/javascript' src='http://coronavirusglobal.ru/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+<script type='text/javascript' defer="defer" src='https://coronavirusglobal.ru/wp-content/plugins/visualizer/js/render-facade.js?ver=3.4.2'></script>
+
 </body>
 </html>

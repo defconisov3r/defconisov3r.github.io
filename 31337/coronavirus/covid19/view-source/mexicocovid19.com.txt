@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <!-- Required meta tags -->
@@ -25,6 +25,105 @@
     <link rel="stylesheet" href="css/slick.css">
     <!-- style CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript">
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+var myVar="";
+
+function loading(){
+	document.getElementById('apDiv1').style.visibility="visible";
+	myVar=setInterval(function(){stopLoading()},1300);
+	}
+
+function stopLoading(){
+	document.getElementById('apDiv1').style.visibility="hidden";
+	clearInterval(myVar);
+	}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+var http = false;
+
+if(navigator.appName == "Microsoft Internet Explorer") {
+  http = new ActiveXObject("Microsoft.XMLHTTP");
+} else {
+  http = new XMLHttpRequest();
+} 
+
+
+function enviarComentarios(){
+	
+  var nombre=document.getElementById('nombre').value;
+  var email=document.getElementById('email').value;
+  var mensaje=document.getElementById('mensaje').value;
+  var verificacion=document.getElementById('verificacion').value;
+  var idVerificacion=document.getElementById('idVerificacion').value;
+  document.getElementById('foo').innerHTML = "... enviando comentario ";
+  
+  http.abort();
+  
+  http.open("GET", "ajax.php?idVerificacion="+idVerificacion+"&nombre="+nombre+"&email="+email+"&mensaje="+mensaje+"&verificacion="+verificacion+"&f=enviarComentarios" , true);
+  http.onreadystatechange=function() {
+    if(http.readyState == 4) {
+		var datos =http.responseText ;
+      document.getElementById('foo').innerHTML =  datos;
+	 var dato=datos.split("|");
+	 var error=dato[0];
+	 var mensaje=dato[1];
+	 document.getElementById('foo').innerHTML =  mensaje;
+	 if(error==0){
+  document.getElementById('nombre').value="";
+  document.getElementById('email').value="";
+  document.getElementById('mensaje').value="";
+  document.getElementById('verificacion').value="";
+		 }
+	  
+    }
+	
+  }
+  http.send(null);
+}
+
+function nextVerificacion(){
+	
+  var idVerificacion=document.getElementById('idVerificacion').value;
+  
+  
+  http.abort();
+  
+  http.open("GET", "ajax.php?idVerificacion="+idVerificacion+"&f=nextVerificacion" , true);
+  http.onreadystatechange=function() {
+    if(http.readyState == 4) {
+	  MM_swapImage('espacioFoto','','verificacion.php?id='+http.responseText,1);
+	  MM_swapImage('espacioFoto2','','verificacion.php?id='+http.responseText,1);
+	  document.getElementById('idVerificacion').value=http.responseText;
+	  
+    }
+	
+  }
+  http.send(null);
+}
+
+</script> 
 </head>
 
 <body>
@@ -45,26 +144,30 @@
                             id="navbarSupportedContent">
                           <ul class="navbar-nav align-items-center">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="index.php">Inicio</a>
+                                    <a class="nav-link" href="index.php#inicio">Inicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#acercaDe">Acerca de</a>
+                                    <a class="nav-link" href="reporte.php">Reporte de Casos</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#Doctores">Doctores</a>
+                                    <a class="nav-link" href="preguntas.php">Preguntas Freq.</a>
+                                </li>
+                                <li cl
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.php#doctores">Doctores</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#reportarCaso">Reportar caso</a>
+                                    <a class="nav-link" href="javascript:;" onClick="window.open('reportarCaso.php','Mexico Reportar Caso CoVid19','scrollbars=1, resize=0, statusbar=0, menubar=0, width=650, height=600')">Reportar caso</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#preguntas">Preguntas Frecuentes</a>
+                                    <a class="nav-link" href="index.php#prevencion">Como prevenir</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#contacto">Contacto</a>
+                                    <a class="nav-link" href="index.php#contacto">Contacto</a>
                                 </li>
                             </ul>
                         </div>
-                        <a class="btn_2 d-none d-lg-block" href="#">TEL- 09856</a>
+                        <a class="btn_2 d-none d-lg-block" href="tel:8000044800">800-0044-800 Salud</a>
                     </nav>
                 </div>
             </div>
@@ -73,6 +176,7 @@
     <!-- Header part end-->
 
     <!-- banner part start-->
+    <a name="inicio">
     <section class="banner_part">
         <div class="container">
             <div class="row align-items-center">
@@ -81,8 +185,13 @@
                         <div class="banner_text_iner">
                             <h5>Estamos para ayudarte</h5>
                             <h1>México CoVid19</h1>
-                            <p>El coronovirus CoVid19 es una realidad mundial  </p>
-                            <a href="#" class="btn_2">Make an appointment</a>
+                            <p>El coronovirus CoVid19 es una realidad mundial que debemos tomar en serio. <br>Los principales <b>sintomas del CoVid19</b> son:</p>
+                            <p>- <b>Fiebre</b> (Es de los principales sintomas, aunque hay personas que en etapas tempranas No lo presentan)</p>
+                            <p>- <b>Tos o Estornudos</b> (Estos pueden o no mostrarse principalmente en el periodo de incubación)</p>
+                            <p>- <b>Malestar General</b> </p>
+                            <p>- <b>Dolor de cabeza</b> (Puede o No estar presente)</p>
+                            <p>- <b>Dificultad para respirar</b> (Esto se muestra en pacientes avanzados o con condiciones médicas crónicas)</p>
+                            Aún no hay cura, solamente tratamiento. Por esto lo mejor es la <a href="#prevencion">prevención</a>, lavarse bien las manos y si presentas sintomas leves quedarte en casa, sin son graves o llevan muchos dias buscar ayuda<br> <a class="btn_2" href="javascript:;" onClick="window.open('reportarCaso.php','Mexico Reportar Caso CoVid19','scrollbars=1, resize=0, statusbar=0, menubar=0, width=650, height=600')">Reporta un caso</a>
 
                         </div>
                     </div>
@@ -109,22 +218,9 @@
                 <div class="col-md-6 col-lg-5">
                     <div class="about_us_text">
                         <h2><a name="acercaDe"></a>Acerca de Nosotros</h2>
-                        <p>Este sitio es un esfuerzo privado para difundir información acerca del CoVid19 en México. Somos un grupo de empresarios comprometidos con México y estamos abiertos a cualquier ayuda de la iniciativa privada y pública que se quiera sumar.</p>
-                        <a class="btn_2 " href="#">learn more</a>
-                        <div class="banner_item">
-                            <div class="single_item">
-                                <img src="img/icon/banner_1.svg" alt="">
-                                <h5>Emergency</h5>
-                            </div>
-                            <div class="single_item">
-                                <img src="img/icon/banner_2.svg" alt="">
-                                <h5>Appointment</h5>
-                            </div>
-                            <div class="single_item">
-                                <img src="img/icon/banner_3.svg" alt="">
-                                <h5>Qualfied</h5>
-                            </div>
-                        </div>
+                        <p>Este sitio es un esfuerzo privado para difundir información correcta acerca del CoVid19 en México. Somos un grupo de empresarios comprometidos con México y estamos abiertos a cualquier ayuda de la iniciativa privada y pública que se quiera sumar.</p>
+                        <a class="btn_2 " href="#contacto">Contáctanos</a>
+                        
                     </div>
                 </div>
             </div>
@@ -138,7 +234,7 @@
             <div class="row justify-content-center">
                 <div class="col-xl-8">
                     <div class="section_tittle text-center">
-                        <h2>Our services</h2>
+                        <h2><a name="prevencion"></a>Como prevenir el CoVid19</h2>
                     </div>
                 </div>
             </div>
@@ -147,17 +243,25 @@
                     <div class="single_feature">
                         <div class="single_feature_part">
                             <span class="single_feature_icon"><img src="img/icon/feature_1.svg" alt=""></span>
-                            <h4>Better Future</h4>
-                            <p>Darkness multiply rule Which from without life creature blessed
-                                give moveth moveth seas make day which divided our have.</p>
+                            <h4>Mejora tu alimentación</h4>
+                            <p> Tu mejor prevención hoy en día es la correcta alimentación enfocate en alimentos que contengan:<br> 
+                            <b>Vitamina A</b> (Tiene propiedades anti-infecciónes, el cuerpo la necesita para el sistema inmune) <br>
+                            Algunos alimentos con vitamina A: Jugo de Zanahoria, papa (horneada), broccoli, atún, kale, melon cantalupe, leche de almendra (ver ingredientes para garantizar calidad), espinacas, etc..<br><br>
+                            <b>Complejo B</b> (Son solubles en agua y trabajan como parte de las coenzymas, cada vitamina B tiene una función especial) 
+                            Vitamina B12 (Tiene un papel importante en como se metaboliza la energía a nivel celular)<br>
+                            Algunos alimentos con vitamina B12: Salmón, sardinas, leche de almendra (ver ingredientes para garantizar calidad), tilapia, camarones, yogurt natural sin azucar, algunas variedades de quesos, pollo, etc..<br><br>
+                            Vitamina B3 (Ayuda al cuerpo a matar el estafilococo, tambien inhibe la infitración de agentes extraños a los pulmones y es muy anti-inflamatorio para los pulmones)<br>
+                            Algunos alimentos con vitamina B3: Pollo, Salmón, atún, hongos protobello, carne de puerco, carne de res, cacahuates, langosta, tilapia, etc..<br><br>
+                            Vitamina B6 (Ayuda a la Metabolización correcta de las protenias, etre otras cosas)<br>
+                            Algunos alimentos con vitamina B6: Pollo, Espinaca, carne de puerco, Salmón, aguacate, platano, semillas de girasol, taro, broccoli, etc.<br><br>
+                            </p>
                         </div>
                   </div>
                     <div class="single_feature">
                         <div class="single_feature_part">
                             <span class="single_feature_icon"><img src="img/icon/feature_2.svg" alt=""></span>
-                            <h4>Better Future</h4>
-                            <p>Darkness multiply rule Which from without life creature blessed
-                                give moveth moveth seas make day which divided our have.</p>
+                            <h4>Estar atento a sintomas propios y de familiares</h4>
+                            <p>.</p>
                         </div>
                     </div>
                 </div>
@@ -170,17 +274,28 @@
                     <div class="single_feature">
                         <div class="single_feature_part">
                             <span class="single_feature_icon"><img src="img/icon/feature_1.svg" alt=""></span>
-                            <h4>Better Future</h4>
-                            <p>Darkness multiply rule Which from without life creature blessed
-                                give moveth moveth seas make day which divided our have.</p>
+                            <h4>Mejora tu alimentación</h4>
+                            <p>La mejor forma de aprovechar los nutrientes es de forma natural por la comida, toma enzymas digestivas asi como lactobacilos, puedes tomar suplementos de preferencia de orgien natural. Otros nutrientes escenciales para combatir virus son: <br> 
+                            <b>Vitamina C</b> (Soluble en agua, principalmente sintetiza el colageno en el tejido conetivo y es un poderoso antioxidante, soporta el sistema inmune y protege contra infecciones como la del coronavirus, tambien puede proporcionar alivio antiestaminico, es eficaz en la prevención de la pneumonia) 
+                            Algunos alimentos con vitamina C: Chiles Bell pepper amarillo y rojo, gauyaba, jugo de naranja, broccoli, papaya, espinaca, jugo de limon, fresas, kale, piña.<br><br>
+                            <b>Vitamina D</b> (Es nutriente y hormona y puede ser sintetizada en nuestro cuerpo con la ayuda de la luz del sol, mantiene la integridad de los huesos y estimula la maduración de de varios tipos de celulas incluyendo celulas inmunológicas) 
+                            Algunos alimentos con vitamina D: Salmón salvaje, sardinas, tilapia, leche de almendra (revisar ingredientes para garantizar calidad), huevo, hongo portobello, etc..<br><br>
+                            <b>Vitamina E:</b> (soluble en lipidos, incluye a la familia de tocoferoles y tocotrienoles, reduce el estrés oxidativo del cuerpo uniendose a los radicales libres como antioxidante)
+                            Algunos alimentos con vitamina E: Semillas de girasol, almendras, espinaca, leche de almendra, broccoli, aguacate, taro, cacahuates, esparragos, camarones.<br><br>
+                            <b>Omega 3:</b> (Acidos grasos de cadena larga, importantes para contrarestar la inflamación y la respuesta inmunológica del cuerpo) 
+                             Algunos alimentos con Omega 3: Salmón, Ostiones, Sardinas, Anchoas, caviar, aceite de higado de bacalao, etc..<br><br>
+                            <b>Selenio:</b> (Es un micronutriente esencial para la respuesta del cuerpo contra enfermedades infecciosas, estar deficiente causa estrés oxidativo al cuerpo)
+                            Algunos alimentos con Selenio: Nuez de brazil, langosta, tilapia, camaron, cangrejo, atún, pollo, sardinas, carne de puerco, salmón, hongo portobello, tofu.<br><br>
+                            <b>Zinc:</b> (Es un micronutriente esencial para el mantenimiento y desarrollo de celulas inmunes)
+                             Algunos alimentos con Zinc: germinado de trigo, langosta, cangrejo, cordero, carne de res, tocino, suero de proteina, carne de puerco, espinacas, semillas de girasol, etc.<br><br>
+                            <b>Hierro:</b> (Es requerido ya que su deficiencia afecta el sistema inmune, en exceso puede causar estrés oxidativo por eso es mejor obtenerlo de alimentos)
+                            Algunos alimentos con Hierro: Tofu, espinaca, guayaba, ostras, frijoles, lentejas, amaranto, broccoli, raspberries, frijol negro, etc..<br><br>
+                            </p>
                         </div>
                   </div>
                     <div class="single_feature">
                         <div class="single_feature_part">
-                            <span class="single_feature_icon"><img src="img/icon/feature_2.svg" alt=""></span>
-                            <h4>Better Future</h4>
-                            <p>Darkness multiply rule Which from without life creature blessed
-                                give moveth moveth seas make day which divided our have.</p>
+                            
                         </div>
                     </div>
                 </div>
@@ -189,160 +304,21 @@
     </section>
     <!-- feature_part start-->
 
-    <!-- our depertment part start-->
-    <section class="our_depertment section_padding">
-        <div class="container">
-            <div class="row justify-content-center text-center">
-                <div class="col-xl-12">
-                    <div class="depertment_content">
-                        <div class="row justify-content-center">
-                            <div class="col-xl-8">
-                                <h2>Our Depertment</h2>
-                                <div class="row">
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="single_our_depertment">
-                                            <span class="our_depertment_icon"><img src="img/icon/feature_2.svg"
-                                                    alt=""></span>
-                                            <h4>Better Future</h4>
-                                            <p>Darkness multiply rule Which from without life creature blessed
-                                                give moveth moveth seas make day which divided our have.</p>
-                                        </div>
-                                  </div>
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="single_our_depertment">
-                                            <span class="our_depertment_icon"><img src="img/icon/feature_2.svg"
-                                                    alt=""></span>
-                                            <h4>Better Future</h4>
-                                            <p>Darkness multiply rule Which from without life creature blessed
-                                                give moveth moveth seas make day which divided our have.</p>
-                                        </div>
-                                  </div>
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="single_our_depertment">
-                                            <span class="our_depertment_icon"><img src="img/icon/feature_2.svg"
-                                                    alt=""></span>
-                                            <h4>Better Future</h4>
-                                            <p>Darkness multiply rule Which from without life creature blessed
-                                                give moveth moveth seas make day which divided our have.</p>
-                                        </div>
-                                  </div>
-                                    <div class="col-lg-6 col-sm-6">
-                                        <div class="single_our_depertment">
-                                            <span class="our_depertment_icon"><img src="img/icon/feature_2.svg"
-                                                    alt=""></span>
-                                            <h4>Better Future</h4>
-                                            <p>Darkness multiply rule Which from without life creature blessed
-                                                give moveth moveth seas make day which divided our have.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- our depertment part end-->
+   
 
     <!--::doctor_part start::-->
+    <a name="doctores">
     <section class="doctor_part section_padding">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-8">
                     <div class="section_tittle text-center">
-                        <h2> Experienced Doctors</h2>
-                        <p>Face replenish sea good winged bearing years air divide wasHave night male also</p>
+                        <h2> Doctores que te pueden ayudar</h2>
+                        <p>Próximamente</p>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-6 col-lg-3">
-                    <div class="single_blog_item">
-                        <div class="single_blog_img">
-                            <img src="img/doctor/doctor_1.png" alt="doctor">
-                            <div class="social_icon">
-                                <ul>
-                                    <li><a href="#"> <i class="ti-facebook"></i> </a></li>
-                                    <li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-                                    <li><a href="#"> <i class="ti-instagram"></i> </a></li>
-                                    <li><a href="#"> <i class="ti-skype"></i> </a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="single_text">
-                            <div class="single_blog_text">
-                                <h3>DR Adam Billiard</h3>
-                                <p>Heart specialist</p>
-                            </div>
-                        </div>
-                    </div>
-              </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="single_blog_item">
-                        <div class="single_blog_img">
-                            <img src="img/doctor/doctor_4.png" alt="doctor">
-                            <div class="social_icon">
-                                <ul>
-                                    <li><a href="#"> <i class="ti-facebook"></i> </a></li>
-                                    <li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-                                    <li><a href="#"> <i class="ti-instagram"></i> </a></li>
-                                    <li><a href="#"> <i class="ti-skype"></i> </a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="single_text">
-                            <div class="single_blog_text">
-                                <h3>DR Adam Billiard</h3>
-                                <p>Medicine specialist</p>
-                            </div>
-                        </div>
-                    </div>
-              </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="single_blog_item">
-                        <div class="single_blog_img">
-                            <img src="img/doctor/doctor_2.png" alt="doctor">
-                            <div class="social_icon">
-                                <ul>
-                                    <li><a href="#"> <i class="ti-facebook"></i> </a></li>
-                                    <li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-                                    <li><a href="#"> <i class="ti-instagram"></i> </a></li>
-                                    <li><a href="#"> <i class="ti-skype"></i> </a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="single_text">
-                            <div class="single_blog_text">
-                                <h3>DR Fred Macyard</h3>
-                                <p>CHeart specialist</p>
-                            </div>
-                        </div>
-                    </div>
-              </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="single_blog_item">
-                        <div class="single_blog_img">
-                            <img src="img/doctor/doctor_3.png" alt="doctor">
-                            <div class="social_icon">
-                                <ul>
-                                    <li><a href="#"> <i class="ti-facebook"></i> </a></li>
-                                    <li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-                                    <li><a href="#"> <i class="ti-instagram"></i> </a></li>
-                                    <li><a href="#"> <i class="ti-skype"></i> </a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="single_text">
-                            <div class="single_blog_text">
-                                <h3>DR Justin Stuard</h3>
-                                <p>Heart specialist</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           <!--::doctor_part end::--> 
         </div>
     </section>
     <!--::doctor_part end::-->
@@ -354,45 +330,31 @@
                 <div class="col-lg-7">
                     <div class="regervation_part_iner">
                         <form>
-                            <h2>Make an Appointment</h2>
+                            <h2>Contáctanos<a name="contacto"></a></h2>
                             <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <input type="email" class="form-control" id="inputEmail4" placeholder="Name">
+                              <div class="form-group col-md-6">
+                                    <input type="email" class="form-control" id="nombre" placeholder="Nombre">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <input type="password" class="form-control" id="inputPassword4"
-                                        placeholder="Email address">
+                                    <input type="text" class="form-control" id="email"
+                                        placeholder="email">
                                 </div>
-                                <div class="form-group col-md-6">
-                                    <select class="form-control" id="Select">
-                                        <option value="1" selected>Select service</option>
-                                        <option value="2">Name of service</option>
-                                        <option value="3">Name of service</option>
-                                        <option value="4">Name of service</option>
-                                        <option value="5">Name of service</option>
-                                    </select>
-                                </div>
-                                <div class="form-group time_icon col-md-6">
-                                    <select class="form-control" id="Select2">
-                                        <option value="" selected>Time</option>
-                                        <option value="1">8 AM TO 10AM</option>
-                                        <option value="1">10 AM TO 12PM</option>
-                                        <option value="1">12PM TO 2PM</option>
-                                        <option value="1">2PM TO 4PM</option>
-                                        <option value="1">4PM TO 6PM</option>
-                                        <option value="1">6PM TO 8PM</option>
-                                        <option value="1">4PM TO 10PM</option>
-                                        <option value="1">10PM TO 12PM</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <textarea class="form-control" id="Textarea" rows="4"
-                                        placeholder="Your Note "></textarea>
+                                
+                          <div class="form-group col-md-12">
+                                    <textarea class="form-control" id="mensaje" rows="4"
+                                        placeholder="Mensaje "></textarea>
                                 </div>
                             </div>
                             <div class="regerv_btn">
-                                <a href="#" class="btn_2">Make an Appointment</a>
-                            </div>
+                            <h3>Verificación</h3>
+                  <img src="verificacion.php?id=2" alt="palabra verificacion" name="espacioFoto" width="185" height="82"  border="0" id="espacioFoto" /><img src="images/refresh.png" width="30" height="30" border="0" onClick="nextVerificacion();" />
+                  <input type="text" id="verificacion" class="form-control ">
+                                <a class="btn_2" onClick="enviarComentarios();">Enviar Comentarios</a>
+                                <br>
+                    <div id="foo" style="background:#F2F2F2">&nbsp;</div>
+                              <span class="col-md-6 form-group">
+                              <input name="idVerificacion" type="hidden" id="idVerificacion" value="2" />
+                            </span></div>
                         </form>
                     </div>
                 </div>
@@ -406,56 +368,7 @@
     </section>
     <!--::regervation_part end::-->
 
-    <!--::blog_part start::-->
-    <section class="blog_part section_padding">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-8">
-                    <div class="section_tittle text-center">
-                        <h2>Our Blog</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="single-home-blog">
-                        <div class="card">
-                            <img src="img/blog/blog_2.png" class="card-img-top" alt="blog">
-                            <div class="card-body">
-                                <a href="blog.html">
-                                    <h5 class="card-title">First cattle which earth unto let health for
-                                        can get and see what you </h5>
-                                </a>
-                                <ul>
-                                    <li> <span class="ti-user"></span>Jhon mike</li>
-                                    <li> <span class="ti-bookmark"></span>Clinic, doctors</li>
-                                </ul>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="single-home-blog">
-                        <div class="card">
-                            <img src="img/blog/blog_3.png" class="card-img-top" alt="blog">
-                            <div class="card-body">
-                                <a href="blog.html">
-                                    <h5 class="card-title">First cattle which earth unto let health for
-                                        can get and see what you </h5>
-                                </a>
-                                <ul>
-                                    <li> <span class="ti-user"></span>Jhon mike</li>
-                                    <li> <span class="ti-bookmark"></span>Clinic, doctors</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--::blog_part end::-->
+    
 
     <!-- footer part start-->
     <footer class="footer-area">
@@ -464,7 +377,7 @@
                 <div class="row justify-content-between">
                     <div class="col-xl-2 col-md-4 col-sm-6 single-footer-widget">
                         <a href="#" class="footer_logo"> <img src="img/logo.png" alt="#"> </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+                        <p>México Covid19 es un esfuerzo privado para combatir y proporcionar información correcta acerca del virus </p>
                         <div class="social_logo">
                             <a href="#"><i class="ti-facebook"></i></a>
                             <a href="#"> <i class="ti-twitter"></i> </a>
@@ -472,57 +385,8 @@
                             <a href="#"><i class="ti-skype"></i></a>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-sm-6 col-md-4 single-footer-widget">
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Department</a></li>
-                            <li><a href="#"> Online payment</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Department</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-xl-2 col-sm-6 col-md-4 single-footer-widget">
-                        <h4>Explore</h4>
-                        <ul>
-                            <li><a href="#">In the community</a></li>
-                            <li><a href="#">IU health foundation</a></li>
-                            <li><a href="#">Family support </a></li>
-                            <li><a href="#">Business solution</a></li>
-                            <li><a href="#">Community clinic</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-xl-2 col-sm-6 col-md-6 single-footer-widget">
-                        <h4>Resources</h4>
-                        <ul>
-                            <li><a href="#">Lights were season</a></li>
-                            <li><a href="#"> Their is let wherein</a></li>
-                            <li><a href="#">which given over</a></li>
-                            <li><a href="#">Without given She</a></li>
-                            <li><a href="#">Isn two signs think</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-xl-3 col-sm-6 col-md-6 single-footer-widget">
-                        <h4>Newsletter</h4>
-                        <p>Seed good winged wherein which night multiply
-                            midst does not fruitful</p>
-                        <div class="form-wrap" id="mc_embed_signup">
-                            <form target="_blank"
-                                action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                                method="get" class="form-inline">
-                                <input class="form-control" name="EMAIL" placeholder="Your Email Address"
-                                    onfocus="this.placeholder = ''" onBlur="this.placeholder = 'Your Email Address '"
-                                    required="" type="email">
-                                <button class="click-btn btn btn-default text-uppercase"> <i class="ti-angle-right"></i>
-                                </button>
-                                <div style="position: absolute; left: -5000px;">
-                                    <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value=""
-                                        type="text">
-                                </div>
-
-                                <div class="info"></div>
-                            </form>
-                        </div>
+                    
+                    
                     </div>
                 </div>
             </div>
@@ -532,7 +396,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <p class="footer-text m-0 col-lg-8 col-md-12"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Sitio por <a href="https://solucionix.com" target="_blank">Solucionix</a> &  <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </p>
                     <div class="col-lg-4 col-md-12 text-center text-lg-right footer-social">
@@ -566,6 +430,19 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/contact.js"></script>
     <!-- custom js -->
     <script src="js/custom.js"></script>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5e7231028d24fc226588631e/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 
 </html>

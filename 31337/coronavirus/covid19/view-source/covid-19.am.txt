@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>Covid-19</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .main {
+            position: relative;
+        }
+        .main__img {
+            width: 100%;
+            /*max-width: 600px;*/
+            /*display: block;*/
+            /*margin: 35px auto 0;*/
+        }
+        .main-block {
+            /*position: absolute;*/
+            max-width: 60%;
+            left: 0;
+            right: 0;
+            top: 30%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .main-block__text {
+            /*color: #fff;*/
+            color: #000;
+            font-size: 25px;
+            font-weight: 300;
+            line-height: 35px;
+        }
+        .main__button {
+            max-width: 300px;
+            width: 100%;
+            background-color: #FF3822;
+            padding: 13px 0;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            position: absolute;
+            bottom: 20%;
+            left: 10%;
+            margin: 15px auto 0;
+            transition: 0.4s ease-in-out;
+            animation: crescendo 2s alternate infinite ease-in;
+        }
+        @keyframes crescendo {
+            0%   {transform: scale(.9);}
+            100% {transform: scale(1.2);}
+        }
+        .main__button:hover {
+            background-color: #ba2919;
+        }
+
+        @media (max-width: 650px) {
+            .main__button {
+                position: unset;
+                margin: 25px auto 0;
+            }
+
+
+}
+    </style>
+</head>
+<body>
+<div class="main">
+    <img src="img/back-img-2.jpg" class="main__img">
+    <div class="main-block">
+        <!--<h4 class="main-block__text">-->
+            <!--Այս էջում կտեղադրենք միայն Հայաստանի Հանրապետության պարետատան տարածած-->
+            <!--հայտարարությունները,լրահոսը,առողջապահության նախարարության և այլ պետական կառույցների ձեռնարկների մասին-->
+            <!--նյութերը:-->
+        <!--</h4>-->
+        <a href="https://www.facebook.com/vipmedia.am/" target="_blank" class="main__button">Իմանալ ավելին</a>
+    </div>
+</div>
+</body>
+</html>

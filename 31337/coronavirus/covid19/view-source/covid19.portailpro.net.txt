@@ -8,6 +8,11 @@
 	<link rel="icon" href="./favicon.png" type="image/png">
     </head>
     <body>
+	<div class="notice">
+		Ce générateur d'attestation a été créé afin de simplifier la création de vos attestations. Aucune donnée n'est récupérée et aucun traceur ou aucune statstique n'est placé sur ce site.<br />
+            <b>Les données sauvegardées sont stockées sur votre smartphone ou votre ordinateur afin qu'elles ne puissent pas être récupérées par personne d'autre.</b><br />
+            Cela est facilement vérifiable par toute personne ayant un peu de connaissance en informatique en examinant le code source de la page (Ctrl + U, ou clic-droit -> Code source de la page)
+	</div>
         <h1>ATTESTATION DE DÉPLACEMENT DÉROGATOIRE</h1>
         <p class="explain">En application de l’article 1 er du décret du 16 mars 2020 portant réglementation des
         déplacements dans le cadre de la lutte contre la propagation du virus Covid-19 :</p>
@@ -80,6 +85,7 @@
         <div class="hidden" id="error">
         Veuillez vérifier que vous avez bien complété tous les champs, sélectionné au moins un motif et signé avant de générer votre attestation.
         </div>
+	<div class="error">Attention, il semblerait que les attestations via téléphone ne soient finalement plus valade ! Veuillez sortir avec l'attestation papier.</div>
 
         <script src="./jspdf.min.js"></script>
         <script src="./attestation.js"></script>

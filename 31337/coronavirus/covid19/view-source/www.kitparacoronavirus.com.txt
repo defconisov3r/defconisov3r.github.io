@@ -1,26 +1,11 @@
 <!doctype html>
 <html class="no-js" lang="es">
 <head>
-
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-
-  <meta name="theme-color" content="#ffffff">
-
-  
-
-  <link rel="canonical" href="https://kitparacoronavirus.com/">
-
-  <title>
-  Kit para coronavirus
-  </title>
-
-  
-    <meta name="description" content="Todo lo que necesitas para sobrevivir la pandemia">
-  
-
-  <!-- /snippets/social-meta-tags.liquid -->
+  <meta name="theme-color" content="#43c8c4">
+  <link rel="canonical" href="https://kitparacoronavirus.com/"><title>Kit para coronavirus</title><meta name="description" content="Todo lo que necesitas para sobrevivir la pandemia"><!-- /snippets/social-meta-tags.liquid -->
 
 
 
@@ -40,36 +25,67 @@
 <meta name="twitter:description" content="Todo lo que necesitas para sobrevivir la pandemia">
 
 
-  <link href="//cdn.shopify.com/s/files/1/0022/5512/6630/t/3/assets/theme.scss.css?38" rel="stylesheet" type="text/css" media="all" />
+  <link href="//cdn.shopify.com/s/files/1/0022/5512/6630/t/4/assets/theme.scss.css?v=14963349010333682368" rel="stylesheet" type="text/css" media="all" />
 
   <script>
-    window.theme = window.theme || {};
-    theme.strings = {
-      cartEmpty: "Su carrito actualmente está vacío.",
-      savingHtml: "Está ahorrando [savings]",
-      addToCart: "Agregar al carrito",
-      soldOut: "Agotado",
-      unavailable: "No disponible",
-      addressError: "No se puede encontrar esa dirección",
-      addressNoResults: "No results for that address",
-      addressQueryLimit: "Se ha excedido el límite de uso de la API de Google . Considere la posibilidad de actualizar a un \u003ca href=\"https:\/\/developers.google.com\/maps\/premium\/usage-limits\"\u003ePlan Premium\u003c\/a\u003e.",
-      authError: "Hubo un problema de autenticación con su cuenta de Google Maps API."
-    };
-    theme.settings = {
-      cartType: "page",
-      moneyFormat: "$ {{amount}}"
-    };
-  </script>
+    var theme = {
+      breakpoints: {
+        medium: 750,
+        large: 990,
+        widescreen: 1400
+      },
+      strings: {
+        addToCart: "Agregar al carrito",
+        soldOut: "Agotado",
+        unavailable: "No disponible",
+        regularPrice: "Precio habitual",
+        salePrice: "Precio de venta",
+        sale: "Oferta",
+        fromLowestPrice: "de [price]",
+        vendor: "Proveedor",
+        showMore: "Ver más",
+        showLess: "Mostrar menos",
+        searchFor: "Buscar",
+        addressError: "No se puede encontrar esa dirección",
+        addressNoResults: "No results for that address",
+        addressQueryLimit: "Se ha excedido el límite de uso de la API de Google . Considere la posibilidad de actualizar a un \u003ca href=\"https:\/\/developers.google.com\/maps\/premium\/usage-limits\"\u003ePlan Premium\u003c\/a\u003e.",
+        authError: "Hubo un problema de autenticación con su cuenta de Google Maps.",
+        newWindow: "Abre en una nueva ventana.",
+        external: "Abre sitio externo.",
+        newWindowExternal: "Abre sitio externo externo en una nueva ventana.",
+        removeLabel: "Eliminar [product]",
+        update: "Actualizar carrito",
+        quantity: "Cantidad",
+        discountedTotal: "Descuento total",
+        regularTotal: "Precio regular total",
+        priceColumn: "Ver la columna de Precio para detalles del descuento.",
+        quantityMinimumMessage: "La cantidad debe ser 1 o más",
+        cartError: "Se ha producido un error al actualizar tu carrito. Vuelve a intentarlo.",
+        removedItemMessage: "Eliminó \u003cspan class=\"cart__removed-product-details\"\u003e([quantity]) [link]\u003c\/span\u003e de tu carrito de compra.",
+        unitPrice: "Precio unitario",
+        unitPriceSeparator: "por",
+        oneCartCount: "1 artículo",
+        otherCartCount: "[count] artículos",
+        quantityLabel: "Cantidad: [count]",
+        products: "Productos",
+        loading: "Cargando",
+        number_of_results: "[result_number] de [results_count]",
+        number_of_results_found: "[results_count] resultados encontrados",
+        one_result_found: "1 resultado encontrado"
+      },
+      moneyFormat: "$ {{amount}}",
+      moneyFormatWithCurrency: "$ {{amount}} MXN",
+      settings: {
+        predictiveSearchEnabled: true,
+        predictiveSearchShowPrice: false,
+        predictiveSearchShowVendor: false
+      }
+    }
 
-  <script src="//cdn.shopify.com/s/files/1/0022/5512/6630/t/3/assets/lazysizes.min.js?38" async="async"></script>
-
-  
-
-  <script src="//cdn.shopify.com/s/files/1/0022/5512/6630/t/3/assets/vendor.js?38" defer="defer"></script>
-
-  <script src="//cdn.shopify.com/s/assets/themes_support/option_selection-fe6b72c2bbdd3369ac0bfefe8648e3c889efca213baefd4cfb0dd9363563831f.js" defer="defer"></script>
-
-  <script src="//cdn.shopify.com/s/files/1/0022/5512/6630/t/3/assets/theme.js?38" defer="defer"></script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  </script><script src="//cdn.shopify.com/s/files/1/0022/5512/6630/t/4/assets/lazysizes.js?v=9422402313628365795" async="async"></script>
+  <script src="//cdn.shopify.com/s/files/1/0022/5512/6630/t/4/assets/vendor.js?v=8583346420283214553" defer="defer"></script>
+  <script src="//cdn.shopify.com/s/files/1/0022/5512/6630/t/4/assets/theme.js?v=11958825300028725633" defer="defer"></script>
 
   <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/2255126630/digital_wallets/dialog">
 <meta name="shopify-checkout-api-token" content="92f71be6c1ae9a8016d2a94017577588">
@@ -81,8 +97,9 @@
 <script id="shopify-features" type="application/json">{"accessToken":"92f71be6c1ae9a8016d2a94017577588","betas":["rich-media-storefront-analytics"],"domain":"www.kitparacoronavirus.com","predictiveSearch":true,"shopId":2255126630,"smart_payment_buttons_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/spb.es.js","dynamic_checkout_cart_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/dynamic-checkout-cart.es.js","locale":"es"}</script>
 <script>var Shopify = Shopify || {};
 Shopify.shop = "boda-julie-y-kurt.myshopify.com";
+Shopify.locale = "es";
 Shopify.currency = {"active":"MXN","rate":"1.0"};
-Shopify.theme = {"name":"Boundless","id":79305113702,"theme_store_id":766,"role":"main"};
+Shopify.theme = {"name":"Debut","id":79314780262,"theme_store_id":796,"role":"main"};
 Shopify.theme.handle = "null";
 Shopify.theme.style = {"id":null,"handle":null};</script>
 <script type="module">!function(o){(o.Shopify=o.Shopify||{}).modules=!0}(window);</script>
@@ -105,7 +122,7 @@ Shopify.theme.style = {"id":null,"handle":null};</script>
     window.addEventListener('load', asyncLoad, false);
   }
 })();</script>
-<script id="__st">var __st={"a":2255126630,"offset":-25200,"reqid":"61143c0d-092c-4298-afc4-8709a0dbc56a","pageurl":"www.kitparacoronavirus.com\/","u":"707da5d7ca49","p":"home"};</script>
+<script id="__st">var __st={"a":2255126630,"offset":-25200,"reqid":"ce05d440-ee5b-453c-b615-b15675b8884f","pageurl":"www.kitparacoronavirus.com\/","u":"784d75dd1b62","p":"home"};</script>
 <script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
 <script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};
 window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
@@ -185,7 +202,7 @@ for (var attr in meta) {
     first.parentNode.insertBefore(script, first);
   };
   trekkie.load(
-    {"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":2255126630,"isMerchantRequest":null,"themeId":79305113702,"themeCityHash":"3684710310437514952","contentLanguage":"es","currency":"MXN"}},"Performance":{"navigationTimingApiMeasurementsEnabled":true,"navigationTimingApiMeasurementsSampleRate":1},"Session Attribution":{}}
+    {"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":2255126630,"isMerchantRequest":null,"themeId":79314780262,"themeCityHash":"4098962055612816211","contentLanguage":"es","currency":"MXN"}},"Performance":{"navigationTimingApiMeasurementsEnabled":true,"navigationTimingApiMeasurementsSampleRate":1},"Session Attribution":{}}
   );
 
   var loaded = false;
@@ -210,7 +227,7 @@ for (var attr in meta) {
         window.BOOMR.snippetVersion = 12;
         window.BOOMR.application = "core";
         window.BOOMR.shopId = 2255126630;
-        window.BOOMR.themeId = 79305113702;
+        window.BOOMR.themeId = 79314780262;
         window.BOOMR.url =
           "https://cdn.shopify.com/shopifycloud/boomerang/shopify-boomerang-1.0.0.min.js";
         var where = document.currentScript || document.getElementsByTagName("script")[0];
@@ -355,73 +372,7 @@ for (var attr in meta) {
 <script integrity="sha256-4C8Xn08nwqM3O49DRPPchMb3B3xQ7b00VkDrQItpRW4=" crossorigin="anonymous" data-source-attribution="shopify.loadfeatures" defer="defer" src="//cdn.shopify.com/s/assets/storefront/load_feature-e02f179f4f27c2a3373b8f4344f3dc84c6f7077c50edbd345640eb408b69456e.js"></script>
 <script integrity="sha256-EYppj7RbseKnaugbP4EJXR4sMs7TPdTpPmQ3i163eNA=" data-source-attribution="shopify.dynamic-checkout" defer="defer" src="//cdn.shopify.com/s/assets/storefront/features-118a698fb45bb1e2a76ae81b3f81095d1e2c32ced33dd4e93e64378b5eb778d0.js" crossorigin="anonymous"></script>
 
-<style id="shopify-dynamic-checkout">.shopify-payment-button__button--hidden {
-  visibility: hidden;
-}
 
-.shopify-payment-button__button {
-  border-radius: 4px;
-  border: none;
-  box-shadow: 0 0 0 0 transparent;
-  color: white;
-  cursor: pointer;
-  display: block;
-  font-size: 1em;
-  font-weight: 500;
-  line-height: 1;
-  text-align: center;
-  width: 100%;
-  transition: background 0.2s ease-in-out;
-}
-
-.shopify-payment-button__button[disabled] {
-  opacity: 0.6;
-  cursor: default;
-}
-
-.shopify-payment-button__button--unbranded {
-  background-color: #1990c6;
-  padding: 1em 2em;
-}
-
-.shopify-payment-button__button--unbranded:hover:not([disabled]) {
-  background-color: #136f99;
-}
-
-.shopify-payment-button__more-options {
-  background: transparent;
-  border: 0 none;
-  cursor: pointer;
-  display: block;
-  font-size: 1em;
-  margin-top: 1em;
-  text-align: center;
-  width: 100%;
-}
-
-.shopify-payment-button__more-options:hover:not([disabled]) {
-  text-decoration: underline;
-}
-
-.shopify-payment-button__more-options[disabled] {
-  opacity: 0.6;
-  cursor: default;
-}
-
-.shopify-payment-button__button--branded {
-  display: flex;
-  flex-direction: column;
-  min-height: 44px;
-  position: relative;
-  z-index: 1;
-}
-
-.shopify-payment-button__button--branded .shopify-cleanslate {
-  flex: 1 !important;
-  display: flex !important;
-  flex-direction: column !important;
-}
-</style>
 <style id="shopify-dynamic-checkout-cart">@media screen and (min-width: 750px) {
   #dynamic-checkout-cart {
     min-height: 50px;
@@ -434,634 +385,874 @@ for (var attr in meta) {
   }
 }
 </style><script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
-
 </head>
 
-<body id="kit-para-coronavirus" class="template-index">
-  <div id="SearchDrawer" class="search-bar drawer drawer--top">
-    <div class="search-bar__table">
-      <form action="/search" method="get" class="search-bar__table-cell search-bar__form" role="search">
-        <div class="search-bar__table">
-          <div class="search-bar__table-cell search-bar__icon-cell">
-            <button type="submit" class="search-bar__icon-button search-bar__submit">
-              <span class="icon icon-search" aria-hidden="true"></span>
-              <span class="icon__fallback-text">Buscar</span>
-            </button>
-          </div>
-          <div class="search-bar__table-cell">
-            <input type="search" id="SearchInput" name="q" value="" placeholder="buscar en nuestra tienda" aria-label="buscar en nuestra tienda" class="search-bar__input">
-          </div>
+<body class="template-index">
+
+  <a class="in-page-link visually-hidden skip-link" href="#MainContent">Ir directamente al contenido</a><style data-shopify>
+
+  .cart-popup {
+    box-shadow: 1px 1px 10px 2px rgba(255, 255, 255, 0.5);
+  }</style><div class="cart-popup-wrapper cart-popup-wrapper--hidden" role="dialog" aria-modal="true" aria-labelledby="CartPopupHeading" data-cart-popup-wrapper>
+  <div class="cart-popup" data-cart-popup tabindex="-1">
+    <div class="cart-popup__header">
+      <h2 id="CartPopupHeading" class="cart-popup__heading">Recién agregado a tu carrito de compra</h2>
+      <button class="cart-popup__close" aria-label="Cerrar" data-cart-popup-close><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 40 40"><path d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z" class="layer"/></svg></button>
+    </div>
+    <div class="cart-popup-item">
+      <div class="cart-popup-item__image-wrapper hide" data-cart-popup-image-wrapper>
+        <div class="cart-popup-item__image cart-popup-item__image--placeholder" data-cart-popup-image-placeholder>
+          <div data-placeholder-size></div>
+          <div class="placeholder-background placeholder-background--animation"></div>
         </div>
-      </form>
-      <div class="search-bar__table-cell text-right">
-        <button type="button" class="search-bar__icon-button search-bar__close js-drawer-close">
-          <span class="icon icon-x" aria-hidden="true"></span>
-          <span class="icon__fallback-text">Cerrar (esc)</span>
-        </button>
+      </div>
+      <div class="cart-popup-item__description">
+        <div>
+          <div class="cart-popup-item__title" data-cart-popup-title></div>
+          <ul class="product-details" aria-label="Detalles del producto" data-cart-popup-product-details></ul>
+        </div>
+        <div class="cart-popup-item__quantity">
+          <span class="visually-hidden" data-cart-popup-quantity-label></span>
+          <span aria-hidden="true">Cantidad:</span>
+          <span aria-hidden="true" data-cart-popup-quantity></span>
+        </div>
       </div>
     </div>
-  </div>
-  <div id="NavDrawer" class="drawer drawer--left">
-  <div id="shopify-section-sidebar-menu" class="shopify-section sidebar-menu-section"><div class="drawer__header" data-section-id="sidebar-menu" data-section-type="sidebar-menu-section">
-  <div class="drawer__close">
-    <button type="button" class="drawer__close-button js-drawer-close">
-      <span class="icon icon-x" aria-hidden="true"></span>
-      <span class="icon__fallback-text">Cerrar menú</span>
-    </button>
-  </div>
-</div>
-<div class="drawer__inner">
-  <ul class="drawer-nav">
-    
-      
-      
-        <li class="drawer-nav__item">
-          <a href="/" class="drawer-nav__link h2" aria-current="page">Inicio</a>
-        </li>
-      
-    
-      
-      
-        <li class="drawer-nav__item">
-          <a href="/collections/all" class="drawer-nav__link h2">Catálogo</a>
-        </li>
-      
-    
 
-    <li class="drawer-nav__spacer"></li>
+    <a href="/cart" class="cart-popup__cta-link btn btn--secondary-accent">
+      Ver carrito (<span data-cart-popup-cart-quantity></span>)
+    </a>
 
-    
-    
-      <li class="drawer-nav__item drawer-nav__item--secondary"><a href="/search">Búsqueda</a></li>
-    
-  </ul>
-
-  <ul class="list--inline social-icons social-icons--drawer">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  </ul>
-</div>
-
-
-
-
-</div>
-  </div>
-  <div id="CartDrawer" class="drawer drawer--right drawer--has-fixed-footer">
-    <div class="drawer__header">
-      <div class="drawer__close">
-        <button type="button" class="drawer__close-button js-drawer-close">
-          <span class="icon icon-x" aria-hidden="true"></span>
-          <span class="icon__fallback-text">Cerrar carrito</span>
-        </button>
-      </div>
-    </div>
-    <div class="drawer__inner">
-      <div id="CartContainer">
-      </div>
-    </div>
-  </div>
-
-  <div id="PageContainer">
-    <div id="shopify-section-announcement-bar" class="shopify-section">
-  
-    <style>
-      .announcement-bar {
-        background-color: #43c8c4;
-      }
-
-      .announcement-bar--link:hover {
-        
-
-        
-          
-          background-color: #5bcfcb;
-        
-      }
-
-      .announcement-bar__message {
-        color: #ffffff;
-      }
-    </style>
-
-    
-      <div class="announcement-bar">
-    
-
-      <p class="announcement-bar__message">#yomequedoencasa</p>
-
-    
-      </div>
-    
-
-  
-
-
-
-
-
-</div>
-
-    <div class="site-header-wrapper">
-      <div class="site-header-container">
-        <div id="shopify-section-header" class="shopify-section header-section"><style>
-  .site-header__logo img {
-    max-width: 180px;
-  }
-  @media screen and (max-width: 749px) {
-    .site-header__logo img {
-      max-width: 100%;
-    }
-  }
-</style>
-
-<header class="site-header" role="banner" data-section-id="header" data-section-type="header-section">
-  <div class="grid grid--no-gutters grid--table site-header__inner">
-    <div class="grid__item one-third medium-up--one-sixth">
-      <button type="button" class="site-header__link text-link site-header__toggle-nav js-drawer-open-left">
-        <span class="icon icon-hamburger" aria-hidden="true"></span>
-        <span class="icon__fallback-text">Menú</span>
+    <div class="cart-popup__dismiss">
+      <button class="cart-popup__dismiss-button text-link text-link--accent" data-cart-popup-dismiss>
+        Seguir comprando
       </button>
     </div>
-    <div class="grid__item one-third medium-up--two-thirds">
-      <div class="site-header__logo h1" itemscope itemtype="http://schema.org/Organization"></div>
-    </div>
-
-    <div class="grid__item one-third medium-up--one-sixth text-right">
-      <a href="/search" class="site-header__link site-header__search js-drawer-open-top">
-        <span class="icon icon-search" aria-hidden="true"></span>
-        <span class="icon__fallback-text">Buscar</span>
-      </a>
-      <a href="/cart" class="site-header__link site-header__cart cart-link">
-        <span class="icon icon-cart" aria-hidden="true"></span>
-        <span class="icon__fallback-text">Carrito</span>
-      </a>
-    </div>
   </div>
-</header>
-
-
-
 </div>
 
-        <div class="action-area"></div>
+<div id="shopify-section-header" class="shopify-section">
+  <style>
+    
+      .site-header__logo-image {
+        max-width: 135px;
+      }
+    
+
+    
+      .site-header__logo-image {
+        margin: 0;
+      }
+    
+  </style>
+
+
+<div id="SearchDrawer" class="search-bar drawer drawer--top" role="dialog" aria-modal="true" aria-label="Buscar" data-predictive-search-drawer>
+  <div class="search-bar__interior">
+    <div class="search-form__container" data-search-form-container>
+      <form class="search-form search-bar__form" action="/search" method="get" role="search">
+        <div class="search-form__input-wrapper">
+          <input
+            type="text"
+            name="q"
+            placeholder="Buscar"
+            role="combobox"
+            aria-autocomplete="list"
+            aria-owns="predictive-search-results"
+            aria-expanded="false"
+            aria-label="Buscar"
+            aria-haspopup="listbox"
+            class="search-form__input search-bar__input"
+            data-predictive-search-drawer-input
+          />
+          <input type="hidden" name="options[prefix]" value="last" aria-hidden="true" />
+          <div class="predictive-search-wrapper predictive-search-wrapper--drawer" data-predictive-search-mount="drawer"></div>
+        </div>
+
+        <button class="search-bar__submit search-form__submit"
+          type="submit"
+          data-search-form-submit>
+          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 37 40"><path d="M35.6 36l-9.8-9.8c4.1-5.4 3.6-13.2-1.3-18.1-5.4-5.4-14.2-5.4-19.7 0-5.4 5.4-5.4 14.2 0 19.7 2.6 2.6 6.1 4.1 9.8 4.1 3 0 5.9-1 8.3-2.8l9.8 9.8c.4.4.9.6 1.4.6s1-.2 1.4-.6c.9-.9.9-2.1.1-2.9zm-20.9-8.2c-2.6 0-5.1-1-7-2.9-3.9-3.9-3.9-10.1 0-14C9.6 9 12.2 8 14.7 8s5.1 1 7 2.9c3.9 3.9 3.9 10.1 0 14-1.9 1.9-4.4 2.9-7 2.9z"/></svg>
+          <span class="icon__fallback-text">Buscar</span>
+        </button>
+      </form>
+
+      <div class="search-bar__actions">
+        <button type="button" class="btn--link search-bar__close js-drawer-close">
+          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 40 40"><path d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z" class="layer"/></svg>
+          <span class="icon__fallback-text">Cerrar</span>
+        </button>
       </div>
     </div>
-
-    <main class="main-content" role="main">
-      <!-- /templates/index.liquid -->
-
-
-
-
-  <div id="shopify-section-slideshow" class="shopify-section"><style data-shopify>.hero {
-      height:53.298153034300796vw !important;
-      overflow: hidden;
-    }
-    .hero .slick-track,
-    .hero .hero__slide:before {
-      height:53.298153034300796vw;
-    }</style><style data-shopify>.site-header__link,
-  .site-header__logo-link {
-    color: #ffffff !important;
-  }
-
-  .hero__text-title {
-    color: #ffffff;
-  }
-
-  .hero__slide:after {
-    background-color: #000000;
-    opacity: 0.2;
-  }
-
-  .hero__button-circle {
-    background: rgba(0, 0, 0, 0.3);
-  }
-
-  .slick-prev .icon:before,
-  .slick-next .icon:before,
-  .hero__pause .icon:before {
-    color: #ffffff;
-  }
-
-  .slick-dots {
-    background: rgba(0, 0, 0, 0.3);
-  }
-
-  .hero__dots:before {
-    background-color: #ffffff;
-    border-color: #ffffff;
-  }
-
-  .slick-active .hero__dots:before {
-    background-color: transparent;
-    border: 2px solid #ffffff;
-  }</style><div data-section-id="slideshow" data-section-type="slideshow-section"class="hero--adapt">
-  <div class="hero slideshow-slideshow"
-        id="Hero"
-        role="region"
-        aria-label="slideshow"
-        aria-describedby="slideshow-info"
-        tabindex="-1"
-        data-autoplay="false"
-        data-autoplayspeed="5000"
-        data-adapt="true"
-        data-slide-nav-a11y="Cargar diapositiva [slide_number]"
-        data-slide-nav-active-a11y="Diapositiva actual [slide_number]"><div id="SlickSlide1" aria-hidden="true" class="hero__slide hero__slide--slider-0" >
-            <img class="hero__image hero__image--slider-0 lazyload"src="//cdn.shopify.com/s/files/1/0022/5512/6630/files/IMG-7904_300x.JPG?v=1584338095"data-src="//cdn.shopify.com/s/files/1/0022/5512/6630/files/IMG-7904_{width}x.JPG?v=1584338095"
-              data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048, 4472]"
-              data-aspectratio="1.8762376237623761"
-              data-sizes="auto"
-              data-parent-fit="cover"
-              alt=""
-              style="object-position: center center"><noscript>
-                <div class="hero__image-no-js hero__image--slider-0" data-image="slider-0" style="background-image: url('//cdn.shopify.com/s/files/1/0022/5512/6630/files/IMG-7904_2048x2048.JPG?v=1584338095');"></div>
-              </noscript><div class="hero__content-wrapper">
-            <div class="hero__content">
-              <div class="hero__content-centered"><h1 class="hero__text-title" itemscope itemtype="http://schema.org/Organization">
-                    Todo lo que necesitas para sobrevivir la pandemia
-                  </h1></div>
-            </div>
-          </div>
-        </div></div><div class="hero__content-wrapper-mobile"><div class="hero__content-mobile text-center is-active" data-index="1"><h2 class="hero-title-empty hero-title-mobile h1">
-                Todo lo que necesitas para sobrevivir la pandemia
-              </h2></div></div></div>
-<p id="slideshow-info" class="visually-hidden" aria-hidden="true">Utiliza las flechas izquierda/derecha para navegar por la presentación o deslízate hacia la izquierda/derecha si usas un dispositivo móvil</p>
-
-
-</div>
-
-  <div class="hero__header">
-   <div class="action-area">
-     <!-- action bar section -->
-<div id="shopify-section-action-bar" class="shopify-section action-bar-section"><!-- snippets/action-bar.liquid -->
-
-
-
-
-
-
-  
-  <div class="action-bar-wrapper  action-bar--hero " data-section-id="action-bar" data-section-type="action-bar-section">
-
-
-    <nav class="action-bar action-bar--has-menu" role="presentation">
-      <ul class="action-bar__menu--main action-bar__menu list--inline  action-bar--show" id="SiteNav" role="navigation">
-        
-        
-          
-          
-            <li class="action-bar__menu-item action-bar--active">
-              <a href="/" class="action-bar__link">Inicio</a>
-            </li>
-          
-        
-          
-          
-            <li class="action-bar__menu-item ">
-              <a href="/collections/all" class="action-bar__link">Catálogo</a>
-            </li>
-          
-        
-      </ul>
-
-      
-        
-        
-      
-        
-        
-      
-    </nav>
   </div>
-
-
-
-
 </div>
-   </div>
- </div>
-</div>
-<!-- BEGIN content_for_index --><div id="shopify-section-rich-text" class="shopify-section index-section rich-text-section"><div class="rich-text page-width" data-section-id="rich-text" data-section-type="rich-text-section">
-  <div class="grid">
-    <div class="grid__item rte text-center medium-up--two-thirds medium-up--push-one-sixth">
+
+
+<div data-section-id="header" data-section-type="header-section" data-header-section>
+  
+    
+      <style>
+        .announcement-bar {
+          background-color: #43c8c4;
+        }
+
+        .announcement-bar--link:hover {
+          
+
+          
+            
+            background-color: #5bcfcb;
+          
+        }
+
+        .announcement-bar__message {
+          color: #ffffff;
+        }
+      </style>
+
       
-        <h2 class="rich-text__heading">Si vas a salir de casa</h2>
+        <div class="announcement-bar">
       
+
+        <p class="announcement-bar__message">#yomequedoencasa</p>
+
       
-        <div class="rich-text__text--medium">
-          <p>Preve&eacute; con el Kit b&aacute;sico para COVID- 19.&nbsp; No salgas sin cubrebocas y antibacterial. Hazo por ti, hazlo por todos</p>
         </div>
       
-    </div>
-  </div>
-</div>
 
+    
+  
 
+  <header class="site-header border-bottom logo--left" role="banner">
+    <div class="grid grid--no-gutters grid--table site-header__mobile-nav">
+      
 
-
-</div><div id="shopify-section-1584421283898" class="shopify-section index-section index-section--featured-product"><div itemscope itemtype="http://schema.org/Product" data-section-id="1584421283898" data-section-type="product">
-  <meta itemprop="url" content="https://kitparacoronavirus.com/products/kit-basico-para-coronavirus">
-  <meta itemprop="image" content="//cdn.shopify.com/s/files/1/0022/5512/6630/products/IMG_7971_600x.jpg?v=1584422856">
-  <meta itemprop="name" content="Kit básico para Coronavirus">
-
-  <div class="product featured-product" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-
-    <div class="product__details featured-product__details">
-      <div class="featured-product__details-content">
-        <div class="product__form-wrapper">
+      <div class="grid__item medium-up--one-quarter logo-align--left">
+        
+        
+          <h1 class="h2 site-header__logo">
+        
           
-          <h2 itemprop="name">Kit básico para Coronavirus</h2>
-          <link itemprop="availability" href="http://schema.org/InStock">
-          
-<form method="post" action="/cart/add" id="AddToCartForm-1584421283898" accept-charset="UTF-8" class="product__form--add-to-cart" enctype="multipart/form-data" data-cart-form=""><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" />
+<a href="/" class="site-header__logo-image">
               
-              <select
-                name="id"
-                id="ProductSelect-1584421283898"
-                class=""
-              >
+              <img class="lazyload js"
+                   src="//cdn.shopify.com/s/files/1/0022/5512/6630/files/covid-19_300x300.png?v=1584420764"
+                   data-src="//cdn.shopify.com/s/files/1/0022/5512/6630/files/covid-19_{width}x.png?v=1584420764"
+                   data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                   data-aspectratio="1.7777777777777777"
+                   data-sizes="auto"
+                   alt="Kit para coronavirus"
+                   style="max-width: 135px">
+              <noscript>
                 
-                  <option  selected="selected"   value="31503141273702" data-sku="COVIDKIT">Default Title - $ 989.00 MXN</option>
-                
-              </select>
-
-              
-                <div class="quantity-wrapper">
-                  <label for="Quantity" class="product__quantity-label">Cantidad</label>
-                  <input id="Quantity"
-                    class="quantity-input"
-                    name="quantity" type="number" value="1" min="1">
-                </div>
-              
-
-              <p class="product__price small--text-center">
-                <meta itemprop="priceCurrency" content="MXN">
-                <meta itemprop="price" content="989.0">
-                
-                  <span class="visually-hidden">Precio habitual</span>
-                  <span class="product__price--reg">$ 1,300</span>
-                  <span class="product__price--sale"><span class="txt--emphasis">ahora</span> <span class="js-price">$ 989</span></span>
-                
-                <span class="product-price-unit product-price-unit--unavailable " data-unit-price-container><span class="visually-hidden">Precio unitario</span>
-  <span data-unit-price></span><span aria-hidden="true">/</span><span class="visually-hidden">&nbsp;por&nbsp;</span><span data-unit-price-base-unit>
-    </span></span>
-
-              </p>
-                <button id="AddToCart-1584421283898" type="submit" name="add" class="btn btn--add-to-cart btn--secondary-accent">
-                  <span class="btn__text">Agregar al carrito</span>
-                </button>
-              
-              
-                <div data-shopify="payment-button" class="shopify-payment-button"><button class="shopify-payment-button__button shopify-payment-button__button--unbranded shopify-payment-button__button--hidden" disabled="disabled" aria-hidden="true"> </button><button class="shopify-payment-button__more-options shopify-payment-button__button--hidden" disabled="disabled" aria-hidden="true"> </button></div>
-              
-            </form>
-          
-
-          
-            <a
-              class="action-link"
-              href="/products/kit-basico-para-coronavirus?variant=31503141273702"
-              data-page-link
-              >
-              Todos los detalles <span class="icon icon-arrow-right action-link__icon" aria-hidden="true"></span>
+                <img src="//cdn.shopify.com/s/files/1/0022/5512/6630/files/covid-19_135x.png?v=1584420764"
+                     srcset="//cdn.shopify.com/s/files/1/0022/5512/6630/files/covid-19_135x.png?v=1584420764 1x, //cdn.shopify.com/s/files/1/0022/5512/6630/files/covid-19_135x@2x.png?v=1584420764 2x"
+                     alt="Kit para coronavirus"
+                     style="max-width: 135px;">
+              </noscript>
             </a>
           
+        
+          </h1>
+        
+      </div>
 
-          <div class="product-single__errors"></div>
+      
+        <nav class="grid__item medium-up--one-half small--hide" id="AccessibleNav" role="navigation">
+          
+<ul class="site-nav list--inline" id="SiteNav">
+  
+
+
+
+    
+      <li  class="site-nav--active">
+        <a href="/"
+          class="site-nav__link site-nav__link--main site-nav__link--active"
+           aria-current="page"
+        >
+          <span class="site-nav__label">Inicio</span>
+        </a>
+      </li>
+    
+  
+
+
+
+    
+      <li >
+        <a href="/collections/all"
+          class="site-nav__link site-nav__link--main"
+          
+        >
+          <span class="site-nav__label">Catálogo</span>
+        </a>
+      </li>
+    
+  
+</ul>
+
+        </nav>
+      
+
+      <div class="grid__item medium-up--one-quarter text-right site-header__icons">
+        <div class="site-header__icons-wrapper">
+
+          <button type="button" class="btn--link site-header__icon site-header__search-toggle js-drawer-open-top">
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 37 40"><path d="M35.6 36l-9.8-9.8c4.1-5.4 3.6-13.2-1.3-18.1-5.4-5.4-14.2-5.4-19.7 0-5.4 5.4-5.4 14.2 0 19.7 2.6 2.6 6.1 4.1 9.8 4.1 3 0 5.9-1 8.3-2.8l9.8 9.8c.4.4.9.6 1.4.6s1-.2 1.4-.6c.9-.9.9-2.1.1-2.9zm-20.9-8.2c-2.6 0-5.1-1-7-2.9-3.9-3.9-3.9-10.1 0-14C9.6 9 12.2 8 14.7 8s5.1 1 7 2.9c3.9 3.9 3.9 10.1 0 14-1.9 1.9-4.4 2.9-7 2.9z"/></svg>
+            <span class="icon__fallback-text">Buscar</span>
+          </button>
 
           
-            <!-- /snippets/social-sharing.liquid -->
-<div class="social-sharing" data-permalink="">
 
-  
-    <a target="_blank" href="//www.facebook.com/sharer.php?u=https://kitparacoronavirus.com/products/kit-basico-para-coronavirus" class="share-facebook" title="Compartir en Facebook">
-      <span class="icon icon-facebook" aria-hidden="true"></span>
-      <span class="share-title" aria-hidden="true">Compartir</span>
-      <span class="visually-hidden">Compartir en Facebook</span>
-    </a>
-  
+          <a href="/cart" class="site-header__icon site-header__cart">
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-cart" viewBox="0 0 37 40"><path d="M36.5 34.8L33.3 8h-5.9C26.7 3.9 23 .8 18.5.8S10.3 3.9 9.6 8H3.7L.5 34.8c-.2 1.5.4 2.4.9 3 .5.5 1.4 1.2 3.1 1.2h28c1.3 0 2.4-.4 3.1-1.3.7-.7 1-1.8.9-2.9zm-18-30c2.2 0 4.1 1.4 4.7 3.2h-9.5c.7-1.9 2.6-3.2 4.8-3.2zM4.5 35l2.8-23h2.2v3c0 1.1.9 2 2 2s2-.9 2-2v-3h10v3c0 1.1.9 2 2 2s2-.9 2-2v-3h2.2l2.8 23h-28z"/></svg>
+            <span class="icon__fallback-text">Carrito</span>
+            <div id="CartCount" class="site-header__cart-count hide" data-cart-count-bubble>
+              <span data-cart-count>0</span>
+              <span class="icon__fallback-text medium-up--hide">artículos</span>
+            </div>
+          </a>
 
-  
-    <a target="_blank" href="//twitter.com/share?text=Kit%20b%C3%A1sico%20para%20Coronavirus&amp;url=https://kitparacoronavirus.com/products/kit-basico-para-coronavirus" class="share-twitter" title="Tuitear en Twitter">
-      <span class="icon icon-twitter" aria-hidden="true"></span>
-      <span class="share-title" aria-hidden="true">Tuitear</span>
-      <span class="visually-hidden">Tuitear en Twitter</span>
-    </a>
-  
-
-  
-    <a target="_blank" href="http://pinterest.com/pin/create/button/?url=https://kitparacoronavirus.com/products/kit-basico-para-coronavirus&amp;media=//cdn.shopify.com/s/files/1/0022/5512/6630/products/IMG_7971_1024x1024.jpg?v=1584422856&amp;description=Kit%20b%C3%A1sico%20para%20Coronavirus" class="share-pinterest" title="Pinear en Pinterest">
-      <span class="icon icon-pinterest" aria-hidden="true"></span>
-      <span class="share-title" aria-hidden="true">Hacer pin</span>
-      <span class="visually-hidden">Pinear en Pinterest</span>
-    </a>
-  
-
-</div>
+          
+            <button type="button" class="btn--link site-header__icon site-header__menu js-mobile-nav-toggle mobile-nav--open" aria-controls="MobileNav"  aria-expanded="false" aria-label="Menú">
+              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-hamburger" viewBox="0 0 37 40"><path d="M33.5 25h-30c-1.1 0-2-.9-2-2s.9-2 2-2h30c1.1 0 2 .9 2 2s-.9 2-2 2zm0-11.5h-30c-1.1 0-2-.9-2-2s.9-2 2-2h30c1.1 0 2 .9 2 2s-.9 2-2 2zm0 23h-30c-1.1 0-2-.9-2-2s.9-2 2-2h30c1.1 0 2 .9 2 2s-.9 2-2 2z"/></svg>
+              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 40 40"><path d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z" class="layer"/></svg>
+            </button>
           
         </div>
+
       </div>
     </div>
 
-    <div class="product__photo featured-product__photo">
-      
+    <nav class="mobile-nav-wrapper medium-up--hide" role="navigation">
+      <ul id="MobileNav" class="mobile-nav">
         
-          
-          
-          
-<style>
-  
-
-  #ProductImage-14259473317990 {
-    max-width: 745.0686641697879px;
-    max-height: 800px;
-  }
-  #ProductImageWrapper-14259473317990 {
-    max-width: 745.0686641697879px;
-  }
-
-  
-
-  
-
-  @media screen and (max-width: 750px ) {
-    #ProductImage-14259473317990 {
-      max-width: 372.53433208489395px;
-      max-height: 400px;
-    }
-    #ProductImageWrapper-14259473317990 {
-      max-width: 372.53433208489395px;
-    }
-  }
-</style>
-
-          
-          <div id="ProductImageWrapper-14259473317990" class="featured-product__photo-wrapper">
-            <div data-image-id="14259473317990"
-              class="product__photo--single product__photo--variant-wrapper
+<li class="mobile-nav__item border-bottom">
             
-              fade-in
-              
-            " style="padding-top:107.3726542%;">
-              <img id="ProductImage-14259473317990"
-                class="product__photo--variant lazyload"
-                src="//cdn.shopify.com/s/files/1/0022/5512/6630/products/IMG_7971_300x.jpg?v=1584422856"
-                data-src="//cdn.shopify.com/s/files/1/0022/5512/6630/products/IMG_7971_{width}x.jpg?v=1584422856"
-                data-widths="[360, 540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048, 4472]"
-                data-aspectratio="0.9313358302122348"
-                data-sizes="auto"
-                alt="Kit básico para Coronavirus">
-            </div>
-          </div>
-        
-          
-          
-          
-<style>
-  
-
-  #ProductImage-14259455983718 {
-    max-width: 700px;
-    max-height: 393.0987821380244px;
-  }
-  #ProductImageWrapper-14259455983718 {
-    max-width: 700px;
-  }
-
-  
-
-  
-
-  @media screen and (max-width: 750px ) {
-    #ProductImage-14259455983718 {
-      max-width: 700px;
-      max-height: 393.0987821380244px;
-    }
-    #ProductImageWrapper-14259455983718 {
-      max-width: 700px;
-    }
-  }
-</style>
-
-          
-          <div id="ProductImageWrapper-14259455983718" class="featured-product__photo-wrapper">
-            <div data-image-id="14259455983718"
-              class="product__photo--single product__photo--variant-wrapper
+              <a href="/"
+                class="mobile-nav__link mobile-nav__link--active"
+                 aria-current="page"
+              >
+                <span class="mobile-nav__label">Inicio</span>
+              </a>
             
-              fade-in
-               hide
-            " style="padding-top:56.15696887686062%;">
-              <img id="ProductImage-14259455983718"
-                class="product__photo--variant lazyload"
-                src="//cdn.shopify.com/s/files/1/0022/5512/6630/products/IMG-7962_300x.jpg?v=1584422856"
-                data-src="//cdn.shopify.com/s/files/1/0022/5512/6630/products/IMG-7962_{width}x.jpg?v=1584422856"
-                data-widths="[360, 540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048, 4472]"
-                data-aspectratio="1.780722891566265"
-                data-sizes="auto"
-                alt="Kit básico para Coronavirus">
-            </div>
-          </div>
+          </li>
         
-          
-          
-          
-<style>
-  
-
-  #ProductImage-14259456180326 {
-    max-width: 609.9447513812155px;
-    max-height: 800px;
-  }
-  #ProductImageWrapper-14259456180326 {
-    max-width: 609.9447513812155px;
-  }
-
-  
-
-  
-
-  @media screen and (max-width: 750px ) {
-    #ProductImage-14259456180326 {
-      max-width: 304.97237569060775px;
-      max-height: 400px;
-    }
-    #ProductImageWrapper-14259456180326 {
-      max-width: 304.97237569060775px;
-    }
-  }
-</style>
-
-          
-          <div id="ProductImageWrapper-14259456180326" class="featured-product__photo-wrapper">
-            <div data-image-id="14259456180326"
-              class="product__photo--single product__photo--variant-wrapper
+<li class="mobile-nav__item">
             
-              fade-in
-               hide
-            " style="padding-top:131.1594203%;">
-              <img id="ProductImage-14259456180326"
-                class="product__photo--variant lazyload"
-                src="//cdn.shopify.com/s/files/1/0022/5512/6630/products/IMG-7960_300x.jpg?v=1584422856"
-                data-src="//cdn.shopify.com/s/files/1/0022/5512/6630/products/IMG-7960_{width}x.jpg?v=1584422856"
-                data-widths="[360, 540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048, 4472]"
-                data-aspectratio="0.7624309392265194"
-                data-sizes="auto"
-                alt="Kit básico para Coronavirus">
-            </div>
-          </div>
+              <a href="/collections/all"
+                class="mobile-nav__link"
+                
+              >
+                <span class="mobile-nav__label">Catálogo</span>
+              </a>
+            
+          </li>
         
+      </ul>
+    </nav>
+  </header>
 
-        <noscript>
-          <img class="product__photo--variant" src="//cdn.shopify.com/s/files/1/0022/5512/6630/products/IMG_7971_2048x2048.jpg?v=1584422856" alt="Kit básico para Coronavirus">
-        </noscript>
-      
-    </div>
-  </div>
+  
 </div>
 
 
-  <script type="application/json" id="ProductJson-1584421283898">
-    {"id":4675037954150,"title":"Kit básico para Coronavirus","handle":"kit-basico-para-coronavirus","description":"\u003cp\u003e-100 Cubrebocas Protec doble capa con cita elástica\u003c\/p\u003e\n\u003cp\u003e- 1 Gel antibacterial 500ml \u003c\/p\u003e\n\u003cp\u003e-1 Gel antibacterial de bolsillo 60ml\u003c\/p\u003e\n\u003cp\u003e-1 libro informativo sobre COVID-19, prevenciones y medidas de seguridad \u003c\/p\u003e","published_at":"2020-03-15T22:06:44-07:00","created_at":"2020-03-15T22:10:45-07:00","vendor":"boda Julie y Kurt","type":"","tags":[],"price":98900,"price_min":98900,"price_max":98900,"available":true,"price_varies":false,"compare_at_price":130000,"compare_at_price_min":130000,"compare_at_price_max":130000,"compare_at_price_varies":false,"variants":[{"id":31503141273702,"title":"Default Title","option1":"Default Title","option2":null,"option3":null,"sku":"COVIDKIT","requires_shipping":true,"taxable":true,"featured_image":null,"available":true,"name":"Kit básico para Coronavirus","public_title":null,"options":["Default Title"],"price":98900,"weight":1000,"compare_at_price":130000,"inventory_management":"shopify","barcode":""}],"images":["\/\/cdn.shopify.com\/s\/files\/1\/0022\/5512\/6630\/products\/IMG_7971.jpg?v=1584422856","\/\/cdn.shopify.com\/s\/files\/1\/0022\/5512\/6630\/products\/IMG-7962.jpg?v=1584422856","\/\/cdn.shopify.com\/s\/files\/1\/0022\/5512\/6630\/products\/IMG-7960.jpg?v=1584422856"],"featured_image":"\/\/cdn.shopify.com\/s\/files\/1\/0022\/5512\/6630\/products\/IMG_7971.jpg?v=1584422856","options":["Title"],"media":[{"alt":null,"id":6434286731366,"position":1,"preview_image":{"aspect_ratio":0.931,"height":801,"width":746,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0022\/5512\/6630\/products\/IMG_7971.jpg?v=1584422838"},"aspect_ratio":0.931,"height":801,"media_type":"image","src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0022\/5512\/6630\/products\/IMG_7971.jpg?v=1584422838","width":746},{"alt":null,"id":6434269397094,"position":2,"preview_image":{"aspect_ratio":1.781,"height":415,"width":739,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0022\/5512\/6630\/products\/IMG-7962.jpg?v=1584421963"},"aspect_ratio":1.781,"height":415,"media_type":"image","src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0022\/5512\/6630\/products\/IMG-7962.jpg?v=1584421963","width":739},{"alt":null,"id":6434269560934,"position":3,"preview_image":{"aspect_ratio":0.762,"height":1629,"width":1242,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0022\/5512\/6630\/products\/IMG-7960.jpg?v=1584421975"},"aspect_ratio":0.762,"height":1629,"media_type":"image","src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0022\/5512\/6630\/products\/IMG-7960.jpg?v=1584421975","width":1242}],"content":"\u003cp\u003e-100 Cubrebocas Protec doble capa con cita elástica\u003c\/p\u003e\n\u003cp\u003e- 1 Gel antibacterial 500ml \u003c\/p\u003e\n\u003cp\u003e-1 Gel antibacterial de bolsillo 60ml\u003c\/p\u003e\n\u003cp\u003e-1 libro informativo sobre COVID-19, prevenciones y medidas de seguridad \u003c\/p\u003e"}
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "Kit para coronavirus",
+  
+    
+    "logo": "https:\/\/cdn.shopify.com\/s\/files\/1\/0022\/5512\/6630\/files\/covid-19_720x.png?v=1584420764",
+  
+  "sameAs": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "url": "https:\/\/kitparacoronavirus.com"
+}
+</script>
+
+
+  
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": "Kit para coronavirus",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https:\/\/kitparacoronavirus.com\/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "url": "https:\/\/kitparacoronavirus.com"
+    }
   </script>
 
 
 
+</div>
+
+  <div class="page-container drawer-page-content" id="PageContainer">
+
+    <main class="main-content js-focus-hidden" id="MainContent" role="main" tabindex="-1">
+      <!-- BEGIN content_for_index --><div id="shopify-section-hero" class="shopify-section index-section index-section--flush"><div data-section-id="hero" data-section-type="hero-section"><div class="hero hero--medium hero-hero hero__overlay box ratio-container lazyload js"
+         id="Hero-hero"
+         data-layout="full_width"
+         data-bg="//cdn.shopify.com/s/files/1/0022/5512/6630/files/IMG-7904_300x300.JPG?v=1584338095"
+         data-bgset="//cdn.shopify.com/s/files/1/0022/5512/6630/files/IMG-7904_180x.JPG?v=1584338095 180w 96h,
+    //cdn.shopify.com/s/files/1/0022/5512/6630/files/IMG-7904_360x.JPG?v=1584338095 360w 192h,
+    //cdn.shopify.com/s/files/1/0022/5512/6630/files/IMG-7904_540x.JPG?v=1584338095 540w 288h,
+    //cdn.shopify.com/s/files/1/0022/5512/6630/files/IMG-7904_720x.JPG?v=1584338095 720w 384h,
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //cdn.shopify.com/s/files/1/0022/5512/6630/files/IMG-7904.JPG?v=1584338095 758w 404h"
+         data-sizes="auto"
+         data-parent-fit="cover"
+         style="background-position: center; background-image: url('//cdn.shopify.com/s/files/1/0022/5512/6630/files/IMG-7904_300x300.JPG?v=1584338095);"><div class="hero__inner">
+        <div class="page-width text-center"><h2 class="h1 mega-title mega-title--large">Estamos contigo</h2><div class="rte-setting mega-subtitle mega-subtitle--large"><p>Sabemos lo dif&iacute;cil que puede ser encontrar productos sanitarios en estos momentos cr&iacute;ticos, para eso estamos aqu&iacute;</p>
+<p></p></div></div>
+      </div>
+    </div>
+    <noscript>
+      <div class="hero hero--medium hero__overlay" style="background-image: url('//cdn.shopify.com/s/files/1/0022/5512/6630/files/IMG-7904_2048x.JPG?v=1584338095'); background-position: center center;"></div>
+    </noscript></div>
 
 
-</div><div id="shopify-section-newsletter-signup" class="shopify-section index-section newsletter-signup"><div class="newsletter text-center" data-section-id="newsletter-signup" data-section-type="newsletter-signup-section">
+</div><div id="shopify-section-1492033924902" class="shopify-section index-section"><div class="page-width">
   
-    <h2 >Suscríbete a nuestro boletín de noticias</h2>
-  
-  
-    <div class="rte"><p>Una frase corta que describe lo que las personas recibirán al suscribirse</p></div>
-  
-  <div class="wrapper">
-    <form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8" class="contact-form"><input type="hidden" name="form_type" value="customer" /><input type="hidden" name="utf8" value="✓" />
+
+  <div class="custom-content">
       
-      
-        <div class="input-group">
-          <input type="hidden" name="contact[tags]" value="newsletter">
-          <label for="Email" class="newsletter__label label--hidden">Dirección de correo electrónico</label>
-          <input type="email" value="" placeholder="Dirección de correo electrónico" name="contact[email]" id="Email" class="input-group__field newsletter__input" autocorrect="off" autocapitalize="off">
-          <span class="input-group__btn">
-            <button type="submit" class="btn newsletter__submit" name="commit" id="Subscribe">
-              <span class="newsletter__submit-text--large">Suscribirse</span>
-            </button>
-          </span>
+
+
+      <div class="custom__item custom__item--text custom__item--1492033924902-0  one-whole align--center" >
+        <div class="custom__item-inner custom__item-inner--text">
+          
+              <div class="medium-up--text-center">
+                
+                  <h4 class="h3">Si vas a salir de casa</h4>
+                
+                
+                  <div class="rte-setting rte"><p>Preve&eacute; con los productos necesarios para COVID- 19.&nbsp; No salgas sin cubrebocas y antibacterial. H&aacute;zlo por ti, h&aacute;zlo por todos</p></div>
+                
+              </div>
+            
         </div>
-      
-    </form>
+      </div>
+
+    
   </div>
+
+  
+</div>
+
+
+
+
+</div><div id="shopify-section-1584597059932" class="shopify-section index-section index-section--flush"><div data-section-id="1584597059932" data-section-type="hero-section"><div class="hero hero--x-small hero-1584597059932 hero__overlay box ratio-container lazyload js"
+         id="Hero-1584597059932"
+         data-layout="full_width"
+         data-bg="//cdn.shopify.com/s/files/1/0022/5512/6630/files/using-a-tape-dispenser-to-close-up-a-box_300x300.jpg?v=1584598008"
+         data-bgset="//cdn.shopify.com/s/files/1/0022/5512/6630/files/using-a-tape-dispenser-to-close-up-a-box_180x.jpg?v=1584598008 180w 120h,
+    //cdn.shopify.com/s/files/1/0022/5512/6630/files/using-a-tape-dispenser-to-close-up-a-box_360x.jpg?v=1584598008 360w 241h,
+    //cdn.shopify.com/s/files/1/0022/5512/6630/files/using-a-tape-dispenser-to-close-up-a-box_540x.jpg?v=1584598008 540w 361h,
+    //cdn.shopify.com/s/files/1/0022/5512/6630/files/using-a-tape-dispenser-to-close-up-a-box_720x.jpg?v=1584598008 720w 482h,
+    //cdn.shopify.com/s/files/1/0022/5512/6630/files/using-a-tape-dispenser-to-close-up-a-box_900x.jpg?v=1584598008 900w 602h,
+    //cdn.shopify.com/s/files/1/0022/5512/6630/files/using-a-tape-dispenser-to-close-up-a-box_1080x.jpg?v=1584598008 1080w 723h,
+    //cdn.shopify.com/s/files/1/0022/5512/6630/files/using-a-tape-dispenser-to-close-up-a-box_1296x.jpg?v=1584598008 1296w 868h,
+    //cdn.shopify.com/s/files/1/0022/5512/6630/files/using-a-tape-dispenser-to-close-up-a-box_1512x.jpg?v=1584598008 1512w 1012h,
+    //cdn.shopify.com/s/files/1/0022/5512/6630/files/using-a-tape-dispenser-to-close-up-a-box_1728x.jpg?v=1584598008 1728w 1157h,
+    //cdn.shopify.com/s/files/1/0022/5512/6630/files/using-a-tape-dispenser-to-close-up-a-box_1950x.jpg?v=1584598008 1950w 1305h,
+    //cdn.shopify.com/s/files/1/0022/5512/6630/files/using-a-tape-dispenser-to-close-up-a-box_2100x.jpg?v=1584598008 2100w 1406h,
+    //cdn.shopify.com/s/files/1/0022/5512/6630/files/using-a-tape-dispenser-to-close-up-a-box_2260x.jpg?v=1584598008 2260w 1513h,
+    //cdn.shopify.com/s/files/1/0022/5512/6630/files/using-a-tape-dispenser-to-close-up-a-box_2450x.jpg?v=1584598008 2450w 1640h,
+    //cdn.shopify.com/s/files/1/0022/5512/6630/files/using-a-tape-dispenser-to-close-up-a-box_2700x.jpg?v=1584598008 2700w 1807h,
+    //cdn.shopify.com/s/files/1/0022/5512/6630/files/using-a-tape-dispenser-to-close-up-a-box_3000x.jpg?v=1584598008 3000w 2008h,
+    //cdn.shopify.com/s/files/1/0022/5512/6630/files/using-a-tape-dispenser-to-close-up-a-box_3350x.jpg?v=1584598008 3350w 2243h,
+    //cdn.shopify.com/s/files/1/0022/5512/6630/files/using-a-tape-dispenser-to-close-up-a-box_3750x.jpg?v=1584598008 3750w 2510h,
+    
+    //cdn.shopify.com/s/files/1/0022/5512/6630/files/using-a-tape-dispenser-to-close-up-a-box.jpg?v=1584598008 4096w 2742h"
+         data-sizes="auto"
+         data-parent-fit="cover"
+         style="background-position: center; background-image: url('//cdn.shopify.com/s/files/1/0022/5512/6630/files/using-a-tape-dispenser-to-close-up-a-box_300x300.jpg?v=1584598008);"><div class="hero__inner">
+        <div class="page-width text-center"><h2 class="h1 mega-title">Envío GRATIS</h2><div class="rte-setting mega-subtitle"><p>Estamos conscientes de la problem&aacute;tica de propagaci&oacute;n de COVID19 de nuestro pa&iacute;s. Nuestra misi&oacute;n: que&nbsp;las personas en M&eacute;xico tengan acceso&nbsp;a productos sanitarios de calidad los cu&aacute;les son de vitales en estos momentos, por lo que COVIDKIT absorbe todos los costos de env&iacute;o</p></div></div>
+      </div>
+    </div>
+    <noscript>
+      <div class="hero hero--x-small hero__overlay" style="background-image: url('//cdn.shopify.com/s/files/1/0022/5512/6630/files/using-a-tape-dispenser-to-close-up-a-box_2048x.jpg?v=1584598008'); background-position: center center;"></div>
+    </noscript></div>
+
+
+</div><div id="shopify-section-featured-collections" class="shopify-section index-section"><div class="page-width">
+  
+    <div class="section-header text-center">
+      <h2>No te expongas</h2>
+    </div>
+  
+
+<ul class="grid grid--uniform grid--view-items">
+    
+      <li class="grid__item grid__item--featured-collections small--one-half medium-up--one-quarter">
+        
+<div class="grid-view-item product-card">
+  <a class="grid-view-item__link grid-view-item__image-container full-width-link" href="/collections/no-te-expongas/products/kit-premium-para-coronavirus">
+    <span class="visually-hidden">Kit premium para Coronavirus</span>
+  </a>
+
+  
+  
+
+    <style>#ProductCardImage-featured-collections-4677007605862 {
+    max-width: 256.30914826498423px;
+    max-height: 250px;
+  }
+
+  #ProductCardImageWrapper-featured-collections-4677007605862 {
+    max-width: 256.30914826498423px;
+  }
+</style>
+
+  
+
+  <div class="product-card__image-with-placeholder-wrapper" data-image-with-placeholder-wrapper>
+    <div id="ProductCardImageWrapper-featured-collections-4677007605862" class="grid-view-item__image-wrapper product-card__image-wrapper js">
+      <div style="padding-top:97.53846153846153%;">
+        <img id="ProductCardImage-featured-collections-4677007605862"
+              class="grid-view-item__image lazyload"
+              alt=""
+              data-src="//cdn.shopify.com/s/files/1/0022/5512/6630/products/ScreenShot2020-03-18at23.41.24_8ee73c2e-f95b-4329-a695-2d06d4000648_{width}x.png?v=1584596617"
+              data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+              data-aspectratio="1.025236593059937"
+              data-sizes="auto"
+              data-image>
+      </div>
+    </div>
+    <div class="placeholder-background placeholder-background--animation" data-image-placeholder></div>
+  </div>
+
+  <noscript>
+    
+    <img class="grid-view-item__image" src="//cdn.shopify.com/s/files/1/0022/5512/6630/products/ScreenShot2020-03-18at23.41.24_8ee73c2e-f95b-4329-a695-2d06d4000648_250x250@2x.png?v=1584596617" alt="" style="max-width: 256.30914826498423px;">
+  </noscript>
+
+  <div class="h4 grid-view-item__title product-card__title" aria-hidden="true">Kit premium para Coronavirus</div>
+
+  
+<dl class="price price--listing price--on-sale "
+>
+  
+    <div class="price__vendor price__vendor--listing">
+      <dt>
+        <span class="visually-hidden">Proveedor</span>
+      </dt>
+      <dd>
+        Kit para coronavirus
+      </dd>
+    </div>
+  
+<div class="price__regular">
+    <dt>
+      <span class="visually-hidden visually-hidden--inline">Precio habitual</span>
+    </dt>
+    <dd>
+      <span class="price-item price-item--regular">$ 1,299.00
+</span>
+    </dd>
+  </div>
+  <div class="price__sale">
+    <dt>
+      <span class="visually-hidden visually-hidden--inline">Precio de venta</span>
+    </dt>
+    <dd>
+      <span class="price-item price-item--sale">$ 1,299.00
+</span>
+    </dd>
+    <div class="price__compare">
+      <dt>
+        <span class="visually-hidden visually-hidden--inline">Precio habitual</span>
+      </dt>
+      <dd>
+        <s class="price-item price-item--regular">
+          $ 1,600.00
+        </s>
+      </dd>
+    </div>
+  </div>
+  <div class="price__unit">
+    <dt>
+      <span class="visually-hidden visually-hidden--inline">Precio unitario</span>
+    </dt>
+    <dd class="price-unit-price"><span></span><span aria-hidden="true">/</span><span class="visually-hidden">por&nbsp;</span><span></span></dd>
+  </div>
+  <div class="price__badges price__badges--listing">
+    <span class="price__badge price__badge--sale" aria-hidden="true">
+      <span>Oferta</span>
+    </span>
+    <span class="price__badge price__badge--sold-out">
+      <span>Agotado</span>
+    </span>
+  </div>
+</dl>
+
+
+</div>
+
+      </li>
+    
+      <li class="grid__item grid__item--featured-collections small--one-half medium-up--one-quarter">
+        
+<div class="grid-view-item product-card">
+  <a class="grid-view-item__link grid-view-item__image-container full-width-link" href="/collections/no-te-expongas/products/kit-basico-para-coronavirus">
+    <span class="visually-hidden">Kit básico para Coronavirus</span>
+  </a>
+
+  
+  
+
+    <style>#ProductCardImage-featured-collections-4675037954150 {
+    max-width: 256.30914826498423px;
+    max-height: 250px;
+  }
+
+  #ProductCardImageWrapper-featured-collections-4675037954150 {
+    max-width: 256.30914826498423px;
+  }
+</style>
+
+  
+
+  <div class="product-card__image-with-placeholder-wrapper" data-image-with-placeholder-wrapper>
+    <div id="ProductCardImageWrapper-featured-collections-4675037954150" class="grid-view-item__image-wrapper product-card__image-wrapper js">
+      <div style="padding-top:97.53846153846153%;">
+        <img id="ProductCardImage-featured-collections-4675037954150"
+              class="grid-view-item__image lazyload"
+              alt=""
+              data-src="//cdn.shopify.com/s/files/1/0022/5512/6630/products/ScreenShot2020-03-18at23.41.24_{width}x.png?v=1584596517"
+              data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+              data-aspectratio="1.025236593059937"
+              data-sizes="auto"
+              data-image>
+      </div>
+    </div>
+    <div class="placeholder-background placeholder-background--animation" data-image-placeholder></div>
+  </div>
+
+  <noscript>
+    
+    <img class="grid-view-item__image" src="//cdn.shopify.com/s/files/1/0022/5512/6630/products/ScreenShot2020-03-18at23.41.24_250x250@2x.png?v=1584596517" alt="" style="max-width: 256.30914826498423px;">
+  </noscript>
+
+  <div class="h4 grid-view-item__title product-card__title" aria-hidden="true">Kit básico para Coronavirus</div>
+
+  
+<dl class="price price--listing price--on-sale "
+>
+  
+    <div class="price__vendor price__vendor--listing">
+      <dt>
+        <span class="visually-hidden">Proveedor</span>
+      </dt>
+      <dd>
+        kit para coronavirus
+      </dd>
+    </div>
+  
+<div class="price__regular">
+    <dt>
+      <span class="visually-hidden visually-hidden--inline">Precio habitual</span>
+    </dt>
+    <dd>
+      <span class="price-item price-item--regular">$ 989.00
+</span>
+    </dd>
+  </div>
+  <div class="price__sale">
+    <dt>
+      <span class="visually-hidden visually-hidden--inline">Precio de venta</span>
+    </dt>
+    <dd>
+      <span class="price-item price-item--sale">$ 989.00
+</span>
+    </dd>
+    <div class="price__compare">
+      <dt>
+        <span class="visually-hidden visually-hidden--inline">Precio habitual</span>
+      </dt>
+      <dd>
+        <s class="price-item price-item--regular">
+          $ 1,300.00
+        </s>
+      </dd>
+    </div>
+  </div>
+  <div class="price__unit">
+    <dt>
+      <span class="visually-hidden visually-hidden--inline">Precio unitario</span>
+    </dt>
+    <dd class="price-unit-price"><span></span><span aria-hidden="true">/</span><span class="visually-hidden">por&nbsp;</span><span></span></dd>
+  </div>
+  <div class="price__badges price__badges--listing">
+    <span class="price__badge price__badge--sale" aria-hidden="true">
+      <span>Oferta</span>
+    </span>
+    <span class="price__badge price__badge--sold-out">
+      <span>Agotado</span>
+    </span>
+  </div>
+</dl>
+
+
+</div>
+
+      </li>
+    
+      <li class="grid__item grid__item--featured-collections small--one-half medium-up--one-quarter">
+        
+<div class="grid-view-item product-card">
+  <a class="grid-view-item__link grid-view-item__image-container full-width-link" href="/collections/no-te-expongas/products/100-cubrebocas-basico">
+    <span class="visually-hidden">100 Cubrebocas básico</span>
+  </a>
+
+  
+  
+
+    <style>#ProductCardImage-featured-collections-4677012684902 {
+    max-width: 232.8339575530587px;
+    max-height: 250px;
+  }
+
+  #ProductCardImageWrapper-featured-collections-4677012684902 {
+    max-width: 232.8339575530587px;
+  }
+</style>
+
+  
+
+  <div class="product-card__image-with-placeholder-wrapper" data-image-with-placeholder-wrapper>
+    <div id="ProductCardImageWrapper-featured-collections-4677012684902" class="grid-view-item__image-wrapper product-card__image-wrapper js">
+      <div style="padding-top:107.3726542%;">
+        <img id="ProductCardImage-featured-collections-4677012684902"
+              class="grid-view-item__image lazyload"
+              alt=""
+              data-src="//cdn.shopify.com/s/files/1/0022/5512/6630/products/IMG_7971_14a2fa37-8a92-4d73-825f-00d77297dea5_{width}x.jpg?v=1584595728"
+              data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+              data-aspectratio="0.9313358302122348"
+              data-sizes="auto"
+              data-image>
+      </div>
+    </div>
+    <div class="placeholder-background placeholder-background--animation" data-image-placeholder></div>
+  </div>
+
+  <noscript>
+    
+    <img class="grid-view-item__image" src="//cdn.shopify.com/s/files/1/0022/5512/6630/products/IMG_7971_14a2fa37-8a92-4d73-825f-00d77297dea5_250x250@2x.jpg?v=1584595728" alt="" style="max-width: 232.8339575530587px;">
+  </noscript>
+
+  <div class="h4 grid-view-item__title product-card__title" aria-hidden="true">100 Cubrebocas básico</div>
+
+  
+<dl class="price price--listing price--on-sale "
+>
+  
+    <div class="price__vendor price__vendor--listing">
+      <dt>
+        <span class="visually-hidden">Proveedor</span>
+      </dt>
+      <dd>
+        Kit para coronavirus
+      </dd>
+    </div>
+  
+<div class="price__regular">
+    <dt>
+      <span class="visually-hidden visually-hidden--inline">Precio habitual</span>
+    </dt>
+    <dd>
+      <span class="price-item price-item--regular">$ 799.00
+</span>
+    </dd>
+  </div>
+  <div class="price__sale">
+    <dt>
+      <span class="visually-hidden visually-hidden--inline">Precio de venta</span>
+    </dt>
+    <dd>
+      <span class="price-item price-item--sale">$ 799.00
+</span>
+    </dd>
+    <div class="price__compare">
+      <dt>
+        <span class="visually-hidden visually-hidden--inline">Precio habitual</span>
+      </dt>
+      <dd>
+        <s class="price-item price-item--regular">
+          $ 999.00
+        </s>
+      </dd>
+    </div>
+  </div>
+  <div class="price__unit">
+    <dt>
+      <span class="visually-hidden visually-hidden--inline">Precio unitario</span>
+    </dt>
+    <dd class="price-unit-price"><span></span><span aria-hidden="true">/</span><span class="visually-hidden">por&nbsp;</span><span></span></dd>
+  </div>
+  <div class="price__badges price__badges--listing">
+    <span class="price__badge price__badge--sale" aria-hidden="true">
+      <span>Oferta</span>
+    </span>
+    <span class="price__badge price__badge--sold-out">
+      <span>Agotado</span>
+    </span>
+  </div>
+</dl>
+
+
+</div>
+
+      </li>
+    
+      <li class="grid__item grid__item--featured-collections small--one-half medium-up--one-quarter">
+        
+<div class="grid-view-item product-card">
+  <a class="grid-view-item__link grid-view-item__image-container full-width-link" href="/collections/no-te-expongas/products/gel-antibacterial-con-vitamina-5">
+    <span class="visually-hidden">6 Geles Antibacterial con vitamina E</span>
+  </a>
+
+  
+  
+
+    <style>#ProductCardImage-featured-collections-4677005443174 {
+    max-width: 250.0px;
+    max-height: 250px;
+  }
+
+  #ProductCardImageWrapper-featured-collections-4677005443174 {
+    max-width: 250.0px;
+  }
+</style>
+
+  
+
+  <div class="product-card__image-with-placeholder-wrapper" data-image-with-placeholder-wrapper>
+    <div id="ProductCardImageWrapper-featured-collections-4677005443174" class="grid-view-item__image-wrapper product-card__image-wrapper js">
+      <div style="padding-top:100.0%;">
+        <img id="ProductCardImage-featured-collections-4677005443174"
+              class="grid-view-item__image lazyload"
+              alt=""
+              data-src="//cdn.shopify.com/s/files/1/0022/5512/6630/products/0f64f63e-ae2b-44ab-9820-bf4797491cf9_2ea743b7-e399-43dd-8c36-f33a24a52e74_{width}x.jpg?v=1584594737"
+              data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+              data-aspectratio="1.0"
+              data-sizes="auto"
+              data-image>
+      </div>
+    </div>
+    <div class="placeholder-background placeholder-background--animation" data-image-placeholder></div>
+  </div>
+
+  <noscript>
+    
+    <img class="grid-view-item__image" src="//cdn.shopify.com/s/files/1/0022/5512/6630/products/0f64f63e-ae2b-44ab-9820-bf4797491cf9_2ea743b7-e399-43dd-8c36-f33a24a52e74_250x250@2x.jpg?v=1584594737" alt="" style="max-width: 250.0px;">
+  </noscript>
+
+  <div class="h4 grid-view-item__title product-card__title" aria-hidden="true">6 Geles Antibacterial con vitamina E</div>
+
+  
+<dl class="price price--listing"
+>
+  
+    <div class="price__vendor price__vendor--listing">
+      <dt>
+        <span class="visually-hidden">Proveedor</span>
+      </dt>
+      <dd>
+        Kit para coronavirus
+      </dd>
+    </div>
+  
+<div class="price__regular">
+    <dt>
+      <span class="visually-hidden visually-hidden--inline">Precio habitual</span>
+    </dt>
+    <dd>
+      <span class="price-item price-item--regular">$ 499.00
+</span>
+    </dd>
+  </div>
+  <div class="price__sale">
+    <dt>
+      <span class="visually-hidden visually-hidden--inline">Precio de venta</span>
+    </dt>
+    <dd>
+      <span class="price-item price-item--sale">$ 499.00
+</span>
+    </dd>
+    <div class="price__compare">
+      <dt>
+        <span class="visually-hidden visually-hidden--inline">Precio habitual</span>
+      </dt>
+      <dd>
+        <s class="price-item price-item--regular">
+          
+        </s>
+      </dd>
+    </div>
+  </div>
+  <div class="price__unit">
+    <dt>
+      <span class="visually-hidden visually-hidden--inline">Precio unitario</span>
+    </dt>
+    <dd class="price-unit-price"><span></span><span aria-hidden="true">/</span><span class="visually-hidden">por&nbsp;</span><span></span></dd>
+  </div>
+  <div class="price__badges price__badges--listing">
+    <span class="price__badge price__badge--sale" aria-hidden="true">
+      <span>Oferta</span>
+    </span>
+    <span class="price__badge price__badge--sold-out">
+      <span>Agotado</span>
+    </span>
+  </div>
+</dl>
+
+
+</div>
+
+      </li>
+    
+  </ul>
+
+  
+    <hr class="hr--invisible" aria-hidden="true" />
+    <div class="text-center">
+      <a href="/collections/no-te-expongas" class="btn" aria-label="Ver todos los productos de la colección No te expongas">
+        Ver todo
+      </a>
+    </div>
+  
+
 </div>
 
 
@@ -1071,32 +1262,115 @@ for (var attr in meta) {
 
     </main>
 
-    <div id="shopify-section-footer" class="shopify-section footer-section"><footer class="site-footer" role="contentinfo">
-  
-  
+    <div id="shopify-section-footer" class="shopify-section">
+<style>
+  .site-footer__hr {
+    border-bottom: 1px solid #dfdfdf;
+  }
 
-  <div class="grid text-center large-up--grid--table">
-    <div class="grid__item large-up--one-quarter text-center">
-      <ul class="list--inline social-icons social-icons--footer">
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-      </ul>
+  .site-footer p,
+  .site-footer__linklist-item a,
+  .site-footer__rte a,
+  .site-footer h4,
+  .site-footer small,
+  .site-footer__copyright-content a,
+  .site-footer__newsletter-error,
+  .site-footer__social-icons .social-icons__link {
+    color: #6d6d6d;
+  }
+
+  .site-footer {
+    color: #6d6d6d;
+    background-color: #f8f8f8;
+  }
+
+  .site-footer__rte a {
+    border-bottom: 1px solid #6d6d6d;
+  }
+
+  .site-footer__rte a:hover,
+  .site-footer__linklist-item a:hover,
+  .site-footer__copyright-content a:hover {
+    color: #535353;
+    border-bottom: 1px solid #535353;
+  }
+
+  .site-footer__social-icons .social-icons__link:hover {
+    color: #535353;
+  }
+</style><footer class="site-footer" role="contentinfo" data-section-id="footer" data-section-type="footer-section">
+  <div class="page-width">
+    <div class="site-footer__content"><div class="site-footer__item
+                    
+                    site-footer__item--one-quarter
+                    "
+             >
+          <div class="site-footer__item-inner site-footer__item-inner--link_list"><p class="h4">Enlaces rápidos</p><ul class="site-footer__linklist
+                            "><li class="site-footer__linklist-item">
+                        <a href="/search"
+                          
+                        >
+                          Búsqueda
+                        </a>
+                      </li></ul></div>
+        </div><div class="site-footer__item
+                    
+                    site-footer__item--one-quarter
+                    "
+             >
+          <div class="site-footer__item-inner site-footer__item-inner--text"><p class="h4">COVIDKIT</p></div>
+        </div><div class="site-footer__item
+                    
+                    site-footer__item--one-quarter
+                    site-footer-newsletter__one-half"
+             >
+          <div class="site-footer__item-inner site-footer__item-inner--newsletter"><p class="h4">Suscíbete</p><div class="site-footer__newsletter
+                          "><form method="post" action="/contact#ContactFooter" id="ContactFooter" accept-charset="UTF-8" class="contact-form" novalidate="novalidate"><input type="hidden" name="form_type" value="customer" /><input type="hidden" name="utf8" value="✓" />
+<input type="hidden" name="contact[tags]" value="newsletter">
+                    <div class="input-group ">
+                      <input type="email"
+                        name="contact[email]"
+                        id="ContactFooter-email"
+                        class="input-group__field newsletter__input"
+                        value=""
+                        placeholder="Dirección de correo electrónico"
+                        aria-label="Dirección de correo electrónico"
+                        aria-required="true"
+                        required
+                        autocorrect="off"
+                        autocapitalize="off"
+                        >
+                      <span class="input-group__btn">
+                        <button type="submit" class="btn newsletter__submit" name="commit" id="Subscribe">
+                          <span class="newsletter__submit-text--large">Suscribirse</span>
+                        </button>
+                      </span>
+                    </div>
+                    
+                  </form>
+                </div></div>
+        </div></div>
+  </div>
+
+  <hr class="site-footer__hr"><div class="page-width">
+    <div class="grid grid--no-gutters small--text-center grid--footer-float-right"><div class="grid__item small--hide one-half site-footer-item-center-vertically"><div class="grid__item site-footer__payment-icons">
+      <span class="visually-hidden">Métodos de pago</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"/><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"/><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"/><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"/><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"/></svg>
+          </li></ul>
+    </div></div><div class="grid__item one-half small--one-whole site-footer-item-tall"><div class="small--hide site-footer-item-align-right site-footer-item-center-vertically">
+            <small class="site-footer__copyright-content">&copy; 2020, <a href="/" title="">Kit para coronavirus</a></small>
+            <small class="site-footer__copyright-content site-footer__copyright-content-powered-by"><a target="_blank" rel="nofollow" href="http://es.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore">http://es.shopify.com</a></small>
+          </div></div><div class="grid__item medium-up--hide one-half small--one-whole"><div class="grid__item site-footer__payment-icons">
+      <span class="visually-hidden">Métodos de pago</span>
+      <ul class="payment-icons list--inline site-footer__icon-list"><li class="payment-icon">
+            <svg class="icon icon--full-color" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"/><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"/><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"/><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"/><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"/></svg>
+          </li></ul>
+    </div></div><div class="grid__item small--one-whole medium-up--hide site-footer-item-align-right">
+        <small class="site-footer__copyright-content">&copy; 2020, <a href="/" title="">Kit para coronavirus</a></small>
+        <small class="site-footer__copyright-content site-footer__copyright-content--powered-by"><a target="_blank" rel="nofollow" href="http://es.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore">http://es.shopify.com</a></small>
+      </div>
     </div>
-    <div class="grid__item large-up--one-half">
-      <span class="site-footer__copyright">&copy; 2020, <a href="/">Kit para coronavirus</a>. <a target="_blank" rel="nofollow" href="http://es.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore">http://es.shopify.com</a></span>
-    </div>
-    <div class="grid__item large-up--one-quarter text-center"><span class="visually-hidden">Métodos de pago</span>
-          <ul class="list--inline payment-icons payment-icons--footer"><li>
-                <svg class="payment-icons__icon" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"/><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"/><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"/><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"/><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"/></svg>
-              </li></ul></div>
   </div>
 </footer>
 
@@ -1105,10 +1379,10 @@ for (var attr in meta) {
 
 </div>
 
+    <div id="slideshow-info" class="visually-hidden" aria-hidden="true">Utiliza las flechas izquierda/derecha para navegar por la presentación o deslízate hacia la izquierda/derecha si usas un dispositivo móvil</div>
+
   </div>
 
-  
-  
   <ul hidden>
     <li id="a11y-refresh-page-message">Al seleccionar una opción se actualiza toda la página.</li>
     <li id="a11y-selection-message">Presiona la tecla de espacio y luego las teclas de flecha para seleccionar una opción.</li>

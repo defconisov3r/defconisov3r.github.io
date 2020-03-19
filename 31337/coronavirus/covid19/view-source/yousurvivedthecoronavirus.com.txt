@@ -1,27 +1,28 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
+
+  <!-- Basic page needs ================================================== -->
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#3a3a3a">
-  <link rel="canonical" href="https://yousurvivedthecoronavirus.com/password">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   
 
+  <!-- Title and description ================================================== -->
   <title>
-    I Survived The Corona Virus 2020 &ndash; Opening Soon
+  I Survived The Corona Virus 2020
   </title>
 
   
 
+  <!-- Helpers ================================================== -->
   <!-- /snippets/social-meta-tags.liquid -->
 
 
 
 
 <meta property="og:site_name" content="I Survived The Corona Virus 2020">
-<meta property="og:url" content="https://yousurvivedthecoronavirus.com">
+<meta property="og:url" content="https://yousurvivedthecoronavirus.com/">
 <meta property="og:title" content="I Survived The Corona Virus 2020">
 <meta property="og:type" content="website">
 <meta property="og:description" content="I Survived The Corona Virus 2020">
@@ -34,16 +35,44 @@
 <meta name="twitter:title" content="I Survived The Corona Virus 2020">
 <meta name="twitter:description" content="I Survived The Corona Virus 2020">
 
+  <link rel="canonical" href="https://yousurvivedthecoronavirus.com/">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="theme-color" content="#1f2021">
 
-  <link href="//cdn.shopify.com/s/files/1/0362/9668/7748/t/1/assets/theme.scss.css?v=11414180630579592287" rel="stylesheet" type="text/css" media="all" />
+  <!-- CSS ================================================== -->
+  <link href="//cdn.shopify.com/s/files/1/0362/9668/7748/t/3/assets/timber.scss.css?v=16226800542792929977" rel="stylesheet" type="text/css" media="all" />
+  <link href="//cdn.shopify.com/s/files/1/0362/9668/7748/t/3/assets/theme.scss.css?v=13332380951067983689" rel="stylesheet" type="text/css" media="all" />
 
+  <!-- Sections ================================================== -->
+  <script>
+    window.theme = window.theme || {};
+    theme.strings = {
+      zoomClose: "Close (Esc)",
+      zoomPrev: "Previous (Left arrow key)",
+      zoomNext: "Next (Right arrow key)",
+      moneyFormat: "${{amount}}",
+      addressError: "Error looking up that address",
+      addressNoResults: "No results for that address",
+      addressQueryLimit: "You have exceeded the Google API usage limit. Consider upgrading to a \u003ca href=\"https:\/\/developers.google.com\/maps\/premium\/usage-limits\"\u003ePremium Plan\u003c\/a\u003e.",
+      authError: "There was a problem authenticating your Google Maps account.",
+      cartEmpty: "Your cart is currently empty.",
+      cartCookie: "Enable cookies to use the shopping cart",
+      cartSavings: "You're saving [savings]",
+      productSlideLabel: "Slide [slide_number] of [slide_max]."
+    };
+    theme.settings = {
+      cartType: "page",
+      gridType: null
+    };
+  </script>
 
-  <script src="//cdn.shopify.com/s/files/1/0362/9668/7748/t/1/assets/vendor.js?v=8583346420283214553" defer="defer"></script>
+  <script src="//cdn.shopify.com/s/files/1/0362/9668/7748/t/3/assets/jquery-2.2.3.min.js?v=5821186314690718683" type="text/javascript"></script>
 
-  <script src="//cdn.shopify.com/s/files/1/0362/9668/7748/t/1/assets/theme.js?v=11958825300028725633" defer="defer"></script>
+  <script src="//cdn.shopify.com/s/files/1/0362/9668/7748/t/3/assets/lazysizes.min.js?v=15522312340271661705" async="async"></script>
 
-  <script src="//cdn.shopify.com/s/files/1/0362/9668/7748/t/1/assets/password.js?v=16754382210079724339" defer="defer"></script>
+  <script src="//cdn.shopify.com/s/files/1/0362/9668/7748/t/3/assets/theme.js?v=8337823781073982307" defer="defer"></script>
 
+  <!-- Header hook for plugins ================================================== -->
   <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/36296687748/digital_wallets/dialog">
 <meta name="shopify-checkout-api-token" content="8569bac8918aa05ccf8a4bff2708ea8c">
 <meta id="in-context-paypal-metadata" data-shop-id="36296687748" data-venmo-supported="true" data-environment="production" data-locale="en_US" data-paypal-v4="true" data-currency="USD">
@@ -52,10 +81,12 @@
 <style media="all">.additional-checkout-button{border:0 !important;border-radius:5px !important;display:inline-block;margin:0 0 10px;padding:0 24px !important;max-width:100%;min-width:150px !important;line-height:44px !important;text-align:center !important}.additional-checkout-button+.additional-checkout-button{margin-left:10px}.additional-checkout-button:last-child{margin-bottom:0}.additional-checkout-button span{font-size:14px !important}.additional-checkout-button img{display:inline-block !important;height:1.3em !important;margin:0 !important;vertical-align:middle !important;width:auto !important}@media (max-width: 500px){.additional-checkout-button{display:block;margin-left:0 !important;padding:0 10px !important;width:100%}}.additional-checkout-button--apple-pay{background-color:#000 !important;color:#fff !important;display:none;font-family:-apple-system, Helvetica Neue, sans-serif !important;min-width:150px !important;white-space:nowrap !important}.additional-checkout-button--apple-pay:hover,.additional-checkout-button--apple-pay:active,.additional-checkout-button--apple-pay:visited{color:#fff !important;text-decoration:none !important}.additional-checkout-button--apple-pay .additional-checkout-button__logo{background:-webkit-named-image(apple-pay-logo-white) center center no-repeat !important;background-size:auto 100% !important;display:inline-block !important;vertical-align:middle !important;width:3em !important;height:1.3em !important}@media (max-width: 500px){.additional-checkout-button--apple-pay{display:none}}.additional-checkout-button--google-pay{line-height:0 !important;padding:0 !important;border-radius:unset !important;width:80px !important}@media (max-width: 500px){.additional-checkout-button--google-pay{width:100% !important}}.gpay-iframe{height:44px !important;width:100%  !important;cursor:pointer;vertical-align:middle !important}.additional-checkout-button--paypal-express{background-color:#ffc439 !important}.additional-checkout-button--paypal,.additional-checkout-button--venmo{vertical-align:top;line-height:0 !important;padding:0 !important}.additional-checkout-button--amazon{background-color:#fad676 !important;position:relative !important}.additional-checkout-button--amazon .additional-checkout-button__logo{-webkit-transform:translateY(4px) !important;transform:translateY(4px) !important}.additional-checkout-button--amazon .alt-payment-list-amazon-button-image{max-height:none !important;opacity:0 !important;position:absolute !important;top:0 !important;left:0 !important;width:100% !important;height:100% !important}.additional-checkout-button-visually-hidden{border:0 !important;clip:rect(0, 0, 0, 0) !important;clip:rect(0 0 0 0) !important;width:1px !important;height:1px !important;margin:-2px !important;overflow:hidden !important;padding:0 !important;position:absolute !important}
 </style>
 <script id="apple-pay-shop-capabilities" type="application/json">{"shopId":36296687748,"countryCode":"US","currencyCode":"USD","merchantCapabilities":["supports3DS"],"merchantId":"gid:\/\/shopify\/Shop\/36296687748","merchantName":"I Survived The Corona Virus 2020","requiredBillingContactFields":["postalAddress","email"],"requiredShippingContactFields":["postalAddress","email"],"shippingType":"shipping","supportedNetworks":["visa","masterCard","amex","discover"],"total":{"type":"pending","label":"I Survived The Corona Virus 2020","amount":"1.00"}}</script>
+<script id="shopify-features" type="application/json">{"accessToken":"8569bac8918aa05ccf8a4bff2708ea8c","betas":["rich-media-storefront-analytics"],"domain":"yousurvivedthecoronavirus.com","predictiveSearch":true,"shopId":36296687748,"smart_payment_buttons_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/spb.en.js","dynamic_checkout_cart_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/dynamic-checkout-cart.en.js","locale":"en"}</script>
 <script>var Shopify = Shopify || {};
 Shopify.shop = "i-survived-the-corona-virus-2020.myshopify.com";
+Shopify.locale = "en";
 Shopify.currency = {"active":"USD","rate":"1.0"};
-Shopify.theme = {"name":"Debut","id":92166422660,"theme_store_id":796,"role":"main"};
+Shopify.theme = {"name":"Brooklyn","id":92186673284,"theme_store_id":730,"role":"main"};
 Shopify.theme.handle = "null";
 Shopify.theme.style = {"id":null,"handle":null};</script>
 <script type="module">!function(o){(o.Shopify=o.Shopify||{}).modules=!0}(window);</script>
@@ -80,12 +111,12 @@ window.ShopifyPay.apiHost = "pay.shopify.com";</script>
     window.addEventListener('load', asyncLoad, false);
   }
 })();</script>
-<script id="__st">var __st={"a":36296687748,"offset":-18000,"reqid":"44f43bed-3c43-4dbd-868c-e561172083af","pageurl":"yousurvivedthecoronavirus.com\/password","u":"4b763f6ac544","p":"password"};</script>
+<script id="__st">var __st={"a":36296687748,"offset":-18000,"reqid":"85bcc957-4dc2-40b1-993b-92ca8460c059","pageurl":"yousurvivedthecoronavirus.com\/","u":"afdcdb5f211e","p":"home"};</script>
 <script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
 <script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};
 window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
 window.ShopifyAnalytics.meta.currency = 'USD';
-var meta = {"page":{"pageType":"password"}};
+var meta = {"page":{"pageType":"home"}};
 for (var attr in meta) {
   window.ShopifyAnalytics.meta[attr] = meta[attr];
 }</script>
@@ -160,7 +191,7 @@ for (var attr in meta) {
     first.parentNode.insertBefore(script, first);
   };
   trekkie.load(
-    {"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":36296687748,"isMerchantRequest":null,"themeId":92166422660,"themeCityHash":"4098962055612816211","contentLanguage":"en","currency":"USD"}},"Performance":{"navigationTimingApiMeasurementsEnabled":true,"navigationTimingApiMeasurementsSampleRate":1},"Session Attribution":{}}
+    {"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":36296687748,"isMerchantRequest":null,"themeId":92186673284,"themeCityHash":"10109257386283545023","contentLanguage":"en","currency":"USD"}},"Performance":{"navigationTimingApiMeasurementsEnabled":true,"navigationTimingApiMeasurementsSampleRate":1},"Facebook Pixel":{"pixelIds":["2137744053186948"],"agent":"plshopify1.2"},"Session Attribution":{}}
   );
 
   var loaded = false;
@@ -185,7 +216,7 @@ for (var attr in meta) {
         window.BOOMR.snippetVersion = 12;
         window.BOOMR.application = "core";
         window.BOOMR.shopId = 36296687748;
-        window.BOOMR.themeId = 92166422660;
+        window.BOOMR.themeId = 92186673284;
         window.BOOMR.url =
           "https://cdn.shopify.com/shopifycloud/boomerang/shopify-boomerang-1.0.0.min.js";
         var where = document.currentScript || document.getElementsByTagName("script")[0];
@@ -313,7 +344,7 @@ for (var attr in meta) {
       
         window.ShopifyAnalytics.lib.page(
           null,
-          {"pageType":"password"}
+          {"pageType":"home"}
         );
       
       
@@ -329,8 +360,75 @@ for (var attr in meta) {
 })();</script>
 <script integrity="sha256-4C8Xn08nwqM3O49DRPPchMb3B3xQ7b00VkDrQItpRW4=" crossorigin="anonymous" data-source-attribution="shopify.loadfeatures" defer="defer" src="//cdn.shopify.com/s/assets/storefront/load_feature-e02f179f4f27c2a3373b8f4344f3dc84c6f7077c50edbd345640eb408b69456e.js"></script>
 <script crossorigin="anonymous" defer="defer" src="//cdn.shopify.com/s/assets/shopify_pay/storefront-f95c62afca18778ed8677facd32818c864b5e4938cba1769e8d8ba0b541d41dc.js?v=20190107"></script>
+<script integrity="sha256-EYppj7RbseKnaugbP4EJXR4sMs7TPdTpPmQ3i163eNA=" data-source-attribution="shopify.dynamic-checkout" defer="defer" src="//cdn.shopify.com/s/assets/storefront/features-118a698fb45bb1e2a76ae81b3f81095d1e2c32ced33dd4e93e64378b5eb778d0.js" crossorigin="anonymous"></script>
 
+<style id="shopify-dynamic-checkout">.shopify-payment-button__button--hidden {
+  visibility: hidden;
+}
 
+.shopify-payment-button__button {
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 0 0 0 transparent;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  width: 100%;
+  transition: background 0.2s ease-in-out;
+}
+
+.shopify-payment-button__button[disabled] {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.shopify-payment-button__button--unbranded {
+  background-color: #1990c6;
+  padding: 1em 2em;
+}
+
+.shopify-payment-button__button--unbranded:hover:not([disabled]) {
+  background-color: #136f99;
+}
+
+.shopify-payment-button__more-options {
+  background: transparent;
+  border: 0 none;
+  cursor: pointer;
+  display: block;
+  font-size: 1em;
+  margin-top: 1em;
+  text-align: center;
+  width: 100%;
+}
+
+.shopify-payment-button__more-options:hover:not([disabled]) {
+  text-decoration: underline;
+}
+
+.shopify-payment-button__more-options[disabled] {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.shopify-payment-button__button--branded {
+  display: flex;
+  flex-direction: column;
+  min-height: 44px;
+  position: relative;
+  z-index: 1;
+}
+
+.shopify-payment-button__button--branded .shopify-cleanslate {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+</style>
 <style id="shopify-dynamic-checkout-cart">@media screen and (min-width: 750px) {
   #dynamic-checkout-cart {
     min-height: 50px;
@@ -343,178 +441,1435 @@ for (var attr in meta) {
   }
 }
 </style><script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
+
+  <script src="//cdn.shopify.com/s/files/1/0362/9668/7748/t/3/assets/modernizr.min.js?v=2139105474820643245" type="text/javascript"></script>
+
+  
+  
+
 </head>
 
-<body class="template-password">
-  <div class="password-page">
-    <header class="password-header" role="banner">
-      <div class="password-header__inner">
-        <div class="password-login">
-          <a href="#LoginModal" class="js-modal-open-login-modal link--action btn btn--secondary" aria-haspopup="dialog">
-            Enter using password <span aria-hidden="true">&rarr;</span>
-          </a>
-        </div>
-      </div>
-    </header>
 
-    <div class="password-main" role="main">
-      <div class="password-main__inner">
+<body id="i-survived-the-corona-virus-2020" class="template-index">
+
+  <div id="shopify-section-header" class="shopify-section"><style data-shopify>.header-wrapper.header-wrapper--transparent .site-nav__link,
+    .header-wrapper.header-wrapper--transparent .site-header__logo a {
+      color: #ffffff;
+    }
+
+    .header-wrapper.header-wrapper--transparent .site-header__logo a:hover,
+    .header-wrapper.header-wrapper--transparent .site-nav__link:hover,
+    .header-wrapper.header-wrapper--transparent .site-nav__link:focus,
+    .header-wrapper.header-wrapper--transparent .site-header__logo a:focus {
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .header-wrapper.header-wrapper--transparent .site-nav--has-dropdown.nav-hover > .site-nav__link {
+      color: #000000;
+    }
+
+    .header-wrapper.header-wrapper--transparent .burger-icon,
+    .header-wrapper.header-wrapper--transparent .site-nav__link:hover .burger-icon {
+      background: #ffffff;
+    }.header-wrapper .site-nav__link,
+  .header-wrapper .site-header__logo a,
+  .header-wrapper .site-nav__dropdown-link,
+  .header-wrapper .site-nav--has-dropdown > a.nav-focus,
+  .header-wrapper .site-nav--has-dropdown.nav-hover > a,
+  .header-wrapper .site-nav--has-dropdown:hover > a {
+    color: #000000;
+  }
+
+  .header-wrapper .site-header__logo a:hover,
+  .header-wrapper .site-header__logo a:focus,
+  .header-wrapper .site-nav__link:hover,
+  .header-wrapper .site-nav__link:focus,
+  .header-wrapper .site-nav--has-dropdown a:hover,
+  .header-wrapper .site-nav--has-dropdown > a.nav-focus:hover,
+  .header-wrapper .site-nav--has-dropdown > a.nav-focus:focus,
+  .header-wrapper .site-nav--has-dropdown .site-nav__link:hover,
+  .header-wrapper .site-nav--has-dropdown .site-nav__link:focus,
+  .header-wrapper .site-nav--has-dropdown.nav-hover > a:hover,
+  .header-wrapper .site-nav__dropdown a:focus {
+    color: rgba(0, 0, 0, 0.75);
+  }
+
+  .header-wrapper .burger-icon,
+  .header-wrapper .site-nav--has-dropdown:hover > a:before,
+  .header-wrapper .site-nav--has-dropdown > a.nav-focus:before,
+  .header-wrapper .site-nav--has-dropdown.nav-hover > a:before {
+    background: #000000;
+  }
+
+  .header-wrapper .site-nav__link:hover .burger-icon {
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  .site-header__logo img {
+    max-width: 180px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .site-header__logo img {
+      max-width: 100%;
+    }
+  }</style><div data-section-id="header" data-section-type="header-section" data-template="index">
+  <div id="NavDrawer" class="drawer drawer--left">
+      <div class="drawer__inner drawer-left__inner">
+
+    
+
+    <ul class="mobile-nav">
+      
         
 
-
-
-<div id="shopify-section-password-header" class="shopify-section"><div class="password-content">
-  
-    <h1 class="site-header__logo-link">
-      <span class="logo">I Survived The Corona Virus 2020</span>
-    </h1>
-  
-
-  <span class="h2 password-content__title">Coming Soon</span>
-</div>
-
-
-
-</div>
-<div id="shopify-section-password-content" class="shopify-section">
-<div class="password-content">
-  
-</div>
-
-
-  <div class="password-content password-content--rte">
-    <p class="h4">
-      Be the first to know when we launch.
-    </p>
-    
-      <div class="password__form-subheading rte"><p>A short sentence describing what someone will receive by subscribing</p></div>
-    
-  </div>
-  <form method="post" action="/contact#ContactPassword" id="ContactPassword" accept-charset="UTF-8" class="contact-form form-single-field"><input type="hidden" name="form_type" value="customer" /><input type="hidden" name="utf8" value="✓" />
-<input type="hidden" name="contact[tags]" value="prospect, password page">
-    <label for="PasswordNewsletterForm-email" class="label--hidden">Email</label><div class="input-group">
-        <input
-          type="email"
-          name="contact[email]"
-          id="PasswordNewsletterForm-email"
-          class="input-group__field "
-          placeholder="Email address">
-      <span class="input-group__btn">
-        <button type="submit" name="commit" class="btn">
-          <span>Notify me</span>
-        </button>
-      </span>
-    </div></form>
-
-
-
-
-
-</div>
-<div id="shopify-section-password-footer" class="shopify-section"><div class="password-content">
-  
-    <div class="password-social-sharing">
-      <p class="password__form-heading h4">Spread the word</p>
-      <!-- /snippets/social-sharing.liquid -->
-<ul class="social-sharing">
-
-  
-    <li>
-      <a target="_blank" href="//www.facebook.com/sharer.php?u=https://yousurvivedthecoronavirus.com" class="btn btn--small btn--share share-facebook">
-        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-facebook" viewBox="0 0 20 20"><path fill="#444" d="M18.05.811q.439 0 .744.305t.305.744v16.637q0 .439-.305.744t-.744.305h-4.732v-7.221h2.415l.342-2.854h-2.757v-1.83q0-.659.293-1t1.073-.342h1.488V3.762q-.976-.098-2.171-.098-1.634 0-2.635.964t-1 2.72V9.47H7.951v2.854h2.415v7.221H1.413q-.439 0-.744-.305t-.305-.744V1.859q0-.439.305-.744T1.413.81H18.05z"/></svg>
-        <span class="share-title" aria-hidden="true">Share</span>
-        <span class="visually-hidden">Share on Facebook</span>
-      </a>
-    </li>
-  
-
-  
-    <li>
-      <a target="_blank" href="//twitter.com/share?text=&amp;url=https://yousurvivedthecoronavirus.com" class="btn btn--small btn--share share-twitter">
-        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-twitter" viewBox="0 0 20 20"><path fill="#444" d="M19.551 4.208q-.815 1.202-1.956 2.038 0 .082.02.255t.02.255q0 1.589-.469 3.179t-1.426 3.036-2.272 2.567-3.158 1.793-3.963.672q-3.301 0-6.031-1.773.571.041.937.041 2.751 0 4.911-1.671-1.284-.02-2.292-.784T2.456 11.85q.346.082.754.082.55 0 1.039-.163-1.365-.285-2.262-1.365T1.09 7.918v-.041q.774.408 1.773.448-.795-.53-1.263-1.396t-.469-1.864q0-1.019.509-1.997 1.487 1.854 3.596 2.924T9.81 7.184q-.143-.509-.143-.897 0-1.63 1.161-2.781t2.832-1.151q.815 0 1.569.326t1.284.917q1.345-.265 2.506-.958-.428 1.386-1.732 2.18 1.243-.163 2.262-.611z"/></svg>
-        <span class="share-title" aria-hidden="true">Tweet</span>
-        <span class="visually-hidden">Tweet on Twitter</span>
-      </a>
-    </li>
-  
-
-  
-    <li>
-      <a target="_blank" href="//pinterest.com/pin/create/button/?url=https://yousurvivedthecoronavirus.com&amp;media=//cdn.shopify.com/s/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_1024x1024.gif&amp;description=" class="btn btn--small btn--share share-pinterest">
-        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-pinterest" viewBox="0 0 20 20"><path fill="#444" d="M9.958.811q1.903 0 3.635.744t2.988 2 2 2.988.744 3.635q0 2.537-1.256 4.696t-3.415 3.415-4.696 1.256q-1.39 0-2.659-.366.707-1.147.951-2.025l.659-2.561q.244.463.903.817t1.39.354q1.464 0 2.622-.842t1.793-2.305.634-3.293q0-2.171-1.671-3.769t-4.257-1.598q-1.586 0-2.903.537T5.298 5.897 4.066 7.775t-.427 2.037q0 1.268.476 2.22t1.427 1.342q.171.073.293.012t.171-.232q.171-.61.195-.756.098-.268-.122-.512-.634-.707-.634-1.83 0-1.854 1.281-3.183t3.354-1.329q1.83 0 2.854 1t1.025 2.61q0 1.342-.366 2.476t-1.049 1.817-1.561.683q-.732 0-1.195-.537t-.293-1.269q.098-.342.256-.878t.268-.915.207-.817.098-.732q0-.61-.317-1t-.927-.39q-.756 0-1.269.695t-.512 1.744q0 .39.061.756t.134.537l.073.171q-1 4.342-1.22 5.098-.195.927-.146 2.171-2.513-1.122-4.062-3.44T.59 10.177q0-3.879 2.744-6.623T9.957.81z"/></svg>
-        <span class="share-title" aria-hidden="true">Pin it</span>
-        <span class="visually-hidden">Pin on Pinterest</span>
-      </a>
-    </li>
-  
-
-</ul>
-
-    </div>
-  
-
-  <div class="password-powered-by">
-    
-
-    <small>This shop will be powered by 
-      <a class="classic-link shopify-link" href="//www.shopify.com" rel="nofollow" target="_blank" title="Create your own online store with Shopify">Shopify</a>
-    </small>
-  </div>
-</div>
-
-
-
-</div>
-
-      </div>
-    </div>
-  </div>
-
-  <div id="LoginModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="password-modal-heading">
-    <button type="button" class="modal__close js-modal-close text-link">
-      <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 40 40"><path d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z" class="layer"/></svg>
-      <span class="icon__fallback-text">"Close"</span>
-    </button>
-    <div class="modal__inner">
-      <div class="modal__centered password-modal__content page-width">
-        <div class="password-content">
-          <h2 class="password__form-heading h4" id="password-modal-heading">
-            Enter store using password
-          </h2>
-        </div>
-
-        <form method="post" action="/password" id="login_form" accept-charset="UTF-8" class="form-single-field"><input type="hidden" name="form_type" value="storefront_password" /><input type="hidden" name="utf8" value="✓" />
-<div class="input-group ">
-            <label id="PasswordLabel" for="Password" class="label--hidden">Password</label>
-            <input type="password" name="password"
-              id="Password"
-              class="input-group__field input--content-color "
-              placeholder="Your password"
-              data-login-field
-              autocomplete="off"
-              aria-labelledby="PasswordLabel "
+          <li class="mobile-nav__item">
+            <a
+              href="/"
+              class="mobile-nav__link"
               >
-            <span class="input-group__btn">
-              <button type="submit" name="commit" class="btn btn--narrow">
-                Enter
-              </button>
-            </span>
-          </div></form>
-        <p class="password-content">Are you the store owner? <a href="/admin" class="text-link">Log in here</a></p>
+                Home
+            </a>
+          </li>
+
+        
+      
+        
+
+          <li class="mobile-nav__item">
+            <a
+              href="/collections/all"
+              class="mobile-nav__link"
+              >
+                Catalog
+            </a>
+          </li>
+
+        
+      
+      
+      <li class="mobile-nav__spacer"></li>
+
+      
+      
+      
+        <li class="mobile-nav__item mobile-nav__item--secondary"><a href="/search">Search</a></li>
+      
+        <li class="mobile-nav__item mobile-nav__item--secondary"><a href="/pages/refund-policy">Refund Policy</a></li>
+      
+        <li class="mobile-nav__item mobile-nav__item--secondary"><a href="/pages/terms-of-service">Terms of Service</a></li>
+      
+        <li class="mobile-nav__item mobile-nav__item--secondary"><a href="/pages/privacy-policy">Privacy Policy</a></li>
+      
+    </ul>
+    <!-- //mobile-nav -->
+  </div>
+
+
+  </div>
+  <div class="header-container drawer__header-container">
+    <div class="header-wrapper" data-header-wrapper>
+      
+        
+          <style>
+            .announcement-bar {
+              background-color: #1c1d1d;
+            }
+
+            .announcement-bar--link:hover {
+              
+
+              
+                
+                background-color: #404242;
+              
+            }
+
+            .announcement-bar__message {
+              color: #ffffff;
+            }
+          </style>
+
+          
+            <div class="announcement-bar">
+          
+
+            <p class="announcement-bar__message">Free Shipping Store-Wide Until March 30th</p>
+
+          
+            </div>
+          
+
+        
+      
+
+      <header class="site-header" role="banner" data-transparent-header="true">
+        <div class="wrapper">
+          <div class="grid--full grid--table">
+            <div class="grid__item large--hide large--one-sixth one-quarter">
+              <div class="site-nav--open site-nav--mobile">
+                <button type="button" class="icon-fallback-text site-nav__link site-nav__link--burger js-drawer-open-button-left" aria-controls="NavDrawer">
+                  <span class="burger-icon burger-icon--top"></span>
+                  <span class="burger-icon burger-icon--mid"></span>
+                  <span class="burger-icon burger-icon--bottom"></span>
+                  <span class="fallback-text">Site navigation</span>
+                </button>
+              </div>
+            </div>
+            <div class="grid__item large--one-third medium-down--one-half">
+              
+              
+                <h1 class="site-header__logo large--left" itemscope itemtype="http://schema.org/Organization">
+              
+                
+
+                <a href="/" itemprop="url" class="site-header__logo-link">
+                  
+                    I Survived The Corona Virus 2020
+                  
+                </a>
+              
+                </h1>
+              
+            </div>
+            <nav class="grid__item large--two-thirds large--text-right medium-down--hide" role="navigation">
+              
+              <!-- begin site-nav -->
+              <ul class="site-nav" id="AccessibleNav">
+                
+                  
+                    <li class="site-nav__item site-nav--active">
+                      <a
+                        href="/"
+                        class="site-nav__link"
+                        data-meganav-type="child"
+                        >
+                          Home
+                      </a>
+                    </li>
+                  
+                
+                  
+                    <li class="site-nav__item">
+                      <a
+                        href="/collections/all"
+                        class="site-nav__link"
+                        data-meganav-type="child"
+                        >
+                          Catalog
+                      </a>
+                    </li>
+                  
+                
+
+                
+                
+
+                
+                  
+                  
+                  <li class="site-nav__item site-nav__item--compressed">
+                    <a href="/search" class="site-nav__link site-nav__link--icon js-toggle-search-modal" data-mfp-src="#SearchModal">
+                      <span class="icon-fallback-text">
+                        <span class="icon icon-search" aria-hidden="true"></span>
+                        <span class="fallback-text">Search</span>
+                      </span>
+                    </a>
+                  </li>
+                
+
+                <li class="site-nav__item site-nav__item--compressed">
+                  <a href="/cart" class="site-nav__link site-nav__link--icon cart-link js-drawer-open-button-right" aria-controls="CartDrawer">
+                    <span class="icon-fallback-text">
+                      <span class="icon icon-cart" aria-hidden="true"></span>
+                      <span class="fallback-text">Cart</span>
+                    </span>
+                    <span class="cart-link__bubble"></span>
+                  </a>
+                </li>
+
+              </ul>
+              <!-- //site-nav -->
+            </nav>
+            <div class="grid__item large--hide one-quarter">
+              <div class="site-nav--mobile text-right">
+                <a href="/cart" class="site-nav__link cart-link js-drawer-open-button-right" aria-controls="CartDrawer">
+                  <span class="icon-fallback-text">
+                    <span class="icon icon-cart" aria-hidden="true"></span>
+                    <span class="fallback-text">Cart</span>
+                  </span>
+                  <span class="cart-link__bubble"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </header>
+    </div>
+  </div>
+</div>
+
+
+
+
+</div>
+
+  <div id="CartDrawer" class="drawer drawer--right drawer--has-fixed-footer">
+    <div class="drawer__fixed-header">
+      <div class="drawer__header">
+        <div class="drawer__title">Your cart</div>
+        <div class="drawer__close">
+          <button type="button" class="icon-fallback-text drawer__close-button js-drawer-close">
+            <span class="icon icon-x" aria-hidden="true"></span>
+            <span class="fallback-text">Close Cart</span>
+          </button>
+        </div>
       </div>
+    </div>
+    <div class="drawer__inner">
+      <div id="CartContainer" class="drawer__cart"></div>
     </div>
   </div>
 
-  <script>
-    var theme = {
-      strings: {
-        addressError: "Error looking up that address",
-        addressNoResults: "No results for that address",
-        addressQueryLimit: "You have exceeded the Google API usage limit. Consider upgrading to a \u003ca href=\"https:\/\/developers.google.com\/maps\/premium\/usage-limits\"\u003ePremium Plan\u003c\/a\u003e.",
-        authError: "There was a problem authenticating your Google Maps account."
+  <div id="PageContainer" class="page-container">
+    <main class="main-content" role="main">
+      
+        <!-- /templates/index.liquid -->
+
+<div class="index-sections" data-sections-wrapper>
+  <!-- BEGIN content_for_index --><div id="shopify-section-slideshow" class="shopify-section index-section index-slideshow-section shopify-section--full-width"><div id="HeroWrapper-slideshow" data-section-id="slideshow" data-section-type="slideshow-section"><div class="hero-slideshow hero"
+         id="Hero-slideshow"
+         aria-label="slideshow"
+         aria-describedby="a11y-slideshow-info"
+         tabindex="-1"
+         role="region"
+         data-autoplay="false"
+         data-autoplayspeed="5000"
+         data-adapt="false"
+         data-slide-nav-a11y="Load slide [slide_number]"
+         data-slide-nav-active-a11y="Slide [slide_number], current"
+         data-slide-index="0"><style data-shopify>#HeroWrapper-slideshow .hero--color-0 .hero__pause,
+          #HeroWrapper-slideshow .hero--color-0 .hero__pause .icon:before,
+          #HeroWrapper-slideshow .hero--color-0 .slick-prev .icon:before,
+          #HeroWrapper-slideshow .hero--color-0 .slick-next .icon:before,
+          #HeroWrapper-slideshow .hero--color-0 .slide--slideshow-0 {
+            color: #ffffff;
+          }
+          #HeroWrapper-slideshow .hero--color-0 .slick-dots li a:before {
+            background: transparent;
+            border-color: #ffffff;
+          }
+          #HeroWrapper-slideshow .hero--color-0 li.slick-active a:before {
+            background: #ffffff;
+            border-color: transparent;
+          }
+          #HeroWrapper-slideshow .hero--color-0 .hero__pause .icon {
+            fill: #ffffff;
+          }
+          #HeroWrapper-slideshow .slide--slideshow-0 .hero__text-wrap {
+            text-align: center
+          }</style><style data-shopify>.slide--slideshow-0 .slideshow__overlay:before {background-image: linear-gradient(to bottom,
+                                                rgba(0, 0, 0, 0.72),
+                                                rgba(0, 0, 0, 0.72) calc(100% - 150px),
+                                                rgba(0, 0, 0, 0.85) calc(100% - 60px),
+                                                rgba(0, 0, 0, 0.97));
+            }</style><div class="hero__slide slide--slideshow-0"
+              data-hero-slide
+              ><noscript><div class="hero__image-no-js" style="background-image: url('//cdn.shopify.com/s/files/1/0362/9668/7748/files/four-way-fist-bump-at-work_1_2048x.jpg?v=1584473142');"></div></noscript><img class="hero__image hero__image--slideshow-0 lazyload fade-in"src="//cdn.shopify.com/s/files/1/0362/9668/7748/files/four-way-fist-bump-at-work_1_300x.jpg?v=1584473142"data-src="//cdn.shopify.com/s/files/1/0362/9668/7748/files/four-way-fist-bump-at-work_1_{width}x.jpg?v=1584473142"
+              data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048, 4472]"
+              data-aspectratio="1.4996637525218561"
+              data-sizes="auto"
+              data-parent-fit="cover"
+              data-hero-image
+              alt=""
+              style="object-position: center center"><div class="hero__text-wrap slideshow__overlay">
+            <div class="hero__text-align wrapper">
+              <div class="hero__text-content" data-hero-text-content><p class="hero__subtitle">
+                    Ending the Corona Virus
+                  </p><h2 class="hero__title h1">
+                    As a Team
+                  </h2><a href="/products/short-sleeve-unisex-t-shirt" style="color: #ffffff; background-color: #1f2021" class="btn hero__cta">
+                    Shop now
+                  </a></div>
+            </div>
+          </div>
+        </div><style data-shopify>#HeroWrapper-slideshow .hero--color-1 .hero__pause,
+          #HeroWrapper-slideshow .hero--color-1 .hero__pause .icon:before,
+          #HeroWrapper-slideshow .hero--color-1 .slick-prev .icon:before,
+          #HeroWrapper-slideshow .hero--color-1 .slick-next .icon:before,
+          #HeroWrapper-slideshow .hero--color-1 .slide--slideshow-1 {
+            color: #ffffff;
+          }
+          #HeroWrapper-slideshow .hero--color-1 .slick-dots li a:before {
+            background: transparent;
+            border-color: #ffffff;
+          }
+          #HeroWrapper-slideshow .hero--color-1 li.slick-active a:before {
+            background: #ffffff;
+            border-color: transparent;
+          }
+          #HeroWrapper-slideshow .hero--color-1 .hero__pause .icon {
+            fill: #ffffff;
+          }
+          #HeroWrapper-slideshow .slide--slideshow-1 .hero__text-wrap {
+            text-align: center
+          }</style><style data-shopify>.slide--slideshow-1 .slideshow__overlay:before {background-image: linear-gradient(to bottom,
+                                                rgba(0, 0, 0, 0.73),
+                                                rgba(0, 0, 0, 0.73) calc(100% - 150px),
+                                                rgba(0, 0, 0, 0.86) calc(100% - 60px),
+                                                rgba(0, 0, 0, 0.98));
+            }</style><div class="hero__slide slide--slideshow-1"
+              data-hero-slide
+              ><noscript></noscript><img class="hero__image hero__image--slideshow-1 lazyload fade-in lazypreload"data-src="//cdn.shopify.com/s/files/1/0362/9668/7748/files/hand-washing-in-the-kitchen_2_{width}x.jpg?v=1584473371"
+              data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048, 4472]"
+              data-aspectratio="1.4996637525218561"
+              data-sizes="auto"
+              data-parent-fit="cover"
+              data-hero-image
+              alt=""
+              style="object-position: center center"><div class="hero__text-wrap slideshow__overlay">
+            <div class="hero__text-align wrapper">
+              <div class="hero__text-content" data-hero-text-content><p class="hero__subtitle">
+                    Learn how you can
+                  </p><h2 class="hero__title h1">
+                    Stay Safe
+                  </h2><a href="/blogs/updates-on-the-coronavirus" style="color: #ffffff; background-color: #1f2021" class="btn hero__cta">
+                    Read Now
+                  </a></div>
+            </div>
+          </div>
+        </div><div class="hero__controls wrapper"><ul>
+            <li>
+              <button class="slick-prev" aria-label="Previous slide" data-slide-previous>
+                <span class="icon icon-slide-prev" aria-hidden="true"></span>
+              </button>
+            </li>
+            <li>
+              <button class="slick-next" aria-label="Next slide" data-slide-next>
+                <span class="icon icon-slide-next" aria-hidden="true"></span>
+              </button>
+            </li>
+          </ul>
+          <div class="hero__dots-wrapper" data-hero-dots-wrapper></div>
+        </div></div></div>
+
+
+</div><div id="shopify-section-featured-content" class="shopify-section index-section rich-text-section"><div data-section-id="featured-content" data-section-type="featured-content-section">
+  <div class="rich-text wrapper">
+    <div class="grid">
+      <div class="grid__item text-center large--two-thirds medium--two-thirds push--large--one-sixth push--medium--one-sixth">
+        
+          <div class="section-header">
+            <h2 class="rich-text__heading--large section-header__title h1">Stay Healthy!</h2>
+          </div>
+        
+        
+          <div class="rte rich-text__text--large">
+            <p>Practicing basic hand hygiene, and maintaining a strong immune system can go a long way in preventing the spread of the Corona Virus!</p>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+</div><div id="shopify-section-featured-collections" class="shopify-section"><div data-section-id="featured-collections" data-section-type="featured-collections-section">
+  <div class="wrapper">
+    
+      <div class="section-header text-center">
+        <h2 class="h1 section-header__title">Collection list</h2>
+        <hr class="hr--small">
+      </div>
+    
+
+    <div class="grid collection-grid">
+
+      
+      
+      
+      
+      
+
+      
+      
+
+      
+      
+
+      
+
+      
+      
+
+      
+      
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  <!-- /snippets/collection-grid-item.liquid -->
+
+
+
+
+
+
+
+
+
+<div class="grid__item one-whole medium--one-half large--one-half collection-collage__item text-center" >
+  <a href="/collections/hoodies" class="collection-grid__item-link collection-collage__item-wrapper">
+    
+
+    
+
+    
+
+    
+      
+        <noscript>
+          <div class="collection-grid__item-overlay grid__image" style="background-image: url(//cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-c3cdc6fb_grande.jpg?v=1584484964)"></div>
+        </noscript>
+        <div class="collection-grid__item-overlay grid__image lazyload"
+          
+            style="background-image: url('//cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-c3cdc6fb_300x.jpg?v=1584484964);"
+          
+          data-bgset="//cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-c3cdc6fb_180x.jpg?v=1584484964 180w 180h,
+  //cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-c3cdc6fb_360x.jpg?v=1584484964 360w 360h,
+  //cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-c3cdc6fb_540x.jpg?v=1584484964 540w 540h,
+  //cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-c3cdc6fb_720x.jpg?v=1584484964 720w 720h,
+  //cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-c3cdc6fb_900x.jpg?v=1584484964 900w 900h,
+  
+  
+  
+  
+  //cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-c3cdc6fb.jpg?v=1584484964 1000w 1000h"
+          data-sizes="auto"
+          data-parent-fit="cover">
+        </div>
+      
+    
+    <div class="collection-grid__item-title--wrapper">
+      <span class="collection-grid__item-title">
+        Hoodies
+      </span>
+    </div>
+  </a>
+</div>
+
+
+
+
+
+
+      
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  <!-- /snippets/collection-grid-item.liquid -->
+
+
+
+
+
+
+
+
+
+<div class="grid__item one-half medium--one-half large--one-half collection-collage__item text-center" >
+  <a href="/collections/accessories" class="collection-grid__item-link collection-collage__item-wrapper">
+    
+
+    
+
+    
+
+    
+      
+        <noscript>
+          <div class="collection-grid__item-overlay grid__image" style="background-image: url(//cdn.shopify.com/s/files/1/0362/9668/7748/collections/mockup-94106755_350x350_09f97833-62c7-4b75-8fc5-002a6c128ca2_grande.jpg?v=1584484677)"></div>
+        </noscript>
+        <div class="collection-grid__item-overlay grid__image lazyload"
+          
+            style="background-image: url('//cdn.shopify.com/s/files/1/0362/9668/7748/collections/mockup-94106755_350x350_09f97833-62c7-4b75-8fc5-002a6c128ca2_300x.jpg?v=1584484677);"
+          
+          data-bgset="//cdn.shopify.com/s/files/1/0362/9668/7748/collections/mockup-94106755_350x350_09f97833-62c7-4b75-8fc5-002a6c128ca2_180x.jpg?v=1584484677 180w 180h,
+  
+  
+  
+  
+  
+  
+  
+  
+  //cdn.shopify.com/s/files/1/0362/9668/7748/collections/mockup-94106755_350x350_09f97833-62c7-4b75-8fc5-002a6c128ca2.jpg?v=1584484677 350w 350h"
+          data-sizes="auto"
+          data-parent-fit="cover">
+        </div>
+      
+    
+    <div class="collection-grid__item-title--wrapper">
+      <span class="collection-grid__item-title">
+        Accessories
+      </span>
+    </div>
+  </a>
+</div>
+
+
+
+
+
+
+      
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  <!-- /snippets/collection-grid-item.liquid -->
+
+
+
+
+
+
+
+
+
+<div class="grid__item one-half medium--one-third large--one-third collection-collage__item text-center" >
+  <a href="/collections/frontpage" class="collection-grid__item-link collection-collage__item-wrapper">
+    
+
+    
+
+    
+
+    
+      
+        <noscript>
+          <div class="collection-grid__item-overlay grid__image" style="background-image: url(//cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-0ee78ec5_grande.jpg?v=1584486675)"></div>
+        </noscript>
+        <div class="collection-grid__item-overlay grid__image lazyload"
+          
+            style="background-image: url('//cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-0ee78ec5_300x.jpg?v=1584486675);"
+          
+          data-bgset="//cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-0ee78ec5_180x.jpg?v=1584486675 180w 180h,
+  //cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-0ee78ec5_360x.jpg?v=1584486675 360w 360h,
+  //cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-0ee78ec5_540x.jpg?v=1584486675 540w 540h,
+  //cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-0ee78ec5_720x.jpg?v=1584486675 720w 720h,
+  //cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-0ee78ec5_900x.jpg?v=1584486675 900w 900h,
+  
+  
+  
+  
+  //cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-0ee78ec5.jpg?v=1584486675 1000w 1000h"
+          data-sizes="auto"
+          data-parent-fit="cover">
+        </div>
+      
+    
+    <div class="collection-grid__item-title--wrapper">
+      <span class="collection-grid__item-title">
+        Home page
+      </span>
+    </div>
+  </a>
+</div>
+
+
+
+      
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  <!-- /snippets/collection-grid-item.liquid -->
+
+
+
+
+
+
+
+
+
+<div class="grid__item one-half medium--one-third large--one-third collection-collage__item text-center" >
+  <a href="/collections/t-shirts" class="collection-grid__item-link collection-collage__item-wrapper">
+    
+
+    
+
+    
+
+    
+      
+        <noscript>
+          <div class="collection-grid__item-overlay grid__image" style="background-image: url(//cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-0ee78ec5_grande.jpg?v=1584486675)"></div>
+        </noscript>
+        <div class="collection-grid__item-overlay grid__image lazyload"
+          
+            style="background-image: url('//cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-0ee78ec5_300x.jpg?v=1584486675);"
+          
+          data-bgset="//cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-0ee78ec5_180x.jpg?v=1584486675 180w 180h,
+  //cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-0ee78ec5_360x.jpg?v=1584486675 360w 360h,
+  //cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-0ee78ec5_540x.jpg?v=1584486675 540w 540h,
+  //cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-0ee78ec5_720x.jpg?v=1584486675 720w 720h,
+  //cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-0ee78ec5_900x.jpg?v=1584486675 900w 900h,
+  
+  
+  
+  
+  //cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-0ee78ec5.jpg?v=1584486675 1000w 1000h"
+          data-sizes="auto"
+          data-parent-fit="cover">
+        </div>
+      
+    
+    <div class="collection-grid__item-title--wrapper">
+      <span class="collection-grid__item-title">
+        T- Shirts
+      </span>
+    </div>
+  </a>
+</div>
+
+
+
+      
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  <!-- /snippets/collection-grid-item.liquid -->
+
+
+
+
+
+
+
+
+
+<div class="grid__item one-half medium--one-third large--one-third collection-collage__item text-center" >
+  <a href="/collections/hats" class="collection-grid__item-link collection-collage__item-wrapper">
+    
+
+    
+
+    
+
+    
+      
+        <noscript>
+          <div class="collection-grid__item-overlay grid__image" style="background-image: url(//cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-11737fc7_grande.jpg?v=1584483511)"></div>
+        </noscript>
+        <div class="collection-grid__item-overlay grid__image lazyload"
+          
+            style="background-image: url('//cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-11737fc7_300x.jpg?v=1584483511);"
+          
+          data-bgset="//cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-11737fc7_180x.jpg?v=1584483511 180w 180h,
+  //cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-11737fc7_360x.jpg?v=1584483511 360w 360h,
+  //cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-11737fc7_540x.jpg?v=1584483511 540w 540h,
+  //cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-11737fc7_720x.jpg?v=1584483511 720w 720h,
+  //cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-11737fc7_900x.jpg?v=1584483511 900w 900h,
+  
+  
+  
+  
+  //cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-11737fc7.jpg?v=1584483511 1000w 1000h"
+          data-sizes="auto"
+          data-parent-fit="cover">
+        </div>
+      
+    
+    <div class="collection-grid__item-title--wrapper">
+      <span class="collection-grid__item-title">
+        Hats
+      </span>
+    </div>
+  </a>
+</div>
+
+
+
+      
+
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+</div><div id="shopify-section-featured-product" class="shopify-section"><div itemscope itemtype="http://schema.org/Product" id="FeaturedProductSection--featured-product"
+  data-section-id="featured-product"
+  data-section-type="product-template"
+  data-enable-history-state="false"
+  data-featured-product="true"
+  >
+  <div class="wrapper">
+    <meta itemprop="url" content="https://yousurvivedthecoronavirus.com/products/corona-virus-hoodie-i-survived-edition">
+    <meta itemprop="image" content="//cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-c3cdc6fb_grande.jpg?v=1584484964">
+
+    <div class="grid product-single">
+      <div class="grid__item large--seven-twelfths medium--seven-twelfths text-center">
+        <div class="product-single__media-group-wrapper product-single__media-group-wrapper--featured" data-product-single-media-group-wrapper>
+          
+            <div class="product-single__media-group product-single__media-group--single-xr" data-product-single-media-group>
+
+
+
+
+
+
+<div id="ProductMediaWrapper-featured-product-7129730973828" class="product-single__media-wrapper "
+
+
+
+data-product-single-media-wrapper
+data-media-id="featured-product-7129730973828"
+tabindex="-1">
+  
+    <style>
+  
+
+  @media screen and (min-width: 591px) { 
+    .product-single__media-featured-product-7129730973828 {
+      max-width: 800.0px;
+      max-height: 800px;
+    }
+    #ProductMediaWrapper-featured-product-7129730973828 {
+      max-width: 800.0px;
+    }
+   } 
+
+  
+    
+    @media screen and (max-width: 590px) {
+      .product-single__media-featured-product-7129730973828 {
+        max-width: 295.0px;
+      }
+      #ProductMediaWrapper-featured-product-7129730973828 {
+        max-width: 295.0px;
       }
     }
+  
+</style>
+
+    <div class="product-single__media" style="padding-top:100.0%;">
+      
+      <img class="mfp-image lazyload product-single__media-featured-product-7129730973828"
+        src="//cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-c3cdc6fb_300x300.jpg?v=1584484964"
+        data-src="//cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-c3cdc6fb_{width}x.jpg?v=1584484964"
+        data-widths="[180, 360, 590, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+        data-aspectratio="1.0"
+        data-sizes="auto"
+        
+        data-media-id="7129730973828"
+        alt="Corona Virus Hoodie (&quot;I Survived&quot; edition)">
+    </div>
+  
+  <noscript>
+    <img class="product-single__media" src="//cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-c3cdc6fb.jpg?v=1584484964"
+      alt="Corona Virus Hoodie (&quot;I Survived&quot; edition)">
+  </noscript>
+</div>
+
+</div>
+        </div>
+      </div>
+
+      <div class="grid__item product-single__meta--wrapper medium--five-twelfths large--five-twelfths">
+        
+
+        <h1 class="product-single__title" itemprop="name">Corona Virus Hoodie ("I Survived" edition)</h1>
+
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+          
+          <div class="price-container" data-price-container><span id="PriceA11y" class="visually-hidden">Regular price</span>
+    <span class="product-single__price--wrapper hide" aria-hidden="true">
+      <span id="ComparePrice" class="product-single__price--compare-at"></span>
+    </span>
+    <span id="ComparePriceA11y" class="visually-hidden" aria-hidden="true">Sale price</span><span id="ProductPrice"
+    class="product-single__price"
+    itemprop="price"
+    content="29.0">
+    $29.00
+  </span>
+
+  <div class="product-single__unit"><span class="product-unit-price">
+      <span class="visually-hidden">Unit price</span>
+      <span data-unit-price></span><span aria-hidden="true">/</span><span class="visually-hidden">&nbsp;per&nbsp;</span><span data-unit-price-base-unit></span></span>
+  </div>
+</div>
+
+<hr class="hr--small">
+
+          <meta itemprop="priceCurrency" content="USD">
+          <link itemprop="availability" href="http://schema.org/InStock">
+
+          
+            
+
+            
+
+            <form method="post" action="/cart/add" id="AddToCartForm--featured-product" accept-charset="UTF-8" class="
+              product-single__form
+" enctype="multipart/form-data" data-product-form=""><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" />
+              
+                
+                  <div class="radio-wrapper js product-form__item">
+                    <label class="single-option-radio__label"
+                      for="ProductSelect--featured-product-option-0">
+                      Size
+                    </label>
+                    <fieldset class="single-option-radio"
+
+                      id="ProductSelect--featured-product-option-0">
+                      
+                      
+                        
+                        
+                        <input type="radio"
+                           checked="checked"
+                          
+                          value="S"
+                          data-index="option1"
+                          name="option1"
+                          class="single-option-selector__radio"
+                          id="ProductSelect--featured-product-option-size-S">
+                        <label for="ProductSelect--featured-product-option-size-S">S</label>
+                      
+                        
+                        
+                        <input type="radio"
+                          
+                          
+                          value="M"
+                          data-index="option1"
+                          name="option1"
+                          class="single-option-selector__radio"
+                          id="ProductSelect--featured-product-option-size-M">
+                        <label for="ProductSelect--featured-product-option-size-M">M</label>
+                      
+                        
+                        
+                        <input type="radio"
+                          
+                          
+                          value="L"
+                          data-index="option1"
+                          name="option1"
+                          class="single-option-selector__radio"
+                          id="ProductSelect--featured-product-option-size-L">
+                        <label for="ProductSelect--featured-product-option-size-L">L</label>
+                      
+                        
+                        
+                        <input type="radio"
+                          
+                          
+                          value="XL"
+                          data-index="option1"
+                          name="option1"
+                          class="single-option-selector__radio"
+                          id="ProductSelect--featured-product-option-size-XL">
+                        <label for="ProductSelect--featured-product-option-size-XL">XL</label>
+                      
+                        
+                        
+                        <input type="radio"
+                          
+                          
+                          value="2XL"
+                          data-index="option1"
+                          name="option1"
+                          class="single-option-selector__radio"
+                          id="ProductSelect--featured-product-option-size-2XL">
+                        <label for="ProductSelect--featured-product-option-size-2XL">2XL</label>
+                      
+                        
+                        
+                        <input type="radio"
+                          
+                          
+                          value="3XL"
+                          data-index="option1"
+                          name="option1"
+                          class="single-option-selector__radio"
+                          id="ProductSelect--featured-product-option-size-3XL">
+                        <label for="ProductSelect--featured-product-option-size-3XL">3XL</label>
+                      
+                        
+                        
+                        <input type="radio"
+                          
+                          
+                          value="4XL"
+                          data-index="option1"
+                          name="option1"
+                          class="single-option-selector__radio"
+                          id="ProductSelect--featured-product-option-size-4XL">
+                        <label for="ProductSelect--featured-product-option-size-4XL">4XL</label>
+                      
+                        
+                        
+                        <input type="radio"
+                          
+                          
+                          value="5XL"
+                          data-index="option1"
+                          name="option1"
+                          class="single-option-selector__radio"
+                          id="ProductSelect--featured-product-option-size-5XL">
+                        <label for="ProductSelect--featured-product-option-size-5XL">5XL</label>
+                      
+                    </fieldset>
+                  </div>
+                
+              
+
+              <select name="id" id="ProductSelect--featured-product" class="product-single__variants no-js">
+                
+                  
+                    <option 
+                      selected="selected" 
+                      data-sku="7229594_5522"
+                      value="32795745190020">
+                      S - $29.00 USD
+                    </option>
+                  
+                
+                  
+                    <option 
+                      data-sku="7229594_5523"
+                      value="32795745222788">
+                      M - $29.00 USD
+                    </option>
+                  
+                
+                  
+                    <option 
+                      data-sku="7229594_5524"
+                      value="32795745255556">
+                      L - $29.00 USD
+                    </option>
+                  
+                
+                  
+                    <option 
+                      data-sku="7229594_5525"
+                      value="32795745288324">
+                      XL - $29.00 USD
+                    </option>
+                  
+                
+                  
+                    <option 
+                      data-sku="7229594_5526"
+                      value="32795745321092">
+                      2XL - $31.00 USD
+                    </option>
+                  
+                
+                  
+                    <option 
+                      data-sku="7229594_5527"
+                      value="32795745353860">
+                      3XL - $33.50 USD
+                    </option>
+                  
+                
+                  
+                    <option 
+                      data-sku="7229594_5528"
+                      value="32795745386628">
+                      4XL - $35.50 USD
+                    </option>
+                  
+                
+                  
+                    <option 
+                      data-sku="7229594_5529"
+                      value="32795745419396">
+                      5XL - $37.50 USD
+                    </option>
+                  
+                
+              </select>
+
+              <div class="product-single__add-to-cart">
+                <button type="submit" name="add" id="AddToCart--featured-product" class="btn btn--add-to-cart btn--secondary-accent">
+                  <span class="btn__text">
+                    
+                      Add to Cart
+                    
+                  </span>
+                </button>
+                
+                  <div data-shopify="payment-button" class="shopify-payment-button"><button class="shopify-payment-button__button shopify-payment-button__button--unbranded shopify-payment-button__button--hidden" disabled="disabled" aria-hidden="true"> </button><button class="shopify-payment-button__more-options shopify-payment-button__button--hidden" disabled="disabled" aria-hidden="true"> </button></div>
+                
+              </div>
+            </form>
+          
+        </div>
+
+        <a class="product-single__full-details text-link" href="/products/corona-virus-hoodie-i-survived-edition?variant=32795745190020">
+          Full details <span class="icon icon-arrow-right" aria-hidden="true"></span>
+        </a>
+
+        
+          <!-- /snippets/social-sharing.liquid -->
+
+
+<div class="social-sharing ">
+
+  
+    <a target="_blank" href="//www.facebook.com/sharer.php?u=https://yousurvivedthecoronavirus.com/products/corona-virus-hoodie-i-survived-edition" class="share-facebook" title="Share on Facebook">
+      <span class="icon icon-facebook" aria-hidden="true"></span>
+      <span class="share-title" aria-hidden="true">Share</span>
+      <span class="visually-hidden">Share on Facebook</span>
+    </a>
+  
+
+  
+    <a target="_blank" href="//twitter.com/share?text=Corona%20Virus%20Hoodie%20(%22I%20Survived%22%20edition)&amp;url=https://yousurvivedthecoronavirus.com/products/corona-virus-hoodie-i-survived-edition" class="share-twitter" title="Tweet on Twitter">
+      <span class="icon icon-twitter" aria-hidden="true"></span>
+      <span class="share-title" aria-hidden="true">Tweet</span>
+      <span class="visually-hidden">Tweet on Twitter</span>
+    </a>
+  
+
+  
+    <a target="_blank" href="//pinterest.com/pin/create/button/?url=https://yousurvivedthecoronavirus.com/products/corona-virus-hoodie-i-survived-edition&amp;media=//cdn.shopify.com/s/files/1/0362/9668/7748/products/mockup-c3cdc6fb_1024x1024.jpg?v=1584484964&amp;description=Corona%20Virus%20Hoodie%20(%22I%20Survived%22%20edition)" class="share-pinterest" title="Pin on Pinterest">
+      <span class="icon icon-pinterest" aria-hidden="true"></span>
+      <span class="share-title" aria-hidden="true">Pin it</span>
+      <span class="visually-hidden">Pin on Pinterest</span>
+    </a>
+  
+
+</div>
+
+        
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+  <script type="application/json" id="ProductJson-featured-product">
+    {"id":4694013640836,"title":"Corona Virus Hoodie (\"I Survived\" edition)","handle":"corona-virus-hoodie-i-survived-edition","description":"Everyone needs a cozy go-to hoodie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!\u003cbr\u003e\n\u003cbr\u003e\n• 50% cotton, 50% polyester \u003cbr\u003e\n• Double-lined hood\u003cbr\u003e\n• Double-needle stitching throughout \u003cbr\u003e\n• Air-jet spun yarn with a soft feel and reduced pilling\u003cbr\u003e\n• 1x1 athletic rib knit cuffs and waistband with spandex\u003cbr\u003e\n• Front pouch pocket \u003cp\u003e\u003cstrong class=\"size-guide-title\"\u003eSize guide\u003c\/strong\u003e\u003c\/p\u003e\u003cdiv class=\"table-responsive dynamic\" data-unit-system=\"imperial\"\u003e\u003ctable cellpadding=\"5\"\u003e\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd\u003e \u003c\/td\u003e\n\u003ctd\u003e\u003cstrong\u003eS\u003c\/strong\u003e\u003c\/td\u003e\n\u003ctd\u003e\u003cstrong\u003eM\u003c\/strong\u003e\u003c\/td\u003e\n\u003ctd\u003e\u003cstrong\u003eL\u003c\/strong\u003e\u003c\/td\u003e\n\u003ctd\u003e\u003cstrong\u003eXL\u003c\/strong\u003e\u003c\/td\u003e\n\u003ctd\u003e\u003cstrong\u003e2XL\u003c\/strong\u003e\u003c\/td\u003e\n\u003ctd\u003e\u003cstrong\u003e3XL\u003c\/strong\u003e\u003c\/td\u003e\n\u003ctd\u003e\u003cstrong\u003e4XL\u003c\/strong\u003e\u003c\/td\u003e\n\u003ctd\u003e\u003cstrong\u003e5XL\u003c\/strong\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003cstrong\u003eLength (inches)\u003c\/strong\u003e\u003c\/td\u003e\n\u003ctd\u003e27\u003c\/td\u003e\n\u003ctd\u003e28\u003c\/td\u003e\n\u003ctd\u003e29\u003c\/td\u003e\n\u003ctd\u003e30\u003c\/td\u003e\n\u003ctd\u003e31\u003c\/td\u003e\n\u003ctd\u003e32\u003c\/td\u003e\n\u003ctd\u003e33\u003c\/td\u003e\n\u003ctd\u003e34\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003cstrong\u003eWidth (inches)\u003c\/strong\u003e\u003c\/td\u003e\n\u003ctd\u003e20\u003c\/td\u003e\n\u003ctd\u003e22\u003c\/td\u003e\n\u003ctd\u003e24\u003c\/td\u003e\n\u003ctd\u003e26\u003c\/td\u003e\n\u003ctd\u003e28\u003c\/td\u003e\n\u003ctd\u003e30\u003c\/td\u003e\n\u003ctd\u003e32\u003c\/td\u003e\n\u003ctd\u003e34\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003c\/tbody\u003e\u003c\/table\u003e\u003c\/div\u003e","published_at":"2020-03-17T17:42:47-05:00","created_at":"2020-03-17T17:42:42-05:00","vendor":"I Survived The Corona Virus 2020","type":"","tags":["hoodie"],"price":2900,"price_min":2900,"price_max":3750,"available":true,"price_varies":true,"compare_at_price":null,"compare_at_price_min":0,"compare_at_price_max":0,"compare_at_price_varies":false,"variants":[{"id":32795745190020,"title":"S","option1":"S","option2":null,"option3":null,"sku":"7229594_5522","requires_shipping":true,"taxable":true,"featured_image":{"id":14953487171716,"product_id":4694013640836,"position":1,"created_at":"2020-03-17T17:42:44-05:00","updated_at":"2020-03-17T17:42:44-05:00","alt":null,"width":1000,"height":1000,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0362\/9668\/7748\/products\/mockup-c3cdc6fb.jpg?v=1584484964","variant_ids":[32795745190020,32795745222788,32795745255556,32795745288324,32795745321092,32795745353860,32795745386628,32795745419396]},"available":true,"name":"Corona Virus Hoodie (\"I Survived\" edition) - S","public_title":"S","options":["S"],"price":2900,"weight":454,"compare_at_price":null,"inventory_management":null,"barcode":null,"featured_media":{"alt":null,"id":7129730973828,"position":1,"preview_image":{"aspect_ratio":1.0,"height":1000,"width":1000,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0362\/9668\/7748\/products\/mockup-c3cdc6fb.jpg?v=1584484964"}}},{"id":32795745222788,"title":"M","option1":"M","option2":null,"option3":null,"sku":"7229594_5523","requires_shipping":true,"taxable":true,"featured_image":{"id":14953487171716,"product_id":4694013640836,"position":1,"created_at":"2020-03-17T17:42:44-05:00","updated_at":"2020-03-17T17:42:44-05:00","alt":null,"width":1000,"height":1000,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0362\/9668\/7748\/products\/mockup-c3cdc6fb.jpg?v=1584484964","variant_ids":[32795745190020,32795745222788,32795745255556,32795745288324,32795745321092,32795745353860,32795745386628,32795745419396]},"available":true,"name":"Corona Virus Hoodie (\"I Survived\" edition) - M","public_title":"M","options":["M"],"price":2900,"weight":468,"compare_at_price":null,"inventory_management":null,"barcode":null,"featured_media":{"alt":null,"id":7129730973828,"position":1,"preview_image":{"aspect_ratio":1.0,"height":1000,"width":1000,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0362\/9668\/7748\/products\/mockup-c3cdc6fb.jpg?v=1584484964"}}},{"id":32795745255556,"title":"L","option1":"L","option2":null,"option3":null,"sku":"7229594_5524","requires_shipping":true,"taxable":true,"featured_image":{"id":14953487171716,"product_id":4694013640836,"position":1,"created_at":"2020-03-17T17:42:44-05:00","updated_at":"2020-03-17T17:42:44-05:00","alt":null,"width":1000,"height":1000,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0362\/9668\/7748\/products\/mockup-c3cdc6fb.jpg?v=1584484964","variant_ids":[32795745190020,32795745222788,32795745255556,32795745288324,32795745321092,32795745353860,32795745386628,32795745419396]},"available":true,"name":"Corona Virus Hoodie (\"I Survived\" edition) - L","public_title":"L","options":["L"],"price":2900,"weight":567,"compare_at_price":null,"inventory_management":null,"barcode":null,"featured_media":{"alt":null,"id":7129730973828,"position":1,"preview_image":{"aspect_ratio":1.0,"height":1000,"width":1000,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0362\/9668\/7748\/products\/mockup-c3cdc6fb.jpg?v=1584484964"}}},{"id":32795745288324,"title":"XL","option1":"XL","option2":null,"option3":null,"sku":"7229594_5525","requires_shipping":true,"taxable":true,"featured_image":{"id":14953487171716,"product_id":4694013640836,"position":1,"created_at":"2020-03-17T17:42:44-05:00","updated_at":"2020-03-17T17:42:44-05:00","alt":null,"width":1000,"height":1000,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0362\/9668\/7748\/products\/mockup-c3cdc6fb.jpg?v=1584484964","variant_ids":[32795745190020,32795745222788,32795745255556,32795745288324,32795745321092,32795745353860,32795745386628,32795745419396]},"available":true,"name":"Corona Virus Hoodie (\"I Survived\" edition) - XL","public_title":"XL","options":["XL"],"price":2900,"weight":618,"compare_at_price":null,"inventory_management":null,"barcode":null,"featured_media":{"alt":null,"id":7129730973828,"position":1,"preview_image":{"aspect_ratio":1.0,"height":1000,"width":1000,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0362\/9668\/7748\/products\/mockup-c3cdc6fb.jpg?v=1584484964"}}},{"id":32795745321092,"title":"2XL","option1":"2XL","option2":null,"option3":null,"sku":"7229594_5526","requires_shipping":true,"taxable":true,"featured_image":{"id":14953487171716,"product_id":4694013640836,"position":1,"created_at":"2020-03-17T17:42:44-05:00","updated_at":"2020-03-17T17:42:44-05:00","alt":null,"width":1000,"height":1000,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0362\/9668\/7748\/products\/mockup-c3cdc6fb.jpg?v=1584484964","variant_ids":[32795745190020,32795745222788,32795745255556,32795745288324,32795745321092,32795745353860,32795745386628,32795745419396]},"available":true,"name":"Corona Virus Hoodie (\"I Survived\" edition) - 2XL","public_title":"2XL","options":["2XL"],"price":3100,"weight":638,"compare_at_price":null,"inventory_management":null,"barcode":null,"featured_media":{"alt":null,"id":7129730973828,"position":1,"preview_image":{"aspect_ratio":1.0,"height":1000,"width":1000,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0362\/9668\/7748\/products\/mockup-c3cdc6fb.jpg?v=1584484964"}}},{"id":32795745353860,"title":"3XL","option1":"3XL","option2":null,"option3":null,"sku":"7229594_5527","requires_shipping":true,"taxable":true,"featured_image":{"id":14953487171716,"product_id":4694013640836,"position":1,"created_at":"2020-03-17T17:42:44-05:00","updated_at":"2020-03-17T17:42:44-05:00","alt":null,"width":1000,"height":1000,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0362\/9668\/7748\/products\/mockup-c3cdc6fb.jpg?v=1584484964","variant_ids":[32795745190020,32795745222788,32795745255556,32795745288324,32795745321092,32795745353860,32795745386628,32795745419396]},"available":true,"name":"Corona Virus Hoodie (\"I Survived\" edition) - 3XL","public_title":"3XL","options":["3XL"],"price":3350,"weight":714,"compare_at_price":null,"inventory_management":null,"barcode":null,"featured_media":{"alt":null,"id":7129730973828,"position":1,"preview_image":{"aspect_ratio":1.0,"height":1000,"width":1000,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0362\/9668\/7748\/products\/mockup-c3cdc6fb.jpg?v=1584484964"}}},{"id":32795745386628,"title":"4XL","option1":"4XL","option2":null,"option3":null,"sku":"7229594_5528","requires_shipping":true,"taxable":true,"featured_image":{"id":14953487171716,"product_id":4694013640836,"position":1,"created_at":"2020-03-17T17:42:44-05:00","updated_at":"2020-03-17T17:42:44-05:00","alt":null,"width":1000,"height":1000,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0362\/9668\/7748\/products\/mockup-c3cdc6fb.jpg?v=1584484964","variant_ids":[32795745190020,32795745222788,32795745255556,32795745288324,32795745321092,32795745353860,32795745386628,32795745419396]},"available":true,"name":"Corona Virus Hoodie (\"I Survived\" edition) - 4XL","public_title":"4XL","options":["4XL"],"price":3550,"weight":726,"compare_at_price":null,"inventory_management":null,"barcode":null,"featured_media":{"alt":null,"id":7129730973828,"position":1,"preview_image":{"aspect_ratio":1.0,"height":1000,"width":1000,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0362\/9668\/7748\/products\/mockup-c3cdc6fb.jpg?v=1584484964"}}},{"id":32795745419396,"title":"5XL","option1":"5XL","option2":null,"option3":null,"sku":"7229594_5529","requires_shipping":true,"taxable":true,"featured_image":{"id":14953487171716,"product_id":4694013640836,"position":1,"created_at":"2020-03-17T17:42:44-05:00","updated_at":"2020-03-17T17:42:44-05:00","alt":null,"width":1000,"height":1000,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0362\/9668\/7748\/products\/mockup-c3cdc6fb.jpg?v=1584484964","variant_ids":[32795745190020,32795745222788,32795745255556,32795745288324,32795745321092,32795745353860,32795745386628,32795745419396]},"available":true,"name":"Corona Virus Hoodie (\"I Survived\" edition) - 5XL","public_title":"5XL","options":["5XL"],"price":3750,"weight":746,"compare_at_price":null,"inventory_management":null,"barcode":null,"featured_media":{"alt":null,"id":7129730973828,"position":1,"preview_image":{"aspect_ratio":1.0,"height":1000,"width":1000,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0362\/9668\/7748\/products\/mockup-c3cdc6fb.jpg?v=1584484964"}}}],"images":["\/\/cdn.shopify.com\/s\/files\/1\/0362\/9668\/7748\/products\/mockup-c3cdc6fb.jpg?v=1584484964"],"featured_image":"\/\/cdn.shopify.com\/s\/files\/1\/0362\/9668\/7748\/products\/mockup-c3cdc6fb.jpg?v=1584484964","options":["Size"],"media":[{"alt":null,"id":7129730973828,"position":1,"preview_image":{"aspect_ratio":1.0,"height":1000,"width":1000,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0362\/9668\/7748\/products\/mockup-c3cdc6fb.jpg?v=1584484964"},"aspect_ratio":1.0,"height":1000,"media_type":"image","src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0362\/9668\/7748\/products\/mockup-c3cdc6fb.jpg?v=1584484964","width":1000}],"content":"Everyone needs a cozy go-to hoodie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!\u003cbr\u003e\n\u003cbr\u003e\n• 50% cotton, 50% polyester \u003cbr\u003e\n• Double-lined hood\u003cbr\u003e\n• Double-needle stitching throughout \u003cbr\u003e\n• Air-jet spun yarn with a soft feel and reduced pilling\u003cbr\u003e\n• 1x1 athletic rib knit cuffs and waistband with spandex\u003cbr\u003e\n• Front pouch pocket \u003cp\u003e\u003cstrong class=\"size-guide-title\"\u003eSize guide\u003c\/strong\u003e\u003c\/p\u003e\u003cdiv class=\"table-responsive dynamic\" data-unit-system=\"imperial\"\u003e\u003ctable cellpadding=\"5\"\u003e\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd\u003e \u003c\/td\u003e\n\u003ctd\u003e\u003cstrong\u003eS\u003c\/strong\u003e\u003c\/td\u003e\n\u003ctd\u003e\u003cstrong\u003eM\u003c\/strong\u003e\u003c\/td\u003e\n\u003ctd\u003e\u003cstrong\u003eL\u003c\/strong\u003e\u003c\/td\u003e\n\u003ctd\u003e\u003cstrong\u003eXL\u003c\/strong\u003e\u003c\/td\u003e\n\u003ctd\u003e\u003cstrong\u003e2XL\u003c\/strong\u003e\u003c\/td\u003e\n\u003ctd\u003e\u003cstrong\u003e3XL\u003c\/strong\u003e\u003c\/td\u003e\n\u003ctd\u003e\u003cstrong\u003e4XL\u003c\/strong\u003e\u003c\/td\u003e\n\u003ctd\u003e\u003cstrong\u003e5XL\u003c\/strong\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003cstrong\u003eLength (inches)\u003c\/strong\u003e\u003c\/td\u003e\n\u003ctd\u003e27\u003c\/td\u003e\n\u003ctd\u003e28\u003c\/td\u003e\n\u003ctd\u003e29\u003c\/td\u003e\n\u003ctd\u003e30\u003c\/td\u003e\n\u003ctd\u003e31\u003c\/td\u003e\n\u003ctd\u003e32\u003c\/td\u003e\n\u003ctd\u003e33\u003c\/td\u003e\n\u003ctd\u003e34\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003cstrong\u003eWidth (inches)\u003c\/strong\u003e\u003c\/td\u003e\n\u003ctd\u003e20\u003c\/td\u003e\n\u003ctd\u003e22\u003c\/td\u003e\n\u003ctd\u003e24\u003c\/td\u003e\n\u003ctd\u003e26\u003c\/td\u003e\n\u003ctd\u003e28\u003c\/td\u003e\n\u003ctd\u003e30\u003c\/td\u003e\n\u003ctd\u003e32\u003c\/td\u003e\n\u003ctd\u003e34\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003c\/tbody\u003e\u003c\/table\u003e\u003c\/div\u003e"}
+  </script>
+  <script type="application/json" id="ModelJson-featured-product">
+    []
   </script>
 
+
+
+
+
+</div><div id="shopify-section-newsletter" class="shopify-section index-section index-newsletter-section shopify-section--full-width"><div class="newsletter" data-section-id="newsletter" data-section-type="newsletter-section">
+  <div class="wrapper">
+    
+      <div class="section-header text-center">
+        <h2 class="h1 section-header__title">Subscribe to our newsletter</h2>
+        
+      </div>
+    
+    
+      <div class="section-subheading rte text-center">
+        <p>Every other day we come out with an update in regaurds to the spreading of the Corona Virus!</p>
+        <hr class="hr--small">
+      </div>
+    
+    <form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8" class="contact-form"><input type="hidden" name="form_type" value="customer" /><input type="hidden" name="utf8" value="✓" />
+      
+      
+        <label for="Email" class="newsletter__label hidden-label">Sign up to our mailing list</label>
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <div class="newsletter--form">
+          <div class="input-group">
+            <input type="email" value="" placeholder="Your email" name="contact[email]" id="Email" class="input-group-field newsletter__input" autocorrect="off" autocapitalize="off">
+            <span class="input-group-btn">
+              <button id="Subscribe" type="submit"
+                class="btn newsletter__submit"
+                aria-label="Subscribe">
+                <span class="newsletter__submit-text--large">Subscribe</span>
+                <span class="newsletter__submit-text--small">
+                  <span class="icon icon-arrow-right" aria-hidden="true"></span>
+                </span>
+              </button>
+            </span>
+          </div>
+        </div>
+      
+    </form>
+  </div>
+</div>
+
+
+
+
+</div><!-- END content_for_index -->
+</div>
+
+      
+    </main>
+
+    <hr class="hr--large">
+
+    <div id="shopify-section-footer" class="shopify-section"><footer class="site-footer small--text-center" role="contentinfo" data-section-id="footer" data-section-type="footer-section">
+  <div class="wrapper">
+
+    <div class="grid-uniform">
+
+      
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+      
+
+      
+
+      
+        <div class="grid__item one-half small--one-whole">
+          <ul class="no-bullets site-footer__linklist">
+            
+
+      
+      
+
+              <li><a href="/search">Search</a></li>
+
+            
+
+      
+      
+
+              <li><a href="/pages/refund-policy">Refund Policy</a></li>
+
+            
+
+      
+      
+
+              <li><a href="/pages/terms-of-service">Terms of Service</a></li>
+
+            
+
+      
+      
+
+              <li><a href="/pages/privacy-policy">Privacy Policy</a></li>
+
+            
+          </ul>
+        </div>
+      
+
+      
+<div class="grid__item one-half small--one-whole large--text-right"><form method="post" action="/localization" id="localization_form" accept-charset="UTF-8" class="selectors-form" enctype="multipart/form-data"><input type="hidden" name="form_type" value="localization" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="return_to" value="/" /></form><p class="site-footer__copyright-content">&copy; 2020, <a href="/" title="">I Survived The Corona Virus 2020</a><br><a target="_blank" rel="nofollow" href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore">Powered by Shopify</a></p><span class="visually-hidden">Payment methods</span>
+            <ul class="inline-list payment-icons site-footer__payment-icons"><li>
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 38 24" width="38" height="24" aria-labelledby="pi-american_express"><title id="pi-american_express">American Express</title><g fill="none"><path fill="#000" d="M35,0 L3,0 C1.3,0 0,1.3 0,3 L0,21 C0,22.7 1.4,24 3,24 L35,24 C36.7,24 38,22.7 38,21 L38,3 C38,1.3 36.6,0 35,0 Z" opacity=".07"/><path fill="#006FCF" d="M35,1 C36.1,1 37,1.9 37,3 L37,21 C37,22.1 36.1,23 35,23 L3,23 C1.9,23 1,22.1 1,21 L1,3 C1,1.9 1.9,1 3,1 L35,1"/><path fill="#FFF" d="M8.971,10.268 L9.745,12.144 L8.203,12.144 L8.971,10.268 Z M25.046,10.346 L22.069,10.346 L22.069,11.173 L24.998,11.173 L24.998,12.412 L22.075,12.412 L22.075,13.334 L25.052,13.334 L25.052,14.073 L27.129,11.828 L25.052,9.488 L25.046,10.346 L25.046,10.346 Z M10.983,8.006 L14.978,8.006 L15.865,9.941 L16.687,8 L27.057,8 L28.135,9.19 L29.25,8 L34.013,8 L30.494,11.852 L33.977,15.68 L29.143,15.68 L28.065,14.49 L26.94,15.68 L10.03,15.68 L9.536,14.49 L8.406,14.49 L7.911,15.68 L4,15.68 L7.286,8 L10.716,8 L10.983,8.006 Z M19.646,9.084 L17.407,9.084 L15.907,12.62 L14.282,9.084 L12.06,9.084 L12.06,13.894 L10,9.084 L8.007,9.084 L5.625,14.596 L7.18,14.596 L7.674,13.406 L10.27,13.406 L10.764,14.596 L13.484,14.596 L13.484,10.661 L15.235,14.602 L16.425,14.602 L18.165,10.673 L18.165,14.603 L19.623,14.603 L19.647,9.083 L19.646,9.084 Z M28.986,11.852 L31.517,9.084 L29.695,9.084 L28.094,10.81 L26.546,9.084 L20.652,9.084 L20.652,14.602 L26.462,14.602 L28.076,12.864 L29.624,14.602 L31.499,14.602 L28.987,11.852 L28.986,11.852 Z"/></g></svg>
+
+                </li><li>
+                  <svg class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" role="img" x="0" y="0" width="38" height="24" viewBox="0 0 165.521 105.965" xml:space="preserve" aria-labelledby="pi-apple_pay"><title id="pi-apple_pay">Apple Pay</title><path fill="#000" d="M150.698 0H14.823c-.566 0-1.133 0-1.698.003-.477.004-.953.009-1.43.022-1.039.028-2.087.09-3.113.274a10.51 10.51 0 0 0-2.958.975 9.932 9.932 0 0 0-4.35 4.35 10.463 10.463 0 0 0-.975 2.96C.113 9.611.052 10.658.024 11.696a70.22 70.22 0 0 0-.022 1.43C0 13.69 0 14.256 0 14.823v76.318c0 .567 0 1.132.002 1.699.003.476.009.953.022 1.43.028 1.036.09 2.084.275 3.11a10.46 10.46 0 0 0 .974 2.96 9.897 9.897 0 0 0 1.83 2.52 9.874 9.874 0 0 0 2.52 1.83c.947.483 1.917.79 2.96.977 1.025.183 2.073.245 3.112.273.477.011.953.017 1.43.02.565.004 1.132.004 1.698.004h135.875c.565 0 1.132 0 1.697-.004.476-.002.952-.009 1.431-.02 1.037-.028 2.085-.09 3.113-.273a10.478 10.478 0 0 0 2.958-.977 9.955 9.955 0 0 0 4.35-4.35c.483-.947.789-1.917.974-2.96.186-1.026.246-2.074.274-3.11.013-.477.02-.954.022-1.43.004-.567.004-1.132.004-1.699V14.824c0-.567 0-1.133-.004-1.699a63.067 63.067 0 0 0-.022-1.429c-.028-1.038-.088-2.085-.274-3.112a10.4 10.4 0 0 0-.974-2.96 9.94 9.94 0 0 0-4.35-4.35A10.52 10.52 0 0 0 156.939.3c-1.028-.185-2.076-.246-3.113-.274a71.417 71.417 0 0 0-1.431-.022C151.83 0 151.263 0 150.698 0z" /><path fill="#FFF" d="M150.698 3.532l1.672.003c.452.003.905.008 1.36.02.793.022 1.719.065 2.583.22.75.135 1.38.34 1.984.648a6.392 6.392 0 0 1 2.804 2.807c.306.6.51 1.226.645 1.983.154.854.197 1.783.218 2.58.013.45.019.9.02 1.36.005.557.005 1.113.005 1.671v76.318c0 .558 0 1.114-.004 1.682-.002.45-.008.9-.02 1.35-.022.796-.065 1.725-.221 2.589a6.855 6.855 0 0 1-.645 1.975 6.397 6.397 0 0 1-2.808 2.807c-.6.306-1.228.511-1.971.645-.881.157-1.847.2-2.574.22-.457.01-.912.017-1.379.019-.555.004-1.113.004-1.669.004H14.801c-.55 0-1.1 0-1.66-.004a74.993 74.993 0 0 1-1.35-.018c-.744-.02-1.71-.064-2.584-.22a6.938 6.938 0 0 1-1.986-.65 6.337 6.337 0 0 1-1.622-1.18 6.355 6.355 0 0 1-1.178-1.623 6.935 6.935 0 0 1-.646-1.985c-.156-.863-.2-1.788-.22-2.578a66.088 66.088 0 0 1-.02-1.355l-.003-1.327V14.474l.002-1.325a66.7 66.7 0 0 1 .02-1.357c.022-.792.065-1.717.222-2.587a6.924 6.924 0 0 1 .646-1.981c.304-.598.7-1.144 1.18-1.623a6.386 6.386 0 0 1 1.624-1.18 6.96 6.96 0 0 1 1.98-.646c.865-.155 1.792-.198 2.586-.22.452-.012.905-.017 1.354-.02l1.677-.003h135.875" /><g><g><path fill="#000" d="M43.508 35.77c1.404-1.755 2.356-4.112 2.105-6.52-2.054.102-4.56 1.355-6.012 3.112-1.303 1.504-2.456 3.959-2.156 6.266 2.306.2 4.61-1.152 6.063-2.858" /><path fill="#000" d="M45.587 39.079c-3.35-.2-6.196 1.9-7.795 1.9-1.6 0-4.049-1.8-6.698-1.751-3.447.05-6.645 2-8.395 5.1-3.598 6.2-.95 15.4 2.55 20.45 1.699 2.5 3.747 5.25 6.445 5.151 2.55-.1 3.549-1.65 6.647-1.65 3.097 0 3.997 1.65 6.696 1.6 2.798-.05 4.548-2.5 6.247-5 1.95-2.85 2.747-5.6 2.797-5.75-.05-.05-5.396-2.101-5.446-8.251-.05-5.15 4.198-7.6 4.398-7.751-2.399-3.548-6.147-3.948-7.447-4.048" /></g><g><path fill="#000" d="M78.973 32.11c7.278 0 12.347 5.017 12.347 12.321 0 7.33-5.173 12.373-12.529 12.373h-8.058V69.62h-5.822V32.11h14.062zm-8.24 19.807h6.68c5.07 0 7.954-2.729 7.954-7.46 0-4.73-2.885-7.434-7.928-7.434h-6.706v14.894z" /><path fill="#000" d="M92.764 61.847c0-4.809 3.665-7.564 10.423-7.98l7.252-.442v-2.08c0-3.04-2.001-4.704-5.562-4.704-2.938 0-5.07 1.507-5.51 3.82h-5.252c.157-4.86 4.731-8.395 10.918-8.395 6.654 0 10.995 3.483 10.995 8.89v18.663h-5.38v-4.497h-.13c-1.534 2.937-4.914 4.782-8.579 4.782-5.406 0-9.175-3.222-9.175-8.057zm17.675-2.417v-2.106l-6.472.416c-3.64.234-5.536 1.585-5.536 3.95 0 2.288 1.975 3.77 5.068 3.77 3.95 0 6.94-2.522 6.94-6.03z" /><path fill="#000" d="M120.975 79.652v-4.496c.364.051 1.247.103 1.715.103 2.573 0 4.029-1.09 4.913-3.899l.52-1.663-9.852-27.293h6.082l6.863 22.146h.13l6.862-22.146h5.927l-10.216 28.67c-2.34 6.577-5.017 8.735-10.683 8.735-.442 0-1.872-.052-2.261-.157z" /></g></g></svg>
+
+                </li><li>
+                  <svg class="icon" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24" aria-labelledby="pi-diners_club"><title id="pi-diners_club">Diners Club</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"/><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"/><path d="M12 12v3.7c0 .3-.2.3-.5.2-1.9-.8-3-3.3-2.3-5.4.4-1.1 1.2-2 2.3-2.4.4-.2.5-.1.5.2V12zm2 0V8.3c0-.3 0-.3.3-.2 2.1.8 3.2 3.3 2.4 5.4-.4 1.1-1.2 2-2.3 2.4-.4.2-.4.1-.4-.2V12zm7.2-7H13c3.8 0 6.8 3.1 6.8 7s-3 7-6.8 7h8.2c3.8 0 6.8-3.1 6.8-7s-3-7-6.8-7z" fill="#3086C8"/></svg>
+                </li><li>
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 38 24" width="38" height="24" aria-labelledby="pi-discover"><title id="pi-discover">Discover</title><path d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" fill="#000" opacity=".07"/><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" fill="#FFF"/><path d="M37 16.95V21c0 1.1-.9 2-2 2H23.228c7.896-1.815 12.043-4.601 13.772-6.05z" fill="#EDA024"/><path fill="#494949" d="M9 11h20v2H9z"/><path d="M22 12c0 1.7-1.3 3-3 3s-3-1.4-3-3 1.4-3 3-3c1.7 0 3 1.3 3 3z" fill="#EDA024"/></svg>
+
+                </li><li>
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 38 24" width="38" height="24" aria-labelledby="pi-google_pay"><title id="pi-google_pay">Google Pay</title><path d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" fill="#000" opacity=".07"/><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" fill="#FFF"/><path d="M18.093 11.976v3.2h-1.018v-7.9h2.691a2.447 2.447 0 0 1 1.747.692 2.28 2.28 0 0 1 .11 3.224l-.11.116c-.47.447-1.098.69-1.747.674l-1.673-.006zm0-3.732v2.788h1.698c.377.012.741-.135 1.005-.404a1.391 1.391 0 0 0-1.005-2.354l-1.698-.03zm6.484 1.348c.65-.03 1.286.188 1.778.613.445.43.682 1.03.65 1.649v3.334h-.969v-.766h-.049a1.93 1.93 0 0 1-1.673.931 2.17 2.17 0 0 1-1.496-.533 1.667 1.667 0 0 1-.613-1.324 1.606 1.606 0 0 1 .613-1.336 2.746 2.746 0 0 1 1.698-.515c.517-.02 1.03.093 1.49.331v-.208a1.134 1.134 0 0 0-.417-.901 1.416 1.416 0 0 0-.98-.368 1.545 1.545 0 0 0-1.319.717l-.895-.564a2.488 2.488 0 0 1 2.182-1.06zM23.29 13.52a.79.79 0 0 0 .337.662c.223.176.5.269.785.263.429-.001.84-.17 1.146-.472.305-.286.478-.685.478-1.103a2.047 2.047 0 0 0-1.324-.374 1.716 1.716 0 0 0-1.03.294.883.883 0 0 0-.392.73zm9.286-3.75l-3.39 7.79h-1.048l1.281-2.728-2.224-5.062h1.103l1.612 3.885 1.569-3.885h1.097z" fill="#5F6368"/><path d="M13.986 11.284c0-.308-.024-.616-.073-.92h-4.29v1.747h2.451a2.096 2.096 0 0 1-.9 1.373v1.134h1.464a4.433 4.433 0 0 0 1.348-3.334z" fill="#4285F4"/><path d="M9.629 15.721a4.352 4.352 0 0 0 3.01-1.097l-1.466-1.14a2.752 2.752 0 0 1-4.094-1.44H5.577v1.17a4.53 4.53 0 0 0 4.052 2.507z" fill="#34A853"/><path d="M7.079 12.05a2.709 2.709 0 0 1 0-1.735v-1.17H5.577a4.505 4.505 0 0 0 0 4.075l1.502-1.17z" fill="#FBBC04"/><path d="M9.629 8.44a2.452 2.452 0 0 1 1.74.68l1.3-1.293a4.37 4.37 0 0 0-3.065-1.183 4.53 4.53 0 0 0-4.027 2.5l1.502 1.171a2.715 2.715 0 0 1 2.55-1.875z" fill="#EA4335"/></svg>
+
+                </li><li>
+                  <svg class="icon" width="38" height="24" role="img" aria-labelledby="pi-jcb" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg"><title id="pi-jcb">JCB</title><g fill="none" fill-rule="evenodd"><g fill-rule="nonzero"><path d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" fill="#000" opacity=".07"/><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" fill="#FFF"/></g><path d="M11.5 5H15v11.5a2.5 2.5 0 0 1-2.5 2.5H9V7.5A2.5 2.5 0 0 1 11.5 5z" fill="#006EBC"/><path d="M18.5 5H22v11.5a2.5 2.5 0 0 1-2.5 2.5H16V7.5A2.5 2.5 0 0 1 18.5 5z" fill="#F00036"/><path d="M25.5 5H29v11.5a2.5 2.5 0 0 1-2.5 2.5H23V7.5A2.5 2.5 0 0 1 25.5 5z" fill="#2AB419"/><path d="M10.755 14.5c-1.06 0-2.122-.304-2.656-.987l.78-.676c.068 1.133 3.545 1.24 3.545-.19V9.5h1.802v3.147c0 .728-.574 1.322-1.573 1.632-.466.144-1.365.221-1.898.221zm8.116 0c-.674 0-1.388-.107-1.965-.366-.948-.425-1.312-1.206-1.3-2.199.012-1.014.436-1.782 1.468-2.165 1.319-.49 3.343-.261 3.926.27v.972c-.572-.521-1.958-.898-2.919-.46-.494.226-.737.917-.744 1.448-.006.56.245 1.252.744 1.497.953.467 2.39.04 2.919-.441v1.01c-.358.255-1.253.434-2.129.434zm8.679-2.587c.37-.235.582-.567.582-1.005 0-.438-.116-.687-.348-.939-.206-.207-.58-.469-1.238-.469H23v5h3.546c.696 0 1.097-.23 1.315-.415.283-.25.426-.53.426-.96 0-.431-.155-.908-.737-1.212zm-1.906-.281h-1.428v-1.444h1.495c.956 0 .944 1.444-.067 1.444zm.288 2.157h-1.716v-1.513h1.716c.986 0 1.083 1.513 0 1.513z" fill="#FFF" fill-rule="nonzero"/></g></svg>
+                </li><li>
+                  <svg class="icon" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24" aria-labelledby="pi-master"><title id="pi-master">Mastercard</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"/><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"/><circle fill="#EB001B" cx="15" cy="12" r="7"/><circle fill="#F79E1B" cx="23" cy="12" r="7"/><path fill="#FF5F00" d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z"/></svg>
+                </li><li>
+                  <svg class="icon" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"/><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"/><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"/><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"/><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"/></svg>
+                </li><li>
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 38 24" width="38" height="24" aria-labelledby="pi-shopify_pay"><title id="pi-shopify_pay">Shop Pay</title><rect x=".5" y=".5" width="37" height="23" rx="2" fill="#5A31F4" stroke="#3F22AB"/><path d="M21.382 9.713c0 1.668-1.177 2.858-2.821 2.858h-1.549a.133.133 0 00-.092.038.128.128 0 00-.038.091v2.192a.129.129 0 01-.08.119.13.13 0 01-.05.01h-1.084a.13.13 0 01-.12-.08.127.127 0 01-.01-.05V6.986a.129.129 0 01.13-.13h2.9c1.637 0 2.814 1.19 2.814 2.858zm-1.352 0c0-.958-.658-1.658-1.55-1.658h-1.468a.13.13 0 00-.13.13v3.05a.129.129 0 00.13.13h1.468c.892.005 1.55-.695 1.55-1.652zM21.704 13.504a1.527 1.527 0 01.647-1.317c.423-.316 1.084-.48 2.055-.514l1.033-.036v-.303c0-.607-.41-.863-1.068-.863-.658 0-1.075.231-1.17.61a.127.127 0 01-.125.09h-1.022a.13.13 0 01-.126-.092.126.126 0 01-.004-.055c.152-.898.904-1.58 2.494-1.58 1.692 0 2.303.783 2.303 2.276v3.172a.13.13 0 01-.132.129h-1.03a.13.13 0 01-.13-.13v-.236a.096.096 0 00-.061-.091.099.099 0 00-.107.022c-.31.334-.808.575-1.607.575-1.175 0-1.95-.607-1.95-1.657zm3.735-.687v-.246l-1.339.07c-.705.036-1.115.326-1.115.816 0 .444.376.69 1.034.69.893 0 1.42-.48 1.42-1.33zM27.755 17.417v-.919a.131.131 0 01.157-.127c.158.029.318.044.479.044a1.229 1.229 0 001.245-.876l.067-.211a.133.133 0 000-.088l-2.145-5.471a.13.13 0 01.122-.18h1.04a.132.132 0 01.123.085l1.456 3.859a.131.131 0 00.125.088.133.133 0 00.125-.088l1.265-3.848a.13.13 0 01.126-.09h1.076a.134.134 0 01.132.116.133.133 0 01-.008.063l-2.295 6.076c-.528 1.413-1.433 1.773-2.43 1.773a1.96 1.96 0 01-.561-.066.132.132 0 01-.1-.14zM8.57 6.4a5.363 5.363 0 00-3.683 1.427.231.231 0 00-.029.31l.618.839a.236.236 0 00.276.084.237.237 0 00.086-.056 3.823 3.823 0 012.738-1.11c2.12 0 3.227 1.584 3.227 3.15 0 1.7-1.163 2.898-2.835 2.921-1.292 0-2.266-.85-2.266-1.974a1.908 1.908 0 01.713-1.48.231.231 0 00.033-.324l-.65-.815a.236.236 0 00-.339-.034c-.399.32-.72.724-.942 1.183a3.39 3.39 0 00-.337 1.47c0 1.935 1.655 3.452 3.775 3.464h.03c2.517-.032 4.337-1.884 4.337-4.415 0-2.247-1.667-4.64-4.752-4.64z" fill="#fff"/></svg>
+                </li><li>
+                  <svg class="icon" viewBox="0 0 38 24" width="38" height="24" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="pi-venmo"><title id="pi-venmo">Venmo</title><g fill="none" fill-rule="evenodd"><rect fill-opacity=".07" fill="#000" width="38" height="24" rx="3"/><path fill="#3D95CE" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"/><path d="M24.675 8.36c0 3.064-2.557 7.045-4.633 9.84h-4.74L13.4 6.57l4.151-.402 1.005 8.275c.94-1.566 2.099-4.025 2.099-5.702 0-.918-.154-1.543-.394-2.058l3.78-.783c.437.738.634 1.499.634 2.46z" fill="#FFF" fill-rule="nonzero"/></g></svg>
+
+                </li><li>
+                  <svg class="icon" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24" aria-labelledby="pi-visa"><title id="pi-visa">Visa</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"/><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"/><path d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z" fill="#142688"/></svg>
+                </li></ul></div>
+    </div>
+
+  </div>
+</footer>
+
+
+
+
+</div>
+
+  </div>
+
+  
+  <script>
+    
+  </script>
+
+  
+  
+
+  
+      <script>
+        // Override default values of shop.strings for each template.
+        // Alternate product templates can change values of
+        // add to cart button, sold out, and unavailable states here.
+        theme.productStrings = {
+          addToCart: "Add to Cart",
+          soldOut: "Sold Out",
+          unavailable: "Unavailable"
+        }
+      </script>
+    
+
+  <div id="SearchModal" class="mfp-hide">
+    <!-- /snippets/search-bar.liquid -->
+
+
+
+
+
+<form action="/search" method="get" class="input-group search-bar search-bar--modal" role="search">
+  
+  <input type="search" name="q" value="" placeholder="Search our store" class="input-group-field" aria-label="Search our store">
+  <span class="input-group-btn">
+    <button type="submit" class="btn icon-fallback-text">
+      <span class="icon icon-search" aria-hidden="true"></span>
+      <span class="fallback-text">Search</span>
+    </button>
+  </span>
+</form>
+
+  </div>
+  <ul hidden>
+    <li id="a11y-refresh-page-message">Choosing a selection results in a full page refresh.</li>
+    <li id="a11y-selection-message">Press the space key then arrow keys to make a selection.</li>
+    <li id="a11y-slideshow-info">Use left/right arrows to navigate the slideshow or swipe left/right if using a mobile device</li>
+  </ul>
 </body>
 </html>

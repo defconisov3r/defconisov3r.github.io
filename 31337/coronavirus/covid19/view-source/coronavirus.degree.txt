@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Visitor anti-robot validation</title>
+    
+    <link rel="stylesheet" type="text/css" href="v2/css/main.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1975075-20"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1975075-20');
+        gtag('event', 'screen_view', {
+            'screen_name': 'Captcha Page'
+        });
+
+    </script>
+
+    <script src="v2/js/adaptive-color.js"></script>
+    <script src="v2/js/translations.js"></script>
+    <script src="v2/js/detect-browser-language.js"></script>
+
+</head>
+
+<body>
+
+
+    <div class="page-container">
+
+        <div class="contact-support info">
+            <!--
+        <div>
+            <p>Company</p>
+            <p>info@company.com</p>
+        </div>
+        <div>
+            <p>USA: +1 234 567 88</p>
+            <p>EU: +44 55 6666 777</p>
+        </div>
+        -->
+        </div>
+
+        <noscript>
+            <div class="alert card">
+                <div class="title">Your browser does not support JavaScript!</div>
+                <p>
+                    Please enable Javascript and refresh this page!
+                </p>
+            </div>
+        </noscript>
+
+        <div class="card">
+            <div class="captcha-container">
+                <div class="right">
+                    <select id="languageDropdown" class="link"></select>
+                </div>
+
+                <img class="logo" alt="logo"
+                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAyIiBoZWlnaHQ9IjgyIiB2aWV3Qm94PSIwIDAgMTAyIDgyIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNODMuMzc2MyAyNy4yMjM5TDgyLjE2NzYgMzAuMDkxNUw4NS4yMjgzIDMwLjY1MzdDOTMuNTM5IDMyLjE4MDMgOTkuNSAzOC43ODQ5IDk5LjUgNDYuMzYzNkM5OS41IDU1LjAwNzUgOTEuNzE2NyA2Mi40MDkxIDgxLjYgNjIuNDA5MUgyMi45NUMxMS40MzA4IDYyLjQwOTEgMi41IDUzLjk2NDMgMi41IDQ0LjA0NTVDMi41IDM2LjE5MjggOC4wNDQyOSAyOS4zMTA3IDE2LjA5MzQgMjYuNzM2NkwxNy45MDczIDI2LjE1NjVMMTcuODI5OCAyNC4yNTM2QzE3LjgxMzUgMjMuODUzOSAxNy44IDIzLjUxMzYgMTcuOCAyMy4xODE4QzE3LjggMTEuOTczNSAyNy44NjI0IDIuNSA0MC44IDIuNUM0OS40MzM3IDIuNSA1Ni44NTg5IDYuNzU5NiA2MC43OTQ3IDEyLjk1OTdMNjIuMTEwOCAxNS4wMzMxTDY0LjIwNzMgMTMuNzU0MUM2Ni4yMzkxIDEyLjUxNDYgNjguNzIxNCAxMS43NzI3IDcxLjQgMTEuNzcyN0M3OC42OTU3IDExLjc3MjcgODQuMiAxNy4xMDI0IDg0LjIgMjMuMTgxOEM4NC4yIDI0LjYwMTIgODMuOTA2IDI1Ljk2NzEgODMuMzc2MyAyNy4yMjM5WiIgc3Ryb2tlPSIjQzQwMDAwIiBzdHJva2Utd2lkdGg9IjUiLz4KPHBhdGggZD0iTTQ2LjAwNjQgNjIuOTcwOEw0Ny43NzQyIDY0LjczODZMNDkuNTQyIDYyLjk3MDhMNjAuNzg4MSA1MS43MjQ3TDYwLjkwMjIgNTEuODM4N0w0Ny43NzQyIDY0Ljk2NjdMNDEuMDk3OCA1OC4yOTAzTDQxLjIxMTkgNTguMTc2M0w0Ni4wMDY0IDYyLjk3MDhaTTU5LjkzMjggNTAuODY5NEw1OS45MzM2IDUwLjg3MDJDNTkuOTMzMyA1MC44Njk5IDU5LjkzMyA1MC44Njk2IDU5LjkzMjcgNTAuODY5Mkw1OS45MzI4IDUwLjg2OTRaTTUxIDc5LjVDNjMuNDI2NCA3OS41IDczLjUgNjkuNDI2NCA3My41IDU3QzczLjUgNDQuNTczNiA2My40MjY0IDM0LjUgNTEgMzQuNUMzOC41NzM2IDM0LjUgMjguNSA0NC41NzM2IDI4LjUgNTdDMjguNSA2OS40MjY0IDM4LjU3MzYgNzkuNSA1MSA3OS41WiIgZmlsbD0iI0M0MDAwMCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI1Ii8+Cjwvc3ZnPgo=">
+                <div class="title js-lang-TITLE"></div>
+
+                <div class="description js-lang-SUBTITLE"></div>
+
+                <div class="ip-info info"><span class="js-lang-YOUR_IP"></span>: <b class="primary"> 104.244.72.115</b>
+                    <!-- ∘ BNI: 552aebbdf8d1b9f8 -->
+                </div>
+
+                <div class="center">
+
+                    <div class="captcha">
+                        <form method="post" action="/verify.php">
+                            <script src="https://recaptcha.net/recaptcha/api.js" async defer></script>
+                    <div class="g-recaptcha" data-sitekey="6LdvpRAUAAAAAJkr4psZnXC4TeOEVPwP_bEQrP24"></div>
+                            <input type="hidden" name="origin_url" value="http://coronavirus.degree/" />
+                            <input type="submit" class="delist-button" translate translate-attr-value="SUBMIT"
+                                value="Delist" />
+                        </form>
+                    </div>
+
+                    <div id="moreInfoDropdown" class="link"><span class="js-lang-HEADING"></span> ⌵</div>
+                    <div id="moreInfo">
+                        <span class="js-lang-PRE_BODY"></span>
+                        <span class="js-lang-POST_BODY"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="info js-lang-CHECK"></footer>
+
+    <script>
+
+        // Use and calculate colors:
+
+        const primaryColor = "#c00000";
+        const backgroundColor = "#fff";
+
+        var fallbackLanguage = { code: 'en' };
+
+        // Detect browser language
+
+        var browserLanguages = [...parse(window.navigator.language), fallbackLanguage];
+
+        var languageDropdown = document.getElementById("languageDropdown");
+
+        languageDropdown.addEventListener("change", function () {
+            translate([{ code: languageDropdown.value }, fallbackLanguage]);
+        }, false);
+
+        for (const langCode in translations) {
+            var opt = document.createElement("option");
+            opt.value = langCode;
+            opt.innerHTML = languages[langCode];
+            opt.selected = browserLanguages[0].code === langCode;
+
+            languageDropdown.appendChild(opt);
+        }
+
+        // More info dropdown
+
+        var moreInfoDropdown = document.getElementById("moreInfoDropdown");
+
+        moreInfoDropdown.addEventListener("click", function () {
+            this.className = 'invisible';
+            document.getElementById("moreInfo").className = 'visible';
+        }, false);
+
+    </script>
+
+    <script src="v2/js/translate.js"></script>
+    <script src="v2/js/set-colors.js"></script>
+
+</body>
+
+
+
+
+
+<img src="https://admin.bitninja.io/cookieimg.php" rel="nofollow" style="display: none;" />
+
+</html>

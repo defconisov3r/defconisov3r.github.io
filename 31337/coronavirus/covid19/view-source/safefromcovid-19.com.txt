@@ -54,6 +54,7 @@
 <script id="apple-pay-shop-capabilities" type="application/json">{"shopId":35505897516,"countryCode":"ES","currencyCode":"EUR","merchantCapabilities":["supports3DS"],"merchantId":"gid:\/\/shopify\/Shop\/35505897516","merchantName":"Safe from COVID-19","requiredBillingContactFields":["postalAddress","email"],"requiredShippingContactFields":["postalAddress","email"],"shippingType":"shipping","supportedNetworks":["visa","maestro","masterCard","amex"],"total":{"type":"pending","label":"Safe from COVID-19","amount":"1.00"}}</script>
 <script>var Shopify = Shopify || {};
 Shopify.shop = "safe-from-covid-19.myshopify.com";
+Shopify.locale = "es";
 Shopify.currency = {"active":"EUR","rate":"1.0"};
 Shopify.theme = {"name":"Debut","id":92025192492,"theme_store_id":796,"role":"main"};
 Shopify.theme.handle = "null";
@@ -62,8 +63,66 @@ Shopify.theme.style = {"id":null,"handle":null};</script>
 <script>!function(o){function n(){var o=[];function n(){o.push(Array.prototype.slice.apply(arguments))}return n.q=o,n}var t=o.Shopify=o.Shopify||{};t.loadFeatures=n(),t.autoloadFeatures=n()}(window);</script>
 <script>window.ShopifyPay = window.ShopifyPay || {};
 window.ShopifyPay.apiHost = "pay.shopify.com";</script>
-<script id="__st">var __st={"a":35505897516,"offset":3600,"reqid":"9ebd081f-32e3-4dea-8bbf-eff6ad12b14f","pageurl":"safefromcovid-19.com\/password","u":"bf5fa147e146","p":"password"};</script>
+<script>(function() {
+  function asyncLoad() {
+    var urls = ["\/\/code.tidio.co\/tpujajnpfpvws0mf95ovrkg405vkm15m.js?shop=safe-from-covid-19.myshopify.com"];
+    for (var i = 0; i < urls.length; i++) {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = urls[i];
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    }
+  };
+  if(window.attachEvent) {
+    window.attachEvent('onload', asyncLoad);
+  } else {
+    window.addEventListener('load', asyncLoad, false);
+  }
+})();</script>
+<script id="__st">var __st={"a":35505897516,"offset":3600,"reqid":"394a50b1-95a3-4eff-9bd6-35fef491d850","pageurl":"safefromcovid-19.com\/password","u":"cd4d7eaa9766","p":"password"};</script>
 <script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
+<script>window['GoogleAnalyticsObject'] = 'ga';
+window['ga'] = window['ga'] || function() {
+  (window['ga'].q = window['ga'].q || []).push(arguments);
+};
+window['ga'].l = 1 * new Date();</script>
+<script>var _gaUTrackerOptions = {'allowLinker': true};ga('create', 'UA-160993765-1', 'auto', _gaUTrackerOptions);ga('send', 'pageview');
+      (function(){
+        ga('require', 'linker');
+        function addListener(element, type, callback) {
+          if (element.addEventListener) {
+            element.addEventListener(type, callback);
+          }
+          else if (element.attachEvent) {
+            element.attachEvent('on' + type, callback);
+          }
+        }
+        function decorate(event) {
+          event = event || window.event;
+          var target = event.target || event.srcElement;
+          if (target && (target.action || target.href)) {
+            ga(function (tracker) {
+              var linkerParam = tracker.get('linkerParam');
+              document.cookie = '_shopify_ga=' + linkerParam + '; ' + 'path=/';
+            });
+          }
+        }
+        addListener(window, 'load', function(){
+          for (var i=0; i<document.forms.length; i++) {
+            if(document.forms[i].action && document.forms[i].action.indexOf('/cart') >= 0) {
+              addListener(document.forms[i], 'submit', decorate);
+            }
+          }
+          for (var i=0; i<document.links.length; i++) {
+            if(document.links[i].href && document.links[i].href.indexOf('/checkout') >= 0) {
+              addListener(document.links[i], 'click', decorate);
+            }
+          }
+        })
+      }());
+    </script>
 <script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};
 window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
 window.ShopifyAnalytics.meta.currency = 'EUR';
@@ -311,6 +370,8 @@ for (var attr in meta) {
 })();</script>
 <script integrity="sha256-4C8Xn08nwqM3O49DRPPchMb3B3xQ7b00VkDrQItpRW4=" crossorigin="anonymous" data-source-attribution="shopify.loadfeatures" defer="defer" src="//cdn.shopify.com/s/assets/storefront/load_feature-e02f179f4f27c2a3373b8f4344f3dc84c6f7077c50edbd345640eb408b69456e.js"></script>
 <script crossorigin="anonymous" defer="defer" src="//cdn.shopify.com/s/assets/shopify_pay/storefront-f95c62afca18778ed8677facd32818c864b5e4938cba1769e8d8ba0b541d41dc.js?v=20190107"></script>
+<script async="async" src="https://www.google-analytics.com/analytics.js"></script>
+<script defer="defer" src="//cdn.shopify.com/s/assets/themes_support/ga_urchin_forms-99e991855b3d8ddc69e625c68ab0579dd9927b611c2ec4943d396c72e3af0849.js"></script>
 
 
 <style id="shopify-dynamic-checkout-cart">@media screen and (min-width: 750px) {

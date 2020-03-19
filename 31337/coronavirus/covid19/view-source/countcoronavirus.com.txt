@@ -1,0 +1,791 @@
+﻿<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Coronavirus COVID-19 Virus Outbreak Live Update: Today New Cases and New Deaths</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap.min.css'>
+<link rel="stylesheet" href="./style.css">
+<link rel='stylesheet' href='https://cdn.datatables.net/fixedheader/3.1.6/css/fixedHeader.dataTables.min.css'>
+<link rel='stylesheet' href='https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css'>
+
+    <style type="text/css">
+
+    .auto-style2 {
+        height: 30.75pt;
+        width: 75pt;
+        color: #666666;
+        font-size: 11.0pt;
+        font-weight: 700;
+        font-style: normal;
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        text-align: left;
+        vertical-align: bottom;
+        white-space: normal;
+        border: 1.0pt solid #DDDDDD;
+        padding-left: 1px;
+        padding-right: 1px;
+        padding-top: 1px;
+        background: white;
+    }
+    .auto-style3 {
+        width: 65pt;
+        color: #666666;
+        font-size: 11.0pt;
+        font-weight: 700;
+        font-style: normal;
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        text-align: left;
+        vertical-align: bottom;
+        white-space: normal;
+        border: 1.0pt solid #DDDDDD;
+        padding-left: 1px;
+        padding-right: 1px;
+        padding-top: 1px;
+        background: white;
+    }
+    .auto-style4 {
+        width: 53pt;
+        color: #666666;
+        font-size: 11.0pt;
+        font-weight: 700;
+        font-style: normal;
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        text-align: left;
+        vertical-align: bottom;
+        white-space: normal;
+        border: 1.0pt solid #DDDDDD;
+        padding-left: 1px;
+        padding-right: 1px;
+        padding-top: 1px;
+        background: white;
+    }
+    .auto-style5 {
+        width: 49pt;
+        color: #666666;
+        font-size: 11.0pt;
+        font-weight: 700;
+        font-style: normal;
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        text-align: left;
+        vertical-align: bottom;
+        white-space: normal;
+        border: 1.0pt solid #DDDDDD;
+        padding-left: 1px;
+        padding-right: 1px;
+        padding-top: 1px;
+        background: white;
+    }
+    .auto-style6 {
+        width: 72pt;
+        color: #666666;
+        font-size: 11.0pt;
+        font-weight: 700;
+        font-style: normal;
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        text-align: left;
+        vertical-align: bottom;
+        white-space: normal;
+        border: 1.0pt solid #DDDDDD;
+        padding-left: 1px;
+        padding-right: 1px;
+        padding-top: 1px;
+        background: white;
+    }
+    .auto-style7 {
+        width: 77pt;
+        color: #666666;
+        font-size: 11.0pt;
+        font-weight: 700;
+        font-style: normal;
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        text-align: left;
+        vertical-align: bottom;
+        white-space: normal;
+        border: 1.0pt solid #DDDDDD;
+        padding-left: 1px;
+        padding-right: 1px;
+        padding-top: 1px;
+        background: white;
+    }
+    .auto-style8 {
+        height: 27.0pt;
+        width: 75pt;
+        color: #ED7D31;
+        font-size: 20.0pt;
+        font-weight: 700;
+        font-style: normal;
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        text-align: left;
+        vertical-align: bottom;
+        white-space: normal;
+        border-left: 1.0pt solid #DDDDDD;
+        border-right: 1.0pt solid #DDDDDD;
+        border-top-style: none;
+        border-top-color: inherit;
+        border-top-width: medium;
+        border-bottom: 1.5pt solid #DDDDDD;
+        padding-left: 1px;
+        padding-right: 1px;
+        padding-top: 1px;
+        background: white;
+    }
+    .auto-style9 {
+        width: 65pt;
+        color: #000000;
+        font-size: 20.0pt;
+        font-weight: 700;
+        font-style: normal;
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        text-align: left;
+        vertical-align: bottom;
+        white-space: normal;
+        border-left: 1.0pt solid #DDDDDD;
+        border-right: 1.0pt solid #DDDDDD;
+        border-top-style: none;
+        border-top-color: inherit;
+        border-top-width: medium;
+        border-bottom: 1.5pt solid #DDDDDD;
+        padding-left: 1px;
+        padding-right: 1px;
+        padding-top: 1px;
+        background: yellow;
+        }
+    .auto-style10 {
+        width: 53pt;
+        color: red;
+        font-size: 20.0pt;
+        font-weight: 700;
+        font-style: normal;
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        text-align: left;
+        vertical-align: bottom;
+        white-space: normal;
+        border-left: 1.0pt solid #DDDDDD;
+        border-right: 1.0pt solid #DDDDDD;
+        border-top-style: none;
+        border-top-color: inherit;
+        border-top-width: medium;
+        border-bottom: 1.5pt solid #DDDDDD;
+        padding-left: 1px;
+        padding-right: 1px;
+        padding-top: 1px;
+        background: white;
+    }
+    .auto-style11 {
+        width: 49pt;
+        color: black;
+        font-size: 20.0pt;
+        font-weight: 700;
+        font-style: normal;
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        text-align: left;
+        vertical-align: bottom;
+        white-space: normal;
+        border-left: 1.0pt solid #DDDDDD;
+        border-right: 1.0pt solid #DDDDDD;
+        border-top-style: none;
+        border-top-color: inherit;
+        border-top-width: medium;
+        border-bottom: 1.5pt solid #DDDDDD;
+        padding-left: 1px;
+        padding-right: 1px;
+        padding-top: 1px;
+        background: #FF0000;
+        }
+    .auto-style12 {
+        width: 72pt;
+        color: #00B050;
+        font-size: 20.0pt;
+        font-weight: 700;
+        font-style: normal;
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        text-align: left;
+        vertical-align: bottom;
+        white-space: normal;
+        border-left: 1.0pt solid #DDDDDD;
+        border-right: 1.0pt solid #DDDDDD;
+        border-top-style: none;
+        border-top-color: inherit;
+        border-top-width: medium;
+        border-bottom: 1.5pt solid #DDDDDD;
+        padding-left: 1px;
+        padding-right: 1px;
+        padding-top: 1px;
+        background: white;
+    }
+    .auto-style13 {
+        width: 77pt;
+        color: #0070C0;
+        font-size: 20.0pt;
+        font-weight: 700;
+        font-style: normal;
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        text-align: left;
+        vertical-align: bottom;
+        white-space: normal;
+        border-left: 1.0pt solid #DDDDDD;
+        border-right: 1.0pt solid #DDDDDD;
+        border-top-style: none;
+        border-top-color: inherit;
+        border-top-width: medium;
+        border-bottom: 1.5pt solid #DDDDDD;
+        padding-left: 1px;
+        padding-right: 1px;
+        padding-top: 1px;
+        background: white;
+    }
+    </style>
+
+</head>
+<body>
+
+    <h1 style="text-align: center;"><strong>CORONAVIRUS COVID-19 LIVE UPDATES</strong></h1>
+    <p style="text-align: center;">Last updated: March 19, 2020, 10:21 GMT+0 </p>
+
+        <div style="text-align: center;">
+            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; width: 391pt; box-sizing: border-box; border-spacing: 0px; max-width: none !important; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; margin-left: auto; margin-right: auto" width="520">
+       
+                <tr height="41" role="row">
+                    <td class="auto-style2" height="41" width="100">Coronavirus cases</td>
+                    <td class="auto-style3" width="86">New Cases</td>
+                    <td class="auto-style4" width="71">Deaths Total</td>
+                    <td class="auto-style5" width="65">New Deaths</td>
+                    <td class="auto-style6" width="96">Recovered</td>
+                    <td class="auto-style7" width="102">Active Cases<span style="mso-spacerun:yes">&nbsp;</span></td>
+                </tr>
+                <tr height="36">
+                    <td class="auto-style8" height="36" width="100"><span style="font-variant-ligatures: normal;font-variant-caps: normal;orphans: 2;
+  widows: 2;-webkit-text-stroke-width: 0px;text-decoration-style: initial;
+  text-decoration-color: initial">221,290</span></td>
+                    <td class="auto-style9" width="86">&nbsp; 2502</td>
+                    <td class="auto-style10" width="71">8,997</td>
+                    <td class="auto-style11" width="65">&nbsp;&nbsp; 54</td>
+                    <td class="auto-style12" width="96">85,785</td>
+                    <td class="auto-style13" width="102"><span style="font-variant-ligatures: normal;font-variant-caps: normal;orphans: 2;
+  widows: 2;-webkit-text-stroke-width: 0px;text-decoration-style: initial;
+  text-decoration-color: initial">126,508</span></td>
+                </tr>
+            </table>
+           </div>
+            <br />
+    <div style="text-align: center;">
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <input type="hidden" name="cmd" value="_s-xclick" />
+<input type="hidden" name="hosted_button_id" value="FAR38GDUGYJUJ" />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+      <br />
+</form>
+        </div>
+
+<!-- partial:index.partial.html -->
+<div class="container">
+  <div class="row">
+    
+    <table id="example" class="table table-bordered" cellspacing="0" width="100%">
+      <thead>
+        <tr>
+          <th><b>Country</b></th>
+          <th><b>Cases</b></th>
+          <th><b>New Cases</b></th>
+          <th><b>Deaths</b></th>
+          <th><b>New Deaths</b></th>
+          <th><b>Recovered</b></th>
+		  <th><b>Active Case</b></th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th><b></b></th>
+          <th><b></b></th>
+          <th><b></b></th>
+          <th><b></b></th>
+          <th><b></b></th>
+          <th><b></b></th>
+		  <th><b></b></th>
+        </tr>
+      </tfoot>
+     </table>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src='https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js'></script>
+<script src='https://cdn.datatables.net/plug-ins/1.10.20/api/sum().js'></script>
+
+<script  src="./script.js"></script>
+<script src='https://cdn.datatables.net/fixedheader/3.1.6/js/dataTables.fixedHeader.min.js'></script>
+<script src='https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js'></script>
+
+           <h2 id="news" align="left">Latest Updates</h2>
+        <div class="row">
+            <div id="news_block" class="col-md-12">
+                <div class="news_date">
+                    <h4 class="auto-style1">March 19 (00:00 - 23:59 GMT+0)</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <p>
+        &nbsp;</p>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body news_box" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">China</strong>: for the first time since the beginning of the outbreak, there have been<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">0 new cases in Wuhan<span>&nbsp;</span></strong>and in the<strong style="box-sizing: border-box; font-weight: 700;">&nbsp;Hubei<span>&nbsp;</span></strong>province, and&nbsp;<strong style="box-sizing: border-box; font-weight: 700;">no&nbsp;new and no&nbsp;existing suspected cases&nbsp;</strong>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Wuhan<span>&nbsp;</span></strong>and in&nbsp;<strong style="box-sizing: border-box; font-weight: 700;">Hubei<span>&nbsp;</span></strong>&nbsp;[<a href="http://www.nhc.gov.cn/xcs/yqtb/202003/e644c2fc18b4448db7ed4b30f68b91a6.shtml" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important; cursor: pointer;" target="_blank">source</a>]</li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">12 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Armenia</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.facebook.com/141126305932755/posts/3198541096857912/?d=n" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">31 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Norway</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.vg.no/spesial/2020/corona-viruset/?utm_source=vgfront&amp;utm_content=row-1" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">104 new cases</strong><span>&nbsp;</span>and<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">2 new deaths</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Switzerland</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://interactif.tdg.ch/2020/covid-19-carte-suisse/" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">2 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Lithuania</strong>: both cases imported&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.lrt.lt/naujienos/lietuvoje/2/1153043/ketvirtadieni-du-nauji-iveztiniai-koronaviruso-atvejai-lietuvoje" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">28 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Finland</strong></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">3 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Tanzania</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.instagram.com/p/B96N__QHd4x/?igshid=1h4ygn3l8kk46" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">3 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">the State of Palestine</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.maannews.net/Content.aspx?id=1010317" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">4 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Bangladesh</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.thedailystar.net/coronavirus-in-bangladesh-3-new-cases-detected-dghs-1882915" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">4 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Guam</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.pncguam.com/4-new-positive-cases-of-covid-19-guam-now-has-12-positive-coronavirus-cases/" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">497 new cases</strong><span>&nbsp;</span>and<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">3 new deaths</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Germany</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://interaktiv.morgenpost.de/corona-virus-karte-infektionen-deutschland-weltweit/?fbclid=IwAR04HlqzakGaNssQzbz4d8o8R3gz0C910U8tvfYlBT6P0lVJJvHfk9uS2rc" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">5 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Brunei Darussalam</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://twitter.com/thescoop_co/status/1240567616822865920?s=20" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">1 new death</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Greece</strong>: a 70-year-old man&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.newsbomb.gr/ellada/ergasia/story/1064165/koronoios-ektos-nekros-stin-ellada" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;">
+                    <strong style="box-sizing: border-box; font-weight: 700;">13 new cases</strong><span>&nbsp;</span>and<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">1 new death</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Croatia</strong>: 1<sup style="box-sizing: border-box; position: relative; font-size: 10.5px; line-height: 0; vertical-align: baseline; top: -0.5em;">st</sup>&nbsp;confirmed case, a man from Istria region&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.index.hr/vijesti/clanak/jos-10-potvrdjeno-zarazenih-ukupno-99-u-hrvatskoj-skoro-sve-zatvoreno/2166633.aspx" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">4 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Morocco</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.sante.gov.ma/pages/actualites.aspx?idactu=410" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">6 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Bosnia and Herzegovina</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://hayat.ba/novih-sest-slucejava-zarazenih-virusom-u-bih/135128/?fbclid=IwAR0dm2g8dlqOZpQZntgEJeN3ehVn6IobTMYhdqCHWCIOCpmZFzv7EW9MJmo" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">15 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">the Philippines</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://cnnphilippines.com/news/2020/3/19/covid-19-cases-philippines-recovery-death-toll.html" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">7 new cases</strong><span>&nbsp;</span>and<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">1 new death</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Algeria</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="http://m.elbilad.net/article/detail?id=105812" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">75 new cases</strong><span>&nbsp;</span>and<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">2 new deaths</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Denmark</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.ssi.dk/aktuelt/sygdomsudbrud/coronavirus" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">2 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Ghana</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://ghanahealthservice.org/covid19/" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">91 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Australia&nbsp;(NSW)</strong>, including a 6-year-old child&nbsp;<strong style="box-sizing: border-box; font-weight: 700;">&nbsp;</strong>[<a href="https://www.health.nsw.gov.au/Infectious/diseases/Pages/covid-19-latest.aspx#statistics" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important; cursor: pointer;" target="_blank">source</a>]&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.news.com.au/lifestyle/health/health-problems/coronavirus-australia-covid19-cases-in-nsw-victoria-queensland-sa-wa-tasmania-act-and-nt/news-story/e8c8797238bfc27d0bc25e7fa1903ae1" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">105 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Slovakia</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://novinytempo.sk/aktualita-v-partizanskom-potvrdili-novy-pripad-koronavirusu/" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">7 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">the DR Congo</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.aa.com.tr/fr/afrique/rdc-coronavirus-le-bilan-des-contaminations-passe-à-14-cas/1771086" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">6 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Lebanon</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.lebanon24.com/news/lebanon/685160/لبنان-يستعد-للأسوأ-18-إصابة-جديدة-بكورونا-والعدّاد" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">96 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Israel</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.jpost.com/Breaking-News/529-Israelis-have-been-diagnosed-with-coronavirus-Health-Ministry-621536" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">132 new cases</strong><span>&nbsp;</span>and<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">2 new deaths</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Luxembourg</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://msan.gouvernement.lu/fr/dossiers/2020/corona-virus.html" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">15 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Latvia</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://mobile.twitter.com/SPKCentrs/status/1240549725327294464" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">50 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Czechia</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://onemocneni-aktualne.mzcr.cz/covid-19" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body news_box" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li style="box-sizing: border-box; margin-bottom: 25px;">
+                    &nbsp;<strong style="box-sizing: border-box; font-weight: 700;">1<sup style="box-sizing: border-box; position: relative; font-size: 10.5px; line-height: 0; vertical-align: baseline; top: -0.5em;">st</sup>&nbsp;death</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Russia</strong>: a 79-year-old woman with underlying medical conditions&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://meduza.io/news/2020/03/19/v-moskovskoy-bolnitse-umerla-patsientka-s-koronavirusom" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">110 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Malaysia</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://twitter.com/KKMPutrajaya/status/1240548135987863553?s=19" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">14 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Faeroe Islands</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.hmr.fo/fo/kunning/tidindi/72-foroyingar-eru-smittadir/" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">6 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Kuwait</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://twitter.com/KUWAIT_MOH/status/1240547188821893121?s=20" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">1 new case</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Cuba</strong>:&nbsp;&nbsp;a 57-year-old Canadian citizen who had entered the country on March 14&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://oncubanews.com/cuba/onceno-caso-positivo-al-coronavirus-en-cuba/" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">60 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Thailand</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.thaienquirer.com/9777/breaking-thailand-confirms-60-new-cases-of-coronavirus-largest-single-day-climb-since-outbreak-began/" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">82 new cases</strong><span>&nbsp;</span>and<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">6 new deaths</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Indonesia</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://today.line.me/ID/article/MkG71V?utm_source=copyshare" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">18 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Poland</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://twitter.com/MZ_GOV_PL/status/1240543115502632960" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">8 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Kazakhstan</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.zakon.kz/5012473-7-novyh-sluchaev-zarazheniya.html" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body news_box" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">1<sup style="box-sizing: border-box; position: relative; font-size: 10.5px; line-height: 0; vertical-align: baseline; top: -0.5em;">st</sup>&nbsp;death</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Mexico</strong>: a 41-year-old man with diabetes&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.eluniversal.com.mx/nacion/coronavirus-secretaria-de-salud-confirma-la-primera-muerte-por-covid-19-en-mexico?amp" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">197 new cases</strong><span>&nbsp;</span>and<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">1 new death</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Austria</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.sozialministerium.at/Informationen-zum-Coronavirus/Neuartiges-Coronavirus-(2019-nCov).html" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">8 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Serbia</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://covid19.rs/homepage-english/" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">2 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Sri Lanka</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="http://hpb.health.gov.lk/" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">5 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">India</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.thehindu.com/sci-tech/health/covid-19-interactive-map-confirmed-cases-in-india/article31041690.ece?utm_source=thehindu&amp;utm_medium=cube&amp;utm_campaign=corona" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://aajtak.intoday.in/news/liveblog/corona-virus-covid-19-confirmed-cases-death-toll-in-india-suspects-list-live-updates-813.html" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">15 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Hungary</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://koronavirus.gov.hu/" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">2 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Georgia</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://stopcov.ge/en" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">8 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Taiwan</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.cdc.gov.tw/Bulletin/Detail/vcmwTQgymqoIKGU86YFjhg?typeid=9" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">2 new cases</strong><span>&nbsp;</span>and<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">1 new death</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Bulgaria</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://nova.bg/news/view/2020/03/19/281911/трета-жертва-на-коронавируса-у-нас/" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">5 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Uzbekistan</strong>, including&nbsp;3 relatives of a woman who arrived from<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Paris<span>&nbsp;</span></strong>and 2 passengers of flights from<strong style="box-sizing: border-box; font-weight: 700;"><span>&nbsp;</span>Istanbul<span>&nbsp;</span></strong>and<strong style="box-sizing: border-box; font-weight: 700;"><span>&nbsp;</span>London</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://telegra.ph/Soғliқni-saқlash-vazirligi-YANA-BESH-NAFAR-FUҚARODA-KORONAVIRUS-INFEKCIYASI-ANIҚLANDI-03-19" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">205 new cases</strong><span>&nbsp;</span>and<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">5 new deaths</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">the United States</strong><br style="box-sizing: border-box;" />
+                    <br style="box-sizing: border-box;" />
+                    <em style="box-sizing: border-box;">Deaths include:</em><ul style="box-sizing: border-box; margin-top: 0px; margin-bottom: 0px;">
+                        <br style="box-sizing: border-box;" />
+                        <li style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">1 death in California</strong>, the first in San Benito County: a man in his 60s&nbsp;[<a href="https://twitter.com/KION546/status/1240080278795833346" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important; cursor: pointer;" target="_blank">source</a>]</li>
+                        <li style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">1 death in&nbsp;Louisiana</strong>: a patient in his 60s&nbsp;with underlying health conditions [<a href="https://www.nola.com/news/coronavirus/article_9fe53efa-6982-11ea-b3e8-b749c5f5ee37.html" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important; cursor: pointer;" target="_blank">source</a>]</li>
+                        <li style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">1 death in Georgia</strong>&nbsp;[<a href="https://www.11alive.com/article/news/health/coronavirus/coronavirus-georgia-atlanta-live-updates/85-57e8f764-d489-439e-98f3-630824dbb124" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important; cursor: pointer;" target="_blank">source</a>]</li>
+                        <li style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">1st death in Maryland</strong>: a man in his 60s with an underlying medical condition&nbsp;&nbsp;[<a href="https://baltimore.cbslocal.com/2020/03/18/gov-hogan-announces-first-coronavirus-death-in-maryland/" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important; cursor: pointer;" target="_blank">source</a>]</li>
+                        <li style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">1 death in Washington State</strong>:&nbsp;a woman in her 80s with underlying health conditions&nbsp;&nbsp;[<a href="https://www.tri-cityherald.com/news/coronavirus/article241289426.html" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important; cursor: pointer;" target="_blank">source</a>]</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">9 new cases</strong><span>&nbsp;</span>and<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">3 new deaths</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Japan</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www3.nhk.or.jp/news/html/20200316/k10012333121000.html?utm_int=news_contents_news-main_001" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www3.nhk.or.jp/news/html/20200319/k10012339341000.html?utm_int=news_contents_news-main_002" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">3 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Honduras</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.laprensa.hn/honduras/1365257-410/honduras-reporta-tres-nuevos-casos-covid-19-eleva-12-afectados" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">2 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Trinidad and Tobago</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.facebook.com/MinistryofHealthTT/?__tn__=kC-R&amp;eid=ARCed-oICnXzG-jlo0GwJ52Ld44E9-_xt4fdpflwoqTcY7AKb-eIccD8lW8RBgy8xI-WQB2Ld0QjQtiw&amp;hc_ref=ARSr1dSjoIGeTqqoMjwqDCxr2oV-z50u9xQIf9KGJadMMxC2aobXALnSFHdwDaZ5e6M&amp;fref=nf&amp;__xts__[0]=68.ARBw3yAqmJNxl2JhgrwugUcbwlPaHtvMxSp9weNihBe3VXlNc3_WiXnSO2LmR4EaFUy7B1lHuL5vjadMvSlzdVDRAfL87NYhYiBvN1fKSyCLio4gQdGGdE5qvjrElH_eCtcrVkY8SoXRKc-yN3Iwasw-BebRrb1Q2PTGmyTeTYlhxu92-i9heu0Tt0sw_LuW7ynJpaz9TAc6Ilm2M149S66w3It0wxfPDi7gDVyBMsfgCRMjgahhCFCxrVnfFA-kGTriNh0TKrWht5VTVtm8HdL3vYGSc80Yvv2_MTmyFVICmNUcSC1-td_hP446VZ-vnl43KdfA0DRgaVrZ4IygCJ6U2w" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">1 new case</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">French Polynesia</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.tahiti-infos.com/Six-cas-de-coronavirus-en-Polynesie_a189674.html" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">1 new death</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Argentina</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.lanacion.com.ar/sociedad/coronavirus-tercer-muerto-argentina-nid2344998" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body news_box" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li style="box-sizing: border-box; margin-bottom: 25px;">
+                    <strong style="box-sizing: border-box; font-weight: 700;">1<sup style="box-sizing: border-box; position: relative; font-size: 10.5px; line-height: 0; vertical-align: baseline; top: -0.5em;">st<span>&nbsp;</span></sup>case in Nicaragua</strong>:&nbsp;a 40-year-old who had traveled to<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Panama<span>&nbsp;</span></strong>from March 13 to 15 [<a href="https://www.articulo66.com/2020/03/18/rosario-murillo-confirma-primer-caso-de-coronavirus-en-nicaragua/" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important; cursor: pointer;" target="_blank">source</a>]</li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body news_box" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li style="box-sizing: border-box; margin-bottom: 25px;">
+                    <strong style="box-sizing: border-box; font-weight: 700;">1<sup style="box-sizing: border-box; position: relative; font-size: 10.5px; line-height: 0; vertical-align: baseline; top: -0.5em;">st</sup><span>&nbsp;</span>case in El Salvador</strong><span>&nbsp;</span>[<a href="https://twitter.com/tcsnoticias/status/1240464372801187843?s=20" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important; cursor: pointer;" target="_blank">source</a>]</li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body news_box" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li style="box-sizing: border-box; margin-bottom: 25px;">
+                    <strong style="box-sizing: border-box; font-weight: 700;">1<sup style="box-sizing: border-box; position: relative; font-size: 10.5px; line-height: 0; vertical-align: baseline; top: -0.5em;">st</sup><span>&nbsp;</span>case in Fiji</strong>:&nbsp;a<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Fijian Airlines flight attendant<span>&nbsp;</span></strong>who briefly traveled through Auckland and had spent time in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">San Francisco</strong>, where it&#39;s believed he contracted the virus [<a href="https://www.tvnz.co.nz/one-news/new-zealand/fiji-confirms-first-coronavirus-case-flight-attendant-briefly-passed-through-auckland" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important; cursor: pointer;" target="_blank">source</a>]</li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">1 new death</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Curaçao</strong>. Death of the first-diagnosed case in the country:<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">a 69-year-old Dutch man</strong><span>&nbsp;</span>from North Brabant (<strong style="box-sizing: border-box; font-weight: 700;">Netherlands)</strong>&nbsp;who was<strong style="box-sizing: border-box; font-weight: 700;"><span>&nbsp;</span>on vacation</strong><span>&nbsp;</span>in Curaçao. His condition deteriorated on Monday, when he was admitted to the ICU.&nbsp;Curaçao has 2 more confirmed cases. One is his wife&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://curacao.nu/eerst-gedetecteerde-en-bevestigde-corona-patient-op-curacao-overleden/#" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">9 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">Colombia</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://twitter.com/MinSaludCol/status/1240463700622036992?s=20" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">152 new cases</strong><span>&nbsp;</span>and<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">7 new deaths</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">South Korea</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="http://ncov.mohw.go.kr/tcmBoardView.do?brdId=&amp;brdGubun=&amp;dataGubun=&amp;ncvContSeq=353626&amp;contSeq=353626&amp;board_id=&amp;gubun=ALL" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul class="news_ul" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li class="news_li" style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">8 new cases</strong><span>&nbsp;</span>in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">New Zealand</strong>&nbsp;<span class="source" style="box-sizing: border-box; user-select: text !important;">[<a class="news_source_a" href="https://www.reuters.com/article/us-health-newzealand/new-zealand-coronavirus-cases-rises-to-28-with-8-more-people-confirmed-idUSKBN21601L?feedType=RSS&amp;feedName=worldNews&amp;utm_source=dlvr.it&amp;utm_medium=twitter" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important;" target="_blank">source</a>]</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news_post" style="box-sizing: border-box; user-select: text !important; margin-bottom: 40px; color: rgb(54, 57, 69); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+        <div class="news_body news_box" style="box-sizing: border-box; user-select: text !important; position: relative;">
+            <ul style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px;">
+                <li style="box-sizing: border-box; margin-bottom: 25px;"><strong style="box-sizing: border-box; font-weight: 700;">34 new&nbsp;cases</strong>,<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">8&nbsp;new deaths<span>&nbsp;</span></strong>(all&nbsp;in Hubei), and<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">819&nbsp;new discharges</strong><span>&nbsp;</span>occurred in<span>&nbsp;</span><strong style="box-sizing: border-box; font-weight: 700;">China</strong><span>&nbsp;</span>on March 18, as reported by the National Health Commission (NHC) of China [<a href="http://www.nhc.gov.cn/xcs/yqtb/202003/e644c2fc18b4448db7ed4b30f68b91a6.shtml" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration: none; user-select: text !important; cursor: pointer;" target="_blank">source</a>]</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

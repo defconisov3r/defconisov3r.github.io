@@ -1,0 +1,256 @@
+<html>
+ <head>
+  <title> The Game of COVID-19 </title>
+  <style>
+   a { text-decoration: none; color:blue;}
+   a-visited { text-decoration: none; color:blue;}
+   .red   { background-color:red;   }
+   .green { background-color:green; }
+   .gray  { background-color:gray;  }
+   body {
+     background-image:url('covid19.jpg');
+   }
+   #heading {
+     background: rgba(255, 255, 255, 0.5);
+   }
+   #settings {
+     width:500px;
+     max-width:500px;
+     background: rgba(255, 255, 255, 0.5);
+     padding:10px 10px 10px 10px;
+   }
+   #disqus_thread {
+     width:500px;
+     max-width:500px;
+     background: rgba(255, 255, 255, 0.8);
+     padding:10px 10px 10px 10px;
+   }
+  </style>
+ </head>
+ <body>
+  <center>
+   <div id="heading">
+   <h1> The Game of COVID-19 <super><a href="game.html">*</a></super></h1>
+   <p><i> Inspired by the <u>Conway's Game of Life</u>, a cellular automaton. <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Wikipedia</a></i></p>
+   <p> Click the green canvas below a few times to start </p>
+   </div>
+   <canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;">Canvas not supported</canvas>
+   <table id="settings">
+    <tr>
+     <td title="Number of days a cell is sick and contagious"> Sick days
+     <td id="ShowSickDays">
+     <td> <input type="range" min="1" max="200" value="20" id="SickDays">
+    <tr>
+     <td title="The probability of getting sick when ajacent to a sick cell (percentage)"> Virulence
+     <td id="ShowVirulence">
+     <td> <input type="range" min="0" max="100" value="20" id="Virulence">
+    <tr>
+     <td title="The probability of getting on a plane and flying somewhere (magnitude)"> Travel
+     <td id="ShowTravel">
+     <td> <input type="range" min="0" max="100" value="20" id="Travel">
+    <tr>
+     <td> Simulated Days
+     <td colspan="2" id="NumberDays">
+    <tr>
+     <td> Healthy
+     <td colspan="2" id="NumberHealthy">
+    <tr>
+     <td> Sick
+     <td colspan="2" id="NumberSick">
+    <tr>
+     <td> Recovered
+     <td colspan="2" id="NumberRecovered">
+   </table>
+  </center>
+  <script>
+
+    var travel       = .0001;		// Probibility that a cell will get on a plane and fly somewhere.
+    var sickdays     = 20;
+    var virulence    = 25;		// Problibility that you will get it per cycle per infected neighbor.
+    var neighborhood = [[-1, -1], [0, -1], [1, -1],	// Offsets in x/y to find neighboring cells
+                        [-1,  0],          [1,  0],
+                        [-1,  1], [0,  1], [1,  1]];
+    var numberdays      = 0;		// Number of simulated days.
+    var numberhealthy   = 0;
+    var numbersick      = 0;
+    var numberrecovered = 0;
+
+    var cvs = document.getElementById("myCanvas");
+    var ctx = cvs.getContext("2d");
+
+    cvs.addEventListener('click', (e) => { sicken(e.clientX - cvs.offsetLeft, e.clientY - cvs.offsetTop); }, false);
+
+    ctx.fillStyle = "green";
+    ctx.fillRect(0, 0, cvs.width, cvs.height);		// Not my off-by-one error.
+
+    function foobaz() {
+      var imd = ctx.getImageData(0, 0, cvs.width, cvs.height);
+      for (var y = 0; y <= cvs.height; ++y) {
+        for (var x = 0; x <= cvs.width; ++x) {
+          o = (x + y * cvs.width) * 4;
+          imd.data[o + 0] =   0;
+          imd.data[o + 1] = 255;
+          imd.data[o + 2] =   0;
+          imd.data[o + 3] = 255;
+        }
+      }
+      ctx.putImageData(imd, 0, 0);
+    }
+ 
+    function sicken(x, y) {
+      var imd = ctx.getImageData(x, y, 1, 1);
+      var r = imd.data[0];
+      var g = imd.data[1];
+      if (r == 0 && g > 0) {			// Only uninfected can get sick
+        imd.data[0] = 255;
+        imd.data[1] = 0;
+        ctx.putImageData(imd, x, y);
+      }
+    }
+ 
+    foobaz();
+ 
+    var sickTimer = setInterval(function() { spreadVirus(); }, 200);
+    var cure = []
+    for (var y = 0; y <= cvs.height; ++y) {
+      cure[y] = [];
+      for (var x = 0; x <= cvs.width; ++x) {
+        cure[y][x] = 0;;
+      }
+    }
+ 
+    function spreadVirus() {
+      var imd = ctx.getImageData(0, 0, cvs.width, cvs.height);
+      var ima = ctx.createImageData(cvs.width, cvs.height);
+      for (var y = 1; y < cvs.height - 1; ++y) {	// Minus one for margin
+        for (var x = 1; x < cvs.width - 1; ++x) {	// Minus one for margin
+          o = (x + y * cvs.width) * 4;
+          var r = imd.data[o + 0];
+          var g = imd.data[o + 1];
+          var b = imd.data[o + 2];
+          var a = imd.data[o + 3];
+
+          ima.data[o + 2] = b;				// Just copy blue
+          ima.data[o + 3] = a;				// Just copy and alpha
+
+          if (r >  0 && g == 0 && b == 0) {		// Red (sick)
+            ++numbersick;
+            ++cure[y][x];
+            if (cure[y][x] >= sickdays) {		// Sick long enough either died or got well!
+              ima.data[o + 0] = 255;
+              ima.data[o + 1] = 255;
+            }
+            else {
+              ima.data[o + 0] = 255;			// Still sick ...
+              ima.data[o + 1] = 0;
+            }
+          }
+          else if (r == 0 && g >  0 && b == 0) {	// Green (healthy)
+            ++numberhealthy;
+            if (x == 0 || x == cvs.width  - 1) continue;
+            if (y == 0 || y == cvs.height - 1) continue;
+            var sickneighbors = 0;
+            for (var i = 0; i < neighborhood.length; ++i) {
+              var xp = x + neighborhood[i][0];
+              var yp = y + neighborhood[i][1];
+              op = (xp + yp * cvs.width) * 4;
+              if (imd.data[op + 0] > 0 && imd.data[op + 1] == 0)
+                ++sickneighbors;
+            }
+            if (Math.random() < ((virulence / 100) * sickneighbors)) {
+              ima.data[o + 0] = 255;
+              ima.data[o + 1] = 0;
+            }
+            else {
+              ima.data[o + 0] = 0;
+              ima.data[o + 1] = 255;
+            }
+	  }
+          else if (r >  0 && g >  0 && b == 0) {	// Yellow (recovered)
+            ++numberrecovered;
+            ima.data[o + 0] = 255;
+            ima.data[o + 1] = 255;
+	  }
+          else {					// Unknown
+            ima.data[o + 0] = 0;			// Mark unknown blue until we fix it.
+            ima.data[o + 1] = 0;
+            ima.data[o + 2] = 255;
+          }
+
+          if ((travel) && (Math.random() <= travel)) {
+            var t = Math.round(Math.random() * (cvs.width * cvs.height)) * 4;	// Place we're traveling too.
+            ima.data[t + 0] = ima.data[o + 0];
+            ima.data[t + 1] = ima.data[o + 1];
+            ima.data[t + 2] = ima.data[o + 2];
+            ima.data[t + 3] = ima.data[o + 3];
+          }
+        }
+      }
+
+      ctx.putImageData(ima, 0, 0);
+
+      if (numbersick) ++numberdays;			// Only count if cells are sick
+      document.getElementById("NumberDays"     ).innerHTML = numberdays;
+      document.getElementById("NumberHealthy"  ).innerHTML = numberhealthy;
+      document.getElementById("NumberSick"     ).innerHTML = numbersick;
+      document.getElementById("NumberRecovered").innerHTML = numberrecovered;
+
+      numberhealthy   = 0;
+      numbersick      = 0;
+      numberrecovered = 0;
+
+    }
+
+    var sickdaysdoc  = document.getElementById("SickDays");
+    var showsickdays = document.getElementById("ShowSickDays")
+    showsickdays.innerHTML = sickdays;
+    sickdaysdoc.oninput = function() {
+      showsickdays.innerHTML = this.value;
+      sickdays = this.value;
+    }
+
+    var virulencedoc  = document.getElementById("Virulence");
+    var showvirulence = document.getElementById("ShowVirulence")
+    showvirulence.innerHTML = virulence;
+    virulencedoc.oninput = function() {
+      showvirulence.innerHTML = this.value;
+      virulence = this.value;
+    }
+
+    var traveldoc  = document.getElementById("Travel");
+    var showtravel = document.getElementById("ShowTravel")
+    showtravel.innerHTML = travel;
+    traveldoc.oninput = function() {
+      showtravel.innerHTML = this.value;
+      travel = this.value;
+    }
+
+
+  </script>
+  <br>
+  <br>
+  <center>
+  <div id="disqus_thread">
+  </div>
+  </center>
+  <script>
+
+   var disqus_config = function () {
+     this.page.url        = "http://gameofcovid19.com";
+     this.page.identifier = "gameofcovid19";
+   };
+
+   (function() {
+     var d = document;
+     var s = d.createElement('script');
+     s.src = 'https://gameofcovid19-com.disqus.com/embed.js';
+     s.setAttribute('data-timestamp', + new Date());
+     (d.head || d.body).appendChild(s);
+   })();
+
+  </script>
+  <noscript>
+       Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+ </body>
+</html>

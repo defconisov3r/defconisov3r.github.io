@@ -1,10 +1,141 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>502 Proxy Error</title>
-</head><body>
-<h1>Proxy Error</h1>
-<p>The proxy server received an invalid
-response from an upstream server.<br />
-The proxy server could not handle the request <em><a href="/index.php">GET&nbsp;/index.php</a></em>.<p>
-Reason: <strong>DNS lookup failure for: presenta-care.netindex.php</strong></p></p>
-</body></html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>COVID-19</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/assets/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/static/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri:400,600" rel="stylesheet">
+    <link href="/static/css/styles.css" rel="stylesheet">
+    <!--<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>-->
+    <!--<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>-->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="/static/assets/datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/assets/datetimepicker-master/jquery.datetimepicker.css"/>
+</head>
+
+<body>
+<div class="container header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>COVID-19 (Coronavirus)</h1>
+                <h2>Präventionsmassnahme des öffentlichen Verkehrs</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+
+    <div class="page-header">
+        <img src="/static/img/logo.png" alt="presenta ag"/>
+        <br />
+        <h1>Meldeformular</h1>
+    </div>
+
+    
+<div>
+        <p>
+            Sehr geehrte Damen und Herren
+        </p>
+        <p>
+            Zweck dieser Registrierung ist die Eindämmung und Verzögerung der Weiterverbreitung des COVID-19 Virus (Coronavirus) durch eine möglichst frühzeitige Lokalisierung und Identifizierung von infizierten Personen, so dass diese informiert und isoliert werden können.
+        </p>
+        <p>
+            Die Registrierung ist freiwilig. Weitere Informationen finden Sie unter Datenschutz.
+        </p>
+        <p>
+            Mit dieser Massnahme können wir in einem bestätigten Verdachtsfall sehr schnell Betroffene informieren und präventiv mit Verhaltensanweisungen unterstützen. Nur schon die Weiterverbreitung einen Tag früher zu unterbrechen ergibt eine Reduzierung der momentan schnell fortschreitenden Kumulation von Betroffenen.
+        </p>
+        <p>
+            Wir bitten Sie, die nachfolgenden Felder mit notwendigen Angaben auszufüllen. Herzlichen Dank!
+        </p>
+    </div>
+<div class="row">
+    <div class="col-lg-12">
+        <form class="form-horizontal" method="post">
+            <input type="hidden" name="csrfmiddlewaretoken" value="NTOSbZGvKDrnoYFM3YGGmYtVTBFBZ1NdJj234MJ38zWV6eaptrAskFu5OOa8Chj7">
+            
+
+<input type="hidden" name="csrfmiddlewaretoken" value="NTOSbZGvKDrnoYFM3YGGmYtVTBFBZ1NdJj234MJ38zWV6eaptrAskFu5OOa8Chj7"> <div  class="row " > <div  
+    class="col-lg-5" > <p class="strong">Personalien</p> <div id="div_id_first_name" class="form-group"> <label for="id_first_name" class="control-label  requiredField">
+                Vorname<span class="asteriskField">*</span> </label> <div class="controls "> <input type="text" name="first_name" id="id_first_name" required class="textinput textInput form-control" maxlength="50"> </div> </div> <div id="div_id_last_name" class="form-group"> <label for="id_last_name" class="control-label  requiredField">
+                Name<span class="asteriskField">*</span> </label> <div class="controls "> <input type="text" name="last_name" id="id_last_name" required class="textinput textInput form-control" maxlength="50"> </div> </div> <div id="div_id_birthday" class="form-group"> <label for="id_birthday" class="control-label  requiredField">
+                Geburtsdatum<span class="asteriskField">*</span> </label> <div class="controls "> <input type="text" name="birthday" id="id_birthday" required class="dateinput form-control"> </div> </div> <div id="div_id_email" class="form-group"> <label for="id_email" class="control-label  requiredField">
+                E-Mail<span class="asteriskField">*</span> </label> <div class="controls "> <input type="text" name="email" id="id_email" required class="textinput textInput form-control" maxlength="30"> </div> </div> <p>Beim Fehlen einer Mailadresse schreiben Sie „keine“ ins Eingabefeld und füllen die nachfolgenden Felder aus.</p> <div id="div_id_phone" class="form-group"> <label for="id_phone" class="control-label ">
+                Telefon
+            </label> <div class="controls "> <input type="text" name="phone" id="id_phone" class="textinput textInput form-control" maxlength="50"> </div> </div> <div id="div_id_address" class="form-group"> <label for="id_address" class="control-label ">
+                Adresse
+            </label> <div class="controls "> <input type="text" name="address" id="id_address" class="textinput textInput form-control" maxlength="50"> </div> </div> <div id="div_id_zip_code" class="form-group"> <label for="id_zip_code" class="control-label ">
+                PLZ
+            </label> <div class="controls "> <input type="number" name="zip_code" id="id_zip_code" class="numberinput form-control"> </div> </div> <div id="div_id_city" class="form-group"> <label for="id_city" class="control-label ">
+                Ort
+            </label> <div class="controls "> <input type="text" name="city" id="id_city" class="textinput textInput form-control" maxlength="50"> </div> </div> </div>
+<div  
+    class="col-lg-5 col-lg-offset-2" > <p class="strong">Ihr Reiseverlauf</p> <div id="div_id_date" class="form-group"> <label for="id_date" class="control-label  requiredField">
+                Reisedatum<span class="asteriskField">*</span> </label> <div class="controls "> <input type="text" name="date" id="id_date" required class="dateinput form-control"> </div> </div> <div id="div_id_entry" class="form-group"> <label for="id_entry" class="control-label  requiredField">
+                Einstiegsort<span class="asteriskField">*</span> </label> <div class="controls "> <input type="text" name="entry" id="id_entry" required class="textinput textInput form-control"> </div> </div> <div id="div_id_entry_time" class="form-group"> <label for="id_entry_time" class="control-label  requiredField">
+                Einstiegszeit<span class="asteriskField">*</span> </label> <div class="controls "> <input type="text" name="entry_time" id="id_entry_time" required class="timeinput form-control"> </div> </div> <div id="div_id_exit" class="form-group"> <label for="id_exit" class="control-label  requiredField">
+                Ausstiegsort<span class="asteriskField">*</span> </label> <div class="controls "> <input type="text" name="exit" id="id_exit" required class="textinput textInput form-control"> </div> </div> <div id="div_id_exit_time" class="form-group"> <label for="id_exit_time" class="control-label  requiredField">
+                Ausstiegszeit<span class="asteriskField">*</span> </label> <div class="controls "> <input type="text" name="exit_time" id="id_exit_time" required class="timeinput form-control"> </div> </div> </div>
+
+</div>
+
+                <br />
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Absenden</button>
+                </div>
+        </form>
+    </div>
+</div>
+
+    <a class="footer" href="/datenschutz">Datenschutz</a>
+    <br /><br />
+</div> <!-- /container -->
+
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="/static/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    <script>
+        $( document ).ready(function() {
+            jQuery.datetimepicker.setLocale('de');
+
+            $('input.dateinput').datetimepicker({
+                formatDate: 'd.m.Y',
+                format: 'd.m.Y',
+                timepicker: false,
+                scrollMonth: false
+            });
+
+            $('input.timeinput').datetimepicker({
+                datepicker: false,
+                format: 'H:i',
+                step: 5,
+                timepickerScrollbar: false
+            });
+        });
+    </script>
+
+</body>
+</html>

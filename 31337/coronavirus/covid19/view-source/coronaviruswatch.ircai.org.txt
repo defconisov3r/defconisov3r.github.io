@@ -39,8 +39,8 @@
 
     <meta property="og:title" content="Coronavirus Watch">
     <meta property="og:description" content="Coronavirus real-time news across the world">
-    <meta property="og:image" content="http://coronaviruswatch.ircai.org/assets/thumbnail_2.png">
-    <meta property="og:url" content="http://coronaviruswatch.ircai.org/">
+    <meta property="og:image" content="https://coronaviruswatch.ircai.org/assets/thumbnail_2.png">
+    <meta property="og:url" content="https://coronaviruswatch.ircai.org/">
 
     <!--  Non-Essential, But Recommended -->
 
@@ -57,7 +57,7 @@
 <body style="padding-top: 0;padding-bottom: 0">
 
 <div id="dashboard" class="d-flex flex-column p-2 bd-highlight">
-    <div id="bar" class="d-flex flex-row bd-highlight" style="margin: 0">
+    <div id="bar" class="d-flex flex-row bd-highlight" style="margin: 0; min-height: 110px;">
         <div class="d-flex p-2 bd-highlight">
             <img class="logo" src="/assets/oecd_ai_logo.png" onclick="window.location.href='https://oecd.ai'"
                  alt="OECD AI Observatory Logo" target="_blank"
@@ -69,7 +69,7 @@
         </div>
         <div class="d-flex p-2 bd-highlight d-inline-flex flex-grow-1 flex-column">
             <h1 id="title" style="margin: 0 auto; align-self: center" class="p-2 bd-highlight"><a style="text-decoration: none; color: black"
-                    href="http://coronaviruswatch.ircai.org">Coronavirus Watch</a></h1>
+                                                                                                  href="https://coronaviruswatch.ircai.org">Coronavirus Watch</a></h1>
             <h6 class="d-inline-block" data-toggle="modal" data-target="#embed-modal"
                 style="cursor: pointer; align-self: center;">Click here to embed into your website</h6>
         </div>
@@ -94,13 +94,15 @@
                     <a class="nav-link" id="news-tab" data-toggle="tab" href="#news-tab-content" role="tab" aria-selected="true">Real-Time Media Monitoring</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="evolution-tab" data-toggle="tab" href="#evolution-tab-content" role="tab" aria-selected="false">Coronavirus Spread Visualization <i><strong style="color:red;">New!</strong></i></a>
+                    <a class="nav-link" id="evolution-tab" data-toggle="tab" href="#evolution-tab-content" role="tab" aria-selected="false">Coronavirus Spread Visualization</a>
                 </li>
-                <!--
                 <li class="nav-item">
-                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Behind Metric</a>
+                    <a class="nav-link" id="temporal-distance-tab" data-toggle="tab" href="#full-stats-tab-content" role="tab" aria-selected="false">Time Difference Among Countries <i><strong style="color:red;">New!</strong></i></a>
                 </li>
-                -->
+
+                <li class="nav-item">
+                    <a class="nav-link" id="full-stats-tab" data-toggle="tab" href="#full-stats-tab-content" role="tab" aria-selected="false">Full Data Report <i><strong style="color:red;">New!</strong></i></a>
+                </li>
             </ul>
             <div id="tabContent" class="tab-content d-flex flex-column bd-highlight flex-grow-1">
                 <div class="tab-pane fade" id="news-tab-content"
@@ -111,6 +113,16 @@
                 </div>
                 <div class="tab-pane fade" id="evolution-tab-content" role="tabpanel" aria-labelledby="evolution-tab">
                     <div id="evolution-dashboard" class="d-flex flex-row bd-highlight flex-grow-1 iframe embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item d-flex flex-row bd-highlight flex-grow-1" allowfullscreen src=""  onload="resizeIframe(this)"></iframe>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="full-stats-tab-content" role="tabpanel" aria-labelledby="evolution-tab">
+                    <div id="full-stats-dashboard" class="d-flex flex-row bd-highlight flex-grow-1 iframe embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item d-flex flex-row bd-highlight flex-grow-1" allowfullscreen src=""  onload="resizeIframe(this)"></iframe>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="temporal-distance-tab-content" role="tabpanel" aria-labelledby="evolution-tab">
+                    <div id="temporal-distance-dashboard" class="d-flex flex-row bd-highlight flex-grow-1 iframe embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item d-flex flex-row bd-highlight flex-grow-1" allowfullscreen src=""  onload="resizeIframe(this)"></iframe>
                     </div>
                 </div>
@@ -132,7 +144,7 @@
                 Select a country from the list if you want the default page on that country
                 <br>
                 <select id="country-selection-clipboard" style="width:100%;"></select>
-                <textarea id="embed-code" style="width:100%;height: 135px;resize: none" readonly>&ltiframe src="http://coronaviruswatch.ircai.org/?country=All" style="border:0px #ffffff none;" name="CoronaVirusWatch" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen&gt&lt/iframe&gt</textarea>
+                <textarea id="embed-code" style="width:100%;height: 135px;resize: none" readonly>&ltiframe src="https://coronaviruswatch.ircai.org/?country=All" style="border:0px #ffffff none;" name="CoronaVirusWatch" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen&gt&lt/iframe&gt</textarea>
             </div>
             <div class="modal-footer">
                 <button id="embed-clipboard-button" type="button" class="btn btn-secondary" data-dismiss="modal">Copy to

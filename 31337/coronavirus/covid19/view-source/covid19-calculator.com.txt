@@ -8,13 +8,12 @@
                 <!-- Global site tag (gtag.js) - Google Analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160862355-1"></script>
             <script type="text/javascript" src="/assets/js/a22231caac98ea17be9a1153755e6fd1-gtag.min.js"></script>
-            <script data-ad-client="ca-pub-3033716134009667" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!--<script data-ad-client="ca-pub-3033716134009667" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
         
-
 
     <!--<script type="text/javascript" src="/assets/js/97fedf9d52273bcd2d574916bb9e45ce-facebookshare.min.js"></script>-->
 
-    <div id="fb-root"></div>
+
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
 
     <title>COVID-19 Calculator</title>
@@ -29,8 +28,10 @@
     <meta property="og:url"           content="https://covid19-calculator.com/" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Corona Virus Pandemic. How long will it take? How long does it have to take? How many ICU beds do we need?" />
-    <meta property="og:description"   content="As the Corona Virus (SARS-CoV-2) is spreading with an increasing momentum, governments have started to started to counter this pandemic. The idea is to slow it down such that the health care systems remain operative. The number of intensive care unit ICU beds is a limiting factor, as this is a key element in COVID-19 treatment.  &lt;br&gt;&lt;br&gt;This calculator helps to understand the outreach of this pandemic. It answers the question until it will last under the assumption that all critical patients who require an ICU bed will get it. It is a simple rule of three calculation which you could also make on a napkin without the ambition of being a fully fledged scientific approach." />
-    <!--<meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />-->
+    <meta property="og:description"   content="As the Corona Virus (SARS-CoV-2) is spreading with an increasing momentum, governments have started to started to counter this pandemic. The idea is to slow it down such that the health care systems remain operative. The number of intensive care unit (ICU) beds is a limiting factor, as this is a key element in COVID-19 treatment.  &lt;br&gt;&lt;br&gt;This calculator helps to understand the outreach of this pandemic. It answers the question until it will last under the assumption that all critical patients who require an ICU bed will get it. It is a simple rule of three calculation which you could also make on a napkin without the ambition of being a fully fledged scientific approach." />
+    <meta property="og:image"         content="https://covid19-calculator.com/assets/img/0f6be2212c78512b08016db2f65be31d-Covid19-Calculator.png" />
+
+
 
 
     <link href="/assets/lib/bootstrap/css/7cc40c199d128af6b01e74a28c5900b0-bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -40,10 +41,10 @@
     <link href="/assets/scss/4342ce5635b0992a4018d93e0a6499e2-toast.css" rel="stylesheet" type="text/css">
     <link href="/assets/lib/jquery-ui/0b5729a931d113be34b6fac13bcf5b29-jquery-ui.min.css" rel="stylesheet" type="text/css">
 
-    <link href="/assets/css/1aadd3ecc0ce6c2aafb6a2c6cd314fa2-fieldConstructors.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/c016e5948f1a70ec05132d9fc3b1c462-fieldConstructors.css" rel="stylesheet" type="text/css">
     <link href="/assets/css/fontawesome/css/467b042bd4f377223f70e636d1b09e56-all.min.css" rel="stylesheet" type="text/css">
     <link href="/assets/lib/DataTables/498ea5439791248619e54f22ec57bb74-datatables.min.css" rel="stylesheet" type="text/css">
-    <link href="/assets/css/6c98ecaec33081adc80f96c20bdbf971-main.css" rel="stylesheet">
+    <link href="/assets/css/4f5802e44df90223be9fae5847e35b2a-main.css" rel="stylesheet">
     <link href="/assets/css/adedf70954fdced2f3d1d3c4b583516a-general.css" rel="stylesheet" type="text/css">
     <link href="/assets/css/8211f3c2a38d1ebbd29498abd632632f-mdmain.css" rel="stylesheet" type="text/css">
 
@@ -51,16 +52,23 @@
 
     </head>
 
-    <body>
+    <body style="background: url('/assets/img/b5bb9eb29c700762ce8aa3b7235e44bf-clouds_and_palms.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover">
 
-        <span class="d-none" id="csrf_token" data-value="943e4f49dfb8b1f5c341f4e7333138a77af0d9ef-1584461205511-38e7c85e339aca44643c169c"> </span>
+        <div class="mask rgba-black-strong position-absolute w-100" style="min-height: 100vh">
+            <div id="fb-root"></div>
+
+        <span class="d-none" id="csrf_token" data-value="0e608ebbc8f612f78f80f18ad5fef994586f1e4a-1584640136670-5462974633583da9a98f7c03"> </span>
         <span class="d-none" id="currentLanguage" data-value="en"> </span>
 
         <nav class="navbar fixed-top navbar-expand-md navbar-dark scrolling-navbar top-nav-collapse">
             <div class="container">
 
                 <a class="navbar-brand" href="/">
-                        <!--<img src="/assets/img/cvcalc_Logo_White.svg" class="d-inline" style="height: 1.5rem" alt="">-->
+                    <img src="/assets/img/9a4984729e22bef18357d36f01f453a8-Covid19-Calculator-Logo-white.svg" class="d-inline" style="height: 1.5rem" alt="">
                     <strong>COVID-19 Calculator</strong>
                 </a>
 
@@ -116,12 +124,12 @@
 
 
     <!-- Full Page Intro -->
-    <div class="view full-page-intro" style="background-image: url('/assets/img/b5bb9eb29c700762ce8aa3b7235e44bf-clouds_and_palms.jpg');
+    <!--<div class="view full-page-intro" style="background-image: url('/assets/img/b5bb9eb29c700762ce8aa3b7235e44bf-clouds_and_palms.jpg');
         background-repeat: no-repeat;
-        background-size: cover;">
+        background-size: cover;">-->
 
             <!-- Mask & flexbox options-->
-        <div class="mask rgba-black-strong overflow-auto">
+        <!--<div class="mask rgba-black-strong">-->
 
                 <!-- Content -->
             <div id="introStart" class="container" style="margin-top: 100px;
@@ -132,7 +140,7 @@
 
                     <div class="col-12 my-4 white-text text-center text-md-left">
                         <h1 class="lead font-weight-bold">
-                                <!--<img src="/assets/img/cvcalc_Logo_White.svg" class="d-inline" style="height: 6rem" alt="">-->
+                            <!--<img src="/assets/img/9a4984729e22bef18357d36f01f453a8-Covid19-Calculator-Logo-white.svg" class="d-inline" style="height: 6rem" alt="">-->
                             Corona Virus Pandemic. How long will it take? How long does it have to take? How many ICU beds do we need?
                         </h1>
                     </div>
@@ -146,7 +154,7 @@
                         </p>
 
                         <p class="mb-4">
-                            <strong>As the Corona Virus (SARS-CoV-2) is spreading with an increasing momentum, governments have started to started to counter this pandemic. The idea is to slow it down such that the health care systems remain operative. The number of intensive care unit ICU beds is a limiting factor, as this is a key element in COVID-19 treatment.  <br><br>This calculator helps to understand the outreach of this pandemic. It answers the question until it will last under the assumption that all critical patients who require an ICU bed will get it. It is a simple rule of three calculation which you could also make on a napkin without the ambition of being a fully fledged scientific approach.</strong>
+                            <strong>As the Corona Virus (SARS-CoV-2) is spreading with an increasing momentum, governments have started to started to counter this pandemic. The idea is to slow it down such that the health care systems remain operative. The number of intensive care unit (ICU) beds is a limiting factor, as this is a key element in COVID-19 treatment.  <br><br>This calculator helps to understand the outreach of this pandemic. It answers the question until it will last under the assumption that all critical patients who require an ICU bed will get it. It is a simple rule of three calculation which you could also make on a napkin without the ambition of being a fully fledged scientific approach.</strong>
                         </p>
                         
                         
@@ -161,16 +169,26 @@
                             <div class="card-header pb-1">
                                 <div class="">
                                     <div class="form-row my-0">
-                                        <div class="d-flex col-7 col-md-8 col-lg-9 align-items-center lead">
+                                        <div class="d-flex col-xs-12 col-sm-7 col-md-8 col-lg-9 align-items-center lead">
                                         Please provide the following numbers or choose a preset
                                         </div>
-                                        <div class="d-flex col-5 col-md-4 col-lg-3 align-items-center lead">
+                                        <div class="d-flex col-xs-12 col-sm-5 col-md-4 col-lg-3 align-items-center lead">
                                             <div class="form-group mt-2 mb-0 w-100">
                                                 <select class="custom-select form-control" id="country" required>
                                                     <option value=""></option>
                                                     
 
+    <option  value="AT">Austria</option>
+
     <option  value="DE">Germany</option>
+
+    <option  value="IT">Italy</option>
+
+    <option  value="CH">Switzerland</option>
+
+    <option  value="GB">United Kingdom</option>
+
+    <option  value="US">United States</option>
 
 
                                                 </select>
@@ -263,7 +281,7 @@
         
         min="1.0"
         >
-    <label class="form-control-placeholder no-user-select" for="icuBeds">No. of intensive care unit (ICU) beds</label>
+    <label class="form-control-placeholder no-user-select" for="icuBeds">No. of intensive care (ICU) beds</label>
 </div>
 
 
@@ -380,10 +398,10 @@
             </div>
                 <!-- Content -->
 
-        </div>
+        <!--</div>-->
             <!-- Mask & flexbox options-->
 
-    </div>
+    <!--</div>--
         <!-- Full Page Intro -->
         
 
@@ -432,6 +450,7 @@
     </div>
 </div>
 
+        </div>
 
         <script type="text/javascript" src="/assets/lib/jquery/a09e13ee94d51c524b7e2a728c7d4039-jquery.min.js"></script>
         <script type="text/javascript" src="/assets/lib/jquery-ui/c15b1008dec3c8967ea657a7bb4baaec-jquery-ui.min.js"></script>
@@ -448,7 +467,7 @@
 
             <!-- MDB core JavaScript -->
         <script type="text/javascript" src="/assets/lib/mdb/js/c9def5456a192e3a43cfaa30e620550d-mdb.min.js"></script>
-        <script type="text/javascript" src="/assets/js/e221b9d20c7b702d035febc75c8d149b-index.min.js"></script>
+        <script type="text/javascript" src="/assets/js/2a64b7576f4709100dc47b9e5fdc2763-index.min.js"></script>
         
         
         

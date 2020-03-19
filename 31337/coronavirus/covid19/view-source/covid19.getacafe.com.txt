@@ -5,6 +5,11 @@
   <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta property="og:title" content="Pusicov Kota Bandung" />
+  <meta property="og:description" content="Pusat informasi dan koordinasi COVID-19 Kota Bandung
+  merupakan bagian dari Command Center dibentuk berdasarkan surat edaran Walikota Bandung 
+  Nomor 443/SE.030-Dinkes" />
+  <meta property="og:image" content="/img/bcc-logo.png" />
   <link rel="icon" type="image/svg" href="/img/Lambang_Kota_Bandung.svg">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -15,9 +20,22 @@
   <link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet">
   <link href="css/hover-min.css" rel="stylesheet">
+  <link href="css/animate-css.css" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161216712-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  <title>Puscovid Bandung</title>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-161216712-1');
+  </script>
+  <script text="javascript" src="/js/style.js"></script>
+  <title>Pusicov Bandung</title>
 </head>
 
 <body>
@@ -31,7 +49,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link active" href="index.html">Beranda <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="index.html">Beranda <span class="sr-only">(current)</span></a>
           <a class="nav-item nav-link" href="data.html">Data<a>
               <a class="nav-item nav-link" href="peta.html">Peta</a>
               <a class="nav-item nav-link" href="publikasi.html">Publikasi</a>
@@ -45,14 +63,16 @@
 
   <!-- Jumbotron -->
   <div class="jumbotron jumbotron-fluid">
-    <div class="container">
+    <div class="container animated bounceInDown">
       <h2 class="display-4">
-        Pusat Informasi & Kordinasi
+        Pusat Informasi
         <span>COVID-19 Kota Bandung</span>
       </h2>
       <h3>Hubungi Layanan Tanggap COVID-19</h3>
       <!-- <span href="tel:112" class="btn btn-primary tombol"> <span data-v-ee9049c4="">112</span></a> atau -->
-      Call : <a href="tel:112" class="btn btn-primary tombol"> <span data-v-ee9049c4="">119</span></a>
+      <!-- <a href="tel:112" class="btn btn-primary"><i class="fa fa-phone"></i> 112</a>
+      Atau <a href="tel:119" class="btn btn-primary"> <i class="fa fa-phone"></i> 119</a> -->
+      <!-- <a href="tel:112" class="btn btn-primary m-2">112</a> -->
     </div>
   </div>
   <!-- akhir Jumbotron -->
@@ -68,7 +88,9 @@
             <a href="index.html">
               <h4>24 jam</h4>
             </a>
-            <p>Pengaduan terkait COVID-19</p>
+            <p> Layanan Pengaduan</p>
+            <a href="tel:112" class="btn btn-primary btn-sm tombol"><i class="fa fa-phone"></i> 112</a>
+            / <a href="tel:119" class="btn btn-primary btn-sm tombol"> <i class="fa fa-phone"></i> 119</a>
           </div>
           <div class="col-lg">
             <img src="img/hires.png" alt="HiRes" class="img-fluid float-left" />
@@ -90,7 +112,13 @@
     <!-- akhir info panel -->
     <div class="row justify-content-center">
       <div class="col-10 info-panel-card">
-        <h3>Data Pantauan COVID-19 Bandung</h3>
+        <h3><b>Data Pantauan COVID-19 Bandung</b></h3>
+        <!-- <div id="jam"></div> -->
+        <script language='JavaScript'>
+          document.write(tanggallengkap);
+        </script>
+        <br>
+        <br>
         <div class="row">
           <div class="col-lg">
             <div class="card">
@@ -99,12 +127,18 @@
               </div>
               <div class="card-body">
                 <p class="card-text text-success data-font">Proses pemantauan</p>
-                <h1 class="text-success">40</h1>
+                <h1 class="text-success">56</h1>
                 <p class="card-text text-success data-font">Selesai pemantauan</p>
-                <h1 class="text-success">37</h1>
+                <h1 class="text-success">42</h1>
+                <span class="d-none d-lg-block">
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                </span>
               </div>
               <div class="card-footer text-muted data-font text-center">Total ODP</div>
-              <h1 class="text-center">77</h1>
+              <h1 class="text-center mt-2">98</h1>
             </div>
             <p></p>
           </div>
@@ -115,12 +149,18 @@
               </div>
               <div class="card-body">
                 <p class="card-text text-primary data-font">Masih Dirawat</p>
-                <h1 class="text-primary">6</h1>
+                <h1 class="text-primary">5</h1>
                 <p class="card-text text-primary data-font">Pulang dan Sehat</p>
-                <h1 class="text-primary">7</h1>
+                <h1 class="text-primary">8</h1>
               </div>
+              <span class="d-none d-lg-block">
+                <br>
+                <br>
+                <br>
+                <br>
+              </span>
               <div class="card-footer text-muted data-font text-center">Total PDP</div>
-              <h1 class="text-center">13</h1>
+              <h1 class="text-center mt-2">13</h1>
             </div>
             <p></p>
           </div>
@@ -138,8 +178,9 @@
                 <h1 class="text-danger">0</h1>
               </div>
               <div class="card-footer text-muted data-font text-center">Kasus Positif</div>
-              <h1 class="text-center">1</h1>
+              <h1 class="text-center mt-2">1</h1>
             </div>
+            <p></p>
           </div>
           <div class="col-lg">
             <div class="card">
@@ -148,14 +189,14 @@
               </div>
               <div class="card-body">
                 <p class="card-text text-danger data-font">Dirawat</p>
-                <h1 class="text-danger">121</h1>
+                <h1 class="text-danger">269</h1>
                 <p class="card-text text-danger data-font">Sembuh</p>
-                <h1 class="text-danger">8</h1>
+                <h1 class="text-danger">15</h1>
                 <p class="card-text text-danger data-font">Meninggal</p>
-                <h1 class="text-danger">5</h1>
+                <h1 class="text-danger">25</h1>
               </div>
               <div class="card-footer text-muted data-font text-center">Kasus Positif</div>
-              <h1 class="text-center">134</h1>
+              <h1 class="text-center mt-2">309</h1>
             </div>
           </div>
         </div>
@@ -167,23 +208,24 @@
 
     <div class="row workingspace">
       <div class="col-lg-6">
-        <img src="img/GERMAS_Virus Corona.jpg" alt="Working Space" class="img-fluid" />
+        <img src="/file/8.jpeg" alt="Working Space" class="img-fluid" />
       </div>
-      <div class="col-lg-5">
-        <h3>Tentang <span>COVID-19</span></h3>
+      <div class="col-lg-6">
+        <h3><b>Tentang <span>COVID-19</span></b></h3>
         <h4>Apa Itu COVID-19</h4>
-        <p>
+        <p class="text-justify">
           Pneumonia Coronavirus Disease 2019 atau COVID-19 adalah penyakit peradangan paru yang disebabkan oleh Severe
           Acute Respiratory Syndrome Coronavirus 2 (SARS-CoV-2). Gejala klinis yang muncul beragam, mulai dari seperti
           gejala flu biasa (batuk, pilek, nyeri tenggorok, nyeri otot, nyeri kepala) sampai yang berkomplikasi berat
           (pneumonia atau sepsis).
         </p>
         <h4>Bagaimana COVID-19 Menular</h4>
-        <p>Cara penularan SARS-CoV-2 penyebab COVID-19 ialah melalui kontak dengan droplet saluran napas penderita.
+        <p class="text-justify">Cara penularan SARS-CoV-2 penyebab COVID-19 ialah melalui kontak dengan droplet saluran
+          napas penderita.
           Droplet merupakan partikel kecil dari mulut penderita yang mengandung kuman penyakit, yang dihasilkan pada
           saat batuk, bersin, atau berbicara. Droplet dapat melewati sampai jarak tertentu (biasanya 1 meter).</p>
-        <br>
-        <p>Droplet bisa menempel di pakaian atau benda di sekitar penderita pada saat batuk atau bersin. Namun,
+        <p class="text-justify">Droplet bisa menempel di pakaian atau benda di sekitar penderita pada saat batuk atau
+          bersin. Namun,
           partikel
           droplet cukup besar sehingga tidak akan bertahan atau mengendap di udara dalam waktu yang lama. Oleh karena
           itu, orang yang sedang sakit, diwajibkan untuk menggunakan masker untuk mencegah penyebaran droplet. Untuk
@@ -198,18 +240,46 @@
   <br>
   <!-- Three columns of text below the carousel -->
   <div class="container text-center">
-    <h3>Melindungi Diri dari COVID-19</h3>
-    <p>Ada beberapa hal yang dapat Anda lakukan untuk mencegah atau membantu
+    <h3><b>Melindungi Diri dari COVID-19</b></h3>
+    <p class="text-center">Ada beberapa hal yang dapat Anda lakukan untuk mencegah atau membantu
       menghentikan penyebaran coronavirus, antara lain:</p>
-    <h5>Hal yang Harus Dilakukan</h5>
-    <img src="/img/lakukan.png" </div> <br>
+    <!-- <h5>Hal yang Harus Dilakukan</h5> -->
+    <!-- <img src="/img/lakukan.png" </div> <br> -->
+    <div class="container">
+      <div class="text-center pt-5" style="padding-bottom:10px">
+        <h3><b>Hal yang Harus Dilakukan</b></h3>
+      </div>
+      <div class="row">
+        <div class="text-center m-auto">
+          <img class="mx-2 align-top" src="/img/tdd1.png" alt="" style="margin-bottom: 40px;padding-top: 15px;">
+          <img class="mx-2 align-top" src="/img/tdd2.png" alt="" style="margin-bottom: 40px;padding-top: 20px;">
+          <img class="mx-2 align-top" src="/img/tdd3.png" alt="" style="margin-bottom: 40px;padding-top: 20px;">
+          <img class="mx-2 align-top" src="/img/tdd4.png" alt="" style="margin-bottom: 40px;padding-top: 20px;">
+          <img class="mx-2 align-top" src="/img/tdd5.png" alt="" style="margin-bottom: 40px;padding-top: 20px;">
+        </div>
+      </div>
+    </div>
     <br>
     <div class="container text-center">
-      <h3>Hal Yang Tidak Boleh Dilakukan</h3>
+      <!-- <h3>Hal Yang Tidak Boleh Dilakukan</h3>
       <p>Ada beberapa hal yang dapat Anda lakukan untuk mencegah atau membantu
-        menghentikan penyebaran coronavirus, antara lain:</p>
-      <h5>Hal yang Harus Dilakukan</h5>
-      <img src="/img/tidakboleh.png">
+        menghentikan penyebaran coronavirus, antara lain:</p> -->
+      <!-- <h5>Hal yang Harus Dilakukan</h5> -->
+      <!-- <img src="/img/tidakboleh.png"> -->
+      <div class="container">
+        <div class="text-center pt-5" style="padding-bottom:10px">
+          <h3><b>Hal yang Tidak Boleh Dilakukan</b></h3>
+        </div>
+
+        <div class="row">
+          <div class="text-center m-auto">
+            <img class="mx-2 align-top" src="/img/ntd1.png" alt="" style="margin-bottom: 40px;padding-top: 10px;">
+            <img class="mx-2 align-top" src="/img/ntd2.png" alt="" style="margin-bottom: 40px;padding-top: 20px;">
+            <img class="mx-2 align-top" src="/img/ntd3.png" alt="" style="margin-bottom: 40px;padding-top: 20px;">
+            <img class="mx-2 align-top" src="/img/ntd4.png" alt="" style="margin-bottom: 40px;padding-top: 20px;">
+          </div>
+        </div>
+      </div>
       <a href="/faq.html" class="btn btn-success">Lihat Pertanyaan yang sering diajukan</a>
     </div>
     <br>
@@ -220,10 +290,10 @@
       <hr>
       <div class="row">
         <div class="col-md-6 baris_gejala">
-          <h5 class="text-left"><i class="fa fa-check-circle"></i> Hubungi Layanan Covid di <a href="tel:119"
+          <h5 class="text-left"><i class="fa fa-check-circle"></i> Hubungi layanan Covid di <a href="tel:119"
               class="btn btn-info btn-sm">119</a></h5>
-          <h5 class="text-left"><i class="fa fa-check-circle"></i> Kenakan Masker (tipe masker bedah), dan ganti secara
-            berkala, agar tidak menular dengan orang lain</a></h5>
+          <h5 class="text-left"><i class="fa fa-check-circle"></i> Kenakan masker (tipe masker bedah), dan ganti secara
+            berkala, agar tidak menular kepada orang lain</a></h5>
           <h5 class="text-left"><i class="fa fa-check-circle"></i> Batasi menerima tamu di rumah, hindari kontak
             langsung dengan tamu untuk mencegah penyebaran virus yang lebih luas</a></h5>
 
@@ -231,7 +301,7 @@
         <div class="col-md-6 baris_gejala">
           <h5 class="text-left"><i class="fa fa-check-circle"></i> Tetap tinggal di rumah dan jaga jarak dengan orang
             lain termasuk anggota keluarga</a></h5>
-          <h5 class="text-left"><i class="fa fa-check-circle"></i> Minta Bantuan teman, anggota keluarga, atau layanan
+          <h5 class="text-left"><i class="fa fa-check-circle"></i> Minta bantuan teman, anggota keluarga, atau layanan
             jasa lain untuk menyelesaikan urusan di luar rumah</a></h5>
           <h5 class="text-left"><i class="fa fa-check-circle"></i> Lakukan ini selama 14 hari untuk membantu mengurangi
             penyebaran virus</a></h5>
@@ -239,10 +309,11 @@
       </div>
     </div>
     <hr>
+    <!-- Akhir KOntak -->
     <!-- infografis -->
     <div class="tab-pane fade show active" id="tab1"></div>
     <span>
-      <h1>Infografik</h1>
+      <h3><b>Infografik</b></h3>
       <div class="float-right">
         <span class="text-muted"><a href="publikasi.html">Selengkapnya > </a></span>
       </div>
@@ -252,45 +323,24 @@
       <div class="col-sm-4 pt-3">
         <div class="card">
           <div class="card-body">
-            <img src="https://jabarprov.go.id/assets/images/galeri/2889_4ovid.jpg" height=100% width=100% alt="">
+            <img src="file/14.jpeg" height=100% width=100% alt="">
             <hr>
-            <h6 class="card-subtitle mb-2 text-muted">Deskripsi Infografis</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Urus ADMINDUK dengan Mudah Kunjungi Link ini <a
+                href="https://disdukcapil.bandung.go.id/salaman">https://disdukcapil.bandung.go.id/salaman </a> </h6>
             <div class="text-center">
-              <a href="https://jabarprov.go.id/assets/images/galeri/2889_4ovid.jpg"
-                class="btn btn-info btn-custom btn-sm text-center hvr-grow-shadow">Unduh
+              <a href="file/14.jpeg" class="btn btn-info btn-custom btn-sm text-center hvr-grow-shadow">Unduh
                 PDF</a>
-              <a href="https://jabarprov.go.id/assets/images/galeri/2889_4ovid.jpg"
-                class="btn btn-info btn-custom btn-sm text-center hvr-grow-shadow">Unduh
+              <a href="file/14.jpeg" class="btn btn-info btn-custom btn-sm text-center hvr-grow-shadow">Unduh
                 JPG</a>
             </div>
-            <div class="download text-center">
-              <h3><a href=""><i class="fa fa-facebook-square"></i></a></h3>
-              <h3><a href=""><i class="fa fa-twitter"></i></a></h3>
-              <h3><a href="https://wa.me/"><i class="fa fa-whatsapp"></i></a></h3>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Akhir KOntak -->
-      <div class="col-sm-4 pt-3">
-        <div class="card">
-          <div class="card-body">
-            <img src="https://jabarprov.go.id/assets/images/galeri/2889_Jabar_siaga_1_corona.jpg" height=100% width=100%
-              alt="">
-            <hr>
-            <h6 class="card-subtitle mb-2 text-muted">Deskripsi Infografis</h6>
-            <div class="text-center">
-              <a href="https://jabarprov.go.id/assets/images/galeri/2889_Jabar_siaga_1_corona.jpg"
-                class="btn btn-info btn-custom btn-sm text-center hvr-grow-shadow">Unduh
-                PDF</a>
-              <a href="https://jabarprov.go.id/assets/images/galeri/2889_Jabar_siaga_1_corona.jpg"
-                class="btn btn-info btn-custom btn-sm text-center hvr-grow-shadow">Unduh
-                JPG</a>
-            </div>
-            <div class="download text-center">
-              <h3><a href=""><i class="fa fa-facebook-square"></i></a></h3>
-              <h3><a href=""><i class="fa fa-twitter"></i></a></h3>
-              <h3><a href=""><i class="fa fa-whatsapp"></i></a></h3>
+            <hr style="margin-top:1%;margin-bottom:1%">
+            <div class="download" style="padding-left:70%;">
+              <a href="https://www.facebook.com/sharer.php?u=https://covid19.bandung.go.id/file/14.jpeg"
+                title="Bagikan ke Facebook"><img src="img/facebook.png" alt="" height=auto width=30%></a>
+              <a href="https://twitter.com/share?url=https://covid19.bandung.go.id/file/14.jpeg"
+                title="Bagikan Ke Facebook"><img src="img/twitter.png" alt="" height=auto width=30%></a>
+              <a href="https://wa.me/?text=https://covid19.bandung.go.id/file/14.jpeg" title="Bagikan ke Whatsapp"><img
+                  src="img/whatsapp.png" alt="" height=auto width=30%></a>
             </div>
           </div>
         </div>
@@ -298,41 +348,68 @@
       <div class="col-sm-4 pt-3">
         <div class="card">
           <div class="card-body">
-            <img src="https://jabarprov.go.id/assets/images/galeri/2889_7ovid.jpg" height=100% width=100% alt="">
+            <img src="file/2.jpeg" height=100% width=100% alt="">
             <hr>
-            <h6 class="card-subtitle mb-2 text-muted">Deskripsi Infografis</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Kenali Tingkatan Status (2)</h6>
             <div class="text-center">
-              <a href="https://jabarprov.go.id/assets/images/galeri/2889_7ovid.jpg"
-                class="btn btn-info btn-custom btn-sm text-center hvr-grow-shadow">Unduh
+              <a href="file/2.jpeg" class="btn btn-info btn-custom btn-sm text-center hvr-grow-shadow">Unduh
                 PDF</a>
-              <a href="https://jabarprov.go.id/assets/images/galeri/2889_7ovid.jpg"
-                class="btn btn-info btn-custom btn-sm text-center hvr-grow-shadow">Unduh
+              <a href="file/2.jpeg" class="btn btn-info btn-custom btn-sm text-center hvr-grow-shadow">Unduh
                 JPG</a>
             </div>
-            <div class="download text-center">
-              <h3><a href=""><i class="fa fa-facebook-square"></i></a></h3>
-              <h3><a href=""><i class="fa fa-twitter"></i></a></h3>
-              <h3><a href=""><i class="fa fa-whatsapp"></i></a></h3>
+            <hr style="margin-top:1%;margin-bottom:1%">
+            <div class="download" style="padding-left:70%;">
+              <a href="https://www.facebook.com/sharer.php?u=https://covid19.bandung.go.id/file/2.jpeg"
+                title="Bagikan ke Facebook"><img src="img/facebook.png" alt="" height=auto width=30%></a>
+              <a href="https://twitter.com/share?url=https://covid19.bandung.go.id/file/2.jpeg"
+                title="Bagikan Ke Facebook"><img src="img/twitter.png" alt="" height=auto width=30%></a>
+              <a href="https://wa.me/?text=https://covid19.bandung.go.id/file/2.jpeg" title="Bagikan ke Whatsapp"><img
+                  src="img/whatsapp.png" alt="" height=auto width=30%></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 pt-3">
+        <div class="card">
+          <div class="card-body">
+            <img src="file/3.jpeg" height=100% width=100% alt="">
+            <hr>
+            <h6 class="card-subtitle mb-2 text-muted">Laju Menghetikan Virus Corona</h6>
+            <div class="text-center">
+              <a href="file/3.jpeg" class="btn btn-info btn-custom btn-sm text-center hvr-grow-shadow">Unduh
+                PDF</a>
+              <a href="file/3.jpeg" class="btn btn-info btn-custom btn-sm text-center hvr-grow-shadow">Unduh
+                JPG</a>
+            </div>
+            <hr style="margin-top:1%;margin-bottom:1%">
+            <div class="download" style="padding-left:70%;">
+              <a href="https://www.facebook.com/sharer.php?u=https://covid19.bandung.go.id/file/3.jpeg"
+                title="Bagikan ke Facebook"><img src="img/facebook.png" alt="" height=auto width=30%></a>
+              <a href="https://twitter.com/share?url=https://covid19.bandung.go.id/file/3.jpeg"
+                title="Bagikan Ke Facebook"><img src="img/twitter.png" alt="" height=auto width=30%></a>
+              <a href="https://wa.me/?text=https://covid19.bandung.go.id/file/3.jpeg" title="Bagikan ke Whatsapp"><img
+                  src="img/whatsapp.png" alt="" height=auto width=30%></a>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
   </div>
   </div>
   <!-- akhir infografis -->
   <!-- Tabel index -->
   <div class="container">
     <div class="mt-5">
-      <hr style="padding-top:18px;padding-bottom:50px;">
+      <hr style="padding-top:18px;padding-bottom:20px;">
       <div class="float-left">
-        <h4>Dokumen</h4>
+        <h3><b>Dokumen</b></h3>
       </div>
       <div class="float-right">
         <span class="text-muted"><a href="publikasi.html">Selengkapnya > </a></span>
       </div>
     </div>
-    <div class="mt-5" style="padding-top:36px;padding-bottom:100px;">
+    <div class="mt-5" style="padding-top:36px;padding-bottom:20px;">
       <table class="table table-striped">
         <thead>
           <tr>
@@ -344,9 +421,27 @@
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>14 Maret 2020</td>
-            <td><a href="file/edaran walikota terkait covid19.pdf" target="_blank" download text-center>Surat Edaran
-                Walikota Bandung</a></td>
+            <td>19 Maret 2020</td>
+            <td>
+              <a href="file/edaran/SK KA No 13 A Tahun 2020.pdf.pdf.pdf.pdf" target="_blank" download text-center>SK KA
+                No.13 A Tahun 2020</a>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>19 Maret 2020</td>
+            <td>
+              <a href="file/edaran/Surat-Edaran-Work From Home 2020.pdf" target="_blank" download text-center>Surat
+                Edaran Work From Home</a>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>19 Maret 2020</td>
+            <td>
+              <a href="file/edaran/SE Protokol Isolasi Diri Sendiri Dalam Penanganan Covid -19.pdf" target="_blank"
+                download text-center>SE Protokol Isolasi Diri Sendiri Dalam Penanganan Covid 19</a>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -385,13 +480,20 @@
 
     <div class="row workingspace">
       <div class="col-lg-6">
-        <img src="img/cara-memakai-masker.jpg" alt="Working Space" class="img-fluid" />
+        <img src="/file/12.jpeg" alt="Working Space" class="img-fluid" />
       </div>
-      <div class="col-lg-5">
-        <h3>Penanganan Pasien COVID-19</h3>
-        <p>Saat ini belum ada obat khusus untuk pasien dengan COVID-19. Perawatan yang tersedia saat ini bertujuan
-          untuk
-          meringankan gejala. Anda harus tetap terisolasi dari orang lain sampai Anda benar-benar pulih.</p>
+      <div class="col-lg-6">
+        <h3><b>Penanganan Pasien COVID-19</b></h3>
+        <p class="text-justify">Saat ini belum ada obat khusus untuk pasien dengan COVID-19. Perawatan yang tersedia
+          saat ini bertujuan untuk meringankan gejala. Anda harus tetap terisolasi dari orang lain sampai Anda
+          benar-benar pulih.</p>
+        <p class="text-justify">Gejala-gejala ini biasanya ringan dan mulai secara bertahap. Beberapa orang bisa
+          terinfeksi tetapi tidak menunjukkan gejala apa pun dan merasa tidak enak badan. Kebanyakan orang (sekitar 80%)
+          pulih dari penyakit tanpa perlu perawatan khusus. Sekitar 1 dari setiap 6 orang yang terinfeksi COVID-19 sakit
+          parah dan mengalami kesulitan bernapas. </p>
+        <p class="text-justify">Orang yang lebih tua, dan mereka yang memiliki masalah medis penyerta seperti tekanan
+          darah tinggi, masalah jantung atau diabetes, lebih mungkin untuk berkembang menjadi penyakit serius. Orang
+          dengan demam, batuk dan kesulitan bernapas harus mencari perhatian medis.</p>
         <!-- <a href="#" class="btn btn-success tombol">Gallery</a> -->
       </div>
     </div>
@@ -401,25 +503,47 @@
 
     <div class="row workingspace">
       <div class="col-lg-6">
-        <img src="/img/tanggap.jpg" class="img-fluid" />
+        <img src="/file/6.jpeg" class="img-fluid" />
       </div>
-      <div class="col-lg-5">
-        <h3>
-          Layanan Telepon
-          Darurat COVID-19</h3>
-        <p>Hubungi layanpan ini jika:
-          Anda mengalami gejala COVID-19
-          Anda baru-baru ini berkunjung ke suatu negara atau daerah dengan risiko tinggi coronavirus
-          Anda telah melakukan kontak dekat dengan seseorang dengan coronavirus
-          Untuk refrensi lebih lanjut kunjungi:</p>
-        <li><a href="https://infeksiemerging.kemkes.go.id">Kementrian Kesehatan</a> </li>
-        <li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">Worid Health Organization</a>
+      <div class="col-lg-6 text-justify">
+        <h3><b>Layanan Telepon
+            Darurat COVID-19</b>
+        </h3>
+        <p class="text-justify">Hubungi layanan ini jika:</p>
+        <p><i class="fa fa-check-circle"></i> Mengalami gejala COVID-19</p>
+        <p><i class="fa fa-check-circle"></i> Anda baru-baru ini berkunjung ke suatu negara atau daerah dengan risiko
+          tinggi coronavirus</p>
+        <p><i class="fa fa-check-circle"></i> Anda telah melakukan kontak dekat dengan seseorang dengan coronavirus</p>
+        <br>
+        <p>Untuk referensi lebih lanjut kunjungi:</p>
+        <li class="text-left"><a href="https://infeksiemerging.kemkes.go.id">Kementrian Kesehatan</a> </li>
+        <li class="text-left"><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">World Health
+            Organization</a>
         </li>
-        <li><a href="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">Peta Kasus
+        <li class="text-left"><a
+            href="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">Peta Kasus
             Global COVID-19</a> </li>
         <!-- <a href="#" class="btn btn-success tombol">Gallery</a> -->
+        <hr />
+        <!-- Kunjungan -->
+        <div class="row">
+          <div class=" col-md-6 col align-self-end">
+            <div class="card">
+              <div class="card-header">
+                <h6>Jumlah Kunjungan</h6>
+              </div>
+              <div class="card-body">
+                <b>
+                  <h5 class="text-center" id="jumlahKunjungan"> Kunjungan </h5>
+                </b>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
+    <!--  -->
     <!-- akhir Workingspace -->
     <hr class="featurette-divider">
     <!-- FOOTER -->
@@ -445,6 +569,11 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
   </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+  <script src="js/visitor.js"></script>
+
 </body>
 
 </html>

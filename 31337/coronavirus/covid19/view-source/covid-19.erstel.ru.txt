@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Covid-19 Statistics</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+<div class="progress" style="margin: 0">
+	<div class="determinate" style="width: 100%"></div>
+</div>
+<div class="container flex-center position-ref full-height">
+		<div class="content">
+		<div class="row">
+			<div class="col s12 m6">
+				<h1 class="title text">
+					Covid-19
+				</h1>
+			</div>
+			<div class="col s12 m6">
+				<span class="flow-text"> last update: 2020-03-19 08:30:04</span>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col"><h2>Total:</h2></div>
+		</div>
+		<div class="row totals">
+			<div class="col s12 m4 confirmed center-align">
+				Confirmed: <span class="confirmed-text">214910</span>
+			</div>
+			<div class="col s12 m4 deaths center-align">
+				Deaths: <span class="deaths-text">8733</span>
+			</div>
+			<div class="col s12 m4 recovered center-align">
+				Recovered: <span class="recovered-text">83207</span>
+			</div>
+		</div>
+		<div class="charts">
+			<div class="row">
+				<div class="col s12 center-align">
+					<div id="map_chart_div"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12 center-align">
+					<div id="total_chart_div"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div id="covid"></div>
+					<script src="https://unpkg.com/covid-charts/index.js"></script>
+					<script>
+						const chart = createChart('#covid', {
+							country: "France",
+							width: 400,
+							height: 300
+						});
+					</script>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12 m6">
+				<table class="striped highlight">
+					<h2>World <span class="flow-text"> last date: 2020-03-18</span></h2>
+					<thead>
+					<tr>
+						<th>Country</th>
+						<th>Confirmed</th>
+						<th>Deaths</th>
+						<th>Recovered</th>
+						<th>New</th>
+					</tr>
+					</thead>
+					<tbody>
+											<tr>
+							<td>China</td>
+							<td class="confirmed">81102</td>
+							<td class=" deaths ">3241</td>
+							<td class="recovered ">69755</td>
+							<td class="confirmed_add ">44</td>
+						</tr>
+											<tr>
+							<td>Italy</td>
+							<td class="confirmed">35713</td>
+							<td class=" deaths ">2978</td>
+							<td class="recovered ">4025</td>
+							<td class="confirmed_add ">4207</td>
+						</tr>
+											<tr>
+							<td>Iran</td>
+							<td class="confirmed">17361</td>
+							<td class=" deaths ">1135</td>
+							<td class="recovered ">5389</td>
+							<td class="confirmed_add ">1192</td>
+						</tr>
+											<tr>
+							<td>Spain</td>
+							<td class="confirmed">13910</td>
+							<td class=" deaths ">623</td>
+							<td class="recovered ">1081</td>
+							<td class="confirmed_add ">2162</td>
+						</tr>
+											<tr>
+							<td>Germany</td>
+							<td class="confirmed">12327</td>
+							<td class=" deaths ">28</td>
+							<td class="recovered ">105</td>
+							<td class="confirmed_add ">3070</td>
+						</tr>
+											<tr>
+							<td>France</td>
+							<td class="confirmed">9105</td>
+							<td class=" deaths ">148</td>
+							<td class="recovered ">12</td>
+							<td class="confirmed_add ">1406</td>
+						</tr>
+											<tr>
+							<td>Korea, South</td>
+							<td class="confirmed">8413</td>
+							<td class=" deaths ">84</td>
+							<td class="recovered ">1540</td>
+							<td class="confirmed_add ">93</td>
+						</tr>
+											<tr>
+							<td>US</td>
+							<td class="confirmed">7783</td>
+							<td class=" deaths ">118</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">1362</td>
+						</tr>
+											<tr>
+							<td>Switzerland</td>
+							<td class="confirmed">3028</td>
+							<td class=" deaths ">28</td>
+							<td class="recovered ">15</td>
+							<td class="confirmed_add ">328</td>
+						</tr>
+											<tr>
+							<td>United Kingdom</td>
+							<td class="confirmed">2642</td>
+							<td class=" deaths ">72</td>
+							<td class="recovered ">67</td>
+							<td class="confirmed_add ">682</td>
+						</tr>
+											<tr>
+							<td>Netherlands</td>
+							<td class="confirmed">2058</td>
+							<td class=" deaths ">58</td>
+							<td class="recovered ">2</td>
+							<td class="confirmed_add ">350</td>
+						</tr>
+											<tr>
+							<td>Austria</td>
+							<td class="confirmed">1646</td>
+							<td class=" deaths ">4</td>
+							<td class="recovered ">9</td>
+							<td class="confirmed_add ">314</td>
+						</tr>
+											<tr>
+							<td>Norway</td>
+							<td class="confirmed">1550</td>
+							<td class=" deaths ">6</td>
+							<td class="recovered ">1</td>
+							<td class="confirmed_add ">87</td>
+						</tr>
+											<tr>
+							<td>Belgium</td>
+							<td class="confirmed">1486</td>
+							<td class=" deaths ">14</td>
+							<td class="recovered ">31</td>
+							<td class="confirmed_add ">243</td>
+						</tr>
+											<tr>
+							<td>Sweden</td>
+							<td class="confirmed">1279</td>
+							<td class=" deaths ">10</td>
+							<td class="recovered ">1</td>
+							<td class="confirmed_add ">89</td>
+						</tr>
+											<tr>
+							<td>Denmark</td>
+							<td class="confirmed">1115</td>
+							<td class=" deaths ">4</td>
+							<td class="recovered ">1</td>
+							<td class="confirmed_add ">91</td>
+						</tr>
+											<tr>
+							<td>Japan</td>
+							<td class="confirmed">889</td>
+							<td class=" deaths ">29</td>
+							<td class="recovered ">144</td>
+							<td class="confirmed_add ">11</td>
+						</tr>
+											<tr>
+							<td>Malaysia</td>
+							<td class="confirmed">790</td>
+							<td class=" deaths ">2</td>
+							<td class="recovered ">60</td>
+							<td class="confirmed_add ">117</td>
+						</tr>
+											<tr>
+							<td>Cruise Ship</td>
+							<td class="confirmed">712</td>
+							<td class=" deaths ">7</td>
+							<td class="recovered ">325</td>
+							<td class="confirmed_add ">16</td>
+						</tr>
+											<tr>
+							<td>Canada</td>
+							<td class="confirmed">657</td>
+							<td class=" deaths ">8</td>
+							<td class="recovered ">9</td>
+							<td class="confirmed_add ">179</td>
+						</tr>
+											<tr>
+							<td>Australia</td>
+							<td class="confirmed">568</td>
+							<td class=" deaths ">6</td>
+							<td class="recovered ">23</td>
+							<td class="confirmed_add ">116</td>
+						</tr>
+											<tr>
+							<td>Czechia</td>
+							<td class="confirmed">464</td>
+							<td class="">0</td>
+							<td class="recovered ">3</td>
+							<td class="confirmed_add ">68</td>
+						</tr>
+											<tr>
+							<td>Qatar</td>
+							<td class="confirmed">452</td>
+							<td class="">0</td>
+							<td class="recovered ">4</td>
+							<td class="confirmed_add ">13</td>
+						</tr>
+											<tr>
+							<td>Portugal</td>
+							<td class="confirmed">448</td>
+							<td class=" deaths ">2</td>
+							<td class="recovered ">3</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Israel</td>
+							<td class="confirmed">433</td>
+							<td class="">0</td>
+							<td class="recovered ">11</td>
+							<td class="confirmed_add ">96</td>
+						</tr>
+											<tr>
+							<td>Greece</td>
+							<td class="confirmed">418</td>
+							<td class=" deaths ">5</td>
+							<td class="recovered ">8</td>
+							<td class="confirmed_add ">31</td>
+						</tr>
+											<tr>
+							<td>Brazil</td>
+							<td class="confirmed">372</td>
+							<td class=" deaths ">3</td>
+							<td class="recovered ">2</td>
+							<td class="confirmed_add ">51</td>
+						</tr>
+											<tr>
+							<td>Finland</td>
+							<td class="confirmed">336</td>
+							<td class="">0</td>
+							<td class="recovered ">10</td>
+							<td class="confirmed_add ">15</td>
+						</tr>
+											<tr>
+							<td>Singapore</td>
+							<td class="confirmed">313</td>
+							<td class="">0</td>
+							<td class="recovered ">114</td>
+							<td class="confirmed_add ">47</td>
+						</tr>
+											<tr>
+							<td>Pakistan</td>
+							<td class="confirmed">299</td>
+							<td class="">0</td>
+							<td class="recovered ">2</td>
+							<td class="confirmed_add ">63</td>
+						</tr>
+											<tr>
+							<td>Ireland</td>
+							<td class="confirmed">292</td>
+							<td class=" deaths ">2</td>
+							<td class="recovered ">5</td>
+							<td class="confirmed_add ">69</td>
+						</tr>
+											<tr>
+							<td>Slovenia</td>
+							<td class="confirmed">275</td>
+							<td class=" deaths ">1</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Romania</td>
+							<td class="confirmed">260</td>
+							<td class="">0</td>
+							<td class="recovered ">19</td>
+							<td class="confirmed_add ">76</td>
+						</tr>
+											<tr>
+							<td>Estonia</td>
+							<td class="confirmed">258</td>
+							<td class="">0</td>
+							<td class="recovered ">1</td>
+							<td class="confirmed_add ">33</td>
+						</tr>
+											<tr>
+							<td>Bahrain</td>
+							<td class="confirmed">256</td>
+							<td class=" deaths ">1</td>
+							<td class="recovered ">88</td>
+							<td class="confirmed_add ">28</td>
+						</tr>
+											<tr>
+							<td>Poland</td>
+							<td class="confirmed">251</td>
+							<td class=" deaths ">5</td>
+							<td class="recovered ">13</td>
+							<td class="confirmed_add ">13</td>
+						</tr>
+											<tr>
+							<td>Iceland</td>
+							<td class="confirmed">250</td>
+							<td class=" deaths ">1</td>
+							<td class="recovered ">5</td>
+							<td class="confirmed_add ">30</td>
+						</tr>
+											<tr>
+							<td>Chile</td>
+							<td class="confirmed">238</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">37</td>
+						</tr>
+											<tr>
+							<td>Indonesia</td>
+							<td class="confirmed">227</td>
+							<td class=" deaths ">19</td>
+							<td class="recovered ">11</td>
+							<td class="confirmed_add ">55</td>
+						</tr>
+											<tr>
+							<td>Thailand</td>
+							<td class="confirmed">212</td>
+							<td class=" deaths ">1</td>
+							<td class="recovered ">42</td>
+							<td class="confirmed_add ">35</td>
+						</tr>
+											<tr>
+							<td>Luxembourg</td>
+							<td class="confirmed">203</td>
+							<td class=" deaths ">2</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">63</td>
+						</tr>
+											<tr>
+							<td>Philippines</td>
+							<td class="confirmed">202</td>
+							<td class=" deaths ">19</td>
+							<td class="recovered ">5</td>
+							<td class="confirmed_add ">15</td>
+						</tr>
+											<tr>
+							<td>Egypt</td>
+							<td class="confirmed">196</td>
+							<td class=" deaths ">6</td>
+							<td class="recovered ">32</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Saudi Arabia</td>
+							<td class="confirmed">171</td>
+							<td class="">0</td>
+							<td class="recovered ">6</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Iraq</td>
+							<td class="confirmed">164</td>
+							<td class=" deaths ">12</td>
+							<td class="recovered ">43</td>
+							<td class="confirmed_add ">10</td>
+						</tr>
+											<tr>
+							<td>India</td>
+							<td class="confirmed">156</td>
+							<td class=" deaths ">3</td>
+							<td class="recovered ">14</td>
+							<td class="confirmed_add ">14</td>
+						</tr>
+											<tr>
+							<td>Russia</td>
+							<td class="confirmed">147</td>
+							<td class="">0</td>
+							<td class="recovered ">8</td>
+							<td class="confirmed_add ">33</td>
+						</tr>
+											<tr>
+							<td>Peru</td>
+							<td class="confirmed">145</td>
+							<td class="">0</td>
+							<td class="recovered ">1</td>
+							<td class="confirmed_add ">28</td>
+						</tr>
+											<tr>
+							<td>Kuwait</td>
+							<td class="confirmed">142</td>
+							<td class="">0</td>
+							<td class="recovered ">15</td>
+							<td class="confirmed_add ">12</td>
+						</tr>
+											<tr>
+							<td>Lebanon</td>
+							<td class="confirmed">133</td>
+							<td class=" deaths ">3</td>
+							<td class="recovered ">3</td>
+							<td class="confirmed_add ">13</td>
+						</tr>
+											<tr>
+							<td>San Marino</td>
+							<td class="confirmed">119</td>
+							<td class=" deaths ">11</td>
+							<td class="recovered ">4</td>
+							<td class="confirmed_add ">10</td>
+						</tr>
+											<tr>
+							<td>South Africa</td>
+							<td class="confirmed">116</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">54</td>
+						</tr>
+											<tr>
+							<td>United Arab Emirates</td>
+							<td class="confirmed">113</td>
+							<td class="">0</td>
+							<td class="recovered ">26</td>
+							<td class="confirmed_add ">15</td>
+						</tr>
+											<tr>
+							<td>Ecuador</td>
+							<td class="confirmed">111</td>
+							<td class=" deaths ">2</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">53</td>
+						</tr>
+											<tr>
+							<td>Slovakia</td>
+							<td class="confirmed">105</td>
+							<td class=" deaths ">1</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">33</td>
+						</tr>
+											<tr>
+							<td>Taiwan*</td>
+							<td class="confirmed">100</td>
+							<td class=" deaths ">1</td>
+							<td class="recovered ">22</td>
+							<td class="confirmed_add ">23</td>
+						</tr>
+											<tr>
+							<td>Turkey</td>
+							<td class="confirmed">98</td>
+							<td class=" deaths ">1</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">51</td>
+						</tr>
+											<tr>
+							<td>Mexico</td>
+							<td class="confirmed">93</td>
+							<td class="">0</td>
+							<td class="recovered ">4</td>
+							<td class="confirmed_add ">11</td>
+						</tr>
+											<tr>
+							<td>Colombia</td>
+							<td class="confirmed">93</td>
+							<td class="">0</td>
+							<td class="recovered ">1</td>
+							<td class="confirmed_add ">28</td>
+						</tr>
+											<tr>
+							<td>Bulgaria</td>
+							<td class="confirmed">92</td>
+							<td class=" deaths ">2</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">25</td>
+						</tr>
+											<tr>
+							<td>Panama</td>
+							<td class="confirmed">86</td>
+							<td class=" deaths ">1</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">17</td>
+						</tr>
+											<tr>
+							<td>Armenia</td>
+							<td class="confirmed">84</td>
+							<td class="">0</td>
+							<td class="recovered ">1</td>
+							<td class="confirmed_add ">6</td>
+						</tr>
+											<tr>
+							<td>Serbia</td>
+							<td class="confirmed">83</td>
+							<td class="">0</td>
+							<td class="recovered ">1</td>
+							<td class="confirmed_add ">18</td>
+						</tr>
+											<tr>
+							<td>Croatia</td>
+							<td class="confirmed">81</td>
+							<td class="">0</td>
+							<td class="recovered ">4</td>
+							<td class="confirmed_add ">16</td>
+						</tr>
+											<tr>
+							<td>Argentina</td>
+							<td class="confirmed">79</td>
+							<td class=" deaths ">2</td>
+							<td class="recovered ">3</td>
+							<td class="confirmed_add ">11</td>
+						</tr>
+											<tr>
+							<td>Vietnam</td>
+							<td class="confirmed">75</td>
+							<td class="">0</td>
+							<td class="recovered ">16</td>
+							<td class="confirmed_add ">9</td>
+						</tr>
+											<tr>
+							<td>Algeria</td>
+							<td class="confirmed">74</td>
+							<td class=" deaths ">7</td>
+							<td class="recovered ">12</td>
+							<td class="confirmed_add ">14</td>
+						</tr>
+											<tr>
+							<td>Latvia</td>
+							<td class="confirmed">71</td>
+							<td class="">0</td>
+							<td class="recovered ">1</td>
+							<td class="confirmed_add ">22</td>
+						</tr>
+											<tr>
+							<td>Brunei</td>
+							<td class="confirmed">68</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">12</td>
+						</tr>
+											<tr>
+							<td>Albania</td>
+							<td class="confirmed">59</td>
+							<td class=" deaths ">2</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">4</td>
+						</tr>
+											<tr>
+							<td>Hungary</td>
+							<td class="confirmed">58</td>
+							<td class=" deaths ">1</td>
+							<td class="recovered ">2</td>
+							<td class="confirmed_add ">8</td>
+						</tr>
+											<tr>
+							<td>Jordan</td>
+							<td class="confirmed">52</td>
+							<td class="">0</td>
+							<td class="recovered ">1</td>
+							<td class="confirmed_add ">18</td>
+						</tr>
+											<tr>
+							<td>Belarus</td>
+							<td class="confirmed">51</td>
+							<td class="">0</td>
+							<td class="recovered ">5</td>
+							<td class="confirmed_add ">15</td>
+						</tr>
+											<tr>
+							<td>Sri Lanka</td>
+							<td class="confirmed">51</td>
+							<td class="">0</td>
+							<td class="recovered ">1</td>
+							<td class="confirmed_add ">7</td>
+						</tr>
+											<tr>
+							<td>Costa Rica</td>
+							<td class="confirmed">50</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">9</td>
+						</tr>
+											<tr>
+							<td>Uruguay</td>
+							<td class="confirmed">50</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">21</td>
+						</tr>
+											<tr>
+							<td>Morocco</td>
+							<td class="confirmed">49</td>
+							<td class=" deaths ">2</td>
+							<td class="recovered ">1</td>
+							<td class="confirmed_add ">11</td>
+						</tr>
+											<tr>
+							<td>Cyprus</td>
+							<td class="confirmed">49</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">3</td>
+						</tr>
+											<tr>
+							<td>Oman</td>
+							<td class="confirmed">39</td>
+							<td class="">0</td>
+							<td class="recovered ">12</td>
+							<td class="confirmed_add ">15</td>
+						</tr>
+											<tr>
+							<td>Andorra</td>
+							<td class="confirmed">39</td>
+							<td class="">0</td>
+							<td class="recovered ">1</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Bosnia and Herzegovina</td>
+							<td class="confirmed">38</td>
+							<td class="">0</td>
+							<td class="recovered ">2</td>
+							<td class="confirmed_add ">12</td>
+						</tr>
+											<tr>
+							<td>Malta</td>
+							<td class="confirmed">38</td>
+							<td class="">0</td>
+							<td class="recovered ">2</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Georgia</td>
+							<td class="confirmed">38</td>
+							<td class="">0</td>
+							<td class="recovered ">1</td>
+							<td class="confirmed_add ">4</td>
+						</tr>
+											<tr>
+							<td>Venezuela</td>
+							<td class="confirmed">36</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">3</td>
+						</tr>
+											<tr>
+							<td>Cambodia</td>
+							<td class="confirmed">35</td>
+							<td class="">0</td>
+							<td class="recovered ">1</td>
+							<td class="confirmed_add ">2</td>
+						</tr>
+											<tr>
+							<td>North Macedonia</td>
+							<td class="confirmed">35</td>
+							<td class="">0</td>
+							<td class="recovered ">1</td>
+							<td class="confirmed_add ">9</td>
+						</tr>
+											<tr>
+							<td>Kazakhstan</td>
+							<td class="confirmed">35</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">2</td>
+						</tr>
+											<tr>
+							<td>Senegal</td>
+							<td class="confirmed">31</td>
+							<td class="">0</td>
+							<td class="recovered ">2</td>
+							<td class="confirmed_add ">5</td>
+						</tr>
+											<tr>
+							<td>Moldova</td>
+							<td class="confirmed">30</td>
+							<td class=" deaths ">1</td>
+							<td class="recovered ">1</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Tunisia</td>
+							<td class="confirmed">29</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">5</td>
+						</tr>
+											<tr>
+							<td>Azerbaijan</td>
+							<td class="confirmed">28</td>
+							<td class=" deaths ">1</td>
+							<td class="recovered ">6</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Liechtenstein</td>
+							<td class="confirmed">28</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">21</td>
+						</tr>
+											<tr>
+							<td>Lithuania</td>
+							<td class="confirmed">27</td>
+							<td class="">0</td>
+							<td class="recovered ">1</td>
+							<td class="confirmed_add ">2</td>
+						</tr>
+											<tr>
+							<td>Afghanistan</td>
+							<td class="confirmed">22</td>
+							<td class="">0</td>
+							<td class="recovered ">1</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Dominican Republic</td>
+							<td class="confirmed">21</td>
+							<td class=" deaths ">1</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>New Zealand</td>
+							<td class="confirmed">20</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">8</td>
+						</tr>
+											<tr>
+							<td>Burkina Faso</td>
+							<td class="confirmed">20</td>
+							<td class=" deaths ">1</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">5</td>
+						</tr>
+											<tr>
+							<td>Martinique</td>
+							<td class="confirmed">19</td>
+							<td class=" deaths ">1</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">3</td>
+						</tr>
+											<tr>
+							<td>Uzbekistan</td>
+							<td class="confirmed">15</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">5</td>
+						</tr>
+											<tr>
+							<td>Bangladesh</td>
+							<td class="confirmed">14</td>
+							<td class=" deaths ">1</td>
+							<td class="recovered ">3</td>
+							<td class="confirmed_add ">4</td>
+						</tr>
+											<tr>
+							<td>Ukraine</td>
+							<td class="confirmed">14</td>
+							<td class=" deaths ">2</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Jamaica</td>
+							<td class="confirmed">13</td>
+							<td class="">0</td>
+							<td class="recovered ">2</td>
+							<td class="confirmed_add ">1</td>
+						</tr>
+											<tr>
+							<td>Maldives</td>
+							<td class="confirmed">13</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Bolivia</td>
+							<td class="confirmed">12</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">1</td>
+						</tr>
+											<tr>
+							<td>Paraguay</td>
+							<td class="confirmed">11</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">2</td>
+						</tr>
+											<tr>
+							<td>Cameroon</td>
+							<td class="confirmed">10</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Honduras</td>
+							<td class="confirmed">9</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">1</td>
+						</tr>
+											<tr>
+							<td>Nigeria</td>
+							<td class="confirmed">8</td>
+							<td class="">0</td>
+							<td class="recovered ">1</td>
+							<td class="confirmed_add ">5</td>
+						</tr>
+											<tr>
+							<td>Rwanda</td>
+							<td class="confirmed">8</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">1</td>
+						</tr>
+											<tr>
+							<td>Monaco</td>
+							<td class="confirmed">7</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Cuba</td>
+							<td class="confirmed">7</td>
+							<td class=" deaths ">1</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">2</td>
+						</tr>
+											<tr>
+							<td>Guyana</td>
+							<td class="confirmed">7</td>
+							<td class=" deaths ">1</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Ghana</td>
+							<td class="confirmed">7</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Trinidad and Tobago</td>
+							<td class="confirmed">7</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">2</td>
+						</tr>
+											<tr>
+							<td>Cote d&#039;Ivoire</td>
+							<td class="confirmed">6</td>
+							<td class="">0</td>
+							<td class="recovered ">1</td>
+							<td class="confirmed_add ">1</td>
+						</tr>
+											<tr>
+							<td>Mongolia</td>
+							<td class="confirmed">6</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">1</td>
+						</tr>
+											<tr>
+							<td>Ethiopia</td>
+							<td class="confirmed">6</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">1</td>
+						</tr>
+											<tr>
+							<td>Guatemala</td>
+							<td class="confirmed">6</td>
+							<td class=" deaths ">1</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Congo (Kinshasa)</td>
+							<td class="confirmed">4</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">1</td>
+						</tr>
+											<tr>
+							<td>Seychelles</td>
+							<td class="confirmed">4</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Equatorial Guinea</td>
+							<td class="confirmed">4</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">3</td>
+						</tr>
+											<tr>
+							<td>Kenya</td>
+							<td class="confirmed">3</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Tanzania</td>
+							<td class="confirmed">3</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">2</td>
+						</tr>
+											<tr>
+							<td>Kyrgyzstan</td>
+							<td class="confirmed">3</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">3</td>
+						</tr>
+											<tr>
+							<td>Mauritius</td>
+							<td class="confirmed">3</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">3</td>
+						</tr>
+											<tr>
+							<td>Sudan</td>
+							<td class="confirmed">2</td>
+							<td class=" deaths ">1</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">1</td>
+						</tr>
+											<tr>
+							<td>Namibia</td>
+							<td class="confirmed">2</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Saint Lucia</td>
+							<td class="confirmed">2</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Kosovo</td>
+							<td class="confirmed">2</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Benin</td>
+							<td class="confirmed">2</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">1</td>
+						</tr>
+											<tr>
+							<td>Liberia</td>
+							<td class="confirmed">2</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">1</td>
+						</tr>
+											<tr>
+							<td>Barbados</td>
+							<td class="confirmed">2</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Zambia</td>
+							<td class="confirmed">2</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">2</td>
+						</tr>
+											<tr>
+							<td>Nepal</td>
+							<td class="confirmed">1</td>
+							<td class="">0</td>
+							<td class="recovered ">1</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Bhutan</td>
+							<td class="confirmed">1</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Togo</td>
+							<td class="confirmed">1</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Holy See</td>
+							<td class="confirmed">1</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Guinea</td>
+							<td class="confirmed">1</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Antigua and Barbuda</td>
+							<td class="confirmed">1</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Eswatini</td>
+							<td class="confirmed">1</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Gabon</td>
+							<td class="confirmed">1</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Mauritania</td>
+							<td class="confirmed">1</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Saint Vincent and the Grenadines</td>
+							<td class="confirmed">1</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Suriname</td>
+							<td class="confirmed">1</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Central African Republic</td>
+							<td class="confirmed">1</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Congo (Brazzaville)</td>
+							<td class="confirmed">1</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Greenland</td>
+							<td class="confirmed">1</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Somalia</td>
+							<td class="confirmed">1</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>The Bahamas</td>
+							<td class="confirmed">1</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Montenegro</td>
+							<td class="confirmed">1</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>Djibouti</td>
+							<td class="confirmed">1</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="confirmed_add ">1</td>
+						</tr>
+											<tr>
+							<td>Gambia, The</td>
+							<td class="confirmed">1</td>
+							<td class="">0</td>
+							<td class="">0</td>
+							<td class="">0</td>
+						</tr>
+										</tbody>
+				</table>
+			</div>
+			<div class="col s12 m6">
+				<table class="striped highlight">
+					<h2>Russia</h2>
+					<thead>
+					<tr>
+						<th>Date</th>
+						<th>Confirmed</th>
+						<th>Deaths</th>
+						<th>Recovered</th>
+						<th>New</th>
+					</tr>
+					</thead>
+					<tbody>
+											<tr>
+							<td>2020-03-18</td>
+							<td class="confirmed">147</td>
+							<td class="">0</td>
+							<td class="recovered ">8</td>
+							<td class="confirmed_add ">33</td>
+						</tr>
+											<tr>
+							<td>2020-03-17</td>
+							<td class="confirmed">114</td>
+							<td class="">0</td>
+							<td class="recovered ">8</td>
+							<td class="confirmed_add ">24</td>
+						</tr>
+											<tr>
+							<td>2020-03-16</td>
+							<td class="confirmed">90</td>
+							<td class="">0</td>
+							<td class="recovered ">8</td>
+							<td class="confirmed_add ">27</td>
+						</tr>
+											<tr>
+							<td>2020-03-15</td>
+							<td class="confirmed">63</td>
+							<td class="">0</td>
+							<td class="recovered ">8</td>
+							<td class="confirmed_add ">4</td>
+						</tr>
+											<tr>
+							<td>2020-03-14</td>
+							<td class="confirmed">59</td>
+							<td class="">0</td>
+							<td class="recovered ">8</td>
+							<td class="confirmed_add ">14</td>
+						</tr>
+											<tr>
+							<td>2020-03-13</td>
+							<td class="confirmed">45</td>
+							<td class="">0</td>
+							<td class="recovered ">3</td>
+							<td class="confirmed_add ">17</td>
+						</tr>
+											<tr>
+							<td>2020-03-12</td>
+							<td class="confirmed">28</td>
+							<td class="">0</td>
+							<td class="recovered ">3</td>
+							<td class="confirmed_add ">8</td>
+						</tr>
+											<tr>
+							<td>2020-03-11</td>
+							<td class="confirmed">20</td>
+							<td class="">0</td>
+							<td class="recovered ">3</td>
+							<td class="">0</td>
+						</tr>
+											<tr>
+							<td>2020-03-10</td>
+							<td class="confirmed">20</td>
+							<td class="">0</td>
+							<td class="recovered ">3</td>
+							<td class="confirmed_add ">3</td>
+						</tr>
+											<tr>
+							<td>2020-03-09</td>
+							<td class="confirmed">17</td>
+							<td class="">0</td>
+							<td class="recovered ">3</td>
+							<td class="">0</td>
+						</tr>
+										</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<footer class="container green lighten-5">
+	<div class="row">
+		<div class="col">
+		</div>
+	</div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script !src="">
+	$(document).ready(function () {
+		google.charts.load('current', {'packages': ['line']});
+		google.charts.setOnLoadCallback(drawChart);
+
+		function drawChart() {
+
+			var data = new google.visualization.DataTable();
+			data.addColumn('string', 'Day');
+			data.addColumn('number', 'Confirmed');
+			data.addColumn('number', 'Deaths');
+			data.addColumn('number', 'New');
+			data.addColumn('number', 'Recovered');
+
+			data.addRows([
+									['2020-01-22',  555, 17, 0, 28],
+								['2020-01-23',  653, 18, 98, 30],
+								['2020-01-24',  941, 26, 288, 36],
+								['2020-01-25',  1434, 42, 493, 39],
+								['2020-01-26',  2118, 56, 684, 52],
+								['2020-01-27',  2927, 82, 809, 61],
+								['2020-01-28',  5578, 131, 2651, 107],
+								['2020-01-29',  6166, 133, 588, 126],
+								['2020-01-30',  8234, 171, 2068, 143],
+								['2020-01-31',  9927, 213, 1693, 222],
+								['2020-02-01',  12038, 259, 2111, 284],
+								['2020-02-02',  16787, 362, 4749, 472],
+								['2020-02-03',  19881, 426, 3094, 623],
+								['2020-02-04',  23892, 492, 4011, 852],
+								['2020-02-05',  27635, 564, 3743, 1124],
+								['2020-02-06',  30817, 634, 3182, 1487],
+								['2020-02-07',  34391, 719, 3574, 2011],
+								['2020-02-08',  37120, 806, 2729, 2616],
+								['2020-02-09',  40150, 906, 3030, 3244],
+								['2020-02-10',  42762, 1013, 2612, 3946],
+								['2020-02-11',  44802, 1113, 2040, 4683],
+								['2020-02-12',  45221, 1118, 419, 5150],
+								['2020-02-13',  60368, 1371, 15147, 6295],
+								['2020-02-14',  66885, 1523, 6517, 8058],
+								['2020-02-15',  69030, 1666, 2145, 9395],
+								['2020-02-16',  71224, 1770, 2194, 10865],
+								['2020-02-17',  73258, 1868, 2034, 12583],
+								['2020-02-18',  75136, 2007, 1878, 14352],
+								['2020-02-19',  75639, 2122, 503, 16121],
+								['2020-02-20',  76197, 2247, 558, 18177],
+								['2020-02-21',  76823, 2251, 626, 18890],
+								['2020-02-22',  78579, 2458, 1756, 22886],
+								['2020-02-23',  78965, 2469, 386, 23394],
+								['2020-02-24',  79568, 2629, 603, 25227],
+								['2020-02-25',  80413, 2708, 845, 27905],
+								['2020-02-26',  81395, 2770, 982, 30384],
+								['2020-02-27',  82754, 2814, 1359, 33277],
+								['2020-02-28',  84120, 2872, 1366, 36711],
+								['2020-02-29',  86011, 2941, 1891, 39782],
+								['2020-03-01',  88369, 2996, 2358, 42716],
+								['2020-03-02',  90306, 3085, 1937, 45602],
+								['2020-03-03',  92840, 3160, 2534, 48228],
+								['2020-03-04',  95120, 3254, 2280, 51170],
+								['2020-03-05',  97882, 3348, 2762, 53796],
+								['2020-03-06',  101784, 3460, 3902, 55865],
+								['2020-03-07',  105821, 3558, 4037, 58358],
+								['2020-03-08',  109795, 3802, 3974, 60694],
+								['2020-03-09',  113561, 3988, 3766, 62494],
+								['2020-03-10',  118592, 4262, 5031, 64404],
+								['2020-03-11',  125865, 4615, 7273, 67003],
+								['2020-03-12',  128343, 4720, 2478, 68324],
+								['2020-03-13',  145193, 5404, 16850, 70251],
+								['2020-03-14',  156097, 5819, 10904, 72624],
+								['2020-03-15',  167449, 6440, 11352, 76034],
+								['2020-03-16',  181531, 7126, 14082, 78088],
+								['2020-03-17',  197147, 7905, 15616, 80840],
+								['2020-03-18',  214910, 8733, 17763, 83207],
+							]);
+
+			var options = {
+				chart: {
+					title: 'Disease statistics COVID-19',
+					subtitle: ''
+				},
+				width: '100%',
+				height: 500,
+				axes: {
+					x: {
+						0: {side: 'top'}
+					}
+				}
+			};
+
+			var chart = new google.charts.Line(document.getElementById('total_chart_div'));
+
+			chart.draw(data, google.charts.Line.convertOptions(options));
+		}
+	});
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32235011-3"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-32235011-3');
+</script>
+</body>
+</html>
