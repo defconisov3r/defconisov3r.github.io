@@ -1,0 +1,2130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carte en ligne de Coronavirus en France</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+
+     <!-- Load Esri Leaflet from CDN -->
+  <script src="https://unpkg.com/esri-leaflet@2.3.3/dist/esri-leaflet.js"
+  integrity="sha512-cMQ5e58BDuu1pr9BQ/eGRn6HaR6Olh0ofcHFWe5XesdCITVuSBiBZZbhCijBe5ya238f/zMMRYIMIIg1jxv4sQ=="
+  crossorigin=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <!-- Load Esri Leaflet Geocoder from CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder@2.3.2/dist/esri-leaflet-geocoder.css"
+    integrity="sha512-IM3Hs+feyi40yZhDH6kV8vQMg4Fh20s9OzInIIAc4nx7aMYMfo+IenRUekoYsHZqGkREUgx0VvlEsgm7nCDW9g=="
+    crossorigin="">
+  <script src="https://unpkg.com/esri-leaflet-geocoder@2.3.2/dist/esri-leaflet-geocoder.js"
+    integrity="sha512-8twnXcrOGP3WfMvjB0jS5pNigFuIWj4ALwWEgxhZ+mxvjF5/FBPVd5uAxqT8dd2kUmTVK9+yQJ4CmTmSg/sXAQ=="
+    crossorigin=""></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    
+    <script src="./js/scripts.js" ></script>
+    <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+  <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(61147291, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/61147291" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+  <div class="mainmap">
+    <div id="mapid"></div>
+    <div class="analytics">
+      <h2 class="analytics__title"></h2>
+      <div class="analytics__main">
+        <div class="analytics__main__item"><span class="analytics__confirmed"></span><span class="analytics__main__item__subtitle">cases</span></div>
+        <div class="analytics__main__item"><span class="analytics__death"></span><span class="analytics__main__item__subtitle">death</span></div>
+        <div class="analytics__main__item"><span class="analytics__recovered"></span><span class="analytics__main__item__subtitle">recovered</span></div>
+        <div class="analytics__main__item"><span class="analytics__mortality"></span><span class="analytics__main__item__subtitle">mortality</span></div>
+      </div>
+      <div class="analytics__content">
+        <div class="analytics__tabs">
+          <ul class="analytics__tabs__ul">
+            <li class="analytics__tab"><a href="#statistics" class="analytics__tab__link analytics__tab__link-active">Statistics</a></li>
+            <li class="analytics__tab"><a href="#news" class="analytics__tab__link">News</a></li>
+          </ul>
+        </div>
+        <div id="statistics" class="analytics__tab__content analytics__tab__content-active analytics__statistics">
+          <div id="linechart_material"></div>
+          <div id="columnchart"></div>
+        </div>
+        <div id="news" class="analytics__tab__content analytics__news"></div>
+      </div>
+      <div class="analytics__close"></div>
+    </div>
+    <div class="main_stat">
+      <div class="main-stat__item main-stat__item-confirmed">
+        <div class="main-stat__item__title">Total Cases</div>
+        <div class="main-stat__item__count main-stat__item__count-cases"></div>
+        <div class="main-stat__item__count-today_cases"></div>
+      </div>
+      <div class="main-stat__item main-stat__item-death">
+        <div class="main-stat__item__title">Death</div>
+        <div class="main-stat__item__count main-stat__item__count-death"></div>
+        <div class="main-stat__item__count-today_death"></div>
+      </div>
+      <div class="main-stat__item main-stat__item-recovered">
+        <div class="main-stat__item__title">Recovered</div>
+        <div class="main-stat__item__count main-stat__item__count-recovered"></div>
+      </div>
+      <div class="main-stat__item">
+        <div class="main-stat__item__title">Mortality</div>
+        <div class="main-stat__item__count main-stat__item__count-mortality"></div>
+      </div>
+    </div>
+    <div class="range">
+            <input type="range" min="0" max="60" value="60" class="range__input range__input-country">
+      <div class="range__dates">
+        <div class="range__date">19 Jan 2020</div>
+        <div class="range__date range__date-current range__date-current-country"></div>
+        <div class="range__date">19 Mar 2020</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="tables" id="tables">
+    <div class="tables__container">
+      <div class="tables__col tables__col-country">
+                  <div class="tables__table__head">
+          <h2 class="tables__title tables__title-country">France</h2>
+          <div class="tables__show-on-map"><a href="#" class="tables__show-on-map__link" data-id="58">Show on map</a></div>
+        </div>
+        <div class="tables__charts">
+          <div class="tables__chart" id="table__chart1"></div>
+          <div class="tables__chart" id="table__chart2"></div>
+          <div class="tables__chart"></div>
+          <div class="tables__chart"></div>
+        </div>
+        <div class="tables__table-content tables__table-content-country">
+          <table class="tables__table tables__table-country">
+            <tr class="table__tr">
+              <th class="table__th table__th-country">Province</th>
+              <th class="table__th">Total<br>cases</th>
+              <th class="table__th">Total<br>Death</th>
+              <th class="table__th">Recovered</th>
+              <th class="table__th">Mortality</th>
+          </tr>
+                      <tr class="table__tr">
+              <td class="table__td table__td-country"><a href="#" data-city='38' class="table__link-city">Île-de-France</a></td>
+              <td class="table__td">3384</td>
+              <td class="table__td">7</td>
+              <td class="table__td">5</td>
+              <td class="table__td">0.21%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country"><a href="#" data-city='41' class="table__link-city">Grand Est</a></td>
+              <td class="table__td">2643</td>
+              <td class="table__td">21</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0.79%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country"><a href="#" data-city='40' class="table__link-city">Auvergne-Rhône-Alpes</a></td>
+              <td class="table__td">1014</td>
+              <td class="table__td">10</td>
+              <td class="table__td">8</td>
+              <td class="table__td">0.99%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country"><a href="#" data-city='42' class="table__link-city">Hauts-de-France</a></td>
+              <td class="table__td">700</td>
+              <td class="table__td">26</td>
+              <td class="table__td">0</td>
+              <td class="table__td">3.71%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country"><a href="#" data-city='43' class="table__link-city">Bourgogne-Franche-Comté</a></td>
+              <td class="table__td">696</td>
+              <td class="table__td">5</td>
+              <td class="table__td">8</td>
+              <td class="table__td">0.72%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country"><a href="#" data-city='46' class="table__link-city">Provence-Alpes-Côte d'Azur</a></td>
+              <td class="table__td">693</td>
+              <td class="table__td">1</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0.14%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country"><a href="#" data-city='45' class="table__link-city">Occitanie</a></td>
+              <td class="table__td">444</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country"><a href="#" data-city='44' class="table__link-city">Bretagne</a></td>
+              <td class="table__td">297</td>
+              <td class="table__td">3</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1.01%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country"><a href="#" data-city='39' class="table__link-city">Nouvelle-Aquitaine</a></td>
+              <td class="table__td">280</td>
+              <td class="table__td">0</td>
+              <td class="table__td">2</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country"><a href="#" data-city='48' class="table__link-city">Normandie</a></td>
+              <td class="table__td">241</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0.41%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country"><a href="#" data-city='52' class="table__link-city">Corse</a></td>
+              <td class="table__td">162</td>
+              <td class="table__td">5</td>
+              <td class="table__td">0</td>
+              <td class="table__td">3.09%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country"><a href="#" data-city='47' class="table__link-city">Pays de la Loire</a></td>
+              <td class="table__td">160</td>
+              <td class="table__td">0</td>
+              <td class="table__td">4</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country"><a href="#" data-city='51' class="table__link-city">Centre-Val de Loire</a></td>
+              <td class="table__td">157</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country"><a href="#" data-city='56' class="table__link-city">Guadeloupe</a></td>
+              <td class="table__td">45</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country"><a href="#" data-city='53' class="table__link-city">Guyane</a></td>
+              <td class="table__td">32</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country"><a href="#" data-city='55' class="table__link-city">La Réunion</a></td>
+              <td class="table__td">19</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country"><a href="#" data-city='54' class="table__link-city">Martinique</a></td>
+              <td class="table__td">15</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country"><a href="#" data-city='57' class="table__link-city">Mayotte</a></td>
+              <td class="table__td">6</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country"><a href="#" data-city='50' class="table__link-city">Saint-Martin</a></td>
+              <td class="table__td">4</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country"><a href="#" data-city='49' class="table__link-city">Saint-Barthélémy</a></td>
+              <td class="table__td">3</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                      </table>
+        </div>
+      </div>
+      <div class="tables__col">
+        <h2 class="tables__title tables__title-world">World</h2>
+        <div class="tables__charts">
+          <div class="tables__chart" id="table__chart1_world"></div>
+          <div class="tables__chart" id="table__chart2_world"></div>
+          <div class="tables__chart"></div>
+          <div class="tables__chart"></div>
+        </div>
+        <div class="tables__table-content">
+          <table class="tables__table">
+            <tr class="table__tr">
+              <th class="table__th table__th-country">Country</th>
+              <th class="table__th">Total<br>cases</th>
+              <th class="table__th">New<br>cases</th>
+              <th class="table__th">Total<br>Death</th>
+              <th class="table__th">New<br>Death</th>
+              <th class="table__th">Recovered</th>
+              <th class="table__th">Mortality</th>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  China                              </td>
+              <td class="table__td">80928</td>
+              <td class="table__td">34</td>
+              <td class="table__td">3245</td>
+              <td class="table__td">8</td>
+              <td class="table__td">70420</td>
+              <td class="table__td">4.01%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  <a href="#" data-id='79' class="table__link">Italy</a>
+                              </td>
+              <td class="table__td">41035</td>
+              <td class="table__td">5322</td>
+              <td class="table__td">3405</td>
+              <td class="table__td">427</td>
+              <td class="table__td">4440</td>
+              <td class="table__td">8.3%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Iran                              </td>
+              <td class="table__td">18407</td>
+              <td class="table__td">1046</td>
+              <td class="table__td">1284</td>
+              <td class="table__td">149</td>
+              <td class="table__td">5979</td>
+              <td class="table__td">6.98%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Spain                              </td>
+              <td class="table__td">17395</td>
+              <td class="table__td">2626</td>
+              <td class="table__td">803</td>
+              <td class="table__td">165</td>
+              <td class="table__td">1107</td>
+              <td class="table__td">4.62%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  <a href="#" data-id='62' class="table__link">Germany</a>
+                              </td>
+              <td class="table__td">15309</td>
+              <td class="table__td">2982</td>
+              <td class="table__td">44</td>
+              <td class="table__td">16</td>
+              <td class="table__td">114</td>
+              <td class="table__td">0.29%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  US                              </td>
+              <td class="table__td">11413</td>
+              <td class="table__td">2154</td>
+              <td class="table__td">171</td>
+              <td class="table__td">21</td>
+              <td class="table__td">108</td>
+              <td class="table__td">1.5%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  <a href="#" data-id='58' class="table__link">France</a>
+                              </td>
+              <td class="table__td">10995</td>
+              <td class="table__td">1861</td>
+              <td class="table__td">372</td>
+              <td class="table__td">108</td>
+              <td class="table__td">602</td>
+              <td class="table__td">3.38%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  South Korea                              </td>
+              <td class="table__td">8565</td>
+              <td class="table__td">152</td>
+              <td class="table__td">91</td>
+              <td class="table__td">7</td>
+              <td class="table__td">1947</td>
+              <td class="table__td">1.06%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Switzerland                              </td>
+              <td class="table__td">3944</td>
+              <td class="table__td">829</td>
+              <td class="table__td">41</td>
+              <td class="table__td">8</td>
+              <td class="table__td">15</td>
+              <td class="table__td">1.04%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  UK                              </td>
+              <td class="table__td">3269</td>
+              <td class="table__td">643</td>
+              <td class="table__td">144</td>
+              <td class="table__td">40</td>
+              <td class="table__td">65</td>
+              <td class="table__td">4.41%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Netherlands                              </td>
+              <td class="table__td">2460</td>
+              <td class="table__td">409</td>
+              <td class="table__td">76</td>
+              <td class="table__td">18</td>
+              <td class="table__td">2</td>
+              <td class="table__td">3.09%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Austria                              </td>
+              <td class="table__td">2013</td>
+              <td class="table__td">367</td>
+              <td class="table__td">6</td>
+              <td class="table__td">2</td>
+              <td class="table__td">9</td>
+              <td class="table__td">0.3%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Belgium                              </td>
+              <td class="table__td">1795</td>
+              <td class="table__td">309</td>
+              <td class="table__td">21</td>
+              <td class="table__td">7</td>
+              <td class="table__td">165</td>
+              <td class="table__td">1.17%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Norway                              </td>
+              <td class="table__td">1759</td>
+              <td class="table__td">168</td>
+              <td class="table__td">7</td>
+              <td class="table__td">1</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0.4%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Sweden                              </td>
+              <td class="table__td">1439</td>
+              <td class="table__td">138</td>
+              <td class="table__td">11</td>
+              <td class="table__td">1</td>
+              <td class="table__td">16</td>
+              <td class="table__td">0.76%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Denmark                              </td>
+              <td class="table__td">1151</td>
+              <td class="table__td">94</td>
+              <td class="table__td">6</td>
+              <td class="table__td">2</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0.52%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Japan                              </td>
+              <td class="table__td">923</td>
+              <td class="table__td">9</td>
+              <td class="table__td">32</td>
+              <td class="table__td">3</td>
+              <td class="table__td">191</td>
+              <td class="table__td">3.47%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Malaysia                              </td>
+              <td class="table__td">900</td>
+              <td class="table__td">110</td>
+              <td class="table__td">2</td>
+              <td class="table__td">0</td>
+              <td class="table__td">75</td>
+              <td class="table__td">0.22%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Canada                              </td>
+              <td class="table__td">801</td>
+              <td class="table__td">74</td>
+              <td class="table__td">10</td>
+              <td class="table__td">1</td>
+              <td class="table__td">11</td>
+              <td class="table__td">1.25%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Portugal                              </td>
+              <td class="table__td">785</td>
+              <td class="table__td">143</td>
+              <td class="table__td">3</td>
+              <td class="table__td">1</td>
+              <td class="table__td">4</td>
+              <td class="table__td">0.38%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Cruise Ship                              </td>
+              <td class="table__td">712</td>
+              <td class="table__td">0</td>
+              <td class="table__td">7</td>
+              <td class="table__td">0</td>
+              <td class="table__td">527</td>
+              <td class="table__td">0.98%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Australia                              </td>
+              <td class="table__td">709</td>
+              <td class="table__td">113</td>
+              <td class="table__td">6</td>
+              <td class="table__td">0</td>
+              <td class="table__td">46</td>
+              <td class="table__td">0.85%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Czechia                              </td>
+              <td class="table__td">694</td>
+              <td class="table__td">172</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">3</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Israel                              </td>
+              <td class="table__td">573</td>
+              <td class="table__td">140</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">14</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Ireland                              </td>
+              <td class="table__td">557</td>
+              <td class="table__td">191</td>
+              <td class="table__td">3</td>
+              <td class="table__td">1</td>
+              <td class="table__td">5</td>
+              <td class="table__td">0.54%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Brazil                              </td>
+              <td class="table__td">534</td>
+              <td class="table__td">5</td>
+              <td class="table__td">6</td>
+              <td class="table__td">2</td>
+              <td class="table__td">2</td>
+              <td class="table__td">1.12%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Greece                              </td>
+              <td class="table__td">464</td>
+              <td class="table__td">46</td>
+              <td class="table__td">6</td>
+              <td class="table__td">1</td>
+              <td class="table__td">19</td>
+              <td class="table__td">1.29%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Qatar                              </td>
+              <td class="table__td">460</td>
+              <td class="table__td">8</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">10</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Pakistan                              </td>
+              <td class="table__td">454</td>
+              <td class="table__td">147</td>
+              <td class="table__td">2</td>
+              <td class="table__td">0</td>
+              <td class="table__td">13</td>
+              <td class="table__td">0.44%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Finland                              </td>
+              <td class="table__td">400</td>
+              <td class="table__td">41</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">10</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Poland                              </td>
+              <td class="table__td">355</td>
+              <td class="table__td">68</td>
+              <td class="table__td">5</td>
+              <td class="table__td">0</td>
+              <td class="table__td">13</td>
+              <td class="table__td">1.41%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Singapore                              </td>
+              <td class="table__td">345</td>
+              <td class="table__td">32</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">124</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Chile                              </td>
+              <td class="table__td">342</td>
+              <td class="table__td">104</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Luxembourg                              </td>
+              <td class="table__td">335</td>
+              <td class="table__td">132</td>
+              <td class="table__td">4</td>
+              <td class="table__td">2</td>
+              <td class="table__td">6</td>
+              <td class="table__td">1.19%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Iceland                              </td>
+              <td class="table__td">330</td>
+              <td class="table__td">80</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">5</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Slovenia                              </td>
+              <td class="table__td">319</td>
+              <td class="table__td">33</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0.31%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Indonesia                              </td>
+              <td class="table__td">308</td>
+              <td class="table__td">81</td>
+              <td class="table__td">25</td>
+              <td class="table__td">6</td>
+              <td class="table__td">15</td>
+              <td class="table__td">8.12%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Bahrain                              </td>
+              <td class="table__td">277</td>
+              <td class="table__td">21</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">100</td>
+              <td class="table__td">0.36%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Romania                              </td>
+              <td class="table__td">277</td>
+              <td class="table__td">17</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">25</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Saudi Arabia                              </td>
+              <td class="table__td">274</td>
+              <td class="table__td">36</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">8</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Thailand                              </td>
+              <td class="table__td">272</td>
+              <td class="table__td">60</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">42</td>
+              <td class="table__td">0.37%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Estonia                              </td>
+              <td class="table__td">267</td>
+              <td class="table__td">9</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Egypt                              </td>
+              <td class="table__td">256</td>
+              <td class="table__td">46</td>
+              <td class="table__td">7</td>
+              <td class="table__td">1</td>
+              <td class="table__td">28</td>
+              <td class="table__td">2.73%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Peru                              </td>
+              <td class="table__td">234</td>
+              <td class="table__td">89</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Philippines                              </td>
+              <td class="table__td">217</td>
+              <td class="table__td">15</td>
+              <td class="table__td">17</td>
+              <td class="table__td">0</td>
+              <td class="table__td">8</td>
+              <td class="table__td">7.83%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Hong Kong                              </td>
+              <td class="table__td">208</td>
+              <td class="table__td">15</td>
+              <td class="table__td">4</td>
+              <td class="table__td">0</td>
+              <td class="table__td">98</td>
+              <td class="table__td">1.92%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Ecuador                              </td>
+              <td class="table__td">199</td>
+              <td class="table__td">31</td>
+              <td class="table__td">3</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1</td>
+              <td class="table__td">1.51%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Russia                              </td>
+              <td class="table__td">199</td>
+              <td class="table__td">52</td>
+              <td class="table__td">1</td>
+              <td class="table__td">1</td>
+              <td class="table__td">8</td>
+              <td class="table__td">0.5%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  India                              </td>
+              <td class="table__td">194</td>
+              <td class="table__td">25</td>
+              <td class="table__td">4</td>
+              <td class="table__td">1</td>
+              <td class="table__td">20</td>
+              <td class="table__td">2.06%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Turkey                              </td>
+              <td class="table__td">192</td>
+              <td class="table__td">1</td>
+              <td class="table__td">3</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1.56%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Iraq                              </td>
+              <td class="table__td">177</td>
+              <td class="table__td">13</td>
+              <td class="table__td">12</td>
+              <td class="table__td">0</td>
+              <td class="table__td">49</td>
+              <td class="table__td">6.78%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Lebanon                              </td>
+              <td class="table__td">157</td>
+              <td class="table__td">24</td>
+              <td class="table__td">4</td>
+              <td class="table__td">0</td>
+              <td class="table__td">4</td>
+              <td class="table__td">2.55%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  South Africa                              </td>
+              <td class="table__td">150</td>
+              <td class="table__td">34</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Kuwait                              </td>
+              <td class="table__td">148</td>
+              <td class="table__td">6</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">18</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  San Marino                              </td>
+              <td class="table__td">140</td>
+              <td class="table__td">0</td>
+              <td class="table__td">14</td>
+              <td class="table__td">0</td>
+              <td class="table__td">4</td>
+              <td class="table__td">10%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  United Arab Emirates                              </td>
+              <td class="table__td">140</td>
+              <td class="table__td">27</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">31</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Slovakia                              </td>
+              <td class="table__td">124</td>
+              <td class="table__td">19</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Armenia                              </td>
+              <td class="table__td">122</td>
+              <td class="table__td">12</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Mexico                              </td>
+              <td class="table__td">118</td>
+              <td class="table__td">25</td>
+              <td class="table__td">1</td>
+              <td class="table__td">1</td>
+              <td class="table__td">4</td>
+              <td class="table__td">0.85%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Croatia                              </td>
+              <td class="table__td">110</td>
+              <td class="table__td">21</td>
+              <td class="table__td">1</td>
+              <td class="table__td">1</td>
+              <td class="table__td">5</td>
+              <td class="table__td">0.91%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Panama                              </td>
+              <td class="table__td">109</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0.92%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Colombia                              </td>
+              <td class="table__td">108</td>
+              <td class="table__td">15</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Taiwan                              </td>
+              <td class="table__td">108</td>
+              <td class="table__td">8</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">26</td>
+              <td class="table__td">0.93%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Bulgaria                              </td>
+              <td class="table__td">107</td>
+              <td class="table__td">15</td>
+              <td class="table__td">3</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">2.8%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Serbia                              </td>
+              <td class="table__td">103</td>
+              <td class="table__td">14</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Argentina                              </td>
+              <td class="table__td">97</td>
+              <td class="table__td">0</td>
+              <td class="table__td">3</td>
+              <td class="table__td">1</td>
+              <td class="table__td">3</td>
+              <td class="table__td">3.09%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Algeria                              </td>
+              <td class="table__td">90</td>
+              <td class="table__td">15</td>
+              <td class="table__td">9</td>
+              <td class="table__td">2</td>
+              <td class="table__td">32</td>
+              <td class="table__td">10%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Costa Rica                              </td>
+              <td class="table__td">87</td>
+              <td class="table__td">18</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1.15%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Latvia                              </td>
+              <td class="table__td">86</td>
+              <td class="table__td">15</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Vietnam                              </td>
+              <td class="table__td">85</td>
+              <td class="table__td">9</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">16</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Uruguay                              </td>
+              <td class="table__td">79</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Brunei                              </td>
+              <td class="table__td">73</td>
+              <td class="table__td">5</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Hungary                              </td>
+              <td class="table__td">73</td>
+              <td class="table__td">15</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">2</td>
+              <td class="table__td">1.37%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Jordan                              </td>
+              <td class="table__td">69</td>
+              <td class="table__td">13</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Cyprus                              </td>
+              <td class="table__td">67</td>
+              <td class="table__td">9</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Albania                              </td>
+              <td class="table__td">64</td>
+              <td class="table__td">5</td>
+              <td class="table__td">2</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">3.13%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Bosnia and Herzegovina                              </td>
+              <td class="table__td">64</td>
+              <td class="table__td">25</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">2</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Morocco                              </td>
+              <td class="table__td">61</td>
+              <td class="table__td">7</td>
+              <td class="table__td">2</td>
+              <td class="table__td">0</td>
+              <td class="table__td">2</td>
+              <td class="table__td">3.28%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Sri Lanka                              </td>
+              <td class="table__td">60</td>
+              <td class="table__td">9</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">3</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Andorra                              </td>
+              <td class="table__td">53</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Malta                              </td>
+              <td class="table__td">53</td>
+              <td class="table__td">5</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">2</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Belarus                              </td>
+              <td class="table__td">51</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">5</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Moldova                              </td>
+              <td class="table__td">49</td>
+              <td class="table__td">13</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1</td>
+              <td class="table__td">2.04%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  North Macedonia                              </td>
+              <td class="table__td">49</td>
+              <td class="table__td">6</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Oman                              </td>
+              <td class="table__td">48</td>
+              <td class="table__td">9</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">13</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Palestine                              </td>
+              <td class="table__td">47</td>
+              <td class="table__td">3</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Azerbaijan                              </td>
+              <td class="table__td">44</td>
+              <td class="table__td">10</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">7</td>
+              <td class="table__td">2.27%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Kazakhstan                              </td>
+              <td class="table__td">44</td>
+              <td class="table__td">8</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Venezuela                              </td>
+              <td class="table__td">42</td>
+              <td class="table__td">6</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Lithuania                              </td>
+              <td class="table__td">41</td>
+              <td class="table__td">7</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Georgia                              </td>
+              <td class="table__td">40</td>
+              <td class="table__td">2</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Tunisia                              </td>
+              <td class="table__td">39</td>
+              <td class="table__td">10</td>
+              <td class="table__td">1</td>
+              <td class="table__td">1</td>
+              <td class="table__td">1</td>
+              <td class="table__td">2.56%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Cambodia                              </td>
+              <td class="table__td">37</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Senegal                              </td>
+              <td class="table__td">36</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">2</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Dominican Republic                              </td>
+              <td class="table__td">34</td>
+              <td class="table__td">0</td>
+              <td class="table__td">2</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">5.88%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Burkina Faso                              </td>
+              <td class="table__td">33</td>
+              <td class="table__td">6</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">3.03%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Guadeloupe                              </td>
+              <td class="table__td">33</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Liechtenstein                              </td>
+              <td class="table__td">28</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  New Zealand                              </td>
+              <td class="table__td">28</td>
+              <td class="table__td">8</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Uzbekistan                              </td>
+              <td class="table__td">23</td>
+              <td class="table__td">5</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Martinique                              </td>
+              <td class="table__td">23</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">4.35%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Afghanistan                              </td>
+              <td class="table__td">22</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Ukraine                              </td>
+              <td class="table__td">21</td>
+              <td class="table__td">5</td>
+              <td class="table__td">3</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">14.29%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Bangladesh                              </td>
+              <td class="table__td">18</td>
+              <td class="table__td">4</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">3</td>
+              <td class="table__td">5.56%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Macau                              </td>
+              <td class="table__td">17</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">10</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Jamaica                              </td>
+              <td class="table__td">15</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">2</td>
+              <td class="table__td">6.67%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Bolivia                              </td>
+              <td class="table__td">15</td>
+              <td class="table__td">3</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  French Guiana                              </td>
+              <td class="table__td">15</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  DRC                              </td>
+              <td class="table__td">14</td>
+              <td class="table__td">7</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Cameroon                              </td>
+              <td class="table__td">13</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Maldives                              </td>
+              <td class="table__td">13</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Honduras                              </td>
+              <td class="table__td">12</td>
+              <td class="table__td">3</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Nigeria                              </td>
+              <td class="table__td">12</td>
+              <td class="table__td">4</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Guam                              </td>
+              <td class="table__td">12</td>
+              <td class="table__td">4</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Cuba                              </td>
+              <td class="table__td">11</td>
+              <td class="table__td">1</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">9.09%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Ghana                              </td>
+              <td class="table__td">11</td>
+              <td class="table__td">4</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Paraguay                              </td>
+              <td class="table__td">11</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Rwanda                              </td>
+              <td class="table__td">11</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Monaco                              </td>
+              <td class="table__td">10</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Montenegro                              </td>
+              <td class="table__td">10</td>
+              <td class="table__td">2</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Ivory Coast                              </td>
+              <td class="table__td">9</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Guatemala                              </td>
+              <td class="table__td">9</td>
+              <td class="table__td">1</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">11.11%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Trinidad and Tobago                              </td>
+              <td class="table__td">9</td>
+              <td class="table__td">2</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Gibraltar                              </td>
+              <td class="table__td">8</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">2</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Ethiopia                              </td>
+              <td class="table__td">7</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Kenya                              </td>
+              <td class="table__td">7</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Mauritius                              </td>
+              <td class="table__td">7</td>
+              <td class="table__td">4</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Channel Islands                              </td>
+              <td class="table__td">7</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Mongolia                              </td>
+              <td class="table__td">6</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Seychelles                              </td>
+              <td class="table__td">6</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Tanzania                              </td>
+              <td class="table__td">6</td>
+              <td class="table__td">3</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  French Polynesia                              </td>
+              <td class="table__td">6</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Puerto Rico                              </td>
+              <td class="table__td">6</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Barbados                              </td>
+              <td class="table__td">5</td>
+              <td class="table__td">3</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Guyana                              </td>
+              <td class="table__td">5</td>
+              <td class="table__td">1</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">20%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Aruba                              </td>
+              <td class="table__td">5</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Equatorial Guinea                              </td>
+              <td class="table__td">4</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Bahamas                              </td>
+              <td class="table__td">3</td>
+              <td class="table__td">2</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Congo                              </td>
+              <td class="table__td">3</td>
+              <td class="table__td">2</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Gabon                              </td>
+              <td class="table__td">3</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Kyrgyzstan                              </td>
+              <td class="table__td">3</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Namibia                              </td>
+              <td class="table__td">3</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Saint Barthelemy                              </td>
+              <td class="table__td">3</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Saint Martin                              </td>
+              <td class="table__td">3</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Mayotte                              </td>
+              <td class="table__td">3</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Benin                              </td>
+              <td class="table__td">2</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Liberia                              </td>
+              <td class="table__td">2</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Mauritania                              </td>
+              <td class="table__td">2</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Saint Lucia                              </td>
+              <td class="table__td">2</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Sudan                              </td>
+              <td class="table__td">2</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">50%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Zambia                              </td>
+              <td class="table__td">2</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Bermuda                              </td>
+              <td class="table__td">2</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Greenland                              </td>
+              <td class="table__td">2</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  New Caledonia                              </td>
+              <td class="table__td">2</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Kosovo                              </td>
+              <td class="table__td">2</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Antigua and Barbuda                              </td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Bhutan                              </td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Chad                              </td>
+              <td class="table__td">1</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Djibouti                              </td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  El Salvador                              </td>
+              <td class="table__td">1</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Fiji                              </td>
+              <td class="table__td">1</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Gambia                              </td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Guinea                              </td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Nepal                              </td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Nicaragua                              </td>
+              <td class="table__td">1</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Somalia                              </td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Suriname                              </td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Eswatini                              </td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Togo                              </td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Cayman Islands                              </td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">100%</td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Montserrat                              </td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Sint Maarten                              </td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                        <tr class="table__tr">
+              <td class="table__td table__td-country">
+                                  Vatican City                              </td>
+              <td class="table__td">1</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td">0</td>
+              <td class="table__td"></td>
+            </tr>
+                      </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="symptoms" class="symptoms">
+    <h2 class="symptoms__h2">Symptoms of Coronavirus</h2>
+    <div class="container symptoms__container">
+      <div class="symptoms__row">
+        <div class="symptoms__item">
+          <div class="symptoms__block_img"><img src="./images/covid__symptoms-2__img-1.png" alt="" class="symptoms__img"></div>
+          <div class="symptoms__title">Cough</div>
+        </div>
+        <div class="symptoms__item">
+          <div class="symptoms__block_img"><img src="./images/covid__symptoms-2__img-2.png" alt="" class="symptoms__img"></div>
+          <div class="symptoms__title">Runny nose</div>
+        </div>
+        <div class="symptoms__item">
+          <div class="symptoms__block_img"><img src="./images/covid__symptoms-2__img-3.png" alt="" class="symptoms__img"></div>
+          <div class="symptoms__title">Sore throat</div>
+        </div>
+        <div class="symptoms__item">
+          <div class="symptoms__block_img"><img src="./images/covid__symptoms-2__img-4.png" alt="" class="symptoms__img"></div>
+          <div class="symptoms__title">Fever</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="about__container">
+      <div class="about__row about__row-1">
+        <div class="about__video"><iframe style="width: 100%" height="100%" src="https://www.youtube.com/embed/mOV1aBVYKGA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="about__text about__text-right">
+          <h2 class="about__title">QU'EST-CE QU'UN CORONAVIRUS?</h2>
+          <p>Les coronavirus (CoV) sont une grande famille de virus qui provoquent des maladies allant du rhume à des maladies plus graves telles que le syndrome respiratoire du Moyen-Orient (MERS-CoV) et le syndrome respiratoire aigu sévère (SRAS-CoV). Un nouveau coronavirus (nCoV) est une nouvelle souche qui n'a pas été identifiée auparavant chez l'homme.
+          <p>Les coronavirus sont zoonotiques, ce qui signifie qu'ils sont transmis entre les animaux et les humains. Des enquêtes détaillées ont révélé que le SARS-CoV était transmis des civettes aux humains et le MERS-CoV des dromadaires aux humains. Plusieurs coronavirus connus circulent chez des animaux qui n'ont pas encore infecté l'homme.</p>
+          <p>Les signes d'infection courants comprennent les symptômes respiratoires, la fièvre, la toux, l'essoufflement et les difficultés respiratoires. Dans les cas plus graves, l'infection peut provoquer une pneumonie, un syndrome respiratoire aigu sévère, une insuffisance rénale et même la mort.</p>
+          <p>Les recommandations standard pour prévenir la propagation des infections comprennent le lavage régulier des mains, la couverture de la bouche et du nez lors de la toux et des éternuements, la cuisson minutieuse de la viande et des œufs. Évitez tout contact étroit avec toute personne présentant des symptômes de maladie respiratoire tels que toux et éternuements.</p>  
+        </div>
+      </div>
+      <div class="about__row about__row-2">
+      <div class="about__text about__text-left">
+          <h3 class="about__title">COMMENT VOUS PROTÉGER<br>CONTRE COVID-19</h3>
+          <p><b>Lavez-vous les mains fréquemment</b><br>Nettoyez régulièrement et soigneusement vos mains avec un désinfectant à base d'alcool ou lavez-les à l'eau et au savon</p>
+          <p><b>Maintenez une distance sociale</b><br> Maintenez une distance d'au moins 1 mètre (3 pieds) entre vous et toute personne qui tousse ou éternue.</p>
+          <p><b>Évitez de toucher les yeux, le nez et la bouche</b></p>
+          <p><b>Pratiquez l'hygiène</b><br>respiratoire Assurez-vous que vous et les personnes qui vous entourent suivez une bonne hygiène respiratoire. Cela signifie vous couvrir la bouche et le nez avec vos coudes ou vos tissus pliés lorsque vous toussez ou éternuez. Jetez ensuite le mouchoir utilisé immédiatement.</p>
+          <p><b>Si vous avez de la fièvre, de la toux et des difficultés respiratoires, consultez un médecin au plus tôt</b><br>Restez à la maison si vous ne vous sentez pas bien. Si vous avez de la fièvre, de la toux et des difficultés respiratoires, consultez un médecin et appelez à l'avance. Suivez les instructions de votre autorité sanitaire locale.</p>
+          <p><b>Restez informé et suivez les conseils de votre professionnel de la santé</b><br>Restez informé des derniers développements concernant COVID-19. Suivez les conseils donnés par votre fournisseur de soins de santé, votre autorité nationale et locale de santé publique ou votre employeur sur la façon de vous protéger et de protéger les autres contre COVID-19.</p>
+        </div>
+        <div class="about__video"><iframe style="width: 100%" height="100%" src="https://www.youtube.com/embed/1APwq1df6Mw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slider">
+    <div class="slider__container">
+      <div class="slick"><div class="slick__item"><a href="./images/who__img-3.jpg" data-fancybox="gallery" class="slick__item__link"><img src="./images/who__img-3_min.jpg" alt="" class="slick__img"></a></div>
+        <div class="slick__item"><a href="./images/who__img-4.jpg" data-fancybox="gallery" class="slick__item__link"><img src="./images/who__img-4_min.jpg" alt="" class="slick__img"></a></div>
+        <div class="slick__item"><a href="./images/who__img-5.jpg" data-fancybox="gallery" class="slick__item__link"><img src="./images/who__img-5_min.jpg" alt="" class="slick__img"></a></div>
+        <div class="slick__item"><a href="./images/who__img-6.jpg" data-fancybox="gallery" class="slick__item__link"><img src="./images/who__img-6_min.jpg" alt="" class="slick__img"></a></div>
+        <div class="slick__item"><a href="./images/who__img-7.jpg" data-fancybox="gallery" class="slick__item__link"><img src="./images/who__img-7_min.jpg" alt="" class="slick__img"></a></div>
+        <div class="slick__item"><a href="./images/who__img-8.jpg" data-fancybox="gallery" class="slick__item__link"><img src="./images/who__img-8_min.jpg" alt="" class="slick__img"></a></div>
+        <div class="slick__item"><a href="./images/who__img-9.jpg" data-fancybox="gallery" class="slick__item__link"><img src="./images/who__img-9_min.jpg" alt="" class="slick__img"></a></div>
+        <div class="slick__item"><a href="./images/who__img-10.jpg" data-fancybox="gallery" class="slick__item__link"><img src="./images/who__img-10_min.jpg" alt="" class="slick__img"></a></div>
+        <div class="slick__item"><a href="./images/who__img-11.jpg" data-fancybox="gallery" class="slick__item__link"><img src="./images/who__img-11_min.jpg" alt="" class="slick__img"></a></div>
+        <div class="slick__item"><a href="./images/who__img-12.jpg" data-fancybox="gallery" class="slick__item__link"><img src="./images/who__img-12_min.jpg" alt="" class="slick__img"></a></div>
+        <div class="slick__item"><a href="./images/who__img-13.jpg" data-fancybox="gallery" class="slick__item__link"><img src="./images/who__img-13_min.jpg" alt="" class="slick__img"></a></div>
+        <div class="slick__item"><a href="./images/who__img-14.jpg" data-fancybox="gallery" class="slick__item__link"><img src="./images/who__img-14_min.jpg" alt="" class="slick__img"></a></div>
+        <div class="slick__item"><a href="./images/who__img-15.jpg" data-fancybox="gallery" class="slick__item__link"><img src="./images/who__img-15_min.jpg" alt="" class="slick__img"></a></div>
+        <div class="slick__item"><a href="./images/who__img-16.jpg" data-fancybox="gallery" class="slick__item__link"><img src="./images/who__img-16_min.jpg" alt="" class="slick__img"></a></div>
+        <div class="slick__item"><a href="./images/who__img-17.jpg" data-fancybox="gallery" class="slick__item__link"><img src="./images/who__img-17_min.jpg" alt="" class="slick__img"></a></div>
+        <div class="slick__item"><a href="./images/who__img-18.jpg" data-fancybox="gallery" class="slick__item__link"><img src="./images/who__img-18_min.jpg" alt="" class="slick__img"></a></div>
+        <div class="slick__item"><a href="./images/who__img-19.jpg" data-fancybox="gallery" class="slick__item__link"><img src="./images/who__img-19_min.jpg" alt="" class="slick__img"></a></div>
+        <div class="slick__item"><a href="./images/who__img-20.jpg" data-fancybox="gallery" class="slick__item__link"><img src="./images/who__img-20_min.jpg" alt="" class="slick__img"></a></div>
+        <div class="slick__item"><a href="./images/who__img-21.jpg" data-fancybox="gallery" class="slick__item__link"><img src="./images/who__img-21_min.jpg" alt="" class="slick__img"></a></div>
+        <div class="slick__item"><a href="./images/who__img-22.jpg" data-fancybox="gallery" class="slick__item__link"><img src="./images/who__img-22_min.jpg" alt="" class="slick__img"></a></div>
+        <div class="slick__item"><a href="./images/who__img-23.jpg" data-fancybox="gallery" class="slick__item__link"><img src="./images/who__img-23.jpg" alt="" class="slick__img"></a></div>
+        <div class="slick__item"><a href="./images/who__img-24.jpg" data-fancybox="gallery" class="slick__item__link"><img src="./images/who__img-24.jpg" alt="" class="slick__img"></a></div>
+        <div class="slick__item"><a href="./images/who__img-1.jpg" data-fancybox="gallery" class="slick__item__link"><img src="./images/who__img-1_min.jpg" alt="" class="slick__img"></a></div>
+        <div class="slick__item"><a href="./images/who__img-2.jpg" data-fancybox="gallery" class="slick__item__link"><img src="./images/who__img-2_min.jpg" alt="" class="slick__img"></a></div>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__contact">Contact us by </div>
+      <div class="footer__source">
+        <span class="footer__source__title">Out source:</span>
+        <ul class="footer__source__list">
+          <li class="footer__source__item"><a href="https://www.who.int/" rel="nofollow" class="footer__sorce__link">WHO</a>,</li>
+          <li class="footer__source__item"><a href="https://www.worldometers.info/coronavirus/" rel="nofollow" class="footer__sorce__link">worldometers</a>,</li>
+          <li class="footer__source__item"><a href="https://bnonews.com/index.php/2020/01/the-latest-coronavirus-cases/" rel="nofollow" class="footer__sorce__link">bno</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

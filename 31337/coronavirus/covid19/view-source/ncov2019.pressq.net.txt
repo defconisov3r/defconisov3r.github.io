@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="generator" content="">
+    <title>nCoV2019.SI</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/Chart.min.css" rel="stylesheet">
+    <link href="css/ncov2019.si.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- START CHART Container -->
+<main class="container">
+    <h3>Corona-Infizierte im Siegerland</h3>
+    <div class="card">
+        <div class="card-body">
+            <canvas id="chLine" height="150"></canvas>
+        </div>
+    </div>
+</main>
+<!-- END CHART Container -->
+
+<!-- START TIMELINE Container -->
+<main class="container">
+    <h3>Zeitstrahl</h3>
+    <ul class="timeline">
+        <li>
+            <span class="badge badge-warning">3 neue Corona-Infizierte</span><span class="float-right"><b>18.März 2020 19:20</b></span>
+            <p class="font-italic">
+                Der Kreis Siegen-Wittgenstein meldet am Mittwochabend drei neue Fälle, zwei davon sind Personen Mitte 30 aus Kreuztal, eine Frau um 60 Jahre aus Bad Berleburg.
+            </p>
+        </li>
+        <li>
+            <span class="badge badge-warning">5 neue Corona-Infizierte</span><span class="float-right"><b>17.März 2020 19:35</b></span>
+            <p class="font-italic">
+                Der Kreis Siegen-Wittgenstein bestätigt fünf neue Corona-Infizierte, drei Mäner um 40 Jahre aus Kreuztal, ein Mann Mitte 50 aus Kreuztal, eine Frau Ende 50 aus Siegen.
+            </p>
+        </li>
+        <li>
+            <span class="badge badge-warning">1 neuen Corona-Infizierten</span><span class="float-right"><b>17.März 2020 15:31</b></span>
+            <p class="font-italic">
+                Der Kreis Siegen-Wittgenstein meldet einen weiteren Coronafall.
+            </p>
+        </li>
+        <li>
+            <span class="badge badge-warning">5 neue Corona-Infizierte</span><span class="float-right"><b>16.März 2020 18:30</b></span>
+            <p class="font-italic">
+                Fünf neue Corona-Infizierte in Siegen-Wittgenstein gemeldet: drei Frauen und ein Mann aus Siegen, eine Frau aus Wilnsdorf.
+            </p>
+        </li>
+        <li>
+            <span class="badge badge-warning">16 Corona-Infizierte</span><span class="float-right"><b>15.März 2020 19:20</b></span>
+            <p class="font-italic">
+                Im Kreis Siegen-Wittgenstein hat sich die Zahl der nachweislich an Corona erkrankten Menschen auf 16 erhöht.
+            </p>
+        </li>
+        <li>
+            <span class="badge badge-warning">14 Corona-Infizierte</span><span class="float-right"><b>13.März 2020 20:40</b></span>
+            <p class="font-italic">
+                Die Kreisverwaltung teilt mit: Die Zahl der mit dem Coronavirus infizierten ist auf 14 angestiegen.
+            </p>
+        </li>
+        <li>
+            <span class="badge badge-warning">10 Corona-Infizierte</span><span class="float-right"><b>12.März 2020 17:24</b></span>
+            <p class="font-italic">
+                Insgesamt zehn Infizierte in Siegen-Wittgenstein.
+            </p>
+        </li> 
+    </ul>
+</main>
+<!-- END TIMELINE Container --> 
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/ncov2019.si.js"></script>
+
+</body>
+</html>

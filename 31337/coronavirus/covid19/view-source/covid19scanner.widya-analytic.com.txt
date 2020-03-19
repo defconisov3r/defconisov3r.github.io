@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Relawan Digital COVID-19</title>
+    <link href="https://covid19scanner.widya-analytic.com/asset/style.css" rel="stylesheet"/>
+    <link href="https://covid19scanner.widya-analytic.com/asset/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://covid19scanner.widya-analytic.com/asset/img/square.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Relawan Digital COVID-19</title>
+</head>
+<body>
+    
+
+        <div class="utama">
+                    <div class="row header">
+            <img class="logo" src="https://covid19scanner.widya-analytic.com/asset/img/logo.svg">
+        </div>
+        
+        <div class="row middle">
+            <p>Apakah terdapat data Pasien Dalam Pemantauan (PDP), Orang Dalam Pemantauan (ODP), atau Positif COVID-19 (Positif) di area anda?</p>
+            <button onclick="window.location.href = 'resultmaps';" type="button" class="btn1 btn-block">SCAN DENGAN LOKASI ANDA</button>
+            <button onclick="window.location.href = 'kodepos';" type="button" class="btn2 btn-block">SCAN DENGAN KODE POS</button>
+        </div>
+        
+        <div class="row disclaimer">
+            <p class="P1">Disclaimer</p>
+            
+            <p class="P">* COVID-19 Area Scanner saat ini hanya menjangkau provinsi <b>D. I. Yogyakarta</b></p>
+            
+            <p class="P">* Seluruh data bersumber dari portal resmi publikasi data terkait COVID-19 milik pemerintah provinsi.</p>
+            
+            <p class="P">* Titik lokasi yang terdapat dalam peta tidak menggambarkan alamat rumah pasien melainkan lokasi wilayah kecamatan domisili pasien</p>
+        </div>
+        
+        <div class="row footer">
+            <div class="col-sm-8">
+                <p>Copyright © 2020 Relawan Digital COVID-19</p>
+            </div>
+            
+            <div class="col-sm-4">
+                <b type="button" data-toggle="modal" data-target="#myModal">About Us</b>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">About Us</h4>
+          </div>
+          <div class="modal-body">
+              <p>Relawan Digital COVID-19 merupakan sekumpulan pegiat teknologi yang berasal dari berbagai latar belakang dan beberapa daerah di Indonesia. <br><br>Seluruh kode COVID-19 Area Scanner merupakan kode terbuka (open source), permintaan kode dapat menghubungi email relawandigitalcovid19@gmail.com. <br><br>Tetap selalu waspada, lindungi diri, lindungi sesama mari bersatu, bekerja sama, gotong royong menghadapi COVID-19. Social Distancing !</p>
+            </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+
+                </div>
+
+        
+    
+</body>
+
+<script src="https://covid19scanner.widya-analytic.com/asset/js/bootstrap.min.js"></script>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script type="text/javascript">CIjs=function(){"use strict";var j,a=function(a,b){return a.className.match(new RegExp("\b"+b+"\b"))},b=function(a,b){a.className=a.className.replace(new RegExp("\b"+b+"\b")," ")},c=function(b,c){a(b,c)||(b.className+=" "+c)},d=[],e=4,f=0,g=function(){var a=document.querySelector(".ci-toolbar-ajax-requests");if(a){a.textContent="("+d.length+")",a.className="ci-toolbar-ajax-requests";var g=document.querySelector(".ci-toolbar-ajax-info");g&&(g.textContent=d.length+" AJAX request"+(d.length>1?"s":""));var h=document.querySelector(".ci-toolbar-block-ajax");d.length?c(h.parentNode,"active"):b(h.parentNode,"active"),f>0?c(h,"ci-ajax-request-loading"):e<4?(c(h,"ci-toolbar-status-red"),b(h,"ci-ajax-request-loading")):(b(h,"ci-ajax-request-loading"),b(h,"ci-toolbar-status-red"))}},h=function(a){var b=d[a];f++;var c=document.createElement("tr");b.DOMNode=c;var e=document.querySelector(".ci-toolbar-ajax-request-list");if(e){var h=document.createElement("td");h.textContent=b.method,c.appendChild(h);var i=document.createElement("td"),j=document.createElement("span");j.textContent="-",i.appendChild(j),c.appendChild(i);var k=document.createElement("td");if(k.className="ci-ajax-request-url","GET"===b.method){var l=document.createElement("a");l.setAttribute("href",b.url),l.setAttribute("target","_blank"),l.textContent=b.url.split("?")[0],k.appendChild(l)}else k.textContent=b.url;k.setAttribute("title",b.url),c.appendChild(k);var m=document.createElement("td");m.className="ci-ajax-request-duration",m.textContent="-",c.appendChild(m);var n=document.createElement("td");n.className="ci-ajax-profiler-url",""!=b.profiler&&(profilerLink.textContent="profiler",n.appendChild(n)),c.appendChild(n),c.className="ci-ajax-request ci-ajax-request-loading",e.insertBefore(c,e.firstChild),g()}},i=function(a){var b=d[a];f--;var c=b.DOMNode,h=c.children[0],i=c.children[1],j=i.children[0],k=c.children[3],l=c.children[4];if(b.error?(c.className="ci-ajax-request ci-ajax-request-error",h.className="ci-ajax-request-error",e=0):(c.className="ci-ajax-request ci-ajax-request-ok",e++),b.statusCode&&(b.statusCode<300?j.setAttribute("class","ci-toolbar-status"):b.statusCode<400?j.setAttribute("class","ci-toolbar-status ci-toolbar-status-yellow"):j.setAttribute("class","ci-toolbar-status ci-toolbar-status-red"),j.textContent=b.statusCode),b.duration&&(k.textContent=b.duration+"ms"),b.profiler){var m=document.createElement("a");m.setAttribute("href",cidvl_siteurl+"profiler/profil/"+b.profiler),m.setAttribute("target","_blank"),m.textContent="profiler",l.appendChild(m)}g()};if(j="addEventListener"in document.createElement("div")?function(a,b,c){a.addEventListener(b,c,!1)}:function(a,b,c){a.attachEvent("on"+b,c)},window.fetch&&void 0===window.fetch.polyfill){var l=window.fetch;window.fetch=function(){var a=l.apply(this,arguments),b=arguments[0],c=arguments[1];"[object Request]"===Object.prototype.toString.call(arguments[0])&&(b=arguments[0].url,c={method:arguments[0].method,credentials:arguments[0].credentials,headers:arguments[0].headers,mode:arguments[0].mode,redirect:arguments[0].redirect});var f="GET";c&&void 0!==c.method&&(f=c.method);var g={error:!1,url:b,method:f,type:"fetch",start:new Date},j=d.push(g)-1;return a.then(function(a){g.duration=new Date-g.start,g.error=a.status<200||a.status>=400,g.statusCode=a.status,i(j)},function(a){g.error=!0}),h(j),a}}if(window.XMLHttpRequest&&XMLHttpRequest.prototype.addEventListener){var m=XMLHttpRequest.prototype.open,n=0;XMLHttpRequest.prototype.open=function(a,b,c,e,f){var g=this,j={error:!1,url:b,method:a,profiler:"",start:new Date};n=d.push(j)-1,this.addEventListener("readystatechange",function(){4==g.readyState&&(j.duration=new Date-j.start,j.error=g.status<200||g.status>=400,j.statusCode=g.status,j.profiler=g.getResponseHeader("X-CI-Toolbar-Profiler"),i(n))},!1),h(n),m.apply(this,Array.prototype.slice.call(arguments))}}return{hasClass:a,removeClass:b,addClass:c,addEventListener:j,renderAjaxRequests:g}}(),CIjs.addEventListener(window,"load",function(){CIjs.renderAjaxRequests()});
+</script>
+	<meta charset="utf-8">
+	<title>.: Jatim Aware COVID-19</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="http://covid19dev.jatimprov.go.id/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="http://covid19dev.jatimprov.go.id/public/assets/css/lib/bootstrap.min.css">
+  <link rel="stylesheet" href="http://covid19dev.jatimprov.go.id/public/assets/css/lib/font-awesome.css">
+  <link rel="stylesheet" href="http://covid19dev.jatimprov.go.id/public/assets/css/lib/hover.css">
+  <link rel="stylesheet" href="http://covid19dev.jatimprov.go.id/public/assets/css/lib/aos.css">
+  <link rel="stylesheet" href="http://covid19dev.jatimprov.go.id/public/assets/css/style.css">
+  <script src="http://covid19dev.jatimprov.go.id/public/assets/js/lib/jquery.min.js"></script>
+  <script src="http://covid19dev.jatimprov.go.id/public/assets/js/lib/popper.min.js"></script>
+  <script src="http://covid19dev.jatimprov.go.id/public/assets/js/lib/bootstrap.min.js"></script>
+  <script src="http://covid19dev.jatimprov.go.id/public/assets/js/lib/aos.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light shadow m-0" style=" flex-direction: column;">
+    <div class="container py-1 px-4" id="header">
+      <a class="navbar-brand" href="http://covid19dev.jatimprov.go.id">
+        <img src="http://covid19dev.jatimprov.go.id/favicon.ico" style="float:left;height:3.4rem;padding:0 .3rem 0 0">
+        <div style="float:right; padding:.3rem 0">
+          .: Jatim Aware <span class="text-danger">COVID-19</span>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fas fa-bars"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="http://covid19dev.jatimprov.go.id">Home</a>
+          </li>
+          <li class="nav-item"><span class="nav-link">/</span></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfLkg3JZgPYoiLgJKjkRtx_ZfS9aW-bEprhV7oSG5CwOFNl5g/viewform?usp=sf_link">Form Penyelidikan Epidemologi Coronavirus Disease (COVID-19)</a>
+          </li>
+          
+          <li class="nav-item"><span class="nav-link">/</span></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSe1hqbW3x_yc3Q-tMts5fl2oyuxCQkjGGlAB_VrtO218wjrBA/viewform">Form Identifikasi Kontak Erat</a>
+          </li>
+          
+          <li class="nav-item"><span class="nav-link">/</span></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfLkg3JZgPYoiLgJKjkRtx_ZfS9aW-bEprhV7oSG5CwOFNl5g/viewform?usp=sf_link">Form Ketersediaan APD</a>
+          </li>
+          
+          <li class="nav-item"><span class="nav-link">/</span></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://checkupcovid19.jatimprov.go.id">Jatim Self Assessment</a>
+          </li>
+          
+          <li class="nav-item"><span class="nav-link">/</span></li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://covid19dev.jatimprov.go.id/xadmin">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>  
+  <div class="jumbotron shadow-sm m-0" style="background:url(http://covid19dev.jatimprov.go.id/public/assets/img/helpdesk.jpg) center;background-size:cover">
+    <div class="container py-1">
+        <h1>Peta Persebaran COVID-19</h1>
+    </div>
+  </div>
+  
+  
+  
+          <script type='text/javascript' src='http://tab.big.jatimprov.go.id:1104/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 100%;height: 600px;'><object class='tableauViz' width='1280' height='600' style='display:none;'><param name='host_url' value='http%3A%2F%2Ftab.big.jatimprov.go.id%3A1104%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='petaonline&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /><param name='filter' value='iframeSizedToWindow=true' /></object></div>
+          
+  
+  <!--<div class="footer bg-dark" style="min-height:300px">-->
+  <!--  <div class="container">-->
+  <!--    <div class="row">-->
+  <!--      <div class="col" data-aos="fade-left" data-aos-delay="100">-->
+  <!--        <div class="card text-white bg-dark border-0">-->
+  <!--          <div class="card-body">-->
+  <!--            <h5 class="card-title mt-2"><b>Dinas Peternakan Prov. Jawa Timur</b></h5>-->
+  <!--            <hr>-->
+  <!--            <p style="font-size:.8rem">-->
+  <!--            <div class="text-muted">Alamat</div>-->
+  <!--            Jl. Jend Achmad Yani 202 Surabaya 60235<br>-->
+  <!--            Jawa Timur - Indonesia<br><br>-->
+  <!--            <div class="text-muted">Telp</div>-->
+  <!--            (031) 8292545 8280445 - 8285126 - 8285129<br><br>-->
+  <!--            <div class="text-muted">Fax</div>-->
+  <!--            (031)8291853-->
+  <!--            </p>-->
+  <!--          </div>-->
+  <!--        </div>-->
+  <!--      </div>-->
+  <!--      <div class="col" data-aos="fade-left" data-aos-delay="200">-->
+  <!--        <div class="card text-white bg-dark border-0">-->
+  <!--          <div class="card-body">-->
+  <!--            <h5 class="card-title mt-2"><b>Link Terkait</b></h5>-->
+  <!--            <hr>-->
+  <!--            <p><a href="http://disnak.jatimprov.go.id/web" target="_blank">Web Disnak Jatim</a></p>-->
+  <!--            <p><a href="http://103.53.76.91/simtanak/login">SIMTANAK</a></p>-->
+  <!--            <p><a href="http://p2t.jatimprov.go.id/peternakan.html">Perizinan Terpadu</a></p>-->
+  <!--            <p><a href="http://disnak.jatimprov.go.id/web/layananpublik/klinikonline">Klinik Online Disnak</a></p>-->
+  <!--            <p><a href="http://disnak.jatimprov.go.id/web/layananpublik/forumkonsultasi">Forum konsultasi Peternakan</a></p>-->
+  <!--          </div>-->
+  <!--        </div>-->
+  <!--      </div>-->
+  <!--      <div class="col" data-aos="fade-left" data-aos-delay="300">-->
+  <!--        <div class="card text-white bg-dark border-0">-->
+  <!--          <div class="card-body">-->
+  <!--            <h5 class="card-title mt-2"><b>Media Sosial</b></h5>-->
+  <!--            <hr>-->
+  <!--            <p>-->
+  <!--            <a class="twitter-timeline" data-width="300" data-height="200" href="https://twitter.com/DisnakJatim?ref_src=twsrc%5Etfw">Tweets by DisnakJatim</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
+  <!--            </p>-->
+  <!--          </div>-->
+  <!--        </div>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <!--</div>-->
+  <script>
+  $(()=> {
+    AOS.init({
+  startEvent: 'load',
+});
+    $("[data-scroll]").click(function() {
+      $('html, body').animate({
+          scrollTop: $($(this).data('scroll')).offset().top
+      }, 1000);
+    });
+  });
+  
+  
+  
+  
+ $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+
+     var $target = $(e.target);
+
+     if ($target.hasClass('disabled')) {
+         return false;
+     }
+ });
+
+ $(".next-step").click(function (e) {
+     var $active = $('.wizard.nav-tabs .nav-item .active');
+     var $activeli = $active.parent("li");
+
+     $($activeli).next().find('a[data-toggle="tab"]').removeClass("disabled");
+     $($activeli).next().find('a[data-toggle="tab"]').click();
+ });
+
+
+ $(".prev-step").click(function (e) {
+
+     var $active = $('.wizard.nav-tabs .nav-item .active');
+     var $activeli = $active.parent("li");
+
+     $($activeli).prev().find('a[data-toggle="tab"]').removeClass("disabled");
+     $($activeli).prev().find('a[data-toggle="tab"]').click();
+
+ });
+
+  </script>
+<!-- START CodeIgniter Developer Toolbar -->
+<style type="text/css">
+    .develbar{
+    font-family: Tahoma!important;
+    font-size:.7em!important;
+    position:fixed; bottom:0; left:0; width:100%; height:40px; color:#90949f; 
+    z-index:2000 !important;
+    font-size:12px;
+    background: #2e313a; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJlMzEzYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyMDIxMjgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #2e313a 0%, #202128 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2e313a), color-stop(100%,#202128)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #2e313a 0%,#202128 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #2e313a 0%,#202128 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #2e313a 0%,#202128 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #2e313a 0%,#202128 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e313a', endColorstr='#202128',GradientType=0 ); /* IE6-8 */
+
+    -moz-box-shadow: 0px -2px 5px 0px #999;
+    -webkit-box-shadow: 0px -2px 5px 0px #999;
+    -o-box-shadow: 0px -2px 5px 0px #999;
+    box-shadow: 0px -2px 5px 0px #999;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#999, Direction=90, Strength=5);
+    }
+    .develbar p{ padding:2px 0; margin:0; overflow:hidden }
+    .develbar p::after{ content:''; clear:both }
+    .develbar p .left-col{ display:block; float:left; width:80% }
+    .develbar p .right-col{ display:block; float:right; color:#FFF }
+
+    .develbar .label{ padding:2px 4px; margin-right:2px;
+        font-size:11px; color:#FFF; -moz-border-radius:3px;  -webkit-border-radius: 3px; border-radius:3px; }
+        .develbar .warning{ background:#F0AD4E; border-color:#EEA236 }
+    .develbar a{ color:#33BCEF; text-decoration:none }
+        .develbar a:hover{ color:#33BCEF; text-decoration:underline }
+    .develbar ul{ list-style:none; float:left; width:100%; padding-left:10px; padding-top:0; margin:0 }
+        .develbar ul li{ float:left; height:40px; cursor:default; position:relative; margin-right:10px; padding:0 4px }
+        .develbar ul li.none{ cursor:pointer }
+        .develbar ul li:hover{ border-color:#f03900; color:#FFF }
+        .develbar ul li img{ max-height:40px; max-width:40px; display: inline-block; vertical-align:middle; margin-right:2px; }
+        .develbar ul li:before { content: ' '; display: inline-block; vertical-align:middle; height: 100%; }
+        .develbar ul li div.detail{ min-width:200px; max-height:300px; color:#90949f; padding:6px 12px; display:none; position:absolute; left:0; bottom:40px; background:#2E313A;
+            border-bottom:2px solid transparent;
+            -moz-box-shadow: 0px -4px 5px 0px #999;
+            -webkit-box-shadow: 0px -4px 5px 0px #999;
+            -o-box-shadow: 0px -4px 5px 0px #999;
+            box-shadow: 0px -4px 5px 0px #999;
+            filter:progid:DXImageTransform.Microsoft.Shadow(color=#999, Direction=90, Strength=5);
+            -moz-border-radius: 5px;
+            -moz-border-radius-bottomleft:0;
+            -moz-border-radius-bottomright:0;
+            -webkit-border-radius: 5px;
+            -webkit-border-bottom-left-radius:0;
+            -webkit-border-bottom-right-radius:0;
+            border-radius: 5px;
+            border-bottom-right-radius:0;
+            border-bottom-left-radius:0;
+        }
+
+        .develbar ul li div.detail::after { content: ''; position: absolute; bottom:-8px; left:8px; width: 0; height: 0; border-left:6px solid transparent; border-right:6px solid transparent; border-top: 6px solid #f03900 }
+        .develbar ul li div.detail .scroll { min-width:200px; max-width:400px; max-height:280px; overflow:auto }
+        .develbar ul li.none div.detail::after { content: ''; border:0 }
+        .develbar ul li:hover div.detail, .develbar ul li.active div.detail{ display:block; border-color:#f03900 }
+        .develbar ul li div.benchmarks{ min-width:400px }
+        .develbar ul li div.database{ min-width:400px }
+        .develbar ul li div.views{ min-width:450px }
+        .develbar ul li div.hooks{ min-width:300px }
+        .develbar ul li div.config{ min-width:320px }
+        .develbar ul li div.models{ min-width:200px }
+        .develbar ul li div.ajax{ min-width:340px }
+
+#develbar-off{ position:fixed; bottom:6px; left:14px; cursor:pointer; height:30px; display:none;
+    -moz-box-shadow: 0px 0px 5px 0px #999;
+    -webkit-box-shadow: 0px 0px 5px 0px #999;
+    -o-box-shadow: 0px 0px 5px 0px #999;
+    box-shadow: 0px 0px 5px 0px #999;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#999, Direction=90, Strength=5);
+
+    -moz-border-radius:16px;
+    border-radius: 16px;
+    -webkit-border-radius:16px;
+}
+.develbar .ci-toolbar-status{ background-color:#666; color:#FFF; padding:2px 4px }
+.develbar .ci-toolbar-status-red{ background-color:#FF0000; color:#FFF; padding:2px 4px }
+.develbar .ci-ajax-request-loading{ background-color:#F9AA20; color:#FFF; padding:2px 4px }
+.develbar .ci-toolbar-ajax-info{ border-bottom:1px solid #666 }
+.develbar .ci-toolbar-ajax-head{ background-color: #000; border:0; margin:0; padding:0 }
+.develbar .ci-toolbar-ajax-table td{ vertical-align:top; padding:2px 3px }
+.develbar .develbar-detail-vars { background: #fff; padding: 5px 10px; border-radius: 5px; }</style>
+<script type="text/javascript">
+    var HideDevelBar=function(){var a=document.getElementById("develbar-container"),b=document.getElementById("develbar-off");a.style.display="none",b.style.display="block"},ShowDevelBar=function(){var a=document.getElementById("develbar-container"),b=document.getElementById("develbar-off");b.style.display="none",a.style.display="block"},HideDevelBarSection=function(){for(var a=document.getElementById("develbar-container"),b=a.getElementsByTagName("li"),c=0;c<b.length;c++)b[c].className=""},ShowViewVars=function(a){for(var b=a.parentElement.parentElement.nextSibling,c=document.getElementsByClassName("develbar-detail-vars"),d=0;d<c.length;d++)if(b!=c[d]){c[d].style.display="none";for(var e=document.getElementsByClassName("develbar-open-icon"),d=0;d<e.length;d++)e[d].innerHTML="+"}var f=b.style.display;"block"==f?b.style.display="none":(b.style.display="block",a.getElementsByClassName("develbar-open-icon")[0].innerHTML="-")};</script>
+<div class="develbar" id="develbar-container">
+    <ul class="develbar-nav">
+        <li class="none" onclick="HideDevelBar()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0QjVERjk3OUQwQjcxMUU0OUU1NkQyMTA5QzM2RUM0NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0QjVERjk3QUQwQjcxMUU0OUU1NkQyMTA5QzM2RUM0NSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjRCNURGOTc3RDBCNzExRTQ5RTU2RDIxMDlDMzZFQzQ1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjRCNURGOTc4RDBCNzExRTQ5RTU2RDIxMDlDMzZFQzQ1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+SOOsjQAABb9JREFUeNqcV1tsFFUY/s7MbtluLxQKQrlIoRj7UIWIDQS0UVQEAwkJEgjoA4HECl5AA5oYgkiIFmIMYqIoxAcvoDYQfCCRIEpAQUC0eAHSUGiVkkKlt91td3Znxu/MnHZvs2XDSb6dOTNn/u/897OicyZyGUOJGcRDxFRiPFGi3nUS/xC/EyeIU0TX7QSK2xAHiXXE04owMWx11ZLu3SE3UE+8R0TuhHgpsYmoTCHqH34N1g0LwkchpZwb6ZJxkb+biX1ewrUspHXE3qykch7ywb9gEZ0wBnab3EiGjEoloy5XjT8kajNMmjx0wPwLKPziK1ichpcsga9SkdspWvePj4jnB9P4rQFSO4umFG5Lz9HE2qhxCMxbDL2mElabxwYTMmqVbE/i+cTGQUNN+lNqew4IrFoJ3wMzHbX8s+cBfVmskxgbFUcKsUyXnYPHv7s69jOVnl+N4Ob3E7sfOha2nVNa7lRcA8SriHLPpbZaRcR/IekTj6Co/ihvggNLrNYLENogG06McsXliAz2T5At7vNo3t94mVtD0v0QQwoTpLEoYqdphvxE4KWRpQ/JFZRipw+kjdfwu6R6dRUK9x4k6bCU12ZjA8w/miBK3KCzLvNhXG3Ae0iu6ZK4JquJpaYUJEaPRvHBwxD5lG71Jq2xoI8cw80EEWO90surkbfmZZgtqpDmZQ24Gv318VibobHyqx0l2oGiT/dAr5wB22yHYKmyIp0wQ63QAgGIwhKIsWUsIm0oeHMbAstqYQfzYew/Aq0ArgusDOJOWUDO8ObBDOIA15/nppcvQsGOehlBJDYg/OUIvf0K7MtnULT7OBe2qUDlB+jlpxG6uBThdzegb9N2+O5TZk/V/Kw0dZFXZbL/o4m548CLa/hND6zodT6POcLNpjMw9pxA32fbOS/l+y7Y8T/phb9h9zbxvgXBV7dAn1MFq9kz2Io0Ty9IM9+UAXU/9Mn3cNJEhGl6kuMW8ubMdD6K1G5A+KXlQMdNNosRfNJNy0RgGxfJFUXg2RUyDLxMbUvinoy8i7nb8c26V1ZiCrpBLdhi82QLuo7AwmXwL53qWCT6+dfoevhJxE4egpZfzkLSw7Wypl6CPm0CxES/FJGudY8kbsnYj2pxomKc4zMr2kXf+rl7A8bVBt4DBTvZMSeXQK+gQu2t6J6zEsb39dALK0huUskOYKQOrXSY9E56V2iR03OeqeSUSDcZhc/HVJqA8LptiO3ezydToI2ooNAC2Lfokilcw+gNr94I80YjtOIyt7BHaeNon1dwnZPEx72KhlxoX2l2tqoHJyLeyID6+Bji3/4I49AO9G59B1bjNYi7XGfpVdILUUT37GPK+fkVg66xHWZztxu+qX4+LolPEw3pqeQ0hCPnZe9x0iV6oB4arWazPIVXrYWx60tow5NSRQpmJTUbLqggKYVxkJXuliokiSG5Tktilgl8kloHyTuGl5OXWIePOrXdbG9zrC9ILkbx/WjlNyvRMm0ZG0P8XDcdRsNhGJ8egijLMLPkivafQGSj+DWlgsmG/y9Jikeh6LtjiF07i/CsZ5xgcuqFlSRQrmXQW1eA4p8O8Odu9Mx7HCLcAVGuDOAOeQ6bJjOxP9Zk/K9O2RftoI2j1q1tCC14DL7hZRhStwJWKG8g3QbST6ZLbwD5H7zAUtqFnqcehejugDYphRSKI5J+AvmBWJ/saosfaawf8avXEFrIg10kBFFV5tZwuUYGoCl7hQatehLily4jvGwFg62bqcjv++AWEHesVxxZD3t1FLjBTotyu8PVTIzVIeJmwm22e9SVrdC+zuPuSBWc8aRCKLCNl9dyOVe/QWxJqTeamhkevdZOtFEZmEnBZKuz1tZcz9Vy4VzZRRJHDSVUz34ec7RMkJ5VMrbeyV8YKfI5YjExG7kNmX/fELsGO3eKHP+06epP2wynXgITktqpbDLNqjCcUjBvJ/B/AQYADbsG7HNtMogAAAAASUVORK5CYII=" alt="CodeIgniter" />
+            <div class="detail">
+                <p>CodeIgniter version : 3.2.0-dev</p>
+                                <p><a href="http://www.codeigniter.com/userguide3/" target="_blank">CodeIgniter documentation</a></p>
+                <p>DevelBar versi : 1.2</p>
+                                <p>PHP versi : 7.2.28</p>
+                <p>Bahasa utama : Indonesian</p>
+            </div>
+        </li>
+                                    <li onmouseover="HideDevelBarSection()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3MjBEMzgwNkQwQzIxMUU0OUU1NkQyMTA5QzM2RUM0NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3MjBEMzgwN0QwQzIxMUU0OUU1NkQyMTA5QzM2RUM0NSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjRCNURGOTdGRDBCNzExRTQ5RTU2RDIxMDlDMzZFQzQ1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjRCNURGOTgwRDBCNzExRTQ5RTU2RDIxMDlDMzZFQzQ1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+hNu19QAAAg5JREFUeNqMlU1IVVEQx+/VZ/BwEUYU6EIRDQyUICTrIS7cZKSGKCYVmEWB7lQwEVy5eC5ctCgEQUJqESQaIbRIdKMbU4OgIOyDvoRA6rmJPuj2G5kLw/HdqwM/5jj3nP+dMzP36QdB4EVZ5ox/EjcH+fBH/aWDy8GjqDMJL96K4agTOxZ7QjKM48dpbwwCZcbEUzAICbs/EXPdQ7jLUGfCVcRv4tfhgd6gCjoir8yBXFw3DMNh53EpjMvFwNdYzl41lIJf0PV3mIVV+AcV0AJF+nwb+u1h33aZ7NK4Af3zCVyno9+cGyRxd6FTQw/Zc3FXUyhuiyn+xD6adc3svxXGdzLkrUf0qrXwHKQhK3CDt2/HNG4SdxW+wln2vgwLmlIxsV7ogXbY5NAQFGizXJtSXwiNtkPVYQWkEbzpqY6ENGUEtuA1opWOoNzio64rrGD4NWTgiywQlY2nYFlHpBy6HMGfel2xpBXMqM/X+nkqKuJXNEOxZ47gATOrv63gC/V5OvmeEX2HOyFDzXrOETwOZbr+ZAWX4I2uG9zKI/QZ3mdpSrPJbt6dw04zV937mMN6sz8dxnNMFvc0U7E7dLQ/Zv7a9JMU+wCjUZ+eDPhjqNHQIiyA1PEvlOjMntfnb6GJZF5lFVTRAtx9OLfHj+8atLq19aP+BSBcj+uDSp0xmcVfsAG3EZrOdu6/AAMAJ+Ur9otPKsgAAAAASUVORK5CYII=" alt="Benchmarks"
+     title="Benchmarks"/> 0.0281 detik<div class="detail benchmarks">
+            <p>
+            <span class="left-col">Loading Time: Base Classes :</span>
+            <span class="right-col">0.0073 detik</span>
+        </p>
+            <p>
+            <span class="left-col">Controller Execution Time ( Xweb Controller / Index ) :</span>
+            <span class="right-col">0.0165 detik</span>
+        </p>
+    </div>
+</li>
+                            <li onmouseover="HideDevelBarSection()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3MjBEMzgwRUQwQzIxMUU0OUU1NkQyMTA5QzM2RUM0NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3MjBEMzgwRkQwQzIxMUU0OUU1NkQyMTA5QzM2RUM0NSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjcyMEQzODBDRDBDMjExRTQ5RTU2RDIxMDlDMzZFQzQ1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjcyMEQzODBERDBDMjExRTQ5RTU2RDIxMDlDMzZFQzQ1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+1Vu9IQAAAgdJREFUeNqUlc1LVFEYxufW1cmmoayQ2vTh10JoYUFQW2mjoJvEFKLoL9CFm1aiO3HpSog2kQsXBdEm6ANMgyCGmTREIRLTqEXNpKP24djvlWfgeJnJ4wu/mcu59zznPc/7nnuD7JVYueiHTrgME5CH2/AJ+uCRPXR0envXpANlxOJwENagCn7Dusa/wiGoKDWxlOAdSMENqIRZaISLkIYNGIC3cC06OWDLAf9HYBMuwZuYf/yCBvimjNdDft5BMyzCE1iFUNv8X1TJkmFogyQ8t4kPYRJWJBTu4a8bVpEMzMMx+GCTR5wHbmrlDQ8xs+okPKXSmeJgKP8Oqy0SWtU3/sDp3NXgY1HDtvVerbCian73FLOFP0OPfDeNV5bhXTivopxSxgXPLR+HaXit63kTHI94GPf0cOegwBQezrge1iqzH6pUYR8e2ulpwsNQxVyyiykJWpOOycOEp4dfdN6vayxlgrfgrAyu1zb+enpoiTyGB1BT9PBZxMMKT8GYdpKOetjkeGiNurUPD+3oXcDDhPpwx8OXStea9D5kdXOvKKj3uqBDY2kT7FYfLtlqcEJtU/DwsA4G4Z6Smgsib+wGHXTfsI44g4d510M3FqAFetUWOfmaU0ZJWVKt4zbkipV7Rb2AdlXfBFrhJyzrvXcORuXdjM8nwL2X1HWl8w2JK9uS8U+AAQAcw4Mgbo/VVAAAAABJRU5ErkJggg==" alt="Penggunaan memory" title="Penggunaan memory" /> 2.73MB</li>
+                            <li onmouseover="HideDevelBarSection()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEOUY4RDdGMUQwREExMUU0OUU1NkQyMTA5QzM2RUM0NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEOUY4RDdGMkQwREExMUU0OUU1NkQyMTA5QzM2RUM0NSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjcyMEQzODEwRDBDMjExRTQ5RTU2RDIxMDlDMzZFQzQ1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQ5RjhEN0YwRDBEQTExRTQ5RTU2RDIxMDlDMzZFQzQ1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+5+QVXgAAAgBJREFUeNqc1FtIFFEcx/FZd8MkMoKoEIosi6B7WekWIWhoiUX2VFSQEu1Dz1EgGKg9h5eNQIN6NBO8gEWCSbSF2c16SIVIIU3YzKQreOn7h18wII07Hfiws2dmfnM4539OYCLb+Z/WiCyUI47BJbHZd3Yj4DNwPS7jBD5iAmuxFBsJ7U/yEXYcA/otRQZycRXTiNhDIR+BK/ETF/EClfiMZizCla/hwG8/I7SPv8cNnHZNgY3yJqaw2U/gNWxCMnqwAkG8wTa8QpmfwHNahOt4i060YBIXkInUfwXutlJAP7aor16jPIsqTYG9X4F9uGtz6y6bHK2cTf4x7FT/M9XdqEYYUZmk6JlPKKJket11WIRWBYwhhteYwQHsxWL1HcYIwjiKKGFD7pWztl2/j9GGe3rZ2h6FHMEOK2AF2kdjhM0pBUer9gMPUK16S9IIezSf6Qob91o5e+kkbmMYHQorxiM0YRm+oFbbzaYmzyvwFJZrFN/Ub6XRoNW+pD7bdk+wCvlegTaqX3owRf1VKo8PuKW+NGzFdzz12k41OoJsS+3Hc83jQ43673xauWxQSd33CnRUEgtRqBG0o0/31uEQdmGB7jvzBYb08EGs0Z59qXu2CwqwWv+DiQRGrch1WCarYEt0zsV1RNl1F7oTCbRW57o+o71r7TzuJHqC/BFgAE3IgNgLytIFAAAAAElFTkSuQmCC" title="Request"
+     alt="Request"/> Request : xweb_controller/index<div class="detail request">
+    <p>
+        <span class="left-col">Method :</span>
+        <span class="right-col">GET</span>
+    </p>
+
+    </div>
+</li>
+                            <li onmouseover="HideDevelBarSection()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAUCAYAAABroNZJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEOUY4RDdGOUQwREExMUU0OUU1NkQyMTA5QzM2RUM0NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEOUY4RDdGQUQwREExMUU0OUU1NkQyMTA5QzM2RUM0NSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQ5RjhEN0Y3RDBEQTExRTQ5RTU2RDIxMDlDMzZFQzQ1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQ5RjhEN0Y4RDBEQTExRTQ5RTU2RDIxMDlDMzZFQzQ1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+XPsfIAAAAdFJREFUeNqclMsrRGEYxs/cXXKZcWlcilFTUjZyLTY2ykKIsLClbK3s5F+wkyyULFgRCxtZGLlt2FEKaYgYZCaMGc/Do06TmZi3fs2Zc77znvd9nvf7LKEWg2EDPtAAukETqDC+Iwasug6CPbACtsFFXiAesSCJF38mwagWnoEHENJLYeACJSAfeEAlsINlMMGLBdAOXsAwWAVRI3lYQCtYAn3AzzKb9fADlIECffm3cKqacvCuez62c4OLYtPCU7XyrLZYYSZwgxxRY1p/Y5eo5vAb/wsH25kDr0Z6Qec2rHKmE+yCE7mRKt7k4D4YohlsZx7MmATmjNRJZI9EpoiP4Aocg02trQfTFDauG7R6CxyBS4kaSXDGreS1oBGMfXmOJBwob0LJt3InrJmxySE6U5hgRtCu4UmMIvGXcFLYEfCUpjtsd4qVBLT5esA4yFLp/HWo9JjEjZjgaMzyOZMcUmGwLrXD2rXVoFTJOEfXGoGIkleBLn6Ywt5KLENbfI2jDO7UZlQ7NlvruLc6QK/sv2cS+p+bYrDelSTZprxn2eeplFcFrlTiMskg2EnTHWo0YNHx+HNa9YM2nRl0KMPkzqtEp04HYJF7CMfj9acAAwDhEnOxHmuHkwAAAABJRU5ErkJggg==" title="Database"
+     alt="Database"/> Database<div class="detail database">
+    <div class="scroll">
+    -192.168.1.25#Database : covid19j_persebaran : No queries were run<br/>    
+        </div>
+</div>
+</li>
+                            <li onmouseover="HideDevelBarSection()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3M0EwMzM3OUQxNUQxMUU0QTBBOUE3MDg3REExMTE4MCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3M0EwMzM3QUQxNUQxMUU0QTBBOUE3MDg3REExMTE4MCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjczQTAzMzc3RDE1RDExRTRBMEE5QTcwODdEQTExMTgwIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjczQTAzMzc4RDE1RDExRTRBMEE5QTcwODdEQTExMTgwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+ZWvxhQAAAOhJREFUeNpi/P//PwM1AeMHSxS+FRAbgsSBGGTTMSA+j6ZHC4gdgJgJyr/Hf+z/NlwGPgRiOST+ZSDWQzNwMxD7oIkJAw19x4BkCwwIoCvE4is+LGJcMAYLmkQmECsD8T+oZdewaK4DYnsg/gsNml9A1z1B93IEEGsDMUjiO5JmTiCWRTPwBRB/Qo4HqCMeAA2eB3JhFRC3UiOGP1ox2oNc+APIZqdSqvnPBHUytcAPkIE/qWjgHyYGKoNRAwepgZxUNI8VZOAXKhrIBjIwg4oG1oEKh5UgpwKxKgXZEFS6PwaWNnMAAgwAQAEyu95pIiwAAAAASUVORK5CYII=" title="Hooks"
+     alt="Hooks"/> N/A</li>
+                            <li onmouseover="HideDevelBarSection()"><script type="text/javascript">
+    var cidvl_siteurl = 'http://covid19dev.jatimprov.go.id/';
+</script>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NjRGQTg3OTAxQkUxMUU3OERCMEUzODhGMzJFOTMzQSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NjRGQTg3QTAxQkUxMUU3OERCMEUzODhGMzJFOTMzQSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjY2NEZBODc3MDFCRTExRTc4REIwRTM4OEYzMkU5MzNBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY2NEZBODc4MDFCRTExRTc4REIwRTM4OEYzMkU5MzNBIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+wcTkWwAAAU1JREFUeNpi/P//PwM1AeODUB1kvjQQPyXFAPlVl1H4TEjs6UCcR6kLYQZmAnEGED+hhpebgXQNlP8SiL+CxInQywLEn4H4EBBPBHr9BsyFXEiK+IFYBIgliMAgtVpQn11/GKabihwpoLCbCMT5QDyJRF9aA/FmIBYEYluQC/dADZkKxHKkhhnQq0eBlDaUuwBkoDMQbwfiHCBuJCcigIY+B1L7gFgZFstSUPozBRH8BDnZvKVCJhFANlCBXFOAscsLZb6DGbgDiBWhSYAckAw0dDIwHBOB7LVMSNntOBCbk2HgNVCEAg2tAhoaAkuHUUC8FKrgCxC/B2JmIgz7B8Qc0MwAArNZoIxlQHwBiIuAOASIZaCKiTEQOZuKMaE5PQUaW0zQvEoIswGxP8x1QC8HMFEhuaiDMgbQsDT08pBcsBOIQ+HFF7WrAIAAAwDM8E2+e6H5PAAAAABJRU5ErkJggg==" alt="Ajax requests"
+     title="Ajax requests"/> <span class="ci-toolbar-ajax-requests"></span>
+<div class="detail ajax ci-toolbar-block-ajax">
+    <div class="scroll">
+        <p class="ci-toolbar-ajax-info"></p>
+        <table cellspacing="0" width="100%" class="ci-toolbar-ajax-table">
+            <thead class="ci-toolbar-ajax-head">
+            <tr>
+                <td>Method</td>
+                <td>Status</td>
+                <td>URL</td>
+                <td>Time</td>
+                <td>Profiler</td>
+            </tr>
+            </thead>
+            <tbody class="ci-toolbar-ajax-request-list"></tbody>
+        </table>
+    </div>
+</div>
+</li>
+                            <li onmouseover="HideDevelBarSection()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGNzI4NDg3MkQxNjExMUU0QTBBOUE3MDg3REExMTE4MCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGNzI4NDg3M0QxNjExMUU0QTBBOUE3MDg3REExMTE4MCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkY3Mjg0ODcwRDE2MTExRTRBMEE5QTcwODdEQTExMTgwIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkY3Mjg0ODcxRDE2MTExRTRBMEE5QTcwODdEQTExMTgwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Xb3wIAAAATtJREFUeNpi/GDJMJuBgcGBAQL+AHEtEO8A4oNALAAVfw/ErkDMCsSRQOwCxJpAnMR/7P8hBiTAAsQpDKggDIjvA7ERmnggEJcBsTqSWAYQoxjIBMRf0DS+AeK/DJjgB9SFyEAdXRHIwP9oYv+xiIHAMSBeiyam+9GKUQzdQGLBByDegibGCg1PsgzkBeJzWMSdyDVQFBreH9HEPcg1UBBK70ETlwaGoz45BjJC6X34vE2KgbCY345Fzp0cA2EAlOhvoInZAL3NQq6B2LzNDcRalBi4G5e3yTVwP5bcRJGBoLR4C03MARiOPOQaCAI70fjMQGxNiYG7sIj5UGLgXiD+ju5tJmimRwYiQMyOxQAuLOXjJTQxNRZocW8MFfgHLfpBifcRkiHfgPguFktmArEyEN8B4jNAvBogwAB3QzxD0b4PEwAAAABJRU5ErkJggg==" title="Libraries"
+     alt="Libraries"/> Libraries (15)<div class="detail">
+    <div class="scroll">
+    
+            <p>
+                <span class="left-col"><strong>Benchmark</strong></span></p>
+            <p>
+                <span class="left-col"><strong>Blade</strong></span></p>
+            <p>
+                <span class="left-col"><strong>Cache</strong></span></p>
+            <p>
+                <span class="left-col"><strong>Config</strong></span></p>
+            <p>
+                <span class="left-col"><strong>Hooks</strong></span></p>
+            <p>
+                <span class="left-col"><strong>Input</strong></span></p>
+            <p>
+                <span class="left-col"><strong>Lang</strong></span></p>
+            <p>
+                <span class="left-col"><strong>Loader</strong></span></p>
+            <p>
+                <span class="left-col"><strong>Log</strong></span></p>
+            <p>
+                <span class="left-col"><strong>Output</strong></span></p>
+            <p>
+                <span class="left-col"><strong>Router</strong></span></p>
+            <p>
+                <span class="left-col"><strong>Security</strong></span></p>
+            <p>
+                <span class="left-col"><strong>Session</strong></span></p>
+            <p>
+                <span class="left-col"><strong>URI</strong></span></p>
+            <p>
+                <span class="left-col"><strong>Utf8</strong></span></p>    </div>
+</div>
+</li>
+                            <li onmouseover="HideDevelBarSection()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0MjAwQzNGM0Q0MEMxMUU0QUEzM0YzQTVFOTIyMkI2RCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0MjAwQzNGNEQ0MEMxMUU0QUEzM0YzQTVFOTIyMkI2RCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQyMDBDM0YxRDQwQzExRTRBQTMzRjNBNUU5MjIyQjZEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjQyMDBDM0YyRDQwQzExRTRBQTMzRjNBNUU5MjIyQjZEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+0eM6EAAAAUJJREFUeNpi/GDFgAsIA/EEIJYD4ilAvBqbIv6j/1H4LDgMYwPiA0CsA+XbAXEoEK9hIACYcIjzIhkGAyEMRAAWNENgQA6L2r9oav4A8XdsBhoA8UogloSK/cfhcpCXfaBsRiD+BcTrgTgVWREjMFIOQsOIXGAHjJjDyGEozEAZkEGPlG8UGvgN3UA5Cg18iB6GwdAI0QLiTDIMnAnEp4D4OjAsjzOi5ZREIJ5HgWszGbFkvVtArEqmgb+wpbf/FLiQGd3AFCBWo8DAbFBOiQZiWWjejSbDkG4g3g/Ej4GRcgUUhq+AHFEKXGUMNOgccjq8j0PhUSC2BGIVIK7CY6AseuHAjUXRCyC2QeK3Q+k2LGo50XPKWyyKHmER24PDhc/QXQjKHUugmRxWdD3EohFUZL1GUvMDiNcCw+8QsiKAAAMAh8ZCxX2dxfcAAAAASUVORK5CYII=" title="Helper"
+     alt="Helper"/> Helper (7)<div class="detail">
+    <div class="scroll">
+    
+            <p>
+                <span class="left-col"><strong>File_helper</strong></span></p>
+            <p>
+                <span class="left-col"><strong>Language_helper</strong></span></p>
+            <p>
+                <span class="left-col"><strong>Main_helper</strong></span></p>
+            <p>
+                <span class="left-col"><strong>Security_helper</strong></span></p>
+            <p>
+                <span class="left-col"><strong>Text_helper</strong></span></p>
+            <p>
+                <span class="left-col"><strong>Url_helper</strong></span></p>
+            <p>
+                <span class="left-col"><strong>Utility_helper</strong></span></p>    </div>
+</div>
+</li>
+                            <li onmouseover="HideDevelBarSection()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUCAYAAACaq43EAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0Mzc4QjBCRUQ0MTAxMUU0QUEzM0YzQTVFOTIyMkI2RCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0Mzc4QjBCRkQ0MTAxMUU0QUEzM0YzQTVFOTIyMkI2RCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQyMDBDM0Y1RDQwQzExRTRBQTMzRjNBNUU5MjIyQjZEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjQyMDBDM0Y2RDQwQzExRTRBQTMzRjNBNUU5MjIyQjZEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+NOq9cgAAAjJJREFUeNqklk1IVFEUx2eUxJFAKBUjzVwVLjKw/GhARSJdREQ7FWkjBC1cBG3MCfJzo0QMQQwtWoiQ0qI0UFRKzAyiDEMqdCEkSNJi3MjYovF34BjP4d37XuOBHx65557/effrTDB+KeDXCqEVwlACxyET4rAJH2AkdyH53U+yoA/hC9AHV3wWKMI9FDByGOFncDOQnn2EqxSw5TaYYZh0DbYson/gqyaPG2Iuwq/tcLDbr7AEvoR8lzEppl339xxUwjGogyVDARHEp72W+jY8NiT4qWIHvpCl/OcjMC7La5gfJbbDTfgGvDBM2oFyWNP/G6AejsA3GCVpQsVnddzNBom76xSWJG8sB0Uqjao/BHdSxj/LnpL0L8Jl+CuWXJ3EDYhwSK/AKUtwKazrMo4bYvpI2KVf/Z4/NZZ81XK4nnqIrqmoWIslrsLhf/G4ao9E+KxH0K7DP2qJy3L4CY+ceSJ8zyOoVK+P2IQl7ofDP+ORc1CEJ+G5JSgHLqsfg7cuMfKFD3V/C/SwmuwVZ+HJ/gPS6rEvD/TqiDXBLXgNc9Av20WyVR3v1WLd7B1cT73HebAMJwyTplQ0YHlA5FT3GObLy1ZBfDL1yfwNzZavboQZOOk2iGjMIrqtDSNp605VMAbFliI+aYPY1VtRCyFD7LxcQ0Q3/LZFaRaRQPomRbUhOPY/bVHsPpyHxTRERazIJOr3F4jYaT35ss8FuqzZMl+vUkK7l5z0YVPzd9qeAAMA7E6d61kA+54AAAAASUVORK5CYII=" title="View"
+     alt="View"/> View (1)    <div class="detail views">
+        <div class="scroll">
+            
+            <p>
+                <span class="left-col">
+                <a href="#" onclick="return ShowViewVars(this);" title="Show variables">
+                    <strong><span class="develbar-open-icon">+</span> modules<span style="color:#FFF">/</span>xweb<span style="color:#FFF">/</span>views<span style="color:#FFF">/</span><span style="color:#FFF">home.blade.php</span></strong>
+                </a>
+                </span></p><div class="develbar-detail-vars" style="display:none"></div>        </div>
+    </div>
+</li>
+                            <li onmouseover="HideDevelBarSection()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5NERGM0VFRkQxQjIxMUU0QUQyM0YyM0VBRTk2NzNEMiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5NERGM0VGMEQxQjIxMUU0QUQyM0YyM0VBRTk2NzNEMiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjk0REYzRUVERDFCMjExRTRBRDIzRjIzRUFFOTY3M0QyIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjk0REYzRUVFRDFCMjExRTRBRDIzRjIzRUFFOTY3M0QyIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+M9WPywAAAVNJREFUeNqs1b1LAzEYx/G74uIg7aJ/gDo6ikUXRRARUTfFl9HJxclB8N3R1T9ABBG6OIiOorR0FJcqiK8gvuBQaxXE5fwGIsSQnM+JgQ8hufRHcvf0LnxpD5K0KUygBRW0pYvRg7mgRhjUgBw6jbldvNoLpYGbVtg2xl0LJYGj6DXGOxizF1U6wla6akoQOGyNc46weroDZCWBaWvs+s066hBKjly1xk1oNHY3YJziUxJYa41XNFcr/3bkWXQJK+ES+bgdzmE1QdFPU+TvqX8IK2OEsD1fHcaF3WAfzYhQwBZh177CXsKiJ+wKfTj/UVPFyFtT8zFhTxi0w1ztO3AhphRu0Y2S5IaqwEkse64/oh+n0ketAtfwhg3cGdfu9T0rJXlhqsAMLjCDMz2vgntwEiRs6ikf6n/Ds55T/VCSY9o7VC/KPD5wBPVROA7+2L4EGABIA0qqC4+E+wAAAABJRU5ErkJggg=="
+     alt="Konfigurasi" title="Konfigurasi"/> Konfigurasi    <div class="detail config">
+        <div class="scroll">
+            <p><span class="left-col" style="width:60%">base_url:</span><span class="right-col" style="width:40%">http://covid19dev.jatimprov.go.id</span></p><p><span class="left-col" style="width:60%">index_page:</span><span class="right-col" style="width:40%"></span></p><p><span class="left-col" style="width:60%">blade:</span><span class="right-col" style="width:40%">Array
+(
+    [@url] =&gt; http://covid19dev.jatimprov.go.id
+    [@asset] =&gt; http://covid19dev.jatimprov.go.id/public/assets
+    [@css] =&gt; http://covid19dev.jatimprov.go.id/public/assets/css
+    [@js] =&gt; http://covid19dev.jatimprov.go.id/public/assets/js
+)
+</span></p><p><span class="left-col" style="width:60%">api_secret_key:</span><span class="right-col" style="width:40%">XigniteApps</span></p><p><span class="left-col" style="width:60%">uri_protocol:</span><span class="right-col" style="width:40%">REQUEST_URI</span></p><p><span class="left-col" style="width:60%">url_suffix:</span><span class="right-col" style="width:40%"></span></p><p><span class="left-col" style="width:60%">modules_locations:</span><span class="right-col" style="width:40%">Array
+(
+    [/home/covid19jtm/public_html/apps/../modules/] =&gt; ../../modules/
+)
+</span></p><p><span class="left-col" style="width:60%">controller_suffix:</span><span class="right-col" style="width:40%">_controller</span></p><p><span class="left-col" style="width:60%">language:</span><span class="right-col" style="width:40%">indonesian</span></p><p><span class="left-col" style="width:60%">charset:</span><span class="right-col" style="width:40%">UTF-8</span></p><p><span class="left-col" style="width:60%">enable_hooks:</span><span class="right-col" style="width:40%">1</span></p><p><span class="left-col" style="width:60%">subclass_prefix:</span><span class="right-col" style="width:40%">MY_</span></p><p><span class="left-col" style="width:60%">composer_autoload:</span><span class="right-col" style="width:40%"></span></p><p><span class="left-col" style="width:60%">permitted_uri_chars:</span><span class="right-col" style="width:40%">a-z 0-9~%.:_\-</span></p><p><span class="left-col" style="width:60%">allow_get_array:</span><span class="right-col" style="width:40%">1</span></p><p><span class="left-col" style="width:60%">enable_query_strings:</span><span class="right-col" style="width:40%"></span></p><p><span class="left-col" style="width:60%">controller_trigger:</span><span class="right-col" style="width:40%">c</span></p><p><span class="left-col" style="width:60%">function_trigger:</span><span class="right-col" style="width:40%">m</span></p><p><span class="left-col" style="width:60%">directory_trigger:</span><span class="right-col" style="width:40%">d</span></p><p><span class="left-col" style="width:60%">log_threshold:</span><span class="right-col" style="width:40%">1</span></p><p><span class="left-col" style="width:60%">log_path:</span><span class="right-col" style="width:40%"></span></p><p><span class="left-col" style="width:60%">log_file_extension:</span><span class="right-col" style="width:40%"></span></p><p><span class="left-col" style="width:60%">log_file_permissions:</span><span class="right-col" style="width:40%">420</span></p><p><span class="left-col" style="width:60%">log_date_format:</span><span class="right-col" style="width:40%">Y-m-d H:i:s</span></p><p><span class="left-col" style="width:60%">error_views_path:</span><span class="right-col" style="width:40%"></span></p><p><span class="left-col" style="width:60%">cache_path:</span><span class="right-col" style="width:40%"></span></p><p><span class="left-col" style="width:60%">cache_query_string:</span><span class="right-col" style="width:40%"></span></p><p><span class="left-col" style="width:60%">encryption_key:</span><span class="right-col" style="width:40%">xenginedevelopmentapps</span></p><p><span class="left-col" style="width:60%">sess_driver:</span><span class="right-col" style="width:40%">files</span></p><p><span class="left-col" style="width:60%">sess_cookie_name:</span><span class="right-col" style="width:40%">rand_session</span></p><p><span class="left-col" style="width:60%">sess_expiration:</span><span class="right-col" style="width:40%">7200</span></p><p><span class="left-col" style="width:60%">sess_save_path:</span><span class="right-col" style="width:40%"></span></p><p><span class="left-col" style="width:60%">sess_match_ip:</span><span class="right-col" style="width:40%"></span></p><p><span class="left-col" style="width:60%">sess_time_to_update:</span><span class="right-col" style="width:40%">300</span></p><p><span class="left-col" style="width:60%">sess_regenerate_destroy:</span><span class="right-col" style="width:40%"></span></p><p><span class="left-col" style="width:60%">cookie_prefix:</span><span class="right-col" style="width:40%"></span></p><p><span class="left-col" style="width:60%">cookie_domain:</span><span class="right-col" style="width:40%"></span></p><p><span class="left-col" style="width:60%">cookie_path:</span><span class="right-col" style="width:40%">/</span></p><p><span class="left-col" style="width:60%">cookie_secure:</span><span class="right-col" style="width:40%"></span></p><p><span class="left-col" style="width:60%">cookie_httponly:</span><span class="right-col" style="width:40%"></span></p><p><span class="left-col" style="width:60%">standardize_newlines:</span><span class="right-col" style="width:40%"></span></p><p><span class="left-col" style="width:60%">global_xss_filtering:</span><span class="right-col" style="width:40%"></span></p><p><span class="left-col" style="width:60%">csrf_protection:</span><span class="right-col" style="width:40%"></span></p><p><span class="left-col" style="width:60%">csrf_token_name:</span><span class="right-col" style="width:40%">csrf_token_name</span></p><p><span class="left-col" style="width:60%">csrf_cookie_name:</span><span class="right-col" style="width:40%">csrf_cookie_name</span></p><p><span class="left-col" style="width:60%">csrf_expire:</span><span class="right-col" style="width:40%">7200</span></p><p><span class="left-col" style="width:60%">csrf_regenerate:</span><span class="right-col" style="width:40%">1</span></p><p><span class="left-col" style="width:60%">csrf_exclude_uris:</span><span class="right-col" style="width:40%">Array
+(
+)
+</span></p><p><span class="left-col" style="width:60%">compress_output:</span><span class="right-col" style="width:40%"></span></p><p><span class="left-col" style="width:60%">time_reference:</span><span class="right-col" style="width:40%">Asia/Jakarta</span></p><p><span class="left-col" style="width:60%">rewrite_short_tags:</span><span class="right-col" style="width:40%"></span></p><p><span class="left-col" style="width:60%">proxy_ips:</span><span class="right-col" style="width:40%"></span></p>        </div>
+    </div>
+</li>
+                            <li onmouseover="HideDevelBarSection()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0MjAwQzNFRkQ0MEMxMUU0QUEzM0YzQTVFOTIyMkI2RCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0MjAwQzNGMEQ0MEMxMUU0QUEzM0YzQTVFOTIyMkI2RCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQyMDBDM0VERDQwQzExRTRBQTMzRjNBNUU5MjIyQjZEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjQyMDBDM0VFRDQwQzExRTRBQTMzRjNBNUU5MjIyQjZEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+WvoaJwAAAbVJREFUeNqMlUsoBVEYx+9cZEGUBWVDQqIUUXIjCxsLRR6xYGPBDkXsFBZWLlEkWUghkcfCxkpJLCULr8hOuB4XC3n8vjq3xunM3Pnqd+fOd/7n33xnzvnGei73OUU1NEIhFIAF53AC27ApouSD33+TLINhBUxCkc89LmAQww170q+JBmDfg5lEDqy/BKxxJ8N+GDNMHIE8yII+w3gvphN6yaVwbBAPwbCW64RZg7aR8tcjhjeQYRClwb0h/waJWu4VUqTkSgcziR+H/LchlwRdYtjusvDNhly97BYnfSw/xS6GU+q6oJ6qCeZc9JmyhmH+JHjYJmIYE0Xz7jfsRaeI8aCxxOzSYVBOQAtkqzcqVWRCHSw5zAmJ4amWvAbZTA2wCldSCnzALWxBmzrfR9rcOzFc1pIBOPRQ3hmUwacttyWGO/BoS1b5vEe57R18wXTkps0mkifu8GBWCwcQr+67OXrhiOEuTNjE82qtKgxGJbCoemIk1jCbMfXDIPRoBpfqZUgnTYd8bXwFs1a3BtuuOkxGlJKfYBSzYLSOLRGn2lQN5EKq+gQ8qG20p45gSP8E/AkwAG75ZjDCy5nOAAAAAElFTkSuQmCC"
+     alt="Sesi" title="Sesi"/> Sesi    <div class="detail config">
+        <div class="scroll">
+            <p><span class="left-col" style="width:30%">__ci_last_regenerate:</span><span class="right-col" style="width:80%"><pre style="color:#fff">1584648981</pre></span></p>        </div>
+    </div>
+</li>
+                            <li onmouseover="HideDevelBarSection()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGQzQ4RjhFRkQ0MTUxMUU0OEIyMEZCODlBM0EzNURCQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGQzQ4RjhGMEQ0MTUxMUU0OEIyMEZCODlBM0EzNURCQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDNDhGOEVERDQxNTExRTQ4QjIwRkI4OUEzQTM1REJDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkZDNDhGOEVFRDQxNTExRTQ4QjIwRkI4OUEzQTM1REJDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+2FzSMgAAAeJJREFUeNqclTtIXEEUhr3rqihBIagJ4lYWQqyEdBaKhdi4khAR8cHGLKKVJDZBC9ciENBCBMsFkRAxIZWNCLJFCIJuqcTGImiCiQ8UbDSQm2/k3OU4jNfHgY8z958zZ+bMY9fzfT8vzE4bvELcB6iEzrJv/u+w+MgNybpw59ABjbCPNnrvhNhzhzZ064TMHofXSvKV9x0VvIQerXlmDxEf0p6EftGzUuIsJKw836FF+uKiLcMA+7sbrPCTSmbsKWzIoE2l/4E+mFfJjLXCnC454iitmhmz1j4mRatyxHt2okD0pF3KVmSkvMCeoH3E1zriL3NE5WMJmh2H0SQE9t6xgMC+5lZIGdO4IliELSk3EgRZtgPmEIulfxUqiE9duTYIF7ifcEb7F6U9oF3iSGhezmNizIU/MAdF+9C+Nr1ycoH9lcnypTy9T6b9T4iqMcMknglWmLBOrUCSpeGFGjQAKZksap1y+01P74gZk/Y9RJuwtNC3rK/BMVsRw0+p/hTaI/yJI/5KwkFY16uDZzAObUqvhxV4A9tK/wFvc4eiHvsrXB2MUJrP92fZQ33v9uiLSfyY+XnjO1eFPiVzddLXbI3nEol/d9ffw4xD+xI2wLvFX0ANbgHKoZtVrYXF/xdgAJTFpTY0/GXiAAAAAElFTkSuQmCC" title="Model"
+     alt="Model"/> N/A</li>
+                        </ul>
+</div>
+<div onclick="ShowDevelBar()" id="develbar-off"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0QjVERjk3OUQwQjcxMUU0OUU1NkQyMTA5QzM2RUM0NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0QjVERjk3QUQwQjcxMUU0OUU1NkQyMTA5QzM2RUM0NSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjRCNURGOTc3RDBCNzExRTQ5RTU2RDIxMDlDMzZFQzQ1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjRCNURGOTc4RDBCNzExRTQ5RTU2RDIxMDlDMzZFQzQ1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+SOOsjQAABb9JREFUeNqcV1tsFFUY/s7MbtluLxQKQrlIoRj7UIWIDQS0UVQEAwkJEgjoA4HECl5AA5oYgkiIFmIMYqIoxAcvoDYQfCCRIEpAQUC0eAHSUGiVkkKlt91td3Znxu/MnHZvs2XDSb6dOTNn/u/897OicyZyGUOJGcRDxFRiPFGi3nUS/xC/EyeIU0TX7QSK2xAHiXXE04owMWx11ZLu3SE3UE+8R0TuhHgpsYmoTCHqH34N1g0LwkchpZwb6ZJxkb+biX1ewrUspHXE3qykch7ywb9gEZ0wBnab3EiGjEoloy5XjT8kajNMmjx0wPwLKPziK1ichpcsga9SkdspWvePj4jnB9P4rQFSO4umFG5Lz9HE2qhxCMxbDL2mElabxwYTMmqVbE/i+cTGQUNN+lNqew4IrFoJ3wMzHbX8s+cBfVmskxgbFUcKsUyXnYPHv7s69jOVnl+N4Ob3E7sfOha2nVNa7lRcA8SriHLPpbZaRcR/IekTj6Co/ihvggNLrNYLENogG06McsXliAz2T5At7vNo3t94mVtD0v0QQwoTpLEoYqdphvxE4KWRpQ/JFZRipw+kjdfwu6R6dRUK9x4k6bCU12ZjA8w/miBK3KCzLvNhXG3Ae0iu6ZK4JquJpaYUJEaPRvHBwxD5lG71Jq2xoI8cw80EEWO90surkbfmZZgtqpDmZQ24Gv318VibobHyqx0l2oGiT/dAr5wB22yHYKmyIp0wQ63QAgGIwhKIsWUsIm0oeHMbAstqYQfzYew/Aq0ArgusDOJOWUDO8ObBDOIA15/nppcvQsGOehlBJDYg/OUIvf0K7MtnULT7OBe2qUDlB+jlpxG6uBThdzegb9N2+O5TZk/V/Kw0dZFXZbL/o4m548CLa/hND6zodT6POcLNpjMw9pxA32fbOS/l+y7Y8T/phb9h9zbxvgXBV7dAn1MFq9kz2Io0Ty9IM9+UAXU/9Mn3cNJEhGl6kuMW8ubMdD6K1G5A+KXlQMdNNosRfNJNy0RgGxfJFUXg2RUyDLxMbUvinoy8i7nb8c26V1ZiCrpBLdhi82QLuo7AwmXwL53qWCT6+dfoevhJxE4egpZfzkLSw7Wypl6CPm0CxES/FJGudY8kbsnYj2pxomKc4zMr2kXf+rl7A8bVBt4DBTvZMSeXQK+gQu2t6J6zEsb39dALK0huUskOYKQOrXSY9E56V2iR03OeqeSUSDcZhc/HVJqA8LptiO3ezydToI2ooNAC2Lfokilcw+gNr94I80YjtOIyt7BHaeNon1dwnZPEx72KhlxoX2l2tqoHJyLeyID6+Bji3/4I49AO9G59B1bjNYi7XGfpVdILUUT37GPK+fkVg66xHWZztxu+qX4+LolPEw3pqeQ0hCPnZe9x0iV6oB4arWazPIVXrYWx60tow5NSRQpmJTUbLqggKYVxkJXuliokiSG5Tktilgl8kloHyTuGl5OXWIePOrXdbG9zrC9ILkbx/WjlNyvRMm0ZG0P8XDcdRsNhGJ8egijLMLPkivafQGSj+DWlgsmG/y9Jikeh6LtjiF07i/CsZ5xgcuqFlSRQrmXQW1eA4p8O8Odu9Mx7HCLcAVGuDOAOeQ6bJjOxP9Zk/K9O2RftoI2j1q1tCC14DL7hZRhStwJWKG8g3QbST6ZLbwD5H7zAUtqFnqcehejugDYphRSKI5J+AvmBWJ/saosfaawf8avXEFrIg10kBFFV5tZwuUYGoCl7hQatehLily4jvGwFg62bqcjv++AWEHesVxxZD3t1FLjBTotyu8PVTIzVIeJmwm22e9SVrdC+zuPuSBWc8aRCKLCNl9dyOVe/QWxJqTeamhkevdZOtFEZmEnBZKuz1tZcz9Vy4VzZRRJHDSVUz34ec7RMkJ5VMrbeyV8YKfI5YjExG7kNmX/fELsGO3eKHP+06epP2wynXgITktqpbDLNqjCcUjBvJ/B/AQYADbsG7HNtMogAAAAASUVORK5CYII=" alt="CodeIgniter" />
+
+<!-- END CodeIgniter Developer Toolbar -->
+</body></html>

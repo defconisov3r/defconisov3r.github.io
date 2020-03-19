@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Gathering Interest Form - Shekinah Church
+    </title>
+
+      <script src="//unpkg.com/qrcode@1.2.2/build/qrcode.min.js" async="async" defer="defer" integrity="sha384-i1Yz5pxNaJKgpc1EhOYfcs4tqbGBYwLW8MoAM5pQRypt/1/gQQZ+6zuZG08lGH2E" crossorigin="anonymous"></script>
+
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="L4PDSZKGyixvyQ1TkNj3431Lwxy5WVV/6uUxMJMmdZ/YXYcKTJlysrQN08s4qPt4ogDeYdGanvHyJrinu8QI2Q==" />
+
+<meta content="width=device-width,initial-scale=1.0" name="viewport" />
+  <link rel="apple-touch-icon" href="https://avatars.planningcenteronline.com/uploads/organization/290412-1559142806/avatar.2.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://avatars.planningcenteronline.com/uploads/organization/290412-1559142806/avatar.2.png?g=180x180">
+  <link rel="apple-touch-icon" sizes="167x167" href="https://avatars.planningcenteronline.com/uploads/organization/290412-1559142806/avatar.2.png?g=167x167">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://avatars.planningcenteronline.com/uploads/organization/290412-1559142806/avatar.2.png?g=152x152">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://avatars.planningcenteronline.com/uploads/organization/290412-1559142806/avatar.2.png?g=120x120">
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Shekinah Church" />
+<meta property="og:title" content="Gathering Interest Form" />
+
+  <script>
+    ;(function() {
+  var state = {
+    blessed: "unknown", // unknown, yes, no
+    inIframe: (function inIframe() {
+      try {
+        return window.self !== window.top
+      } catch (e) {
+        return true
+      }
+    })(),
+  }
+
+  function setBlessed(nextBlessed) {
+    state.blessed = nextBlessed
+    render()
+  }
+
+  function confirmBlessed() {
+    setBlessed("yes")
+  }
+
+  function assumeNotBlessed() {
+    if (state.blessed === "unknown") {
+      setBlessed("no")
+      console.log(
+        "Trying to put Giving on your website? Use the fully supported ChurchCenterModal! Instructions are available at https://pcogiving.zendesk.com/hc/en-us/articles/115014121428"
+      )
+    }
+  }
+
+  function render() {
+    var classList = document.body.classList
+    classList.remove("iframed")
+    classList.remove("iframed--blessed-unknown")
+    classList.remove("iframed--blessed-yes")
+    classList.remove("iframed--blessed-no")
+
+    if (state.inIframe) {
+      classList.add("iframed")
+      classList.add("iframed--blessed-" + state.blessed)
+    }
+  }
+
+  function showIFrame() {
+    render()
+    window.scrollTo(0, 0)
+    postMessageToChurchCenterButton("ready")
+    setTimeout(assumeNotBlessed, 1000)
+  }
+
+  function receiveMessageFromChurchCenterButton(e) {
+    var location = new URL(e.origin)
+    var isHTTPS =
+      location.protocol === "https:" ||
+      location.host.slice(0, 9) === "localhost" ||
+      location.host.match(/\.test$/)
+    if (e.data.type === "verified") {
+      if (isHTTPS) {
+        confirmBlessed()
+        postMessageToChurchCenterButton("show")
+      } else {
+        throw "ChurchCenterButton: must be called from an HTTPS page."
+      }
+    }
+  }
+
+  function postMessageToChurchCenterButton(type) {
+    parent.postMessage({ type: type }, "*")
+  }
+
+  function handleKeyup(event) {
+    if (event.keyCode === 27) {
+      if (event.target === document.body) close()
+      else if (event.target.blur) event.target.blur()
+    }
+  }
+
+  function run() {
+    if (!state.inIframe) return
+    window.addEventListener(
+      "message",
+      receiveMessageFromChurchCenterButton,
+      false
+    )
+    var initEvent = window.Turbolinks ? "turbolinks:load" : "DOMContentLoaded"
+    document.addEventListener(initEvent, showIFrame)
+    document.addEventListener("keyup", handleKeyup)
+  }
+
+  function close() {
+    postMessageToChurchCenterButton("close")
+  }
+
+  window.ChurchCenterButtonRemote = new function ChurchCenterButtonRemote() {
+    this.close = close
+  }()
+
+  run()
+})()
+
+  </script>
+
+
+      <script>window.features = {"ACCOUNTS_ccapp_checkins":true,"CHURCH_CENTER_ROLLOUT_ccweb_login":true,"ACCOUNTS_rails_payment_mailer":true,"FEATURE_list_email_direct":true,"ACCOUNTS_use_login_dot_for_login":true,"FEATURE_form_conditions":true,"FEATURE_announcements":true,"ACCOUNTS_rollout_ie_unsupported_message":true,"ACCOUNTS_staff_check_entry":true,"ROLLOUT_ie_unsupported_message":true,"FEATURE_list_permissions":true,"FEATURE_spam_scorer":true,"FEATURE_amazon_spam_scorer":true,"LOGIN_ROLLOUT_password_resets":true,"ACCOUNTS_TOGGLE_use_login_dot_for_password_resets":true,"LOGIN_ROLLOUT_links":true,"calendar_rebrand":true,"CALENDAR_rebrand_override_app_name":true,"LOGIN_ROLLOUT_upgrade_passwords_automatically":true,"ACCOUNTS_TOGGLE_enable_sign_up_captcha":true,"LOGIN_ROLLOUT_force_compromised_credentials_to_change":true};</script><script src="https://www.googletagmanager.com/gtag/js?id=UA-462630-12" async="async"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date())
+gtag('config', 'UA-462630-12')</script><script>window.currentOrganization = {
+  dateFormat: "%m/%d/%Y"
+};</script><script src="https://d1pz3w4vu41eda.cloudfront.net/packs/js/church_center-f53d472f25f1c43f4558.js"></script><script src="https://d1pz3w4vu41eda.cloudfront.net/assets/church_center-58184442cf9c5ca0e146f0924a7e09dc056fb28a56fe6f98fb3c6e9cc96de122.js" data-turbolinks-track="true"></script><link rel="stylesheet" media="all" href="https://d1pz3w4vu41eda.cloudfront.net/assets/church_center_web-96035033106f151b5aaad4c774d425d29b7d8fb55fe818a92398ddb1d35dac87.css" data-turbolinks-track="reload" /><script src="https://d1pz3w4vu41eda.cloudfront.net/assets/@planningcenter/icons/js/svg4everybody-8c74364bd11003cb4702aee9dee75fbedf3608b141d18017b6c8a2c729041867.js"></script><meta property="og:image" content="https://account-center-production.s3.amazonaws.com/uploads/organization/290412-1559142806/avatar.2.png" /><meta property="og:description" content="Gathering Interest Form" /><script>window.svg4everybody()</script>
+  </head>
+
+  <body class="sans-serif ">
+    <a href="#main_page_content" class="screen-reader-text">Skip to content</a>
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MKBNS7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <div class="iframed-content-for--blessed-unknown d-n">
+      <img src="/static/embed-loading.svg" alt="loading"/>
+    </div>
+    <div class="iframed-content-for--blessed-no d-n">
+      <a class="btn" href="javascript:window.open(location,'_blank');">
+        Forms
+      </a>
+    </div>
+    <div class="iframed-content-for--blessed-yes">
+
+
+      <div class="page-container d-f fd-c" role="main">
+        <a class="close-iframe d-n" onclick="javascript:ChurchCenterButtonRemote.close()">
+          <span class="icon d-if ai-c">
+            <svg class="symbol" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><title>x</title><polygon points="16 1.611 14.389 0 8 6.389 1.611 0 0 1.611 6.389 8 0 14.389 1.611 16 8 9.611 14.389 16 16 14.389 9.611 8 16 1.611"/></svg>
+          </span>
+        </a>
+
+          <div class="js-page-header cco-header">
+            <div class="px-2 px-4@md p-r h-100% d-f jc-sb ai-c container container--narrow">
+
+              <div class="w-4">
+              </div>
+
+              <div class="org-logo px-9">
+                <a class="d-b c-gray_800" data-turbolinks="false" href="/">
+                      <img alt="logo for Shekinah Church" class="d-b" src="https://avatars.planningcenteronline.com/uploads/organization/290412-1559142806/avatar.2.png" />
+</a>              </div>
+              <div class="w-4"></div>
+                <div data-react-class="Components.SelfHydratingNavitar" data-react-props="{&quot;defaultDisplayName&quot;:&quot;Guest&quot;,&quot;defaultImageUrl&quot;:&quot;https://people.planningcenteronline.com/static/no_photo_thumbnail.svg&quot;}"></div>
+
+            </div>
+          </div>
+
+
+
+        <div id="main_page_content" class="page-content f-1">
+          <div class="p-2 p-4@md p-3@iframe container container--narrow ">
+            <section><div data-react-class="Components.Form" data-react-props="{&quot;id&quot;:115158,&quot;name&quot;:&quot;Gathering Interest Form&quot;,&quot;description&quot;:null,&quot;phoneTypes&quot;:[&quot;Mobile&quot;,&quot;Home&quot;,&quot;Work&quot;,&quot;Other&quot;],&quot;addressTypes&quot;:[&quot;Home&quot;,&quot;Work&quot;,&quot;Other&quot;],&quot;grades&quot;:[{&quot;key&quot;:-1,&quot;value&quot;:&quot;Pre-Kindergarten&quot;},{&quot;key&quot;:0,&quot;value&quot;:&quot;Kindergarten&quot;},{&quot;key&quot;:1,&quot;value&quot;:&quot;1st Grade&quot;},{&quot;key&quot;:2,&quot;value&quot;:&quot;2nd Grade&quot;},{&quot;key&quot;:3,&quot;value&quot;:&quot;3rd Grade&quot;},{&quot;key&quot;:4,&quot;value&quot;:&quot;4th Grade&quot;},{&quot;key&quot;:5,&quot;value&quot;:&quot;5th Grade&quot;},{&quot;key&quot;:6,&quot;value&quot;:&quot;6th Grade&quot;},{&quot;key&quot;:7,&quot;value&quot;:&quot;7th Grade&quot;},{&quot;key&quot;:8,&quot;value&quot;:&quot;8th Grade&quot;},{&quot;key&quot;:9,&quot;value&quot;:&quot;9th Grade&quot;},{&quot;key&quot;:10,&quot;value&quot;:&quot;10th Grade&quot;},{&quot;key&quot;:11,&quot;value&quot;:&quot;11th Grade&quot;},{&quot;key&quot;:12,&quot;value&quot;:&quot;12th Grade&quot;}],&quot;defaultFirstName&quot;:null,&quot;defaultLastName&quot;:null,&quot;defaultEmailAddress&quot;:null,&quot;person&quot;:null,&quot;encryptedParam&quot;:null}"></div></section>
+          </div>
+        </div><!-- page-content -->
+
+          <div class="container container--narrow">
+            <div id="qrcode-wrapper" class="action-drawer d-f p-2 mt-4" style="display: none">
+              <div class="mr-2">
+                <a class="qrcode-download">
+                  <img id="qrcode" alt="qrcode" />
+                </a>
+              </div>
+              <div class="f-1">
+                <p>
+                  Use this graphic in printed materials or on displayed screens.
+                  People can scan the code using their phone's built-in code reader
+                  ("Camera" on iOS, "Google Assistant" on Android) to be brought straight to this URL –
+                  without having to type it.
+                </p>
+                <p>
+                  <a class="qrcode-download">Download QR Code</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <script>
+            (function() {
+  var WRAPPER_ID = "qrcode-wrapper";
+  var IMAGE_ID = "qrcode";
+  var DOWNLOAD_CLASS = "qrcode-download";
+
+  var qrOptions = {
+    errorCorrectionLevel: "H",
+    margin: 0,
+    width: 150,
+    color: {
+      dark: "#313437",
+      light: "#0000"
+    }
+  };
+
+  function generateQrCode(callback) {
+    if (hasGeneratedQrCode()) {
+      return callback();
+    }
+
+    QRCode.toDataURL(window.location.toString(), qrOptions, function(
+      error,
+      url
+    ) {
+      if (error) return;
+
+      var downloadLinks = document.getElementsByClassName(DOWNLOAD_CLASS);
+
+      Array.prototype.forEach.call(downloadLinks, function(link) {
+        link.href = url;
+        link.download = "qrcode.png";
+      });
+
+      var image = document.getElementById(IMAGE_ID);
+      image.src = url;
+      image.width = qrOptions.width;
+
+      callback();
+    });
+  }
+
+  window.toggleQRCode = function() {
+    var wrapper = getWrapper();
+    if (wrapper.style.display === "none") {
+      generateQrCode(function() {
+        wrapper.style.display = null;
+        setTimeout(function() {
+          window.scrollTo(0, 10000000);
+        }, 0);
+      });
+    } else {
+      wrapper.style.display = "none";
+    }
+  };
+
+  function getWrapper() {
+    return document.getElementById(WRAPPER_ID);
+  }
+
+  function getImage() {
+    return document.getElementById(IMAGE_ID);
+  }
+
+  function hasGeneratedQrCode() {
+    return !!getImage().src;
+  }
+})();
+
+          </script>
+
+        <footer class="site-footer" role="contentinfo">
+          <ul class="site-footer__links o-2 o-1@sm">
+            <li class="site-footer__link"><a class="c-tourmaline" href="https://planning.center/terms/" target="_blank">Terms of Service</a></li>
+            <li class="site-footer__link"><a class="c-tourmaline" href="https://planning.center/privacy/" target="_blank">Privacy Policy</a></li>
+          </ul>
+
+          <ul class="site-footer__links o-1 o-2@sm">
+              <li class="site-footer__link">Shekinah Church</li>
+              <li class="site-footer__link">info@shekinahchurch.org</li>
+                <li class="site-footer__link"><a class="fw-400 c-gray_700" href="tel:734.662.6040">734.662.6040</a></li>
+          </ul>
+
+            <ul class="site-footer__links o-3 d-n d-f@md">
+              <li class="site-footer__link"><a class="fs-5 c-gray_600" onclick="window.toggleQRCode()">Shareable Code</a></li>
+            </ul>
+        </footer>
+
+      </div>
+    </div>
+  </body>
+</html>

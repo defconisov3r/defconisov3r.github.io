@@ -1,0 +1,199 @@
+<html>
+
+<head>
+    <title>Covid-19 - BiH</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161231675-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-161231675-1');
+    </script>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Date', 'Broj slucajeva'],
+                ['15.03', 24],
+                ['16.03', 25],
+                ['17.03', 34],
+                ['18.03', 39],
+                ['19.03',64],
+
+            ]);
+
+            var options = {
+                title: '',
+                chartArea: {
+                    // leave room for y-axis labels
+                    width: '78%'
+                },
+                legend: {
+                    position: 'top'
+                },
+                width: '100%',
+                curveType: 'function',
+                legend: 'none',
+                backgroundColor: 'transparent',
+                hAxis: {
+                    textStyle: { color: '#FFF' }
+                },
+                vAxis: {
+                    textStyle: { color: '#FFF' },
+                    format: "##"
+                },
+
+                lineWidth: 5,
+                pointSize: 15,
+                vAxes: {
+
+                    0: {
+                        title: 'Broj slucajeva',
+                        titleTextStyle: {
+                            color: '#fff'
+                        }
+                    },
+
+                },
+                series: {
+                    0: {
+                        color: '#4e8fa9',
+                        pointShape: 'circle'
+                    },
+                }
+
+
+
+
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(-45deg, #183850 0, #183850 25%, #192c46 50%, #22254c 75%, #22254c 100%);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            text-align: center;
+            color: #fff !important;
+        }
+
+        nav {
+
+            border-bottom: 0.1px solid white;
+            margin-bottom: 50px;
+        }
+
+        a {
+            color: white;
+        }
+
+        #omer {
+            color: white;
+        }
+    </style>
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="index.html">
+            <img src="https://cdn.countryflags.com/thumbs/bosnia-and-herzegovina/flag-round-250.png" width="30"
+                height="30" class="d-inline-block align-top" alt="">
+            COVID-19 BiH
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link"
+                        href="https://www.youtube.com/watch?time_continue=2&v=Y5capFWePeE&feature=emb_title"
+                        target="_blank">Kako se
+                        zastiti? <span class="sr-only">(current)</span></a>
+                </li>
+        </div>
+    </nav>
+</header>
+
+<body>
+
+    <div class="container">
+        <img src="https://cdn.countryflags.com/thumbs/bosnia-and-herzegovina/flag-round-250.png" width="20px" alt="">
+        <h2>BiH</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    Broj žaraženih: <br />
+
+                    <b>64</b>
+                </div>
+                <div class="col">
+                    Oporavljeni slučajevi: <br />
+
+                    <b>2</b>
+                </div>
+
+                <div class="col">
+                    Smrtni slučajevi: <br />
+
+                    <b>0</b> (0%)
+                </div>
+            </div>
+        </div>
+        <br>
+
+       <iframe title="" aria-label="Bosnia and Herzegovina municipalities Symbol map" id="datawrapper-chart-5UL2D" src="//datawrapper.dwcdn.net/5UL2D/11/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="550"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();
+</script>
+
+        <div id="curve_chart" style=" background-color: transparent;  height: 500px">
+        </div>
+        
+        
+        <div class="container">
+            <img src="https://utz.org/wp-content/uploads/2017/04/Globe_Africa_white.png" width="20px" alt="">
+            <h2>Svijet</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        Broj žaraženih: <br />
+
+                        <b>237,233</b>
+                    </div>
+                    <div class="col">
+                        Oporavljeni: <br />
+
+                        <b>86,675</b>
+                    </div>
+                    <div class="col">
+                        Smrtni slučajevi: <br />
+                        <b>9,836</b> (4.15%)
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+
+
+            <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", function (a) { if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) { var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t && (t.style.height = a.data["datawrapper-height"][e] + "px") } }) }();
+            </script>
+
+</body>
+
+</html>

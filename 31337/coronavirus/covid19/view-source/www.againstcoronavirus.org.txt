@@ -1,0 +1,1134 @@
+
+
+ 
+
+
+<!DOCTYPE html>
+<html lang="es" class="page" ng-app="DetailApp" ng-controller="DetailController">
+	<head>
+		<!-- Google Tag Manager -->
+		<script>
+			dataLayer = [];
+		</script>
+		
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-5CPTG5W');</script>
+		
+		
+		<!-- End Google Tag Manager -->
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Cache-Control" content="no-store">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Cache-Control" content="must-revalidate">
+		<meta http-equiv="Cache-Control" content="Post-Check=0">
+		<meta http-equiv="Cache-Control" content="Pre-Check=0">
+		<meta http-equiv="Cache-Control" content="max-age=0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<meta http-equiv="Last-Modified" content="0">
+		 
+		<meta name="title" content="contraelcoronavirus.org">
+		 
+		<meta name="subject" content="contraelcoronavirus.org">
+		 
+		<meta name="description" content="Aquí puedes colaborar con hospitales, centros de investigación, asociaciones de personal sanitario, escuelas, universidades, y ONG que están luchando contra el Coronavirus. ¡Colabora! ¡Implícate!
+#contraelcoronavirus">
+		 
+		<meta name="twitter:url" content="https://www.stockcrowd.com/template/2/1960?key=">
+		 
+		<meta name="twitter:card" content="summary">
+		 
+		<meta name="twitter:title" content="contraelcoronavirus.org">
+		 
+		<meta name="twitter:description" content="Aquí puedes colaborar con hospitales, centros de investigación, asociaciones de personal sanitario, escuelas, universidades, y ONG que están luchando contra el Coronavirus. ¡Colabora! ¡Implícate!
+#contraelcoronavirus">
+		
+		
+
+		<title></title>		
+		
+		<!--MATERIALIZE-->
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" media="all"/>				
+		
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<style type="text/css">		
+			body{				
+				color: #222222;
+				font-family: 'Poppins', sans-serif;
+			}
+			nav{
+				top: 0px;
+			}		
+			.color-fondo, .nav-white .color-hover::after, .collapsible-faqs .collapsible-header.active, .color-borde:hover, .color-borde.active, .collaps-difunde .collapsible-header::before, 
+			.collaps-difunde .img-embajador::before{                 
+				background-color: {{'#'+colorCampaign}} !important;
+			}
+			.texto-camp a{
+				border-bottom: 1px solid {{'#'+colorCampaign}} !important;
+			}
+			.color-texto, .texto-camp a{
+				color: {{'#'+colorCampaign}} !important;
+			}
+			.color-borde{
+				border: 1px solid {{'#'+colorCampaign}} !important;
+			}
+			.nav-white .color-hover:hover, .nav-white .color-hover.active{
+				color: {{'#'+colorCampaign}} !important;
+			}
+			.nav-white .color-hover.active{
+				border-bottom: 3px solid {{'#'+colorCampaign}} !important;
+			}
+		</style>
+		
+		<!--ESTILOS--> 
+		<link rel="stylesheet" type="text/css" rel="stylesheet" href="https://www.stockcrowd.com/resources/css/templates/2/style.css"/>
+		<!--FUENTES-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700"> 
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		
+	</head>
+
+	<body class="body-detail page load-opacity hide">
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5CPTG5W"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
+		<!-- End Google Tag Manager (noscript) -->	
+		<!--MAIN-->
+		<main role="main" class="valign-wrapper">				
+			<ul id="slide-out" class="side-nav">
+				<li>
+					<div class="user-view valign-wrapper">
+						<p ng-bind-html="htmlTrusted(campaign.tituloCampaign)" class="white-text relative-position">{{campaign.tituloCampaign}}</p>
+					</div>
+				</li>				
+				<li ng-if="opportunities.length>0" class="storytelling"><a class="color-hover" ng-click="goToSection($event.currentTarget)" data-id="storytelling" ng-bind-html="htmlTrusted(K05)">{{K05}}</a></li>
+				<li ng-if="team.length>0" class="equipo"><a class="color-hover" ng-click="goToSection($event.currentTarget)" data-id="equipo" ng-bind-html="htmlTrusted(K00)">{{K00}}</a></li>	
+				<li ng-if="updates.length>0" class="actualizaciones"><a class="color-hover" ng-click="goToSection($event.currentTarget)" data-id="actualizaciones" ng-bind-html="htmlTrusted(K03)">{{K03}}</a></li>
+				<li ng-if="documents.length>0" class="adjuntos"><a class="color-hover" ng-click="goToSection($event.currentTarget)" data-id="adjuntos" ng-bind-html="htmlTrusted(K02)">{{K02}}</a></li>								
+				<li ng-if="rewards.length>0" class="recompensas"><a class="color-hover" ng-click="goToSection($event.currentTarget)" data-id="recompensas" ng-bind-html="htmlTrusted(K07)">{{K07}}</a></li>
+				<li ng-if="faqs.length>0" class="faqs"><a class="color-hover" ng-click="goToSection($event.currentTarget)" data-id="faqs" ng-bind-html="htmlTrusted(K06)">{{K06}}</a></li>
+				<li ng-if="(campaign.participantes>0 && campaign.detalleOcultarTotalParticipantesList==false) || sponsorsLevel2.length>0 || sponsorsLevel1.length>0" class="participantes"><a class="color-hover" ng-click="goToSection($event.currentTarget)" data-id="participantes" ng-bind-html="htmlTrusted(K04)">{{K04}}</a></li>
+			</ul>       
+			<div class="slider fullscreen" ng-if="gallery.length>1">
+				<ul class="slides">
+					<li ng-repeat="item in gallery">
+						<img ng-src="{{item.url}}" class="responsive-img">
+					</li>
+				</ul>
+			</div>
+			<div class="principal" ng-class="{'filtroPortada': coverFilter==false}">
+				<div class="play-video relative-position hide-on-med-and-down" ng-click="playVideo();" ng-if="videos.length>0">
+					<img src="https://stockcrowd.s3.amazonaws.com/demos/filipinas/v2/img/play_video.png" class="responsive-img" alt="Ver video">
+				</div>	
+			</div>
+			<div class="navbar-fixed">
+				<nav class="z-depth-0 transparent">
+					<div class="nav-wrapper container">
+						<div class="valign-wrapper ancho-menu">
+							<a ng-if="campaign.empresaSitioWeb != '' && campaign.empresaSitioWeb != null" ng-href="{{campaign.empresaSitioWeb}}" class="company-logo valign-wrapper">
+								<img ng-if="campaign.urlLogoCampaign != null" ng-src="{{campaign.urlLogoCampaign}}" class="responsive-img">
+								<img ng-if="campaign.urlLogoCampaign == null" ng-src="{{companyLogo}}" class="responsive-img">
+							</a>
+							<a ng-if="campaign.empresaSitioWeb == '' || campaign.empresaSitioWeb == null" ng-href="{{companyWeb}}" class="company-logo valign-wrapper">
+								<img ng-if="campaign.urlLogoCampaign != null" ng-src="{{campaign.urlLogoCampaign}}" class="responsive-img">
+								<img ng-if="campaign.urlLogoCampaign == null" ng-src="{{companyLogo}}" class="responsive-img">
+							</a>
+							<ul id="nav-mobile" class="right hide-on-med-and-down desktop-version">
+								<li ng-if="opportunities.length>0"><a class="color-hover" ng-click="goToSection($event.currentTarget)" data-id="storytelling" ng-bind-html="htmlTrusted(K05)">{{K05}}</a></li>
+								<li ng-if="team.length>0"><a class="color-hover" ng-click="goToSection($event.currentTarget)" data-id="equipo" ng-bind-html="htmlTrusted(K00)">{{K00}}</a></li>	
+								<li ng-if="updates.length>0"><a class="color-hover" ng-click="goToSection($event.currentTarget)" data-id="actualizaciones" ng-bind-html="htmlTrusted(K03)">{{K03}}</a></li>
+								<li ng-if="documents.length>0"><a class="color-hover" ng-click="goToSection($event.currentTarget)" data-id="adjuntos" ng-bind-html="htmlTrusted(K02)">{{K02}}</a></li>								
+								<li ng-if="rewards.length>0"><a class="color-hover" ng-click="goToSection($event.currentTarget)" data-id="recompensas" ng-bind-html="htmlTrusted(k07)">{{K07}}</a></li>
+								<li ng-if="faqs.length>0"><a class="color-hover" ng-click="goToSection($event.currentTarget)" data-id="faqs" ng-bind-html="htmlTrusted(K06)">{{K06}}</a></li>
+								<li ng-if="(campaign.participantes>0 && campaign.detalleOcultarTotalParticipantesList==false) || sponsorsLevel2.length>0 || sponsorsLevel1.length>0"><a class="color-hover" ng-click="goToSection($event.currentTarget)" data-id="participantes" ng-bind-html="htmlTrusted(K04)">{{K04}}</a></li>
+							</ul>
+						</div>						
+					</div>
+					<a href="#" data-activates="slide-out" class="button-collapse" ng-class="{'button-collapse-movil' : idiomas.length>1}">
+						<i class="fas fa-bars"></i>
+					</a>	            
+					<div class="button-nav hide-on-med-and-down">
+						<div ng-if="campaign.tipoCampaign==402 && mayDonate" style="display: inline-block;">       
+							<a class="waves-effect waves-light btn-large z-depth-0 color-fondo payment-button" ng-click="goToSection($event.currentTarget)" data-id="recompensas">
+								{{btnCta}}
+							</a>
+						</div>  
+						<div ng-if="campaign.tipoCampaign!=402 && mayDonate" style="display: inline-block;">
+							<a ng-if="campaign.cta == ''" class="waves-effect waves-light btn-large z-depth-0 color-fondo payment-button" onclick="pay(this);" data-id-campaign="1960">
+								{{btnCta}}
+							</a>
+							<a ng-if="campaign.cta != ''" class="waves-effect waves-light btn-large z-depth-0 color-fondo payment-button" ng-href="{{campaign.cta}}">
+								{{btnCta}}
+							</a>
+						</div>
+						<div ng-if="campaign.showPeerToPeer != false" style="display: inline-block;">				 			   
+							<a class="waves-effect waves-light btn-large z-depth-0 color-fondo payment-button" ng-href="{{urlP2p}}">
+								{{ 'CREA' | translate }}
+							</a> 
+						</div>
+					</div>
+					<div class="barra-idiomas" ng-if="idiomas.length>1">
+						<a class='dropdown-button btn z-depth-0 right selector-idioma' data-activates='dropdownIdiomas'>
+							<span ng-if="currentLang=='es'" class="paises active-pais">ESP</span>
+							<span ng-if="currentLang=='ca'" class="paises active-pais">CAT</span>
+							<span ng-if="currentLang=='en'" class="paises active-pais">ENG</span>
+							<span ng-if="currentLang=='it'" class="paises active-pais">ITA</span>
+							<span ng-if="currentLang=='pt'" class="paises active-pais">POR</span>
+							<span ng-if="currentLang=='fr'" class="paises active-pais">FRA</span>
+							<i class="fas fa-chevron-down"></i>
+						</a> 
+						<!-- Dropdown Structure -->
+						<ul id='dropdownIdiomas' class='dropdown-content select-paises'>
+							<li class="valign-wrapper" ng-repeat="idioma in idiomas" ng-if="currentLang != idioma" ng-click="changeLanguage(idioma)">
+								<a ng-if="idioma=='es'" class="color-texto">ESP</a>
+								<a ng-if="idioma=='ca'" class="color-texto">CAT</a>
+								<a ng-if="idioma=='en'" class="color-texto">ENG</a>
+								<a ng-if="idioma=='it'" class="color-texto">ITA</a>
+								<a ng-if="idioma=='pt'" class="color-texto">POR</a>
+								<a ng-if="idioma=='fr'" class="color-texto">FRA</a>
+							</li>
+						</ul>						
+					</div>
+				</nav>				
+			</div>
+			<div class="container valign-wrapper contenido-main">
+				<div class="row margin-cero">
+					<div class="col l12 m12 s12" ng-class="{'xl5' : videos.length>0, 'xl6' : videos.length==0 && campaign.contentHeaderAlign!= 'B', 'xl7' : videos.length==0 && campaign.contentHeaderAlign == 'B'}">
+						<h1 ng-bind-html="htmlTrusted(campaign.tituloCampaign)">{{campaign.tituloCampaign}}</h1>
+						<p ng-bind-html="htmlTrusted(campaign.descripcion)" class="descripcion">{{campaign.descripcion}}</p>    
+					</div>	       
+					<div class="col l8 m12 s12" ng-class="{'offset-xl2 xl5' : videos.length>0, 'offset-xl1 xl5' : videos.length==0 && campaign.contentHeaderAlign!= 'B', 'xl6' : videos.length==0 && campaign.contentHeaderAlign== 'B'}">
+						<div class="" ng-class="{'filtro-fondo' : campaign.detalleOcultarBarra == false || campaign.detalleOcultarTotalParticipantes == false || campaign.detalleOcultarObjetivo == false || campaign.detalleOcultarImporteRecaudado == false, 'move-right' : campaign.contentHeaderAlign!= 'B' && campaign.detalleOcultarBarra != false && campaign.showPeerToPeer == false, 'move-left' : campaign.contentHeaderAlign == 'B' && campaign.showPeerToPeer == false}">    
+							<div ng-if="hideRaised==false">      
+								<p class="now desktop-version" ng-bind-html="htmlTrusted('NOW' | translate)">{{ 'NOW' | translate }}</p>   
+								<p class="collected">										
+									{{collected | number:0}} <span ng-bind-html="htmlTrusted(campaign.simboloMoneda)"></span>           
+									<span class="ng-cloak mobile-version objectiveMobile">{{ 'OUT_OF' | translate }} 
+										{{objective | number:0}} <span ng-bind-html="htmlTrusted(campaign.simboloMoneda)"></span>
+									</span>    
+								</p>    
+							</div>
+							<div ng-if="hideBar==false && objective!=null">	
+								<div class="progress-bar relative-position">
+									<div class="multi-uno multi-camp color-fondo" ng-if="tipoBarraProgeso != 'D'" ng-class="{'reto-mitad' : reto3 == null || collected >= reto1 && collected < reto2+reto1 && tipoBarraProgeso == 'P', 'hide' : collected < reto1 && tipoBarraProgeso == 'P'}"></div>
+									<div class="multi-dos multi-camp color-fondo" ng-if="tipoBarraProgeso != 'D' && reto3 != null" ng-class="{'hide' : collected < reto1+reto2 && tipoBarraProgeso == 'P'}"></div>
+									<div class="progress">     
+										<div class="determinate color-fondo" ng-style="{'width': porCiento+'%'}"></div>	
+									</div>	
+									<div class="retos" ng-if="tipoBarraProgeso != 'D'">
+										<div class="reto-uno" ng-class="{'reto-mitad-ancho' : reto3 == null || collected >= reto1 && collected < reto2+reto1 && tipoBarraProgeso == 'P', 'hide' : collected < reto1 && tipoBarraProgeso == 'P'}">
+											<p>{{ 'RETO' | translate }} 1</p>
+											<span>{{reto1 | number:0}}</span> <span ng-bind-html="htmlTrusted(campaign.simboloMoneda)"></span>       
+										</div>
+										<div class="reto-dos" ng-class="{'reto-mitad-ancho' : reto3 == null || collected >= reto1 && collected < reto2+reto1 && tipoBarraProgeso == 'P', 'hide' : collected < reto1 && tipoBarraProgeso == 'P'}">
+											<p>{{ 'RETO' | translate }} 2</p>                         
+											<span>{{reto2 | number:0}}</span> <span ng-bind-html="htmlTrusted(campaign.simboloMoneda)"></span>                                 
+										</div>         
+										<div class="reto-tres" ng-if="reto3 != null" ng-class="{'hide' : collected < reto1+reto2 && tipoBarraProgeso == 'P'}">
+											<p>{{ 'RETO' | translate }} 3</p>
+											<span>{{reto3 | number:0}}</span> <span ng-bind-html="htmlTrusted(campaign.simboloMoneda)"></span>       
+										</div>
+									</div>																
+								</div>				     			        	         
+							</div>
+							<div class="desktop-version" ng-if="objective != null && objective >0 && hideObjective==false">
+								<p class="now">{{ 'GOAL' | translate }}</p>
+								<p class="objective">{{objective | number:0}} <span ng-bind-html="htmlTrusted(campaign.simboloMoneda)"></span></p>
+							</div>
+							<div ng-if="campaign.detalleOcultarTotalParticipantes==false">
+								<span class="raised">
+									{{ 'RAISED_BY' | translate }} {{recaudado}} {{ 'PEOPLE' | translate }} 
+									<span ng-if="campaign.mostrarDias == true && campaign.fechaInicio != null">{{ 'IN' | translate }} 
+										<span>
+											{{diasTranscurridos}}
+										</span>
+									</span>
+									<span ng-if="tiempoRestante">, {{'TERMINA_EN' | translate}}
+										<span>
+											{{tiempoRestante}}
+										</span>
+									</span>
+								</span>
+							</div>
+							<div class="main-buttons" ng-class="{'button-top' : campaign.detalleOcultarTotalParticipantes==false}">
+								<div class="row margin-cero">
+									<div class="col s12" ng-class="{'xl6 l6 m6' : campaign.showPeerToPeer != false, 'xl12 l6 m6' : campaign.showPeerToPeer == false}" ng-if="(campaign.tipoCampaign==402 && mayDonate || campaign.tipoCampaign!=402)">
+										<div ng-if="campaign.tipoCampaign==402 && mayDonate">       
+											<a class="waves-effect waves-light btn-large z-depth-0 color-fondo payment-button" ng-click="goToSection($event.currentTarget)" data-id="recompensas">
+												{{btnCta}}
+											</a>
+										</div> 	     
+										<div ng-if="campaign.tipoCampaign!=402 && mayDonate">
+											<a ng-if="campaign.cta == ''" class="waves-effect waves-light btn-large z-depth-0 color-fondo payment-button" onclick="pay(this);" data-id-campaign="1960">
+												{{btnCta}}
+											</a>
+											<a ng-if="campaign.cta != ''" class="waves-effect waves-light btn-large z-depth-0 color-fondo payment-button" ng-href="{{campaign.cta}}">
+												{{btnCta}}
+											</a>											
+										</div>		      															
+									</div>   
+									<div class="col xl6 l6 m6 s12 p2p-contain" ng-if="campaign.showPeerToPeer != false">
+										<a class="waves-effect waves-light btn-large z-depth-0 color-fondo payment-button" ng-href="{{urlP2p}}">
+											{{ 'CREA' | translate }}
+										</a>
+									</div>
+								</div>																
+							</div> 
+							<div>
+								<ul ng-if="campaign.twitterTweet != null || campaign.facebookShare != null || guiaEmbajador == true" class="redes-sociales">
+									<li ng-if="campaign.facebookShare != null">
+										<a class="facebook" ng-click="facebookShare($event.currentTarget)"><i class="fab fa-facebook-f"></i></a>
+									</li>
+									<li ng-if="campaign.twitterTweet != null">
+										<a class="twitter" ng-href="https://twitter.com/intent/tweet?text={{publicarTweet}}"><i class="fab fa-twitter"></i></a>										
+									</li>	
+									<li class="hide-on-med-and-up ">
+										<a class="whatsapp " target="_blank" href="whatsapp://send?text={{campaign.whatsappDetalle}}" data-action="share/whatsapp/share">
+											<i class="fab fa-whatsapp"></i>
+										</a>
+									</li>
+									<li ng-if="guiaEmbajador == true">
+										<a class="difundir color-fondo tooltipped modal-trigger" data-position="bottom" data-delay="50" data-tooltip="{{ 'DIFUNDIR' | translate }}" href="#guia">
+											<i class="fas fa-bullhorn"></i>
+										</a>
+									</li>		
+								</ul>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+			<div class="video-background hide-on-med-and-down desktop-version" ng-if="videos.length>0">
+				<div class="video-foreground"> 
+					<iframe ng-if="videos[0].url" ng-src="{{trustSrc(videos[0].url+'?rel=0&amp;controls=0&amp;showinfo=0&amp;loop=1')}}" style="border:0;" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="logo-encabezado desktop-version ng-scope" ng-if="empresaDatos.partidoPolitico == false">
+				<img src="https://stockcrowd.s3.amazonaws.com/logo_stc/icon_stc.svg" alt="Logo StockCrowd">
+			</div>
+			<div class="bajar-info">
+				<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72">
+					<path fill="#FFF" fill-rule="evenodd" d="M37.243 52.928V11.213h-4v41.144l-17.627-17.6-2.829 2.828L35.06 60.03l.183.213 23-22.658-2.828-2.828-18.172 18.171z"></path>
+				</svg>
+			</div>						  
+		</main>
+		<div class="contenido-camp">
+		  
+		<!--STORYTELLING-->
+		<div class="storytelling seccion-web" ng-if="opportunities.length>0">
+			<div class="container">
+				<div class="row margin-cero">
+					<div class="col s12 center-align">
+						<h2>{{K05}}</h2>
+						<p class="descripción-no-img" ng-if="campaign.tabs[5].descripcionLarga != null && campaign.tabs[5].descripcionLarga != ''" ng-bind-html="campaign.tabs[5].descripcionLarga"></p>
+					</div>
+				</div>
+				<div class="row margin-cero elementos">
+					<div class="col s12 center-align buttons-story" ng-class="{'hide' : opportunities[0].titulo=='' && opportunities.length==1}">
+						<a class="btn z-depth-0 button-tabs color-borde color-texto" id="{{opportunity.id}}" ng-repeat="opportunity in opportunities" ng-class="{'active': $first, 'no-cursor' : opportunities.length==1}" ng-click="changeStory($event.currentTarget)">{{opportunity.titulo}}</a>
+					</div>		
+					<div class="col s12 oportunidades-container active-element {{opportunity.id}}" ng-repeat="opportunity in opportunities" ng-class="{'active': $first}">
+						<div class="row margin-cero">
+							<div class="col offset-l1 l10 offset-m1 m10 s12">
+								<div class="texto-camp" ng-bind-html="htmlTrusted(opportunity.descripcion)"></div>
+								<div class="arhivo-url" ng-if="opportunity.file != null">
+									<a ng-href="{{opportunity.file.url}}" class="color-texto">
+										<i class="far fa-file-word" ng-if="opportunity.file.extension == 'docx' || opportunity.file.extension == 'doc' || opportunity.file.extension == 'DOC' || opportunity.file.extension == 'DOCX'"></i>
+										<i class="far fa-file-pdf" ng-if="opportunity.file.extension == 'pdf' || opportunity.file.extension == 'PDF'"></i>
+										<i class="far fa-file-excel" ng-if="opportunity.file.extension == 'xls' || opportunity.file.extension == 'xlsx' || opportunity.file.extension == 'XLS' || opportunity.file.extension == 'XLSX'"></i>
+										<i class="far fa-file-powerpoint" ng-if="opportunity.file.extension == 'ppt' || opportunity.file.extension == 'pptx' || opportunity.file.extension == 'PPT' || opportunity.file.extension == 'PPTX'"></i>
+										{{opportunity.file.name}}.{{opportunity.file.extension}}
+									</a>
+								</div>
+							</div>
+							<div class="col offset-l1 l10 s12 video-url archivos-camp {{opportunity.id}}" ng-if="opportunity.video != null" ng-class="{'active': $first}">      
+								<div class="video-container video-before" ng-style="{'background-image': {true : 'url(\''+opportunity.video.urlThumbnail+'\')', false : ''}[opportunity.video.urlThumbnail!=null]}">
+									<iframe class="hide {{opportunity.id}}" ng-if="opportunity.video.url" width="853" height="480" ng-src="{{trustSrc(opportunity.video.url)}}" style="border:0;" allowfullscreen></iframe>									
+									<img src="https://stockcrowd.s3.amazonaws.com/demos/filipinas/v2/img/play_video.png" ng-click="verVideo($event.currentTarget)">
+								</div>					                                          					
+							</div>
+							<div class="col s12 archivos-camp" ng-if="opportunity.images!=''" ng-class="{'desktop-version' : opportunity.images.length>1}">
+								<div class="row margin-cero">
+									<div class="col" ng-if="opportunity.images.length<3" ng-class="{'xl12 l12 m12 s12 center-align': opportunity.images.length==1, 'xl6 l6 m12 s12 image-half': opportunity.images.length==2}" ng-repeat="imagen in opportunity.images">
+										<img ng-src="{{imagen.url}}" class="responsive-img img-one" alt="{{opportunity.descripcion}}">
+									</div>
+									<div class="col s12" ng-if="opportunity.images.length>=3">
+										<div class="row margin-cero contendor-imagenes">
+											<div class="col l6 m12 s12 image-mini-one hide-on-small-only">
+												<img ng-src="{{opportunity.images[0].url}}" class="responsive-img img-one" alt="{{opportunity.descripcion}}">
+											</div>
+											<div class="col l6 m12 s12 images-mini" ng-class="{'container-thirteen': opportunity.images.length>=5 && opportunity.images.length<13, 'container-twentyFour': opportunity.images.length>=13 && opportunity.images.length<25}">    
+												<div class="row margin-cero">
+													<div class="col s12 img-opportunities-mini" ng-class="{'xll6 l6 m3 imgFive': opportunity.images.length<5, 'xl3 l3 m2 img-thirteen': opportunity.images.length>=5 && opportunity.images.length<13, 'img-twenty-four xl2 l2 m2': opportunity.images.length>=13 && opportunity.images.length<25}" ng-repeat="imagen in opportunity.images">
+														<div class="container-image">
+															<img ng-src="{{imagen.url}}" class="responsive-img" ng-click="changeImage($event.currentTarget)" alt="{{opportunity.descripcion}}">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> 
+								</div>
+							</div>
+							<div class="col s12 archivos-camp mobile-version" ng-if="opportunity.images!=''" ng-class="{'hide' : opportunity.images.length==1}">								
+								<div class="carousel carousel-slider carousel-storytelling" data-indicators="true">
+									<div class="carousel-item" ng-repeat="imagen in opportunity.images">
+										<img ng-src="{{imagen.url}}" class="responsive-img" alt="{{opportunity.descripcion}}">
+									</div>
+								</div>       
+							</div>
+						</div>						
+					</div>	
+				</div>	
+			</div>	
+		</div>		
+		
+		<!--EQUIPO GESTOR-->
+		<div class="equipo seccion-web ng-cloak" ng-if="team.length>0">
+			<div class="container">
+				<div class="row margin-cero ng-cloak">
+					<div class="col s12 center-align ng-cloak">
+						<h2 class="ng-cloak">{{K00}}</h2>
+						<p class="descripción-no-img" ng-bind-html="htmlTrusted(campaign.tabs[0].descripcionLarga)" class="ng-cloak" ng-if="campaign.tabs[0].descripcionLarga != null && campaign.tabs[0].descripcionLarga != ''"></p>
+					</div>
+				</div>
+				<div class="row margin-cero ng-cloak">
+					<div class="col s12 contenedor-carrousel carousel-equipo-contenido valign-wrapper">
+						<a class="carrousel-direccion hide-on-med-and-down" ng-click="anteriorItem()" ng-if="team.length >= 5">
+							<i class="fas fa-chevron-circle-left color-texto"></i>
+						</a>
+						<div class="carousel carousel-equipo">
+							<a class="carousel-item color-text" ng-repeat="equipo in team">
+								<img ng-src="{{equipo.urlImagen}}">
+								<span class="color-texto">
+									<strong>{{equipo.nombre}} {{equipo.apellidos}}</strong><br>
+									{{equipo.rol}}
+								</span> 
+								<div class="reproducir" data-id="{{equipo.id}}" ng-if="equipo.biografia != ''">  				              			
+									<i class="fas fa-play"></i>	
+								</div>
+							</a>									    
+						</div>	  
+						<a class="carrousel-direccion hide-on-med-and-down" ng-click="siguienteItem()" ng-if="team.length >= 5">
+							<i class="fas fa-chevron-circle-right color-texto"></i>
+						</a>	
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--ACTUALIZACIONES-->
+		<div class="actualizaciones seccion-web ng-cloak" ng-if="updates.length>0">
+			<div class="container">
+				<div class="row margin-cero ng-cloak">
+					<div class="col s12 center-align ng-cloak">
+						<h2 class="ng-cloak">{{K03}}</h2>
+						<p class="descripción-no-img" ng-bind-html="htmlTrusted(campaign.tabs[3].descripcionLarga)" class="ng-cloak" ng-if="campaign.tabs[3].descripcionLarga != null && campaign.tabs[3].descripcionLarga != ''"></p>
+					</div>
+				</div>
+				<div class="row margin-cero elementos ng-cloak">
+					<div class="col s12 center-align buttons-story ng-cloak" ng-class="{'hide' : updates[0].titulo=='' && updates.length==1}">
+						<a class="btn z-depth-0 button-tabs color-borde color-texto ng-cloak" id="{{actualizacion.id}}" ng-repeat="actualizacion in updates" ng-class="{'active': $first, 'no-cursor' : actualizacion.length==1}" ng-click="changeStory($event.currentTarget)">{{actualizacion.titulo}}</a>
+					</div>		
+					<div class="col s12 actualizaciones-container active-element ng-cloak {{actualizacion.id}}" ng-repeat="actualizacion in updates" ng-class="{'active': $first}">
+						<div class="row margin-cero ng-cloak">
+							<div class="col offset-l1 l10 offset-m1 m10 s12 ng-cloak">
+								<div class="texto-camp ng-cloak" ng-bind-html="htmlTrusted(actualizacion.descripcion)"></div>
+								<div class="arhivo-url" ng-if="actualizacion.file != null">
+									<a ng-href="{{actualizacion.file.url}}" class="color-texto">
+										<i class="far fa-file-word" ng-if="actualizacion.file.extension == 'docx' || actualizacion.file.extension == 'doc' || actualizacion.file.extension == 'DOC' || actualizacion.file.extension == 'DOCX'"></i>
+										<i class="far fa-file-pdf" ng-if="actualizacion.file.extension == 'pdf' || actualizacion.file.extension == 'PDF'"></i>
+										<i class="far fa-file-excel" ng-if="actualizacion.file.extension == 'xls' || actualizacion.file.extension == 'xlsx' || actualizacion.file.extension == 'XLS' || actualizacion.file.extension == 'XLSX'"></i>
+										<i class="far fa-file-powerpoint" ng-if="actualizacion.file.extension == 'ppt' || actualizacion.file.extension == 'pptx' || actualizacion.file.extension == 'PPT' || actualizacion.file.extension == 'PPTX'"></i>
+										{{actualizacion.file.name}}.{{actualizacion.file.extension}}
+									</a>
+								</div>
+							</div>
+							<div class="col offset-l1 l10 s12 video-url archivos-camp {{actualizacion.id}}" ng-if="actualizacion.video != null" ng-class="{'active': $first}">      
+								<div class="video-container video-before" ng-style="{'background-image': {true : 'url(\''+actualizacion.video.urlThumbnail+'\')', false : ''}[actualizacion.video.urlThumbnail!=null]}">
+									<iframe class="hide" ng-if="actualizacion.video.url" width="853" height="480" ng-src="{{trustSrc(actualizacion.video.url)}}" style="border:0;" allowfullscreen></iframe>									
+									<img class="ng-cloak" src="https://stockcrowd.s3.amazonaws.com/demos/filipinas/v2/img/play_video.png" ng-click="verVideo($event.currentTarget)">
+								</div>					                                          					
+							</div>							
+							<div class="col s12 archivos-camp mobile-version ng-cloak" ng-if="actualizacion.images!=''" ng-class="{'hide' : actualizacion.images.length==1}">								
+								<div class="carousel carousel-slider carousel-actualizacion ng-cloak" data-indicators="true">
+									<div class="carousel-item ng-cloak" ng-repeat="imagen in actualizacion.images">
+										<img ng-src="{{imagen.url}}" class="responsive-img ng-cloak" alt="{{actualizacion.descripcion}}">
+									</div>
+								</div>          
+							</div> 
+							<div class="col xl12 l12 m12 s12 center-align archivos-camp" ng-repeat="imagen in actualizacion.images" ng-if="actualizacion.images.length==1">
+								<img ng-src="{{imagen.url}}" class="responsive-img img-one">						
+							</div> 
+						</div>						
+					</div>	    
+				</div>	
+			</div>
+			<div class="container-img container-updates desktop-version {{update.id}}" ng-repeat="update in updates" ng-class="{'active': $first,'item-half': update.images.length==2, 'item-all': update.images.length==1, 'cont-imgs': update.images.length>1}" ng-if="update.images.length>=2">
+				<div class="row carousel-fondos margin-cero">					
+					<i class="fas fa-chevron-left anterior" ng-if="update.images.length>=3" ng-click="anterior()"></i>
+					<i class="fas fa-chevron-right proximo" ng-if="update.images.length>=3" ng-click="proximo()"></i>					
+					<div class="col card-item" ng-class="{'xl4 l6 m6 s12': update.images.length>=3, 'xl6 l6 m6 s6': update.images.length==2, 'active' : $first}" ng-repeat="imagen in update.images" ng-style="{'background-image': {true : 'url(\''+imagen.url+'\')', false : ''}[imagen.url!=null]}" ng-if="update.images.length>1">											
+					</div>    				
+				</div>
+			</div>
+		</div>
+		
+		<!--ADJUNTOS-->
+		<div class="adjuntos seccion-web ng-cloak" ng-if="documents.length>0">
+			<div class="container">
+				<div class="row margin-cero ng-cloak">
+					<div class="col s12 center-align">
+						<h2 class="ng-cloak">{{K02}}</h2>
+						<p class="descripción-no-img"  ng-bind-html="htmlTrusted(campaign.tabs[2].descripcionLarga)" class="ng-cloak texto-descripcion" ng-if="campaign.tabs[2].descripcionLarga != null && campaign.tabs[2].descripcionLarga != ''"></p>
+					</div>
+				</div>
+				<div class="row margin-cero elementos ng-cloak">
+					<div class="col s12 center-align buttons-story ng-cloak" ng-class="{'hide' : documents[0].titulo=='' && documents.length==1}">
+						<a class="btn z-depth-0 button-tabs color-borde color-texto ng-cloak" id="{{documento.id}}" ng-repeat="documento in documents" ng-class="{'active': $first, 'no-cursor' : documents.length==1}" ng-click="changeStory($event.currentTarget)">{{documento.titulo}}</a>
+					</div>		
+					<div class="col s12 documentos-container active-element ng-cloak {{documento.id}}" ng-repeat="documento in documents" ng-class="{'active': $first}">
+						<div class="row margin-cero ng-cloak">
+							<div class="col offset-l1 l10 offset-m1 m10 s12 ng-cloak">
+								<div class="texto-camp ng-cloak" ng-bind-html="htmlTrusted(documento.descripcion)"></div>
+								<div class="arhivo-url" ng-if="documento.file != null">
+									<a ng-href="{{documento.file.url}}" class="color-texto">
+										<i class="far fa-file-word" ng-if="documento.file.extension == 'docx' || documento.file.extension == 'doc' || documento.file.extension == 'DOC' || documento.file.extension == 'DOCX'"></i>
+										<i class="far fa-file-pdf" ng-if="documento.file.extension == 'pdf' || documento.file.extension == 'PDF'"></i>
+										<i class="far fa-file-excel" ng-if="documento.file.extension == 'xls' || documento.file.extension == 'xlsx' || documento.file.extension == 'XLS' || documento.file.extension == 'XLSX'"></i>
+										<i class="far fa-file-powerpoint" ng-if="documento.file.extension == 'ppt' || documento.file.extension == 'pptx' || documento.file.extension == 'PPT' || documento.file.extension == 'PPTX'"></i>
+										{{documento.file.name}}.{{documento.file.extension}}
+									</a>
+								</div>
+							</div>
+							<div class="col offset-l1 l10 s12 video-url archivos-camp {{documento.id}}" ng-if="documento.video != null" ng-class="{'active': $first}">      
+								<div class="video-container video-before" ng-style="{'background-image': {true : 'url(\''+documento.video.urlThumbnail+'\')', false : ''}[documento.video.urlThumbnail!=null]}">
+									<iframe class="hide" ng-if="documento.video.url" width="853" height="480" ng-src="{{trustSrc(documento.video.url)}}" style="border:0;" allowfullscreen></iframe>									
+									<img class="ng-cloak" src="https://stockcrowd.s3.amazonaws.com/demos/filipinas/v2/img/play_video.png" ng-click="verVideo($event.currentTarget)">
+								</div>				    	                                          					
+							</div>
+							<div class="col s12 ng-cloak archivos-camp ng-cloak" ng-if="documento.images!=''" ng-class="{'desktop-version' : documento.images.length>1}">
+								<div class="row margin-cero ng-cloak">
+									<div class="col ng-cloak" ng-if="documento.images.length<3" ng-class="{'xl12 l12 m12 s12 center-align': documento.images.length==1, 'xl6 l6 m12 s12 image-half': documento.images.length==2}" ng-repeat="imagen in documento.images">
+										<img ng-src="{{imagen.url}}" class="responsive-img img-one ng-cloak" alt="{{documento.descripcion}}">
+									</div>
+									<div class="col s12 ng-cloak" ng-if="documento.images.length>=3">
+										<div class="row margin-cero contendor-imagenes ng-cloak">
+											<div class="col l6 m12 s12 image-mini-one hide-on-small-only ng-cloak">
+												<img ng-src="{{documento.images[0].url}}" class="responsive-img img-one ng-cloak" alt="{{documento.descripcion}}">
+											</div>
+											<div class="col l6 m12 s12 images-mini ng-cloak" ng-class="{'container-thirteen': documento.images.length>=5 && documento.images.length<13, 'container-twentyFour': documento.images.length>=13 && documento.images.length<25}">    
+												<div class="row margin-cero ng-cloak">
+													<div class="col s12 img-opportunities-mini ng-cloak" ng-class="{'xll6 l6 m3 imgFive': documento.images.length<5, 'xl3 l3 m2 img-thirteen': documento.images.length>=5 && documento.images.length<13, 'img-twenty-four xl2 l2 m2': documento.images.length>=13 && documento.images.length<25}" ng-repeat="imagen in documento.images">
+														<div class="container-image ng-cloak">
+															<img ng-src="{{imagen.url}}" class="responsive-img ng-cloak" ng-click="changeImage($event.currentTarget)" alt="{{documento.descripcion}}">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> 
+								</div>
+							</div>
+							<div class="col s12 archivos-camp mobile-version ng-cloak" ng-if="documento.images!=''" ng-class="{'hide' : documento.images.length==1}">								
+								<div class="carousel carousel-slider carousel-documentos ng-cloak" data-indicators="true">
+									<div class="carousel-item ng-cloak" ng-repeat="imagen in documento.images">
+										<img ng-src="{{imagen.url}}" class="responsive-img ng-cloak" alt="{{documento.descripcion}}">
+									</div>
+								</div>       
+							</div>
+						</div>						
+					</div>	
+				</div>	
+			</div>
+		</div>
+		
+		<!--RECOMPENSAS-->
+		<div class="recompensas seccion-web ng-cloak" ng-if="rewards.length>0 || tickets.length>0">
+			<div class="container">
+				<div class="row margin-cero ng-cloak">
+					<div class="col s12 center-align ng-cloak">
+						<h2 class="ng-cloak">{{K07}}</h2>
+					</div>
+				</div>
+				<div class="row margin-cero ng-cloak">
+					<div class="col s12 ng-cloak">
+						<div class="row height-card recompensas-container ng-cloak">
+						
+							<!-- TICKETS(BEGIN) -->
+							<div class="col xl4 l6 m6 s12 ng-cloak" ng-repeat="ticket in tickets">
+								<div class="card z-depth-0 ng-cloak">
+									<div class="card-image ng-cloak" ng-if="ticket.urlImagen != null">
+										<img ng-src="{{ticket.urlImagen}}" ng-if="ticket.urlImagen" class="responsive-img ng-cloak">										  
+									</div>
+									<div class="card-content ng-cloak">
+										<span class="color-texto ng-cloak">{{ticket.titulo}} - {{ticket.importe}}<span class="color-texto ng-cloak" ng-bind-html="htmlTrusted(campaign.simboloMoneda)"></span></span>
+										<p>{{ticket.subTitulo}}</p>
+										<div class="participaFechas">											
+											<p ng-if="ticket.cantidad-ticket.reservados>0">
+												<strong class="color-texto">{{ 'DISPONIBILIDAD' | translate }}:</strong> 
+													{{ 'QUEDAN' | translate }} {{ticket.cantidad - ticket.reservados}} {{ 'DE' | translate }} {{ticket.cantidad}}
+												</p>	
+											<p ng-if="ticket.cantidad==0"><strong class="color-texto">{{ 'SOLICITADAS' | translate }}:</strong> {{reward.reservados}}</p>
+										</div>
+									</div> 
+									<div class="card-action ng-cloak" ng-if="mayDonate && ticket.cantidad-ticket.reservados>0">
+										<a onclick="pay(this);" class="waves-effect waves-light btn-large color-fondo white-text z-depth-0 ng-cloak" ng-if="reward.etiquetaBoton == null || reward.etiquetaBoton == ''" data-id-campaign="1960" data-id-ticket="{{ticket.id}}">
+											{{ 'SUMATE' | translate }}
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- TICKETS(END) -->					
+							
+							<!-- RECOMPENSAS(BEGIN) -->
+							<div class="col xl4 l6 m6 s12 ng-cloak" ng-repeat="reward in rewards">
+								<div class="card z-depth-0 ng-cloak">
+									<div class="card-image ng-cloak" ng-if="reward.urlImagenPrincipal != null">
+										<img ng-src="{{reward.urlImagenPrincipal}}" ng-if="reward.imagenes.length<2" class="responsive-img ng-cloak">
+										<div class="carousel carousel-slider" ng-if="reward.imagenes.length>=2">
+									    	<div class="carousel-item valign-wrapper" ng-repeat="image in reward.imagenes">
+									    		<img ng-src="{{image.url}}">
+									    	</div>
+									  	</div>        
+										<span class="badge color-fondo white-text" ng-if="reward.total == reward.reclamadas">{{ 'AGOTADA' | translate }}</span>
+									</div>
+									<div class="card-content ng-cloak">
+										<span class="color-texto ng-cloak" ng-if="reward.cta">{{reward.titulo}}</span></span>
+										<span class="color-texto ng-cloak" ng-if="!reward.cta">{{reward.titulo}} - {{reward.importe}}<span class="color-texto ng-cloak" ng-bind-html="htmlTrusted(campaign.simboloMoneda)"></span></span>
+										<p ng-bind-html="htmlTrusted(reward.descripcion)"></p> 
+										<div class="participaFechas" ng-if="!reward.ocultarDisponibilidad || !reward.ocultarSolicitadas">											
+											<p ng-if="!reward.ocultarDisponibilidad && !reward.ocultarSolicitadas && reward.total!=null">
+												<strong class="color-texto">{{ 'DISPONIBILIDAD' | translate }}:</strong> 
+												{{ 'QUEDAN' | translate }} {{reward.total - reward.reclamadas}} {{ 'DE' | translate }} {{reward.total}}
+											</p>
+											<p ng-if="reward.ocultarDisponibilidad && !reward.ocultarSolicitadas">
+												<strong class="color-texto">{{ 'SOLICITADAS' | translate }}:</strong> 
+												{{reward.reclamadas}}
+											</p>
+											<p ng-if="!reward.ocultarDisponibilidad && reward.ocultarSolicitadas && reward.total!=null">
+												<strong class="color-texto">{{ 'DISPONIBILIDAD' | translate }}:</strong> 
+												{{ 'QUEDAN' | translate }} {{reward.total - reward.reclamadas}}
+											</p>
+										</div>
+									</div> 
+									<div class="card-action ng-cloak" ng-if="mayDonate && (reward.total==null || reward.total>reward.reclamadas) && !reward.cta">
+										<a onclick="pay(this);" class="waves-effect waves-light btn-large color-fondo white-text z-depth-0 ng-cloak" ng-if="reward.etiquetaBoton != null && reward.etiquetaBoton != ''" data-id-campaign="1960" data-id-reward="{{reward.id}}"  data-lang="{{currentLang}}">
+											{{reward.etiquetaBoton}}
+										</a>
+										<a onclick="pay(this);" class="waves-effect waves-light btn-large color-fondo white-text z-depth-0 ng-cloak" ng-if="reward.etiquetaBoton == null || reward.etiquetaBoton == ''" data-id-campaign="1960" data-id-reward="{{reward.id}}"  data-lang="{{currentLang}}">
+											{{ 'SUMATE' | translate }}
+										</a>
+									</div>     
+									<div class="card-action ng-cloak" ng-if="mayDonate && reward.cta">
+										<a ng-href="{{reward.cta}}" class="waves-effect waves-light btn-large color-fondo white-text z-depth-0 ng-cloak" ng-if="reward.etiquetaBoton != null && reward.etiquetaBoton != ''">
+											{{reward.etiquetaBoton}}
+										</a>
+										<a ng-href="{{reward.cta}}" class="waves-effect waves-light btn-large color-fondo white-text z-depth-0 ng-cloak" ng-if="reward.etiquetaBoton == null || reward.etiquetaBoton == ''">
+											{{ 'SUMATE' | translate }}
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- RECOMPENSAS(END) -->
+							
+						</div>
+					</div>
+				</div>					
+			</div>
+		</div>
+		
+		<!--ENCABEZADO FAQS-->
+		<div class="color-fondo encabezados-seccion valign-wrapper ng-cloak" ng-if="campaign.tabs[6].descripcionLarga != null && campaign.tabs[6].descripcionLarga != '' || campaign.tabs[6].urlImage != null">
+			<div class="container ng-cloak">
+				<div class="row margin-cero valign-wrapper bg-movil ng-cloak">
+					<div class="col l5 m12 s12 ng-cloak" ng-if="campaign.tabs[6].urlImage != null">
+						<img ng-src="{{campaign.tabs[6].urlImage}}" alt="{{K06}}" class="responsive-img img-storytelling ng-cloak">
+					</div>
+					<div class="col m12 s12 ng-cloak" ng-class="{'l7' : campaign.tabs[6].urlImage != null, 'l12' : campaign.tabs[6].urlImage == null}">
+						<p ng-bind-html="htmlTrusted(campaign.tabs[6].descripcionLarga)" class="white-text ng-cloak" ng-if="campaign.tabs[6].descripcionLarga != null && campaign.tabs[6].descripcionLarga != ''"></p>
+						<div class="divider-oportunidad-inverse ng-cloak" ng-if="campaign.tabs[6].descripcionLarga != null && campaign.tabs[6].descripcionLarga != ''"></div>
+					</div>
+				</div>
+			</div>			
+		</div>
+		<!--FAQS-->
+		<div class="faqs seccion-web ng-cloak" ng-if="faqs.length>0">
+			<div class="container ng-cloak">
+				<div class="row margin-cero ng-cloak">
+					<div class="col s12 ng-cloak">
+						<h2 class="ng-cloak">{{K06}}</h2>
+					</div>
+				</div>
+				<div class="row margin-cero card-faqs height-card ng-cloak hide-on-med-and-down">
+					<div class="col m6 s12 ng-cloak" ng-repeat="faq in faqs">
+						<div class="faq-card">
+							<h3 class="ng-cloak" ng-bind-html="htmlTrusted(faq.pregunta)"></h3>
+							<p class="texto-camp ng-cloak" ng-bind-html="htmlTrusted(faq.respuesta)"></p>
+						</div>						
+					</div>
+				</div>
+				<div class="row margin-cero hide-on-large-only">
+					<div class="col m12 s12 ng-cloak">
+						<ul class="collapsible collapsible-faqs z-depth-0 ng-cloak" data-collapsible="accordion">
+							<li class="ng-cloak" ng-repeat="faq in faqs">
+								<div class="collapsible-header valign-wrapper ng-cloak" ng-class="{'active' : $first}">
+									<div class="container-pregunta">
+										<p ng-bind-html="htmlTrusted(faq.pregunta)"></p>
+									</div>
+									<div class="container-icon">
+										<i class="fas fa-angle-down"></i>
+										<i class="fas fa-angle-up"></i>
+									</div>
+								</div>
+								<div class="collapsible-body texto-camp ng-cloak"><span ng-bind-html="htmlTrusted(faq.respuesta)"></span></div>
+							</li>
+						</ul>						
+					</div>
+				</div>
+			</div>			
+		</div>
+		
+		<!--PARTICIPANTES-->
+		<div class="participantes seccion-web ng-cloak" ng-if="(participants>0 && hideParticipantsList==false) || sponsorsLevel2.length>0 || sponsorsLevel1.length>0">
+			<div class="container">
+				<div class="row margin-cero ng-cloak">
+					<div class="col s12 center-align ng-cloak">
+						<h2 class="ng-cloak">{{K04}}</h2>
+					</div>
+				</div>	
+				<div class="row margin-cero sponsors-container ng-cloak">
+					<div class="col s12 ng-cloak" ng-if="sponsorsLevel1.length>0">
+						<div class="row gold-sponsor sponsors-level space-between height-card ng-cloak" ng-class="{'margin-cero' : sponsorsLevel2.length==0}">
+							<div ng-repeat="nivelUno in sponsorsLevel1" class="col l3 m6 s12 ng-cloak">
+								<div class="donantes-img valign-wrapper ng-cloak">
+									<img ng-if="!nivelUno.campaignP2p && !nivelUno.urlPatrocinador" ng-src="{{nivelUno.urlArchivo}}" class="responsive-img ng-cloak" alt="{{nivelUno.nombre}}">
+									<a class="valign-wrapper ng-cloak" ng-if="nivelUno.campaignP2p" ng-href="/p2p/{{nivelUno.campaignP2p.urlId}}">
+										<img ng-src="{{nivelUno.urlArchivo}}" class="responsive-img ng-cloak" alt="{{nivelUno.nombre}}">
+									</a>      
+									<a class="valign-wrapper ng-cloak" ng-if="nivelUno.urlPatrocinador && !nivelUno.campaignP2p" ng-href="{{nivelUno.urlPatrocinador}}">
+										<img ng-src="{{nivelUno.urlArchivo}}" class="responsive-img ng-cloak" alt="{{nivelUno.nombre}}">
+									</a>        
+								</div>                 
+							</div>   
+						</div>
+					</div>   
+					<div class="col s12 ng-cloak" ng-if="sponsorsLevel2.length>0"> 
+						<div class="row margin-cero space-between height-card ng-cloak">   
+							<div ng-repeat="nivelDos in sponsorsLevel2" class="col l2 m4 s6 ng-cloak">   
+								<div class="donantes-img valign-wrapper ng-cloak">
+									<img ng-if="!nivelDos.campaignP2p && !nivelDos.urlPatrocinador" ng-src="{{nivelDos.urlArchivo}}" class="responsive-img ng-cloak">  
+									<a ng-if="nivelDos.campaignP2p" class="valign-wrapper ng-cloak" ng-href="/p2p/{{nivelDos.campaignP2p.urlId}}">
+										<img ng-src="{{nivelDos.urlArchivo}}" class="responsive-img ng-cloak">
+									</a>      
+									<a ng-if="nivelDos.urlPatrocinador && !nivelDos.campaignP2p" class="valign-wrapper ng-cloak" ng-href="{{nivelDos.urlPatrocinador}}">
+										<img ng-src="{{nivelDos.urlArchivo}}" class="responsive-img ng-cloak">
+									</a>     
+								</div>   
+							</div>    
+						</div>									
+					</div> 
+					<div class="col s12 ng-cloak" ng-if="participants>0 && hideParticipantsList==false" ng-class="{'total-donantes' : sponsorsLevel2.length>0 || sponsorsLevel1.length>0}">
+						<div class="row margin-cero space-between height-card ng-cloak">
+							<div class="col xl3 l4 m6 s12 ng-cloak" ng-repeat="payment in payments">
+								<div class="donantes-container valign-wrapper ng-cloak">
+									<img ng-if="campaign.urlIconoParticipantes==null" src="https://stockcrowd.s3.amazonaws.com/descargables/detalles-stc/user-stc.png" class="responsive-img img-participante">
+									<img ng-if="campaign.urlIconoParticipantes!=null" ng-src="{{campaign.urlIconoParticipantes}}" class="responsive-img img-participante">
+									<div>
+										<p ng-if="payment.anonimo==false" class="nombre-donante color-texto ng-cloak">{{payment.nombre}}</p>
+										<p ng-if="payment.anonimo==true" class="nombre-donante color-texto ng-cloak">{{ 'ANONIMO' | translate }}</p>
+										<p class="fecha-donante ng-cloak">{{payment.fecha}}</p>
+										<span class="color-texto ng-cloak">{{payment.importe}}</span> <span class="euro color-texto ng-cloak" ng-bind-html="htmlTrusted(payment.simboloMoneda)"></span>
+									</div>
+								</div>
+							</div>							
+						</div>
+						<div class="row margin-cero">
+							<div class="col offset-m4 m4 s12 center-align ver-participantes ng-cloak">
+								<div class="center-align donaFinal ng-cloak" ng-click="paginatePayments()" id="paginatePayments">
+									<button class="waves-effect waves-light btn-large z-depth-0 color-fondo ng-cloak valign-wrapper">
+										<span>{{ 'VER_MAS' | translate }}</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>      
+		
+		<!--FOOTER-->	
+		<footer class="page-footer">
+			<div class="footerContent valign-wrapper" ng-class="{'footerDos' : gallery.length>1}">
+				<div class="container ">
+					<div class="row margin-cero contactInfo">
+						<div class="col s12 center-align">
+							<h4 class="white-text">{{'CONTACT_US' | translate}}</h4>
+							<span class="ng-cloak" ng-cloak>{{'EMAIL' | translate}}:  
+								<a href="mailto:{{contactoEmpresa}}" itemprop="email" class="white-text">{{contactoEmpresa}}</a>
+								<br>
+							</span>				
+							<span class="ng-cloak" ng-if="telefonoEmpresa != '' && telefonoEmpresa != null" ng-cloak>
+								{{'CONTACT_NUMBER' | translate}}:  
+								<span class="ng-cloak" itemprop="tel">{{telefonoEmpresa}}</span>	
+								<br>
+							</span>
+							<div class="ng-cloak" ng-cloak>
+								<span class="ng-cloak" itemprop="streetAddress">
+									{{direccionEmpresa}}     
+								</span>
+							</div>
+						</div>
+						<div class="col s12 center-align" ng-if="companyEmail || campaign.empresaEmailContacto != '' || campaign.empresaEmailContacto != null">
+							<a ng-if="campaign.empresaEmailContacto != '' && campaign.empresaEmailContacto != null" class="waves-effect waves-light btn z-depth-0" href="mailto:{{campaign.empresaEmailContacto}}">{{'SEND_MESSAGE' | translate}} <i class="fab fa-telegram-plane"></i></a>
+							<a ng-if="campaign.empresaEmailContacto == '' || campaign.empresaEmailContacto == null" class="waves-effect waves-light btn z-depth-0" href="mailto:{{companyEmail}}">{{'SEND_MESSAGE' | translate}} <i class="fab fa-telegram-plane"></i></a>
+						</div>  
+					</div>
+				</div>
+			</div>
+			<div class="footer-copyright white">
+				<div class="container">
+					<div class="row margin-cero valign-wrapper">
+						<div class="col m2 s12 hide-on-small-only">
+							<a ng-if="campaign.empresaSitioWeb != '' && campaign.empresaSitioWeb != null" ng-href="{{campaign.empresaSitioWeb}}" class="company-name hide-on-small-only valign-wrapper">
+								<img ng-if="campaign.urlLogoCampaign != null" ng-src="{{campaign.urlLogoCampaign}}" class="responsive-img">
+								<img ng-if="campaign.urlLogoCampaign == null" ng-src="{{companyLogo}}" class="responsive-img">
+							</a>
+							<a ng-if="campaign.empresaSitioWeb == '' || campaign.empresaSitioWeb == null" ng-href="{{companyWeb}}" class="company-name hide-on-small-only valign-wrapper">
+								<img ng-if="campaign.urlLogoCampaign != null" ng-src="{{campaign.urlLogoCampaign}}" class="responsive-img">
+								<img ng-if="campaign.urlLogoCampaign == null" ng-src="{{companyLogo}}" class="responsive-img">
+							</a>    
+						</div>
+						<div class="col m10 s12">
+							<p class="copyright" ng-if="empresaDatos.partidoPolitico == false">
+								Powered by StockCrowd <img src="https://stockcrowd.s3.amazonaws.com/logo_stc/icon_stc.svg" alt="Logo StockCrowd" class="ng-cloak">
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+		</div>
+		<!-- EQUIPO GESTOR DATOS -->
+		<div class="overlay overlay-slidedown overlay-equipo color-fondo">
+			<img src="https://stockcrowd.s3.amazonaws.com/descargables/img-detalle/icon-close.png" alt="Cerrar equipo" class="responsive-img icon-close-equipo">
+			<div class="historia-contenido container">
+				<div class="row">
+					<div class="col offset-xl2 xl8 l12 m12 s12 equipo-overlay {{equipo.id}}" ng-repeat="equipo in team">
+						<img ng-if="equipo.urlImagen != null && equipo.urlImagen !=''" ng-src="{{equipo.urlImagen}}" class="responsive-img">
+						<h4 class="white-text"><strong>{{equipo.nombre}} {{equipo.apellidos}}</strong></h4>
+						<p class="white-text" ng-bind-html="htmlTrusted(equipo.biografia)"></p>	 
+						<ul class="social">                                 
+							<li ng-repeat="red in equipo.redes">
+								<a ng-href="{{trustSrc(red.url)}}" class="link-social" ng-class="{'facebook' : red.tipo=='Facebook' , 'twitter' : red.tipo=='Twitter' , 'linkedin' : red.tipo=='Linkedin' , 'youtube' : red.tipo=='Youtube' , 'skype' : red.tipo=='Skype' , 'blog' : red.tipo=='Blog' , 'instagram' : red.tipo=='Instagram' , 'google-play' : red.tipo=='Google Play' , 'otros' : red.tipo=='Otros' , 'app-store' : red.tipo=='App Store'}" target="_blank">
+									<i class="fab fa-facebook-f" ng-if="red.tipo=='Facebook'"></i>
+									<i class="fab fa-twitter" ng-if="red.tipo=='Twitter'"></i>
+									<i class="fab fa-linkedin-in" ng-if="red.tipo=='Linkedin'"></i>
+									<i class="fab fa-instagram" ng-if="red.tipo=='Instagram'"></i>
+									<i class="fab fa-youtube" ng-if="red.tipo=='Youtube'"></i>
+									<i class="fab fa-skype" ng-if="red.tipo=='Skype'"></i>
+									<i class="fab fa-blogger-b" ng-if="red.tipo=='Blog'"></i>
+									<i class="fab fa-google-play" ng-if="red.tipo=='Google Play'"></i>
+									<i class="fab fa-app-store" ng-if="red.tipo=='App Store'"></i>
+									<i class="fas fa-link" ng-if="red.tipo=='Otros'"></i>
+								</a>
+							</li>            
+						</ul>    
+					</div>					
+				</div>       
+			</div>		
+		</div>
+		
+		<!-- GUIA EMBAJADOR -->
+		<div id="guia" class="modal">			
+		    <div class="modal-content">		    	
+		    	<div class="row margin-cero">                 
+		    		<div class="col s12">    
+		    			<h2 class="color-texto center-align" ng-if="campaignembajador.encabezado.titulo != null" ng-bind-html="htmlTrusted(campaignembajador.encabezado.titulo)">{{campaignembajador.encabezado.titulo}}</h2>
+		    			<div class="textos-camp" ng-if="campaignembajador.encabezado.descripcion != null" ng-bind-html="htmlTrusted(campaignembajador.encabezado.descripcion)">{{campaignembajador.encabezado.descripcion}}</div>
+		    		</div>       
+		    		<div class="col s12 video-encabezado" ng-if="campaignembajador.encabezado.video.url">
+		    			<div class="video-container" ng-if="campaignembajador.encabezado.video.url">
+							<iframe width="853" height="480" ng-src="{{trustSrc(campaignembajador.encabezado.video.url+'?rel=0&showinfo=0')}}" frameborder="0" allowfullscreen></iframe>
+						</div>
+		    		</div>
+		    		<div class="col s12" ng-if="campaignembajador.facebook.length>0 || campaignembajador.twitter.length>0 || campaignembajador.instagram.length>0">
+		    			<div class="materiales">    
+		    				<h2 class="color-texto">{{ 'REDES_SOCIALES' | translate }}</h2>
+		    			</div>        
+		    		</div>
+		    		<div class="col s12" ng-if="campaignembajador.facebook.length>0 || campaignembajador.twitter.length>0 || campaignembajador.instagram.length>0">
+		    			<ul class="collapsible collaps-difunde z-depth-0 collapsible-redes" data-collapsible="accordion">
+							<li ng-if="campaignembajador.facebook.length>0" class="ng-cloak" ng-cloak>
+								<div class="collapsible-header valign-wrapper">
+									<div class="redes valign-wrapper">
+										<span class="valign-wrapper color-fondo">
+											<i class="fab fa-facebook-f"></i>
+										</span>
+										 Facebook
+									</div>	
+									<div class="down valign-wrapper color-fondo">
+										<i class="fas fa-chevron-down"></i>	
+									</div>
+									<div class="up valign-wrapper color-fondo">
+										<i class="fas fa-chevron-up"></i>	
+									</div>	
+								</div>   
+								<div class="collapsible-body">   
+									<div class="row img-redes margin-cero">
+										<a class="col l3 m4 s12 img-embajador valign-wrapper" ng-repeat="imagenes in campaignembajador.facebook" ng-style="{'background-image': {true : 'url(\''+imagenes.imagen.url+'\')', false : ''}[imagenes.imagen.url!=null]}" ng-href="{{imagenes.imagen.url}}" target="_blank">
+											<div class="descargar">
+												<i class="fas fa-arrow-down"></i>
+											</div> 
+										</a>
+									</div>
+								</div>
+							</li>
+							<li ng-if="campaignembajador.twitter.length>0" class="ng-cloak" ng-cloak>
+								<div class="collapsible-header valign-wrapper">
+									<div class="redes valign-wrapper">
+										<span class="valign-wrapper color-fondo">
+											<i class="fab fa-twitter"></i> 
+										</span>
+										Twitter
+									</div>	
+									<div class="down valign-wrapper color-fondo">
+										<i class="fas fa-chevron-down"></i>	
+									</div>
+									<div class="up valign-wrapper color-fondo">
+										<i class="fas fa-chevron-up"></i>	
+									</div>		
+								</div>
+								<div class="collapsible-body">   
+									<div class="row img-redes margin-cero">
+										<a class="col l3 m4 s12 img-embajador valign-wrapper" ng-repeat="imagenes in campaignembajador.twitter" ng-style="{'background-image': {true : 'url(\''+imagenes.imagen.url+'\')', false : ''}[imagenes.imagen.url!=null]}" ng-href="{{imagenes.imagen.url}}" target="_blank">
+											<div class="descargar">
+												<i class="fas fa-arrow-down"></i>
+											</div> 
+										</a>
+									</div>
+								</div>
+							</li>
+							<li ng-if="campaignembajador.instagram.length>0" class="ng-cloak" ng-cloak>
+								<div class="collapsible-header valign-wrapper">
+									<div class="redes valign-wrapper">
+										<span class="valign-wrapper color-fondo">
+											<i class="fab fa-instagram"></i> 
+										</span>
+										Instagram
+									</div>
+									<div class="down valign-wrapper color-fondo">
+										<i class="fas fa-chevron-down"></i>	
+									</div>
+									<div class="up valign-wrapper color-fondo">
+										<i class="fas fa-chevron-up"></i>	
+									</div>		
+								</div>
+								<div class="collapsible-body">   
+									<div class="row img-redes margin-cero">
+										<a class="col l3 m4 s12 img-embajador valign-wrapper" ng-repeat="imagenes in campaignembajador.instagram" ng-style="{'background-image': {true : 'url(\''+imagenes.imagen.url+'\')', false : ''}[imagenes.imagen.url!=null]}" ng-href="{{imagenes.imagen.url}}" target="_blank">
+											<div class="descargar">
+												<i class="fas fa-arrow-down"></i>
+											</div> 
+										</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+		    		</div>
+		    		<div class="col s12" ng-if="campaignembajador.videos.length>0 || campaignembajador.fotos.length>0 || campaignembajador.textos != null">
+		    			<div class="materiales">
+		    				<h2 class="color-texto">{{ 'MATERIALES' | translate }}</h2>
+		    			</div>    
+		    		</div>
+		    		<div class="col s12" ng-if="campaignembajador.videos.length>0 || campaignembajador.fotos.length>0 || campaignembajador.textos != null">
+		    			<ul class="collapsible collaps-difunde z-depth-0" data-collapsible="accordion">
+							<li ng-if="campaignembajador.videos.length>0" class="ng-cloak" ng-cloak>
+								<div class="collapsible-header valign-wrapper">
+									<div class="redes valign-wrapper">
+										<span class="valign-wrapper color-fondo">
+											<i class="fas fa-video"></i>
+										</span>
+										 {{ 'VIDEOS' | translate }}
+									</div>	
+									<div class="down valign-wrapper color-fondo">
+										<i class="fas fa-chevron-down"></i>	
+									</div>
+									<div class="up valign-wrapper color-fondo">
+										<i class="fas fa-chevron-up"></i>	
+									</div>	
+								</div>
+								<div class="collapsible-body">
+									<div class="row margin-cero">
+										<div class="col s12 videos-embajador" ng-repeat="videos in campaignembajador.videos" ng-if="videos.video.url">
+											<div class="video-container" ng-if="videos.video.url">
+												<iframe width="853" height="480" ng-src="{{trustSrc(videos.video.url+'?rel=0&showinfo=0')}}" frameborder="0" allowfullscreen></iframe>
+											</div>
+											<div class="center-align compartir-video">
+												<span>{{ 'SHARE' | translate }}:</span> <span>{{videos.video.url}}</span>
+											</div>
+										</div>									
+									</div>
+								</div>
+							</li>
+							<li ng-if="campaignembajador.fotos.length>0" class="ng-cloak" ng-cloak>
+								<div class="collapsible-header valign-wrapper">
+									<div class="redes valign-wrapper">
+										<span class="valign-wrapper color-fondo">
+											<i class="far fa-images"></i> 
+										</span>
+										{{ 'IMAGENES' | translate }}
+									</div>	
+									<div class="down valign-wrapper color-fondo">
+										<i class="fas fa-chevron-down"></i>	
+									</div>
+									<div class="up valign-wrapper color-fondo">
+										<i class="fas fa-chevron-up"></i>	
+									</div>		
+								</div>
+								<div class="collapsible-body">   
+									<div class="row img-redes margin-cero">
+										<a class="col l3 m4 s12 img-embajador valign-wrapper" ng-repeat="imagenes in campaignembajador.fotos" ng-style="{'background-image': {true : 'url(\''+imagenes.imagen.url+'\')', false : ''}[imagenes.imagen.url!=null]}" ng-href="{{imagenes.imagen.url}}" target="_blank">
+											<div class="descargar">
+												<i class="fas fa-arrow-down"></i>
+											</div> 
+										</a>
+									</div>
+								</div>
+							</li>
+							<li ng-if="campaignembajador.textos != null" class="ng-cloak" ng-cloak>
+								<div class="collapsible-header valign-wrapper">
+									<div class="redes valign-wrapper">
+										<span class="valign-wrapper color-fondo">
+											<i class="fas fa-font"></i>
+										</span>
+										{{ 'TEXTOS' | translate }}
+									</div>
+									<div class="down valign-wrapper color-fondo">
+										<i class="fas fa-chevron-down"></i>	
+									</div>
+									<div class="up valign-wrapper color-fondo">
+										<i class="fas fa-chevron-up"></i>	
+									</div>		
+								</div>
+								<div class="collapsible-body">
+									<div class="row margin-cero">
+										<div class="col s12">
+											<div ng-bind-html="htmlTrusted(campaignembajador.textos.descripcion)" class="textos-camp"></div>
+										</div>								
+									</div>
+								</div>
+							</li>
+						</ul>
+		    		</div>
+		    		<div class="col s12 widgets" ng-if="widget.length>0">
+		    			<div class="materiales">
+		    				<h2 class="color-texto">{{ 'WEB' | translate }}</h2>
+		    				<div class="textos-camp">     
+		    					<p>{{ 'WEB_BLOG' | translate }}</p>
+		    				</div>
+		    			</div>
+		    		</div>   
+		    		<div class="col s12 widget-peq" ng-if="widget.length>0 && iframeWidget">     
+						<iframe frameborder="0" height="320" width="320" scrolling="no" ng-src="{{trustSrc(iframeWidget)}}"></iframe>							    			
+		    		</div>
+		    		<div class="col s12" ng-if="widgetPequenno == true">
+		    			<div class="row valign-wrapper">
+		    				<div class="col m8 s12">
+		    					<h3>{{ 'FORMATO' | translate }} 320x320 px</h3>
+		    				</div>
+		    				<div class="col m4 s12 right-align">
+		    					<a class="waves-effect waves-light btn z-depth-0 color-fondo copiar-miniatura-code" data-clipboard-action="copy" data-clipboard-target="#miniatura-320">{{ 'COPIAR' | translate }}</a>
+		    				</div>		    				   				
+		    			</div>	
+		    			<div class="row margin-cero">  
+		    				<div class="col m12 s12">   
+		    					<pre class="language-markup pre-iframe"><code class="language-markup code-iframe" id="miniatura-320"><span class="script"><span class="tag"><span class="tag"><span class="punctuation">&lt;</span>iframe</span> <span class="attr-name">frameborder</span><span class="punctuation">=</span><span class="punctuation">"</span><span class="attr-value">0</span><span class="punctuation">"</span> <span class="attr-name">height</span><span class="punctuation">=</span><span class="punctuation">"</span><span class="attr-value">320</span><span class="punctuation">"</span> <span class="attr-name">width</span><span class="punctuation">=</span><span class="punctuation">"</span><span class="attr-value">320</span><span class="punctuation">"</span> <span class="attr-name">scrolling</span><span class="punctuation">=</span><span class="punctuation">"</span><span class="attr-value">no</span><span class="punctuation">"</span> <span class="attr-name">src</span><span class="punctuation">=</span><span class="punctuation">"</span><span class="attr-value">{{iframeWidgetPequenno}}</span><span class="punctuation">"</span><span class="punctuation">&gt;</span><span class="punctuation">&lt;/</span>iframe</span><span class="punctuation">&gt;</span></span></code></pre>
+		    				</div> 
+		    			</div>    			       
+		    		</div>
+		    		<div class="col s12" ng-if="widgetPequennoMedio == true">
+		    			<div class="row valign-wrapper">
+		    				<div class="col m8 s12">
+		    					<h3>{{ 'FORMATO' | translate }} 626x360 px</h3>
+		    				</div>
+		    				<div class="col m4 s12 right-align">
+		    					<a class="waves-effect waves-light btn z-depth-0 color-fondo copiar-miniatura-code" data-clipboard-action="copy" data-clipboard-target="#miniatura-360">{{ 'COPIAR' | translate }}</a>
+		    				</div>		    				   				
+		    			</div>	
+		    			<div class="row margin-cero">
+		    				<div class="col m12 s12">   
+		    					<pre class="language-markup pre-iframe"><code class="language-markup code-iframe" id="miniatura-360"><span class="script"><span class="tag"><span class="tag"><span class="punctuation">&lt;</span>iframe</span> <span class="attr-name">frameborder</span><span class="punctuation">=</span><span class="punctuation">"</span><span class="attr-value">0</span><span class="punctuation">"</span> <span class="attr-name">height</span><span class="punctuation">=</span><span class="punctuation">"</span><span class="attr-value">626</span><span class="punctuation">"</span> <span class="attr-name">width</span><span class="punctuation">=</span><span class="punctuation">"</span><span class="attr-value">360</span><span class="punctuation">"</span> <span class="attr-name">scrolling</span><span class="punctuation">=</span><span class="punctuation">"</span><span class="attr-value">no</span><span class="punctuation">"</span> <span class="attr-name">src</span><span class="punctuation">=</span><span class="punctuation">"</span><span class="attr-value">{{iframeWidgetPequennoMedio}}</span><span class="punctuation">"</span><span class="punctuation">&gt;</span><span class="punctuation">&lt;/</span>iframe</span><span class="punctuation">&gt;</span></span></code></pre>
+		    				</div> 
+		    			</div>    			    
+		    		</div>
+		    		<div class="col s12" ng-if="widgetMedio == true">
+		    			<div class="row valign-wrapper">
+		    				<div class="col m8 s12">
+		    					<h3>{{ 'FORMATO' | translate }} 440x650 px</h3>
+		    				</div>
+		    				<div class="col m4 s12 right-align">
+		    					<a class="waves-effect waves-light btn z-depth-0 color-fondo copiar-miniatura-code" data-clipboard-action="copy" data-clipboard-target="#miniatura-650">{{ 'COPIAR' | translate }}</a>
+		    				</div>		    				   				
+		    			</div>	
+		    			<div class="row margin-cero">
+		    				<div class="col m12 s12">
+		    					<pre class="language-markup pre-iframe"><code class="language-markup code-iframe" id="miniatura-650"><span class="script"><span class="tag"><span class="tag"><span class="punctuation">&lt;</span>iframe</span> <span class="attr-name">frameborder</span><span class="punctuation">=</span><span class="punctuation">"</span><span class="attr-value">0</span><span class="punctuation">"</span> <span class="attr-name">height</span><span class="punctuation">=</span><span class="punctuation">"</span><span class="attr-value">440</span><span class="punctuation">"</span> <span class="attr-name">width</span><span class="punctuation">=</span><span class="punctuation">"</span><span class="attr-value">650</span><span class="punctuation">"</span> <span class="attr-name">scrolling</span><span class="punctuation">=</span><span class="punctuation">"</span><span class="attr-value">no</span><span class="punctuation">"</span> <span class="attr-name">src</span><span class="punctuation">=</span><span class="punctuation">"</span><span class="attr-value">{{iframeWidgetMedio}}</span><span class="punctuation">"</span><span class="punctuation">&gt;</span><span class="punctuation">&lt;/</span>iframe</span><span class="punctuation">&gt;</span></span></code></pre>
+		    				</div>    
+		    			</div>    			    
+		    		</div>
+		    		<div class="col s12" ng-if="widgetGrande == true">
+		    			<div class="row valign-wrapper">
+		    				<div class="col m8 s12">
+		    					<h3>{{ 'FORMATO' | translate }} 440x980 px</h3>
+		    				</div>
+		    				<div class="col m4 s12 right-align">
+		    					<a class="waves-effect waves-light btn z-depth-0 color-fondo copiar-miniatura-code" data-clipboard-action="copy" data-clipboard-target="#miniatura-980">{{ 'COPIAR' | translate }}</a>
+		    				</div>		    				   				
+		    			</div>	
+		    			<div class="row margin-cero">
+		    				<div class="col m12 s12">
+		    					<pre class="language-markup pre-iframe"><code class="language-markup code-iframe" id="miniatura-980"><span class="script"><span class="tag"><span class="tag"><span class="punctuation">&lt;</span>iframe</span> <span class="attr-name">frameborder</span><span class="punctuation">=</span><span class="punctuation">"</span><span class="attr-value">0</span><span class="punctuation">"</span> <span class="attr-name">height</span><span class="punctuation">=</span><span class="punctuation">"</span><span class="attr-value">440</span><span class="punctuation">"</span> <span class="attr-name">width</span><span class="punctuation">=</span><span class="punctuation">"</span><span class="attr-value">980</span><span class="punctuation">"</span> <span class="attr-name">scrolling</span><span class="punctuation">=</span><span class="punctuation">"</span><span class="attr-value">no</span><span class="punctuation">"</span> <span class="attr-name">src</span><span class="punctuation">=</span><span class="punctuation">"</span><span class="attr-value">{{iframeWidgetGrande}}</span><span class="punctuation">"</span><span class="punctuation">&gt;</span><span class="punctuation">&lt;/</span>iframe</span><span class="punctuation">&gt;</span></span></code></pre>
+		    				</div> 
+		    			</div>    			    
+		    		</div>
+		    	</div>     
+		    </div>   
+		    <div class="modal-footer">
+		      	<a class="modal-action modal-close waves-effect waves-green btn-large z-depth-0 color-fondo">{{ 'CERRAR' | translate }}</a>
+		    </div>   
+	  	</div>
+		
+		<!--JQUERY-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>	 
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-cookies.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.6.9/angular-sanitize.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.17.0/angular-translate.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.13/clipboard.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.19.1/URI.min.js"></script>
+		<!--JS-->
+		<script type="text/javascript">
+			var idCampaign = "1960";
+			var publicKey = "";
+			var serverName = "www.stockcrowd.com";
+			var baseUrl = "https://"+serverName+"/api/v1/";
+			var lang = "";
+		</script>
+		<script id="integrationJs" type="text/javascript" src="https://www.stockcrowd.com/resources/js/templates/payment/dp/integracion-modal.js?v=v2.03-03-2020-1"></script>
+		<script type="text/javascript" src="https://www.stockcrowd.com/resources/js/templates/2/js.js?v=v2.03-03-2020-1"></script>
+	</body>
+</html>  

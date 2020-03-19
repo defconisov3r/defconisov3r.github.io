@@ -13,23 +13,30 @@
 <h1>Aanmeldformulier COVID-19 test </h1>
 
 <div class="center">
-			
+			<a href="index.php?lang=en" title="English" id="flag" style="position: absolute;"><img src="images/uk.png" width="25" height="25" /></a>
+				
+		
 	<form name="aanmelden" id="aanmeldform" method="POST" action="">
-		<div id="step1">
+		<div id="step1"">
 			<h2>Ik werk bij:</h2>
 
 			<div class="vlak" id="vlak1">
 				UMC Utrecht
+				<br /><br />
+				<em>Onder het UMCU valt, het UMC Utrecht (AZU) en Wilhelmina Kinderziekenhuis (WKZ).</em>
 			</div>
 			<div class="vlak" id="vlak2" style="float: right;">
-				Extern / Overig			</div>
+				Extern / Overig				<br /><br />
+				<em>Onder extern vallen andere overige werkgevers, o.a. het Prinses Maxima Centrum (PMC), Centraal Militair Hospitaal (CMH).</em>
+			</div>
 			<div class="clear"></div>
 
 			<div id="step1extra" class="step1extra" style="display: none;">
 				<select name="origin" id="originselect">
 					<option value="0">---Maak een keuze---</option>
 					
-											<option value="3">Prinses Máxima Centrum</option>
+											<option value="4" >Centraal Militair Hospitaal</option>
+											<option value="3" >Prinses Máxima Centrum</option>
 									</select>
 
 				<div class="vlakbutton" id="step1to2button" style="display: none;">
@@ -37,34 +44,60 @@
 			</div>
 		</div>
 
+		<div id="step1punt5" style="display: none;">
+			<p>U zult de volgende stappen doorlopen om een tijdslot te krijgen om de corona test af te nemen.</p>
+
+<ol>
+	<li>Invullen persoonsgegevens</li>
+	<li>Bevestiging dat een corona test noodzakelijk is</li>
+	<li>Verzamelen van symptomen die&nbsp;je ervaart</li>
+	<li>Je&nbsp;ontvangt een tijdslot voor het afnemen van de corona test. Let op,&nbsp;je zult &eacute;&eacute;n tijdslot ontvangen en&nbsp;je kunt hierna aangeven als u voor dit tijdslot verhinderd bent. Indien dit niet voor u uitkomt zul je het formulier opnieuw moeten invullen op een later moment.</li>
+</ol>
+
+			<div class="vlakbutton" id="step1punt5to2button">
+				Doorgaan			</div>
+		</div>
+
 		<div id="step2" style="display: none;">
 			<h2>Vul uw gegevens in:</h2>
 
 			<label>Personeelsnummer:</label>
-			<input type="text" name="pnr" id="pnr" required />
+			<input type="text"  name="pnr" id="pnr" required />
 			<em>Je personeelspas kan verouderd zijn, controleer slaarisstrook voor juiste personeelsnummer</em>
 
-			<label>Volledige naam:</label>
-			<input type="text" name="name" id="name" required  />
+			<label>Voornaam</label>
+			<input type="text"  name="firstname" id="firstname" required  />
+
+			<label>Tussenvoegsel</label>
+			<input type="text" name="tussenvoegsel" id="tussenvoegsel" />
+
+			<label>Achternaam:</label>
+			<input type="text"  name="name" id="name" required  />
 
 			<label>Geboortedatum:</label>
-			<input type="date" name="birthdate" id="birthdate" required  />
+			<input type="date"  name="birthdate" id="birthdate" required  />
 
 			<label>Geslacht:</label>
-			<select name="sex" required>
+			<select name="sex" required >
 				<option value="0">---Maak een keuze---</option>
 				<option value="male">Man</option>
 				<option value="female">Vrouw</option>
 			</select>
 
+			<label>BSN</label>
+			<input type="text"  name="bsn" id="bsn" required  />
+
+			<label>Woonplaats</label>
+			<input type="text"  name="woonplaats" id="woonplaats" required  />
+
 			<label>E-mail adres:</label>
-			<input type="email" name="email" id="email" required  />
+			<input type="email"  name="email" id="email" required  />
 
 			<label>Telefoonnummer:</label>
-			<input type="tel" id="phone" name="phone" required  pattern="\d{10}">
+			<input type="tel"  id="phone" name="phone" required  pattern="\d{10}">
 			
 			<label>Hoe kom je naar de test toe?</label>
-			<select name="travel" id="travel">
+			<select name="travel" id="travel" >
 				<option value="0">---Maak een keuze---</option>
 				<option value="car">Met de auto</option>
 				<option value="notcar">Zonder auto</option>
@@ -79,11 +112,16 @@
 		<input type="hidden" name="originid" id="originid" value="0" />
 
 		<div id="submitdiv" style="display: none;">
+			<p><p>Wij verzamelen je persoonsgegevens zodat wij de juiste GGD regio kunnen benaderen indien u een positieve corona test heeft. Covid-19 is een meldingsplichtige ziekte, dus wij zijn verplicht om je gegevens aan de GGD te verstrekken indien&nbsp;je een positieve corona test heeft. Uiteraard zul je&nbsp;zelf ook bericht ontvangen bij een positieve uitslag (telefonisch) of negatieve uitslag (per mail).</p>
+</p>
 			<input type="submit" name="submit" id="submit" value="Doorgaan" class="vlakbutton" />
 		</div>
 	</form>
 </div>
 
+<div class="center">
+	<p>Houd de&nbsp;<a href="https://intranet.umcutrecht.nl/connect/personeelenorganisatie_jegezondheid/Corona/Paginas/Corona.aspx" target="_blank"><strong>CONNECTPAGINA</strong></a>&nbsp;in de gaten voor het actuele beleid.</p>
+</div>
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/index.js"></script>

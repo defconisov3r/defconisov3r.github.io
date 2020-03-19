@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <title>indonesia Map</title>
+
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
+    <style type="text/css">
+      html, body, #map {margin: 0px; height: 100%; width: 100%; }
+      
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    
+    
+<script>
+var map = L.map('map', {
+  minZoom: 4,
+  maxZoom: 17
+});
+
+var basemap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}', {
+});
+map.addLayer(basemap);
+map.setView([-1.538,119.355], 4.9);
+
+
+var data = {
+    Batas_Desa: L.tileLayer.wms('http://wilayahkelolarakyat.info/geoserver/ows?', { layers: 'geonode:Batas_20Desa',format: 'image/png',transparent: true}),
+    Batas_Kabupaten: L.tileLayer.wms('http://wilayahkelolarakyat.info/geoserver/ows?', { layers: 'geonode:Batas_20Kabupaten',format: 'image/png',transparent: true}),
+    Batas_Kecamatan: L.tileLayer.wms('http://wilayahkelolarakyat.info/geoserver/ows?', { layers: 'geonode:Batas_20Kecamatan',format: 'image/png',transparent: true}),
+    Batas_Provinsi: L.tileLayer.wms('http://wilayahkelolarakyat.info/geoserver/ows?', { layers: 'geonode:Batas_20Provinsi',format: 'image/png',transparent: true}),
+    Jumlah_penduduk: L.tileLayer.wms('http://wilayahkelolarakyat.info/geoserver/ows?', { layers: 'geonode:Jumlah_20Penduduk',format: 'image/png',transparent: true}),
+    Jumlah_penduduk_laki_laki: L.tileLayer.wms('http://wilayahkelolarakyat.info/geoserver/ows?', { layers: 'geonode:Jumlah_20Penduduk_20Laki_laki',format: 'image/png',transparent: true}),
+    Jumlah_penduduk_Perempuan: L.tileLayer.wms('http://wilayahkelolarakyat.info/geoserver/ows?', { layers: 'geonode:Jumlah_20Penduduk_20Perempuan',format: 'image/png',transparent: true}),
+    sungai: L.tileLayer.wms('http://wilayahkelolarakyat.info/geoserver/ows?', { layers: 'geonode:Sungai_big_ar',format: 'image/png',transparent: true}),
+    Batas_DAS: L.tileLayer.wms('http://wilayahkelolarakyat.info/geoserver/ows?', { layers: 'geonode:batas_das',format: 'image/png',transparent: true}),
+    Batas_DAS_IDN: L.tileLayer.wms('http://wilayahkelolarakyat.info/geoserver/ows?', { layers: 'batas_das_idn',format: 'image/png',transparent: true}),
+    Batas_Wilayah_RBI: L.tileLayer.wms('http://wilayahkelolarakyat.info/geoserver/ows?', { layers: 'batas_wilayah_50_k_rbi',format: 'image/png',transparent: true}),
+
+};
+
+
+
+L.control.layers(data, null, {collapsed: false}).addTo(map);
+L.control.scale().addTo(map);
+
+    </script>
+    </body>

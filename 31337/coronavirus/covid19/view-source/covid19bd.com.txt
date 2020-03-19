@@ -1,0 +1,286 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160999792-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-160999792-1');
+</script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="title" content="Corona Virus Realtime Update Bangladesh">
+  <meta name="description" content="A  site for corona virus live updates in Bangladesh">
+  <meta name="keywords" content="Covid-19, Corona, Virus, Corona Bangladesh, Corona Virus Bangladesh, Corona update BD, Corona BD , Corona Hotline BD">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://covid19bd.com">
+  <meta property="og:title" content="Corona Virus Realtime Update Bangladesh">
+  <meta property="og:description" content="A  site for corona virus live updates in Bangladesh">
+  <meta property="og:image" content="https://covid19bd.com/img1.png">
+
+
+  <title>Corona Live Update</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/heroic-features.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation --> <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="/">Corona-Virus Latest Updates in Bangladesh</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#news">Latest News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="maps">Maps</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="world_update">World Update</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Page Content -->
+  <div class="container">
+
+ <header>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <br>
+          <br>
+          <h3>IEDCR Hotline : </h3>
+          <p class="lead">01401184551, 01401184554, 01401184555, 01401184556,
+           01401184559, 01401184560, 01401184563, 01401184568,
+         01927711784, 01927711785, 01937000011, 01937110011</p>
+         <h3>DGHS Hotline : </h3>
+         <p class="lead">16263</p>
+       </div>
+
+
+       <div class="col-lg-6">
+        <div id="piechart"></div>
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+        <script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+    ['Task', 'percentage'],
+    ['Active', 14],
+    ['Death', 1],
+    ['TV', 0],
+    ['Recovered', 3],
+    ['Sleep', 0]
+    ]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'Active, Recovery and Death Percentage', 'width':550, 'height':400};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
+</div>
+</div>
+
+
+</header>
+
+
+<div class="row text-center">
+
+   <div class="col-lg-8 col-md-8">
+     
+     <div class="row text-center">
+
+
+  <div class="col-lg-6 col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <a href="#" class="btn btn-primary">Total Cases</a>
+      </div>
+      
+      <div class="card-body">
+        <h4 class="card-title" id="tc">18</h4>
+        <!-- <p class="card-text">Lorem ipsum dolor .</p> -->
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="col-lg-6 col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <a href="#" class="btn btn-primary">Active Cases</a>
+      </div>
+      
+      <div class="card-body">
+        <h4 class="card-title" id="ac">14</h4>
+        <!-- <p class="card-text">Lorem ipsum dolor .</p> -->
+      </div>
+      
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <a href="#" class="btn btn-primary" style="background: green" >Total Recovered</a>
+      </div>
+      
+      <div class="card-body">
+        <h4 class="card-title" id="tr">3</h4>
+        <!--  <p class="card-text">Lorem ipsum dolor .</p> -->
+      </div>
+      
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <a href="#" class="btn btn-primary" style="background: red">Total Deaths</a>
+      </div>
+      
+      <div class="card-body">
+        <h4 class="card-title" id="td">1</h4>
+        <!-- <p class="card-text">Lorem ipsum dolor .</p> -->
+      </div>
+      
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <a href="#" class="btn btn-primary">New Cases Today</a>
+      </div>
+      
+      <div class="card-body">
+        <h4 class="card-title" id="nc">4</h4>
+        <!--  <p class="card-text">Lorem ipsum dolor .</p> -->
+      </div>
+      
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <a href="#" class="btn btn-primary" style="background: red">New Deaths Today</a>
+      </div>
+      
+      <div class="card-body">
+        <h4 class="card-title" id="nd">0</h4>
+        <!-- <p class="card-text"> .</p> -->
+      </div>
+      
+    </div>
+  </div>
+
+
+</div>
+   </div>
+      <div id='news' class="col-lg-4 col-md-4">
+    <p class="youth_cup"> <img width="30%" src="corona.webp" alt="live_icon" class="live_icon"> করোনা: লাইভ আপডেট  </p>
+     <iframe src="https://service.prothomalo.com/commentary/index.php" height="400" width="100%"></iframe>
+     <img width="30%" src="https://paloimages.prothom-alo.com/contents/themes/public/style/images/Prothom-Alo.png">
+   </div>
+  
+</div>
+    <!-- /.row -->
+    
+
+
+  </div>
+  <!-- /.container -->
+ 
+     <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Covid19bd.com</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+    // your setTimeout function goes in here.
+
+    function doajax(){
+    	$.ajax({
+  url: 'https://thevirustracker.com/free-api?countryTotal=BD',
+  dataType: 'json',
+  success: function(data) {
+
+    var obj = data;
+
+
+
+    document.getElementById("tc").innerHTML = obj.countrydata[0].total_cases;
+    document.getElementById("tr").innerHTML = obj.countrydata[0].total_recovered;
+    document.getElementById("td").innerHTML = obj.countrydata[0].total_deaths;
+    document.getElementById("nc").innerHTML = obj.countrydata[0].total_new_cases_today;
+    document.getElementById("nd").innerHTML = obj.countrydata[0].total_new_deaths_today;
+    document.getElementById("ac").innerHTML = obj.countrydata[0].total_active_cases;
+// var x='';
+//     //var k= reverse();
+//     for (const i in obj.countrynewsitems.reverse()[0]) {
+//   x += obj.countrynewsitems.reverse()[0][i].title + "<br>";
+   
+  
+// }
+// document.getElementById("demo").innerHTML = x;
+
+
+
+  }
+});
+
+
+
+           
+    };
+
+     doajax();
+
+     setInterval(doajax,5000);
+});
+  </script>
+
+<!—- ShareThis BEGIN -—>
+<script async src="https://platform-api.sharethis.com/js/sharethis.js#property=5e733a975b20e800139c4dd7&product=sticky-share-buttons"></script>
+<!—- ShareThis END -—>
+</body>
+
+</html>

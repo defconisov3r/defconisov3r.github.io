@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>Карта коронавируса Covid-19 Онлайн - март 2020 - Коронавирус Онлайн</title>
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/images/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+        <link rel="manifest" href="/images/manifest.json">
+        <meta name="msapplication-TileColor" content="#df765d">
+        <meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png">
+        <meta name="theme-color" content="#df765d">
+        <meta name="csrf-param" content="_csrf-frontend">
+<meta name="csrf-token" content="hvtFAIbXiNLSyG41--TXbz4xGJx9EAnDdbwFbGCIjZazoS4ytp3rlv-LMUPKqr1YTmlr3jhoQe4t9FpZCLrCxA==">
+
+<link href="/assets/bac4c6df/css/bootstrap.css" rel="stylesheet">
+<link href="/css/site.css" rel="stylesheet">    </head>
+    <body>
+        
+        <div class="wrap">
+            <nav id="w0" class="navbar-inverse navbar-fixed-top navbar"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w0-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="/"><img style="width:40px;display:inline-block;margin-right:5px;" src="/images/logo.png"><span>Coronavirus (Covid-19)</span></a></div><div id="w0-collapse" class="collapse navbar-collapse"><ul id="w1" class="navbar-nav navbar-right nav"><li class="active"><a href="/">Карта коронавируса</a></li>
+<li><a href="/symptoms">Симптомы</a></li>
+<li><a href="/site/profilaktika-koronavirusa">Профилактика</a></li>
+<li><a href="/kto-sozdal-koronavirus">Кто создал</a></li>
+<li><a href="/vaktsina-ot-koronavirusa">Вакцина</a></li>
+<li><a href="/site/contact">Вакцина</a></li></ul></div></div></nav>            <div class="header-html-1"> <script>Data = new Date();
+                Data.setMinutes(Data.getMinutes() - 1);
+                Hour = ('0' + Data.getHours()).slice(-2);
+                Minutes = ('0' + Data.getMinutes()).slice(-2);
+                Year = Data.getFullYear();
+                Month = Data.getMonth();
+                Day = Data.getDate();
+
+            // Преобразуем месяца
+                switch (Month)
+                {
+                    case 0:
+                        fMonth = "января";
+                        break;
+                    case 1:
+                        fMonth = "февраля";
+                        break;
+                    case 2:
+                        fMonth = "марта";
+                        break;
+                    case 3:
+                        fMonth = "апреля";
+                        break;
+                    case 4:
+                        fMonth = "мае";
+                        break;
+                    case 5:
+                        fMonth = "июня";
+                        break;
+                    case 6:
+                        fMonth = "июля";
+                        break;
+                    case 7:
+                        fMonth = "августа";
+                        break;
+                    case 8:
+                        fMonth = "сентября";
+                        break;
+                    case 9:
+                        fMonth = "октября";
+                        break;
+                    case 10:
+                        fMonth = "ноября";
+                        break;
+                    case 11:
+                        fMonth = "декабря";
+                        break;
+                }
+                // Вывод
+                document.write("<b>Обновлено: " + Day + " " + fMonth + " " + Year + ", " + Hour + ":" + Minutes + ":" + 30 + "</b>");</script> 
+            </div>
+            <div class="page-container">
+                                
+<div class="map-container">
+    <center><h1 style="font-size:22px;font-weight:700;">Онлайн карта коронавируса COVID-19</h1></center>
+    <iframe loading="lazy" src="https://coronavirus-online.org/map/map-covid19.html" frameborder="0" height="450" style="width: 100%;margin-bottom:15px;" data-rocket-lazyload="fitvidscompatible" data-lazy-src="https://coronavirus-online.ru/ajax/mapcfc.html" class="lazyloaded" data-was-processed="true"></iframe>
+    <!--<iframe loading="lazy" src="https://coronavirus-online.org/map/2map-covid19.html" frameborder="0" height="450" style="width: 100%;margin-bottom:15px;" data-rocket-lazyload="fitvidscompatible" data-lazy-src="https://coronavirus-online.ru/ajax/mapcfc.html" class="lazyloaded" data-was-processed="true"></iframe>-->
+</div>
+<div class="main-content-wrapper">
+    <div class="main-content">
+        <div class="content">
+            <script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+            <script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+            <script type="text/javascript" src="https://www.amcharts.com/lib/3/lang/ru.js"></script>            
+            <h2 style="text-align: center;"> График распространения COVID-2019</h2>
+            <div id="chartdiv" style="width: 100%; max-width: 900px; height: 300px; background-color: rgb(255, 255, 255); margin: 0 auto 10px;"></div>
+            <h2 style="text-align: center;"> Прогноз (Репродуктивное число)</h2>
+            <div id="chartdiv1" style="width: 100%; max-width: 900px; height: 300px; background-color: rgb(255, 255, 255); margin: 0 auto 10px;"></div>
+        </div>
+        <div class="content">
+            <div class="container" style="max-width:900px">
+                <h2 style="text-align: center;"> Коронавирус сегодня (по МСК)</h2>
+                <div id="lapseblock" style="overflow:hidden;max-height:700px;"></div>
+            </div>
+        </div>
+        <div class="show-more">
+            <a href="/coronavirus-v-rossii">Подробная статистика по России</a>
+        </div>
+        
+        <div class="b-about">
+            <div class="container">
+                <h2 class="title center" id="symptoms">Симптомы коронавируса</h2>
+                <p>Инкубационный период коронавируса Covid-19 может продолжаться более двух недель. Более продолжительные сроки инкубационного периода могут быть характерны при передаче вируса от животных.</p>
+                <p>Симптомы коронавируса Covid-19 схожи с симптомами пневмонии или тяжёлого острого респираторного синдрома:</p>
+                <ul class="symptoms">
+                    <li>Потеря сознания (в результате прогрессирующего разрушения лёгочных тканей),</li>
+                    <li>Сухой, непродуктивный кашель,</li>
+                    <li>Лихорадка и повышение температуры (38 °С или выше, озноб),</li>
+                    <li>Затруднения при дыхании,</li>
+                    <li>Боли в области груди,</li>
+                    <li>Головная боль,</li>
+                    <li>Боль в мышцах,</li>
+                    <li>Общее недомогание.</li>
+                </ul>
+            </div>
+            <div class="container">
+                <h2 class="title center" id="measures">Меры профилактики коронавируса</h2>
+                <ul class="measures">
+                    <li>Часто мойте руки с мылом - не менее 20 секунд</li>
+                    <li>Не касайтесь грязными руками глаз, рта и слизистых</li>
+                    <li>Избегайте тесного контакта с зараженными людьми</li>
+                    <li>Почаще делайте влажную уборку с использованием дезинфицирующих средств</li>
+                    <li>Уточняйте эпидемиологическую обстановку при планировании путешествия</li>
+                    <li>Используйте маски для защиты органов дыхания</li>
+                    <li>При первых признаках заболевания обратитесь за медицинской помощью в лечебные организации</li>
+                </ul>
+            </div>
+        </div>
+        <div class="show-more m-b">
+            <a href="/coronavirus">Подробнее о коронавирусе</a>
+        </div>
+    </div>            
+</div>            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <p class="pull-left">&copy; CoronaVirus-online.org 2020</p>
+
+                <p class="pull-right">Работает на <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></p>
+            </div>
+        </footer>
+
+<script src="/assets/cb7e130b/jquery.js"></script>
+<script src="/assets/f448fbf9/yii.js"></script>
+<script src="/js/main.js"></script>
+<script src="/assets/bac4c6df/js/bootstrap.js"></script>    </body>
+</html>

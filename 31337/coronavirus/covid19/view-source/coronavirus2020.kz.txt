@@ -1,0 +1,533 @@
+
+<!DOCTYPE html>
+
+    <html lang="ru">
+
+	<head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+            <title>Коронавирус</title>
+			<link rel="alternate" href="android-app://kz.inform.informkz" />
+			<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap&subset=cyrillic" rel="stylesheet">
+			<link rel="stylesheet" href="https://www.inform.kz/lenta/css/lenta-virus.css?v=4">
+            <meta name="description" content="Коронавирус - последние новости">
+            <meta name="robots" content="index,follow">
+
+			<meta property="og:title" content="Коронавирус">
+			<meta property="og:url" content="https://www.coronavirus2020.kz/ru">
+			<meta property="og:image" content="https://www.inform.kz/images/banners/bannerSoc3_ru.jpg">
+			<meta property="og:description" content="Коронавирус - последние новости">
+			<meta name="twitter:card" content="summary_large_image">
+			<meta name="twitter:site" content="@kazinformkz">
+			<meta name="twitter:title" content="Коронавирус">
+			<meta name="twitter:description" content="Коронавирус - последние новости">
+			<meta name="twitter:image:src" content="https://www.inform.kz/images/banners/bannerSoc3_ru.jpg">
+			<meta name="twitter:domain" content="inform.kz">
+            
+            <link rel="canonical" href="https://www.coronavirus2020.kz/">
+
+                         <link rel="alternate" type="application/rss+xml" title="KAZINFORM" href="http://www.inform.kz/rss/rus.xml">             
+			<style>
+
+				.mainContainer {
+					max-width: 1260px;
+					min-height: 3000px !important;
+					position: relative;
+				}
+				.news_stat_t {
+					overflow: hidden;
+				}
+				.container_news {
+					position:relative;
+					overflow:visible;
+				}
+				.infogr_bl {
+					position: absolute;
+					top: 48px;
+					right: 0;
+					width: 240px;
+				}
+				.infogr_bl a {
+					display: block;
+					margin-bottom: 50px;
+				}
+				.infogr_bl img {
+					width: 100%;
+				}
+				iframe {
+					display: block;
+					clear: both;
+					margin-bottom: 40px;
+				}
+				footer {
+					position: absolute;
+					bottom: 20px;
+					left: 10px;
+				}
+				.counter {
+					margin-top: 10px;
+				}
+				.info_cor {
+					position: absolute;
+					top: 0;
+					right: 280px;
+					/*max-width: 350px;*/
+					width: auto !important;
+					height: 315px;
+				}
+				.load_page_block {
+					display: none !important;
+				}
+				@media(max-width:1240px) {
+					.info_cor {
+						position: static;
+						display: block;
+						clear: both;
+						max-width: 450px;
+						margin-bottom: 50px;
+					}
+				}
+				@media(max-width:700px) {
+					.link_telegram {
+						right: 0 !important;
+						top: 40px !important;
+					}
+				}
+				.news_stat_t > div:nth-of-type(3n+4) {
+					clear:both;
+				}
+				@media(max-width:1120px) {
+					.news_stat_t > div:nth-of-type(3n+4) {
+						clear: none;
+					}
+					.news_stat_t > div:nth-of-type(2n+3) {
+						clear: both;
+					}
+					.news_stat_t > div:nth-of-type(3n) {
+						margin-right: 30px !important;
+					}
+				}
+				@media(max-width:1025px) {
+					.news_stat_t > div:nth-of-type(2n+3) {
+						clear: none;
+					}
+					.news_stat_t > div:nth-of-type(3n+4) {
+						clear: both;
+					}
+					.news_stat_t > div:nth-of-type(3n) {
+						margin-right: 1% !important;
+					}
+					.infogr_bl {
+						display: none !important;
+					}
+					.mainContainer {
+						min-height: 1500px !important;
+					}
+
+				}
+				@media(max-width:900px) {
+					.news_tab {
+						margin-bottom: 10px;
+					}
+				}
+				@media(max-width:600px) {
+					iframe {
+						width: 100% !important;
+					}
+					.info_cor {
+						height: auto;
+						width: 100% !important;
+						max-width: 100%;
+					}
+				}
+				@media(max-width:540px) {
+					.news_stat_t > div:nth-of-type(3n+4) {
+						clear: none;
+					}
+					.news_stat_t > div:nth-of-type(2n+3) {
+						clear: both;
+					}
+				}
+
+
+			</style>
+
+
+	</head>
+	<body>
+
+			<div class="mainContainer">
+
+				
+				<header style="margin:0; padding:30px 0; position:relative;">
+					<div class="logo_block">
+						<a href="/ru"><img src="https://www.inform.kz/lenta/img/logo/logo100_ru.png?v=2" alt=""></a>
+					</div>
+					<div class="lang_block">
+						<ul>
+							<li><a href="https://www.coronavirus2020.kz/kz">қз</a></li>
+							<li><a href="https://www.coronavirus2020.kz/ru">ру</a></li>
+							<!-- <li><a href="https://www.coronavirus2020.kz/en">en</a></li> -->
+						</ul>
+					</div>
+					<div class="name_block" style="margin-top:15px;">
+
+						<img src="https://www.inform.kz/lenta/img/lenta-virus/logo_right_ru.png?v=7" alt="">
+
+					</div>
+
+					<div class="call_bl" style="position:absolute; top:10px; right:0; color:#fff; font-weight:bold;">call-center: 1406</div>
+					<a class="link_telegram" style="position:absolute; top:5px; right:150px;" href="https://t.me/kz_hls_bot" target="_blank">
+						<svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 0 39 34" width="39"><g fill="none" fill-rule="evenodd"><circle cx="17" cy="17" fill="#27a7e5" r="17"/><path d="m7.06510669 16.9258959c5.22739451-2.1065178 8.71314291-3.4952633 10.45724521-4.1662364 4.9797665-1.9157646 6.0145193-2.2485535 6.6889567-2.2595423.1483363-.0024169.480005.0315855.6948461.192827.1814076.1361492.23132.3200675.2552048.4491519.0238847.1290844.0536269.4231419.0299841.65291-.2698553 2.6225356-1.4375148 8.986738-2.0315537 11.9240228-.2513602 1.2428753-.7499132 1.5088847-1.2290685 1.5496672-1.0413153.0886298-1.8284257-.4857912-2.8369905-1.0972863-1.5782048-.9568691-2.5327083-1.3984317-4.0646293-2.3321592-1.7703998-1.0790837-.212559-1.583655.7963867-2.5529189.2640459-.2536609 4.7753906-4.3097041 4.755976-4.431706-.0070494-.0442984-.1409018-.481649-.2457499-.5678447-.104848-.0861957-.2595946-.0567202-.3712641-.033278-.1582881.0332286-2.6794907 1.5745492-7.5636077 4.6239616-.715635.4545193-1.3638349.6759763-1.9445998.6643712-.64024672-.0127938-1.87182452-.334829-2.78737602-.6100966-1.12296117-.3376271-1.53748501-.4966332-1.45976769-1.0700283.04048-.2986597.32581586-.610598.8560076-.935815z" fill="#fff"/></g></svg>
+					</a>
+				</header>
+
+
+				
+
+
+				<!-- Begin delete -->
+				<div class="container_news">
+
+					
+						<div class="infogr_bl">
+							<a href="https://www.inform.kz/ru/mery-protiv-koronavirusa-v-kazahstane_a3624148"><img src="https://www.inform.kz/radmin/fotofiles/2020/03/12/2003121647566920f.jpg" alt=""></a>
+							<a href="https://www.inform.kz/ru/pravila-prohozhdeniya-domashnego-karantina_a3623517"><img src="https://www.inform.kz/radmin/fotofiles/2020/03/11/2003111227461200f.jpg" alt=""></a>
+							<a href="https://www.inform.kz/ru/mery-po-profilaktike-rasprostraneniya-koronavirusa_a3622281"><img src="https://www.inform.kz/radmin/fotofiles/2020/03/06/2003061628343250f.jpg" alt=""></a>
+							<a href="https://www.inform.kz/ru/chasto-zadavaemye-voprosy-po-koronavirusnoy-infekcii_a3621374"><img src="https://www.inform.kz/radmin/fotofiles/2020/03/04/2003041401195840f.jpg" alt=""></a>
+							<a href="https://www.inform.kz/ru/chasto-zadavaemye-voprosy-po-koronavirusnoy-infekcii_a3621371"><img src="https://www.inform.kz/radmin/fotofiles/2020/03/04/2003041355307290f.jpg" alt=""></a>
+							<a href="https://www.inform.kz/ru/chasto-zadavaemye-voprosy-po-koronavirusnoy-infekcii_a3621271"><img src="https://www.inform.kz/radmin/fotofiles/2020/03/04/2003041139518450f.jpg" alt=""></a>
+						</div>
+
+					
+					
+
+					
+						
+						<style>
+							.news_stat_t {
+								display: none;
+								position: relative;
+							}
+							.tab_wrap > div {
+								display: inline-block;
+								cursor: pointer;
+							}
+							.tab_wrap {
+								margin-bottom: 20px;
+							}
+							.news_stat_t img {
+								width:100%;
+							}
+							.news_stat_t .lenta_news_block a {
+								color:#181818;
+								display:inline-block;
+								margin-top: 10px;
+								font-size: 16px;
+								line-height: 24px;
+							}
+							.news_stat_t > div:nth-of-type(3n) {
+								margin-right: 0;
+							}
+							.tab_wrap > div {
+								text-transform:uppercase;
+								font-weight:bold;
+								color:#8F8F8F;
+								margin-right: 20px;
+								font-size: 24px;
+							}
+							.tab_wrap > div.active {
+								color: #ae1c07;
+							}
+						</style>
+
+						<div class="tab_wrap">
+							<div class="news_tab active">Новости</div>
+							<div class="stat_tab">Что нужно знать о коронавирусе</div>
+						</div>
+
+						<div class="news_stat_t">
+
+						
+													<iframe width="560" height="315" src="https://www.youtube.com/embed/vZOlVGwdU6c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<a href="https://www.inform.kz/lenta/img/lenta-virus/coronavirus_info_ru.jpg" target="_blank"><img class="info_cor" src="/lenta/img/lenta-virus/coronavirus_info_ru.jpg" alt=""></a>
+							<div class="lenta_news_block">
+								<img src="https://www.inform.kz/radmin/news/2020/03/13/200313132413544e.jpg" alt="">
+								<a href="https://www.inform.kz/ru/mify-i-lozhnye-predstavleniya-o-koronaviruse-voz-dala-rekomendacii_a3624501">Мифы и ложные представления о коронавирусе: ВОЗ дала рекомендации </a>
+							</div>
+							<div class="lenta_news_block">
+								<img src="https://www.inform.kz/radmin/news/2020/03/13/200313200916410e.png" alt="">
+								<a href="https://www.inform.kz/ru/mery-prinyatye-dlya-predotvrascheniya-rasprostraneniya-koronavirusa-na-territorii-kazahstana_a3624754">Меры, принятые для предотвращения распространения коронавируса на территории Казахстана  </a>
+							</div>
+							<div class="lenta_news_block">
+								<img src="https://www.inform.kz/radmin/news/2020/03/13/200313192031563a3624728i.jpg" alt="">
+								<a href="https://www.inform.kz/ru/elzhan-birtanov-nazval-samyy-luchshiy-sposob-profilaktiki-koronavirusa_a3624728">Елжан Биртанов назвал самый лучший способ профилактики коронавируса</a>
+							</div>
+							<div class="lenta_news_block">
+								<img src="https://www.inform.kz/radmin/news/2020/03/13/200313162250517e.jpg" alt="">
+								<a href="https://www.inform.kz/ru/glava-minzdrava-o-profilaktike-koronavirusa-ogranich-te-nenuzhnye-kontakty_a3624612">Глава Минздрава о профилактике коронавируса: Ограничьте ненужные контакты </a>
+							</div>
+							<div class="lenta_news_block">
+								<img src="https://www.inform.kz/radmin/news/2020/03/13/200313123054934e.jpg" alt="">
+								<a href="https://www.inform.kz/ru/stolichnyy-gorzdrav-rekomenduet-otkazat-sya-ot-rukopozhatiy_a3624463">Столичный горздрав рекомендует отказаться от рукопожатий</a>
+							</div>
+							<div class="lenta_news_block">
+								<img src="https://www.inform.kz/radmin/news/2020/03/12/200312165254727e.JPG" alt="">
+								<a href="https://www.inform.kz/ru/o-plane-b-pri-vyyavlenii-koronavirusa-v-almaty-rasskazali-v-akimate_a3624151">О плане «Б» при выявлении коронавируса в Алматы рассказали в акимате</a>
+							</div>
+							<div class="lenta_news_block">
+								<img src="https://www.inform.kz/radmin/news/2020/03/10/200310153515997a3623151i.jpg" alt="">
+								<a href="https://www.inform.kz/ru/kakie-pravila-dolzhny-soblyudat-lica-na-domashnem-karantine-po-koronavirusu_a3623151">Какие правила должны соблюдать лица на домашнем карантине по коронавирусу</a>
+							</div>
+							<div class="lenta_news_block">
+								<img src="https://www.inform.kz/radmin/news/2020/03/10/200310124357093e.jpg" alt="">
+								<a href="https://www.inform.kz/ru/o-dopolnitel-nyh-merah-bezopasnosti-na-rynke-truda-v-svyazi-so-vspyshkoy-koronavirusa-rasskazal-birzhan-nurymbetov_a3623083">О дополнительных мерах безопасности на рынке труда в связи со вспышкой коронавируса рассказал Биржан Нурымбетов</a>
+							</div>
+							<div class="lenta_news_block">
+								<img src="https://www.inform.kz/radmin/news/2020/03/07/200306200445810a3622384i.jpg" alt="">
+								<a href="https://www.inform.kz/ru/kak-ne-podhvatit-koronavirus_a3622384">Как не подхватить коронавирус</a>
+							</div>
+							<div class="lenta_news_block">
+								<img src="https://www.inform.kz/radmin/news/2020/03/04/200304173123015e.jpg" alt="">
+								<a href="https://www.inform.kz/ru/o-profilakticheskih-merah-v-svyazi-so-vspyshkoy-koronavirusa-v-mire-rasskazali-v-minzdrave_a3621479">О профилактических мерах в связи со вспышкой коронавируса в мире рассказали в Минздраве </a>
+							</div>
+							<div class="lenta_news_block">
+								<img src="https://www.inform.kz/radmin/news/2020/03/04/200304152027170e.jpg" alt="">
+								<a href="https://www.inform.kz/ru/vmesto-medicinskoy-maski-predlozhili-ispol-zovat-oksolinovuyu-maz_a3621416">Вместо медицинской маски предложили использовать оксолиновую мазь</a>
+							</div>
+							<div class="lenta_news_block">
+								<img src="https://www.inform.kz/radmin/news/2020/03/04/200304131941295e.JPG" alt="">
+								<a href="https://www.inform.kz/ru/maska-ne-yavlyaetsya-meroy-profilaktiki-ot-koronavirusa-professor_a3621338">Маска не является мерой профилактики от коронавируса </a>
+							</div>
+							<div class="lenta_news_block">
+								<img src="https://www.inform.kz/radmin/news/2020/03/04/200304035612012a3621165i.jpg" alt="">
+								<a href="https://www.inform.kz/ru/15-svezhih-faktov-o-koronaviruse-kotorye-nuzhno-znat_a3621165">15 свежих фактов о коронавирусе, которые нужно знать </a>
+							</div>
+
+						
+					
+					</div>
+
+					<div class="news_block news_cont_t">
+						<DIV class="main_container">
+
+    <div class="rubrics_container">
+        <div class="title_rubric"><span> <h1> Коронавирус в РК </h1> </span></div>
+
+        <UL id= "lenta">
+            <style>
+    @media(max-width:768px) { .lenta_news_text > a {display:none;} }
+</style>
+
+
+
+    	<DIV class="lenta_news_block">
+            <li>
+
+            <a class="lenta_news_img" href="/ru/akim-vko-proinspektiroval-proizvodstvo-mnogorazovyh-masok-v-semee_a3627409">
+                                                                <img src="https://www.inform.kz/radmin/news/2020/03/20/200320011247348e.jpg" alt="Аким ВКО проинспектировал производство многоразовых масок в Семее" height="100px"; width="150px";>
+                                                </a>
+
+                   <div class="lenta_news_title"> <a href="/ru/akim-vko-proinspektiroval-proizvodstvo-mnogorazovyh-masok-v-semee_a3627409">Аким ВКО проинспектировал производство многоразовых масок в Семее </a></div>
+                    <div class="lenta_news_text">
+                        <a href="/ru/akim-vko-proinspektiroval-proizvodstvo-mnogorazovyh-masok-v-semee_a3627409">СЕМЕЙ. КАЗИНФОРМ - Аким Восточного Казахстана Даниал Ахметов проинспектировал процесс производства многоразовых масок в Семее, передает корреспондент МИА «Казинформ».</a>
+                        <div class="foot_lenta_b">
+                            <a class="lenta_comment" href="/ru/akim-vko-proinspektiroval-proizvodstvo-mnogorazovyh-masok-v-semee_a3627409"></a>
+                        </div>
+                    </div>
+                    <div class="lenta_news_time-rubric"> 20.03.2020 01:17 </div>
+            </li>
+	</DIV>
+
+
+    	<DIV class="lenta_news_block">
+            <li>
+
+            <a class="lenta_news_img" href="/ru/torgovye-doma-vremenno-zakryvayutsya-v-karagandinskoy-oblasti_a3627400">
+                                                                <img src="https://www.inform.kz/radmin/news/2020/03/20/200320001015955e.jpg" alt="Торговые дома временно закрываются в Карагандинской области" height="100px"; width="150px";>
+                                                </a>
+
+                   <div class="lenta_news_title"> <a href="/ru/torgovye-doma-vremenno-zakryvayutsya-v-karagandinskoy-oblasti_a3627400">Торговые дома временно закрываются в Карагандинской области </a></div>
+                    <div class="lenta_news_text">
+                        <a href="/ru/torgovye-doma-vremenno-zakryvayutsya-v-karagandinskoy-oblasti_a3627400">КАРАГАНДА. КАЗИНФОРМ - Торгово-развлекательные центры и крупные торговые дома в Карагандинской области временно приостанавливают деятельность с 20 марта, передает МИА «Казинформ».</a>
+                        <div class="foot_lenta_b">
+                            <a class="lenta_comment" href="/ru/torgovye-doma-vremenno-zakryvayutsya-v-karagandinskoy-oblasti_a3627400"></a>
+                        </div>
+                    </div>
+                    <div class="lenta_news_time-rubric"> 20.03.2020 00:08 </div>
+            </li>
+	</DIV>
+
+
+    	<DIV class="lenta_news_block">
+            <li>
+
+            <a class="lenta_news_img" href="/ru/kak-budut-uchit-sya-shkol-niki-posle-6-aprelya-glava-mon-o-perehode-na-distancionnoe-obuchenie_a3627393">
+                                                                <img src="https://www.inform.kz/radmin/news/2020/03/19/200319235108397e.jpg" alt="Как будут учиться школьники после 6 апреля: Глава МОН о переходе на дистанционное обучение" height="100px"; width="150px";>
+                                                </a>
+
+                   <div class="lenta_news_title"> <a href="/ru/kak-budut-uchit-sya-shkol-niki-posle-6-aprelya-glava-mon-o-perehode-na-distancionnoe-obuchenie_a3627393">Как будут учиться школьники после 6 апреля: Глава МОН о переходе на дистанционное обучение </a></div>
+                    <div class="lenta_news_text">
+                        <a href="/ru/kak-budut-uchit-sya-shkol-niki-posle-6-aprelya-glava-mon-o-perehode-na-distancionnoe-obuchenie_a3627393">НУР-СУЛТАН. КАЗИНФОРМ - Казахстанская система школьного образования готовится 6 апреля по необходимости перейти к дистанционному формату. Об этом рассказал министр образования и науки РК Асхат Аймагамбетов в Facebook, передает МИА «Казинформ».</a>
+                        <div class="foot_lenta_b">
+                            <a class="lenta_comment" href="/ru/kak-budut-uchit-sya-shkol-niki-posle-6-aprelya-glava-mon-o-perehode-na-distancionnoe-obuchenie_a3627393"></a>
+                        </div>
+                    </div>
+                    <div class="lenta_news_time-rubric"> 19.03.2020 23:39 </div>
+            </li>
+	</DIV>
+
+
+    	<DIV class="lenta_news_block">
+            <li>
+
+            <a class="lenta_news_img" href="/ru/reshenie-operativnogo-shtaba-po-predotvrascheniyu-rasprostraneniya-koronavirusnoy-infekcii-po-gorodu-nur-sultanu_a3627384">
+                                                                <img src="https://www.inform.kz/radmin/news/2020/03/19/200319225755953e.jpg" alt="Решение оперативного штаба по предотвращению распространения коронавирусной инфекции по городу Нур-Султану" height="100px"; width="150px";>
+                                                </a>
+
+                   <div class="lenta_news_title"> <a href="/ru/reshenie-operativnogo-shtaba-po-predotvrascheniyu-rasprostraneniya-koronavirusnoy-infekcii-po-gorodu-nur-sultanu_a3627384">Решение оперативного штаба по предотвращению распространения коронавирусной инфекции по городу Нур-Султану </a></div>
+                    <div class="lenta_news_text">
+                        <a href="/ru/reshenie-operativnogo-shtaba-po-predotvrascheniyu-rasprostraneniya-koronavirusnoy-infekcii-po-gorodu-nur-sultanu_a3627384">НУР-СУЛТАН. КАЗИНФОРМ - Принято решениео мерах по недопущению распространения коронавирусной инфекции (COVID-19) на территории города Нур-Султана. Об этом передает МИА «Казинформ» со ссылкой на официальный сайт города Нур-Султана.</a>
+                        <div class="foot_lenta_b">
+                            <a class="lenta_comment" href="/ru/reshenie-operativnogo-shtaba-po-predotvrascheniyu-rasprostraneniya-koronavirusnoy-infekcii-po-gorodu-nur-sultanu_a3627384"></a>
+                        </div>
+                    </div>
+                    <div class="lenta_news_time-rubric"> 19.03.2020 22:53 </div>
+            </li>
+	</DIV>
+
+
+<span class="last_id" data-id="2020-03-19 22:53:00" />        </UL>
+
+        <div class="load_page_block">
+            <div class="show_more"><span id="load-archive" data-lang="">Показать еще</span></div>
+            <div class="load_gif"><img src="https://www.inform.kz/lenta/img/loading.gif" alt=""></div>
+        </div>
+    </div>
+
+</DIV>					</div>
+
+
+				</div>
+				<!-- End delete -->
+
+				<footer>
+					<div class="copyright">© 2020 МИА «Казинформ»</div>
+					<div class="counter">  <!-- Счетчики BEGIN -->
+						<!-- google-analytics -->
+							<script type="text/javascript">
+							var _gaq = _gaq || [];	  _gaq.push(['_setAccount', 'UA-18014960-1']);	  _gaq.push(['_trackPageview']);	  (function() {
+							var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+							ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+							var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);	  })();
+							</script>
+						<!-- google-analytics -->
+
+						<!-- Yandex.Metrika informer -->
+							<a href="http://metrika.yandex.ru/stat/?id=381728&amp;from=informer"
+							target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/381728/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+							style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:381728,type:0,lang:'ru'});return false}catch(e){}"/></a>
+						<!-- /Yandex.Metrika informer -->
+
+						<!-- Yandex.Metrika counter -->
+							<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+							<script type="text/javascript">
+							try { var yaCounter381728 = new Ya.Metrika({id:381728, enableAll: true, webvisor:true});}
+							catch(e) { }
+							</script>
+							<noscript><div><img src="//mc.yandex.ru/watch/381728" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+						<!-- /Yandex.Metrika counter -->
+
+
+					</div>
+					<!-- Счетчики END -->
+
+				</footer>
+
+			</div>
+
+			<script src="/lenta/js/jquery-1.11.3.min.js"></script>
+
+			<script>
+				$(function() {
+
+					$("#load").click(function() {
+						last_id = $(document).find('.last_id:last').data('id');
+						show_more = $(this);
+						show_more.hide();
+						$('.load_gif').fadeIn();
+
+						param = '?';
+						if (window.location.href.indexOf('?') > -1) {
+								param = '&';
+						}
+
+						$.get(window.location.href + param + "last_id=" + last_id, function(data) {
+							$('#lentach').append(data);
+							$('.load_gif').fadeOut();
+							show_more.fadeIn();
+
+						});
+
+					});
+
+					$("#load-archive").click(function() {
+						last_id = $(document).find('.last_id:last').data('id');
+						show_more = $(this);
+						show_more.hide();
+						$('.load_gif').fadeIn();
+
+						param = '?';
+						if (window.location.href.indexOf('?') > -1) {
+							param = '&';
+						}
+
+						$.get(window.location.href + param + "last_id=" + last_id, function(data){
+							$('#lenta').append(data);
+							$('.load_gif').fadeOut();
+							show_more.fadeIn();
+						});
+
+					});
+
+				});
+
+			</script>
+
+
+			
+				<script>
+					$(function(){
+						$('body').on('click', '.tab_wrap > div:not(.active)', function() {
+							$(this).addClass('active').siblings().removeClass('active');
+						});
+						$('body').on('click', '.news_tab', function() {
+							$('.news_cont_t').fadeIn(400);
+							$('.news_stat_t').fadeOut(0);
+						});
+
+						$('body').on('click', '.stat_tab', function() {
+							$('.news_cont_t').fadeOut(0);
+							$('.news_stat_t').fadeIn(400);
+						});
+
+						$("a[href*=#]").on("click", function(e){
+							var anchor = $(this);
+							$('html, body').stop().animate({
+							scrollTop: $(anchor.attr('href')).offset().top - 100
+							}, 300);
+							e.preventDefault();
+							return false;
+						});
+
+					})
+				</script>
+
+			
+
+
+
+    </body>
+
+</html><!--Страница сгенерирована за 0.118640 секунд-->

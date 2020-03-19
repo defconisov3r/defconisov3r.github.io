@@ -1,0 +1,1466 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="COVID-19 Portugal - Informação útil e verdadeira">
+    <title>COVID-19 PORTUGAL</title>
+
+    <link href="https://covid19portugal.org/css/app.css" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160968222-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-160968222-1');
+    </script>
+    <script src="https://covid19portugal.org/js/app.js" ></script>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="https://covid19portugal.org">Covid19Portugal.org</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://covid19portugal.org">Início <span class="sr-only">(current)</span></a>
+                </li>
+                <!--
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Notícias</a>
+                </li>
+                <li class="nav-item">
+                    &nbsp;
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-danger text-danger" href="#">Notícias falsas</a>
+                </li>
+                -->
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main role="main">
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item text-center active">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#fff"/></svg>
+                <div class="carousel-caption text-black-50">
+                    <h2 class="font-weight-bold mb-4">DISTANCIAMENTO SOCIAL</h2>
+                    <p class="font-weight-bold">Proteja-se a si e aos outros,<br><span class="text-danger">mantenha-se em casa sempre que possível!</span></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#fff"/></svg>
+                <div class="carousel-caption text-black-50">
+                    <h2 class="font-weight-bold mb-3">Se tiver tosse, febre ou falta de ar ligue para o SNS24</h2>
+                    <h3 class="font-weight-bold mb-3"><span class="badge badge-success">808 24 24 24</span></h3>
+                    <p class="text-danger font-weight-bold">Não utilize o e-mail atendimento@sns24.gov.pt!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#fff"/></svg>
+                <div class="carousel-caption text-black-50">
+                    <h2 class="font-weight-bold mb-3">Para baixas médicas deve ligar para a Segurança Social</h2>
+                    <h3 class="font-weight-bold mb-3"><span class="badge badge-success">300 502 502</span></h3>
+                    <p class="text-danger font-weight-bold">Não utilize o linha telefónica do SNS24!</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="https://covid19portugal.org/images/coronavirus.jpg" class="rounded-circle" alt="">
+                <h2>Sintomas</h2>
+                <ul class="text-left">
+                    <li>Febre (T>37,5ºC)</li>
+                    <li>Tosse</li>
+                    <li>Dificuldade respiratória</li>
+                </ul>
+                <p>Em casos mais graves pode causar pneumonia grave com insuficiência respiratória aguda, falência renal e de outros órgãos, e eventual <strong>morte</strong>.</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img src="https://covid19portugal.org/images/coronavirus.jpg" class="rounded-circle" alt="">
+                <h2>Risco</h2>
+                <p>A avaliação de risco encontra-se em atualização permanente, de acordo com a evolução do surto. O Centro Europeu de Prevenção e Controlo das Doenças (ECDC) e a Direção-Geral da Saúde (DGS) emitem comunicados diários com o sumário da informação e recomendações mais recentes.</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img src="https://covid19portugal.org/images/coronavirus.jpg" class="rounded-circle" alt="">
+                <h2>Coronavírus</h2>
+                <p>O novo coronavírus, designado SARS-CoV-2, foi identificado pela primeira vez em dezembro de 2019 na China, na cidade de Wuhan. Este novo agente nunca tinha sido identificado anteriormente em seres humanos. A fonte da infeção é ainda desconhecida.</p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+        <hr class="featurette-divider">
+
+        <div class="pac-card" id="pac-card">
+            <div>
+                <div id="title">
+                    Encontre um espaço
+                </div>
+            </div>
+            <div id="pac-container">
+                <input id="pac-input" type="text" placeholder="Escreva o nome do espaço">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col">
+                <h2>Saiba o que está em funcionamento, horário reduzido ou encerrado</h2>
+                <p><strong>NOTA:</strong> Contribua adicionando espaços! Pesquise pelo nome do espaço, clique no botão "atualizar informação" e preencha com a informação de que dispõe.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p class="mb-3">
+                    <span class="btn btn-success">Em funcionamento</span>
+                    <span class="btn btn-warning">Em horário reduzido</span>
+                    <span class="btn btn-danger">Encerrado</span>
+                </p>
+
+                <p><label><input type="checkbox" class="filter" id="filter_only_open_now" value="1"> MOSTRAR APENAS <strong>ABERTO AGORA</strong></label></p>
+
+                <div id="infowindow-content">
+                    <img src="" width="16" height="16" id="place-icon">
+                    <span id="place-name" class="title"></span><br>
+                    <span id="place-address"></span><br><br>
+                    <span class="font-weight-bold">Horário atual</span><br>
+                    <span id="place-schedule-1"></span><br>
+                    <span id="place-schedule-2"></span><br>
+                    <span id="place-schedule-3"></span><br><br>
+                    <span class="font-weight-bold">Informações</span><br>
+                    <span id="place-information"></span><br><br>
+                    <span class="text-danger font-weight-bold">Informações importantes</span><br>
+                    <span id="place-information-important"></span><br><br>
+                    <p class="text-center">
+                        <span class="btn btn-outline-primary" data-toggle="modal" data-target="#add_place">Atualizar informação</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-6 col-md-2">
+                <label><input type="checkbox" class="filter" id="filter_type_1" checked value="1"> <i class="fa fa-h-square"></i> Hospitais</label>
+            </div>
+            <div class="col-6 col-md-2">
+                <label><input type="checkbox" class="filter" id="filter_type_2" checked value="2"> <i class="fa fa-medkit"></i> Farmácias</label>
+            </div>
+            <div class="col-6 col-md-2">
+                <label><input type="checkbox" class="filter" id="filter_type_3" checked value="3"> <i class="fa fa-shopping-cart"></i> Hipermercados</label>
+            </div>
+            <div class="col-6 col-md-2">
+                <label><input type="checkbox" class="filter" id="filter_type_4" checked value="4"> <i class="fa fa-shopping-basket"></i> Supermercados</label>
+            </div>
+            <div class="col-6 col-md-2">
+                <label><input type="checkbox" class="filter" id="filter_type_5" checked value="5"> <i class="fa fa-coffee"></i> Padarias</label>
+            </div>
+            <div class="col-6 col-md-2">
+                <label><input type="checkbox" class="filter" id="filter_type_6" checked value="6"> <i class="fa fa-building-o"></i> CM & Juntas</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div id="map" style="width:100%; height: calc(100vh - 200px); max-height: 800px"></div>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row">
+            <div class="col-12">
+                <h2 class="mb-3">Ponto de Situação Atual</h2>
+                <iframe src="" style="width:100%; height: calc(100vh - 200px); max-height: 800px" frameborder="0"></iframe>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Folhetos informativos</h2>
+                <ul>
+                    <li><a href="https://covid19.min-saude.pt/wp-content/uploads/2020/03/Isolamento-icon-1.pdf">Isolamento – Durante o período de isolamento</a></li>
+                    <li><a href="https://covid19.min-saude.pt/wp-content/uploads/2020/03/isolamento-folheto-1.pdf">Isolamento – Recomendações para isolamento em casa</a></li>
+                    <li><a aria-label="Transportes Públicos (abre num novo separador)" href="https://covid19.min-saude.pt/wp-content/uploads/2020/03/TRANSPORTES-PÚBLICOS.pdf" target="_blank" rel="noreferrer noopener">Transportes Públicos</a></li>
+                    <li><a aria-label="Lavagem das Mãos (alcool) (abre num novo separador)" href="https://covid19.min-saude.pt/wp-content/uploads/2020/03/01-DGS_Lavarmaos_alcool_V1.pdf" target="_blank" rel="noreferrer noopener">Lavagem das Mãos (álcool)</a></li>
+                    <li><a aria-label="Recomendações para crianças e encarregados de Educação (abre num novo separador)" href="https://covid19.min-saude.pt/wp-content/uploads/2020/03/Folheto-crianças-e-encarregados-de-educação.pdf" target="_blank" rel="noreferrer noopener">Recomendações para crianças e encarregados de Educação</a></li>
+                </ul>
+            </div>
+            <div class="col-md-5">
+                <img src="https://covid19portugal.org/images/folhetos-informativos.jpg" width="100%" alt="">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Documentos úteis</h2>
+                <ul>
+                    <li><a aria-label="Medida de apoio excecional - Certificação de Isolamento Profilático (abre num novo separador)" href="https://www.dgaep.gov.pt/CORONAVIRUS/modelos/COVID_19_MODELO_1_DGAEP_V1.pdf" target="_blank" rel="noreferrer noopener">Certificação de Isolamento Profilático</a></li>
+                    <li><a aria-label="Medida de apoio excecional - declaração a preencher pelos pais em caso de encerramento de escola (abre num novo separador)" href="https://www.portugal.gov.pt/download-ficheiros/ficheiro.aspx?v=1e16772c-9656-4d59-8b9f-e576cb995903" target="_blank" rel="noreferrer noopener">Declaração a preencher pelos pais em caso de encerramento de escola</a></li>
+                </ul>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="https://covid19portugal.org/images/documentos-uteis.jpg" width="100%" alt="">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row">
+            <div class="col-12">
+                <h2>Perguntas frequentes</h2>
+
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header" id="heading1">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                    O que são os Coronavírus?
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordion">
+                            <div class="card-body">
+                                Os coronavírus são uma família de vírus que podem causar infeções nas pessoas. Normalmente estas infeções afetam o sistema respiratório, podendo ser semelhantes à gripe ou evoluir para uma doença mais grave, como pneumonia.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading2">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    O que é o Novo Coronavírus?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
+                            <div class="card-body">
+                                O novo coronavírus, designado SARS-CoV-2, foi identificado pela primeira vez em dezembro de 2019 na China, na cidade de Wuhan. Este novo agente nunca tinha sido identificado anteriormente em seres humanos. A fonte da infeção é ainda desconhecida.
+                                <br><br>Ainda está em investigação a via de transmissão. A transmissão pessoa a pessoa foi confirmada e já existe infeção em vários países e em pessoas que não tinham visitado o mercado de Wuhan. A investigação prossegue.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading3">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    COVID-19 é o mesmo que o SARS-CoV-2?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordion">
+                            <div class="card-body">
+                                Não. SARS-CoV-2 é o nome do novo vírus e significa Severe Respiratory Acute Syndrome (Síndrome Respiratória Aguda Grave) – Coronavírus – 2. Existe outro coronavírus que causa uma Síndrome Respiratória Aguda Grave, que foi identificado em 2002, este é chamado “SARS-CoV”, por isso o Novo Coronavírus é designado por “SARS-CoV-2”. COVID-19 (Coronavirus Disease) é o nome da doença e significa Doença por Coronavírus 2019, fazendo referência ao ano em que foi descoberta.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading4">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                    Qual é a origem do Novo Coronavírus?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordion">
+                            <div class="card-body">
+                                Segundo as informações publicadas pelas autoridades internacionais, a fonte da infeção é desconhecida e ainda pode estar ativa. A maioria dos casos está associada a um mercado em Wuhan (Wuhan’s Huanan Seafood Wholesale Market), específico para alimentos e animais vivos (peixe, mariscos e aves). O mercado foi encerrado a 1 de janeiro de 2020. Como os primeiros casos de infeção estão relacionados com pessoas que frequentaram este mercado, suspeita-se que o vírus seja de origem animal, mas não há certezas. Isto porque já foram confirmadas infeções em pessoas que não tinham visitado este mercado. A investigação prossegue.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading5">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                    Qual o risco para Portugal?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordion">
+                            <div class="card-body">
+                                A avaliação de risco encontra-se em atualização permanente, de acordo com a evolução do surto. O Centro Europeu de Prevenção e Controlo das Doenças (ECDC) e a Direção-Geral da Saúde (DGS) emitem comunicados diários com o sumário da informação e recomendações mais recentes.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading6">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                    Quais são os sinais e sintomas?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordion">
+                            <div class="card-body">
+                                A maioria das pessoas infetadas apresentam sintomas de infeção respiratória aguda ligeiros a moderados:
+                                <ul>
+                                    <li>Febre (T>37,5ºC)</li>
+                                    <li>Tosse</li>
+                                    <li>Dificuldade respiratória (Falta de ar)</li>
+                                </ul>
+
+                                Em casos mais graves pode causar pneumonia grave com insuficiência respiratória aguda, falência renal e de outros órgãos, e eventual morte. Contudo, a maioria dos casos recupera sem sequelas.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading7">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                                    Como se transmite?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordion">
+                            <div class="card-body">
+                                A COVID-19 transmite-se por contacto próximo com pessoas infetadas pelo vírus, ou superfícies e objetos contaminados.
+
+                                <br><br>Esta doença transmite-se através de gotículas libertadas pelo nariz ou boca quando tossimos ou espirramos, que podem atingir diretamente a boca, nariz e olhos de quem estiver próximo.
+
+                                <br><br>As gotículas podem depositar-se nos objetos ou superfícies que rodeiam a pessoa infetada. Por sua vez, outras pessoas podem infetar-se ao tocar nestes objetos ou superfícies e depois tocar nos olhos, nariz ou boca com as mãos.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading8">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                                    O que é uma área de transmissão comunitária?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordion">
+                            <div class="card-body">
+                                Quando é feito o diagnóstico de COVID-19 a uma pessoa, as autoridades de saúde fazem um inquérito epidemiológico para, entre outras informações, perceberem qual a fonte da infeção. Quando não se consegue identificar essa fonte, ou seja, quem transmitiu o vírus, diz-se que estamos perante uma área de transmissão comunitária.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading9">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                                    Qual é o período de incubação?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#accordion">
+                            <div class="card-body">
+                                Estima-se que o período de incubação da doença (tempo decorrido desde a exposição ao vírus até ao aparecimento de sintomas) seja entre 2 e 14 dias. A transmissão por pessoas assintomáticas (sem sintomas) ainda está a ser investigada.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading10">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                                    O que é um contacto próximo?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordion">
+                            <div class="card-body">
+                                Os seguintes casos podem ser considerados como contactos próximos:
+
+                                <ul>
+                                    <li>Pessoa com exposição associada a cuidados de saúde, nomeadamente a prestação de cuidados diretos a doente com COVID-19 ou o contacto em ambiente laboratorial com amostras de COVID-19;</li>
+                                    <li>Contacto em proximidade ou em ambiente fechado com um doente com COVID-19 (ex: sala de aula);</li>
+                                    <li>
+                                        Pessoas que viagem com doente com COVID-19, como por exemplo:
+                                        <ol>
+                                            <li>companheiros de viagem num avião: as pessoas que estão dois lugares à esquerda ou à direita do doente, 2 lugares nas duas filas consecutivas à frente do doente e dois lugares nas duas filas consecutivas atrás do doente e tripulantes de bordo que serviram a secção do doente;</li>
+                                            <li>companheiros de viagem num navio: pessoas que partilharam a mesma cabine e tripulantes de bordo que serviram a cabine do doente.</li>
+                                            <li>Ou outros meios de transporte (autocarros, comboios…)</li>
+                                        </ol>
+                                    </li>
+                                </ul>
+
+                                A Autoridade de Saúde pode considerar como contato próximo outros indivíduos não definidos nos pontos anteriores (a avaliação é feita caso a caso).
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading11">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                                    Os animais domésticos podem transmitir o COVID-19?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse11" class="collapse" aria-labelledby="heading11" data-parent="#accordion">
+                            <div class="card-body">
+                                Não. De acordo com informação da Organização Mundial da Saúde (OMS), não há evidência de que os animais domésticos, tais como cães e gatos, tenham sido infetados e que, consequentemente, possam transmitir o COVID-19.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading12">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                                    O COVID-19 pode ser transmitido através de alimentos, incluindo os refrigerados e congelados?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse12" class="collapse" aria-labelledby="heading12" data-parent="#accordion">
+                            <div class="card-body">
+                                Os coronavírus transmitem-se, geralmente, de pessoa para pessoa através de gotículas respiratórias. De acordo com a European Food Safety Authority (EFSA) “as experiências dos surtos anteriores com coronavírus, nomeadamente com o coronavírus SARS-CoV e com o coronavírus MERS-CoV, mostram que a sua transmissão não ocorreu através do consumo alimentar”.
+
+                                <br><br>Atualmente, não há evidência que suporte a transmissão do COVID-19 pelos alimentos.
+
+                                <br><br>Porém, aplicando o princípio da precaução, a manutenção e o reforço das boas práticas de higiene e segurança alimentar durante a manipulação, preparação e coinfecção dos alimentos é recomendada.
+
+                                <br><br>Assumindo o princípio da precaução, a OMS publicou no seu site algumas recomendações relativas às boas práticas de higiene e segurança alimentar e, a nível nacional, a Autoridade de Segurança Alimentar e Económica (ASAE), publicou o comunicado – Pode o novo tipo de coronavírus ser transmissível através da Comida?
+
+                                <br><br>Destas orientações relativas à preparação, confeção e consumo de alimentos, destaca-se o reforço das seguintes boas práticas de higiene:
+
+                                <ul>
+                                    <li>Lavagem frequente e prolongada das mãos (com água e sabão durante 20 segundos), seguida de secagem apropriada evitando a contaminação cruzada (por exemplo fechar a torneira com uma toalha de papel ao invés da mão que a abriu enquanto suja)</li>
+                                    <li>Desinfeção apropriada das bancadas de trabalho e das mesas com produtos apropriados</li>
+                                    <li>Evitar a contaminação entre comida crua e cozinhada</li>
+                                    <li>Cozinhar e “empratar” a comida a temperaturas apropriadas e lavar adequadamente os alimentos crus</li>
+                                    <li>Evitar partilhar comida ou objetos entre pessoas durante a sua preparação, confeção e consumo</li>
+                                </ul>
+
+                                A ASAE irá continuar a acompanhar esta situação de forma contínua e sempre que se justifique emitirá novos comunicados ou documentos técnicos.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading13">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                                    O clima quente vai parar o surto de COVID-19?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse13" class="collapse" aria-labelledby="heading13" data-parent="#accordion">
+                            <div class="card-body">
+                                Ainda não é conhecido se o clima ou a temperatura afetam a propagação do COVID-19. Outros vírus, por exemplo os que causam gripe, têm uma maior propagação durante os meses mais frios. Contudo, isso não significa que não se fique doente devido a estes vírus durante os restantes meses.
+
+                                <br><br>De momento, não há evidência de que a propagação do COVID-19 irá diminuir quando o clima ficar mais quente. Ainda há muito para aprender sobre o modo de transmissão, a gravidade e outras informações relacionadas com o COVID-19, e há investigações em curso.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading14">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
+                                    Devo ser testado para o COVID-19?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse14" class="collapse" aria-labelledby="heading14" data-parent="#accordion">
+                            <div class="card-body">
+                                Se estiver com febre, tosse ou dificuldade respiratória e tiver estado em contacto com uma pessoa infetada por COVID-19, ou tiver regressado recentemente de uma área afetada, deve ligar para o SNS24 (808 24 24 24).
+
+                                <br><br>Após este contacto e validação da história clínica, os profissionais de saúde irão determinar se é necessário ser testado para COVID-19.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading9">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
+                                    Existe uma vacina?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse15" class="collapse" aria-labelledby="heading15" data-parent="#accordion">
+                            <div class="card-body">
+                                Atualmente não existe vacina contra o SARS-CoV-2. Sendo um vírus recentemente identificado, estão em curso as investigações para o seu desenvolvimento.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading15">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
+                                    Qual é o tratamento?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse15" class="collapse" aria-labelledby="heading15" data-parent="#accordion">
+                            <div class="card-body">
+                                O tratamento para a infeção por este novo coronavírus é dirigido aos sinais e sintomas que os doentes apresentam.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading16">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse16" aria-expanded="false" aria-controls="collapse16">
+                                    Os antibióticos são efetivos a prevenir e tratar o novo coronavírus?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse16" class="collapse" aria-labelledby="heading16" data-parent="#accordion">
+                            <div class="card-body">
+                                Não, os antibióticos são dirigidos a bactérias, não tendo efeito contra vírus. O SARS-CoV-2 é um vírus e, como tal, os antibióticos não devem ser usados para a sua prevenção ou tratamento. Não terá resultado e poderá contribuir para o aumento das resistências a antimicrobianos (antibióticos).
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading17">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse17" aria-expanded="false" aria-controls="collapse17">
+                                    O que são medidas de higiene e etiqueta respiratória?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse17" class="collapse" aria-labelledby="heading17" data-parent="#accordion">
+                            <div class="card-body">
+                                Nas áreas afetadas, a Organização Mundial da Saúde (OMS) recomenda medidas de higiene e etiqueta respiratória para reduzir a exposição e transmissão da doença:
+                                <ul>
+                                    <li>Medidas de etiqueta respiratória: tapar o nariz e a boca quando espirrar ou tossir, com um lenço de papel ou com o antebraço, nunca com as mãos, e deitar sempre o lenço de papel no lixo;</li>
+                                    <li>Lavar as mãos frequentemente. Deve lavá-las sempre que se assoar, espirrar, tossir ou após contacto direto com pessoas doentes. Deve lavá-las durante 20 segundos (o tempo que demora a cantar os “Parabéns”) com água e sabão ou com solução à base de álcool a 70%;</li>
+                                    <li>Evitar contacto próximo com pessoas com infeção respiratória;</li>
+                                    <li>Evitar tocar na cara com as mãos;</li>
+                                    <li>Evitar partilhar objetos pessoais ou comida em que tenha tocado.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading18">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse18" aria-expanded="false" aria-controls="collapse18">
+                                    Quem está em risco de doença por COVID-19?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse18" class="collapse" aria-labelledby="heading18" data-parent="#accordion">
+                            <div class="card-body">
+                                O vírus não tem nacionalidade, idade ou género, por isso todos corremos o risco de contração deste novo coronavírus.
+
+                                <br><br>Ainda assim, as pessoas que correm maior risco de doença grave por COVID-19 são os idosos e pessoas com doenças crónicas (ex.: doenças cardíacas, diabetes e doenças pulmonares).
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading19">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse19" aria-expanded="false" aria-controls="collapse19">
+                                    O que é que as pessoas em risco de doença grave por COVID-19 devem fazer?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse19" class="collapse" aria-labelledby="heading19" data-parent="#accordion">
+                            <div class="card-body">
+                                Se tiver risco de doença grave por COVID-19, deve:
+
+                                <ul>
+                                    <li>Tomar precauções diárias (ex.: medidas de etiqueta respiratória), evitando o contacto próximo com outras pessoas;</li>
+                                    <li>Afastar-se de pessoas doentes;</li>
+                                    <li>Limitar o contacto social e evitar multidões;</li>
+                                    <li>Lavar frequentemente as mãos.</li>
+                                </ul>
+
+                                Se houver um cluster na sua comunidade, evite o contacto próximo com pessoas e, se possível, mantenha-se em casa. Preste atenção aos sinais e sintomas. Se ficar doente, permaneça em casa e ligue para o SNS24.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading20">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse20" aria-expanded="false" aria-controls="collapse20">
+                                    Tenho de usar máscara para me proteger?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse20" class="collapse" aria-labelledby="heading20" data-parent="#accordion">
+                            <div class="card-body">
+                                De acordo com a situação atual em Portugal, não está indicado o uso de máscara para proteção individual, exceto nas seguintes situações:
+
+                                <ul>
+                                    <li>Suspeitos de infeção por COVID-19;</li>
+                                    <li>Pessoas que prestem cuidados a suspeitos de infeção por COVID-19.</li>
+                                </ul>
+
+                                A Direção-Geral da Saúde não recomenda, até ao momento, o uso de máscara de proteção para pessoas que não apresentam sintomas (assintomáticas). O uso de máscara de forma incorreta pode aumentar o risco de infeção, por estar mal colocada ou devido ao contacto das mãos com a cara. A máscara contribui também para uma falsa sensação de segurança.
+
+                                <br><br>A utilização de máscara contribui também para uma falsa sensação de segurança.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-3"><strong>NOTA:</strong> Todas as respostas à perguntas frequentes são indicações da DGS, SNS24 e Infarmed.</p>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row">
+            <div class="col">
+                <h2 class="mb-3">Contactos úteis</h2>
+                <h4>+351 808 24 24 24 <small>Linha SNS 24 para esclarecimentos de diagnóstico médico.</small></h4>
+                <h4>+351 300 502 502 <small>Linha Segurança Social para esclarecimentos sobre assistência a familiares, baixas e quarentena.</small></h4>
+                <h4>+351 217 929 755 <small>Linha do Ministério dos Negócios Estrangeiros de emergência aos portugueses em viagem.</small></h4>
+                <h4 class="mt-3">atendimento@sns24.gov.pt <small>Canal SNS 24 para esclarecimentos de dúvidas. <strong>Não utilizar para diagnóstico médico.</strong></small></h4>
+                <h4 class="mt-3">covid19@mne.pt <small>Canal do Ministério dos Negócios Estrangeiros de emergência aos portugueses em viagem.</small></h4>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row">
+            <div class="col">
+                <h2>Covid19Portugal.org</h2>
+                <p>Este site tem como objetivo ajudar os cidadãos com a agregação de dados úteis.</p>
+                <p>NUNCA publicaremos informação que não tenha sido confirmada por fontes seguras.</p>
+                <p>Quaisquer dúvidas, críticas e/ou sugestões envie para <a href="mailto:info@covid19portugal.org">info@covid19portugal.org</a></p>
+                <p><strong>Trabalho em curso:</strong> secção de notícias importantes e secção de esclarecimento de notícias falsas.</p>
+
+                <p class="mt3">
+                    <strong>NOTA:</strong> Não gravamos quaisquer dados do utilizador.<br>
+                    A localização serve apenas para situar o mapa na sua zona.
+                </p>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+
+    <!-- FOOTER -->
+    <footer class="container">
+        <p class="float-right"><a href="#">Voltar para cima</a></p>
+        <p>&copy; 2019 <a href="https://covid19portugal.org">Covid19Portugal.org</a> &middot; Todos os dados foram recolhidos de fontes seguras
+    </footer>
+</main>
+
+<div id="add_place" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Atualizar informação</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post">
+                    <input type="hidden" name="_token" value="oAwDe4ueUenkNkaN2kn1dy3ogeAjGLV1l9XYIeZB">
+                    <input type="hidden" name="name" id="new_place_name" class="new_place_name">
+                    <input type="hidden" name="address" id="new_place_address">
+                    <input type="hidden" name="latitude" id="new_place_latitude">
+                    <input type="hidden" name="longitude" id="new_place_longitude">
+                    <input type="hidden" name="icon" id="new_place_icon">
+                    <div class="form-group text-center font-weight-bold" class="new_place_name">
+                    </div>
+                    <div class="form-group">
+                        <label for="new_place_type">Estado</label>
+                        <select name="status" class="form-control" id="new_place_status">
+                            <option value="1" class="bg-success">Em funcionamento</option>
+                            <option value="2" class="bg-warning">Em horário reduzido</option>
+                            <option value="3" class="bg-danger">Encerrado</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="new_place_type">Tipo</label>
+                        <select name="type" class="form-control" id="new_place_type">
+                            <option value="1">Hospital ou Centro de Saúde</option>
+                            <option value="2">Farmácia</option>
+                            <option value="3">Hipermercado</option>
+                            <option value="4">Supermercado</option>
+                            <option value="5">Padaria</option>
+                            <option value="6">Câmara Municiapal ou Junta de Freguesia</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="new_place_information">Informações úteis</label>
+                        <textarea name="information" class="form-control" id="new_place_information" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="new_place_important">Informações <strong>MUITO IMPORTANTES</strong><br><span class="text-danger">Estas informações vão aparecer destacadas</span></label>
+                        <textarea class="form-control" name="information_important" id="new_place_information_important" rows="3"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="col text-center">
+                            <strong>Horário</strong><br>(preencher apenas as linhas necessárias)
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col text-center">
+                            Abertura <small>(Ex: 10:00)</small>
+                        </div>
+                        <div class="col text-center">
+                            Fecho <small>(Ex: 14:00)</small>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" name="open1" id="new_place_open1" class="form-control text-center">
+                        </div>
+                        <div class="col">
+                            <input type="text" name="close1" id="new_place_close1" class="form-control text-center">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" name="open2" id="new_place_open2" class="form-control text-center">
+                        </div>
+                        <div class="col">
+                            <input type="text" name="close2" id="new_place_close2" class="form-control text-center">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" name="open3" id="new_place_open3" class="form-control text-center">
+                        </div>
+                        <div class="col">
+                            <input type="text" name="close3" id="new_place_close3" class="form-control text-center">
+                        </div>
+                    </div>
+                </form>
+                <div class="row mt-3">
+                    <div class="col text-danger errors">
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Submeter</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="toast">
+    <div class="toast-header">
+        Toast Header
+    </div>
+    <div class="toast-body">
+        Some text inside the toast body
+    </div>
+</div>
+
+<script>
+    var map, placeSearch, autocomplete, infowindow, infowindowContent;
+    var countryRestrict = {'country': 'pt'};
+    var places = [];
+    var labels = [
+        {
+            fontFamily: 'Fontawesome',
+            text: '\uf0fd',
+            fontSize: '30px',
+            color: 'black',
+        },
+        {
+            fontFamily: 'Fontawesome',
+            text: '\uf0fa',
+            fontSize: '30px',
+            color: 'black',
+        },
+        {
+            fontFamily: 'Fontawesome',
+            text: '\uf07a',
+            fontSize: '30px',
+            color: 'black',
+        },
+        {
+            fontFamily: 'Fontawesome',
+            text: '\uf291',
+            fontSize: '30px',
+            color: 'black',
+        },
+        {
+            fontFamily: 'Fontawesome',
+            text: '\uf0f4',
+            fontSize: '30px',
+            color: 'black',
+        },
+        {
+            fontFamily: 'Fontawesome',
+            text: '\uf0f7',
+            fontSize: '30px',
+            color: 'black',
+        },
+    ];
+
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 39.932782, lng: -8.349333},
+            zoom: 7
+        });
+        infowindowContent = document.getElementById('infowindow-content');
+        infowindow = new google.maps.InfoWindow();
+        infowindow.setContent(infowindowContent);
+
+                                                            var marker = new google.maps.Marker(
+                {
+                    position: new google.maps.LatLng(40.6842433, -8.5974529),
+                    map: map,
+                    label: labels[5],
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE, //or any others
+                        scale: 15,
+                        fillOpacity: 1,
+                        fillColor: '#38c172',
+                        strokeColor: '#38c172',
+                    },
+                    zIndex: -6,
+                    attrs: {"id":1,"status":1,"type":6,"name":"Junta de Freguesia de Cacia","address":"6A Av. Fernando Augusto de Oliveira Cacia","latitude":"40.6842433","longitude":"-8.5974529","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/civic_building-71.png","information":"A JF Cacia, decidiu manter o mercado de Cacia aberto desde que sejam cumpridas as regras:\r\n- Exclusivo para produtos alimentares;\r\n- S\u00f3 para: Talho, peixaria, legumes, p\u00e3o, charcutaria, frutas, animais, sementes, plantas;\r\n- Vendedores com m\u00e1scara e luvas, se poss\u00edvel gel;\r\n- Os vendedores v\u00e3o ser dispostos de uma forma mais espa\u00e7osa;\r\n- n\u00e3o pode haver ajuntamentos;\r\n- cumpra as regras de distanciamento;\r\n- obede\u00e7a \u00e0s indica\u00e7\u00f5es dadas;\r\n- sem tem sintomas (tosse, febre) n\u00e3o venha fazer compras.","information_important":"Linha de apoio para aquisi\u00e7\u00e3o de bens de 1.\u00aa necessidade e produtos de farm\u00e1cia. S\u00f3 para idosos e pessoas com doen\u00e7as cr\u00f3nicas\r\nTelefone: 234 912 439","open1":"09:30:00","close1":"12:00:00","open2":"14:30:00","close2":"19:00:00","open3":null,"close3":null,"created_at":"2020-03-19T15:50:47.000000Z","updated_at":"2020-03-19T15:52:38.000000Z"}
+                }
+            );
+            marker.addListener('click', function() {
+                setInfowindow({"id":1,"status":1,"type":6,"name":"Junta de Freguesia de Cacia","address":"6A Av. Fernando Augusto de Oliveira Cacia","latitude":"40.6842433","longitude":"-8.5974529","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/civic_building-71.png","information":"A JF Cacia, decidiu manter o mercado de Cacia aberto desde que sejam cumpridas as regras:\r\n- Exclusivo para produtos alimentares;\r\n- S\u00f3 para: Talho, peixaria, legumes, p\u00e3o, charcutaria, frutas, animais, sementes, plantas;\r\n- Vendedores com m\u00e1scara e luvas, se poss\u00edvel gel;\r\n- Os vendedores v\u00e3o ser dispostos de uma forma mais espa\u00e7osa;\r\n- n\u00e3o pode haver ajuntamentos;\r\n- cumpra as regras de distanciamento;\r\n- obede\u00e7a \u00e0s indica\u00e7\u00f5es dadas;\r\n- sem tem sintomas (tosse, febre) n\u00e3o venha fazer compras.","information_important":"Linha de apoio para aquisi\u00e7\u00e3o de bens de 1.\u00aa necessidade e produtos de farm\u00e1cia. S\u00f3 para idosos e pessoas com doen\u00e7as cr\u00f3nicas\r\nTelefone: 234 912 439","open1":"09:30:00","close1":"12:00:00","open2":"14:30:00","close2":"19:00:00","open3":null,"close3":null,"created_at":"2020-03-19T15:50:47.000000Z","updated_at":"2020-03-19T15:52:38.000000Z"});
+            });
+
+            places.push(marker);
+                                                            var marker = new google.maps.Marker(
+                {
+                    position: new google.maps.LatLng(40.68804360000001, -8.601069799999998),
+                    map: map,
+                    label: labels[4],
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE, //or any others
+                        scale: 15,
+                        fillOpacity: 1,
+                        fillColor: '#38c172',
+                        strokeColor: '#38c172',
+                    },
+                    zIndex: -5,
+                    attrs: {"id":2,"status":1,"type":5,"name":"Cantinho Do P\u00e3o Doce","address":"47 R. Dr. Alberto Souto Cacia","latitude":"40.68804360000001","longitude":"-8.601069799999998","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png","information":null,"information_important":null,"open1":null,"close1":null,"open2":null,"close2":null,"open3":null,"close3":null,"created_at":"2020-03-19T15:53:03.000000Z","updated_at":"2020-03-19T15:53:03.000000Z"}
+                }
+            );
+            marker.addListener('click', function() {
+                setInfowindow({"id":2,"status":1,"type":5,"name":"Cantinho Do P\u00e3o Doce","address":"47 R. Dr. Alberto Souto Cacia","latitude":"40.68804360000001","longitude":"-8.601069799999998","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png","information":null,"information_important":null,"open1":null,"close1":null,"open2":null,"close2":null,"open3":null,"close3":null,"created_at":"2020-03-19T15:53:03.000000Z","updated_at":"2020-03-19T15:53:03.000000Z"});
+            });
+
+            places.push(marker);
+                                                            var marker = new google.maps.Marker(
+                {
+                    position: new google.maps.LatLng(40.68385329999999, -8.5985247),
+                    map: map,
+                    label: labels[0],
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE, //or any others
+                        scale: 15,
+                        fillOpacity: 1,
+                        fillColor: '#38c172',
+                        strokeColor: '#38c172',
+                    },
+                    zIndex: -1,
+                    attrs: {"id":3,"status":1,"type":1,"name":"Unidade De Sa\u00fade Familiar Salinas","address":"3800 R. Conselheiro Nunes da Silva Cacia","latitude":"40.68385329999999","longitude":"-8.5985247","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/generic_business-71.png","information":null,"information_important":null,"open1":"08:00:00","close1":"18:00:00","open2":null,"close2":null,"open3":null,"close3":null,"created_at":"2020-03-19T15:53:36.000000Z","updated_at":"2020-03-19T15:53:36.000000Z"}
+                }
+            );
+            marker.addListener('click', function() {
+                setInfowindow({"id":3,"status":1,"type":1,"name":"Unidade De Sa\u00fade Familiar Salinas","address":"3800 R. Conselheiro Nunes da Silva Cacia","latitude":"40.68385329999999","longitude":"-8.5985247","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/generic_business-71.png","information":null,"information_important":null,"open1":"08:00:00","close1":"18:00:00","open2":null,"close2":null,"open3":null,"close3":null,"created_at":"2020-03-19T15:53:36.000000Z","updated_at":"2020-03-19T15:53:36.000000Z"});
+            });
+
+            places.push(marker);
+                                                            var marker = new google.maps.Marker(
+                {
+                    position: new google.maps.LatLng(40.68397220000001, -8.5973379),
+                    map: map,
+                    label: labels[1],
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE, //or any others
+                        scale: 15,
+                        fillOpacity: 1,
+                        fillColor: '#ffed4a',
+                        strokeColor: '#ffed4a',
+                    },
+                    zIndex: -2,
+                    attrs: {"id":4,"status":2,"type":2,"name":"Farm\u00e1cia Lusitana","address":"Cacia Aveiro PT","latitude":"40.68397220000001","longitude":"-8.5973379","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/pharmacy_cross-71.png","information":"- Os servi\u00e7os farmac\u00eauticos - medi\u00e7\u00e3o glicemia, colesterol e tens\u00e3o arterial, administra\u00e7\u00e3o de injet\u00e1veis - s\u00e3o agora suspensos, a entrega de encomendas ao domic\u00edlio tamb\u00e9m ser\u00e1 restrita.\r\n- H\u00e1 quest\u00f5es que podem ser resolvidas por telefone sem que tenha de se deslocar \u00e0 farm\u00e1cia.\r\nContacto: 234916010","information_important":"- Evite acompanhar-se de outras pessoas, s\u00f3 mesmo em caso de urg\u00eancia extrema;\r\n- Enquanto aguarda no exterior da farm\u00e1cia mantenha a dist\u00e2ncia de cerca de 1 metro dos outros utentes;\r\n- Ao entrar na farm\u00e1cia \u00e9 OBRIGAT\u00d3RIO utilizar a solu\u00e7\u00e3o desinfetante que se encontra junto do dispensador de senhas (agora n\u00e3o utilizado);\r\n- No ch\u00e3o da farm\u00e1cia existem fitas a delinear a dist\u00e2ncia de seguran\u00e7a. Respeite!","open1":"09:00:00","close1":"13:00:00","open2":"14:00:00","close2":"19:00:00","open3":null,"close3":null,"created_at":"2020-03-19T15:54:22.000000Z","updated_at":"2020-03-19T15:54:22.000000Z"}
+                }
+            );
+            marker.addListener('click', function() {
+                setInfowindow({"id":4,"status":2,"type":2,"name":"Farm\u00e1cia Lusitana","address":"Cacia Aveiro PT","latitude":"40.68397220000001","longitude":"-8.5973379","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/pharmacy_cross-71.png","information":"- Os servi\u00e7os farmac\u00eauticos - medi\u00e7\u00e3o glicemia, colesterol e tens\u00e3o arterial, administra\u00e7\u00e3o de injet\u00e1veis - s\u00e3o agora suspensos, a entrega de encomendas ao domic\u00edlio tamb\u00e9m ser\u00e1 restrita.\r\n- H\u00e1 quest\u00f5es que podem ser resolvidas por telefone sem que tenha de se deslocar \u00e0 farm\u00e1cia.\r\nContacto: 234916010","information_important":"- Evite acompanhar-se de outras pessoas, s\u00f3 mesmo em caso de urg\u00eancia extrema;\r\n- Enquanto aguarda no exterior da farm\u00e1cia mantenha a dist\u00e2ncia de cerca de 1 metro dos outros utentes;\r\n- Ao entrar na farm\u00e1cia \u00e9 OBRIGAT\u00d3RIO utilizar a solu\u00e7\u00e3o desinfetante que se encontra junto do dispensador de senhas (agora n\u00e3o utilizado);\r\n- No ch\u00e3o da farm\u00e1cia existem fitas a delinear a dist\u00e2ncia de seguran\u00e7a. Respeite!","open1":"09:00:00","close1":"13:00:00","open2":"14:00:00","close2":"19:00:00","open3":null,"close3":null,"created_at":"2020-03-19T15:54:22.000000Z","updated_at":"2020-03-19T15:54:22.000000Z"});
+            });
+
+            places.push(marker);
+                                                            var marker = new google.maps.Marker(
+                {
+                    position: new google.maps.LatLng(40.68387380000001, -8.597250899999999),
+                    map: map,
+                    label: labels[4],
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE, //or any others
+                        scale: 15,
+                        fillOpacity: 1,
+                        fillColor: '#e3342f',
+                        strokeColor: '#e3342f',
+                    },
+                    zIndex: -5,
+                    attrs: {"id":5,"status":3,"type":5,"name":"Padaria da Vila","address":"9-11 Av. Fernando Augusto de Oliveira Cacia","latitude":"40.68387380000001","longitude":"-8.597250899999999","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png","information":null,"information_important":null,"open1":null,"close1":null,"open2":null,"close2":null,"open3":null,"close3":null,"created_at":"2020-03-19T15:54:42.000000Z","updated_at":"2020-03-19T15:54:42.000000Z"}
+                }
+            );
+            marker.addListener('click', function() {
+                setInfowindow({"id":5,"status":3,"type":5,"name":"Padaria da Vila","address":"9-11 Av. Fernando Augusto de Oliveira Cacia","latitude":"40.68387380000001","longitude":"-8.597250899999999","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png","information":null,"information_important":null,"open1":null,"close1":null,"open2":null,"close2":null,"open3":null,"close3":null,"created_at":"2020-03-19T15:54:42.000000Z","updated_at":"2020-03-19T15:54:42.000000Z"});
+            });
+
+            places.push(marker);
+                                                            var marker = new google.maps.Marker(
+                {
+                    position: new google.maps.LatLng(40.6335995, -8.655059999999999),
+                    map: map,
+                    label: labels[0],
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE, //or any others
+                        scale: 15,
+                        fillOpacity: 1,
+                        fillColor: '#38c172',
+                        strokeColor: '#38c172',
+                    },
+                    zIndex: -1,
+                    attrs: {"id":6,"status":1,"type":1,"name":"Centro Hospitalar Baixo Vouga, Aveiro","address":"Av. Artur Ravara Aveiro Aveiro","latitude":"40.6335995","longitude":"-8.655059999999999","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/doctor-71.png","information":null,"information_important":"ENCERRAMENTO DO SERVI\u00c7O DE URG\u00caNCIA PEDI\u00c1TRICA\r\nQuem necessitar dever\u00e1 dirigir-se ao Hospital Pedi\u00e1trico de Coimbra.","open1":null,"close1":null,"open2":null,"close2":null,"open3":null,"close3":null,"created_at":"2020-03-19T16:54:31.000000Z","updated_at":"2020-03-19T16:54:31.000000Z"}
+                }
+            );
+            marker.addListener('click', function() {
+                setInfowindow({"id":6,"status":1,"type":1,"name":"Centro Hospitalar Baixo Vouga, Aveiro","address":"Av. Artur Ravara Aveiro Aveiro","latitude":"40.6335995","longitude":"-8.655059999999999","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/doctor-71.png","information":null,"information_important":"ENCERRAMENTO DO SERVI\u00c7O DE URG\u00caNCIA PEDI\u00c1TRICA\r\nQuem necessitar dever\u00e1 dirigir-se ao Hospital Pedi\u00e1trico de Coimbra.","open1":null,"close1":null,"open2":null,"close2":null,"open3":null,"close3":null,"created_at":"2020-03-19T16:54:31.000000Z","updated_at":"2020-03-19T16:54:31.000000Z"});
+            });
+
+            places.push(marker);
+                                                            var marker = new google.maps.Marker(
+                {
+                    position: new google.maps.LatLng(40.64999470000001, -8.6206409),
+                    map: map,
+                    label: labels[2],
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE, //or any others
+                        scale: 15,
+                        fillOpacity: 1,
+                        fillColor: '#ffed4a',
+                        strokeColor: '#ffed4a',
+                    },
+                    zIndex: -3,
+                    attrs: {"id":7,"status":2,"type":3,"name":"Pingo Doce Aveiro - Hiper","address":"109 N109 Aveiro","latitude":"40.64999470000001","longitude":"-8.6206409","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/shopping-71.png","information":null,"information_important":null,"open1":"10:00:00","close1":"14:00:00","open2":"16:00:00","close2":"20:00:00","open3":null,"close3":null,"created_at":"2020-03-19T17:56:00.000000Z","updated_at":"2020-03-19T17:56:00.000000Z"}
+                }
+            );
+            marker.addListener('click', function() {
+                setInfowindow({"id":7,"status":2,"type":3,"name":"Pingo Doce Aveiro - Hiper","address":"109 N109 Aveiro","latitude":"40.64999470000001","longitude":"-8.6206409","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/shopping-71.png","information":null,"information_important":null,"open1":"10:00:00","close1":"14:00:00","open2":"16:00:00","close2":"20:00:00","open3":null,"close3":null,"created_at":"2020-03-19T17:56:00.000000Z","updated_at":"2020-03-19T17:56:00.000000Z"});
+            });
+
+            places.push(marker);
+                                                            var marker = new google.maps.Marker(
+                {
+                    position: new google.maps.LatLng(40.647315, -8.646544),
+                    map: map,
+                    label: labels[2],
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE, //or any others
+                        scale: 15,
+                        fillOpacity: 1,
+                        fillColor: '#ffed4a',
+                        strokeColor: '#ffed4a',
+                    },
+                    zIndex: -3,
+                    attrs: {"id":8,"status":2,"type":3,"name":"Pingo Doce Aveiro - Ria","address":"15 Urbaniza\u00e7\u00e3o Das Barrocas Aveiro","latitude":"40.647315","longitude":"-8.646544","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/shopping-71.png","information":null,"information_important":null,"open1":"11:00:00","close1":"19:00:00","open2":null,"close2":null,"open3":null,"close3":null,"created_at":"2020-03-19T17:57:04.000000Z","updated_at":"2020-03-19T17:57:04.000000Z"}
+                }
+            );
+            marker.addListener('click', function() {
+                setInfowindow({"id":8,"status":2,"type":3,"name":"Pingo Doce Aveiro - Ria","address":"15 Urbaniza\u00e7\u00e3o Das Barrocas Aveiro","latitude":"40.647315","longitude":"-8.646544","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/shopping-71.png","information":null,"information_important":null,"open1":"11:00:00","close1":"19:00:00","open2":null,"close2":null,"open3":null,"close3":null,"created_at":"2020-03-19T17:57:04.000000Z","updated_at":"2020-03-19T17:57:04.000000Z"});
+            });
+
+            places.push(marker);
+                                                            var marker = new google.maps.Marker(
+                {
+                    position: new google.maps.LatLng(40.64123170000001, -8.6423675),
+                    map: map,
+                    label: labels[2],
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE, //or any others
+                        scale: 15,
+                        fillOpacity: 1,
+                        fillColor: '#e3342f',
+                        strokeColor: '#e3342f',
+                    },
+                    zIndex: -3,
+                    attrs: {"id":9,"status":3,"type":3,"name":"Pingo Doce Aveiro - Vera Cruz","address":"Av. Congresso Oposi\u00e7\u00e3o Democr\u00e1tica Aveiro Aveiro","latitude":"40.64123170000001","longitude":"-8.6423675","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/shopping-71.png","information":null,"information_important":null,"open1":null,"close1":null,"open2":null,"close2":null,"open3":null,"close3":null,"created_at":"2020-03-19T17:57:31.000000Z","updated_at":"2020-03-19T17:57:31.000000Z"}
+                }
+            );
+            marker.addListener('click', function() {
+                setInfowindow({"id":9,"status":3,"type":3,"name":"Pingo Doce Aveiro - Vera Cruz","address":"Av. Congresso Oposi\u00e7\u00e3o Democr\u00e1tica Aveiro Aveiro","latitude":"40.64123170000001","longitude":"-8.6423675","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/shopping-71.png","information":null,"information_important":null,"open1":null,"close1":null,"open2":null,"close2":null,"open3":null,"close3":null,"created_at":"2020-03-19T17:57:31.000000Z","updated_at":"2020-03-19T17:57:31.000000Z"});
+            });
+
+            places.push(marker);
+                                                            var marker = new google.maps.Marker(
+                {
+                    position: new google.maps.LatLng(40.6302908, -8.6439527),
+                    map: map,
+                    label: labels[2],
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE, //or any others
+                        scale: 15,
+                        fillOpacity: 1,
+                        fillColor: '#ffed4a',
+                        strokeColor: '#ffed4a',
+                    },
+                    zIndex: -3,
+                    attrs: {"id":10,"status":2,"type":3,"name":"Pingo Doce Aveiro - S\u00e3o Bernardo","address":"Aveiro Aveiro PT","latitude":"40.6302908","longitude":"-8.6439527","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/shopping-71.png","information":null,"information_important":null,"open1":"10:00:00","close1":"14:00:00","open2":"16:00:00","close2":"20:00:00","open3":null,"close3":null,"created_at":"2020-03-19T17:58:22.000000Z","updated_at":"2020-03-19T17:58:22.000000Z"}
+                }
+            );
+            marker.addListener('click', function() {
+                setInfowindow({"id":10,"status":2,"type":3,"name":"Pingo Doce Aveiro - S\u00e3o Bernardo","address":"Aveiro Aveiro PT","latitude":"40.6302908","longitude":"-8.6439527","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/shopping-71.png","information":null,"information_important":null,"open1":"10:00:00","close1":"14:00:00","open2":"16:00:00","close2":"20:00:00","open3":null,"close3":null,"created_at":"2020-03-19T17:58:22.000000Z","updated_at":"2020-03-19T17:58:22.000000Z"});
+            });
+
+            places.push(marker);
+                                                            var marker = new google.maps.Marker(
+                {
+                    position: new google.maps.LatLng(40.6418283, -8.639396999999999),
+                    map: map,
+                    label: labels[2],
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE, //or any others
+                        scale: 15,
+                        fillOpacity: 1,
+                        fillColor: '#38c172',
+                        strokeColor: '#38c172',
+                    },
+                    zIndex: -3,
+                    attrs: {"id":11,"status":1,"type":3,"name":"Continente Bom Dia Aveiro","address":"Alameda Silva Rocha Aveiro Aveiro","latitude":"40.6418283","longitude":"-8.639396999999999","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/shopping-71.png","information":null,"information_important":null,"open1":"08:30:00","close1":"21:00:00","open2":null,"close2":null,"open3":null,"close3":null,"created_at":"2020-03-19T18:00:33.000000Z","updated_at":"2020-03-19T18:00:33.000000Z"}
+                }
+            );
+            marker.addListener('click', function() {
+                setInfowindow({"id":11,"status":1,"type":3,"name":"Continente Bom Dia Aveiro","address":"Alameda Silva Rocha Aveiro Aveiro","latitude":"40.6418283","longitude":"-8.639396999999999","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/shopping-71.png","information":null,"information_important":null,"open1":"08:30:00","close1":"21:00:00","open2":null,"close2":null,"open3":null,"close3":null,"created_at":"2020-03-19T18:00:33.000000Z","updated_at":"2020-03-19T18:00:33.000000Z"});
+            });
+
+            places.push(marker);
+                                                            var marker = new google.maps.Marker(
+                {
+                    position: new google.maps.LatLng(40.6492447, -8.6148854),
+                    map: map,
+                    label: labels[2],
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE, //or any others
+                        scale: 15,
+                        fillOpacity: 1,
+                        fillColor: '#38c172',
+                        strokeColor: '#38c172',
+                    },
+                    zIndex: -3,
+                    attrs: {"id":12,"status":1,"type":3,"name":"Continente Aveiro","address":"Aveiro PT 3800-000","latitude":"40.6492447","longitude":"-8.6148854","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/shopping-71.png","information":null,"information_important":null,"open1":"09:00:00","close1":"22:00:00","open2":null,"close2":null,"open3":null,"close3":null,"created_at":"2020-03-19T18:01:14.000000Z","updated_at":"2020-03-19T18:01:14.000000Z"}
+                }
+            );
+            marker.addListener('click', function() {
+                setInfowindow({"id":12,"status":1,"type":3,"name":"Continente Aveiro","address":"Aveiro PT 3800-000","latitude":"40.6492447","longitude":"-8.6148854","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/shopping-71.png","information":null,"information_important":null,"open1":"09:00:00","close1":"22:00:00","open2":null,"close2":null,"open3":null,"close3":null,"created_at":"2020-03-19T18:01:14.000000Z","updated_at":"2020-03-19T18:01:14.000000Z"});
+            });
+
+            places.push(marker);
+                                                            var marker = new google.maps.Marker(
+                {
+                    position: new google.maps.LatLng(40.62600049999999, -8.646034),
+                    map: map,
+                    label: labels[2],
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE, //or any others
+                        scale: 15,
+                        fillOpacity: 1,
+                        fillColor: '#38c172',
+                        strokeColor: '#38c172',
+                    },
+                    zIndex: -3,
+                    attrs: {"id":13,"status":1,"type":3,"name":"Auchan Aveiro","address":"R. das Glic\u00ednias Aveiro PT","latitude":"40.62600049999999","longitude":"-8.646034","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/generic_business-71.png","information":null,"information_important":null,"open1":null,"close1":null,"open2":null,"close2":null,"open3":null,"close3":null,"created_at":"2020-03-19T19:06:59.000000Z","updated_at":"2020-03-19T19:06:59.000000Z"}
+                }
+            );
+            marker.addListener('click', function() {
+                setInfowindow({"id":13,"status":1,"type":3,"name":"Auchan Aveiro","address":"R. das Glic\u00ednias Aveiro PT","latitude":"40.62600049999999","longitude":"-8.646034","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/generic_business-71.png","information":null,"information_important":null,"open1":null,"close1":null,"open2":null,"close2":null,"open3":null,"close3":null,"created_at":"2020-03-19T19:06:59.000000Z","updated_at":"2020-03-19T19:06:59.000000Z"});
+            });
+
+            places.push(marker);
+                                                            var marker = new google.maps.Marker(
+                {
+                    position: new google.maps.LatLng(40.6481498, -8.6304612),
+                    map: map,
+                    label: labels[1],
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE, //or any others
+                        scale: 15,
+                        fillOpacity: 1,
+                        fillColor: '#38c172',
+                        strokeColor: '#38c172',
+                    },
+                    zIndex: -2,
+                    attrs: {"id":14,"status":1,"type":2,"name":"Farm\u00e1cia Higiene","address":"162 R. de Jos\u00e9 Luciano de Castro Esgueira","latitude":"40.6481498","longitude":"-8.6304612","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/pharmacy_cross-71.png","information":null,"information_important":null,"open1":null,"close1":null,"open2":null,"close2":null,"open3":null,"close3":null,"created_at":"2020-03-19T19:33:18.000000Z","updated_at":"2020-03-19T19:33:18.000000Z"}
+                }
+            );
+            marker.addListener('click', function() {
+                setInfowindow({"id":14,"status":1,"type":2,"name":"Farm\u00e1cia Higiene","address":"162 R. de Jos\u00e9 Luciano de Castro Esgueira","latitude":"40.6481498","longitude":"-8.6304612","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/pharmacy_cross-71.png","information":null,"information_important":null,"open1":null,"close1":null,"open2":null,"close2":null,"open3":null,"close3":null,"created_at":"2020-03-19T19:33:18.000000Z","updated_at":"2020-03-19T19:33:18.000000Z"});
+            });
+
+            places.push(marker);
+                                                            var marker = new google.maps.Marker(
+                {
+                    position: new google.maps.LatLng(40.6404727, -8.6100408),
+                    map: map,
+                    label: labels[1],
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE, //or any others
+                        scale: 15,
+                        fillOpacity: 1,
+                        fillColor: '#ffed4a',
+                        strokeColor: '#ffed4a',
+                    },
+                    zIndex: -2,
+                    attrs: {"id":15,"status":2,"type":2,"name":"Farm\u00e1cia Alagoas","address":"2008 4-6 R. da Boavista","latitude":"40.6404727","longitude":"-8.6100408","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/pharmacy_cross-71.png","information":"- Altera\u00e7\u00f5es f\u00edsicas na zona de atendimento de forma a criar uma BARREIRA F\u00cdSICA entre os colaboradores e os utentes, protegendo ambas as partes.\r\n\r\n- SUSPENS\u00c3O da utiliza\u00e7\u00e3o da m\u00e1quina de senhas. Pedimos que aguardem no exterior, em fila, mantendo SEMPRE as dist\u00e2ncias de seguran\u00e7a. Deste modo, apenas est\u00e3o dentro da Farm\u00e1cia os utentes que estiverem ao balc\u00e3o, a ser atendidos. Assim que sai um, poder\u00e1 entrar o pr\u00f3ximo.\r\n\r\n- SUSPENS\u00c3O de realiza\u00e7\u00e3o de testes bioqu\u00edmicos (glic\u00e9mia, colesterol, etc), administra\u00e7\u00e3o de injet\u00e1veis e medi\u00e7\u00e3o de tens\u00e3o arterial.\r\n\r\n- SUSPENS\u00c3O de servi\u00e7os complementares (nutri\u00e7\u00e3o e podologia).","information_important":"- Coloca\u00e7\u00e3o de GEL DESINFETANTE \u00e0 entrada da Farm\u00e1cia e em todos os balc\u00f5es, para vossa utiliza\u00e7\u00e3o.\r\n\r\n- Coloca\u00e7\u00e3o de FITA SINALIZADORA no ch\u00e3o, em frente ao balc\u00e3o, que n\u00e3o devem ultrapassar para manter a dist\u00e2ncia de seguran\u00e7a.","open1":"08:30:00","close1":"13:00:00","open2":"14:30:00","close2":"19:00:00","open3":null,"close3":null,"created_at":"2020-03-19T19:37:35.000000Z","updated_at":"2020-03-19T19:37:35.000000Z"}
+                }
+            );
+            marker.addListener('click', function() {
+                setInfowindow({"id":15,"status":2,"type":2,"name":"Farm\u00e1cia Alagoas","address":"2008 4-6 R. da Boavista","latitude":"40.6404727","longitude":"-8.6100408","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/pharmacy_cross-71.png","information":"- Altera\u00e7\u00f5es f\u00edsicas na zona de atendimento de forma a criar uma BARREIRA F\u00cdSICA entre os colaboradores e os utentes, protegendo ambas as partes.\r\n\r\n- SUSPENS\u00c3O da utiliza\u00e7\u00e3o da m\u00e1quina de senhas. Pedimos que aguardem no exterior, em fila, mantendo SEMPRE as dist\u00e2ncias de seguran\u00e7a. Deste modo, apenas est\u00e3o dentro da Farm\u00e1cia os utentes que estiverem ao balc\u00e3o, a ser atendidos. Assim que sai um, poder\u00e1 entrar o pr\u00f3ximo.\r\n\r\n- SUSPENS\u00c3O de realiza\u00e7\u00e3o de testes bioqu\u00edmicos (glic\u00e9mia, colesterol, etc), administra\u00e7\u00e3o de injet\u00e1veis e medi\u00e7\u00e3o de tens\u00e3o arterial.\r\n\r\n- SUSPENS\u00c3O de servi\u00e7os complementares (nutri\u00e7\u00e3o e podologia).","information_important":"- Coloca\u00e7\u00e3o de GEL DESINFETANTE \u00e0 entrada da Farm\u00e1cia e em todos os balc\u00f5es, para vossa utiliza\u00e7\u00e3o.\r\n\r\n- Coloca\u00e7\u00e3o de FITA SINALIZADORA no ch\u00e3o, em frente ao balc\u00e3o, que n\u00e3o devem ultrapassar para manter a dist\u00e2ncia de seguran\u00e7a.","open1":"08:30:00","close1":"13:00:00","open2":"14:30:00","close2":"19:00:00","open3":null,"close3":null,"created_at":"2020-03-19T19:37:35.000000Z","updated_at":"2020-03-19T19:37:35.000000Z"});
+            });
+
+            places.push(marker);
+                                                            var marker = new google.maps.Marker(
+                {
+                    position: new google.maps.LatLng(40.6678346, -8.6086645),
+                    map: map,
+                    label: labels[4],
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE, //or any others
+                        scale: 15,
+                        fillOpacity: 1,
+                        fillColor: '#e3342f',
+                        strokeColor: '#e3342f',
+                    },
+                    zIndex: -5,
+                    attrs: {"id":16,"status":3,"type":5,"name":"Imperium","address":"114 N109 Cacia","latitude":"40.6678346","longitude":"-8.6086645","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png","information":"Fechado por tempo indeterminado.","information_important":null,"open1":null,"close1":null,"open2":null,"close2":null,"open3":null,"close3":null,"created_at":"2020-03-19T19:46:09.000000Z","updated_at":"2020-03-19T19:46:09.000000Z"}
+                }
+            );
+            marker.addListener('click', function() {
+                setInfowindow({"id":16,"status":3,"type":5,"name":"Imperium","address":"114 N109 Cacia","latitude":"40.6678346","longitude":"-8.6086645","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/restaurant-71.png","information":"Fechado por tempo indeterminado.","information_important":null,"open1":null,"close1":null,"open2":null,"close2":null,"open3":null,"close3":null,"created_at":"2020-03-19T19:46:09.000000Z","updated_at":"2020-03-19T19:46:09.000000Z"});
+            });
+
+            places.push(marker);
+                                                            var marker = new google.maps.Marker(
+                {
+                    position: new google.maps.LatLng(40.672811, -8.603968),
+                    map: map,
+                    label: labels[2],
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE, //or any others
+                        scale: 15,
+                        fillOpacity: 1,
+                        fillColor: '#ffed4a',
+                        strokeColor: '#ffed4a',
+                    },
+                    zIndex: -3,
+                    attrs: {"id":17,"status":2,"type":3,"name":"Recheio Cash & Carry, S.A.","address":"Av. Europa Aveiro Aveiro","latitude":"40.672811","longitude":"-8.603968","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/generic_business-71.png","information":"S\u00e1bado: 07:30 \u00e0s 13:00","information_important":null,"open1":"07:30:00","close1":"16:00:00","open2":null,"close2":null,"open3":null,"close3":null,"created_at":"2020-03-19T19:46:24.000000Z","updated_at":"2020-03-19T20:17:37.000000Z"}
+                }
+            );
+            marker.addListener('click', function() {
+                setInfowindow({"id":17,"status":2,"type":3,"name":"Recheio Cash & Carry, S.A.","address":"Av. Europa Aveiro Aveiro","latitude":"40.672811","longitude":"-8.603968","icon":"https:\/\/maps.gstatic.com\/mapfiles\/place_api\/icons\/generic_business-71.png","information":"S\u00e1bado: 07:30 \u00e0s 13:00","information_important":null,"open1":"07:30:00","close1":"16:00:00","open2":null,"close2":null,"open3":null,"close3":null,"created_at":"2020-03-19T19:46:24.000000Z","updated_at":"2020-03-19T20:17:37.000000Z"});
+            });
+
+            places.push(marker);
+        
+        geolocate();
+
+        var card = document.getElementById('pac-card');
+        var input = document.getElementById('pac-input');
+        var types = document.getElementById('type-selector');
+        var strictBounds = document.getElementById('strict-bounds-selector');
+
+        map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
+
+        var autocomplete = new google.maps.places.Autocomplete(input);
+
+        // Bind the map's bounds (viewport) property to the autocomplete object,
+        // so that the autocomplete requests use the current map bounds for the
+        // bounds option in the request.
+        autocomplete.bindTo('bounds', map);
+
+        autocomplete.setTypes(['establishment']);
+
+        // Set the data fields to return when the user selects a place.
+        autocomplete.setFields(['address_components', 'geometry', 'icon', 'name']);
+
+        autocomplete.addListener('place_changed', function() {
+            var place = autocomplete.getPlace();
+            if (!place.geometry) {
+                // User entered the name of a Place that was not suggested and
+                // pressed the Enter key, or the Place Details request failed.
+                window.alert("Não encontrámos o espaço: '" + place.name + "'");
+                return;
+            }
+
+            // If the place has a geometry, then present it on a map.
+            if (place.geometry.viewport) {
+                map.fitBounds(place.geometry.viewport);
+            } else {
+                map.setCenter(place.geometry.location);
+                map.setZoom(17);  // Why 17? Because it looks good.
+            }
+
+            var address = '';
+            if (place.address_components) {
+                address = [
+                    (place.address_components[0] && place.address_components[0].short_name || ''),
+                    (place.address_components[1] && place.address_components[1].short_name || ''),
+                    (place.address_components[2] && place.address_components[2].short_name || '')
+                ].join(' ');
+            }
+
+            var data = places.find(curPlace => parseFloat(curPlace.attrs.latitude) == place.geometry.location.lat() && parseFloat(curPlace.attrs.longitude) ==  place.geometry.location.lng());
+
+            if (data != undefined) {
+                data = data.attrs;
+            } else {
+                data = {
+                    name: place.name,
+                    address: address,
+                    latitude: place.geometry.location.lat(),
+                    longitude: place.geometry.location.lng(),
+                    icon: place.icon,
+                    information: '',
+                    information_important: ''
+                };
+            }
+
+            setInfowindow(data);
+
+        });
+    }
+
+    function setInfowindow(data) {
+        infowindow.close();
+        let latitude = parseFloat(data.latitude);
+        let longitude = parseFloat(data.longitude);
+
+        let marker = places.find(place => parseFloat(place.attrs.latitude) == latitude && parseFloat(place.attrs.longitude) == longitude);
+
+        if (marker == undefined) {
+            marker = new google.maps.Marker({
+                anchorPoint: new google.maps.Point(0, 0)
+            });
+            marker.setMap(map);
+            marker.setZIndex(data.type * (-1));
+            marker.setPosition({lat: latitude, lng: longitude});
+            marker.setVisible(false);
+        }
+
+        let schedule1 = '';
+        if (data.open1) {
+            schedule1 += data.open1.substr(0, 5);
+        }
+
+        if (data.close1) {
+            schedule1 += ' - ' + data.close1.substr(0, 5);
+        }
+
+        let schedule2 = '';
+        if (data.open2) {
+            schedule2 += data.open2.substr(0, 5);
+        }
+
+        if (data.close2) {
+            schedule2 += ' - ' + data.close2.substr(0, 5);
+        }
+
+        let schedule3 = '';
+        if (data.open3) {
+            schedule1 += data.open3.substr(0, 5);
+        }
+
+        if (data.close3) {
+            schedule3 += ' - ' + data.close3.substr(0, 5);
+        }
+
+        infowindowContent.children['place-icon'].src = data.icon;
+        infowindowContent.children['place-name'].textContent = data.name;
+        infowindowContent.children['place-address'].textContent = data.address;
+        infowindowContent.children['place-information'].innerHTML = data.information ? data.information.replace(/(?:\r\n|\r|\n)/g, '<br>') : null;
+        infowindowContent.children['place-information-important'].innerHTML = data.information_important ? data.information_important.replace(/(?:\r\n|\r|\n)/g, '<br>') : null;
+        infowindowContent.children['place-schedule-1'].textContent = schedule1;
+        infowindowContent.children['place-schedule-2'].textContent = schedule2;
+        infowindowContent.children['place-schedule-3'].textContent = schedule3;
+        infowindow.open(map, marker);
+
+        document.getElementById('new_place_status').value = data.status;
+        document.getElementById('new_place_type').value = data.type;
+        document.getElementById('new_place_name').value = data.name;
+        document.getElementById('new_place_address').value = data.address;
+        document.getElementById('new_place_latitude').value = data.latitude;
+        document.getElementById('new_place_longitude').value = data.longitude;
+        document.getElementById('new_place_icon').value = data.icon;
+        document.getElementById('new_place_information').value = data.information;
+        document.getElementById('new_place_information_important').value = data.information_important;
+        document.getElementById('new_place_open1').value = data.open1 ? data.open1.substr(0, 5) : '';
+        document.getElementById('new_place_close1').value = data.close1 ? data.close1.substr(0, 5) : '';
+        document.getElementById('new_place_open2').value = data.open2 ? data.open2.substr(0, 5) : '';
+        document.getElementById('new_place_close2').value = data.close2 ? data.close2.substr(0, 5) : '';
+        document.getElementById('new_place_open3').value = data.open3 ? data.open3.substr(0, 5) : '';
+        document.getElementById('new_place_close3').value = data.close3 ? data.close3.substr(0, 5) : '';
+    }
+
+
+    // Bias the autocomplete object to the user's geographical location,
+    // as supplied by the browser's 'navigator.geolocation' object.
+    function geolocate() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var geolocation = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+
+                var circle = new google.maps.Circle({center: geolocation, radius: position.coords.accuracy});
+                map.fitBounds(circle.getBounds());
+            });
+        }
+    }
+
+    $(document).ready(function() {
+        if ($('body').width() > 767) {
+            $('iframe').attr('src', 'https://esriportugal.maps.arcgis.com/apps/opsdashboard/index.html#/acf023da9a0b4f9dbb2332c13f635829');
+        } else {
+            $('iframe').attr('src', 'https://esriportugal.maps.arcgis.com/apps/opsdashboard/index.html#/d94f25ab7e934815ab8e187a90431ef0');
+        }
+
+        $('.filter').on('change', function(e) {
+            var types = [
+                    $('#filter_type_1').is(':checked'),
+                    $('#filter_type_2').is(':checked'),
+                    $('#filter_type_3').is(':checked'),
+                    $('#filter_type_4').is(':checked'),
+                    $('#filter_type_5').is(':checked'),
+                    $('#filter_type_6').is(':checked'),
+                ],
+                onlyOpenNow = $('#filter_only_open_now').is(':checked'),
+                currentTime = moment();
+
+            places.forEach(place => {
+                var show = false;
+
+                if (types[place.attrs.type - 1]) {
+                    show = true;
+                }
+
+                if (show && onlyOpenNow &&
+                    ! (
+                        (place.attrs.open1 && place.attrs.close1 && currentTime.isBetween(moment(place.attrs.open1), moment(place.attrs.close1))) ||
+                        (place.attrs.open2 && place.attrs.close2 && currentTime.isBetween(moment(place.attrs.open2), moment(place.attrs.close2))) ||
+                        (place.attrs.open3 && place.attrs.close3 && currentTime.isBetween(moment(place.attrs.open3), moment(place.attrs.close3)))
+                    )
+                ) {
+                    var open1 = place.attrs.open1 ? moment().set('hour', place.attrs.open1.split(':')[0]).set('minute', place.attrs.open1.split(':')[1]) : null,
+                        close1 = place.attrs.close1 ? moment().set('hour', place.attrs.close1.split(':')[0]).set('minute', place.attrs.close1.split(':')[1]) : null,
+                        open2 = place.attrs.open1 ? moment().set('hour', place.attrs.open1.split(':')[0]).set('minute', place.attrs.open1.split(':')[1]) : null,
+                        close2 = place.attrs.close1 ? moment().set('hour', place.attrs.close1.split(':')[0]).set('minute', place.attrs.close1.split(':')[1]) : null,
+                        open3 = place.attrs.open1 ? moment().set('hour', place.attrs.open1.split(':')[0]).set('minute', place.attrs.open1.split(':')[1]) : null,
+                        close3 = place.attrs.close1 ? moment().set('hour', place.attrs.close1.split(':')[0]).set('minute', place.attrs.close1.split(':')[1]) : null;
+
+                    if (open1 && close1 && currentTime.isBetween(open1, close1)) {
+                        show = true;
+                    } else if (open2 && close2 && currentTime.isBetween(open2, close2)) {
+                        show = true;
+                    } else if (open3 && close3 && currentTime.isBetween(open3, close3)) {
+                        show = true;
+                    } else {
+                        show = false;
+                    }
+                }
+
+                place.setMap(show ? map : null);
+            });
+        });
+
+        $('#add_place .btn-primary').on('click', function(e) {
+            var $btn = $(this),
+                $form = $btn.parent().parent().find('form');
+
+            $.ajax({
+                method: "POST",
+                url: "https://covid19portugal.org/add_place",
+                data: $form.serialize()
+            })
+            .done(function( result ) {
+                $('#add_place').modal('hide');
+
+                var placeData = result.place,
+                    latitude = parseFloat(placeData.latitude),
+                    longitude = parseFloat(placeData.longitude);
+
+                var color = '#38c172';
+                if (placeData.status == 2) {
+                    color = '#ffed4a';
+                } else if (placeData.status == 3) {
+                    color = '#e3342f';
+                }
+
+                var marker = new google.maps.Marker(
+                    {
+                        position: new google.maps.LatLng(latitude, longitude),
+                        label: labels[placeData.type - 1],
+                        icon: {
+                            path: google.maps.SymbolPath.CIRCLE, //or any others
+                            scale: 15,
+                            fillOpacity: 1,
+                            fillColor: color,
+                            strokeColor: color,
+                        },
+                        zIndex: placeData.type * (-1),
+                        attrs: placeData
+                    }
+                );
+                marker.addListener('click', function() {
+                    setInfowindow(placeData);
+                });
+
+                var place = places.find(curPlace => curPlace.attrs.latitude == latitude && curPlace.attrs.longitude == longitude);
+                if (place != undefined) {
+                    place.setLabel(marker.getLabel());
+                    place.setIcon(marker.getIcon());
+                    place.setZIndex(marker.getZIndex());
+                    place.set('attrs', marker.get('attrs'));
+                    place.addListener('click', function() {
+                        setInfowindow(placeData);
+                    });
+                } else {
+                    marker.setMap(map);
+                    places.push(marker);
+                }
+
+                setInfowindow(marker.get('attrs'));
+            })
+            .fail(function(result) {
+                $errors = $('#add_place .errors ul');
+                $errors.html('');
+
+                $.each(result.responseJSON.errors, (key, value) => {
+                    console.log(value);
+                    $errors.append('<li>'+value+'</li>');
+                });
+            });
+        });
+    });
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2ErElogAeZlLb9zECVFBijtSe2UKJokM&libraries=places&callback=initMap" async defer></script>
+</body>
+</html>

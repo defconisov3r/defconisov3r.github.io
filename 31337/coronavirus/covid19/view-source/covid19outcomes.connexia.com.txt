@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="shortcut icon" type="image/x-icon" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="img/favicon-16x16.png">
+  <title>Connexia Outcomes</title>
+  </head>
+  <body>
+    <div id="users-device-size">
+      <div id="xs" class="d-md-none d-lg-none d-xl-none"></div>
+      <div id="lg" class="d-none d-md-block"></div>
+    </div>
+      <header class="navbar navbar-expand-xs navbar-expand-md fixed-top" style="width: 980px; margin: 0 auto; display: none;">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/cnxdash.png" />
+          </a>
+        </div>
+        <!--div id="mySidenav" class="sidenav hidden-sm-down">
+          <a class="navbar-brand" href="#">
+            <img src="img/cnxdash.png" />
+          </a>
+          <a href="#" class="closebtn2"></a>
+          <hr>
+          <div id="menuitems"></div>    
+          <button id="signout-button">Esci</button>  
+        </div-->
+      </header>
+      <div id="error-message" style="display: none;"></div>
+      <div id="login">
+          <div id="logologin"><img src="img/cnxdash.png" height="40"></div>
+          <button id="authorize-button" style="display: none;" class="btn btn-lg btn-primary btn-block">Accedi</button>
+      </div>
+      <div id="mydocument"  class="contentframe desktopcontent hidden-sm-dowm" style="margin: 0 auto; margin-top: 0px;">
+        <iframe id="myframe" width="980px"  height="1440px" src="https://datastudio.google.com/embed/reporting/1OcP0ODTTaquvAZ5_5ZGb5YV1h0vdGa-8/page/VK0IB" frameborder="0" allowfullscreen ></iframe>
+      </div>
+      <footer class="fixed-bottom">
+        <div class="container" style="width: 980px; margin: 0 auto;">
+          <a class="navbar-brand-bottom" href="https://www.connexia.com/">
+            <img src="img/outcomes.png" height="14"/>
+          </a>
+        </div>
+      </footer>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <style>
+        html, body { height: 100% }
+    </style>
+    <script src="js/custom.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)http://localhost:59433/Eagle/Dashboard?ID=0c0edd5d-d75f-40ca-88c3-88b661f8724f -->
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>COVID-19 Dashboard - USA</title>
+    <link href="Files/superfine.css" rel="stylesheet">
+    <link href="Files/mapbox-gl.css" rel="stylesheet">
+    <link href="Files/custom.css" rel="stylesheet">
+    <script src="Files/jquery-3.3.1.min.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #loading {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 1;
+            margin: -35px 0 0 -35px;
+            border: 8px solid #FFF;
+            border-radius: 50%;
+            border-top: 8px solid var(--colorOne);
+            border-right: 8px solid var(--colorTwo);
+            border-bottom: 8px solid var(--colorThree);
+            border-left: 8px solid var(--colorFour);
+            width: 40px;
+            height: 40px;
+            -webkit-animation: spin 2s linear infinite; /* Safari */
+            animation: spin 2s linear infinite;
+        }
+
+        /* Safari */
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body style="cursor: default;">
+    <div id="loading"></div>
+	<div class="covid-menu">
+		<a href="./">USA</a>
+		<a href="Regions/North America/">North America </a>
+		<a href="Regions/Middle East/">Middle East</a>
+		<a href="Regions/Europe/">Europe</a>
+		<a href="Regions/South America/">South America</a>
+		<a href="Regions/Asia/">Asia</a>
+		<a href="Regions/Africa/">Africa</a>
+		<a href="Regions/Oceana/">Oceania</a>
+	</div>
+    <div id="layout-content">
+	</div>
+    <script src="Files/jquery-3.3.1.min.js"></script>
+    <script src="Files/dashboard.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $("#loading").hide();
+        })
+
+		function dataUrlBuilder(dataId) {
+			return "Data/" + dataId + ".csv";
+		}
+		
+		function showLayout(layoutDataConfig) {
+            const options = {
+                title: "COVID-19 Dashboard - USA",
+                //iconFile: "Data/logo.png",
+                customTheme: {
+                    primary: "#2F84C7",
+                    secondary: "#5EBA6E"
+                },
+                mapOptions: {
+                    appName: "Karta",
+                    startLat: 24.7136,
+                    startLon: 46.6753,
+                    recenterOnLoad: true,
+                    useDefaultTheme: true,
+                    showSidePanel: true,
+                    customTheme: {
+                        primary: "#2F84C7",
+                        secondary: "#5EBA6E"
+                    }
+                },
+                closablePanel: false,
+                enableFilterOverride: false
+            };
+            const mapboxStyles = [
+			  {
+				"id": "satellite-streets-v11",
+				"label": "Satellite Streets V11",
+				"url": "mapbox://styles/mapbox/satellite-streets-v11",
+				"layerGroups": []
+			  },
+			  {
+				"id": "streets-v10",
+				"label": "Streets V10",
+				"url": "mapbox://styles/mapbox/streets-v10",
+				"layerGroups": []
+			  },
+			  {
+				"id": "streets-v11",
+				"label": "Streets V11",
+				"url": "mapbox://styles/mapbox/streets-v11",
+				"layerGroups": []
+			  },
+			  {
+				"id": "outdoors-v11",
+				"label": "Terrain V11",
+				"url": "mapbox://styles/mapbox/outdoors-v11",
+				"layerGroups": []
+			  }
+			];
+
+            const kartaApi = new dashboard.DashboardApi("layout-content",
+                "pk.eyJ1IjoibmFyZXNoZGV2aSIsImEiOiJjampwc2didG4wNzRoM2txcnhuNGV3dWI3In0.yYyHPphbbzGggvxXvK_Pgg", 
+                mapboxStyles,
+                layoutDataConfig,
+                dataUrlBuilder,
+                options);
+        }
+		
+		$.getJSON('Data/template.json', (layoutDataConfig) => {
+			showLayout(layoutDataConfig);
+		});
+		     
+    </script>
+
+</body>
+
+</html>

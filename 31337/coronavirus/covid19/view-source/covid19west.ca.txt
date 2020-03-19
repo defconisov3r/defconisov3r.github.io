@@ -1,0 +1,145 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><title>
+	Covid-19 West - Login
+</title>
+    <!--[if lt IE 7]>
+        <script type="text/javascript" src="/png_fix/unitpngfix.js"></script>
+    <![endif]-->
+    <link href="/css/normalize.css" rel="stylesheet" /><link href="/css/skeleton.css" rel="stylesheet" /><link href="/CSS/Main.css" rel="stylesheet" type="text/css" /><link href="//fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css" />
+
+    	<!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<!-- ****** faviconit.com favicons ****** -->
+	<link rel="shortcut icon" href="/uploads/favicon__/fav-icon.ico" />
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <style type="text/css">
+        #box
+        {
+	        position:relative;
+	        display:none;
+	        background-color: #ffffff;
+	        width: 706px;
+	        margin: 0px auto;
+	        height: auto;
+	        padding: 20px;
+	        margin-top: 100px;
+	        
+	        -webkit-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 1);
+            -moz-box-shadow:    0px 0px 16px 0px rgba(0, 0, 0, 1);
+            box-shadow:         0px 0px 16px 0px rgba(0, 0, 0, 1);
+            behavior: url(/js/PIE-2.0beta1/PIE.htc);
+        }
+        #box input
+        {
+            margin: 0px;
+        }
+        body, html
+        {
+	        height:100%;
+        }
+        div#box > table{
+            width: 100%; padding: 0px; margin: 0px;
+
+        }
+        div#box > table tr:first-child td{
+            padding-top: 13px;
+        }
+        table.login-container{
+            border:none;
+            padding: 0px;
+            width:440px;
+        }
+        .remember-pwd-conatiner{
+            font-family: Calibri, Arial, Tahoma, Sans-Serif; font-size: 14px; color: #2d3e52;
+        }
+
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#box').slideDown('slow');
+            setTimeout(function () { $('#txtUsername').focus(); }, 1000);
+        });
+	</script>
+</head>
+<body style="padding-top:0px; background-color:#ffffff; margin:0; border:0; padding:0;">
+        <a href="#content" title="Skip to main content" class="nosize">Skip content</a>
+
+<form method="post" action="./login?r=Home" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE3NjYzMTI4NDVkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBQVjYlJlbayJzBUfCLH0cael28jKiJB/usyBJhwn3FecmTmVGAEd" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C2EE9ABB" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAUpJPG3LkEBDaIIBA6HizcdVK7BrRAtEiqu9nGFEI+jB3Y2+Mc6SrnAqio3oCKbxYbN+DvxnwFeFeJ9MIBWR693sPlF3lFuceGg29pkEubA0D/7b731jt/ehQeZplprf0FD5PsbQIsSdRnXTGQVpUg7" />
+</div>
+    <div>
+        <div id="box">
+            <table>
+                <tr>
+                    <td><a href="/">
+                        <img src="/images/COVID19 West Logo.png" alt="logo" /></a>
+                        <h1 class="nosize">Windsor Regional Hospital Login</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">
+                            <a name="content"></a>
+                            <table class="login-container">
+                                <tr class="login-username">
+                                    <td class="text-right">
+                                        <label for="txtUsername" id="Label1">User name</label></td>
+                                    <td>
+                                        <input name="txtUsername" type="text" id="txtUsername" title="username" /></td>
+                                </tr>
+                                <tr class="login-password">
+                                    <td class="padding-top-20 text-right">
+                                        <label for="txtPassword" id="Label2">Password</label></td>
+                                    <td class="padding-top-20">
+                                        <input name="txtPassword" type="password" id="txtPassword" title="password" /></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="padding-top-20 login-btn text-right">
+                                        <div>
+                                            <div>
+                                                <input type="submit" name="Button1" value="Login" id="Button1" class="button-primary" /></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                     
+                    </td>
+                </tr>
+                <tr class="login-error">
+                    <td style="text-align:center;">
+                        
+                            
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="forgot-change-pwd-container">
+                            <a class="bodytext" href="/forgot.aspx" target="_blank">
+                                <span>Forgot password?</span>
+                            </a>&nbsp;&nbsp;<a class="bodytext" href="/ChangePassword.aspx" target="_blank">
+                                <span>Change password</span></a>
+                        </div>
+                        <div class="remember-pwd-conatiner">
+                            <span>
+                                <label for="cbRem">Remember me</label>
+                            </span>&nbsp;&nbsp;<input id="cbRem" type="checkbox" name="cbRem" />
+                        </div>
+                    </td>
+                </tr>
+                
+            </table>
+        </div>
+    </div>
+</form>
+</body>
+</html>

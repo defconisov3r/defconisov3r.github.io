@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>COVID-19 Live Map</title>
+	<meta name="description" content="COVID-19 live map">
+
+	<meta content="width=device-width, initial-scale=1, maximum-scale=5" name="viewport">
+	
+	<style>*{ margin:0;padding:0;font-family:Verdana,Geneva,Tahoma,sans-serif;}body{ margin:0 auto;max-width:1928px;padding:1em 1em;background:#252526;color:#d6d6d6;}header,aside,article,footer{ background:#1e1e1e;padding:1em;}.grid{ display:grid;grid-template-columns:2fr 4fr 1fr;grid-gap:1em;}header,footer{ grid-column:1 / 4;}@media screen and (max-width:700px){ aside,article{ grid-column:1 / 4;}}.logo_headline{ display:inline-block;padding:.4rem 1rem;border-radius:1rem;color:#000;background-color:#fff;text-decoration:none;margin-bottom:1rem;}.top-stats{ display:grid;grid-template-columns:auto auto auto;grid-gap:1em;margin-top:1em;}.top-stats strong{ font-weight:normal;font-size:0.8rem;}.top-stats p{ font-size:2rem;}.top-stats div:nth-child(1) p{ color:#4A6590;}.top-stats div:nth-child(2) p{ color:red;}.top-stats div:nth-child(3) p{ color:green;}.country-list a{ display:block;color:#fff;text-decoration:none;border-bottom:1px solid #ccc;font-size:1rem;padding:1rem .25rem;}.country-list a span{ display:inline-block;font-size:.75rem;padding:.2rem .4rem;border-radius:1rem;}.country-list a span:nth-child(1){ background-color:#fff;background-color:#4A6590;}.country-list a span:nth-child(2){ background-color:red;}.country-list a span:nth-child(3){ background-color:#333;color:#888;float:right;}</style>	
+	<meta name="apple-mobile-web-app-title" content="COVID-19">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="apple-touch-icon" href="/assets/img/default/logo/touch-icon-iphone.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/logo/touch-icon-ipad.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/logo/touch-icon-iphone-retina.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="/assets/img/logo/touch-icon-ipad-retina.png">
+
+	<script data-ad-client="ca-pub-2001158936418513" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+		var charts = [];
+	</script>
+</head>
+<body class="wwwcovid-19-maplive">
+<section class="grid">
+    <header>
+        <a href="/" class="logo_headline"><h2>COVID-19 live data</h2></a>
+        <h4>dated 2020-03-18</h4>
+        <div class="top-stats">
+            <div>
+                <strong>Total Deaths</strong>
+                <p>8733</p>
+            </div>
+            <div>
+                <strong>Total Cases</strong>
+                <p>214911</p>
+            </div>
+            <div>
+                <strong>Total Recovered</strong>
+                <p>83313</p>
+            </div>
+        </div>
+    </header>
+    <aside class="sidebar-left country-list">
+<a href="/country/detail/46/china"><span>81102</span> <span>3241</span> China <span>- 0.02 %</span></a><a href="/country/detail/111/italy"><span>35713</span> <span>2978</span> Italy <span>+ 13.35 %</span></a><a href="/country/detail/106/iran"><span>17361</span> <span>1135</span> Iran <span>+ 7.37 %</span></a><a href="/country/detail/210/spain"><span>13910</span> <span>623</span> Spain <span>+ 18.4 %</span></a><a href="/country/detail/84/germany"><span>12327</span> <span>28</span> Germany <span>+ 33.16 %</span></a><a href="/country/detail/77/france"><span>9052</span> <span>148</span> France <span>+ 17.82 %</span></a><a href="/country/detail/120/south-korea"><span>8413</span> <span>84</span> South Korea <span>+ 1.12 %</span></a><a href="/country/detail/236/united-states"><span>7786</span> <span>118</span> United States <span>+ 21.26 %</span></a><a href="/country/detail/216/switzerland"><span>3028</span> <span>28</span> Switzerland <span>+ 12.15 %</span></a><a href="/country/detail/235/united-kingdom"><span>2642</span> <span>72</span> United Kingdom <span>+ 34.8 %</span></a><a href="/country/detail/157/netherlands"><span>2056</span> <span>58</span> Netherlands <span>+ 20.37 %</span></a><a href="/country/detail/15/austria"><span>1646</span> <span>4</span> Austria <span>+ 23.57 %</span></a><a href="/country/detail/167/norway"><span>1550</span> <span>6</span> Norway <span>+ 5.95 %</span></a><a href="/country/detail/22/belgium"><span>1486</span> <span>14</span> Belgium <span>+ 19.55 %</span></a><a href="/country/detail/215/sweden"><span>1279</span> <span>10</span> Sweden <span>+ 7.48 %</span></a><a href="/country/detail/61/denmark"><span>1115</span> <span>4</span> Denmark <span>+ 8.89 %</span></a><a href="/country/detail/113/japan"><span>889</span> <span>29</span> Japan <span>+ 1.25 %</span></a><a href="/country/detail/135/malaysia"><span>790</span> <span>2</span> Malaysia <span>+ 17.38 %</span></a><a href="/country/detail/41/canada"><span>657</span> <span>8</span> Canada <span>+ 37.45 %</span></a><a href="/country/detail/14/australia"><span>568</span> <span>6</span> Australia <span>+ 25.66 %</span></a><a href="/country/detail/60/czechia"><span>464</span> <span>0</span> Czechia <span>+ 17.17 %</span></a><a href="/country/detail/181/qatar"><span>452</span> <span>0</span> Qatar <span>+ 2.96 %</span></a><a href="/country/detail/179/portugal"><span>448</span> <span>2</span> Portugal <span>+ 0 %</span></a><a href="/country/detail/110/israel"><span>433</span> <span>0</span> Israel <span>+ 28.49 %</span></a><a href="/country/detail/87/greece"><span>418</span> <span>5</span> Greece <span>+ 8.01 %</span></a><a href="/country/detail/32/brazil"><span>372</span> <span>3</span> Brazil <span>+ 15.89 %</span></a><a href="/country/detail/76/finland"><span>336</span> <span>0</span> Finland <span>+ 4.67 %</span></a><a href="/country/detail/201/singapore"><span>313</span> <span>0</span> Singapore <span>+ 17.67 %</span></a><a href="/country/detail/169/pakistan"><span>299</span> <span>0</span> Pakistan <span>+ 26.69 %</span></a><a href="/country/detail/108/ireland"><span>292</span> <span>2</span> Ireland <span>+ 30.94 %</span></a><a href="/country/detail/204/slovenia"><span>275</span> <span>1</span> Slovenia <span>+ 0 %</span></a><a href="/country/detail/183/romania"><span>260</span> <span>0</span> Romania <span>+ 41.3 %</span></a><a href="/country/detail/70/estonia"><span>258</span> <span>0</span> Estonia <span>+ 14.67 %</span></a><a href="/country/detail/18/bahrain"><span>256</span> <span>1</span> Bahrain <span>+ 11.79 %</span></a><a href="/country/detail/178/poland"><span>251</span> <span>5</span> Poland <span>+ 5.46 %</span></a><a href="/country/detail/103/iceland"><span>250</span> <span>1</span> Iceland <span>+ 13.64 %</span></a><a href="/country/detail/45/chile"><span>238</span> <span>0</span> Chile <span>+ 18.41 %</span></a><a href="/country/detail/105/indonesia"><span>227</span> <span>19</span> Indonesia <span>+ 31.98 %</span></a><a href="/country/detail/221/thailand"><span>212</span> <span>1</span> Thailand <span>+ 19.77 %</span></a><a href="/country/detail/131/luxembourg"><span>203</span> <span>2</span> Luxembourg <span>+ 45 %</span></a><a href="/country/detail/176/philippines"><span>202</span> <span>19</span> Philippines <span>+ 8.02 %</span></a><a href="/country/detail/66/egypt"><span>196</span> <span>6</span> Egypt <span>+ 0 %</span></a><a href="/country/detail/196/saudi-arabia"><span>171</span> <span>0</span> Saudi Arabia <span>+ 0 %</span></a><a href="/country/detail/107/iraq"><span>164</span> <span>12</span> Iraq <span>+ 6.49 %</span></a><a href="/country/detail/104/india"><span>156</span> <span>3</span> India <span>+ 9.86 %</span></a><a href="/country/detail/184/russia"><span>147</span> <span>0</span> Russia <span>+ 28.95 %</span></a><a href="/country/detail/175/peru"><span>145</span> <span>0</span> Peru <span>+ 23.93 %</span></a><a href="/country/detail/121/kuwait"><span>142</span> <span>0</span> Kuwait <span>+ 9.23 %</span></a><a href="/country/detail/125/lebanon"><span>133</span> <span>3</span> Lebanon <span>+ 10.83 %</span></a><a href="/country/detail/194/san-marino"><span>119</span> <span>11</span> San Marino <span>+ 9.17 %</span></a><a href="/country/detail/207/south-africa"><span>116</span> <span>0</span> South Africa <span>+ 87.1 %</span></a><a href="/country/detail/234/united-arab-emirates"><span>113</span> <span>0</span> United Arab Emirates <span>+ 15.31 %</span></a><a href="/country/detail/65/ecuador"><span>111</span> <span>2</span> Ecuador <span>+ 91.38 %</span></a><a href="/country/detail/203/slovakia"><span>105</span> <span>1</span> Slovakia <span>+ 45.83 %</span></a><a href="/country/detail/218/taiwan"><span>100</span> <span>1</span> Taiwan <span>+ 29.87 %</span></a><a href="/country/detail/228/turkey"><span>98</span> <span>1</span> Turkey <span>+ 108.51 %</span></a><a href="/country/detail/144/mexico"><span>93</span> <span>0</span> Mexico <span>+ 13.41 %</span></a><a href="/country/detail/49/colombia"><span>93</span> <span>0</span> Colombia <span>+ 43.08 %</span></a><a href="/country/detail/35/bulgaria"><span>92</span> <span>2</span> Bulgaria <span>+ 37.31 %</span></a><a href="/country/detail/172/panama"><span>86</span> <span>1</span> Panama <span>+ 24.64 %</span></a><a href="/country/detail/12/armenia"><span>84</span> <span>0</span> Armenia <span>+ 7.69 %</span></a><a href="/country/detail/198/serbia"><span>83</span> <span>0</span> Serbia <span>+ 18.57 %</span></a><a href="/country/detail/56/croatia"><span>81</span> <span>0</span> Croatia <span>+ 24.62 %</span></a><a href="/country/detail/11/argentina"><span>79</span> <span>2</span> Argentina <span>+ 16.18 %</span></a><a href="/country/detail/242/vietnam"><span>75</span> <span>0</span> Vietnam <span>+ 13.64 %</span></a><a href="/country/detail/4/algeria"><span>74</span> <span>7</span> Algeria <span>+ 23.33 %</span></a><a href="/country/detail/124/latvia"><span>71</span> <span>0</span> Latvia <span>+ 44.9 %</span></a><a href="/country/detail/34/brunei-darussalam"><span>68</span> <span>0</span> Brunei Darussalam <span>+ 21.43 %</span></a><a href="/country/detail/3/albania"><span>59</span> <span>2</span> Albania <span>+ 7.27 %</span></a><a href="/country/detail/102/hungary"><span>58</span> <span>1</span> Hungary <span>+ 16 %</span></a><a href="/country/detail/115/jordan"><span>52</span> <span>0</span> Jordan <span>+ 48.57 %</span></a><a href="/country/detail/21/belarus"><span>51</span> <span>0</span> Belarus <span>+ 41.67 %</span></a><a href="/country/detail/211/sri-lanka"><span>51</span> <span>0</span> Sri Lanka <span>+ 15.91 %</span></a><a href="/country/detail/238/uruguay"><span>50</span> <span>0</span> Uruguay <span>+ 72.41 %</span></a><a href="/country/detail/54/costa-rica"><span>50</span> <span>0</span> Costa Rica <span>+ 21.95 %</span></a><a href="/country/detail/151/morocco"><span>49</span> <span>2</span> Morocco <span>+ 28.95 %</span></a><a href="/country/detail/59/cyprus"><span>49</span> <span>0</span> Cyprus <span>+ 6.52 %</span></a><a href="/country/detail/168/oman"><span>39</span> <span>0</span> Oman <span>+ 62.5 %</span></a><a href="/country/detail/6/andorra"><span>39</span> <span>0</span> Andorra <span>+ 0 %</span></a><a href="/country/detail/138/malta"><span>38</span> <span>0</span> Malta <span>+ 0 %</span></a><a href="/country/detail/29/bosnia-and-herzegovina"><span>38</span> <span>0</span> Bosnia and Herzegovina <span>+ 46.15 %</span></a><a href="/country/detail/83/georgia"><span>38</span> <span>0</span> Georgia <span>+ 11.76 %</span></a><a href="/country/detail/241/venezuela"><span>36</span> <span>0</span> Venezuela <span>+ 9.09 %</span></a><a href="/country/detail/165/macedonia"><span>35</span> <span>0</span> Macedonia <span>+ 34.62 %</span></a><a href="/country/detail/39/cambodia"><span>35</span> <span>0</span> Cambodia <span>+ 6.06 %</span></a><a href="/country/detail/116/kazakhstan"><span>35</span> <span>0</span> Kazakhstan <span>+ 6.06 %</span></a><a href="/country/detail/197/senegal"><span>31</span> <span>0</span> Senegal <span>+ 14.81 %</span></a><a href="/country/detail/146/moldova"><span>30</span> <span>1</span> Moldova <span>+ 0 %</span></a><a href="/country/detail/227/tunisia"><span>29</span> <span>0</span> Tunisia <span>+ 20.83 %</span></a><a href="/country/detail/16/azerbaijan"><span>28</span> <span>1</span> Azerbaijan <span>+ 0 %</span></a><a href="/country/detail/129/liechtenstein"><span>28</span> <span>0</span> Liechtenstein <span>+ 300 %</span></a><a href="/country/detail/130/lithuania"><span>27</span> <span>0</span> Lithuania <span>+ 8 %</span></a><a href="/country/detail/90/guadeloupe"><span>27</span> <span>0</span> Guadeloupe <span>+ 50 %</span></a><a href="/country/detail/1/afghanistan"><span>22</span> <span>0</span> Afghanistan <span>+ 0 %</span></a><a href="/country/detail/64/dominican-republic"><span>21</span> <span>1</span> Dominican Republic <span>+ 0 %</span></a><a href="/country/detail/36/burkina-faso"><span>20</span> <span>1</span> Burkina Faso <span>+ 33.33 %</span></a><a href="/country/detail/159/new-zealand"><span>20</span> <span>0</span> New Zealand <span>+ 66.67 %</span></a><a href="/country/detail/140/martinique"><span>19</span> <span>1</span> Martinique <span>+ 18.75 %</span></a><a href="/country/detail/239/uzbekistan"><span>15</span> <span>0</span> Uzbekistan <span>+ 50 %</span></a><a href="/country/detail/233/ukraine"><span>14</span> <span>2</span> Ukraine <span>+ 0 %</span></a><a href="/country/detail/19/bangladesh"><span>14</span> <span>1</span> Bangladesh <span>+ 40 %</span></a><a href="/country/detail/112/jamaica"><span>13</span> <span>0</span> Jamaica <span>+ 8.33 %</span></a><a href="/country/detail/136/maldives"><span>13</span> <span>0</span> Maldives <span>+ 0 %</span></a><a href="/country/detail/27/bolivia"><span>12</span> <span>0</span> Bolivia <span>+ 9.09 %</span></a><a href="/country/detail/182/runion"><span>12</span> <span>0</span> Réunion <span>+ 33.33 %</span></a><a href="/country/detail/174/paraguay"><span>11</span> <span>0</span> Paraguay <span>+ 22.22 %</span></a><a href="/country/detail/78/french-guiana"><span>11</span> <span>0</span> French Guiana <span>+ 0 %</span></a><a href="/country/detail/40/cameroon"><span>10</span> <span>0</span> Cameroon <span>+ 0 %</span></a><a href="/country/detail/100/honduras"><span>9</span> <span>0</span> Honduras <span>+ 12.5 %</span></a><a href="/country/detail/162/nigeria"><span>8</span> <span>0</span> Nigeria <span>+ 166.67 %</span></a><a href="/country/detail/185/rwanda"><span>8</span> <span>0</span> Rwanda <span>+ 14.29 %</span></a><a href="/country/detail/96/guyana"><span>7</span> <span>1</span> Guyana <span>+ 0 %</span></a><a href="/country/detail/57/cuba"><span>7</span> <span>1</span> Cuba <span>+ 40 %</span></a><a href="/country/detail/85/ghana"><span>7</span> <span>0</span> Ghana <span>+ 0 %</span></a><a href="/country/detail/226/trinidad-and-tobago"><span>7</span> <span>0</span> Trinidad and Tobago <span>+ 40 %</span></a><a href="/country/detail/147/monaco"><span>7</span> <span>0</span> Monaco <span>- 22.22 %</span></a><a href="/country/detail/92/guatemala"><span>6</span> <span>1</span> Guatemala <span>+ 0 %</span></a><a href="/country/detail/55/cte-divoire"><span>6</span> <span>0</span> Côte d'Ivoire <span>+ 0 %</span></a><a href="/country/detail/148/mongolia"><span>6</span> <span>0</span> Mongolia <span>+ 20 %</span></a><a href="/country/detail/72/ethiopia"><span>6</span> <span>0</span> Ethiopia <span>+ 20 %</span></a><a href="/country/detail/199/seychelles"><span>4</span> <span>0</span> Seychelles <span>+ 0 %</span></a><a href="/country/detail/68/equatorial-guinea"><span>4</span> <span>0</span> Equatorial Guinea <span>+ 300 %</span></a><a href="/country/detail/52/congo-kinshasa"><span>4</span> <span>0</span> Congo (Kinshasa) <span>+ 33.33 %</span></a><a href="/country/detail/13/aruba"><span>4</span> <span>0</span> Aruba <span>+ 33.33 %</span></a><a href="/country/detail/117/kenya"><span>3</span> <span>0</span> Kenya <span>+ 0 %</span></a><a href="/country/detail/220/tanzania"><span>3</span> <span>0</span> Tanzania <span>+ 200 %</span></a><a href="/country/detail/143/mayotte"><span>3</span> <span>0</span> Mayotte <span>+ 200 %</span></a><a href="/country/detail/142/mauritius"><span>3</span> <span>0</span> Mauritius <span>+ 0 %</span></a><a href="/country/detail/122/kyrgyzstan"><span>3</span> <span>0</span> Kyrgyzstan <span>+ 0 %</span></a><a href="/country/detail/212/sudan"><span>2</span> <span>1</span> Sudan <span>+ 0 %</span></a><a href="/country/detail/248/zambia"><span>2</span> <span>0</span> Zambia <span>+ 0 %</span></a><a href="/country/detail/189/saint-lucia"><span>2</span> <span>0</span> Saint Lucia <span>+ 0 %</span></a><a href="/country/detail/154/namibia"><span>2</span> <span>0</span> Namibia <span>+ 0 %</span></a><a href="/country/detail/127/liberia"><span>2</span> <span>0</span> Liberia <span>+ 100 %</span></a><a href="/country/detail/24/benin"><span>2</span> <span>0</span> Benin <span>+ 100 %</span></a><a href="/country/detail/20/barbados"><span>2</span> <span>0</span> Barbados <span>+ 0 %</span></a><a href="/country/detail/156/nepal"><span>1</span> <span>0</span> Nepal <span>+ 0 %</span></a><a href="/country/detail/141/mauritania"><span>1</span> <span>0</span> Mauritania <span>+ 0 %</span></a><a href="/country/detail/99/vatican"><span>1</span> <span>0</span> Vatican <span>+ 0 %</span></a><a href="/country/detail/94/guinea"><span>1</span> <span>0</span> Guinea <span>+ 0 %</span></a><a href="/country/detail/88/greenland"><span>1</span> <span>0</span> Greenland <span>+ 0 %</span></a><a href="/country/detail/223/togo"><span>1</span> <span>0</span> Togo <span>+ 0 %</span></a><a href="/country/detail/81/gabon"><span>1</span> <span>0</span> Gabon <span>+ 0 %</span></a><a href="/country/detail/17/bahamas"><span>1</span> <span>0</span> Bahamas <span>+ 0 %</span></a><a href="/country/detail/71/eswatini"><span>1</span> <span>0</span> Eswatini <span>+ 0 %</span></a><a href="/country/detail/213/suriname"><span>1</span> <span>0</span> Suriname <span>+ 0 %</span></a><a href="/country/detail/62/djibouti"><span>1</span> <span>0</span> Djibouti <span>+ 0 %</span></a><a href="/country/detail/206/somalia"><span>1</span> <span>0</span> Somalia <span>+ 0 %</span></a><a href="/country/detail/43/central-african-republic"><span>1</span> <span>0</span> Central African Republic <span>+ 0 %</span></a><a href="/country/detail/192/saint-vincent-and-the-grenadines"><span>1</span> <span>0</span> Saint Vincent and the Grenadines <span>+ 0 %</span></a><a href="/country/detail/26/bhutan"><span>1</span> <span>0</span> Bhutan <span>+ 0 %</span></a><a href="/country/detail/10/antigua-and-barbuda"><span>1</span> <span>0</span> Antigua and Barbuda <span>+ 0 %</span></a><a href="/country/detail/149/montenegro"><span>1</span> <span>0</span> Montenegro <span>- 50 %</span></a></aside>
+<article>
+    <h1>COVID-19 live map</h1>
+
+<!-- Styles -->
+<style>
+#chartdiv {
+  width: 100%;
+  height: 500px;
+}
+</style>
+
+<script>
+
+  charts.push(function(){
+
+    am4core.options.onlyShowOnViewport = true;
+    am4core.options.queue = true;
+    am4core.ready(function() {
+      
+    am4core.useTheme(am4themes_material);
+
+    var countries = {
+    };
+
+
+    var continents = {
+      "AF": 0,
+      "AN": 1,
+      "AS": 2,
+      "EU": 3,
+      "NA": 4,
+      "OC": 5,
+      "SA": 6
+    }
+
+    var chart = am4core.create("chartdiv", am4maps.MapChart);
+    chart.projection = new am4maps.projections.Miller();
+
+    var worldSeries = chart.series.push(new am4maps.MapPolygonSeries());
+    worldSeries.useGeodata = true;
+    worldSeries.geodata = am4geodata_worldLow;
+    worldSeries.exclude = ["AQ"];
+
+    var worldPolygon = worldSeries.mapPolygons.template;
+    worldPolygon.tooltipText = "{name}";
+    worldPolygon.nonScalingStroke = true;
+    worldPolygon.strokeOpacity = 0.5;
+    worldPolygon.fill = am4core.color("#eee");
+    worldPolygon.propertyFields.fill = "color";
+
+    var hs = worldPolygon.states.create("hover");
+    hs.properties.fill = chart.colors.getIndex(9);
+
+    var countrySeries = chart.series.push(new am4maps.MapPolygonSeries());
+    countrySeries.useGeodata = true;
+    countrySeries.hide();
+    countrySeries.geodataSource.events.on("done", function(ev) {
+      worldSeries.hide();
+      countrySeries.show();
+    });
+
+    var countryPolygon = countrySeries.mapPolygons.template;
+    countryPolygon.tooltipText = "{name}";
+    countryPolygon.nonScalingStroke = true;
+    countryPolygon.strokeOpacity = 0.5;
+    countryPolygon.fill = am4core.color("#eee");
+
+    var hs = countryPolygon.states.create("hover");
+    hs.properties.fill = chart.colors.getIndex(9);
+
+    worldPolygon.events.on("hit", function(ev) {
+      ev.target.series.chart.zoomToMapObject(ev.target);
+      var map = ev.target.dataItem.dataContext.map;
+      if (map) {
+        ev.target.isHover = false;
+        countrySeries.geodataSource.url = "/assets/plugins/amcharts4/geodata/json/" + map + ".json";
+        countrySeries.geodataSource.load();
+      }
+    });
+
+    var data = [];
+    for(var id in countries) {
+      if (countries.hasOwnProperty(id)) {
+        var country = countries[id];
+        if (country.maps.length) {
+          data.push({
+            id: id,
+            color: chart.colors.getIndex(continents[country.continent_code]),
+            map: country.maps[0]
+          });
+        }
+      }
+    }
+    worldSeries.data = data;
+
+    chart.zoomControl = new am4maps.ZoomControl();
+
+    var homeButton = new am4core.Button();
+    homeButton.events.on("hit", function() {
+      worldSeries.show();
+      countrySeries.hide();
+      chart.goHome();
+    });
+
+    homeButton.icon = new am4core.Sprite();
+    homeButton.padding(7, 5, 7, 5);
+    homeButton.width = 30;
+    homeButton.icon.path = "M16,8 L14,8 L14,16 L10,16 L10,10 L6,10 L6,16 L2,16 L2,8 L0,8 L8,0 L16,8 Z M16,8";
+    homeButton.marginBottom = 10;
+    homeButton.parent = chart.zoomControl;
+    homeButton.insertBefore(chart.zoomControl.plusButton);
+  
+  });
+
+});
+</script>
+
+<!-- HTML -->
+<div id="chartdiv"></div>
+
+<script>
+
+    charts.push(function(){
+
+        am4core.options.onlyShowOnViewport = true;
+        am4core.options.queue = true;
+        am4core.ready(function() {
+
+            am4core.useTheme(am4themes_material);
+
+            var chart = am4core.create("chart_daytotal", am4charts.XYChart);
+
+            chart.data = [{"date":1579561200000,"total_cases":282,"total_deaths":6},{"date":1579647600000,"total_cases":314,"total_deaths":6},{"date":1579734000000,"total_cases":581,"total_deaths":17},{"date":1579820400000,"total_cases":846,"total_deaths":25},{"date":1579906800000,"total_cases":1320,"total_deaths":41},{"date":1579993200000,"total_cases":2014,"total_deaths":56},{"date":1580079600000,"total_cases":2798,"total_deaths":80},{"date":1580166000000,"total_cases":4593,"total_deaths":106},{"date":1580252400000,"total_cases":6065,"total_deaths":132},{"date":1580338800000,"total_cases":7818,"total_deaths":170},{"date":1580425200000,"total_cases":9826,"total_deaths":213},{"date":1580511600000,"total_cases":11953,"total_deaths":259},{"date":1580598000000,"total_cases":14557,"total_deaths":305},{"date":1580684400000,"total_cases":17391,"total_deaths":362},{"date":1580770800000,"total_cases":20630,"total_deaths":426},{"date":1580857200000,"total_cases":24544,"total_deaths":492},{"date":1580943600000,"total_cases":28276,"total_deaths":565},{"date":1581030000000,"total_cases":31481,"total_deaths":638},{"date":1581116400000,"total_cases":34886,"total_deaths":724},{"date":1581202800000,"total_cases":37558,"total_deaths":813},{"date":1581289200000,"total_cases":40554,"total_deaths":910},{"date":1581375600000,"total_cases":43103,"total_deaths":1018},{"date":1581462000000,"total_cases":45171,"total_deaths":1115},{"date":1581548400000,"total_cases":46997,"total_deaths":1369},{"date":1581634800000,"total_cases":49053,"total_deaths":1383},{"date":1581721200000,"total_cases":50580,"total_deaths":1526},{"date":1581807600000,"total_cases":51857,"total_deaths":1669},{"date":1581894000000,"total_cases":71429,"total_deaths":1775},{"date":1581980400000,"total_cases":73332,"total_deaths":1873},{"date":1582066800000,"total_cases":75204,"total_deaths":2009},{"date":1582153200000,"total_cases":75748,"total_deaths":2129},{"date":1582239600000,"total_cases":76769,"total_deaths":2247},{"date":1582326000000,"total_cases":77794,"total_deaths":2359},{"date":1582412400000,"total_cases":78811,"total_deaths":2463},{"date":1582498800000,"total_cases":79331,"total_deaths":2618},{"date":1582585200000,"total_cases":80239,"total_deaths":2700},{"date":1582671600000,"total_cases":81109,"total_deaths":2762},{"date":1582758000000,"total_cases":82294,"total_deaths":2804},{"date":1582844400000,"total_cases":83652,"total_deaths":2858},{"date":1582930800000,"total_cases":85403,"total_deaths":2924},{"date":1583017200000,"total_cases":87137,"total_deaths":2977},{"date":1583103600000,"total_cases":88948,"total_deaths":3043},{"date":1583190000000,"total_cases":90869,"total_deaths":3112},{"date":1583276400000,"total_cases":93090,"total_deaths":3198},{"date":1583362800000,"total_cases":95324,"total_deaths":3280},{"date":1583449200000,"total_cases":98192,"total_deaths":3380},{"date":1583535600000,"total_cases":101927,"total_deaths":3486},{"date":1583622000000,"total_cases":105592,"total_deaths":3584},{"date":1583708400000,"total_cases":109577,"total_deaths":3809},{"date":1583794800000,"total_cases":113702,"total_deaths":4012},{"date":1583881200000,"total_cases":118319,"total_deaths":4292},{"date":1583967600000,"total_cases":125260,"total_deaths":4613},{"date":1584054000000,"total_cases":132758,"total_deaths":4956},{"date":1584140400000,"total_cases":142534,"total_deaths":5392},{"date":1584226800000,"total_cases":153517,"total_deaths":5735},{"date":1584313200000,"total_cases":167506,"total_deaths":6606},{"date":1584399600000,"total_cases":179112,"total_deaths":7426},{"date":1584486000000,"total_cases":214911,"total_deaths":8733}];
+
+            chart.dateFormatter.inputDateFormat = "yyyy-MM-dd";
+            var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+            dateAxis.renderer.labels.template.fill = am4core.color("white");
+            dateAxis.renderer.minGridDistance = 60;
+            dateAxis.startLocation = 1;
+            dateAxis.endLocation = 1;
+            dateAxis.baseInterval = {
+            timeUnit: "day",
+            count: 1
+            }
+
+            var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+            valueAxis.tooltip.disabled = true;
+            valueAxis.renderer.labels.template.fill = am4core.color("white");
+
+            var series = chart.series.push(new am4charts.LineSeries());
+            series.name = "Total Deaths";
+            series.dataFields.dateX = "date";
+            series.dataFields.valueY = "total_deaths";
+            series.tooltipHTML = "<span style='font-size:14px; color:#fff;'><b>{valueY.value}</b></span>";
+            series.tooltipText = "[#000]{valueY.value}[/]";
+            series.tooltip.background.fill = am4core.color("red");
+            series.tooltip.getFillFromObject = false;
+            series.fill = am4core.color("red");
+            series.fillOpacity = 0.6;
+            series.strokeWidth = 2;
+            series.stroke = am4core.color("red");
+            series.stacked = true;
+
+            var series2 = chart.series.push(new am4charts.LineSeries());
+            series2.name = "Total Cases";
+            series2.dataFields.dateX = "date";
+            series2.dataFields.valueY = "total_cases";
+            series2.tooltipHTML = "<span style='font-size:14px; color:#000;'><b>{valueY.value}</b></span>";
+            series2.tooltipText = "[#000]{valueY.value}[/]";
+            series2.tooltip.background.fill = am4core.color("white");
+            series2.tooltip.getFillFromObject = false;
+            series2.fill = am4core.color("#888");
+            series2.sequencedInterpolation = true;
+            series2.fillOpacity = 0.6;
+            series2.stacked = true;
+            series2.strokeWidth = 2;
+            series2.stroke = am4core.color("#888");
+
+            chart.cursor = new am4charts.XYCursor();
+            chart.cursor.xAxis = dateAxis;
+
+            chart.legend = new am4charts.Legend();
+            chart.legend.position = "top";
+            chart.legend.markers.template.propertyFields.fill = am4core.color("white");
+
+            var range = dateAxis.axisRanges.create();
+            range.date = new Date(2020, 1, 16);
+            range.endDate = new Date(2020, 1, 18);
+            range.axisFill.fill = chart.colors.getIndex(7);
+            range.axisFill.fillOpacity = 0.2;
+
+            range.label.text = "Change of counting";
+            range.label.inside = true;
+            range.label.rotation = 90;
+            range.label.horizontalCenter = "right";
+            range.label.verticalCenter = "bottom";
+
+        });
+    });
+    
+</script>
+
+<style>
+#chart_daytotal {
+  width: 100%;
+  height: 500px;
+}
+
+</style>
+
+<!-- HTML -->
+<div id="chart_daytotal"></div>
+
+<h2>SARS-CoV-2</h2>
+<h2>COVID-19 is a pandemic</h2>
+<h2>Coronavirus 2019-nCoV</h2>
+<h2>2019 Novel Coronavirus</h2>
+
+</article>
+<aside class="sidebar-right">
+    
+</aside>    <footer>
+        <a href="/imprint">Imprint</a>
+        <br /><br />
+        Sources: <br />
+        <a href="https://ourworldindata.org" rel="noopener nofollow">ourworldindata.org</a><br />
+        <a href="https://raw.githubusercontent.com/CSSEGISandData/COVID-19/" rel="noopener nofollow">CSSEGISandData</a>
+    </footer>
+</section>
+<script>
+    var lang = 'en';
+</script>
+<script src="/assets/plugins/amcharts4/core.js?1584632162"></script>
+<script src="/assets/plugins/amcharts4/charts.js?1584632160"></script>
+<script src="/assets/plugins/amcharts4/themes/material.js?1584632445"></script>
+<script src="/assets/plugins/amcharts4/maps.js?1584632431"></script>
+<script src="/assets/plugins/amcharts4/geodata/worldLow.js?1584632427"></script>
+<script src="/assets/js/charts.js?1584635603"></script>
+</body>
+</html>

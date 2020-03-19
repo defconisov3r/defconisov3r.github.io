@@ -1,0 +1,174 @@
+<head>
+<meta property="og:image" content="https://coronaviruscrypto.com">
+<title>Infect Their Coins!</title>
+<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<style>
+
+input[type=text], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 25%;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=date], select {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 35%;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 40%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 30%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #5ab75e;
+}
+
+div {
+    
+    
+    width: 550px;
+    
+    
+}
+
+.divtd {
+    
+    width: 100%;
+    padding: 5px;
+    
+}
+.main {
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: contain;
+  position: relative;
+  padding: 20px;
+  width:550px; 
+  text-align: center;
+  margin: 50px auto auto auto;
+  background-color: #fff;
+}
+.page {
+    
+    width: 100%;
+    
+}
+
+.inresp {
+  
+  position: relative;
+  padding-bottom: 20px;
+  text-align: center;
+  margin: auto;
+  width:550px;  
+  
+}
+
+.footer {
+  
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  margin: auto;
+  width:550px;  
+  
+}
+
+.topright {
+    
+  position: fixed;
+  top:10px;
+  right:10px;
+  width:50px;
+    
+}
+
+
+.icons {
+    
+  padding: 0px;
+    
+}
+
+.diagno {
+    
+  size: 300px;
+    
+}
+
+.button {
+  width: 40%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 30%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+.divtr {
+    
+    width: 550px;
+    
+}
+
+</style>
+</head>
+<body style="margin:0px; background-color: #ccc; ">
+    
+<link rel="stylesheet" href="assets/custom.css" >
+
+<div class="page">
+
+
+<div class="main" >
+    
+    
+<table width="500">
+    
+ <tr><div class='divtr'><td class=''><div class='divtd'>1</div></td><td class=''><div class='divtd'><img src='/image/coins/ETH.png' alt='Bitcoin' width='16' height='16' class=''></div></td><td class=''><div class='divtd'>Ethereum</div></td><td class=''><div class='divtd'>200</div></td><td class=''><div class='divtd'>20</div></td></div></tr><tr><div class='divtr'><td class=''><div class='divtd'>2</div></td><td class=''><div class='divtd'><img src='/image/coins/BTC.png' alt='Bitcoin' width='16' height='16' class=''></div></td><td class=''><div class='divtd'>Bitcoin</div></td><td class=''><div class='divtd'>100</div></td><td class=''><div class='divtd'>10</div></td></div></tr><tr><div class='divtr'><td class=''><div class='divtd'>3</div></td><td class=''><div class='divtd'><img src='/image/coins/XRP.png' alt='Bitcoin' width='16' height='16' class=''></div></td><td class=''><div class='divtd'>XRP</div></td><td class=''><div class='divtd'>0</div></td><td class=''><div class='divtd'>0</div></td></div></tr><tr><div class='divtr'><td class=''><div class='divtd'>4</div></td><td class=''><div class='divtd'><img src='/image/coins/USDT.png' alt='Bitcoin' width='16' height='16' class=''></div></td><td class=''><div class='divtd'>Tether</div></td><td class=''><div class='divtd'>0</div></td><td class=''><div class='divtd'>0</div></td></div></tr><tr><div class='divtr'><td class=''><div class='divtd'>5</div></td><td class=''><div class='divtd'><img src='/image/coins/BCH.png' alt='Bitcoin' width='16' height='16' class=''></div></td><td class=''><div class='divtd'>Bitcoin Cash</div></td><td class=''><div class='divtd'>0</div></td><td class=''><div class='divtd'>0</div></td></div></tr><tr><div class='divtr'><td class=''><div class='divtd'>6</div></td><td class=''><div class='divtd'><img src='/image/coins/BSV.png' alt='Bitcoin' width='16' height='16' class=''></div></td><td class=''><div class='divtd'>Bitcoin SV</div></td><td class=''><div class='divtd'>0</div></td><td class=''><div class='divtd'>0</div></td></div></tr><tr><div class='divtr'><td class=''><div class='divtd'>7</div></td><td class=''><div class='divtd'><img src='/image/coins/LTC.png' alt='Bitcoin' width='16' height='16' class=''></div></td><td class=''><div class='divtd'>Litecoin</div></td><td class=''><div class='divtd'>0</div></td><td class=''><div class='divtd'>0</div></td></div></tr><tr><div class='divtr'><td class=''><div class='divtd'>8</div></td><td class=''><div class='divtd'><img src='/image/coins/BNB.png' alt='Bitcoin' width='16' height='16' class=''></div></td><td class=''><div class='divtd'>Binance Coin</div></td><td class=''><div class='divtd'>0</div></td><td class=''><div class='divtd'>0</div></td></div></tr><tr><div class='divtr'><td class=''><div class='divtd'>9</div></td><td class=''><div class='divtd'><img src='/image/coins/LEO.png' alt='Bitcoin' width='16' height='16' class=''></div></td><td class=''><div class='divtd'>UNUS SED LEO</div></td><td class=''><div class='divtd'>0</div></td><td class=''><div class='divtd'>0</div></td></div></tr><tr><div class='divtr'><td class=''><div class='divtd'>10</div></td><td class=''><div class='divtd'><img src='/image/coins/XTZ.png' alt='Bitcoin' width='16' height='16' class=''></div></td><td class=''><div class='divtd'>Tezos</div></td><td class=''><div class='divtd'>0</div></td><td class=''><div class='divtd'>0</div></td></div></tr><tr><div class='divtr'><td class=''><div class='divtd'>11</div></td><td class=''><div class='divtd'><img src='/image/coins/XLM.png' alt='Bitcoin' width='16' height='16' class=''></div></td><td class=''><div class='divtd'>Stellar</div></td><td class=''><div class='divtd'>0</div></td><td class=''><div class='divtd'>0</div></td></div></tr><tr><div class='divtr'><td class=''><div class='divtd'>12</div></td><td class=''><div class='divtd'><img src='/image/coins/TRX.png' alt='Bitcoin' width='16' height='16' class=''></div></td><td class=''><div class='divtd'>TRON</div></td><td class=''><div class='divtd'>0</div></td><td class=''><div class='divtd'>0</div></td></div></tr>
+
+</table>
+
+
+
+<p class="pfooter">This site is for entertainment purposes only.</p>
+
+
+</div>
+
+
+<div class="footer">
+    
+<a href="whatsapp://send?text=Infect Their Coins! https://coronaviruscrypto.com"><image class="icons" src="image/whatsapp.png" width="50px"></a>
+
+<a href="https://twitter.com/intent/tweet?url=https://coronaviruscrypto.com&text=Infect Their Coins!" target="_blank" ><img class="icons" src="image/twitter.png" width="50px"> </a>
+
+<a href="http://www.facebook.com/sharer/sharer.php?u=https://coronaviruscrypto.com&t=Infect Their Coins!" target="_blank" ><img class="icons" src="image/facebook.png" width="50px"> </a>
+
+</div>
+
+
+</div>
+</body>

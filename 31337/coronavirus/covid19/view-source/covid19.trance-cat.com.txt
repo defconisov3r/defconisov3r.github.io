@@ -1,0 +1,539 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>新型コロナウィルス国内感染状況</title>
+  <meta name="keywords" content="コロナウィルス, coronavirus, covid19, 感染者数, 日本, 国内, 新型コロナウィルス, コロナ">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {
+      'packages': ['corechart']
+    });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['都道府県', '患者数'],
+        ['北海道', 153],
+['愛知県', 122],
+['東京都', 105],
+['大阪府', 100],
+['兵庫県', 69],
+['神奈川県', 52],
+['埼玉県', 32],
+['千葉県', 31],
+['新潟県', 17],
+['京都府', 17],
+['和歌山県', 13],
+['高知県', 11],
+['群馬県', 10],
+['石川県', 5],
+['三重県', 5],
+['熊本県', 5],
+['滋賀県', 4],
+['奈良県', 4],
+['福岡県', 4],
+['栃木県', 3],
+['長野県', 3],
+['岐阜県', 3],
+['静岡県', 3],
+['宮崎県', 3],
+['沖縄県', 3],
+['福島県', 2],
+['茨城県', 2],
+['山梨県', 2],
+['愛媛県', 2],
+['宮城県', 1],
+['秋田県', 1],
+['福井県', 1],
+['広島県', 1],
+['山口県', 1],
+['香川県', 1],
+['佐賀県', 1],
+['大分県', 1],
+      ]);
+
+      var options = {};
+
+      var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+
+      chart.draw(data, options);
+    }
+  </script>
+  <script type="text/javascript">
+    google.charts.load('current', {
+      'packages': ['line']
+    });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('date', 'Time');
+      data.addColumn('number', '患者数');
+      data.addColumn('number', '死亡者数');
+	  data.addColumn('number', '退院者数');
+
+      data.addRows([
+        [new Date( 2020,2,6,12,0),16,0,4],
+[new Date( 2020,2,7,12,0),16,0,4],
+[new Date( 2020,2,8,12,0),16,0,4],
+[new Date( 2020,2,9,12,0),16,0,4],
+[new Date( 2020,2,10,12,0),16,0,9],
+[new Date( 2020,2,11,12,0),16,0,9],
+[new Date( 2020,2,12,12,0),16,0,10],
+[new Date( 2020,2,13,12,0),17,0,11],
+[new Date( 2020,2,14,12,0),21,1,11],
+[new Date( 2020,2,15,12,0),21,1,11],
+[new Date( 2020,2,16,12,0),21,1,11],
+[new Date( 2020,2,17,12,0),38,1,12],
+[new Date( 2020,2,18,12,0),44,1,12],
+[new Date( 2020,2,19,12,0),50,1,14],
+[new Date( 2020,2,20,12,0),60,1,16],
+[new Date( 2020,2,21,12,0),69,1,16],
+[new Date( 2020,2,22,12,0),80,1,17],
+[new Date( 2020,2,23,12,0),102,1,17],
+[new Date( 2020,2,24,12,0),114,1,17],
+[new Date( 2020,2,25,12,0),128,1,17],
+[new Date( 2020,2,26,12,0),136,1,22],
+[new Date( 2020,2,27,12,0),156,3,26],
+[new Date( 2020,2,28,12,0),180,4,26],
+[new Date( 2020,2,29,12,0),197,5,27],
+[new Date( 2020,3,1,12,0),206,5,27],
+[new Date( 2020,3,2,12,0),221,6,27],
+[new Date( 2020,3,3,12,0),230,6,30],
+[new Date( 2020,3,4,12,0),246,6,31],
+[new Date( 2020,3,5,12,0),276,6,32],
+[new Date( 2020,3,6,12,0),302,6,50],
+[new Date( 2020,3,7,12,0),355,6,53],
+[new Date( 2020,3,8,12,0),397,6,57],
+[new Date( 2020,3,9,12,0),427,7,77],
+[new Date( 2020,3,10,12,0),446,9,77],
+[new Date( 2020,3,11,12,0),492,12,88],
+[new Date( 2020,3,12,12,0),542,15,93],
+[new Date( 2020,3,13,12,0),591,19,104],
+[new Date( 2020,3,14,12,0),629,21,111],
+[new Date( 2020,3,15,12,0),681,22,123],
+[new Date( 2020,3,16,12,0),702,24,128],
+[new Date( 2020,3,17,12,0),717,28,133],
+[new Date( 2020,3,18,12,0),758,29,150],
+[new Date( 2020,3,19,12,0),794,31,173],
+      ]);
+
+      var options = {
+        height: 400,
+        vAxis: {
+          format: "decimal"
+        },
+	  series: {
+		0: { color: '#e2431e' },
+		1: { color: '#555555' },
+		2: { color: '#1ac91d' },
+	  },
+        axes: {
+          // Adds labels to each axis; they don't have to match the axis names.
+          x: {
+            0: {
+              side: 'top'
+            }
+          }
+        }
+      };
+
+      var chart = new google.charts.Line(document.getElementById('line_top_x'));
+
+      chart.draw(data, google.charts.Line.convertOptions(options));
+    }
+  </script>
+  <script type="text/javascript">
+    google.charts.load('current', {
+      'packages': ['line']
+    });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('date', '日付');
+	  data.addColumn('number', '新規患者数');
+      data.addColumn('number', '新規死亡者数');
+	  data.addColumn('number', '新規退院者数');
+
+      data.addRows([
+        [new Date( 2020,2,7,12,0),0,0,0],
+[new Date( 2020,2,8,12,0),0,0,0],
+[new Date( 2020,2,9,12,0),0,0,0],
+[new Date( 2020,2,10,12,0),0,0,5],
+[new Date( 2020,2,11,12,0),0,0,0],
+[new Date( 2020,2,12,12,0),0,0,1],
+[new Date( 2020,2,13,12,0),1,0,1],
+[new Date( 2020,2,14,12,0),4,1,0],
+[new Date( 2020,2,15,12,0),0,0,0],
+[new Date( 2020,2,16,12,0),0,0,0],
+[new Date( 2020,2,17,12,0),17,0,1],
+[new Date( 2020,2,18,12,0),6,0,0],
+[new Date( 2020,2,19,12,0),6,0,2],
+[new Date( 2020,2,20,12,0),10,0,2],
+[new Date( 2020,2,21,12,0),9,0,0],
+[new Date( 2020,2,22,12,0),11,0,1],
+[new Date( 2020,2,23,12,0),22,0,0],
+[new Date( 2020,2,24,12,0),12,0,0],
+[new Date( 2020,2,25,12,0),14,0,0],
+[new Date( 2020,2,26,12,0),8,0,5],
+[new Date( 2020,2,27,12,0),20,2,4],
+[new Date( 2020,2,28,12,0),24,1,0],
+[new Date( 2020,2,29,12,0),17,1,1],
+[new Date( 2020,3,1,12,0),9,0,0],
+[new Date( 2020,3,2,12,0),15,1,0],
+[new Date( 2020,3,3,12,0),9,0,3],
+[new Date( 2020,3,4,12,0),16,0,1],
+[new Date( 2020,3,5,12,0),30,0,1],
+[new Date( 2020,3,6,12,0),26,0,18],
+[new Date( 2020,3,7,12,0),53,0,3],
+[new Date( 2020,3,8,12,0),42,0,4],
+[new Date( 2020,3,9,12,0),30,1,20],
+[new Date( 2020,3,10,12,0),19,2,0],
+[new Date( 2020,3,11,12,0),46,3,11],
+[new Date( 2020,3,12,12,0),50,3,5],
+[new Date( 2020,3,13,12,0),49,4,11],
+[new Date( 2020,3,14,12,0),38,2,7],
+[new Date( 2020,3,15,12,0),52,1,12],
+[new Date( 2020,3,16,12,0),21,2,5],
+[new Date( 2020,3,17,12,0),15,4,5],
+[new Date( 2020,3,18,12,0),41,1,17],
+[new Date( 2020,3,19,12,0),36,2,23],
+      ]);
+
+      var options = {
+        height: 400,
+        vAxis: {
+          format: "decimal"
+        },
+	  series: {
+		0: { color: '#e2431e' },
+		1: { color: '#555555' },
+		2: { color: '#1ac91d' },
+	  },
+        axes: {
+          // Adds labels to each axis; they don't have to match the axis names.
+          x: {
+            0: {
+              side: 'top'
+            }
+          }
+        }
+      };
+
+      var chart = new google.charts.Line(document.getElementById('daily_cases'));
+
+      chart.draw(data, google.charts.Line.convertOptions(options));
+    }
+  </script>
+  <script type="text/javascript">
+    google.charts.load('current', {
+      'packages': ['line']
+    });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('date', 'Time');
+	  data.addColumn('number', '検査数');
+      data.addColumn('number', '患者数');
+
+      data.addRows([
+        [new Date( 2020,2,6,12,0),132,16],
+[new Date( 2020,2,7,12,0),151,16],
+[new Date( 2020,2,8,12,0),151,16],
+[new Date( 2020,2,9,12,0),151,16],
+[new Date( 2020,2,10,12,0),174,16],
+[new Date( 2020,2,11,12,0),174,16],
+[new Date( 2020,2,12,12,0),190,16],
+[new Date( 2020,2,13,12,0),200,17],
+[new Date( 2020,2,14,12,0),214,21],
+[new Date( 2020,2,15,12,0),214,21],
+[new Date( 2020,2,16,12,0),214,21],
+[new Date( 2020,2,17,12,0),487,38],
+[new Date( 2020,2,18,12,0),523,44],
+[new Date( 2020,2,19,12,0),532,50],
+[new Date( 2020,2,20,12,0),603,60],
+[new Date( 2020,2,21,12,0),693,69],
+[new Date( 2020,2,22,12,0),778,80],
+[new Date( 2020,2,23,12,0),874,102],
+[new Date( 2020,2,24,12,0),913,114],
+[new Date( 2020,2,25,12,0),1017,128],
+[new Date( 2020,2,26,12,0),1061,136],
+[new Date( 2020,2,27,12,0),1229,156],
+[new Date( 2020,2,28,12,0),1380,180],
+[new Date( 2020,2,29,12,0),1510,197],
+[new Date( 2020,3,1,12,0),1688,206],
+[new Date( 2020,3,2,12,0),1784,221],
+[new Date( 2020,3,3,12,0),1855,230],
+[new Date( 2020,3,4,12,0),5690,246],
+[new Date( 2020,3,5,12,0),5948,276],
+[new Date( 2020,3,6,12,0),6647,302],
+[new Date( 2020,3,7,12,0),7200,355],
+[new Date( 2020,3,8,12,0),7347,397],
+[new Date( 2020,3,9,12,0),7457,427],
+[new Date( 2020,3,10,12,0),8771,446],
+[new Date( 2020,3,11,12,0),9195,492],
+[new Date( 2020,3,12,12,0),9376,542],
+[new Date( 2020,3,13,12,0),11231,591],
+[new Date( 2020,3,14,12,0),12090,629],
+[new Date( 2020,3,15,12,0),12197,681],
+[new Date( 2020,3,16,12,0),12239,702],
+[new Date( 2020,3,17,12,0),14322,717],
+[new Date( 2020,3,18,12,0),14525,758],
+[new Date( 2020,3,19,12,0),14072,794],
+      ]);
+
+      var options = {
+        height: 400,
+        vAxis: {
+          format: "decimal"
+        },
+	  series: {
+		0: { color: '#0095ff' },
+		1: { color: '#e2431e' },
+	  },
+        axes: {
+          // Adds labels to each axis; they don't have to match the axis names.
+          x: {
+            0: {
+              side: 'top'
+            }
+          }
+        }
+      };
+
+      var chart = new google.charts.Line(document.getElementById('pcr_graph'));
+
+      chart.draw(data, google.charts.Line.convertOptions(options));
+    }
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="japan-map.min.js"></script>
+<script>
+$(function(){        
+    var areas = [
+		{code : 1, name: "患者100人以上", color: "#e2431e", hoverColor: "#e2431e", prefectures: [1,23,13,27]},
+{code : 2, name: "患者10人以上100人未満",　color: "#ffb040", hoverColor: "#ffb040", prefectures: [28,14,11,12,15,26,30,39,10]},
+{code : 3, name: "患者1人以上10人未満",　color: "#ffe596", hoverColor: "#ffe596", prefectures: [17,24,43,25,29,40,9,20,21,22,45,47,7,8,19,38,4,5,18,34,35,37,41,44]},
+{code : 4, name: "患者0", color: "#ccc", hoverColor: "#ccc", prefectures: [2,3,6,16,31,32,33,36,42,46]},    ];
+
+    $("#corona-japan-map").japanMap({
+        width: 800,
+        selection: "area",
+        areas: areas,
+        backgroundColor : "#ffffff",
+        borderLineColor: "#ffffff",
+        borderLineWidth : 1.5,
+        lineColor : "#a0a0a0",
+        lineWidth: 0,
+        drawsBoxLine: false,
+        showsPrefectureName: false,
+        prefectureNameType: "short",
+        movesIslands : true,
+        fontSize : 11,
+        onSelect : function(data){
+            alert(data.name);
+        }
+    });
+});
+</script>
+  <meta charset="UTF-8">
+<link rel="stylesheet" media="all" href="https://www.trance-cat.com/default/style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<header class="container white center">
+<h1>新型コロナウィルス国内感染状況</h1>
+</header>
+  <main>
+    <article class="grid" data-masonry='{ "itemSelector": ".room", "columnWidth": ".width-50" }'>
+      <section class="room width-50 round">
+        <h2>患者数</h2>
+        <div class="large-font" style="color:#e2431e;">794人</div>
+		<p>前日比:+36人</p>
+		<p>3月19日 12:00時点</p>
+      </section>
+      <section class="room width-50 round">
+        <h2>死亡者数</h2>
+        <div class="large-font" style="color:#555555;">31人</div>
+		<p>前日比:+2人</p>
+		<p>3月19日 12:00時点</p>
+      </section>
+      <section class="room width-50 round">
+        <h2>退院者数</h2>
+        <div class="large-font" style="color:#1ac91d;">173人</div>
+		<p>前日比:+23人</p>
+		<p>3月19日 12:00時点</p>
+      </section>
+      <section class="room width-50 center round">
+        <h2>都道府県別患者数</h2>
+        <div id="piechart2" style="width: 100％; height: 400px;"></div>
+        <table class="small-font">
+          <tbody>
+            <tr>
+              <td><strong>都道府県</strong></td>
+              <td><strong>患者数</strong></td>
+            </tr>
+            <tr>
+<td class="left">北海道</td><td class="left">153</td>
+</tr>
+<tr>
+<td class="left">愛知県</td><td class="left">122</td>
+</tr>
+<tr>
+<td class="left">東京都</td><td class="left">105</td>
+</tr>
+<tr>
+<td class="left">大阪府</td><td class="left">100</td>
+</tr>
+<tr>
+<td class="left">兵庫県</td><td class="left">69</td>
+</tr>
+<tr>
+<td class="left">神奈川県</td><td class="left">52</td>
+</tr>
+<tr>
+<td class="left">埼玉県</td><td class="left">32</td>
+</tr>
+<tr>
+<td class="left">千葉県</td><td class="left">31</td>
+</tr>
+<tr>
+<td class="left">新潟県</td><td class="left">17</td>
+</tr>
+<tr>
+<td class="left">京都府</td><td class="left">17</td>
+</tr>
+<tr>
+<td class="left">和歌山県</td><td class="left">13</td>
+</tr>
+<tr>
+<td class="left">高知県</td><td class="left">11</td>
+</tr>
+<tr>
+<td class="left">群馬県</td><td class="left">10</td>
+</tr>
+<tr>
+<td class="left">石川県</td><td class="left">5</td>
+</tr>
+<tr>
+<td class="left">三重県</td><td class="left">5</td>
+</tr>
+<tr>
+<td class="left">熊本県</td><td class="left">5</td>
+</tr>
+<tr>
+<td class="left">滋賀県</td><td class="left">4</td>
+</tr>
+<tr>
+<td class="left">奈良県</td><td class="left">4</td>
+</tr>
+<tr>
+<td class="left">福岡県</td><td class="left">4</td>
+</tr>
+<tr>
+<td class="left">栃木県</td><td class="left">3</td>
+</tr>
+<tr>
+<td class="left">長野県</td><td class="left">3</td>
+</tr>
+<tr>
+<td class="left">岐阜県</td><td class="left">3</td>
+</tr>
+<tr>
+<td class="left">静岡県</td><td class="left">3</td>
+</tr>
+<tr>
+<td class="left">宮崎県</td><td class="left">3</td>
+</tr>
+<tr>
+<td class="left">沖縄県</td><td class="left">3</td>
+</tr>
+<tr>
+<td class="left">福島県</td><td class="left">2</td>
+</tr>
+<tr>
+<td class="left">茨城県</td><td class="left">2</td>
+</tr>
+<tr>
+<td class="left">山梨県</td><td class="left">2</td>
+</tr>
+<tr>
+<td class="left">愛媛県</td><td class="left">2</td>
+</tr>
+<tr>
+<td class="left">宮城県</td><td class="left">1</td>
+</tr>
+<tr>
+<td class="left">秋田県</td><td class="left">1</td>
+</tr>
+<tr>
+<td class="left">福井県</td><td class="left">1</td>
+</tr>
+<tr>
+<td class="left">広島県</td><td class="left">1</td>
+</tr>
+<tr>
+<td class="left">山口県</td><td class="left">1</td>
+</tr>
+<tr>
+<td class="left">香川県</td><td class="left">1</td>
+</tr>
+<tr>
+<td class="left">佐賀県</td><td class="left">1</td>
+</tr>
+<tr>
+<td class="left">大分県</td><td class="left">1</td>
+</tr>
+          </tbody>
+        </table>
+      </section>
+	  <section class="room width-66 center round">
+        <h2>国内感染者分布地図</h2>
+        <div id="corona-japan-map" style="height: 620px;"></div>
+      </section>
+      <section class="room width-66 center round">
+        <h2>累計患者・死亡者・退院者数推移</h2>
+        <div id="line_top_x" style="width: 100％; height: 400px;"></div>
+      </section>
+      <section class="room width-66 center round">
+        <h2>新規患者・死亡者・退院者数推移</h2>
+        <div id="daily_cases" style="width: 100％; height: 400px;"></div>
+      </section>
+      <section class="room width-66 center round">
+        <h2>PCR検査数推移</h2>
+        <div id="pcr_graph" style="width: 100％; height: 400px;"></div>
+      </section>
+<section class="room width-100 center round">
+<h2>留意事項</h2>
+<p>武漢からの政府チャーター便帰国者、およびダイヤモンド・プリンセス号の乗客・乗員は除いています。</p>
+<p><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000121431_00086.html" target="_blank">厚生労働省の報道発表資料</a>を基にした東洋経済のJSONファイルを使用しています。</p>
+<p>GitHub:<a href="https://github.com/kaz-ogiwara/covid19/blob/master/data/data.json" rel="nofollow">https://github.com/kaz-ogiwara/covid19/blob/master/data/data.json</a></p>
+  <div class="clear"></div>
+</section>
+      <section class="room width-100 center round">
+  <script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- TC-Responsive -->
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5109257615219698" data-ad-slot="3139056561" data-ad-format="auto"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <div class="clear"></div>
+</section>
+
+</article>
+<div class="clear"></div>
+</main>
+<div id="footer" class="center">
+  <a href="https://www.trance-cat.com/contact-english.php">Contact</a><br><br>
+  <div class="clear"></div>
+</div>
+<script defer src="https://www.trance-cat.com/default/masonry.js"></script></body>
+
+</html>

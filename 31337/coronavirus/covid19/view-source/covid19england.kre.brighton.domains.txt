@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+<!--   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vega-embed@5"></script>
+ -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.10.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.0.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.3.2"></script>
+    <link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>  
+  <div class="wrapper">
+      <!-- header -->
+      <header>
+
+      </header>    
+    <!-- main content -->
+      <div align="center" class="container">
+        <!-- banner -->
+
+           <!-- heading -->
+          <h2>Visualisation of England cases</h2>
+          This visualisation uses data from Public Health England detailing the <a href="https://www.arcgis.com/apps/opsdashboard/index.html#/f94c3c90da5b4e9f9a0b19484dd4bb14">Total UK cases COVID-19 Cases Update</a>
+          <div id="vis"></div>
+
+            <script>
+            const spec = "data1.json";
+            vegaEmbed("#vis", spec)
+              // result.view provides access to the Vega View API
+              .then(result => console.log(result))
+              .catch(console.warn);
+              </script>
+         
+      </div>
+      </div>
+
+<!--   <div id="vis"></div>
+ -->  
+
+
+</body>

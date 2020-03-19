@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>California Coronavirus Map</title>
+    <meta charset="utf-8">
+
+    <script>
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+      analytics.load(window.location.hostname === "californiacoronavirus.org" ? "hczDooaRr4ItnMJMOqzDH4Spm5BThpLx" : "W0AkKdYa2EBDbabDXwnha4wfTw9ciNYc");
+      analytics.page("Map homepage");
+      }}();
+    </script>
+
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+      integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+      crossorigin>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" integrity="sha256-G7A4JrJjJlFqP0yamznwPjAApIKPkadeHfyIwiaa9e0=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js" integrity="sha256-AdQN98MVZs44Eq2yTwtoKufhnU+uZ7v2kXnD5vqzZVo=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.16.1/apexcharts.min.css" integrity="sha256-Z3b9DHpL/hLUfx9VnIAAZN/truIaL0Vze0wgY8THD9g=" crossorigin="anonymous" />
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"></script>
+    <link rel="stylesheet"
+      href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha256-kdEnCVOWosn3TNsGslxB8ffuKdrZoGQdIdPwh7W1CsE=" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
+
+
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="California Coronavirus Map">
+    <meta property="og:description" content="Up-to-date, county-level data on the current outbreak of COVID-19 in California.">
+    <meta property="og:url" content="http://californiacoronavirus.org">
+    <meta property="og:site_name" content="California Coronavirus Map">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@embrein" />
+    <meta name="twitter:creator" content="@embrein" />
+    <meta name="twitter:title" content="California Coronavirus Map" />
+    <meta name="twitter:description" content="Up-to-date, county-level data on the current outbreak of COVID-19 in California." />
+    <meta name="twitter:url" content="http://californiacoronavirus.org" />
+
+    <meta name="twitter:image" content="http://californiacoronavirus.org/og-image.jpg" />
+    <meta property="og:image" content="http://californiacoronavirus.org/og-image.jpg">
+  </head>
+
+
+  <body>
+    <div id="header">
+      <h1>California Coronavirus Map</h1>
+    </div>
+    <div id="map"></div>
+    <div id="sidebar">
+      <div class="sidebarMenu">
+        <div class="view-cal menu-btn">California</div>
+        <div class="view-bay-area menu-btn">3/17 Bay Area Shelter-In-Place</div>
+      </div>
+      <div class="sidebarWrapper">
+      </div>
+    </div>
+    <div id="footer">
+      <p>
+        Created by <a href="https://twitter.com/embrein" target="_blank">@embrein</a>. Data last updated <span class="last-updated"></span> from the <a href="https://projects.sfchronicle.com/2020/coronavirus-map/" target="_blank">SF Chronicle</a>. Map made with <a href="https://leafletjs.com/" target="_blank">Leaflet</a>.
+      </p>
+    </div>
+
+
+    <script type="text/template" id="SidebarTemplate">
+        <h1><%= props.title %></h1>
+
+        <h2>Cases</h2>
+        <% if (props.caseRate) { %>
+          <p><b><%= props.cases.TOTALS %></b> total cases so far</p>
+          <p><b><%= props.caseRate.toFixed(2) %></b> cases per 100,000 people</p>
+          <h3>New confirmed cases, by day</h3>
+          <div id="casesByDay" class="chart"></div>
+        <% } else { %>
+          <p>No confirmed cases</p>
+        <% } %>
+
+        <h2>Deaths</h2>
+        <% if (props.deathRate) { %>
+          <p><b><%= props.deaths.TOTALS %></b> total deaths so far</p>
+          <p><b><%= props.deathRate.toFixed(2) %></b> deaths per 100,000 people</p>
+          <h3>New Deaths, by day</h3>
+          <div id="deathsByDay" class="chart"></div>
+        <% } else { %>
+          <p>No confirmed deaths</p>
+        <% } %>
+
+        <% if (props.caseRate) { %>
+          <h2>Total Cases and Deaths</h2>
+          <div id="totalsByDay" class="chart"></div>
+        <% } %>
+
+        <% if (props.links && props.links.publicHealthDept)  { %>
+          <p>Find the latest information from <%= props.title %> on their <a href="<%= props.links.publicHealthDept%>">Public Health Department website</a>.</p>
+        <% } %>
+    </script>
+    <script src="ca-counties.js"></script>
+    <script src="index.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>COVID-19 Bangka</title>
+	<!-- Tell the browser to be responsive to screen width -->
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<!-- Bootstrap 3.3.7 -->
+	<link rel="stylesheet" href="https://covid19.bangka.go.id/assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet"
+		href="https://covid19.bangka.go.id/assets/bower_components/font-awesome/css/font-awesome.min.css">
+	<!-- Ionicons -->
+	<link rel="stylesheet" href="https://covid19.bangka.go.id/assets/bower_components/Ionicons/css/ionicons.min.css">
+	<!-- Theme style -->
+	<link rel="stylesheet" href="https://covid19.bangka.go.id/assets/dist/css/AdminLTE.min.css">
+	<!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+	<link rel="stylesheet" href="https://covid19.bangka.go.id/assets/dist/css/skins/_all-skins.min.css">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+	<!-- Google Font -->
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+
+<body class="hold-transition skin-blue layout-top-nav">
+	<div class="wrapper">
+
+		<header class="main-header">
+			<nav class="navbar navbar-static-top">
+				<div class="container">
+					<div class="navbar-header">
+						<a href="https://covid19.bangka.go.id/" class="navbar-brand"><b>COVID-19</b></a>
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+							data-target="#navbar-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="https://covid19.bangka.go.id/">Beranda <span
+										class="sr-only">(current)</span></a></li>
+						</ul>
+
+					</div>
+					<!-- /.navbar-collapse -->
+				</div>
+				<!-- /.container-fluid -->
+			</nav>
+		</header>
+		<!-- Full Width Column -->
+		<div class="content-wrapper">
+			<div class="container">
+				<!-- Content Header (Page header) -->
+				<section class="content-header">
+					<h1>
+						Dashboard
+						<small>Ver 1.0</small>
+					</h1>
+					<ol class="breadcrumb">
+						<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+						<li><a href="#">Dashboard</a></li>
+					</ol>
+				</section>
+
+				<!-- Main content -->
+				<section class="content">
+					<div class="row">
+						<img class="center-block" src="https://covid19.bangka.go.id/assets/dist/img/bangka.png"/>
+						<h3 class="text-center"><strong>PUSAT INFORMASI COVID-19 KABUPATEN BANGKA</strong></h3>
+			</div>
+			<!-- Small boxes (Stat box) -->
+			<div class="row">
+				<br>
+				<div class="col-lg-4 col-xs-6">
+					<!-- small box -->
+					<div class="small-box bg-aqua">
+						<div class="inner">
+							<h3>4</h3>
+							<p>Orang Dalam Pemantauan (ODP)</p>
+						</div>
+						<div class="icon">
+							<i class="ion ion-person"></i>
+						</div>
+					</div>
+				</div>
+				<!-- ./col -->
+				<div class="col-lg-4 col-xs-6">
+					<!-- small box -->
+					<div class="small-box bg-yellow">
+						<div class="inner">
+							<h3>0</h3>
+							<p>Pasien Dalam Pengawasan (PDP)</p>
+						</div>
+						<div class="icon">
+							<i class="ion ion-person"></i>
+						</div>
+					</div>
+				</div>
+				<!-- ./col -->
+				<div class="col-lg-4 col-xs-6">
+					<!-- small box -->
+					<div class="small-box bg-yellow">
+						<div class="inner">
+							<h3>0</h3>
+							<p>Dalam Proses Uji Lab</p>
+						</div>
+						<div class="icon">
+							<i class="ion ion-person"></i>
+						</div>
+					</div>
+				</div>
+				<!-- ./col -->
+				<div class="col-lg-4 col-xs-6">
+					<!-- small box -->
+					<div class="small-box bg-red">
+						<div class="inner">
+							<h3>0</h3>
+							<p>Pasien Positif</p>
+						</div>
+						<div class="icon">
+							<i class="ion ion-person"></i>
+						</div>
+					</div>
+				</div>
+				<!-- ./col -->
+				<!-- ./col -->
+				<div class="col-lg-4 col-xs-6">
+					<!-- small box -->
+					<div class="small-box bg-aqua">
+						<div class="inner">
+							<h3>1</h3>
+							<p>Pasien Negatif</p>
+						</div>
+						<div class="icon">
+							<i class="ion ion-person"></i>
+						</div>
+					</div>
+				</div>
+				<!-- ./col -->
+				<!-- ./col -->
+				<div class="col-lg-4 col-xs-6">
+					<!-- small box -->
+					<div class="small-box bg-green">
+						<div class="inner">
+							<h3>0</h3>
+							<p>Pasien Sembuh</p>
+						</div>
+						<div class="icon">
+							<i class="ion ion-person"></i>
+						</div>
+					</div>
+				</div>
+				<!-- ./col -->
+				<div class="col-lg-12 col-xs-12">
+
+					<div class="box box-default">
+						<div class="box-body">
+							<h4 class="text-center"><strong>Update Data : 2020-03-19 14:41:15</strong></h4>
+							<h4 class="text-center"><strong>Sumber : Dinas Kesehatan Kabupaten Bangka</strong></h4>
+						</div>
+						<!-- /.box-body -->
+					</div>
+				</div>
+			</div>
+			<!-- /.row -->
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="box box-solid">
+						<div class="box-header with-border">
+							<h3 class="box-title">Info</h3>
+						</div>
+						<!-- /.box-header -->
+						<div class="box-body">
+							<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+								<ol class="carousel-indicators">
+									<li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+									<li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
+								</ol>
+								<div class="carousel-inner">
+									<div class="item">
+										<img src="https://blog.ruangguru.com/hs-fs/hubfs/5%20Cara%20Orang%20Tua%20Mencegah%20Virus%20Corona%20di%20Rumah.png?width=600&name=5%20Cara%20Orang%20Tua%20Mencegah%20Virus%20Corona%20di%20Rumah.png"
+											alt="First slide">
+										<div class="carousel-caption">
+											Cuci Tangan
+										</div>
+									</div>
+									<div class="item active">
+										<img src="https://blog.ruangguru.com/hs-fs/hubfs/5%20Cara%20Orang%20Tua%20Mencegah%20Virus%20Corona%20di%20Rumah.jpeg?width=600&name=5%20Cara%20Orang%20Tua%20Mencegah%20Virus%20Corona%20di%20Rumah.jpeg"
+											alt="Second slide">
+										<div class="carousel-caption">
+											Etika Batuk
+										</div>
+									</div>
+
+								</div>
+								<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+									<span class="fa fa-angle-left"></span>
+								</a>
+								<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+									<span class="fa fa-angle-right"></span>
+								</a>
+							</div>
+						</div>
+						<!-- /.box-body -->
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="box box-solid">
+						<div class="box-header with-border">
+							<h3 class="box-title">Promosi Kesehatan</h3>
+						</div>
+						<!-- /.box-header -->
+						<div class="box-body">
+							<div class="embed-responsive embed-responsive-16by9">
+								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hxmCG_knv2M"
+									frameborder="0"
+									allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+									allowfullscreen></iframe>
+							</div>
+						</div>
+						<!-- /.box-body -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.box -->
+		</section>
+		<!-- /.content -->
+	</div>
+	<!-- /.container -->
+	</div>
+	<!-- /.content-wrapper -->
+	<footer class="main-footer">
+		<div class="container">
+			<div class="pull-right hidden-xs">
+				<b>Version</b> 1
+			</div>
+			<strong>Copyright &copy; 2020 <a href="https://www.bangka.go.id">Pemerintah Kabupaten Bangka</a>.</strong>
+			All rights
+			reserved.
+		</div>
+		<!-- /.container -->
+	</footer>
+	</div>
+	<!-- ./wrapper -->
+
+	<!-- jQuery 3 -->
+	<script src="https://covid19.bangka.go.id/assets/bower_components/jquery/dist/jquery.min.js"></script>
+	<!-- Bootstrap 3.3.7 -->
+	<script src="https://covid19.bangka.go.id/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- SlimScroll -->
+	<script src="https://covid19.bangka.go.id/assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<!-- FastClick -->
+	<script src="https://covid19.bangka.go.id/assets/bower_components/fastclick/lib/fastclick.js"></script>
+	<!-- AdminLTE App -->
+	<script src="https://covid19.bangka.go.id/assets/dist/js/adminlte.min.js"></script>
+	<!-- AdminLTE for demo purposes -->
+	<script src="https://covid19.bangka.go.id/assets/dist/js/demo.js"></script>
+</body>
+
+</html>

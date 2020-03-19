@@ -1,0 +1,61 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <title>Coming soon</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+    <style>
+        html, body {
+            margin: 0;
+            background-color: #1494b2;
+            height: 100%;
+            font-family: "Open Sans", arial, sans-serif;
+        }
+        .main-image {}
+        .main-image img {
+            margin: 30px auto;
+            display: block;
+            max-width: 600px;
+            width: 100%;
+        }
+        .content-wrapper {
+            background-color: #323539;
+            color: #fff;
+            overflow: hidden;
+            padding: 30px;
+        }
+        .content-wrapper p {
+            text-align: center;
+            margin-bottom: 5px;
+            margin-top: 0;
+        }
+        .content-wrapper h1 {
+            text-align: center;
+            margin-top: 0;
+        }
+        .main-container{
+            display: table;
+            width: 100%;
+            height: 100%;
+        }
+        .main-content {
+            display: table-cell;
+            vertical-align:middle;
+        }
+    </style>
+</head>
+<body>
+<div class="main-container">
+    <div class="main-content">
+        <div class="main-image">
+            <img src="https://cdn.managewp.com/maintenance/v1/coming-soon.png" alt="">
+        </div>
+        <div class="content-wrapper">
+            <h1>Website Coming Soon!</h1>
+            <p>We are working hard on our new website.</p>
+            <p>Stay tuned for more info.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

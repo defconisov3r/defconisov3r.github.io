@@ -1,0 +1,240 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Corona In CO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+dl{
+	display:flex;
+	flex-wrap: wrap;
+}
+
+dt{
+	flex-basis:100px;
+}
+
+dd{
+	margin:0;
+	width:calc(100% - 100px);
+}
+
+dd:after {
+	content: '\A';
+	white-space: pre;
+}
+
+.rawData{
+	display:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="current">
+	<h1>Tracking Covid-19 in CO</h1>
+	<h2>Current</h2>
+	<dl>
+		<dt>Positive</dt>
+		<dd>216</dd>
+		<dt>Negative</dt>
+		<dd>2112</dd>
+		<dt>Death</dt>
+		<dd>2</dd>
+		<dt>Total Tested</dt>
+		<dd>2328</dd>
+		<dt>Last Checked</dt>
+		<dd>3/18 18:30</dd>
+	</dl>
+	
+	<div class="rawData">
+		<h3>Raw Data</h3>
+		<code>
+			{"state":"CO","positive":216,"negative":2112,"pending":null,"death":2,"total":2328,"lastUpdateEt":"3/18 18:30","checkTimeEt":"3/19 12:17"}		</code>
+	</div>
+</div>	
+	<hr>
+	
+	
+
+<div id="history">	
+	<h2>History</h2>
+		<dl>
+		<dt>Date</dt>
+		<dd>2020-03-18</dd>
+		<dt>Positive</dt>
+		<dd>183</dd>
+		<dt>Negative</dt>
+		<dd>1617</dd>
+		<dt>Death</dt>
+		<dd>2</dd>
+		<dt>Total Tested</dt>
+		<dd>1800</dd>
+	</dl>
+		<dl>
+		<dt>Date</dt>
+		<dd>2020-03-17</dd>
+		<dt>Positive</dt>
+		<dd>160</dd>
+		<dt>Negative</dt>
+		<dd>1056</dd>
+		<dt>Death</dt>
+		<dd>1</dd>
+		<dt>Total Tested</dt>
+		<dd>1216</dd>
+	</dl>
+		<dl>
+		<dt>Date</dt>
+		<dd>2020-03-16</dd>
+		<dt>Positive</dt>
+		<dd>131</dd>
+		<dt>Negative</dt>
+		<dd>627</dd>
+		<dt>Death</dt>
+		<dd>1</dd>
+		<dt>Total Tested</dt>
+		<dd>758</dd>
+	</dl>
+		<dl>
+		<dt>Date</dt>
+		<dd>2020-03-15</dd>
+		<dt>Positive</dt>
+		<dd>131</dd>
+		<dt>Negative</dt>
+		<dd>627</dd>
+		<dt>Death</dt>
+		<dd>1</dd>
+		<dt>Total Tested</dt>
+		<dd>758</dd>
+	</dl>
+		<dl>
+		<dt>Date</dt>
+		<dd>2020-03-14</dd>
+		<dt>Positive</dt>
+		<dd>101</dd>
+		<dt>Negative</dt>
+		<dd>712</dd>
+		<dt>Death</dt>
+		<dd>1</dd>
+		<dt>Total Tested</dt>
+		<dd>814</dd>
+	</dl>
+		<dl>
+		<dt>Date</dt>
+		<dd>2020-03-13</dd>
+		<dt>Positive</dt>
+		<dd>72</dd>
+		<dt>Negative</dt>
+		<dd>524</dd>
+		<dt>Death</dt>
+		<dd></dd>
+		<dt>Total Tested</dt>
+		<dd>596</dd>
+	</dl>
+		<dl>
+		<dt>Date</dt>
+		<dd>2020-03-12</dd>
+		<dt>Positive</dt>
+		<dd>45</dd>
+		<dt>Negative</dt>
+		<dd>298</dd>
+		<dt>Death</dt>
+		<dd></dd>
+		<dt>Total Tested</dt>
+		<dd>343</dd>
+	</dl>
+		<dl>
+		<dt>Date</dt>
+		<dd>2020-03-11</dd>
+		<dt>Positive</dt>
+		<dd>28</dd>
+		<dt>Negative</dt>
+		<dd>251</dd>
+		<dt>Death</dt>
+		<dd></dd>
+		<dt>Total Tested</dt>
+		<dd>279</dd>
+	</dl>
+		<dl>
+		<dt>Date</dt>
+		<dd>2020-03-10</dd>
+		<dt>Positive</dt>
+		<dd>12</dd>
+		<dt>Negative</dt>
+		<dd>142</dd>
+		<dt>Death</dt>
+		<dd></dd>
+		<dt>Total Tested</dt>
+		<dd>155</dd>
+	</dl>
+		<dl>
+		<dt>Date</dt>
+		<dd>2020-03-09</dd>
+		<dt>Positive</dt>
+		<dd>9</dd>
+		<dt>Negative</dt>
+		<dd>266</dd>
+		<dt>Death</dt>
+		<dd></dd>
+		<dt>Total Tested</dt>
+		<dd>275</dd>
+	</dl>
+		<dl>
+		<dt>Date</dt>
+		<dd>2020-03-08</dd>
+		<dt>Positive</dt>
+		<dd>8</dd>
+		<dt>Negative</dt>
+		<dd>208</dd>
+		<dt>Death</dt>
+		<dd></dd>
+		<dt>Total Tested</dt>
+		<dd>216</dd>
+	</dl>
+		<dl>
+		<dt>Date</dt>
+		<dd>2020-03-07</dd>
+		<dt>Positive</dt>
+		<dd>8</dd>
+		<dt>Negative</dt>
+		<dd>109</dd>
+		<dt>Death</dt>
+		<dd></dd>
+		<dt>Total Tested</dt>
+		<dd>186</dd>
+	</dl>
+		<dl>
+		<dt>Date</dt>
+		<dd>2020-03-06</dd>
+		<dt>Positive</dt>
+		<dd>2</dd>
+		<dt>Negative</dt>
+		<dd>92</dd>
+		<dt>Death</dt>
+		<dd></dd>
+		<dt>Total Tested</dt>
+		<dd>124</dd>
+	</dl>
+		<dl>
+		<dt>Date</dt>
+		<dd>2020-03-05</dd>
+		<dt>Positive</dt>
+		<dd>0</dd>
+		<dt>Negative</dt>
+		<dd>37</dd>
+		<dt>Death</dt>
+		<dd></dd>
+		<dt>Total Tested</dt>
+		<dd>58</dd>
+	</dl>
+		<div class="rawData">
+		<h3>Raw Data</h3>
+		<code>
+			[{"date":20200318,"state":"CO","positive":183,"negative":1617,"pending":null,"death":2,"total":1800,"dateChecked":"2020-03-18T20:00:00Z"},{"date":20200317,"state":"CO","positive":160,"negative":1056,"pending":null,"death":1,"total":1216,"dateChecked":"2020-03-17T20:00:00Z"},{"date":20200316,"state":"CO","positive":131,"negative":627,"pending":null,"death":1,"total":758,"dateChecked":"2020-03-16T20:00:00Z"},{"date":20200315,"state":"CO","positive":131,"negative":627,"pending":null,"death":1,"total":758,"dateChecked":"2020-03-15T20:00:00Z"},{"date":20200314,"state":"CO","positive":101,"negative":712,"pending":null,"death":1,"total":814,"dateChecked":"2020-03-14T20:00:00Z"},{"date":20200313,"state":"CO","positive":72,"negative":524,"pending":null,"death":null,"total":596,"dateChecked":"2020-03-13T20:00:00Z"},{"date":20200312,"state":"CO","positive":45,"negative":298,"pending":null,"death":null,"total":343,"dateChecked":"2020-03-12T20:00:00Z"},{"date":20200311,"state":"CO","positive":28,"negative":251,"pending":null,"death":null,"total":279,"dateChecked":"2020-03-11T20:00:00Z"},{"date":20200310,"state":"CO","positive":12,"negative":142,"pending":1,"death":null,"total":155,"dateChecked":"2020-03-10T20:00:00Z"},{"date":20200309,"state":"CO","positive":9,"negative":266,"pending":null,"death":null,"total":275,"dateChecked":"2020-03-09T20:00:00Z"},{"date":20200308,"state":"CO","positive":8,"negative":208,"pending":null,"death":null,"total":216,"dateChecked":"2020-03-08T21:00:00Z"},{"date":20200307,"state":"CO","positive":8,"negative":109,"pending":69,"death":null,"total":186,"dateChecked":"2020-03-07T21:00:00Z"},{"date":20200306,"state":"CO","positive":2,"negative":92,"pending":30,"death":null,"total":124,"dateChecked":"2020-03-06T21:00:00Z"},{"date":20200305,"state":"CO","positive":0,"negative":37,"pending":21,"death":null,"total":58,"dateChecked":"2020-03-05T21:00:00Z"}]		</code>
+	</div>
+</div>
+</body>
+</html>

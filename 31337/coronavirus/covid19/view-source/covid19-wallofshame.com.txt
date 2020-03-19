@@ -1,0 +1,394 @@
+<!doctype html>
+<html>
+
+<head>
+	<script src="dmxAppConnect/dmxAppConnect.js"></script>
+	<meta charset="UTF-8">
+	<title>Covid19 Wall of Shame</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script src="dmxAppConnect/dmxBootstrap4Navigation/dmxBootstrap4Navigation.js" defer=""></script>
+	<script src="dmxAppConnect/dmxBootstrap4Modal/dmxBootstrap4Modal.js" defer=""></script>
+	<link rel="stylesheet" href="dmxAppConnect/dmxBootstrap4TableGenerator/dmxBootstrap4TableGenerator.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="dmxAppConnect/dmxBrowser/dmxBrowser.js" defer=""></script>
+	<link rel="stylesheet" href="bootstrap/4/cyborg/bootstrap.min.css" />
+	<link rel="stylesheet" href="dmxAppConnect/dmxValidator/dmxValidator.css" />
+	<script src="dmxAppConnect/dmxValidator/dmxValidator.js" defer=""></script>
+	<script src="dmxAppConnect/dmxBootstrap4Tooltips/dmxBootstrap4Tooltips.js" defer=""></script>
+	<link rel="stylesheet" href="dmxAppConnect/dmxMediumEditor/medium-editor.css" />
+	<script src="dmxAppConnect/dmxMediumEditor/medium-editor.js" defer=""></script>
+	<link rel="stylesheet" href="dmxAppConnect/dmxMediumEditor/dmxMediumEditor.css" />
+	<script src="dmxAppConnect/dmxMediumEditor/dmxMediumEditor.js" defer=""></script>
+	<link rel="stylesheet" href="dmxAppConnect/dmxMediumEditor/themes/default.css" />
+
+</head>
+
+<body is="dmx-app" id="index">
+
+
+	<div is="dmx-browser" id="browser1"></div>
+	<dmx-value id="var_page" dmx-bind:value="wos_home"></dmx-value>
+	<dmx-value id="var_ip" value="66.70.228.168"></dmx-value>
+	<dmx-serverconnect id="sc_cities" url="dmxConnect/api/cities.php"></dmx-serverconnect>
+	<dmx-serverconnect id="sc_states" url="dmxConnect/api/states.php"></dmx-serverconnect>
+	<dmx-serverconnect id="sc_wos" url="dmxConnect/api/tbl_wos.php"></dmx-serverconnect>
+	<dmx-serverconnect id="sc_resources" url="dmxConnect/api/tbl_resources.php"></dmx-serverconnect>
+
+
+
+	<dmx-serverconnect id="sc_resource_types" url="dmxConnect/api/resource_types.php"></dmx-serverconnect>
+	<div class="modal" id="modal_add_wos" is="dmx-bs4-modal" tabindex="-1" role="dialog" dmx-on:hide-bs-modal="sc_form_add_wos.reset()">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+
+				<div class="modal-header bg-danger">
+					<h5 class="modal-title">Add Company to Wall of Shame</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form is="dmx-serverconnect-form" id="sc_form_add_wos" method="post" action="dmxConnect/api/add_wos.php" dmx-generator="bootstrap4" dmx-form-type="horizontal" dmx-on:success="modal_add_wos.hide();sc_wos.load()"
+						dmx-on:error="browser1.alert(lastError.message)">
+						<div class="form-group row">
+							<label for="inp_company_name" class="col-sm-2 col-form-label">Company name</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="inp_company_name" name="company_name" aria-describedby="inp_company_name_help" placeholder="Enter Company name" required="">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inp_company_website" class="col-sm-2 col-form-label">Company website</label>
+							<div class="col-sm-10">
+								<input type="url" class="form-control" id="inp_company_website" name="company_website" aria-describedby="inp_company_website_help" placeholder="Enter Company website" data-msg-url="" required="">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inp_admin_email" class="col-sm-2 col-form-label">Admin email</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="inp_admin_email" name="admin_email" aria-describedby="inp_admin_email_help" placeholder="Enter Admin email" data-rule-email="">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inp_state_id" class="col-sm-2 col-form-label">State</label>
+							<div class="col-sm-10">
+								<select id="inp_state_id" class="form-control" name="state_id" dmx-bind:options="sc_states.data.query1" optiontext="STATE_NAME" optionvalue="ID" dmx-on:changed="sc_cities.load({state_id: value},true)">
+									<option value="">Select A State</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inp_city_id" class="col-sm-2 col-form-label">City</label>
+							<div class="col-sm-10">
+								<select id="inp_city_id" class="form-control" name="city_id" dmx-bind:options="sc_cities.data.query1" optiontext="CITY" optionvalue="ID">
+
+									<option value="">Select A City</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inp_comments" class="col-sm-2 col-form-label">Comments</label>
+							<div class="col-sm-10">
+								<textarea class="form-control" id="inp_comments" name="comments" aria-describedby="inp_comments_help" placeholder="Enter Comments" is="dmx-medium-editor"
+									buttons="bold,italic,underline,anchor,quote,h2,h3,strikethrough"></textarea>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inp_ip" class="col-sm-2 col-form-label">IP Address</label>
+							<div class="col-sm-10">
+								<input name="ip" id="ip" dmx-bind:value="var_ip.value" type="text" class="form-control" readonly="true" required="">
+							</div>
+						</div>
+
+
+						<div class="form-group row">
+							<div class="col-sm-2">&nbsp;</div>
+							<div class="col-sm-10 text-right">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								<button type="submit" class="btn btn-danger">Add to Wall of Shame</button>
+							</div>
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+		<div class="modal-footer"></div>
+	</div>
+	<div class="modal" id="modal_add_resource" is="dmx-bs4-modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+
+				<div class="modal-header bg-primary">
+					<h5 class="modal-title">Add a Resource</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form is="dmx-serverconnect-form" id="sc_form_add_resource" method="post" action="dmxConnect/api/add_resource.php" dmx-generator="bootstrap4" dmx-form-type="horizontal"
+						dmx-on:success="modal_add_resource.hide();browser1.alert(&quot;Thank you for submitting a COVID19 resource!!&quot;);sc_resources.load()">
+						<div class="form-group row">
+							<label for="inp_resource_name" class="col-sm-3 col-form-label">Resource name</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="inp_resource_name" name="resource_name" aria-describedby="inp_resource_name_help" placeholder="Enter Resource name" required="">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inp_resource_website" class="col-sm-3 col-form-label">Resource website</label>
+							<div class="col-sm-9">
+								<input type="url" class="form-control" id="inp_resource_website" name="resource_website" aria-describedby="inp_resource_website_help" placeholder="Enter Resource website" data-rule-url="">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inp_resource_type_id" class="col-sm-3 col-form-label">Resource type</label>
+							<div class="col-sm-9">
+								<select id="inp_resource_type_id" class="form-control" name="resource_type_id" dmx-bind:options="sc_resource_types.data.query1" optiontext="resource_type" optionvalue="resource_type_id" required="">
+									<option value="">Select a Resource Type</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inp_resource_notes" class="col-sm-3 col-form-label">Resource notes</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="inp_resource_notes" name="resource_notes" aria-describedby="inp_resource_notes_help" placeholder="Enter Resource notes">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inp_state_id" class="col-sm-3 col-form-label">State</label>
+							<div class="col-sm-9">
+								<select id="state_id" class="form-control" name="state_id" dmx-bind:options="sc_states.data.query1" optiontext="STATE_NAME" optionvalue="ID" dmx-on:changed="sc_cities.load({state_id: value},true)">
+									<option value="">Select a State</option>
+
+								</select>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inp_city_id" class="col-sm-3 col-form-label">City</label>
+							<div class="col-sm-9">
+								<select id="city_id" class="form-control" name="city_id" dmx-bind:options="sc_cities.data.query1" optiontext="CITY" optionvalue="ID">
+									<option value="">Select a City</option>
+
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<div class="col-sm-2">&nbsp;</div>
+							<div class="col-sm-10 text-right">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								<button type="submit" class="btn btn-primary">Save</button>
+							</div>
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+		<div class="modal-footer"></div>
+	</div>
+
+
+
+	<div class="modal" id="modal_status_change" is="dmx-bs4-modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+
+				<div class="modal-header bg-warning">
+					<h5 class="modal-title">Request Status Change</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form is="dmx-serverconnect-form" id="sc_status_request" method="post" action="dmxConnect/api/add_status_request.php" dmx-generator="bootstrap4" dmx-form-type="horizontal"
+						dmx-on:success="modal_status_change.hide();browser1.alert(&quot;Thanks for submitting a Status Change Request.  All Requests will be handled within 24 hours.&quot;)">
+						<div class="form-group row">
+							<label for="inp_wos_id" class="col-sm-2 col-form-label">Wos</label>
+							<div class="col-sm-10">
+								<select id="inp_wos_id" class="form-control" name="wos_id" dmx-bind:options="sc_wos.data.query1" optiontext="company_name" optionvalue="wos_id">
+								</select>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inp_reason" class="col-sm-2 col-form-label">Reason</label>
+							<div class="col-sm-10">
+								<textarea id="reason" rows="20" name="reason" class="form-control" is="dmx-medium-editor" auto-link auto-list buttons="bold,italic,underline,anchor,quote,h2,h3,subscript"></textarea>
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-sm-2">&nbsp;</div>
+							<div class="col-sm-10 text-right">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button><button type="submit" class="btn btn-warning">Save</button>
+							</div>
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+		<div class="modal-footer"></div>
+	</div>
+	<div class="container-fluid">
+		<div class="row" id="site_header">
+			<div class="col">
+				<h1 class="text-center">Covid19 Wall of Shame</h1>
+			</div>
+		</div>
+		<div class="row" id="site_subheader">
+			<div class="col">
+				<h5 class="text-center text-danger">Name and Shame Companies Not Allowing Work from Home or Otherwise Needlessly Endangouring their Employees</h5>
+			</div>
+		</div>
+		<div class="row" id="site_navigation">
+			<div class="col">
+				<nav class="navbar navbar-expand-lg justify-content-center navbar-light bg-secondary">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1_collapse" aria-controls="navbar1_collapse" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbar1_collapse">
+						<div class="navbar-nav nav-fill justify-content-center align-items-center">
+
+							<a class="nav-item nav-link active text-white" href="#" dmx-on:click="var_page.setValue('')">Home</a>
+							<a class="nav-item nav-link text-white" href="#" dmx-on:click="var_page.setValue('resources')">Resources</a>
+							<a class="nav-item nav-link text-white" href="#" dmx-on:click="var_page.setValue('disclaimer')">Disclaimers</a>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<section id="home" class="pt-3" dmx-show="!var_page.value">
+			<div class="row">
+				<div class="col-9">
+					<h6>One report per IP address allowed. Reports deemed to be inappropriate will be removed.</h6>
+				</div>
+				<div class="col">
+					<button id="btn_add_wos" class="btn btn-danger style1" dmx-on:click="modal_add_wos.show()">Report Company</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="table-responsive">
+						<table class="table table-striped table-sm">
+							<thead>
+								<tr>
+
+									<th>Company name</th>
+									<th>Company website</th>
+									<th>State name</th>
+									<th>City</th>
+									<th>Comments</th>
+									<th>Reported date</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody is="dmx-repeat" dmx-generator="bs4table" dmx-bind:repeat="sc_wos.data.query1" id="tbl_wos">
+								<tr class="table-danger text-white" dmx-class:table-success="policy_changed > 0">
+
+									<td dmx-text="company_name"></td>
+									<td dmx-text="company_website"></td>
+									<td dmx-text="STATE_NAME"></td>
+									<td dmx-text="CITY"></td>
+									<td dmx-text="comments"></td>
+									<td dmx-text="reported_date"></td>
+									<td class="text-right">
+										<button id="btn_status_change" class="btn btn-warning text-right" dmx-on:click="modal_status_change.show();modal_status_change.sc_status_request.inp_wos_id.setValue(wos_id)">Request Status Change</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="resources" dmx-show="var_page.value=='resources'">
+			<div class="row pt-3">
+				<div class="col-9">
+					<h4 class="text-primary">Resources</h4>
+				</div>
+				<div class="col">
+					<button id="btn_add_resource" class="btn btn-primary style1" dmx-on:click="modal_add_resource.show()">Add Resource</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="table-responsive">
+						<table class="table table-sm">
+							<thead>
+								<tr>
+									<th>Resource</th>
+									<th>Website</th>
+									<th>Phone Number</th>
+									<th>Notes</th>
+									<th>City</th>
+									<th>State</th>
+									<th>Resource type</th>
+								</tr>
+							</thead>
+							<tbody is="dmx-repeat" dmx-generator="bs4table" dmx-bind:repeat="sc_resources.data.query1" id="tableRepeat1">
+								<tr>
+									<td dmx-text="resource_name"></td>
+									<td><a class="text-primary" target="_blank" dmx-bind:href="resource_website">{{resource_website}}</a>
+									</td>
+									<td dmx-text="resource_phone"></td>
+									<td dmx-text="resource_notes"></td>
+									<td dmx-text="CITY"></td>
+									<td dmx-text="STATE_NAME"></td>
+									<td dmx-text="resource_type"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section dmx-show="var_page.value=='disclaimer'" id="disclaimer">
+			<div class="row">
+				<div class="col">
+					<h4>Legal & Other Disclaimers</h4>
+					<h6 class="text-warning">A few words...</h6>
+
+					<p>I created this site so employees have somewhere to report employers who are not allowing them to work from home, or are otherwise endagering their workers health and safety, during this pandemic crisis. I hope that it will
+						convince employers to change their policies. I am not a
+						coronavirus expert. I just saw a lot of call for this type of service and as I had the skills and time to create it did so.</p>
+					<p>If you represent a company that has been called out here or have verifiable information that a company has changed its policies please click the 'Update Status' button next to the complaint (just one of them if there are
+						multiple) and fill in the form. I will happily update the status of the report(s) so that they are shown as Did the Right Thing</p>
+
+					<p>You may notice there's a link to Wappler at the bottom of the page. I am in no way affiliated with Wappler except that I used their awesome program to build this website in about 5 hours. I do have experience with Wappler, so I
+						wouldn't expext someone with no experience with it to be able to do something like this in that amount of time but if you're looking for a sweet low/no-code platform give it a look.</p>
+					<h6 class="text-warning">The Legal Stuff</h6>
+					<p></p>
+				</div>
+			</div>
+		</section>
+		<section id="contact" dmx-show="var_page.value=='contact'">
+			<div class="row align-items-center w-100 h-100 justify-content-center">
+				<div class="col align-self-center">
+
+
+				</div>
+			</div>
+		</section>
+
+
+
+
+
+	</div>
+	<footer class="fixed-bottom">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col style1">
+					<p class="text-center text-warning mb-0 pb-0"><a href="mailto:admin@covid19-wallofshame.com">Contact Us</a></p>
+					<p class="text-center text-warning"><a href="https://wappler.io/" target="_blank">Created with Wappler</a></p>
+
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="bootstrap/4/js/popper.min.js"></script>
+	<script src="bootstrap/4/js/bootstrap.min.js"></script>
+</body>
+
+</html>

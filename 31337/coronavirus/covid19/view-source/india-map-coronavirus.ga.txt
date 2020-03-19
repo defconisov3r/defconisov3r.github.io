@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <title>CoronaVirus India - Live Interactive Map</title>
     <meta name="description" content="Live updated map of novel corona virus, covid-19, city wise spread in india."/>
-    <!-- Google Analytics -->
     <script type="text/javascript" src="data.js"></script>
+    <!-- Google Analytics -->
     <script>
     window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
     ga('create', 'UA-160825964-1', 'auto');
@@ -55,6 +55,41 @@
         color: rgba(0, 0, 0, 0.57);
         font-size: smaller;
       }
+      #list {
+        position: absolute;
+        top: 8em;
+      }
+      #list #button {
+        background-color: teal;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 0px 5px 5px 0px;
+        cursor: pointer;
+        display: inline-block;
+        position: inherit;
+        top: 20px;
+      }
+
+      #state_list {
+        border-collapse: collapse;
+        background-color: white;
+        font-size: small;
+        width: 100%;
+        display: none;
+        height: 480px;
+        overflow-y: scroll;
+      }
+      #state_list td, #state_list th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      #state_list tr:nth-child(even){background-color: #f2f2f2;}
+      #state_list tr:hover {background-color: #ddd;}
+      #state_list th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+      }
     </style>
   </head>
   <body>
@@ -67,20 +102,41 @@
               <span id="confirmed"></span> confirmed cases</br>
               <span id="recovered"></span> recovered</br>
               <span id="death"></span> reported deaths</br>
-              22 cases found today
+              0 cases found today
               <div id="last_updated">
                 --------------------------------------------<br/>
-                last updated: 7:10pm 19 March
+                last updated: 1:00am 20 March
               </div>
             </div>
           </div>
+      </div>
+      <div id="list">
+        <table id="state_list">
+          <thead>
+            <tr>
+              <th>State</th>
+              <th>Reported</th>
+              <th>Recovered</th>
+              <th>Deaths</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+        <div id="button">
+          LIST
+        </div>
       </div>
       <img id="share" src="./share.png" />
     </div>
 
     <script>
-      var share = document.getElementById('share')
+      var wrapper = document.getElementById('wrapper');
+      var share = document.getElementById('share');
+      var list_button =  document.getElementById('button');
+      var state_list = document.getElementById('state_list');
       let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+
       if (navigator.share && isMobile) {
         share.style.display = "block"
       };
@@ -90,6 +146,22 @@
           console.log("Data was shared successfully");
         } catch (err) {
           console.error("Share failed:", err.message);
+        }
+      });
+      list_button.addEventListener("click", async (ev) => {
+        if(list_button.textContent != "X") {
+          list_button.textContent = "X";
+          state_list.style.display = "inline-block";
+          ev.stopPropagation();
+        }
+      });
+      state_list.addEventListener("click", async (ev) => {
+        ev.stopPropagation();
+      });
+      wrapper.addEventListener("click", async () => {
+        if(list_button.textContent === "X") {
+          list_button.textContent = "LIST";
+          state_list.style.display = "none";
         }
       });
       function initMap() {
@@ -106,6 +178,7 @@
         var confirmed = 0;
         var death = 0;
         var recovered = 0;
+        var states = {};
         // Add some markers to the map.
         // Note: The code uses the JavaScript Array.prototype.map() method to
         // create an array of markers based on a given "locations" array.
@@ -113,6 +186,13 @@
         var markers = [];
         locations.forEach(function(location, i) {
           count = location[5];
+          if(states[location[1]] === undefined) {
+            states[location[1]] = [location[5], location[6], location[7]];
+          } else {
+            states[location[1]][0] += location[5];
+            states[location[1]][1] += location[6];
+            states[location[1]][2] += location[7];
+          }
           if(location[0] === "in") {
             confirmed += location[5];
             recovered += location[6];
@@ -127,6 +207,15 @@
             });
             markers.push(mark);
           }
+        });
+        var state_keys = Object.keys(states)
+        state_keys.sort(function(a, b) {
+            return states[b][0] - states[a][0];
+        });
+        console.log(states);
+        state_keys.forEach(function(key, i) {
+          state_list.tBodies[0].innerHTML += 
+          '<tr id = "row' + i + '"><td>'+key+'</td><td>'+states[key][0]+'</td><td>'+states[key][1]+'</td><td>'+states[key][2]+'</td></tr>';
         });
 
         // set confirmed cases count

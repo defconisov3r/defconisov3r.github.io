@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - COVID19-Norge</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" href="/">Home</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <!--
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </!li>
+                        -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            
+<h2>COVID19 - Norge</h2>
+
+<p>
+    Siste 19.03.2020 14.00 (neste 20.03.2020 14.00)
+</p>
+<p>
+    <iframe width="933" height="700" src="https://msit.powerbi.com/view?r=eyJrIjoiMDYzMTZmZjctNWE0YS00ODJiLThlZjAtNDIxZWM0ZmE2YjNjIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9" frameborder="0" allowFullScreen="true"></iframe>
+</p>
+<p>
+    kilde: <a href="https://www.fhi.no/en/id/infectious-diseases/coronavirus/dags--og-ukerapporter/daily-reports-COVID19" target="_blank">fhi.no</a>
+</p>
+<a href="mailto:post@covid19norge.no" target="_blank">post@covid19norge.no</a>
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <!----div class="container">
+            &copy; 2020 - covid19_norge - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div-->
+    </footer>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0"></script>
+    
+</body>
+</html>

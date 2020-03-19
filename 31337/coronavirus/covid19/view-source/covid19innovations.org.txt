@@ -1,0 +1,377 @@
+<!DOCTYPE html><html prefix="og: http://ogp.me/ns#"><head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"30b484a957","applicationID":"51901936","transactionName":"Il4KRktdWlgAQkleVwxUS1tXVlNM","queueTime":0,"applicationTime":154,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"30b484a957",applicationID:"51901936"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script><title>COVID-19 Response &amp; Recovery Innovations </title><meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" /><meta content="GIE" property="og:site_name"></meta><meta content="website" property="og:type"></meta><meta content="https://covid19innovations.org/" property="og:url"></meta><meta content="COVID-19 Response &amp; Recovery Innovations " property="og:title"></meta><meta content="COVID-19 Response &amp;amp; Recovery Innovations " property="og:description"></meta><meta content="COVID-19 Response &amp;amp; Recovery Innovations " property="description"></meta><meta content="summary_large_image" property="twitter:card"></meta><meta content="COVID-19 Response &amp; Recovery Innovations " property="twitter:title"></meta><meta content="COVID-19 Response &amp;amp; Recovery Innovations " property="twitter:description"></meta><meta content="1918040368409010" property="fb:app_id"></meta><meta content="https://www.globalinnovationexchange.org/assets/gie-logo-0908bcad55e5147a4f4d2af945b13ceaec51d30ee5122ecf9c92db157b945eb2.png" property="og:image"></meta><meta content="https://www.globalinnovationexchange.org/assets/gie-logo-0908bcad55e5147a4f4d2af945b13ceaec51d30ee5122ecf9c92db157b945eb2.png" property="twitter:image"></meta><meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="H0qXsGeoUlHW+ztojaftMrM5Lk1J1uiJAcmHFbryE9+1XW6RULIXyEOynZ+DcQwdddpyyD2sIjAtWieQEzj8Hg==" /><link rel="stylesheet" media="all" href="/assets/application-8d57c24f7bbf39b2d91f863756fcafee40bdd98f4096bbb001180843c6b4fd3c.css" data-turbolinks-track="reload" /><script src="/assets/application-1bbec581eee85d203a48af2ea65956be6a7611bd532e2956dbe86bc82623d86d.js" data-turbolinks-track="reload"></script><script src="/packs/application-59f40389fe4d8cab4bf4.js" data-turbolinks-track="reload"></script><script src="/assets/cocoon-4a0df703686ddcd145122af2c24da539b19c286f3ab34f8b6703bf52db8d338d.js"></script><link rel="stylesheet" media="screen" href="/assets/patch-cafaff41750bca9444556b4258ac048e6dcef7bbc841a638c3ab82b09a0b609d.css" data-turbolinks-track="reload" /><meta content="https://covid19innovations.org/assets/wysihtml5-066bdbef84fa9f4a41bce61c2493e18dceda00919b1667a30571d1c3729df107.css" name="wysihtml5-css-url" /><script>var google_tag_manager_id = "GTM-5XWPVKK";
+
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer',google_tag_manager_id);
+
+$.trumbowyg.svgPath = "/assets/icons-fe098badb0ac3dc18a018270acbf50d316d737cf67a8fb6e9d7bc130edac72b4.svg";</script><link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#dde0e4",
+          "text": "#000000"
+        },
+        "button": {
+          "background": "#ffffff",
+          "text": "#000000"
+        }
+      },
+      "location": true,
+      "theme": "edgeless",
+      "content": {
+        "message": "Global Innovation Exchange uses cookies to analyze traffic and offer a better experience. By continuing to use our site you accept this.",
+        "dismiss": "Got It",
+        "href": "https://sites.google.com/globalinnovationexchange.org/gie-privacy-policy/home"
+      }
+    })});
+</script>
+</head><body class="home microsite home-index" data-client-type="" data-microsite-url="covid19innovations.org" id="home-index"><noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-5XWPVKK" style="display:none;visibility:hidden" width="0"></iframe></noscript><div class="wrapper-container"><link rel="shortcut icon" type="image/x-icon" href="https://covid19innovations.org/assets/blank_favicon-9deb629637088856fe61dc868bf40a7d21ed942e4117659f3d6c3408f59b906b.ico" /><style>
+  .g-normal-input:focus, .normal-form textarea.form-control:focus, #funding-oppties-new form textarea.form-control:focus,
+  #funding-oppties-edit form textarea.form-control:focus, #funding-oppties-update form textarea.form-control:focus,
+  #funding-oppties-create form textarea.form-control:focus, .guide-organizations .wrapper form textarea.form-control:focus,
+  .guide-innovations .wrapper form textarea.form-control:focus,
+  .guide-follow-sectors .wrapper form textarea.form-control:focus,
+  .guide-follow-organizations .wrapper form textarea.form-control:focus, #innovations-edit .big-part textarea.form-control:focus,
+  #innovations-update .big-part textarea.form-control:focus, .m-session-form textarea.form-control:focus,
+  #sessions-new .wrapper form textarea.form-control:focus,
+  #registrations-new .wrapper form textarea.form-control:focus,
+  #registrations-create .wrapper form textarea.form-control:focus,
+  .passwords .wrapper form textarea.form-control:focus,
+  .normal-form input.form-control:focus,
+  #funding-oppties-new form input.form-control:focus,
+  #funding-oppties-edit form input.form-control:focus,
+  #funding-oppties-update form input.form-control:focus,
+  #funding-oppties-create form input.form-control:focus,
+  .guide-organizations .wrapper form input.form-control:focus,
+  .guide-innovations .wrapper form input.form-control:focus,
+  .guide-follow-sectors .wrapper form input.form-control:focus,
+  .guide-follow-organizations .wrapper form input.form-control:focus,
+  #innovations-edit .big-part input.form-control:focus,
+  #innovations-update .big-part input.form-control:focus,
+  .m-session-form input.form-control:focus,
+  #sessions-new .wrapper form input.form-control:focus,
+  #registrations-new .wrapper form input.form-control:focus,
+  #registrations-create .wrapper form input.form-control:focus,
+  .passwords .wrapper form input.form-control:focus, .navbar.navbar-default form.navbar-form .search-input:focus,
+  .guide-organizations .wrapper a.next-btn:focus,
+  .guide-innovations .wrapper a.next-btn:focus, .search .search-bar textarea.form-control:focus,
+  .search .search-bar input.form-control:focus, #search-funding-oppties .filter.amount_range .range_inputs input:focus {
+    border: 1px solid #999999;
+  }
+
+  .g-normal-submit, .g-validate-submit, .normal-form[data-validate='true'] input[type='submit'], [data-validate='true'].m-session-form input[type='submit'], .normal-form input[type='submit'], #funding-oppties-new form input[type='submit'], #funding-oppties-edit form input[type='submit'], #funding-oppties-update form input[type='submit'],
+  #funding-oppties-create form input[type='submit'], .guide-organizations .wrapper form input[type='submit'],
+  .guide-innovations .wrapper form input[type='submit'],
+  .guide-follow-sectors .wrapper form input[type='submit'],
+  .guide-follow-organizations .wrapper form input[type='submit'], #innovations-edit .big-part input[type='submit'], #innovations-update .big-part input[type='submit'], .m-session-form input[type='submit'], #sessions-new .wrapper form input[type='submit'],
+  #registrations-new .wrapper form input[type='submit'],
+  #registrations-create .wrapper form input[type='submit'],
+  .passwords .wrapper form input[type='submit'], .search .search-bar input[type='submit'] {
+    background-color: #74dff6;
+  }
+
+  .g-validate-submit.valid, .normal-form[data-validate='true'] input.valid[type='submit'], #funding-oppties-new form[data-validate='true'] input.valid[type='submit'], #funding-oppties-edit form[data-validate='true'] input.valid[type='submit'], #funding-oppties-update form[data-validate='true'] input.valid[type='submit'],
+  #funding-oppties-create form[data-validate='true'] input.valid[type='submit'], .guide-organizations .wrapper form[data-validate='true'] input.valid[type='submit'],
+  .guide-innovations .wrapper form[data-validate='true'] input.valid[type='submit'],
+  .guide-follow-sectors .wrapper form[data-validate='true'] input.valid[type='submit'],
+  .guide-follow-organizations .wrapper form[data-validate='true'] input.valid[type='submit'], #innovations-edit [data-validate='true'].big-part input.valid[type='submit'], #innovations-update [data-validate='true'].big-part input.valid[type='submit'], [data-validate='true'].m-session-form input.valid[type='submit'], #sessions-new .wrapper form[data-validate='true'] input.valid[type='submit'],
+  #registrations-new .wrapper form[data-validate='true'] input.valid[type='submit'],
+  #registrations-create .wrapper form[data-validate='true'] input.valid[type='submit'],
+  .passwords .wrapper form[data-validate='true'] input.valid[type='submit'] {
+    background-color: #74dff6;
+  }
+
+  .select2.select2-container.select2-container--open {
+    border: 1px solid #999999;
+  }
+
+  span.select2-container span.select2-dropdown {
+    border: 1px solid #999999;
+  }
+
+  .m-btns-group button, #innovations-show .btns-group button {
+    background-color: #74dff6;
+  }
+
+  .autocomplete-suggestions {
+    border: 1px solid #74dff6;
+  }
+
+  .autocomplete-suggestions strong {
+    color: #74dff6;
+  }
+
+  a {
+    color: #74dff6;
+  }
+
+  a:hover {
+    color: #74dff6;
+  }
+
+  .btn.btn-primary, #funding-oppties-show .btn-primary.apply_btn {
+    background-color: #74dff6;
+  }
+
+  .btn.btn-green, #funding-oppties-show .btn-green.apply_btn, .btn.btn-white, #funding-oppties-show .btn-white.apply_btn {
+    background-color: #74dff6;
+  }
+
+  .social_links a {
+    background-color: #74dff6;
+  }
+
+  .social_links.large a {
+    background-color: #74dff6;
+  }
+
+  .navbar.navbar-default .navbar-collapse ul.navbar-right > li > a:hover {
+    color: #74dff6;
+  }
+
+  .navbar.navbar-default .navbar-collapse ul.navbar-right > li.active a {
+    color: #74dff6;
+  }
+
+  .navbar.navbar-default .navbar-collapse ul.navbar-right > li.dropdown.open a.dropdown-toggle {
+    color: #74dff6;
+  }
+
+  .upload_and_preview_box .uploader .uploader-box label.uploader-show {
+    border: 1px solid #74dff6;
+  }
+
+  nav.pagination a {
+    color: #74dff6;
+  }
+
+  nav.pagination span {
+    background-color: #74dff6;
+  }
+
+  .attachments .attachment_list tr a.icon-box {
+    background-color: #74dff6;
+  }
+
+  .attachments .attachment_list tr i {
+    color: #74dff6;
+  }
+
+  .guide-organizations .wrapper form#create-org .warning button,
+  .guide-organizations .wrapper form#create-innovation .warning button,
+  .guide-innovations .wrapper form#create-org .warning button,
+  .guide-innovations .wrapper form#create-innovation .warning button {
+    background-color: #74dff6;
+  }
+
+  .guide-organizations .wrapper a.skip,
+  .guide-innovations .wrapper a.skip {
+    color: #74dff6;
+  }
+
+  .guide-organizations .wrapper a.next-btn.valid,
+  .guide-innovations .wrapper a.next-btn.valid {
+    background-color: #74dff6;
+  }
+
+  #innovations-edit .big-part .members-wrapper .btn-add-more, #innovations-update .big-part .members-wrapper .btn-add-more {
+    border: 1px solid #74dff6;
+  }
+
+  #innovations-show .info-wrapper .item .social_links a {
+    background-color: #74dff6;
+  }
+
+  .about-youth-power-block .icon-inno-stage {
+    color: #74dff6;
+  }
+
+  .about-program-box .read-more {
+    color: #74dff6;
+  }
+
+  .search .additional ul#selected-values #clear-all {
+    color: #74dff6;
+  }
+
+  .search .search-bar .search-btn {
+    background-color: #74dff6;
+  }
+
+  .search .search-bar input#keyword:focus {
+    border-color: #74dff6;
+  }
+
+  .empty-section .left i {
+    color: #74dff6;
+  }
+
+  .home-guide-finish .btn.block, .home-guide-finish #funding-oppties-show .block.apply_btn, #funding-oppties-show .home-guide-finish .block.apply_btn {
+    background-color: #74dff6;
+  }
+
+
+  .list .section .desc .see-more, .list .section .desc .see-less {
+    color: #74dff6;
+  }
+
+  .navbar.navbar-default .navbar-collapse ul.navbar-right > li:hover a, .navbar.navbar-default .navbar-collapse ul.navbar-right > li.active a {
+    color: #74dff6;
+  }
+
+  .nav-toggle-icon span {
+    background-color: #74dff6;
+  }
+  
+  .m-bunch .piece.active, .guide-organizations .wrapper .bunch .piece.active,
+  .guide-innovations .wrapper .bunch .piece.active, .snapshot-wrapper .bunch .piece.active {
+    border: 8px solid #313896;
+  }
+
+  .green-bg {
+    background-color: #313896;
+  }
+
+  .gallery-show .assets .delineations a.active,
+  .gallery-wrapper .assets .delineations a.active {
+    border: 3px solid #74dff6;
+  }
+
+  .m-milestones-list .milestone .line_and_content .dot.start, #innovations-edit .big-part .milestones .milestone .line_and_content .dot.start, 
+  #innovations-update .big-part .milestones .milestone .line_and_content .dot.start, #innovations-show .milestones .milestone .line_and_content .dot.start {
+    background-color: #313896;
+  }
+
+  .m-milestones-list .milestone .line_and_content .dot.start:before, #innovations-edit .big-part .milestones .milestone .line_and_content .dot.start:before, 
+  #innovations-update .big-part .milestones .milestone .line_and_content .dot.start:before, #innovations-show .milestones .milestone .line_and_content .dot.start:before {
+    background-color: #313896;
+  }
+
+  .m-milestones-list .milestone .line_and_content .last_dot_fix, #innovations-edit .big-part .milestones .milestone .line_and_content .last_dot_fix, 
+  #innovations-update .big-part .milestones .milestone .line_and_content .last_dot_fix, #innovations-show .milestones .milestone .line_and_content .last_dot_fix {
+    background-color: #313896;
+  }
+
+  .lg-icon {
+    color: #313896;
+  }
+
+  #funding-oppties-show .about_award {
+    background-color: #313896;
+  }
+
+  #funding-oppties-show .snapshot {
+    background-color: #313896;
+  }
+
+  .past_funded_innos .bg,
+  .connected-innos .bg {
+    background-color: #313896;
+  }
+
+  .guide-organizations .wrapper .bunch .piece.active i:before,
+  .guide-innovations .wrapper .bunch .piece.active i:before {
+    color: #313896;
+  }
+
+  .home .mission .big-icon {
+    color: #313896;
+  }
+
+  .home-guide-finish .main {
+    background-color: #313896;
+  }
+
+  .home-guide-finish .mac .main-inside .focus-areas i, .home-guide-finish .mac .main-inside .implemented-in i {
+    background: #313896;
+  }
+
+  .snapshot-wrapper .bunch .piece .sub-piece.left i {
+    background-color: #313896;
+  }
+
+  #innovations-show table.details_table td span.dot {
+    background-color: #313896;
+  }
+
+  #innovations-show table.details_table td span.dot:after {
+    border: 2px solid #313896;
+  }
+  
+  #innovations-show table.details_table td span.dot:before {
+    border: 2px solid #313896;
+  }
+
+  #innovations-show .milestones {
+    background-color: #313896;
+  }
+
+  .top-green {
+    background-color: #313896;
+    box-shadow: 15px 0 0 #313896, -15px 0 0 #313896;
+    background-color: #313896;
+  }
+
+  .search #filters-menu .filter-wrapper.expired .switch input:checked + .slider,
+  .search #filters-menu .filter-wrapper.all-type-switch .switch input:checked + .slider {
+    background-color: #313896;
+  }
+
+  .search #filters-menu .filter-wrapper.expired .switch input:focus + .slider,
+  .search #filters-menu .filter-wrapper.all-type-switch .switch input:focus + .slider {
+    box-shadow: 0 0 1px #313896;
+  }
+  
+  .search .m-sub-nav, .search #funding-oppties-new .m-sub-nav, #funding-oppties-new .search .m-sub-nav, .search #funding-oppties-edit .m-sub-nav, #funding-oppties-edit .search .m-sub-nav, .search #funding-oppties-update .m-sub-nav, #funding-oppties-update .search .m-sub-nav,
+  .search #funding-oppties-create .m-sub-nav,
+  #funding-oppties-create .search .m-sub-nav, .search #innovations-edit .sub-nav, #innovations-edit .search .sub-nav, .search #innovations-update .sub-nav, #innovations-update .search .sub-nav {
+    background-color: #313896;
+  }
+
+  .messages-block {
+    background-color: #313896;
+  }
+
+  .empty-section {
+    border-top: 5px solid #313896;
+  }
+  
+  #innovations-show .milestones .milestone:nth-child(2):before {
+    background-color: #313896;
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .empty-section {
+      border-top: 2px solid #313896;
+    }
+  }
+
+  .component.slideshow .asset-thumbnail.active {
+    border-color: #74dff6 !important;
+  }
+
+  .component.text a {
+    color: #74dff6 !important;
+  }
+
+  .component.text a.btn {
+    color: white !important;
+  }
+</style>
+
+<div class="microsite-header text-uppercase"><div class="gie-links"><span class="text-uppercase">THIS WEBSITE IS POWERED BY GLOBAL INNOVATION EXCHANGE, A TECH PLATFORM FOR GLOBAL DEVELOPMENT INNOVATIONS.</span><a target="_blank" href="https://www.globalinnovationexchange.org"><img width="142" height="30" class="footer-logo block" src="/assets/microsite/logo-defbe1fdda9f4f52941b30441e2b0e6be5be69d442ec2a98ad753b10df5c3d52.png" /></a></div></div><style type="text/css">.microsite-header {
+  background-color: #313896;
+}</style><nav class="navbar navbar-default"><div class="container-fluid"><div class="navbar-header"><button aria-expanded="false" class="nav-toggle-icon" data-target=".navbar-collapse" data-toggle="collapse" type="button"><span></span><span></span><span></span><span></span></button><a class="navbar-brand" href="/"><img src="/assets/gie-logo-0908bcad55e5147a4f4d2af945b13ceaec51d30ee5122ecf9c92db157b945eb2.png" /></a></div><div class="collapse navbar-collapse"><ul class="nav navbar-nav navbar-right false"><li><a href="/add"><span class="full-name">Add Your Solution</span></a></li><li><a href="/browse/innovation"><span class="full-name">Innovations</span></a></li><li><a href="/categories"><span class="full-name">Categories</span></a></li></ul></div></div></nav><div class="components clearfix"><div class="component banner_image_with_box"><div class="component-wrapper" style="background-image: url(&#39;https://gie-r4d-production.s3.amazonaws.com/uploads/1584638473-f56235e04c3301383cfd0e6489633e00/laboratory-3827736-orientation-null.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJB3X6TUMUQAXVZAA%2F20200319%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20200319T201252Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=b257ae4655e32731d778bc4bb38d38db279a12f6e0a78f7f50b29094a9e55f97&#39;)"><div class="component-box"><div class="component-content-in-box"><span class="component-content"><span class="component-title">COVID-19 Response and Recovery </span><span class="component-subtitle">A Global Initiative for Supplying and Seeking Solutions</span></span></div></div></div></div><div class="component text"><div class="component-wrapper" style="background-color: #d3d3d3"><div class="component-text-type"><span class="component-title"><br>Global Innovation Exchange and donors are coming together to source and supply a growing list of innovations for the development community, in response to COVID-19.</span><span class="component-title"><br></span><span class="component-title"><a class="btn btn-primary" target="_blank" href="https://covid19innovations.org/browse/innovation" style="background-color: #74dff6; border: border: 1px solid white;">ACCESS THE DIRECTORY</a><br></span><span class="component-subtitle"></span></div></div></div><div class="component 50/50"><div class="row fifty-fifty-component"><div class="col-sm-6 col-xs-12 row-eq-height fifty-fifty-img" style="background-image:url(https://gie-r4d-production.s3.amazonaws.com/uploads/1584638055-fc12bf104c3201383cfc0e6489633e00/noun-world-map-75277-2-orientation-null.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJB3X6TUMUQAXVZAA%2F20200319%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20200319T201252Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=155d50f0efdab041aeee2551c199706770a7fb71e6a582a5d5619d21fb48167c)"></div><div class="col-sm-6 col-xs-12 row-eq-height fifty-fifty-text"><span class="component-title">WHY WE'RE GETTING INVOLVED</span><span class="component-subtitle"><br>The World Health Organization (WHO) declared the 2019–20 coronavirus outbreak a pandemic and a Public Health Emergency of International Concern (PHEIC). Evidence of local transmission of the disease has been found in many countries across all six WHO regions.
+<br><br>
+
+<a class="btn btn-primary" target="_blank" href="https://forms.gle/ooXXMMqyP8vgmR786">SUBMIT OR NOMINATE AN INNOVATION</a>
+
+</span></div></div></div><div class="component text"><div class="component-wrapper"><div class="component-text-type"><span class="component-title"><font color="#313896">CATEGORIES OF RELEVANT INNOVATIONS</font></span></div></div></div><div class="component three_columns"><div class="row"><div class="col-sm-4 row-eq-height"><div class="image-container"><img src="https://gie-r4d-production.s3.amazonaws.com/uploads/1584635343-ab533c604c2c01383cfd0e6489633e00/noun-test-1275935-orientation-null-orientation-null.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJB3X6TUMUQAXVZAA%2F20200319%2Fus-east-1%2Fs3%2Fa

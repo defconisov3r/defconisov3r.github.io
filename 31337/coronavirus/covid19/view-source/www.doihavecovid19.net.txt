@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<title>Do I Have COVID-19?</title>
+
+<!-- Async WordPress.com Remote Login -->
+<script id="wpcom_remote_login_js">
+var wpcom_remote_login_extra_auth = '';
+function wpcom_remote_login_remove_dom_node_id( element_id ) {
+	var dom_node = document.getElementById( element_id );
+	if ( dom_node ) { dom_node.remove(); }
+}
+function wpcom_remote_login_remove_dom_node_classes( class_name ) {
+	var dom_nodes = document.querySelectorAll( '.' + class_name );
+	for ( var i = 0; i < dom_nodes.length; i++ ) {
+		dom_nodes[i].remove();
+	}
+}
+function wpcom_remote_login_final_cleanup() {
+	wpcom_remote_login_remove_dom_node_classes( "wpcom_remote_login_msg" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_validate" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_js" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_iframe" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_styles" );
+}
+
+// Watch for messages back from the remote login
+window.addEventListener( "message", function( e ) {
+	if ( e.origin === "https://r-login.wordpress.com" ) {
+		var data = {};
+		try {
+			data = JSON.parse( e.data );
+		} catch( e ) {
+			wpcom_remote_login_final_cleanup();
+			return;
+		}
+
+		if ( data.msg === 'LOGIN' ) {
+			// Clean up the login check iframe
+			wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+
+			var id_regex = new RegExp( /^[0-9]+$/ );
+			var token_regex = new RegExp( /^.*|.*|.*$/ );
+			if (
+				token_regex.test( data.token )
+				&& id_regex.test( data.wpcomid )
+			) {
+				// We have everything we need to ask for a login
+				var script = document.createElement( "script" );
+				script.setAttribute( "id", "wpcom_remote_login_validate" );
+				script.src = '/remote-login.php?wpcom_remote_login=validate'
+					+ '&wpcomid=' + data.wpcomid
+					+ '&token=' + encodeURIComponent( data.token )
+					+ '&host=' + window.location.protocol
+						+ '//' + window.location.hostname;
+				document.body.appendChild( script );
+			}
+
+			return;
+		}
+
+		// Safari ITP, not logged in, so redirect
+		if ( data.msg === 'LOGIN-REDIRECT' ) {
+			window.location = 'https://wordpress.com/log-in?redirect_to=' + window.location.href;
+			return;
+		}
+
+		// Safari ITP, storage access failed, remove the request
+		if ( data.msg === 'LOGIN-REMOVE' ) {
+			var css_zap = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } @media screen and ( max-width: 782px ) { html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } }';
+			var style_zap = document.createElement( 'style' );
+			style_zap.type = 'text/css';
+			style_zap.appendChild( document.createTextNode( css_zap ) );
+			document.body.appendChild( style_zap );
+
+			var e = document.getElementById( 'wpcom_request_access_iframe' );
+			e.parentNode.removeChild( e );
+
+			document.cookie = 'wordpress_com_login_access=denied; path=/; max-age=31536000';
+
+			return;
+		}
+
+		// Safari ITP
+		if ( data.msg === 'REQUEST_ACCESS' ) {
+			console.log( 'request access: safari' );
+
+			// Check ITP iframe enable/disable knob
+			if ( wpcom_remote_login_extra_auth !== 'safari_itp_iframe' ) {
+				return;
+			}
+
+			// If we are in a "private window" there is no ITP.
+			var private_window = false;
+			try {
+				var opendb = window.openDatabase( null, null, null, null );
+			} catch( e ) {
+				private_window = true;
+			}
+
+			if ( private_window ) {
+				console.log( 'private window' );
+				return;
+			}
+
+			var iframe = document.createElement( 'iframe' );
+			iframe.id = 'wpcom_request_access_iframe';
+			iframe.setAttribute( 'scrolling', 'no' );
+			iframe.setAttribute( 'sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-top-navigation-by-user-activation' );
+			iframe.src = 'https://r-login.wordpress.com/remote-login.php?wpcom_remote_login=request_access&origin=' + encodeURIComponent( data.origin ) + '&wpcomid=' + encodeURIComponent( data.wpcomid );
+
+			var css = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 46px !important; } * html body { margin-top: 46px !important; } @media screen and ( max-width: 660px ) { html { margin-top: 71px !important; } * html body { margin-top: 71px !important; } #wpcom_request_access_iframe { display: block; height: 71px !important; } } #wpcom_request_access_iframe { border: 0px; height: 46px; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 99999; background: #23282d; } ';
+
+			var style = document.createElement( 'style' );
+			style.type = 'text/css';
+			style.id = 'wpcom_request_access_styles';
+			style.appendChild( document.createTextNode( css ) );
+			document.body.appendChild( style );
+
+			document.body.appendChild( iframe );
+		}
+
+		if ( data.msg === 'DONE' ) {
+			wpcom_remote_login_final_cleanup();
+		}
+	}
+}, false );
+
+// Inject the remote login iframe after the page has had a chance to load
+// more critical resources
+window.addEventListener( "DOMContentLoaded", function( e ) {
+	var iframe = document.createElement( "iframe" );
+	iframe.style.display = "none";
+	iframe.setAttribute( "scrolling", "no" );
+	iframe.setAttribute( "id", "wpcom_remote_login_key" );
+	iframe.src = "https://r-login.wordpress.com/remote-login.php"
+		+ "?wpcom_remote_login=key"
+		+ "&origin=aHR0cHM6Ly9kb2loYXZlY292aWQxOS5uZXQ%3D"
+		+ "&wpcomid=174256213"
+		+ "&time=1584649388";
+	document.body.appendChild( iframe );
+}, false );
+</script>
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//doihavecovid19.wordpress.com' />
+<link rel='dns-prefetch' href='//wordpress.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Do I Have COVID-19? &raquo; Feed" href="https://doihavecovid19.net/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Do I Have COVID-19? &raquo; Comments Feed" href="https://doihavecovid19.net/comments/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s0.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1582709031h&ver=5.4-RC1-47426"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='all-css-0-1' href='https://s0.wp.com/_static/??-eJylk9tugzAMhl9oIaUFdb2Y9iwcPOY2BxQ7Rbz9DKFTR7WtEjdRbOf7/Stx9NCrxjsGx9pG1ZvYoSM99I23iiwaGFdR1hC96DvsxnRRwhpCJ5UA+pgdsp2uI5pW18Y3F2WwDlUYNfFoYLsMf4J9RmamSJ+B+2rCq9FHVl3A9mknK4lQMbqO/sE/ojGKkEFBixOw3K4ui1OxL8uThqucFy46bv3gUpvNqjeXjBYMOtgsKLYk6Ylpcdgisb4iDL+KNn65sjzb77JczROUuFTIkqn5XTdYS66M6N5bW2cfGtxN+jRkkrd9xdMJK50qMDJZjv/C0peo6z4AkZLVYrRqHsnHH/KjnZ2kxdwFJKJVJqGonWcUmr43U+HdvuXla5Hv8mNRnr8ActRg3A==?cssminify=yes' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify {
+	text-align:justify;
+}
+</style>
+<link rel='stylesheet' id='print-css-1-1' href='https://s0.wp.com/wp-content/themes/pub/varia/print.css?m=1571655471h&cssminify=yes' type='text/css' media='print' />
+<link rel='stylesheet' id='all-css-2-1' href='https://s0.wp.com/_static/??-eJx9i9EKwjAMAH/IGqaTPonf0pXYRdKktOmGf+/EF0Xx7Q7uYC0uqhiKgc2YsUHpE8y4YIVmd8Z9bG0Hv7MlVApAEl+pW0vU/DXk7gr3RNIgoTrWGIxUPsRdOVD9t1acWNOGCbbqTZ/TJZ+Hk/fD4TiO/vYAjSBOww==?cssminify=yes' type='text/css' media='all' />
+<link crossorigin="anonymous" rel='stylesheet' id='hever-fonts-css'  href='https://fonts.googleapis.com/css?family=PT%2BSans%3A400%2C400i%2C700%2C700i&#038;subset=latin%2Clatin-ext' media='all' />
+<link rel='stylesheet' id='all-css-4-1' href='https://s0.wp.com/_static/??-eJx9kNsKwjAMhl/IGictugvxWdratdGuHUuq+PZ2sKEy2FUS+P4DgdcgbE7sEgMH1zuCoRgI7ulGIH5Ht7dEO/jB+iKGWDwmAm0ZczJ6/G4rfGG7EqMgZCfcDRmTn11AyVYelWrBx2x0ZaZUquGa0YKJOj22OgyZWHRRY+0b9FiNl7mlomyxZsXs8/+xEs1fCXLuNwHX/tKos2wOzUmq+wfwindB?cssminify=yes' type='text/css' media='all' />
+<style id='jetpack-global-styles-frontend-style-inline-css'>
+:root { --font-headings: unset; --font-base: unset; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+</style>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJx9zUsKgDAMBNALWYtIixvxLH6itJhUmxTx9lbQnQgDs5gHo49NORrXNAFrn7MniOdTpedC/wGFbom9QImOXjwGEiC57RZYEJj7BT5WDINbQSWGmAFJvplDdh22lTFNbaw1tb8AOGU7DA=='></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://doihavecovid19.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s0.wp.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress.com" />
+<link rel="canonical" href="https://doihavecovid19.net/" />
+<link rel='shortlink' href='https://wp.me/PbNa05-5' />
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css" type="text/css">
+			.site-title, .site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+		</style>
+		<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Fdoihavecovid19.net%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Fdoihavecovid19.net%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Do I Have COVID-19?" />
+<meta property="og:url" content="https://doihavecovid19.net/" />
+<meta property="og:site_name" content="Do I Have COVID-19?" />
+<meta property="og:image" content="https://doihavecovid19.files.wordpress.com/2020/03/c0481846-wuhan_novel_coronavirus_illustration-spl.jpg" />
+<meta property="og:image:width" content="750" />
+<meta property="og:image:height" content="500" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+<meta name="twitter:text:title" content="Do I Have&nbsp;COVID-19?" />
+<meta name="twitter:image" content="https://doihavecovid19.files.wordpress.com/2020/03/c0481846-wuhan_novel_coronavirus_illustration-spl.jpg?w=640" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Visit the post for more." />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="shortcut icon" type="image/x-icon" href="https://s0.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="icon" type="image/x-icon" href="https://s0.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="apple-touch-icon" href="https://s0.wp.com/i/webclip.png" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://doihavecovid19.net/osd.xml" title="Do I Have COVID-19?" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<meta name="application-name" content="Do I Have COVID-19?" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-task" content="name=Subscribe;action-uri=https://doihavecovid19.net/feed/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="description" content="#flattenthecurve The best thing we all can do right now is Not panic,Wash your hands for 20 seconds,Do not touch face with unwashed hands,Maintain 6-ft social distancing,Stay home if having any symptoms,Wear a mask when ill to protect others,Cancel or postpone all social gatherings. Do You Possibly Have COVID-19? Take the quiz Latest from the&hellip;" />
+</head>
+
+<body class="home page-template-default page page-id-5 wp-embed-responsive customizer-styles-applied singular image-filters-enabled hide-homepage-title highlander-enabled highlander-light">
+
+	
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	
+		<header id="masthead" class="site-header responsive-max-width">
+
+			
+
+			<p class="site-title"><a href="https://doihavecovid19.net/" rel="home">Do I Have COVID-19?</a></p>
+	
+
+							<nav id="site-navigation" class="main-navigation" aria-label="Main Navigation">
+					<input type="checkbox" role="button" aria-haspopup="true" id="toggle" class="hide-visually">
+					<label for="toggle" id="toggle-menu" class="button">
+						Menu						<span class="dropdown-icon open">+</span>
+						<span class="dropdown-icon close">&times;</span>
+						<span class="hide-visually expanded-text">expanded</span>
+						<span class="hide-visually collapsed-text">collapsed</span>
+					</label>
+					<div class="menu-primary-container"><ul id="menu-primary" class="main-menu" aria-label="submenu"><li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item menu-item-19"><a href="https://doihavecovid19.net/" aria-current="page">Do I Have COVID-19?</a></li>
+<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="https://doihavecovid19.net/blog-2/">Blog</a></li>
+</ul></div>				</nav><!-- #site-navigation -->
+			
+			
+		</header><!-- #masthead -->
+
+	
+	<div id="content" class="site-content">
+
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main">
+
+			
+<article id="post-5" class="post-5 page type-page status-publish has-post-thumbnail hentry entry">
+
+	<header class="entry-header responsive-max-width">
+		
+<h1 class="entry-title">Do I Have&nbsp;COVID-19?</h1>
+	</header>
+
+	<div class="entry-content">
+		
+<div class="wp-block-cover alignfull has-background-dim" style="background-image:url('https://doihavecovid19.files.wordpress.com/2020/03/c0481846-wuhan_novel_coronavirus_illustration-spl-1.jpg');"><div class="wp-block-cover__inner-container">
+<div class="wp-block-jetpack-layout-grid alignfull column1-desktop-grid__span-8 column1-desktop-grid__start-3 column1-desktop-grid__row-1 column1-tablet-grid__span-8 column1-tablet-grid__row-1 column1-mobile-grid__span-4 column1-mobile-grid__row-1">
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-none">
+<h3 class="has-text-align-center">#flattenthecurve</h3>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="37" data-permalink="https://doihavecovid19.net/flatten-the-curve-2/" data-orig-file="https://doihavecovid19.files.wordpress.com/2020/03/flatten-the-curve-2.gif" data-orig-size="750,472" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="flatten-the-curve-2" data-image-description="" data-medium-file="https://doihavecovid19.files.wordpress.com/2020/03/flatten-the-curve-2.gif?w=300" data-large-file="https://doihavecovid19.files.wordpress.com/2020/03/flatten-the-curve-2.gif?w=750" src="https://doihavecovid19.files.wordpress.com/2020/03/flatten-the-curve-2.gif?w=750" alt="" class="wp-image-37" /></figure>
+
+
+
+<h2 class="has-text-align-center">The best thing we all can do right now is </h2>
+
+
+
+<p class="has-text-align-center">Not panic,<br>Wash your hands for 20 seconds,<br>Do not touch face with unwashed hands,<br>Maintain 6-ft social distancing,<br>Stay home if having any symptoms,<br>Wear a mask when ill to protect others,<br>Cancel or postpone all social gatherings.<br></p>
+
+
+
+<div class="wp-block-buttons aligncenter">
+<div class="wp-block-button"><a class="wp-block-button__link" href="https://forms.gle/KgNZVuKZHJYjjcUF9" title="https://forms.gle/KgNZVuKZHJYjjcUF9" target="_blank" rel="noreferrer noopener"><strong>Do You Possibly Have COVID-19? <br>Take the quiz</strong></a></div>
+</div>
+</div>
+</div>
+</div></div>
+
+
+
+<div class="wp-block-group alignfull has-background-background-color has-background"><div class="wp-block-group__inner-container">
+<div class="wp-block-jetpack-layout-grid alignfull column1-desktop-grid__span-12 column1-desktop-grid__row-1 column1-tablet-grid__span-8 column1-tablet-grid__row-1 column1-mobile-grid__span-4 column1-mobile-grid__row-1">
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-none">
+<h4>Latest from the Blog</h4>
+
+
+				<div
+			class="wp-block-newspack-blocks-homepage-articles  wpnbha is-grid columns-3 ts-3 "
+			style=""
+			>
+			<div data-posts>
+									<article data-post-id="9"
+						>
+		
+		<div class="entry-wrapper">
+			<h2 class="entry-title"><a href="https://doihavecovid19.net/2020/03/16/example-post-3/" rel="bookmark">Social Distancing</a></h2>						<p>Social distancing is the best thing we can do right now as a community and society to slow the spread of this virus. All events should be postponed or cancelled. The CDC has recommended no gatherings for parties of 50 or more, but we would recommend to hold off on any and all gatherings at<a class="more-link" href="https://doihavecovid19.net/2020/03/16/example-post-3/">Continue reading <span class="screen-reader-text">&#8220;Social Distancing&#8221;</span></a></p>
+				<div class="entry-meta">
+					<time class="entry-date published" datetime="2020-03-16T01:20:36+00:00">March 16, 2020</time><time class="updated" datetime="2020-03-19T05:29:19+00:00">March 19, 2020</time>				</div><!-- .entry-meta -->
+					</div><!-- .entry-wrapper -->
+	</article>
+
+			<article data-post-id="10"
+						>
+		
+		<div class="entry-wrapper">
+			<h2 class="entry-title"><a href="https://doihavecovid19.net/2020/03/16/example-post-2/" rel="bookmark">What is this&nbsp;coronavirus?</a></h2>						<p>The novel coronavirus is officially known as SARS-CoV-2 (Severe Acute Respiratory Syndrome CoronaVirus 2), formerly known as the novel coronavirus. COVID-19 (COrona VIrus Disease 2019) is the disease or condition caused by the SARS-CoV-2 virus. It is about 80% similar to the other 4 human coronaviruses already in circulation. It is hoped that the SARS-CoV-2<a class="more-link" href="https://doihavecovid19.net/2020/03/16/example-post-2/">Continue reading <span class="screen-reader-text">&#8220;What is this&nbsp;coronavirus?&#8221;</span></a></p>
+				<div class="entry-meta">
+					<time class="entry-date published" datetime="2020-03-16T01:20:35+00:00">March 16, 2020</time><time class="updated" datetime="2020-03-19T03:51:17+00:00">March 19, 2020</time>				</div><!-- .entry-meta -->
+					</div><!-- .entry-wrapper -->
+	</article>
+
+			<article data-post-id="11"
+						>
+		
+		<div class="entry-wrapper">
+			<h2 class="entry-title"><a href="https://doihavecovid19.net/2020/03/16/example-post/" rel="bookmark">Who is Most at&nbsp;Risk?</a></h2>						<p>Individuals with any chronic conditions would be at great risk for complications from this disease, COVID-19. These are: Heart disease Lung disease Kidney disease Lung disease Diabetes High blood pressure Tobacco use Pregnancy Cancer Taking oral steroid, or other medications that might suppress your immunity Things you can do to not get exposed: Wash your<a class="more-link" href="https://doihavecovid19.net/2020/03/16/example-post/">Continue reading <span class="screen-reader-text">&#8220;Who is Most at&nbsp;Risk?&#8221;</span></a></p>
+				<div class="entry-meta">
+					<time class="entry-date published" datetime="2020-03-16T01:20:34+00:00">March 16, 2020</time><time class="updated" datetime="2020-03-19T03:49:13+00:00">March 19, 2020</time>				</div><!-- .entry-meta -->
+					</div><!-- .entry-wrapper -->
+	</article>
+
+					</div>
+			
+		</div>
+				
+
+
+<h3 class="has-text-align-center">Information for residents of <br>Williamson and Travis Counties, Texas</h3>
+
+
+
+<p class="has-text-align-left">Information from the <a rel="noreferrer noopener" aria-label="Texas COVID-19 Information (opens in a new tab)" href="https://dshs.texas.gov/coronavirus/" target="_blank">State of Texas regarding COVID-19</a> and Hotline: 211 or 877-570-9779</p>
+
+
+
+<p>Information from the <a href="http://www.wcchd.org/">Williamson County, Texas Health Department</a> and list of its <a rel="noreferrer noopener" aria-label="Locations (opens in a new tab)" href="http://www.wcchd.org/location_and_hours/index.php" target="_blank">locations</a></p>
+
+
+
+<p>Information from the <a rel="noreferrer noopener" aria-label="Travis County Health Department (opens in a new tab)" href="https://www.traviscountytx.gov/health-human-services" target="_blank">Travis County Health Department</a> and the <a href="http://www.austintexas.gov/COVID19" target="_blank" rel="noreferrer noopener" aria-label="city of Austin (opens in a new tab)">city of Austin</a></p>
+
+
+
+<h2 class="has-text-align-center"><a rel="noreferrer noopener" aria-label="COVID-19 Statistics (opens in a new tab)" href="https://covid19stats.live/" target="_blank">COVID-19 Live Statistics</a></h2>
+
+
+
+<p></p>
+</div>
+</div>
+</div></div>
+
+
+
+<div class="wp-block-group alignfull has-foreground-dark-background-color has-background"><div class="wp-block-group__inner-container">
+<p class="has-text-align-center"><strong><a href="https://doihavecovid19.wordpress.com/2020/03/19/information-and-hotline-for-all-50-u-s-states/">Information and Hotline for all 50 states in the United States</a></strong></p>
+</div></div>
+
+
+
+<p class="has-text-align-center">Sponsored by</p>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://ochnahealth.com/"><img src="https://ochnahealth.com/wp-content/uploads/2016/01/logo_retina_116-466x114.png" alt="" /></a></figure>
+
+
+
+<p class="has-text-align-center"><a href="https://ochnahealth.com/">Ochna Health Direct Primary Care</a><br>Georgetown, TX</p>
+	</div><!-- .entry-content -->
+
+	</article><!-- #post-5 -->
+
+		</main><!-- #main -->
+	</section><!-- #primary -->
+
+
+	</div><!-- #content -->
+
+		<footer id="colophon" class="site-footer responsive-max-width">
+	
+		<div class="site-info">
+										<a class="site-name" href="https://doihavecovid19.net/" rel="home">Do I Have COVID-19?</a><span class="comma">,</span>
+						<a href="https://wordpress.com/?ref=footer_custom_powered" rel="nofollow">Powered by WordPress.com</a>.					</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+
+</div><!-- #page -->
+
+<!--  -->
+<script src='//0.gravatar.com/js/gprofiles.js?ver=202012y'></script>
+<script>
+var WPGroHo = {"my_hash":""};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781h'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-51be53ff6ef025a852639ddda707cb43">
+	</div>
+	</div>
+
+	<div id="carousel-reblog-box">
+		<form action="#" name="carousel-reblog">
+			<textarea id="carousel-reblog-content" name="carousel-reblog-content" placeholder="Add your thoughts here... (optional)"></textarea>
+			<label for="carousel-reblog-to-blog-id" id="carousel-reblog-lblogid">Post to</label>
+			<select name="carousel-reblog-to-blog-id" id="carousel-reblog-to-blog-id">
+						</select>
+
+			<div class="submit">
+				<span class="canceltext"><a href="#" class="cancel">Cancel</a></span>
+				<input type="submit" name="carousel-reblog-submit" class="button" id="carousel-reblog-submit" value="Reblog Post" />
+				<input type="hidden" id="carousel-reblog-blog-id" value="174256213" />
+				<input type="hidden" id="carousel-reblog-blog-url" value="https://doihavecovid19.net" />
+				<input type="hidden" id="carousel-reblog-blog-title" value="Do I Have COVID-19?" />
+				<input type="hidden" id="carousel-reblog-post-url" value="" />
+				<input type="hidden" id="carousel-reblog-post-title" value="" />
+			</div>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="58fdd1f103" /><input type="hidden" name="_wp_http_referer" value="/" />		</form>
+
+		<div class="arrow"></div>
+	</div>
+<link rel='stylesheet' id='all-css-0-2' href='https://s0.wp.com/_static/??/wp-content/plugins/gutenberg-blocks/jetpack-layout-grid/blocks/front.css,/wp-content/mu-plugins/carousel/jetpack-carousel.css?m=1583834955j&cssminify=yes' type='text/css' media='all' />
+<script>
+var comment_like_text = {"loading":"Loading..."};
+</script>
+<script>
+var actionbardata = {"siteID":"174256213","siteName":"Do I Have COVID-19?","siteURL":"https:\/\/doihavecovid19.net","icon":"<img alt='' src='https:\/\/s0.wp.com\/i\/logo\/wpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/hever","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Fdoihavecovid19.net%2F&signup_flow=account&domain=doihavecovid19.net","themeURL":"https:\/\/wordpress.com\/theme\/hever\/","xhrURL":"https:\/\/doihavecovid19.net\/wp-admin\/admin-ajax.php","nonce":"96ce0d996d","isSingular":"1","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"a625e2851e\" \/>","referer":"https:\/\/doihavecovid19.net\/","canFollow":"1","feedID":"104383833","statusMessage":"","customizeLink":"https:\/\/doihavecovid19.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Fdoihavecovid19.wordpress.com%2F","postID":"5","shortlink":"https:\/\/wp.me\/PbNa05-5","canEditPost":"","editLink":"https:\/\/wordpress.com\/page\/doihavecovid19.net\/5","statsLink":"https:\/\/wordpress.com\/stats\/post\/5\/doihavecovid19.net","i18n":{"view":"View site","follow":"Follow","following":"Following","edit":"Edit","login":"Log in","signup":"Sign up","customize":"Customize","report":"Report this content","themeInfo":"Get theme: Hever","shortlink":"Copy shortlink","copied":"Copied","followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/read\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar","editSubs":"Manage subscriptions","viewReader":"View site in Reader","viewReadPost":"View post in Reader","subscribe":"Sign me up","enterEmail":"Enter your email address","followers":"","alreadyUser":"Already have a WordPress.com account? <a href=\"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Fdoihavecovid19.net%2F&signup_flow=account&domain=doihavecovid19.net\">Log in now.<\/a>","stats":"Stats"}};
+</script>
+<script>
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/doihavecovid19.net\/wp-admin\/admin-ajax.php","nonce":"17d5061c7a","display_exif":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/doihavecovid19.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fdoihavecovid19.net%2F","blog_id":"174256213","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Reblog","reblogged":"Reblogged","reblog_add_thoughts":"Add your thoughts here... (optional)","reblogging":"Reblogging...","post_reblog":"Post Reblog","stats_query_args":"blog=174256213&v=wpcom&tz=0&user_id=0&subd=doihavecovid19","is_public":"1","reblog_enabled":""};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJydUe1uwjAMfKGlXqdWGz+mPUubGOTifCxOWnj7pdAyhhAS+5NYd7nL2YYpKO1dQpdgEDA4ksZwqAZ5gUKR05wNyokjSTCiMz7OVPB83BJzZcmtz1enwHlHTmCbmZVQQoWGErmdOjPQNpvmrW030LMvoJckqpR6v/xCON162qxWW+2tLZBi2p+jMfUgEwV8RvQH+H8HOM4m2meXjJ/c0sbplFvyQbzOlDmqvotgO0kYS6X8iDHSPP4L9qRDil2J8UikE3k3iy7Vvd1L+F3yNT58Z4zH5aquX93bQBd9FmQYMIWSS61A0XzZz7r9aOrX+r1phx8IjvXr'></script>
+<script type='text/javascript'>
+( 'fetch' in window ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?m=1573572739h&#038;ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?m=1540208548h&#038;ver=3.26.0-0"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?m=1550600082h&#038;ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?m=1540208548h&#038;ver=2.0.2"></scr' + 'ipt>' );
+</script>
+	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="//stats.wp.com/w.js?61" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'174256213','blog_tz':'0','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'174256213','v':'wpcom','tz':'0','user_id':'0','post':'5','subd':'doihavecovid19'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1mJVY3bm9aR3VCbS9mWm1pRyZuJS1LX1t5NE84SWQsc2J8a3kvOS9ufHlFc2gmTk9WWlF2Lit2cCVUNnFGN2FKMVkuU2cxa3g1SThLSFg/RDFXcU42RG0udEFiRzhkOEhKOWU4N0RwOVh6VGxkLm18a2ZBfFNrPXBVR0JnejkwMn5TJWpKdD1yVGM9WnF3W1drZ0x8THFZUEJfM1BPVFNGTy0tV0FtVm44N1FULDB8W24vTnJuQTZ1cmYrODUuJiZIK2NTTTEyJn4uM1ZDU1VhWStJTn5HTTV6SC9vRi1VdiZxZlEvdX4zLiZFNXl4PVIwR01bOXIw'}]);
+_stq.push([ 'clickTrackerInit', '174256213', '5' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+</body>
+</html>

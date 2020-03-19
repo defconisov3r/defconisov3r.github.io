@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+	<link rel="manifest" href="/assets/site.webmanifest">
+	<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#0e1628">
+	<meta name="msapplication-TileColor" content="#0e1628">
+	<meta name="theme-color" content="#0e1628">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://cdn.polyfill.io/v2/polyfill.min.js">
+
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/xterm@3.8.0/dist/xterm.min.js">
+
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/xterm@3.8.0/dist/addons/fullscreen/fullscreen.min.js">
+
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/xterm@3.8.0/dist/addons/fit/fit.js">
+
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-25629695-3">
+	</script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-25629695-3');
+	</script>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm@3.8.0/dist/xterm.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm@3.8.0/dist/addons/fullscreen/fullscreen.min.css" />
+	<style>
+    .grecaptcha-badge {
+      visibility: collapse;
+    }
+
+		html,
+		body {
+			height: 100%;
+			width: 100%;
+			background-color: black;
+			overflow: hidden;
+		}
+
+		* {
+			font-family: Monaco, "Ubuntu Mono", "Courier New", Courier, replit-icons, monospace;
+		}
+
+		#target {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			border-left: 15px solid black;
+			border-top: 10px solid black;
+		}
+
+		#restart-bar {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: black;
+			color: white;
+			padding: 1em;
+			z-index: 10;
+		}
+
+		button {
+			background: none;
+			border: solid white 1px;
+			color: white;
+			padding: 0.5em;
+			vertical-align: middle;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background: white;
+			color: black;
+		}
+
+		#logo {
+			z-index: 100;
+			position: absolute;
+			right: 5px;
+			top: 5px;
+			width: 20px;
+			height: 20px;
+			background-image: url(/assets/logo.png);
+			background-position: center;
+			background-size: contain;
+			opacity: 0.5;
+		}
+
+		#logo:hover {
+			opacity: 1;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="target"></div>
+	<div id="restart-bar" style="display: none">
+		This repl has exited, <button onclick="window.location.reload()">run again</button> ?
+  </div>
+  <a title="Powered by repl.it" href="/__repl/"><div id="logo"></div></a>
+  <script src="https://browser.sentry-cdn.com/5.5.0/bundle.min.js" crossorigin="anonymous">
+  </script>
+  <script type="text/javascript">
+    Sentry.init({ dsn: 'https://5912068b7c214cbe9fde58d20e804781@sentry.repl.it/9' });
+  </script>
+	<script src="https://cdn.polyfill.io/v2/polyfill.min.js">
+
+	</script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6Lc7fZQUAAAAAIXMD8AonuuleBX0P3hS2XW364Ms"></script>
+	<script src="/crosis.js?v=201">
+	</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.4.3/polyfill.js">
+  </script>
+	<script src="/script.js?v=2">
+	</script>
+
+</body>
+
+</html>

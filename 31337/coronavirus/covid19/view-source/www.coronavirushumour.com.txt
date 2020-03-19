@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<title>CORONA VIRUS HUMOUR &#8211; CORONAVIRUS HUMOUR. Contact LET’S COMBAT THIS VIRUS WITH EVERYTHING WE’VE GOT – INCLUDING HUMOUR</title>
+
+<!-- Async WordPress.com Remote Login -->
+<script id="wpcom_remote_login_js">
+var wpcom_remote_login_extra_auth = '';
+function wpcom_remote_login_remove_dom_node_id( element_id ) {
+	var dom_node = document.getElementById( element_id );
+	if ( dom_node ) { dom_node.remove(); }
+}
+function wpcom_remote_login_remove_dom_node_classes( class_name ) {
+	var dom_nodes = document.querySelectorAll( '.' + class_name );
+	for ( var i = 0; i < dom_nodes.length; i++ ) {
+		dom_nodes[i].remove();
+	}
+}
+function wpcom_remote_login_final_cleanup() {
+	wpcom_remote_login_remove_dom_node_classes( "wpcom_remote_login_msg" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_validate" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_js" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_iframe" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_styles" );
+}
+
+// Watch for messages back from the remote login
+window.addEventListener( "message", function( e ) {
+	if ( e.origin === "https://r-login.wordpress.com" ) {
+		var data = {};
+		try {
+			data = JSON.parse( e.data );
+		} catch( e ) {
+			wpcom_remote_login_final_cleanup();
+			return;
+		}
+
+		if ( data.msg === 'LOGIN' ) {
+			// Clean up the login check iframe
+			wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+
+			var id_regex = new RegExp( /^[0-9]+$/ );
+			var token_regex = new RegExp( /^.*|.*|.*$/ );
+			if (
+				token_regex.test( data.token )
+				&& id_regex.test( data.wpcomid )
+			) {
+				// We have everything we need to ask for a login
+				var script = document.createElement( "script" );
+				script.setAttribute( "id", "wpcom_remote_login_validate" );
+				script.src = '/remote-login.php?wpcom_remote_login=validate'
+					+ '&wpcomid=' + data.wpcomid
+					+ '&token=' + encodeURIComponent( data.token )
+					+ '&host=' + window.location.protocol
+						+ '//' + window.location.hostname;
+				document.body.appendChild( script );
+			}
+
+			return;
+		}
+
+		// Safari ITP, not logged in, so redirect
+		if ( data.msg === 'LOGIN-REDIRECT' ) {
+			window.location = 'https://wordpress.com/log-in?redirect_to=' + window.location.href;
+			return;
+		}
+
+		// Safari ITP, storage access failed, remove the request
+		if ( data.msg === 'LOGIN-REMOVE' ) {
+			var css_zap = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } @media screen and ( max-width: 782px ) { html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } }';
+			var style_zap = document.createElement( 'style' );
+			style_zap.type = 'text/css';
+			style_zap.appendChild( document.createTextNode( css_zap ) );
+			document.body.appendChild( style_zap );
+
+			var e = document.getElementById( 'wpcom_request_access_iframe' );
+			e.parentNode.removeChild( e );
+
+			document.cookie = 'wordpress_com_login_access=denied; path=/; max-age=31536000';
+
+			return;
+		}
+
+		// Safari ITP
+		if ( data.msg === 'REQUEST_ACCESS' ) {
+			console.log( 'request access: safari' );
+
+			// Check ITP iframe enable/disable knob
+			if ( wpcom_remote_login_extra_auth !== 'safari_itp_iframe' ) {
+				return;
+			}
+
+			// If we are in a "private window" there is no ITP.
+			var private_window = false;
+			try {
+				var opendb = window.openDatabase( null, null, null, null );
+			} catch( e ) {
+				private_window = true;
+			}
+
+			if ( private_window ) {
+				console.log( 'private window' );
+				return;
+			}
+
+			var iframe = document.createElement( 'iframe' );
+			iframe.id = 'wpcom_request_access_iframe';
+			iframe.setAttribute( 'scrolling', 'no' );
+			iframe.setAttribute( 'sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-top-navigation-by-user-activation' );
+			iframe.src = 'https://r-login.wordpress.com/remote-login.php?wpcom_remote_login=request_access&origin=' + encodeURIComponent( data.origin ) + '&wpcomid=' + encodeURIComponent( data.wpcomid );
+
+			var css = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 46px !important; } * html body { margin-top: 46px !important; } @media screen and ( max-width: 660px ) { html { margin-top: 71px !important; } * html body { margin-top: 71px !important; } #wpcom_request_access_iframe { display: block; height: 71px !important; } } #wpcom_request_access_iframe { border: 0px; height: 46px; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 99999; background: #23282d; } ';
+
+			var style = document.createElement( 'style' );
+			style.type = 'text/css';
+			style.id = 'wpcom_request_access_styles';
+			style.appendChild( document.createTextNode( css ) );
+			document.body.appendChild( style );
+
+			document.body.appendChild( iframe );
+		}
+
+		if ( data.msg === 'DONE' ) {
+			wpcom_remote_login_final_cleanup();
+		}
+	}
+}, false );
+
+// Inject the remote login iframe after the page has had a chance to load
+// more critical resources
+window.addEventListener( "DOMContentLoaded", function( e ) {
+	var iframe = document.createElement( "iframe" );
+	iframe.style.display = "none";
+	iframe.setAttribute( "scrolling", "no" );
+	iframe.setAttribute( "id", "wpcom_remote_login_key" );
+	iframe.src = "https://r-login.wordpress.com/remote-login.php"
+		+ "?wpcom_remote_login=key"
+		+ "&origin=aHR0cHM6Ly9jb3JvbmF2aXJ1c2h1bW91ci5jb20%3D"
+		+ "&wpcomid=174427244"
+		+ "&time=1584650885";
+	document.body.appendChild( iframe );
+}, false );
+</script>
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//coronavirushumourcom.wordpress.com' />
+<link rel='dns-prefetch' href='//wordpress.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="CORONA VIRUS HUMOUR &raquo; Feed" href="https://coronavirushumour.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="CORONA VIRUS HUMOUR &raquo; Comments Feed" href="https://coronavirushumour.com/comments/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s0.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1582709031h&ver=5.4-RC1-47426"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='all-css-0-1' href='https://s0.wp.com/_static/??-eJylk9tugzAMhl9oIaUFdb2Y9iwcPOY2BxQ7Rbz9DKFTR7WtEjdRbOf7/Stx9NCrxjsGx9pG1ZvYoSM99I23iiwaGFdR1hC96DvsxnRRwhpCJ5UA+pgdsp2uI5pW18Y3F2WwDlUYNfFoYLsMf4J9RmamSJ+B+2rCq9FHVl3A9mknK4lQMbqO/sE/ojGKkEFBixOw3K4ui1OxL8uThqucFy46bv3gUpvNqjeXjBYMOtgsKLYk6Ylpcdgisb4iDL+KNn65sjzb77JczROUuFTIkqn5XTdYS66M6N5bW2cfGtxN+jRkkrd9xdMJK50qMDJZjv/C0peo6z4AkZLVYrRqHsnHH/KjnZ2kxdwFJKJVJqGonWcUmr43U+HdvuXla5Hv8mNRnr8ActRg3A==?cssminify=yes' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify {
+	text-align:justify;
+}
+</style>
+<link rel='stylesheet' id='print-css-1-1' href='https://s0.wp.com/wp-content/themes/pub/varia/print.css?m=1571655471h&cssminify=yes' type='text/css' media='print' />
+<link rel='stylesheet' id='all-css-2-1' href='https://s0.wp.com/_static/??-eJx9i8sKAjEMAH/IGnZVehK/JVtjjaRJ6cNl/94VL4ribQZmYM4umDbSBu1KiSrkPkHCRVDPUNsitA21buB3eMfCCKzhlbo5B0tfQ+ouS4+sFSKZEwvY2PRD3EWQy7+10CQWV4ywVm/6nE7pOBy8H8b96He3BzdCT40=?cssminify=yes' type='text/css' media='all' />
+<link crossorigin="anonymous" rel='stylesheet' id='mayland-fonts-css'  href='https://fonts.googleapis.com/css?family=Poppins%3A400%2C400i%2C600%2C600i&#038;subset=latin%2Clatin-ext' media='all' />
+<link rel='stylesheet' id='all-css-4-1' href='https://s0.wp.com/_static/??-eJx9kNsKwjAMhl/IGict6oX4LG3XddEexpIie3s72FAZ7CoJfP+BwHsQNid2iYF7Fx3BUAxEPQWdWiCegjtaogP8gLGIIRSPiUBbxpyMHr/bBl/ZroQgCNkJ1yJj8osLKHmTZ6Vu4EM2ujJzKtVwzWjB1CavvQ5DJhZd0DgC9XqsxuvcU1G2WLNC9vn/2IiWv/Ry6TcDj3hv1FU2p+Yi1fMD8yJ4DQ==?cssminify=yes' type='text/css' media='all' />
+<style id='jetpack-global-styles-frontend-style-inline-css'>
+:root { --font-headings: unset; --font-base: unset; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+</style>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJx9zUsKgDAMBNALWYtIixvxLH6itJhUmxTx9lbQnQgDs5gHo49NORrXNAFrn7MniOdTpedC/wGFbom9QImOXjwGEiC57RZYEJj7BT5WDINbQSWGmAFJvplDdh22lTFNbaw1tb8AOGU7DA=='></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://coronavirushumourcom.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s0.wp.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress.com" />
+<link rel="canonical" href="https://coronavirushumour.com/" />
+<link rel='shortlink' href='https://wp.me/PbNSuE-y' />
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Fcoronavirushumour.com%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Fcoronavirushumour.com%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="CORONA VIRUS HUMOUR" />
+<meta property="og:description" content="CORONAVIRUS HUMOUR. Contact LET’S COMBAT THIS VIRUS WITH EVERYTHING WE’VE GOT – INCLUDING HUMOUR" />
+<meta property="og:url" content="https://coronavirushumour.com/" />
+<meta property="og:site_name" content="CORONA VIRUS HUMOUR" />
+<meta property="og:image" content="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.07.40.png?w=1022" />
+<meta property="og:locale" content="en_GB" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+<meta name="twitter:text:title" content="CORONAVIRUS HUMOUR." />
+<meta name="twitter:card" content="summary" />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="search" type="application/opensearchdescription+xml" href="https://coronavirushumour.com/osd.xml" title="CORONA VIRUS HUMOUR" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<meta name="application-name" content="CORONA VIRUS HUMOUR" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="CORONAVIRUS HUMOUR. Contact LET’S COMBAT THIS VIRUS WITH EVERYTHING WE’VE GOT – INCLUDING HUMOUR" /><meta name="msapplication-task" content="name=Subscribe;action-uri=https://coronavirushumour.com/feed/;icon-uri=https://coronavirushumourcom.files.wordpress.com/2020/03/cropped-b534b667666aa2a337cead6dc2e4519b.jpg?w=16" /><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="description" content="LET&#039;S COMBAT THIS VIRUS WITH EVERYTHING WE&#039;VE GOT - INCLUDING HUMOUR Want to add more please email coronahumour@gmail.com" />
+<link rel="icon" href="https://coronavirushumourcom.files.wordpress.com/2020/03/cropped-b534b667666aa2a337cead6dc2e4519b.jpg?w=32" sizes="32x32" />
+<link rel="icon" href="https://coronavirushumourcom.files.wordpress.com/2020/03/cropped-b534b667666aa2a337cead6dc2e4519b.jpg?w=192" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://coronavirushumourcom.files.wordpress.com/2020/03/cropped-b534b667666aa2a337cead6dc2e4519b.jpg?w=180" />
+<meta name="msapplication-TileImage" content="https://coronavirushumourcom.files.wordpress.com/2020/03/cropped-b534b667666aa2a337cead6dc2e4519b.jpg?w=270" />
+</head>
+
+<body class="home page-template-default page page-id-34 wp-embed-responsive customizer-styles-applied singular image-filters-enabled hide-homepage-title highlander-enabled highlander-light">
+
+	
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	
+		<header id="masthead" class="site-header responsive-max-width">
+
+			<div class="site-branding">
+
+								<p class="site-title"><a href="https://coronavirushumour.com/" rel="home">CORONA VIRUS HUMOUR</a></p>
+			
+				<p class="site-description">
+				CORONAVIRUS HUMOUR. Contact LET’S COMBAT THIS VIRUS WITH EVERYTHING WE’VE GOT – INCLUDING HUMOUR			</p>
+	</div><!-- .site-branding -->
+
+							<nav id="site-navigation" class="main-navigation" aria-label="Main Navigation">
+					<input type="checkbox" role="button" aria-haspopup="true" id="toggle" class="hide-visually">
+					<label for="toggle" id="toggle-menu" class="button">
+						Menu						<span class="dropdown-icon open">+</span>
+						<span class="dropdown-icon close">&times;</span>
+						<span class="hide-visually expanded-text">expanded</span>
+						<span class="hide-visually collapsed-text">collapsed</span>
+					</label>
+					<div class="menu-primary-container"><ul id="menu-primary" class="main-menu" aria-label="submenu"><li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a href="https://coronavirushumour.com/contact/">Contact</a></li>
+</ul></div>				</nav><!-- #site-navigation -->
+			
+			
+		</header><!-- #masthead -->
+
+	
+	<div id="content" class="site-content">
+
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main">
+
+			
+<article id="post-34" class="post-34 page type-page status-publish hentry entry">
+
+	<header class="entry-header responsive-max-width">
+		
+<h1 class="entry-title">CORONAVIRUS HUMOUR.</h1>
+	</header>
+
+	<div class="entry-content">
+		
+<p class="has-small-font-size"><strong>                    LET&#8217;S COMBAT THIS VIRUS WITH EVERYTHING WE&#8217;VE GOT &#8211; INCLUDING HUMOUR</strong></p>
+
+
+
+<div class="wp-block-group alignfull has-background-background-color has-background"><div class="wp-block-group__inner-container">
+<div class="wp-block-coblocks-gallery-masonry alignfull"><div class="coblocks-gallery has-caption-style-dark has-gutter"><ul class="has-grid-lrg has-gutter-30 has-gutter-mobile-15"><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/90657161_10158541273623352_2298405607620739072_n.jpg?w=640" rel=""><img data-attachment-id="40" data-permalink="https://coronavirushumour.com/90657161_10158541273623352_2298405607620739072_n/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/90657161_10158541273623352_2298405607620739072_n.jpg" data-orig-size="640,403" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="90657161_10158541273623352_2298405607620739072_n" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/90657161_10158541273623352_2298405607620739072_n.jpg?w=300" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/90657161_10158541273623352_2298405607620739072_n.jpg?w=640" src="https://coronavirushumourcom.files.wordpress.com/2020/03/90657161_10158541273623352_2298405607620739072_n.jpg?w=640" alt="" data-id="40" data-imglink="" data-link="https://coronavirushumour.com/90657161_10158541273623352_2298405607620739072_n/" class="wp-image-40" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/90657161_10158541273623352_2298405607620739072_n.jpg 640w, https://coronavirushumourcom.files.wordpress.com/2020/03/90657161_10158541273623352_2298405607620739072_n.jpg?w=150 150w, https://coronavirushumourcom.files.wordpress.com/2020/03/90657161_10158541273623352_2298405607620739072_n.jpg?w=300 300w" sizes="(max-width: 640px) 100vw, 640px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-10.59.17.png?w=662" rel=""><img data-attachment-id="38" data-permalink="https://coronavirushumour.com/screenshot-2020-03-19-at-10-59-17/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-10.59.17.png" data-orig-size="662,492" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2020-03-19-at-10.59.17" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-10.59.17.png?w=300" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-10.59.17.png?w=662" src="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-10.59.17.png?w=662" alt="" data-id="38" data-imglink="" data-link="https://coronavirushumour.com/screenshot-2020-03-19-at-10-59-17/" class="wp-image-38" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-10.59.17.png 662w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-10.59.17.png?w=150 150w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-10.59.17.png?w=300 300w" sizes="(max-width: 662px) 100vw, 662px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-11.26.40.png?w=634" rel=""><img data-attachment-id="41" data-permalink="https://coronavirushumour.com/screenshot-2020-03-19-at-11-26-40/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-11.26.40.png" data-orig-size="634,536" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2020-03-19-at-11.26.40" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-11.26.40.png?w=300" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-11.26.40.png?w=634" src="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-11.26.40.png?w=634" alt="" data-id="41" data-imglink="" data-link="https://coronavirushumour.com/screenshot-2020-03-19-at-11-26-40/" class="wp-image-41" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-11.26.40.png 634w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-11.26.40.png?w=150 150w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-11.26.40.png?w=300 300w" sizes="(max-width: 634px) 100vw, 634px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/image.png?w=800" rel=""><img data-attachment-id="43" data-permalink="https://coronavirushumour.com/image/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/image.png" data-orig-size="800,480" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/image.png?w=300" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/image.png?w=750" src="https://coronavirushumourcom.files.wordpress.com/2020/03/image.png?w=800" alt="" data-id="43" data-imglink="" data-link="https://coronavirushumour.com/image/" class="wp-image-43" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/image.png 800w, https://coronavirushumourcom.files.wordpress.com/2020/03/image.png?w=150 150w, https://coronavirushumourcom.files.wordpress.com/2020/03/image.png?w=300 300w, https://coronavirushumourcom.files.wordpress.com/2020/03/image.png?w=768 768w" sizes="(max-width: 800px) 100vw, 800px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/90188301-10158650641895400-5388058587618607104-o-1584616267.jpg?w=640" rel=""><img data-attachment-id="44" data-permalink="https://coronavirushumour.com/90188301-10158650641895400-5388058587618607104-o-1584616267/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/90188301-10158650641895400-5388058587618607104-o-1584616267.jpg" data-orig-size="640,955" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="90188301-10158650641895400-5388058587618607104-o-1584616267" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/90188301-10158650641895400-5388058587618607104-o-1584616267.jpg?w=201" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/90188301-10158650641895400-5388058587618607104-o-1584616267.jpg?w=640" src="https://coronavirushumourcom.files.wordpress.com/2020/03/90188301-10158650641895400-5388058587618607104-o-1584616267.jpg?w=640" alt="" data-id="44" data-imglink="" data-link="https://coronavirushumour.com/90188301-10158650641895400-5388058587618607104-o-1584616267/" class="wp-image-44" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/90188301-10158650641895400-5388058587618607104-o-1584616267.jpg 640w, https://coronavirushumourcom.files.wordpress.com/2020/03/90188301-10158650641895400-5388058587618607104-o-1584616267.jpg?w=101 101w, https://coronavirushumourcom.files.wordpress.com/2020/03/90188301-10158650641895400-5388058587618607104-o-1584616267.jpg?w=201 201w" sizes="(max-width: 640px) 100vw, 640px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-14.58.59.png?w=613" rel=""><img data-attachment-id="46" data-permalink="https://coronavirushumour.com/screenshot-2020-03-19-at-14-58-59/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-14.58.59.png" data-orig-size="1072,1790" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2020-03-19-at-14.58.59" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-14.58.59.png?w=180" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-14.58.59.png?w=613" src="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-14.58.59.png?w=613" alt="" data-id="46" data-imglink="" data-link="https://coronavirushumour.com/screenshot-2020-03-19-at-14-58-59/" class="wp-image-46" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-14.58.59.png?w=613 613w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-14.58.59.png?w=90 90w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-14.58.59.png?w=180 180w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-14.58.59.png?w=768 768w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-14.58.59.png 1072w" sizes="(max-width: 613px) 100vw, 613px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.52.26.png?w=1024" rel=""><img data-attachment-id="47" data-permalink="https://coronavirushumour.com/screenshot-2020-03-19-at-15-52-26/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.52.26.png" data-orig-size="1118,1014" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2020-03-19-at-15.52.26" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.52.26.png?w=300" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.52.26.png?w=750" src="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.52.26.png?w=1024" alt="" data-id="47" data-imglink="" data-link="https://coronavirushumour.com/screenshot-2020-03-19-at-15-52-26/" class="wp-image-47" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.52.26.png?w=1024 1024w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.52.26.png?w=150 150w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.52.26.png?w=300 300w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.52.26.png?w=768 768w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.52.26.png 1118w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.53.17.png?w=1024" rel=""><img data-attachment-id="48" data-permalink="https://coronavirushumour.com/screenshot-2020-03-19-at-15-53-17/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.53.17.png" data-orig-size="1078,370" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2020-03-19-at-15.53.17" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.53.17.png?w=300" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.53.17.png?w=750" src="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.53.17.png?w=1024" alt="" data-id="48" data-imglink="" data-link="https://coronavirushumour.com/screenshot-2020-03-19-at-15-53-17/" class="wp-image-48" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.53.17.png?w=1024 1024w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.53.17.png?w=150 150w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.53.17.png?w=300 300w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.53.17.png?w=768 768w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.53.17.png 1078w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.53.47.png?w=734" rel=""><img data-attachment-id="49" data-permalink="https://coronavirushumour.com/screenshot-2020-03-19-at-15-53-47/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.53.47.png" data-orig-size="1092,1524" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2020-03-19-at-15.53.47" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.53.47.png?w=215" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.53.47.png?w=734" src="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.53.47.png?w=734" alt="" data-id="49" data-imglink="" data-link="https://coronavirushumour.com/screenshot-2020-03-19-at-15-53-47/" class="wp-image-49" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.53.47.png?w=734 734w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.53.47.png?w=107 107w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.53.47.png?w=215 215w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.53.47.png?w=768 768w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.53.47.png 1092w" sizes="(max-width: 734px) 100vw, 734px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.56.11.png?w=1003" rel=""><img data-attachment-id="50" data-permalink="https://coronavirushumour.com/screenshot-2020-03-19-at-15-56-11/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.56.11.png" data-orig-size="1074,1096" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2020-03-19-at-15.56.11" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.56.11.png?w=294" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.56.11.png?w=750" src="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.56.11.png?w=1003" alt="" data-id="50" data-imglink="" data-link="https://coronavirushumour.com/screenshot-2020-03-19-at-15-56-11/" class="wp-image-50" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.56.11.png?w=1003 1003w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.56.11.png?w=147 147w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.56.11.png?w=294 294w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.56.11.png?w=768 768w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.56.11.png 1074w" sizes="(max-width: 1003px) 100vw, 1003px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.57.05.png?w=791" rel=""><img data-attachment-id="51" data-permalink="https://coronavirushumour.com/screenshot-2020-03-19-at-15-57-05/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.57.05.png" data-orig-size="1032,1336" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2020-03-19-at-15.57.05" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.57.05.png?w=232" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.57.05.png?w=750" src="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.57.05.png?w=791" alt="" data-id="51" data-imglink="" data-link="https://coronavirushumour.com/screenshot-2020-03-19-at-15-57-05/" class="wp-image-51" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.57.05.png?w=791 791w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.57.05.png?w=116 116w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.57.05.png?w=232 232w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.57.05.png?w=768 768w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-15.57.05.png 1032w" sizes="(max-width: 791px) 100vw, 791px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.53.46.png?w=803" rel=""><img data-attachment-id="65" data-permalink="https://coronavirushumour.com/screenshot-2020-03-19-at-18-53-46/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.53.46.png" data-orig-size="1104,1408" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2020-03-19-at-18.53.46" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.53.46.png?w=235" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.53.46.png?w=750" src="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.53.46.png?w=803" alt="" data-id="65" data-imglink="" data-link="https://coronavirushumour.com/screenshot-2020-03-19-at-18-53-46/" class="wp-image-65" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.53.46.png?w=803 803w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.53.46.png?w=118 118w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.53.46.png?w=235 235w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.53.46.png?w=768 768w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.53.46.png 1104w" sizes="(max-width: 803px) 100vw, 803px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.55.10.png?w=1024" rel=""><img data-attachment-id="67" data-permalink="https://coronavirushumour.com/screenshot-2020-03-19-at-18-55-10/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.55.10.png" data-orig-size="1040,916" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2020-03-19-at-18.55.10" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.55.10.png?w=300" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.55.10.png?w=750" src="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.55.10.png?w=1024" alt="" data-id="67" data-imglink="" data-link="https://coronavirushumour.com/screenshot-2020-03-19-at-18-55-10/" class="wp-image-67" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.55.10.png?w=1024 1024w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.55.10.png?w=150 150w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.55.10.png?w=300 300w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.55.10.png?w=768 768w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.55.10.png 1040w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.55.49.png?w=1022" rel=""><img data-attachment-id="68" data-permalink="https://coronavirushumour.com/screenshot-2020-03-19-at-18-55-49/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.55.49.png" data-orig-size="1034,1036" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2020-03-19-at-18.55.49" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.55.49.png?w=300" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.55.49.png?w=750" src="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.55.49.png?w=1022" alt="" data-id="68" data-imglink="" data-link="https://coronavirushumour.com/screenshot-2020-03-19-at-18-55-49/" class="wp-image-68" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.55.49.png?w=1022 1022w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.55.49.png?w=150 150w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.55.49.png?w=300 300w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.55.49.png?w=768 768w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.55.49.png 1034w" sizes="(max-width: 1022px) 100vw, 1022px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.57.08.png?w=782" rel=""><img data-attachment-id="69" data-permalink="https://coronavirushumour.com/screenshot-2020-03-19-at-18-57-08/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.57.08.png" data-orig-size="1062,1390" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2020-03-19-at-18.57.08" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.57.08.png?w=229" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.57.08.png?w=750" src="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.57.08.png?w=782" alt="" data-id="69" data-imglink="" data-link="https://coronavirushumour.com/screenshot-2020-03-19-at-18-57-08/" class="wp-image-69" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.57.08.png?w=782 782w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.57.08.png?w=115 115w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.57.08.png?w=229 229w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.57.08.png?w=768 768w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.57.08.png 1062w" sizes="(max-width: 782px) 100vw, 782px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.58.06.png?w=1024" rel=""><img data-attachment-id="70" data-permalink="https://coronavirushumour.com/screenshot-2020-03-19-at-18-58-06/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.58.06.png" data-orig-size="1044,1036" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2020-03-19-at-18.58.06" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.58.06.png?w=300" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.58.06.png?w=750" src="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.58.06.png?w=1024" alt="" data-id="70" data-imglink="" data-link="https://coronavirushumour.com/screenshot-2020-03-19-at-18-58-06/" class="wp-image-70" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.58.06.png?w=1024 1024w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.58.06.png?w=150 150w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.58.06.png?w=300 300w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.58.06.png?w=768 768w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.58.06.png 1044w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.58.41.png?w=749" rel=""><img data-attachment-id="71" data-permalink="https://coronavirushumour.com/screenshot-2020-03-19-at-18-58-41/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.58.41.png" data-orig-size="1070,1462" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2020-03-19-at-18.58.41" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.58.41.png?w=220" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.58.41.png?w=750" src="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.58.41.png?w=749" alt="" data-id="71" data-imglink="" data-link="https://coronavirushumour.com/screenshot-2020-03-19-at-18-58-41/" class="wp-image-71" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.58.41.png?w=749 749w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.58.41.png?w=110 110w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.58.41.png?w=220 220w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.58.41.png?w=768 768w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.58.41.png 1070w" sizes="(max-width: 749px) 100vw, 749px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.59.23.png?w=1024" rel=""><img data-attachment-id="72" data-permalink="https://coronavirushumour.com/screenshot-2020-03-19-at-18-59-23/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.59.23.png" data-orig-size="1066,744" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2020-03-19-at-18.59.23" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.59.23.png?w=300" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.59.23.png?w=750" src="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.59.23.png?w=1024" alt="" data-id="72" data-imglink="" data-link="https://coronavirushumour.com/screenshot-2020-03-19-at-18-59-23/" class="wp-image-72" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.59.23.png?w=1024 1024w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.59.23.png?w=150 150w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.59.23.png?w=300 300w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.59.23.png?w=768 768w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.59.23.png 1066w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.59.56.png?w=1024" rel=""><img data-attachment-id="73" data-permalink="https://coronavirushumour.com/screenshot-2020-03-19-at-18-59-56/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.59.56.png" data-orig-size="1078,1030" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2020-03-19-at-18.59.56" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.59.56.png?w=300" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.59.56.png?w=750" src="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.59.56.png?w=1024" alt="" data-id="73" data-imglink="" data-link="https://coronavirushumour.com/screenshot-2020-03-19-at-18-59-56/" class="wp-image-73" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.59.56.png?w=1024 1024w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.59.56.png?w=150 150w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.59.56.png?w=300 300w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.59.56.png?w=768 768w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-18.59.56.png 1078w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.01.06.png?w=1024" rel=""><img data-attachment-id="74" data-permalink="https://coronavirushumour.com/screenshot-2020-03-19-at-19-01-06/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.01.06.png" data-orig-size="1046,474" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2020-03-19-at-19.01.06" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.01.06.png?w=300" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.01.06.png?w=750" src="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.01.06.png?w=1024" alt="" data-id="74" data-imglink="" data-link="https://coronavirushumour.com/screenshot-2020-03-19-at-19-01-06/" class="wp-image-74" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.01.06.png?w=1024 1024w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.01.06.png?w=150 150w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.01.06.png?w=300 300w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.01.06.png?w=768 768w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.01.06.png 1046w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.02.03.png?w=991" rel=""><img data-attachment-id="76" data-permalink="https://coronavirushumour.com/screenshot-2020-03-19-at-19-02-03/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.02.03.png" data-orig-size="1066,1102" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2020-03-19-at-19.02.03" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.02.03.png?w=290" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.02.03.png?w=750" src="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.02.03.png?w=991" alt="" data-id="76" data-imglink="" data-link="https://coronavirushumour.com/screenshot-2020-03-19-at-19-02-03/" class="wp-image-76" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.02.03.png?w=991 991w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.02.03.png?w=145 145w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.02.03.png?w=290 290w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.02.03.png?w=768 768w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.02.03.png 1066w" sizes="(max-width: 991px) 100vw, 991px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.02.36.png?w=1024" rel=""><img data-attachment-id="77" data-permalink="https://coronavirushumour.com/screenshot-2020-03-19-at-19-02-36/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.02.36.png" data-orig-size="1100,870" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2020-03-19-at-19.02.36" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.02.36.png?w=300" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.02.36.png?w=750" src="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.02.36.png?w=1024" alt="" data-id="77" data-imglink="" data-link="https://coronavirushumour.com/screenshot-2020-03-19-at-19-02-36/" class="wp-image-77" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.02.36.png?w=1024 1024w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.02.36.png?w=150 150w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.02.36.png?w=300 300w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.02.36.png?w=768 768w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.02.36.png 1100w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.29.png?w=1024" rel=""><img data-attachment-id="79" data-permalink="https://coronavirushumour.com/screenshot-2020-03-19-at-19-03-29/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.29.png" data-orig-size="1032,578" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2020-03-19-at-19.03.29" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.29.png?w=300" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.29.png?w=750" src="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.29.png?w=1024" alt="" data-id="79" data-imglink="" data-link="https://coronavirushumour.com/screenshot-2020-03-19-at-19-03-29/" class="wp-image-79" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.29.png?w=1024 1024w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.29.png?w=150 150w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.29.png?w=300 300w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.29.png?w=768 768w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.29.png 1032w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.56.png?w=1024" rel=""><img data-attachment-id="80" data-permalink="https://coronavirushumour.com/screenshot-2020-03-19-at-19-03-56/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.56.png" data-orig-size="1062,916" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2020-03-19-at-19.03.56" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.56.png?w=300" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.56.png?w=750" src="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.56.png?w=1024" alt="" data-id="80" data-imglink="" data-link="https://coronavirushumour.com/screenshot-2020-03-19-at-19-03-56/" class="wp-image-80" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.56.png?w=1024 1024w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.56.png?w=150 150w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.56.png?w=300 300w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.56.png?w=768 768w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.56.png 1062w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.29-1.png?w=1024" rel=""><img data-attachment-id="81" data-permalink="https://coronavirushumour.com/screenshot-2020-03-19-at-19-03-29-1/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.29-1.png" data-orig-size="1032,578" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2020-03-19-at-19.03.29-1" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.29-1.png?w=300" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.29-1.png?w=750" src="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.29-1.png?w=1024" alt="" data-id="81" data-imglink="" data-link="https://coronavirushumour.com/screenshot-2020-03-19-at-19-03-29-1/" class="wp-image-81" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.29-1.png?w=1024 1024w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.29-1.png?w=150 150w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.29-1.png?w=300 300w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.29-1.png?w=768 768w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.03.29-1.png 1032w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.04.59.png?w=1024" rel=""><img data-attachment-id="82" data-permalink="https://coronavirushumour.com/screenshot-2020-03-19-at-19-04-59/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.04.59.png" data-orig-size="1072,884" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2020-03-19-at-19.04.59" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.04.59.png?w=300" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.04.59.png?w=750" src="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.04.59.png?w=1024" alt="" data-id="82" data-imglink="" data-link="https://coronavirushumour.com/screenshot-2020-03-19-at-19-04-59/" class="wp-image-82" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.04.59.png?w=1024 1024w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.04.59.png?w=150 150w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.04.59.png?w=300 300w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.04.59.png?w=768 768w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.04.59.png 1072w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.06.41.png?w=819" rel=""><img data-attachment-id="84" data-permalink="https://coronavirushumour.com/screenshot-2020-03-19-at-19-06-41/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.06.41.png" data-orig-size="1032,1290" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2020-03-19-at-19.06.41" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.06.41.png?w=240" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.06.41.png?w=750" src="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.06.41.png?w=819" alt="" data-id="84" data-imglink="" data-link="https://coronavirushumour.com/screenshot-2020-03-19-at-19-06-41/" class="wp-image-84" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.06.41.png?w=819 819w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.06.41.png?w=120 120w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.06.41.png?w=240 240w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.06.41.png?w=768 768w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.06.41.png 1032w" sizes="(max-width: 819px) 100vw, 819px" /></a></figure></li><li class="coblocks-gallery--item"><figure class="coblocks-gallery--figure"><a href="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.07.40.png?w=1022" rel=""><img data-attachment-id="85" data-permalink="https://coronavirushumour.com/screenshot-2020-03-19-at-19-07-40/" data-orig-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.07.40.png" data-orig-size="1022,524" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2020-03-19-at-19.07.40" data-image-description="" data-medium-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.07.40.png?w=300" data-large-file="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.07.40.png?w=750" src="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.07.40.png?w=1022" alt="" data-id="85" data-imglink="" data-link="https://coronavirushumour.com/screenshot-2020-03-19-at-19-07-40/" class="wp-image-85" srcset="https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.07.40.png 1022w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.07.40.png?w=150 150w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.07.40.png?w=300 300w, https://coronavirushumourcom.files.wordpress.com/2020/03/screenshot-2020-03-19-at-19.07.40.png?w=768 768w" sizes="(max-width: 1022px) 100vw, 1022px" /></a></figure></li></ul></div></div>
+</div></div>
+
+
+
+<h2 class="has-text-align-center">Want to add more please email coronahumour@gmail.com</h2>
+
+
+
+<p></p>
+<div id="jp-post-flair" class="sharedaddy sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-34" class="share-twitter sd-button share-icon" href="https://coronavirushumour.com/?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-34" class="share-facebook sd-button share-icon" href="https://coronavirushumour.com/?share=facebook" target="_blank" title="Click to share on Facebook"><span>Facebook</span></a></li><li class="share-end"></li></ul></div></div></div></div>	</div><!-- .entry-content -->
+
+	</article><!-- #post-34 -->
+
+		</main><!-- #main -->
+	</section><!-- #primary -->
+
+
+	</div><!-- #content -->
+
+		<footer id="colophon" class="site-footer responsive-max-width">
+	
+		<div class="site-info">
+										<a class="site-name" href="https://coronavirushumour.com/" rel="home">CORONA VIRUS HUMOUR</a><span class="comma">,</span>
+						<a href="https://wordpress.com/?ref=footer_blog" rel="nofollow">Blog at WordPress.com.</a>					</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+
+</div><!-- #page -->
+
+<!--  -->
+<script src='//0.gravatar.com/js/gprofiles.js?ver=202012y'></script>
+<script>
+var WPGroHo = {"my_hash":""};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781h'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	</div>
+
+	<div id="carousel-reblog-box">
+		<form action="#" name="carousel-reblog">
+			<textarea id="carousel-reblog-content" name="carousel-reblog-content" placeholder="Add your thoughts here... (optional)"></textarea>
+			<label for="carousel-reblog-to-blog-id" id="carousel-reblog-lblogid">Post to</label>
+			<select name="carousel-reblog-to-blog-id" id="carousel-reblog-to-blog-id">
+						</select>
+
+			<div class="submit">
+				<span class="canceltext"><a href="#" class="cancel">Cancel</a></span>
+				<input type="submit" name="carousel-reblog-submit" class="button" id="carousel-reblog-submit" value="Reblog Post" />
+				<input type="hidden" id="carousel-reblog-blog-id" value="174427244" />
+				<input type="hidden" id="carousel-reblog-blog-url" value="https://coronavirushumour.com" />
+				<input type="hidden" id="carousel-reblog-blog-title" value="CORONA VIRUS HUMOUR" />
+				<input type="hidden" id="carousel-reblog-post-url" value="" />
+				<input type="hidden" id="carousel-reblog-post-title" value="" />
+			</div>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="58fdd1f103" /><input type="hidden" name="_wp_http_referer" value="/" />		</form>
+
+		<div class="arrow"></div>
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/coronavirushumour.com\/":34};
+	</script>
+				<link rel='stylesheet' id='all-css-0-2' href='https://s0.wp.com/_static/??/wp-content/plugins/gutenberg-blocks/jetpack-layout-grid/blocks/front.css,/wp-content/mu-plugins/carousel/jetpack-carousel.css?m=1583834955j&cssminify=yes' type='text/css' media='all' />
+<script>
+var comment_like_text = {"loading":"Loading..."};
+</script>
+<script>
+var actionbardata = {"siteID":"174427244","siteName":"CORONA VIRUS HUMOUR","siteURL":"https:\/\/coronavirushumour.com","icon":"<img alt='' src='https:\/\/coronavirushumourcom.files.wordpress.com\/2020\/03\/cropped-b534b667666aa2a337cead6dc2e4519b.jpg?w=50' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/mayland","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Fcoronavirushumour.com%2F&signup_flow=account&domain=coronavirushumour.com","themeURL":"https:\/\/wordpress.com\/theme\/mayland\/","xhrURL":"https:\/\/coronavirushumour.com\/wp-admin\/admin-ajax.php","nonce":"96ce0d996d","isSingular":"1","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"3a0885aca0\" \/>","referer":"https:\/\/coronavirushumour.com\/","canFollow":"1","feedID":"104398697","statusMessage":"","customizeLink":"https:\/\/coronavirushumourcom.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Fcoronavirushumourcom.wordpress.com%2F","postID":"34","shortlink":"https:\/\/wp.me\/PbNSuE-y","canEditPost":"","editLink":"https:\/\/wordpress.com\/page\/coronavirushumour.com\/34","statsLink":"https:\/\/wordpress.com\/stats\/post\/34\/coronavirushumour.com","i18n":{"view":"View site","follow":"Follow","following":"Following","edit":"Edit","login":"Log in","signup":"Sign up","customize":"Customise","report":"Report this content","themeInfo":"Get theme: Mayland","shortlink":"Copy shortlink","copied":"Copied","followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/read\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar","editSubs":"Manage subscriptions","viewReader":"View site in Reader","viewReadPost":"View post in Reader","subscribe":"Sign me up","enterEmail":"Enter your email address","followers":"","alreadyUser":"Already have a WordPress.com account? <a href=\"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Fcoronavirushumour.com%2F&signup_flow=account&domain=coronavirushumour.com\">Log in now.<\/a>","stats":"Statistics"}};
+</script>
+<script>
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/coronavirushumour.com\/wp-admin\/admin-ajax.php","nonce":"17d5061c7a","display_exif":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/coronavirushumourcom.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fcoronavirushumour.com%2F","blog_id":"174427244","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Reblog","reblogged":"Reblogged","reblog_add_thoughts":"Add your thoughts here... (optional)","reblogging":"Reblogging...","post_reblog":"Post Reblog","stats_query_args":"blog=174427244&v=wpcom&tz=0&user_id=0&subd=coronavirushumourcom","is_public":"1","reblog_enabled":""};
+</script>
+<script>
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJytUtFugzAM/KGFlAq09WHat4TEpaYhzuIA7d83tNCxClXqtJfEurPP9sly8EKTi+CibFga6FGDP2UNv8lEodO2M8BXDjnKHpyhMFKe7HmP1mYtujl9VvK2q9Gx3HfWCsYIAgxGdLW4MbIsdsW2LHeyspRA4sgihfo4dUEYHjXbTsyymto2QcLi8TaaxUrygB5eKfoF/H0D6EcRTZ2LhgY3rXF9+ZFcsxVbVQNbUgbM0stlTquYXDg/s1rT1DLPtpssF4NP+93cbH5Y8X9KFutDrOi0JrWwXZnEi0qFcYkIIUWCeggBx93u2IsKMag0w7MiHZHcWHSP1oxlv254891BOE9ftsxauywVqGOwsoHo01xiBp7UjCcv9lZhkHxQIR3W/Keir/YzLz+KfJO/F2VzAUHUWQs='></script>
+<script type='text/javascript'>
+( 'fetch' in window ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?m=1573572739h&#038;ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?m=1540208548h&#038;ver=3.26.0-0"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?m=1550600082h&#038;ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?m=1540208548h&#038;ver=2.0.2"></scr' + 'ipt>' );
+</script>
+<script type='text/javascript'>
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+</script>
+	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="//stats.wp.com/w.js?61" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'174427244','blog_tz':'0','user_lang':'en-gb','blog_lang':'en-gb','user_id':'0'}]);
+_stq.push(['view', {'blog':'174427244','v':'wpcom','tz':'0','user_id':'0','post':'34','subd':'coronavirushumourcom'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1mJVY3bm9aR3VCbS9mWm1pRyZuJS1LX1t5NE84SWQsc2J8a3kvOS9ufHlFc2gmTk9WWlF2Lit2cCVUNnFGN2FKMVkuU2cxa3g1SThLSFg/RDFXUXZ6LFFBWC0uM3xqaWxLeUxsOSxRWHpBZkFZaVNrR1RqaHNGWy56QmcycU1MSVBCTXl5QnUudkg2YiY1YXVYQyVWNk55ZnE2PUdiT05KLz1wdVtsNGdfOSZmXy8wUDZGMyZLNlZ1Ny9OJltjfGZkWmFFLGlTSE9kdnFVdGJ3QXhpPy9wWCZ3ZTFxa1dCcGtjYn5Zc3VXbUMzWkZpQ1A3YUdocFhrRmZtOHJ8cmU='}]);
+_stq.push([ 'clickTrackerInit', '174427244', '34' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+</body>
+</html>
+<!--
+	generated in 0.169 seconds
+	87776 bytes batcached for 300 seconds
+-->

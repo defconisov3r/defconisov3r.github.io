@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161358701-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-161358701-1');
+</script>
+
+    <meta charset="UTF-8"/>
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#f68449">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#f68449">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#f68449">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Pandemic Project</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:300,400,600,800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="main.css"/>
+  </head>
+
+  <body>
+    <nav>
+      <div id="logo">
+        <b>PANDEMIC PROJECT</b>
+      </div>
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#projects">Tests</a>
+        </li>
+        <li>
+          <a href="./resources.html">Resources</a>
+        </li>
+        <li>
+          <a href="./about.html">About</a>
+        </li>
+      </ul>
+    </nav>
+    <hr class="navline"/>
+
+    <div id="hero-image">
+      <section id="hero">
+        <div class="flex-v">
+          <h1>THE PANDEMIC PROJECT</h1>
+          <h3>The study of people
+            <br/> during COVID-19</h3>
+          <button onClick="window.open('https://utexas.qualtrics.com/jfe/form/SV_72FrSghTcwU7kZ7', '_blank');">Take the COVID survey</button>
+          <button onClick="window.location='./resources.html';">COVID-19 Resources</button>
+        </div>
+        <div class="flex-h">
+          <div>
+            <span class="line"></span>
+            <p>
+              The Pandemic Project is a social psychology initiative that is studying how our everyday lives are affected by the coronavirus outbreak. For many of us, our worlds, our work, and our social relationships are changing.
+            </p>
+          </div>
+
+          <div>
+            <span class="line"></span>
+            <p>
+              The research team brings together scientists from around the world to better understand how the pandemic is affecting our daily lives, mental health, and connections with others. 
+            </p>
+          </div>
+
+          <div>
+            <span class="line"></span>
+            <p>
+             We need your help. Take the COVID survey, which takes 10-15 minutes, and learn how your reactions to the outbreak compare with others.You will get personal feedback about your coping methods with information about what may work best for you.
+            </p>
+          </div>
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <section id="projects">
+    <h1 class="title">
+      <span>PANDEMIC</span>PROJECTS</h1>
+    <div class="flex-v">
+      <h2>The COVID Social Psychological Survey.</h2>
+      <p>The Covid Survey is an online questionnaire that takes about 15 minutes to complete. A series of questions are included that ask about the ways people are thinking about and responding to the current coronavirus outbreak. Individuals who complete the survey will get specific feedback about their coping strategies along with information that might help them deal with the current uncertainties.
+        <br/><br/>Although optional, we are also asking participants to provide an email address so that we can contact them sometime later to see how their thoughts and behaviors may be changing. Except for the optional email, no other identifying information is collected.</p>
+      <button onClick="window.open('https://utexas.qualtrics.com/jfe/form/SV_72FrSghTcwU7kZ7', '_blank');">Take the COVID survey</button>
+    </div>
+  </section>
+  <p id="more-projects">More projects coming soon.
+       <br/><br/>If you found the COVID survey interesting, check out more tests from our <a href="https://utpsyc.org/#questionaries">
+            Personality and Language Project website.</a><br/><br/>
+  </p>
+  <footer>© 2020 All rights reserved | Pennebaker Conglomerates Inc</footer>
+</body>
+
+</html>

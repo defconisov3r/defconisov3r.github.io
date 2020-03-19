@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html class="antialiased">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Covid-19</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="oevsevBrBtcSks1XahjpRUN4wzzdREe/BPRrrvMRfxYzxecsSwkf77IgYovATQAQv+iEd8LsErvXZ8ct+3ShPw==" />
+    
+
+    <link rel="stylesheet" media="all" href="/packs/css/application-2f3be456.css" data-turbolinks-track="reload" />
+    <script src="/packs/js/application-8598694fc0e5862034b7.js" data-turbolinks-track="reload"></script>
+  </head>
+
+  <body class="flex flex-col min-h-screen antialiased">
+    
+    <div class="flex-grow px-4 pt-2 pb-20">
+      <div class="max-w-5xl mx-auto">
+  <div class="text-center">
+    <h1 class="text-2xl">Europe</h1>
+    <p class="font-bold text-gray-600">Confirmed cases</p>
+    <p class="text-gray-600">Last data: 3/18/20</p>
+    <p class="mb-2 text-gray-600">Source: <a href="https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv">CSSEGIS</a></p>
+  </div>
+  <table class="mx-auto">
+    <thead>
+      <tr>
+        <th>Country</th>
+        <th class="pr-4">New cases</th>
+        <th>Total cases</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr id="16">
+          <td><a href="/countries/16">Italy</a></td>
+          <td class="text-center pr-4">4207</td>
+          <td class="text-center">35713</td>
+</tr>        <tr id="11">
+          <td><a href="/countries/11">Germany</a></td>
+          <td class="text-center pr-4">3070</td>
+          <td class="text-center">12327</td>
+</tr>        <tr id="18">
+          <td><a href="/countries/18">Spain</a></td>
+          <td class="text-center pr-4">2162</td>
+          <td class="text-center">13910</td>
+</tr>        <tr id="157">
+          <td><a href="/countries/157">France - France</a></td>
+          <td class="text-center pr-4">1391</td>
+          <td class="text-center">9043</td>
+</tr>        <tr id="440">
+          <td><a href="/countries/440">Netherlands - Netherlands</a></td>
+          <td class="text-center pr-4">346</td>
+          <td class="text-center">2051</td>
+</tr>        <tr id="31">
+          <td><a href="/countries/31">Switzerland</a></td>
+          <td class="text-center pr-4">328</td>
+          <td class="text-center">3028</td>
+</tr>        <tr id="32">
+          <td><a href="/countries/32">Austria</a></td>
+          <td class="text-center pr-4">314</td>
+          <td class="text-center">1646</td>
+</tr>        <tr id="20">
+          <td><a href="/countries/20">Belgium</a></td>
+          <td class="text-center pr-4">243</td>
+          <td class="text-center">1486</td>
+</tr>        <tr id="17">
+          <td><a href="/countries/17">Sweden</a></td>
+          <td class="text-center pr-4">89</td>
+          <td class="text-center">1279</td>
+</tr>        <tr id="170">
+          <td><a href="/countries/170">Denmark - Denmark</a></td>
+          <td class="text-center pr-4">80</td>
+          <td class="text-center">1057</td>
+</tr>        <tr id="40">
+          <td><a href="/countries/40">Romania</a></td>
+          <td class="text-center pr-4">76</td>
+          <td class="text-center">260</td>
+</tr>        <tr id="50">
+          <td><a href="/countries/50">Ireland</a></td>
+          <td class="text-center pr-4">69</td>
+          <td class="text-center">292</td>
+</tr>        <tr id="186">
+          <td><a href="/countries/186">Czechia</a></td>
+          <td class="text-center pr-4">68</td>
+          <td class="text-center">464</td>
+</tr>        <tr id="51">
+          <td><a href="/countries/51">Luxembourg</a></td>
+          <td class="text-center pr-4">63</td>
+          <td class="text-center">203</td>
+</tr>        <tr id="84">
+          <td><a href="/countries/84">Slovakia</a></td>
+          <td class="text-center pr-4">33</td>
+          <td class="text-center">105</td>
+</tr>        <tr id="41">
+          <td><a href="/countries/41">Estonia</a></td>
+          <td class="text-center pr-4">33</td>
+          <td class="text-center">258</td>
+</tr>        <tr id="37">
+          <td><a href="/countries/37">Greece</a></td>
+          <td class="text-center pr-4">31</td>
+          <td class="text-center">418</td>
+</tr>        <tr id="88">
+          <td><a href="/countries/88">Bulgaria</a></td>
+          <td class="text-center pr-4">25</td>
+          <td class="text-center">92</td>
+</tr>        <tr id="62">
+          <td><a href="/countries/62">Latvia</a></td>
+          <td class="text-center pr-4">22</td>
+          <td class="text-center">71</td>
+</tr>        <tr id="30">
+          <td><a href="/countries/30">Croatia</a></td>
+          <td class="text-center pr-4">16</td>
+          <td class="text-center">81</td>
+</tr>        <tr id="12">
+          <td><a href="/countries/12">Finland</a></td>
+          <td class="text-center pr-4">15</td>
+          <td class="text-center">336</td>
+</tr>        <tr id="73">
+          <td><a href="/countries/73">Poland</a></td>
+          <td class="text-center pr-4">13</td>
+          <td class="text-center">251</td>
+</tr>        <tr id="197">
+          <td><a href="/countries/197">Denmark - Faroe Islands</a></td>
+          <td class="text-center pr-4">11</td>
+          <td class="text-center">58</td>
+</tr>        <tr id="442">
+          <td><a href="/countries/442">France - Guadeloupe</a></td>
+          <td class="text-center pr-4">9</td>
+          <td class="text-center">27</td>
+</tr>        <tr id="70">
+          <td><a href="/countries/70">Hungary</a></td>
+          <td class="text-center pr-4">8</td>
+          <td class="text-center">58</td>
+</tr>        <tr id="452">
+          <td><a href="/countries/452">France - Reunion</a></td>
+          <td class="text-center pr-4">3</td>
+          <td class="text-center">12</td>
+</tr>        <tr id="96">
+          <td><a href="/countries/96">Cyprus</a></td>
+          <td class="text-center pr-4">3</td>
+          <td class="text-center">49</td>
+</tr>        <tr id="438">
+          <td><a href="/countries/438">France - Mayotte</a></td>
+          <td class="text-center pr-4">2</td>
+          <td class="text-center">3</td>
+</tr>        <tr id="45">
+          <td><a href="/countries/45">Lithuania</a></td>
+          <td class="text-center pr-4">2</td>
+          <td class="text-center">27</td>
+</tr>        <tr id="457">
+          <td><a href="/countries/457">Netherlands - Aruba</a></td>
+          <td class="text-center pr-4">1</td>
+          <td class="text-center">4</td>
+</tr>        <tr id="198">
+          <td><a href="/countries/198">France - St Martin</a></td>
+          <td class="text-center pr-4">1</td>
+          <td class="text-center">3</td>
+</tr>        <tr id="446">
+          <td><a href="/countries/446">Netherlands - Curacao</a></td>
+          <td class="text-center pr-4">0</td>
+          <td class="text-center">3</td>
+</tr>        <tr id="430">
+          <td><a href="/countries/430">France - French Guiana</a></td>
+          <td class="text-center pr-4">0</td>
+          <td class="text-center">11</td>
+</tr>        <tr id="405">
+          <td><a href="/countries/405">France - French Polynesia</a></td>
+          <td class="text-center pr-4">0</td>
+          <td class="text-center">3</td>
+</tr>        <tr id="205">
+          <td><a href="/countries/205">France - Saint Barthelemy</a></td>
+          <td class="text-center pr-4">0</td>
+          <td class="text-center">3</td>
+</tr>        <tr id="86">
+          <td><a href="/countries/86">Malta</a></td>
+          <td class="text-center pr-4">0</td>
+          <td class="text-center">38</td>
+</tr>        <tr id="76">
+          <td><a href="/countries/76">Slovenia</a></td>
+          <td class="text-center pr-4">0</td>
+          <td class="text-center">275</td>
+</tr>        <tr id="52">
+          <td><a href="/countries/52">Monaco</a></td>
+          <td class="text-center pr-4">0</td>
+          <td class="text-center">7</td>
+</tr>    </tbody>
+  </table>
+</div>
+
+    </div>
+    <div class="fixed bottom-0 left-0 right-0 py-4 text-center bg-white border-t">
+      <a href="/countries">Countries</a>
+    </div>
+  </body>
+</html>

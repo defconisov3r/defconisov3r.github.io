@@ -1,0 +1,92 @@
+<form method="post" action="traitement.php">
+    <p>
+       <fieldset>
+            <label>1.  Quel est votre nom</label><br />
+            <input type="text" name="nom"/><br />
+            <label>.  Quel est votre prenom</label><br />
+            <input type="text" name="prenom"/><br />
+            <label>.  Quel est votre adresse</label><br />
+            <input type="text" name="adresse"/>
+        </fieldset><br /> 
+        <fieldset>
+            <label>1.  Vous êtes :</label><br />
+            <input type="radio" name="sexe" value="Homme" id="Homme" /><label for="Homme">Homme</label>
+            <input type="radio" name="sexe" value="Femme" id="Femme" /><label for="Femme">Femme</label>  
+        </fieldset><br />
+        <fieldset>
+            <label>2.  Votre tranche d'âge ?</label><br />
+            <input type="radio" name="age" value="Moins de 18 ans" id="Moins de 18 ans" /><label for="Moins de 18 ans">Moins de 18 ans</label><br />
+            <input type="radio" name="age" value="18-24" id="18-24"/><label for="18-24">18-24</label><br />
+            <input type="radio" name="age" value="25-29" id="25-29"/><label for="25-29">25-29</label><br />
+            <input type="radio" name="age" value="30-39" id="30-39"/><label for="30-39">30-39</label><br />
+            <input type="radio" name="age" value="40-49" id="40-49"/><label for="40-49">40-49</label><br />
+            <input type="radio" name="age" value="50-59" id="50-59"/><label for="50-59">50-59</label><br />
+            <input type="radio" name="age" value="60-69" id="60-69"/><label for="60-69">60-69</label><br />
+            <input type="radio" name="age" value="70-+" id="70-+"/><label for="70-+">70 ou plus</label><br />   
+        </fieldset><br />
+        <fieldset>
+            <label>3. Avez vous connaissance de cas autour de vous ?</label><br />
+            <input type="radio" name="cas-autour"  value="oui" id="cas-autour"/><label for="cas-autour">Oui</label><br />
+            <input type="radio" name="cas-autour" value="non" id="pas-de-cas-autour"/><label for="pas-de-cas-autour">Non</label><br />
+        </fieldset><br />
+        <fieldset>
+            <label>4. Avez vous connaissance de cas suspects autour de vous ?</label><br />
+            <input type="radio" name="cas-suspect" value="oui" id="cas-suspect"/><label for="cas-suspect">Oui</label><br />
+            <input type="radio" name="cas-suspect" value="non" id="pas-de-cas-suspect"/><label for="pas-de-cas-autour">Non</label><br />
+        </fieldset><br />
+        <fieldset>
+            <label>5.  Avez vous de la toux ?</label><br />
+            <input type="radio" name="toux" value="oui" id="toux"/><label for="toux">Oui</label><br />
+            <input type="radio" name="toux" value="non" id="pas-de-toux"/><label for="pas-de-toux">Non</label><br />
+        </fieldset><br />
+        <fieldset>
+            <label>6. Avez vous de la fièvre ?</label><br />
+            <input type="radio" name="fievre" value="oui" id="fievre"/><label for="fievre">Oui</label><br />
+            <input type="radio" name="fievre" value="non" id="pas-de-fievre"/><label for="pas-de-fievre">Non</label><br />  
+        </fieldset><br />
+        <fieldset>
+            <label>7.  Ressentez vous de la fatigue ?</label><br />
+            <input type="radio" name="fatigue" value="oui" id="fatigue"/><label for="fatigue">Oui</label><br />
+            <input type="radio" name="fatigue" value="non" id="pas-de-fatigue"/><label for="pas-de-fatigue">Non</label><br />
+        </fieldset><br />
+        <fieldset>
+            <label>8.  Ressentez vous des douleurs musculaire ?</label><br />
+            <input type="radio" name="douleur-musculaire" value="oui" id="douleur-musculaire"/><label for="douleur-musculaire">Oui</label><br />
+            <input type="radio" name="douleur-musculaire" value="non" id="pas-de-douleur-musculaire"/><label for="pas-de-douleur-musculaire">Non</label><br />
+        </fieldset><br />
+        <fieldset>
+            <label>9.  Avez vous mal à la gorge ?</label><br />
+            <input type="radio" name="mal-de-gorge" value="oui" id="mal-de-gorge"/><label for="mal-de-gorge">Oui</label><br />
+            <input type="radio" name="mal-de-gorge" value="non" id="pas-de-mal-gorge"/><label for="pas-de-mal-gorge">Non</label><br />
+        </fieldset><br />
+        <fieldset>
+            <label>10.  Avez vous mal à la tete ?</label><br />
+            <input type="radio" name="mal-de-tete" value="oui" id="mal-de-tete"/><label for="mal-de-tete">Oui</label><br />
+            <input type="radio" name="mal-de-tete" value="non" id="pas-de-mal-tete"/><label for="pas-de-mal-tete">Non</label><br />
+        </fieldset><br />
+        <fieldset>
+            <label>11.  Avez vous de la diarrhée ?</label><br />
+            <input type="radio" name="diarhee" value="oui" id="diarhee"/><label for="diarhee">Oui</label><br />
+            <input type="radio" name="diarhee" value="non" id="pas-de-diarhee"/><label for="pas-de-diarhee">Non</label><br />
+        </fieldset><br />
+        <fieldset>
+            <label>12.  Avez vous de la nausée ?</label><br />
+            <input type="radio" name="nausee" value="oui" id="nausee"/><label for="nausee">Oui</label><br />
+            <input type="radio" name="nausee" value="non" id="pas-de-nausee"/><label for="pas-de-nausee">Non</label><br />
+        </fieldset><br />
+        <fieldset>
+            <label>13.  Avez vous le nez qui coule ?</label><br />
+            <input type="radio" name="nez-qui-coule" value="oui" id="nez-qui-coule"/><label for="nez-qui-coule">Oui</label><br />
+            <input type="radio" name="nez-qui-coule" value="non" id="nez-ne-coule-pas"/><label for="nez-ne-coule-pas">Non</label><br />
+        </fieldset><br />
+        <fieldset>
+            <label>13.  Avez vous des difficultes respiratoires ?</label><br />
+            <input type="radio" name="difficulte-respiratoire" value="oui" id="difficulte-respiratoire"/><label for="difficulte-respiratoire">Oui</label><br />
+            <input type="radio" name="difficulte-respiratoire" value="non" id="pas-de-difficulte-respiratoire"/><label for="pas-de-difficulte-respiratoire">Non</label><br />
+        </fieldset><br />
+
+        <input type="submit" value="Valider" /> 
+    
+    </p>
+
+</form>

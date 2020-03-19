@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+		<link rel="profile" href="https://gmpg.org/xfn/11">
+
+		<title>Covid-19 preparedness</title>
+
+<!-- Async WordPress.com Remote Login -->
+<script id="wpcom_remote_login_js">
+var wpcom_remote_login_extra_auth = '';
+function wpcom_remote_login_remove_dom_node_id( element_id ) {
+	var dom_node = document.getElementById( element_id );
+	if ( dom_node ) { dom_node.remove(); }
+}
+function wpcom_remote_login_remove_dom_node_classes( class_name ) {
+	var dom_nodes = document.querySelectorAll( '.' + class_name );
+	for ( var i = 0; i < dom_nodes.length; i++ ) {
+		dom_nodes[i].remove();
+	}
+}
+function wpcom_remote_login_final_cleanup() {
+	wpcom_remote_login_remove_dom_node_classes( "wpcom_remote_login_msg" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_validate" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_js" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_iframe" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_styles" );
+}
+
+// Watch for messages back from the remote login
+window.addEventListener( "message", function( e ) {
+	if ( e.origin === "https://r-login.wordpress.com" ) {
+		var data = {};
+		try {
+			data = JSON.parse( e.data );
+		} catch( e ) {
+			wpcom_remote_login_final_cleanup();
+			return;
+		}
+
+		if ( data.msg === 'LOGIN' ) {
+			// Clean up the login check iframe
+			wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+
+			var id_regex = new RegExp( /^[0-9]+$/ );
+			var token_regex = new RegExp( /^.*|.*|.*$/ );
+			if (
+				token_regex.test( data.token )
+				&& id_regex.test( data.wpcomid )
+			) {
+				// We have everything we need to ask for a login
+				var script = document.createElement( "script" );
+				script.setAttribute( "id", "wpcom_remote_login_validate" );
+				script.src = '/remote-login.php?wpcom_remote_login=validate'
+					+ '&wpcomid=' + data.wpcomid
+					+ '&token=' + encodeURIComponent( data.token )
+					+ '&host=' + window.location.protocol
+						+ '//' + window.location.hostname;
+				document.body.appendChild( script );
+			}
+
+			return;
+		}
+
+		// Safari ITP, not logged in, so redirect
+		if ( data.msg === 'LOGIN-REDIRECT' ) {
+			window.location = 'https://wordpress.com/log-in?redirect_to=' + window.location.href;
+			return;
+		}
+
+		// Safari ITP, storage access failed, remove the request
+		if ( data.msg === 'LOGIN-REMOVE' ) {
+			var css_zap = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } @media screen and ( max-width: 782px ) { html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } }';
+			var style_zap = document.createElement( 'style' );
+			style_zap.type = 'text/css';
+			style_zap.appendChild( document.createTextNode( css_zap ) );
+			document.body.appendChild( style_zap );
+
+			var e = document.getElementById( 'wpcom_request_access_iframe' );
+			e.parentNode.removeChild( e );
+
+			document.cookie = 'wordpress_com_login_access=denied; path=/; max-age=31536000';
+
+			return;
+		}
+
+		// Safari ITP
+		if ( data.msg === 'REQUEST_ACCESS' ) {
+			console.log( 'request access: safari' );
+
+			// Check ITP iframe enable/disable knob
+			if ( wpcom_remote_login_extra_auth !== 'safari_itp_iframe' ) {
+				return;
+			}
+
+			// If we are in a "private window" there is no ITP.
+			var private_window = false;
+			try {
+				var opendb = window.openDatabase( null, null, null, null );
+			} catch( e ) {
+				private_window = true;
+			}
+
+			if ( private_window ) {
+				console.log( 'private window' );
+				return;
+			}
+
+			var iframe = document.createElement( 'iframe' );
+			iframe.id = 'wpcom_request_access_iframe';
+			iframe.setAttribute( 'scrolling', 'no' );
+			iframe.setAttribute( 'sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-top-navigation-by-user-activation' );
+			iframe.src = 'https://r-login.wordpress.com/remote-login.php?wpcom_remote_login=request_access&origin=' + encodeURIComponent( data.origin ) + '&wpcomid=' + encodeURIComponent( data.wpcomid );
+
+			var css = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 46px !important; } * html body { margin-top: 46px !important; } @media screen and ( max-width: 660px ) { html { margin-top: 71px !important; } * html body { margin-top: 71px !important; } #wpcom_request_access_iframe { display: block; height: 71px !important; } } #wpcom_request_access_iframe { border: 0px; height: 46px; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 99999; background: #23282d; } ';
+
+			var style = document.createElement( 'style' );
+			style.type = 'text/css';
+			style.id = 'wpcom_request_access_styles';
+			style.appendChild( document.createTextNode( css ) );
+			document.body.appendChild( style );
+
+			document.body.appendChild( iframe );
+		}
+
+		if ( data.msg === 'DONE' ) {
+			wpcom_remote_login_final_cleanup();
+		}
+	}
+}, false );
+
+// Inject the remote login iframe after the page has had a chance to load
+// more critical resources
+window.addEventListener( "DOMContentLoaded", function( e ) {
+	var iframe = document.createElement( "iframe" );
+	iframe.style.display = "none";
+	iframe.setAttribute( "scrolling", "no" );
+	iframe.setAttribute( "id", "wpcom_remote_login_key" );
+	iframe.src = "https://r-login.wordpress.com/remote-login.php"
+		+ "?wpcom_remote_login=key"
+		+ "&origin=aHR0cHM6Ly9jb3ZpZDE5cHJlcGFyZWRuZXNzLm9yZw%3D%3D"
+		+ "&wpcomid=173646053"
+		+ "&time=1584646490";
+	document.body.appendChild( iframe );
+}, false );
+</script>
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//covid19preparedness.wordpress.com' />
+<link rel='dns-prefetch' href='//wordpress.com' />
+<link rel="alternate" type="application/rss+xml" title="Covid-19 preparedness &raquo; Feed" href="https://covid19preparedness.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Covid-19 preparedness &raquo; Comments Feed" href="https://covid19preparedness.org/comments/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s0.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1582709031h&ver=5.4-RC1-47426"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='all-css-0-1' href='https://s0.wp.com/_static/??-eJylkttuwjAMhl9oqSlrxbiY9iw9eJ0hhyp2qPr2cwlsDLSDxk0UO/5+/4oN02i64AW9gEtmtGkgzzCNXXCGHVmcr6KiY36AC+zMDEnDFuOgLxFhUzwWK2gT2R5aG7q9sdTGJs7AMlv8g8yRYtihjM2CN3NIYoZI/X8lYiPkB/4Ff03WGiZBgz0twOlboK621bqut4AHrVcueenD5HObu1XPLoUcWvJ4t6Da0mRg4ZPDnljgQDh9K9qF05eVxXpVlOY4+szlhyKbOs71DmvZlVXdS2vX2ZsGFyu6LJnm3djIUuG0U4MWnZb9hOVdbtsxIrPR01FyRt4UvF3tL+3cIq3m9qgRX2UySuCDkNL8cbnRzK1gTC3IpIk5n5/DfnHPZf1UlatyU9W7d/EMWPE=?cssminify=yes' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify {
+	text-align:justify;
+}
+</style>
+<style id='twentytwenty-style-inline-css'>
+.color-accent,.color-accent-hover:hover,.color-accent-hover:focus,:root .has-accent-color,.has-drop-cap:not(:focus):first-letter,.wp-block-button.is-style-outline,a { color: #cd2653; }blockquote,.border-color-accent,.border-color-accent-hover:hover,.border-color-accent-hover:focus { border-color: #cd2653; }button:not(.toggle),.button,.faux-button,.wp-block-button__link,.wp-block-file .wp-block-file__button,input[type="button"],input[type="reset"],input[type="submit"],.bg-accent,.bg-accent-hover:hover,.bg-accent-hover:focus,:root .has-accent-background-color,.comment-reply-link { background-color: #cd2653; }.fill-children-accent,.fill-children-accent * { fill: #cd2653; }body,.entry-title a,:root .has-primary-color { color: #000000; }:root .has-primary-background-color { background-color: #000000; }cite,figcaption,.wp-caption-text,.post-meta,.entry-content .wp-block-archives li,.entry-content .wp-block-categories li,.entry-content .wp-block-latest-posts li,.wp-block-latest-comments__comment-date,.wp-block-latest-posts__post-date,.wp-block-embed figcaption,.wp-block-image figcaption,.wp-block-pullquote cite,.comment-metadata,.comment-respond .comment-notes,.comment-respond .logged-in-as,.pagination .dots,.entry-content hr:not(.has-background),hr.styled-separator,:root .has-secondary-color { color: #6d6d6d; }:root .has-secondary-background-color { background-color: #6d6d6d; }pre,fieldset,input,textarea,table,table *,hr { border-color: #dcd7ca; }caption,code,code,kbd,samp,.wp-block-table.is-style-stripes tbody tr:nth-child(odd),:root .has-subtle-background-background-color { background-color: #dcd7ca; }.wp-block-table.is-style-stripes { border-bottom-color: #dcd7ca; }.wp-block-latest-posts.is-grid li { border-top-color: #dcd7ca; }:root .has-subtle-background-color { color: #dcd7ca; }body:not(.overlay-header) .primary-menu > li > a,body:not(.overlay-header) .primary-menu > li > .icon,.modal-menu a,.footer-menu a, .footer-widgets a,#site-footer .wp-block-button.is-style-outline,.wp-block-pullquote:before,.singular:not(.overlay-header) .entry-header a,.archive-header a,.header-footer-group .color-accent,.header-footer-group .color-accent-hover:hover { color: #cd2653; }.social-icons a,#site-footer button:not(.toggle),#site-footer .button,#site-footer .faux-button,#site-footer .wp-block-button__link,#site-footer .wp-block-file__button,#site-footer input[type="button"],#site-footer input[type="reset"],#site-footer input[type="submit"] { background-color: #cd2653; }.header-footer-group,body:not(.overlay-header) #site-header .toggle,.menu-modal .toggle { color: #000000; }body:not(.overlay-header) .primary-menu ul { background-color: #000000; }body:not(.overlay-header) .primary-menu > li > ul:after { border-bottom-color: #000000; }body:not(.overlay-header) .primary-menu ul ul:after { border-left-color: #000000; }.site-description,body:not(.overlay-header) .toggle-inner .toggle-text,.widget .post-date,.widget .rss-date,.widget_archive li,.widget_categories li,.widget cite,.widget_pages li,.widget_meta li,.widget_nav_menu li,.powered-by-wordpress,.to-the-top,.singular .entry-header .post-meta,.singular:not(.overlay-header) .entry-header .post-meta a { color: #6d6d6d; }.header-footer-group pre,.header-footer-group fieldset,.header-footer-group input,.header-footer-group textarea,.header-footer-group table,.header-footer-group table *,.footer-nav-widgets-wrapper,#site-footer,.menu-modal nav *,.footer-widgets-outer-wrapper,.footer-top { border-color: #dcd7ca; }.header-footer-group table caption,body:not(.overlay-header) .header-inner .toggle-wrapper::before { background-color: #dcd7ca; }
+</style>
+<link rel='stylesheet' id='print-css-1-1' href='https://s0.wp.com/wp-content/themes/pub/twentytwenty/print.css?m=1573683825h&cssminify=yes' type='text/css' media='print' />
+<link rel='stylesheet' id='all-css-2-1' href='https://s0.wp.com/_static/??-eJx9kdFuwyAMRX9ozM0E2vow7VuAUkJHMMKOov59HSXVElXLC9ji3GtfAVNVHguHwjCMquYxpkLgsQXFfRgCyfNQLQNPwtyX890TvcFGuqBQR7fjIBUPxPcc1FTF50W3GRkDqozecsKya9Q129SOpC24jFHKCEJt2iOR9bO5s+2vesGf7HXMWVHioMIlsRivLmD0WX8Yc4aY0Vlh5qwkkWVzDy7b8nu0Q0XiJR5Qb9scYL2PVIQ+ySzJiPvmv2/p9brfDPwM35350t2p+9Tm9gA5/r+O?cssminify=yes' type='text/css' media='all' />
+<style id='jetpack-global-styles-frontend-style-inline-css'>
+:root { --font-headings: unset; --font-base: unset; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+</style>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJx9jtEOgjAMRX/I0aABfDF+y4CKW1g31y7I31tRX4wxuWmT29P2wpKMo2EuIzJ41a1gXt+t8ryDf4AJbspWsAqOPvAQSZDkyabIEpDZTvhjGmLvZjSFMStAom8u8ZuTK+oFSKUHWdRYXxUsM8oWyNGId107h1PddG1TH7r90T8AoX9QRA=='></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://covid19preparedness.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s0.wp.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress.com" />
+<link rel="canonical" href="https://covid19preparedness.org/" />
+<link rel='shortlink' href='https://wp.me/PbKBgN-7' />
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Fcovid19preparedness.org%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Fcovid19preparedness.org%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Covid-19 preparedness" />
+<meta property="og:url" content="https://covid19preparedness.org/" />
+<meta property="og:site_name" content="Covid-19 preparedness" />
+<meta property="og:image" content="https://covid19preparedness.files.wordpress.com/2020/03/we-are-here-to-help-bkgd.png" />
+<meta property="og:image:width" content="2027" />
+<meta property="og:image:height" content="641" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+<meta name="twitter:text:title" content="Home" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Visit the post for more." />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="shortcut icon" type="image/x-icon" href="https://s0.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="icon" type="image/x-icon" href="https://s0.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="apple-touch-icon" href="https://s0.wp.com/i/webclip.png" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://covid19preparedness.org/osd.xml" title="Covid-19 preparedness" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+	<script>document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );</script>
+	<meta name="application-name" content="Covid-19 preparedness" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-task" content="name=Subscribe;action-uri=https://covid19preparedness.org/feed/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="description" content="The coronavirus infection has been recognized as community spread in the USA. It might be near you. If you wonder how you should ready yourself for a potential outbreak near you, don&#039;t panic but get prepared. Here is a guide for preparing your household for it. How Should Americans prepare for the coronavirus disease outbreak&hellip;" />
+
+	</head>
+
+	<body class="home page-template page-template-templates page-template-template-full-width page-template-templatestemplate-full-width-php page page-id-7 customizer-styles-applied singular has-full-width-content enable-search-modal missing-post-thumbnail has-no-pagination not-showing-comments show-avatars template-full-width footer-top-hidden hide-homepage-title highlander-enabled highlander-light">
+
+		<a class="skip-link screen-reader-text" href="#site-content">Skip to the content</a>
+		<header id="site-header" class="header-footer-group" role="banner">
+
+			<div class="header-inner section-inner">
+
+				<div class="header-titles-wrapper">
+
+					
+						<button class="toggle search-toggle mobile-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
+							<span class="toggle-inner">
+								<span class="toggle-icon">
+									<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"><path d="M38.710696,48.0601792 L43,52.3494831 L41.3494831,54 L37.0601792,49.710696 C35.2632422,51.1481185 32.9839107,52.0076499 30.5038249,52.0076499 C24.7027226,52.0076499 20,47.3049272 20,41.5038249 C20,35.7027226 24.7027226,31 30.5038249,31 C36.3049272,31 41.0076499,35.7027226 41.0076499,41.5038249 C41.0076499,43.9839107 40.1481185,46.2632422 38.710696,48.0601792 Z M36.3875844,47.1716785 C37.8030221,45.7026647 38.6734666,43.7048964 38.6734666,41.5038249 C38.6734666,36.9918565 35.0157934,33.3341833 30.5038249,33.3341833 C25.9918565,33.3341833 22.3341833,36.9918565 22.3341833,41.5038249 C22.3341833,46.0157934 25.9918565,49.6734666 30.5038249,49.6734666 C32.7048964,49.6734666 34.7026647,48.8030221 36.1716785,47.3875844 C36.2023931,47.347638 36.2360451,47.3092237 36.2726343,47.2726343 C36.3092237,47.2360451 36.347638,47.2023931 36.3875844,47.1716785 Z" transform="translate(-20 -31)" /></svg>								</span>
+								<span class="toggle-text">Search</span>
+							</span>
+						</button><!-- .search-toggle -->
+
+					
+					<div class="header-titles">
+
+						<div class="site-title faux-heading"><a href="https://covid19preparedness.org/">Covid-19 preparedness</a></div>
+					</div><!-- .header-titles -->
+
+					<button class="toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
+						<span class="toggle-inner">
+							<span class="toggle-icon">
+								<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="26" height="7" viewBox="0 0 26 7"><path fill-rule="evenodd" d="M332.5,45 C330.567003,45 329,43.4329966 329,41.5 C329,39.5670034 330.567003,38 332.5,38 C334.432997,38 336,39.5670034 336,41.5 C336,43.4329966 334.432997,45 332.5,45 Z M342,45 C340.067003,45 338.5,43.4329966 338.5,41.5 C338.5,39.5670034 340.067003,38 342,38 C343.932997,38 345.5,39.5670034 345.5,41.5 C345.5,43.4329966 343.932997,45 342,45 Z M351.5,45 C349.567003,45 348,43.4329966 348,41.5 C348,39.5670034 349.567003,38 351.5,38 C353.432997,38 355,39.5670034 355,41.5 C355,43.4329966 353.432997,45 351.5,45 Z" transform="translate(-329 -38)" /></svg>							</span>
+							<span class="toggle-text">Menu</span>
+						</span>
+					</button><!-- .nav-toggle -->
+
+				</div><!-- .header-titles-wrapper -->
+
+				<div class="header-navigation-wrapper">
+
+					
+							<nav class="primary-menu-wrapper" aria-label="Horizontal" role="navigation">
+
+								<ul class="primary-menu reset-list-style">
+
+								<li class="page_item page-item-89"><a href="https://covid19preparedness.org/contact-us/">Contact Us</a></li>
+<li class="page_item page-item-95"><a href="https://covid19preparedness.org/news-and-articles/">News and Articles</a></li>
+<li class="page_item page-item-162"><a href="https://covid19preparedness.org/services/">Services</a></li>
+<li class="page_item page-item-7 current_page_item current-menu-item"><a href="https://covid19preparedness.org/" aria-current="page">Home</a></li>
+<li class="page_item page-item-5"><a href="https://covid19preparedness.org/blog-feed/">Blog Feed</a></li>
+
+								</ul>
+
+							</nav><!-- .primary-menu-wrapper -->
+
+						
+						<div class="header-toggles hide-no-js">
+
+						
+							<div class="toggle-wrapper search-toggle-wrapper">
+
+								<button class="toggle search-toggle desktop-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
+									<span class="toggle-inner">
+										<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"><path d="M38.710696,48.0601792 L43,52.3494831 L41.3494831,54 L37.0601792,49.710696 C35.2632422,51.1481185 32.9839107,52.0076499 30.5038249,52.0076499 C24.7027226,52.0076499 20,47.3049272 20,41.5038249 C20,35.7027226 24.7027226,31 30.5038249,31 C36.3049272,31 41.0076499,35.7027226 41.0076499,41.5038249 C41.0076499,43.9839107 40.1481185,46.2632422 38.710696,48.0601792 Z M36.3875844,47.1716785 C37.8030221,45.7026647 38.6734666,43.7048964 38.6734666,41.5038249 C38.6734666,36.9918565 35.0157934,33.3341833 30.5038249,33.3341833 C25.9918565,33.3341833 22.3341833,36.9918565 22.3341833,41.5038249 C22.3341833,46.0157934 25.9918565,49.6734666 30.5038249,49.6734666 C32.7048964,49.6734666 34.7026647,48.8030221 36.1716785,47.3875844 C36.2023931,47.347638 36.2360451,47.3092237 36.2726343,47.2726343 C36.3092237,47.2360451 36.347638,47.2023931 36.3875844,47.1716785 Z" transform="translate(-20 -31)" /></svg>										<span class="toggle-text">Search</span>
+									</span>
+								</button><!-- .search-toggle -->
+
+							</div>
+
+							
+						</div><!-- .header-toggles -->
+						
+				</div><!-- .header-navigation-wrapper -->
+
+			</div><!-- .header-inner -->
+
+			<div class="search-modal cover-modal header-footer-group" data-modal-target-string=".search-modal">
+
+	<div class="search-modal-inner modal-inner">
+
+		<div class="section-inner">
+
+			<form role="search" aria-label="Search for:" method="get" class="search-form" action="https://covid19preparedness.org/">
+	<label for="search-form-1">
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" id="search-form-1" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+	</label>
+	<input type="submit" class="search-submit" value="Search" />
+</form>
+
+			<button class="toggle search-untoggle close-search-toggle fill-children-current-color" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
+				<span class="screen-reader-text">Close search</span>
+				<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><polygon fill="" fill-rule="evenodd" points="6.852 7.649 .399 1.195 1.445 .149 7.899 6.602 14.352 .149 15.399 1.195 8.945 7.649 15.399 14.102 14.352 15.149 7.899 8.695 1.445 15.149 .399 14.102" /></svg>			</button><!-- .search-toggle -->
+
+		</div><!-- .section-inner -->
+
+	</div><!-- .search-modal-inner -->
+
+</div><!-- .menu-modal -->
+
+		</header><!-- #site-header -->
+
+		
+<div class="menu-modal cover-modal header-footer-group" data-modal-target-string=".menu-modal">
+
+	<div class="menu-modal-inner modal-inner">
+
+		<div class="menu-wrapper section-inner">
+
+			<div class="menu-top">
+
+				<button class="toggle close-nav-toggle fill-children-current-color" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".menu-modal">
+					<span class="toggle-text">Close Menu</span>
+					<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><polygon fill="" fill-rule="evenodd" points="6.852 7.649 .399 1.195 1.445 .149 7.899 6.602 14.352 .149 15.399 1.195 8.945 7.649 15.399 14.102 14.352 15.149 7.899 8.695 1.445 15.149 .399 14.102" /></svg>				</button><!-- .nav-toggle -->
+
+				
+					<nav class="mobile-menu" aria-label="Mobile" role="navigation">
+
+						<ul class="modal-menu reset-list-style">
+
+						<li class="page_item page-item-89"><div class="ancestor-wrapper"><a href="https://covid19preparedness.org/contact-us/">Contact Us</a></div><!-- .ancestor-wrapper --></li>
+<li class="page_item page-item-95"><div class="ancestor-wrapper"><a href="https://covid19preparedness.org/news-and-articles/">News and Articles</a></div><!-- .ancestor-wrapper --></li>
+<li class="page_item page-item-162"><div class="ancestor-wrapper"><a href="https://covid19preparedness.org/services/">Services</a></div><!-- .ancestor-wrapper --></li>
+<li class="page_item page-item-7 current_page_item current-menu-item"><div class="ancestor-wrapper"><a href="https://covid19preparedness.org/" aria-current="page">Home</a></div><!-- .ancestor-wrapper --></li>
+<li class="page_item page-item-5"><div class="ancestor-wrapper"><a href="https://covid19preparedness.org/blog-feed/">Blog Feed</a></div><!-- .ancestor-wrapper --></li>
+
+						</ul>
+
+					</nav>
+
+					
+			</div><!-- .menu-top -->
+
+			<div class="menu-bottom">
+
+				
+			</div><!-- .menu-bottom -->
+
+		</div><!-- .menu-wrapper -->
+
+	</div><!-- .menu-modal-inner -->
+
+</div><!-- .menu-modal -->
+
+<main id="site-content" role="main">
+
+	
+<article class="post-7 page type-page status-publish hentry" id="post-7">
+
+	
+<header class="entry-header has-text-align-center header-footer-group">
+
+	<div class="entry-header-inner section-inner medium">
+
+		<h1 class="entry-title">Home</h1>
+	</div><!-- .entry-header-inner -->
+
+</header><!-- .entry-header -->
+
+	<div class="post-inner  ">
+
+		<div class="entry-content">
+
+			
+<figure class="wp-block-image size-large"><img data-attachment-id="254" data-permalink="https://covid19preparedness.org/20200319/" data-orig-file="https://covid19preparedness.files.wordpress.com/2020/03/20200319.png" data-orig-size="826,481" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="20200319" data-image-description="" data-medium-file="https://covid19preparedness.files.wordpress.com/2020/03/20200319.png?w=300" data-large-file="https://covid19preparedness.files.wordpress.com/2020/03/20200319.png?w=580" src="https://covid19preparedness.files.wordpress.com/2020/03/20200319.png?w=826" alt="" class="wp-image-254" srcset="https://covid19preparedness.files.wordpress.com/2020/03/20200319.png 826w, https://covid19preparedness.files.wordpress.com/2020/03/20200319.png?w=150 150w, https://covid19preparedness.files.wordpress.com/2020/03/20200319.png?w=300 300w, https://covid19preparedness.files.wordpress.com/2020/03/20200319.png?w=768 768w" sizes="(max-width: 826px) 100vw, 826px" /></figure>
+
+
+
+<figure class="wp-block-image size-large"><img data-attachment-id="255" data-permalink="https://covid19preparedness.org/20200319-graph/" data-orig-file="https://covid19preparedness.files.wordpress.com/2020/03/20200319-graph.png" data-orig-size="850,385" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="20200319-graph" data-image-description="" data-medium-file="https://covid19preparedness.files.wordpress.com/2020/03/20200319-graph.png?w=300" data-large-file="https://covid19preparedness.files.wordpress.com/2020/03/20200319-graph.png?w=580" src="https://covid19preparedness.files.wordpress.com/2020/03/20200319-graph.png?w=850" alt="" class="wp-image-255" srcset="https://covid19preparedness.files.wordpress.com/2020/03/20200319-graph.png 850w, https://covid19preparedness.files.wordpress.com/2020/03/20200319-graph.png?w=150 150w, https://covid19preparedness.files.wordpress.com/2020/03/20200319-graph.png?w=300 300w, https://covid19preparedness.files.wordpress.com/2020/03/20200319-graph.png?w=768 768w" sizes="(max-width: 850px) 100vw, 850px" /></figure>
+
+
+
+<div class="wp-block-columns">
+<div class="wp-block-column"></div>
+
+
+
+<div class="wp-block-column"></div>
+</div>
+
+
+
+<p>The coronavirus infection has been recognized as community spread in the USA. It might be near you. If you wonder how you should ready yourself for a potential outbreak near you, don&#8217;t panic but get prepared. Here is a guide for preparing your household for it.</p>
+
+
+
+<p><a href="https://covid19preparedness.wordpress.com/2020/03/02/how-sphould-americans-prepare-for-covid-19/">How Should Americans prepare for the coronavirus disease outbreak</a></p>
+
+
+
+<p>It might be the case that you know of someone who you&#8217;ve been in close contact being suspected to be virus positive, there are a few things you should do to protect yourself and your family.</p>
+
+
+
+<p><font color="#000121"><a href="https://covid19preparedness.wordpress.com/2020/03/02/the-bless-and-curse-of-central-air-conditioning-when-it-comes-to-covid-19/">In case you need to quarantine yourself or your member of household, here is a simple practical guide</a></font></p>
+
+
+
+<div class="wp-block-group"><div class="wp-block-group__inner-container">
+<div class="wp-block-group"><div class="wp-block-group__inner-container">
+<figure class="wp-block-image size-large"><a href="https://covid19preparedness.wordpress.com/services/"><img data-attachment-id="169" data-permalink="https://covid19preparedness.org/we-are-here-to-help-bkgd/" data-orig-file="https://covid19preparedness.files.wordpress.com/2020/03/we-are-here-to-help-bkgd.png" data-orig-size="2027,641" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="we-are-here-to-help-bkgd" data-image-description="" data-medium-file="https://covid19preparedness.files.wordpress.com/2020/03/we-are-here-to-help-bkgd.png?w=300" data-large-file="https://covid19preparedness.files.wordpress.com/2020/03/we-are-here-to-help-bkgd.png?w=580" src="https://covid19preparedness.files.wordpress.com/2020/03/we-are-here-to-help-bkgd.png?w=1024" alt="" class="wp-image-169" srcset="https://covid19preparedness.files.wordpress.com/2020/03/we-are-here-to-help-bkgd.png?w=1024 1024w, https://covid19preparedness.files.wordpress.com/2020/03/we-are-here-to-help-bkgd.png?w=150 150w, https://covid19preparedness.files.wordpress.com/2020/03/we-are-here-to-help-bkgd.png?w=300 300w, https://covid19preparedness.files.wordpress.com/2020/03/we-are-here-to-help-bkgd.png?w=768 768w, https://covid19preparedness.files.wordpress.com/2020/03/we-are-here-to-help-bkgd.png 2027w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure>
+</div></div>
+</div></div>
+
+
+
+<p>A lot of areas has closed their schools. This may make it hard for working parents to go to work, particularly important jobs, such as the medical professionals, emergency responders, and others I can&#8217;t enumerate. Here is a volunteer based community helping hands. Please visit our <a href="https://covid19preparedness.wordpress.com/services/">Services page </a>to sign up for need or volunteering. </p>
+
+
+
+<span id="more-7"></span>
+
+
+
+<div class="wp-block-group"><div class="wp-block-group__inner-container">
+<p>More Articles</p>
+</div></div>
+
+
+				<div
+			class="wp-block-newspack-blocks-homepage-articles  wpnbha show-image image-aligntop ts-4 is-3 "
+			style=""
+			>
+			<div data-posts>
+									<article data-post-id="250"
+						>
+		
+		<div class="entry-wrapper">
+			<h2 class="entry-title"><a href="https://covid19preparedness.org/2020/03/19/250/" rel="bookmark">Advice from the Rescue Squad during Time of&nbsp;Coronavirus</a></h2>						<p>by Jason Kreyling, 1st Lieutenant Bradley Gardens Rescue Squad If anyone feels they have symptoms related to the corona virus (covid-19), has come in contact with a known Covid-19 patient, or feels they should be tested they should first contact their doctor for guidance. IF THERE IS A SERIOUS OR LIFE THREATENING EMERGENCY CALL 911 FIRST! [&hellip;]</p>
+				<div class="entry-meta">
+					<time class="entry-date published" datetime="2020-03-19T04:36:42+00:00">March 19, 2020</time><time class="updated" datetime="2020-03-19T04:37:42+00:00">March 19, 2020</time>				</div><!-- .entry-meta -->
+					</div><!-- .entry-wrapper -->
+	</article>
+
+			<article data-post-id="206"
+						>
+		
+		<div class="entry-wrapper">
+			<h2 class="entry-title"><a href="https://covid19preparedness.org/2020/03/16/206/" rel="bookmark">The Hard Learnt Lesson &#8211; Protect the Healthcare&nbsp;Professionals</a></h2>						<p>by Lucy In a recent Chinese news report, it was revealed that between the Covid-19 disease outbreak in early January 2020 till Feb 11, there had been 1716 health workers infected by the virus, and 5 died of the infection. This was attributed to be due to occupational exposure, more specifically linked to lack of [&hellip;]</p>
+				<div class="entry-meta">
+					<time class="entry-date published" datetime="2020-03-16T03:53:56+00:00">March 16, 2020</time><time class="updated" datetime="2020-03-17T01:47:56+00:00">March 17, 2020</time>				</div><!-- .entry-meta -->
+					</div><!-- .entry-wrapper -->
+	</article>
+
+					</div>
+			
+		</div>
+				
+
+
+<div style="height:20px;" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-group"><div class="wp-block-group__inner-container">
+<div class="wp-block-group"><div class="wp-block-group__inner-container"><ul class="wp-block-archives wp-block-archives-list">	<li><a href='https://covid19preparedness.org/2020/03/'>March 2020</a></li>
+</ul></div></div>
+</div></div>
+
+
+
+<hr class="wp-block-separator is-style-wide" />
+
+
+
+<h3 class="has-text-align-left">Follow Us</h3>
+
+
+
+<p class="has-text-align-left">Get new content delivered directly to your inbox.</p>
+
+
+
+<div class="wp-block-jetpack-subscriptions"><div class="jetpack_subscription_widget">            <form action="https://subscribe.wordpress.com" method="post" accept-charset="utf-8"
+                  id="subscribe-blog">
+									                    <p><input type="text" name="email" style="width: 95%; padding: 1px 2px"
+                              placeholder="Enter your email address" value=""
+                              id="subscribe-field"/></p>
+				
+                <p>
+                    <input type="hidden" name="action" value="subscribe"/>
+                    <input type="hidden" name="blog_id" value="173646053"/>
+                    <input type="hidden" name="source" value="https://covid19preparedness.org/"/>
+                    <input type="hidden" name="sub-type" value="widget"/>
+                    <input type="hidden" name="redirect_fragment" value="520"/>
+					<input type="hidden" id="_wpnonce" name="_wpnonce" value="f3674e193d" />                    <button type="submit"
+	                    	                        class="undefined"
+	                    		                			                style="background-color: undefined; color: undefined;"
+		                	                >
+	                    Subscribe                    </button>
+                </p>
+            </form>
+			
+</div></div>
+
+		</div><!-- .entry-content -->
+
+	</div><!-- .post-inner -->
+
+	<div class="section-inner">
+		
+	</div><!-- .section-inner -->
+
+	
+</article><!-- .post -->
+
+</main><!-- #site-content -->
+
+
+			<footer id="site-footer" role="contentinfo" class="header-footer-group">
+
+				<div class="section-inner">
+
+					<div class="footer-credits">
+
+						<p class="footer-copyright">&copy;
+							2020							<a href="https://covid19preparedness.org/">Covid-19 preparedness</a>
+						</p><!-- .footer-copyright -->
+
+						<p class="powered-by-wordpress">
+							<a href="https://wordpress.com/?ref=footer_segment_blog" rel="nofollow">Blog at WordPress.com.</a>
+						</p><!-- .powered-by-wordpress -->
+
+					</div><!-- .footer-credits -->
+
+					<a class="to-the-top" href="#site-header">
+						<span class="to-the-top-long">
+							To the top <span class="arrow" aria-hidden="true">&uarr;</span>						</span><!-- .to-the-top-long -->
+						<span class="to-the-top-short">
+							Up <span class="arrow" aria-hidden="true">&uarr;</span>						</span><!-- .to-the-top-short -->
+					</a><!-- .to-the-top -->
+
+				</div><!-- .section-inner -->
+
+			</footer><!-- #site-footer -->
+
+		<!--  -->
+<script src='//0.gravatar.com/js/gprofiles.js?ver=202012y'></script>
+<script>
+var WPGroHo = {"my_hash":""};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781h'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-3c132600a3e6c6762611d53fc20404e4">
+	</div>
+	</div>
+
+	<div id="carousel-reblog-box">
+		<form action="#" name="carousel-reblog">
+			<textarea id="carousel-reblog-content" name="carousel-reblog-content" placeholder="Add your thoughts here... (optional)"></textarea>
+			<label for="carousel-reblog-to-blog-id" id="carousel-reblog-lblogid">Post to</label>
+			<select name="carousel-reblog-to-blog-id" id="carousel-reblog-to-blog-id">
+						</select>
+
+			<div class="submit">
+				<span class="canceltext"><a href="#" class="cancel">Cancel</a></span>
+				<input type="submit" name="carousel-reblog-submit" class="button" id="carousel-reblog-submit" value="Reblog Post" />
+				<input type="hidden" id="carousel-reblog-blog-id" value="173646053" />
+				<input type="hidden" id="carousel-reblog-blog-url" value="https://covid19preparedness.org" />
+				<input type="hidden" id="carousel-reblog-blog-title" value="Covid-19 preparedness" />
+				<input type="hidden" id="carousel-reblog-post-url" value="" />
+				<input type="hidden" id="carousel-reblog-post-title" value="" />
+			</div>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="58fdd1f103" /><input type="hidden" name="_wp_http_referer" value="/" />		</form>
+
+		<div class="arrow"></div>
+	</div>
+<link rel='stylesheet' id='all-css-0-2' href='https://s0.wp.com/_static/??/wp-content/plugins/gutenberg-blocks/jetpack-layout-grid/blocks/front.css,/wp-content/mu-plugins/carousel/jetpack-carousel.css?m=1583834955j&cssminify=yes' type='text/css' media='all' />
+<script>
+var comment_like_text = {"loading":"Loading..."};
+</script>
+<script>
+var actionbardata = {"siteID":"173646053","siteName":"Covid-19 preparedness","siteURL":"https:\/\/covid19preparedness.org","icon":"<img alt='' src='https:\/\/s0.wp.com\/i\/logo\/wpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/twentytwenty","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Fcovid19preparedness.org%2F&signup_flow=account&domain=covid19preparedness.org","themeURL":"https:\/\/wordpress.com\/theme\/twentytwenty\/","xhrURL":"https:\/\/covid19preparedness.org\/wp-admin\/admin-ajax.php","nonce":"96ce0d996d","isSingular":"1","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"f3674e193d\" \/>","referer":"https:\/\/covid19preparedness.org\/","canFollow":"1","feedID":"104369291","statusMessage":"","customizeLink":"https:\/\/covid19preparedness.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Fcovid19preparedness.wordpress.com%2F","postID":"7","shortlink":"https:\/\/wp.me\/PbKBgN-7","canEditPost":"","editLink":"https:\/\/wordpress.com\/page\/covid19preparedness.org\/7","statsLink":"https:\/\/wordpress.com\/stats\/post\/7\/covid19preparedness.org","i18n":{"view":"View site","follow":"Follow","following":"Following","edit":"Edit","login":"Log in","signup":"Sign up","customize":"Customize","report":"Report this content","themeInfo":"Get theme: Twenty Twenty","shortlink":"Copy shortlink","copied":"Copied","followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/read\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar","editSubs":"Manage subscriptions","viewReader":"View site in Reader","viewReadPost":"View post in Reader","subscribe":"Sign me up","enterEmail":"Enter your email address","followers":"","alreadyUser":"Already have a WordPress.com account? <a href=\"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Fcovid19preparedness.org%2F&signup_flow=account&domain=covid19preparedness.org\">Log in now.<\/a>","stats":"Stats"}};
+</script>
+<script>
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/covid19preparedness.org\/wp-admin\/admin-ajax.php","nonce":"17d5061c7a","display_exif":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/covid19preparedness.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fcovid19preparedness.org%2F","blog_id":"173646053","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Reblog","reblogged":"Reblogged","reblog_add_thoughts":"Add your thoughts here... (optional)","reblogging":"Reblogging...","post_reblog":"Post Reblog","stats_query_args":"blog=173646053&v=wpcom&tz=0&user_id=0&subd=covid19preparedness","is_public":"1","reblog_enabled":""};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJydUe1uwjAMfKGlXqdWGz+mPUubGOTifCxOWnj7pdAyhhAS+5NYd7nL2YYpKO1dQpdgEDA4ksZwqAZ5gUKR05wNyokjSTCiMz7OVPB83BJzZcmtz1enwHlHTmCbmZVQQoWGErmdOjPQNpvmrW030LMvoJckqpR6v/xCON162qxWW+2tLZBi2p+jMfUgEwV8RvQH+H8HOM4m2meXjJ/c0sbplFvyQbzOlDmqvotgO0kYS6X8iDHSPP4L9qRDil2J8UikE3k3iy7Vvd1L+F3yNT58Z4zH5aquX93bQBd9FmQYMIWSS61A0XzZz7r9aOrX+r1phx8IjvXr'></script>
+<script type='text/javascript'>
+( 'fetch' in window ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?m=1573572739h&#038;ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?m=1540208548h&#038;ver=3.26.0-0"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?m=1550600082h&#038;ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?m=1540208548h&#038;ver=2.0.2"></scr' + 'ipt>' );
+</script>
+	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="//stats.wp.com/w.js?61" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'173646053','blog_tz':'0','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'173646053','v':'wpcom','tz':'0','user_id':'0','post':'7','subd':'covid19preparedness'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1mJVY3bm9aR3VCbS9mWm1pRyZuJS1LX1t5NE84SWQsc2J8a3kvOS9ufHlFc2gmTk9WWlF2Lit2cCVUNnFGN2FKMVkuU2cxa3g1SThLSFg/RDFXP2pDRC5NOWJHS19FWm9yazlKcW96XWFpRlV5SXdVL2sreEhkfHo0MXArSWI5LWlqNV1xMSw9Lmg9MkxdM1FSWUt+RnpxS1haSVkweVpTYjVtc009S1tacEs2fCVdLHQ3Qj8uMS1ET2J3UXY9VUNLRDBSUH4wYWIselAya0QzSlFXTjEweTNGSmRIb3Jtci49UGZxNWRjdW0vSVZaM0pmL004THFEenhxQXcyX0lhbS54bTU/flZqRTZIWmJXW1dOPT1mc3I='}]);
+_stq.push([ 'clickTrackerInit', '173646053', '7' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+	</body>
+</html>

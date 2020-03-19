@@ -1,0 +1,96 @@
+<html>
+<head>
+    <title>Проверка браузера, пожалуйста, подождите...</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="noindex,nofollow">
+    <style>
+        #container {
+            height: 400px;
+            position: relative;
+            }
+        #preloader-icon {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -64px;
+            margin-top: -64px;
+            width: 128px;
+            height: 128px;
+            }
+        #noscript {
+            font-family: sans-serif;
+            text-align: center;
+            }
+        #noscript p {
+            font-size: 140%;
+            margin-top: 100px;
+            }
+        #error {
+            color: #A32929;
+            padding-top: 30px;
+            }
+    </style>
+    <script src='//code.jquery.com/jquery-1.11.2.min.js'></script>
+    <script>
+
+        function show_error(title, message) {
+            $('#preloader-icon').hide();
+            $('#error_title').html(title);
+            $('#error_message').html(message);
+            $('#error');
+        }
+
+        function cookies_enabled() {
+            var cookieEnabled = navigator.cookieEnabled;
+            if (cookieEnabled === false) return false;
+            if (!document.cookie && (cookieEnabled === null || /*@cc_on!@*/false)) {
+                document.cookie = "test=1";
+                if (!document.cookie) {
+                    return false;
+                } else {
+                    document.cookie = "test=; expires=" + new Date(0).toUTCString();
+                }
+            }
+            return true;
+        }
+
+        $(function() {
+            $('#preloader-icon').show();
+            var result = eval('6*66*59-66');
+            if (cookies_enabled()) {
+                $.ajax({
+                    data: {
+                        access_challenge_key: result
+                    },
+                    method: 'GET'
+                }).done(function() {
+                    location.reload();
+                }).error(function() {
+                    show_error('Ошибка', 'Не удалось отобразить страницу. Пожалуйста, повторите попытку через несколько минут');
+                });
+            } else {
+                show_error('Требуется поддержка Cookies', '<strong>Зачем включать Cookies?</strong><br /><span>С Вашего IP адреса зафиксирована активность вредоносных программ. Включение Cookies позволит нам проверить,<br /> что запрос производится человеком и отобразить страницу сайта.</span>');
+            }
+        });
+    </script>
+</head>
+<body>
+<div id="container">
+    <img style="display:none;" id="preloader-icon" src="//www.ukraine.com.ua/static/parking/preloader-ccc-128.gif" alt="Loading page, please wait" />
+
+    <div id="noscript">
+        <noscript>
+            <p>Для просмотра сайта включите поддержку JavaScript в Вашем браузере</p>
+
+            <strong>Зачем включать JavaScript?</strong><br />
+            <span>С Вашего IP адреса зафиксирована активность вредоносных программ. Включение JavaScript позволит нам проверить,<br /> что запрос производится человеком и отобразить страницу сайта.</span>
+        </noscript>
+
+        <div id="error">
+            <h1 id="error_title"></h1>
+            <span id="error_message"></span>
+        </div>
+
+    </div>
+</div>
+</body>

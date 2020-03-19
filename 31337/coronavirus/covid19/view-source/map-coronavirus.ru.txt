@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Коронавирус. Онлайн карта распространения коронавируса. Коронавирус в России и мире.</title>
+    <meta name="description" content="Карта распространения коронавируса. Статистика по коронавирусу в России и мире. Новости про коронавирус. Covid-19">
+    <meta name="keywords" content="коронавирус,онлайн карта распространения коронавируса, симптомы коронавируса, коронавирус онлайн, новости про коронавирус, статистика, covid-19, коронавирус в России">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=fdb8c53e-ae71-480d-ba68-f90d50a010e5&lang=ru_RU" type="text/javascript"></script>
+    <script src="/assets/js/jquery-lite-8.js" type="text/javascript"></script>
+    <meta name="og:title" content="Коронавирус. Онлайн карта распространения коронавируса. Коронавирус в России и мире.">
+    <meta name="og:description" content="Карта распространения коронавируса. Статистика по коронавирусу в России и мире. Новости про коронавирус. Covid-19">
+    <meta name="og:image" content="https://map-coronavirus.ru/coronavirus.png">
+    <meta name="og:url" content="https://map-coronavirus.ru">
+    <meta name="twitter:title" content="Коронавирус. Онлайн карта распространения коронавируса. Коронавирус в России и мире.">
+    <meta name="twitter:description" content="Карта распространения коронавируса. Статистика по коронавирусу в России и мире. Новости про коронавирус. Covid-19">
+    <meta name="twitter:image" content="https://map-coronavirus.ru/coronavirus.png">
+    <meta name="twitter:url" content="https://map-coronavirus.ru">
+    <link href="/assets/css/main.css" rel="stylesheet">
+</head>
+</html>
+<body>
+<header class="b-header">
+    <div class="header-content">
+        <a class="h1-wrapper" href="/">
+            <h1 class="name">Coronavirus (Covid-19)</h1>
+        </a>
+        <a class="link" href="#map">Карта заражения</a>
+        <a class="link" href="#confirmed-statistics">Графики</a>
+        <a class="link" href="#news">Важные новости</a>
+        <a class="link" href="#symptoms">Симптомы</a>
+        <a class="link" href="#measures">Меры профилактики</a>
+        <a class="h1-wrapper-mobile" href="/">
+            <h2 class="name-mobile">Coronavirus (Covid-19)</h2>
+        </a>
+        <div class="hamburger js-open-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="menu js-menu">
+            <div class="wrapper">
+                <div class="close js-close-menu">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <div class="title-menu">Меню</div>
+                <div class="list-link">
+                    <a class="link" href="/">Главная</a>
+                    <a class="link" href="/statistika">Статистика</a>
+                    <a class="link" href="/coronavirus">О коронавирусе</a>
+                    <a class="link" href="/novosti">Новости</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="page-container">
+    <div class="map-container">
+        <div class="b-map js-map" id="map"></div>
+        <div class="b-totals js-totals">
+            <div class="total load">
+                <div class="description">Количество погибших</div>
+                <div class="amount"> </div>
+            </div>
+            <div class="total load">
+                <div class="description">Количество вылеченных</div>
+                <div class="amount"> </div>
+            </div>
+            <div class="total load">
+                <div class="description">Количество вылеченных</div>
+                <div class="amount"> </div>
+            </div>
+        </div>
+        <div class="go-to-information js-go-to-statistics">Перейти к статистике</div>
+    </div>
+    <div class="main-content-wrapper">
+        <div class="main-content">
+            <div class="content">
+                <h2 class="title center" id="statistics">Статистика случаев заражения коронавирусом в Роcсии</h2>
+                <div class="b-statistics">
+                    <div class="table-title-row">
+                        <div class="country"></div>
+                        <div class="cell">Заражений</div>
+                        <div class="cell">Смертей</div>
+                    </div>
+                    <div class="animated-background js-statistics-russia">
+                        <div class="statistics-row">
+                            <div class="country load"></div>
+                            <div class="cell load">0</div>
+                            <div class="cell load">0</div>
+                        </div>
+                        <div class="statistics-row">
+                            <div class="country load"></div>
+                            <div class="cell load">0</div>
+                            <div class="cell load">0</div>
+                        </div>
+                        <div class="statistics-row">
+                            <div class="country load"></div>
+                            <div class="cell load">0</div>
+                            <div class="cell load">0</div>
+                        </div>
+                        <div class="statistics-row">
+                            <div class="country load"></div>
+                            <div class="cell load">0</div>
+                            <div class="cell load">0</div>
+                        </div>
+                        <div class="statistics-row">
+                            <div class="country load"></div>
+                            <div class="cell load">0</div>
+                            <div class="cell load">0</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="note">* Зараженные эвакуированы с круизного лайнера Diamond Princess</div>
+            </div>
+            <div class="content">
+                <h2 class="title center" id="statistics">Статистика случаев заражения коронавирусом в Европе</h2>
+                <div class="b-statistics">
+                    <div class="table-title-row">
+                        <div class="country"></div>
+                        <div class="cell">Заражений</div>
+                        <div class="cell">Смертей</div>
+                    </div>
+                    <div class="animated-background js-statistics-europe">
+                        <div class="statistics-row">
+                            <div class="country load"></div>
+                            <div class="cell load">0</div>
+                            <div class="cell load">0</div>
+                        </div>
+                        <div class="statistics-row">
+                            <div class="country load"></div>
+                            <div class="cell load">0</div>
+                            <div class="cell load">0</div>
+                        </div>
+                        <div class="statistics-row">
+                            <div class="country load"></div>
+                            <div class="cell load">0</div>
+                            <div class="cell load">0</div>
+                        </div>
+                        <div class="statistics-row">
+                            <div class="country load"></div>
+                            <div class="cell load">0</div>
+                            <div class="cell load">0</div>
+                        </div>
+                        <div class="statistics-row">
+                            <div class="country load"></div>
+                            <div class="cell load">0</div>
+                            <div class="cell load">0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <h2 class="title center" id="statistics">Мировая статистика случаев заражения коронавирусом</h2>
+                <div class="b-statistics">
+                    <div class="table-title-row">
+                        <div class="country"></div>
+                        <div class="cell">Заражений</div>
+                        <div class="cell">Смертей</div>
+                    </div>
+                    <div class="animated-background js-statistics">
+                        <div class="statistics-row">
+                            <div class="country load"></div>
+                            <div class="cell load">0</div>
+                            <div class="cell load">0</div>
+                        </div>
+                        <div class="statistics-row">
+                            <div class="country load"></div>
+                            <div class="cell load">0</div>
+                            <div class="cell load">0</div>
+                        </div>
+                        <div class="statistics-row">
+                            <div class="country load"></div>
+                            <div class="cell load">0</div>
+                            <div class="cell load">0</div>
+                        </div>
+                        <div class="statistics-row">
+                            <div class="country load"></div>
+                            <div class="cell load">0</div>
+                            <div class="cell load">0</div>
+                        </div>
+                        <div class="statistics-row">
+                            <div class="country load"></div>
+                            <div class="cell load">0</div>
+                            <div class="cell load">0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-chart">
+                <h2 class="title center">График по заражениям</h2><canvas id="confirmed-statistics" width="400" height="400"></canvas>
+            </div>
+            <div class="b-chart">
+                <h2 class="title center"></h2>
+                <canvas id="died-cured-statistics" width="400" height="400"></canvas>
+            </div>
+            <div class="show-more"><a href="/statistika">Перейти к подробной статистике</a></div>
+            <div class="b-articles">
+                <div class="title center" id="news">Важные новости</div>
+                <div class="container js-news"></div>
+                <div class="show-more"><a href="/novosti">Смотреть больше новостей</a></div>
+            </div>
+            <div class="b-about">
+                <div class="container">
+                    <h2 class="title center" id="symptoms">Симптомы коронавируса</h2>
+                    <p>Инкубационный период коронавируса Covid-19 может продолжаться более двух недель. Более продолжительные сроки инкубационного периода могут быть характерны при передаче вируса от животных.</p>
+                    <p>Симптомы коронавируса Covid-19 схожи с симптомами пневмонии или тяжёлого острого респираторного синдрома:</p>
+                    <ul class="symptoms">
+                        <li>Потеря сознания (в результате прогрессирующего разрушения лёгочных тканей),</li>
+                        <li>Сухой, непродуктивный кашель,</li>
+                        <li>Лихорадка и повышение температуры (38 °С или выше, озноб),</li>
+                        <li>Затруднения при дыхании,</li>
+                        <li>Боли в области груди,</li>
+                        <li>Головная боль,</li>
+                        <li>Боль в мышцах,</li>
+                        <li>Общее недомогание.</li>
+                    </ul>
+                </div>
+                <div class="container">
+                    <h2 class="title center" id="measures">Меры профилактики коронавируса</h2>
+                    <ul class="measures">
+                        <li>Часто мойте руки с мылом - не менее 20 секунд</li>
+                        <li>Не касайтесь грязными руками глаз, рта и слизистых</li>
+                        <li>Избегайте тесного контакта с зараженными людьми</li>
+                        <li>Почаще делайте влажную уборку с использованием дезинфицирующих средств</li>
+                        <li>Уточняйте эпидемиологическую обстановку при планировании путешествия</li>
+                        <li>Используйте маски для защиты органов дыхания</li>
+                        <li>При первых признаках заболевания обратитесь за медицинской помощью в лечебные организации</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="show-more m-b"><a href="/coronavirus">Подробнее о коронавирусе</a></div>
+        </div>
+    </div>
+</div>
+<footer class="b-footer">
+    <div class="footer-content">
+        <div class="socials">
+            <div class="share-title">Поделиться:</div>
+            <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,twitter,whatsapp"></div>
+            <a class="tg" href="http://tlg.wtf/share/url?url=https://map-coronavirus.ru/&amp;text=Онлайн карта распространения коронавируса." target="_blank"></a>
+        </div>
+    </div>
+</footer>
+<div class="b-footer-info-row">
+    <div class="info-row">
+        <div class="description">Онлайн карта распространения коронавируса</div>
+        <div class="sources">Основные источники:<a class="source" href="https://3g.dxy.cn/newh5/view/pneumonia?scene=2" target="_blank">DXY</a><span>,</span><a class="source" href="https://bnonews.com/index.php/2020/01/the-latest-coronavirus-cases/" target="_blank">BNO</a></div>
+    </div>
+</div>
+<script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+<script src="https://yastatic.net/share2/share.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>
+<script type="text/javascript" src="/assets/js/home.js"></script>
+</body>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>COVID-19 Data</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/w3.4.css">
+  <link rel="stylesheet" href="css/google-fonts-Montserrat.css">
+  <link rel="stylesheet" href="font-awesome/5.12.1/css/all.min.css">
+
+  <script src='js/lib/leaflet.js'></script>
+  <link href="css/leaflet.css" rel="stylesheet" type="text/css"/>
+  <script src="js/lib/leaflet-providers.js"></script>
+  <script src="js/lib/leaflet.markercluster.js"></script>
+  <script src="js/lib/gpx.js"></script>
+
+  <link rel="stylesheet" href="css/MarkerCluster.css" />
+  <link rel="stylesheet" href="css/MarkerCluster.Default.css" />
+
+  <link rel="stylesheet" href="css/leaflet.fullscreen.css" />
+  <script src="js/lib/Leaflet.fullscreen.min.js"></script>
+
+  <script id='eventMapScript' src='js/covidMap.js' title='data/gd-events.json'></script>
+  <link href="css/eventMap.css" rel="stylesheet" type="text/css"/>
+
+<style>
+  body,h1 {font-family: "Montserrat", sans-serif; background-color:"#888884"}
+  img {margin-bottom: -7px}
+  .w3-row-padding img {margin-bottom: 12px}
+</style>
+</head>
+<body class="w3-black">
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px;">
+
+<!-- Header -->
+<header class="w3-row w3-padding-8 w3-xlarge w3-margin-bottom">
+  <div style="width=400px; float:left">
+    <div class="w3-left-align w3-margin-left">
+      <b>COVID-19</b>
+    </div>
+  </div>
+  <div class="w3-rest">
+    <div class="w3-right-align w3-margin-right">
+    	<a href="mailto:greg@gdanforth.com"><i class="fas fa-envelope w3-hover-text-indigo"></i></a> 
+    </div>
+  </div>
+</header>
+
+<div class="w3-container">
+  <div id="eventMapDiv" class="w3-border w3-border-black w3-dark-grey">
+<!--  
+    <div class="w3-center w3-padding-4 w3-large">
+      Gallery Map
+    </div>
+-->    
+    <div style="height:800px" id="eventMap"></div>
+    <div class="w3-black">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-center w3-opacity w3-medium">
+<i class="fas fa-copyright w3-hover-text-indigo"></i> 2000-2019 G Danforth 
+</footer>
+
+
+<script src='js/lib/jquery-3.2.1.min.js'></script>
+<script src='js/lib/papaparse-5.1.0.min.js'></script>
+<script src="js/lib/handlebars-v4.0.5.js"></script>
+
+
+<script>
+
+  function getQueryVariable(variable) {
+     var query = window.location.search.substring(1);
+     var vars = query.split("&");
+     for (var i=0;i<vars.length;i++) {
+             var pair = vars[i].split("=");
+             if(pair[0] == variable){return pair[1];}
+     }
+     return(false);
+  }
+
+</script>
+
+</body>
+</html>

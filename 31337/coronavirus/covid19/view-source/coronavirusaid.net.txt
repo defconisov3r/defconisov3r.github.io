@@ -1,0 +1,4417 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>-->
+<meta name=viewport content="width=1025">
+
+<link rel="canonical" href="https://coronavirusaid.net/">
+<meta property="fb:app_id" content="316916912071513" />
+<meta property="og:type" content="website" />
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+
+
+<title>
+Coronavirus Aid | Covid-19 | Community Help</title>
+
+
+<meta property="og:description" content="Coronavirus Aid is a platform developed with the purpose to create a community to fight Covid-19, create collaboration within communities and globally, give a virtual space for those who need support and provide information as need it.&nbsp;" />
+
+<meta name="description" content="Coronavirus Aid is a platform developed with the purpose to create a community to fight Covid-19, create collaboration within communities and globally, give a virtual space for those who need support and provide information as need it.&nbsp;" />
+<meta name="keywords" content="Coronavirus, Covid-19, Novel Coronavirus, Help, Aid," />
+
+<meta name="robots" content="INDEX,FOLLOW" />
+
+<h1 style="display: none;">Coronavirus Aid | Covid-19 | Community Help</h1>
+<h2 style="display: none;">Coronavirus Aid is a platform developed with the purpose to create a community to fight Covid-19, create collaboration within communities and globally, give a virtual space for those who need support and provide information as need it.&nbsp;</h2>
+
+<link rel="icon" href="https://coronavirusaid.net/media/favicon/default/favicon_2.jpg" type="image/x-icon" />
+<link rel="shortcut icon" href="https://coronavirusaid.net/media/favicon/default/favicon_2.jpg" type="image/x-icon" />
+<!--[if lt IE 7]>
+<script type="text/javascript">
+//<![CDATA[
+    var BLANK_URL = 'https://coronavirusaid.net/js/blank.html';
+    var BLANK_IMG = 'https://coronavirusaid.net/js/spacer.gif';  
+    //jQuery.noConflict();
+//]]>
+</script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="https://coronavirusaid.net/skin/frontend/on-store-now/default/css/styles_merge.css" media="all" />
+<link rel="stylesheet" type="text/css" href="https://coronavirusaid.net/skin/frontend/on-store-now/default/marketplace/css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="https://coronavirusaid.net/skin/frontend/default/default/marketplace/css/blog.css" media="all" />
+<link rel="stylesheet" type="text/css" href="https://coronavirusaid.net/skin/frontend/on-store-now/default/css/FME/fme_layered_nav.css" media="all" />
+<link rel="stylesheet" type="text/css" href="https://coronavirusaid.net/skin/frontend/default/default/css/print.css" media="print" />
+<script type="text/javascript" src="https://coronavirusaid.net/media/js/e95faaad46b3828355a3f1908305b033.js"></script>
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" href="https://coronavirusaid.net/skin/frontend/default/default/css/styles-ie.css" media="all" />
+<![endif]-->
+<!--[if lt IE 7]>
+<script type="text/javascript" src="https://coronavirusaid.net/media/js/2cfd208416ebd386e5f48b5006e565b0.js"></script>
+<![endif]-->
+<script src="https://coronavirusaid.net/skin/frontend/on-store-now/default/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+Mage.Cookies.path     = '/';
+Mage.Cookies.domain   = '.coronavirusaid.net';
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+optionalZipCountries = ["HK","IE","MO","PA"];
+//]]>
+</script>
+<script type="text/javascript">
+	if (typeof jQuery == 'undefined'){
+	    document.write(unescape("%3Cscript src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+	}
+</script>
+<div id="user_cs_div_container"></div>
+<audio id="wk_cs_chat_notify">
+    <source src="https://coronavirusaid.net/js/ChatSystem/notify.ogg" type="audio/ogg">
+    <source src="https://coronavirusaid.net/js/ChatSystem/notify.mp3" type="audio/mpeg">
+</audio>
+<script> 
+	jQuery.noConflict();
+	var limit_count = 10,title_blink,current_title = jQuery("title").text(),open_first_time = true;
+	var right = 25,window_width = jQuery(window).width(),chat_window_more_than_window_width = false;
+	var more_window_righ=0;
+	
+	function SoundAlert(){
+		jQuery("#wk_cs_chat_notify")[0].play();
+	}	
+
+	jQuery( "body" ).delegate( ".wk_cs_chat_close", "click", function() {
+		var divcount = jQuery('.wk_cs_chatwindow').length;
+		var currid = jQuery(this).parents('.wk_cs_chatwindow').attr('id');
+		var lastdivid = jQuery('.wk_cs_chatwindow').eq(divcount-1).attr('id');
+		var flag = 0;
+		for(var i=1; i < divcount; i++){
+			var posdivid = jQuery('.wk_cs_chatwindow').eq(i-1).attr('id');
+			if(currid==posdivid){
+				flag = 1;
+			}
+			if(flag == 1){	
+				var rightnew = jQuery('.wk_cs_chatwindow').eq(i).css('right');
+				var right1 = parseInt(rightnew.split("px")[0])-260;
+				right = right1+260;
+				jQuery('.wk_cs_chatwindow').eq(i).attr('style','right:'+right1+'px;');				
+			}
+		}
+		if(currid==lastdivid){
+			var rightnew = jQuery('.wk_cs_chatwindow').eq(divcount-1).css('right');
+			var right1 = parseInt(rightnew.split("px")[0]);
+			right = right1;
+		}
+		jQuery(this).parents('.wk_cs_chatwindow').remove();
+	});
+	
+	var u_log_status='0';
+	if(u_log_status==1){
+		jQuery(document).ready(function(){Check_User_Status();});	
+	}
+	
+	jQuery( "body" ).delegate( ".wk_cs_chat_buddies", "click", function() {
+		var id = jQuery(this).attr("id").split("-")[1];		
+		var signalclass = jQuery(this).find("#wk_cs_admin_signal").attr('class');
+		var name = jQuery(this).find(".wk_cs_buddy_name").text();
+		if(id!=0){
+			if(typeof jQuery("body").find("#"+id).attr("id") == "undefined"){	
+				var $obj1=jQuery('<div/>').addClass('wk_cs_chatwindow').attr('id',id).attr('style','right:'+right+'px').attr('onclick','changemycolor(this);')
+					.append(jQuery('<span/>').addClass('wk_cs_fetch_content_limit').attr('id','false').text('10'))
+					.append(
+						jQuery('<div/>').addClass('wk_cs_chat_top').attr('style','background:#525252;')
+						.append(jQuery('<span/>').attr('id','wk_cs_admin_signal').addClass(signalclass))
+						.append(jQuery('<span/>').addClass('wk_cs_user_showname').attr('style','width:134px;').text(name.substring(0,20)))
+						.append(jQuery('<span/>').addClass('wk_cs_user_name').attr('style','display:none;').text(name))
+						.append(
+							jQuery('<span/>').addClass('wk_cs_chat_btn wk_cs_chat_close')
+							.append(jQuery('<span/>').addClass('wk_cs_chat_close_btn'))
+						)
+						.append(
+							jQuery('<span/>').addClass('wk_cs_chat_btn wk_cs_fs').attr('onclick','fullscreen(this);')
+							.append(jQuery('<span/>').addClass('wk_cs_fullscreen'))
+						)
+						.append(
+							jQuery('<span/>').addClass('wk_cs_chat_btn wk_cs_sh').attr('onclick','showhide(this);')
+							.append(jQuery('<span/>').addClass('wk_cs_show'))
+						)
+						.append(
+							jQuery('<span class="wk_europe_time">Central Europe Time</span>')
+						)
+					)
+					.append(
+						jQuery('<div/>').addClass('wk_cs_chat_container')
+						.append(
+							jQuery('<div/>').addClass('wk_cs_chat_list_small')
+							.append(
+								jQuery('<div/>').addClass('wk_cs_loader_container')
+								.append(jQuery('<span/>').addClass('wk_cs_loader').attr('style','display:block;'))
+							)
+							.append(jQuery('<div/>').addClass('wk_cs_chat_moveable_list'))
+							.append(
+								jQuery('<span/>').addClass('wk_cs_chat_btn wk_cs_fs').attr('onclick','fullscreen(this);')
+								.append(jQuery('<span/>').addClass('wk_cs_fullscreen'))
+							)
+						)
+						.append(
+							jQuery('<div/>').addClass('wk_cs_enter_text_container_small')
+							.append(jQuery('<textarea/>').addClass('wk_cs_enter_text_small').attr('id',name+'_'+id).attr('onkeypress','Msg_Entered(this,event);'))
+							
+						)
+					);     				
+				jQuery("body").append($obj1);	
+				if(chat_window_more_than_window_width == true)
+				{
+					if ( jQuery( "#mp_custom_more_chat_windows" ).length==0 ) {
+						//more_window_righ+=260;
+						//jQuery( "body" ).append( "<div id='mp_custom_more_chat_windows' class='wk_cs_chatwindow' style='right:"+more_window_righ+"px;display:none;'><div style='background:#525252;' class='wk_cs_chat_top'><span class='wk_cs_user_showname'>...</span></div></div>" );
+					}
+					
+					if ( jQuery( ".mp_custom_alluser_chat_window" ).length==0 ) {
+					//jQuery( "body" ).append( "<ul class='mp_custom_alluser_chat_window' style='display:none;'></ul>" );
+					}
+					
+					//jQuery("#wk_cs_alluser").find(".wk_cs_chatwindow").eq(0).remove();
+					//jQuery("ul.mp_custom_alluser_chat_window").append("<li><div class=wk_cs_chat_buddies mp_cust_wk_cs_chat_buddies id='list-"+id+"'><span class=wk_cs_buddy_name>"+name+"</span></div></li>");
+				}
+				right+=260;
+				more_window_righ=right;
+				if(right > window_width-500){
+					chat_window_more_than_window_width = true;
+					//right = 285;
+					right=right-260;
+				}
+				openchatwindow(id);
+			}
+		}
+	});
+	
+	
+	function Msg_Entered(thisthis,e) {
+		var strid = jQuery(thisthis).attr('id');
+		var dt = new Date();
+		//+ ":" + dt.getSeconds()
+		var time = dt.getHours() + ":" + dt.getMinutes();
+		if(" ".length > 1)	{
+			if(e.keyCode == 13 && !e.shiftKey){
+				//if(!jQuery.browser.msie)
+					e.preventDefault();
+				var content;
+				if(jQuery(thisthis).val().trim() != ""){
+					var val = jQuery(thisthis).val().replace(/\</g,'&lt;').replace(/\>/g,'&gt;').replace(/\n/g,'</br>');					
+					var href_test_http = val.split("http://");
+					var href_test_https = val.split("https://");
+					var href_test_www = val.split("www");
+					if((href_test_http[0] == "" && href_test_http[1].length > 0) || (href_test_https[0] == "" && href_test_https[1].length > 0) || (href_test_www[0] == "" && href_test_www[1].length > 0))	{
+						if(href_test_www[0] == "" && href_test_www[1].length > 0)	{
+							var $obj3=jQuery('<div/>').addClass('wk_cs_chat')
+								.append(
+									jQuery('<span/>').addClass('wk_cs_chat_ref').attr('title','')
+									.append(jQuery('<span/>').addClass('wk_cs_chat_time').text('['+time+']'))
+									.append(jQuery('<span/>').addClass('wk_cs_chat_myname').text(' :  '))
+								)
+								.append(
+									jQuery('<span/>').addClass('wk_cs_chat_content')
+									.append(jQuery('<a/>').attr('href','http://'+val).attr('target','_blank').text(' '+val))
+								);
+						}
+						else{
+							var $obj3=jQuery('<div/>').addClass('wk_cs_chat')
+								.append(
+									jQuery('<span/>').addClass('wk_cs_chat_ref').attr('title','')
+									.append(jQuery('<span/>').addClass('wk_cs_chat_time').text('['+time+']'))
+									.append(jQuery('<span/>').addClass('wk_cs_chat_myname').text(' :  '))
+								)
+								.append(
+									jQuery('<span/>').addClass('wk_cs_chat_content')
+									.append(jQuery('<a/>').attr('href',val).attr('target','_blank').text(' '+val))
+								);
+						}
+					}
+					else 
+					if(/^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(val)){
+						var $obj3=jQuery('<div/>').addClass('wk_cs_chat')
+								.append(
+									jQuery('<span/>').addClass('wk_cs_chat_ref').attr('title','')
+									.append(jQuery('<span/>').addClass('wk_cs_chat_time').text('['+time+']'))
+									.append(jQuery('<span/>').addClass('wk_cs_chat_myname').text(' :  '))
+								)
+								.append(
+									jQuery('<span/>').addClass('wk_cs_chat_content')
+									.append(jQuery('<a/>').attr('href','mailto:'+val).attr('target','_blank').text(' '+val))
+								);
+						
+					}
+					else	{
+						var $obj3=jQuery('<div/>').addClass('wk_cs_chat')
+								.append(
+									jQuery('<span/>').addClass('wk_cs_chat_ref').attr('title','')
+									.append(jQuery('<span/>').addClass('wk_cs_chat_time').text('['+time+']'))
+									.append(jQuery('<span/>').addClass('wk_cs_chat_myname').text(' :  '))
+								)
+								.append(jQuery('<span/>').addClass('wk_cs_chat_content').text(' '+val));
+					}
+					jQuery('#'+strid.split("_")[1]).find(".wk_cs_chat_moveable_list").append($obj3);
+					jQuery('#'+strid.split("_")[1]).find(".wk_cs_chat_list_small,.wk_cs_chat_list_big").scrollTop(jQuery(".wk_cs_chat_moveable_list").height());					
+					jQuery(thisthis).val("");
+					jQuery.ajax({
+						url: "https://coronavirusaid.net/chatsystem/index/saveconversation/",
+						type: "POST",
+						dataType: 'html',
+						data:{	fromname : "",
+								forid	 : "",
+								toid     :	strid.split("_")[1],
+								toname   :	strid.split("_")[0],
+								message	 : val	}
+					});
+				}
+			}
+			if(e.keyCode == 13 && e.shiftKey){
+				jQuery(this).val(jQuery(this).val());
+			}
+		}
+		else
+			jQuery(".wk_cs_alert_bg").css({"height":jQuery(window).height()}).fadeIn(500,function(){
+				jQuery(".wk_cs_alert_message").animate({"top":"300px"},500);
+			});
+		jQuery('#'+strid.split("_")[1]).find(".wk_cs_chat_list_small,.wk_cs_chat_list_big").scrollTop(jQuery('#'+strid.split("_")[1]).find(".wk_cs_chat_moveable_list").height());
+	}
+	
+	function Check_User_Status(){
+		//for user notify
+		jQuery.ajax({
+			url: "https://coronavirusaid.net/chatsystem/index/checkifnewusermessagethere/",
+			type: "GET",
+			dataType: 'html',
+			success:function(data){
+				if(data){
+					jQuery("#new_header_right #mp_chat_header_link img").attr("src","https://coronavirusaid.net/skin/frontend/on-store-now/default/images/chat-head-notification.png");
+					var users_array = data.replace(/(,$)/g,"").split(",");
+					for(var i = 0;i < users_array.length; i++){
+						var dataarrayofonecustomer = users_array[i].split("-");
+						var name = dataarrayofonecustomer[0];
+						var id = dataarrayofonecustomer[1];
+						if(id!=0){
+							if(typeof jQuery("body").find("#"+id).attr("id") == "undefined"){
+								var $obj1=jQuery('<div/>').addClass('wk_cs_chatwindow').attr('id',id).attr('style','right:'+right+'px').attr('onclick','changemycolor(this);')
+									.append(jQuery('<span/>').addClass('wk_cs_fetch_content_limit').attr('id','false').text('10'))
+									.append(
+										jQuery('<div/>').addClass('wk_cs_chat_top').attr('style','background:#525252;')
+										.append(jQuery('<span/>').attr('id','wk_cs_admin_signal').addClass('wk_cs_signal_on'))
+										.append(jQuery('<span/>').addClass('wk_cs_user_showname').attr('style','width:134px;').text(name.substring(0,20)))
+										.append(jQuery('<span/>').addClass('wk_cs_user_name').attr('style','display:none;').text('Central Europe Time'))
+										.append(
+											jQuery('<span/>').addClass('wk_cs_chat_btn wk_cs_chat_close')
+											.append(jQuery('<span/>').addClass('wk_cs_chat_close_btn'))
+										)
+										.append(
+											jQuery('<span/>').addClass('wk_cs_chat_btn wk_cs_fs').attr('onclick','fullscreen(this);')
+											.append(jQuery('<span/>').addClass('wk_cs_fullscreen'))
+										)
+										.append(
+											jQuery('<span/>').addClass('wk_cs_chat_btn wk_cs_sh').attr('onclick','showhide(this);')
+											.append(jQuery('<span/>').addClass('wk_cs_show'))
+										)
+										.append(
+											jQuery('<span class="wk_europe_time">Central Europe Time</span>')
+										)
+									)
+									.append(
+										jQuery('<div/>').addClass('wk_cs_chat_container')
+										.append(
+											jQuery('<div/>').addClass('wk_cs_chat_list_small')
+											.append(
+												jQuery('<div/>').addClass('wk_cs_loader_container')
+												.append(jQuery('<span/>').addClass('wk_cs_loader').attr('style','display:block;'))
+											)
+											.append(jQuery('<div/>').addClass('wk_cs_chat_moveable_list'))
+											.append(
+												jQuery('<span/>').addClass('wk_cs_chat_btn wk_cs_fs').attr('onclick','fullscreen(this);')
+												.append(jQuery('<span/>').addClass('wk_cs_fullscreen'))
+											)
+										)
+										.append(
+											jQuery('<div/>').addClass('wk_cs_enter_text_container_small')
+											.append(jQuery('<textarea/>').addClass('wk_cs_enter_text_small').attr('id',name+'_'+id).attr('onkeypress','Msg_Entered(this,event);'))
+										)
+									);     				
+								jQuery("body").append($obj1);
+								Fetch_Msg_From_Admin_For_Users(id,false);
+								jQuery("#"+id).find(".wk_cs_chat_top").css({"background":"#525252"});
+								jQuery.ajax({
+									url: "https://coronavirusaid.net/chatsystem/index/notifyusermsgisreadnow/",
+									type: "POST",
+									data:{
+										userid : "",
+										toid : id
+									}
+								});
+								if(chat_window_more_than_window_width == true)
+									jQuery("#wk_cs_alluser").find(".wk_cs_chatwindow").eq(0).remove();
+								right+=260;
+								if(right > window_width-500){
+									chat_window_more_than_window_width = true;
+									right = 285;
+								}
+								openchatwindow(id);
+								
+							}
+							else{
+								jQuery("body").find("#"+id).find(".wk_cs_chat_top").css({"background":"#525252"});
+								Fetch_Msg_From_Admin_For_Users(id,false);
+								jQuery.ajax({
+									url	: "https://coronavirusaid.net/chatsystem/index/notifyusermsgisreadnow/",
+									type: "POST",
+									data:{
+										userid : "",
+										toid : id
+									}
+								});
+							}
+						}
+					}
+				}
+			}
+		});
+		
+	}
+
+		
+	function changemycolor(thisthis){
+		clearInterval(title_blink);
+		jQuery(thisthis).find(".wk_cs_chat_top").css({"background":"#000"});
+		jQuery("title").text(current_title);
+		jQuery("body").find(".wk_cs_chatwindow").each(function(){jQuery(this).css({"z-index":"0"});});
+		jQuery(thisthis).css({"z-index":"999"});
+	}
+	function showhide(thisthis){
+		var thisid = jQuery(thisthis).parents('.wk_cs_chatwindow').attr('id');
+		jQuery('#'+thisid).find(".wk_cs_chat_top").css({"background":"#000"});
+		if(jQuery(thisthis).find("span").attr("class") == "wk_cs_hide"){
+			jQuery(thisthis).parent().next().hide();
+			jQuery(thisthis).find("span").attr("class","wk_cs_show");
+			jQuery(thisthis).parent().parent().css({"width":"250px"});
+			jQuery(thisthis).prev().find("span").attr("class","wk_cs_fullscreen");
+			jQuery(thisthis).parent().find(".wk_cs_user_showname").css({"width":"134px"});
+		}
+		else{			
+			Fetch_Msg_From_Admin_For_Users(thisid,false);
+			jQuery(thisthis).parent().next().find(".wk_cs_chat_list_big").attr("class","wk_cs_chat_list_small");
+			jQuery(thisthis).parent().next().find(".wk_cs_enter_text_container_big").attr("class","wk_cs_enter_text_container_small");			
+			jQuery(thisthis).parent().next().find(".wk_cs_enter_text_big").attr("class","wk_cs_enter_text_small");
+			jQuery(thisthis).parent().parent().css({"width":"250px"});
+			jQuery(thisthis).parent().next().css({"height":"250px"}).show();
+			jQuery(thisthis).find("span").attr("class","wk_cs_hide");
+			jQuery(thisthis).parent().next().find(".wk_cs_chat_list_small").scrollTop(jQuery(thisthis).parent().next().find(".wk_cs_chat_moveable_list").height());
+			jQuery(thisthis).parent().find(".wk_cs_user_showname").css({"width":"134px"});
+		}
+	}
+	function fullscreen(thisthis){
+		var thisid = jQuery(thisthis).parents('.wk_cs_chatwindow').attr('id');
+		Fetch_Msg_From_Admin_For_Users(thisid,false);
+		if(jQuery(thisthis).find("span").attr("class") == "wk_cs_fullscreen"){
+			jQuery(thisthis).parent().next().find(".wk_cs_chat_list_small").attr("class","wk_cs_chat_list_big");
+			jQuery(thisthis).parent().next().find(".wk_cs_enter_text_container_small").attr("class","wk_cs_enter_text_container_big");
+			jQuery(thisthis).parent().next().find(".wk_cs_enter_text_small").attr("class","wk_cs_enter_text_big");
+			jQuery(thisthis).parent().parent().css({"width":"500px"});
+			jQuery(thisthis).parent().next().css({"height":"500px"}).show();
+			jQuery(thisthis).find("span").attr("class","wk_cs_smallscreen");
+			jQuery(thisthis).next().find("span").attr("class","wk_cs_hide");
+			jQuery(thisthis).parent().find(".wk_cs_user_showname").css({"width":"300px"});
+			
+		}
+		else{			
+			jQuery(thisthis).parent().next().find(".wk_cs_chat_list_big").attr("class","wk_cs_chat_list_small");
+			jQuery(thisthis).parent().next().find(".wk_cs_enter_text_container_big").attr("class","wk_cs_enter_text_container_small");
+			jQuery(thisthis).parent().next().find(".wk_cs_enter_text_big").attr("class","wk_cs_enter_text_small");
+			jQuery(thisthis).parent().parent().css({"width":"250px"});
+			jQuery(thisthis).parent().next().css({"height":"250px"});
+			jQuery(thisthis).find("span").attr("class","wk_cs_fullscreen");
+			jQuery(thisthis).next().find("span").attr("class","wk_cs_hide");
+			jQuery(thisthis).parent().find(".wk_cs_user_showname").css({"width":"134px"});
+		}
+	}
+	function openchatwindow(thisthis){
+		var thisid = thisthis;
+		Fetch_Msg_From_Admin_For_Users(thisid,false);
+		jQuery('#'+thisid).find(".wk_cs_chat_list_big").attr("class","wk_cs_chat_list_small");
+		jQuery('#'+thisid).find(".wk_cs_enter_text_container_big").attr("class","wk_cs_enter_text_container_small");			
+		jQuery('#'+thisid).find(".wk_cs_enter_text_big").attr("class","wk_cs_enter_text_small");
+		jQuery('#'+thisid).css({"width":"250px"});
+		jQuery('#'+thisid).find('.wk_cs_chat_container').css({"height":"250px"}).show();
+		jQuery('#'+thisid).find(".wk_cs_sh").find("span").attr("class","wk_cs_hide");
+		jQuery('#'+thisid).find(".wk_cs_chat_list_small").scrollTop(jQuery('#'+thisid).find(".wk_cs_chat_moveable_list").height());
+		jQuery('#'+thisid).find(".wk_cs_user_showname").css({"width":"134px"});
+	}
+</script>
+<!--<link media="all" href="" type="text/css" rel="stylesheet">-->
+<link rel="stylesheet" id="style_font" type="text/css" href="">
+<script type='text/javascript'>
+function addstyle()
+{
+    document.getElementById('style_font').href="https://coronavirusaid.net/skin/frontend/on-store-now/default/marketplace/css/CS_Front.css";
+}
+</script>
+<script type="text/javascript">//<![CDATA[
+        var Translator = new Translate([]);
+        //]]></script><link media="all" href="https://coronavirusaid.net/skin/frontend/on-store-now/default/css/custom_style_all.css" type="text/css" rel="stylesheet">
+
+<!-- <div class="Mahesh" style="display: none;"></div> --></head>
+<body class=" board-index-index lang-en">
+<div class="wrapper">
+        <noscript>
+        <div class="global-site-notice noscript">
+            <div class="notice-inner">
+                <p>
+                    <strong>JavaScript seems to be disabled in your browser.</strong><br />
+                    You must have JavaScript enabled in your browser to utilize the functionality of this website.                </p>
+            </div>
+        </div>
+    </noscript>
+    <div class="page">
+        
+<!--<script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initgLocation"></script>-->
+
+<!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>-->
+
+<!--<script>jQuery.getScript("https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAhtIe0O57pNLk06JrOmeVHYxc4fbuRUAo&callback=initgLocation");</script>-->
+
+
+<div class="header-container">
+
+<input type="hidden" name="redirect_url" id="redirect_url" value="">
+    <div class="header">
+
+      <!--<div class="main-full">-->
+
+	<div class="box-topHeader megt-header">
+
+	    <div class="container">
+
+		<div class="row">
+
+		
+
+		<div class="new_header_type" id="new_header_type">
+
+							<div class="new_header_left box-store">
+
+								<ul class="list-topLeft list-topLeftHome">
+
+			    <!--<li>
+
+				    <a href="">
+
+				    <span class="hmlogo"><img src="" title="HOME" alt="HOME" /></span>
+
+				    <span class="tx"></span>
+
+				    </a>
+
+			    </li>-->
+
+							<li  class="logo-li">	
+
+			    <a href="https://coronavirusaid.net/" title="Coronavirus" class="logo_link">
+
+			
+
+								<img src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/logo-head.jpg" alt="Coronavirus" />
+
+							
+
+							</a>
+
+			   </li>
+
+			    <li class="browse-icon" style="display: none">
+
+				<a id="mp_toggle_browse" href="javascript:void(0);">Browse</a>
+
+				<!--<div class="nav_container" id="head_nav_browse_container">-->
+
+				    <ul id="head_nav_browse" class="nav_main_list">
+
+					<li>
+
+					    <a href="https://coronavirusaid.net/home">Main</a>
+
+					</li>
+
+					<li class="has_sub_nav">
+
+					    <a href="https://coronavirusaid.net/blog">Blog</a>
+
+					</li>
+
+					<li class="has_sub_nav">
+
+					    <a href="https://coronavirusaid.net/set">Fashion Sets</a>
+
+					</li>
+
+					<li class="has_sub_nav">
+
+					    <a href="https://coronavirusaid.net/virtual-try-on">Virtual Try On</a>
+
+					</li>
+
+				       
+
+				       	<li>
+
+					    <a href="https://coronavirusaid.net/stores">Brands</a>
+
+					</li>
+
+					
+
+					<li style="display: none;" class="has_sub_nav">
+
+					    <a href="https://coronavirusaid.net/video/index/allvideos">Videos</a>
+
+					</li>
+
+					<li style="display: none;">
+
+					    <a href="https://coronavirusaid.net/ciscatalog/index/catalogs">Collections</a>
+
+					</li>
+
+					
+
+						<li class="ddl_item_community">
+
+						
+						<a class="top-account-a fancybox" href="#inline1">Groups</a>
+
+						
+					    
+
+					</li>
+
+					<li class="ddl_item_community">
+
+						
+						<a class="top-account-a fancybox" href="#inline1">Community</a>
+
+						
+					    
+
+					</li>
+
+					<li class="mp_currency_swith">
+
+					    <div class="currency_section">
+
+						<div class="currency_lbl">Currency</div>
+
+						<div class="currency_ddl select-style">
+        <select tabindex="1" class="currency_switcher" name="currency_id" id="currency_id" onchange="window.location.href=this.value">
+                         <option value="https://coronavirusaid.net/directory/currency/switch/currency/AFN/uenc/aHR0cHM6Ly9jb3JvbmF2aXJ1c2FpZC5uZXQv/"
+            >
+            Af        </option>
+                         <option value="https://coronavirusaid.net/directory/currency/switch/currency/DZD/uenc/aHR0cHM6Ly9jb3JvbmF2aXJ1c2FpZC5uZXQv/"
+            >
+            DA        </option>
+                         <option value="https://coronavirusaid.net/directory/currency/switch/currency/AOA/uenc/aHR0cHM6Ly9jb3JvbmF2aXJ1c2FpZC5uZXQv/"
+            >
+            Kz        </option>
+                         <option value="https://coronavirusaid.net/directory/currency/switch/currency/ARS/uenc/aHR0cHM6Ly9jb3JvbmF2aXJ1c2FpZC5uZXQv/"
+            >
+            AR$        </option>
+                         <option value="https://coronavirusaid.net/directory/currency/switch/currency/AWG/uenc/aHR0cHM6Ly9jb3JvbmF2aXJ1c2FpZC5uZXQv/"
+            >
+            Afl.        </option>
+                         <option value="https://coronavirusaid.net/directory/currency/switch/currency/AUD/uenc/aHR0cHM6Ly9jb3JvbmF2aXJ1c2FpZC5uZXQv/"
+            >
+            AU$        </option>
+                         <option value="https://coronavirusaid.net/directory/currency/switch/currency/AZM/uenc/aHR0cHM6Ly9jb3JvbmF2aXJ1c2FpZC5uZXQv/"
+            >
+                    </option>
+                         <option value="https://coronavirusaid.net/directory/currency/switch/currency/GBP/uenc/aHR0cHM6Ly9jb3JvbmF2aXJ1c2FpZC5uZXQv/"
+            >
+            £        </option>
+                         <option value="https://coronavirusaid.net/directory/currency/switch/currency/EUR/uenc/aHR0cHM6Ly9jb3JvbmF2aXJ1c2FpZC5uZXQv/"
+                            selected="SELECTED"
+            >
+            €        </option>
+                         <option value="https://coronavirusaid.net/directory/currency/switch/currency/CHF/uenc/aHR0cHM6Ly9jb3JvbmF2aXJ1c2FpZC5uZXQv/"
+            >
+            CHF        </option>
+                    </select>
+</div>
+
+					    </div>
+
+					</li>
+
+<!----removed dropdown-->
+
+				<li class="mp_powered_by">
+
+					<div class="mp_pb_main">
+
+						<div class="mp_pb_text">By</div>
+
+						<div class="mp_pb_img"><img src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/g_icon.png"></div>
+
+					</div>
+
+				</li>
+
+				    </ul>
+
+				 <!--</div>-->
+
+			    </li>
+
+                <li class="search-n-icon">
+																	<div class="sort-by-middle-cont"></div>							
+							<div class="input-box form serachbox">								
+								<input class="form-control txt-auto input-text" id="search_board"  name="search_blog" placeholder="" type="text" autocomplete="off" onkeypress="hideSug();">
+								<span id="blogsearch" class="icon-srch"><i class="fa fa-search"></i></span>
+								<ul id="search_suggestion_holder"></ul>
+							</div>
+							<div id="search_autocomplete_default_home" style="display: none;">
+								<div class="le-search-side" style="top: 37px;"><p>Search for</p><ul class="threeoption"><li><a href="https://coronavirusaid.net/women.html"><img style="width:10%" src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/dd_product.png"><span>Products</span></a></li><li><a href="https://coronavirusaid.net/set"><img style="width:18%" src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/dd_blog_head.png"><span>Blogs</span></a></li><li><a href="https://coronavirusaid.net/gmap/?add_q=London, UK"><img style="width:12%" src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/map.png"/><span>Products in Map</span></a></li></ul></div>							</div>	
+															
+						<div class="sort-by-field mp_sort_ddl">
+							<select name="topsort" id="topsort" class="country_id" onchange="javascript:window.location.href='?sort='+this.value;">
+								<option value="new" selected="selected">Newest First</option>
+								<option value="name" >Title</option>
+								<option value="popularity" >Most Popular</option>
+							</select>
+						</div>						
+						<script>
+						var default_ajax_data = '<div class="le-search-side" style="top: 37px;"><p>Search for</p><ul class="threeoption"><li><a href="https://coronavirusaid.net/women.html"><img style="width:10%" src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/dd_product.png"><span>Products</span></a></li><li><a href="https://coronavirusaid.net/set"><img style="width:18%" src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/dd_blog_head.png"><span>Blogs</span></a></li><li><a href="https://coronavirusaid.net/gmap/?add_q=London, UK"><img style="width:12%" src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/map.png"/><span>Products in Map</span></a></li></ul></div>';
+						//document.getElementById('search_autocomplete_default_home').innerHTML = default_ajax_data;
+						
+						 document.onclick = function(e){
+							if(e.target.id === 'search_board'){
+								if(document.getElementById('search_board').value != ''){
+									document.getElementById('search_autocomplete_default_home').innerHTML = '';
+									document.getElementById('search_autocomplete_default_home').style.display = 'none';
+								}
+								else{
+									document.getElementById('search_autocomplete_default_home').innerHTML = default_ajax_data;
+									document.getElementById('search_autocomplete_default_home').style.display = 'block';
+								}
+							}
+							else if(e.target.id !== 'search_autocomplete_default_home'){
+								document.getElementById('search_autocomplete_default_home').innerHTML = '';
+								document.getElementById('search_autocomplete_default_home').style.display = 'none';
+							}
+						  };
+						  
+						  function hideSug(){
+							document.getElementById('search_autocomplete_default_home').innerHTML = '';
+							document.getElementById('search_autocomplete_default_home').style.display = 'none';
+						  }
+						  function checkSug(){
+							if(document.getElementById('search_board').value != ''){
+								document.getElementById('search_autocomplete_default_home').innerHTML = '';
+								document.getElementById('search_autocomplete_default_home').style.display = 'none';
+							}
+						  }
+						</script>
+						<style>
+							.header .search-n-icon #search_autocomplete_default_home {
+								z-index: 999;
+								left: 40px !important;
+								top: 22px !important;
+							}
+
+							.header .search-n-icon #search_autocomplete_default_home .le-search-side {
+								width: 410px !important;
+							}
+
+							.header .search-n-icon #search_autocomplete_default_home p {
+								color: #000;
+								line-height: 35px;
+								margin-left: 10px;
+								font-family: 'merriweather_sansregular';
+							}
+
+							.header .search-n-icon #search_autocomplete_default_home .threeoption {
+								margin-left: 8px;
+							}
+
+							.header .search-n-icon #search_autocomplete_default_home li {
+								width: 100%;
+							}
+
+							.header .search-n-icon #search_autocomplete_default_home li a {
+								line-height: 30px;
+								color: #363636;
+							}
+
+							.header .search-n-icon #search_autocomplete_default_home li a span {
+								margin-left: 13px;
+							}
+						</style>	
+										<div class="box-searchTop" style="display: none;">
+
+						<div class="box-searchTop-inner">
+
+								<!--<div class="search_section_main">-->
+
+								<!--<div class="header_bottom">-->
+
+									<!--<div class="header_site_search_field">-->
+
+									
+									<!--</div>
+
+									<div class="header_site_search_address_field">-->
+
+									
+
+												<!--</div>-->
+
+									<div class="adv_search_list button-address" style="text-align: center;">
+
+													
+
+									<a id="btn_adv_search_list" class="adv_opt_links" href="javascript:void(0);" style="display: none;">
+
+									  <!--  <img class="header_search_list_img" src=""/>-->
+
+									  <!--  <span class="pr_in_list"></span>-->
+
+														
+										<!--<img class="header_search_map_img-3" src=""/>-->
+
+														
+									</a>
+
+															<input type="text" placeholder="&nbsp;&nbsp;&nbsp; Location" title="  Location" class="adv_textbox noSubmit bg" name="adv_search_add" id="adv_search_add">
+
+
+
+									</div>
+
+									<div class="adv_search_map button-address" style="text-align: left;">
+
+														<a id="btn_adv_search_map" class="adv_opt_links" href="javascript:void(0);">
+
+																<!--  <img class="header_search_list_img" src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/src-icon.png"/>-->
+
+																	
+																		<span class="pr_in_map">Near Me</span>
+
+																	
+
+														</a>
+
+									</div>
+
+								<!--</div>-->
+
+								<!--</div>-->
+
+							</div>
+
+						</div>
+                
+
+                </li>
+
+																<!---moved map from here to next ul>
+
+																
+
+				
+<!--		<li class="mp_chat_header"><a href="javascript:void(0);" id="mp_chat_header_link"></a><a href="#inline1" class="fancybox" id="mp_chat_header_link"></a></li>
+
+-->			
+
+			</ul>
+
+								
+
+							</div>
+
+					 
+	
+
+	      <div class="new_header_right" id="new_header_right"><ul class="new_type_header  usr_not_loggedin">
+	          	          <li class="invite-header-link">
+                <a id="mp_invite_link" class="fancybox" href="#inline1"><img src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/group-header-icn.png" title="Groups" alt="Groups"><span>Groups</span></a>
+                </li>
+	          
+
+							<li class="header-map-icon">
+
+				<a id="mp_map_click" href="https://coronavirusaid.net/gmap/?add_q=London, UK"><img src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/map-icon-header.png" title="MAP" alt="MAP" /><span>Map</span></a>
+
+				
+				<!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhtIe0O57pNLk06JrOmeVHYxc4fbuRUAo"></script>-->
+
+				
+				
+																</li>
+																													<li class=""><a href="#inline1" class="fancybox" ><img  src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/notification-icon.png" /><span>News</span></a></li>
+														
+
+							<li class="" style="display: none;"><a href="https://coronavirusaid.net/set" ><img  src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/blog-head.png" /><span>Sets</span></a></li>
+
+							<!--<li class=""><a href="virtual-try-on" ><img  src="" /><span>Try on</span></a></li>-->
+
+							<li class="mp-group-top-link">
+
+								<a href="#inline1" class="fancybox" ><img  src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/group-head.png" /><span>Groups</span></a>								
+
+													
+													<li class="blog-icon"><a href="#inline1" class="fancybox" ><img  src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/login-head.png" /><span>Login</span></a></li>
+
+						
+							
+
+						<li class=""><a href="#inline1" class="fancybox" id="mp_chat_header_link"><img  src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/scr-header-chat.png" /><span>chat</span></a></li>
+
+						<li class=""><a href="https://coronavirusaid.net/checkout/cart/" ><img  src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/cart-head.png" /><span>Cart</span></a></li>
+
+					
+
+							<li class="mp_google_trans new_language">
+
+						
+					    <!-- Google Translator start -->
+
+					    <div id="mp_g_translator">
+
+						  <div id="google_translate_element"></div>
+
+						</div>
+
+						<script type="text/javascript">
+
+						function googleTranslateElementInit() {
+
+						  new google.translate.TranslateElement({pageLanguage: 'en',includedLanguages: 'ar,da,de,el,en,es,fr,it,ja,ko,nl,no,pl,pt,ru,tr,zh-TW,cs,hi,id,iw,sr,sv' ,layout: google.translate.TranslateElement.InlineLayout.VERTICAL}, 'google_translate_element');
+
+
+
+						  jQuery( document ).ready(function() {
+						      jQuery( "#mp_invite_link" ).click(function() {
+                                  jQuery("#redirect_url").val('https://coronavirusaid.net/social/groups/create/step/group-details/?type=event');
+                                });
+						      var open_login='';
+						      if(open_login==1){
+						          jQuery("#redirect_url").val('https://coronavirusaid.net/social/groups/create/step/group-details/?type=event');
+						          jQuery(".top-account-a").click();
+						      }
+						      
+						      var open_event='';
+						      if(open_event){
+						          jQuery(".top-account-a").click();
+						      }
+
+						  	//setTimeout(function(){  
+
+						    jQuery( ".goog-te-menu-frame" ).hover(
+
+							  function() {
+
+							    jQuery('#head_nav_browse').toggle();  
+
+							  }, function() {
+
+							    jQuery('#head_nav_browse').toggle();
+
+							  }
+
+							);
+
+						    //}, 2000);
+
+
+
+						    //Set Language automatically to the browser language
+
+					//	    var a = document.querySelector(".goog-te-combo");
+
+					//					   var a = document.querySelector(".goog-te-combo");
+
+					//									setTimeout(function(){
+
+																				//		var sboxvalue = jQuery( ".goog-te-combo option:selected" ).text();
+
+																				//		if(sboxvalue=="Select Language"){
+
+																				//		jQuery( ".goog-te-combo option:selected" ).text("Language");
+
+																				//		}
+
+		              //      var userLang = navigator.language || navigator.userLanguage || navigator.languages;
+
+		            //        var default_lang=userLang.substr(0,2);
+
+		           //         var lang_index=jQuery(".goog-te-combo option[value$='"+default_lang+"']").index();
+
+		          //          var a = document.querySelector(".goog-te-combo");
+
+		          //          if(lang_index!=-1){
+
+		          //          	a.selectedIndex=lang_index;
+
+		          //          	a.dispatchEvent(new Event('change'));
+
+		         //       	}
+
+		   //      }, 2000);
+
+									
+
+		//				setTimeout(function(){
+
+		//																	var sboxvalue = jQuery( ".goog-te-combo option:selected" ).text();
+
+		//																		if(sboxvalue=="Select Language"){
+
+		//																		jQuery( ".goog-te-combo option:selected" ).text("Language");
+
+		//																		}
+
+		//																			//var e = document.getElementsByClassName("goog-te-combo")[0];
+
+		//																		//	console.log(a.selectedIndex);
+
+		//																			var strUser = a.options[a.selectedIndex].value;
+
+		//																			console.log(strUser);
+
+		//																			//if(a.selectedIndex!="0"){
+
+		//																			if(strUser){
+
+		//																				var 	default_lang =strUser;
+
+		//																				console.log("define");
+
+		//																								jQuery('#new_header_right').removeClass();
+
+		//																				jQuery('#new_header_right').addClass("langs-"+default_lang +' new_header_right');
+
+		//																
+
+		//																			}
+
+		//																		
+
+		//																			//else{
+
+		////																				var 	default_lang ='en'; // set default lanague english
+
+		////																				console.log("notdefine");
+
+		////																			}
+
+		////																		
+
+		//																						
+
+		////																						jQuery('#new_header_right').addClass("langs-"+default_lang +' new_header_right');
+
+		////                    var lang_index=jQuery(".goog-te-combo option[value$='"+default_lang+"']").index();
+
+		////                     
+
+		//                    // console.log(lang_index);
+
+		//                    //if(lang_index!=-1){
+
+		//                    //	a.selectedIndex=lang_index;
+
+		//                    //	a.dispatchEvent(new Event('change'));
+
+		//                    //}
+
+		//                    /*var userLang = navigator.language || navigator.userLanguage || navigator.languages;
+
+		//                    var default_lang=userLang.substr(0,2);
+
+		//																				console.log(default_lang);
+
+		//																					//var 	default_lang ='en'; // set default lanague english
+
+		//																						jQuery('#new_header_type').addClass("lang-"+default_lang +' new_header_type');
+
+		//																				jQuery('#new_header_type').removeClass();
+
+		//																						jQuery('#new_header_type').addClass("lang-"+default_lang +' new_header_type');
+
+		//                    var lang_index=jQuery(".goog-te-combo option[value$='"+default_lang+"']").index();
+
+		//                     
+
+		//                    // console.log(lang_index);
+
+		//                    if(lang_index!=-1){
+
+		//                    	a.selectedIndex=lang_index;
+
+		//                    	a.dispatchEvent(new Event('change'));
+
+		//                    }*/
+
+		//                   }, 2000);
+
+							//End	
+
+
+
+							jQuery( ".goog-te-combo" ).change(function() {
+
+						    	var language=jQuery(this).val();
+
+													jQuery('#new_header_right').removeClass();
+
+													jQuery('#new_header_right').addClass("langs-"+language +' new_header_right');
+
+																								
+
+						    	if(language=='zh-TW'){
+
+						    		language='zh';
+
+						    	}
+
+							  	new Ajax.Request("https://coronavirusaid.net/gmap/index/ChangeStore/?___store="+language, {
+
+									method: 'Post',
+
+									dataType: 'json',
+
+									parameters: {"lang":language},
+
+									onComplete: function(transport) {
+
+									}
+
+									});
+
+							  	jQuery('#head_nav_browse').hide();
+
+							});
+
+												
+
+						});
+
+
+
+						}
+
+						</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+
+						
+
+						<style type="text/css">
+
+							.goog-te-gadget-simple{border-style:none!important;background-color:transparent!important}.goog-te-menu-value{line-height:normal!important;margin-left:0!important}.goog-te-banner-frame.skiptranslate,.goog-te-gadget-icon{display:none}.goog-te-gadget-simple .goog-te-menu-value span{text-decoration:none}.goog-tooltip{visibility:hidden!important}.goog-te-combo{width:95%;border-style:none}.goog-te-gadget{color:transparent}.goog-logo-link{display:none!important}html body.topspace-2{top:0!important}
+
+						</style>
+
+					    <!-- End -->
+
+					    
+				</li>
+
+						<li class="new_curreny">
+        <select tabindex="1" class="currency_switcher" name="currency_id" id="currency_id" onchange="window.location.href=this.value">
+                         <option value="https://coronavirusaid.net/directory/currency/switch/currency/AFN/uenc/aHR0cHM6Ly9jb3JvbmF2aXJ1c2FpZC5uZXQv/"
+            >
+            Af        </option>
+                         <option value="https://coronavirusaid.net/directory/currency/switch/currency/DZD/uenc/aHR0cHM6Ly9jb3JvbmF2aXJ1c2FpZC5uZXQv/"
+            >
+            DA        </option>
+                         <option value="https://coronavirusaid.net/directory/currency/switch/currency/AOA/uenc/aHR0cHM6Ly9jb3JvbmF2aXJ1c2FpZC5uZXQv/"
+            >
+            Kz        </option>
+                         <option value="https://coronavirusaid.net/directory/currency/switch/currency/ARS/uenc/aHR0cHM6Ly9jb3JvbmF2aXJ1c2FpZC5uZXQv/"
+            >
+            AR$        </option>
+                         <option value="https://coronavirusaid.net/directory/currency/switch/currency/AWG/uenc/aHR0cHM6Ly9jb3JvbmF2aXJ1c2FpZC5uZXQv/"
+            >
+            Afl.        </option>
+                         <option value="https://coronavirusaid.net/directory/currency/switch/currency/AUD/uenc/aHR0cHM6Ly9jb3JvbmF2aXJ1c2FpZC5uZXQv/"
+            >
+            AU$        </option>
+                         <option value="https://coronavirusaid.net/directory/currency/switch/currency/AZM/uenc/aHR0cHM6Ly9jb3JvbmF2aXJ1c2FpZC5uZXQv/"
+            >
+                    </option>
+                         <option value="https://coronavirusaid.net/directory/currency/switch/currency/GBP/uenc/aHR0cHM6Ly9jb3JvbmF2aXJ1c2FpZC5uZXQv/"
+            >
+            £        </option>
+                         <option value="https://coronavirusaid.net/directory/currency/switch/currency/EUR/uenc/aHR0cHM6Ly9jb3JvbmF2aXJ1c2FpZC5uZXQv/"
+                            selected="SELECTED"
+            >
+            €        </option>
+                         <option value="https://coronavirusaid.net/directory/currency/switch/currency/CHF/uenc/aHR0cHM6Ly9jb3JvbmF2aXJ1c2FpZC5uZXQv/"
+            >
+            CHF        </option>
+                    </select>
+</li>
+
+			   </ul> </div>
+
+
+
+
+
+		    
+
+		    
+
+		   <div class="clear"></div>
+
+		</div>
+
+				
+
+		    <div class="box-signIn col-md-4 usr_not_loggedin" style="display: none;">
+
+					<div class="list-topRight">
+
+					    
+<!--						<div style="display: none;" class="select-language-bar">
+
+						    <div class="sep">|</div>
+
+						    <div class="select-language-main">
+
+								    
+						    </div>
+
+						    <div class="sep">|</div>
+
+						    <div class="select-language-main eur-select">
+
+								    
+						    </div>
+
+						</div>
+
+-->					</div> <!--list-topRight-->
+
+		    </div>
+
+		</div> <!--row-->
+
+	    </div> <!--container-->
+
+	</div> <!--header-row-one-->
+
+    <!--</div>-->
+
+    <!--<div style="display: none !important;"></div>-->
+
+			<script>
+
+			    var jq_head = jQuery.noConflict();
+
+			    
+
+			    function initgLocation() {
+
+				//alert('test');
+
+				var input_adv_add =document.getElementById('adv_search_add');  
+
+				var searchBox2 = new google.maps.places.SearchBox(input_adv_add);
+
+				
+
+				if ( jq_head( "#gmap_address" ).length ) {
+
+				    var input_add2 =document.getElementById('gmap_address');  
+
+				    var searchBoxAdd2 = new google.maps.places.SearchBox(input_add2);
+
+				}
+
+			    }
+
+			    
+
+			    var main_cat="https://coronavirusaid.net/catalog/category/view/";
+
+			    var cat_url = main_cat;
+
+			    jq_head("#btn_gotolist").click(function(){
+
+				var address = jq_head("#add_q").val();
+
+				var cat_id = jq_head("#category_id").val();
+
+				var brand_id = jq_head("#stores").val();
+
+				var minprice = jq_head("#minprice").val();
+
+				var maxprice = jq_head("#maxprice").val();
+
+				//var currency = jq_head("#currency").val();
+
+				var size = jq_head("#size").val();
+
+				var color = jq_head("#color").val();
+
+				var couuntry =''; //jq_head("#country_search").val();
+
+				var main_cat_id = jq_head("#main_category_id").val();
+
+				if (cat_id=='') {
+
+				var valu = jq_head("#main_category_id").val();
+
+				 jq_head("select#main_category_id option").each(function()
+
+				    {
+
+					var allval = jq_head(this).val();
+
+					if (allval==valu) {
+
+					    if (jq_head(this).attr('hr')!="") {
+
+						cat_url = jq_head(this).attr('hr');
+
+					    }
+
+					}
+
+				    });
+
+				    var m_cat_ids='444';
+
+				    var m_cat_ids_arr = m_cat_ids.split(',');
+
+				    if (jq_head.inArray(valu, m_cat_ids_arr)!=-1) {
+
+				    alert('Please select the category');
+
+				    return false;
+
+				}
+
+				}
+
+				else
+
+				{
+
+				    jq_head("select#category_id option").each(function()
+
+				    {
+
+					var allval = jq_head(this).val();
+
+					if (allval==cat_id) {
+
+					    if (jq_head(this).attr('hr')!="") {
+
+						cat_url = jq_head(this).attr('hr');
+
+					    }
+
+					}
+
+				    });
+
+				}
+
+				var mark='?';
+
+				//jq_head("#search_prod_list").attr("action", cat_url);
+
+				if(main_cat_id!='stores' && main_cat_id!='outlets')
+
+				{
+
+				    var price=0;
+
+				    if (main_cat_id=='deals') {
+
+					mark='&';
+
+				    }
+
+				    if (address!='Search in Address , Town') {
+
+					$add=address;
+
+					var postcode =''; //jq_head("#zipcode").val();
+
+					if (postcode!='Zip/Postal Code' && postcode!='') {
+
+					    address=address+' '+postcode;
+
+					}
+
+					address=address.replace(/ /g, '+');
+
+					cat_url+=mark+'add='+address;
+
+					mark='&';
+
+				    }
+
+				    if (minprice!='Min Price' && jq_head.isNumeric(minprice)==false) {
+
+					alert('Please enter only numeric values in Min Price.');return false;
+
+				    }
+
+				    if (maxprice!='Max Price' && jq_head.isNumeric(maxprice)==false) {
+
+					alert('Please enter only numeric values in Max Price.');return false;
+
+				    }
+
+				    if (minprice!='Min Price' && jq_head.isNumeric(minprice)==true && minprice<=0) {
+
+					alert('Min Price value should be greater than Zero.');return false;
+
+				    }
+
+				    if (maxprice!='Max Price' && jq_head.isNumeric(maxprice)==true && maxprice<=0) {
+
+					alert('Max Price value should be greater than Zero.');return false;
+
+				    }
+
+				    if (minprice!='Min Price' && maxprice!='Max Price' && jq_head.isNumeric(maxprice)==true && jq_head.isNumeric(minprice)==true && minprice>=maxprice ) {
+
+					alert('Please enter Min Price value less than Max Price value.');return false;
+
+				    }
+
+				    if (minprice!='Min Price' && jq_head.isNumeric(minprice)==true) {
+
+					price=minprice;
+
+				       // mark='&';
+
+				    }
+
+				    if (maxprice!='Max Price' && jq_head.isNumeric(maxprice)==true && maxprice>minprice) {
+
+					if (price>=0) {
+
+					    price+='%2C'+maxprice;
+
+					    cat_url+=mark+'price='+price;
+
+					    mark='&';
+
+					    //jq_head('#search_price').val(price);
+
+					}
+
+				    }
+
+				    if (size!='') {
+
+					cat_url+=mark+'size='+size;
+
+					mark='&';
+
+					jq_head('#search_size').val(size);
+
+				    }
+
+				    if (color!='') {
+
+					cat_url+=mark+'color='+color;
+
+					mark='&';
+
+					jq_head('#search_color').val(color);
+
+				    }
+
+				    if (brand_id!='') {
+
+					cat_url+=mark+'brand='+brand_id;
+
+					mark='&';
+
+					jq_head('#search_brand').val(brand_id);
+
+				    }
+
+				}
+
+				if(main_cat_id=='outlets')
+
+				{
+
+				    if (brand_id!='') {
+
+					cat_url+=mark+'brandname='+brand_id;
+
+					mark='&';
+
+				    }
+
+				}
+
+				if (couuntry!='') {
+
+					cat_url+=mark+'country='+couuntry;
+
+					mark='&';
+
+				}
+
+				window.location.href=cat_url;
+
+				//jq_head('#search_prod_list').submit();
+
+			    });
+
+			     //Code for main category change start
+
+			    //jq_head(document).delegate('','',function(){
+
+			    //
+
+			    //});
+
+			    jq_head(document).delegate('.display_none a','click',function(event){
+
+				jq_head(".display_none ul").css("display","none");
+
+			    });
+
+			     jq_head(document).delegate('#main_category_id','change',function()
+
+			     {
+
+				//alert('call');
+
+				var main_cat=this.value;
+
+				if (main_cat!='') {
+
+				    if (main_cat=='outlets') {
+
+					show_outlets('outlets');
+
+					var cat_html='<select tabindex="1" class="country_id" name="category_id" id="category_id" sb="75074009" style="display: none;">';
+
+					cat_html=cat_html+'<option value="" selected="selected" disabled="disabled">Category</option>';
+
+					cat_html=cat_html+'</select>';
+
+					jq_head(".header-sub_cat-two").html(cat_html);
+
+					jq_head("#category_id").selectbox();
+
+					disable_search_elements();
+
+					jq_head('#btn_gotolist').val('Go To Outlet'); 
+
+				    }
+
+				    else if (main_cat=='stores') {
+
+					var cat_html='<select tabindex="1" class="country_id" name="category_id" id="category_id" sb="75074009" style="display: none;">';
+
+					cat_html=cat_html+'<option value="" selected="selected" disabled="disabled">Category</option>';
+
+					cat_html=cat_html+'</select>';
+
+					jq_head(".header-sub_cat-two").html(cat_html);
+
+					jq_head("#category_id").selectbox();
+
+					disable_search_elements();
+
+					show_outlets(null);
+
+					jq_head('#btn_gotolist').val('Go To Store');
+
+				    }
+
+				    else
+
+				    {
+
+					enable_search_elements();
+
+					show_subcategories(main_cat);
+
+					show_outlets();
+
+					jq_head('#btn_gotolist').val('Go To List');
+
+				    }
+
+				}
+
+			    });
+
+			    //Code for main category change end
+
+			    jq_head( document ).ready(function() {
+
+			    var main_cat = jq_head("#main_category_id").val();
+
+			    if (main_cat!='') {
+
+				    //show_subcategories(main_cat);
+
+				}
+
+			    var mage_login_user='0';
+
+			    if (mage_login_user==1) {
+
+				var socila_url='https://coronavirusaid.net/social';
+
+				var socila_url1='javascript:void(0)';
+
+				jq_head('.usr_loggedin a.top-account-a').attr('href',socila_url1);
+
+				
+
+				//Add Image instead of community link
+
+				var usr_img_url='https://coronavirusaid.net/skin/frontend/on-store-now/default/images/defaultuser.jpg';
+
+				//var login_usr_img='<span class="mp_log_user_pic"><img src="'+usr_img_url+'" class="avatar"></span>';
+
+				var login_usr_img='<img src="'+usr_img_url+'" class="avatar"><span>Account</span>';
+
+				jq_head('.usr_loggedin a.top-account-a').html(login_usr_img);
+
+				//End Image add
+
+			var user_name			=	'My Account';
+
+	var members			=	'Member Search';
+
+				var sign_out			=	'';
+
+				var logout_lbl			=	'Log Out';
+
+				var AddBlog_lbl			=	'Blogs';
+
+				var addBlog_url			=	'https://coronavirusaid.net/wkblog/index/viewallpost/';
+
+				var Addboard_lbl		=	'Blogs';
+
+				var collection_lbl		=	'Dashboard';
+
+				var edit_pro_lbl		=	'Store';
+
+				var addBoard_url		=	'https://coronavirusaid.net/myboard/index/viewallboard/';
+
+				var edit_pro_url		=	'https://coronavirusaid.net/marketplace/marketplaceaccount/editprofile';
+
+				var collection_url		=	'https://coronavirusaid.net/marketplace/marketplaceaccount/mydashboard';
+
+				var Addvideo_lbl		=	'Virtual Try-On';
+
+				var addVideo_url		=	'https://coronavirusaid.net/myboard/index/tryonlist';
+
+				var Addproduct_lbl		=	'Products';
+
+				var addProduct_url		=	'https://coronavirusaid.net/marketplace/marketplaceaccount/myproductslist/';
+
+
+
+				var AddCommunity_lbl	=	'Notifications';
+
+				
+
+			//	var manage_lbl	=	'Manage';
+
+				var manage_lbl	=	"<img src='https://coronavirusaid.net/skin/frontend/on-store-now/default/images/manage.png' class='manage-icon'/>";
+
+				var eye_lbl	=	"<img src='https://coronavirusaid.net/skin/frontend/on-store-now/default/images/eye.png' class='manage-icon'/>";
+
+				var acc_settings	=	'Account';
+
+				var help_lbl	=	'Help';
+
+				//var fa_lbl	=	'Chat';
+
+				var fa_lbl	=	"<img src='https://coronavirusaid.net/skin/frontend/on-store-now/default/images/chat-icon.png' class='manage-icon'/>";
+
+				var language_lbl	=	'Language';
+
+				var currency_lbl	=	'Currency';
+
+				var base_mage_url='https://coronavirusaid.net/';
+
+				//var acc_name	=	'';
+
+				var acc_name	=	'My Wall';
+
+				var noti_url='https://coronavirusaid.net/social/members//notifications';
+
+				var u_acc_url='https://coronavirusaid.net/social';
+
+				var isPartnar			=	"";
+
+				var addCommunity_url	=	'https://coronavirusaid.net/social';
+
+				var AddSetting_lbl		=	'Setting';
+
+				var addSetting_url		=	'#';
+
+				var myorder ="My Orders";
+
+				var order_url		=	'https://coronavirusaid.net/sales/order/history';
+
+				var tell_friend = 'https://coronavirusaid.net/social/members/?invite_friend=1';
+
+				var tell_friend_lbl = 'Tell a friend';
+
+				var addGroup_url ='https://coronavirusaid.net/social/groups/';
+
+				var addGroup_url1 ='https://coronavirusaid.net/social/groups/?type=event';
+
+				var Addgroup_lbl = 'Groups';
+
+				var Addgroup_lbl1 = 'Events';
+
+				var Addaffiliate_lbl1 = 'Affiliate';
+
+				var creategroup_lbl = 'Add Product';
+
+				var Addtryon_lbl = 'My Wish list';
+
+				var addTryon_url = 'https://coronavirusaid.net/myboard/index/tryonlist/';
+
+				var addTryon_url1 = 'https://coronavirusaid.net/wishlist/index/index';
+
+				var addimg= "<a class='add_url' href='https://coronavirusaid.net/marketplace/marketplaceaccount/new/'><img src='https://coronavirusaid.net/skin/frontend/on-store-now/default/images/add.png' class='manage-icon' id='add_option'/></a>";
+
+				var addimg_blog= "<a class='add_url' href='https://coronavirusaid.net/wkblog/index/index/'><img src='https://coronavirusaid.net/skin/frontend/on-store-now/default/images/add.png' class='manage-icon' id='add_option'/></a>";
+
+				var addimg_set= "<a class='add_url' href='https://coronavirusaid.net/myboard/index/index/'><img src='https://coronavirusaid.net/skin/frontend/on-store-now/default/images/add.png' class='manage-icon' id='add_option'/></a>";
+
+				var addimg_tryon= "<a class='add_url' href='https://coronavirusaid.net/virtual-try-on'><img src='https://coronavirusaid.net/skin/frontend/on-store-now/default/images/add.png' class='manage-icon' id='add_option'/></a>";
+
+    var addimg_grp= "<a class='add_url' href='https://coronavirusaid.net/social/groups/create/step/group-details/'><img src='https://coronavirusaid.net/skin/frontend/on-store-now/default/images/add.png' class='manage-icon' id='add_option'/></a>";  
+
+    var addimg_grp1= "<a class='add_url' href='https://coronavirusaid.net/social/groups/create/step/group-details/?type=event'><img src='https://coronavirusaid.net/skin/frontend/on-store-now/default/images/add.png' class='manage-icon' id='add_option'/></a>";  
+
+				var outimg ="<a href='"+sign_out+"' class='middleicon'><img src='https://coronavirusaid.net/skin/frontend/on-store-now/default/images/logoutimg.png'></a>";
+
+				var addaffiliate = 'https://coronavirusaid.net/affiliate/index/summary/';
+
+			//	var isPartner 			= 	"";
+
+				if(isPartnar==1){
+
+					var dropdown='<ul id="mp_ddl_account" class="mp_new_account_link">'+
+
+					'<p class="acc_setting">'+acc_settings+'</p>'+
+
+					'<li class="log_out" style="display:none;"><p class="profile-left hide_profile_element"><img src="'+usr_img_url+'" class="avatar"></p><a class="notranslate" href="'+u_acc_url+'">'+acc_name+'</a><p class="profile-right hide_profile_element"><a href="'+sign_out+'">'+logout_lbl+'</a></p></option>'+
+
+					'<li class="log_out threeimg"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/dd_account.png"></p><a class="myaccount" href="'+base_mage_url+'customer/account/edit/">'+user_name+'</a>'+outimg+'<p class="profile-right hide_profile_element"><a href="'+base_mage_url+'customer/account/edit/">'+manage_lbl+'</a></p></option>'+
+
+					'<li class="user_name "><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/dashboard.png"></p><a href="'+order_url+'/">'+myorder+'</a><p class="profile-right hide_profile_element"><a href="'+order_url+'">'+eye_lbl+'</a></p></li>'+
+
+					'<li class="user_name"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/dd_edit.png"></p><a href="'+edit_pro_url+'/">'+edit_pro_lbl+'</a><p class="profile-right hide_profile_element"><a href="'+edit_pro_url+'">'+manage_lbl+'</a></p></li>'+
+
+					'<li class="log_out"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/dd_product.png"></p><a href="'+addProduct_url+'" class="addoption">'+Addproduct_lbl+'</a>'+addimg+'<p class="profile-right hide_profile_element"><a href="'+addProduct_url+'">'+manage_lbl+'</a></p></option>'+
+
+					'<li class="user_name"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/dd_collections.png"></p><a href="'+collection_url+'/">'+collection_lbl+'</a><p class="profile-right hide_profile_element"><a href="'+collection_url+'">'+eye_lbl+'</a></p></li>'+
+
+				//	'<li class="log_out"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/dd_blog.png"></p><a href="'+addBlog_url+'" class="addoption">'+AddBlog_lbl+'</a>'+addimg_blog+'<p class="profile-right hide_profile_element"><a href="'+addBlog_url+'">'+manage_lbl+'</a></p></option>'+
+
+					'<li class="log_out"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/dd_blog.png"></p><a href="'+addBoard_url+'" class="addoption">'+Addboard_lbl+'</a>'+addimg_set+'<p class="profile-right hide_profile_element"><a href="'+addBoard_url+'">'+manage_lbl+'</a></p></li>'+
+
+     '<li class="log_out"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/whish-list-icon.png"></p><a href="'+addTryon_url1+'" class="addoption">'+Addtryon_lbl+'</a><p class="profile-right hide_profile_element"><a href="'+addTryon_url1+'">'+manage_lbl+'</a></p></li>'+
+
+					'<li class="log_out"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/group.png"></p><a href="'+addGroup_url+'" class="addoption">'+Addgroup_lbl+'</a>'+addimg_grp+'<p class="profile-right hide_profile_element"><a href="'+addGroup_url+'">'+manage_lbl+'</a></p></li>'+
+
+					'<li class="log_out"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/invite.png"></p><a href="'+addGroup_url1+'" class="addoption">'+Addgroup_lbl1+'</a>'+addimg_grp1+'<p class="profile-right hide_profile_element"><a href="'+addGroup_url1+'">'+manage_lbl+'</a></p></li>'+
+
+					'<li class="log_out"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/affiliate.png"></p><a href="'+addaffiliate+'" class="addoption">'+Addaffiliate_lbl1+'</a></p></li>'+
+
+					'<li class="user_name"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/dd_notifications.png"></p><a id="notilink" href="'+noti_url+'/">'+AddCommunity_lbl+'</a><p class="profile-right hide_profile_element"><a href="'+noti_url+'">'+eye_lbl+'</a></p></li>'+
+
+					//'<li class="log_out"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/dd_video.png"></p><a href="'+addVideo_url+'">'+Addvideo_lbl+'</a><p class="profile-right hide_profile_element"><a href="'+addVideo_url+'">'+manage_lbl+'</a></p></option>'+
+
+										'<li class="log_out"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/search-gray.png"></p><a href="'+base_mage_url+'social/members/">'+members+'</a><p class="profile-right hide_profile_element"><a href="'+base_mage_url+'social/members/">'+eye_lbl+'</a></p></option>'+
+
+					'<li class="log_out"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/dd_help.png"></p><a href="javascript:void(0);" onclick="open_help_chat();">'+help_lbl+'</a><p class="profile-right hide_profile_element"><a href="javascript:void(0);" onclick="open_help_chat();">'+fa_lbl+'</a></p></option>'+
+
+					'<li class="log_out"><p class="profile-left hide_profile_element tellafrnd"><img src="'+base_mage_url+'social/wp-content/themes/bp-default/images/invitef.png"></p><a href="'+tell_friend+'" >'+tell_friend_lbl+'</a><p class="profile-right hide_profile_element"><a href="'+tell_friend+'" >'+manage_lbl+'</a></p></option>'+
+
+
+
+					'</ul>';	
+
+				}else{
+
+					var dropdown='<ul id="mp_ddl_account" class="mp_new_account_link">'+
+
+					'<p class="acc_setting">'+acc_settings+'</p>'+
+
+					'<li class="log_out" style="display:none;"><p class="profile-left hide_profile_element"><img src="'+usr_img_url+'" class="avatar"></p><a href="'+u_acc_url+'">'+acc_name+'</a><p class="profile-right hide_profile_element"><a href="'+sign_out+'">'+logout_lbl+'</a></p></option>'+
+
+					'<li class="user_name"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/dd_account.png"></p><a class="myaccount" href="'+base_mage_url+'customer/account/edit/">'+user_name+'</a>'+outimg+'<p class="profile-right hide_profile_element"><a href="'+base_mage_url+'customer/account/edit/">'+manage_lbl+'</a></p></li>'+
+
+					'<li class="log_out"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/dashboard.png"></p><a href="'+order_url+'">'+myorder+'</a><p class="profile-right hide_profile_element"><a href="'+order_url+'">'+eye_lbl+'</a></p></li>'+
+
+				//	'<li class="log_out"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/dd_blog.png"></p><a href="'+addBlog_url+'" class="addoption">'+AddBlog_lbl+'</a>'+addimg_blog+'<p class="profile-right hide_profile_element"><a href="'+addBlog_url+'">'+manage_lbl+'</a></p></option>'+
+
+					'<li class="log_out"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/dd_blog.png"></p><a href="'+addBoard_url+'" class="addoption">'+Addboard_lbl+'</a>'+addimg_set+'<p class="profile-right hide_profile_element"><a href="'+addBoard_url+'">'+manage_lbl+'</a></p></li>'+
+
+				 '<li class="log_out"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/whish-list-icon.png"></p><a href="'+base_mage_url+'wishlist/index/index" class="addoption testinggg">'+Addtryon_lbl+'</a><p class="profile-right hide_profile_element"><a href="'+base_mage_url+'wishlist/index/index">'+manage_lbl+'</a></p></li>'+
+
+					'<li class="log_out"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/group.png"></p><a href="'+addGroup_url+'" class="addoption">'+Addgroup_lbl+'</a>'+addimg_grp+'<p class="profile-right hide_profile_element"><a href="'+addGroup_url+'">'+manage_lbl+'</a></p></li>'+
+
+					'<li class="log_out"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/invite.png"></p><a href="'+addGroup_url1+'" class="addoption">'+Addgroup_lbl1+'</a>'+addimg_grp1+'<p class="profile-right hide_profile_element"><a href="'+addGroup_url1+'">'+manage_lbl+'</a></p></li>'+
+
+								'<li class="log_out"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/affiliate.png"></p><a href="'+addaffiliate+'" class="addoption">'+Addaffiliate_lbl1+'</a></p></li>'+
+
+					'<li class="user_name"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/dd_notifications.png"></p><a id="notilink" href="'+noti_url+'/">'+AddCommunity_lbl+'</a><p class="profile-right hide_profile_element"><a href="'+noti_url+'">'+eye_lbl+'</a></p></li>'+
+
+					//'<li class="log_out"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/dd_video.png"></p><a href="'+addVideo_url+'">'+Addvideo_lbl+'</a><p class="profile-right hide_profile_element"><a href="'+addVideo_url+'">'+manage_lbl+'</a></p></option>'+
+
+					'<li class="log_out"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/search-gray.png"></p><a href="'+base_mage_url+'social/members/">'+members+'</a><p class="profile-right hide_profile_element"><a href="'+base_mage_url+'social/members/">'+eye_lbl+'</a></p></li>'+
+
+					'<li class="log_out"><p class="profile-left hide_profile_element"><img src="'+base_mage_url+'skin/frontend/on-store-now/default/images/dd_help.png"></p><a href="javascript:void(0);" onclick="open_help_chat();">'+help_lbl+'</a><p class="profile-right hide_profile_element"><a href="javascript:void(0);" onclick="open_help_chat();">'+fa_lbl+'</a></p></option>'+
+
+					'<li class="log_out"><p class="profile-left hide_profile_element tellafrnd"><img src="'+base_mage_url+'social/wp-content/themes/bp-default/images/invitef.png"></p><a href="'+tell_friend+'" >'+tell_friend_lbl+'</a><p class="profile-right hide_profile_element"><a href="'+tell_friend+'" >'+manage_lbl+'</a></p></option>'+
+
+					'</ul>';
+
+				}
+
+					var chat ='<li class="mp_chat_header"><a href="javascript:void(0);" id="mp_chat_header_link">Chat</a></li><li class="vsep">|</li>';
+
+					jq_head('.login-right').prepend(chat);
+
+					jq_head('.usr_loggedin a.top-account-a').parent().addClass('last mp_community_li');
+
+					jq_head('.usr_loggedin a.top-account-a').after(dropdown);
+
+			    }
+
+			    else
+
+			    {
+
+				var chat = '<li class="mp_chat_header"><a href="#inline1" class="fancybox" id="mp_chat_header_link">Chat</a></li><li class="vsep" style="display:block !important;">|</li>';
+
+				jq_head('.login-right').prepend(chat);
+
+				jq_head('.usr_not_loggedin a.top-account-a').addClass('fancybox');
+
+				jq_head('.usr_not_loggedin a.top-account-a').attr('href','#inline1');
+
+			    }
+
+			    
+
+			    });
+
+			    //
+
+			    
+
+			    jq_head(function(){
+
+			    jq_head("input.noSubmit").keypress(function(e){
+
+				var k=e.keyCode || e.which;
+
+				if(k==13){
+
+				    e.preventDefault();
+
+			    	}
+
+			        });
+
+			    });
+
+			    
+
+			    function open_help_chat() {
+
+				if (jq_head('#list-45').length) {
+
+				    jq_head('#list-45').click();   
+
+				}
+
+			    }
+
+			    
+
+			    function disable_search_elements() {
+
+				jq_head( "#add_q" ).prop( "disabled", true );
+
+				jq_head( "#zipcode" ).prop( "disabled", true );
+
+				jq_head( "#minprice" ).prop( "disabled", true );
+
+				jq_head( "#maxprice" ).prop( "disabled", true );
+
+				jq_head( ".header-sub_cat-two .sbHolder" ).addClass( "display_none" );
+
+				jq_head( ".header_search_rowtwo_coltwo .sbHolder" ).addClass( "display_none" );
+
+				jq_head( ".header_search_rowtwo_colthree .sbHolder" ).addClass( "display_none" );
+
+			    }
+
+			    function enable_search_elements() {
+
+				jq_head( "#add_q" ).prop( "disabled", false );
+
+				jq_head( "#zipcode" ).prop( "disabled", false );
+
+				jq_head( "#minprice" ).prop( "disabled", false );
+
+				jq_head( "#maxprice" ).prop( "disabled", false );
+
+				jq_head( ".header-sub_cat-two .sbHolder" ).removeClass( "display_none" );
+
+				jq_head( ".header_search_rowtwo_coltwo .sbHolder" ).removeClass( "display_none" );
+
+				jq_head( ".header_search_rowtwo_colthree .sbHolder" ).removeClass( "display_none" );
+
+			    }
+
+			    function show_subcategories(main_cat) {
+
+				new Ajax.Request("https://coronavirusaid.net/gmap/index/getsubcategories/", {
+
+					method: 'Post',
+
+					dataType: 'json',
+
+					parameters: {"main_cat":main_cat},
+
+					onComplete: function(transport) {
+
+					jq_head(".header-sub_cat-two").html(JSON.parse(transport.responseText));
+
+					jq_head("#category_id").selectbox();
+
+					    }
+
+					 });
+
+			    }
+
+			    function mpLoginInSocialSite() {
+
+				new Ajax.Request("https://coronavirusaid.net/socialsignup/twitter/loginToSocialSite/", {
+
+					method: 'Post',
+
+					dataType: 'json',
+
+					parameters: {"logintype":'social'},
+
+					onComplete: function(transport) {
+
+					    if (JSON.parse(transport.responseText)=='ajaxloginsuccess') {
+
+						
+						//Added by mp to redirect on social after login start
+
+						//var socila_url='https://coronavirusaid.net/social';
+
+						//window.location.href=socila_url;
+
+						//Added by mp to redirect on social after login end
+
+						window.location.reload();
+
+					    }
+
+					    }
+
+					 });
+
+			    }
+
+			   function show_outlets(type) {
+
+			    new Ajax.Request("https://coronavirusaid.net/gmap/index/getoutletbrands/", {
+
+					method: 'Post',
+
+					dataType: 'json',
+
+					parameters: {"main_cat":type},
+
+					onComplete: function(transport) {
+
+					jq_head(".header-brands-one").html(JSON.parse(transport.responseText));
+
+					jq_head("#stores").selectbox();
+
+					    }
+
+					 });
+
+			   }
+
+			    jq_head( ".adv_opt_link" ).click(function() {
+
+				//jq_head( ".adv_search_div" ).toggle("slow");
+
+				if(jq_head('.adv_search_div').hasClass('shw'))
+
+				{
+
+				    jq_head('.adv_search_div').removeClass('shw');
+
+				    var loc='https://coronavirusaid.net/skin/frontend/on-store-now/default/images/nxt.png';
+
+				    jq_head('.header_site_search_adv_img').attr("src",loc);
+
+				    jq_head('.header_site_search_adv_img').removeClass('header_site_search_adv_down_img');
+
+				    jq_head( ".adv_search_div" ).hide();
+
+				}
+
+				else
+
+				{
+
+				    jq_head('.adv_search_div').addClass('shw');
+
+				    var loc='https://coronavirusaid.net/skin/frontend/on-store-now/default/images/adv_search_down.png';
+
+				    jq_head('.header_site_search_adv_img').attr("src",loc);
+
+				    jq_head('.header_site_search_adv_img').addClass('header_site_search_adv_down_img');
+
+				    jq_head( ".adv_search_div" ).show();
+
+				}
+
+			    });
+
+			    var search_cat_url='';
+
+			    var catalog_search_url=jq_head('#search_mini_form').attr('action');
+
+			    var g_map_url='https://coronavirusaid.net/gmap/';
+
+			    jq_head("#btn_adv_search_list").click(function() {
+
+				jq_head("#search_mini_form").attr("action", catalog_search_url);
+
+				jq_head("#search_mini_form").attr("method", 'get');
+
+				var search_query=jq_head("#search").val();
+
+				var search_add=jq_head("#adv_search_add").val();
+
+				if (search_query!='') {
+
+				    if (search_query!='' && search_query!='No Result Found') {
+
+					jq_head('#adv_search_add_input').val(search_add);
+
+					if (search_cat_url!='') {
+
+					//    if (search_add!='') {
+
+					//	search_cat_url=search_cat_url+'?add='+search_add;
+
+					//    }
+
+					    window.location.href=search_cat_url;
+
+					}
+
+					else
+
+					{
+
+					    //var mc_url="https://coronavirusaid.net/catalog/category/view/";
+
+					    //window.location.href=mc_url+'?csearch='+search_query;
+
+					    
+
+					    jq_head("#search_mini_form").submit();
+
+					}
+
+				    }
+
+				    else
+
+				    {
+
+					alert('No Result Found ! Please try again.');
+
+				    }
+
+				}
+
+				else
+
+				{
+
+				    alert('Please enter keywords in search box.');
+
+				}
+
+			    });
+
+							
+
+							// search on enter
+
+			
+			jq_head('#search').keypress(function(e){
+
+        if(e.which == 13){//Enter key pressed
+
+            jq_head('#btn_adv_search_list').click();//Trigger search button click event
+
+        }
+
+    });
+
+			
+
+			 jq_head("#searchicon").click(function() {
+
+						  jq_head('#btn_adv_search_list').click();//Trigger search button click event
+
+				});
+
+			
+			 
+
+			    //jq_head("#btn_adv_search_map" ).click(function() {
+
+					jq_head("#adv_search_add").keypress(function(e){
+
+					var k=e.keyCode || e.which;
+
+											if(k==13){		
+
+													jq_head("#search_mini_form").attr("action", g_map_url);
+
+													jq_head("#search_mini_form").attr("method", 'post');
+
+													var search_add=jq_head("#adv_search_add").val();
+
+													var search_query=jq_head("#search").val();
+
+													if (search_add!='' && search_add!='Address') {
+
+																	if (search_query=='Search') {
+
+														jq_head("#search").val('');
+
+														//alert('Please enter keyword in Search box.');
+
+																	}
+
+																	//else
+
+																	//{
+
+														jq_head('#adv_search_add_input').val(search_add);
+
+														var search_query=jq_head("#search").val();
+
+														var search_add=jq_head("#adv_search_add").val();
+
+									
+
+														if(search_add){
+
+															g_map_url=g_map_url+'?add_q='+encodeURIComponent(search_add);
+
+														}
+
+														if(search_query){
+
+															g_map_url=g_map_url+'&q='+encodeURIComponent(search_query);
+
+														}
+
+									
+
+														window.location.href=g_map_url;
+
+									
+
+														//jq_head("#search_mini_form").submit();
+
+																	//}
+
+													}
+
+													else
+
+													{
+
+																	alert('Please enter keywords in Address box.');
+
+													}
+
+											}
+
+			    });
+
+					
+
+					//jq_head("#btn_adv_search_map" ).click(function() {
+
+		
+
+													//jq_head("#search_mini_form").attr("action", g_map_url);
+
+													//jq_head("#search_mini_form").attr("method", 'post');
+
+													//var search_add=jq_head("#adv_search_add").val();
+
+													//var search_query=jq_head("#search").val();
+
+													//if (search_add!='' && search_add!='Address') {
+
+													//				if (search_query=='Search') {
+
+													//	jq_head("#search").val('');
+
+													//	//alert('Please enter keyword in Search box.');
+
+													//				}
+
+													//				//else
+
+													//				//{
+
+													//	jq_head('#adv_search_add_input').val(search_add);
+
+													//	var search_query=jq_head("#search").val();
+
+													//	var search_add=jq_head("#adv_search_add").val();
+
+													//
+
+													//	if(search_add){
+
+													//		g_map_url=g_map_url+'?add_q='+encodeURIComponent(search_add);
+
+													//	}
+
+													//	if(search_query){
+
+													//		g_map_url=g_map_url+'&q='+encodeURIComponent(search_query);
+
+													//	}
+
+													//
+
+													//	window.location.href=g_map_url;
+
+													//
+
+													//	//jq_head("#search_mini_form").submit();
+
+													//				//}
+
+													//}
+
+													//else
+
+													//{
+
+													//				alert('Please enter keywords in Address box.');
+
+													//}
+
+			    //				
+
+			    //});
+
+					
+
+			    jq_head("#adv_search_add").change(function(){
+
+				jq_head('.box-searchTop').addClass('showSBox');
+
+			    });
+
+			    			    
+
+			    jq_head( ".pac-container" ).live( "mouseover", function() {
+
+				console.log(jq_head('#adv_search_add').length);
+
+				if (jq_head('#adv_search_add').val().length>0 ) {
+
+				    // removed for edit profile page problem
+
+				    //jq_head('.box-searchTop').addClass('showSBox');
+
+				    //jq_head('.pac-container').css('display','block');
+
+				    jq_head(this).css('display','block');
+
+				   // removed for edit profile page problem
+
+				}
+
+			      });
+
+			
+
+			    jq_head( ".box-searchTop" ).live( "mouseleave", function() {
+
+				jq_head('.box-searchTop').removeClass('showSBox');
+
+				jq_head('.pac-container').css('display','none');
+
+			      });
+
+							
+
+							jq_head("#adv_search_add").keyup(function() { jq_head.trim(jq_head(this).val()) != "" ? jq_head(this).toggleClass("bg", false) : jq_head(this).toggleClass("bg"); });
+
+							 jq_head('#adv_search_add').focus(function(){
+
+										jq_head(this).toggleClass("bg",false);
+
+        });
+
+							
+
+							
+
+			    jq_head(document).mouseup(function (e)
+
+				{
+
+				    if (e.target.id!='mp_toggle_search_frm') {
+
+					var container = jq_head(".box-searchTop");
+
+					if (!container.is(e.target) // if the target of the click isn't the container...
+
+					    && container.has(e.target).length === 0) // ... nor a descendant of the container
+
+					{
+
+					    container.hide();
+
+					}
+
+				    }
+
+				});
+
+			    
+
+			    
+
+			    //For currency hover
+
+			    jQuery(document).on("mouseenter","#currency_id",function(e) {
+
+				jQuery("#head_nav_browse").addClass('mp_show_element');
+
+			    });
+
+			    jQuery(document).on("mouseleave","#currency_id",function(e) {
+
+			     var id_parent=jQuery(e.target).parent().prop('id');
+
+			     if(id_parent && id_parent=='currency_id'){
+
+			       jQuery("#head_nav_browse").removeClass('mp_show_element');
+
+			     }
+
+			     
+
+			    });
+
+			    jQuery(document).on("mouseleave","#head_nav_browse",function(e) {
+
+				var id_parent=jQuery(e.target).parent().prop('id');
+
+				console.log(id_parent);
+
+				if((id_parent&& id_parent!='crrency_id') || id_parent!='head_nav_browse'){
+
+				  jQuery("#head_nav_browse").removeClass('mp_show_element');
+
+				}
+
+				
+
+			      });
+
+			    //end of currency hover
+
+			    
+
+			    jq_head('#search').keydown(function (e) {
+
+			    if(e.which==40){
+
+				jq_head('.le-search-ul li:first').focus();
+
+			    }
+
+			});
+
+			jq_head("ul.le-search-ul li").live("click",function(){
+
+			 jq_head('#search').val(jq_head(this).find("div").text().replace(/ +(?= )/g,''));
+
+			 search_cat_url=jq_head(this).find("p").text();
+
+			 jq_head('#search_autocomplete').hide();
+
+		     });
+
+			var chat_css =0;
+
+		    jq_head( "#mp_chat_header_link" ).live( "click", function() {
+
+										jQuery("#new_header_right #mp_chat_header_link img").attr("src","https://coronavirusaid.net/skin/frontend/on-store-now/default/images/chat-head.png");
+
+
+
+							if(chat_css==0){
+
+							    addstyle();
+
+											chat_css =1;
+
+							}
+
+							
+
+			var u_log_check="";
+
+			if (!u_log_check) {
+
+			    //jq_head(".top-account-a").click();
+
+			}
+
+			else
+
+			{
+
+					setTimeout(function() {
+
+			    jq_head("#wk_cs_buddy_list_opener_icon").click();
+
+					},1000);
+
+			}
+
+		    });
+
+			</script>
+
+
+
+
+
+
+
+			<script>
+
+				jq_head(document).on('keyup', '#search', function(e) {
+
+					var key = e.which;
+
+					if(key == 13)  // the enter key code
+
+					{
+
+						
+
+						jq_head("#search_mini_form").submit();
+
+					}
+
+					
+
+				});
+
+			</script>
+
+
+
+
+
+
+
+		</div>
+
+        
+    </div>
+
+</div>
+
+<div class="main-full">
+
+	<div class="box-secondMenu container">
+
+		 
+	    <script>
+
+		    jq_head( document ).ready(function() {
+
+				jq_head('body').addClass('header-top-space');
+
+						jq_head('body').addClass('topspace-2');
+
+			jq_head('.sm-megamenu-child > div:first-child').addClass('in_megamenu');
+
+		    });
+
+		</script>
+
+	    <script type="text/javascript" src="https://coronavirusaid.net/skin/frontend/on-store-now/default/sm/megamenu/js/sm-megamenu.js"></script>		
+
+<link media="all" href="https://coronavirusaid.net/skin/frontend/on-store-now/default/sm/megamenu/css/horizontal/black/megamenu.css" type="text/css" rel="stylesheet">
+
+
+		
+	<div class="sm_megamenu_wrapper_horizontal_menu sambar" id="sm_megamenu_menu5e73d095ae5f0" data-sam="7405026951584648341">
+		<div class="sambar-inner">
+			<a class="btn-sambar" data-sapi="collapse" href="#sm_megamenu_menu5e73d095ae5f0">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>	
+			<ul class="sm-megamenu-hover sm_megamenu_menu sm_megamenu_menu_black" data-jsapi="on">
+									<li class="<?php echo $prefix; ?>block-title-parent other-toggle   
+						sm_megamenu_lv1 sm_megamenu_nodrop   ">
+												<a class="sm_megamenu_head sm_megamenu_nodrop " href="javascript:void(0)"  id="sm_megamenu_2961">
+																										<span style="padding-left:0px;" class="sm_megamenu_icon sm_megamenu_nodesc">		
+																												<span class="sm_megamenu_title">CORONAVIRUS</span>
+																	
+														
+													</span>
+																									</a>
+																														</ul>
+		</div>
+	</div>
+	<!--End Module-->
+
+<script type="text/javascript">
+// <![CDATA[ 
+	jQuery(document).ready(function($){
+		var menu_width = $('.sm_megamenu_wrapper_horizontal_menu').width();
+		$('.sm_megamenu_wrapper_horizontal_menu .sm_megamenu_menu > li > div').each(function(){
+			$this = $(this);			
+			var lv2w = $this.width();
+			var lv2ps = $this.position();
+			var lv2psl = $this.position().left;
+			var sw = lv2w + lv2psl;
+			if( sw > menu_width ){
+				$this.css({'right': '0'});
+			}			
+		});
+	});
+// ]]> 
+</script>
+
+
+
+
+	    <style type="text/css">
+
+	    	.sm_megamenu_id385 .sm_megamenu_id425,.sm_megamenu_id385 .sm_megamenu_id432,.sm_megamenu_id385 .sm_megamenu_id442,.sm_megamenu_id385 .sm_megamenu_id943,.sm_megamenu_id385 .sm_megamenu_id965{display:none!important}.header-top-space .col-main{margin-top:10px!important}
+
+	    </style>
+
+	</div>
+
+<!--<div id="fb-root"></div>-->
+
+<div class="section-main">
+
+<script>
+
+jq_head( document ).ready(function() {
+
+    window.scrollTo(0,0);
+
+    setTimeout(function() {
+
+        jq_head('.messages').fadeOut('slow');
+
+    }, 10000); // <-- time in milliseconds
+
+    //Code to open login poup window after 10 sec
+
+    var usr_log_status=0;
+
+	usr_log_status='';
+
+        var current_url='https://coronavirusaid.net/';
+
+        var base_url='https://coronavirusaid.net/';
+
+        var base_login_url='https://coronavirusaid.net/?poplogin=login';
+
+	var base_home_url='https://coronavirusaid.net/?type=home';
+
+	var log_pop_flag='';	 
+
+
+
+		
+});
+
+var lgtypeSess='';
+
+if (lgtypeSess=='sociallogin') {
+
+    mpLoginInSocialSite();
+
+}
+
+</script>
+
+
+<!--Show login popup if user is not logged in start-->
+
+
+<script>
+
+var j_time_out = jQuery.noConflict();
+
+j_time_out( window ).load(function() {
+
+var pop_login='';
+
+if (pop_login=='login') {
+
+    j_time_out(".top-account-a").trigger( "click" );
+
+}
+
+});
+
+</script>
+
+
+<!--Show login popup if user is not logged in end-->
+
+
+
+
+
+<!-- <script type="text/javascript">
+
+var usr_log_status='';
+
+	jq_head( document ).ready(function() {
+
+		 if (!usr_log_status) {
+
+            setTimeout(function() {
+
+				if (!jq_head('.fancybox-overlay-fixed').length) {
+
+					//jq_head(".top-account-a").trigger( "click" );
+
+					new Ajax.Request("", {
+
+					method: 'Post',
+
+					dataType: 'json',
+
+					parameters: {"status":1},
+
+					onComplete: function(transport) {
+
+					}
+
+					});
+
+					
+
+				}
+
+            }, 25000);
+
+        }
+
+	});
+
+</script> -->
+
+
+
+
+<script type="text/javascript">
+
+//Code to call a loader on scroll down start
+
+var jq = jQuery.noConflict(); var is_loding=false; var all_pro_array=null; var page_no=2; var data_count=0; var p_per_page=48; var iScrollPos = 0;
+
+jq(document).ready(function () {
+
+if(jq('#list_page_loader').length){
+
+	var loader_url='https://coronavirusaid.net/infinitescroll';
+
+	jq(window).on( "scroll", function( event ) {
+
+		//var pdta=jq('#mp_pro_array').html();
+
+		var pdta=all_pro_array;
+
+		var hT = jq('.inner-right').offset().top,
+
+		hH = jq('.inner-right').outerHeight(),
+
+		wH = jq(window).height(),
+
+		wS = jq(this).scrollTop();
+
+		//if (wS > (hT+hH-wH)){
+
+		var iCurScrollPos = jq(this).scrollTop();
+
+	    if (iCurScrollPos > iScrollPos) {
+
+	        //Scrolling Down
+
+			if(is_loding==false && data_count>p_per_page){
+
+			    is_loding=true;
+
+			    jq('#list_page_loader').show();
+
+			    new Ajax.Request(loader_url, {
+
+			        method: 'Post',
+
+			        dataType: 'json',
+
+			        parameters: {"page":page_no,"p_per_page":p_per_page,"p_ids":pdta},
+
+			        onComplete: function(transport) {
+
+			            is_loding=false;
+
+			            data_count=data_count-p_per_page;
+
+			            page_no=page_no+1;
+
+			            var html=transport.responseText;
+
+			            if(html){
+
+			            	 jq('#list_page_loader').before(html);
+
+			            }
+
+			           // var data=JSON.parse(transport.responseText);
+
+			           jq('#list_page_loader').hide();
+
+				    }
+
+				});
+
+			}
+
+		}
+
+		iScrollPos = iCurScrollPos;
+
+		//}
+
+	});
+
+}
+
+});
+
+//Code to call a loader on scroll down ends
+
+
+
+</script>
+
+
+
+<!-- Code to add cart popup -->
+
+<script type="text/javascript">
+
+	jq(document).ready(function () {
+
+		var mp_log_sts='';
+
+		jq(".minicart_wrapper .item_cart_list li").sort(function (a, b) {
+
+		    return parseInt(a.id) < parseInt(b.id);
+
+		}).each(function(){
+
+		    var elem = jq(this);
+
+		    elem.remove();
+
+		    jq(elem).appendTo(".minicart_wrapper .item_cart_list");
+
+		});
+
+		jq( '.goog-te-combo' ).click(function() {
+
+			jq('#head_nav_browse').css('display','block');
+
+		});
+
+		jq( '#currency_id' ).click(function() {
+
+			jq('#head_nav_browse').css('display','block');
+
+		});
+
+		jq(document).mouseup(function (e)
+
+		{
+
+		    if (e.target.id!='browse-icon') {
+
+								  var container="";
+
+		        //var container = jq_top_link("#head_nav_browse");
+
+										if(container!=""){
+
+											if (!container.is(e.target) 
+
+		            && container.has(e.target).length === 0) 
+
+												{
+
+																container.hide();
+
+												}
+
+										}
+
+		        
+
+		    }
+
+		});
+
+	});
+
+</script>
+
+<!-- End -->
+
+<style type="text/css">
+
+.category-products .availability.out-of-stock span{color: black;text-transform: uppercase;font-size: 9px;border: 1px solid black;padding: 2px;font-weight: bold;font-family: GothamBook;}
+
+.new_header_type .new_header_right .notred{color: red;color: red;display: inline;font-weight: bold;text-transform: lowercase;font-size: 9px;font-family: merriweather_sansregular;}
+
+.mp_community_li ul#mp_ddl_account  li >a.myaccount{ width: 40%;}
+
+.mp_community_li ul#mp_ddl_account  li >a.middleicon {width:auto;}
+.mp-group-top-link{display:none;}
+</style>        <div class="main-container col1-layout">
+            <div class="main">
+                                <div class="col-main">
+                                        <style type="text/css">
+
+	body.board-index-index.lang-en.header-top-space.topspace-2 {
+    	background: #ebebeb !important;
+	}
+
+	.auth_dtl .auth_name{
+		width: 100%;
+	}
+	.try_on_icon {
+	    top: 3px;
+	    right: 5px;
+	}
+	#mp_all_sets_front ul.category-photo li{
+		width: 48%;
+	}
+
+	h2#hello123{
+		background: #ebebeb;
+	}
+	.section-main .col2-left-layout .store-main{
+		width: 100%;
+	}
+	.inner-right{width: 100%;}
+	.setmaindiv {
+    box-shadow: 0 0 10px 0 rgba(80, 80, 80, 0.2);
+	width: 100%;
+	float: left;
+	background-color: white;
+	}
+	.category-image.setwithimagelist {
+    box-shadow: 0 0 0 0 !important;
+	}
+	
+	.serachbox{ width: 37%; margin-top: 30px;}
+	#blogsearch{ top:-21px;}
+	.main-full .sort-by-right .limiter div.mp_table_sorter {
+    display: block;
+	}
+	.sort-by-right .limiter div {
+    display: none;
+	}
+	#mp_bottom_toolbar .pages {
+		display: none;
+	}
+	#mp_bottom_toolbar .limiter {
+		display: none;
+	}
+	#mp_all_sets_front ul.category-photo li{
+	width: 24%;	
+	}
+	#mp_all_sets_front ul.category-photo li:nth-child(3n+3){
+		margin-right: 1%;
+	}
+	#mp_all_sets_front ul.category-photo li:nth-child(4n+4){
+		margin-right: 0;	
+	}
+	.auth_dtl > span{
+		line-height: 34px;
+	}
+	.post_auth_img{ width: 38px ;height: 38px;}
+	#loading-image {width: 40px;margin-top: -40px; }
+	.back-top { display: none;}
+	
+	/******11-03-2019 start css******/
+	#search_suggestion_holder li {
+		font-size: 12px !important;
+		font-family: 'merriweather_sansregular';
+	}
+	
+	.search-n-icon .input-box.form.serachbox {
+		width: 100%;
+		margin: 0;
+	}
+	.search-n-icon .input-box.form.serachbox #search_board {
+		margin: 10px 0 0px !important;
+		width: 100%;
+		height: 30px;
+		font-size: 12px !important;
+		font-family: 'merriweather_sansregular';
+	}
+	.search-n-icon .input-box.form.serachbox #blogsearch {
+		top: 15px;
+		right: 13px;
+		position: absolute;
+		color: #000;
+	}
+	#search_suggestion_holder {
+		position: absolute;
+		top: 50px;
+		background: #fff;
+		width: 410px;
+		left: 0;
+		max-height: 290px;
+		overflow-y: auto;
+		box-shadow: 0 0 3px #9c9c9c;
+	}
+	#search_suggestion_holder li {
+		padding: 6px 13px;
+		text-align: left;
+		width: 100%;
+		color: #000;
+		border-bottom: solid 1px #eee;
+		cursor: pointer;
+	}
+	#search_suggestion_holder .highlight-keys {
+		color: #000;
+	}
+	#search_suggestion_holder li:hover {
+		background: #f1f1f1;
+	}
+  .new_header_left.box-store {
+	width: 30%;
+  }
+  .list-topLeft li.search-n-icon {
+	width: 80%;
+   }
+   .sort-by.top-video {
+	padding-bottom: 0;
+	border: none;
+	margin-bottom: 0;
+   }
+  .col-main.index-main.store-main {
+	margin-top: 0 !important;
+  }
+  ul.category-photo li {
+	padding-bottom: 40px;
+}
+
+/******* new-change 26-03-2019 *******/
+
+	#mp_all_sets_front .category-products .setwithimagelist {
+    width: 50%;
+    float: left;
+    max-height: 200px;
+    min-height: 200px;
+	overflow: hidden;
+	height: 235px;
+	}
+
+	.setwithimagelist img{max-height:100%;float: left; height: 100%;}
+
+
+.trandy-club {
+	display: inline-block;
+	width: 100%;
+	border-top: 0.5px solid rgb(230, 230, 230);
+	padding-top: 8px;
+	margin-top: 0px;
+	min-height: 70px;
+	position: relative;
+}
+.trandy-club .mp_post_auth_dtl.mp_auth_decorate {
+	display: inline-block;
+	width: 100%;
+	padding: 0 10px 0 60px;
+	text-align: left;
+	border-top: none;
+}
+.trandy-club .auth_dtl {
+	display: inline-block;
+	line-height: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	text-align: left;
+}
+#mp_all_sets_front .category-image .product-name, #mp_all_sets_front .setmaindiv .product-name {
+	height: auto;
+	padding: 0 !important;
+	text-align: left;
+	margin: 0 !important;
+	line-height: 15px;
+	min-height: auto;
+}
+.trandy-club .post_auth_img {
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    z-index: 11;
+}
+.trandy-club .auth_dtl > span {
+    line-height: 24px;
+}
+.trandy-club .post_likes {
+    line-height: 20px;
+}
+
+
+</style>
+
+<div class="section-main" id="mp_all_sets_front">
+<div class="main-container col2-left-layout">
+<div class="main">
+    <div class="sort-by top-video">
+    <div class="mb_search_area mysearch_blog">
+      <link rel="stylesheet" href="https://coronavirusaid.net/skin/frontend/on-store-now/default/css/ajax-autocomplete.css" />
+          
+    </div>
+            </div>
+<div id="tab">
+ <div class="col-main index-main store-main">
+     <div class="customer-account-giftcard">
+	
+	
+	
+	
+	<div class="inner-right">
+<div class="category-products">
+                                <ul class="products-grid category-photo tt">
+                    <li class="item first">
+			<div class="setmaindiv">
+							<div class="category-image">
+					<a href="https://coronavirusaid.net/set/protective-measures-against-coronavirus/id/1361" title="" class="product-image">
+					  <img alt="Item" src="https://coronavirusaid.net/media/coverimage/0123281e5b7d94b7fc1cf4ae2d7148ac_6909d70cdbf7d1ab826ab805022a7f83_coronavirus-tips-to-protect.jpg" class="lazyOwl coverimage">
+					</a>
+
+			   	   <div class="trandy-club">
+	   	  <span class="post_auth_img test">
+		      <a class="fancybox" href="https://coronavirusaid.net/myboard/index/userprofile/1621">
+			<img src="https://coronavirusaid.net/media/customer/p/r/prevention_1.jpg" alt="auth img" class="auth_img">
+		    </a>
+		  </span>
+	    <div class="mp_post_auth_dtl mp_auth_decorate">
+		  <h2 class="product-name"><a title="" href="https://coronavirusaid.net/set/protective-measures-against-coronavirus/id/1361">
+		  	Protective Measures against Coronavirus			</a></h2>
+		
+			   
+		    <span class="auth_dtl">
+		    <span class="auth_name"><a class="fancybox" href="https://coronavirusaid.net/myboard/index/userprofile/1621"><span class="notranslate">Coronavirus Prevention</span></a></span>
+		   </span>
+		  <span class="post_likes">
+		     <ul class="title-socils post_likes" style="display: none;float: left;padding: 0 0 0 !important">
+										<li><a href="#inline1" class="top-account-a fancybox"><img src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/like-icon.png" alt="like-icon"/></a></li>
+									    
+			</ul>
+		     <span id="num_likes7257">0</span>
+		  </span>
+		  </div>
+		</div>
+		                </div>
+						</div>
+            </li>
+                                    <li class="item">
+			<div class="setmaindiv">
+							<div class="category-image">
+					<a href="https://coronavirusaid.net/set/when-to-use-a-mask/id/1360" title="" class="product-image">
+					  <img alt="Item" src="https://coronavirusaid.net/media/coverimage/077ec705983e0882ca496e297b30231b_5fe48977b98918e38a2d52b35efd0b14_coronavirus-when-to-use-a-mask.jpg" class="lazyOwl coverimage">
+					</a>
+
+			   	   <div class="trandy-club">
+	   	  <span class="post_auth_img test">
+		      <a class="fancybox" href="https://coronavirusaid.net/myboard/index/userprofile/1621">
+			<img src="https://coronavirusaid.net/media/customer/p/r/prevention_1.jpg" alt="auth img" class="auth_img">
+		    </a>
+		  </span>
+	    <div class="mp_post_auth_dtl mp_auth_decorate">
+		  <h2 class="product-name"><a title="" href="https://coronavirusaid.net/set/when-to-use-a-mask/id/1360">
+		  	When to use a mask			</a></h2>
+		
+			   
+		    <span class="auth_dtl">
+		    <span class="auth_name"><a class="fancybox" href="https://coronavirusaid.net/myboard/index/userprofile/1621"><span class="notranslate">Coronavirus Prevention</span></a></span>
+		   </span>
+		  <span class="post_likes">
+		     <ul class="title-socils post_likes" style="display: none;float: left;padding: 0 0 0 !important">
+										<li><a href="#inline1" class="top-account-a fancybox"><img src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/like-icon.png" alt="like-icon"/></a></li>
+									    
+			</ul>
+		     <span id="num_likes7256">0</span>
+		  </span>
+		  </div>
+		</div>
+		                </div>
+						</div>
+            </li>
+                                    <li class="item">
+			<div class="setmaindiv">
+							<div class="category-image">
+					<a href="https://coronavirusaid.net/set/bbc-how-do-we-prepare/id/1359" title="" class="product-image">
+					  <img alt="Item" src="https://coronavirusaid.net/media/coverimage/f90a94bb2a7f5b61c892e83bbc5daff4_3281893f66abc8d254069a9c532d033c_coronavirus-bbc copy.jpg" class="lazyOwl coverimage">
+					</a>
+
+			   	   <div class="trandy-club">
+	   	  <span class="post_auth_img test">
+		      <a class="fancybox" href="https://coronavirusaid.net/myboard/index/userprofile/1620">
+			<img src="https://coronavirusaid.net/media/customer/t/v/tv-channels-coronavirus_1_1.jpg" alt="auth img" class="auth_img">
+		    </a>
+		  </span>
+	    <div class="mp_post_auth_dtl mp_auth_decorate">
+		  <h2 class="product-name"><a title="" href="https://coronavirusaid.net/set/bbc-how-do-we-prepare/id/1359">
+		  	BBC | How do we prepare?			</a></h2>
+		
+			   
+		    <span class="auth_dtl">
+		    <span class="auth_name"><a class="fancybox" href="https://coronavirusaid.net/myboard/index/userprofile/1620"><span class="notranslate">TV Channels</span></a></span>
+		   </span>
+		  <span class="post_likes">
+		     <ul class="title-socils post_likes" style="display: none;float: left;padding: 0 0 0 !important">
+										<li><a href="#inline1" class="top-account-a fancybox"><img src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/like-icon.png" alt="like-icon"/></a></li>
+									    
+			</ul>
+		     <span id="num_likes7254">0</span>
+		  </span>
+		  </div>
+		</div>
+		                </div>
+						</div>
+            </li>
+                                    <li class="item last">
+			<div class="setmaindiv">
+							<div class="category-image">
+					<a href="https://coronavirusaid.net/set/al-jazeera-coronavirus-inaction/id/1358" title="" class="product-image">
+					  <img alt="Item" src="https://coronavirusaid.net/media/coverimage/b6bfcf057a4b4856a56a12ef9e55fbbc_97e3ee077248002ad563954a8ae5a3db_coronavirus-al-jazeera.jpg" class="lazyOwl coverimage">
+					</a>
+
+			   	   <div class="trandy-club">
+	   	  <span class="post_auth_img test">
+		      <a class="fancybox" href="https://coronavirusaid.net/myboard/index/userprofile/1620">
+			<img src="https://coronavirusaid.net/media/customer/t/v/tv-channels-coronavirus_1_1.jpg" alt="auth img" class="auth_img">
+		    </a>
+		  </span>
+	    <div class="mp_post_auth_dtl mp_auth_decorate">
+		  <h2 class="product-name"><a title="" href="https://coronavirusaid.net/set/al-jazeera-coronavirus-inaction/id/1358">
+		  	Al Jazeera | Coronavirus inaction			</a></h2>
+		
+			   
+		    <span class="auth_dtl">
+		    <span class="auth_name"><a class="fancybox" href="https://coronavirusaid.net/myboard/index/userprofile/1620"><span class="notranslate">TV Channels</span></a></span>
+		   </span>
+		  <span class="post_likes">
+		     <ul class="title-socils post_likes" style="display: none;float: left;padding: 0 0 0 !important">
+										<li><a href="#inline1" class="top-account-a fancybox"><img src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/like-icon.png" alt="like-icon"/></a></li>
+									    
+			</ul>
+		     <span id="num_likes7253">0</span>
+		  </span>
+		  </div>
+		</div>
+		                </div>
+						</div>
+            </li>
+                </ul>
+                                <ul class="products-grid category-photo tt">
+                    <li class="item first">
+			<div class="setmaindiv">
+							<div class="category-image">
+					<a href="https://coronavirusaid.net/set/4-channel-are-we-doing-enough/id/1357" title="" class="product-image">
+					  <img alt="Item" src="https://coronavirusaid.net/media/coverimage/bb4aa2f9b349babc2d76601b875fe70f_a10988bbe90f6c7e664bf12af6e2069f_Screen Shot 2020-03-14 at 16.48.21.png" class="lazyOwl coverimage">
+					</a>
+
+			   	   <div class="trandy-club">
+	   	  <span class="post_auth_img test">
+		      <a class="fancybox" href="https://coronavirusaid.net/myboard/index/userprofile/1620">
+			<img src="https://coronavirusaid.net/media/customer/t/v/tv-channels-coronavirus_1_1.jpg" alt="auth img" class="auth_img">
+		    </a>
+		  </span>
+	    <div class="mp_post_auth_dtl mp_auth_decorate">
+		  <h2 class="product-name"><a title="" href="https://coronavirusaid.net/set/4-channel-are-we-doing-enough/id/1357">
+		  	4 Channel | Are we doing enough?			</a></h2>
+		
+			   
+		    <span class="auth_dtl">
+		    <span class="auth_name"><a class="fancybox" href="https://coronavirusaid.net/myboard/index/userprofile/1620"><span class="notranslate">TV Channels</span></a></span>
+		   </span>
+		  <span class="post_likes">
+		     <ul class="title-socils post_likes" style="display: none;float: left;padding: 0 0 0 !important">
+										<li><a href="#inline1" class="top-account-a fancybox"><img src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/like-icon.png" alt="like-icon"/></a></li>
+									    
+			</ul>
+		     <span id="num_likes7258">0</span>
+		  </span>
+		  </div>
+		</div>
+		                </div>
+						</div>
+            </li>
+                                    <li class="item">
+			<div class="setmaindiv">
+							<div class="category-image">
+					<a href="https://www.worldometers.info/coronavirus/" title="" class="product-image">
+					  <img alt="Item" src="https://coronavirusaid.net/media/coverimage/e891614a74d16808181a3b35d1a93044_coronavirus-daily-updates copy.jpg" class="lazyOwl coverimage">
+					</a>
+
+			   	   <div class="trandy-club">
+	   	  <span class="post_auth_img test">
+		      <a class="fancybox" href="https://coronavirusaid.net/myboard/index/userprofile/338">
+			<img src="https://coronavirusaid.net/media/customer/c/o/coronavirus-covid-19.jpg" alt="auth img" class="auth_img">
+		    </a>
+		  </span>
+	    <div class="mp_post_auth_dtl mp_auth_decorate">
+		  <h2 class="product-name"><a title="" href="https://www.worldometers.info/coronavirus/">
+		  	Coronavirus Number of Cases | Daily Updated			</a></h2>
+		
+			   
+		    <span class="auth_dtl">
+		    <span class="auth_name"><a class="fancybox" href="https://coronavirusaid.net/myboard/index/userprofile/338"><span class="notranslate">Coronavirus Now</span></a></span>
+		   </span>
+		  <span class="post_likes">
+		     <ul class="title-socils post_likes" style="display: none;float: left;padding: 0 0 0 !important">
+										<li><a href="#inline1" class="top-account-a fancybox"><img src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/like-icon.png" alt="like-icon"/></a></li>
+									    
+			</ul>
+		     <span id="num_likes7246">0</span>
+		  </span>
+		  </div>
+		</div>
+		                </div>
+						</div>
+            </li>
+                                    <li class="item">
+			<div class="setmaindiv">
+							<div class="category-image">
+					<a href="https://www.who.int/redirect-pages/page/novel-coronavirus-(covid-19)-situation-dashboard" title="" class="product-image">
+					  <img alt="Item" src="https://coronavirusaid.net/media/coverimage/13308a1c1e1579bf3ec0239ba8e8c201_Novel Coronavirus | Covin-19 | Situation copy.jpg" class="lazyOwl coverimage">
+					</a>
+
+			   	   <div class="trandy-club">
+	   	  <span class="post_auth_img test">
+		      <a class="fancybox" href="https://coronavirusaid.net/myboard/index/userprofile/338">
+			<img src="https://coronavirusaid.net/media/customer/c/o/coronavirus-covid-19.jpg" alt="auth img" class="auth_img">
+		    </a>
+		  </span>
+	    <div class="mp_post_auth_dtl mp_auth_decorate">
+		  <h2 class="product-name"><a title="" href="https://www.who.int/redirect-pages/page/novel-coronavirus-(covid-19)-situation-dashboard">
+		  	WHO Novel Coronavirus | Covin-19 | Situation			</a></h2>
+		
+			   
+		    <span class="auth_dtl">
+		    <span class="auth_name"><a class="fancybox" href="https://coronavirusaid.net/myboard/index/userprofile/338"><span class="notranslate">Coronavirus Now</span></a></span>
+		   </span>
+		  <span class="post_likes">
+		     <ul class="title-socils post_likes" style="display: none;float: left;padding: 0 0 0 !important">
+										<li><a href="#inline1" class="top-account-a fancybox"><img src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/like-icon.png" alt="like-icon"/></a></li>
+									    
+			</ul>
+		     <span id="num_likes7240">0</span>
+		  </span>
+		  </div>
+		</div>
+		                </div>
+						</div>
+            </li>
+                        <script type="text/javascript">decorateGeneric($$('ul.products-grid'), ['odd','even','first','last'])</script>
+     	 </div>
+</div>
+
+<div id="mp_bottom_toolbar" class="mp_blg_bottom_toolbar">	
+
+        <div class="pager order-table order-bottom">
+    
+        <!--<p class="amount">-->
+                                        <!--<strong></strong>-->
+            <!--</p>-->
+    
+        <div class="limiter">
+    
+		<div class="view-txt">View</div>
+          
+        <!--<label class="mp_lbl_review"></label>-->
+        <select class="country_id" sb="49080052" style="display: none;" onchange="setLocation(this.value)">
+                    <option value="https://coronavirusaid.net/?limit=8" selected="selected">
+                8            </option>
+                    <option value="https://coronavirusaid.net/?limit=16">
+                16            </option>
+                    <option value="https://coronavirusaid.net/?limit=24">
+                24            </option>
+                    <option value="https://coronavirusaid.net/?limit=all">
+                all            </option>
+                </select> 	        <div class="mp_table_sorter">
+        <select onchange="blogsortby(this.value);" class="country_id" sb="49080052">
+                <option  value="new">Newest First</option>
+        <option  value="name">Title</option>
+	<option  value="popularity">Most Popular</option>
+	</select>
+        </div>
+                
+    </div>
+    	
+
+        
+        
+            <div class="view-size mp_go_to_top">
+            <div class="sort-by-field">
+             <a class="back-top" href="#"><img alt="" src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/arrow-up.png"></a>
+            </div>
+        </div>
+
+
+        </div>
+    
+</div>
+		
+        <!--<a class="comment_video" onclick="addComment();" href="javascript:void(0)">Add a Comment</a>	-->
+
+    <div class="buttons-set">
+        <!--<p class="back-link"><a href="http://maria.kr.cisinlive.com/index.php/giftvoucher/index/index/"><small>� </small></a></p>-->
+    </div>
+</div>
+       <div id="loadingDiv" class="myblogdiv" style="display: none;"></div>              
+               
+ </div>
+                
+                
+</div>
+ <div  style="text-align: center"><img id="loading-image" src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/loader.gif"></div>
+	        <div class="col-left sidebar inner-left sidebar-left store_left video-top" style="display: none;"> <!--add sidebar-left-->
+                
+                
+            <div class="block block-layered-nav">
+        <div class="block-content inner-left">
+           <div class="fme-filter">
+            
+            <dl id="fme_filters_list" class="inner-row inner-scnd">
+		    		<h2>Theme</h2>
+		 <dd id="fme_layered_theme">
+                        <ol class="select-field side-scroll content mCustomScrollbar theme_list">
+						</ol>
+		 </dd>
+					 <h2>Author</h2>
+			 
+                        <div class="srch-store brand-store">
+        <input id="search_brand" name="search_brand" type="text" class="srch-box2" placeholder="Enter Keywords">
+        <span class="icon-srch"><i class="fa fa-search"></i></span>
+        </div>
+                        <dd id="fme_layered_brand">
+                        <ol class="select-field side-scroll content mCustomScrollbar brands_list">
+                        <!--				    <li><input id="brand-" style="display: none;" class="checkbrand" type="checkbox" name="brandchk" value=""  ><a id="brand-" class="checkbrand fme_layered_attribute " value="" ></a></li>
+				   --> 				    <li><input id="brand-338" style="display: none;" class="checkbrand" type="checkbox" name="brandchk" value="338"  ><a id="brand-338" class="notranslate checkbrand fme_layered_attribute " value="338" >Coronavirus Now </a></li>
+				    				    <li><input id="brand-1620" style="display: none;" class="checkbrand" type="checkbox" name="brandchk" value="1620"  ><a id="brand-1620" class="notranslate checkbrand fme_layered_attribute " value="1620" >TV Channels </a></li>
+				    				    <li><input id="brand-1621" style="display: none;" class="checkbrand" type="checkbox" name="brandchk" value="1621"  ><a id="brand-1621" class="notranslate checkbrand fme_layered_attribute " value="1621" >Coronavirus Prevention </a></li>
+				                            </ol>
+                        </dd>
+            </dl>
+            
+            </div>		
+			
+	</div>
+</div>
+	</div>		
+	</div> 
+</div>
+<input type="hidden"  id="type1" nams= "type1"  value=""/>
+<input type="hidden" id="brand" nams= "brand" value=""/>
+<input type="hidden"  id="theme" nams= "theme" value=""/>
+<input type="hidden"  id="sort" nams= "sort" value=""/>
+<script>
+	var jsearch = jQuery.noConflict();
+jsearch("#search_brand").keyup(function () {
+var filter = jsearch(this).val();
+//console.log(filter);
+var show_count=0;
+jsearch(".brands_list li").each(function () {
+if (jsearch(this).text().search(new RegExp(filter, "i")) < 0) {
+    jsearch(this).hide();
+} else {
+    jsearch(this).show();
+    show_count++;
+}
+});
+
+if (show_count==0) {
+    jsearch(".brands_list").append('<li class="no_res_li">No result found</li>');
+}
+else{
+    jsearch(".brands_list .no_res_li").remove();
+}
+
+});
+
+var jq = jQuery.noConflict();
+//Sort the brand list start
+        var mylist = jq('.brands_list');
+	var listitems = mylist.children('li').get();
+	listitems.sort(function(a, b) {
+	   var compA = jq(a).text().toUpperCase();
+	   var compB = jq(b).text().toUpperCase();
+	   return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
+	})
+	jq.each(listitems, function(idx, itm) { mylist.append(itm); });
+    //Sort the brand list end
+    
+    
+     // functions
+            function reloadWithQueryStringVars (queryStringVars) {
+            var existingQueryVars = location.search ? location.search.substring(1).split("&") : [],
+                currentUrl = location.search ? location.href.replace(location.search,"") : location.href,
+                newQueryVars = {};
+		var n = currentUrl.indexOf("#");
+		     if (n>0) {
+		       //currentUrl= currentUrl.substring(0, currentUrl.length - 2);
+			   currentUrl= currentUrl.substring(0, currentUrl.length - 1);
+		     }
+               var newUrl = currentUrl + "?";
+	       
+            if(existingQueryVars.length > 0) {
+                for (var i = 0; i < existingQueryVars.length; i++) {
+                    var pair = existingQueryVars[i].split("=");
+                    newQueryVars[pair[0]] = pair[1];
+                }
+            }
+            if(queryStringVars) {
+                for (var queryStringVar in queryStringVars) {
+                    newQueryVars[queryStringVar] = queryStringVars[queryStringVar];
+                }
+            }
+            if(newQueryVars) { 
+                for (var newQueryVar in newQueryVars) {
+                    newUrl += newQueryVar + "=" + newQueryVars[newQueryVar] + "&";
+                }
+                newUrl = newUrl.substring(0, newUrl.length-1);
+                window.location.href = newUrl;
+            } else {
+                window.location.href = location.href;
+            }
+        }
+    // end function
+    
+    
+jq('.checkbrand').click(function() {
+jq('#loadingDiv').show();
+if(jq(this).parent().find('input').prop('checked') == true){
+    jq(this).parent().find('input').prop('checked',false);
+}
+else
+{
+	jq(this).parent().find('input').prop('checked',true);					
+}
+
+var checkedValues = jq('input[name="brandchk"]:checked').map(function() {
+	return this.value;
+    }).get();
+reloadWithQueryStringVars({"brand": checkedValues});
+});
+
+//For theme
+jq('.checktheme').click(function() {
+jq('#loadingDiv').show();
+if(jq(this).parent().find('input').prop('checked') == true){
+    jq(this).parent().find('input').prop('checked',false);
+}
+else
+{
+	jq(this).parent().find('input').prop('checked',true);					
+}
+
+var checkedValues = jq('input[name="themechk"]:checked').map(function() {
+	return this.value;
+    }).get();
+reloadWithQueryStringVars({"theme": checkedValues});
+});
+
+//For sorting
+function blogsortby(sort)
+{
+	reloadWithQueryStringVars({"sort": sort});
+}
+
+function show_searchedboardproducts(url) {
+
+	console.log("loading-image show");
+    //jq_head("#loader_product").show();
+    var type = jq('#type1').val();
+    var brand = jq('#brand').val();
+    var theme = jq('#theme').val();
+    var sort = jq('#sort').val();
+    var main_title=jq('#search_board').val();
+    jq(".myblogdiv").show();
+    if(url)
+    var pageurl=url;
+    else
+    var pageurl='https://coronavirusaid.net/myboard/index/searchmyboardajax/';
+    new Ajax.Request(pageurl, {
+	method: 'Post',
+	dataType: 'json',
+	parameters: {"main_title":main_title,"brand":brand,"theme":theme,"type":type,"sort":sort},
+	onComplete: function(transport) {
+			 page_no2 = 2;
+		    jq("#tab").html(transport.responseText);
+			
+			total_pages=jq('#mp_bottom_toolbar .page-link .i-next').parent().prev().text();
+			console.log("total_pages="+total_pages);
+			if(total_pages == ""){
+				console.log("total_pages="+total_pages);
+				jq("#loading-image").hide();
+			}
+			if(total_pages >1){
+				jq("#loading-image").show();
+			}
+		    jq(".myblogdiv").hide();
+	    }
+    });
+    	
+}
+
+jq( "#search_board" ).keyup(function(e) {
+    if ((jq('#search_board').val().length>=3 || (e.keyCode ==8 && jq('#search_board').val().length>0))&& e.keyCode!=40 && e.keyCode!=38 && e.keyCode!=37 && e.keyCode!=39 ) {
+
+	show_searchedboardproducts('');
+    }
+});
+jq(document).ready(function(){
+	var ajx_fun_url='https://coronavirusaid.net/myboard/index/board_search_autocomplete/';
+	var timer = null;
+	jq('#search_board').keyup(function(e){
+		
+		if( e.keyCode ==38 ){
+			if( jq('#search_suggestion_holder').is(':visible') ){
+				if( ! jq('.selected').is(':visible') ){
+					jq('#search_suggestion_holder li').last().addClass('selected');
+				}else{
+					var i = jq('#search_suggestion_holder li').index(jQuery('#search_suggestion_holder li.selected')) ;
+					jq('#search_suggestion_holder li.selected').removeClass('selected');
+					i--;
+					jq('#search_suggestion_holder li:eq('+i+')').addClass('selected');
+					
+				}
+			}
+		}else if(e.keyCode ==40){
+			if( jq('#search_suggestion_holder').is(':visible') ){
+				if( ! jq('.selected').is(':visible') ){
+					jq('#search_suggestion_holder li').first().addClass('selected');
+				}else{
+					var i =  jq('#search_suggestion_holder li').index(jQuery('#search_suggestion_holder li.selected')) ;
+					jq('#search_suggestion_holder li.selected').removeClass('selected');
+					i++;
+					jq('#search_suggestion_holder li:eq('+i+')').addClass('selected');
+				}
+			}					
+		}else if(e.keyCode ==13){
+			if( jq('.selected').is(':visible') ){
+				var value=jq('.selected').text();
+				jq('#search_board').val(value);
+				jq('#search_suggestion_holder').hide();
+				show_searchedboardproducts('');
+				jq('#search_suggestion_holder').hide();
+				
+			}
+		}else{
+			var keyword=jQuery(this).val();
+			
+			if (keyword==''&& e.keyCode!=37 && e.keyCode!=39){
+				show_searchedboardproducts('');
+			}
+			
+			setTimeout( function(){
+			    var usertype = jq('#type1').val();
+				jq.ajax({
+					url:ajx_fun_url,
+					data:'keyword='+keyword+'&usertype='+usertype,
+					success:function(data){
+						jq('#search_suggestion_holder').html(data);
+					
+						
+						if (keyword=='') {
+							jq('#search_suggestion_holder').hide();
+						}
+						else
+						{
+							jq('#search_suggestion_holder').show();
+						}
+						
+					}
+				});
+			},400);
+		}
+	});
+	
+	jq('#search_suggestion_holder').on('click','li',function(){
+		var value=jq(this).text();
+		jq('#search_board').val(value);
+		show_searchedboardproducts('');
+		jq('#search_suggestion_holder').hide();
+	});
+	
+	jq( "#btn_mb_search" ).click(function() {
+		
+		show_searchedboardproducts('');
+		jq('#search_suggestion_holder').hide();
+	});
+	
+	jq("body").mouseup(function(e)
+	{
+	    var subject = jq("#search_suggestion_holder");
+    
+	    if(e.target.id != subject.attr('id'))
+	    {
+		subject.hide();
+	    }
+	});
+	
+});
+var jq_home = jQuery.noConflict();
+function likePost(thisthis) {
+    
+    var likedimg='https://coronavirusaid.net/skin/frontend/on-store-now/default/images/liked.png';
+    var unlikedimg='https://coronavirusaid.net/skin/frontend/on-store-now/default/images/like-icon.png';
+    var acti_id=jq_home(thisthis).attr('id');
+    var post_id=jq_home(thisthis).attr('postid');
+    var status=0;
+    var posttype='boardpost';
+    
+    if (jq_home(thisthis).hasClass('mp_likeit')) {
+    jq_home(thisthis).find('img').attr('src',likedimg);
+    jq_home(thisthis).removeClass('mp_likeit');
+    jq_home(thisthis).addClass('mp_unlikeit');
+     
+	if (acti_id) {
+	    new Ajax.Request("https://coronavirusaid.net/social/wp-admin/admin-ajax.php", {
+		method: 'Post',
+		dataType: 'json',
+		parameters: {"id":acti_id,"action":"activity_mark_fav"},
+		onComplete: function(response) {
+	
+		}
+	     });
+	}
+	status=1;
+     
+    }
+    else
+    {
+	jq_home(thisthis).find('img').attr('src',unlikedimg);
+	jq_home(thisthis).removeClass('mp_unlikeit');
+	jq_home(thisthis).addClass('mp_likeit');
+	
+	if (acti_id) {
+	    new Ajax.Request("https://coronavirusaid.net/social/wp-admin/admin-ajax.php", {
+	    method: 'Post',
+	    dataType: 'json',
+	    parameters: {"id":acti_id,"action":"activity_mark_unfav"},
+	    onComplete: function(response) {
+		
+	    }
+	 });
+	}
+	status=0;
+	
+    }
+    
+    new Ajax.Request("https://coronavirusaid.net/wkblog/index/likePostByuser", {
+	method: 'Post',
+	dataType: 'json',
+	parameters: {"postid":post_id,"type":posttype,"status":status},
+	onComplete: function(response) {
+	    console.log('status=',status);
+		  var num_like = jq_home('#num_likes'+acti_id).html();
+		   if(status==0)
+		   num_like =  parseInt(num_like)-parseInt(1);
+		   else
+		   num_like =  parseInt(num_like)+parseInt(1);
+
+		  jq_home('#num_likes'+acti_id).html(num_like);
+		  console.log(num_like);
+	}
+     });
+    
+}
+//Code to call a loader on scroll down start
+var jq = jQuery.noConflict();
+var is_loding2=false;
+var page_no2=2;
+var p_per_page2=8;
+var iScrollPos2 = 0;
+
+jq(document).ready(function () {
+//if(jq('.blog-index-index').length){
+	var search = "";
+	var loader_url='https://coronavirusaid.net/myboard/index/infiniteloader/';
+	
+	jq(window).on( "scroll", function( event ) {	
+		var iCurScrollPos = jq(this).scrollTop();
+	    if (iCurScrollPos > iScrollPos2) {
+	        //Scrolling Down
+
+	        var total_pages=1;
+			if(jq('#mp_bottom_toolbar .page-link .i-next').length){
+				total_pages=jq('#mp_bottom_toolbar .page-link .i-next').parent().prev().text();
+			}
+				console.log("search_text_before"+loader_url);
+	        
+			if(is_loding2==false && total_pages>=page_no2){
+				
+				var search_text=jq('#search_board').val();
+			    console.log("search_text"+search_text);
+				is_loding2=true;
+			    jq('#loading-image').show();
+
+				    new Ajax.Request(loader_url, {
+				        method: 'Post',
+				        dataType: 'json',
+				        parameters: {"page":page_no2,"p_per_page":p_per_page2,"main_title":search_text,"search":search},
+				        onComplete: function(transport) {
+				            is_loding2=false;
+				            page_no2=page_no2+1;
+				            var html=transport.responseText;
+				            if(html){
+				            	 jq('.category-products').append(html);
+				            }
+				           // var data=JSON.parse(transport.responseText);
+				           jq('#loading-image').hide();
+						   	jq(".back-top").show();
+					    }
+					});
+			}
+		}
+		iScrollPos2 = iCurScrollPos;
+	});
+//}
+});
+//Code to call a loader on scroll down ends
+</script>
+</div>
+<div id="loadingDiv" class="mploadingDiv" style="display: none;"></div>                </div>
+            </div>
+        </div>
+        <!--<div class="footer-container">-->
+</div>
+</div>
+<div class="footer">        	
+<div class="main-full">
+    <div class="container">
+                 <div class="footer-middle">
+                            <div class="footer-colum-one footercols">
+                                           <ul class="footer-link">
+<li><a title="Coronavirus Aid Abous Us" href="https://coronavirusaid.net/about-us/"> About Us</a></li>
+<li><a title="Coronavirus Aid Contact us" href="https://coronavirusaid.net/contact-us/">Contact Us</a></li>
+</ul>                            </div>
+                            
+                            <div class="footer-colum-two footercols">
+                                            <ul class="footer-link">
+<li><a href="https://coronavirusaid.net/terms/">Terms &amp; Conditions</a></li>
+<li><a href="https://coronavirusaid.net/privacy-policy-cookie"> Privacy Policy</a></li>
+</ul>                            </div>
+                            
+                            <div class="footer-colum-three footercols" style="display: none;">
+				                            </div>
+                            
+                            <div style="display: none;" class="footer-colum-four footercols">
+                                				                            </div>
+			    <div class="footer-colum-five">
+			      <!--<h2></h2>-->
+			       <div id="fb-root"></div>
+				      <script type="text/javascript">
+					jQuery.noConflict();
+					jQuery(".login-right .first").prev('li').remove();
+				      </script>
+              <a href="">
+                <img src="https://coronavirusaid.net/skin/frontend/on-store-now/default/images/fbbox.jpg">
+              </a>
+				      <!-- <div class="fb-like-box" data-href="" data-width="300px" data-adapt-container-width="true" data-height="190px" data-colorscheme="light" data-show-faces="true" data-border-color="#3B5998" data-header="false" data-stream="false" data-show-border="false"></div> -->
+				    <div style="display: none;" class="mp_fanbox_loader" id="footer_fbbox_loader"></div>
+			    </div>
+            </div>
+            <div class="footer-bottom">
+             &copy; Copyright 2020 Coronavirus Aid |  <a href="#">All Rights Reserved</a>
+            </div>
+</div>
+        </div>
+        <!--start of Offerchat js code--><!--<script type='text/javascript'>var ofc_key = '5eb1dff586ab0022c2ff881cfc4d3f26';(function(){  var oc = document.createElement('script'); oc.type = 'text/javascript'; oc.async = true;  oc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'd1cpaygqxflr8n.cloudfront.net/p/js/widget.min.js?r=1';  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(oc, s);}());</script>--><!--end of Offerchat js code-->
+                <!--<p class="bugs"> - <a href="http://www.magentocommerce.com/bug-tracking" onclick="this.target='_blank'"><strong></strong></a> </p>-->
+    </div>
+<!--</div>-->
+<a class="shopN" style="display:none" id="shopN_Link" target="_blank" href="#">Shop Now</a>
+<style type="text/css">
+  .shopN{
+position: absolute;
+z-index: 1px;
+background: none repeat scroll 0 0 #ececec;
+border: 1px solid #e0e0e0;
+color: #1a1a1a;
+font-family: GothamBook;
+font-size: 12px;
+padding: 5px 20px;
+}
+.shopN{
+    text-decoration: none;
+}
+</style>
+<script type="text/javascript">
+       
+  jQuery('#search_brand').on('keyup',function(){
+  var one=jQuery('.one ul > li:visible').length;
+  var two=jQuery('.two ul > li:visible').length; 
+  var three=jQuery('.three ul > li:visible').length;
+  if(one==0){
+  jQuery('.one').css("width","auto");
+  }else{
+    jQuery('.one').removeAttr('style');
+  }
+  if(two==0){
+  jQuery('.two').css("width","auto");
+  }else{
+  jQuery('.two').removeAttr('style');
+  }
+  if(three==0){
+  jQuery('.three').css("width","auto");
+  }else{
+  jQuery('.three').removeAttr('style');
+  }
+})
+</script>
+<script type="text/javascript">
+// jQuery('.list-leftMenu').prev().addClass('mp_left_down');
+// jQuery('.list-leftMenu').prev().click(function(){
+//   jQuery('.list-leftMenu').toggle('slow');
+//   jQuery(this).toggleClass('mp_left_up');
+// })
+</script>
+<style>
+.mp_custom_border{
+border: 1px solid #e0dede;
+border-radius:8px;
+padding: 5px !important;
+}
+.catalog-category-view .mp_custom_border{
+ border: none;
+ border-radius:0px; 
+}
+.catalogsearch-result-index .mp_custom_border{
+ border: none;
+ border-radius:0px;  
+}
+</style>
+<script type="text/javascript">
+  //var cb = function() {
+  //  var l = document.createElement('link'); l.rel = 'stylesheet';
+  //  l.href = '';
+  //  var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+  //   var l = document.createElement('link'); l.rel = 'stylesheet';
+  //  l.href = '';
+  //  var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+  //
+  //};
+  //var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+  //    webkitRequestAnimationFrame || msRequestAnimationFrame;
+  //if (raf) raf(cb);
+  //else window.addEventListener('load', cb);
+</script>
+<!-- <link media="all" href="" type="text/css" rel="stylesheet">
+<link media="all" href="" type="text/css" rel="stylesheet"> -->
+ <!-- <link media="all" href="" type="text/css" rel="stylesheet"> -->
+
+<!-- <script src="" type="text/javascript" ></script>
+<script src="" type="text/javascript" ></script>
+<script src="" type="text/javascript" ></script>
+<script src="" type="text/javascript" ></script>
+<script src="" type="text/javascript" ></script>
+<script src="" type="text/javascript" ></script>
+<script src="" type="text/javascript" ></script> -->
+<script src="https://coronavirusaid.net/skin/frontend/on-store-now/default/js/custom.js" type="text/javascript"></script>
+<script src="https://coronavirusaid.net/skin/frontend/on-store-now/default/js/jquery.fancybox.pack.js" type="text/javascript" ></script>
+
+
+<div id="mp_log_pop_content">
+    <div style="display:none" id="inline1">
+<!-- <link media="all" href="" type="text/css" rel="stylesheet"> -->
+<!-- <script type="text/javascript" src=""></script> -->
+				<div class="login_inner">
+                <div class="login_inner_left">
+			<div id="ajaxlogin_form_message"></div>
+                	<div class="h2">Login&nbsp;<span class="login-title-txt">for 24/7 Style Advice</span></div>
+			
+			                    <div class="login_with"><span></span></div>
+                    
+               	  <div class="three_btn">
+			<!-- Social Login Links -->
+								
+				<!--<div id="fb-root"></div>-->
+								<!-- Facebook login -->
+								<div class="fb_btn"><a href="javascript:void(0)" onclick="return fblogin();" class="fb_button_ps mp_custom_fb_login_button"><img src="https://coronavirusaid.net/skin/frontend/default/default/SocialSignup/images/fb_btn.jpg" alt="Facebook" width="37" height="37" title=""/></a></div>
+								<!-- End Facebook login -->
+	
+				<!-- twitter login -->
+								<!-- ENd twitter login -->
+	
+				<!-- google login -->
+								<!-- ENd google login -->
+	
+				<!-- Linkedin login -->
+								<!-- ENd Linkedin login -->
+	
+					
+								<!-- Social Login Links end -->
+			
+				<!--<div class="fb_btn"><a href="#"><img src="" width="37" height="37" alt=""/></a></div>
+				<div class="tw_btn"><a href="#"><img src="" width="37" height="37" alt=""/></a></div>
+				<div class="g_pls_btn"><a href="#"><img src="" width="37" height="37" alt=""/></a></div>-->
+                       
+                    </div>
+		  <div class="clear"></div>
+		  
+		  <div class="or-box"><span>or </span></div>
+			
+			<p class="mp_l_to_ac">Login with your email address</p>
+			<form id="ajaxlogin_form" action="https://coronavirusaid.net/ajaxlogin/index/loginPost/" method="post">
+				<ul class="login-form">
+				    <li>
+					    <label>Email </label>
+					    <input type="text" autocomplete="off" class="input input-text required-entry validate-email" value="" id="login:email" name="login[username]" >
+				    </li>
+				    <li>
+					    <label>Password</label>  
+					    <input type="password" autocomplete="off" class="input input-text required-entry validate-password mploginpwd" value="" id="login:password" name="login[password]" >
+				    </li>
+				    <li>
+					    <a href="https://coronavirusaid.net/customer/account/forgotpassword/" class="pass_for">Forgot Password ?</a>
+					
+				    </li>
+				    <li class="rem">
+					    <input type="checkbox" id="rememberme" name="login[rememberme]" /><p class="remember_me">Remember me <span class="tick_me">(Tick if on your own computer)</span></p>
+					
+				    </li>
+				     <li class="ajaxlogin_actions">
+					<button id="ajaxlogin_button_send" name="ajaxlogin_button_send" class="butn ajaxlogin_button ajaxlogin_actions" type="button" onclick="AjaxLoginForm.submit(this)">Login </button>
+				    </li>
+				</ul>
+		    </form>
+                </div>
+                
+                
+                <div class="login_inner_right">
+                    <div style="text-align: center;" class="h2">New to Coronavirus Aid?</div>
+                    <div class="mp_r_content">
+                    <div class="d_img3" style="text-align: center;">Get the Latest News about Coronavirus</div>
+<div class="d_img3" style="text-align: center;">Share Positive Experiences</div>
+<div class="d_img3" style="text-align: center;">Donate Anything you Want to the</div>
+<div class="d_img3" style="text-align: center;">Ones who Most Need It</div>
+<div class="d_img3">&nbsp;</div>
+<div class="d_img3"><img style="display: block; margin-left: auto; margin-right: auto;" title="Login Coronavirus Aid" src="https://coronavirusaid.net/media/wysiwyg/Login_Coronavirus_Aid.jpg" alt="Login Coronavirus Aid" width="300" /></div>
+<div class="d_img3">&nbsp;</div>                    </div>
+                    <button onclick="regCustPage('https://coronavirusaid.net/customer/account/create//');" class="butn_join">Join Now</button>  
+<!--                    <div class="or-box">&nbsp;</div> 
+                    <ul class="tags">
+                    	<li class="join"><p><span></span></p></li>
+                        <li class="search"><p><span></span></p></li>
+                        <li class="share"><p> <span></span></p></li>
+                        <li class="chat"><p><span></span></p></li>
+                    </ul>-->
+                             
+                </div>
+            </div>
+	</div>
+<p align="center" style="margin-top:50px;display: none;"><a id="mp_pop_login_link" class="fancybox" href="#inline1">Click Here to Login</a></p>
+<script type="text/javascript">
+jQuery.noConflict();
+var j = jQuery.noConflict();
+jQuery(document).ready(function() {
+	//jQuery('.fancybox').fancybox();
+	
+	jQuery(".fancybox").fancybox({
+		closeClick  : false, // prevents closing when clicking INSIDE fancybox
+		helpers     : { 
+		    overlay : {closeClick: false} // prevents closing when clicking OUTSIDE fancybox
+		}
+	});
+	
+    
+        var usr_log_status='';
+        var current_url='https://coronavirusaid.net/';
+        var base_url='https://coronavirusaid.net/';
+        var base_login_url='https://coronavirusaid.net/?poplogin=login';
+        //console.log(current_url);
+        //if (!usr_log_status && (current_url==base_url || current_url==base_login_url )) {
+        //    setTimeout(function() {
+        //        j(".top-account-a").trigger( "click" );
+        //    }, 10000);
+        //}
+        
+	//var poplogin_status='';
+	//var mp_lg_status='';
+	//if (poplogin_status && !mp_lg_status) {
+	//	jQuery("#mp_pop_login_link").trigger( "click" );
+	//}
+	
+})
+</script>
+
+	
+<script type="text/javascript">		
+	var AjaxLoginForm = new VarienForm("ajaxlogin_form");
+	AjaxLoginForm.submit = function(button){
+		if (this.validator.validate()) {
+			// show ajax image
+			// button.insert({"after":osc_ajax_loading_small});
+			AjaxLoginForm.hideLoader();
+			AjaxLoginForm.insertLoader(button);
+			
+			$("ajaxlogin_form").request({
+				onSuccess: function(transport) {
+					var json = transport.responseText.evalJSON();
+					
+					if(json.is_forgot_pwd){
+						if(json.success){
+							$("ajaxlogin_form_message").update("<span style='color:green;font-weight:bold'>"+json.success_message+"</span>");
+							$("ajaxlogin_form_message").show();
+						}
+						if(json.error){
+							$("ajaxlogin_form_message").update("<span style='color:red;font-weight:bold'>"+json.error_message+"</span>");
+							$("ajaxlogin_form_message").show();
+						}
+					}else{
+						if(json.success || json=='ajaxloginsuccess'){
+						    
+						    var red_url=document.getElementById('redirect_url').value;
+						    if(red_url){
+						        //alert('logged in');
+						        window.location.href=red_url;
+						        return false;
+						    }
+						    
+							//login success 
+							var baseurl='https://coronavirusaid.net/';
+							var base_url_log=baseurl+'?poplogin=login';
+							if(baseurl==window.location.href || base_url_log==window.location.href){
+								//window.location.href='https://coronavirusaid.net//social';
+								window.location.reload();
+							}
+							else
+							{
+								var c_url=window.location.href;
+								if(!c_url.includes('virtual-try-on')){
+									window.location.reload();
+								}
+								else{
+									jQuery('.fancybox-close').click();
+									document.getElementById('lgst').value=1;
+								}
+							}
+							
+							//window.location.href='/social';
+						}
+						if(json.error){
+							$("ajaxlogin_form_message").update("<span style='color:red;font-weight:bold'>"+json.error_message+"</span>");
+							$("ajaxlogin_form_message").show();
+						}
+					}
+					AjaxLoginForm.hideLoader();
+					setTimeout("AjaxLoginForm.hideResponseMessage()", 5000);
+				}
+			});
+			
+		}
+	}.bind(AjaxLoginForm);
+	
+	AjaxLoginLoader = "<div class='ajax_login_loader'>&nbsp;</div>";
+	AjaxLoginForm.insertLoader = function(element){
+		// show ajax image
+		element.insert({"after":AjaxLoginLoader});
+	}
+	
+	AjaxLoginForm.hideLoader = function(){
+		$$(".ajax_login_loader").each(function(elem){
+			elem.remove();
+		});
+	}
+	
+	AjaxLoginForm.showForgotPwdForm = function(pwdFieldId, forgotPwdFlagFieldId){
+		$(pwdFieldId).toggle( "blind" );
+		$(forgotPwdFlagFieldId).value = 1;
+		
+		$$("li.ajaxlogin_forgot_pwd_actions").each(function(elem){
+			elem.toggle( "blind" );
+		});
+		
+		$$("li.ajaxlogin_actions").each(function(elem){
+			elem.toggle( "blind" );
+		});
+	}
+	
+	AjaxLoginForm.showLoginForm = function(pwdFieldId, forgotPwdFlagFieldId){
+		$(pwdFieldId).toggle( "blind" );
+		$(forgotPwdFlagFieldId).value = 0;
+		
+		$$("li.ajaxlogin_actions").each(function(elem){
+			elem.toggle( "blind" );
+		});
+		
+		$$("li.ajaxlogin_forgot_pwd_actions").each(function(elem){
+			elem.toggle( "blind" );
+		});
+	}
+	AjaxLoginForm.hideLoginContainer = function(){
+		$$('ul.popup').each(function(containerEl){
+			containerEl.style.display = "none";
+			document.getElementById("dullDiv").style.display = "none";
+		});
+	}
+
+	AjaxLoginForm.hideResponseMessage = function(){
+		$('ajaxlogin_form_message').toggle( "blind" );
+		setTimeout("$('ajaxlogin_form_message').innerHTML = '';", 3000);
+	}
+	$$('ul.popup').each(function(containerEl){
+		containerEl.style.display = "none";
+	});
+
+function regCustPage(url) {
+	window.location.href=url;
+}
+
+
+jQuery('.mploginpwd').keypress(function(event) {
+    if (event.keyCode == 13) {
+	jQuery('#ajaxlogin_button_send').click();
+    }
+});
+
+
+</script></div>
+<div id="mp_tell_a_friend_social"></div>
+<script type="text/javascript">
+
+var jq = jQuery.noConflict();
+var is_fb_fanbox_loaded=false;
+function loadFBFanbox() {
+    new Ajax.Request("https://coronavirusaid.net/ajaxlogin/index/loadSocialAPIS/", {
+	method: 'Post',
+	parameters: {"is_social":1},
+	onComplete: function(transport) {
+		jq("#mp_log_pop_content").append(transport.responseText);
+		jq("#footer_fbbox_loader").remove();
+	    }
+	});
+}
+
+function loadInviteFriendBox() {
+    new Ajax.Request("https://coronavirusaid.net/test.php", {
+	method: 'Post',
+	parameters: {"is_social":1},
+	onComplete: function(transport) {
+		//jq("#mp_tell_a_friend_social").append(transport.responseText);
+	    }
+	});
+}
+
+jQuery( document ).ready(function() {
+    
+    //To remove the Price filter start
+    //jQuery("#fme_layered_price").prev().hide();
+    //jQuery("#fme_layered_price").hide();
+    jQuery("#fme_layered_size").prev().hide();
+    jQuery("#fme_layered_size").hide();
+    //end
+    
+    //Hide the last name required atrisk
+    jQuery('.fields .name-lastname label em').hide();
+    //end
+    
+  //  call on scroll down on reaching last element
+   jQuery(window).scroll(function() {
+	if (jQuery('body').height() <= (jQuery(window).height() + jQuery(window).scrollTop())) {
+	    if (is_fb_fanbox_loaded == false) {
+		is_fb_fanbox_loaded = true;
+		loadFBFanbox();
+	    }
+	}
+   });
+    //end    
+  setTimeout( function(){ 
+	// Do something after 6 second 
+      if (is_fb_fanbox_loaded == false) {
+		is_fb_fanbox_loaded = true;
+		loadFBFanbox();
+	}
+  }  , 1000 );
+   
+   jQuery(".mCustomScrollbar").mCustomScrollbar({
+	scrollButtons:{ /*scroll buttons*/
+	    scrollSpeed:20, /*scroll buttons continuous scrolling speed: integer*/
+	    scrollAmount:40 /*scroll buttons pixels scroll amount: integer (pixels)*/
+	}
+      });
+	jQuery('a#mp_compare_now').click(function(){
+	myWindow = window.open('https://coronavirusaid.net/catalog/product_compare/index/', "width=820, height=600");
+	});
+});
+
+//add mobile specific divs and classes
+if (jQuery('.main .col-left').length) {
+    if (jQuery('#pagetitle').length) {
+	jQuery('<div class="mp_magento_left_btn"></div>').insertBefore('#pagetitle h1');
+	jQuery('#pagetitle h1').addClass('top-page-title');
+    }
+    if (jQuery('.sort-by-middle-cont').length) {
+	jQuery('<div class="mp_magento_left_btn"></div>').insertBefore('.sort-by-middle-cont h2');
+	jQuery('.sort-by-middle-cont h2').addClass('top-page-title');
+    }
+}
+//jQuery('<div class="mp_magento_left_btn"></div>').insertBefore('.main .col-left');
+jQuery('.video-right').parent().append('<div class="mp_social_right_btn"></div>');
+jQuery('.video-right').addClass('social-right');
+ var right_hide=0;
+ jQuery( ".mp_magento_left_btn" ).live( "click", function() {
+    if(jQuery('.main .col-left').hasClass('mp_show_mage_left_section')){
+	jQuery('.main .col-left').removeClass('mp_show_mage_left_section');
+	jQuery('body').removeClass('body-overlay');
+    }
+    else{
+      jQuery('.main .col-left').addClass('mp_show_mage_left_section');
+      jQuery('body').addClass('body-overlay');
+    }
+    });
+ 
+ jQuery( ".mp_social_right_btn" ).live( "click", function() {
+       if(right_hide==1){
+        jQuery('.video-right').removeClass('mp_show_right_section');
+        jQuery('body').removeClass('body-overlay');
+        
+        right_hide=0;
+    }
+    else{
+       jQuery('.video-right').addClass('mp_show_right_section');
+        jQuery('body').addClass('body-overlay');
+        
+       right_hide=1;
+    } 
+    });
+ 
+  jQuery(document).mouseup(function (e)
+    {
+      var container = jQuery(".mp_magento_left_btn");
+      if (!container.is(e.target) // if the target of the click isn't the container...
+            && container.has(e.target).length === 0) // ... nor a descendant of the container
+        {
+	    
+	    if (!jQuery(e.target).hasClass('input-text')) {
+		jQuery('.main .col-left').removeClass('mp_show_mage_left_section');
+		jQuery('body').removeClass('body-overlay');
+	    }
+        }
+	
+	 var container2 = jQuery(".mp_social_rigth_btn");
+      if (!container2.is(e.target) // if the target of the click isn't the container...
+            && container2.has(e.target).length === 0) // ... nor a descendant of the container
+        {
+          if (jQuery(e.target).attr('class')!='mp_social_rigth_btn') {
+            jQuery('.video-right').removeClass('mp_show_right_section');
+            jQuery('body').removeClass('body-overlay');
+          }
+          
+        }
+	
+    });
+//end of adding divs
+jq('#head_nav_browse .has_sub_nav .nav_inner_list').addClass('mCustomScrollbar'); 
+
+jq("#fme_layered_size .mCustomScrollbar").mCustomScrollbar("destroy");
+jq("#fme_layered_size ol").removeClass( "select-field content side-scroll mCustomScrollbar");
+jq(".mCustomScrollbar").mCustomScrollbar();
+jq(".country_id").selectbox();
+</script>
+<!-- <script type="text/javascript">
+  var vglnk = { key: 'a560e1f2d1c7a3269990003b96668322' };
+
+  (function(d, t) {
+    var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
+    s.src = '//cdn.viglink.com/api/vglnk.js';
+    var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
+  }(document, 'script'));
+</script> -->
+<script src="https://coronavirusaid.net/skin/frontend/on-store-now/default/js/jquery.cookie.js" type="text/javascript" ></script>
+<script type="text/javascript"> 
+    jQuery( document ).ready(function() {
+		
+			if(jQuery.cookie('cookie-pop')!=='set'){ 
+			   jQuery('.footer .main-full').after('<div class="cookie-pop">'+"We use cookies to ensure you the best experience on our website. By closing this message, you agree to allow us to collect information through  cookies in accordance with our cookie policy. <a href=\"/privacy-policy-cookie\" target=\"_blank\">Cookie Policy</a>     <button id=\"accept-cookie\">I Agree</button> "+'<a id="closecookies">X</a></div>').delay( 800 );
+			   jQuery( '#accept-cookie' ).click(function () {
+				   jQuery.cookie( 'cookie-pop', 'set', { expires: 30 } ); // expires after 30 days
+				   jQuery( '.cookie-pop' ).slideUp('slow', function() {
+					   jQuery( '.cookie-pop' ).remove();
+				   });
+			   });
+				jQuery( '#closecookies' ).click(function () {
+					jQuery('.cookie-pop').hide();
+				});
+			} 
+
+    });
+
+    </script>
+<style>
+.cookie-pop {
+    background-color: rgba(20,20,20,0.8);
+    min-height: 24px;
+    color: #ccc;
+    padding: 8px 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+	text-align: center;
+	line-height: 24px;
+}
+.cookie-pop a {
+    text-decoration: underline;
+}
+button#accept-cookie {
+    background: #000;
+    margin-left: 10px;
+    color: #fff;
+    border: 0px;
+    border: 1px solid #fff;
+    padding: 4px 10px;
+	cursor: pointer;
+}
+
+#closecookies {
+	text-decoration: none;
+    font-weight: bold;
+	cursor: pointer;
+	padding-left: 15px;
+
+}
+
+</style>
+                
+
+<script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+//window.fbAsyncInit = function() {
+//	FB.init({appId: '487350378616647',             
+//	    status     : true, 
+//            cookie     : true,
+//            xfbml      : true,
+//            oauth      : true});
+//
+//	FB.getLoginStatus(function(response) {
+//	   if (response.status == 'connected') {
+//	    //	   }
+//	});
+//};
+//(function(d){
+//           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+//           js = d.createElement('script'); js.id = id; js.async = true;
+//           js.src = "//connect.facebook.net/en_US/all.js";
+//           d.getElementsByTagName('head')[0].appendChild(js);
+//         }(document));
+//
+//function login(){
+//	   document.location.href="https://coronavirusaid.net/facebooksignup/customer/login/?referer=aHR0cHM6Ly9jb3JvbmF2aXJ1c2FpZC5uZXQv";
+//	}
+//	function logout(){
+//	   document.location.href="https://coronavirusaid.net/facebooksignup/customer/logout/";
+//	}
+//	function greet(id){
+//	   FB.api('/me', function(response) {
+//		var src = 'https://graph.facebook.com/'+id+'/picture';
+//		$$('.welcome-msg')[0].insert('<img height="20" src="'+src+'"/>');
+//	   });
+//	}
+//
+//    function fblogin(){
+//        FB.login(function(response) {
+//
+//           if (response.status == 'connected') {
+//                login();
+//            } else {
+//                // user is not logged in
+//                window.location.reload();
+//            }
+//        }, {scope:'email,publish_stream'});
+//        return false;
+//    }
+/*]]>*/
+</script>    </div>
+</div>
+</body>
+</html>

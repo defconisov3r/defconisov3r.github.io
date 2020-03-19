@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+<title>Life Style At Coronavirus &#8211;                                                                                           Before And After</title>
+
+<!-- Async WordPress.com Remote Login -->
+<script id="wpcom_remote_login_js">
+var wpcom_remote_login_extra_auth = '';
+function wpcom_remote_login_remove_dom_node_id( element_id ) {
+	var dom_node = document.getElementById( element_id );
+	if ( dom_node ) { dom_node.remove(); }
+}
+function wpcom_remote_login_remove_dom_node_classes( class_name ) {
+	var dom_nodes = document.querySelectorAll( '.' + class_name );
+	for ( var i = 0; i < dom_nodes.length; i++ ) {
+		dom_nodes[i].remove();
+	}
+}
+function wpcom_remote_login_final_cleanup() {
+	wpcom_remote_login_remove_dom_node_classes( "wpcom_remote_login_msg" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_validate" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_js" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_iframe" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_styles" );
+}
+
+// Watch for messages back from the remote login
+window.addEventListener( "message", function( e ) {
+	if ( e.origin === "https://r-login.wordpress.com" ) {
+		var data = {};
+		try {
+			data = JSON.parse( e.data );
+		} catch( e ) {
+			wpcom_remote_login_final_cleanup();
+			return;
+		}
+
+		if ( data.msg === 'LOGIN' ) {
+			// Clean up the login check iframe
+			wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+
+			var id_regex = new RegExp( /^[0-9]+$/ );
+			var token_regex = new RegExp( /^.*|.*|.*$/ );
+			if (
+				token_regex.test( data.token )
+				&& id_regex.test( data.wpcomid )
+			) {
+				// We have everything we need to ask for a login
+				var script = document.createElement( "script" );
+				script.setAttribute( "id", "wpcom_remote_login_validate" );
+				script.src = '/remote-login.php?wpcom_remote_login=validate'
+					+ '&wpcomid=' + data.wpcomid
+					+ '&token=' + encodeURIComponent( data.token )
+					+ '&host=' + window.location.protocol
+						+ '//' + window.location.hostname;
+				document.body.appendChild( script );
+			}
+
+			return;
+		}
+
+		// Safari ITP, not logged in, so redirect
+		if ( data.msg === 'LOGIN-REDIRECT' ) {
+			window.location = 'https://wordpress.com/log-in?redirect_to=' + window.location.href;
+			return;
+		}
+
+		// Safari ITP, storage access failed, remove the request
+		if ( data.msg === 'LOGIN-REMOVE' ) {
+			var css_zap = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } @media screen and ( max-width: 782px ) { html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } }';
+			var style_zap = document.createElement( 'style' );
+			style_zap.type = 'text/css';
+			style_zap.appendChild( document.createTextNode( css_zap ) );
+			document.body.appendChild( style_zap );
+
+			var e = document.getElementById( 'wpcom_request_access_iframe' );
+			e.parentNode.removeChild( e );
+
+			document.cookie = 'wordpress_com_login_access=denied; path=/; max-age=31536000';
+
+			return;
+		}
+
+		// Safari ITP
+		if ( data.msg === 'REQUEST_ACCESS' ) {
+			console.log( 'request access: safari' );
+
+			// Check ITP iframe enable/disable knob
+			if ( wpcom_remote_login_extra_auth !== 'safari_itp_iframe' ) {
+				return;
+			}
+
+			// If we are in a "private window" there is no ITP.
+			var private_window = false;
+			try {
+				var opendb = window.openDatabase( null, null, null, null );
+			} catch( e ) {
+				private_window = true;
+			}
+
+			if ( private_window ) {
+				console.log( 'private window' );
+				return;
+			}
+
+			var iframe = document.createElement( 'iframe' );
+			iframe.id = 'wpcom_request_access_iframe';
+			iframe.setAttribute( 'scrolling', 'no' );
+			iframe.setAttribute( 'sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-top-navigation-by-user-activation' );
+			iframe.src = 'https://r-login.wordpress.com/remote-login.php?wpcom_remote_login=request_access&origin=' + encodeURIComponent( data.origin ) + '&wpcomid=' + encodeURIComponent( data.wpcomid );
+
+			var css = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 46px !important; } * html body { margin-top: 46px !important; } @media screen and ( max-width: 660px ) { html { margin-top: 71px !important; } * html body { margin-top: 71px !important; } #wpcom_request_access_iframe { display: block; height: 71px !important; } } #wpcom_request_access_iframe { border: 0px; height: 46px; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 99999; background: #23282d; } ';
+
+			var style = document.createElement( 'style' );
+			style.type = 'text/css';
+			style.id = 'wpcom_request_access_styles';
+			style.appendChild( document.createTextNode( css ) );
+			document.body.appendChild( style );
+
+			document.body.appendChild( iframe );
+		}
+
+		if ( data.msg === 'DONE' ) {
+			wpcom_remote_login_final_cleanup();
+		}
+	}
+}, false );
+
+// Inject the remote login iframe after the page has had a chance to load
+// more critical resources
+window.addEventListener( "DOMContentLoaded", function( e ) {
+	var iframe = document.createElement( "iframe" );
+	iframe.style.display = "none";
+	iframe.setAttribute( "scrolling", "no" );
+	iframe.setAttribute( "id", "wpcom_remote_login_key" );
+	iframe.src = "https://r-login.wordpress.com/remote-login.php"
+		+ "?wpcom_remote_login=key"
+		+ "&origin=aHR0cHM6Ly9saWZlc3R5bGVhdGNvcm9uYXZpcnVzLmNvbQ%3D%3D"
+		+ "&wpcomid=174259697"
+		+ "&time=1584646979";
+	document.body.appendChild( iframe );
+}, false );
+</script>
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//lifestyleatcoronavirus.wordpress.com' />
+<link rel="alternate" type="application/rss+xml" title="Life Style At Coronavirus -                                                                                           Before And After &raquo; Feed" href="https://lifestyleatcoronavirus.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Life Style At Coronavirus -                                                                                           Before And After &raquo; Comments Feed" href="https://lifestyleatcoronavirus.com/comments/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s0.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1582709031h&ver=5.4-RC1-47426"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='all-css-0-1' href='https://s0.wp.com/_static/??-eJylk9tywiAQhl+oBGOTsV50+iyQrLiW03Awk7fvJug01dE6esOwwPfvD7vwwbPO2QQ2cZOZ11mhjXzwnTMsGtQwXkRVF+MbX2BnRmUKJQRFOwH4pnqvVlxm1D2X2nXfTKMMIow8plHDAzIzFfkBkhcTLkaXE1MB+2clgkhoVfwH32WtWcQEDHqcgNOz8LbZNuu23XI40nnisk29G2xJ87Lq2WVCAxotvCxItmjRxRRPDnuMiR8RhpuinTs9WV2tV1XN5tIXrmxUxdRc1xesFVeadJfWLlevEixadGoyWjdepOmEoUwCNBg6dg8rvSylDxAjo9FgNiztCbxu7QWnwEJA2rgxvWKLJPdZcrQ9eKCBmoZiut8eAlvfqO8DICHncjxBo+1K6lLd+7d2jPLQt3H2T8B2WmC4hwaY2o+marb7G07Ql/ms24+mXtWbpj38ACVrrtg=?cssminify=yes' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify {
+	text-align:justify;
+}
+</style>
+<style id='independent-publisher-2-style-inline-css'>
+#hero-header { background: url("https://defaultcustomheadersdata.files.wordpress.com/2016/07/beach1.jpg?resize=1440,600") no-repeat center; background-size: cover; background-attachment: scroll; }
+</style>
+<link rel='stylesheet' id='print-css-1-1' href='https://s0.wp.com/wp-content/mu-plugins/global-print/global-print.css?m=1465851035h&cssminify=yes' type='text/css' media='print' />
+<link rel='stylesheet' id='all-css-2-1' href='https://s0.wp.com/_static/??-eJxlzEEOAiEMheELiRUD0VkYzwKITLWUiS2ZeHvHZIwm7t7iez/Mk0mNNbNC7WaiXpAFQlJsHMPju7ZJZAM//GOvncgIajb5gopc1gp4N7i99wMUajEsRp+UBUSDYoJIge9/UR1zXczo1tMbnOvJ+qOzO3tw/vYCJE4/7g==?cssminify=yes' type='text/css' media='all' />
+<style id='jetpack-global-styles-frontend-style-inline-css'>
+:root { --font-headings: unset; --font-base: unset; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+</style>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJx9zUsKgDAMBNALWYtIixvxLH6itJhUmxTx9lbQnQgDs5gHo49NORrXNAFrn7MniOdTpedC/wGFbom9QImOXjwGEiC57RZYEJj7BT5WDINbQSWGmAFJvplDdh22lTFNbaw1tb8AOGU7DA=='></script>
+<link rel='stylesheet' id='all-css-0-2' href='https://s0.wp.com/wp-content/mu-plugins/highlander-comments/style.css?m=1530132353h&cssminify=yes' type='text/css' media='all' />
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s0.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563h&#038;ver=20110606' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://lifestyleatcoronavirus.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s0.wp.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress.com" />
+<link rel='shortlink' href='https://wp.me/bNaUh' />
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Life Style At Coronavirus -                                                                                           Before And After" />
+<meta property="og:url" content="https://lifestyleatcoronavirus.com/" />
+<meta property="og:site_name" content="Life Style At Coronavirus -                                                                                           Before And After" />
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="shortcut icon" type="image/x-icon" href="https://s0.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="icon" type="image/x-icon" href="https://s0.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="apple-touch-icon" href="https://s0.wp.com/i/webclip.png" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://lifestyleatcoronavirus.com/osd.xml" title="Life Style At Coronavirus -                                                                                           Before And After" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<meta name="theme-color" content="#ffffff" />
+<meta name="application-name" content="Life Style At Coronavirus -                                                                                           Before And After" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-task" content="name=Subscribe;action-uri=https://lifestyleatcoronavirus.com/feed/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s0.wp.com/i/favicon.ico" /></head>
+
+<body class="home blog wp-embed-responsive customizer-styles-applied has-header-image highlander-enabled highlander-light">
+
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<div id="hero-header" class="site-hero-section">
+		<header id="masthead" class="site-header" role="banner">
+			<div class="inner">
+				<div class="site-branding">
+					
+											<a class="site-logo-link" href="https://lifestyleatcoronavirus.com/">
+							<img alt="" class="site-logo-image no-grav" width="80" height="80" src="https://secure.gravatar.com/avatar/4428fa41a3dc44079823c02f626ea406?s=160&#038;d=identicon&#038;r=g" />
+						</a><!-- .site-logo-link -->
+													<h1 class="site-title"><a href="https://lifestyleatcoronavirus.com/" rel="home">Life Style At Coronavirus &#8211;                                                                                           Before And After</a></h1>
+										</div><!-- .site-branding -->
+
+				
+									<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" id="primary-menu-button">
+						Menu					</button><!-- .menu-toggle -->
+				
+			</div><!-- .inner -->
+		</header><!-- #masthead -->
+	</div>
+
+				<nav id="site-navigation" class="main-navigation" role="navigation">
+			<div class="menu-primary-container"><ul id="primary-menu" class="menu"><li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-6"><a href="/" aria-current="page">Home</a></li>
+<li id="menu-item-7" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7"><a href="https://lifestyleatcoronavirus.com/contact/">Contact</a></li>
+</ul></div>		</nav><!-- .main-navigation -->
+	
+	
+	
+	<div id="content-wrapper" class="content-wrapper">
+		<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+			
+						
+				
+<article id="post-101" class="post-101 post type-post status-publish format-standard hentry category-uncategorized">
+			<header class="entry-header">
+			<h1 class="entry-title"><a href="https://lifestyleatcoronavirus.com/2020/03/19/%cf%80%ce%ad%ce%bc%cf%80%cf%84%ce%b7-19-%ce%bc%ce%b1%cf%81%cf%84%ce%af%ce%bf%cf%85/" rel="bookmark">Πέμπτη 19 Μαρτίου</a></h1>		</header><!-- .entry-header -->	
+	<div class="entry-content">
+		
+<p><strong>Η Μοναξιά Των Ηλικιωμένων Και Όχι Μόνο..</strong></p>
+
+
+
+<p>Καλημέρα με μια όμορφη ανοιξιάτικη μέρα.</p>
+
+
+
+<p>Χθες το βράδυ επισκέφτηκα μετά από αρκετές μέρες τον ηλικιωμένο πατέρα μου. Ανήκει στις ευάλωτες κοινωνικές ομάδες λόγω ηλικίας αλλά και λόγω σοβαρών προβλημάτων υγείας. Έχει πλήρη διαύγεια πνεύματος παρά την ηλικία του ,και ζει μόνος του. Τις &#8220;Προ-Μέρες&#8221;  λόγω της δουλειάς του και των  ενδιαφερόντων του είχε μια πολύ καλή κοινωνική ζωή. Η μόνη  επαφή  που έχει πια είναι η γυναίκα που τον φροντίζει κάποιες ώρες, και εγώ. Εκτός από την τηλεόραση και την εφημερίδα, η παρέα του είναι η γάτα του με τα δυο της νεογέννητα γατάκια. Είχα μέρες να τον δω και παρατήρησα μια αδιαόρατη αλλαγή ,αόρατη για τους άλλους όχι όμως για μένα που τον ξέρω πάρα πολύ καλά. Πρώτον για μια στιγμή προσπαθούσε να βρει τις σωστές λέξεις  για να απαντήσει και μιλούσε πιο αργά.</p>
+
+
+
+<p>Το σκέφτηκα όταν γύρισα σπίτι και κατέληξα στο συμπέρασμα ότι η μη λεκτική καθημερινή επικοινωνία επιβραδύνει την ομιλία του και αποφασίστηκε να τον παίρνουμε Όλοι τηλέφωνο κάθε μέρα σε διαφορετικές ώρες για να εξασκεί το την ομιλία του. Επίσης εκτός της εφημερίδας και της τηλεόρασης να αρχίσει να διαβάζει και κάτι άλλο ,ίσως ένα αστυνομικό μυθιστόρημα (Γιάννη Μαρή) της γενιάς του .Μπορείτε να πάρετε στους ανθρώπους σας κάτι ανάλογα με τα ενδιαφέροντα που είχαν, περιοδικά, σταυρόλεξα, παζλ η ότι τέλος πάντων θα διαβάσουν η θα παίξουν με ευχαρίστηση. Πάντως ο δικός μας συμφώνησε αμέσως για τον Γιάννη Μαρή!!! Βλέποντας όλη μέρα τηλεόραση με τις άσχημες ειδήσεις των τελευταίων ημερών έχουν μεγαλύτερες φοβίες από εμάς και πρέπει να απεξαρτηθούν λίγο από την tv (όπως όλοι μας). </p>
+
+
+
+<p>Κάτι άλλο που του δίνει μεγάλο  ενδιαφέρον είναι η φροντίδα των ζώων συντροφιάς του,τώρα καταλαβαίνω την φροντίδα των μοναχικών ανθρώπων κυρίως για τις γάτες γιατί δεν είναι τόσο πολύ κουραστική η φροντίδα τους.  </p>
+
+
+
+<p>Όλα τα παραπάνω ισχύουν και για μας βέβαια. </p>
+
+
+
+<p>Κλείστε για λίγο τις τηλεοράσεις ,κάτι θα βρείτε να κάνετε&#8230;ούτως η άλλως αν γίνει κάτι πολύ συνταρακτικό, όπως λέει και η παροιμία &#8220;Τα κακά νέα φτάνουν πάντα πιο γρήγορα από τα καλά&#8221;.</p>
+
+
+
+<p>Σήμερα δεν κάνω δουλειές του σπιτιού,έχουμε χρόνο&#8230;</p>
+
+
+
+<p>Αποφάσισα το απόγευμα να πάω να περπατήσω(με όλες τις προφυλάξεις) για μια ώρα στην φύση. Είναι τόσα πολλά τα μέρη που μπορείτε να είστε τελείως μόνοι σας&#8230;</p>
+
+
+
+<p>Ανακαλύψτε τα..</p>
+
+
+
+<p></p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		
+				<div class="entry-meta">
+			<span class="byline">
+				<a href="https://lifestyleatcoronavirus.com/author/lifestyleatcoronavirus/" title="Posts by Elli Zafiriou" rel="author">Elli Zafiriou</a>			</span>
+							<span class="cat-links">
+					<a href="https://lifestyleatcoronavirus.com/category/uncategorized/" rel="category tag">Uncategorized</a>				</span><!-- .cat-links -->
+			
+			<span class="comments-link"><a href="https://lifestyleatcoronavirus.com/2020/03/19/%cf%80%ce%ad%ce%bc%cf%80%cf%84%ce%b7-19-%ce%bc%ce%b1%cf%81%cf%84%ce%af%ce%bf%cf%85/#respond">Leave a comment</a></span><!-- .comments-link -->
+			<span class="published-on">
+									<a href="https://lifestyleatcoronavirus.com/2020/03/19/%cf%80%ce%ad%ce%bc%cf%80%cf%84%ce%b7-19-%ce%bc%ce%b1%cf%81%cf%84%ce%af%ce%bf%cf%85/" rel="bookmark"><time class="entry-date published updated" datetime="2020-03-19T06:59:23+00:00">March 19, 2020</time></a>
+							</span>
+
+			<span class="word-count">1 Minute</span>		</div><!-- .entry-meta -->
+		</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-83" class="post-83 post type-post status-publish format-standard hentry category-uncategorized">
+			<header class="entry-header">
+			<h1 class="entry-title"><a href="https://lifestyleatcoronavirus.com/2020/03/18/%cf%84%ce%b5%cf%84%ce%ac%cf%81%cf%84%ce%b7-18-%ce%bc%ce%b1%cf%81%cf%84%ce%af%ce%bf%cf%85/" rel="bookmark">Τετάρτη 18 Μαρτίου</a></h1>		</header><!-- .entry-header -->	
+	<div class="entry-content">
+		
+<p></p>
+
+
+
+<p>Καλημέρα</p>
+
+
+
+<p>Ήταν λίγο δύσκολη η νύχτα. </p>
+
+
+
+<p>Μετά το διάγγελμα του πρωθυπουργού ,ότι είμαστε Σε Πόλεμο με έναν άγνωστο εχθρό,έπεσε μια μελαγχολία στό σπίτι και ένας φυσιολογικός  φόβος.Πήρα τηλέφωνο και τα δυο παιδιά μου που ζουν σε διαφορετικές πόλεις ,(επέλεξαν σαν ώριμοι άνθρωποι να μην μετακινηθούν προς το πατρικό) είπα τους φόβους μου ,και μου έδωσαν θάρρος και αισιοδοξία..γιατί όπως είναι γνωστό ,ότι δίνουμε παίρνουμε &#8230;και αφού είπαμε καληνύχτα έκλεισα την τηλεόραση (μην κοιμάστε με ανοιχτή την τηλεόραση) και ξάπλωσα  να διαβάσω ένα βιβλίο. </p>
+
+
+
+<p>Εγερτήριο 5.00 το πρωί ,αφού κοιμήθηκα νωρίς,και κατευθείαν ανοίγω το ραδιόφωνο <a href="https://menta88.gr/player/">https://menta88.gr/player/</a> , γιατί τα τραγούδια που βάζει είναι πιο κοντά στο δικά μου γούστα,και όπως έχω γράψει, το πρωί είναι η καλύτερη ώρα. Μουσική ,καφές,διάβασμα ,γράψιμο. </p>
+
+
+
+<p>Ο φόβος λοιπόν&#8230;</p>
+
+
+
+<p>Κατά αρχήν ο φόβος είναι ένα από τα κεντρικά συναισθήματα του ανθρώπου .</p>
+
+
+
+<p>Σύμφωνα με την ψυχολογία  υπάρχουν τρία είδη φόβου και όλοι οι φόβοι έχουν τις ρίζες τους στο ασυνείδητο.</p>
+
+
+
+<p><strong>Ο υγιής φόβος</strong></p>
+
+
+
+<p>Ο υγιής φόβος είναι αυτός που μας βοηθά να καταλάβουμε τι είναι επικίνδυνο και τι όχι για να επιβιώσουμε.Είναι το ένστικτο που χρειαζόμαστε για την επιβίωση και την ασφάλεια μας. Είναι αυτοί οι χτύποι της καρδιάς που αυξάνονται όταν ανησυχούμε για κάτι. Και αυτόματα ο εγκέφαλος δίνει εντολή αντίδρασης και προστασίας.</p>
+
+
+
+<p><strong>Ο πραγματικός φόβος</strong></p>
+
+
+
+<p>Ο&nbsp;πραγματικός φόβος βασίζεται σε μεγάλο βαθμό με την πραγματικότητα. Μερικά παραδείγματα για τον πραγματικό φόβο είναι όταν φοβόμαστε ότι θα χάσουμε ένα αγαπημένο πρόσωπο ή όταν νιώθουμε ότι δεν θα πετύχουμε ποτέ τα όνειρα και τις φιλοδοξίες μας. Όλα στη ζωή ευτυχώς ή δυστυχώς κάποτε τελειώνουν κι αυτοί οι υπαρξιακοί φόβοι συνδέονται&nbsp;με πραγματικά γεγονότα, τα οποία, όμως, δεν θα πρέπει να μας υπαγορεύουν τον τρόπο με τον οποίο ζούμε. Ο πραγματικός φόβος μπορεί να αποτελέσει κίνητρο για να ξεκινήσουμε να ζούμε καλύτερα και πιο συνετά.</p>
+
+
+
+<p><br><strong>Ο παράλογος φόβος</strong></p>
+
+
+
+<p>Αυτός είναι και ο πιο επικίνδυνος. Είναι ένας υποθετικός&nbsp;φόβος&nbsp;ή πολλές φορές ακόμη και ανύπαρκτος και χωρίς ουσία. Μπορεί να είναι μεγάλος ή μικρός, αλλά εκδηλώνεται σ’ όλους. Είναι ο φόβος για τα ύψη, τις αράχνες, την κλειστοφοβία, τη δημόσια ομιλία κτλ.. Αυτοί είναι οι φόβοι που πρέπει να αντιμετωπιστούν και στις περισσότερες  περιπτώσεις χρειάζεται και η βοήθεια ειδικού.</p>
+
+
+
+<p>Αυτά, με λίγα λόγια για το τι είναι φόβος . Όταν δεν είναι υπερβολικός μας βοηθάει και ενεργοποιεί τις άμυνες του οργανισμού. Και  επειδή μου αρέσει να βλέπω την θετική πλευρά της ζωής είπα ΟΧΙ δεν θα εγκατασταθεί ο υπερβολικός φόβος στο μυαλό μου και να περιορίσει τις αντιστάσεις και άμυνές μου. </p>
+
+
+
+<p>Θα το παλέψω ,με ότι όπλα έχω ,θα απασχολώ το μυαλό μου και τα χέρια μου,δεν θα κάθομαι να βλέπω τηλεόραση όλη μέρα, θα ακούω μουσική και αν μου έρθει να χορέψω ,θα χορέψω, και ας μην κατάφερα να κάνω Ακόμα εκείνα τα μαθήματα που είχα πάντα κατά νου, και δεν προλάβαινα&#8230;</p>
+
+
+
+<p>Λοιπόν&#8230;</p>
+
+
+
+<p>Μουσική </p>
+
+
+
+<p>Φαγητό(Φασολάκια με πατάτες  και αυγά ολα νερόβραστα)</p>
+
+
+
+<p>Λίγες δουλειές του σπιτιού , </p>
+
+
+
+<p>Ξεκούραση το μεσημέρι </p>
+
+
+
+<p>Αρκετό Διάβασμα, που προσπαθώ να το εξελίξω σε μελέτη&#8230;</p>
+
+
+
+<p>Και το βράδυ λέω από ταινίες να αρχίσω από το The Holiday!!!! <strong>Χιου Γκραντ</strong>!!!</p>
+
+
+
+<p>Να έχετε μια ωραία και ήρεμη μέρα.</p>
+
+
+
+<p></p>
+
+
+
+<p></p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		
+				<div class="entry-meta">
+			<span class="byline">
+				<a href="https://lifestyleatcoronavirus.com/author/lifestyleatcoronavirus/" title="Posts by Elli Zafiriou" rel="author">Elli Zafiriou</a>			</span>
+							<span class="cat-links">
+					<a href="https://lifestyleatcoronavirus.com/category/uncategorized/" rel="category tag">Uncategorized</a>				</span><!-- .cat-links -->
+			
+			<span class="comments-link"><a href="https://lifestyleatcoronavirus.com/2020/03/18/%cf%84%ce%b5%cf%84%ce%ac%cf%81%cf%84%ce%b7-18-%ce%bc%ce%b1%cf%81%cf%84%ce%af%ce%bf%cf%85/#respond">Leave a comment</a></span><!-- .comments-link -->
+			<span class="published-on">
+									<a href="https://lifestyleatcoronavirus.com/2020/03/18/%cf%84%ce%b5%cf%84%ce%ac%cf%81%cf%84%ce%b7-18-%ce%bc%ce%b1%cf%81%cf%84%ce%af%ce%bf%cf%85/" rel="bookmark"><time class="entry-date published updated" datetime="2020-03-18T08:51:26+00:00">March 18, 2020</time></a>
+							</span>
+
+			<span class="word-count">1 Minute</span>		</div><!-- .entry-meta -->
+		</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-69" class="post-69 post type-post status-publish format-standard hentry category-uncategorized tag-advises tag-athome tag-blogger tag-coronavirus tag-covid-19 tag-familylife tag-greece tag-homelife tag-lifestyle tag-menoumespiti tag-stayhome tag-support">
+			<header class="entry-header">
+			<h1 class="entry-title"><a href="https://lifestyleatcoronavirus.com/2020/03/17/%ce%ba%ce%b1%ce%bb%ce%b7%ce%bc%ce%ad%cf%81%ce%b1/" rel="bookmark">Καλημέρα</a></h1>		</header><!-- .entry-header -->	
+	<div class="entry-content">
+		
+<p>Τρίτη 17  Μαρτίου</p>
+
+
+
+<p>Ξημέρωσε μια καινούρια μέρα και να είμαστε υγιείς. Αυτό που λέγαμε σαν ευχή από συνήθεια,έγινε αυτοσκοπός για τους περισσότερους από εμάς .</p>
+
+
+
+<p> Ένα σύντομο βιογραφικό ζωής , όχι επαγγελματικό. </p>
+
+
+
+<p> Γυναίκα 45-55 χρονών,παντρεμένη,με δύο μεγάλα παιδιά ηλικίας 20-28 ετών,και ηλικιωμένους γονείς και πεθερικά σε κοντινές αποστάσεις από εμάς. Επιχειρηματίας,αυτοδημιούργητη ,πολυπράγμων με την θετική σημασία της λέξης. Μου αρέσει  η μόδα,τα ταξίδια,τα βιβλία,η φύση,το περπάτημα, η θάλασσα,τα ζώα,το ευ ζην. Και βέβαια  το ζην. Δηλαδή μια γυναίκα σαν τις περισσότερες από εσάς .</p>
+
+
+
+<p>Επίσης να ξεκαθαρίσω κάτι, δεν είμαι συγγραφέας και δεν έχω καμιά σχέση με το χώρο της εκπαίδευσης. Το λέω αυτό για να μου συγχωρήσετε τυχόν λάθη,συντακτικά,ορθογραφικά,κλπ. Είμαι μια συνηθισμένη γυναίκα ,σύζυγος και μητέρα. Επίσης η απόψεις είναι καθαρά προσωπικές .</p>
+
+
+
+<p>Και ξεκινάμε την σημερινή ημέρα.. Έφτιαξα τον καφέ μου ,σερβιρισμένο σε εκείνο το καλό σερβίτσιο (ξέρετε εσείς)  και τον πίνω στο σαλόνι μου. Στο σπίτι επικρατεί ησυχία ,το πρωί ήταν πάντα η καλύτερη ώρα για μένα,το μυαλό καθαρό και ξεκούραστο.Σηκωνόμουν πάντα 2 ώρες νωρίτερα από τους άλλους για να μείνω τελείως μόνη. Μετά τις πρώτες μέρες πανικού και αναστάτωσης και αφού τελείωσε ο γενικός ξε-καθαρισμός του σπιτιού(μετά από πολλάαα χρόνια) ήρθε η ώρα της καθημερινότητας και της σημερινής πραγματικότητας&#8230;</p>
+
+
+
+<p>Όπως ξέρετε ένα ταξίδι ξεκινάει με ένα καλό και προσεκτικό σχεδιασμό. Ο καθένας μας παίρνει μαζί του ότι αυτός θεωρεί σημαντικό και απαραίτητο για τον ίδιο και την οικογένειά του και δεν εννοώ  βέβαια τα αυτονόητα φαγητό και ρούχα, αλλά εκείνα τα πράγματα που θα κάνουν το ταξίδι,πιο εύκολο και πιο ευχάριστο ώστε να φτάσει στον προορισμό του με όσο το δυνατόν  λιγότερη ταλαιπωρία  απολαμβάνοντας ταυτόχρονα και την διαδρομή.</p>
+
+
+
+<p>Σκεφτείτε τι ήταν αυτά τα απλά πράγματα που σας ευχαριστούσαν  πολύ και σας έκαναν χαρούμενους ανθρώπους, αλλά δεν προλαβαίνατε να τα απολαύσετε η πάντα το κάνατε βιαστικά. Προσωπικά εγώ θέλω πολύ χρόνο για τον πρώτο καφέ της ημέρας και ησυχία. Διαβάζω τα νέα της ημέρας ,σημειώνω στο ημερολόγιο πράγματα που μου έρχονται στο μυαλό, ιδέες, πλάνα, επιθυμίες και ας μην είναι η ήταν όλα πραγματοποιήσημα. Με το να ονειρεύεται  δεν έπαθε ποτέ κανείς τίποτα. Αχ τι ωραία ανοιξιάτικη  μέρα, έχετε σκεφτεί πόσο τυχεροί είμαστε που είναι άνοιξη και ζούμε στην Ελλάδα? Σε λίγο ο ήλιος θα μας ζεστάνει και θα μπει στα σπίτια μας ,για αυτό ανοίξτε τα παράθυρά σας να πάρετε ήλιο ,φως , καθαρό αέρα και ανοιξιάτικες μυρωδιές. </p>
+
+
+
+<p>Και βέβαια η μουσική αχ αυτή η μουσική!&#8230;μήπως ήρθε η ώρα να ξαναθυμηθήτε τα ραδιόφωνα και κάνοντας τις δουλείες σας να ακούτε τα τραγούδια που σας αρέσουν. Είναι η ευκαιρία να θυμηθούμε ήχους και λέξεις ,να ονειρευτούμε έρωτες και αγάπες, ωραίες στιγμές που μας χάρισαν τα τραγούδια και η μουσική.</p>
+
+
+
+<p>Εννοείται ότι δεν χρειάζεται να λέμε κάθε μέρα τα ίδια , είμαστε υπεύθυνοι άνθρωποι , ακολουθούμε τις οδηγίες ..και η ζωή συνεχίζεται&#8230;</p>
+
+
+
+<p></p>
+
+
+
+<p></p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		
+				<div class="entry-meta">
+			<span class="byline">
+				<a href="https://lifestyleatcoronavirus.com/author/lifestyleatcoronavirus/" title="Posts by Elli Zafiriou" rel="author">Elli Zafiriou</a>			</span>
+							<span class="cat-links">
+					<a href="https://lifestyleatcoronavirus.com/category/uncategorized/" rel="category tag">Uncategorized</a>				</span><!-- .cat-links -->
+			
+			<span class="comments-link"><a href="https://lifestyleatcoronavirus.com/2020/03/17/%ce%ba%ce%b1%ce%bb%ce%b7%ce%bc%ce%ad%cf%81%ce%b1/#respond">Leave a comment</a></span><!-- .comments-link -->
+			<span class="published-on">
+									<a href="https://lifestyleatcoronavirus.com/2020/03/17/%ce%ba%ce%b1%ce%bb%ce%b7%ce%bc%ce%ad%cf%81%ce%b1/" rel="bookmark"><time class="entry-date published updated" datetime="2020-03-17T06:23:49+00:00">March 17, 2020</time></a>
+							</span>
+
+			<span class="word-count">1 Minute</span>		</div><!-- .entry-meta -->
+		</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-37" class="post-37 post type-post status-publish format-standard hentry category-uncategorized tag-greece">
+		
+	<div class="entry-content">
+		
+<h2>Ξυπνώντας &#8230;στην εποχή του κορονοϊού&#8230;</h2>
+
+
+
+<p>Καλημέρα και καλή εβδομάδα. </p>
+
+
+
+<p>Ξεκινάει μια καινούργια μέρα και μια καινούργια εβδομάδα,που δεν μοιάζει σε τίποτα με τις προηγούμενες. Είμαστε στην Ελλάδα του 2020 ,16 Μαρτίου,σε μια μικρή επαρχιακή πόλη ,μια τυπική ελληνική οικογένεια με δύο μεγάλα  παιδιά ,παππούδες,γιαγιάδες,σκυλιά ,γατιά,επιχείρηση, κλπ, κλπ. Πριν δεκαπέντε μέρες αν κάποιος μας έλεγε ότι θα πρωταγωνιστούσαμε  σε &#8220;ζωντανή ταινία¨ καταστροφής η επιστημονικής φαντασίας (το λέτε όπως θέλετε) θα τον περνούσαμε για τρελό. </p>
+
+
+
+<p>Το τι ακριβώς συνέβη νομίζω ότι δεν πρέπει να το αναλύσω ,το ξέρετε όλοι πια , έστω και σαν είδηση. Θα πω μόνο δυο λόγια.-Ο νέος κορωνοϊός-2019 ονομάζεται τώρα SARS-CoV-2, ενώ η ασθένεια που προκαλεί ονομάζεται <a href="https://eody.gov.gr/">COVID-19</a>. O ιός ανιχνεύθηκε πρώτη φορά το Δεκέμβριο του 2019 στην περιοχή Γιουχάν της Κίνας και έκτοτε έως σήμερα έχει διασπαρεί σε περισσότερες από 60 χώρες σε όλο τον κόσμο. Αποτελεί ένα νέο στέλεχος κορωνοϊού που μέχρι τότε δεν είχε απομονωθεί στον άνθρωπο.<a href="https://eody.gov.gr/">https://eody.gov.gr</a> Από εδώ και πέρα θα αναφέρομαι με την διεθνή του ονομασία COVID-19. </p>
+
+
+
+<p>Σήμερα σαν πρώτη μέρα επικοινωνίας ίσως να μην υπάρχει μεγάλη συνοχή στο κείμενο ,μέχρι να προσαρμοστούμε στα σημερινά δεδομένα. Είμαστε ήδη δύο μέρες, το λιγότερο βάση κυβερνητικής οδηγίας ,σε περιορισμό κατ΄ οίκον και χρησιμοποιούμε το σύνθημα &#8220;ΜΕΝΟΥΜΕ ΣΠΙΤΙ&#8221;. Και από εδώ αρχίζει η ιστορία μας&#8230; </p>
+
+
+
+<p></p>
+
+
+
+<pre class="wp-block-preformatted"></pre>
+
+
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<div class="page-links">Pages: <a href="https://lifestyleatcoronavirus.com/2020/03/16/37/" class="post-page-numbers"><span>1</span></a> <a href="https://lifestyleatcoronavirus.com/2020/03/16/37/2/" class="post-page-numbers"><span>2</span></a></div>
+				<div class="entry-meta">
+			<span class="byline">
+				<a href="https://lifestyleatcoronavirus.com/author/lifestyleatcoronavirus/" title="Posts by Elli Zafiriou" rel="author">Elli Zafiriou</a>			</span>
+							<span class="cat-links">
+					<a href="https://lifestyleatcoronavirus.com/category/uncategorized/" rel="category tag">Uncategorized</a>				</span><!-- .cat-links -->
+			
+			<span class="comments-link"><a href="https://lifestyleatcoronavirus.com/2020/03/16/37/#respond">Leave a comment</a></span><!-- .comments-link -->
+			<span class="published-on">
+									<a href="https://lifestyleatcoronavirus.com/2020/03/16/37/" rel="bookmark"><time class="entry-date published updated" datetime="2020-03-16T06:41:39+00:00">March 16, 2020</time></a>
+							</span>
+
+			<span class="word-count">1 Minute</span>		</div><!-- .entry-meta -->
+		</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-3" class="post-3 post type-post status-publish format-standard hentry category-uncategorized">
+			<header class="entry-header">
+			<h1 class="entry-title"><a href="https://lifestyleatcoronavirus.com/2020/03/16/the-journey-begins/" rel="bookmark">The Journey Begins</a></h1>		</header><!-- .entry-header -->	
+	<div class="entry-content">
+		<p>Thanks for joining me! </p>
+<blockquote><p>Good company in a journey makes the way seem shorter. — Izaak Walton</p></blockquote>
+<p><img class="wp-image-7 size-full" src="https://twentysixteendemo.files.wordpress.com/2015/11/post.png" alt="post" width="1000" height="563" /></p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		
+				<div class="entry-meta">
+			<span class="byline">
+				<a href="https://lifestyleatcoronavirus.com/author/lifestyleatcoronavirus/" title="Posts by Elli Zafiriou" rel="author">Elli Zafiriou</a>			</span>
+							<span class="cat-links">
+					<a href="https://lifestyleatcoronavirus.com/category/uncategorized/" rel="category tag">Uncategorized</a>				</span><!-- .cat-links -->
+			
+			<span class="comments-link"><a href="https://lifestyleatcoronavirus.com/2020/03/16/the-journey-begins/#respond">Leave a comment</a></span><!-- .comments-link -->
+			<span class="published-on">
+									<a href="https://lifestyleatcoronavirus.com/2020/03/16/the-journey-begins/" rel="bookmark"><time class="entry-date published" datetime="2020-03-16T03:40:19+00:00">March 16, 2020</time><time class="updated" datetime="2020-03-16T03:45:20+00:00">March 16, 2020</time></a>
+							</span>
+
+			<span class="word-count">1 Minute</span>		</div><!-- .entry-meta -->
+		</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+			
+			
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+		</div><!-- #content -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+						<div class="site-info">
+				<a href="https://wordpress.com/?ref=footer_custom_com" rel="nofollow">WordPress.com</a>.
+				
+							</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+	</div><!-- #content-wrapper -->
+</div><!-- #page -->
+
+<!--  -->
+<script src='//0.gravatar.com/js/gprofiles.js?ver=202012y'></script>
+<script>
+var WPGroHo = {"my_hash":""};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781h'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	</div>
+<script>
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"https:\/\/lifestyleatcoronavirus.wordpress.com\/public.api\/connect\/?action=request&domain=lifestyleatcoronavirus.com","logoutURL":"https:\/\/lifestyleatcoronavirus.wordpress.com\/wp-login.php?action=logout&_wpnonce=b2fdac2926","homeURL":"https:\/\/lifestyleatcoronavirus.com\/","postID":"101","gravDefault":"identicon","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"0","userIsLoggedIn":"","isJetpack":"","text_direction":"ltr"};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??/wp-content/js/jquery/jquery.autoresize.js,/wp-content/mu-plugins/highlander-comments/script.js?m=1573483029j'></script>
+
+	<div id="carousel-reblog-box">
+		<form action="#" name="carousel-reblog">
+			<textarea id="carousel-reblog-content" name="carousel-reblog-content" placeholder="Add your thoughts here... (optional)"></textarea>
+			<label for="carousel-reblog-to-blog-id" id="carousel-reblog-lblogid">Post to</label>
+			<select name="carousel-reblog-to-blog-id" id="carousel-reblog-to-blog-id">
+						</select>
+
+			<div class="submit">
+				<span class="canceltext"><a href="#" class="cancel">Cancel</a></span>
+				<input type="submit" name="carousel-reblog-submit" class="button" id="carousel-reblog-submit" value="Reblog Post" />
+				<input type="hidden" id="carousel-reblog-blog-id" value="174259697" />
+				<input type="hidden" id="carousel-reblog-blog-url" value="https://lifestyleatcoronavirus.com" />
+				<input type="hidden" id="carousel-reblog-blog-title" value="Life Style At Coronavirus -                                                                                           Before And After" />
+				<input type="hidden" id="carousel-reblog-post-url" value="" />
+				<input type="hidden" id="carousel-reblog-post-title" value="" />
+			</div>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="58fdd1f103" /><input type="hidden" name="_wp_http_referer" value="/" />		</form>
+
+		<div class="arrow"></div>
+	</div>
+<link rel='stylesheet' id='all-css-0-3' href='https://s0.wp.com/_static/??/wp-content/plugins/gutenberg-blocks/jetpack-layout-grid/blocks/front.css,/wp-content/mu-plugins/carousel/jetpack-carousel.css?m=1583834955j&cssminify=yes' type='text/css' media='all' />
+<script>
+var actionbardata = {"siteID":"174259697","siteName":"Life Style At Coronavirus -                                                                                           Before And After","siteURL":"https:\/\/lifestyleatcoronavirus.com","icon":"<img alt='' src='https:\/\/s0.wp.com\/i\/logo\/wpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/independent-publisher-2","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Flifestyleatcoronavirus.com%2F2020%2F03%2F19%2F%CF%80%CE%AD%CE%BC%CF%80%CF%84%CE%B7-19-%CE%BC%CE%B1%CF%81%CF%84%CE%AF%CE%BF%CF%85%2F&signup_flow=account&domain=lifestyleatcoronavirus.com","themeURL":"https:\/\/wordpress.com\/theme\/independent-publisher-2\/","xhrURL":"https:\/\/lifestyleatcoronavirus.com\/wp-admin\/admin-ajax.php","nonce":"96ce0d996d","isSingular":"","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"17f7c17da1\" \/>","referer":"https:\/\/lifestyleatcoronavirus.com\/","canFollow":"1","feedID":"104293318","statusMessage":"","customizeLink":"https:\/\/lifestyleatcoronavirus.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Flifestyleatcoronavirus.wordpress.com%2F","i18n":{"view":"View site","follow":"Follow","following":"Following","edit":"Edit","login":"Log in","signup":"Sign up","customize":"Customize","report":"Report this content","themeInfo":"Get theme: Independent Publisher 2","shortlink":"Copy shortlink","copied":"Copied","followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/read\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar","editSubs":"Manage subscriptions","viewReader":"View site in Reader","viewReadPost":"View post in Reader","subscribe":"Sign me up","enterEmail":"Enter your email address","followers":"","alreadyUser":"Already have a WordPress.com account? <a href=\"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Flifestyleatcoronavirus.com%2F2020%2F03%2F19%2F%CF%80%CE%AD%CE%BC%CF%80%CF%84%CE%B7-19-%CE%BC%CE%B1%CF%81%CF%84%CE%AF%CE%BF%CF%85%2F&signup_flow=account&domain=lifestyleatcoronavirus.com\">Log in now.<\/a>","stats":"Stats"}};
+</script>
+<script>
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/lifestyleatcoronavirus.com\/wp-admin\/admin-ajax.php","nonce":"17d5061c7a","display_exif":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/lifestyleatcoronavirus.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Flifestyleatcoronavirus.com%2F2020%2F03%2F16%2Fthe-journey-begins%2F","blog_id":"174259697","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Reblog","reblogged":"Reblogged","reblog_add_thoughts":"Add your thoughts here... (optional)","reblogging":"Reblogging...","post_reblog":"Post Reblog","stats_query_args":"blog=174259697&v=wpcom&tz=0&user_id=0&subd=lifestyleatcoronavirus","is_public":"1","reblog_enabled":""};
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJydUlFuwjAMvdBMxtRq42PaWUrigkuaZLHTwu3nMsoQYpPWn8Tx83u2Y5sxgY1BMIjp2DgcyGI6rjp+MgpRsL445DNGLGbA4GKeoBT9qSXvVz2FOXxWSr7sKLBpi/fAJAjoSCjs4BsxdbWpXup6Y7Y+qjOyMKhpD5cshONyTdQiRXkliItjuAifT74H77PIHnttN5WtoeAwabtTvL498R4zvExfEZqBdo1QXMj/BVomxgdK4CkcoI22MLR0XCCkkzZsMyWBMdnY30v0BeYJNE5HDtsmm75hwawWxAFzpmlTrr5/KkhudD5/kez04RPpaj1aU04/+3jr7z4L5tPlWt1GPchlmxwLozcdStK6YHYo56N/X9dv1fp5/VrV3Rf0QDX+'></script>
+<script type='text/javascript'>
+( 'fetch' in window ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?m=1573572739h&#038;ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?m=1540208548h&#038;ver=3.26.0-0"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?m=1550600082h&#038;ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://s0.wp.com/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?m=1540208548h&#038;ver=2.0.2"></scr' + 'ipt>' );
+</script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="//stats.wp.com/w.js?61" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'174259697','blog_tz':'0','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'174259697','v':'wpcom','tz':'0','user_id':'0','subd':'lifestyleatcoronavirus'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1mJVY3bm9aR3VCbS9mWm1pRyZuJS1LX1t5NE84SWQsc2J8a3kvOS9ufHlFc2gmTk9WWlF2Lit2cCVUNnFGN2FKMVkuU2cxa3g1SThLSFg/RDFXUzVHLzN+W0F2Skt1JTFFZlRMTzhqTCVNSTEwdXg0N29iMT1bZE8lc0c1QXNveTJbM25GMCxPOERJaHhGWTlrfFFlY3MtaFR1M09KVm9YZXZGY19ma1h0VTViLU1yOCxNc3NdL0MsMTdSZ0FKWFlnZFJHVnx4bHkwK1ppUzYlSy9RWEhRWnxbTm5GVXwtaGE2fEY9R1pKWFFWbnNsRGQ1bk85ZFssOS8/SlFUVWl6bm02OHhkdlM5'}]);
+_stq.push([ 'clickTrackerInit', '174259697', '0' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+</body>
+</html>

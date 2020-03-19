@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>COVID-19 Statistika</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+.menu {
+  float:left;
+  width:20%;
+  text-align:center;
+}
+.menu a {
+  background-color:#e5e5e5;
+  padding:8px;
+  margin-top:7px;
+  display:block;
+  width:100%;
+  color:black;
+}
+.main {
+  float:left;
+  width:60%;
+  padding:0 20px;
+  text-align:center;
+}
+.right {
+  background-color:#e5e5e5;
+  float:left;
+  width:20%;
+  padding:15px;
+  margin-top:7px;
+  text-align:center;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#chart {
+  max-width: 650px;
+  margin: 35px auto;
+  #text-align:center;
+  #align: center;
+}
+@media only screen and (max-width:11620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width:100%;
+  }
+}
+</style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/forge/0.8.2/forge.all.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+    <script type="text/Javascript">
+        function narisi()
+		{
+			var options = {
+			  chart: {
+				width: '100%',
+				type: 'line'
+			  },
+			  series: [{
+				name: 'sales',
+				type: 'column',
+				data: [30,40,35,50,49,60,70,91,125]
+			  }],
+			  xaxis: {
+				categories: [1991,1992,1993,1994,1995,1996,1997, 1998,1999]
+			  }
+			}
+
+			var chart = new ApexCharts(document.querySelector("#chart"), options);
+
+			chart.render();
+		}
+		
+		function generateHash()
+		{
+			var error="";
+			var emso = document.getElementById('emso').value;
+			emso = emso.trim();
+			if (emso.length!=13) { error="EMŠO je napačen!"; }
+			var sum=Number(emso.charAt(0))*7+Number(emso.charAt(1))*6+Number(emso.charAt(2))*5+Number(emso.charAt(3))*4+Number(emso.charAt(4))*3+Number(emso.charAt(5))*2+Number(emso.charAt(6))*7+Number(emso.charAt(7))*6+Number(emso.charAt(8))*5+Number(emso.charAt(9))*4+Number(emso.charAt(10))*3+Number(emso.charAt(11))*2+Number(emso.charAt(12));
+			if (sum%11!=0) { error="NAPAKA: EMŠO je napačen!"; }
+			var response = grecaptcha.getResponse();
+			if(response.length == 0) { error="NAPAKA: Najprej potrdi, da nisi robot!"; } 
+			if (error=="") {
+				var md = forge.md.sha256.create();  
+				md.start();  
+				md.update(emso, "utf8");  
+				var hashText = md.digest().toHex();  
+				document.getElementById("hashText").innerHTML = hashText; 
+				document.getElementById('form').submit();
+				
+			} else {
+				
+			}
+			document.getElementById("error").innerHTML = error; 
+        }        
+    </script>
+</head>
+<body onload="narisi()">
+    <div style="background-color:#e5e5e5;padding:15px;text-align:center;">
+    <h1>Sporočanje anonimiziranih podatkov o državljanih RS okuženih s SARS-CoV-2 (COVID-19)</h1>
+	</div>
+	<div style="overflow:auto">
+		<div class="main">
+					
+			<div id="chart1" ></div>
+			<p>Na tej spletni strani zbiramo anonimizirane podatke o okuženih državljanih RS, ki jih dajemo na voljo pristojnim državnim institucijam v Republiki Sloveniji.</p>
+			<p>Opozorilo: Vpisan EMŠO se ne neposredno pošilje preko spleta, ampak se pred pošiljanjem anonimizira s SHA256 algoritmom. Na ta način iz anonimizirane EMŠO, ni mogoče priti do prave EMŠO. Vnašanje EMŠO pa je žal nujno za zagotavljanje konsistentnosti podatkov.</p>
+			<br><input id='emso' type='number' class="w3-input w3-border" placeholder="EMŠO"/><br>
+			<form method="post" action="index.php" name="form" id="form" enctype="multipart/mixed">
+			<input type="text" name="starost" id="email" hidden/>
+			<input type="radio" id="Imam potrjeno okužbo" name="covid" value="Imam potrjeno okužbo">
+			<label for="Imam potrjeno okužbo">Imam potrjeno okužbo</label><br>
+			<input type="radio" id="Mislim, da sem okužen in sem bil v stiku z osebo s potrjeno okužbo" name="covid" value="Mislim, da sem okužen in sem bil v stiku z osebo s potrjeno okužbo">
+			<label for="Mislim, da sem okužen in sem bil v stiku z osebo s potrjeno okužbo">Mislim, da sem okužen in sem bil v stiku z osebo s potrjeno okužbo</label><br>
+			<input type="radio" id="Mislim, da sem okužen, vendar nisem bil v stiku z osebo s potrjeno okužbo" name="covid" value="Mislim, da sem okužen, vendar nisem bil v stiku z osebo s potrjeno okužbo">
+			<label for="Mislim, da sem okužen, vendar nisem bil v stiku z osebo s potrjeno okužbo">Mislim, da sem okužen, vendar nisem bil v stiku z osebo s potrjeno okužbo</label><br><br>
+			<label for="datum">Prvi dan, ko sem začel kazati znake okužbe je bil: </label>
+			<input type="date" id="datum" name="datum" value="2020-03-19"><br><br>
+			<label for="quantity">Poštna številka: </label>
+			<input type="number" id="Poštna številka" name="Poštna številka" min="1000" max="9999"><br>
+			<input type="text" name="hashText" id="hashText" hidden/><br>
+			<div class="g-recaptcha" align="center"  data-sitekey="6LcNY-IUAAAAAGaFyf_PQQexWGNyGWlECvJfjLdx"></div>
+			<br>
+			<span style="color:red" id='error'></span><br><br>
+			<p>S pritiskom na Pošlji se bodo odposlali anonimiziran EMŠO, starost in spol pridobljena iz EMŠO ter ostali vnešeni podatki.</p><br><br>	
+			<input type="button" class="button" name="btnsubmit" value="Pošlji" onclick="generateHash()"/><br><br>
+			</form>
+		</div>
+	</div>
+	<div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;">© copyright covid-19-stats.si</div>
+</body>
+</html>

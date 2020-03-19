@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+    <head>
+    	<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- SEO -->
+<title>Coronavírus no Brasil</title>
+<meta name="description" content="Informações | Estatísticas | Notícias"/>
+
+<!-- og meta for facebook, googleplus -->
+<meta property="og:title" content="Coronavírus no Brasil"/>
+<meta property="og:description" content="Informações | Estatísticas | Notícias"/>
+<meta property="og:url" content="https://www.coronavirusnobrasil.com.br"/>
+<meta property="og:type" content="website" />
+<meta property="og:image" content=""/>
+
+<!-- twitter meta -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Coronavírus no Brasil"/>
+<meta name="twitter:description" content="Informações | Estatísticas | Notícias"/>
+<meta name="twitter:url" content="https://www.coronavirusnobrasil.com.br"/>
+<meta name="twitter:image" content=""/>
+
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700%7CMontserrat:400,700,400&amp;subset=latin-ext,cyrillic,latin,vietnamese,cyrillic-ext" rel="stylesheet">
+
+        
+
+        <link rel="stylesheet" href="https://www.coronavirusnobrasil.com.br/wp-content/plugins/cmp-coming-soon-maintenance/themes/hardwork/style.css?ver=3.7.1" type="text/css" media="all">
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <style>
+            body,input {font-family:'Montserrat', 'sans-serif';color:#ffffff;}
+                            .social-list {background-color: rgba(0,0,0,0.4);}
+                            a {color:#ffffff;}
+            h1,h2,h3,h4,h5,h6 {font-family:'Playfair Display', 'sans-serif';}
+            body {font-size:17px; letter-spacing: 0px; font-weight:400;; }
+            h1:not(.text-logo),h2, h3,h4,h5,h6,.text-logo-wrapper {font-size:2.3529411764706em;letter-spacing: 0px; font-weight:700;font-style: normal;; }
+            h1 {font-weight:700;font-style: normal;;}
+        </style>
+
+        
+
+<style>
+    /* wp video shortcode  */
+    .wp-video {margin: 0 auto;}
+    .wp-video-shortcode {max-width: 100%;}
+    /* google recaptcha badge */
+    .grecaptcha-badge {display: none;}
+    .text-logo {display: inline-block;}
+</style>
+
+
+
+    </head>
+
+
+    <body id="body">
+        <div id="background-wrapper">
+
+         <div id="player" class="video-banner"></div><div class="background-overlay solid-color" style="background-color:#ffffff;opacity:0.2"></div>
+        </div>
+
+        <section class="section section-body">
+            <div class="logo-wrapper image"><a href="https://www.coronavirusnobrasil.com.br" style="text-decoration:none"><img src="https://www.coronavirusnobrasil.com.br/wp-content/uploads/2020/03/LOGOTIPO-500px.png" class="graphic-logo" alt="logo"></a></div>         
+         </section>
+        
+
+<!-- Fade in background image after load -->
+<script>
+    window.addEventListener("load",function(event) {
+        init();
+    });
+
+    function init(){
+
+        var image = document.getElementById('background-image');
+        var body = document.getElementById('body');
+        if ( image === null ) {
+            image = document.getElementById('body');
+        } 
+
+        if ( image != null ) {
+            image.classList.add('loaded');
+            body.classList.add('loaded');
+        }
+
+            }
+</script>
+
+        <script src='https://www.coronavirusnobrasil.com.br/wp-content/plugins/cmp-coming-soon-maintenance/js/external/vidim.min.js?v=1.0.2"'></script>
+        <script>
+                                var myBackground = new vidim( '#player', {
+                        src: [
+                            {
+                              type: 'video/mp4',
+                              src: 'https://www.coronavirusnobrasil.com.br/wp-content/uploads/2020/03/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.mp4',
+                            },
+                        ],
+                        poster: '',
+                        loop: true                    });
+                            </script>
+        
+<!-- Build by CMP – Coming Soon & Maintenance Plugin by NiteoThemes -->
+<!-- Visit plugin page https://wordpress.org/plugins/cmp-coming-soon-maintenance/ -->
+<!-- More CMP Themes on https://niteothemes.com -->
+    </body>
+
+</html>
