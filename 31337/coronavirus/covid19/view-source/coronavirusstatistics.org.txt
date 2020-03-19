@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head><meta charset="utf-8">
+    <title>Coronavirus | COVID-19 | Maps & Statistics</title>
+<meta name="keywords" content="Coronavirus, COVID-19, Maps, Statistics, Brasil, China, Italia, EUA, Mascara, recommendations, recomendações, Governo, faculdade" />
+<meta name="description" content="This interactive dashboard/map provides the latest global numbers and numbers by country of COVID-19 cases on a daily basis." />
+    <style> 
+      .wrap-element{
+      overflow: hidden;
+      padding-top: 56.25%;
+      }
+      .wrapped-iframe{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      }
+    </style>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160829296-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-160829296-1');
+</script>
+
+    
+    
+  </head>
+  <body>
+    <div class="wrap-element">
+      <iframe class="wrapped-iframe" src="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6" gesture="media"  allow="encrypted-media" allowfullscreen></iframe>
+    </div>
+  </body>
+</html>

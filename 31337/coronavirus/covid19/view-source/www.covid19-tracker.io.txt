@@ -33,18 +33,18 @@ img.emoji {
 </style>
 	<link rel='stylesheet' id='wp-block-library-css'  href='https://covid19-tracker.io/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css' media='all' />
 <link rel='stylesheet' id='wpforms-full-css'  href='https://covid19-tracker.io/wp-content/plugins/wpforms-lite/assets/css/wpforms-full.css?ver=1.5.9.1' type='text/css' media='all' />
-<link rel='stylesheet' id='sage/main.css-css'  href='https://covid19-tracker.io/wp-content/themes/corona/dist/styles/main_0439ddc9.css' type='text/css' media='all' />
+<link rel='stylesheet' id='sage/main.css-css'  href='https://covid19-tracker.io/wp-content/themes/corona/dist/styles/main_71b48d39.css' type='text/css' media='all' />
 <script type='text/javascript' src='https://covid19-tracker.io/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
 <script type='text/javascript' src='https://covid19-tracker.io/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
 <script type='text/javascript' src='https://covid19-tracker.io/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js?ver=1.11.3'></script>
-<link rel='https://api.w.org/' href='https://covid19-tracker.io/index.php?rest_route=/' />
+<link rel='https://api.w.org/' href='https://covid19-tracker.io/wp-json/' />
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://covid19-tracker.io/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://covid19-tracker.io/wp-includes/wlwmanifest.xml" /> 
 <meta name="generator" content="WordPress 5.3.2" />
-<link rel="canonical" href="https://covid19-tracker.io/" />
 <link rel='shortlink' href='https://covid19-tracker.io/' />
-<link rel="alternate" type="application/json+oembed" href="https://covid19-tracker.io/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=https%3A%2F%2Fcovid19-tracker.io%2F" />
-<link rel="alternate" type="text/xml+oembed" href="https://covid19-tracker.io/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=https%3A%2F%2Fcovid19-tracker.io%2F&#038;format=xml" />
+<link rel="alternate" type="application/json+oembed" href="https://covid19-tracker.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcovid19-tracker.io%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://covid19-tracker.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcovid19-tracker.io%2F&#038;format=xml" />
+<link rel="canonical" href="https://covid19-tracker.io/" />
 
 <!-- Google Tag Manager for WordPress by gtm4wp.com -->
 <script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">//<![CDATA[
@@ -65,8 +65,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div class="cover bg-left bg-center-l" >
     <nav class="dt w-100 mw8 center">
       <div class="dtc w2 v-mid pa3 center">
-        <i> Coronavirus Tracker </i>
+        <a href="https://covid19-tracker.io"> Coronavirus Tracker </a>
       </div>
+      <div class="dtc v-mid tr pa3 fr">
+                  <div class="menu-primary_navigation-container"><ul id="menu-primary_navigation" class="dtc v-mid tr pa3"><li id="menu-item-253" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-253"><a href="https://covid19-tracker.io/carte-departement/">Carte département</a></li>
+<li id="menu-item-254" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-254"><a href="https://covid19-tracker.io/nos-sources/">Nos sources</a></li>
+</ul></div>
+              </div>
     </nav>
   </div>
 </header>
@@ -80,7 +85,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h1 class="fw2 violet">Soyez au courant de l&#8217;évolution du nombre de cas.</h1>
 
 
-<div class="wpforms-container wpforms-container-full" id="wpforms-149"><form id="wpforms-form-149" class="wpforms-validate wpforms-form wpforms-ajax-form" data-formid="149" method="post" enctype="multipart/form-data" action="/"><noscript class="wpforms-error-noscript">Please enable JavaScript in your browser to complete this form.</noscript><div class="wpforms-field-container"><div id="wpforms-149-field_1-container" class="wpforms-field wpforms-field-email" data-field-id="1"><label class="wpforms-field-label" for="wpforms-149-field_1">Email <span class="wpforms-required-label">*</span></label><input type="email" id="wpforms-149-field_1" class="wpforms-field-large wpforms-field-required" name="wpforms[fields][1]" required></div><div id="wpforms-149-field_3-container" class="wpforms-field wpforms-field-select" data-field-id="3"><label class="wpforms-field-label" for="wpforms-149-field_3">Région <span class="wpforms-required-label">*</span></label><select id="wpforms-149-field_3" class="wpforms-field-large wpforms-field-required" name="wpforms[fields][3]" required="required"><option value="Guadeloupe" >Guadeloupe</option><option value="Martinique" >Martinique</option><option value="Guyane" >Guyane</option><option value="La Réunion" >La Réunion</option><option value="Mayotte" >Mayotte</option><option value="Ile-de-France" >Ile-de-France</option><option value="Centre-Val de Loire" >Centre-Val de Loire</option><option value="Bourgogne-Franche-Comté" >Bourgogne-Franche-Comté</option><option value="Normandie" >Normandie</option><option value="Hauts-de-France" >Hauts-de-France</option><option value="Grand Est" >Grand Est</option><option value="Pays de la Loire" >Pays de la Loire</option><option value="Bretagne" >Bretagne</option><option value="Nouvelle-Aquitaine" >Nouvelle-Aquitaine</option><option value="Occitanie" >Occitanie</option><option value="Auvergne-Rhône-Alpes" >Auvergne-Rhône-Alpes</option><option value="Provence-Alpes-Côte d’Azur" >Provence-Alpes-Côte d’Azur</option><option value="Corse" >Corse</option></select></div></div><div class="wpforms-field wpforms-field-hp"><label for="wpforms-149-field-hp" class="wpforms-field-label">Message</label><input type="text" name="wpforms[hp]" id="wpforms-149-field-hp" class="wpforms-field-medium"></div><div class="wpforms-submit-container" ><input type="hidden" name="wpforms[id]" value="149"><input type="hidden" name="wpforms[author]" value="1"><input type="hidden" name="wpforms[post_id]" value="17"><button type="submit" name="wpforms[submit]" class="wpforms-submit " id="wpforms-submit-149" value="wpforms-submit" aria-live="assertive" data-alt-text="Sending..." data-submit-text="Suivre l&#039;évolution">Suivre l&#039;évolution</button><img src="https://covid19-tracker.io/wp-content/plugins/wpforms-lite/assets/images/submit-spin.svg" class="wpforms-submit-spinner" style="display: none;" width="26" height="26" alt=""></div></form></div>  <!-- .wpforms-container --><div></div>
+<div class="wpforms-container wpforms-container-full" id="wpforms-149"><form id="wpforms-form-149" class="wpforms-validate wpforms-form wpforms-ajax-form" data-formid="149" method="post" enctype="multipart/form-data" action="/"><noscript class="wpforms-error-noscript">Please enable JavaScript in your browser to complete this form.</noscript><div class="wpforms-field-container"><div id="wpforms-149-field_1-container" class="wpforms-field wpforms-field-email" data-field-id="1"><label class="wpforms-field-label" for="wpforms-149-field_1">Email <span class="wpforms-required-label">*</span></label><input type="email" id="wpforms-149-field_1" class="wpforms-field-large wpforms-field-required" name="wpforms[fields][1]" required></div><div id="wpforms-149-field_3-container" class="wpforms-field wpforms-field-select" data-field-id="3"><label class="wpforms-field-label" for="wpforms-149-field_3">Région <span class="wpforms-required-label">*</span></label><select id="wpforms-149-field_3" class="wpforms-field-large wpforms-field-required" name="wpforms[fields][3]" required="required"><option value="Guadeloupe" >Guadeloupe</option><option value="Martinique" >Martinique</option><option value="Guyane" >Guyane</option><option value="La Réunion" >La Réunion</option><option value="Mayotte" >Mayotte</option><option value="Ile-de-France" >Ile-de-France</option><option value="Centre-Val de Loire" >Centre-Val de Loire</option><option value="Bourgogne-Franche-Comté" >Bourgogne-Franche-Comté</option><option value="Normandie" >Normandie</option><option value="Hauts-de-France" >Hauts-de-France</option><option value="Grand Est" >Grand Est</option><option value="Pays de la Loire" >Pays de la Loire</option><option value="Bretagne" >Bretagne</option><option value="Nouvelle-Aquitaine" >Nouvelle-Aquitaine</option><option value="Occitanie" >Occitanie</option><option value="Auvergne-Rhône-Alpes" >Auvergne-Rhône-Alpes</option><option value="Provence-Alpes-Côte d’Azur" >Provence-Alpes-Côte d’Azur</option><option value="Corse" >Corse</option></select></div><div id="wpforms-149-field_4-container" class="wpforms-field wpforms-field-select" data-field-id="4"><label class="wpforms-field-label" for="wpforms-149-field_4">Dropdown <span class="wpforms-required-label">*</span></label><select id="wpforms-149-field_4" class="wpforms-field-large wpforms-field-required" name="wpforms[fields][4]" required="required"><option value="Ain" >Ain</option><option value="Aisne" >Aisne</option><option value="Allier" >Allier</option><option value="Alpes-de-Haute-Provence" >Alpes-de-Haute-Provence</option><option value="Hautes-Alpes" >Hautes-Alpes</option><option value="Alpes-Maritimes" >Alpes-Maritimes</option><option value="Ardèche" >Ardèche</option><option value="Ardennes" >Ardennes</option><option value="Ariège" >Ariège</option><option value="Aube" >Aube</option><option value="Aude" >Aude</option><option value="Aveyron" >Aveyron</option><option value="Bouches-du-Rhône" >Bouches-du-Rhône</option><option value="Calvados" >Calvados</option><option value="Cantal" >Cantal</option><option value="Charente" >Charente</option><option value="Charente-Maritime" >Charente-Maritime</option><option value="Cher" >Cher</option><option value="Corrèze" >Corrèze</option><option value="Côte-d&#039;Or" >Côte-d&#039;Or</option><option value="Côtes-d&#039;Armor" >Côtes-d&#039;Armor</option><option value="Creuse" >Creuse</option><option value="Dordogne" >Dordogne</option><option value="Doubs" >Doubs</option><option value="Drôme" >Drôme</option><option value="Eure" >Eure</option><option value="Eure-et-Loir" >Eure-et-Loir</option><option value="Finistère" >Finistère</option><option value="Corse-du-Sud" >Corse-du-Sud</option><option value="Haute-Corse" >Haute-Corse</option><option value="Gard" >Gard</option><option value="Haute-Garonne" >Haute-Garonne</option><option value="Gers" >Gers</option><option value="Gironde" >Gironde</option><option value="Hérault" >Hérault</option><option value="Ille-et-Vilaine" >Ille-et-Vilaine</option><option value="Indre" >Indre</option><option value="Indre-et-Loire" >Indre-et-Loire</option><option value="Isère" >Isère</option><option value="Jura" >Jura</option><option value="Landes" >Landes</option><option value="Loir-et-Cher" >Loir-et-Cher</option><option value="Loire" >Loire</option><option value="Haute-Loire" >Haute-Loire</option><option value="Loire-Atlantique" >Loire-Atlantique</option><option value="Loiret" >Loiret</option><option value="Lot" >Lot</option><option value="Lot-et-Garonne" >Lot-et-Garonne</option><option value="Lozère" >Lozère</option><option value="Maine-et-Loire" >Maine-et-Loire</option><option value="Manche" >Manche</option><option value="Marne" >Marne</option><option value="Haute-Marne" >Haute-Marne</option><option value="Mayenne" >Mayenne</option><option value="Meurthe-et-Moselle" >Meurthe-et-Moselle</option><option value="Meuse" >Meuse</option><option value="Morbihan" >Morbihan</option><option value="Moselle" >Moselle</option><option value="Nièvre" >Nièvre</option><option value="Nord" >Nord</option><option value="Oise" >Oise</option><option value="Orne" >Orne</option><option value="Pas-de-Calais" >Pas-de-Calais</option><option value="Puy-de-Dôme" >Puy-de-Dôme</option><option value="Pyrénées-Atlantiques" >Pyrénées-Atlantiques</option><option value="Hautes-Pyrénées" >Hautes-Pyrénées</option><option value="Pyrénées-Orientales" >Pyrénées-Orientales</option><option value="Bas-Rhin" >Bas-Rhin</option><option value="Haut-Rhin" >Haut-Rhin</option><option value="Rhône" >Rhône</option><option value="Haute-Saône" >Haute-Saône</option><option value="Saône-et-Loire" >Saône-et-Loire</option><option value="Sarthe" >Sarthe</option><option value="Savoie" >Savoie</option><option value="Haute-Savoie" >Haute-Savoie</option><option value="Paris" >Paris</option><option value="Seine-Maritime" >Seine-Maritime</option><option value="Seine-et-Marne" >Seine-et-Marne</option><option value="Yvelines" >Yvelines</option><option value="Deux-Sèvres" >Deux-Sèvres</option><option value="Somme" >Somme</option><option value="Tarn" >Tarn</option><option value="Tarn-et-Garonne" >Tarn-et-Garonne</option><option value="Var" >Var</option><option value="Vaucluse" >Vaucluse</option><option value="Vendée" >Vendée</option><option value="Vienne" >Vienne</option><option value="Haute-Vienne" >Haute-Vienne</option><option value="Vosges" >Vosges</option><option value="Yonne" >Yonne</option><option value="Territoire de Belfort" >Territoire de Belfort</option><option value="Essonne" >Essonne</option><option value="Hauts-de-Seine" >Hauts-de-Seine</option><option value="Seine-Saint-Denis" >Seine-Saint-Denis</option><option value="Val-de-Marne" >Val-de-Marne</option><option value="Val-d&#039;Oise" >Val-d&#039;Oise</option><option value="Guadeloupe" >Guadeloupe</option><option value="Martinique" >Martinique</option><option value="Guyane" >Guyane</option><option value="La Réunion" >La Réunion</option><option value="Mayotte" >Mayotte</option></select></div></div><div class="wpforms-field wpforms-field-hp"><label for="wpforms-149-field-hp" class="wpforms-field-label">Comment</label><input type="text" name="wpforms[hp]" id="wpforms-149-field-hp" class="wpforms-field-medium"></div><div class="wpforms-submit-container" ><input type="hidden" name="wpforms[id]" value="149"><input type="hidden" name="wpforms[author]" value="1"><input type="hidden" name="wpforms[post_id]" value="17"><button type="submit" name="wpforms[submit]" class="wpforms-submit " id="wpforms-submit-149" value="wpforms-submit" aria-live="assertive" data-alt-text="Sending..." data-submit-text="Suivre l&#039;évolution">Suivre l&#039;évolution</button><img src="https://covid19-tracker.io/wp-content/plugins/wpforms-lite/assets/images/submit-spin.svg" class="wpforms-submit-spinner" style="display: none;" width="26" height="26" alt=""></div></form></div>  <!-- .wpforms-container --><div></div>
 
 
 
@@ -316,7 +321,7 @@ Toucher des objets qui ont été en contact avec une personne infectée.
 
 
 <div class="wp-block-column" style="flex-basis:70%">
-<h4 class="b mt0 mb1">La masque</h4>
+<h4 class="b mt0 mb1">Le masque</h4>
 
 
 
@@ -409,7 +414,17 @@ Toucher des objets qui ont été en contact avec une personne infectée.
 
 
 
-<div id="map" class="center"></div>
+<div class="wp-block-columns center mw8 relative">
+<div class="wp-block-column">
+<div class="center relative"><div id="map" class="center"></div></div>
+</div>
+
+
+
+<div class="wp-block-column">
+<div class="center relative"><div id="map_dept" class="center"></div></div>
+</div>
+</div>
 </div></div>
 
           </main>
@@ -421,11 +436,54 @@ Toucher des objets qui ont été en contact avec une personne infectée.
   </div>
 </footer>
     <script src="https://kit.fontawesome.com/03ddad67c6.js" crossorigin="anonymous"></script>
-    
+    		<style type="text/css">
+			#airpress_debugger {
+				width:100%;
+				font-family: monospace;
+				padding:50px;
+				font-size: 12px;
+				padding-top:100px;
+				display:none;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				color:#000000;
+				background-color: #f7f7f7;
+				z-index:99998;
+			}
+
+			#airpress_debugger .expander {
+				color: blue !important;
+			}
+			#airpress_debugger .expandable {
+				padding: 20px;
+				border: 1px dashed #cccccc;
+				display: none;
+				white-space: pre-wrap;
+			}
+		</style>
+		<script type="text/javascript">
+		jQuery(document).ready(function(){
+			jQuery("#wp-admin-bar-airpress_debugger_toggle").click(function(e){
+				e.preventDefault();
+				jQuery("#airpress_debugger").toggle();
+				jQuery('html, body').animate({ scrollTop: 0 }, 'fast');
+			});
+
+			jQuery(".expander").click(function(e){
+				e.preventDefault();
+				jQuery(this).next().fadeToggle();
+			});
+		});
+		</script>
+		<div id="airpress_debugger">
+				<!-- <hr> -->
+				</div>
+		
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8PHLD8"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) --><script type='text/javascript' src='https://covid19-tracker.io/wp-content/themes/corona/dist/scripts/main_0439ddc9.js'></script>
+<!-- End Google Tag Manager (noscript) --><script type='text/javascript' src='https://covid19-tracker.io/wp-content/themes/corona/dist/scripts/main_71b48d39.js'></script>
 <script type='text/javascript' src='https://covid19-tracker.io/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
 <script type='text/javascript' src='https://covid19-tracker.io/wp-content/plugins/wpforms-lite/assets/js/jquery.validate.min.js?ver=1.19.0'></script>
 <script type='text/javascript' src='https://covid19-tracker.io/wp-content/plugins/wpforms-lite/assets/js/mailcheck.min.js?ver=1.1.2'></script>

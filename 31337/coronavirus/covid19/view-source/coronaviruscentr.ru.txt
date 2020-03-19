@@ -1,292 +1,945 @@
 <!DOCTYPE html>
-<html lang="ru-RU">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Home - COVID-2019</title>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=cyrillic,latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption&amp;subset=cyrillic,latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/solid.css"
+          integrity="sha384-wnAC7ln+XN0UKdcPvJvtqIH3jOjs9pnKnq9qX68ImXvOGz2JuFoEiCjT8jyZQX2z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css"
+          integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Домен не прилинкован ни к одной из директорий на сервере!</title>
+    <!-- b0a8e2d8ccb04b24683d347076e80d29e451a385:3e6fb410018eac605cd88a63abcb1c147c858d33 -->
+    <style>
+        html {
+            height: 100%;
+        }
 
-<!-- This site is optimized with the Yoast SEO plugin v13.2 - https://yoast.com/wordpress/plugins/seo/ -->
-<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
-<link rel="canonical" href="http://coronaviruscentr.ru/" />
-<meta property="og:locale" content="ru_RU" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Home - COVID-2019" />
-<meta property="og:description" content="Онлайн карта распостранения коронавируса COVID-19 Статистика случаев заражения коронавирусом в Роcсии Коронавирус сегодня" />
-<meta property="og:url" content="http://coronaviruscentr.ru/" />
-<meta property="og:site_name" content="COVID-2019" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:description" content="Онлайн карта распостранения коронавируса COVID-19 Статистика случаев заражения коронавирусом в Роcсии Коронавирус сегодня" />
-<meta name="twitter:title" content="Home - COVID-2019" />
-<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"http://coronaviruscentr.ru/#website","url":"http://coronaviruscentr.ru/","name":"COVID-2019","inLanguage":"ru-RU","description":"\u041c\u043e\u043d\u0438\u0442\u043e\u0440\u0438\u043d\u0433 \u0440\u0430\u0441\u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0435\u043d\u0438\u044f \u043a\u043e\u0440\u043e\u043d\u0430\u0432\u0438\u0440\u0443\u0441\u0430","potentialAction":{"@type":"SearchAction","target":"http://coronaviruscentr.ru/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"http://coronaviruscentr.ru/#webpage","url":"http://coronaviruscentr.ru/","name":"Home - COVID-2019","isPartOf":{"@id":"http://coronaviruscentr.ru/#website"},"inLanguage":"ru-RU","datePublished":"2018-10-23T08:04:01+00:00","dateModified":"2020-03-12T15:29:27+00:00"}]}</script>
-<!-- / Yoast SEO plugin. -->
+        body {
+            font-family: 'PT Sans', Arial, sans-serif;
+            font-size: 16px;
+            height: 100%;
+            margin: 0;
+        }
 
-<link rel='dns-prefetch' href='//s.w.org' />
-<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
-<link rel="alternate" type="application/rss+xml" title="COVID-2019 &raquo; Лента" href="http://coronaviruscentr.ru/feed/" />
-		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/coronaviruscentr.ru\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
-			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script>
-		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-	<link rel='stylesheet' id='wp-block-library-css'  href='http://coronaviruscentr.ru/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css' media='all' />
-<link rel='stylesheet' id='futurio-extra-css'  href='http://coronaviruscentr.ru/wp-content/plugins/futurio-extra/css/style.css?ver=1.3.3' type='text/css' media='all' />
-<link rel='stylesheet' id='bootstrap-css'  href='http://coronaviruscentr.ru/wp-content/themes/futurio/css/bootstrap.css?ver=3.3.7' type='text/css' media='all' />
-<link rel='stylesheet' id='futurio-stylesheet-css'  href='http://coronaviruscentr.ru/wp-content/themes/futurio/style.css?ver=1.2.16' type='text/css' media='all' />
-<style id='futurio-stylesheet-inline-css' type='text/css'>
-#site-navigation .dropdown-menu>.active>a {background-color: transparent;}, .woocommerce .widget_price_filter .ui-slider .ui-slider-range, .woocommerce .widget_price_filter .ui-slider .ui-slider-handle{background-color:#dd9933;}.main-container, .container-fluid.head-bread, .offcanvas-sidebar .widget-title h3, #sidebar .widget-title h3, .container-fluid.archive-page-header, .offcanvas-sidebar, .cart-contents span.count, #product-nav > a{background-color:#383838;}a, .author-meta a, .tags-links a, nav.navigation.pagination .nav-links a{color:#dd9933;}.widget-title:before, nav.navigation.pagination .current:before{background-color:#dd9933;}nav.navigation.pagination .current:before{border-color:#dd9933;}a:active, a:hover, a:focus, .tags-links a:hover{color:#a35725;}.read-more-button a, #searchsubmit, .btn-default, input[type="submit"], input#submit, input#submit:hover, button, a.comment-reply-link, .btn-default:hover, input[type="submit"]:hover, button:hover, a.comment-reply-link:hover{color:#ffffff;background-color:#dd9933;border-color:#dd9933;}body, nav.navigation.post-navigation a, .nav-subtitle{color:#dddddd;}.comments-meta a{color:#dddddd;}.news-item h2 a, .page-header, .page-header a, h1.single-title, h1, h2, h3, h4, h5, h6{color:#ffffff;}.top-bar-section{color:#fff;}.site-branding-text h1.site-title a:hover, .site-branding-text .site-title a:hover, .site-branding-text h1.site-title, .site-branding-text .site-title, .site-branding-text h1.site-title a, .site-branding-text .site-title a{color:#ffffff;}p.site-description{color:#a3a3a3;}#site-navigation, #site-navigation .dropdown-menu, #site-navigation.shrink, .header-cart-block:hover ul.site-header-cart{background-color:#2d2d2d;}#site-navigation, #site-navigation .navbar-nav > li > a, #site-navigation .dropdown-menu > li > a, .brand-absolute{color:#ffffff;}.open-panel span{background-color:#ffffff;}.open-panel span, .header-cart a.cart-contents, .header-login a, .top-search-icon i, .offcanvas-sidebar-toggle i, .site-header-cart, .site-header-cart a{color:#ffffff;}#site-navigation .navbar-nav > li > a:hover, #site-navigation .dropdown-menu > li > a:hover, #site-navigation .nav > li > a:before{color:#ffffff;}#site-navigation .nav > li > a:before, #site-navigation .nav > li.active > a:before, #site-navigation .current-page-parent:before{background-color:#ffffff;}#site-navigation .navbar-nav > li > a:hover, #site-navigation .dropdown-menu > li > a:hover, #site-navigation .nav > li > a:before{background-color:#a35725;}#site-navigation .navbar-nav > li.active > a, #site-navigation .dropdown-menu > .active > a, .home-icon.front_page_on i{color:#dd9933;}#sidebar .widget-title h3{color:#ffffff;}#sidebar .widget-title:after, .offcanvas-sidebar .widget-title:after{background-color:#ffffff;}.widget-title h3{border-color:#ffffff;}.widget{color:#e8e8e8;}#content-footer-section, #content-footer-section .widget-title h3{background-color:#5b5b5b;}.single .content-date-comments span{color:#ffffff;}.date-meta{background-color:#dd9933;}.comments-meta, .comments-meta a{color:#0a0a0a;}.comments-meta{background-color:#e5e5e5;}.woocommerce ul.products li.product h3, li.product-category.product h3, .woocommerce ul.products li.product h2.woocommerce-loop-product__title, .woocommerce ul.products li.product h2.woocommerce-loop-category__title{color:#eaeaea;}.woocommerce ul.products li.product .price{color:#dd9933;}.woocommerce ul.products li.product, .woocommerce-page ul.products li.product, li.product-category.product, .woocommerce ul.products li.product .woocommerce-loop-category__title{background:rgba(255,255,255,0);}.woocommerce ul.products li.product .button{color:#ffffff;}.woocommerce ul.products li.product .button:hover{color:#dd9933;}.woocommerce span.onsale, .single .woocommerce .related span.onsale{background-color:#dd9933;}.woocommerce div.product p.price, .woocommerce div.product span.price{color:#dd9933;}.woocommerce .summary .star-rating span{color:#dd9933;}.woocommerce div.product .woocommerce-tabs ul.tabs.wc-tabs li.active a{color:#dd9933;}.woocommerce div.product .woocommerce-tabs ul.tabs.wc-tabs li.active a, .woocommerce div.product .woocommerce-tabs ul.tabs.wc-tabs li:hover a{border-bottom-color:#dd9933;}.woocommerce div.product .woocommerce-tabs ul.tabs li a{color:#a35725;}.woocommerce #respond input#submit, .woocommerce a.button, #sidebar .widget.widget_shopping_cart a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt{color:#ffffff;}.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt{border-color:#dd9933;background-color:#dd9933;}.woocommerce #respond input#submit:hover, .woocommerce a.button:hover, #sidebar .widget.widget_shopping_cart a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover, .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover{color:#dd9933;}.woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover, .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover{border-color:#dd9933;background-color:#ffffff;}@media (max-width: 767px){#site-navigation .navbar-nav a, .openNav .menu-container{background-color:#2d2d2d;}#site-navigation .navbar-nav a:hover{color:#ffffff!important;background-color:#a35725!important;}#site-navigation .navbar-nav .active a{color:#dd9933!important;}}
-.full-head-img {
-    padding-bottom: 60px;
-    padding-top: 60px;
-    }.futurio-content.main-content-page, .futurio-content.single-content, .futurio-woo-content {
-    padding-left: 0%;
-    padding-right: 0%;
-    }
-</style>
-<link rel='stylesheet' id='font-awesome-css'  href='http://coronaviruscentr.ru/wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0' type='text/css' media='all' />
-<link rel='stylesheet' id='elementor-icons-css'  href='http://coronaviruscentr.ru/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.6.2' type='text/css' media='all' />
-<link rel='stylesheet' id='elementor-animations-css'  href='http://coronaviruscentr.ru/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=2.9.6' type='text/css' media='all' />
-<link rel='stylesheet' id='elementor-frontend-css'  href='http://coronaviruscentr.ru/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=2.9.6' type='text/css' media='all' />
-<link rel='stylesheet' id='elementor-global-css'  href='http://coronaviruscentr.ru/wp-content/uploads/elementor/css/global.css?ver=1584024583' type='text/css' media='all' />
-<link rel='stylesheet' id='elementor-post-31-css'  href='http://coronaviruscentr.ru/wp-content/uploads/elementor/css/post-31.css?ver=1584027154' type='text/css' media='all' />
-<link rel='stylesheet' id='kirki-styles-css'  href='http://coronaviruscentr.ru?action=kirki-styles&#038;ver=3.0.38' type='text/css' media='all' />
-<script type='text/javascript' src='http://coronaviruscentr.ru/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
-<script type='text/javascript' src='http://coronaviruscentr.ru/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
-<link rel='https://api.w.org/' href='http://coronaviruscentr.ru/wp-json/' />
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://coronaviruscentr.ru/xmlrpc.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://coronaviruscentr.ru/wp-includes/wlwmanifest.xml" /> 
-<meta name="generator" content="WordPress 5.3.2" />
-<link rel='shortlink' href='http://coronaviruscentr.ru/' />
-<link rel="alternate" type="application/json+oembed" href="http://coronaviruscentr.ru/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fcoronaviruscentr.ru%2F" />
-<link rel="alternate" type="text/xml+oembed" href="http://coronaviruscentr.ru/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fcoronaviruscentr.ru%2F&#038;format=xml" />
-<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>    </head>
-    <body id="blog" class="home page-template-default page page-id-31 elementor-default elementor-kit-161 elementor-page elementor-page-31">
-        <a class="skip-link screen-reader-text" href="#site-content">Skip to the content</a>                <div class="page-wrap">
- 
-<div class="main-menu">
-    <nav id="site-navigation" class="navbar navbar-default nav-pos-center">     
-        <div class="container">   
-            <div class="navbar-header">
-                                    <div class="site-heading navbar-brand heading-menu" >
-                        <div class="site-branding-logo">
-                                                    </div>
-                        <div class="site-branding-text">
-                                                            <h1 class="site-title"><a href="http://coronaviruscentr.ru/" rel="home">COVID-2019</a></h1>
-                            
-                                                            <p class="site-description">
-                                    Мониторинг распространения коронавируса                                </p>
-                                                    </div><!-- .site-branding-text -->
-                    </div>
-                	
+        #ru, #en {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            font-family: 'PT Sans', Arial, sans-serif;
+            font-size: 16px;
+            height: 100%;
+            min-height: 768px;
+            margin: 0;
+        }
+
+        .top, .bottom, hr {
+            flex-shrink: 0;
+        }
+
+        hr {
+            height: 2px;
+            border: 0;
+            box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+            margin: 0;
+        }
+
+        a {
+            color: #2fa3e7;
+            text-decoration: none;
+        }
+
+        a:focus, a:hover {
+            color: #157ab5;
+            text-decoration: none;
+        }
+
+        .b-alert {
+            font-family: 'PT Sans', Arial, sans-serif;
+            position: relative;
+            padding: 20px 20px 20px 65px;
+            min-height: 60px;
+            box-sizing: border-box;
+            border: 1px solid #000;
+            border-radius: 0;
+            background-color: #fff;
+            background-repeat: no-repeat;
+            color: #000;
+            text-align: left;
+            font-size: 16px;
+            line-height: 20px;
+            -webkit-box-shadow: 0 2px 4px rgba(146,149,163,.5);
+            box-shadow: 0 2px 4px rgba(146,149,163,.5)
+        }
+
+        .b-alert:before {
+            background-image: url(https://cp.beget.com/img/icons/new_alert/alert.svg)
+        }
+
+        .b-alert:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 19px;
+            left: 0;
+            width: 45px;
+            height: 20px;
+            border-radius: 0 4px 4px 0;
+            background-repeat: no-repeat;
+            background-position: center right 4px
+        }
+
+        .b-alert.b-alert--info {
+            border-color: #2fa3e7
+        }
+
+        .b-alert.b-alert--info:before {
+            background-color: #2fa3e7
+        }
+
+        .b-alert.b-alert--warning {
+            border-color: #fba700
+        }
+
+        .b-alert.b-alert--warning:before {
+            background-color: #fba700
+        }
+
+        .b-alert.b-alert--danger {
+            border-color: #bd2327
+        }
+
+        .b-alert.b-alert--danger:before {
+            background-color: #bd2327
+        }
+
+        .b-alert.b-alert--success {
+            border-color: #6ec331
+        }
+
+        .b-alert.b-alert--success:before {
+            background-color: #6ec331
+        }
+
+        .b-alert.b-alert--icon-alarm:before {
+            background-image: url(https://cp.beget.com/img/icons/new_alert/alarm.svg)
+        }
+
+        .b-alert.b-alert--icon-backup:before {
+            background-image: url(https://cp.beget.com/img/icons/new_alert/backup.svg)
+        }
+
+        .b-alert.b-alert--icon-card:before {
+            background-image: url(https://cp.beget.com/img/icons/new_alert/card.svg)
+        }
+
+        .b-alert.b-alert--icon-check:before {
+            background-image: url(https://cp.beget.com/img/icons/new_alert/check.svg)
+        }
+
+        .b-alert.b-alert--icon-database:before {
+            background-image: url(https://cp.beget.com/img/icons/new_alert/database.svg)
+        }
+
+        .b-alert.b-alert--icon-delete:before {
+            background-image: url(https://cp.beget.com/img/icons/new_alert/delete.svg)
+        }
+
+        .b-alert.b-alert--icon-domain:before {
+            background-image: url(https://cp.beget.com/img/icons/new_alert/domain.svg)
+        }
+
+        .b-alert.b-alert--icon-info:before {
+            background-image: url(https://cp.beget.com/img/icons/new_alert/info.svg)
+        }
+
+        .b-alert.b-alert--icon-locked:before {
+            background-image: url(https://cp.beget.com/img/icons/new_alert/locked.svg)
+        }
+
+        .b-alert.b-alert--icon-mail:before {
+            background-image: url(https://cp.beget.com/img/icons/new_alert/mail.svg)
+        }
+
+        .b-alert.b-alert--icon-phone:before {
+            background-image: url(https://cp.beget.com/img/icons/new_alert/phone.svg)
+        }
+
+        .b-alert.b-alert--icon-php:before {
+            background-image: url(https://cp.beget.com/img/icons/new_alert/php.svg)
+        }
+
+        .b-alert.b-alert--icon-redis:before {
+            background-image: url(https://cp.beget.com/img/icons/new_alert/redis.svg)
+        }
+
+        .b-alert.b-alert--icon-setup:before {
+            background-image: url(https://cp.beget.com/img/icons/new_alert/setup.svg)
+        }
+
+        .b-alert.b-alert--icon-support:before {
+            background-image: url(https://cp.beget.com/img/icons/new_alert/support.svg)
+        }
+
+        h1, h2 {
+            font-family: 'PT Sans Caption', Arial, sans-serif;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 21px;
+            line-height: 30px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        @media screen and (min-width: 801px) {
+            body {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                min-height: 768px;
+            }
+
+            .top {
+                background-color: #f7f9fa;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-box-flex: 1;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+            }
+
+            .bottom {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+            }
+
+            header, footer, .hint {
+                width: 690px;
+                margin: 0 auto;
+            }
+
+            header {
+                display: -webkit-inline-box;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+            }
+
+            main {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                justify-content: flex-start;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                width: 740px;
+                margin: 0 auto;
+            }
+
+            footer {
+                display: -webkit-inline-box;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                width: 690px;
+            }
+
+            .logo img {
+                max-width: 100%;
+                max-height: 75px;
+                position: relative;
+                top: 15px;
+            }
+
+            nav {
+                display: -webkit-inline-box;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+                -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                justify-content: flex-end;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                padding-right: 10px;
+            }
+
+            nav a {
+                padding: 0 15px;
+            }
+
+            .octo {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+            }
+
+            .octo img {
+                height: 230px;
+                max-height: 230px;
+            }
+
+            .hint {
+                padding-top: 30px;
+            }
+
+            .footer-col {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                padding: 15px 0;
+            }
+
+            .footer-col > * {
+                padding: 2px;
+            }
+
+            .bottom-mobile {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .top {
+                margin: 0 auto;
+                background-color: #f7f9fa;
+            }
+
+            .bottom {
+                margin: 0 auto;
+                width: 95%;
+            }
+
+            header, footer, main {
+                width: 95%;
+            }
+
+            header, footer, main, .hint {
+                margin: 0 auto;
+            }
+
+            .logo {
+                display: block;
+                width: 60%;
+                margin: 0 auto;
+            }
+
+            .logo img {
+                width: 100%;
+            }
+
+            .icon img {
+                display: none;
+            }
+
+            .octo {
+                width: 60%;
+                margin: 0 auto;
+            }
+
+            .octo img {
+                width: 100%;
+            }
+
+            .hint {
+                padding-top: 30px;
+                margin-bottom: 30px;
+            }
+
+            header nav {
+                display: none;
+            }
+
+            .bottom {
+                display: none;
+            }
+
+            .bottom-mobile footer {
+                display: table;
+                width: 95%;
+                margin-bottom: 35px;
+            }
+
+            .bottom-mobile footer span {
+                text-align: right;
+                display: table-cell;
+            }
+
+            .bottom-mobile footer txt {
+                display: table-cell;
+            }
+
+            .bottom-mobile footer h2 {
+                margin-top: 20px;
+                margin-bottom: 5px;
+            }
+
+            .bottom-mobile footer p {
+                display: table-row;
+                width: 100%;
+                line-height: 25px;
+            }
+        }
+
+
+        .instruction-row, li {
+            margin-bottom: .5rem;
+        }
+
+        .fa-li {
+            color: #84c738;
+        }
+
+        .fa-ul {
+            margin-left: 1.3em;
+        }
+
+        span.key {
+            background-color: white;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 0 4px 0 rgba(86, 94, 113, 0.2);
+        }
+
+        .gallery {
+            padding-top: 20px;
+            display: none;
+        }
+
+        .gallery a {
+            display: block;
+            margin-bottom: 30px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+<div id="ru">
+    <div class="top">
+        <header>
+            <a href="http://beget.com" target="_blank" title="Перейти на сайт хостинг-провайдера" class="logo">
+                <img src="https://cp.beget.com/i/logo.png">
+            </a>
+            <nav>
+                <a href="https://cp.beget.com" target="_blank">Панель управления</a>
+                <a href="https://beget.com/ru/domain-register" target="_blank">Регистрация доменов</a>
+                <a href="https://beget.com/ru/virtual-hosting" target="_blank">Тарифы</a>
+            </nav>
+        </header>
+        <main>
+            <div class="octo">
+                <img src="https://cp.beget.com/img/octo/octo_error.png">
             </div>
-                                        <div class="nav navbar-nav navbar-right icons-menu-right">
-                    	
-                                <div class="top-search-icon">
-                                    <i class="fa fa-search"></i>
-                                                                            <div class="top-search-box">
-                                            <form role="search" method="get" class="search-form" action="http://coronaviruscentr.ru/">
-				<label>
-					<span class="screen-reader-text">Найти:</span>
-					<input type="search" class="search-field" placeholder="Поиск&hellip;" value="" name="s" />
-				</label>
-				<input type="submit" class="search-submit" value="Поиск" />
-			</form>                                        </div>
-                                                                    </div>
-                                                </div>
-                                        <a href="#" id="main-menu-panel" class="open-panel" data-panel="main-menu-panel">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <div class="brand-absolute visible-xs">Меню</div>
-                </a>
-            
-            <div class="menu-container"><ul id="menu-main-menu" class="nav navbar-nav navbar-center"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-159" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-31 current_page_item active menu-item-159 nav-item"><a title="Карта заражения" href="http://coronaviruscentr.ru/" class="nav-link">Карта заражения</a></li>
-<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-174" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174 nav-item"><a title="Новости" href="http://coronaviruscentr.ru/blog/" class="nav-link">Новости</a></li>
-</ul></div>
-                    </div>
-    </nav> 
-</div>
-            <div id="site-content"></div>
-            				<div class="container-fluid main-container page-builders" role="main">
-					<div class="page-area">		
-			
-<!-- start content container -->
-<div class="row">
-	<article class="col-md-12 ">
-		                          
-				<div class="post-31 page type-page status-publish hentry">
-																																					<div class="futurio-content main-content-page">                            
-						<div class="single-entry-summary">                              
-																<div data-elementor-type="wp-post" data-elementor-id="31" class="elementor elementor-31" data-elementor-settings="[]">
-			<div class="elementor-inner">
-				<div class="elementor-section-wrap">
-							<section class="elementor-element elementor-element-fb4cb4b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="fb4cb4b" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-						<div class="elementor-container elementor-column-gap-default">
-				<div class="elementor-row">
-				<div class="elementor-element elementor-element-41590ed elementor-column elementor-col-100 elementor-top-column" data-id="41590ed" data-element_type="column">
-			<div class="elementor-column-wrap  elementor-element-populated">
-					<div class="elementor-widget-wrap">
-				<div class="elementor-element elementor-element-d0e4c76 elementor-widget elementor-widget-heading" data-id="d0e4c76" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Онлайн карта распостранения коронавируса COVID-19</h2>		</div>
-				</div>
-						</div>
-			</div>
-		</div>
-						</div>
-			</div>
-		</section>
-				<section class="elementor-element elementor-element-44abf19 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="44abf19" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-				<div class="elementor-row">
-				<div class="elementor-element elementor-element-c33a8d9 elementor-column elementor-col-100 elementor-top-column" data-id="c33a8d9" data-element_type="column">
-			<div class="elementor-column-wrap  elementor-element-populated">
-					<div class="elementor-widget-wrap">
-				<div class="elementor-element elementor-element-6814e7d elementor-widget elementor-widget-html" data-id="6814e7d" data-element_type="widget" data-widget_type="html.default">
-				<div class="elementor-widget-container">
-			<iframe src="https://coronavirus-online.ru/ajax/map.html" frameborder="0" height="550" style="width: 100%;"></iframe>		</div>
-				</div>
-						</div>
-			</div>
-		</div>
-						</div>
-			</div>
-		</section>
-				<section class="elementor-element elementor-element-6c1c434 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="6c1c434" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-				<div class="elementor-row">
-				<div class="elementor-element elementor-element-093fc5c elementor-column elementor-col-100 elementor-top-column" data-id="093fc5c" data-element_type="column">
-			<div class="elementor-column-wrap  elementor-element-populated">
-					<div class="elementor-widget-wrap">
-				<div class="elementor-element elementor-element-53abc6c elementor-widget elementor-widget-spacer" data-id="53abc6c" data-element_type="widget" data-widget_type="spacer.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-spacer">
-			<div class="elementor-spacer-inner"></div>
-		</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-0641bec elementor-widget elementor-widget-heading" data-id="0641bec" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Статистика случаев заражения коронавирусом в Роcсии</h2>		</div>
-				</div>
-						</div>
-			</div>
-		</div>
-						</div>
-			</div>
-		</section>
-				<section class="elementor-element elementor-element-71fb176 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="71fb176" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-				<div class="elementor-row">
-				<div class="elementor-element elementor-element-460bc9e elementor-column elementor-col-100 elementor-top-column" data-id="460bc9e" data-element_type="column">
-			<div class="elementor-column-wrap  elementor-element-populated">
-					<div class="elementor-widget-wrap">
-				<div class="elementor-element elementor-element-d0cdb3e elementor-widget elementor-widget-spacer" data-id="d0cdb3e" data-element_type="widget" data-widget_type="spacer.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-spacer">
-			<div class="elementor-spacer-inner"></div>
-		</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-769d46b elementor-widget elementor-widget-heading" data-id="769d46b" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Коронавирус сегодня</h2>		</div>
-				</div>
-				<div class="elementor-element elementor-element-5e6e2ad elementor-widget elementor-widget-futurio-extra-posts" data-id="5e6e2ad" data-element_type="widget" data-widget_type="futurio-extra-posts.default">
-				<div class="elementor-widget-container">
-			
-				</div>
-				</div>
-						</div>
-			</div>
-		</div>
-						</div>
-			</div>
-		</section>
-						</div>
-			</div>
-		</div>
-															</div>                               
-						
-											</div>
-				</div>        
-			        
-		    
-	</article>       
-	</div>
-<!-- end content container -->
+            <div class="b-alert b-alert--danger">
+                Домен не прилинкован к директории на сервере!
+            </div>
+            <div class="hint">
+                <h2>Что это значит и как прилинковать домен?</h2>
+                "Линковка" - это направление домена на директорию на сервере, которая становится доступна в интернете. Если
+                домен никуда не направлен, Вы видите данную страницу.<br><br>
+                Если Вы владелец домена - прилинкуйте домен в разделе <a href="https://cp.beget.com/sites" target="_blank">"Сайты"</a>
+                Панели Управления. <br>Подробнее об этом можно прочитать <a href="https://beget.com/ru/manual/sites"
+                                                                            target="_blank">здесь.</a>
+            </div>
+            <div class="hint" id="cache-hint"></div>
+        </main>
 
-</div><!-- end main-container -->
-</div><!-- end page-area -->
-
-
-        <footer id="colophon" class="footer-credits container-fluid">
-            <div class="container">
-                <div class="footer-credits-text text-center">
-                    <p>© 2020 Китайский коронавирус - онлайн карта распространения в России и в Мире.<br />Статистика зараженных людей круглосуточно. При распространении и использовании информации обратная активная гиперссылка обязательна. 18+</p>                </div>
-            </div>	
+    </div>
+    <hr>
+    <div class="bottom-mobile">
+        <footer>
+            <h2>Тех. поддержка</h2>
+            <p>
+                <txt>Почта:</txt>
+                <span><a href="mailto:support@beget.com">support@beget.com</a></span></p>
+            <p>
+                <txt>Россия:</txt>
+                <span>+7 (800) 700-06-08</span></p>
+            <p>
+                <txt>Украина:</txt>
+                <span>+380 (800) 802-192</span></p>
         </footer>
-    
-</div><!-- end page-wrap -->
-
-
-	<div id="site-menu-sidebar" class="offcanvas-sidebar" >
-		<div class="offcanvas-sidebar-close">
-			<i class="fa fa-times"></i>
-		</div>
-		<div id="text-2" class="widget widget_text"><div class="widget-title"><h3>Custom menu section</h3></div>			<div class="textwidget"><p>This is off canvas menu widget area. To enable it add some widgets into<strong> Appearance &#8211; Widgets &#8211; Menu Section</strong>, and go to <strong>Customizer &#8211; Main menu</strong> to set the icon position.</p>
+    </div>
+    <div class="bottom">
+        <footer>
+            <div class="footer-col">
+                <div>Тех. поддержка:</div>
+                <div>Бухгалтерия:</div>
+                <div>Руководство:</div>
+                <div>Telegram:</div>
+                <div>Skype:</div>
+            </div>
+            <div class="footer-col" style="padding-right: 100px;">
+                <a href="mailto:support@beget.com">support@beget.com</a>
+                <a href="mailto:bills@beget.com">bills@beget.com</a>
+                <a href="mailto:manager@beget.com">manager@beget.com</a>
+                <a href="tg://resolve?domain=begetbot">@begetbot</a>
+                <a href="https://join.skype.com/bot/ceda3526-d09b-4157-b6f0-91a646073c7e?add" target="_blank">Добавить в
+                    контакты</a>
+            </div>
+            <div class="footer-col">
+                <div>Россия:</div>
+                <div>СПб:</div>
+                <div>Москва:</div>
+                <div>Украина:</div>
+                <div>Киев:</div>
+            </div>
+            <div class="footer-col">
+                <b>+7 (800) 700-06-08</b>
+                <b>+7 (812) 3854136</b>
+                <b>+7 (495) 721-80-88</b>
+                <b>+380 (800) 802-192</b>
+                <b>+380 (44) 300-02-18</b>
+            </div>
+        </footer>
+    </div>
 </div>
-		</div><div id="futurio-extra-popular-posts-1" class="widget popular-posts widget_popular_posts">
-			<div class="popular-news-section">
 
-				<div class="widget-title"><h3>Popular posts</h3></div>
-							<div class="news-item layout-two">
-																<div class="news-text-wrap">
-									<h2>
-										<a href="http://coronaviruscentr.ru/2020/03/12/statistika-koronavirusa-na-11-marta-2020-goda/">
-											Статистика коронавируса на 11 марта 2020 года										</a>
-									</h2>
-									        <span class="extra-posted-date">
-            12.03.2020        </span>
-        <span class="extra-comments-meta">
-            Off            <i class="fa fa-comments-o"></i>
-        </span>
-        								</div><!-- .news-text-wrap -->
-							</div><!-- .news-item -->
-
-							
-					
-				</div>
-
-				</div>	</div>
-
-<script type='text/javascript' src='http://coronaviruscentr.ru/wp-content/plugins/futurio-extra/js/futurio-extra.js?ver=1.3.3'></script>
-<script type='text/javascript' src='http://coronaviruscentr.ru/wp-content/themes/futurio/js/bootstrap.min.js?ver=3.3.7'></script>
-<script type='text/javascript' src='http://coronaviruscentr.ru/wp-content/themes/futurio/js/customscript.js?ver=1.2.16'></script>
-<script type='text/javascript' src='http://coronaviruscentr.ru/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
-<script type='text/javascript' src='http://coronaviruscentr.ru/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=2.9.6'></script>
-<script type='text/javascript' src='http://coronaviruscentr.ru/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4'></script>
-<script type='text/javascript' src='http://coronaviruscentr.ru/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.7.6'></script>
-<script type='text/javascript' src='http://coronaviruscentr.ru/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2'></script>
-<script type='text/javascript' src='http://coronaviruscentr.ru/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6'></script>
-<script type='text/javascript' src='http://coronaviruscentr.ru/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=2.9.6'></script>
-<script type='text/javascript'>
-var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"\u041f\u043e\u0434\u0435\u043b\u0438\u0442\u044c\u0441\u044f \u0432 Facebook","shareOnTwitter":"\u041f\u043e\u0434\u0435\u043b\u0438\u0442\u044c\u0441\u044f \u0432 Twitter","pinIt":"\u0417\u0430\u043f\u0438\u043d\u0438\u0442\u044c","downloadImage":"\u0421\u043a\u0430\u0447\u0430\u0442\u044c \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.9.6","urls":{"assets":"http:\/\/coronaviruscentr.ru\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes","elementor_lightbox_enable_counter":"yes","elementor_lightbox_enable_fullscreen":"yes","elementor_lightbox_enable_zoom":"yes","elementor_lightbox_enable_share":"yes","elementor_lightbox_title_src":"title","elementor_lightbox_description_src":"description"},"editorPreferences":[]},"post":{"id":31,"title":"Home - COVID-2019","excerpt":"","featuredImage":false}};
+<div id="en" style="display: none">
+    <div class="top">
+        <header>
+            <a href="http://beget.com" target="_blank" title="Web hosting home page" class="logo">
+                <img src="https://cp.beget.com/i/logo.png">
+            </a>
+            <nav>
+                <a href="https://cp.beget.com" target="_blank">Control Panel</a>
+                <a href="https://beget.com/en/domain-register" target="_blank">Domain registration</a>
+                <a href="https://beget.com/en/virtual-hosting" target="_blank">Plans</a>
+            </nav>
+        </header>
+        <main>
+            <div class="octo">
+                <img src="https://cp.beget.com/img/octo/octo_error.png">
+            </div>
+            <div class="b-alert b-alert--danger">
+                This domain is not linked to any directory on the server!
+            </div>
+            <div class="hint">
+                <h2>What does it mean, and how do I link it?</h2>
+                Linking domain means mapping it to its directory, thus making the website online. If the domain is not linked,
+                you will be able to view this page only.<br><br>
+                If you're the domain owner please link it in the
+                <a href="https://cp.beget.com/sites" target="_blank">"Sites"</a> section of the control panel.
+                <br>You can read more <a href="https://beget.com/en/manual/sites" target="_blank">here.</a>
+            </div>
+            <div class="hint" id="cache-hint"></div>
+        </main>
+    </div>
+    <hr>
+    <div class="bottom-mobile">
+        <footer>
+            <h2>Support</h2>
+            <p>
+                <txt>Mail:</txt>
+                <span><a href="mailto:support@beget.com">support@beget.com</a></span></p>
+        </footer>
+    </div>
+    <div class="bottom">
+        <footer>
+            <div class="footer-col">
+                <div>Support:</div>
+            </div>
+            <div class="footer-col" style="padding-right: 100px;">
+                <a href="mailto:support@beget.com">support@beget.com</a>
+            </div>
+            <div class="footer-col">
+                <div>Management:</div>
+            </div>
+            <div class="footer-col">
+                <a href="mailto:manager@beget.com">manager@beget.com</a>
+            </div>
+        </footer>
+    </div>
+</div>
+<script type="text/template" id="hotkeyTemplate">
+    <% if ((browser.isOpera || browser.isFirefox || browser.isChrome) && browser.isMac) { %>
+    <span class="key">⌘</span> + <span class="key">R</span>
+    <% } %>
+    <% if ((browser.isOpera || browser.isFirefox || browser.isChrome) && !browser.isMac) { %>
+    <span class="key">Ctrl</span> + <span class="key">R</span>
+    <% } %>
+    <% if (browser.isIE || browser.isEdge) { %>
+    <span class="key">Ctrl</span> + <span class="key">F5</span>
+    <% } %>
+    <% if (browser.isSafari) { %>
+    <span class="key">⌥</span> + <span class="key">⌘</span> + <span class="key">E</span>
+    <% } %>
 </script>
-<script type='text/javascript' src='http://coronaviruscentr.ru/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=2.9.6'></script>
+<script type="text/template" id="instructionTemplateRu">
+    <div>
+        <% _.forEach(data, function(item, index) { %>
+        <div class="instruction-row">
+            <div><%- index + 1 %>. <%- item.text %></div>
+            <% if (item.image) { %>
+            <a href="<%- item.image.normal %>" data-srcset="<%- item.image.normal %> 1x, <%- item.image.retina %> 2x"
+               data-fancybox="instruction" data-caption="<%- item.text %>">
+                <img src="<%- item.image.normal %>" srcset="<%- item.image.normal %> 1x, <%- item.image.retina %> 2x" width="99"
+                     alt="<%- item.text %>">
+            </a>
+            <% } %>
+        </div>
+        <% }) %>
+    </div>
+</script>
+<script type="text/template" id="instructionTemplateEn">
+    <% if (browser.isFirefox) { %>
+    <div>
+        <div class="instruction-row">1. Open the browser menu (three horizontal bars in the upper right corner of the window)</div>
+        <div class="instruction-row">2. Select "Preferences"</div>
+        <div class="instruction-row">3. Go to the "Privacy & Security" section.</div>
+        <div class="instruction-row">4. Click "Clear history..."</div>
+        <div class="instruction-row">5. In the window that appears, click "Clear Now”</div>
+    </div>
+    <% } %>
+    <% if (browser.isChrome && !browser.isYandex) { %>
+    <div>
+        <div class="instruction-row">1. Open the browser menu (three horizontal bars in the upper right corner of the window)</div>
+        <div class="instruction-row">2. Select "More tools" > "Clear browsing data..."</div>
+        <div class="instruction-row">3. Click "Clear data"</div>
+    </div>
+    <% } %>
+    <% if (browser.isSafari) { %>
+    <div>
+        <div class="instruction-row">1. In the menu bar select “Safari” > “Preferences”</div>
+        <div class="instruction-row">2. Enable “Show Develop menu in menu bar” in Advanced section and close the window</div>
+        <div class="instruction-row">3. In the menu bar select “Develop” > “Empty caches”</div>
+    </div>
+    <% } %>
+    <% if (browser.isYandex) { %>
+    <div>
+        <div class="instruction-row">1. Open the browser menu (three horizontal bars in the upper right corner of the window)</div>
+        <div class="instruction-row">2. Go to the "History" > "Settings - Clear browsing data"</div>
+        <div class="instruction-row">3. Select "Cookies and other site data" and "Cached files", click "Clear browsing data"</div>
+    </div>
+    <% } %>
+    <% if (browser.isOpera) { %>
+    <div>
+        <div class="instruction-row">1. Type ”opera://settings/clearBrowserData" in the address bar, press Enter</div>
+        <div class="instruction-row">2. Select "Cookies and other site data" and "Cached images and files", click "Clear browsing data"</div>
+    </div>
+    <% } %>
+    <% if (browser.isIE) { %>
+    <div>
+        <div class="instruction-row">1. Select “Tools” > “Delete browsing history"</div>
+        <div class="instruction-row">2. Select “Temporary Internet files and website files” and press “Delete”</div>
+    </div>
+    <% } %>
+</script>
+<script type="text/template" id="cacheTemplateRu">
+    <div class="hint">
+        <h2>Проблема уже решена? Попробуйте сбросить кэш</h2>
+        <ul class="fa-ul">
+            <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a class="clear-cache"
+                                                                                onclick="clearCache(event)" href="#">Очистите
+                кэш автоматически</a></li>
+            <% if (browser.isSafari) { %>
+            <li><span class="fa-li"><i class="fas fa-angle-right"></i></span>Нажмите <b id="hotkey"></b>, затем перезагрузите
+                страницу.
+            </li>
+            <% } else { %>
+            <li><span class="fa-li"><i class="fas fa-angle-right"></i></span>Перезагрузите страницу, нажав <b id="hotkey"></b>
+            </li>
+            <% } %>
+            <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a onclick="toggleInstruction(event)" href="#">Очистите кэш из настроек браузера <i class="fas fa-angle-down instruction-collapse-angle"></i></a>
+                <div class="gallery">
+                    <div id="instruction"></div>
+                    Если не помогло - вы можете связаться с нашей службой технической поддержки с помощью раздела «Обратная связь»
+                    в панели управления хостингом или любым удобным для вас способом.
+                </div>
+            </li>
+        </ul>
+    </div>
+</script>
+<script type="text/template" id="cacheTemplateEn">
+    <div class="hint">
+        <h2>Is the problem solved? Try to reset the cache</h2>
+        <ul class="fa-ul">
+            <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a class="clear-cache"
+                                                                                onclick="clearCache(event)" href="#">Clear the
+                cache automatically</a></li>
+            <% if (browser.isSafari) { %>
+            <li><span class="fa-li"><i class="fas fa-angle-right"></i></span>Press <b id="hotkey"></b> and reload the page
+            </li>
+            <% } else { %>
+            <li><span class="fa-li"><i class="fas fa-angle-right"></i></span>Reload the page by pressing <b id="hotkey"></b>
+            </li>
+            <% } %>
+            <li><span class="fa-li"><i class="fas fa-angle-right"></i></span><a onclick="toggleInstruction(event)" href="#">Clear the cache from your browser settings <i class="fas fa-angle-down instruction-collapse-angle"></i></a>
+                <div class="gallery">
+                    <div id="instruction"></div>
+                    If it does not help - you can contact our technical support service using the "Feedback" section in the
+                    hosting management panel or in any way convenient for you.
+                </div>
+            </li>
+        </ul>
+    </div>
+</script>
+<script>
+  var browser = {
+    // Opera 8.0+
+    isOpera: (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0,
+    // Firefox 1.0+
+    isFirefox: typeof InstallTrigger !== 'undefined',
+    // Safari 3.0+ "[object HTMLElementConstructor]"
+    isSafari: /constructor/i.test(window.HTMLElement) || (function (p) {
+      return p.toString() === "[object SafariRemoteNotification]";
+    })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification)),
+    // Internet Explorer 6-11
+    isIE: /*@cc_on!@*/false || !!document.documentMode,
+    // Edge 20+
+    isEdge: !(/*@cc_on!@*/false || !!document.documentMode) && !!window.StyleMedia,
+    // Chrome 1+
+    isChrome: !!window.chrome && !!window.chrome.webstore,
+    isYandex: !!window.yandex,
+    isMac: window.navigator.platform.toUpperCase().indexOf('MAC') >= 0
+  };
 
+  var instructions = {
+    firefox: [
+      {
+        "text": "Откройте меню браузера (три горизонтальные полоски в правом верхнем углу окна)"
+      },
+      {
+        "text": 'Выберите "Настройки"',
+        "image": {
+          normal: "https://cp.beget.com/shared/9fc46578a3f3beebbc6e3058537a3fcf/firefox2.png",
+          "retina": "https://cp.beget.com/shared/5fc2dd546f53e0902e15a3a70e4fe653/firefox22x.png"
+        }
+      },
+      {
+        "text": 'Перейдите в раздел “Приватность и защита”',
+        "image": {
+          normal: "https://cp.beget.com/shared/6b5c3dfee3602b060a644965f11eabed/firefox3.png",
+          "retina": "https://cp.beget.com/shared/1f93b61fdeeed1161d5ff5aa36e76dc4/firefox32x.png"
+        }
+      },
+      {
+        "text": 'Нажмите кнопку "Удалить историю"',
+        "image": {
+          normal: "https://cp.beget.com/shared/a41c785d3b44adcba2e1b90db2b77a37/firefox4.png",
+          "retina": "https://cp.beget.com/shared/1a512f91bcc8975205f979acf71d7d29/firefox42x.png"
+        }
+      },
+      {
+        "text": 'В появившемся окне нажмите “Удалить сейчас”',
+        "image": {
+          "normal": "https://cp.beget.com/shared/a4f7c26338626b94ead39246a91aa4b3/firefox5.png",
+          "retina": "https://cp.beget.com/shared/745b3450fc1f4471ff21f6d64fc737b1/firefox52x.png"
+        }
+      }
+
+    ],
+    chrome: [
+      {
+        "text": "Откройте меню браузера (три горизонтальные полоски в правом верхнем углу окна)"
+      },
+      {
+        "text": 'Выберите "Дополнительные инструменты" > "Очистить данные просмотров"',
+        "image": {
+          "normal": "https://cp.beget.com/shared/f38d02735868ba6f0f0f6d0056fcb600/chrome2.png",
+          "retina": "https://cp.beget.com/shared/3c7ced0b4d09861e1884f5661f239fc0/chrome22x.png"
+        }
+      },
+      {
+        "text": 'В окне "Очистить историю" выберите "Изображения и другие файлы, сохранённые в кэше" и нажмите кнопку "Удалить данные"',
+        "image": {
+          "normal": "https://cp.beget.com/shared/82ed82f2d8ca8099998398f34f6aa01a/chrome3.png",
+          "retina": "https://cp.beget.com/shared/5433ccd2ab6359de9db5b621c3a0b633/chrome32x.png"
+        }
+      }
+
+    ],
+    safari: [
+      {
+        "text": 'В меню браузера выберите пункт “Safari” > “Настройки”',
+        "image": {
+          "normal": "https://cp.beget.com/shared/80113015aafa3f261ff2fe54ebd6508d/safari1.png",
+          "retina": "https://cp.beget.com/shared/f8f7096f67c0e3d82446d0ce6217b27d/safari12x.png"
+        }
+      },
+      {
+        "text": 'В  дополнениях включите опцию “Показывать меню «Разработка» в строке меню” и закройте окно',
+        "image": {
+          "normal": "https://cp.beget.com/shared/1193ae0503f94daafb5dd14c87a1ddde/safari2.png",
+          "retina": "https://cp.beget.com/shared/138c05f2803ea0b167a7f975265ce43b/safari22x.png"
+        }
+      },
+      {
+        "text": 'В меню браузера выберите пункт “Разработка” > “Очистить кэши”',
+        "image": {
+          "normal": "https://cp.beget.com/shared/87421068ec6d6013cade7cc6a37e9566/safari3.png",
+          "retina": "https://cp.beget.com/shared/13520f6e24d62a88aa7c54519eb1a647/safari32x.png"
+        }
+      }
+
+    ],
+    yandex: [
+      {
+        "text": 'Откройте меню браузера (три горизонтальные полоски в правом верхнем углу окна)'
+      },
+      {
+        "text": 'Перейдите во вкладку "История"',
+        "image": {
+          "normal": "https://cp.beget.com/shared/80ce1ee88a6a1cec9f2c7620f08a58c2/yandex2.png",
+          "retina": "https://cp.beget.com/shared/0693faca5588f69ca7da9fe4212cdc97/yandex22x.png"
+        }
+      },
+      {
+        "text": 'Нажмите "Очистить историю" (справа)',
+        "image": {
+          "normal": "https://cp.beget.com/shared/ff268c78b70d486538ecede196a9c1f2/yandex3.png",
+          "retina": "https://cp.beget.com/shared/12096cc377f80dda5798cfe745bb66ec/yandex32x.png"
+        }
+      },
+      {
+        "text": 'Отметьте пункты "Файлы cookie и другие данные сайтов и модулей" и "файлы, сохраненные в кэше",  нажмите кнопку "Очистить историю"',
+        "image": {
+          "normal": "https://cp.beget.com/shared/80e7ada09ac4b7da555a5119237ff108/yandex4.png",
+          "retina": "https://cp.beget.com/shared/daa75ad57baee73ff347e589e11fc90f/yandex42x.png"
+        }
+      }
+
+    ],
+    opera: [
+      {
+        "text": 'Введите в адресной строке “opera://settings/clearBrowserData”, нажмите клавишу Enter',
+        "image": {
+          "normal": "https://cp.beget.com/shared/cfb3606fa62fb6a2f951d3e7cd24a8d9/opera1.png",
+          "retina": "https://cp.beget.com/shared/f72a61de7929ef3236d54a7eda5f27e2/opera12x.png"
+        }
+      },
+      {
+        "text": 'Поставьте галочки у пунктов "Файлы cookie и прочие данные сайтов" и "Кэшированные изображения и файлы", нажмите кнопку "Очистить историю посещений"',
+        "image": {
+          "normal": "https://cp.beget.com/shared/d336439cc49a04a1885186dc1930c02c/opera2.png",
+          "retina": "https://cp.beget.com/shared/6d6888aac8d3896da5cd201e8d31670b/opera22x.png"
+        }
+      }
+    ],
+    ie: [
+      {
+        "text": 'Выберите “Сервис” > “Удаление журнала обозревателя…”',
+        "image": {
+          "normal": "https://cp.beget.com/shared/3585ac62cef9f65d999df211007ce578/explorer.png",
+          "retina": "https://cp.beget.com/shared/33ae907b8ce690fe724d9616cb809d35/explorer2x.png"
+        }
+      }
+    ],
+  };
+
+  function clearCache(event) {
+    event.preventDefault();
+    window.location.reload(true);
+  }
+
+  function toggleInstruction(e) {
+    e.preventDefault();
+    $(".gallery").slideToggle();
+  };
+
+  var language = window.navigator.language || navigator.userLanguage,
+    ru = document.getElementById("ru"),
+    en = document.getElementById("en");
+
+  language = language.substr(0, 2).toLowerCase();
+
+  var mainDiv = ru;
+
+  if (language !== "ru") {
+    document.title = "This domain is not linked to any directory on the server!";
+    ru.style.display = "none";
+    en.style.display = "flex";
+    mainDiv = en;
+  }
+  var data = instructions.chrome;
+
+  if (browser.isFirefox) {
+    data = instructions.firefox;
+  }
+  if (browser.isChrome && !browser.isYandex) {
+    data = instructions.chrome;
+  }
+  if (browser.isYandex) {
+    data = instructions.yandex;
+  }
+  if (browser.isSafari) {
+    data = instructions.safari;
+  }
+  if (browser.isOpera) {
+    data = instructions.opera;
+  }
+  if (browser.isIE) {
+    data = instructions.ie;
+  }
+
+  window.onload = function () {
+    if (language === "ru") {
+      mainDiv.querySelector("#cache-hint").innerHTML = _.template(document.getElementById("cacheTemplateRu").innerHTML)({browser: browser});
+      mainDiv.querySelector("#hotkey").innerHTML = _.template(document.getElementById("hotkeyTemplate").innerHTML)({browser: browser});
+      mainDiv.querySelector("#instruction").innerHTML = _.template(document.getElementById("instructionTemplateRu").innerHTML)({data: data});
+    } else {
+      mainDiv.querySelector("#cache-hint").innerHTML = _.template(document.getElementById("cacheTemplateEn").innerHTML)({browser: browser});
+      mainDiv.querySelector("#hotkey").innerHTML = _.template(document.getElementById("hotkeyTemplate").innerHTML)({browser: browser});
+      mainDiv.querySelector("#instruction").innerHTML = _.template(document.getElementById("instructionTemplateEn").innerHTML)({data: data});
+    }
+    $('[data-fancybox="instruction"]').fancybox({
+      afterLoad: function (instance, current) {
+        var pixelRatio = window.devicePixelRatio || 1;
+
+        if (pixelRatio > 1.5) {
+          current.width = current.width / pixelRatio;
+          current.height = current.height / pixelRatio;
+        }
+      }
+    });
+  };
+</script>
 </body>
 </html>

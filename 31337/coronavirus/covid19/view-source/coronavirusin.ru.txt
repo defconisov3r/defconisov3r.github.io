@@ -1,21 +1,29 @@
-<html lang="en" class="hydrated"><head>
+<!DOCTYPE html lang="en" class="hydrated"><head>
     <meta charset="utf-8"><style data-styles="">ion-icon{visibility:hidden}.hydrated{visibility:inherit}</style>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Опрос на симптомы коронавируса в России | coronavirusin.ru</title>
     <link rel="stylesheet" href="/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
-    <meta name="description" content="CoronaVirus Test, симптомы корона вируса в россии, тест,коронавирус в россии">
-    <meta name="keywords" content="bootstrap, mobile template, cordova, phonegap, mobile, html, responsive">
+    <meta name="description" content="CoronaVirus Test, симптомы коронавируса в россии у человека, тест, коронавирус в россии">
+    <meta name="keywords" content="CoronaVirus Test, симптомы коронавируса в россии у человека, тест, коронавирус в россии">
     <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js" data-stencil-namespace="ionicons"></script>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="css/left-nav-style.css">
 <body>
 
+<input type="checkbox" id="nav-toggle" hidden>
+
+<nav class="nav">
+        <label for="nav-toggle" class="nav-toggle" onclick></label>
+
+        <ul >
+            <li><a href="/">Опрос на симптомы</a>
+            <li><a href="map.php">Карта распространения</a>
+            <li><a href="news.php">Последние новости</a>
+        </ul>
+    </nav>
+
     <div class="appHeader bg-primary text-light">
-        <div class="left">
-            <a href="#" class="headerButton" data-toggle="modal" data-target="#sidebarPanel">
-                <ion-icon name="menu-outline" role="img" class="md hydrated" aria-label="menu outline"></ion-icon>
-            </a>
-        </div>
+
         <div class="pageTitle">
             coronavirusin.ru
         </div>
@@ -38,20 +46,31 @@
     }
 </style>
 
+stdClass Object
+(
+    [ip] => 167.114.89.193
+    [city] => 
+    [region] => 
+    [country] => 
+    [error] => Превышено количество запросов для IP или Домена
+    [request] => -10295
+    [created] => 2020.03.11
+    [timestamp] => 1583957306
+)
 
 <form action="result.php"  id="regForm" method="post">    
     <div class="section wallet-card-section pt-1">
-    <input type="text" name="region" style="display:none" value="Люксембург">
+    <input type="text" name="region" style="display:none" value="">
     <input type="text" name="city" style="display:none" value="">
-    <input type="text" name="lat" style="display:none" value="49.75">
-    <input type="text" name="lon" style="display:none" value="6.17">
+    <input type="text" name="lat" style="display:none" value="">
+    <input type="text" name="lon" style="display:none" value="">
     
 
     <div class="tab">
         <div class="wallet-card">
             <div class="balance">
                 <div style="text-align: center;margin: auto;">  
-                    <h1 class="total">Введите ваше имя</h1>
+                    <h1 class="total">Для начала теста <br>введите ваше имя</h1>
                     <input type="text" name="name" class="form-control">
                 </div>
                 
@@ -92,7 +111,7 @@
         <div class="wallet-card">
             <div class="balance">
                 <div style="text-align: center;margin: auto;">  
-                    <h1 class="total">Были ли за границей в последние 10 дней?</h1>
+                    <h1 class="total">Были ли за границей за последние 10 дней?</h1>
                     Вопрос 2/10
                     </div>
                     </div>
@@ -134,7 +153,7 @@
         <div class="wallet-card">
             <div class="balance">
                 <div style="text-align: center;margin: auto;">  
-                    <h1 class="total">Есть ли у вас сухой кашель, чихание с небольшим количество мокроты?</h1>
+                    <h1 class="total">Есть ли у вас сухой кашель с небольшим количество мокроты?</h1>
                     Вопрос 4/10
                     
                     </div>
@@ -374,6 +393,13 @@ return valid; // return the valid status
 }
 
 </script>
+<div class="section mt-4" style="padding-left: 7px;">
+        <div class="section-heading" style="margin-bottom: 0;">
+                <h2 class="title">Результаты опроса на карте</h2>
+                <!-- <a href="#" class="link">Открыть отдельно</a> -->
+            </div></div>
+<iframe loading="lazy" style="width: 98%;height: 300px;border: 0;" scrolling="no" src="/includes/geoFrame.php"></iframe>
+
     
     <div class="section mt-3 mb-3">
         <div class="card">
@@ -389,13 +415,13 @@ return valid; // return the valid status
             <div class="col-6">
                 <div class="stat-box">
                     <div class="title">Зараженных</div>
-                    <div class="value text-danger">181 334</div>
+                    <div class="value text-danger">204 417</div>
                 </div>
             </div>
             <div class="col-6">
                 <div class="stat-box">
                     <div class="title">Выздоровевших</div>
-                    <div class="value text-success">77 940</div>
+                    <div class="value text-success">82 452</div>
                 </div>
             </div>
         </div>
@@ -403,58 +429,41 @@ return valid; // return the valid status
             <div class="col-6">
                 <div class="stat-box">
                     <div class="title">Погибших</div>
-                    <div class="value">7 098</div>
+                    <div class="value">8 232</div>
                 </div>
             </div>
             <div class="col-6">
                 <div class="stat-box">
                     <div class="title">Актуально на</div>
-                    <div class="value" style="color: #8996a7;">16.03.2020</div>
+                    <div class="value" style="color: #8996a7;">18.03.2020</div>
                 </div>
             </div>
         </div>
     </div>
 </div>    
 
-    <div class="appFooter">
+    <div class="appFooter" style="margin-top: 30px;">
             <div class="footer-title">
                 Copyright © Coronavirusin.ru 2020. 
             </div>
             All Rights Reserved.
         </div>
     
-    <div class="appBottomMenu">
-        <a href="/" class="item active">
-            <div class="col">
-                <ion-icon name="pie-chart-outline" role="img" class="md hydrated" aria-label="pie chart outline"></ion-icon>
-                <strong>Опрос</strong>
-            </div>
-        </a>
-        <a href="news.php" class="item">
-            <div class="col">
-                <ion-icon name="document-text-outline" role="img" class="md hydrated" aria-label="document text outline"></ion-icon>
-                <strong>Новости</strong>
-            </div>
-        </a>
-        <a href="map.php" class="item">
-            <div class="col">
-                <ion-icon name="apps-outline" role="img" class="md hydrated" aria-label="apps outline"></ion-icon>
-                <strong>Карта</strong>
-            </div>
-        </a>
-        <a href="#" class="item">
-            <div class="col">
-                <ion-icon name="card-outline" role="img" class="md hydrated" aria-label="card outline"></ion-icon>
-                <strong>Статистика</strong>
-            </div>
-        </a>
-        <a href="javascript:;" class="item" data-toggle="modal" data-target="#sidebarPanel">
-            <div class="col">
-                <ion-icon name="menu-outline" role="img" class="md hydrated" aria-label="menu outline"></ion-icon>
-                <strong>Меню</strong>
-            </div>
-        </a>
-    </div>
 
 
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(61076515, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/61076515" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </body></html>

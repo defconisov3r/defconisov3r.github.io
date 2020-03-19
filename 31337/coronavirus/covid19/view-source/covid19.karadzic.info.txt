@@ -7,172 +7,69 @@
         <meta name="description" content="COVID-19 Statistics" />
         <meta name="keywords" content="novel virus, covid, covid-19, corona, coronavirus, epidemic, pandemic" />
         <meta name="author" content="Miljan Karadzic" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="covid19.css">
         <title>COVID-19 Statistics</title>
-
-        <style>
-            [v-cloak] > * { display:none }
-            [v-cloak]::before { content: "loading…" }
-
-            .d-flex {
-                display: flex;
-                flex-wrap: wrap;
-            }
-
-            .d-flex-item {
-                width: 300px;
-                padding: 0px;
-                margin: 0px;
-            }
-
-            .form-autocomplete {
-                padding-top: 20px;
-            }
-
-            ul {
-                width: 200px;
-                padding-left: 0;
-            }
-
-            ul > li {
-                cursor: pointer;
-                list-style: none;
-                padding: 5px;
-                margin-bottom: 5px;
-                border: 1px solid white;
-                background: #dedede;
-            }
-
-            ul > li:hover {
-                background: #313131;
-                color: white;
-            }
-
-            ul > li.disabled,
-            ul > li.disabled:hover {
-                background: #eaeaea;
-                color: #a7a7a7;
-                cursor: inherit;
-            }
-
-            ul > li.disabled .flag-icon {
-                opacity: 0.5;
-            }
-
-            .items-selected {
-                margin-top: 0px;
-            }
-
-            .item-selected {
-                border-radius: 5px;
-                display: inline-block;
-                padding: 5px;
-                background: #7b8fdc;
-                color: white;
-                margin: 0 5px 10px 0;
-            }
-
-            html {
-                font-family: sans-serif;
-                -ms-text-size-adjust: 100%;
-                -webkit-text-size-adjust: 100%;
-            }
-
-            .footer {
-                font-size: smaller;
-            }
-
-            /* loader */
-            .vld-overlay {
-                bottom: 0;
-                left: 0;
-                position: absolute;
-                right: 0;
-                top: 0;
-                align-items: center;
-                display: none;
-                justify-content: center;
-                overflow: hidden;
-                z-index: 9999;
-            }
-
-            .vld-overlay.is-active {
-                display: flex;
-            }
-
-            .vld-overlay.is-full-page {
-                z-index: 9999;
-                position: fixed;
-            }
-
-            .vld-overlay .vld-background {
-                bottom: 0;
-                left: 0;
-                position: absolute;
-                right: 0;
-                top: 0;
-                background: #fff;
-                opacity: 1;
-            }
-
-            .vld-overlay .vld-icon, .vld-parent {
-                position: relative;
-            }
-        </style>
     </head>
     <body>
-        <div id="app" v-cloak class="container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="">CoViD19 statistics</a>
-            </nav>
-            <loading :active.sync="loading" :can-cancel="false"></loading>
-            <div class="container">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col">
-                        <div class="d-flex-item">
-                            <form-autocomplete
-                                v-model="selectedCountry"
-                                :options="countries">
-                            </form-autocomplete>
+        <main role="main" class="container">
+            <div id="app" v-cloak class="container">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="">CoViD19 statistics</a>
+                </nav>
+                <loading :active.sync="loading" :can-cancel="false"></loading>
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col">
+                            <div class="d-flex-item">
+                                <form-autocomplete
+                                    v-model="selectedCountry"
+                                    :options="countries">
+                                </form-autocomplete>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col" v-if="selectedCountry.country === undefined">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary btn-sm" v-on:click="vm.changeViewKey('cases')" :disabled="viewKey === 'cases'">All Cases</button>
-                            <button type="button" class="btn btn-primary btn-sm" v-on:click="vm.changeViewKey('todayCases')" :disabled="viewKey === 'todayCases'">Cases Today</button>
-                            <button type="button" class="btn btn-primary btn-sm" v-on:click="vm.changeViewKey('deaths')" :disabled="viewKey === 'deaths'">Deaths</button>
-                            <button type="button" class="btn btn-primary btn-sm" v-on:click="vm.changeViewKey('recovered')" :disabled="viewKey === 'recovered'">Recovered</button>
-                            <button type="button" class="btn btn-primary btn-sm" v-on:click="vm.changeViewKey('critical')" :disabled="viewKey === 'critical'">Critical</button>
-                            &nbsp;
-                            <div class="form-check-inline">
-                                <input class="form-check-input" type="checkbox" value="" id="checkbox" v-model="topTen">
-                                <label class="form-check-label small" for="checkbox">
-                                    Top ten
-                                </label>
+                        <div class="col pull-col-right" v-if="selectedCountry.name === undefined">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-primary btn-sm" v-on:click="vm.changeViewKey('cases')" :disabled="viewKey === 'cases'">All Cases</button>
+                                <button type="button" class="btn btn-primary btn-sm" v-on:click="vm.changeViewKey('todayCases')" :disabled="viewKey === 'todayCases'">Cases Today</button>
+                                <button type="button" class="btn btn-primary btn-sm" v-on:click="vm.changeViewKey('deaths')" :disabled="viewKey === 'deaths'">Deaths</button>
+                                <button type="button" class="btn btn-primary btn-sm" v-on:click="vm.changeViewKey('recovered')" :disabled="viewKey === 'recovered'">Recovered</button>
+                                <button type="button" class="btn btn-primary btn-sm" v-on:click="vm.changeViewKey('critical')" :disabled="viewKey === 'critical'">Critical</button>
+                                <button type="button" class="btn btn-primary btn-sm" v-on:click="vm.changeViewKey('casesPerOneMillion')" :disabled="viewKey === 'casesPerOneMillion'">Per Million</button>
+                                &nbsp;
+                                <div class="form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkbox" v-model="topTen">
+                                    <label class="form-check-label small" for="checkbox">
+                                        Top ten
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="combined-data" v-if="selectedCountry.country === undefined">
-                <div class="chart-container column">
-                    <reactive-chart :model="graphData"></reactive-chart>
+                <div id="combined-data" class="pull-back" v-if="selectedCountry.name === undefined">
+                    <div class="chart-container column">
+                        <reactive-chart :model="graphData"></reactive-chart>
+                    </div>
                 </div>
-            </div>
 
-            <div id="combined-data" v-if="selectedCountry.country !== undefined">
-                <div class="chart-container column">
-                    <reactive-chart :model="countryGraphData"></reactive-chart>
+                <div id="combined-data" class="pull-back" v-if="selectedCountry.name !== undefined">
+                    <div class="chart-container column">
+                        <reactive-chart :model="countryGraphData"></reactive-chart>
+                    </div>
+                    <div class="chart-container column">
+                        <reactive-chart :model="countryHistoryGraphData"></reactive-chart>
+                        <small class="plot-comment">* Data source is WHO and it may differ from the data in the first diagram.</small>
+                    </div>
                 </div>
+                <footer class="container footer">
+                    <div class="container">
+                        <center>Data sources: <a target="_blank" href="https://corona.lmao.ninja"><mark>EliteDaMyth</mark></a> &amp; <a target="_blank" href="https://ourworldindata.org/coronavirus"><mark>Our World in Data</mark></a>&nbsp;&bull;&nbsp;Developed by <a target="_blank" href="https://www.miljan.org"><mark>Miljan</mark></a></center>
+                    </div>
+                </footer>
             </div>
-            <div id="about">
-                <p>
-                    <center class="footer">
-                        Data source: <a target="_blank" href="https://corona.lmao.ninja"><mark>EliteDaMyth</mark></a>&nbsp;&bull;&nbsp;Developed by <a target="_blank" href="https://www.miljan.org"><mark>Miljan</mark></a>
-                    </center>
-                </p>
-            </div>
-        </div>
+        </main>
+
 
         <!-- Scripts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.2/axios.js"></script>
@@ -180,299 +77,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/1.39.1/plotly.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue-loading-overlay@3"></script>
-
-        <script type="application/javascript">
-            Vue.prototype.$appName = "Covid-19"
-            Vue.prototype.$http = axios
-
-            Vue.component('reactive-chart', {
-                props: ['model'],
-                template: '<div :ref="model.uuid"></div>',
-                mounted() {
-                    Plotly.plot(this.$refs[this.model.uuid], this.model.traces, this.model.layout);
-                },
-                watch: {
-                    model: {
-                        handler: function() {
-                            Plotly.react(
-                                this.$refs[this.model.uuid],
-                                this.model.traces,
-                                this.model.layout,
-                                {displayModeBar: false, scrollZoom: false}
-                            );
-                        },
-                        deep: true
-                    }
-                }
-            });
-
-
-            Vue.component('form-autocomplete', {
-                template: 
-                  `<div class="form-autocomplete">
-                       <div class="input-group mb-3"  v-if="!value.country">
-                           <div class="input-group-prepend">
-                               <label class="input-group-text" for="inputGroupSelect01">Countries</label>
-                           </div>
-                           <input v-model="textSearch" class="form-control" type="text" :placeholder="'Total: '+ options.length" @focus="showOptions"/>
-                       </div>
-                       <div class="items-selected">
-                           <div class="item-selected" v-if="value.country">
-                               <slot name="selected" :item="value">{{value.country}}</slot> <button class="btn btn-secondary btn-sm" @click="clearItem">remove</button>
-                           </div>
-                       </div>
-                       <ul class="options" v-show="isShow">
-                           <li v-for="item in filteredOptions" @click="selectItem(item)">
-                               <slot :item="item">{{item.country}}</slot>
-                           </li>
-                           <li v-if="filteredOptions.length===0">Item not found</li>
-                       </ul>
-                   </div>`
-                ,
-                props: {
-                  isMultiple: {
-                    type: Boolean,
-                    default: false,
-                  },
-                  placeholder: {
-                    type: String,
-                    default: '',
-                  },
-                  options: {
-                    type: Array,
-                    default() {
-                      return [];
-                    },
-                  },
-                  value: {
-                    type: [Object, Array],
-                    default() {
-                      return {
-                        uid: undefined,
-                        title: undefined,
-                      };
-                    },
-                  },
-                },
-                data() {
-                  return {
-                    textSearch: '',
-                    isShow: false,
-                  };
-                },
-                computed: {
-                  filteredOptions() {
-                    return this.options.filter(val => val.country.toLowerCase().includes(this.textSearch.toLowerCase()));
-                  },
-                  selectedItems() {
-                    if (this.isMultiple) {
-                      return this.value.map(v => v.uid);
-                    }
-                    return [];
-                  }
-                },
-                methods: {
-                  inSelectedItems(uid) {
-                    return this.selectedItems.includes(uid);
-                  },
-                  showOptions() {
-                    this.isShow = true;
-                  },
-                  selectItem(item) {
-                    this.textSearch = '';
-                    this.isShow = false;
-                    // this.$emit('update:item', item);
-                    this.$emit('input', item);
-                    this.$emit('onSelectItem', item);
-                  },
-                  clearItem() {
-                    this.textSearch = '';
-                    // this.$emit('update:item', {
-                    //   id: undefined,
-                    //   title: undefined,
-                    // });
-                    this.$emit('input', {
-                      id: undefined,
-                      title: undefined,
-                    });
-                    this.$emit('onClearItem');
-                  },
-                  addItem(item) {
-                    if (!this.inSelectedItems(item.uid)) {
-                      this.textSearch = '';
-                      this.isShow = false;
-                      const items = JSON.parse(JSON.stringify(this.value));
-                      items.push(item);
-                      // this.$emit('update:item', items);
-                      this.$emit('input', items);
-                      this.$emit('onAddItem', items);
-                    }
-                  },
-                  removeItem(index) {
-                    this.textSearch = '';
-                    const items = JSON.parse(JSON.stringify(this.value));
-                    items.splice(index, 1);
-                    // this.$emit('update:item', items);
-                    this.$emit('input', items);
-                    this.$emit('onRemoveItem', items);
-                  },
-                },
-            });
-
-            
-            var vm = new Vue({
-                el: '#app',
-                data: {
-                    loading: true,
-                    showCombinedData: false,
-                    selectedCountry: {},
-                    viewKey: 'cases',
-                    topTen: false, 
-                    countries: [],
-                    singleBarFilters: ['todayCases', 'recovered', 'critical'],
-                    graphData: {
-                        uuid: "chart",
-                        traces: [],
-                        layout: {
-                            barmode: 'stack', 
-                            yaxis: {fixedrange: true}, 
-                            xaxis : {fixedrange: true} 
-                        }
-                    },
-                    countryGraphData: {
-                        uuid: "chart",
-                        traces: [],
-                        layout: {
-                            barmode: 'stack', 
-                            yaxis: {fixedrange: true}, 
-                            xaxis : {fixedrange: true} 
-                        }
-                    }
-                },
-                components: {
-                    Loading: VueLoading
-                },
-                created() {
-                    var vm = this
-                    vm.$http
-                    .get('https://corona.lmao.ninja/countries')
-                    .then(function(response) {
-                        vm.countries = response.data
-                        vm.orderData()
-                        vm.prepareData()
-                        vm.loading = false
-                    })
-                }
-                
-            })
-
-            vm.$watch('viewKey', function () {
-                vm.orderData()
-                vm.prepareData()
-            })
-
-            vm.$watch('topTen', function () {
-                vm.prepareData()
-            })
-
-            vm.$watch('selectedCountry', function () {
-                vm.showSingleCountry()
-            })
-
-            vm.orderData = function() {
-                vm.countries = _.orderBy(vm.countries, vm.viewKey)
-            }
-
-            vm.changeViewKey = function(key) {
-                if (vm.viewKey !== key)
-                    vm.viewKey = key
-            }
-
-            vm.showSingleCountry = function() {
-                var cases = {x: [], y: [], name: vm.selectedCountry.country, type: 'bar'}
-                cases.x.push('Total Cases')
-                cases.x.push('Active Cases')
-                cases.x.push('Cases Today')
-                cases.x.push('Deaths')
-                cases.x.push('Deaths Today')
-                cases.x.push('Recovered')
-                cases.x.push('Critical')
-
-                cases.y.push(vm.selectedCountry.cases)
-                cases.y.push(vm.selectedCountry.cases - vm.selectedCountry.recovered - vm.selectedCountry.deaths)
-                cases.y.push(vm.selectedCountry.todayCases)
-                cases.y.push(vm.selectedCountry.deaths)
-                cases.y.push(vm.selectedCountry.todayDeaths)
-                cases.y.push(vm.selectedCountry.recovered)
-                cases.y.push(vm.selectedCountry.critical)
-
-                vm.countryGraphData.traces = [cases]
-                vm.countryGraphData.layout.datarevision = new Date().getTime()
-            }
-
-            vm.stackTotals = function(countries) {
-                var cases = {x: [], y: [], name: 'Active Cases',  type: 'bar'}
-                var deaths = {x: [], y: [], name: 'Deaths',  type: 'bar'}
-                var recovered = {x: [], y: [], name: 'Recovered',  type: 'bar'}
-
-                countries.forEach(function(country) {
-                    cases.x.push(country.country)
-                    deaths.x.push(country.country)
-                    recovered.x.push(country.country)
-
-                    cases.y.push(country.cases - country.recovered - country.deaths)
-                    deaths.y.push(country.deaths)
-                    recovered.y.push(country.recovered)
-                })
-
-                vm.graphData.traces = [cases, deaths, recovered]
-                vm.graphData.layout.datarevision = new Date().getTime()
-            }
-
-            vm.stackDeaths = function(countries) {
-                var deaths = {x: [], y: [], name: 'Deaths',  type: 'bar'}
-                var todayDeaths = {x: [], y: [], name: 'Deaths Today',  type: 'bar'}
-
-                countries.forEach(function(country) {
-                    deaths.x.push(country.country)
-                    todayDeaths.x.push(country.country)
-
-                    deaths.y.push(country.deaths)
-                    todayDeaths.y.push(country.todayDeaths)
-                })
-
-                vm.graphData.traces = [deaths, todayDeaths]
-                vm.graphData.layout.datarevision = new Date().getTime()
-            }
-
-            vm.singleBar = function(countries) {
-                var cases = {x: [], y: [], name: 'Cases',  type: 'bar'}
-
-                countries.forEach(function(country) {
-                    cases.x.push(country.country)
-                    cases.y.push(country[vm.viewKey])
-                })
-
-                vm.graphData.traces = [cases]
-                vm.graphData.layout.datarevision = new Date().getTime()
-            }
-
-            vm.prepareData = function() {
-                var countries = vm.topTen === true
-                    ? vm.countries.slice(vm.countries.length - 10)
-                    : vm.countries.slice(vm.countries.length - 70)
-
-                if (vm.singleBarFilters.indexOf(vm.viewKey) !== -1)
-                    vm.singleBar(countries)
-
-                else if (vm.viewKey === 'deaths')
-                    vm.stackDeaths(countries)
-
-                else
-                    vm.stackTotals(countries)
-            }
-
-        </script>
+        <script src="covid19.js"></script>
     </body>
 </html>
-

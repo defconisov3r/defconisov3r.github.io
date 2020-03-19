@@ -1,339 +1,335 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en-US">
 <head>
-<meta name="viewport" content="width=device-width">
-<title>Welcome &mdash; Coming Soon</title>
-<script src="http://box5668.temp.domains/~coronaw3/wp-includes/js/jquery/jquery.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
-<style type="text/css">
-body {
-	background-color: #fff;
-	background-image: url( "http://box5668.temp.domains/~coronaw3/wp-content/plugins/mojo-marketplace-wp-plugin/images/cs-bluehost-bg.jpg" );
-	background-position: top right;
-	background-repeat: no-repeat;
-	font-family: "Open Sans", sans-serif;
-	overflow-x: hidden;
-}
-* {
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
-input {
-	font-family: "Open Sans", sans-serif;
-}
-::-webkit-input-placeholder {
-  color: #9DAFBD;
-}
-::-moz-placeholder {
-  color: #9DAFBD;
-}
-:-ms-input-placeholder {
-  color: #9DAFBD;
-}
-:-moz-placeholder {
-  color: #9DAFBD;
-}
-#wrap {
-	max-width: 560px;
-	margin: 320px auto 120px;
-	color: #444;
-	text-align: center;
-}
-#wrap h1 {
-	font-weight: 300;
-	font-size: 28px;
-}
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<title>Coronavirusman.com - Medical/health info blog</title>
 
-#wrap h2 {
-	font-weight: 300;
-	font-size: 38px;
-}
+<!-- This site is optimized with the Yoast SEO plugin v13.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Medical/health info blog"/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="https://coronavirusman.com/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Coronavirusman.com - Medical/health info blog" />
+<meta property="og:description" content="Medical/health info blog" />
+<meta property="og:url" content="https://coronavirusman.com/" />
+<meta property="og:site_name" content="Coronavirusman.com" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Medical/health info blog" />
+<meta name="twitter:title" content="Coronavirusman.com - Medical/health info blog" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://coronavirusman.com/#website","url":"https://coronavirusman.com/","name":"Coronavirusman.com","inLanguage":"en-US","description":"Medical/health info blog","potentialAction":[{"@type":"SearchAction","target":"https://coronavirusman.com/?s={search_term_string}","query-input":"required name=search_term_string"}]},{"@type":"CollectionPage","@id":"https://coronavirusman.com/#webpage","url":"https://coronavirusman.com/","name":"Coronavirusman.com - Medical/health info blog","isPartOf":{"@id":"https://coronavirusman.com/#website"},"inLanguage":"en-US","description":"Medical/health info blog"}]}</script>
+<!-- / Yoast SEO plugin. -->
 
-#wrap p {
-	color: #666;
-	line-height: 1.5;
-}
-
-footer {
-	background-color: #fff;
-	width: 100%;
-	position: fixed;
-	bottom:0;
-	left:0;
-	color: #666;
-}
-footer p {
-	font-size: 14px;
-	line-height: 22px;
-	color: #5B5B5B;
-	padding: 8px;
-	text-align: center;
-}
-footer p a {
-	color: #3575D3;
-	text-decoration: none;
-}
-footer p a:hover {
-	text-decoration: underline;
-}
-
-.btn {
-	display: inline-block;
-	font-weight: 400;
-	text-align: center;
-	vertical-align: middle;
-	-ms-touch-action: manipulation;
-	touch-action: manipulation;
-	cursor: pointer;
-	background-image: none;
-	border: 1px solid transparent;
-	white-space: nowrap;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	padding: 8px 16px;
-	font-size: 14px;
-	line-height: 1.5;
-	border: 1px solid #2e66ba;
-	background: #2e66ba;
-	color: #fff;
-	box-shadow: none;
-	border-radius: 3px;
-	text-decoration: none;
-	margin-top: 60px;
-}
-
-.btn:hover {
-	border: 1px solid #2e66ba;
-	background-color: #fff;
-	color: #2e66ba;
-}
-
-.bh_subscription_widget {
-}
-.bh_subscription_widget h2.widgettitle {
-	color: #5B5B5B;
-	font-size: 38px;
-	letter-spacing: -1px;
-	line-height: 54px;
-	margin-bottom: 10px;
-}
-.bh_subscription_widget #subscribe-text p {
-	color: #5B5B5B;
-	font-size: 16px;
-	letter-spacing: 0;
-	line-height: 24px;
-	margin-bottom: 25px;
-}
-.bh_subscription_widget #success,
-.bh_subscription_widget #error {
-    border-radius: 4px;
-    font-size: 14px;
-    line-height: 24px;
-    color: #5B5B5B;
-    margin-bottom: 25px;
-    display: none;
-    padding: 8px 40px;
-}
-.bh_subscription_widget #success {
-    background: #CCE9D0;
-    border: 1px solid #009013;
-}
-.bh_subscription_widget #error {
-    background: #FFEAE9;
-    border: 1px solid #F72F26;
-}
-.bh_subscription_widget form .bh-inputs {
-	display: inline-block;
-	position: relative;
-	vertical-align: middle;
-	-webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
-}
-.bh_subscription_widget form .bh-inputs.active {
-	-webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
-}
-.bh_subscription_widget form .bh-inputs.email.active #bh-subscribe-label {
-	color: #5B5B5B;
-    clip: auto !important;
-    height: auto !important;
-    position: absolute !important;
-    overflow: visible !important;
-    width: auto !important;
-    left: 16px;
-    font-size: 11px;
-    top: 2px;
-}
-.bh_subscription_widget form .bh-inputs.email input[type="email"] {
-	background-color: #fff;
-	background-image: url( "http://box5668.temp.domains/~coronaw3/wp-content/plugins/mojo-marketplace-wp-plugin/images/icon-email.svg" );
-	background-position: 10px center;
-	background-repeat: no-repeat;
-    border: 1px solid #5B5B5B;
-    border-radius: 3px;
-    color: #5B5B5B;
-    font-size: 11px;
-    margin-right: 6px;
-    min-width: 300px;
-    padding: 14px 15px 14px 45px;
-    max-height: 45px;
-    -webkit-transition: all 0.05s ease-in-out;
-    -moz-transition: all 0.05s ease-in-out;
-    -o-transition: all 0.05s ease-in-out;
-    transition: all 0.05s ease-in-out;
-}
-.bh_subscription_widget form .bh-inputs.email.active input[type="email"] {
-	background-image: none;
-    font-size: 14px;
-    padding: 16px 15px 12px 15px;
-    max-height: 45px;
-}
-.bh_subscription_widget form .bh-inputs.submit input[type="submit"] {
-    background-color: #3575D3;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 13px;
-    margin: 0;
-    padding: 15px 30px;
-    border: 1px solid #3575D3;
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
-}
-.bh_subscription_widget form .bh-inputs.submit input[type="submit"]:hover {
-    background-color: #5B5B5B;
-    border-color: #5B5B5B;
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
-}
-
-@media (max-width: 1024px) {
-	#wrap {
-		margin: 240px auto 120px;
-	}
-}
-@media (max-width: 960px) {
-	#wrap {
-		margin: 120px auto;
-	}
-}
-@media (max-width: 640px) {
-	#wrap {
-		margin: 60px auto 120px;
-		max-width: 100%;
-		color: #444;
-		padding: 0 20px;
-	}
-	.btn {
-		margin-top: 10px;
-	}
-	.bh_subscription_widget form .bh-inputs,
-	.bh_subscription_widget form .bh-inputs.email input[type="email"],
-	.bh_subscription_widget form .bh-inputs.submit input[type="submit"] {
-	    width: 100%;
-	}
-	.bh_subscription_widget form .bh-inputs.email input[type="email"] {
-	    min-width: 0;
-	}
-	.bh_subscription_widget form .bh-inputs {
-	    margin-bottom: 10px;
-	}
-}
-@media (max-width: 360px) {
-	#wrap h1 {
-		font-size: 26px;
-	}
-	.btn {
-		margin-top: 40px;
-	}
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Coronavirusman.com &raquo; Feed" href="https://coronavirusman.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Coronavirusman.com &raquo; Comments Feed" href="https://coronavirusman.com/comments/feed/" />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.10.4 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<!-- Note: MonsterInsights is not currently configured on this site. The site owner needs to authenticate with Google Analytics in the MonsterInsights settings panel. -->
+<!-- No UA code set -->
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/coronavirusman.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
 }
 </style>
-</head>
-<body>
-	<div id="wrap">
-		<div class="content">
-			
-			
-				<h1>A New WordPress Site</h1>
-				<h2>Coming Soon!</h2>
-				<a class="btn" href="http://box5668.temp.domains/~coronaw3/wp-login.php">Admin Login</a>
-
-			
-		</div>
-	</div>
-	<footer>
-			<p class="text-center">A <a target="_blank" href="https://bluehost.com/wordpress" class="bluehost" rel="nofollow">Bluehost</a> powered website. Is this your website? Log in to <a href="http://box5668.temp.domains/~coronaw3/wp-login.php">WordPress</a> or <a target="_blank" href="https://my.bluehost.com/" class="bluehost" rel="nofollow">Bluehost</a></p>
-	</footer>
-<script>
-	jQuery(document).ready( function($){
-	
-		$( '#subscribe-submit input' ).click(function(e){
-			e.preventDefault();
-
-			$( '#success' ).hide();
-			$( '#error' ).hide();
-
-			var email 		= $( '#subscribe-field-bh' ).val();
-			var nonce 		= $( '#mm_nonce-coming-soon-subscribe' ).val();
-			var ajaxscript 	= { ajax_url : 'http://box5668.temp.domains/~coronaw3/wp-admin/admin-ajax.php' }
-
-			$.ajax({
-				type: 'POST',
-				url: ajaxscript.ajax_url,
-				data: { 
-					'action': 'mm_coming_soon_subscribe',
-					'email': email,
-					'nonce': nonce
-				},
-				success: function( response ){
-					
-					//console.log( response );
-
-					var status = response.status;
-
-					if ( status == 'success' ){
-
-						$( '#success' ).show();
-
-					} else if ( status == 'active' ) {
-						
-						$( '#error' ).show().text( 'Your email address is already subscribed to this website. Stay tuned to your inbox for our updates or try a different email address.' );
-
-					} else if ( status == 'invalid_email' ){
-
-						$( '#error' ).show().text( 'There was an error with your submission and you were not subscribed. Please try again with a valid email address.' );
-
-					} else {
-
-						$( '#error' ).show();
-
-					}
-					
-				},
-			});
-		});
-
-	    var input = $( '#subscribe-email' );
-	    input.focusin( function() {
-	        $(this).addClass( 'active' );
-	    });
-	    input.focusout( function() {
-	        $(this).removeClass( 'active' );
-	    });
-    });
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://coronavirusman.com/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css' media='all' />
+<style id='wp-block-library-inline-css' type='text/css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='https://coronavirusman.com/wp-includes/css/dist/block-library/theme.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='varia-print-style-css'  href='https://coronavirusman.com/wp-content/themes/varia-wpcom/print.css?ver=1.4.1' type='text/css' media='print' />
+<link crossorigin="anonymous" rel='stylesheet' id='hever-fonts-css'  href='https://fonts.googleapis.com/css?family=PT%2BSans%3A400%2C400i%2C700%2C700i&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='hever-style-css'  href='https://coronavirusman.com/wp-content/themes/hever-wpcom/style.css?ver=1.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='https://coronavirusman.com/wp-content/plugins/jetpack/css/jetpack.css?ver=8.3' type='text/css' media='all' />
+<link rel='https://api.w.org/' href='https://coronavirusman.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://coronavirusman.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://coronavirusman.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.3.2" />
+<meta name="generator" content="Site Kit by Google 1.5.1" />
+<link rel='dns-prefetch' href='//i0.wp.com'/>
+<link rel='dns-prefetch' href='//i1.wp.com'/>
+<link rel='dns-prefetch' href='//i2.wp.com'/>
+<style type='text/css'>img#wpstats{display:none}</style><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <script>
+(adsbygoogle = window.adsbygoogle || []).push({
+google_ad_client: "ca-pub-2651667014610464",
+enable_page_level_ads: true,
+tag_partner: "site_kit"
+});
 </script>
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style></head>
+
+<body data-rsssl=1 class="home blog wp-embed-responsive hfeed image-filters-enabled">
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	
+		<header id="masthead" class="site-header responsive-max-width">
+
+			
+
+			<h1 class="site-title"><a href="https://coronavirusman.com/" rel="home">Coronavirusman.com</a></h1>
+	
+		<p class="site-description">
+			Medical/health info blog		</p>
+
+			
+			
+		</header><!-- #masthead -->
+
+	
+	<div id="content" class="site-content">
+
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main">
+
+		
+<article id="post-1" class="post-1 post type-post status-publish format-standard hentry category-uncategorized entry">
+	<header class="entry-header responsive-max-width">
+		<h2 class="entry-title"><a href="https://coronavirusman.com/2020/03/16/hello-world/" rel="bookmark">Coronavirus Information</a></h2>	</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<p>This is a page in development, run by a physician and a MPH candidate to provide news and updates on the current pandemic.</p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer responsive-max-width">
+		<span class="byline"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted by</span><span class="author vcard"><a class="url fn n" href="https://coronavirusman.com/author/answeringdoc-2/">answeringdoc</a></span></span><span class="posted-on"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><path id="a" d="M0 0h24v24H0V0z"></path></defs><clipPath id="b"><use xlink:href="#a" overflow="visible"></use></clipPath><path clip-path="url(#b)" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"></path></svg><a href="https://coronavirusman.com/2020/03/16/hello-world/" rel="bookmark"><time class="entry-date published" datetime="2020-03-16T08:31:52+00:00">March 16, 2020</time><time class="updated" datetime="2020-03-19T05:44:51+00:00">March 19, 2020</time></a></span><span class="cat-links"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted in</span><a href="https://coronavirusman.com/category/uncategorized/" rel="category tag">Uncategorized</a></span><span class="comments-link"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><a href="https://coronavirusman.com/2020/03/16/hello-world/#respond">Leave a comment<span class="screen-reader-text"> on Coronavirus Information</span></a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-${ID} -->
+
+<article id="post-9" class="post-9 post type-post status-publish format-standard hentry category-uncategorized entry">
+	<header class="entry-header responsive-max-width">
+		<h2 class="entry-title"><a href="https://coronavirusman.com/2020/03/16/example-post-3/" rel="bookmark">Introduce Yourself (Example Post)</a></h2>	</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<p><em>This is an example post, originally published as part of </em><a href="https://dailypost.wordpress.com/blogging-university/"><em>Blogging University</em></a><em>. Enroll in one of our ten programs, and start your blog right.</em></p>
+
+
+
+<p>You’re going to publish a post today. Don’t worry about how your blog looks. Don’t worry if you haven’t given it a name yet, or you’re feeling overwhelmed. Just click the “New Post” button, and tell us why you’re here.</p>
+
+
+
+<p>Why do this? </p>
+
+
+
+<ul><li>Because it gives new readers context. What are you about? Why should they read your blog?</li><li>Because it will help you focus you own ideas about your blog and what you’d like to do with it. </li></ul>
+
+
+
+<p>The post can be short or long, a personal intro to your life or a bloggy mission statement, a manifesto for the future or a simple outline of your the types of things you hope to publish.</p>
+
+
+
+<p>To help you get started, here are a few questions: </p>
+
+
+
+<ul><li>Why are you blogging publicly, rather than keeping a personal journal?</li><li>What topics do you think you’ll write about?</li><li>Who would you love to connect with via your blog?</li><li>If you blog successfully throughout the next year, what would you hope to have accomplished? </li></ul>
+
+
+
+<p>You’re not locked into any of this; one of the wonderful things about blogs is how they constantly evolve as we learn, grow, and interact with one another — but it’s good to know where and why you started, and articulating your goals may just give you a few other post ideas.</p>
+
+
+
+<p>Can’t think how to get started? Just write the first thing that pops into your head. Anne Lamott, author of a book on writing we love, says that you need to give yourself permission to write a “crappy first draft”. Anne makes a great point — just start writing, and worry about editing it later.</p>
+
+
+
+<p>When you’re ready to publish, give your post three to five tags that describe your blog’s focus — writing, photography, fiction, parenting, food, cars, movies, sports, whatever. These tags will help others who care about your topics find you in the Reader. Make sure one of the tags is “zerotohero,” so other new bloggers can find you, too.</p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer responsive-max-width">
+		<span class="byline"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted by</span><span class="author vcard"><a class="url fn n" href="https://coronavirusman.com/author/answeringdoc/">answeringdoc</a></span></span><span class="posted-on"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><path id="a" d="M0 0h24v24H0V0z"></path></defs><clipPath id="b"><use xlink:href="#a" overflow="visible"></use></clipPath><path clip-path="url(#b)" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"></path></svg><a href="https://coronavirusman.com/2020/03/16/example-post-3/" rel="bookmark"><time class="entry-date published updated" datetime="2020-03-16T03:43:11+00:00">March 16, 2020</time></a></span><span class="cat-links"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted in</span><a href="https://coronavirusman.com/category/uncategorized/" rel="category tag">Uncategorized</a></span><span class="comments-link"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><a href="https://coronavirusman.com/2020/03/16/example-post-3/#respond">Leave a comment<span class="screen-reader-text"> on Introduce Yourself (Example Post)</span></a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-${ID} -->
+
+<article id="post-10" class="post-10 post type-post status-publish format-standard hentry category-uncategorized entry">
+	<header class="entry-header responsive-max-width">
+		<h2 class="entry-title"><a href="https://coronavirusman.com/2020/03/16/example-post-2/" rel="bookmark">Introduce Yourself (Example Post)</a></h2>	</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<p><em>This is an example post, originally published as part of </em><a href="https://dailypost.wordpress.com/blogging-university/"><em>Blogging University</em></a><em>. Enroll in one of our ten programs, and start your blog right.</em></p>
+
+
+
+<p>You’re going to publish a post today. Don’t worry about how your blog looks. Don’t worry if you haven’t given it a name yet, or you’re feeling overwhelmed. Just click the “New Post” button, and tell us why you’re here.</p>
+
+
+
+<p>Why do this? </p>
+
+
+
+<ul><li>Because it gives new readers context. What are you about? Why should they read your blog?</li><li>Because it will help you focus you own ideas about your blog and what you’d like to do with it. </li></ul>
+
+
+
+<p>The post can be short or long, a personal intro to your life or a bloggy mission statement, a manifesto for the future or a simple outline of your the types of things you hope to publish.</p>
+
+
+
+<p>To help you get started, here are a few questions: </p>
+
+
+
+<ul><li>Why are you blogging publicly, rather than keeping a personal journal?</li><li>What topics do you think you’ll write about?</li><li>Who would you love to connect with via your blog?</li><li>If you blog successfully throughout the next year, what would you hope to have accomplished? </li></ul>
+
+
+
+<p>You’re not locked into any of this; one of the wonderful things about blogs is how they constantly evolve as we learn, grow, and interact with one another — but it’s good to know where and why you started, and articulating your goals may just give you a few other post ideas.</p>
+
+
+
+<p>Can’t think how to get started? Just write the first thing that pops into your head. Anne Lamott, author of a book on writing we love, says that you need to give yourself permission to write a “crappy first draft”. Anne makes a great point — just start writing, and worry about editing it later.</p>
+
+
+
+<p>When you’re ready to publish, give your post three to five tags that describe your blog’s focus — writing, photography, fiction, parenting, food, cars, movies, sports, whatever. These tags will help others who care about your topics find you in the Reader. Make sure one of the tags is “zerotohero,” so other new bloggers can find you, too.</p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer responsive-max-width">
+		<span class="byline"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted by</span><span class="author vcard"><a class="url fn n" href="https://coronavirusman.com/author/answeringdoc/">answeringdoc</a></span></span><span class="posted-on"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><path id="a" d="M0 0h24v24H0V0z"></path></defs><clipPath id="b"><use xlink:href="#a" overflow="visible"></use></clipPath><path clip-path="url(#b)" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"></path></svg><a href="https://coronavirusman.com/2020/03/16/example-post-2/" rel="bookmark"><time class="entry-date published updated" datetime="2020-03-16T03:43:10+00:00">March 16, 2020</time></a></span><span class="cat-links"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted in</span><a href="https://coronavirusman.com/category/uncategorized/" rel="category tag">Uncategorized</a></span><span class="comments-link"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><a href="https://coronavirusman.com/2020/03/16/example-post-2/#respond">Leave a comment<span class="screen-reader-text"> on Introduce Yourself (Example Post)</span></a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-${ID} -->
+
+<article id="post-14" class="post-14 post type-post status-publish format-standard hentry category-uncategorized entry">
+	<header class="entry-header responsive-max-width">
+		<h2 class="entry-title"><a href="https://coronavirusman.com/2020/03/16/example-post/" rel="bookmark">Introduce Yourself (Example Post)</a></h2>	</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<p><em>This is an example post, originally published as part of </em><a href="https://dailypost.wordpress.com/blogging-university/"><em>Blogging University</em></a><em>. Enroll in one of our ten programs, and start your blog right.</em></p>
+
+
+
+<p>You’re going to publish a post today. Don’t worry about how your blog looks. Don’t worry if you haven’t given it a name yet, or you’re feeling overwhelmed. Just click the “New Post” button, and tell us why you’re here.</p>
+
+
+
+<p>Why do this? </p>
+
+
+
+<ul><li>Because it gives new readers context. What are you about? Why should they read your blog?</li><li>Because it will help you focus you own ideas about your blog and what you’d like to do with it. </li></ul>
+
+
+
+<p>The post can be short or long, a personal intro to your life or a bloggy mission statement, a manifesto for the future or a simple outline of your the types of things you hope to publish.</p>
+
+
+
+<p>To help you get started, here are a few questions: </p>
+
+
+
+<ul><li>Why are you blogging publicly, rather than keeping a personal journal?</li><li>What topics do you think you’ll write about?</li><li>Who would you love to connect with via your blog?</li><li>If you blog successfully throughout the next year, what would you hope to have accomplished? </li></ul>
+
+
+
+<p>You’re not locked into any of this; one of the wonderful things about blogs is how they constantly evolve as we learn, grow, and interact with one another — but it’s good to know where and why you started, and articulating your goals may just give you a few other post ideas.</p>
+
+
+
+<p>Can’t think how to get started? Just write the first thing that pops into your head. Anne Lamott, author of a book on writing we love, says that you need to give yourself permission to write a “crappy first draft”. Anne makes a great point — just start writing, and worry about editing it later.</p>
+
+
+
+<p>When you’re ready to publish, give your post three to five tags that describe your blog’s focus — writing, photography, fiction, parenting, food, cars, movies, sports, whatever. These tags will help others who care about your topics find you in the Reader. Make sure one of the tags is “zerotohero,” so other new bloggers can find you, too.</p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer responsive-max-width">
+		<span class="byline"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted by</span><span class="author vcard"><a class="url fn n" href="https://coronavirusman.com/author/answeringdoc/">answeringdoc</a></span></span><span class="posted-on"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><path id="a" d="M0 0h24v24H0V0z"></path></defs><clipPath id="b"><use xlink:href="#a" overflow="visible"></use></clipPath><path clip-path="url(#b)" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"></path></svg><a href="https://coronavirusman.com/2020/03/16/example-post/" rel="bookmark"><time class="entry-date published updated" datetime="2020-03-16T03:43:09+00:00">March 16, 2020</time></a></span><span class="cat-links"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted in</span><a href="https://coronavirusman.com/category/uncategorized/" rel="category tag">Uncategorized</a></span><span class="comments-link"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><a href="https://coronavirusman.com/2020/03/16/example-post/#respond">Leave a comment<span class="screen-reader-text"> on Introduce Yourself (Example Post)</span></a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-${ID} -->
+
+		</main><!-- .site-main -->
+	</section><!-- .content-area -->
+
+
+	</div><!-- #content -->
+
+		<footer id="colophon" class="site-footer responsive-max-width">
+	
+	<aside class="widget-area responsive-max-width" role="complementary" aria-label="Footer">
+		<section id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://coronavirusman.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form></section>		<section id="recent-posts-2" class="widget widget_recent_entries">		<h2 class="widget-title">Recent Posts</h2>		<ul>
+											<li>
+					<a href="https://coronavirusman.com/2020/03/16/hello-world/">Coronavirus Information</a>
+									</li>
+											<li>
+					<a href="https://coronavirusman.com/2020/03/16/example-post-3/">Introduce Yourself (Example Post)</a>
+									</li>
+											<li>
+					<a href="https://coronavirusman.com/2020/03/16/example-post-2/">Introduce Yourself (Example Post)</a>
+									</li>
+											<li>
+					<a href="https://coronavirusman.com/2020/03/16/example-post/">Introduce Yourself (Example Post)</a>
+									</li>
+					</ul>
+		</section><section id="recent-comments-2" class="widget widget_recent_comments"><h2 class="widget-title">Recent Comments</h2><ul id="recentcomments"></ul></section><section id="archives-2" class="widget widget_archive"><h2 class="widget-title">Archives</h2>		<ul>
+				<li><a href='https://coronavirusman.com/2020/03/'>March 2020</a></li>
+		</ul>
+			</section><section id="categories-2" class="widget widget_categories"><h2 class="widget-title">Categories</h2>		<ul>
+				<li class="cat-item cat-item-1"><a href="https://coronavirusman.com/category/uncategorized/">Uncategorized</a>
+</li>
+		</ul>
+			</section><section id="meta-2" class="widget widget_meta"><h2 class="widget-title">Meta</h2>			<ul>
+						<li><a rel="nofollow" href="https://coronavirusman.com/wp-login.php">Log in</a></li>
+			<li><a href="https://coronavirusman.com/feed/">Entries feed</a></li>
+			<li><a href="https://coronavirusman.com/comments/feed/">Comments feed</a></li>
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>			</ul>
+			</section>	</aside><!-- .widget-area -->
+
+
+		<div class="site-info">
+										<a class="site-name" href="https://coronavirusman.com/" rel="home">Coronavirusman.com</a><span class="comma">,</span>
+						<a href="https://wordpress.org/" class="imprint">proudly powered by WordPress</a>.					</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+
+</div><!-- #page -->
+
+<script type='text/javascript' src='https://coronavirusman.com/wp-content/plugins/jetpack/_inc/build/photon/photon.min.js?ver=20191001'></script>
+<script type='text/javascript' src='https://coronavirusman.com/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	<script type='text/javascript' src='https://stats.wp.com/e-202012.js' async='async' defer='defer'></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:8.3',blog:'174409196',post:'0',tz:'0',srv:'coronavirusman.com'} ]);
+	_stq.push([ 'clickTrackerInit', '174409196', '0' ]);
+</script>
+
 </body>
 </html>
+
+<!-- Dynamic page generated in 0.768 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2020-03-19 16:37:43 -->
+
+<!-- super cache -->

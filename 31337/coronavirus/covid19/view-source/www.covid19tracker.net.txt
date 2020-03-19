@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64040181-5"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-64040181-5');
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="//www.amcharts.com/lib/4/core.js"></script>
+<script src="//www.amcharts.com/lib/4/charts.js"></script>
+<script src="//www.amcharts.com/lib/4/maps.js"></script>
+<script src="//www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/cb87cedded.js" crossorigin="anonymous"></script>
+<title>Covid-19 Tracker</title>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/"><img src="/images/logo.png" width ="40" alt="">Covid 19 Tracker</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Worldwide Data:</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/" id="worldstats">Loading...</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="http://maetrimal.com/7WT">Buy me a Coffee</a>
+        </li>
+      </div>
+    </nav>
+  </header>
+
+
+
+<style media="screen">
+div#stattablediv{
+  width: 19%;
+}
+@media only screen and (max-device-width: 480px) {
+  div#stattablediv{
+    width: 99%;
+  }
+}
+</style>
+
+</head>
+<body>
+  <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+    <div class="container-fluid" id="worldstats">
+    </div>
+    <div class="input-group">
+      <select class="form-control" name="sh" id="mapdat">
+        <option value="0" id="Default">Choose Data Set: Infection(default), Deaths, Cases/Capita</option>
+        <option value="0" id="infect">Showing Infection Data</option>
+        <option value="1" id="death">Showing Death Data</option>
+        <option value="2" id="Captia">Cases Per Capita</option>
+      </select>
+      <select class="form-control" name="sh" id="countryselect">
+      </select>
+    </div>
+    <div class="d-flex flex-wrap justify-content-center ">
+      <div class="justify-content-center" id="chartdiv"style=" width: 80%;height: 80vh;"></div>
+      <div class="container overflow-auto justify-content-center" style="height: 80vh;" id="stattablediv">
+        <div class="row navbar sticky-top navbar-light bg-light">
+          <div class="col-sm">
+            Country
+          </div>
+          <div class="col-sm">
+            Cases
+          </div>
+          <div class="col-sm">
+            Deaths
+          </div>
+        </div>
+        <hr>
+        <div id="stattable">
+          Loading...
+        </div>
+      </div>
+    </div>
+    <iframe width="100%" height="750" frameborder="0" class="rssdog" src="https://www.rssdog.com/index.php?url=https%3A%2F%2Fwww.who.int%2Ffeeds%2Fentity%2Fcsr%2Fdon%2Fen%2Frss.xml&mode=html&showonly=&maxitems=0&showdescs=1&desctrim=0&descmax=0&tabwidth=100%25&linktarget=_blank&textsize=inherit&bordercol=%23d4d0c8&headbgcol=%23999999&headtxtcol=%23ffffff&titlebgcol=%23f1eded&titletxtcol=%23000000&itembgcol=%23ffffff&itemtxtcol=%23000000&ctl=0"></iframe>
+    <div id="amzn-assoc-ad-847ea1a4-3860-439c-823f-18401f68e825"></div><script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=847ea1a4-3860-439c-823f-18401f68e825"></script>
+    <div id="amzn-assoc-ad-334ed497-00c1-46e9-8afa-8754145b9bc5"></div><script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=334ed497-00c1-46e9-8afa-8754145b9bc5"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="scripts/scripts.js"></script>
+    <footer>
+  <h3   style="color: red;"">WARNING: THIS WEBSITE IS STILL UNDER DEVELOPMENT</h3>
+  <h4>There may be bugs and inconsistencies with the data</h4>
+  Brought to you by a bored highschool senior in quarantine
+</footer>
+
+  </body>
+  </html>

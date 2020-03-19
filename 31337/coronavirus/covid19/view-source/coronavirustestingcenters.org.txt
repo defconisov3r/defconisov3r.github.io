@@ -1,0 +1,526 @@
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    
+<style>
+.topnav {
+  overflow: hidden;
+  background-color: #292930;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #0b8f1f;
+  color: white;
+}
+
+.topnav-right {
+  float: right;
+}
+</style>
+    
+    
+    
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>CORONA VIRUS TEST CENTERS</title>
+	 <meta name="keywords" content="corona virus, test centers" />
+     <meta name="description" content=" " />
+	 <link rel="shortcut icon" href="img/favicon.ico" />
+	 <script>
+	function changeLang(v){
+	document.location.href="?langset="+v;
+	}
+	</script>
+	  <script>
+
+var default_distance = 'mi';
+var init_zoom = '11';
+var zoomhere_zoom = '15';
+var ssf_cont_us_name = 'Test Center Name';
+var ssf_cont_us_email = 'Email';
+var ssf_msg_sucess = 'Message sent successfully';
+var ssf_cont_us_msg = 'Message';
+var ssf_store_print = 'Print';
+var ssf_store_get_direction = 'Get Direction';
+var ssf_origin = 'Origin';
+var ssf_destination = 'Destination';
+var ssf_back_btn = 'Back';
+
+var geo_settings = '1';
+var default_location = 'New York, US';
+
+var style_map_color = '#e1e2e2';
+
+var ssf_street_view = 'Street View';
+var ssf_get_direction = 'Directions';
+var ssf_zoom_here = 'Zoom here';
+
+var ssf_map_code;
+
+
+</script>
+
+<style>
+
+#clinic-finder form#clinic-finder-form {
+background-color: #292930 !important;
+background-image: none !important;
+
+border: 1px solid #292930 !important;
+}
+
+#clinic-finder form#clinic-finder-form label {
+color: #e1e2e2 !important;
+}
+
+#clinic-finder {
+background-color: #e5e5e5 !important;
+}
+
+#results ol li.active {
+background-color:  #ffffff !important;
+}
+
+#clinic-finder #results ol li {
+color: #292930 !important; 
+}
+
+.help-block, .help-inline {
+color: #292930 !important;
+}
+
+#form_new_store{
+color: #292930 !important;
+}
+
+
+
+#clinic-finder .distance-units {
+background-color: #0b8f1f  !important;
+background-image: none !important;
+}
+
+
+#clinic-finder .blue-button {
+background-image: -webkit-gradient(linear, 0% 0%, 0% 90%, from(#0b8f1f  ), to(#0b8f1f  )) !important;
+background-image: -moz-linear-gradient(#0b8f1f   0%, #0b8f1f   90%) !important;
+
+color: #f7f7f7 !important; 
+}
+
+
+
+#clinic-finder #results ol li {
+
+background-image: url('') !important;
+
+}
+
+
+#clinic-finder #results ol li span.number {
+background: #f7f7f7 !important;
+font-size: 14px;
+display: block;
+position: absolute;
+top: 10px;
+left: 6px!important;
+
+width: 28px;
+padding: 4px 0px;
+text-align: center;
+background: #333;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+}
+
+#clinic-finder #results ol li span.number {
+
+color: #292930 !important;
+
+}
+
+
+
+.btn-primary {
+padding: 10px 10px;
+
+text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25) !important;
+background-color: #0b8f1f !important;
+background-image: -moz-linear-gradient(top, #0b8f1f, #0b8f1f) !important;
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0b8f1f), to(#0b8f1f))  !important;
+background-image: -webkit-linear-gradient(top, #0b8f1f, #0b8f1f)  !important;
+background-image: -o-linear-gradient(top, #0b8f1f, #0b8f1f)  !important;
+background-image: linear-gradient(to bottom, #0b8f1f, #0b8f1f)  !important;
+background-repeat: repeat-x  !important;
+border-color: #E76804 #E76804 #E76804  !important;
+border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25)  !important;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0b8f1f', endColorstr='#0b8f1f', GradientType=0)  !important;
+filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  color: #ffffff !important;
+  background-color: #0b8f1f !important;
+  *background-color: #0b8f1f !important;
+}
+
+.btn-primary {
+color: #292930 !important;
+}
+
+
+.btn-group{
+width:100% !important;
+}
+
+</style>	  		 <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+     <meta name="viewport" content="width=device-width,initial-scale=1">
+	 <meta name="description" content="">
+	 
+	
+	<link rel="stylesheet" type="text/css" href="https://coronavirustestingcenters.org//css/superstorefinder-mobile.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="https://coronavirustestingcenters.org//css/bootstrap.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="https://coronavirustestingcenters.org//css/bootstrap-responsive.css" media="all" 
+	<link rel="stylesheet" type="text/css" href="https://coronavirustestingcenters.org//css/bootstrap-multiselect.css" media="all" />
+	
+	<script src="https://coronavirustestingcenters.org//includes/geoip.php" type="text/javascript"><!--mce:1--></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBt5qWVmRDPhRe9ZLKz_V8tlun8idaFXSQ&sensor=false&libraries=geometry,places"></script>
+	<script type="text/javascript" src="https://coronavirustestingcenters.org//js/jquery-1.9.0.min.js"></script>
+	<script type="text/javascript" src="https://coronavirustestingcenters.org//js/bootstrap.js"></script>
+	<script type="text/javascript" src="https://coronavirustestingcenters.org//js/bootstrap-multiselect.js"></script>
+	<script type="text/javascript" src="https://coronavirustestingcenters.org//js/super-store-finder-mobile.js" charset="utf-8"></script>
+	<script type="text/javascript" src="https://coronavirustestingcenters.org//js/jquery.sort.js" charset="utf-8"></script>
+	<script type="text/javascript" src="https://coronavirustestingcenters.org//js/jquery.geocomplete.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://coronavirustestingcenters.org//css/typography.css" media="all" />
+	
+	<script type="text/javascript" src="https://coronavirustestingcenters.org//js/markerclusterer.js" charset="utf-8"></script>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<link rel="stylesheet" href="style.css">
+	 <link rel="stylesheet" href="css/responsive.css">
+	 <link href='http://fonts.googleapis.com/css?family=PT+Sans:700|Open+Sans:600' rel='stylesheet' type='text/css'><!-- Custom Google Fonts -->
+
+	 <script src="js/libs/modernizr-2.0.6.min.js"></script>
+	
+	<!-- ########## CSS Files ########## -->
+
+	<link rel="stylesheet" href="landing_mobile/css/reset.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="landing_mobile/css/text.css" type="text/css" media="screen" />
+
+	<!-- Cufon Font Replacement -->
+
+	
+	<!-- To customise any of the above, please use this file -->
+	
+
+</head>
+<body id="super-store-finder">
+
+
+<!-- Start Head Container -->
+		<div class="container_12 margin">
+		
+			<!-- Logo -->
+			<!-- <h1 class="grid_4 logo"><a href="http://http://coronavirustestingcenters.org/" class='ie6fix'>Coronavirus Testing Centers</a></h1> -->
+
+<div class="topnav">
+  <a class="nav-link" href="https://coronavirustestingcenters.org/">Home</span></a>
+    <a class="nav-link" href="https://coronavirustestingcenters.org/about.html/" target="_blank">About</a>
+    <a class="nav-link" href="https://coronavirustestingcenters.org/contact.html/" target="_blank">Contact</a>
+    <a class="nav-link" href="https://www.paypal.com/donate/?token=_-x6gMZxJv7msi8K3HbxbZXIvLDKvdgoX4pqSJh-KOM2m_P-DGhaaoyMSHCVSPjllHKmKW&country.x=US&locale.x=US" target="_blank">Donate</a>
+</div>
+
+		</div>
+<!-- Head Container END -->
+		
+		<div class="clear"></div><!-- CLEAR -->
+		
+		<!-- Start Header Break Line -->
+		<div class="container_12">
+		    <center>
+			<hr class="grid_12"><h1 style="color:#E12B38;"><bold>CORONAVIRUS TESTING CENTERS</bold></h1></hr>
+			</center>
+		</div>
+		<br>
+		<!-- Header Break Line END -->
+		
+		<div class="clear"></div><!-- CLEAR -->
+	
+		<!-- Start Teaser -->
+		<div class="container_12 ">
+			
+			<!-- Start Centered Text -->
+			<div class="grid_12 middle">
+				
+				<!-- Heading -->	
+				<center>
+				<div style="padding:10px;">Language: 
+				<select onChange="changeLang(this.value)">
+				<option value="en_US" selected>English</option>
+				<!-- <option value="ar_AR" >Arabic</option>
+				<option value="cn_CN" >Chinese</option>
+				<option value="fr_FR" >French</option>
+				<option value="de_DE" >German</option>
+				<option value="kr_KR" >Korean</option>
+				<option value="jp_JP" >Japanese</option>
+				<option value="sv_SE" >Swedish</option>
+				<option value="es_ES" >Spanish</option> -->
+				</select>
+				</div>		
+				</center>
+				
+			</div><!-- Centered Text END -->
+	
+		</div>
+		<!-- Teaser END -->
+	
+	<div class="clear"></div>
+		
+		
+		<!-- Start Header Break Line -->
+		<div class="container_12">
+		    <center>
+    			    <hr class="grid_12">
+    			    <p width="200"></p><h2 style="color:#292930;"><bold>ACCORDING TO CDC, <a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fabout%2Fsymptoms.html">SYMPTOMS OF CORONAVIRUS</a> :</bold></h2><ul style="list-style-type:disc;">
+                                <li><bold>COUGH</bold></li>
+                                <li><bold>FEVER</bold></li>
+                                <li><bold>SHORTNESS OF BREATH</bold></li>
+                            </ul><p></p><p></p><h2 style="color:#292930;"><bold> MAY APPEAR AFTER 2-14 DAYS OF EXPOSURE TO CORONAVIRUS.</bold>
+                            
+                            <br><br>
+                            
+                        <p><bold>IF YOU WOULD LIKE TO GET TESTED, PLEASE VISIT A CORONAVIRUS TESTING CENTER NEAR YOU.</bold></p>
+                        </h2>
+
+			</center>
+		</div>
+		<!-- Header Break Line END -->
+		
+		<div class="clear"></div><!-- CLEAR -->
+		
+	<!-- Start Container 12 -->
+	<div id="main_content" class="container_12">
+	
+		<div id="main">
+		<div class="width-container">
+
+			<div id="container-sidebar">
+			
+				<div class="content-boxed">
+				
+					<div id="map-container">
+
+						<div id="clinic-finder" class="clear-block">
+						<div class="links"></div>
+			
+						<form method="post" action="./index.php" accept-charset="UTF-8" method="post" id="clinic-finder-form" class="clear-block">
+							<table style="width:100%">
+							<tr><td width="95%" style="padding-right:20px;">
+							<div class="form-item" id="edit-gmap-address-wrapper">
+							 <label for="edit-gmap-address">Please Enter Location: </label>
+							 <input type="text" maxlength="128" name="address" id="address" size="60" value="" class="form-text" autocomplete="off" />
+							</div>
+							</td>
+							</tr>
+							<tr>
+							
+							<td  width="95%">
+														<div class="form-item" id="edit-products-wrapper">
+							 
+							 <select name="products" class="form-select" id="edit-products" ><option value="">All Categories</option>
+							 							 </select>
+							 
+							
+							
+							</div>
+							
+							</tr>
+							<tr><td align="center" nowrap><input type="submit" name="op" id="edit-submit" value="Find Corona Virus Test Center" class="btn btn-primary" style="color:white !important;"/>
+							<input type="hidden" name="form_build_id" id="form-0168068fce35cf80f346d6c1dbd7344e" value="form-0168068fce35cf80f346d6c1dbd7344e"  />
+							<input type="hidden" name="form_id" id="edit-clinic-finder-form" value="clinic_finder_form"  />
+							
+							<input type="button" name="op" onclick="document.location.href='newstore.php'" id="edit-submit" value="Add Test Center" class="btn btn-primary" style="color:white !important;"/>
+							
+							</td></tr>
+							</table>
+							
+
+
+					  <div id="map_canvas">You must have javascript enabled to use the Corona Virus Test Centers.</div>
+					  <div id="results">        
+						<h2 class="title-bg" style="padding-bottom:10px !important; "><input type="radio" id="distance" name="distance" value="50" onChange="cachesearch = ''; $('#clinic-finder-form').submit();"> 50 <div class="radius-distance" style="display:inline;">mi</div> <input type="radio" id="distance" name="distance" value="100" checked  onChange="cachesearch = ''; $('#clinic-finder-form').submit();"> 100 <div class="radius-distance"  style="display:inline;">mi</div></h2>
+						<p class="distance-units">
+						  <label class="km unchecked" units="km"  checked="unchecked" >
+							<input type="radio" name="distance-units" value="kms" />km						  </label>
+						  <label class="miles " units="miles">
+							<input type="radio" name="distance-units" value="miles" />miles						  </label>
+						</p>
+						<ol style="display: block; " id="list"></ol>
+					  </div>
+					  
+					  
+					    </form>
+						
+					  
+					  <div id="direction">
+					  <h2 class="title-bg" style="padding-bottom:10px !important; ">Directions</h2>
+					  <form method="post" id="direction-form">
+					  
+					  <p>
+					  <table><tr>
+					  <td>Origin:</td><td><input id="origin-direction" name="origin-direction" class="orides-txt" type=text /></td>
+					  </tr>
+					  <tr>
+					  <td>Destination:</td><td><input id="dest-direction" name="dest-direction" class="orides-txt" type=text readonly /></td>
+					  </tr>
+					  </table>
+					  <div id="get-dir-button" class="get-dir-button"><input type=submit id="get-direction" class="btn" value="Get Direction"><input type="button" style="display:none; margin-left:5px;" id="DirectionPrint" class="btn btnPrint" disabled="disabled" value="Print"/> <a href="javascript:directionBack()">Back</a></div></p>
+					  </form>
+					  </div>
+					  
+	</div>
+
+
+
+					</div>
+					
+						
+						<div class="clearfix"></div>
+
+					</div>
+					
+
+			</div><!-- close #container-sidebar -->
+			
+
+			
+		<div class="clearfix"></div>
+		</div><!-- close .width-container -->
+	</div><!-- close #main -->
+  
+   <center>
+
+
+		
+		
+
+		<div class="clear"></div><!-- CLEAR -->
+		
+		<!-- 
+		<br><br>
+		
+			 <h4>Embed Corona Virus Test Centers To Your Website:</h4>
+  <textarea id="embed" style="width:650px;"><iframe src="https://coronavirustestingcenters.org//embed.php" width="100%" height="1180px" scrolling=no frameborder=no  allow="geolocation" allowtransparency="true"></iframe></textarea>
+		<br><br>
+		-->
+		
+		<div class="grid_12">
+			
+  </center>
+  
+ 
+	
+
+    <div class="clear"></div>
+	<center>
+      <br>
+    </center>
+		</div>
+	
+	</div><!-- Container 12 END-->
+ <!-- Contact us form data-model code --> 
+  <div class="modal fade" id="myModal"  style="display:none;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" style="margin-top:10px;" aria-hidden="true">×</button>
+                          <h4 class="modal-title" id="myModalLabel" align='center' style="margin-top:10px;">Contact This Test Center</h4>
+                      </div> <!-- /.modal-header -->
+                      <div class="modal-body">
+                        <div class="col-lg-12" align='center'>
+						<form id='ssf-contact-form' action='#' method='post' name='form' role='form'>
+						<div><h4 id='ssf-msg-status'></h4></div>
+						<div>
+						<label>
+						<span>Test Center Name: (<div class='ssf-red-star'>*</div>)</span>
+						<input placeholder='Please enter your name' name='ssf_cont_name' type='text' tabindex='1' required autofocus>
+						</label>
+						</div>
+						<div>
+						<label>
+						<span>Email: (<div class='ssf-red-star'>*</div>)</span>
+						<input placeholder='Please enter your email address' name='ssf_cont_email' type='email' tabindex='2' required>
+						</label>
+						</div>
+						<div>
+						<label>
+						<span>Telephone</span>
+						<input placeholder='Please enter your phone number' name='ssf_cont_phone' type='tel' tabindex='3'>
+						</label>
+						</div>
+						<div>
+						<label>
+						<span>Message: (<div class='ssf-red-star'>*</div>)</span>
+						<textarea placeholder='Include all the details you can' name='ssf_cont_msg' tabindex='4' required></textarea>
+						</label>
+						</div>
+												<div>
+						<button name='submit' type='button' onclick='ssfEmailSubmit();'>Send Message</button>
+						</div>
+                        </form>
+                    </div>
+                    </div> 
+                  <div class="modal-footer">
+                  <div id="loginMsg" style="color:#900; font-size:12px; font-weight:600; text-align:center;"></div>
+                  <div id="signupMsg" style="color:#090; font-size:12px; font-weight:600; text-align:center;"></div>
+                  </div> 
+                  </div>
+                  </div>
+          </div>
+<!-- Contact us form data-model code end here -->  
+<!-- IE fix -->
+<script type="text/javascript"> Cufon.now(); </script>	
+
+<script>
+		if(geo_settings!=1){
+				$('#address').val(default_location);
+		}
+	
+</script>		
+
+
+<footer class="footer">
+  <div class="container">
+	<p>coronavirustestingcenters.org is managed by Coronavirus Testing Centers Organization.</p>
+	
+	<p> Copyright &copy; 2020 Lina Petalver Celino Trust Agreement, Anacleto P. Celino III, and Ma. Veronica Belandres. All worldwide rights reserved. All content included on <a href="http://coronavirustestingcenters.org/">Coronavirus Testing Centers</a> website, such as computer programs, database, data compilations, software, and text, are the property of the Lina Petalver Celino Trust Agreement, Anacleto P. Celino III, and Ma. Veronica Belandres and protected by United States and international copyright laws. The compilation of all content on this site is the exclusive property of the Lina Petalver Celino Trust Agreement, Anacleto P. Celino III and Ma. Veronica Belandres and protected by U.S. and international copyright laws. Any use or re-use of any such content or compilations, without the express written consent of the Lina Petalver Celino Trust Agreement, Anacleto P. Celino III and Ma. Veronica Belandres is expressly prohibited. </p>
+
+	<ul class="footer-links">
+	  
+	</ul>
+  </div>
+</footer></body>
+</html>

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title> COVID-19 | Home</title>
+    <link href="/Resources/favicon.png" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="/Content/mdb.css">
+    <link rel="stylesheet" href="/Content/style.css">
+    <link rel="stylesheet" href="/Content/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Asap|Fredoka+One|Roboto|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="/Content/alertifyjs/alertify.css" />
+    <link rel="stylesheet" href="/Content/datatable/datatables.min.css" />
+    <link rel="stylesheet" href="/Content/bootstrap-override.css" />
+    <link rel="stylesheet" href="/Content/header-css.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <script src="/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="/Scripts/mdb.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/umd/popper.min.js"></script>
+    <script src="/Scripts/alertify.js"></script>
+    <script src="/Scripts/alertify.min.js"></script>
+    <script src="/Scripts/datatable/datatables.min.js"></script>
+    <script src="/Scripts/datatable/dataTables.fixedHeader.min.js"></script>
+    <script src="/Scripts/modernizr-2.6.2.js"></script>
+    <style>
+        body {
+            background-color: #f9f9f9;
+        }
+
+        .side-nav .logo-wrapper {
+            height: auto !important;
+        }
+
+        table.table td {
+            padding-top: 5px !important;
+            padding-bottom: 5px !important;
+            vertical-align: middle !important;
+        }
+
+        form {
+            margin: 0px;
+        }
+
+        thead tr th, tfoot tr th {
+            padding: 10px !important;
+        }
+
+        #x_addbtn {
+            right: 15px;
+            bottom: 15px;
+            position: fixed !important;
+            border-radius: 50% !important;
+            padding: 0px !important;
+        }
+
+        #x_addbtn2 {
+            right: 15px;
+            bottom: 90px;
+            position: fixed !important;
+            border-radius: 50% !important;
+            padding: 0px !important;
+        }
+
+        table tbody {
+            background-color: #fff;
+        }
+
+        @-webkit-keyframes autofill {
+            to {
+                color: #666;
+                background: transparent;
+            }
+        }
+
+        @keyframes autofill {
+            to {
+                color: #666;
+                background: transparent;
+            }
+        }
+
+        input:-webkit-autofill {
+            -webkit-animation-name: autofill;
+            animation-name: autofill;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+    </style>
+</head>
+<body class="fixed-sn white-skin">
+
+    <nav class="fixed-top" aria-label="breadcrumb">
+        <ol class="breadcrumb bg-danger text-white" style="margin-bottom:10px;border-radius:0px;">
+            <li class="breadcrumb-item">
+                <a href="#" data-activates="slide-out" class="p-3 text-white button-collapse"><i class="fas fa-bars"></i></a>
+            </li>
+                    <li class="breadcrumb-item text-white active">COVID-19 / Home</li>
+
+
+        </ol>
+    </nav>
+
+    <!-- Sidebar navigation -->
+    <div id="slide-out" class="side-nav bg-dark sn-bg-4">
+        <ul class="custom-scrollbar">
+            <li>
+                <div class="logo-wrapper waves-light">
+                    <img src="/Resources/dark-wide-cvd.png" class="img-fluid flex-center" style="padding:0px !important;">
+                </div>
+            </li>
+            <li>
+                <div class="logo-wrapper waves-light">
+                    <img src="/Resources/dark-wide-gt.png" class="img-fluid flex-center">
+                </div>
+            </li>
+            <li>
+                <div class="logo-wrapper waves-light">
+                    <img src="/Resources/dark-wide-tm.png" class="img-fluid flex-center">
+                </div>
+            </li>
+            <li>
+                <div class="logo-wrapper waves-light">
+                    <button class="btn btn-block"><span class="text-dark"> COVID-19 </span></button>
+                </div>
+            </li>
+            <!-- Side navigation links -->
+            <li>
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a href="/" class="collapsible-header waves-effect arrow-r" style="text-decoration:none;">
+                            <i class="fas fa-heart"></i>  Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Home/Testing" class="collapsible-header waves-effect arrow-r" style="text-decoration:none;">
+                            <i class="fas fa-stethoscope"></i> Testing a Patient
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Home/Reporting" class="collapsible-header waves-effect arrow-r" style="text-decoration:none;">
+                            <i class="fas fa-ambulance"></i>Reporting a Patient
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Home/Information" class="collapsible-header waves-effect arrow-r" style="text-decoration:none;">
+                            <i class="fas fa-info-circle"></i> COVID-19 Information
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" class="collapsible-header waves-effect arrow-r" style="text-decoration:none;">
+                            <i class="fas fa-link"></i> Link to WHO
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="sidenav-bg rgba-blue-strong"></div>
+    </div>
+
+    <div>
+
+
+
+        <div class="container" style="margin-top:70px;min-height:700px;">
+            <div style="position:absolute;height:100%;width:100%;z-index:999;background-color:#f9f9f9;display:block;" id="id_loader">
+                <br />
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center">
+                        <div class="md-progress">
+                            <div class="progress md-progress primary-color-dark" style="height:.20rem !important;">
+                                <div class="indeterminate"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+<style>
+    .card-body {
+        background-color: #f9f9f9 !important;
+    }
+</style>
+
+<script src="/Scripts/chart-2.7.1.js"></script>
+
+<a class="btn-floating btn-lg btn-default" id="x_addbtn" data-toggle="modal" data-target="#myModal" style=""><i class="fas fa-cloud-download-alt"></i></a>
+
+<div class="container-fluid">
+    <div class="row justify-content-center text-center" id="add_btn_div">
+        <div class="col-md-6">
+            <a href="/Home/Testing" class="btn-flat btn-block btn-lg btn-light"><b><i class="fas fa-stethoscope"></i> &nbsp; Testing a Patient</b></a>
+        </div>
+        <div class="col-md-6">
+            <a href="/Home/Reporting" class="btn-flat btn-block btn-lg btn-light"><b><i class="fas fa-ambulance"></i> &nbsp; Reporting a Patient</b></a>
+        </div>
+        <div class="col-md-6">
+            <a href="/Home/Information" class="btn-flat btn-block btn-lg btn-light"><b><i class="fas fa-info-circle"></i> &nbsp; About COVID-19</b></a>
+        </div>
+        <div class="col-md-6">
+            <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" class="btn-flat btn-block btn-lg btn-light"><b><i class="fas fa-link"></i> &nbsp; Link to WHO</b></a>
+        </div>
+    </div>
+</div>
+        </div>
+
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Download APK!</h4>
+                    </div>
+                    <form action="/Home/Download" id="id_dlform" method="post">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div>
+                                        <input type="text" name="name" required />
+                                        <label>Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div>
+                                        <input type="text" name="con" required />
+                                        <label>Contact</label>
+                                    </div>
+                                    <div>
+                                        <input type="tel" name="con" pattern="^\d{4}-\d{7}$" required>
+                                        <label>Contact (0000-0000000)</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div>
+                                        <input type="email" name="email" required />
+                                        <label>Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div>
+                                        <select name="city" searchable="Search..." required>
+                                            <option value="" disabled selected>SELECT</option>
+                                            <option value="Abbottabad">Abbottabad</option>
+                                            <option value="Ahmadpur">Ahmadpur</option>
+                                            <option value="Aliabad">Aliabad</option>
+                                            <option value="Alpurai">Alpurai</option>
+                                            <option value="Athmuqam">Athmuqam</option>
+                                            <option value="Attock">Attock</option>
+                                            <option value="Awaran">Awaran</option>
+                                            <option value="Badin">Badin</option>
+                                            <option value="Bagh">Bagh</option>
+                                            <option value="Bahawalnagar">Bahawalnagar</option>
+                                            <option value="Bahawalpur">Bahawalpur</option>
+                                            <option value="Bannu">Bannu</option>
+                                            <option value="Bardar">Bardar</option>
+                                            <option value="Barkhan">Barkhan</option>
+                                            <option value="Batgram">Batgram</option>
+                                            <option value="Batkhela">Batkhela</option>
+                                            <option value="Bhakkar">Bhakkar</option>
+                                            <option value="Bhalwal">Bhalwal</option>
+                                            <option value="Bhimber">Bhimber</option>
+                                            <option value="Burewala">Burewala</option>
+                                            <option value="Chakwal">Chakwal</option>
+                                            <option value="Chaman">Chaman</option>
+                                            <option value="Charsadda">Charsadda</option>
+                                            <option value="Chilas">Chilas</option>
+                                            <option value="Chiniot">Chiniot</option>
+                                            <option value="Chishtian">Chishtian</option>
+                                            <option value="Chitral">Chitral</option>
+                                            <option value="Dadu">Dadu</option>
+                                            <option value="Daggar">Daggar</option>
+                                            <option value="Dalbandin">Dalbandin</option>
+                                            <option value="Daska">Daska</option>
+                                            <option value="Dasu">Dasu</option>
+                                            <option value="Dera Allahyar">Dera Allahyar</option>
+                                            <option value="Dera Bugti">Dera Bugti</option>
+                                            <option value="Dera Ghazi Khan">Dera Ghazi Khan</option>
+                                            <option value="Dera Ismail Khan">Dera Ismail Khan</option>
+                                            <option value="Dera Murad Jamali">Dera Murad Jamali</option>
+                                            <option value="Eidgah">Eidgah</option>
+                                            <option value="Faisalabad">Faisalabad</option>
+                                            <option value="Gakuch">Gakuch</option>
+                                            <option value="Gandava">Gandava</option>
+                                            <option value="Ghotki">Ghotki</option>
+                                            <option value="Gilgit">Gilgit</option>
+                                            <option value="Gojra">Gojra</option>
+                                            <option value="Gujar Khan">Gujar Khan</option>
+                                            <option value="Gujranwala">Gujranwala</option>
+                                            <option value="Gujrat">Gujrat</option>
+                                            <option value="Gwadar">Gwadar</option>
+                                            <option value="Hafizabad">Hafizabad</option>
+                                            <option value="Hangu">Hangu</option>
+                                            <option value="Haripur">Haripur</option>
+                                            <option value="Hyderabad">Hyderabad</option>
+                                            <option value="Islamabad">Islamabad</option>
+                                            <option value="Jacobabad">Jacobabad</option>
+                                            <option value="Jamshoro">Jamshoro</option>
+                                            <option value="Jaranwala">Jaranwala</option>
+                                            <option value="Jhang">Jhang</option>
+                                            <option value="Jhelum">Jhelum</option>
+                                            <option value="Kalat">Kalat</option>
+                                            <option value="Kamalia">Kamalia</option>
+                                            <option value="Kamoke">Kamoke</option>
+                                            <option value="Kandhkot">Kandhkot</option>
+                                            <option value="Karachi">Karachi</option>
+                                            <option value="Karak">Karak</option>
+                                            <option value="Kasur">Kasur</option>
+                                            <option value="Khairpur">Khairpur</option>
+                                            <option value="Khanewal">Khanewal</option>
+                                            <option value="Khanpur">Khanpur</option>
+                                            <option value="Kharan">Kharan</option>
+                                            <option value="Khushab">Khushab</option>
+                                            <option value="Khuzdar">Khuzdar</option>
+                                            <option value="Kohat">Kohat</option>
+                                            <option value="Kohlu">Kohlu</option>
+                                            <option value="Kot Adu">Kot Adu</option>
+                                            <option value="Kotli">Kotli</option>
+                                            <option value="Kundian">Kundian</option>
+                                            <option value="Lahore">Lahore</option>
+                                            <option value="Lakki Marwat">Lakki Marwat</option>
+                                            <option value="Larkana">Larkana</option>
+                                            <option value="Layyah">Layyah</option>
+                                            <option value="Lodhran">Lodhran</option>
+                                            <option value="Loralai">Loralai</option>
+                                            <option value="Malakand">Malakand</option>
+                                            <option value="Mandi Bahauddin">Mandi Bahauddin</option>
+                                            <option value="Mansehra">Mansehra</option>
+                                            <option value="Mardan">Mardan</option>
+                                            <option value="Masiwala">Masiwala</option>
+                                            <option value="Mastung">Mastung</option>
+                                            <option value="Matiari">Matiari</option>
+                                            <option value="Mehra">Mehra</option>
+                                            <option value="Mianwali">Mianwali</option>
+                                            <option value="Mingora">Mingora</option>
+                                            <option value="Mirpur">Mirpur</option>
+                                            <option value="Mirpur Khas">Mirpur Khas</option>
+                                            <option value="Multan">Multan</option>
+                                            <option value="Muridke">Muridke</option>
+                                            <option value="Murree">Murree</option>
+                                            <option value="Musa Khel Bazar">Musa Khel Bazar</option>
+                                            <option value="Muzaffarabad">Muzaffarabad</option>
+                                            <option value="Muzaffargarh">Muzaffargarh</option>
+                                            <option value="Nankana Sahib">Nankana Sahib</option>
+                                            <option value="Narowal">Narowal</option>
+                                            <option value="Nowshehro Feroz">Nowshehro Feroz</option>
+                                            <option value="Nawabshah">Nawabshah</option>
+                                            <option value="New Mirpur">New Mirpur</option>
+                                            <option value="Nowshera">Nowshera</option>
+                                            <option value="Okara">Okara</option>
+                                            <option value="Pakpattan">Pakpattan</option>
+                                            <option value="Panjgur">Panjgur</option>
+                                            <option value="Parachinar">Parachinar</option>
+                                            <option value="Peshawar">Peshawar</option>
+                                            <option value="Pishin">Pishin</option>
+                                            <option value="Qila Abdullah">Qila Abdullah</option>
+                                            <option value="Qila Saifullah">Qila Saifullah</option>
+                                            <option value="Qila Sheikhupura">Qila Sheikhupura</option>
+                                            <option value="Quetta">Quetta</option>
+                                            <option value="Rahim Yar Khan">Rahim Yar Khan</option>
+                                            <option value="Rajanpur">Rajanpur</option>
+                                            <option value="Rawala Kot">Rawala Kot</option>
+                                            <option value="Rawalpindi">Rawalpindi</option>
+                                            <option value="Sadiqabad">Sadiqabad</option>
+                                            <option value="Sahiwal">Sahiwal</option>
+                                            <option value="Saidu Shairf">Saidu Shairf</option>
+                                            <option value="Sanghar">Sanghar</option>
+                                            <option value="Sargodha">Sargodha</option>
+                                            <option value="Serai">Serai</option>
+                                            <option value="Shahdad Kot">Shahdad Kot</option>
+                                            <option value="Sheikhupura">Sheikhupura</option>
+                                            <option value="Shikarpur">Shikarpur</option>
+                                            <option value="Sialkot">Sialkot</option>
+                                            <option value="Sibi">Sibi</option>
+                                            <option value="Skardu">Skardu</option>
+                                            <option value="Sukkur">Sukkur</option>
+                                            <option value="Swabi">Swabi</option>
+                                            <option value="Talagang">Talagang</option>
+                                            <option value="Tando Adam">Tando Adam</option>
+                                            <option value="Tando Allahyar">Tando Allahyar</option>
+                                            <option value="Tando Muhammad Khan">Tando Muhammad Khan</option>
+                                            <option value="Tank">Tank</option>
+                                            <option value="Thatta">Thatta</option>
+                                            <option value="Timergara">Timergara</option>
+                                            <option value="Toba Tek Singh">Toba Tek Singh</option>
+                                            <option value="Turbat">Turbat</option>
+                                            <option value="Umarkot">Umarkot</option>
+                                            <option value="Upper Dir">Upper Dir</option>
+                                            <option value="Lower Dir">Lower Dir</option>
+                                            <option value="Uthal">Uthal</option>
+                                            <option value="Vehari">Vehari</option>
+                                            <option value="Wah Cantt.">Wah Cantt.</option>
+                                            <option value="Wazirabad">Wazirabad</option>
+                                            <option value="Zhob">Zhob</option>
+                                            <option value="Ziarat">Ziarat</option>
+                                        </select>
+                                        <label>City</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-light" id="id_down">Download</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="page-footer" style="padding-left:0px;margin-top:25px;">
+        <div class="text-center py-3 text-md-center">
+            Xtense | © 2020 Copyright | Designed & Developed by
+            <a href="https://xtensetech.com/" class="text-primary" target="_blank"> Xtense-Tech </a> & <a href="https://www.xtenseglobal.com/" class="text-primary" target="_blank"> Xtense </a>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+
+            $("table").parent().addClass("table-responsive");
+            $("table").addClass("table table-hover");
+            $("thead").addClass("bg-light text-black");
+            $("tfoot").addClass("bg-light text-black");
+
+            $("select").addClass("mdb-select md-form md-outline colorful-select dropdown-primary");
+            $("select").next().addClass("active");
+            $("select").parent().addClass("mb-3 select-outline");
+
+            $("input[type='text']").addClass("form-control");
+            $("input[type='text']").parent().addClass("md-form md-outline form-sm mb-2");
+            $("input[type='text']").next().addClass("active");
+
+            $("input[type='number']").addClass("form-control");
+            $("input[type='number']").parent().addClass("md-form md-outline form-sm mb-2");
+            $("input[type='number']").next().addClass("active");
+
+            $("input[type='tel']").addClass("form-control");
+            $("input[type='tel']").parent().addClass("md-form md-outline form-sm mb-2");
+            $("input[type='tel']").next().addClass("active");
+
+            $("input[type='email']").addClass("form-control");
+            $("input[type='email']").parent().addClass("md-form md-outline form-sm mb-2");
+            $("input[type='email']").next().addClass("active");
+
+            $("input[type='date']").addClass("form-control");
+            $("input[type='date']").parent().addClass("md-form md-outline form-sm mb-2");
+            $("input[type='date']").next().addClass("active");
+
+            $("span.badge").addClass("z-depth-0");
+
+            $("button").addClass("btn btn-flat m-0");
+
+            //$('.datepicker').pickadate();
+
+            $("body").css("display", "block");
+
+            $(".button-collapse").sideNav();
+            var sideNavScrollbar = document.querySelector('.custom-scrollbar');
+            var ps = new PerfectScrollbar(sideNavScrollbar);
+
+            var table = $('#id_table').DataTable({
+                fixedHeader: {
+                    header: true,
+                    headerOffset: $('#pageHeader').outerHeight(),
+                    footer: true
+                },
+                "paging": false,
+                "order": [],
+                //"order": [[0, "desc"]],
+                dom: 'frtipB',
+                buttons: [
+                    {
+                        extend: 'copyHtml5',
+                        footer: true,
+                        text: '<i class="fa fa-files-o"></i>',
+                        exportOptions: {
+                            columns: ':visible'
+                        }
+                    },
+                    {
+                        extend: 'excelHtml5',
+                        footer: true,
+                        text: '<i class="fa fa-file-excel-o"></i>',
+                        exportOptions: {
+                            columns: ':visible'
+                        }
+                    },
+                    {
+                        extend: 'pdfHtml5',
+                        footer: true,
+                        text: '<i class="fa fa-file-pdf-o"></i>',
+                        exportOptions: {
+                            columns: ':visible'
+                        }
+                    },
+                    {
+                        extend: 'csvHtml5',
+                        footer: true,
+                        text: '<i class="fa fa-file-text"></i>',
+                        exportOptions: {
+                            columns: ':visible'
+                        }
+                    },
+                    {
+                        extend: 'print',
+                        footer: true,
+                        text: '<i class="fa fa-print"></i>',
+                        exportOptions: {
+                            columns: ':visible'
+                        }
+                    },
+                    //'colvis',
+                ],
+                "footerCallback": function (row, data, start, end, display) {
+                    var api = this.api();
+                    nb_cols = api.columns().nodes().length;
+                    var j = 2;
+                    while (j < nb_cols) {
+                        var pageTotalx = 0;
+
+                        var pageTotal2 = api
+                            .column(j, { page: 'current' })
+                            .data()
+                            .reduce(function (a, b) {
+                                var y = b.replace(/,/g, '');
+                                if (!isNaN(y)) {
+                                    pageTotalx += parseFloat(y);
+                                }
+                            }, 0);
+
+                        /*
+                        var pageTotal = api
+                            .column(j, { page: 'current' })
+                            .data()
+                            .reduce(function (a, b) {
+                                return Number(a) + Number(b);
+                            }, 0);
+                        */
+
+                        /*
+                                                if (!isNaN(valuex)) {
+                            if (valuex != 0) {
+                                var formatted = numberWithCommas(valuex);
+                                $(api.column(j).footer()).html(formatted);
+                            }
+                            else {
+                                $(api.column(j).footer()).html('');
+                            }
+                        }
+                        */
+
+                        var valuex = pageTotalx.toFixed(2);
+                        if (!isNaN(valuex) && valuex != '0.00') {
+                            var formatted = numberWithCommas(valuex);
+                            $(api.column(j).footer()).html(formatted);
+                        }
+                        j++;
+                    }
+                }
+            });
+
+            $('#id_table tbody')
+                .on('mouseenter', 'td', function () {
+                    var colIdx = table.cell(this).index().column;
+
+                    $(table.cells().nodes()).removeClass('highlight');
+                    $(table.column(colIdx).nodes()).addClass('highlight');
+                });
+
+            $('#id_table_wrapper').find('label').each(function () {
+                $(this).parent().append($(this).children());
+            });
+            $('#id_table_wrapper .dataTables_filter').find('input').each(function () {
+                const $this = $(this);
+                $this.attr("placeholder", "Search");
+                $this.addClass("w-50");
+                $this.css("display", "inline-block");
+                $this.removeClass('form-control-sm');
+            });
+            $('#id_table_wrapper .dataTables_length').addClass('d-flex flex-row');
+            $('#id_table_wrapper .dataTables_filter').addClass('md-form');
+            $('#id_table_wrapper select').removeClass(
+                'custom-select custom-select-sm form-control form-control-sm');
+            $('#id_table_wrapper select').addClass('mdb-select');
+            $('#id_table_wrapper .dataTables_filter').find('label').remove();
+            $("#id_table_filter").prepend("<i class='fas fa-search' aria-hidden='true'></i>");
+            $("#id_table_filter").css("text-align", "left");
+
+            $('.dt-buttons button').removeClass("btn-secondary");
+            $('.dt-buttons button').addClass("btn-light btn-flat");
+
+            $("#id_np1").change(function () {
+                $("#id_np2").val("");
+            })
+
+            $("#id_np2").change(function () {
+                var pass1 = $("#id_np1").val();
+                var pass2 = $("#id_np2").val();
+
+                if (pass1 !== pass2) {
+                    alertify.warning("Mismatched Confirm Password!")
+                    $("#id_np2").val("");
+                }
+            })
+
+            $(".cpform").submit(function (event) {
+
+                var pass1 = $("#id_np1").val();
+                var pass2 = $("#id_np2").val();
+
+                if (pass1 !== pass2) {
+                    alertify.warning("Mismatched Confirm Password!")
+                    return false;
+                }
+
+            });
+
+            function numberWithCommas(x) {
+                return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }
+
+            function hideDashboard(xdash) {
+                xdash.removeClass('d-none');
+                xdash.removeClass('d-md-flex');
+                xdash.removeClass('d-lg-flex');
+            }
+
+            $('.mdb-select').materialSelect();
+
+            $("#id_down").click(function () {
+                //e.preventDefault();
+                //$('#id_dlform').submit();
+                //$('#id_dlform').trigger("reset");
+            });
+
+            setTimeout(
+                function () {
+                    $("#id_loader").remove();
+                }, 1000);
+
+        });
+    </script>
+
+</body>
+</html>

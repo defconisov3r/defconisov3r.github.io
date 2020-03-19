@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>COVID-19 Stats - Evolution of coronavirus</title>
+    <title>COVID-19 Stats - Evolution of Coronavirus</title>
     <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/images/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-icon-72x72.png">
@@ -21,24 +21,23 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <meta property="og:title" content="COVID-19 Stats - Evolution of coronavirus" />
+    <meta property="og:title" content="COVID-19 Stats - Evolution of Coronavirus" />
     <meta property="og:url" content="http://covid19stats.net/" />
     <meta property="og:image" content="/images/ms-icon-310x310.png">
     <meta property="og:type" content="website" />
-    <meta property="og:description">
-    <meta name="description">
-    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/css/site.css" />
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <meta property="og:description" content="Evolution of confirmed, recovered, deaths and active cases of Coronavirus (COVID-19)">
+    <meta name="description" content="Evolution of confirmed, recovered, deaths and active cases of Coronavirus (COVID-19)">
+    <link rel="canonical" href="/en/Home/Index" />
+    <link rel="alternate" hreflang="es" href="/es/Home/Index" />
+    <link rel="alternate" hreflang="en" href="/en/Home/Index" />
     <script>
 
-        function createUUID(){
+        function createUUID() {
             var dt = new Date().getTime();
-            var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-                var r = (dt + Math.random()*16)%16 | 0;
-                dt = Math.floor(dt/16);
-                return (c=='x' ? r :(r&0x3|0x8)).toString(16);
+            var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+                var r = (dt + Math.random() * 16) % 16 | 0;
+                dt = Math.floor(dt / 16);
+                return (c == 'x' ? r : (r & 0x3 | 0x8)).toString(16);
             });
             return uuid;
         }
@@ -153,57 +152,75 @@
                 padding-bottom: 0.5em;
                 padding-top: 0.5em;
             }
+
+        .navbar-right .dropdown-menu.show {
+            position:absolute;
+        }
     </style>
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" href="/">COVID-19 Stats</a>
+                <a class="navbar-brand" href="/en/Home/Index">COVID-19 Stats</a>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/en/Home/Index" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="flag-icon flag-icon-gb"> </span> English</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown09">
+                            <a class="dropdown-item" href="/es/Home/Index"><span class="flag-icon flag-icon-es"> </span>  Español</a>
+                            <a class="dropdown-item" href="/en/Home/Index"><span class="flag-icon flag-icon-gb"> </span>  English</a>
+                        </div>
+                    </li>
+                </ul>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" id="navbarSupportedContent">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Confirmed cases
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Confirmed Cases
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="/Cases/ByDate">By date</a>
-                                <a class="dropdown-item" href="/Cases/FromDayZero">From day zero</a>
-                                <a class="dropdown-item" href="/Cases/Percentage">Percentage over daily maximum</a>
+                                <a class="dropdown-item" href="/en/Cases/ByDate">By Date</a>
+                                <a class="dropdown-item" href="/en/Cases/FromDayZero">From day zero</a>
+                                <a class="dropdown-item" href="/en/Cases/Percentage">Percentage over daily maximum</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Recovered
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="/Recovered/ByDate">By date</a>
-                                <a class="dropdown-item" href="/Recovered/FromDayZero">From day zero</a>
-                                <a class="dropdown-item" href="/Recovered/Percentage">Percentage over daily maximum</a>
+                                <a class="dropdown-item" href="/en/Recovered/ByDate">By Date</a>
+                                <a class="dropdown-item" href="/en/Recovered/FromDayZero">From day zero</a>
+                                <a class="dropdown-item" href="/en/Recovered/Percentage">Percentage over daily maximum</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Deaths
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="/Deaths/ByDate">By date</a>
-                                <a class="dropdown-item" href="/Deaths/FromDayZero">From day zero</a>
-                                <a class="dropdown-item" href="/Deaths/Percentage">Percentage over daily maximum</a>
+                                <a class="dropdown-item" href="/en/Deaths/ByDate">By Date</a>
+                                <a class="dropdown-item" href="/en/Deaths/FromDayZero">From day zero</a>
+                                <a class="dropdown-item" href="/en/Deaths/Percentage">Percentage over daily maximum</a>
                             </div>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="/Summary">Summary</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/en/Summary/Index">Summary</a></li>
                     </ul>
                 </div>
+
+
+
             </div>
         </nav>
     </header>
     <div class="container-fluid">
         <main role="main" class="pb-3">
+            <script src="https://code.highcharts.com/highcharts.js"></script>
+            <script src="https://code.highcharts.com/modules/exporting.js"></script>
             
 
 <h1>COVID-19 Stats</h1>
@@ -211,7 +228,7 @@
 <div class="row">
     <div class="col">
         Do you want know the evolution of <strong>COVID-19</strong> around the world? This is the correct website, all of data that we show here are from public institutions like <em>Center for Systems Science and Engineering</em> <strong>(CSSE)</strong> at <em>Johns Hopkins University</em> <strong>(JHU)</strong>.
-        Each chart have a link to the data source, <em>the data may be modified</em> with tranformations like <strong>interpolation</strong> when there is no data for a specific day.
+        Each chart have a link to the data source and <em>the data may be modified</em> with tranformations like <strong>interpolation</strong> when there is no data for a specific day.
     </div>
 </div>
 <div class="row">
@@ -227,28 +244,28 @@
             <li>Confirmed Cases</li>
             <li style="list-style-type: none;">
                 <ul>
-                    <li><a href="/Cases/ByDate">By Date</a></li>
-                    <li><a href="/Cases/FromDayZero">From day zero</a></li>
-                    <li><a href="/Cases/Percentage">Percentage over daily maximum</a></li>
+                    <li><a href="/en/Cases/ByDate">By Date</a></li>
+                    <li><a href="/en/Cases/FromDayZero">From day zero</a></li>
+                    <li><a href="/en/Cases/Percentage">Percentage over daily maximum</a></li>
                 </ul>
             </li>
             <li>Recovered Cases</li>
             <li style="list-style-type: none;">
                 <ul>
-                    <li><a href="/Recovered/ByDate">By Date</a></li>
-                    <li><a href="/Recovered/FromDayZero">From day zero</a></li>
-                    <li><a href="/Recovered/Percentage">Percentage over daily maximum</a></li>
+                    <li><a href="/en/Recovered/ByDate">By Date</a></li>
+                    <li><a href="/en/Recovered/FromDayZero">From day zero</a></li>
+                    <li><a href="/en/Recovered/Percentage">Percentage over daily maximum</a></li>
                 </ul>
             </li>
             <li>Deaths Cases</li>
             <li style="list-style-type: none;">
                 <ul>
-                    <li><a href="/Deaths/ByDate">By Date</a></li>
-                    <li><a href="/Deaths/FromDayZero">From day zero</a></li>
-                    <li><a href="/Deaths/Percentage">Percentage over daily maximum</a></li>
+                    <li><a href="/en/Deaths/ByDate">By Date</a></li>
+                    <li><a href="/en/Deaths/FromDayZero">From day zero</a></li>
+                    <li><a href="/en/Deaths/Percentage">Percentage over daily maximum</a></li>
                 </ul>
             </li>
-            <li><a href="/Summary">Summary</a></li>
+            <li><a href="/en/Summary/Index">Summary</a></li>
         </ul>
     </div>
     <div class="col-12 col-sm-8">
@@ -256,17 +273,24 @@
             <strong><em>By date</em></strong>: All data are shown in the date that was retrieved.
         </p>
         <p>
-            <strong><em>From day zero</em></strong>: All data are shown from the first day that the first confirmed case was advise. In these chart can compare the contagiousness (confirmed cases), recovery (recovered) and lethality (deaths) between countries from first day.
+            <strong><em>From day zero</em></strong>: All data are shown from the first day that the first confirmed case was advise. In these chart we can compare the contagiousness (confirmed cases), recovery (recovered) and lethality (deaths) between countries from first day.
         </p>
         <p>
-            <strong><em>Percentage over daily maximum</em></strong>: All data are shown in percentage over the daily maximun value. i.e the daily max value is 1000, then 1000 is 100% and 753 is 75.30%. These charts help us to compare countries in relative values the evolution of confirmed cases, recovered and deaths. Another important factor of these charts are that we can see the evolution of confirmed cases. A lot of countries and specialist talk about flattening the curve and these charts helps us to view how is the curve.
+            <strong><em>Percentage over daily maximum</em></strong>: All data are shown in percentage over the daily maximun value. i.e if the daily max value is 1000, then 1000 is 100% and 753 is 75.30%. These charts help us to compare countries in relative data of the evolution of confirmed cases, recovered and deaths. Another important factor of these charts are that we can see the evolution of confirmed cases. A lot of countries and specialist talk about flattening the curve and these charts helps us to view how is the curve.
         </p>
     </div>
 </div>
 
 <div class="row">
-    <div id="upperContainer1" class="col upperContainer">
+    <div id="upperContainer1" class="col-12 upperContainer">
         <div id="container1" style="height:500px;"></div>
+        <p class="highcharts-description">
+            Click and drag in the chart to zoom in and inspect more detailed data.
+        </p>
+    </div>
+
+    <div id="upperContainer2" class="col-12 upperContainer">
+        <div id="container2" style="height:500px;"></div>
         <p class="highcharts-description">
             Click and drag in the chart to zoom in and inspect more detailed data.
         </p>
@@ -277,18 +301,33 @@
 
     var data1 = [
 
-{visible:true, color:'indianred', stack: "",name:"Active ",data:[[Date.UTC(2020, 0, 22),510],[Date.UTC(2020, 0, 23),606],[Date.UTC(2020, 0, 24),879],[Date.UTC(2020, 0, 25),1355],[Date.UTC(2020, 0, 26),2010],[Date.UTC(2020, 0, 27),2787],[Date.UTC(2020, 0, 28),5341],[Date.UTC(2020, 0, 29),5910],[Date.UTC(2020, 0, 30),7927],[Date.UTC(2020, 0, 31),9495],[Date.UTC(2020, 1, 1),11495],[Date.UTC(2020, 1, 2),15955],[Date.UTC(2020, 1, 3),18840],[Date.UTC(2020, 1, 4),22548],[Date.UTC(2020, 1, 5),25961],[Date.UTC(2020, 1, 6),28698],[Date.UTC(2020, 1, 7),31668],[Date.UTC(2020, 1, 8),33698],[Date.UTC(2020, 1, 9),36002],[Date.UTC(2020, 1, 10),37798],[Date.UTC(2020, 1, 11),39025],[Date.UTC(2020, 1, 12),38949],[Date.UTC(2020, 1, 13),52722],[Date.UTC(2020, 1, 14),57299],[Date.UTC(2020, 1, 15),57966],[Date.UTC(2020, 1, 16),58585],[Date.UTC(2020, 1, 17),58799],[Date.UTC(2020, 1, 18),58777],[Date.UTC(2020, 1, 19),57430],[Date.UTC(2020, 1, 20),55773],[Date.UTC(2020, 1, 21),55582],[Date.UTC(2020, 1, 22),53250],[Date.UTC(2020, 1, 23),53120],[Date.UTC(2020, 1, 24),51710],[Date.UTC(2020, 1, 25),49812],[Date.UTC(2020, 1, 26),48245],[Date.UTC(2020, 1, 27),46656],[Date.UTC(2020, 1, 28),44549],[Date.UTC(2020, 1, 29),43273],[Date.UTC(2020, 2, 1),42660],[Date.UTC(2020, 2, 2),41627],[Date.UTC(2020, 2, 3),41332],[Date.UTC(2020, 2, 4),40706],[Date.UTC(2020, 2, 5),40708],[Date.UTC(2020, 2, 6),42450],[Date.UTC(2020, 2, 7),43981],[Date.UTC(2020, 2, 8),45300],[Date.UTC(2020, 2, 9),47098],[Date.UTC(2020, 2, 10),49532],[Date.UTC(2020, 2, 11),54259],[Date.UTC(2020, 2, 12),60709],[Date.UTC(2020, 2, 13),69550],[Date.UTC(2020, 2, 14),76860],[Date.UTC(2020, 2, 15),84633],[Date.UTC(2020, 2, 16),96332]]},
+{visible:true, color:'indianred', stack: "",name:"Active",data:[[Date.UTC(2020, 0, 22),510],[Date.UTC(2020, 0, 23),606],[Date.UTC(2020, 0, 24),879],[Date.UTC(2020, 0, 25),1355],[Date.UTC(2020, 0, 26),2010],[Date.UTC(2020, 0, 27),2787],[Date.UTC(2020, 0, 28),5341],[Date.UTC(2020, 0, 29),5910],[Date.UTC(2020, 0, 30),7927],[Date.UTC(2020, 0, 31),9495],[Date.UTC(2020, 1, 1),11495],[Date.UTC(2020, 1, 2),15955],[Date.UTC(2020, 1, 3),18840],[Date.UTC(2020, 1, 4),22548],[Date.UTC(2020, 1, 5),25961],[Date.UTC(2020, 1, 6),28698],[Date.UTC(2020, 1, 7),31668],[Date.UTC(2020, 1, 8),33698],[Date.UTC(2020, 1, 9),36002],[Date.UTC(2020, 1, 10),37798],[Date.UTC(2020, 1, 11),39025],[Date.UTC(2020, 1, 12),38949],[Date.UTC(2020, 1, 13),52722],[Date.UTC(2020, 1, 14),57299],[Date.UTC(2020, 1, 15),57966],[Date.UTC(2020, 1, 16),58585],[Date.UTC(2020, 1, 17),58799],[Date.UTC(2020, 1, 18),58777],[Date.UTC(2020, 1, 19),57430],[Date.UTC(2020, 1, 20),55773],[Date.UTC(2020, 1, 21),55582],[Date.UTC(2020, 1, 22),53250],[Date.UTC(2020, 1, 23),53120],[Date.UTC(2020, 1, 24),51710],[Date.UTC(2020, 1, 25),49812],[Date.UTC(2020, 1, 26),48245],[Date.UTC(2020, 1, 27),46656],[Date.UTC(2020, 1, 28),44549],[Date.UTC(2020, 1, 29),43273],[Date.UTC(2020, 2, 1),42660],[Date.UTC(2020, 2, 2),41627],[Date.UTC(2020, 2, 3),41332],[Date.UTC(2020, 2, 4),40706],[Date.UTC(2020, 2, 5),40708],[Date.UTC(2020, 2, 6),42450],[Date.UTC(2020, 2, 7),43981],[Date.UTC(2020, 2, 8),45300],[Date.UTC(2020, 2, 9),47098],[Date.UTC(2020, 2, 10),49532],[Date.UTC(2020, 2, 11),54259],[Date.UTC(2020, 2, 12),60711],[Date.UTC(2020, 2, 13),69550],[Date.UTC(2020, 2, 14),76856],[Date.UTC(2020, 2, 15),84630],[Date.UTC(2020, 2, 16),96203],[Date.UTC(2020, 2, 17),108393],[Date.UTC(2020, 2, 18),122970]]},
     ];
 
     var data2 = [
-{visible:true, color:'lightgreen', stack: "",name:"Recovered ",data:[[Date.UTC(2020, 0, 22),28],[Date.UTC(2020, 0, 23),30],[Date.UTC(2020, 0, 24),36],[Date.UTC(2020, 0, 25),39],[Date.UTC(2020, 0, 26),52],[Date.UTC(2020, 0, 27),61],[Date.UTC(2020, 0, 28),107],[Date.UTC(2020, 0, 29),126],[Date.UTC(2020, 0, 30),143],[Date.UTC(2020, 0, 31),222],[Date.UTC(2020, 1, 1),284],[Date.UTC(2020, 1, 2),472],[Date.UTC(2020, 1, 3),623],[Date.UTC(2020, 1, 4),852],[Date.UTC(2020, 1, 5),1124],[Date.UTC(2020, 1, 6),1487],[Date.UTC(2020, 1, 7),2011],[Date.UTC(2020, 1, 8),2616],[Date.UTC(2020, 1, 9),3244],[Date.UTC(2020, 1, 10),3946],[Date.UTC(2020, 1, 11),4683],[Date.UTC(2020, 1, 12),5150],[Date.UTC(2020, 1, 13),6295],[Date.UTC(2020, 1, 14),8058],[Date.UTC(2020, 1, 15),9395],[Date.UTC(2020, 1, 16),10865],[Date.UTC(2020, 1, 17),12583],[Date.UTC(2020, 1, 18),14352],[Date.UTC(2020, 1, 19),16121],[Date.UTC(2020, 1, 20),18177],[Date.UTC(2020, 1, 21),18890],[Date.UTC(2020, 1, 22),22886],[Date.UTC(2020, 1, 23),23394],[Date.UTC(2020, 1, 24),25227],[Date.UTC(2020, 1, 25),27905],[Date.UTC(2020, 1, 26),30384],[Date.UTC(2020, 1, 27),33277],[Date.UTC(2020, 1, 28),36711],[Date.UTC(2020, 1, 29),39782],[Date.UTC(2020, 2, 1),42716],[Date.UTC(2020, 2, 2),45602],[Date.UTC(2020, 2, 3),48228],[Date.UTC(2020, 2, 4),51170],[Date.UTC(2020, 2, 5),53796],[Date.UTC(2020, 2, 6),55865],[Date.UTC(2020, 2, 7),58358],[Date.UTC(2020, 2, 8),60694],[Date.UTC(2020, 2, 9),62494],[Date.UTC(2020, 2, 10),64404],[Date.UTC(2020, 2, 11),67003],[Date.UTC(2020, 2, 12),68324],[Date.UTC(2020, 2, 13),70251],[Date.UTC(2020, 2, 14),72624],[Date.UTC(2020, 2, 15),76034],[Date.UTC(2020, 2, 16),78088]]},
+{visible:true, color:'lightgreen', stack: "",name:"Recovered",data:[[Date.UTC(2020, 0, 22),28],[Date.UTC(2020, 0, 23),30],[Date.UTC(2020, 0, 24),36],[Date.UTC(2020, 0, 25),39],[Date.UTC(2020, 0, 26),52],[Date.UTC(2020, 0, 27),61],[Date.UTC(2020, 0, 28),107],[Date.UTC(2020, 0, 29),126],[Date.UTC(2020, 0, 30),143],[Date.UTC(2020, 0, 31),222],[Date.UTC(2020, 1, 1),284],[Date.UTC(2020, 1, 2),472],[Date.UTC(2020, 1, 3),623],[Date.UTC(2020, 1, 4),852],[Date.UTC(2020, 1, 5),1124],[Date.UTC(2020, 1, 6),1487],[Date.UTC(2020, 1, 7),2011],[Date.UTC(2020, 1, 8),2616],[Date.UTC(2020, 1, 9),3244],[Date.UTC(2020, 1, 10),3946],[Date.UTC(2020, 1, 11),4683],[Date.UTC(2020, 1, 12),5150],[Date.UTC(2020, 1, 13),6295],[Date.UTC(2020, 1, 14),8058],[Date.UTC(2020, 1, 15),9395],[Date.UTC(2020, 1, 16),10865],[Date.UTC(2020, 1, 17),12583],[Date.UTC(2020, 1, 18),14352],[Date.UTC(2020, 1, 19),16121],[Date.UTC(2020, 1, 20),18177],[Date.UTC(2020, 1, 21),18890],[Date.UTC(2020, 1, 22),22886],[Date.UTC(2020, 1, 23),23394],[Date.UTC(2020, 1, 24),25227],[Date.UTC(2020, 1, 25),27905],[Date.UTC(2020, 1, 26),30384],[Date.UTC(2020, 1, 27),33277],[Date.UTC(2020, 1, 28),36711],[Date.UTC(2020, 1, 29),39782],[Date.UTC(2020, 2, 1),42716],[Date.UTC(2020, 2, 2),45602],[Date.UTC(2020, 2, 3),48228],[Date.UTC(2020, 2, 4),51170],[Date.UTC(2020, 2, 5),53796],[Date.UTC(2020, 2, 6),55865],[Date.UTC(2020, 2, 7),58358],[Date.UTC(2020, 2, 8),60694],[Date.UTC(2020, 2, 9),62494],[Date.UTC(2020, 2, 10),64404],[Date.UTC(2020, 2, 11),67003],[Date.UTC(2020, 2, 12),68324],[Date.UTC(2020, 2, 13),70251],[Date.UTC(2020, 2, 14),72624],[Date.UTC(2020, 2, 15),76034],[Date.UTC(2020, 2, 16),78088],[Date.UTC(2020, 2, 17),80840],[Date.UTC(2020, 2, 18),83207]]},
     ];
 
     var data3 = [
-{visible:true, color:'darkgray', stack: "",name:"Deaths ",data:[[Date.UTC(2020, 0, 22),17],[Date.UTC(2020, 0, 23),18],[Date.UTC(2020, 0, 24),26],[Date.UTC(2020, 0, 25),42],[Date.UTC(2020, 0, 26),56],[Date.UTC(2020, 0, 27),82],[Date.UTC(2020, 0, 28),131],[Date.UTC(2020, 0, 29),133],[Date.UTC(2020, 0, 30),171],[Date.UTC(2020, 0, 31),213],[Date.UTC(2020, 1, 1),259],[Date.UTC(2020, 1, 2),362],[Date.UTC(2020, 1, 3),426],[Date.UTC(2020, 1, 4),492],[Date.UTC(2020, 1, 5),564],[Date.UTC(2020, 1, 6),634],[Date.UTC(2020, 1, 7),719],[Date.UTC(2020, 1, 8),806],[Date.UTC(2020, 1, 9),906],[Date.UTC(2020, 1, 10),1013],[Date.UTC(2020, 1, 11),1113],[Date.UTC(2020, 1, 12),1118],[Date.UTC(2020, 1, 13),1371],[Date.UTC(2020, 1, 14),1523],[Date.UTC(2020, 1, 15),1666],[Date.UTC(2020, 1, 16),1770],[Date.UTC(2020, 1, 17),1868],[Date.UTC(2020, 1, 18),2007],[Date.UTC(2020, 1, 19),2122],[Date.UTC(2020, 1, 20),2247],[Date.UTC(2020, 1, 21),2251],[Date.UTC(2020, 1, 22),2458],[Date.UTC(2020, 1, 23),2469],[Date.UTC(2020, 1, 24),2629],[Date.UTC(2020, 1, 25),2708],[Date.UTC(2020, 1, 26),2770],[Date.UTC(2020, 1, 27),2814],[Date.UTC(2020, 1, 28),2872],[Date.UTC(2020, 1, 29),2941],[Date.UTC(2020, 2, 1),2996],[Date.UTC(2020, 2, 2),3085],[Date.UTC(2020, 2, 3),3160],[Date.UTC(2020, 2, 4),3254],[Date.UTC(2020, 2, 5),3348],[Date.UTC(2020, 2, 6),3460],[Date.UTC(2020, 2, 7),3558],[Date.UTC(2020, 2, 8),3802],[Date.UTC(2020, 2, 9),3988],[Date.UTC(2020, 2, 10),4262],[Date.UTC(2020, 2, 11),4615],[Date.UTC(2020, 2, 12),4720],[Date.UTC(2020, 2, 13),5404],[Date.UTC(2020, 2, 14),5819],[Date.UTC(2020, 2, 15),6440],[Date.UTC(2020, 2, 16),7126]]},
+{visible:true, color:'darkgray', stack: "",name:"Deaths",data:[[Date.UTC(2020, 0, 22),17],[Date.UTC(2020, 0, 23),18],[Date.UTC(2020, 0, 24),26],[Date.UTC(2020, 0, 25),42],[Date.UTC(2020, 0, 26),56],[Date.UTC(2020, 0, 27),82],[Date.UTC(2020, 0, 28),131],[Date.UTC(2020, 0, 29),133],[Date.UTC(2020, 0, 30),171],[Date.UTC(2020, 0, 31),213],[Date.UTC(2020, 1, 1),259],[Date.UTC(2020, 1, 2),362],[Date.UTC(2020, 1, 3),426],[Date.UTC(2020, 1, 4),492],[Date.UTC(2020, 1, 5),564],[Date.UTC(2020, 1, 6),634],[Date.UTC(2020, 1, 7),719],[Date.UTC(2020, 1, 8),806],[Date.UTC(2020, 1, 9),906],[Date.UTC(2020, 1, 10),1013],[Date.UTC(2020, 1, 11),1113],[Date.UTC(2020, 1, 12),1118],[Date.UTC(2020, 1, 13),1371],[Date.UTC(2020, 1, 14),1523],[Date.UTC(2020, 1, 15),1666],[Date.UTC(2020, 1, 16),1770],[Date.UTC(2020, 1, 17),1868],[Date.UTC(2020, 1, 18),2007],[Date.UTC(2020, 1, 19),2122],[Date.UTC(2020, 1, 20),2247],[Date.UTC(2020, 1, 21),2251],[Date.UTC(2020, 1, 22),2458],[Date.UTC(2020, 1, 23),2469],[Date.UTC(2020, 1, 24),2629],[Date.UTC(2020, 1, 25),2708],[Date.UTC(2020, 1, 26),2770],[Date.UTC(2020, 1, 27),2814],[Date.UTC(2020, 1, 28),2872],[Date.UTC(2020, 1, 29),2941],[Date.UTC(2020, 2, 1),2996],[Date.UTC(2020, 2, 2),3085],[Date.UTC(2020, 2, 3),3160],[Date.UTC(2020, 2, 4),3254],[Date.UTC(2020, 2, 5),3348],[Date.UTC(2020, 2, 6),3460],[Date.UTC(2020, 2, 7),3558],[Date.UTC(2020, 2, 8),3802],[Date.UTC(2020, 2, 9),3988],[Date.UTC(2020, 2, 10),4262],[Date.UTC(2020, 2, 11),4615],[Date.UTC(2020, 2, 12),4720],[Date.UTC(2020, 2, 13),5404],[Date.UTC(2020, 2, 14),5819],[Date.UTC(2020, 2, 15),6440],[Date.UTC(2020, 2, 16),7126],[Date.UTC(2020, 2, 17),7905],[Date.UTC(2020, 2, 18),8733]]},
+    ];
+
+    var data4 = [
+
+{visible:true, color:'indianred', stack: "United Kingdom",name:"Active United Kingdom",data:[[Date.UTC(2020, 0, 31),2],[Date.UTC(2020, 1, 1),2],[Date.UTC(2020, 1, 2),2],[Date.UTC(2020, 1, 3),2],[Date.UTC(2020, 1, 4),2],[Date.UTC(2020, 1, 5),2],[Date.UTC(2020, 1, 6),2],[Date.UTC(2020, 1, 7),3],[Date.UTC(2020, 1, 8),3],[Date.UTC(2020, 1, 9),5],[Date.UTC(2020, 1, 10),8],[Date.UTC(2020, 1, 11),8],[Date.UTC(2020, 1, 12),8],[Date.UTC(2020, 1, 13),8],[Date.UTC(2020, 1, 14),8],[Date.UTC(2020, 1, 15),5],[Date.UTC(2020, 1, 16),1],[Date.UTC(2020, 1, 17),1],[Date.UTC(2020, 1, 18),1],[Date.UTC(2020, 1, 19),1],[Date.UTC(2020, 1, 20),1],[Date.UTC(2020, 1, 21),1],[Date.UTC(2020, 1, 22),1],[Date.UTC(2020, 1, 23),3],[Date.UTC(2020, 1, 24),5],[Date.UTC(2020, 1, 25),5],[Date.UTC(2020, 1, 26),6],[Date.UTC(2020, 1, 27),7],[Date.UTC(2020, 1, 28),12],[Date.UTC(2020, 1, 29),15],[Date.UTC(2020, 2, 1),28],[Date.UTC(2020, 2, 2),32],[Date.UTC(2020, 2, 3),43],[Date.UTC(2020, 2, 4),78],[Date.UTC(2020, 2, 5),107],[Date.UTC(2020, 2, 6),149],[Date.UTC(2020, 2, 7),187],[Date.UTC(2020, 2, 8),253],[Date.UTC(2020, 2, 9),300],[Date.UTC(2020, 2, 10),359],[Date.UTC(2020, 2, 11),432],[Date.UTC(2020, 2, 12),603],[Date.UTC(2020, 2, 13),769],[Date.UTC(2020, 2, 14),1104],[Date.UTC(2020, 2, 15),1087],[Date.UTC(2020, 2, 16),1474],[Date.UTC(2020, 2, 17),1843],[Date.UTC(2020, 2, 18),2503]]},
+    ];
+
+    var data5 = [
+{visible:true, color:'lightgreen', stack: "United Kingdom",name:"Recovered United Kingdom",data:[[Date.UTC(2020, 1, 12),1],[Date.UTC(2020, 1, 13),1],[Date.UTC(2020, 1, 14),1],[Date.UTC(2020, 1, 15),4],[Date.UTC(2020, 1, 16),8],[Date.UTC(2020, 1, 17),8],[Date.UTC(2020, 1, 18),8],[Date.UTC(2020, 1, 19),8],[Date.UTC(2020, 1, 20),8],[Date.UTC(2020, 1, 21),8],[Date.UTC(2020, 1, 22),8],[Date.UTC(2020, 1, 23),8],[Date.UTC(2020, 1, 24),8],[Date.UTC(2020, 1, 25),8],[Date.UTC(2020, 1, 26),8],[Date.UTC(2020, 1, 27),8],[Date.UTC(2020, 1, 28),8],[Date.UTC(2020, 1, 29),8],[Date.UTC(2020, 2, 1),8],[Date.UTC(2020, 2, 2),8],[Date.UTC(2020, 2, 3),8],[Date.UTC(2020, 2, 4),8],[Date.UTC(2020, 2, 5),8],[Date.UTC(2020, 2, 6),13],[Date.UTC(2020, 2, 7),18],[Date.UTC(2020, 2, 8),18],[Date.UTC(2020, 2, 9),18],[Date.UTC(2020, 2, 10),19],[Date.UTC(2020, 2, 11),19],[Date.UTC(2020, 2, 12),19],[Date.UTC(2020, 2, 13),19],[Date.UTC(2020, 2, 14),19],[Date.UTC(2020, 2, 15),20],[Date.UTC(2020, 2, 16),21],[Date.UTC(2020, 2, 17),53],[Date.UTC(2020, 2, 18),67]]},
+    ];
+
+    var data6 = [
+{visible:true, color:'darkgray', stack: "United Kingdom",name:"Deaths United Kingdom",data:[[Date.UTC(2020, 2, 5),1],[Date.UTC(2020, 2, 6),2],[Date.UTC(2020, 2, 7),2],[Date.UTC(2020, 2, 8),3],[Date.UTC(2020, 2, 9),4],[Date.UTC(2020, 2, 10),6],[Date.UTC(2020, 2, 11),8],[Date.UTC(2020, 2, 12),8],[Date.UTC(2020, 2, 13),14],[Date.UTC(2020, 2, 14),21],[Date.UTC(2020, 2, 15),38],[Date.UTC(2020, 2, 16),56],[Date.UTC(2020, 2, 17),64],[Date.UTC(2020, 2, 18),72]]},
     ];
 
     var dataMerged = [];
+
+    var dataMerged2 = [];
 
     function getSeries() {
 
@@ -298,9 +337,15 @@
         ret.push(data2);
         ret.push(data3);
 
-        dataMerged = dataMerged.concat(data1);
-        dataMerged = dataMerged.concat(data2);
         dataMerged = dataMerged.concat(data3);
+        dataMerged = dataMerged.concat(data2);
+        dataMerged = dataMerged.concat(data1);
+        
+
+        dataMerged2 = dataMerged2.concat(data6);
+        dataMerged2 = dataMerged2.concat(data5);
+        dataMerged2 = dataMerged2.concat(data4);
+        
 
         return ret;
     }
@@ -318,7 +363,7 @@
             text: 'Evolution of total active cases in the world'
         },
         subtitle: {
-            text: '<strong>*If there is no data for a day, the value is interpolated between previous and next day </strong><a href="https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv">Source: Johns Hopkins University</a>',
+            text: '<strong>*If there is no data for a day, the value is interpolated between previous and next day </strong><a target="_blank" href="https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv">Source: Johns Hopkins University</a>',
             useHTML: true
         },
 
@@ -358,18 +403,81 @@
 
         series: dataMerged
     });
+
+    var chart2 = Highcharts.chart('container2', {
+
+        chart: {
+            zoomType: 'x',
+            type: 'area'
+        },
+
+        title: {
+            text: 'Evolution of total active cases in United Kingdom'
+        },
+        subtitle: {
+            text: '<strong>*If there is no data for a day, the value is interpolated between previous and next day </strong><a target="_blank" href="https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv">Source: Johns Hopkins University</a>',
+            useHTML: true
+        },
+
+        xAxis: {
+            type: 'datetime',
+            dateTimeLabelFormats: { // don't display the dummy year
+                month: '%e. %b',
+                year: '%b'
+            },
+            title: {
+                useHTML: true,
+                text: '<strong>From 22/01/2020 (dd/MM/yyyy) to current date</strong>'
+            }
+        },
+
+        yAxis: {
+            title: {
+                useHTML: true,
+                text: '<strong>Distribution of active, recovered and deaths</strong>'
+            }
+        },
+
+        legend: {
+            maxHeight: 100,
+            itemWidth: 165,
+            layout: 'horizontal'
+        },
+
+        plotOptions: {
+            area: {
+                stacking: 'percent',
+                dataLabels: {
+                    enabled: false
+                }
+            }
+        },
+
+        series: dataMerged2
+    });
 </script>
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top text-muted">
         <div class="container">
-            &copy; 2020 - COVID19 Stats
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-4">
+                    <a class="dropdown-item" href="/es/Home/Index"><span class="flag-icon flag-icon-es"> </span>  Versión en Español</a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <a class="dropdown-item" href="/en/Home/Index"><span class="flag-icon flag-icon-gb"> </span>  English version</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    &copy; 2020 - COVID19 Stats
+                </div>
+            </div>
         </div>
     </footer>
     <script src="/lib/jquery/dist/jquery.min.js"></script>
     <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0"></script>
     
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160827981-1"></script>
@@ -394,11 +502,12 @@
               'event_category': 'Track',
               'event_label': currentUUID
             });
-
-            //ga('send', 'event', 'Track', 'http://covid19stats.net/', currentUUID);
         </script>
     
 
-        
+    
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
 </body>
 </html>

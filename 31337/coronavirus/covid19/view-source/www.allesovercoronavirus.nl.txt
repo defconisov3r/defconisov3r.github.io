@@ -65,49 +65,28 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="navbar-header">
-                                <!-- Button For Responsive toggle -->
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="sr-only">Toggle navigation</span> 
-                                <span class="icon-bar"></span> 
-                                <span class="icon-bar"></span> 
-                                <span class="icon-bar"></span></button> 
-                                <!-- Logo -->
+                                    <!-- Button For Responsive toggle -->
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="sr-only">Toggle navigation</span> 
+                                    <span class="icon-bar"></span> 
+                                    <span class="icon-bar"></span> 
+                                    <span class="icon-bar"></span></button>                                
                                  
-                                <!--<a class="navbar-brand" href="index.html">
-                                    <img class="site_logo" alt="Site Logo" src="img/logo.png" />
-                                </a></div>-->
+                                </div>
                                 <!-- Navbar Collapse -->
                                 <div class="navbar-collapse collapse">
                                     <!-- nav -->
-                                    <ul class="nav navbar-nav">
-                                        <li>
-											<a href="index.php">Home</a></li>
-											<li><a href="news_listing.php">News</a></li>
-											<li><a href="blog.php">Blog</a></li>
-											<li><a href="faq.php">Faq's</a></li>
-											<li><a href="about_us.php">About us</a>
-											<li><a href="nl.php">Coronavirus in Nederland</a>
-											<li><a href="index.php">Coronavirus World</a>
-                                        </li>
-                                        <!-- Shortcode Menu Ends -->
-                                        <!-- Search Box Block -->
-                                        <li class="search-dropdown">
-                                            <a href="#">
-                                                <span class="searchbox-icon">
-                                                    <i class="fa fa-search"></i>
-                                                </span>
-                                            </a>
-                                            <ul class="dropdown-menu left">
-                                                <li>
-                                                    <form class="navbar-form navbar-left" role="search">
-                                                        <div class="form-group">
-                                                            <input type="text" value="" name="s" id="s" class="form-control" placeholder="search" />
-                                                        </div>
-                                                    </form>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <!-- Ends Search Box Block -->
+                                    <ul class="nav navbar-nav" style="float: left;">
+                                        <li><a href="index.php">Home</a></li>
+											<!--<li><a href="faq.php">Faq's</a></li>-->
+										<li><a href="live.php">Live Updates</a></li>
+										<li><a href="nl.php">Coronavirus [Nederland]</a></li>
+										<li><a href="index.php">Coronavirus [World]</a></li>
+										<li><a href="dmd_bmd.php">Coronavirus-Duchenne en Becker</a></li>
+										<li><a href="news_listing.php">News</a></li>
+										<li><a href="blog.php">Blog</a></li>
+                                        
+                                        
                                     </ul>
                                     <!-- Right nav -->
                                 </div>
@@ -125,7 +104,7 @@
         </header>        <!-- Sticky Navbar -->
         <div class="page-header">
             <div class="container">
-                <h1 class="title">Johns Hopkins Center for Systems Science and Engineering</h1>
+                <h1 class="title">John Hopkins Center for Systems Science and Engineering</h1>
             </div>
             <div class="breadcrumb-box">
                 <div class="container">
@@ -144,11 +123,17 @@
         <!-- page-header -->
         <section class="page-section">
             <div class="container">
-                <h4>See the latest on Coronavirus : By Johns Hopkins University</h4>
+                <h4>See the latest on Coronavirus : By John Hopkins University</h4>
                 <div class="row">
                     <div class="col-md-12">
-<iframe src="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6" width="100%" height="750" frameborder="0" allowfullscreen="allowfullscreen"></iframe>					</div>
-                </div>
+<iframe src="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6" width="100%" height="750" frameborder="0" allowfullscreen="allowfullscreen"></iframe>					
+
+
+<p>For mobile version, please select: <br/><img src="https://allesovercoronavirus.nl/img/mobile_version.png" width="275" height="192" alt="" title="Duchenne and Becker Muscular Dystrophy"></p>
+</div>
+                
+                </div>				
+				
             </div>
         </section>
         <!-- page-section -->
@@ -184,15 +169,13 @@
                         <div class="col-xs-12 col-sm-6 col-md-3 widget bottom-xs-pad-20">
                             <div class="widget-title">
                                 <!-- Title -->
-                                <h3 class="title">Blogroll</h3>
+                                <h3 class="title">DMD en BMD</h3>
                             </div>
                             <nav>
                                 <ul>
                                     <!-- List Items -->
-                                    <li>
-                                        <a href="#">Blog One</a>
-                                    </li>
-                                    <li>
+                                    <li><a href="dmd_bmd.php">Coronavirus-Duchenne en Becker</a>
+                                    <!--<li>
                                         <a href="#">Blog One</a>
                                     </li>
                                     <li>
@@ -200,7 +183,7 @@
                                     </li>
                                     <li>
                                         <a href="#">FAQ</a>
-                                    </li>
+                                    </li>-->
                                 </ul>
                             </nav>
                            <!-- <div class="widget-title">
@@ -235,13 +218,13 @@
                                 <ul class="footer-blog">
                                     <!-- List Items -->
                                     <li>
-                                        <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                                        <a href="https://www.cdc.gov">Centers for Disease Control and Prevention</a>
                                     </li>
                                     <li>
-                                        <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                                        <a href="https://hub.jhu.edu">COVID-19 information and resources for Johns Hopkins University</a>
                                     </li>
                                     <li>
-                                        <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                                        <a href="https://www.rivm.nl/nieuws/actuele-informatie-over-coronavirus">RIVM</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -253,7 +236,7 @@
                             </div>
                             <div>
                                 <!-- Text -->
-                                <p>Subscribe to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</p>
+                                <p>Schrijf u hier in zodat we u het laatste nieuws over coronavirus kunnen sturen :</p>
                                 <p class="form-message1" style="display: none;"></p>
                                 <div class="clearfix"></div>
                                 <!-- Form -->

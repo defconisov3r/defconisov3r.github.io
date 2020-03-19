@@ -35,13 +35,9 @@
 	<link rel="manifest" href="/images/site.webmanifest">
 
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/footable.bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-select.min.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
 	<script src="js/jquery.min.js"></script>
 	<script src="js/footable.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/bootstrap-select.min.js"></script>
 	<style>
 		.divCStats{display: none;margin-top: 12px;}
 		.divCCStats{display: none;margin-top: 12px;}
@@ -59,273 +55,275 @@
 		</nav>
 		<a title="Support me on ko-fi.com" style="background-color:#e02828;color: white;" href="https://ko-fi.com/yassinel" target="_blank" class="btn"><img src="https://ko-fi.com/img/cup-border.png" style="width: 25px;margin-right: 5px;">Buy Me a Coffee</a>
 	</div>
+	<div id="social" style="margin: -10px 0px 10px 0px; text-align: center"></div>
 
-
-	<div class="content">
-		<div class="row">
-			<div class="col-md-3">
-				<div class="card gradient-1">
-					<div class="card-body">
-						<h3 class="card-title text-white">Confirmed</h3>
-						<div class="d-inline-block">
-							<h2 class="card_value">184,078<span class="card_value_new"> (+1,638)</span></h2>
-						</div>
-						<span class="card_icon"><i class="fa fa-Confirmed"></i></span>
+	<div class="row" style="margin-bottom: 5px;">
+		<div class="col-md-3">
+			<div class="card green">
+				<div class="card-body">
+					<div class="clearfix">
+						<div class="card-title">Confirmed</div>
+						<span class="card-icon"><i class="fa fa-Confirmed"></i></span>
 					</div>
-				</div>
-			</div>
-
-			<div class="col-md-3">
-				<div class="card gradient-2">
-					<div class="card-body">
-						<h3 class="card-title text-white">Deaths</h3>
-						<div class="d-inline-block">
-							<h2 class="card_value">7,184 <span class="card_value_new"> (+35)</span></h2>
-						</div>
-						<span class="card_icon"><i class="fa fa-Deaths"></i></span>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-3">
-				<div class="card gradient-3">
-					<div class="card-body">
-						<h3 class="card-title text-white">Recovered</h3>
-						<div class="d-inline-block">
-							<h2 class="card_value">80,093</h2>
-						</div>
-						<span class="card_icon"><i class="fa fa-Recovered"></i></span>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-3">
-				<div class="card gradient-4">
-					<div class="card-body">
-						<h3 class="card-title text-white">Serious</h3>
-						<div class="d-inline-block">
-							<h2 class="card_value">6,563</h2>
-						</div>
-						<span class="card_icon"><i class="fa fa-Serious"></i></span>
-					</div>
+					<div class="card-value">231,205<span class="card_value_new"> (+12,416)</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-md-6">
-				<div class="panel panel-default" style="background-color: inherit;">
-					<div class="panel-heading">Global Stats</div>
-					<div class="panel-body">
-						<p style="margin-bottom: 0;font-weight: bold;">Recovered:</p>
-						<div class="progress" style="float: left;width: 45%;margin-right: 10%;margin-bottom: 0;"><div class="progress-bar" style="width: 43.51%;">43.51%</div></div>
-						<div class="input-group" style="margin-top: -14px;">
-							<input type="text" class="form-control" placeholder="Search" id="txt_Filter_G" onkeyup="Table_Filter('GStats', 'txt_Filter_G')">
-							<div class="input-group-btn" onclick="Table_Filter('GStats', 'txt_Filter_G')"><button type="button" class="btn btn-primary search_btn"><span class="fooicon fooicon-search"></span></button></div>
-						</div>
+		<div class="col-md-3">
+			<div class="card red">
+				<div class="card-body">
+					<div class="clearfix">
+						<div class="card-title">Deaths</div>
+						<span class="card-icon"><i class="fa fa-Deaths"></i></span>
 					</div>
-					<div class="table_scroll"><table class="table GStats" data-sorting="true" data-filtering="true"></table></div>
-				</div>
-			</div>
-
-			<div class="col-md-6">
-				<div class="panel panel-default" style="background-color: inherit;">
-					<div class="panel-heading">United States Stats</div>
-					<div class="panel-body">
-						<p style="margin-bottom: 0;font-weight: bold;">Recovered:</p>
-						<div class="progress" style="float: left;width: 45%;margin-right: 10%;margin-bottom: 0;"><div class="progress-bar" style="width: 10%;">10%</div></div>
-						<div class="input-group" style="margin-top: -14px;">
-							<input type="text" class="form-control" placeholder="Search" id="txt_Filter_USA" onkeyup="Table_Filter('USAStats', 'txt_Filter_USA')">
-							<div class="input-group-btn" onclick="Table_Filter('USAStats', 'txt_Filter_USA')"><button type="button" class="btn btn-primary search_btn"><span class="fooicon fooicon-search"></span></button></div>
-						</div>
-					</div>
-					<div class="table_scroll"><table class="table USAStats" data-sorting="true" data-filtering="true"></table></div>
+					<div class="card-value">9,392 <span class="card_value_new"> (+447)</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-md-6">
-				<div class="panel panel-default" style="background-color: inherit;">
-					<div class="panel-heading">Stats By Continent</div>
-					<div class="panel-body">
-						<select id="Continent" class="selectpicker form-control" data-live-search="true" data-size="5">
-							<option data-hidden="true">Select Continent</option>
-							<option value="Asia">Asia</option>
-							<option value="Europe">Europe</option>
-							<option value="Africa">Africa</option>
-							<option value="North America">North America</option>
-							<option value="South America">South America</option>
-							<option value="Oceania/Australia">Oceania/Australia</option>
-						</select>
-						<div class="divCStats">
-							<p style="margin-bottom: 0;font-weight: bold;">Recovered:</p>
-							<div class="progress" style="float: left;width: 45%;margin-right: 10%;margin-bottom: 0;"><div class="progress-bar" style="width: 100%;">100%</div></div>
-							<div class="input-group" style="margin-top: -14px;">
-								<input type="text" class="form-control" placeholder="Search" id="txt_Filter_C" onkeyup="Table_Filter('CStats', 'txt_Filter_C')">
-								<div class="input-group-btn" onclick="Table_Filter('CStats', 'txt_Filter_C')"><button type="button" class="btn btn-primary search_btn"><span class="fooicon fooicon-search"></span></button></div>
-							</div>
-						</div>
+		<div class="col-md-3">
+			<div class="card blue">
+				<div class="card-body">
+					<div class="clearfix">
+						<div class="card-title">Recovered</div>
+						<span class="card-icon"><i class="fa fa-Recovered"></i></span>
 					</div>
-					<div class="table_scroll divCStats"><table class="table CStats" data-sorting="true" data-filtering="true"></table></div>
+					<div class="card-value">86,261</div>
 				</div>
 			</div>
+		</div>
 
-			<div class="col-md-6">
-				<div class="panel panel-default" style="background-color: inherit;">
-					<div class="panel-heading">Stats By Country</div>
-					<div class="panel-body">
-						<select id="Country" class="selectpicker form-control" data-live-search="true" data-size="8">
-							<option data-hidden="true">Select Country</option>
-							<option value="CN">China</option>
-							<option value="IT">Italy</option>
-							<option value="IR">Iran</option>
-							<option value="ES">Spain</option>
-							<option value="KR">South Korea</option>
-							<option value="DE">Germany</option>
-							<option value="FR">France</option>
-							<option value="US">United States</option>
-							<option value="CH">Switzerland</option>
-							<option value="GB">United Kingdom</option>
-							<option value="NL">Netherlands</option>
-							<option value="NO">Norway</option>
-							<option value="BE">Belgium</option>
-							<option value="AT">Austria</option>
-							<option value="SE">Sweden</option>
-							<option value="DK">Denmark</option>
-							<option value="00">Unknown</option>
-							<option value="JP">Japan</option>
-							<option value="MY">Malaysia</option>
-							<option value="AU">Australia</option>
-							<option value="CA">Canada</option>
-							<option value="QA">Qatar</option>
-							<option value="CZ">Czech Republic</option>
-							<option value="GR">Greece</option>
-							<option value="PT">Portugal</option>
-							<option value="IL">Palestine (Israel)</option>
-							<option value="FI">Finland</option>
-							<option value="SI">Slovenia</option>
-							<option value="SG">Singapore</option>
-							<option value="BR">Brazil</option>
-							<option value="BH">Bahrain</option>
-							<option value="EE">Estonia</option>
-							<option value="IE">Ireland</option>
-							<option value="PL">Poland</option>
-							<option value="IS">Iceland</option>
-							<option value="PK">Pakistan</option>
-							<option value="PH">Philippines</option>
-							<option value="RO">Romania</option>
-							<option value="TH">Thailand</option>
-							<option value="ID">Indonesia</option>
-							<option value="EG">Egypt</option>
-							<option value="HK">Hong Kong</option>
-							<option value="CL">Chile</option>
-							<option value="SA">Saudi Arabia</option>
-							<option value="IQ">Iraq</option>
-							<option value="KW">Kuwait</option>
-							<option value="IN">India</option>
-							<option value="LB">Lebanon</option>
-							<option value="SM">San Marino</option>
-							<option value="AE">United Arab Emirates</option>
-							<option value="LU">Luxembourg</option>
-							<option value="RU">Russian Federation</option>
-							<option value="PE">Peru</option>
-							<option value="MX">Mexico</option>
-							<option value="SK">Slovakia</option>
-							<option value="PA">Panama</option>
-							<option value="BG">Bulgaria</option>
-							<option value="RS">Serbia</option>
-							<option value="HR">Croatia</option>
-							<option value="AR">Argentina</option>
-							<option value="AM">Armenia</option>
-							<option value="ZA">South Africa</option>
-							<option value="VN">Viet Nam</option>
-							<option value="DZ">Algeria</option>
-							<option value="EC">Ecuador</option>
-							<option value="CO">Colombia</option>
-							<option value="BN">Brunei Darussalam</option>
-							<option value="AL">Albania</option>
-							<option value="HU">Hungary</option>
-							<option value="LV">Latvia</option>
-							<option value="TR">Turkey</option>
-							<option value="CY">Cyprus</option>
-							<option value="CR">Costa Rica</option>
-							<option value="PS">Palestine</option>
-							<option value="MA">Morocco</option>
-							<option value="BY">Belarus</option>
-							<option value="GE">Georgia</option>
-							<option value="JO">Jordan</option>
-							<option value="VE">Venezuela</option>
-							<option value="MT">Malta</option>
-							<option value="MD">Moldova</option>
-							<option value="LK">Sri Lanka</option>
-							<option value="UY">Uruguay</option>
-							<option value="AZ">Azerbaijan</option>
-							<option value="SN">Senegal</option>
-							<option value="KZ">Kazakhstan</option>
-							<option value="BA">Bosnia and Herzegovina</option>
-							<option value="OM">Oman</option>
-							<option value="MK">North Macedonia</option>
-							<option value="TN">Tunisia</option>
-							<option value="KH">Cambodia</option>
-							<option value="AF">Afghanistan</option>
-							<option value="DO">Dominican Republic</option>
-							<option value="LT">Lithuania</option>
-							<option value="BF">Burkina Faso</option>
-							<option value="AD">Andorra</option>
-							<option value="MV">Maldives</option>
-							<option value="NZ">New Zealand</option>
-							<option value="JM">Jamaica</option>
-							<option value="BO">Bolivia</option>
-							<option value="BD">Bangladesh</option>
-							<option value="UZ">Uzbekistan</option>
-							<option value="MC">Monaco</option>
-							<option value="PY">Paraguay</option>
-							<option value="GT">Guatemala</option>
-							<option value="HN">Honduras</option>
-							<option value="UA">Ukraine</option>
-							<option value="GY">Guyana</option>
-							<option value="LI">Liechtenstein</option>
-							<option value="GH">Ghana</option>
-							<option value="TT">Trinidad and Tobago</option>
-							<option value="CM">Cameroon</option>
-							<option value="ET">Ethiopia</option>
-							<option value="CU">Cuba</option>
-							<option value="SC">Seychelles</option>
-							<option value="MN">Mongolia</option>
-							<option value="CI">Ivory Coast</option>
-							<option value="KE">Kenya</option>
-							<option value="CD">Democratic Congo</option>
-							<option value="NG">Nigeria</option>
-							<option value="NA">Namibia</option>
-							<option value="LC">Saint Lucia</option>
-							<option value="CG">Congo</option>
-							<option value="MR">Mauritania</option>
-							<option value="BT">Bhutan</option>
-							<option value="VA">Holy See (Vatican City State)</option>
-							<option value="VC">St Vincent & Grenadines</option>
-							<option value="GQ">Equatorial Guinea</option>
-							<option value="TG">Togo</option>
-							<option value="AG">Antigua and Barbuda</option>
-							<option value="SR">Suriname</option>
-							<option value="BS">Bahamas</option>
-							<option value="GA">Gabon</option>
-							<option value="GN">Guinea</option>
-							<option value="NP">Nepal</option>
-							<option value="SD">Sudan</option>
-							<option value="CF">Central African Republic</option>
-						</select>
-						<div class="divCCStats">
-							<p style="margin-bottom: 0;font-weight: bold;">Recovered:</p>
-							<div class="progress" style="float: left;width: 45%;margin-right: 10%;margin-bottom: 0;"><div class="progress-bar" style="width: 100%;">100%</div></div>
-							<div class="input-group" style="margin-top: -14px;">
-								<input type="text" class="form-control" placeholder="Search" id="txt_Filter_CC" onkeyup="Table_Filter('CCStats', 'txt_Filter_CC')">
-								<div class="input-group-btn" onclick="Table_Filter('CCStats', 'txt_Filter_CC')"><button type="button" class="btn btn-primary search_btn"><span class="fooicon fooicon-search"></span></button></div>
-							</div>
+		<div class="col-md-3">
+			<div class="card orange">
+				<div class="card-body">
+					<div class="clearfix">
+						<div class="card-title">Serious</div>
+						<span class="card-icon"><i class="fa fa-Serious"></i></span>
+					</div>
+					<div class="card-value">8,225</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+			<div class="divPanel">
+				<div class="Panel-Header">Cases around the world</div>
+				<div class="Panel-Body" style="padding-top: 5px;">
+					<p style="margin-bottom: 0;font-weight: bold;margin-top: 10px;">Recovered:</p>
+					<div class="progress" style="width: 100%;margin-bottom: 10;"><div class="progress-bar" style="width: 37.31%;">37.31%</div></div>
+					<div class="input-group" style="margin-top: -14px;">
+						<input type="text" class="form-control" placeholder="Search" id="txt_Filter_G" onkeyup="Table_Filter('GStats', 'txt_Filter_G')">
+						<div class="input-group-btn" onclick="Table_Filter('GStats', 'txt_Filter_G')"><button type="button" class="btn btn-primary search_btn"><span class="fooicon fooicon-search"></span></button></div>
+					</div>
+				</div>
+				<div class="table_scroll"><table class="table GStats" data-sorting="true" data-filtering="true"></table></div>
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<div class="divPanel">
+				<div class="Panel-Header">Cases around the U.S</div>
+				<div class="Panel-Body" style="padding-top: 5px;">
+					<p style="margin-bottom: 0;font-weight: bold;margin-top: 10px;">Recovered:</p>
+					<div class="progress" style="width: 100%;margin-bottom: 10;"><div class="progress-bar US-PB" style="width: 0%;">0%</div></div>
+					<div class="input-group" style="margin-top: -14px;">
+						<input type="text" class="form-control" placeholder="Search" id="txt_Filter_USA" onkeyup="Table_Filter('USAStats', 'txt_Filter_USA')">
+						<div class="input-group-btn" onclick="Table_Filter('USAStats', 'txt_Filter_USA')"><button type="button" class="btn btn-primary search_btn"><span class="fooicon fooicon-search"></span></button></div>
+					</div>
+				</div>
+				<div class="table_scroll"><table class="table USAStats" data-sorting="true" data-filtering="true"></table></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+			<div class="divPanel">
+				<div class="Panel-Header">Cases By Continent</div>
+				<div class="Panel-Body" style="padding-top: 5px;">
+					<div class="searchable" func="ByContinent">
+						<input type="text" placeholder="Select Continent">
+						<ul>
+							<li value="Asia">Asia</li>
+							<li value="Europe">Europe</li>
+							<li value="Africa">Africa</li>
+							<li value="North America">North America</li>
+							<li value="South America">South America</li>
+							<li value="Oceania/Australia">Oceania/Australia</li>
+						</ul>
+					</div>
+					<div class="divCStats">
+						<p style="margin-bottom: 0;font-weight: bold;margin-top: 10px;">Recovered:</p>
+						<div class="progress" style="width: 100%;margin-bottom: 10;"><div class="progress-bar" style="width: 100%;">100%</div></div>
+						<div class="input-group" style="margin-top: -14px;">
+							<input type="text" class="form-control" placeholder="Search" id="txt_Filter_C" onkeyup="Table_Filter('CStats', 'txt_Filter_C')">
+							<div class="input-group-btn" onclick="Table_Filter('CStats', 'txt_Filter_C')"><button type="button" class="btn btn-primary search_btn"><span class="fooicon fooicon-search"></span></button></div>
 						</div>
 					</div>
-					<div class="table_scroll divCCStats"><table class="table CCStats" data-sorting="true" data-filtering="true"></table></div>
 				</div>
+				<div class="table_scroll divCStats"><table class="table CStats" data-sorting="true" data-filtering="true"></table></div>
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<div class="divPanel">
+				<div class="Panel-Header">Cases By Country</div>
+				<div class="Panel-Body" style="padding-top: 5px;">
+					<div class="searchable" func="ByCountry">
+						<input type="text" placeholder="Select Country">
+						<ul>
+							<li value="CN">China</li>
+							<li value="IT">Italy</li>
+							<li value="IR">Iran</li>
+							<li value="ES">Spain</li>
+							<li value="DE">Germany</li>
+							<li value="US">United States</li>
+							<li value="FR">France</li>
+							<li value="KR">South Korea</li>
+							<li value="CH">Switzerland</li>
+							<li value="GB">United Kingdom</li>
+							<li value="NL">Netherlands</li>
+							<li value="AT">Austria</li>
+							<li value="BE">Belgium</li>
+							<li value="NO">Norway</li>
+							<li value="SE">Sweden</li>
+							<li value="DK">Denmark</li>
+							<li value="00">Unknown</li>
+							<li value="JP">Japan</li>
+							<li value="MY">Malaysia</li>
+							<li value="PT">Portugal</li>
+							<li value="CA">Canada</li>
+							<li value="AU">Australia</li>
+							<li value="CZ">Czech Republic</li>
+							<li value="BR">Brazil</li>
+							<li value="IL">Palestine (Israel)</li>
+							<li value="GR">Greece</li>
+							<li value="QA">Qatar</li>
+							<li value="PK">Pakistan</li>
+							<li value="FI">Finland</li>
+							<li value="IE">Ireland</li>
+							<li value="SG">Singapore</li>
+							<li value="CL">Chile</li>
+							<li value="LU">Luxembourg</li>
+							<li value="IS">Iceland</li>
+							<li value="PL">Poland</li>
+							<li value="SI">Slovenia</li>
+							<li value="ID">Indonesia</li>
+							<li value="BH">Bahrain</li>
+							<li value="RO">Romania</li>
+							<li value="TH">Thailand</li>
+							<li value="EE">Estonia</li>
+							<li value="SA">Saudi Arabia</li>
+							<li value="PH">Philippines</li>
+							<li value="EG">Egypt</li>
+							<li value="HK">Hong Kong</li>
+							<li value="RU">Russian Federation</li>
+							<li value="EC">Ecuador</li>
+							<li value="TR">Turkey</li>
+							<li value="IN">India</li>
+							<li value="IQ">Iraq</li>
+							<li value="PE">Peru</li>
+							<li value="ZA">South Africa</li>
+							<li value="LB">Lebanon</li>
+							<li value="KW">Kuwait</li>
+							<li value="AE">United Arab Emirates</li>
+							<li value="SM">San Marino</li>
+							<li value="SK">Slovakia</li>
+							<li value="AM">Armenia</li>
+							<li value="MX">Mexico</li>
+							<li value="PA">Panama</li>
+							<li value="CO">Colombia</li>
+							<li value="BG">Bulgaria</li>
+							<li value="HR">Croatia</li>
+							<li value="AR">Argentina</li>
+							<li value="RS">Serbia</li>
+							<li value="DZ">Algeria</li>
+							<li value="LV">Latvia</li>
+							<li value="UY">Uruguay</li>
+							<li value="VN">Viet Nam</li>
+							<li value="HU">Hungary</li>
+							<li value="BN">Brunei Darussalam</li>
+							<li value="CR">Costa Rica</li>
+							<li value="CY">Cyprus</li>
+							<li value="AL">Albania</li>
+							<li value="BA">Bosnia and Herzegovina</li>
+							<li value="MA">Morocco</li>
+							<li value="LK">Sri Lanka</li>
+							<li value="JO">Jordan</li>
+							<li value="MT">Malta</li>
+							<li value="AD">Andorra</li>
+							<li value="BY">Belarus</li>
+							<li value="MD">Moldova</li>
+							<li value="MK">North Macedonia</li>
+							<li value="PS">Palestine</li>
+							<li value="KZ">Kazakhstan</li>
+							<li value="AZ">Azerbaijan</li>
+							<li value="GE">Georgia</li>
+							<li value="TN">Tunisia</li>
+							<li value="OM">Oman</li>
+							<li value="KH">Cambodia</li>
+							<li value="VE">Venezuela</li>
+							<li value="SN">Senegal</li>
+							<li value="LT">Lithuania</li>
+							<li value="DO">Dominican Republic</li>
+							<li value="BF">Burkina Faso</li>
+							<li value="NZ">New Zealand</li>
+							<li value="LI">Liechtenstein</li>
+							<li value="UZ">Uzbekistan</li>
+							<li value="AF">Afghanistan</li>
+							<li value="BD">Bangladesh</li>
+							<li value="UA">Ukraine</li>
+							<li value="JM">Jamaica</li>
+							<li value="BO">Bolivia</li>
+							<li value="CD">Democratic Congo</li>
+							<li value="CM">Cameroon</li>
+							<li value="MV">Maldives</li>
+							<li value="HN">Honduras</li>
+							<li value="NG">Nigeria</li>
+							<li value="CU">Cuba</li>
+							<li value="GH">Ghana</li>
+							<li value="PY">Paraguay</li>
+							<li value="MC">Monaco</li>
+							<li value="CI">Ivory Coast</li>
+							<li value="TT">Trinidad and Tobago</li>
+							<li value="GT">Guatemala</li>
+							<li value="KE">Kenya</li>
+							<li value="ET">Ethiopia</li>
+							<li value="SC">Seychelles</li>
+							<li value="MN">Mongolia</li>
+							<li value="GY">Guyana</li>
+							<li value="GQ">Equatorial Guinea</li>
+							<li value="BS">Bahamas</li>
+							<li value="GA">Gabon</li>
+							<li value="NA">Namibia</li>
+							<li value="LC">Saint Lucia</li>
+							<li value="SD">Sudan</li>
+							<li value="MR">Mauritania</li>
+							<li value="AG">Antigua and Barbuda</li>
+							<li value="VA">Holy See (Vatican City State)</li>
+							<li value="VC">St Vincent & Grenadines</li>
+							<li value="TG">Togo</li>
+							<li value="SR">Suriname</li>
+							<li value="GN">Guinea</li>
+							<li value="NP">Nepal</li>
+							<li value="CF">Central African Republic</li>
+							<li value="CG">Congo</li>
+							<li value="BT">Bhutan</li>
+						</ul>
+					</div>
+					<div class="divCCStats">
+						<p style="margin-bottom: 0;font-weight: bold;margin-top: 10px;">Recovered:</p>
+						<div class="progress" style="width: 100%;margin-bottom: 10;"><div class="progress-bar" style="width: 100%;">100%</div></div>
+						<div class="input-group" style="margin-top: -14px;">
+							<input type="text" class="form-control" placeholder="Search" id="txt_Filter_CC" onkeyup="Table_Filter('CCStats', 'txt_Filter_CC')">
+							<div class="input-group-btn" onclick="Table_Filter('CCStats', 'txt_Filter_CC')"><button type="button" class="btn btn-primary search_btn"><span class="fooicon fooicon-search"></span></button></div>
+						</div>
+					</div>
+				</div>
+				<div class="table_scroll divCCStats"><table class="table CCStats" data-sorting="true" data-filtering="true"></table></div>
 			</div>
 		</div>
 	</div>
@@ -334,6 +332,34 @@
 		<a href="https://paypal.me/YassinelDev?locale.x=en_US" class="footer-a">Support me on PayPal.</a>
 	</footer>
 <script>
+	$("#social").html('<a href="https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(document.URL)+'"target="_blank"title="Facebook"style="display:inline-block;vertical-align:middle;width:2em;height:2em;border-radius:50%;box-shadow:.1em .1em 0.1em rgba(0,0,0,.3);background:#3b5998;"><svg style="display:block;fill:#fff;height:44%;margin:28% auto;" viewBox="0 -256 864 1664"><path transform="matrix(1,0,0,-1,-95,1280)" d="M 959,1524 V 1260 H 802 q -86,0 -116,-36 -30,-36 -30,-108 V 927 H 949 L 910,631 H 656 V -128 H 350 V 631 H 95 v 296 h 255 v 218 q 0,186 104,288.5 104,102.5 277,102.5 147,0 228,-12 z" /></svg></a> <a href="https://twitter.com/share?url='+encodeURIComponent(document.URL)+'&text='+encodeURIComponent(document.title)+'"target="_blank"title="Twitter"style="display:inline-block;vertical-align:middle;width:2em;height:2em;border-radius:50%;box-shadow:.1em .1em 0.1em rgba(0,0,0,.3);background:#1b95e0;"><svg style="display:block;fill:#fff;height:36%;margin:32% auto;" viewBox="0 -256 1576 1280"><path transform="matrix(1,0,0,-1,-44,1024)" d="m 1620,1128 q -67,-98 -162,-167 1,-14 1,-42 0,-130 -38,-259.5 Q 1383,530 1305.5,411 1228,292 1121,200.5 1014,109 863,54.5 712,0 540,0 269,0 44,145 q 35,-4 78,-4 225,0 401,138 -105,2 -188,64.5 -83,62.5 -114,159.5 33,-5 61,-5 43,0 85,11 Q 255,532 181.5,620.5 108,709 108,826 v 4 q 68,-38 146,-41 -66,44 -105,115 -39,71 -39,154 0,88 44,163 Q 275,1072 448.5,982.5 622,893 820,883 q -8,38 -8,74 0,134 94.5,228.5 94.5,94.5 228.5,94.5 140,0 236,-102 109,21 205,78 -37,-115 -142,-178 93,10 186,50 z" /></svg></a> <a href="https://www.reddit.com/submit?url='+encodeURIComponent(document.URL)+'&title='+encodeURIComponent(document.title)+'"target="_blank"title="Reddit"style="display:inline-block;vertical-align:middle;width:2em;height:2em;border-radius:50%;box-shadow:.1em .1em 0.1em rgba(0,0,0,.3);background:#ff4500;"><svg style="display:block;fill:#fff;height:46%;margin:26% auto;" viewBox="0 -256 1792 1692"><path transform="matrix(1,0,0,-1,0,1280)" d="m 1792,690 q 0,-58 -29,-105.5 -30,-47.5 -80,-72.5 12,-46 12,-96 0,-155 -106,-287 Q 1482,-3 1298,-79.5 1114,-156 898,-156 682,-156 498.5,-79.5 315,-3 208.5,129 102,261 102,416 q 0,47 11,94 Q 62,535 31,583.5 0,632 0,690 q 0,82 58,140.5 58,58.5 141,58.5 85,0 145,-63 218,152 515,162 l 116,521 q 3,13 15,21 12,8 26,5 l 369,-81 q 18,37 54,60 36,22 79,22 62,0 106,-43 44,-44 44,-106 0,-62 -44,-106 -44,-44 -106,-44 -62,0 -105,44 -44,43 -44,105 l -334,74 -104,-472 q 300,-9 519,-160 58,61 143,61 83,0 141,-58.5 58,-58.5 58,-140.5 z M 418,491 q 0,-62 43.5,-106 43.5,-44 105.5,-44 62,0 106,44 44,44 44,106 0,62 -44,105.5 Q 629,640 567,640 506,640 462,596 418,552 418,491 z m 810,-355 q 11,11 11,26 0,15 -11,26 -10,10 -25,10 -15,0 -26,-10 -41,-42 -121,-62 -80,-20 -160,-20 -80,0 -160,20 -80,20 -121,62 -11,10 -26,10 -15,0 -25,-10 Q 553,178 553,162.5 553,147 564,136 607,93 682.5,68 758,43 805,38.5 852,34 896,34 q 44,0 91,4.5 47,4.5 123,29.5 75,25 118,68 z m -3,205 q 62,0 106,44 43,44 43,106 0,61 -44,105 -44,44 -105,44 -62,0 -106,-43.5 -44,-43.5 -44,-105.5 0,-62 44,-106 44,-44 106,-44 z" /></svg></a> '+(/mobile|android|blackberry/i.test(navigator.userAgent)?'<a href="whatsapp://send?text='+encodeURIComponent(document.URL)+'"title="WhatsApp"style="display:inline-block;vertical-align:middle;width:2em;height:2em;border-radius:50%;box-shadow:.1em .1em 0.1em rgba(0,0,0,.3);background:#43d854;"><svg style="display:block;fill:#fff;height:44%;margin:28% auto;" viewBox="0 -256 1536 1548"><path transform="matrix(1,0,0,-1,0,1158)" d="m 985,562 q 13,0 98,-44 84,-44 89,-53 2,-5 2,-15 0,-33 -17,-76 -16,-39 -71,-65.5 -55,-26.5 -102,-26.5 -57,0 -190,62 -98,45 -170,118 -72,73 -148,185 -72,107 -71,194 v 8 q 3,91 74,158 24,22 52,22 6,0 18,-1 12,-2 19,-2 19,0 26.5,-6 7.5,-7 15.5,-28 8,-20 33,-88 25,-68 25,-75 0,-21 -34.5,-57.5 Q 599,735 599,725 q 0,-7 5,-15 34,-73 102,-137 56,-53 151,-101 12,-7 22,-7 15,0 54,48.5 39,48.5 52,48.5 z M 782,32 q 127,0 244,50 116,50 200,134 84,84 134,200.5 50,116.5 50,243.5 0,127 -50,243.5 -50,116.5 -134,200.5 -84,84 -200,134 -117,50 -244,50 -127,0 -243.5,-50 Q 422,1188 338,1104 254,1020 204,903.5 154,787 154,660 154,457 274,292 L 195,59 437,136 Q 595,32 782,32 z m 0,1382 q 153,0 293,-60 139,-60 240,-161 101,-101 161,-240.5 Q 1536,813 1536,660 1536,507 1476,367.5 1416,228 1315,127 1214,26 1075,-34 935,-94 782,-94 587,-94 417,0 L 0,-134 136,271 Q 28,449 28,660 q 0,153 60,292.5 60,139.5 161,240.5 101,101 240.5,161 139.5,60 292.5,60 z" /></svg></a> ':'')+'<a href="mailto:?body='+encodeURIComponent(document.URL)+'%0A%0A'+encodeURIComponent(document.querySelector('meta[name=description]')?document.querySelector('meta[name=description]').content:'')+'&subject='+encodeURIComponent(document.title)+'"title="Mail"style="display:inline-block;vertical-align:middle;width:2em;height:2em;border-radius:50%;box-shadow:.1em .1em 0.1em rgba(0,0,0,.3);background:#555;"><svg style="display:block;fill:#fff;height:36%;margin:32% auto;" viewBox="0 -256 1792 1408"><path transform="matrix(1,0,0,-1,0,1024)" d="M 1792,826 V 32 q 0,-66 -47,-113 -47,-47 -113,-47 H 160 Q 94,-128 47,-81 0,-34 0,32 V 826 Q 44,777 101,739 463,493 598,394 655,352 690.5,328.5 726,305 785,280.5 844,256 895,256 h 1 1 q 51,0 110,24.5 59,24.5 94.5,48 35.5,23.5 92.5,65.5 170,123 498,345 57,39 100,87 z m 0,294 q 0,-79 -49,-151 -49,-72 -122,-123 -376,-261 -468,-325 -10,-7 -42.5,-30.5 -32.5,-23.5 -54,-38 Q 1035,438 1004.5,420 974,402 947,393 q -27,-9 -50,-9 h -1 -1 q -23,0 -50,9 -27,9 -57.5,27 -30.5,18 -52,32.5 -21.5,14.5 -54,38 Q 649,514 639,521 548,585 377,703.5 206,822 172,846 110,888 55,961.5 0,1035 0,1098 q 0,78 41.5,130 41.5,52 118.5,52 h 1472 q 65,0 112.5,-47 47.5,-47 47.5,-113 z" /></svg></a>');
+	document.addEventListener("DOMContentLoaded", function() {
+		$(".searchable input").on("keyup", function(){
+			var lst_li = $(this).closest(".searchable").find("ul li");
+			$(lst_li).hide();
+			for (var i = 0; i < lst_li.length; i++){
+				if($(lst_li).eq(i).text().toLowerCase().indexOf($(this).val().toLowerCase()) > -1) $(lst_li).eq(i).show();
+			}
+		});
+		$(".searchable input").blur(function(){
+			$(this).closest(".searchable").find("ul").fadeOut();
+		});
+		$(".searchable input").on("focus, click", function(){
+			$(this).closest(".searchable").find("ul li, ul").show();
+		});
+		$(".searchable ul li").hover(function(){
+			$(this).closest(".searchable").find("ul li").removeClass("hovered");
+		});
+		$(".searchable ul li").click(function(){
+			$(this).closest(".searchable").find("ul li").removeClass("selected");
+			$(this).addClass("selected");
+			$(this).closest(".searchable").find("input").val($(this).text());
+			$(this).closest(".searchable").find("ul").hide();
+			var func = $(this).closest(".searchable").attr("func");
+			window[func]($(this).attr("value")).call();
+		});
+	});
+
 	function RoundUp(num, places){
 		return (+(Math.round(num + "e+" + places)  + "e-" + places)).toFixed(places);
 	}
@@ -346,32 +372,35 @@
 		filtering.filter();
 	}
 
-	$('.GStats').footable({"columns": $.get('content/columns.json'), "rows": $.get('content/rows.php?Target=GStats&Token=1')});
-	$('.USAStats').footable({"columns": $.get('content/columns.json'), "rows": $.get('content/rows.php?Target=CCStats&Option=US&Token=1')});
+	$('.GStats').footable({"columns": $.get('content/columns.json'), "rows": $.get('content/rows.php?Target=GStats&Token=1Hpwu5ibcfh8AqF4wKHZ6RAf3IvFl4vMmy1lHTg9RMPa0CrFDu')});
+	$('.USAStats').footable({"columns": $.get('content/columns.json'), "rows": $.get('content/rows.php?Target=CCStats&Option=US&Token=1Hpwu5ibcfh8AqF4wKHZ6RAf3IvFl4vMmy1lHTg9RMPa0CrFDu', function(rows){
+		var rec_percent = RoundUp((rows[0]['Recovered']/rows[0]['Confirmed']) * 100, 2) + "%";
+		$(".US-PB").html(rec_percent).css('width', rec_percent);
+	})});
 	var ft_CStats = FooTable.init('.CStats', {"columns": $.get('content/columns.json')});
 	var ft_CCStats = FooTable.init('.CCStats', {"columns": $.get('content/columns.json')});
 
-	$("#Continent").change(function(){
-		$.get('content/rows.php?Target=CStats&Option='+$(this).val()+'&Token=1').then(function(rows){
+	function ByContinent(val){
+		$.get('content/rows.php?Target=CStats&Option='+val+'&Token=1Hpwu5ibcfh8AqF4wKHZ6RAf3IvFl4vMmy1lHTg9RMPa0CrFDu').then(function(rows){
 			ft_CStats.rows.load(rows);
 			$(".divCStats").show();
 			if(rows.length){
 				var rec_percent = RoundUp((rows[0]['Recovered']/rows[0]['Confirmed']) * 100, 2) + "%";
-				$(".divCStats .progress-bar").html(rec_percent).width(rec_percent);
+				$(".divCStats .progress-bar").html(rec_percent).css('width', rec_percent);
 			}
 		});
-	});
+	}
 
-	$("#Country").change(function(){
-		$.get('content/rows.php?Target=CCStats&Option='+$(this).val()+'&Token=1').then(function(rows){
+	function ByCountry(val){
+		$.get('content/rows.php?Target=CCStats&Option='+val+'&Token=1Hpwu5ibcfh8AqF4wKHZ6RAf3IvFl4vMmy1lHTg9RMPa0CrFDu').then(function(rows){
 			ft_CCStats.rows.load(rows);
 			$(".divCCStats").show();
 			if(rows.length){
 				var rec_percent = RoundUp((rows[0]['Recovered']/rows[0]['Confirmed']) * 100, 2) + "%";
-				$(".divCCStats .progress-bar").html(rec_percent).width(rec_percent);
+				$(".divCCStats .progress-bar").html(rec_percent).css('width', rec_percent);
 			}
 		});
-	});
+	}
 </script>
 </body>
 </html>

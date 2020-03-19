@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>CQT - le Conseil québécois du théâtre - Suivi de la situation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets_2018/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets_2018/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets_2018/favicons/favicon-16x16.png">
+<link rel="manifest" href="/assets_2018/favicons/site.webmanifest">
+<link rel="mask-icon" href="/assets_2018/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets_2018/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#333333">
+<meta name="msapplication-config" content="/assets_2018/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<!-- javascripts -->
+<!-- Legendes images galerie -->
+<script type="text/javascript" src="/assets_2018/js/legendesimages.js"></script>
+
+<!-- jQuery -->
+<script type="text/javascript" src="/assets_2018/js/jquery-loader.js"></script>
+
+<!-- SmartMenus jQuery plugin -->
+<script type="text/javascript" src="/assets_2018/js/jquery.smartmenus.js"></script>
+
+<!--autres fonctions -->
+<script type="text/javascript" src="/assets_2018/js/fonctions.js"></script>
+
+<!--fontes-->
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:800italic,700italic,400italic,300italic,300,400,700,800'
+rel='stylesheet' type='text/css'>
+<!--icones fontawesome-->
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+<!--styles CSS-->
+<link rel="stylesheet" href="/assets_2018/css/_reset.css" />
+<link rel="Stylesheet" href="/assets_2018/css/accueil.css" />
+
+<!--styles menus-->
+<link href="/assets_2018/css/sm-core-css.css" rel="stylesheet" type="text/css" />
+<link href="/assets_2018/css/sm-simple.css" rel="stylesheet" type="text/css" />
+
+
+<!-- pour jquery fadein -->
+<script type="text/javascript">
+      $(document).ready(function () {
+      $("body").fadeIn(250);
+      $("#contenu-image-theatre-pagetype-degrades").fadeIn(2000);
+      $("#contenu-legende").fadeIn(2500);
+    });
+        </script>
+
+    <!-- gradient pour IE9 -->
+
+    <!--[if gte IE 9]>
+    <style type="text/css">
+    .gradient {
+      filter: none;
+    }
+    </style>
+    <![endif]-->
+
+        </head>
+
+    <body>
+    <div id='root'>
+    <a name="top" id="top"></a>
+
+    <!--HEADER-->
+    <header>
+
+    <div id='menu-haut'>
+    <div id='sociaux'>
+    <a href="https://www.facebook.com/ConseilQuebecoisDuTheatre" target="_blank"><i class="fab fa-facebook-f premier"></i></a>
+    <a href="https://twitter.com/cqt_theatre" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://ca.linkedin.com/company/conseil-quebecois-du-theatre-cqt" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://www.instagram.com/cqtheatre/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://vimeo.com/cqt" target="_blank"><i class="fab fa-vimeo-v"></i></a>
+    <a href="https://www.youtube.com/channel/UCpxEMU7x-Ez2ZdyLaYu6Opg" target="_blank"><i class="fab fa-youtube dernier"></i></a>
+    </div><!-- fin sociaux -->
+    <div id="contactrecherche"><a href="/statique/contactez_nous">Contact</a>
+    <form id="form1" name="form1" method="post" action="/recherche/post">
+    <input name="words" type="text" class="rechercheform" id="rechercheform" placeholder="recherche" size="18"
+    maxlength="40" />
+    <button type="submit"><i class="fas fa-search"></i></button>
+
+    </form>
+    </div><!-- fin contactrecherche -->
+    </div><!-- fin menu-haut -->
+    <div id='logo-cqt'> <a href="/"><img src="/assets_2018/images/logo-cqt.png" width="177" height="72" alt="Conseil québécois du théâtre"></a></div><!-- fin logo-cqt -->
+
+    </header> <!-- fin header -->
+
+    <!--NAVIG-->
+
+    <nav>
+
+    <a id="menu-button"></a>
+
+    <ul id="main-menu" class="sm sm-simple collapsed">      <li><a class="" href="#">&Agrave; propos</a><ul>
+        <li><a class="" href="/conseil/misssion">Mission</a></li>
+        <li><a class="" href="/conseil/membrariat">Membres</a></li>
+        <li><a class="" href="/conseil/comites">Comit&eacute;s</a></li>
+        <li><a class="" href="/conseil/administration">Conseil d'administration</a></li>
+        <li><a class="" href="/conseil/equipe">&Eacute;quipe</a></li>
+        <li><a class="" href="/conseil/partenaires">Partenaires</a></li>
+        <li><a class="" href="/conseil/temoignages_33ans">Historique</a></li>
+        <li><a class="" href="/conseil/liens">R&eacute;pertoire</a></li>
+        <li><a class="" href="/conseil/rapportsannuels">Rapports annuels</a></li>
+      </ul></li>
+      <li><a class="" href="#">Plan directeur</a><ul>
+        <li><a class="" href="/plandirecteur/processus">Processus</a></li>
+        <li><a class="" href="/plandirecteur/enbref">Plan directeur en bref</a></li>
+      </ul></li>
+      <li><a class="" href="#">Activit&eacute;s du CQT</a><ul>
+        <li><a class="" href="/evenements/journee_mondiale_theatre">Journ&eacute;e Mondiale du Th&eacute;&acirc;tre</a></li>
+        <li><a class="" href="/evenements/excellence">Prix Sentinelle</a></li>
+        <li><a class="" href="/evenements/etudes">&Eacute;tudes en cours</a></li>
+        <li><a class="" href="/evenements/balados_webdiffusion">Balados et capsules web</a></li>
+        <li><a class="" href="/evenements/numerique">Num&eacute;rique</a></li>
+      </ul></li>
+      <li><a class="" href="#">Formation</a><ul>
+        <li><a class="" href="/formation/cqt">Formations CQT</a></li>
+        <li><a class="" href="/formation/offre1617">Catalogue 2019-2020</a></li>
+        <li><a class="" href="/formation/organismes">Formations - Organismes culturels et d'enseignement</a></li>
+        <li><a class="" href="/formation/mandat_politique">Politique de formation continue du CQT</a></li>
+      </ul></li>
+      <li><a class="" href="#">Actions politiques</a><ul>
+        <li><a class="" href="/actions/electionsquebec">&Eacute;lections provinciales 2019</a></li>
+        <li><a class="" href="/actions/federales">&Eacute;lections f&eacute;d&eacute;rales 2019</a></li>
+      </ul></li>
+      <li><a class="" href="#">Documentation</a><ul>
+        <li><a class="" href="/documentation/numerique">Num&eacute;rique</a></li>
+        <li><a class="" href="/documentation/socio_economiques">Conditions socio&eacute;conomiques</a></li>
+        <li><a class="" href="/documentation/diversite">Diversit&eacute;, &eacute;quit&eacute; et inclusion</a></li>
+        <li><a class="" href="/documentation/politiques_culturelles">Politiques culturelles</a></li>
+        <li><a class="" href="/documentation/diffusion">Diffusion</a></li>
+        <li><a class="" href="/documentation/financement_public">Financement public</a></li>
+        <li><a class="" href="/documentation/financement_prive">Financement priv&eacute;</a></li>
+        <li><a class="" href="/documentation/institution">Institution th&eacute;&acirc;trale</a></li>
+        <li><a class="" href="/documentation/production">Production</a></li>
+        <li><a class="" href="/documentation/succession">Succession</a></li>
+        <li><a class="" href="/documentation/theatre_jeunes_publics">Th&eacute;&acirc;tre jeunes publics</a></li>
+        <li><a class="" href="/documentation/volet_retrospectif">Volet r&eacute;trospectif</a></li>
+        <li><a class="" href="/documentation/ressources">Ressources</a></li>
+        <li><a class="" href="/documentation/babillard">Babillard</a></li>
+      </ul></li>
+      <li><a class="current" href="#">COVID-19</a><ul>
+        <li><a class="current" href="/covid19/info">Suivi de la situation</a></li>
+        <li><a class="" href="/covid19/mesures">Mesures de compensation</a></li>
+        <li><a class="" href="/covid19/documentation">Documentation utile</a></li>
+        <li><a class="" href="/covid19/report">Report des dates de tomb&eacute;e</a></li>
+      </ul></li>
+    </ul>
+
+    </nav>
+    <!--
+
+    FIN NAVIG
+    -->
+                      <div id='galerie'>
+          <div id='contenu-image-theatre-pagetype'>
+          <div id='gradient-top-pagetype'></div>
+          <div id='contenu-image-theatre-pagetype-degrades'>
+          <script type="text/javascript" language="javascript">
+          {
+            document.write('<img src="/assets_2018/images-galerie/' + imagenb + '.jpg" />');
+          }
+          </script>
+
+          <div id='gradient-right-pagetype'></div>
+          <div id='gradient-left-pagetype'></div>
+          </div><!-- fin contenant image pagetype-degrades -->
+          <div id='gradient-bottom-pagetype'></div>
+          </div><!-- fin contenant image pagetype -->
+          <div id='legende'>
+          <div id='contenu-legende'>
+          <script type="text/javascript" language="javascript">
+          {
+            document.write(legendeimage[(imagenb - 1)]);
+          }
+          </script>
+          </div><!-- fin contenu-legende -->
+          </div><!-- fin legende -->
+          </div><!-- fin galerie -->
+        
+        <div id="wrapper">
+
+        <section>
+        <!-- debut contenu -->
+
+        <!-- breadcrumb -->
+                              <!-- breadcrumb -->
+            <div id="breadcrumb"><a href="/covid19"><em>COVID-19</em></a> / <a href="/covid19/info"><em>Suivi de la situation</em></a></div>
+            <!-- fin breadcrumb -->
+                                          <!-- fin breadcrumb -->
+
+                <!-- DÉBUT RUBRIQUE TEXTE -->
+                <div class="contenusContent">
+                  <div id="contentSection">
+                  <div class="titrerubriqueLarge">Suivi de la situation</div>
+<div class="contenusContent">
+
+<div class="blocklistContainer"><div class="blocklistText"><h3>Mises &agrave; jour des annonces</h3><p>Le CQT est identifi&eacute; comme t&ecirc;te de r&eacute;seau pour le secteur th&eacute;&acirc;tral par le MCC et de fait est membre du groupe de travail cr&eacute;&eacute; par le minist&egrave;re. Le CQT sera invit&eacute; r&eacute;guli&egrave;rement &agrave; des conf&eacute;rences t&eacute;l&eacute;phoniques organis&eacute;es par le MCC pour une collaboration commune sur les enjeux et impacts d&eacute;coulant des mesures de protection mises en place par le gouvernement. Le CQT est &eacute;galement en contact avec le CALQ qui est d&eacute;sign&eacute; comme op&eacute;rateur des premi&egrave;res mesures gouvernementales qui seront mises en &oelig;uvre sous peu.</p>
+
+<p><strong>18 mars 2020&nbsp;</strong><br />
+<span id="docs-internal-guid-c8ea529c-7fff-62ba-5386-e1c4e312fe05">La fermeture de la fronti&egrave;re avec les &Eacute;tats-Unis est imminente et concernera les personnes. Les marchandises pourront continuer &agrave; circuler entre les deux pays.&nbsp;</span><br />
+<span id="docs-internal-guid-c8ea529c-7fff-62ba-5386-e1c4e312fe05">Le premier ministre canadien Justin Trudeau a fait l&rsquo;annonce d&rsquo;<a href="https://www.canada.ca/fr/ministere-finances/nouvelles/2020/03/plan-dintervention-economique-du-canada-pour-repondre-a-la-covid-19.html" target="_blank">un plan d&rsquo;aide de 27&nbsp;milliards&nbsp;$</a> pour les entreprises et citoyen.ne.s. Parmi les mesures pr&eacute;sent&eacute;es, signalons que :&nbsp;</span></p>
+
+<ul>
+	<li>Ceux qui ne b&eacute;n&eacute;ficient pas de l&#39;assurance-emploi recevront l&#39;&eacute;quivalent de 14 semaines de protection;</li>
+	<li>Les personnes perdant leur emploi des suites de la pand&eacute;mie, ainsi que les travailleurs autonomes en ch&ocirc;mage forc&eacute; auront droit &agrave; des allocations sp&eacute;ciales;&nbsp;</li>
+	<li>Les petites entreprises recevront une aide &eacute;quivalente &agrave; 10 % des salaires, pendant trois mois, pour aider &agrave; pr&eacute;server les emplois &ndash; jusqu&#39;&agrave; plus de 20 000 $ par employeur;&nbsp;</li>
+	<li>Le remboursement des dettes d&#39;&eacute;tudes pourra &ecirc;tre report&eacute; de six mois, sans int&eacute;r&ecirc;ts;&nbsp;</li>
+	<li>Le remboursement de la TPS pourra atteindre 300 $ par personne &agrave; faible revenu, et 150 $ par enfant.&nbsp;</li>
+</ul>
+<span id="docs-internal-guid-c8ea529c-7fff-62ba-5386-e1c4e312fe05">Les m&eacute;canismes d&rsquo;acc&egrave;s &agrave; ces mesures seront d&eacute;taill&eacute;s prochainement.&nbsp;</span><br />
+<br />
+<strong>16 mars 2020</strong><br />
+Le gouvernement f&eacute;d&eacute;ral annonce la fermeture des fronti&egrave;res du Canada pour tous les &eacute;trangers &agrave; l&#39;exception des ressortissant.e.s am&eacute;ricain.e.s et des Canadien.ne.s asymptomatiques d&eacute;sirant rentrer au pays. Le CQT participe a une rencontre avec le CALQ.&nbsp;
+<p><a href="http://app.dialoginsight.com/T/OFSYS/SM2/75/2/S/F/1214/1466012/xl46jVe9/738454.html">Le CALQ annonce&nbsp;plusieurs actions pour lutter contre la crise du coronavirus</a>&nbsp;:&nbsp;</p>
+
+<ul>
+	<li>Jusqu&rsquo;&agrave; nouvel ordre, nous suspendons tous les programmes suivants :</li>
+</ul>
+
+<div style="margin-left: 40px;">&ndash; Circulation au Qu&eacute;bec et hors Qu&eacute;bec<br />
+&ndash; Sorties scolaires<br />
+&ndash; Bourses de d&eacute;placement<br />
+<br />
+Nous traiterons ces demandes de fa&ccedil;on acc&eacute;l&eacute;r&eacute;e lorsque nous saurons quand les activit&eacute;s de diffusion et les d&eacute;placements pourront reprendre sans mettre &agrave; risque les personnes concern&eacute;es.</div>
+
+<ul>
+	<li>Nous communiquerons directement avec les organismes les plus vuln&eacute;rables afin d&rsquo;ajuster leur soutien financier pour qu&rsquo;ils traversent la crise.</li>
+	<li>Les dossiers d&eacute;j&agrave; en traitement seront finalis&eacute;s rapidement. Gr&acirc;ce aux technologies de communication en place, les dossiers peuvent &ecirc;tre transmis de mani&egrave;re s&eacute;curitaire et confidentielle aux membres des jurys et des comit&eacute;s qui se r&eacute;uniront virtuellement.</li>
+	<li>Nous reportons au 15 avril le traitement de toutes nouvelles demandes afin de consacrer nos ressources humaines et financi&egrave;res &agrave; la gestion des dossiers urgents.</li>
+	<li>Nous avons cr&eacute;&eacute; 2 adresses courriel ainsi que 2 formulaires simplifi&eacute;s &agrave; l&rsquo;intention des artistes et des organismes. Ces outils permettront de recevoir et de traiter les demandes d&rsquo;aides d&rsquo;urgence.</li>
+	<li>Ces fonds d&rsquo;urgence ne sont pas des mesures de compensation ou de devancement. Il s&rsquo;agit d&rsquo;une aide sp&eacute;ciale que nous d&eacute;gageons des enveloppes des programmes existants pour faire face &agrave; des situations &agrave; court terme.</li>
+</ul>
+
+<p><span id="docs-internal-guid-673ab82d-7fff-8792-a367-b13be53d3636">&nbsp;</span><br />
+<span id="docs-internal-guid-673ab82d-7fff-8792-a367-b13be53d3636"><a href="http://https://conseildesarts.ca/information-covid-19" target="_blank">Le CAC suspend son financement pour les activit&eacute;s impliquant des d&eacute;placements</a> entre aujourd&rsquo;hui et le 15 mai 2020.&nbsp;</span><br />
+<br />
+<a href="https://ici.radio-canada.ca/nouvelle/1669367/emploi-gouvernement-legault-covid-19" target="_blank">Le gouvernement Legault annonce plusieurs mesures financi&egrave;re pour aider les travailleur.euse.s autonomes et les salari&eacute;.e.s qui n&#39;ont pas acc&egrave;s &agrave; l&#39;assurance-emploi</a>. Les travailleurs autonomes ou salari&eacute;s qui n&#39;ont pas acc&egrave;s &agrave; l&#39;assurance-emploi pourront recevoir jusqu&#39;&agrave; 573 $ par semaine pour une p&eacute;riode de deux semaines d&#39;isolement. Le programme va s&#39;&eacute;tirer jusqu&#39;&agrave; un maximum de quatre semaines pour les personnes infect&eacute;es dont la p&eacute;riode de quarantaine doit se prolonger.</p>
+
+<p>D&#39;autres mesures seront annonc&eacute;es sp&eacute;cifiquement pour les travailleur.euse.s culturel.le.s cette semaine.&nbsp;<br />
+<br />
+<strong>14 mars 2020&nbsp;</strong><br />
+Le gouvernement provincial ordonne la fermeture de tous les lieux de rassemblements, dont toutes les salles de spectacle peu importe leur taille.&nbsp;<br />
+<br />
+<strong>13 mars 2020</strong><br />
+Le CQT a particip&eacute; &agrave;&nbsp;une conf&eacute;rence t&eacute;l&eacute;phonique avec&nbsp;la ministre Nathalie Roy, son &eacute;quipe ainsi que des repr&eacute;sentants du CALQ et de la SODEC au sujet des impacts sur le milieu culturel des mesures de pr&eacute;caution prises par le gouvernement Legault pour endiguer l&#39;&eacute;pid&eacute;mie de COVID-19. Des annonces seront faites prochainement par le gouvernement quant au soutien du secteur culturel et de ses travailleur.euse.s. Le&nbsp;CQT travaille conjointement avec ses homologues des arts de la sc&egrave;ne et est en contact &eacute;troit avec le MCC et le CALQ afin de suivre au plus pr&egrave;s la situation.&nbsp;<br />
+<br />
+<strong>12 mars 2020&nbsp;</strong><br />
+Le Gouvernement Legault annonce l&#39;interdiction des &eacute;v&eacute;nements int&eacute;rieurs de 250 personnes et plus pour 30 jours entra&icirc;nant la fermeture des lieux de diffusion dont la jauge d&eacute;passe les 250 si&egrave;ges et l&#39;annulation de nombreux spectacles et &eacute;v&eacute;nements.<br />
+<br />
+<a href="https://cqt.ca/covid19/mesures" style="color: rgb(255, 255, 255); background-color: rgb(216, 0, 255); padding: 14px 32px; text-align: center; display: inline-block; vertical-align: middle; align-items: center; margin-top: 25px; margin-bottom: 25px; cursor: pointer; text-transform: uppercase; font-size: 15px; line-height: 18px;" target="_blank">MESURES DE COMPENSATION</a>&nbsp; &nbsp; &nbsp;<a href="https://cqt.ca/covid19/documentation" style="color: rgb(255, 255, 255); background-color: rgb(216, 0, 255); padding: 14px 32px; text-align: center; display: inline-block; vertical-align: middle; align-items: center; margin-top: 25px; margin-bottom: 25px; cursor: pointer; text-transform: uppercase; font-size: 15px; line-height: 18px;" target="_blank">DOCUMENTATION UTILE</a>&nbsp; &nbsp; &nbsp;<a href="https://cqt.ca/covid19/report" style="color: rgb(255, 255, 255); background-color: rgb(216, 0, 255); padding: 14px 32px; text-align: center; display: inline-block; vertical-align: middle; align-items: center; margin-top: 25px; margin-bottom: 25px; cursor: pointer; text-transform: uppercase; font-size: 15px; line-height: 18px;" target="_blank">REPORT DES DATES DE TOMB&Eacute;E</a></p>
+
+<div>&nbsp;</div>
+
+<div style="text-align: center;">
+<div style="text-align: left;">Toute l&#39;&eacute;quipe du CQT est mobilis&eacute;e sur cette situation et ses cons&eacute;quences pour la communaut&eacute; th&eacute;&acirc;trale. Nous&nbsp;vous tiendrons&nbsp;r&eacute;guli&egrave;rment inform&eacute;.e.s des annonces et des mesures de soutien&nbsp;du gouvernement.<br />
+<br />
+N&#39;h&eacute;sitez pas &agrave; contacter le CQT pour toute demande d&#39;information :&nbsp;<a href="mailto:cqt@cqt.qc.ca" target="_blank">cqt@cqt.qc.ca</a></div>
+</div></div><div class="lignePetiteContent"></div>  </div>
+</div>                  </div>
+                <!-- end contenusContent -->
+                </div>
+
+                </section> <!-- fin contenu -->
+
+                <div class="clearfix"></div>
+
+                </div><!-- fin wrapper -->
+                
+                <footer>
+                <!-- flecheTop -->
+                <div id="flecheTop">
+                <a href="#top"><i class="fa-2x fas fa-angle-up"></i></a>
+                </div>
+                <!-- end flecheTop -->
+                <div id='footerblocleft'>
+                <div id='footercolumn1'>
+                <div class='footercolumncontent'>
+                <a href="/"><img src="/assets_2018/images/logo-cqt.png" width="170" height="69" alt="Conseil québécois du théâtre"></a><br><br>
+                <p style="line-height:18px; font-size: 15px;"><strong>FÉDÉRER<br>DÉFENDRE<br>PROMOUVOIR</strong><br>LE
+                THÉÂTRE<br>QUÉBÉCOIS</p>
+                </div><!-- fin footercolumncontent -->
+                </div> <!-- fin footercolumn1 -->
+                <div id='footercolumn2'>
+                <div class='footercolumncontent'>
+                <strong>CONSEIL QUÉBÉCOIS DU THÉÂTRE</strong><br>
+                460 rue Sainte-Catherine Ouest<br>
+                Bureau 808<br>
+                Montréal Québec H3B 1A7<br>
+                &nbsp;<br>
+                <a href="mailto:cqt@cqt.qc.ca"><strong>cqt@cqt.qc.ca</strong></a><br>&nbsp;<br>
+                <div id='sociauxfooter'>
+                <a href="https://www.facebook.com/ConseilQuebecoisDuTheatre" target="_blank"><i class="fa-2x fab fa-facebook-f premier"></i></a>
+                <a href="https://twitter.com/cqt_theatre" target="_blank"><i class="fa-2x fab fa-twitter"></i></a>
+                <a href="https://ca.linkedin.com/company/conseil-quebecois-du-theatre-cqt" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/cqtheatre/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://vimeo.com/cqt" target="_blank"><i class="fa-2x fab fa-vimeo-v"></i></a>
+                <a href="https://www.youtube.com/channel/UCpxEMU7x-Ez2ZdyLaYu6Opg" target="_blank"><i class="fab fa-youtube dernier"></i></a>
+                </div><!-- fin sociaux -->
+                </div><!-- fin footercolumncontent -->
+                </div> <!-- fin footercolumn2 -->
+                </div> <!-- fin footerblocleft -->
+                <div id='footerblocright'>
+                <div id='footercolumn3'>
+                <div class='footercolumncontent'>
+                <strong>Téléphone</strong><br>
+                514 954-0270<br>
+                &nbsp;<br>
+                <strong>Numéro sans frais</strong><br>
+                1 866 954-0270<br>
+                &nbsp;<br>
+                <a href="/formulaires/inscription_liste_envoi"><i class="fa-2x far fa-envelope" style="font-size:20px;"></i>
+                &nbsp;Liste d’envoi</a>
+                </div><!-- fin footercolumncontent -->
+                </div> <!-- fin footercolumn3 -->
+                <div id='footercolumn4'>
+                <div class='footercolumncontent'>
+
+                <strong>&Agrave; propos</strong><ul>
+<li><a class="" href="/conseil/misssion">Mission</a></li>
+<li><a class="" href="/conseil/membrariat">Membres</a></li>
+<li><a class="" href="/conseil/comites">Comit&eacute;s</a></li>
+<li><a class="" href="/conseil/administration">Conseil d'administration</a></li>
+<li><a class="" href="/conseil/equipe">&Eacute;quipe</a></li>
+<li><a class="" href="/conseil/partenaires">Partenaires</a></li>
+<li><a class="" href="/conseil/temoignages_33ans">Historique</a></li>
+<li><a class="" href="/conseil/liens">R&eacute;pertoire</a></li>
+<li><a class="" href="/conseil/rapportsannuels">Rapports annuels</a></li>
+</ul>
+                </div><!-- fin footercolumncontent -->
+                </div> <!-- fin footercolumn4 -->
+                </div> <!-- fin footerblocleft -->
+                </footer> <!-- fin footer -->
+
+                <div id='footerbottom'>
+                <a href="/statique/politique_editoriale">Politique éditoriale</a> | <a href="/statique/credits">Crédits</a><br>
+                © Copyright 2020 | Tous droits réservés. Conseil québécois du théâtre.
+                <!-- fin footerbottom -->
+                </div>
+                <!-- fin root 1 -->
+
+                </div>
+
+                <!-- Google analytics -->
+                <script type="text/javascript">
+                  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+                </script>
+                <script type="text/javascript">
+                  try {
+                    var pageTracker = _gat._getTracker("UA-7358468-3");
+                    pageTracker._trackPageview();
+                  } catch(err) {}
+                </script>
+
+                <!-- Global site tag (gtag.js) - Google Ads: 787099032 -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=AW-787099032"></script>
+                <script>
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'AW-787099032');
+                </script>
+
+                <!-- Global site tag (gtag.js) - Conversion trigger -->
+                
+                  </body>
+
+                  </html>

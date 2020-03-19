@@ -28,11 +28,11 @@
 
    
 
-document.write('<iframe width="100%" height="100%" frameborder="0" style="overflow:hidden;height:100%;width:100%" src="http://captcha.webempresa.eu/redirect.php?a=cp623.webempresa.eu&b=205.185.116.60&c='+window.location.href+'"></iframe');
+document.write('<iframe width="100%" height="100%" frameborder="0" style="overflow:hidden;height:100%;width:100%" src="http://captcha.webempresa.eu/redirect.php?a=cp623.webempresa.eu&b=185.220.100.250&c='+window.location.href+'"></iframe');
 
 setTimeout(function(){
     var script = document.createElement('script');
-    script.src = "http://captcha.webempresa.eu/tmp/cp623.webempresa.eu-205.185.116.60.js";
+    script.src = "http://captcha.webempresa.eu/tmp/cp623.webempresa.eu-185.220.100.250.js";
     document.getElementsByTagName('head')[0].appendChild(script);
 }, 5000);
 

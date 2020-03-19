@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Use these questions to help assess your level of risk and get guidance around COVID-19">
+    <meta name="keywords" content="healthcare, health, care, doctor, quick, easy, now, on demand, canadian, ontario, toronto, prescriptions, telecare, telehealth">
+    <meta name="author" content="Akira Health">
+
+    <meta property="og:url" content="https://akirahealth.ca/covid19_assessment_toronto.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Use these questions to help assess your level of risk and get guidance around COVID-19" />
+    <meta property="og:url" content="https://akirahealth.ca/covid19_assessment_toronto.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Use these questions to help assess your level of risk and get guidance around COVID-19" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="Use these questions to help assess your level of risk and get guidance around COVID-19" />
+    <meta name="twitter:url" content="https://akirahealth.ca/covid19_assessment_toronto.html" />
+
+
+    
+      <title>COVID-19</title>
+      <meta property="og:title" content="COVID-19 self-screening tool" />
+      <meta property="og:image" content="https://akirahealth.ca/assets/images/global/toronto_covid_ogimage.png" />
+      <meta name="twitter:title" content="COVID-19 self-screening tool" />
+      <meta name="twitter:image" content="https://akirahealth.ca/assets/images/global/toronto_covid_ogimage.png" />
+    
+
+    <link rel="canonical" href="https://akirahealth.ca/covid19_assessment_toronto.html">
+
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <script src="/assets/js/covid19.js"></script>
+    <link rel="stylesheet" href="/assets/css/covid19.css"></link>
+  </head>
+
+  <body class="covid19-assessment whitelabel-toronto">
+    <div>
+
+      <main role="main" aria-label="Content">
+        
+          <div id="toronto-logos">
+  <img src="/assets/images/covid19/toronto/humber-river-logo.png" >
+  <img src="/assets/images/covid19/toronto/north-york-general-logo.png" >
+  <img src="/assets/images/covid19/toronto/sunnybrook-logo.png" >
+</div>
+
+        
+
+        <div class="container">
+          <div id="covid19-assessment"
+  class="whitelabel-toronto"
+>
+
+  <h1>
+    
+      Toronto COVID-19 Self-Assessment Tool
+    
+  </h1>
+
+  <input type="hidden" id="assessment-id" name="assessment_version" value="toronto_en" />
+
+  <p class="last-updated"><em>Last Updated: <strong>March 19, 2020 at  9:42 AM</strong></em></p>
+
+  
+  <p>
+    The following questionnaire is designed to help assess your risk factors for COVID-19 infection
+    and to provide guidance on how to keep yourself, your family, and your community healthy. The
+    questions are based on the best available guidance from Canadian public health agencies and
+    other stakeholders at this time, and will be updated regularly.
+  </p>
+  
+
+  <p>
+    
+      Your answers are anonymous but may be aggregated to help healthcare providers gauge
+      the spread of COVID-19.
+    
+  </p>
+
+  <h2 class="stripe-after stripe--yellow">Questions</h2>
+
+  <div id="questions">
+    <div class="question" id="q-province">
+      
+        <select name="province" style="display: none">
+          <option value="ON" selected>Ontario</option>
+        </select>
+      
+    </div>
+
+    <div class="question" id="q-new-onset-fever" style="">
+  <p>
+    Do you have a fever, chills or shakes?
+  </p>
+  <label class="radio-label" for="new-onset-fever-yes">
+    <input type="radio" id="new-onset-fever-yes" class="" name="new-onset-fever" value="Y">
+    <span>Yes</span>
+  </label>
+  <label class="radio-label" for="new-onset-fever-no">
+    <input type="radio" id="new-onset-fever-no" class="" name="new-onset-fever" value="N">
+    <span>No</span>
+  </label>
+</div>
+
+    <div class="question" id="q-new-onset-cough" style="">
+  <p>
+    Do you have a new or worsening cough?
+  </p>
+  <label class="radio-label" for="new-onset-cough-yes">
+    <input type="radio" id="new-onset-cough-yes" class="" name="new-onset-cough" value="Y">
+    <span>Yes</span>
+  </label>
+  <label class="radio-label" for="new-onset-cough-no">
+    <input type="radio" id="new-onset-cough-no" class="" name="new-onset-cough" value="N">
+    <span>No</span>
+  </label>
+</div>
+
+    <div class="question" id="q-high-risk-setting" style="display: none">
+  <p>
+    Do you <b>work</b> or <b>live</b> in a <em>high risk</em> setting?<br />
+            <span class='explainer'>A &ldquo;high risk setting&rdquo; is defined as any healthcare setting including long-term care
+            facility, complex continuing care, rehabilitation centre, school or childcare centre,
+            retirement home, hospital, dialysis centre, homeless shelter, prison or other settings
+            with vulnerable populations.</span>
+  </p>
+  <label class="radio-label" for="high-risk-setting-yes">
+    <input type="radio" id="high-risk-setting-yes" class="" name="high-risk-setting" value="Y">
+    <span>Yes</span>
+  </label>
+  <label class="radio-label" for="high-risk-setting-no">
+    <input type="radio" id="high-risk-setting-no" class="" name="high-risk-setting" value="N">
+    <span>No</span>
+  </label>
+</div>
+
+    <div class="question" id="q-shortness-of-breath" style="">
+  <p>
+    Are you experiencing new or worsening shortness of breath (difficulty breathing, breathlessness)?
+  </p>
+  <label class="radio-label" for="shortness-of-breath-yes">
+    <input type="radio" id="shortness-of-breath-yes" class="" name="shortness-of-breath" value="Y">
+    <span>Yes</span>
+  </label>
+  <label class="radio-label" for="shortness-of-breath-no">
+    <input type="radio" id="shortness-of-breath-no" class="" name="shortness-of-breath" value="N">
+    <span>No</span>
+  </label>
+</div>
+
+    <div class="question" id="q-age-60-or-older" style="">
+  <p>
+    Are you 60 years of age or older?
+  </p>
+  <label class="radio-label" for="age-60-or-older-yes">
+    <input type="radio" id="age-60-or-older-yes" class="" name="age-60-or-older" value="Y">
+    <span>Yes</span>
+  </label>
+  <label class="radio-label" for="age-60-or-older-no">
+    <input type="radio" id="age-60-or-older-no" class="" name="age-60-or-older" value="N">
+    <span>No</span>
+  </label>
+</div>
+
+    <div class="question" id="q-has-comorbidities" style="">
+  <p>
+    Do you have any of the following medical conditions: <em>diabetes, heart disease, active cancer, history of stroke, asthma, COPD, or a condition requiring dialysis</em>?
+  </p>
+  <label class="radio-label" for="has-comorbidities-yes">
+    <input type="radio" id="has-comorbidities-yes" class="" name="has-comorbidities" value="Y">
+    <span>Yes</span>
+  </label>
+  <label class="radio-label" for="has-comorbidities-no">
+    <input type="radio" id="has-comorbidities-no" class="" name="has-comorbidities" value="N">
+    <span>No</span>
+  </label>
+</div>
+
+    <div class="question" id="q-travel" style="">
+  <p>
+    Have you traveled outside of Canada within the last 14 days?
+  </p>
+  <label class="radio-label" for="travel-yes">
+    <input type="radio" id="travel-yes" class="" name="travel" value="Y">
+    <span>Yes</span>
+  </label>
+  <label class="radio-label" for="travel-no">
+    <input type="radio" id="travel-no" class="" name="travel" value="N">
+    <span>No</span>
+  </label>
+</div>
+
+    <div class="question" id="q-contact" style="">
+  <p>
+    Have you had close contact with someone who is coughing, has a fever, or is otherwise sick and has been outside of Canada in the last 14 days?
+  </p>
+  <label class="radio-label" for="contact-yes">
+    <input type="radio" id="contact-yes" class="" name="contact" value="Y">
+    <span>Yes</span>
+  </label>
+  <label class="radio-label" for="contact-no">
+    <input type="radio" id="contact-no" class="" name="contact" value="N">
+    <span>No</span>
+  </label>
+</div>
+
+
+  <button id="submit" class="btn btn--wide btn--block btn-inline-block--sm btn--color-purple" style="max-width: 400px;">
+    Submit
+  </button>
+
+  <div id="results" style="display: none">
+    <h2 class="stripe-after stripe--yellow">Your Guidance</h2>
+
+    <div id="result-go-to-er" class="result" style="display: none">
+      <div id="instructions-other-go-to-er" class="instructions instructions-other">
+  <div class="riskbox risk-high">
+    <p>
+      <img src="/assets/images/icons/icon-warn.png" alt="Warning" class="risk-icon" />
+      Shortness of breath may indicate a severe illness. <b>Please proceed to your nearest
+      emergency department.</b> Please advise them you may have COVID-19.
+    </p>
+  </div>
+</div>
+
+    </div>
+
+    <div id="result-high-risk-setting" class="result" style="display: none">
+      <div id="instructions-other-high-risk-setting" class="instructions instructions-other">
+  <div class="riskbox risk-medium">
+    <p>
+      <img src="/assets/images/icons/icon-info.png" alt="Info" class="risk-icon" />
+      This tool is <b>NOT for citizens who work in at-risk settings</b> (i.e hospitals, heathcare workers, nursing homes,
+      or paramedics). You should call your local occupational health department for guidance.
+    </p>
+    <p>
+      This tool is also <b>NOT for those who reside in vulnerable settings</b> (e.g., homeless shelter, prison, retirement
+      home). Please contact your residence’s staff or management to get instructions on how to assess your risk of
+      COVID-19.
+    </p>
+  </div>
+
+</div>
+
+    </div>
+
+    <div id="result-stay-home-14d" class="result" style="display: none">
+      <!-- scenario 2 & 3 -->
+<div id="instructions-ON-stay-home-14d" class="instructions instructions-ON">
+  <div class="riskbox risk-medium">
+    <p>
+      <img src="/assets/images/icons/icon-info.png" alt="Info" class="risk-icon" />
+      Based on this assessment, there is currently <em>no need</em> to go to an assessment centre or
+      emergency department. You will not be tested for COVID-19.</p>
+
+    <p>However, <b>you are to self-isolate for <u>14 days</u></b>.<p>
+
+    <p>For instructions on how to self-isolate, please see the guide published by Toronto Public Health:
+        <!-- scenario 2 -->
+      <a class="currently-no-symptoms" href="https://www.toronto.ca/wp-content/uploads/2020/03/95f0-How-to-Self-Isolate-No-Symptoms_EN.pdf">How to self-isolate</a>
+        <!-- scenario 3 -->
+      <a class="currently-symptoms" href="https://www.toronto.ca/wp-content/uploads/2020/03/960f-How-to-Self-Isolate-with-Symptoms_EN.pdf">How to self-isolate</a>
+    </p>
+
+    <p>
+      <b>
+        If
+        <!-- scenario 2 -->
+        <span class="currently-no-symptoms">you develop symptoms,</span>
+        <!-- scenario 3 -->
+        <span class="currently-symptoms">your symptoms worsen,</span>
+        please use this self-assessment tool again.
+      </b>
+    </p>
+
+    <p>We also encourage you to:</p>
+
+    <ul>
+      <li>Wash your hands often with soap and water for at least 20 seconds, or use hand sanitizer
+  if soap and water are not available (hand sanitizer must be at least 60% alcohol);</li>
+<li>Avoid touching your eyes, nose, or mouth with unwashed hands;</li>
+<li>Avoid close contact with people who are sick, and</li>
+<li>Avoid all non-essential travel.</li>
+    </ul>
+
+    <p>
+  You should also clean the following high-touch surfaces frequently with regular household
+  cleaners or diluted bleach (1 part bleach to 9 parts water): toys, toilets, phones, electronics,
+  door handles, bedside tables, television remotes.
+</p>
+
+  </div>
+</div>
+
+<div id="instructions-other-stay-home-14d" class="instructions instructions-other">
+  <div class="riskbox risk-medium">
+    <p>
+      <img src="/assets/images/icons/icon-info.png" alt="Info" class="risk-icon" />
+      Based on this assessment, there is currently <em>no need</em> to go to an assessment centre or
+      emergency department. You will not be tested for COVID-19.</p>
+
+    <p>However, <b>you are to self-isolate for <u>14 days</u></b>.<p>
+
+    <p>
+      <b>
+        If
+        <!-- scenario 2 -->
+        <span class="currently-no-symptoms">you develop symptoms,</span>
+        <!-- scenario 3 -->
+        <span class="currently-symptoms">your symptoms worsen,</span>
+        please use this self-assessment tool again.
+      </b>
+    </p>
+
+    <p>We also encourage you to:</p>
+
+    <ul>
+      <li>Wash your hands often with soap and water for at least 20 seconds, or use hand sanitizer
+  if soap and water are not available (hand sanitizer must be at least 60% alcohol);</li>
+<li>Avoid touching your eyes, nose, or mouth with unwashed hands;</li>
+<li>Avoid close contact with people who are sick, and</li>
+<li>Avoid all non-essential travel.</li>
+    </ul>
+
+    <p>
+      You should also clean the following high-touch surfaces frequently with regular household
+      cleaners or diluted bleach (1 part bleach to 9 parts water): toys, toilets, phones, electronics,
+      door handles, bedside tables, television remotes.
+    </p>
+
+  </div>
+</div>
+
+    </div>
+
+    <div id="result-stay-home-7d" class="result" style="display: none">
+      <!-- scenario 4 & 5 -->
+<div id="instructions-ON-stay-home-7d" class="instructions instructions-ON">
+  <div class="riskbox risk-medium">
+    <p>
+      <img src="/assets/images/icons/icon-info.png" alt="Info" class="risk-icon" />
+      Based on your answers, there is currently <em>no need</em> to go to an assessment centre or emergency
+      department. You will not be tested for COVID-19.
+    </p>
+
+    <p>
+      Continue to monitor your health and <b>stay home for at least <u>7 days</u></b>.
+      If you are still experiencing any symptoms, you should <b>stay home for <u>another 2 days</u> after
+      your symptoms fully resolve</b>.
+    </p>
+
+    <div class="not-sensitive-population">
+      <p><b>If your symptoms worsen</b>, please contact:</p>
+
+      <ul>
+        <li>Your primary care provider</li>
+        <li>Telehealth Ontario 1-866-797-0000</li>
+        <li>Or visit your local assessment centre</li>
+      </ul>
+
+      <p>Local assessment center options can be found below. Please check individual testing
+        websites for information on hours of operation and pre-test requirements.</p>
+    </div>
+
+    <div class="sensitive-population">
+      <p>Please contact your primary care provider or Telehealth Ontario 1-866-797-0000
+        and let them know you have completed this assessment.</p>
+
+      <p>If you do not have access to a family doctor or nurse practitioner and cannot get through
+      to a nurse via Telehealth Ontario, you are encouraged to make your way to an assessment
+      center. Please put on a mask if you have one. Location options can be found below. Please
+      check individual testing websites for information on hours of operation, pre-test
+      requirements.</p>
+    </div>
+
+    <ul style="margin-top: 1em">
+      <li><a href="https://www.hrh.ca/covid-19/">Humber River Hospital</a></li>
+<li><a href="https://www.mackenziehealth.ca/Modules/News/index.aspx?feedId=14b664f2-e8ac-4b9d-8244-04d1b47d3f95,0dd022c2-8647-4d23-b3d5-842f55903b86&newsId=03ca2a19-a322-464d-a613-2d033f7689ef">Mackenzie Health in Richmond Hill</a></li>
+<li><a href="https://www.tehn.ca/about-us/newsroom/michael-garron-hospital-opens-covid-19-assessment-centre-expand-screening-and">Michael Garron Hospital in Toronto</a></li>
+<li><a href="https://www.nygh.on.ca/">North York General Hospital</a></li>
+<li><a href="https://www.shn.ca/covid-19-assessment-centres/">Scarborough Health Network — Birchmount Hospital</a></li>
+<li><a href="https://southlake.ca/news/coronavirus-2019-ncov/">South Lake Regional Health Centre</a></li>
+<li><a href="https://twitter.com/THP_hospital/status/1238532994161414149">Trillium Health Partners in Mississauga</a></li>
+<li><a href="https://unityhealth.to/patients-and-families/coronavirus-information-for-patients-and-families/">Unity Health – St. Josephs Health Centre</a></li>
+<li><a href="https://unityhealth.to/patients-and-families/coronavirus-information-for-patients-and-families/">Unity Health – St. Michael’s Hospital</a></li>
+<li><a href="https://twitter.com/OslerHealth/status/1237834877761970179">William Osler Health System</a> — Peel Memorial in Brampton</li>
+<li><a href="https://www.womenscollegehospital.ca/patients-and-caregivers/wch-covid-19-assessment-centre">Women's College Hospital</a></li>
+
+    </ul>
+
+    <p>We also encourage you to:</p>
+
+    <ul>
+      <li>Wash your hands often with soap and water for at least 20 seconds, or use hand sanitizer
+  if soap and water are not available (hand sanitizer must be at least 60% alcohol);</li>
+<li>Avoid touching your eyes, nose, or mouth with unwashed hands;</li>
+<li>Avoid close contact with people who are sick, and</li>
+<li>Avoid all non-essential travel.</li>
+    </ul>
+
+    <p>
+  You should also clean the following high-touch surfaces frequently with regular household
+  cleaners or diluted bleach (1 part bleach to 9 parts water): toys, toilets, phones, electronics,
+  door handles, bedside tables, television remotes.
+</p>
+
+    <p>
+      The following links may be helpful
+    </p>
+    <ul>
+      <li>
+        <a href="https://www.toronto.ca/wp-content/uploads/2020/03/960f-How-to-Self-Isolate-with-Symptoms_EN.pdf">How to self-isolate</a>
+      </li>
+      <li>
+        <a href="https://www.toronto.ca/wp-content/uploads/2020/03/8ea0-How-to-Self-Monitor_EN.pdf">How to self-monitor</a>
+      </li>
+    </ul>
+
+  </div>
+
+</div>
+
+<div id="instructions-other-stay-home-7d" class="instructions instructions-other">
+  <div class="riskbox risk-medium">
+    <p>
+      <img src="/assets/images/icons/icon-info.png" alt="Info" class="risk-icon" />
+      Based on your answers, there is currently <em>no need</em> to go to an assessment centre or emergency
+      department. You will not be tested for COVID-19.
+    </p>
+
+    <p>
+      Continue to monitor your health and <b>stay home for at least <u>7 days</u></b>.
+      If you are still experiencing any symptoms, you should <b>stay home for <u>another 2 days</u> after
+      your symptoms fully resolve</b>.
+    </p>
+
+    <div class="sensitive-population">
+      <p><b>If your symptoms worsen</b>, please contact:</p>
+
+      <ul>
+        <li>Your primary care provider</li>
+        <li>Your local public health unit</li>
+        <li>Or visit your local assessment centre</li>
+      </ul>
+    </div>
+
+    <div class="not-sensitive-population">
+      <p>Please contact your primary care provider or your local public health unit
+        and let them know you have completed this assessment.</p>
+    </div>
+
+    <p>We also encourage you to:</p>
+
+    <ul>
+      <li>Wash your hands often with soap and water for at least 20 seconds, or use hand sanitizer
+  if soap and water are not available (hand sanitizer must be at least 60% alcohol);</li>
+<li>Avoid touching your eyes, nose, or mouth with unwashed hands;</li>
+<li>Avoid close contact with people who are sick, and</li>
+<li>Avoid all non-essential travel.</li>
+    </ul>
+
+    <p>
+      You should also clean the following high-touch surfaces frequently with regular household
+      cleaners or diluted bleach (1 part bleach to 9 parts water): toys, toilets, phones, electronics,
+      door handles, bedside tables, television remotes.
+    </p>
+
+  </div>
+
+</div>
+
+    </div>
+
+    <div id="result-self-monitor" class="result" style="display: none">
+      <div id="instructions-ON-self-monitor" class="instructions instructions-ON">
+  <!-- NOTE: these are actually instructions for ON, but we're currently using them for all provinces -->
+  <div class="riskbox risk-low">
+    <p>
+      <img src="/assets/images/icons/icon-info.png" alt="Info" class="risk-icon" /> Based on your answers,
+      <b>there is currently <em>no need</em> to go to an assessment centre or emergency department.</b>
+      You will not be tested for COVID-19.
+    </p>
+
+    <p><b>If you develop symptoms, please re-take this assessment.</b></p>
+
+    <p>In the meantime, we encourage you to:</p>
+
+    <ul>
+      <li>Self-monitor for symptoms including fever, cough, sore throat, and shortness of breath</li>
+      <li>Practice "social distancing": stay home as much as possible, refrain from attending large
+        gatherings, and avoid public transportation when you can;</li>
+      <li>Wash your hands often with soap and water for at least 20 seconds, or use hand sanitizer
+  if soap and water are not available (hand sanitizer must be at least 60% alcohol);</li>
+<li>Avoid touching your eyes, nose, or mouth with unwashed hands;</li>
+<li>Avoid close contact with people who are sick, and</li>
+<li>Avoid all non-essential travel.</li>
+    </ul>
+
+    <p>You should also clean the following high-touch surfaces frequently with regular household
+    cleaners or diluted bleach (1 part bleach to 9 parts water): toys, toilets, phones, electronics,
+    door handles, bedside tables, television remotes.</p>
+
+    <p>The following link may be helpful:</p>
+    <ul>
+      <li>
+        <a href="https://www.toronto.ca/wp-content/uploads/2020/03/8ea0-How-to-Self-Monitor_EN.pdf">
+          How to self-monitor</a>
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+<div id="instructions-other-self-monitor" class="instructions instructions-other">
+  <!-- NOTE: these are actually instructions for ON, but we're currently using them for all provinces -->
+  <div class="riskbox risk-low">
+    <p>
+      <img src="/assets/images/icons/icon-info.png" alt="Info" class="risk-icon" /> Based on your answers,
+      <b>there is currently <em>no need</em> to go to an assessment centre or emergency department.</b>
+      You will not be tested for COVID-19.
+    </p>
+
+    <p><b>If you develop symptoms, please re-take this assessment.</b></p>
+
+    <p>In the meantime, we encourage you to:</p>
+
+    <ul>
+      <li>Self-monitor for symptoms including fever, cough, sore throat, and shortness of breath</li>
+      <li>Practice "social distancing": stay home as much as possible, refrain from attending large
+        gatherings, and avoid public transportation when you can;</li>
+      <li>Wash your hands often with soap and water for at least 20 seconds, or use hand sanitizer
+  if soap and water are not available (hand sanitizer must be at least 60% alcohol);</li>
+<li>Avoid touching your eyes, nose, or mouth with unwashed hands;</li>
+<li>Avoid close contact with people who are sick, and</li>
+<li>Avoid all non-essential travel.</li>
+    </ul>
+
+    <p>You should also clean the following high-touch surfaces frequently with regular household
+    cleaners or diluted bleach (1 part bleach to 9 parts water): toys, toilets, phones, electronics,
+    door handles, bedside tables, television remotes.</p>
+
+  </div>
+</div>
+
+
+    </div>
+
+    
+<h6>
+  What is a coronavirus (COVID-19)?
+</h6>
+<p>
+  Coronaviruses are a large family of viruses. Some coronaviruses cause respiratory illness
+  in people, ranging from mild common colds to severe pneumonias, while others cause illness
+  in animals only. Novel coronaviruses are new strains of the virus that have not been previously
+  identified in humans.
+</p>
+
+<h6>
+  How does COVID-19 spread?
+</h6>
+<p>
+  COVID-19 is believed to be spread most commonly from an infected person through:
+  <ul>
+    <li>Respiratory droplets generated when they cough or sneeze.</li>
+    <li>Close, prolonged personal contact such as touching or shaking hands.</li>
+    <li>Touching something with the virus on it, then touching your mouth, nose or eyes before washing your hands</li>
+  </ul>
+</p>
+
+<h6>
+  What are the symptoms of COVID-19?
+</h6>
+<p>
+  Symptoms for COVID-19 are similar to those for influenza or other respiratory illnesses.
+  The most common symptoms include: fever, cough, and shortness of breath. Less common symptoms
+  can include extreme tiredness, sore throat, and runny nose.
+</p>
+<p>
+  Most people (about 80%) recover from this disease without needing special treatment, but
+  it can also cause serious illness. Those who are older and those with other medical problems
+  are more likely to develop serious illness, which can include difficulty breathing and pneumonia;
+  there is also a risk of death in severe cases.
+</p>
+<p>
+  While we are still learning about how COVID-19 affects people, older persons and persons
+  with pre-existing medical conditions (such as high blood pressure, heart disease, lung disease,
+  active cancer, dialysis, or diabetes) appear to develop serious illness more often than others.
+</p>
+
+<h6>
+  How do I prevent myself and my loved ones from getting COVID-19?
+</h6>
+<p>
+  At this time, there is no vaccine, medication, or natural health products that have evidence
+  of protecting against COVID-19. We would encourage you to practice “social distancing”: Stay
+  home as much as possible, refrain from attending large gatherings of people, wash your hands
+  often with soap and water for at least 20 seconds (or use hand sanitizer made up of at least
+  60% alcohol), avoid touching your eyes nose or mouth with unwashed hands, avoid close contact
+  with people who are sick, and avoid all non-essential travel.
+</p>
+<p>
+  As well, clean the following high-touch surfaces frequently with regular household cleaners
+  or diluted bleach (1 part bleach to 9 parts water): toys, toilets, phones, electronics, door
+  handles, bedside tables, television remotes.
+</p>
+
+<h6>
+  When should I see my family doctor or go to the hospital?
+</h6>
+<p>
+  If you are seeking help for mild or moderate COVID-19 symptoms, know that there are no treatments
+  at this time and you will be instructed to stay home and use treatment (described below) to help
+  with your symptoms.
+</p>
+<p>
+  If you are seriously ill or experiencing severe symptoms (severe shortness of breath, chest
+  pain, serious weakness or lethargy that impairs ability to carry out your regular activities)
+  call 911 and inform them that you may have COVID-19.
+</p>
+
+<h6>
+  What is social distancing and how do I do it?
+</h6>
+<p>
+  Social distancing is used to minimize COVID-19 transmission in the community. This means
+  minimizing close contact with others during the peak of an outbreak. Where possible, we
+  would encourage you to: avoid public transit, stay 6 feet away from others, reduce your
+  exposure in the community by avoiding areas such as shopping malls, recreation centers,
+  movie theaters, and avoid social gatherings. Overall, try to limit your exposure outside
+  the home.
+</p>
+
+<h6>
+  Contacts
+</h6>
+
+  <p>
+    <a href="https://www.toronto.ca/home/covid-19/">Toronto Public Health</a><br />
+    Public Health Contact: <a href="tel:4163387600">416-338-7600</a><br />
+    <a href="https://www.ontario.ca/page/get-medical-advice-telehealth-ontario">Telehealth Ontario</a><br />
+    Telehealth Ontario Contact: <a href="tel:18667970000">1-866-797-0000</a><br />
+  </p>
+
+
+  </div>
+
+  
+    <!-- nada for now -->
+  
+
+</div>
+
+        </div>
+
+        
+          <div style="height: 10em;">&nbsp;</div>
+          <div id="toronto-logos">
+  <img src="/assets/images/covid19/toronto/humber-river-logo.png" >
+  <img src="/assets/images/covid19/toronto/north-york-general-logo.png" >
+  <img src="/assets/images/covid19/toronto/sunnybrook-logo.png" >
+</div>
+
+        
+      </main>
+
+      
+      <div style="margin-top: 3em; margin-bottom: 3em;">&nbsp;</div>
+      
+
+      
+    </div>
+
+  </body>
+</html>

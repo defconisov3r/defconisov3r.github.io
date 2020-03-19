@@ -1,177 +1,1734 @@
-  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Хостинг-провайдер TimeWeb.ru | Мы рады приветствовать Вас среди наших клиентов!</title><style type="text/css">p {    font-family: tahoma,verdana;    font-size: 12px;                                                                                                                    color: #222329;}p.header {       font-family: tahoma,verdana;font-size: 18px;    color: #3b3f4c;}p.sign {        font-family: tahoma,verdana;                                                                                                font-size: 11px; color: #3b3f4c;}li {    font-family: tahoma,verdana;
 
-        font-size: 12px;
 
-        color: #222329;
 
-        font-weight: bold;
 
-        padding-left: 10px;
 
-        padding-bottom: 4px;
 
-    }
-
-    a {
-
-        font-family: tahoma,verdana;
-
-        font-size: 12px;
-
-        color: #0077be;
-
-        font-weight: bold;
-
-    }
-
-    ul {
-
-        padding-left: 25px;
-
-        list-style-image: url('http://timeweb.com/ru/img/bullet.gif')
-
-    }
-
-    p.line {
-
-        border-top: 1px solid #dbdbdb;
-
-    }
-
-    </style>
-
-    </head>
-
-    <body>
-
-    <center>
-
-    <table border="0" style="width:800px;background-image:url(http://timeweb.com/ru/img/gradient.jpg);background-repeat:repeat-x;background-align:top;">
-
-    <tr>
-
-        <td style="height:148px;width:240px;" valign="bottom" align="right"><img src="http://timeweb.com/ru/img/logo.jpg" alt=''></td>
-
-        <td>&nbsp;</td>
-
-    </tr>
-
-    </table>
-
-    <table border="0" style="width:800px;">
-
-    <tr>
-
-        <td>
-
-     
-
-    <center>
-
-            <table style="width:630px;">
-
-            <tbody><tr>
-
-                    <td align="left">
-
-                            <p class="header">Здравствуйте!</p>
-
-                            <p>Ваш аккаунт в «ТаймВэб» подготовлен к работе.</p>
-
-     
-
-                            <p>Логин и пароль для входа в панель управления отправлены на электронную почту, которую вы указали при регистрации.</p>
-
-                            <p>Эта страница создана автоматически вместе с аккаунтом, ваш сайт станет доступен после загрузки файлов на сервер.</p>
-
-                        <p>Подробно о том, как разместить сайт, в нашем <a href="http://timeweb.com/ru/help/pages/viewpage.action?pageId=6226259&amp;utm_source=tmweb&amp;utm_medium=referral&amp;utm_campaign=help" target="_blank">справочном центре</a>.</p>
-
-                        <p>Если у вашего сайта пока что нет имени, <a href="http://hosting.timeweb.ru/domains/registration" target="_blank">зарегистрируйте</a> его. Если домен уже есть, <a href="http://timeweb.com/ru/help/pages/viewpage.action?pageId=4358494&utm_source=tmweb&utm_medium=referral&utm_campaign=help" target="_blank">перенесите</a> к нам.</p>
-
-                            
-
-                            <p class="header">Если вы видите эту страницу после размещения файлов на нашем хостинге, попробуйте:</p>
-
-                    
-
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>Карта коронавируса - Онлайн. Распространения в реальном времени</title>
+    <meta name="Description" content="Онлайн карта коронавируса 2020 в реальном времени. Сегодня на русском языке. Итерактивная, официальная карта мира заражённых коронавирусом. Coronavirus | Covid-19"/>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgzm-TY3IlnPsx3ZRyZ_mIM9YbN8jsqNo" async defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"  integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="  crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"  integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="  crossorigin=""></script>
+    <script src='https://unpkg.com/leaflet.gridlayer.googlemutant@latest/Leaflet.GoogleMutant.js'></script>
+    
+    <script src="https://unpkg.com/esri-leaflet@2.3.3/dist/esri-leaflet.js"
+    integrity="sha512-cMQ5e58BDuu1pr9BQ/eGRn6HaR6Olh0ofcHFWe5XesdCITVuSBiBZZbhCijBe5ya238f/zMMRYIMIIg1jxv4sQ=="
+    crossorigin=""></script>
+    
+    <script src="https://unpkg.com/esri-leaflet-renderers@2.0.6/dist/esri-leaflet-renderers.js"
+  integrity="sha512-mhpdD3igvv7A/84hueuHzV0NIKFHmp2IvWnY5tIdtAHkHF36yySdstEVI11JZCmSY4TCvOkgEoW+zcV/rUfo0A=="
+  crossorigin=""></script>
+    <script src="https://use.fontawesome.com/2727ee2dca.js"></script>
+    
+    <script src="/js/Yandex.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/datatables.min.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+    
+    <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js" async></script>
+     <script src="https://yastatic.net/share2/share.js"  async></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/datatables.min.js"></script>
+    <script src="/js/script.js"></script>
+</head>
+<body>
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v6.0&appId=801323403724521&autoLogAppEvents=1"></script>
+    <div class="d-flex align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow header-nav">
+        <img src="/img/logo.jpg" alt="Карта короновируса - онлайн" class="logo">
+        
+        <h1 class="logo-text">Карта <span>коронавируса</span></h1>
+        <div class="nav-box d-flex justify-content-end">
+            <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,twitter,viber,whatsapp,skype,telegram"></div>
+         <ul class="nav  ">
+          <li class="nav-item">
+            <a class="nav-link" href="#">В России</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">О проекте</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Статистика</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Источник</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Контакты</a>
+          </li>
+        </ul>
+        
+        </div>
+       
+    </div>
+    
+    <div class="container-fluid">
+     <div class="row">
+        <div class="col-lg-4 col-md-12 col-sm-12 order-lg-0 order-md-1 order-sm-1">
+            <div class="ads_box"> ADS</div>
+            <h3>Подтвержденные случаи заражения короновирусом в России <i class="icon-flag icon-russia"></i></h3>
+            <div class="update-text">
+                19 марта 2020, 16:20 (по московскому времени)<br/>источники: <a href='https://www.rospotrebnadzor.ru/' target='_blank'>Роспотребнадзор</a>, <a href='https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports' target='_blank'>WHO</a>, <a href='https://www.cdc.gov/coronavirus/2019-ncov/index.html' target='_blank'>US CDC</a>, <a href='http://www.nhc.gov.cn/yjb/s3578/new_list.shtml' target='_blank'>China NHC</a>, <a href='https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases' target='_blank'>ECDC</a>, <a href='https://ncov.dxy.cn/ncovh5/view/pneumonia' target='_blank'>DXY</a>            </div>
+              <table  id="cases_tb_city" class="table compact table-striped table-bordered" cellspacing="0">          
+                <thead>
+                   <tr>
+                        <th style="width: 50px;">Город</th>
+                        <th>Заболело</th>
+                        <th>Умерло</th>
+                        <th>Выздоровело</th>
+                   </tr>
+                </thead>
+                <tbody>
+                                                            <tr>
+                                            <td>Москва</td>
+                                            <td>98</td>
+                                            <td>0</td>
+                                            <td>1</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Московская область</td>
+                                            <td>17</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Санкт-Петербург</td>
+                                            <td>10</td>
+                                            <td>0</td>
+                                            <td>2</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Липецкая область</td>
+                                            <td>3</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Калининградская область</td>
+                                            <td>5</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Самарская область</td>
+                                            <td>5</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Кемеровская область</td>
+                                            <td>2</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Пермский край</td>
+                                            <td>3</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Тверская область</td>
+                                            <td>3</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Забайкальский край</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>1</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Нижегородская область</td>
+                                            <td>3</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Тюменская область</td>
+                                            <td>2</td>
+                                            <td>0</td>
+                                            <td>1</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Краснодарский край</td>
+                                            <td>3</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Красноярский край</td>
+                                            <td>4</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Хабаровский край</td>
+                                            <td>3</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Воронежская область</td>
+                                            <td>2</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Белгородская область</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Пензенская область</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Республика Татарстан</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Республика Хакасия</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Ленинградская область</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Свердловская область</td>
+                                            <td>6</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Тульская область</td>
+                                            <td>3</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Архангельская область</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Ярославская область</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Республика Коми</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Кировская область</td>
+                                            <td>3</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Тамбовская область</td>
+                                            <td>3</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Калужская область</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Новосибирская область</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Республика Саха (Якутия)</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Оренбургская область</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Ханты-Мансийский АО</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Томская область</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Республика Чувашия</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Саратовская область</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Ивановская область</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Рязанская область</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                                            <tr>
+                                            <td>Мурманская область</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr> 
+                                    </tbody>
+            </table>
+         <div class="ads_box"> ADS</div>
             
+         <h3>Подтвержденные случаи заражения короновирусом по странам</h3>
+              <table  id="cases_tb_country" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                 
+                   <thead>
+                       <tr>
+                            <th style="width: 50px;">Страна</th>
+                            <th>Заболело</th>
+                            <th>Умерло</th>
+                            <th>Выздоровело</th>
+                       </tr>
+                  </thead>
+                <tbody>
+                   
+                      <tr>
+                         <td>China</td>
+                         <td>81155</td>
+                         <td>3249</td>
+                         <td>70535</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Italy</td>
+                         <td>35713</td>
+                         <td>2978</td>
+                         <td>4025</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Iran</td>
+                         <td>18407</td>
+                         <td>1284</td>
+                         <td>5710</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Spain</td>
+                         <td>17395</td>
+                         <td>803</td>
+                         <td>1107</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Germany</td>
+                         <td>13979</td>
+                         <td>42</td>
+                         <td>113</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>US</td>
+                         <td>10755</td>
+                         <td>154</td>
+                         <td>106</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>France</td>
+                         <td>9058</td>
+                         <td>243</td>
+                         <td>12</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Korea, South</td>
+                         <td>8565</td>
+                         <td>91</td>
+                         <td>1540</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Switzerland</td>
+                         <td>3888</td>
+                         <td>36</td>
+                         <td>15</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>United Kingdom</td>
+                         <td>2644</td>
+                         <td>104</td>
+                         <td>67</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Netherlands</td>
+                         <td>2465</td>
+                         <td>77</td>
+                         <td>2</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Austria</td>
+                         <td>2013</td>
+                         <td>6</td>
+                         <td>9</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Belgium</td>
+                         <td>1795</td>
+                         <td>21</td>
+                         <td>31</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Norway</td>
+                         <td>1720</td>
+                         <td>11</td>
+                         <td>1</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Sweden</td>
+                         <td>1439</td>
+                         <td>11</td>
+                         <td>16</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Denmark</td>
+                         <td>1206</td>
+                         <td>6</td>
+                         <td>1</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Japan</td>
+                         <td>924</td>
+                         <td>29</td>
+                         <td>150</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Malaysia</td>
+                         <td>900</td>
+                         <td>2</td>
+                         <td>75</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Portugal</td>
+                         <td>785</td>
+                         <td>3</td>
+                         <td>3</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Canada</td>
+                         <td>727</td>
+                         <td>9</td>
+                         <td>9</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Cruise Ship</td>
+                         <td>712</td>
+                         <td>7</td>
+                         <td>325</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Australia</td>
+                         <td>681</td>
+                         <td>6</td>
+                         <td>26</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Czechia</td>
+                         <td>631</td>
+                         <td>0</td>
+                         <td>3</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Brazil</td>
+                         <td>533</td>
+                         <td>4</td>
+                         <td>2</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Israel</td>
+                         <td>529</td>
+                         <td>0</td>
+                         <td>11</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Qatar</td>
+                         <td>452</td>
+                         <td>0</td>
+                         <td>4</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Greece</td>
+                         <td>418</td>
+                         <td>6</td>
+                         <td>8</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Finland</td>
+                         <td>400</td>
+                         <td>0</td>
+                         <td>10</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Ireland</td>
+                         <td>366</td>
+                         <td>2</td>
+                         <td>5</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Singapore</td>
+                         <td>345</td>
+                         <td>0</td>
+                         <td>114</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Pakistan</td>
+                         <td>335</td>
+                         <td>2</td>
+                         <td>13</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Luxembourg</td>
+                         <td>335</td>
+                         <td>4</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Iceland</td>
+                         <td>330</td>
+                         <td>1</td>
+                         <td>5</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Indonesia</td>
+                         <td>311</td>
+                         <td>25</td>
+                         <td>11</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Poland</td>
+                         <td>305</td>
+                         <td>5</td>
+                         <td>13</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Slovenia</td>
+                         <td>286</td>
+                         <td>1</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Romania</td>
+                         <td>277</td>
+                         <td>0</td>
+                         <td>25</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Thailand</td>
+                         <td>272</td>
+                         <td>1</td>
+                         <td>42</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Bahrain</td>
+                         <td>269</td>
+                         <td>1</td>
+                         <td>100</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Estonia</td>
+                         <td>267</td>
+                         <td>0</td>
+                         <td>1</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Saudi Arabia</td>
+                         <td>238</td>
+                         <td>0</td>
+                         <td>6</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Chile</td>
+                         <td>238</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Philippines</td>
+                         <td>217</td>
+                         <td>17</td>
+                         <td>8</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Egypt</td>
+                         <td>210</td>
+                         <td>6</td>
+                         <td>32</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Russia</td>
+                         <td>199</td>
+                         <td>1</td>
+                         <td>9</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Turkey</td>
+                         <td>191</td>
+                         <td>2</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>India</td>
+                         <td>184</td>
+                         <td>4</td>
+                         <td>15</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Ecuador</td>
+                         <td>168</td>
+                         <td>3</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Iraq</td>
+                         <td>164</td>
+                         <td>12</td>
+                         <td>43</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Peru</td>
+                         <td>155</td>
+                         <td>0</td>
+                         <td>1</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Lebanon</td>
+                         <td>149</td>
+                         <td>4</td>
+                         <td>4</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Kuwait</td>
+                         <td>148</td>
+                         <td>0</td>
+                         <td>18</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>United Arab Emirates</td>
+                         <td>140</td>
+                         <td>0</td>
+                         <td>31</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Slovakia</td>
+                         <td>123</td>
+                         <td>1</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>San Marino</td>
+                         <td>119</td>
+                         <td>11</td>
+                         <td>4</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Mexico</td>
+                         <td>118</td>
+                         <td>1</td>
+                         <td>4</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>South Africa</td>
+                         <td>116</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Armenia</td>
+                         <td>115</td>
+                         <td>0</td>
+                         <td>1</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Panama</td>
+                         <td>109</td>
+                         <td>1</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Taiwan*</td>
+                         <td>108</td>
+                         <td>1</td>
+                         <td>26</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Colombia</td>
+                         <td>102</td>
+                         <td>0</td>
+                         <td>1</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Croatia</td>
+                         <td>102</td>
+                         <td>1</td>
+                         <td>5</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Argentina</td>
+                         <td>97</td>
+                         <td>3</td>
+                         <td>3</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Serbia</td>
+                         <td>97</td>
+                         <td>0</td>
+                         <td>1</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Bulgaria</td>
+                         <td>94</td>
+                         <td>3</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Algeria</td>
+                         <td>87</td>
+                         <td>9</td>
+                         <td>32</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Latvia</td>
+                         <td>86</td>
+                         <td>0</td>
+                         <td>1</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Uruguay</td>
+                         <td>79</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Vietnam</td>
+                         <td>76</td>
+                         <td>0</td>
+                         <td>16</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Brunei</td>
+                         <td>75</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Hungary</td>
+                         <td>73</td>
+                         <td>1</td>
+                         <td>2</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Costa Rica</td>
+                         <td>69</td>
+                         <td>1</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Albania</td>
+                         <td>64</td>
+                         <td>2</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Sri Lanka</td>
+                         <td>60</td>
+                         <td>0</td>
+                         <td>3</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Cyprus</td>
+                         <td>58</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Morocco</td>
+                         <td>58</td>
+                         <td>2</td>
+                         <td>1</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Jordan</td>
+                         <td>56</td>
+                         <td>0</td>
+                         <td>1</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Andorra</td>
+                         <td>53</td>
+                         <td>0</td>
+                         <td>1</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Malta</td>
+                         <td>53</td>
+                         <td>0</td>
+                         <td>2</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Belarus</td>
+                         <td>51</td>
+                         <td>0</td>
+                         <td>5</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Bosnia and Herzegovina</td>
+                         <td>45</td>
+                         <td>0</td>
+                         <td>2</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Azerbaijan</td>
+                         <td>44</td>
+                         <td>1</td>
+                         <td>6</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Kazakhstan</td>
+                         <td>44</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>North Macedonia</td>
+                         <td>42</td>
+                         <td>0</td>
+                         <td>1</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Georgia</td>
+                         <td>40</td>
+                         <td>0</td>
+                         <td>1</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Oman</td>
+                         <td>39</td>
+                         <td>0</td>
+                         <td>12</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Tunisia</td>
+                         <td>39</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Cambodia</td>
+                         <td>37</td>
+                         <td>0</td>
+                         <td>1</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Moldova</td>
+                         <td>36</td>
+                         <td>1</td>
+                         <td>1</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Venezuela</td>
+                         <td>36</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Lithuania</td>
+                         <td>34</td>
+                         <td>0</td>
+                         <td>1</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Dominican Republic</td>
+                         <td>34</td>
+                         <td>2</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Burkina Faso</td>
+                         <td>33</td>
+                         <td>1</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Guadeloupe</td>
+                         <td>33</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Senegal</td>
+                         <td>31</td>
+                         <td>0</td>
+                         <td>2</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>New Zealand</td>
+                         <td>28</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Liechtenstein</td>
+                         <td>28</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Uzbekistan</td>
+                         <td>23</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Martinique</td>
+                         <td>23</td>
+                         <td>1</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Afghanistan</td>
+                         <td>22</td>
+                         <td>0</td>
+                         <td>1</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Bangladesh</td>
+                         <td>17</td>
+                         <td>1</td>
+                         <td>3</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Ukraine</td>
+                         <td>16</td>
+                         <td>2</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Jamaica</td>
+                         <td>15</td>
+                         <td>1</td>
+                         <td>2</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Congo (Kinshasa)</td>
+                         <td>14</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Reunion</td>
+                         <td>14</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Maldives</td>
+                         <td>13</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Cameroon</td>
+                         <td>13</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Bolivia</td>
+                         <td>12</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Honduras</td>
+                         <td>12</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Cuba</td>
+                         <td>11</td>
+                         <td>1</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>French Guiana</td>
+                         <td>11</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Paraguay</td>
+                         <td>11</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Ghana</td>
+                         <td>9</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Cote d'Ivoire</td>
+                         <td>9</td>
+                         <td>0</td>
+                         <td>1</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Trinidad and Tobago</td>
+                         <td>9</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Rwanda</td>
+                         <td>8</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Nigeria</td>
+                         <td>8</td>
+                         <td>0</td>
+                         <td>1</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Monaco</td>
+                         <td>7</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Kenya</td>
+                         <td>7</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Guyana</td>
+                         <td>7</td>
+                         <td>1</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Ethiopia</td>
+                         <td>6</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Guatemala</td>
+                         <td>6</td>
+                         <td>1</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Tanzania</td>
+                         <td>6</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Mongolia</td>
+                         <td>6</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Seychelles</td>
+                         <td>6</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Aruba</td>
+                         <td>4</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Equatorial Guinea</td>
+                         <td>4</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Bahamas, The</td>
+                         <td>3</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Montenegro</td>
+                         <td>3</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Mauritius</td>
+                         <td>3</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Kyrgyzstan</td>
+                         <td>3</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Mayotte</td>
+                         <td>3</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Liberia</td>
+                         <td>2</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Saint Lucia</td>
+                         <td>2</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Benin</td>
+                         <td>2</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Namibia</td>
+                         <td>2</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Kosovo</td>
+                         <td>2</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Barbados</td>
+                         <td>2</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Sudan</td>
+                         <td>2</td>
+                         <td>1</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Zambia</td>
+                         <td>2</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Mauritania</td>
+                         <td>2</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Gabon</td>
+                         <td>1</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Congo (Brazzaville)</td>
+                         <td>1</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Saint Vincent and the Grenadines</td>
+                         <td>1</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Fiji</td>
+                         <td>1</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Somalia</td>
+                         <td>1</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Togo</td>
+                         <td>1</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Central African Republic</td>
+                         <td>1</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Guinea</td>
+                         <td>1</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>El Salvador</td>
+                         <td>1</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Djibouti</td>
+                         <td>1</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Antigua and Barbuda</td>
+                         <td>1</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Eswatini</td>
+                         <td>1</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Nicaragua</td>
+                         <td>1</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Bhutan</td>
+                         <td>1</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Nepal</td>
+                         <td>1</td>
+                         <td>0</td>
+                         <td>1</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Suriname</td>
+                         <td>1</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Holy See</td>
+                         <td>1</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                       
+                      <tr>
+                         <td>Gambia, The</td>
+                         <td>1</td>
+                         <td>0</td>
+                         <td>0</td>
+                      </tr>
+                                    </tbody>
+         </table>
+        </div>
+         <div class="col-lg-8 col-md-12 col-sm-12 order-lg-1 order-md-0 order-sm-0">
+             <div class="widget_box row">
+                 <div class="col-3">
+                     <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="col-12">
+                                  <p class="card-text">Заражений</p>
+                              </div>
+                              <div class="col-6">
+                                  <h5 class="card-title"><span>в мире</span>170 593</h5>
+                              </div>
+                              <div class="col-6">
+                                  <h5 class="card-title"><span>В России </span>199</h5>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                 </div>
+                 <div class="col-3">
+                     <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="col-12">
+                                  <p class="card-text">Смертей</p>
+                              </div>
+                              <div class="col-6">
+                                  <h5 class="card-title"><span>в мире</span>6 593</h5>
+                              </div>
+                              <div class="col-6">
+                                  <h5 class="card-title"><span>В России</span>5</h5>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                 </div>
+                 <div class="col-3">
+                     <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="col-12">
+                                  <p class="card-text">Выздровелений</p>
+                              </div>
+                              <div class="col-6">
+                                  <h5 class="card-title"><span>в мире</span>70 593</h5>
+                              </div>
+                              <div class="col-6">
+                                  <h5 class="card-title"><span>В России</span>+52</h5>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                 </div>
+                 <div class="col-3">
+                     <div class="card bg-light mb-3" style="max-width: 18rem;">
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="col-12">
+                                  <p class="card-text">Последнее обновление</p>
+                              </div>
+                              <div class="col-8">
+                                  <h5 class="card-title"><span>Дата</span>16.03.2020</h5>
+                              </div>
+                              <div class="col-4">
+                                  <h5 class="card-title"><span>Время</span>12:26</h5>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                 </div>
+                 <div class="col-3"></div>
+                 <div class="col-3"></div>
+                 <div class="col-3"></div>
+             
+             </div>
+              <div id="map"></div>
+             <div class="ads_box"> ADS</div>
+            
+            <div id="disqus_thread"></div>
+<script>
 
-                            <ul>
-
-                                    <li> обновить страницу сочетанием клавиш
-
-                                Ctrl+F5 для Windows
-
-                                Shift+F5 для Linux
-
-                                Cmd+F5 для macOS
-
-                                    </li><li> проверить в разделе «Сайты», к верной ли папке привязан домен</li>
-
-                                    </li><li> удалить файл index.htm из директории сайта в файловом менеджере
-
-                            </li></ul>
-
-                            <p> Обращайтесь к нам по интересующим вопросам: через <a href="http://hosting.timeweb.ru/tickets" target="_blank">панель управления</a>, онлайн-чат, по телефону 8 (800) 333-1081 или e-mail info@timeweb.ru</p>
-
-                            <p> Мы желаем вам успешной работы. Спасибо, что выбрали «ТаймВэб».</p>
-
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://https-kartacoronavirus-ru.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
                             
-
-                            <p class="header">Дополнительно:</p>
-
-                                    <p>
-
-                                    <a href="http://timeweb.com/ru/help/pages/viewpage.action?pageId=6226259&amp;utm_source=tmweb&amp;utm_medium=referral&amp;utm_campaign=help" target="_blank" alt="Справочный центр">Справочный центр</a>&nbsp;&nbsp;
-
-                                    <a href="https://timeweb.com/ru/services/compare/?utm_source=tmweb&amp;utm_medium=referral&amp;utm_campaign=compare" target="_blank" alt="Сравнить хостинг Timeweb">Услуги</a>&nbsp;&nbsp;
-
-                                    <a href="https://timeweb.com/ru/?utm_source=tmweb&amp;utm_medium=referral&amp;utm_campaign=pay#pay" target="_blank" alt="Оплата хостинга Timeweb">Способы оплаты</a>&nbsp;&nbsp;
-
-                                    <a href="https://timeweb.com/ru/services/bonuses/2018/2606/?utm_source=tmweb&amp;utm_medium=referral&amp;utm_campaign=bonuses" target="_blank" alt="Акции и скидки на хостинг Timeweb">Акции и скидки</a>&nbsp;&nbsp;
-
-                                    <a href="https://timeweb.com/ru/about/contacts/?utm_source=tmweb&amp;utm_medium=referral&amp;utm_campaign=contacts" target="_blank" alt="Поддержка хостинга Timeweb">Поддержка</a>
-
-                            </p><p class="line"></p>
-
-     
-
-                            <p class="sign">Тел./Факс:
-
-    7 495 604-1081 (Москва) ::
-
-    7 812 244-1081 (С.-Петербург) ::
-
-    8 800 333-1081 (Россия)
-
-      ©2006-2019, ООО "ТаймВэб"<br>
-
-                            Санкт-Петербург, ул. Заставская, д. 22, к. 2, лит. А, 8 этаж<br>
-
-                            Лицензия РОСКОМНАДЗОР N142739.</p>
-
-                    </td>
-
-            </tr>
-
-            </tbody></table>
-
-     
-
-    </center>
-
-     
-
-            </td>
-
-    </tr>
-
-    </tbody></table>
-
-    </center>
-
+         </div>     
+         </div>      
+     </div>
+    </div>
     
-
     
+    <script type="text/javascript">
+        
+//        const map = L.map('map', {
+//          center: [37.75, 122.23],
+//          zoom: 3
+//        });
+        
+        var mapopts =  {
+         zoomSnap: 0,
+         scrollWheelZoom: false,
+         //center: [17.75, 22.23],
+		};
+        
 
-</body></html>
+
+		var map = L.map('map', mapopts).setView([37.75, 12.23],3);
+
+		var roadMutant = L.gridLayer.googleMutant({
+			maxZoom: 24,
+			type:'roadmap',
+            
+		}).addTo(map);
+        
+        
+        //L.esri.basemapLayer('Streets').addTo(map);
+                
+        const portlandHeritageTrees = L.esri.featureLayer({ url: 'https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/ncov_cases/FeatureServer/1' }).addTo(map);
+        
+        portlandHeritageTrees.bindPopup(function (evt) {
+           
+        var countre_name = evt.feature.properties.Country_Region
+        
+//        if(countre_name == "Russia") {
+//            evt.feature.properties.Country_Region = "Россия";
+//        }
+            
+        return L.Util.template('<h3>Страна: {Country_Region}</h3><hr /><p>Заблоевших: {Confirmed} <br> Умерло: {Deaths }.', evt.feature.properties);
+            
+        });
+        
+        
+        
+//        var service = L.esri.featureLayerService({
+//          url: 'https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/ncov_cases/FeatureServer/1'
+//        });
+        
+//        console.log(service);
+//        var counties = {'US': 'Пендостан', 'Russian': 'раша'};
+//
+//        evt.feature.properties.Country_Region = countries[evt.feature.properties.Country_Region];
+      
+        
+
+//		var mapopts =  {
+//         zoomSnap: 0
+//		};
+//
+//		var map = L.map('map', mapopts).setView([0,0],2);
+//
+//		var roadMutant = L.gridLayer.googleMutant({
+//			maxZoom: 24,
+//			type:'roadmap'
+//		}).addTo(map);
+//
+//		var satMutant = L.gridLayer.googleMutant({
+//			maxZoom: 24,
+//			type:'satellite'
+//		});
+//
+//		var terrainMutant = L.gridLayer.googleMutant({
+//			maxZoom: 24,
+//			type:'terrain'
+//		});
+//
+//		var hybridMutant = L.gridLayer.googleMutant({
+//			maxZoom: 24,
+//			type:'hybrid'
+//		});
+//
+//		var styleMutant = L.gridLayer.googleMutant({
+//			styles: [
+//				{elementType: 'labels', stylers: [{visibility: 'off'}]},
+//				{featureType: 'water', stylers: [{color: '#444444'}]},
+//				{featureType: 'landscape', stylers: [{color: '#eeeeee'}]},
+//				{featureType: 'road', stylers: [{visibility: 'off'}]},
+//				{featureType: 'poi', stylers: [{visibility: 'off'}]},
+//				{featureType: 'transit', stylers: [{visibility: 'off'}]},
+//				{featureType: 'administrative', stylers: [{visibility: 'off'}]},
+//				{featureType: 'administrative.locality', stylers: [{visibility: 'off'}]}
+//			],
+//			maxZoom: 24,
+//			type:'roadmap'
+//		});
+//
+//		var trafficMutant = L.gridLayer.googleMutant({
+//			maxZoom: 24,
+//			type:'roadmap'
+//		});
+//		trafficMutant.addGoogleLayer('TrafficLayer');
+//
+//
+//		var transitMutant = L.gridLayer.googleMutant({
+//			maxZoom: 24,
+//			type:'roadmap'
+//		});
+//		transitMutant.addGoogleLayer('TransitLayer');
+//
+//
+//
+//		L.control.layers({
+//			Roadmap: roadMutant,
+//			Aerial: satMutant,
+//			Terrain: terrainMutant,
+//			Hybrid: hybridMutant,
+//			Styles: styleMutant,
+//			Traffic: trafficMutant,
+//			Transit: transitMutant
+//		}, {}, {
+//			collapsed: false
+//		}).addTo(map);
+//
+//		var kyiv = [50.5, 30.5],
+//			lnd = [51.51, -0.12],
+//			sf = [37.77, -122.42],
+//			dc = [38.91, -77.04],
+//			trd = [63.41, 10.41],
+//			madBounds = [[40.70, -4.19], [40.12, -3.31]],
+//			mad = [40.40, -3.7];
+//
+//
+//		var marker1 = L.marker(kyiv).addTo(map),
+//			marker2 = L.marker(lnd).addTo(map),
+//			marker3 = L.marker(dc).addTo(map),
+//			marker4 = L.marker(sf).addTo(map),
+//			marker5 = L.marker(trd).addTo(map),
+//			marker6 = L.marker(mad).addTo(map);
+//
+//		var rectangle = L.rectangle(madBounds).addTo(map);
+
+//    map.addLayer(osm);
+//    map.addLayer(kittens);
+//    map.addLayer(debug);
+
+// 		var grid = L.gridLayer({
+// 			attribution: 'Grid Layer',
+// //      tileSize: L.point(150, 80),
+// //      tileSize: tileSize
+// 		});
+// 
+// 		grid.createTile = function (coords) {
+// 			var tile = L.DomUtil.create('div', 'tile-coords');
+// 			tile.innerHTML = [coords.x, coords.y, coords.z].join(', ');
+// 
+// 			return tile;
+// 		};
+// 
+// 		map.addLayer(grid);
+
+	</script>
+  <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(61072552, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true, 
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/61072552" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->  
+</body>
+</html>

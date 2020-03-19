@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>COVID-19 Dashboard</title>
+<meta name="keywords" content="COVID-19, โควิด-19, COVID-19 Dashboard, COVID_19 realtime, Sarun Seepun, Sarun, Seepun">
+<meta name="description" content="ระบบสรุปสถานะการโรคโควิด-19 รอบโลกรายวัน อ้างอิงจากข้อมูลรวบรวมโดย Johns Hopkins University">
+<meta name="author" content="Sarun Seepun">
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://thcovid19.com/assets/favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://thcovid19.com/assets/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://thcovid19.com/assets/favicon.png">
+<link rel="shortcut icon" href="https://thcovid19.com/assets/favicon.png">
+<meta name="apple-mobile-web-app-title" content="COVID-19 Dashboard">
+<meta name="application-name" content="COVID-19 Dashboard">
+<meta name="msapplication-config" content="https://thcovid19.com/assets/favicon.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://thcovid19.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="COVID-19 Dashboard">
+<meta property="og:description" content="ระบบสรุปสถานะการโรคโควิด-19 รอบโลกรายวัน อ้างอิงจากข้อมูลรวบรวมโดย Johns Hopkins University">
+<meta property="og:image" content="https://thcovid19.com/assets/preview.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+
+<link rel="stylesheet" href="https://thcovid19.com/css/style.css">
+
+<script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body class="loading">
+    <div class="loader">
+        <div class="wrapper">
+            <h1>COVID-19</h1>
+            <div class="loading-bar"><div class="bar"></div></div>
+        </div>
+    </div>
+
+    <nav class="topnav">
+        <div class="container">
+            <div class="wrapper">
+                <h1>สถานะการโรคโควิด-19 <span class="confirmed">จำนวนผู้ติดเชื้อ</span></h1>
+                <div class="date-container">
+                    อัพเดทข้อมูลล่าสุด <div class="date"></div>
+                </div>
+                <button class="info"><i class="fas fa-info"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="sidenav">
+        <div class="wrapper">
+            <a class="logo" href="https://techavenue.io/" target="_blank">
+                <img src="https://thcovid19.com/assets/logo.png">
+            </a>
+            <div class="menu-container">
+                <button class="menu map-data active" data-type="confirmed">
+                    <i class="fas fa-dizzy"></i>
+                    <div class="tooltip">จำนวนผู้ติดเชื้อ</div>
+                </button>
+                <button class="menu map-data" data-type="recovered">
+                    <i class="fas fa-grin"></i>
+                    <div class="tooltip">จำนวนผู้ที่รักษาหาย</div>
+                </button>
+                <button class="menu map-data" data-type="deaths">
+                    <i class="fas fa-skull-crossbones"></i>
+                    <div class="tooltip">จำนวนผู้เสียชีวิต</div>
+                </button>
+                <button class="menu map-data" data-type="current">
+                    <i class="fas fa-ambulance"></i>
+                    <div class="tooltip">จำนวนผู้ติดเชื้อขณะนี้</div>
+                </button>
+            </div>
+            <div class="menu-container">
+                <button class="menu map-type active" data-type="heatmap">
+                    <i class="fas fa-globe-americas"></i>
+                    <div class="tooltip">แสดงผลด้วย Heatmap</div>
+                </button>
+                <button class="menu map-type" data-type="dot">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="tooltip">แสดงผลด้วยจุด</div>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="container">
+            <div class="contents">
+                <div class="map-content">
+                    <div class="wrapper">
+                        <div class="worldmap-container"></div>
+                    </div>
+                </div>
+                <div class="statistic-content">
+                    <div class="tab confirmed active">
+                        <div class="header">
+                            <h2>จำนวนผู้ติดเชื้อ</h2>
+                            <h1></h1>
+                        </div>
+                        <div class="body">
+                            <h4>จำนวนผู้ติดเชื้อในแต่ละประเทศ</h4>
+                            <div class="scroll-wrapper"><div class="cases"></div></div>
+                        </div>
+                    </div>
+                    <div class="tab deaths">
+                        <div class="header">
+                            <h2>จำนวนผู้เสียชีวิต</h2>
+                            <h1></h1>
+                        </div>
+                        <div class="body">
+                            <h4>จำนวนผู้เสียชีวิตในแต่ละประเทศ</h4>
+                            <div class="scroll-wrapper"><div class="cases"></div></div>
+                        </div>
+                    </div>
+                    <div class="tab recovered">
+                        <div class="header">
+                            <h2>จำนวนผู้ที่รักษาหาย</h2>
+                            <h1></h1>
+                        </div>
+                        <div class="body">
+                            <h4>จำนวนผู้รักษาหายในแต่ละประเทศ</h4>
+                            <div class="scroll-wrapper"><div class="cases"></div></div>
+                        </div>
+                    </div>
+                    <div class="tab current">
+                        <div class="header">
+                            <h2>จำนวนผู้ติดเชื้อขณะนี้</h2>
+                            <h1></h1>
+                        </div>
+                        <div class="body">
+                            <h4>จำนวนผู้ติดเชื้อขณะนี้ในแต่ละประเทศ</h4>
+                            <div class="scroll-wrapper"><div class="cases"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="charts">
+        <div class="container">
+            <div class="chart-container">
+                <div class="text">
+                    <h1>จำนวนผู้ติดเชื้อ</h1>
+                    <h2></h2>
+                </div>
+                <div class="donut-container recovered">
+                    <div class="donut"></div>
+                    <h3>จำนวนผู้ที่รักษาหาย</h3>
+                </div>
+                <div class="donut-container deaths">
+                    <div class="donut"></div>
+                    <h3>จำนวนผู้เสียชีวิต</h3>
+                </div>
+                <div class="donut-container current">
+                    <div class="donut"></div>
+                    <h3>จำนวนผู้ติดเชื้อขณะนี้</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <nav class="footer">
+        <div class="container">
+            <div class="wrapper">
+                <div class="copyright">
+                    &copy; copyright 2020 ThCOVID-19. 
+                    All rights reserved.
+                </div>
+                <div class="socials">
+                    <a class="social" href="https://www.facebook.com/sarun.seepun" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="social" href="mailto:sarun.seepun@gmail.com" target="_blank">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a class="social" href="https://www.linkedin.com/in/sseepun/" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="social" href="https://www.behance.net/sseepun" target="_blank">
+                        <i class="fab fa-behance"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="alert">
+        <div class="wrapper">
+            <div class="box">
+                <h1></h1><p></p>
+                <button><ion-icon name="close-outline"></ion-icon></button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    <script type="module">
+        import App from './js/App.js';
+        var app = new App('https://thcovid19.com/');
+        app.init();
+    </script>
+</body>
+</html>

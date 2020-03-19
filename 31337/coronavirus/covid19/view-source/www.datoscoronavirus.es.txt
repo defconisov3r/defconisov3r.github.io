@@ -1,60 +1,62 @@
 <!doctype html>
 <html  >
-	<head>
-				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Datos Coronavirus - Evolución diaria por Comunidades Autónomas</title>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      Datos Coronavirus - Evolución diaria por Comunidades Autónomas
+    </title>
 
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link REL="stylesheet" href="styles/default.css?33519" type="text/css">
-	
-	
-	<link REL="stylesheet" href="styles/bootstrap/cerulean/normal/style.css?33519&241_1584208560" type="text/css">
-	
-	<link REL="stylesheet" href="styles/font-awesome/css/font-awesome.min.css?33519" type="text/css">
-	
-	<link REL="stylesheet" href="styles/custom/custom.css?33519" type="text/css">
-	
-	<link REL="stylesheet" href="styles/pages/.global_menu.css?241_1584208560" type="text/css">
-	
-	<link REL="stylesheet" href="include/jquery-ui/smoothness/jquery-ui.min.css?33519" type="text/css">
-	
-	<link REL="stylesheet" href="include/bootstrap/css/jquery.mCustomScrollbar.css?33519" type="text/css">
-	
-	</head>
-	<body class=" function-menu" >
-	<script type="text/javascript" src="include/loadfirst.js?33519"></script><script type="text/javascript" src="include/lang/Spanish.js?33519"></script><div id="search_suggest1"></div>
+<meta name="description" content="Datos del coronavirus para España y sus Comunidades Autónomas. Evolución diaria. Casos infectados, fallecidos y en UCI del covid 19">
 
-		
-		<style>
-			
-		</style>
-		<div class="r-topbar-page">
-			<div data-menu-width="full" 
-				 
-				class="r-topheader" 
-				data-resize-name="topbar"
-				data-body-align="left"
-			>
-								
-<nav class="navbar navbar-default" 
-	data-location="supertop" id="form_supertop_1" data-makeup="topbar"  data-pageid="1" >
-			 
-							 
-				<span data-cellId="supertop_c1" data-pageid="1" class="r-align-left navbar-header" data-itemid="logo" >
-				
-	<A data-itemtype="logo" data-itemid="logo"  data-pageid="1" class="navbar-brand" href="grafico_evolucion_dia_chart.php" data-pageid="1" >
-		Coronavirus
-	</A>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css?33519" type="text/css">
+    
+    
+      <link REL="stylesheet" href="styles/bootstrap/cerulean/normal/style.css?33519&281_1584208560" type="text/css">
+    
+      <link REL="stylesheet" href="styles/font-awesome/css/font-awesome.min.css?33519" type="text/css">
+    
+      <link REL="stylesheet" href="styles/custom/custom.css?33519" type="text/css">
+    
+      <link REL="stylesheet" href="styles/pages/.global_menu.css?281_1584208560" type="text/css">
+    
+      <link REL="stylesheet" href="include/jquery-ui/smoothness/jquery-ui.min.css?33519" type="text/css">
+    
+      <link REL="stylesheet" href="include/bootstrap/css/jquery.mCustomScrollbar.css?33519" type="text/css">
+    
+  </head>
+  <BODY class=" function-menu" >
+    <script type="text/javascript" src="include/loadfirst.js?33519"></script><script type="text/javascript" src="include/lang/Spanish.js?33519"></script><div id="search_suggest1"></div>
 
-				<button data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	
-					<span class="sr-only">Toggle navigation</span>	
-					<span class="icon-bar"></span>					
-				</button>				
-			</span>
-		 
-				<span data-cellId="supertop_c1" data-pageid="1" class="r-align-left navbar-collapse" data-itemtype="menu" data-itemid="menu"  data-pageid="1">
-				<ul class="nav navbar-nav">
+      <script data-ad-client="ca-pub-1877774362406011" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+      <style>
+        
+      </style>
+      <DIV class="r-topbar-page">
+        <DIV data-menu-width="full" class="r-topheader" data-resize-name="topbar" data-body-align="left">
+          
+            <NAV class="navbar navbar-default" data-location="supertop" id="form_supertop_1" data-makeup="topbar"  data-pageid="1">
+              <SPAN data-cellId="supertop_c1" data-pageid="1" class="r-align-left navbar-header" data-itemid="logo" >
+                
+                  <A data-itemtype="logo" data-itemid="logo"  data-pageid="1" class="navbar-brand" href="menu.php" data-pageid="1" >
+                    <DIV style="position: relative; height: 40px; top: -6px; white-space: nowrap;">
+      <IMG height="80%" id="navbarlogo" alt="Datos Coronavirus" src="/datoscoronavirus.jpeg"> 
+      Coronavirus
+</DIV>
+                  </A>
+                
+                <BUTTON data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">
+                  <SPAN class="sr-only">
+                    Toggle navigation
+                  </span>
+                  <SPAN class="icon-bar">
+                  </span>
+                </button>
+              </span>
+              <SPAN data-cellId="supertop_c1" data-pageid="1" class="r-align-left navbar-collapse" data-itemtype="menu" data-itemid="menu"  data-pageid="1">
+                <ul class="nav navbar-nav">
 	
 	
 	
@@ -154,119 +156,86 @@
 
 	</li>
 	
-</ul>			</span>
-							 
-													</nav>
-
-				</div>	
-			
-			<div data-body-align="left"  data-body-width="standard" class="r-body" data-resize-top="topbar" >
-				<div class="r-top">
-										</div>
-				<div class="r-content">
-										<div class="r-data-block" data-body-width="standard" >
-						
-										
-							
-						<div class="r-grid">
-										
-<table class="r-fluid r-form" data-location="grid" id="form_grid_1" data-makeup="topbar"  data-pageid="1" >
-						<tbody>
-			
-								<tr>
-									<td 
-	class="			"
-			 
-	data-cellId="grid_c1" data-pageid="1">
- 
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item4"  data-pageid="1" data-page=".global_menu">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="covid19_nuevos_chart.php">
-							<span class="glyphicon glyphicon-signal"></span>Nuevos casos hoy					</a>
-	</div>
-
-				
-	<div class="bs-welcome-content" data-comment-len="0">
-			</div>
-	</div>
-
- 
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item6"  data-pageid="1" data-page=".global_menu">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="grafico_evolucion_dia_chart.php">
-							<span class="glyphicon glyphicon-refresh"></span>Nuevos casos por día					</a>
-	</div>
-
-		</div>
-
- 
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item5"  data-pageid="1" data-page=".global_menu">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="grafico_evolucion_ccaa_chart.php">
-							<span class="glyphicon glyphicon-export"></span>Total casos					</a>
-	</div>
-
-		</div>
-
- 
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item2"  data-pageid="1" data-page=".global_menu">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="grafico_datos_salud_chart.php">
-							<span class="glyphicon glyphicon-heart"></span>Personal Sanitario					</a>
-	</div>
-
-		</div>
-
- 
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item1"  data-pageid="1" data-page=".global_menu">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="gr_fico_uci_chart.php">
-							<span class="glyphicon glyphicon-sort"></span>Gráfico UCI					</a>
-	</div>
-
-				
-	<div class="bs-welcome-content" data-comment-len="0">
-			</div>
-	</div>
-
- 
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item3"  data-pageid="1" data-page=".global_menu">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="covid19_ultimo_list.php">
-							<span class="glyphicon glyphicon-time"></span>Últimos datos					</a>
-	</div>
-
-				
-	<div class="bs-welcome-content" data-comment-len="0">
-			</div>
-	</div>
-
- 
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item"  data-pageid="1" data-page=".global_menu">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="covid19_list.php">
-							<span class="glyphicon glyphicon-cd"></span>Datos diarios					</a>
-	</div>
-
-				
-	<div class="bs-welcome-content" data-comment-len="0">
-			</div>
-	</div>
-
-</td>
-							</tr>
-					
-					</tbody>
-				</table>
-
-							</div>
-						
-														
-					</div>
-				</div>
-			</div>
-		</div>
-		<div style='padding-left:10px; text-align:center'>
+</ul>
+              </span>
+            </nav>
+          
+        </div>
+        <DIV data-body-align="left" data-body-width="standard" class="r-body" data-resize-top="topbar">
+          <DIV class="r-top">
+          </div>
+          <DIV class="r-content">
+            <DIV class="r-data-block" data-body-width="standard">
+              
+              <DIV class="r-grid">
+                
+                  <TABLE class="r-fluid r-form" data-location="grid" id="form_grid_1" data-makeup="topbar"  data-pageid="1">
+                    <tbody>
+                      <tr>
+                        <TD class="	" data-cellId="grid_c1" data-pageid="1">
+                          <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item"  data-pageid="1" data-page=".global_menu">
+                            <DIV class="bs-welcome-header">
+                              <a id="itemlink" href="covid19_nuevos_chart.php">
+                                <SPAN class="glyphicon glyphicon-signal">
+                                </span>
+                                Nuevos casos hoy
+                              </a>
+                            </div>
+                          </div>
+                          <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item6"  data-pageid="1" data-page=".global_menu">
+                            <DIV class="bs-welcome-header">
+                              <a id="itemlink" href="grafico_evolucion_dia_chart.php">
+                                <SPAN class="glyphicon glyphicon-refresh">
+                                </span>
+                                Nuevos casos por día
+                              </a>
+                            </div>
+                          </div>
+                          <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item5"  data-pageid="1" data-page=".global_menu">
+                            <DIV class="bs-welcome-header">
+                              <a id="itemlink" href="grafico_evolucion_ccaa_chart.php">
+                                <SPAN class="glyphicon glyphicon-export">
+                                </span>
+                                Total casos
+                              </a>
+                            </div>
+                          </div>
+                          <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item2"  data-pageid="1" data-page=".global_menu">
+                            <DIV class="bs-welcome-header">
+                              <a id="itemlink" href="grafico_datos_salud_chart.php">
+                                <SPAN class="glyphicon glyphicon-heart">
+                                </span>
+                                Personal Sanitario
+                              </a>
+                            </div>
+                          </div>
+                          <DIV class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item1"  data-pageid="1" data-page=".global_menu">
+                            <DIV class="bs-welcome-header">
+                              <a id="itemlink" href="gr_fico_uci_chart.php">
+                                <SPAN class="glyphicon glyphicon-sort">
+                                </span>
+                                Gráfico UCI
+                              </a>
+                            </div>
+                            <DIV class="bs-welcome-content" data-comment-len="0">
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <TD class="r-ori-vert" data-cellId="grid_c" data-pageid="1">
+                          <img src="images/datoscoronavirus2.jpeg" data-itemtype="image" data-itemid="image"  data-pageid="1" data-page=".global_menu" />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style='padding-left:10px; text-align:center'>
 
 <span class="social-bt"><a href="https://twitter.com/intent/tweet?text=Datos+Coronavirus+&amp;url=https%3A%2F%2Fwww.datoscoronavirus.es%2F&amp;original_referer=" title="Comparte en Twitter" onclick="ga('send', 'event', 'BotonSocial', 'Twitter', '');"><img src="https://s3.eu-central-1.amazonaws.com/img.decimos/s3/comunes/twitter_42.png" alt="Twitter"></a></span>
 
@@ -296,13 +265,13 @@
 
   gtag('config', 'UA-160763177-1');
 </script>
-	<script>
+    <script>
 			window.controlsMap = {"<global>":{"menu":{"1":{"oldLayout":false,"layoutVersion":4,"layoutName":"","video":[],"toolTips":[],"searchPanelActivated":false,"controls":[],"search":{"searchBlocks":[],"allSearchFields":[],"allSearchFieldsLabels":[],"panelSearchFields":false,"googleLikeFields":[],"inflexSearchPanel":false,"requiredSearchFields":[],"isSearchRequired":false,"searchTableName":"<global>","shortSearchTableName":".global","submitPageType":"menu"},"gMaps":{"isUseMainMaps":false,"isUseFieldsMaps":false,"isUseGoogleMap":false,"APIcode":"","mainMapIds":[],"fieldMapsIds":[],"mapsData":[]}}}}};
 			window.viewControlsMap = {"<global>":{"menu":{"1":[]}}};
-			window.settings = {"tableSettings":{"<global>":{"proxy":{"proxy":""},"fieldSettings":[],"strCaption":null,"pageMode":0,"defaultPages":{"menu":"menu"},"ajaxSuggest":false}},"global":{"shortTNames":{"<global>":".global"},"webRootPath":"","ext":"php","charSet":"utf-8","curretLang":"Spanish","debugMode":false,"googleMapsApiCode":"","useCookieBanner":false,"cookieBanner":"Este sitio web utiliza cookies para mejorar la experiencia del usuario","projectBuildKey":"241_1584208560","wizardBuildKey":"33519","isMobile":false,"mobileDeteced":false,"s508":false,"mapProvider":0,"staticMapsOnly":false,"locale":{"dateFormat":"1","langName":"es","ctryName":"ES","startWeekDay":"0","dateDelimiter":"\/","is24hoursFormat":"1","leadingZero":"0","timeDelimiter":":","timePmLetter":"","timeAmLetter":""},"showDetailedError":true,"customErrorMessage":"","idStartFrom":2}};
-			Runner.applyPagesData( {"1":{"proxy":[],"pageName":"menu","helperFormItems":{"formItems":{"supertop":["logo","menu"],"above-grid":["breadcrumb"],"grid":["welcome_item4","welcome_item6","welcome_item5","welcome_item2","welcome_item1","welcome_item3","welcome_item"]},"formXtTags":{"above-grid":["breadcrumb"]},"itemForms":{"logo":"supertop","menu":"supertop","breadcrumb":"above-grid","welcome_item4":"grid","welcome_item6":"grid","welcome_item5":"grid","welcome_item2":"grid","welcome_item1":"grid","welcome_item3":"grid","welcome_item":"grid"},"itemLocations":[],"itemVisiblity":{"menu":3}},"helperItemsByType":{"logo":["logo"],"menu":["menu"],"breadcrumb":["breadcrumb"],"welcome_item":["welcome_item","welcome_item1","welcome_item3","welcome_item4","welcome_item5","welcome_item2","welcome_item6"]},"helperFieldItems":[],"buttons":[],"fieldItems":[],"renderedMediaType":0,"cellMaps":[]}} );
+			window.settings = {"tableSettings":{"<global>":{"proxy":{"proxy":""},"fieldSettings":[],"strCaption":null,"pageMode":0,"defaultPages":{"menu":"menu"},"ajaxSuggest":false}},"global":{"shortTNames":{"<global>":".global"},"webRootPath":"","ext":"php","charSet":"utf-8","curretLang":"Spanish","debugMode":false,"googleMapsApiCode":"","useCookieBanner":false,"cookieBanner":"Este sitio web utiliza cookies para mejorar la experiencia del usuario","projectBuildKey":"281_1584208560","wizardBuildKey":"33519","isMobile":false,"mobileDeteced":false,"s508":false,"mapProvider":0,"staticMapsOnly":false,"locale":{"dateFormat":"1","langName":"es","ctryName":"ES","startWeekDay":"0","dateDelimiter":"\/","is24hoursFormat":"1","leadingZero":"0","timeDelimiter":":","timePmLetter":"","timeAmLetter":""},"showDetailedError":true,"customErrorMessage":"","idStartFrom":2}};
+			Runner.applyPagesData( {"1":{"proxy":[],"pageName":"menu","helperFormItems":{"formItems":{"supertop":["logo","menu"],"above-grid":["breadcrumb"],"grid":["welcome_item","welcome_item6","welcome_item5","welcome_item2","welcome_item1","image"]},"formXtTags":{"above-grid":["breadcrumb"]},"itemForms":{"logo":"supertop","menu":"supertop","breadcrumb":"above-grid","welcome_item":"grid","welcome_item6":"grid","welcome_item5":"grid","welcome_item2":"grid","welcome_item1":"grid","image":"grid"},"itemLocations":[],"itemVisiblity":{"menu":3}},"helperItemsByType":{"logo":["logo"],"menu":["menu"],"breadcrumb":["breadcrumb"],"welcome_item":["welcome_item1","welcome_item5","welcome_item2","welcome_item6","welcome_item"],"image":["image"]},"helperFieldItems":[],"buttons":[],"fieldItems":[],"renderedMediaType":0,"cellMaps":[]}} );
 			</script>
 <script language="JavaScript" src="include/runnerJS/RunnerAll.js?33519"></script>
 <script> Runner.util.ScriptLoader.load();</script>
-	</body>
+  </body>
 </html>

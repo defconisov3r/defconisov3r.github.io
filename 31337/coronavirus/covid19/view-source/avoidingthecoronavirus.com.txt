@@ -1,339 +1,302 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
-<meta name="viewport" content="width=device-width">
-<title>Avoiding the CoronaVirus  &mdash; Coming Soon</title>
-<script src="http://avoidingthecoronavirus.com/wp-includes/js/jquery/jquery.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
-<style type="text/css">
-body {
-	background-color: #fff;
-	background-image: url( "http://avoidingthecoronavirus.com/wp-content/plugins/mojo-marketplace-wp-plugin/images/cs-bluehost-bg.jpg" );
-	background-position: top right;
-	background-repeat: no-repeat;
-	font-family: "Open Sans", sans-serif;
-	overflow-x: hidden;
-}
-* {
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
-input {
-	font-family: "Open Sans", sans-serif;
-}
-::-webkit-input-placeholder {
-  color: #9DAFBD;
-}
-::-moz-placeholder {
-  color: #9DAFBD;
-}
-:-ms-input-placeholder {
-  color: #9DAFBD;
-}
-:-moz-placeholder {
-  color: #9DAFBD;
-}
-#wrap {
-	max-width: 560px;
-	margin: 320px auto 120px;
-	color: #444;
-	text-align: center;
-}
-#wrap h1 {
-	font-weight: 300;
-	font-size: 28px;
-}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="https://gmpg.org/xfn/11">
 
-#wrap h2 {
-	font-weight: 300;
-	font-size: 38px;
-}
+<title>Avoid the coronavirus - usefull guide - Avoiding the CoronaVirus</title>
 
-#wrap p {
-	color: #666;
-	line-height: 1.5;
-}
+<!-- This site is optimized with the Yoast SEO plugin v13.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="A guide containing usefull tips for people trying to avoid the coronavirus. the guide gives general instructions and some recommendations of products."/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="https://avoidingthecoronavirus.com/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Avoid the coronavirus - usefull guide - Avoiding the CoronaVirus" />
+<meta property="og:description" content="A guide containing usefull tips for people trying to avoid the coronavirus. the guide gives general instructions and some recommendations of products." />
+<meta property="og:url" content="https://avoidingthecoronavirus.com/" />
+<meta property="og:site_name" content="Avoiding the CoronaVirus " />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="A guide containing usefull tips for people trying to avoid the coronavirus. the guide gives general instructions and some recommendations of products." />
+<meta name="twitter:title" content="Avoid the coronavirus - usefull guide - Avoiding the CoronaVirus" />
+<meta name="twitter:image" content="https://avoidingthecoronavirus.com/wp-content/uploads/2020/03/woman-wearing-face-mask-3873197-1-1024x683.jpg" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://avoidingthecoronavirus.com/#website","url":"https://avoidingthecoronavirus.com/","name":"Avoiding the CoronaVirus ","inLanguage":"en-US","description":"tips and recommendations about avoiding the CoronaVirus (covid-19)","potentialAction":[{"@type":"SearchAction","target":"https://avoidingthecoronavirus.com/?s={search_term_string}","query-input":"required name=search_term_string"}]},{"@type":"ImageObject","@id":"https://avoidingthecoronavirus.com/#primaryimage","inLanguage":"en-US","url":"https://avoidingthecoronavirus.com/wp-content/uploads/2020/03/woman-wearing-face-mask-3873197-1-1024x683.jpg"},{"@type":"WebPage","@id":"https://avoidingthecoronavirus.com/#webpage","url":"https://avoidingthecoronavirus.com/","name":"Avoid the coronavirus - usefull guide - Avoiding the CoronaVirus","isPartOf":{"@id":"https://avoidingthecoronavirus.com/#website"},"inLanguage":"en-US","primaryImageOfPage":{"@id":"https://avoidingthecoronavirus.com/#primaryimage"},"datePublished":"2020-03-16T02:29:53+00:00","dateModified":"2020-03-18T17:40:13+00:00","description":"A guide containing usefull tips for people trying to avoid the coronavirus. the guide gives general instructions and some recommendations of products.","potentialAction":[{"@type":"ReadAction","target":["https://avoidingthecoronavirus.com/"]}]}]}</script>
+<!-- / Yoast SEO plugin. -->
 
-footer {
-	background-color: #fff;
-	width: 100%;
-	position: fixed;
-	bottom:0;
-	left:0;
-	color: #666;
-}
-footer p {
-	font-size: 14px;
-	line-height: 22px;
-	color: #5B5B5B;
-	padding: 8px;
-	text-align: center;
-}
-footer p a {
-	color: #3575D3;
-	text-decoration: none;
-}
-footer p a:hover {
-	text-decoration: underline;
-}
-
-.btn {
-	display: inline-block;
-	font-weight: 400;
-	text-align: center;
-	vertical-align: middle;
-	-ms-touch-action: manipulation;
-	touch-action: manipulation;
-	cursor: pointer;
-	background-image: none;
-	border: 1px solid transparent;
-	white-space: nowrap;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	padding: 8px 16px;
-	font-size: 14px;
-	line-height: 1.5;
-	border: 1px solid #2e66ba;
-	background: #2e66ba;
-	color: #fff;
-	box-shadow: none;
-	border-radius: 3px;
-	text-decoration: none;
-	margin-top: 60px;
-}
-
-.btn:hover {
-	border: 1px solid #2e66ba;
-	background-color: #fff;
-	color: #2e66ba;
-}
-
-.bh_subscription_widget {
-}
-.bh_subscription_widget h2.widgettitle {
-	color: #5B5B5B;
-	font-size: 38px;
-	letter-spacing: -1px;
-	line-height: 54px;
-	margin-bottom: 10px;
-}
-.bh_subscription_widget #subscribe-text p {
-	color: #5B5B5B;
-	font-size: 16px;
-	letter-spacing: 0;
-	line-height: 24px;
-	margin-bottom: 25px;
-}
-.bh_subscription_widget #success,
-.bh_subscription_widget #error {
-    border-radius: 4px;
-    font-size: 14px;
-    line-height: 24px;
-    color: #5B5B5B;
-    margin-bottom: 25px;
-    display: none;
-    padding: 8px 40px;
-}
-.bh_subscription_widget #success {
-    background: #CCE9D0;
-    border: 1px solid #009013;
-}
-.bh_subscription_widget #error {
-    background: #FFEAE9;
-    border: 1px solid #F72F26;
-}
-.bh_subscription_widget form .bh-inputs {
-	display: inline-block;
-	position: relative;
-	vertical-align: middle;
-	-webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
-}
-.bh_subscription_widget form .bh-inputs.active {
-	-webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
-}
-.bh_subscription_widget form .bh-inputs.email.active #bh-subscribe-label {
-	color: #5B5B5B;
-    clip: auto !important;
-    height: auto !important;
-    position: absolute !important;
-    overflow: visible !important;
-    width: auto !important;
-    left: 16px;
-    font-size: 11px;
-    top: 2px;
-}
-.bh_subscription_widget form .bh-inputs.email input[type="email"] {
-	background-color: #fff;
-	background-image: url( "http://avoidingthecoronavirus.com/wp-content/plugins/mojo-marketplace-wp-plugin/images/icon-email.svg" );
-	background-position: 10px center;
-	background-repeat: no-repeat;
-    border: 1px solid #5B5B5B;
-    border-radius: 3px;
-    color: #5B5B5B;
-    font-size: 11px;
-    margin-right: 6px;
-    min-width: 300px;
-    padding: 14px 15px 14px 45px;
-    max-height: 45px;
-    -webkit-transition: all 0.05s ease-in-out;
-    -moz-transition: all 0.05s ease-in-out;
-    -o-transition: all 0.05s ease-in-out;
-    transition: all 0.05s ease-in-out;
-}
-.bh_subscription_widget form .bh-inputs.email.active input[type="email"] {
-	background-image: none;
-    font-size: 14px;
-    padding: 16px 15px 12px 15px;
-    max-height: 45px;
-}
-.bh_subscription_widget form .bh-inputs.submit input[type="submit"] {
-    background-color: #3575D3;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 13px;
-    margin: 0;
-    padding: 15px 30px;
-    border: 1px solid #3575D3;
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
-}
-.bh_subscription_widget form .bh-inputs.submit input[type="submit"]:hover {
-    background-color: #5B5B5B;
-    border-color: #5B5B5B;
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
-}
-
-@media (max-width: 1024px) {
-	#wrap {
-		margin: 240px auto 120px;
-	}
-}
-@media (max-width: 960px) {
-	#wrap {
-		margin: 120px auto;
-	}
-}
-@media (max-width: 640px) {
-	#wrap {
-		margin: 60px auto 120px;
-		max-width: 100%;
-		color: #444;
-		padding: 0 20px;
-	}
-	.btn {
-		margin-top: 10px;
-	}
-	.bh_subscription_widget form .bh-inputs,
-	.bh_subscription_widget form .bh-inputs.email input[type="email"],
-	.bh_subscription_widget form .bh-inputs.submit input[type="submit"] {
-	    width: 100%;
-	}
-	.bh_subscription_widget form .bh-inputs.email input[type="email"] {
-	    min-width: 0;
-	}
-	.bh_subscription_widget form .bh-inputs {
-	    margin-bottom: 10px;
-	}
-}
-@media (max-width: 360px) {
-	#wrap h1 {
-		font-size: 26px;
-	}
-	.btn {
-		margin-top: 40px;
-	}
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Avoiding the CoronaVirus  &raquo; Feed" href="https://avoidingthecoronavirus.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Avoiding the CoronaVirus  &raquo; Comments Feed" href="https://avoidingthecoronavirus.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Avoiding the CoronaVirus  &raquo; Avoid the coronavirus &#8211; usefull guide Comments Feed" href="https://avoidingthecoronavirus.com/avoid-the-coronavirus/feed/" />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.10.4 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<!-- Note: MonsterInsights is not currently configured on this site. The site owner needs to authenticate with Google Analytics in the MonsterInsights settings panel. -->
+<!-- No UA code set -->
+<!-- / Google Analytics by MonsterInsights -->
+		<script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/avoidingthecoronavirus.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
 }
 </style>
-</head>
-<body>
-	<div id="wrap">
-		<div class="content">
-			
-			
-				<h1>A New WordPress Site</h1>
-				<h2>Coming Soon!</h2>
-				<a class="btn" href="http://avoidingthecoronavirus.com/wp-login.php">Admin Login</a>
-
-			
-		</div>
-	</div>
-	<footer>
-			<p class="text-center">A <a target="_blank" href="https://bluehost.com/wordpress" class="bluehost" rel="nofollow">Bluehost</a> powered website. Is this your website? Log in to <a href="http://avoidingthecoronavirus.com/wp-login.php">WordPress</a> or <a target="_blank" href="https://my.bluehost.com/" class="bluehost" rel="nofollow">Bluehost</a></p>
-	</footer>
+	<link rel='stylesheet' id='astra-theme-css-css'  href='https://avoidingthecoronavirus.com/wp-content/themes/astra/assets/css/minified/style.min.css?ver=2.3.4' media='all' />
+<style id='astra-theme-css-inline-css'>
+html{font-size:93.75%;}a,.page-title{color:#1f51c6;}a:hover,a:focus{color:#3a3a3a;}body,button,input,select,textarea,.ast-button,.ast-custom-button{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-weight:inherit;font-size:15px;font-size:1rem;}blockquote{color:#000000;}.site-title{font-size:35px;font-size:2.3333333333333rem;}.ast-archive-description .ast-archive-title{font-size:40px;font-size:2.6666666666667rem;}.site-header .site-description{font-size:15px;font-size:1rem;}.entry-title{font-size:40px;font-size:2.6666666666667rem;}.comment-reply-title{font-size:24px;font-size:1.6rem;}.ast-comment-list #cancel-comment-reply-link{font-size:15px;font-size:1rem;}h1,.entry-content h1{font-size:40px;font-size:2.6666666666667rem;}h2,.entry-content h2{font-size:30px;font-size:2rem;}h3,.entry-content h3{font-size:25px;font-size:1.6666666666667rem;}h4,.entry-content h4{font-size:20px;font-size:1.3333333333333rem;}h5,.entry-content h5{font-size:18px;font-size:1.2rem;}h6,.entry-content h6{font-size:15px;font-size:1rem;}.ast-single-post .entry-title,.page-title{font-size:30px;font-size:2rem;}#secondary,#secondary button,#secondary input,#secondary select,#secondary textarea{font-size:15px;font-size:1rem;}::selection{background-color:#af006c;color:#ffffff;}body,h1,.entry-title a,.entry-content h1,h2,.entry-content h2,h3,.entry-content h3,h4,.entry-content h4,h5,.entry-content h5,h6,.entry-content h6,.wc-block-grid__product-title{color:#000000;}.tagcloud a:hover,.tagcloud a:focus,.tagcloud a.current-item{color:#ffffff;border-color:#1f51c6;background-color:#1f51c6;}.main-header-menu a,.ast-header-custom-item a{color:#000000;}.main-header-menu li:hover > a,.main-header-menu li:hover > .ast-menu-toggle,.main-header-menu .ast-masthead-custom-menu-items a:hover,.main-header-menu li.focus > a,.main-header-menu li.focus > .ast-menu-toggle,.main-header-menu .current-menu-item > a,.main-header-menu .current-menu-ancestor > a,.main-header-menu .current_page_item > a,.main-header-menu .current-menu-item > .ast-menu-toggle,.main-header-menu .current-menu-ancestor > .ast-menu-toggle,.main-header-menu .current_page_item > .ast-menu-toggle{color:#1f51c6;}input:focus,input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="reset"]:focus,input[type="search"]:focus,textarea:focus{border-color:#1f51c6;}input[type="radio"]:checked,input[type=reset],input[type="checkbox"]:checked,input[type="checkbox"]:hover:checked,input[type="checkbox"]:focus:checked,input[type=range]::-webkit-slider-thumb{border-color:#1f51c6;background-color:#1f51c6;box-shadow:none;}.site-footer a:hover + .post-count,.site-footer a:focus + .post-count{background:#1f51c6;border-color:#1f51c6;}.footer-adv .footer-adv-overlay{border-top-style:solid;border-top-color:#7a7a7a;}.ast-comment-meta{line-height:1.666666667;font-size:12px;font-size:0.8rem;}.single .nav-links .nav-previous,.single .nav-links .nav-next,.single .ast-author-details .author-title,.ast-comment-meta{color:#1f51c6;}.entry-meta,.entry-meta *{line-height:1.45;color:#1f51c6;}.entry-meta a:hover,.entry-meta a:hover *,.entry-meta a:focus,.entry-meta a:focus *{color:#3a3a3a;}.ast-404-layout-1 .ast-404-text{font-size:200px;font-size:13.333333333333rem;}.widget-title{font-size:21px;font-size:1.4rem;color:#000000;}#cat option,.secondary .calendar_wrap thead a,.secondary .calendar_wrap thead a:visited{color:#1f51c6;}.secondary .calendar_wrap #today,.ast-progress-val span{background:#1f51c6;}.secondary a:hover + .post-count,.secondary a:focus + .post-count{background:#1f51c6;border-color:#1f51c6;}.calendar_wrap #today > a{color:#ffffff;}.ast-pagination a,.page-links .page-link,.single .post-navigation a{color:#1f51c6;}.ast-pagination a:hover,.ast-pagination a:focus,.ast-pagination > span:hover:not(.dots),.ast-pagination > span.current,.page-links > .page-link,.page-links .page-link:hover,.post-navigation a:hover{color:#3a3a3a;}.ast-header-break-point .ast-mobile-menu-buttons-minimal.menu-toggle{background:transparent;color:#af006c;}.ast-header-break-point .ast-mobile-menu-buttons-outline.menu-toggle{background:transparent;border:1px solid #af006c;color:#af006c;}.ast-header-break-point .ast-mobile-menu-buttons-fill.menu-toggle{background:#af006c;}.wp-block-button .wp-block-button__link,{color:#ffffff;}.wp-block-button .wp-block-button__link{border-radius:2px;padding-top:10px;padding-right:40px;padding-bottom:10px;padding-left:40px;}.wp-block-button .wp-block-button__link:hover,.wp-block-button .wp-block-button__link:focus{color:#ffffff;background-color:#3a3a3a;border-color:#3a3a3a;}.menu-toggle,button,.ast-button,.ast-custom-button,.button,input#submit,input[type="button"],input[type="submit"],input[type="reset"]{border-style:solid;border-top-width:0;border-right-width:0;border-left-width:0;border-bottom-width:0;color:#ffffff;border-color:#af006c;background-color:#af006c;border-radius:2px;padding-top:10px;padding-right:40px;padding-bottom:10px;padding-left:40px;font-family:inherit;font-weight:inherit;line-height:1;}button:focus,.menu-toggle:hover,button:hover,.ast-button:hover,.button:hover,input[type=reset]:hover,input[type=reset]:focus,input#submit:hover,input#submit:focus,input[type="button"]:hover,input[type="button"]:focus,input[type="submit"]:hover,input[type="submit"]:focus{color:#ffffff;background-color:#3a3a3a;border-color:#3a3a3a;}@media (min-width:545px){.ast-page-builder-template .comments-area,.single.ast-page-builder-template .entry-header,.single.ast-page-builder-template .post-navigation{max-width:1240px;margin-left:auto;margin-right:auto;}}body,.ast-separate-container{background-color:rgba(38,232,239,0.14);}@media (max-width:768px){.ast-archive-description .ast-archive-title{font-size:40px;}.entry-title{font-size:30px;}h1,.entry-content h1{font-size:30px;}h2,.entry-content h2{font-size:25px;}h3,.entry-content h3{font-size:20px;}.ast-single-post .entry-title,.page-title{font-size:30px;}}@media (max-width:544px){.ast-archive-description .ast-archive-title{font-size:40px;}.entry-title{font-size:30px;}h1,.entry-content h1{font-size:30px;}h2,.entry-content h2{font-size:25px;}h3,.entry-content h3{font-size:20px;}.ast-single-post .entry-title,.page-title{font-size:30px;}}@media (max-width:768px){html{font-size:85.5%;}}@media (max-width:544px){html{font-size:85.5%;}}@media (min-width:769px){.ast-container{max-width:1240px;}}@font-face {font-family: "Astra";src: url(https://avoidingthecoronavirus.com/wp-content/themes/astra/assets/fonts/astra.woff) format("woff"),url(https://avoidingthecoronavirus.com/wp-content/themes/astra/assets/fonts/astra.ttf) format("truetype"),url(https://avoidingthecoronavirus.com/wp-content/themes/astra/assets/fonts/astra.svg#astra) format("svg");font-weight: normal;font-style: normal;font-display: fallback;}@media (max-width:921px) {.main-header-bar .main-header-bar-navigation{display:none;}}.ast-desktop .main-header-menu.submenu-with-border .sub-menu,.ast-desktop .main-header-menu.submenu-with-border .children,.ast-desktop .main-header-menu.submenu-with-border .astra-full-megamenu-wrapper{border-color:#af006c;}.ast-desktop .main-header-menu.submenu-with-border .sub-menu,.ast-desktop .main-header-menu.submenu-with-border .children{border-top-width:2px;border-right-width:0px;border-left-width:0px;border-bottom-width:0px;border-style:solid;}.ast-desktop .main-header-menu.submenu-with-border .sub-menu .sub-menu,.ast-desktop .main-header-menu.submenu-with-border .children .children{top:-2px;}.ast-desktop .main-header-menu.submenu-with-border .sub-menu a,.ast-desktop .main-header-menu.submenu-with-border .children a{border-bottom-width:0px;border-style:solid;border-color:#eaeaea;}@media (min-width:769px){.main-header-menu .sub-menu li.ast-left-align-sub-menu:hover > ul,.main-header-menu .sub-menu li.ast-left-align-sub-menu.focus > ul{margin-left:-0px;}}.ast-small-footer{border-top-style:solid;border-top-width:1px;border-top-color:#7a7a7a;}.ast-small-footer-wrap{text-align:center;}@media (max-width:920px){.ast-404-layout-1 .ast-404-text{font-size:100px;font-size:6.6666666666667rem;}}.ast-breadcrumbs .trail-browse,.ast-breadcrumbs .trail-items,.ast-breadcrumbs .trail-items li{display:inline-block;margin:0;padding:0;border:none;background:inherit;text-indent:0;}.ast-breadcrumbs .trail-browse{font-size:inherit;font-style:inherit;font-weight:inherit;color:inherit;}.ast-breadcrumbs .trail-items{list-style:none;}.trail-items li::after{padding:0 0.3em;content:"\00bb";}.trail-items li:last-of-type::after{display:none;}.ast-header-break-point .site-header{border-bottom-width:1px;border-bottom-color:#8224e3;}@media (min-width:769px){.main-header-bar{border-bottom-width:1px;border-bottom-color:#8224e3;}}@media (min-width:769px){#primary{width:70%;}#secondary{width:30%;}}.ast-safari-browser-less-than-11 .main-header-menu .menu-item, .ast-safari-browser-less-than-11 .main-header-bar .ast-masthead-custom-menu-items{display:block;}.main-header-menu .menu-item, .main-header-bar .ast-masthead-custom-menu-items{-js-display:flex;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column;}.main-header-menu > .menu-item > a{height:100%;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;-js-display:flex;display:flex;}.ast-primary-menu-disabled .main-header-bar .ast-masthead-custom-menu-items{flex:unset;}
+</style>
+<link rel='stylesheet' id='astra-menu-animation-css'  href='https://avoidingthecoronavirus.com/wp-content/themes/astra/assets/css/minified/menu-animation.min.css?ver=2.3.4' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://avoidingthecoronavirus.com/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' media='all' />
+<!--[if IE]>
+<script src='https://avoidingthecoronavirus.com/wp-content/themes/astra/assets/js/minified/flexibility.min.js?ver=2.3.4'></script>
 <script>
-	jQuery(document).ready( function($){
-	
-		$( '#subscribe-submit input' ).click(function(e){
-			e.preventDefault();
-
-			$( '#success' ).hide();
-			$( '#error' ).hide();
-
-			var email 		= $( '#subscribe-field-bh' ).val();
-			var nonce 		= $( '#mm_nonce-coming-soon-subscribe' ).val();
-			var ajaxscript 	= { ajax_url : 'http://avoidingthecoronavirus.com/wp-admin/admin-ajax.php' }
-
-			$.ajax({
-				type: 'POST',
-				url: ajaxscript.ajax_url,
-				data: { 
-					'action': 'mm_coming_soon_subscribe',
-					'email': email,
-					'nonce': nonce
-				},
-				success: function( response ){
-					
-					//console.log( response );
-
-					var status = response.status;
-
-					if ( status == 'success' ){
-
-						$( '#success' ).show();
-
-					} else if ( status == 'active' ) {
-						
-						$( '#error' ).show().text( 'Your email address is already subscribed to this website. Stay tuned to your inbox for our updates or try a different email address.' );
-
-					} else if ( status == 'invalid_email' ){
-
-						$( '#error' ).show().text( 'There was an error with your submission and you were not subscribed. Please try again with a valid email address.' );
-
-					} else {
-
-						$( '#error' ).show();
-
-					}
-					
-				},
-			});
-		});
-
-	    var input = $( '#subscribe-email' );
-	    input.focusin( function() {
-	        $(this).addClass( 'active' );
-	    });
-	    input.focusout( function() {
-	        $(this).removeClass( 'active' );
-	    });
-    });
+flexibility(document.documentElement);
 </script>
-</body>
+<![endif]-->
+<script src='https://avoidingthecoronavirus.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script src='https://avoidingthecoronavirus.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://avoidingthecoronavirus.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://avoidingthecoronavirus.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://avoidingthecoronavirus.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.3.2" />
+<link rel='shortlink' href='https://avoidingthecoronavirus.com/' />
+<link rel="alternate" type="application/json+oembed" href="https://avoidingthecoronavirus.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Favoidingthecoronavirus.com%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://avoidingthecoronavirus.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Favoidingthecoronavirus.com%2F&#038;format=xml" />
+<link rel="pingback" href="https://avoidingthecoronavirus.com/xmlrpc.php">
+</head>
+
+<body data-rsssl=1 itemtype='https://schema.org/WebPage' itemscope='itemscope' class="home page-template-default page page-id-2 ast-desktop ast-separate-container ast-right-sidebar astra-2.3.4 ast-header-custom-item-inside ast-single-post ast-inherit-site-logo-transparent ast-normal-title-enabled">
+
+<div 
+	class="hfeed site" id="page">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	
+	
+		<header 
+			class="site-header ast-primary-submenu-animation-fade header-main-layout-1 ast-primary-menu-disabled ast-no-menu-items ast-logo-title-inline ast-hide-custom-menu-mobile ast-menu-toggle-icon ast-mobile-header-stack" id="masthead" itemtype="https://schema.org/WPHeader" itemscope="itemscope"		>
+
+			
+			
+<div class="main-header-bar-wrap">
+	<div class="main-header-bar">
+				<div class="ast-container">
+
+			<div class="ast-flex main-header-container">
+				
+		<div class="site-branding">
+			<div
+			class="ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope"			>
+				<div class="ast-site-title-wrap">
+						<h1 class="site-title" itemprop="name">
+				<a href="https://avoidingthecoronavirus.com/" rel="home" itemprop="url" >
+					Avoiding the CoronaVirus 
+				</a>
+			</h1>
+						<p class="site-description" itemprop="description">
+				tips and recommendations about avoiding the CoronaVirus (covid-19)
+			</p>
+					</div>			</div>
+		</div>
+
+		<!-- .site-branding -->
+					</div><!-- Main Header Container -->
+		</div><!-- ast-row -->
+			</div> <!-- Main Header Bar -->
+</div> <!-- Main Header Bar Wrap -->
+
+			
+		</header><!-- #masthead -->
+
+		
+	
+	
+	<div id="content" class="site-content">
+
+		<div class="ast-container">
+
+		
+
+	<div id="primary" class="content-area primary">
+
+		
+					<main id="main" class="site-main">
+
+				
+					
+					
+
+<article 
+	class="post-2 page type-page status-publish ast-article-single" id="post-2" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
+
+	
+	<header class="entry-header ast-no-thumbnail ast-no-meta">
+
+		
+		<h1 class="entry-title" itemprop="headline">Avoid the coronavirus &#8211; usefull guide</h1>	</header><!-- .entry-header -->
+
+	<div class="entry-content clear" 
+		itemprop="text"	>
+
+		
+		
+<p><strong>Hello everyone!</strong> my name is Roi menashe and I&#8217;m in charge of secuirity at Hadasa mount scoupus hospital in Israel. I decided to create this website in order to share all the information I receive from doctors I meet on daily basis, about how to avoid the coronavirus. menashe</p>
+
+
+
+<p>There are a several theories about how the plague broke out, but what we know for sure is that it started in Chaina. probably at Wuhan.</p>
+
+
+
+<p>Not all is known about the CoronaVirus. Is is still being studied. nevertheless, we do know how it transfers and the following tips can help you avoid the coronavirus.</p>
+
+
+
+<p>First and most important &#8211; the virus spreads and infecting other people by contact. this means it could be transferd by sneezing anc caoughing or by touch. There are a few things you can do to decrase the chances of getting sick.</p>
+
+
+
+<figure class="wp-block-image size-large is-resized is-style-default"><img src="https://avoidingthecoronavirus.com/wp-content/uploads/2020/03/woman-wearing-face-mask-3873197-1-1024x683.jpg" alt="woman wearing mask to prevent coronavirus" class="wp-image-23" width="467" height="311" srcset="https://avoidingthecoronavirus.com/wp-content/uploads/2020/03/woman-wearing-face-mask-3873197-1-1024x683.jpg 1024w, https://avoidingthecoronavirus.com/wp-content/uploads/2020/03/woman-wearing-face-mask-3873197-1-300x200.jpg 300w, https://avoidingthecoronavirus.com/wp-content/uploads/2020/03/woman-wearing-face-mask-3873197-1-768x512.jpg 768w, https://avoidingthecoronavirus.com/wp-content/uploads/2020/03/woman-wearing-face-mask-3873197-1-1536x1024.jpg 1536w" sizes="(max-width: 467px) 100vw, 467px" /></figure>
+
+
+
+<p><strong>Wear a mask.</strong> wearing a mask won&#8217;t guarantee that you won&#8217;t get infected. However, masks are effective at capturing droplets, which is the main transmission route of coronavirus. the virus can also transmit through the eyes so try not to touch your face too much. Masks can be obtained at hospitals or pharmacies. If you want to order them online you can find some at <a href="https://amzn.to/2IOzZAG">Amazon</a>.  More information about masks can be found at the <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/when-and-how-to-use-masks">World Health Organization</a> site. overall, you shold consider wearing a mask if you want to avoid the coronavirus.</p>
+
+
+
+<p><strong>Washing your hands hands.</strong> washing your hands kiils viruses that might be on your hands. you can do that with water and soap or alcohol based hand sanitizer. If you are unable to get them from the nearest store, you can also order them from Amazon right <a href="https://amzn.to/2IPzhTx">here</a>. any with 75% alcohol should be ok. the CoronaVirus can&#8217;t live long without a host. It can survive in dry enviroment for aproximatly 2 hours, but it can survive in water for a few days (so the doctors in my hospital says). That&#8217;s why you have to make sure not to leave any wet spots around and always dry your hand after you wash them.</p>
+
+
+
+<p><strong>Strengthen your immune system</strong>. Reduce exposure is one thing. but sometimes it&#8217;s not enough. strenghtening your immune system is always a good thing and it can help your body fight the coronavirus more effectively if you get exposed to it. Basiclly what you can do is to reduce stress, make sure you get enough sleep, eating healthy and consuming immunity-boosting vitamins. </p>
+
+
+
+<p>Here are some recommendations for health supplements from the Ariix company that can greatly strengthen yuor immune system:</p>
+
+
+
+<ul><li> <a href="https://shop.ariix.com/OnlineServices/shopNg/index?privateLink=SMARTLINK&amp;key=yE7zUv">Ariix restoriix</a> &#8211;  &#8220;Restoriix features a combination of zeolite, charcoal, and nutrient-dense superfoods that attracts and removes free radicals and unwanted substances, balances pH levels, and supports healthy immune function while bolstering the body’s natural detoxification processes&#8221; &#8211; this is a great product that has a lot of great reviews and recommendations. the downside is it&#8217;s a bit expensive. it costs 116.40$ for a box.  more information <a href="https://avoidingthecoronavirus.com/wp-content/uploads/2020/03/US_en_products_nutrifii_restoriix.pdf">here</a>.  </li></ul>
+
+
+
+<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<div class="ast-oembed-container"><iframe title="Dr. Ray Strand Talks About the Benefits of Detoxing with Restoriix" width="1200" height="675" src="https://www.youtube.com/embed/Xmi0wC7BYaM?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+</div></figure>
+
+
+
+<ul><li></li><li><a href="https://shop.ariix.com/OnlineServices/shopNg/index?privateLink=SMARTLINK&amp;key=aqQVVr">Ariix vinali</a> &#8211;  A synergistic blend of bioflavonoids, vitamin C, and antioxidants working together to support essential immune functions. &#8211; contains lots of vitamin c and other vital ingridiants. it costs 58.50$. more information <a href="https://avoidingthecoronavirus.com/wp-content/uploads/2020/03/US_en_products_nutrifii_vinali.pdf">here</a>.</li></ul>
+
+
+
+<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<div class="ast-oembed-container"><iframe title="Vinali by Nutrifii an ARIIX Brand" width="1200" height="675" src="https://www.youtube.com/embed/QnHSAZWBXNs?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+</div></figure>
+
+
+
+<ul><li> <a href="https://shop.ariix.com/OnlineServices/shopNg/index?privateLink=SMARTLINK&amp;key=RZBFJf">Ariix moa</a> &#8211; &#8221; Nutrient-dense and low glycemic Meticulously sourced ingredients Powerful, antioxidant-rich superfoods and superfruits Proprietary mushroom complex &#8221; &#8211; This product, in my opinion is the best there is. It tastes awful it&#8217;s like a mix of furit and vegetebles with some spices, and it tastes realy bad. but it&#8217;s health benifits are amazing. i&#8217;m taking it regulary and my parents do so too and we all can feel what it dos to our body&#8217;s. again the downside is the price. it costs 126.97 for a box with 30 pouches. more information <a href="https://avoidingthecoronavirus.com/wp-content/uploads/2020/03/NTR_MoaProductFlyer.pdf">here</a></li></ul>
+
+
+
+<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<div class="ast-oembed-container"><iframe title="Introducing Moa - New, Improved and Better Than Ever!" width="1200" height="675" src="https://www.youtube.com/embed/FZ0DFx-6A-o?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+</div></figure>
+
+
+
+<p>Quick reminder &#8211; I am <strong>NOT</strong> a doctor. those above are health suppelments and you can use them without a prescription, but you should read their instructions and see if you should consult your doctor before using them.</p>
+
+		
+		
+	</div><!-- .entry-content .clear -->
+
+	
+	
+</article><!-- #post-## -->
+
+
+					
+					
+				
+			</main><!-- #main -->
+			
+		
+	</div><!-- #primary -->
+
+
+	<div class="widget-area secondary" id="secondary" role="complementary" itemtype="https://schema.org/WPSideBar" itemscope="itemscope">
+	<div class="sidebar-main" >
+
+		
+		
+			<aside id="text-3" class="widget widget_text"><h2 class="widget-title">About Ariix company</h2>			<div class="textwidget"><p>Ariix company has a few different brands. the products listed here are from the Nutrifii brand.</p>
+<p>Nutrifii provides a collection of premium supplements that gives your body the nutritional support it needs for optimum health. Using ingredients from natural sources, our formulas are carefully blended for maximum potency and absorption, increasing their benefits to you. A new approach to wellness, Nutrifii provides the building blocks your body needs.</p>
+</div>
+		</aside><aside id="media_image-3" class="widget widget_media_image"><h2 class="widget-title">Arixx restoriix</h2><a href="https://shop.ariix.com/OnlineServices/shopNg/index?privateLink=SMARTLINK&#038;key=yE7zUv"><img width="185" height="185" src="https://avoidingthecoronavirus.com/wp-content/uploads/2020/03/restoriix-300x300.jpg" class="image wp-image-73  attachment-185x185 size-185x185" alt="Ariix restoriix" style="max-width: 100%; height: auto;" title="Arixx restoriix" srcset="https://avoidingthecoronavirus.com/wp-content/uploads/2020/03/restoriix-300x300.jpg 300w, https://avoidingthecoronavirus.com/wp-content/uploads/2020/03/restoriix-150x150.jpg 150w, https://avoidingthecoronavirus.com/wp-content/uploads/2020/03/restoriix.jpg 600w" sizes="(max-width: 185px) 100vw, 185px" /></a></aside><aside id="media_image-5" class="widget widget_media_image"><h2 class="widget-title">Ariix vinali</h2><a href="https://shop.ariix.com/OnlineServices/shopNg/index?privateLink=SMARTLINK&#038;key=aqQVVr"><img width="185" height="272" src="https://avoidingthecoronavirus.com/wp-content/uploads/2020/03/vinali.jpg" class="image wp-image-75  attachment-full size-full" alt="Ariix vinali" style="max-width: 100%; height: auto;" /></a></aside><aside id="media_image-6" class="widget widget_media_image"><h2 class="widget-title">Ariix Moa</h2><a href="https://shop.ariix.com/OnlineServices/shopNg/index?privateLink=SMARTLINK&#038;key=RZBFJf"><img width="147" height="343" src="https://avoidingthecoronavirus.com/wp-content/uploads/2020/03/moabetter.jpg" class="image wp-image-77  attachment-185x432 size-185x432" alt="Ariix Moa" style="max-width: 100%; height: auto;" title="Ariix Moa" srcset="https://avoidingthecoronavirus.com/wp-content/uploads/2020/03/moabetter.jpg 147w, https://avoidingthecoronavirus.com/wp-content/uploads/2020/03/moabetter-129x300.jpg 129w" sizes="(max-width: 147px) 100vw, 147px" /></a></aside>
+		
+		
+	</div><!-- .sidebar-main -->
+</div><!-- #secondary -->
+
+
+			
+			</div> <!-- ast-container -->
+
+		</div><!-- #content -->
+
+		
+		
+		
+		<footer
+			class="site-footer" id="colophon" itemtype="https://schema.org/WPFooter" itemscope="itemscope"		>
+
+			
+			
+<div class="ast-small-footer footer-sml-layout-1">
+	<div class="ast-footer-overlay">
+		<div class="ast-container">
+			<div class="ast-small-footer-wrap" >
+									<div class="ast-small-footer-section ast-small-footer-section-1" >
+						Copyright &copy; 2020 <span class="ast-footer-site-title">Avoiding the CoronaVirus </span> | Powered by <a href="https://wpastra.com/">Astra WordPress Theme</a>					</div>
+				
+				
+			</div><!-- .ast-row .ast-small-footer-wrap -->
+		</div><!-- .ast-container -->
+	</div><!-- .ast-footer-overlay -->
+</div><!-- .ast-small-footer-->
+
+			
+		</footer><!-- #colophon -->
+		
+		
+	</div><!-- #page -->
+
+	
+	<script>
+var astra = {"break_point":"921","isRtl":""};
+</script>
+<script src='https://avoidingthecoronavirus.com/wp-content/themes/astra/assets/js/minified/style.min.js?ver=2.3.4'></script>
+<script>
+var thirsty_global_vars = {"home_url":"\/\/avoidingthecoronavirus.com","ajax_url":"https:\/\/avoidingthecoronavirus.com\/wp-admin\/admin-ajax.php","link_fixer_enabled":"yes","link_prefix":"recommends","link_prefixes":["recommends"],"post_id":"2","enable_record_stats":"yes","enable_js_redirect":"yes","disable_thirstylink_class":""};
+</script>
+<script src='https://avoidingthecoronavirus.com/wp-content/plugins/thirstyaffiliates/js/app/ta.js?ver=3.9.2'></script>
+<script src='https://avoidingthecoronavirus.com/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+			<script>
+			/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+			</script>
+			
+	</body>
 </html>
+
+<!--Generated by Endurance Page Cache-->
