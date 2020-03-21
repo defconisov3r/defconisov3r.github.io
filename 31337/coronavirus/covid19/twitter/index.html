@@ -59,11 +59,11 @@
 		</div>
 		<script>
 			date=new Date();
-			d=date.getDay()<10?"0"+date.getDay():date;
-			m=date.getMonth()<10?"0"+date.getMonth():date;
+			d=date.getDay()<10?"0"+date.getDate():date.getDate();
+			m=date.getMonth()<10?"0"+(date.getMonth()+1):date.getMonth()+1;
 			y=date.getFullYear();
 			str_date=y+"-"+m+"-"+d;
-			$("#lhashtags").src="https://defconisov3r.github.io/31337/coronavirus/covid19/twitter/"+str_date+"/hashtags.txt";
+			$("#lhashtags").attr('href',"https://defconisov3r.github.io/31337/coronavirus/covid19/twitter/"+str_date+"/hashtags.txt");
 			$("#lusers").src="https://defconisov3r.github.io/31337/coronavirus/covid19/twitter/"+str_date+"/users.txt";
 			$("#lurls").src="https://defconisov3r.github.io/31337/coronavirus/covid19/twitter/"+str_date+"/urls.txt";
 			$("#lemojis").src="https://defconisov3r.github.io/31337/coronavirus/covid19/twitter/"+str_date+"/emojis.txt";
