@@ -1,9 +1,72 @@
-<h1>Hashtags, users and urls related to covid19 on twitter </h1>
-
-<a href='https://defconisov3r.github.io/31337/coronavirus/covid19/twitter/hashtags.txt'>Hashtags</a>
-<br/>
-<a href='https://defconisov3r.github.io/31337/coronavirus/covid19/twitter/users.txt'>Users</a>
-<br/>
-<a href='https://defconisov3r.github.io/31337/coronavirus/covid19/twitter/urls.txt'>Urls</a>
-<br/>
-<a href='https://defconisov3r.github.io/31337/coronavirus/covid19/twitter/emojis.txt'>Emojis</a>
+<html>
+	<head>
+		<title>
+			Hashtags, users, urls and emojis related to covid19 on twitter
+		</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<!-- Just an image -->
+		<nav class="navbar navbar-light bg-light">
+		  <a class="navbar-brand" href="https://defconisov3r.github.io/coronavirus/covid-19/">
+			  <img src="https://lh5.googleusercontent.com/ijwMRh4ooGZ84kcoXzhSG_RN7TWEb1rgYnQBPKrPoZ1vqj2CCFnnnB_72yXHlYojYcz8RdaBzA4uP1SnKM73M980POgEhwsqHhPM3EOEmi5yck1wFavL9qGRnpthmXRqoMmUmXdH" width="30" height="30" class="d-inline-block align-top" alt="">
+		    Covid-19
+		  </a>
+		<script async src="https://cse.google.com/cse.js?cx=001897928286581039601:1sx8xzlhhwp"></script>
+		<div class="gcse-search" style='width:500px'></div>
+		</nav>		
+		
+		<div class="accordion" id="accordionCov">
+		  <div class="card">
+			<div class="card-header" id="linksAndResources">
+			  <h2 class="mb-0">
+				<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseResources" aria-expanded="false" aria-controls="collapseResources">
+					<h3>Hashtags, users and urls related to covid19 on twitter</h3>
+				</button>
+			  </h2>
+			</div>
+			<div id="collapseResources" class="collapse show" data-parent="#accordionCov">
+			  <div class="card-body">
+				<ul class="list-group">
+					<li class="list-group-item">
+					  	<a target='_blank' href='' id='lhashtags'>
+							Hashtags
+						</a>
+					</li>
+					<li class="list-group-item">
+					  	<a target='_blank' href='' id='lusers'>
+							Users
+						</a>
+					</li>					
+					<li class="list-group-item">
+					  	<a target='_blank' href='' id='lurls'>
+							Urls
+						</a>
+					</li>
+					<li class="list-group-item">
+					  	<a target='_blank' href='' id='lemojis'>
+							Emojis
+						</a>
+					</li>
+				</ul>
+			  </div>
+			</div>
+		  </div>			
+		</div>
+		<script>
+			date=new Date();
+			d=date.getDay()<10?"0"+date.getDay():date;
+			m=date.getMonth()<10?"0"+date.getMonth():date;
+			y=date.getFullYear();
+			str_date=y+"-"+m+"-"+d;
+			$("#lhashtags").src="https://defconisov3r.github.io/31337/coronavirus/covid19/twitter/"+str_date+"/hashtags.txt";
+			$("#lusers").src="https://defconisov3r.github.io/31337/coronavirus/covid19/twitter/"+str_date+"/users.txt";
+			$("#lurls").src="https://defconisov3r.github.io/31337/coronavirus/covid19/twitter/"+str_date+"/urls.txt";
+			$("#lemojis").src="https://defconisov3r.github.io/31337/coronavirus/covid19/twitter/"+str_date+"/emojis.txt";
+		</script>
+	</body>
+</html>
