@@ -1,1 +1,99 @@
+<html>
+  <head>
+    <title>
+      Coronavirus/Covid19/Twitter/2019-03-29
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property='og:title' content='Coronavirus/Covid19/Twitter/2019-03-30'>
+	<meta property='og:url' content='https://defconisov3r.github.io/31337/coronavirus/covid19/twitter/2019-03-30'>
+	<meta property='og:description' content="Sitio con un listado de url incluidas en diversos tweets durante la pandemia por covid19, se muestra screenshot de la url y enlace a un escaneo en urlscan.io">
+	<meta property='og:image' content='https://img.scoop.it/mvPHhsIlpIFsO8wuSDGWFzl72eJkfbmt4t8yenImKBVvK0kTmF0xjctABnaLJIm9'>
+	<meta name='twitter:card' content='summary_large_image'>
+	<meta property='twitter:site' content='@defconisov3r'>
+	<meta name='twitter:creator' content='@defconisov3r'>
+	<meta property='twitter:title' content='Coronavirus/Covid19/Twitter/2019-03-30'>
+	<meta name='description' content='Sitio con un listado de url incluidas en diversos tweets durante la pandemia por covid19, se muestra screenshot de la url y enlace a un escaneo en urlscan.io'>
+	<meta name='twitter:image' content='https://img.scoop.it/mvPHhsIlpIFsO8wuSDGWFzl72eJkfbmt4t8yenImKBVvK0kTmF0xjctABnaLJIm9'>
+	<meta name='keywords' content='covid19, coronavirus, pandemia, ncov19, ncov, virus, enfermedad, OMS, url, bigdata, covid, epidemia, fakenews, news'>
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src='//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js'>
+    </script>
+  </head>
+  <body>
 
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Coronavirus/Covid19/TwitterData</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="hashtags.txt" target='_blank'>Hashtags</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="users.txt" tabindex="-1" aria-disabled="true" target='_blank'>Users</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="urls.txt" tabindex="-1" aria-disabled="true" target='_blank'>Urls</a>
+      </li>      
+      <li class="nav-item">
+        <a class="nav-link" href="domains.txt" tabindex="-1" aria-disabled="true" target='_blank'>Domains</a>
+      </li>            
+      <li class="nav-item">
+        <a class="nav-link" href="emojis.txt" tabindex="-1" aria-disabled="true" target='_blank'>Emojis</a>
+      </li>            
+    </ul>
+  </div>
+</nav>
+
+  
+    <table id="tableVT" class="display">
+      <thead>
+          <tr>
+              <th>url</th>
+              <th>screenshot</th>
+          </tr>
+      </thead>
+      <tbody id='bodyTableVT'>
+        
+      </tbody>
+  </table>
+  </body>
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">
+				Screenshot for 
+				<a href='#' target='_blank' id='scan'>
+					<span id='url'></span>
+				</a>
+			</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			<img src='#' class="img-fluid" id='screenshot'>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  
+  
+  
+  <script src='table.js'>
+  </script>
+</html>
