@@ -1,4 +1,5 @@
 urls=[
+  "https://hunter.io/",
   "https://fofa.so",
   "https://www.oshadan.com/",
 "http://carbondate.cs.odu.edu",
