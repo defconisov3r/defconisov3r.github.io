@@ -25951,6 +25951,6 @@ $(document).ready( function () {
     htmlTable+="<td>"+vendor+"</td>";
     htmlTable+="</tr>";
   }
-  $("#bodyTableVT").html(htmlTable);
-  $('#tableVT').DataTable();
+  $("#bodyTable").html(htmlTable);
+  $('#table').DataTable();
 } ); 
