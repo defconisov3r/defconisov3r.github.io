@@ -1,4 +1,6 @@
 urls=[
+  "https://fofa.so",
+  "https://www.oshadan.com/",
 "http://carbondate.cs.odu.edu",
 "http://exif.regex.info/exif.cgi",
 "http://fotoforensics.com",
@@ -39,7 +41,6 @@ urls=[
 "https://etherscamdb.info/scams",
 "https://exploitbox.io",
 "https://findsubdomains.com",
-"https://fofa.so",
 "https://geoip-db.com/jsonp",
 "https://ghostproject.fr",
 "https://ghostproject.fr/m",
