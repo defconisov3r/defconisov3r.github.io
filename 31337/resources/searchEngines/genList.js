@@ -1,4 +1,7 @@
 urls=[
+  "https://malwareworld.com/",
+  "https://www.apklab.io",
+  "https://bazaar.abuse.ch",
   "https://hunter.io/",
   "https://fofa.so",
   "https://www.oshadan.com/",
