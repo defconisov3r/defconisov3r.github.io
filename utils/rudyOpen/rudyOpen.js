@@ -1,8 +1,5 @@
 //:P
 var target=null;
-console.log(target);
-l=target.length;
-targetActive=null;
 i=0;
 function rudyOpen(url){
 	targetActive=window.open(url,'_blank');
@@ -11,8 +8,12 @@ function rudyOpen(url){
 	}
 	return false;
 }
-function runRudyOpen(){	
+function runRudyOpen(){
+	//:P
 	target=document.getElementById("rudyTargets").value.split(",");
+	console.log(target);
+	l=target.length;
+	targetActive=null;
 	if(!(targetActive==null)){
 		domain="https://"+target[i];
 		targetActive.location.href=domain;
