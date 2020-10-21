@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>
+			Busca coincidencias con tu username de twitch
+		</title>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'>
+		</script>
+	</head>
+	<body>
+		<center>
+		<h1>
+			Busca coincidencias con tu username de twitch
+		</h1>
+		<input type='text' id='updateQ'/><br/>
+		<br/>
+		</center>
+	</body>
+	<script>
+		$("#updateQ").keydown(function(e){
+			if(e.keyCode==13){
+				val=$("#updateQ").val();
+				elII=document.createElement("iframe");
+				elII.src='iframe.html?q='+val;
+				elII.width="100%";
+				elII.height="100%";
+				elII.enctype="application/json";
+				elII.accept="application/json"
+				$("iframe").remove();
+				$("body").append(elII);
+			}
+		});
+	</script>
+</html>
+
