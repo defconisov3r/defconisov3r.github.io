@@ -1,7 +1,4 @@
 var w=null;
-var target=document.getElementById("target").value;
-var prot=target.match(/^http(s)?/);
-target=(prot===null)?"http://"+target:target;
 var res=document.getElementById("res");
 document.getElementsByTagName("a")[0].onclick=function(e){
 	w=window.open('http://example.com','_blank');
@@ -13,6 +10,9 @@ document.getElementsByTagName("a")[0].onclick=function(e){
 	}
 }
 var alertXSS=function(){
+	let target=document.getElementById("target").value;
+	let prot=target.match(/^http(s)?/);
+	target=(prot===null)?"http://"+target:target;	
 	if(w!=null){
 		let exec=null;
 		let payloads='\
