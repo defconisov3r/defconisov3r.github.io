@@ -4,14 +4,14 @@
 	</head>
 	<body style='background:#000'>
 		<center>
-			<h1>
+			<h1 style='color:red'>
 				AlertXSS
 			</h1>
-			<input id='target' type='text' value='http://localhost/xss.php?vuln='/>
+			<input style='width:300px;font-size:25px' id='target' type='text' value='http://localhost/xss.php?vuln='/>
 			<br/>
 			<img style='width:500px' src='https://static.wixstatic.com/media/55f348_19ba0cdcc7f341a298ebb25d580faf32~mv2.png/v1/fill/w_677,h_349,al_c/55f348_19ba0cdcc7f341a298ebb25d580faf32~mv2.png'/><br/>
 			<br/>
-			<a style='text-decoration:none;color:#fff;width:100px;padding:10px;background:#000' onclick="javascript:return open('http://localhost');" href='' target='_blank'>
+			<a style='text-decoration:none;color:#fff;width:100px;padding:10px;background:green' onclick="javascript:return open('http://localhost');" href='' target='_blank'>
 				run
 			</a>
 			<br/>
