@@ -12,6 +12,7 @@ function rudyOpen(url){
 function runRudyOpen(){
 	//:P
 	clearInterval(rep);
+	rep=setInterval(runRudyOpen,1500);
 	target=document.getElementById("rudyTargets").value.split(",");
 	console.log(target);
 	l=target.length;
@@ -21,4 +22,4 @@ function runRudyOpen(){
 	}
 	i++;
 }
-rep=setInterval(runRudyOpen,1500);
+runRudyOpen();
