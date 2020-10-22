@@ -54,7 +54,8 @@ var alertXSS=function(){
 			if(payloads[i]===undefined){
 				clearInterval(rep);
 			}
-			let exec="localStorage.payload"+i+"='Ok';";
+			//:P
+			let exec="localStorage.payload"+i+"='Ok';console.dir(localStorage);";
 			payloads[i]=payloads[i].replace("{EXEC}",exec);
 			payload=payloads[i].trim();
 			w.location=target+payload;
@@ -63,8 +64,6 @@ var alertXSS=function(){
 			res.innerHTML+="[+]payload["+i+"]: "+payload;
 			res.innerHTML+="\n"+"#".repeat(90)+"\n";
 			i++;
-			//:P
-			console.dir(localStorage);
-		},2000);
+		},2500);
 	}
 };
