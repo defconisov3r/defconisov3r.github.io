@@ -63,6 +63,8 @@ var alertXSS=function(){
 			res.innerHTML+="[+]payload["+i+"]: "+payload;
 			res.innerHTML+="\n"+"#".repeat(90)+"\n";
 			i++;
+			//:P
+			console.dir(localStorage);
 		},2000);
 	}
 };
