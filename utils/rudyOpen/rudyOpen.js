@@ -22,4 +22,4 @@ function runRudyOpen(){
 	}
 	i++;
 }
-runRudyOpen();
+rep=setInterval(runRudyOpen,1500);
