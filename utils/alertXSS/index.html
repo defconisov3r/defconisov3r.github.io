@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>alertXSS</title>
+	</head>
+	<body style='background:#000'>
+		<div style='text-align:center;height:100%;padding-top:0%;width:500px;margin:0 auto;'>
+			<h1 style='color:red;font-size:45px'>alertXSS</h1>
+			<img style='width:500px' src='https://static.wixstatic.com/media/55f348_19ba0cdcc7f341a298ebb25d580faf32~mv2.png/v1/fill/w_677,h_349,al_c/55f348_19ba0cdcc7f341a298ebb25d580faf32~mv2.png'/><br/>
+			<h3 style='color:#fff'>
+				Url a probar
+			</h3>
+			<input style='font-size:25px;width:400px;height:70px' id='target' type='text' placeholder='http://smt.guaymas.gob.mx/fraccion.php?articulo=308&fraccion='>
+			<a style='color:white;font-size:43px;background:green;' href="" target="_blank" onclick="return testAlert('http://example.com');">
+				:::Run AlertXSS:::
+			</a>
+			<textarea rows='50' style='width:500px' id='res'></textarea>
+		</div>
+	</body>
+	<script src='alertXSS.js'></script>
+</html>
