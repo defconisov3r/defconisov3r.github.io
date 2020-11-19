@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>genQR</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  </head>
+  <body>    
+    <div>
+      <div style='width:500px;margin:0 auto;text-align:center'>
+        <h1>GENERAR QR</h1>
+        <input style='width:500px;text-align:center;padding:10px;font-size:23px' id='url' type='text' placeholder='https://defconisov3r.github.io'/>
+        <br/>
+        <img id='QR' src=''/>
+        <br/>
+        <br/>
+        <input style='padding:10px;font-size:23px' id='genQR' type='button' value='Generar QR'/>
+      </div>
+    </div>
+    <script>
+      box=document.getElementById("url");
+      butt=document.getElementById("genQR");
+      QR=document.getElementById("QR");
+      butt.addEventListener("click",function(){
+        QR.src="https://chart.googleapis.com/chart?chs=225x225&chld=L|2&cht=qr&chl="+box.value;
+      });
+    </script>
+  </body>
+</html>
