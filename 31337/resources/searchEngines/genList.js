@@ -1,4 +1,8 @@
 urls=[
+  "https://leaks.sh/",
+  "http://the-eye.eu",
+  "https://malwareanalysis.tools/",
+  "https://vx-underground.org/archive/VxHeaven/vx.php@id=eidx.html",
   "https://malwareworld.com/",
   "https://www.apklab.io",
   "https://bazaar.abuse.ch",
